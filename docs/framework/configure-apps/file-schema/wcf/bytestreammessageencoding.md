@@ -2,18 +2,18 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b11f472c0e33003e50be4b45bb49196c64ecb70d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919725"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consente di specificare la codifica dei caratteri.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<binaryMessageEncoding>  
@@ -29,7 +29,7 @@ Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consen
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |messageVersion|Specifica la versione SOAP dei messaggi inviati usando l'associazione. È possibile impostare questa proprietà solo sul valore relativo alla versione del messaggio <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Il codificatore di messaggi del flusso di byte non supporta altre versioni del messaggio.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
   
@@ -43,7 +43,7 @@ Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consen
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -51,9 +51,9 @@ Specifica la codifica dei messaggi come flusso di byte, con l'opzione che consen
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [Codifica dei messaggi](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [Scelta di un codificatore di messaggi](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Codifica dei messaggi](message-encoding.md)
+- [Scelta di un codificatore di messaggi](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

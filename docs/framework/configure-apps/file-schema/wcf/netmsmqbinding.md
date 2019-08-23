@@ -2,18 +2,18 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 7a4bae0def6599ab577656e970abbe20dd10692f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cb8488a1c633f9b7158f9bebfa617381b407a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933060"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 Definisce un'associazione in coda adatta per la comunicazione fra computer.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -64,7 +64,7 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`closeTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |`customDeadLetterQueue`|URI che contiene il percorso della coda dei messaggi non recapitabili per applicazione, in cui vengono collocati i messaggi scaduti o che non possono essere trasferiti o recapitati.<br /><br /> La coda dei messaggi non recapitabili è una coda del gestore delle code dell'applicazione di origine contenente i messaggi scaduti che sono risultati non recapitabili.<br /><br /> L'URI specificato da <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> deve usare lo schema net.msmq.|  
@@ -74,16 +74,16 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 |`maxBufferPoolSize`|Numero intero che specifica la dimensione del pool di buffer massima per questa associazione. Il valore predefinito è 8.|  
 |`maxReceivedMessageSize`|Numero intero positivo che definisce la dimensione massima del messaggio, in byte, comprese le intestazioni, elaborate da questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536. Questo vincolo alla dimensione dei messaggi limita l'esposizione agli attacchi di tipo Denial of Service (DoS).|  
 |`maxRetryCycles`|Numero intero che indica il numero di cicli di ripetizione usati dalla funzionalità di rilevazione dei messaggi non elaborabili. Un messaggio diventa non elaborabile quando falliscono tutti i tentativi di recapito di tutti i cicli. Il valore predefinito è 3. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Attributo obbligatorio. Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Attributo obbligatorio. Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
-|`QueueTransferProtocol`|Valore <xref:System.ServiceModel.QueueTransferProtocol> valido che specifica il trasporto del canale di comunicazione in coda usato da questa associazione. MSMQ non supporta l'indirizzamento di Active Directory in caso di utilizzo di SOAP Reliable Messaging Protocol. Pertanto, non è necessario impostare questo attributo su `Srmp` oppure `Srmps` quando il `useActiveDirectory` attributo è impostato su `true`.|  
+|`QueueTransferProtocol`|Valore <xref:System.ServiceModel.QueueTransferProtocol> valido che specifica il trasporto del canale di comunicazione in coda usato da questa associazione. MSMQ non supporta l'indirizzamento di Active Directory in caso di utilizzo di SOAP Reliable Messaging Protocol. Pertanto, è consigliabile non impostare questo attributo su `Srmp` o `Srmps` quando l' `useActiveDirectory` attributo è impostato su `true`.|  
 |`receiveErrorHandling`|Valore <xref:System.ServiceModel.ReceiveErrorHandling> che specifica come vengono gestiti i messaggi non elaborabili e non distribuibili.|  
 |`receiveRetryCount`|Numero intero che specifica il numero massimo di tentativi eseguiti dal gestore delle code per inviare un messaggio prima che questo venga trasferito alla coda di tentativi.|  
 |`receiveTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
 |`retryCycleDelay`|Valore TimeSpan che specifica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente. Il valore definisce solo il tempo di attesa minimo, poiché è possibile che l'attesa effettiva sia più lunga. L'impostazione predefinita è 00:10:00. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |`sendTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |`timeToLive`|Un valore TimeSpan che specifica la durata di validità dei messaggi prima che scadano e vengano inseriti nella coda dei messaggi non recapitabili. L'impostazione predefinita è 1.00:00:00.<br /><br /> L'attributo è impostato per verificare che i messaggi a scadenza non risultino non aggiornati prima di essere elaborati dalle applicazioni riceventi. Un messaggio in una coda che non viene usato dall'applicazione ricevente entro l'intervallo di tempo specificato viene considerato scaduto. I messaggi scaduti vengono inviati a una coda speciale denominata coda dei messaggi non recapitabili. Il percorso della coda dei messaggi non recapitabili viene impostato con l'attributo `DeadLetterQueue` o sul valore appropriato predefinito, in base alle garanzie.|  
-|`usingActiveDirectory`|Valore booleano che specifica se convertire gli indirizzi delle code mediante Active Directory.<br /><br /> Gli indirizzi delle code MSMQ possono essere costituiti da nomi di percorso o da nomi di formato Direct. Con un nome di formato Direct, MSMQ risolve il nome del computer usando DNS, NetBIOS o IP. Con un nome di percorso, MSMQ risolve il nome del computer usando Active Directory.<br /><br /> Per impostazione predefinita, Windows Communication Foundation (WCF) in coda trasporto Converte l'URI di una coda di messaggi a un nome di formato direct. L'impostazione della proprietà `UseActiveDirectory` su true consente a un'applicazione di specificare che il trasporto in coda deve risolvere il nome del computer usando Active Directory invece di DNS, NetBIOS o IP.|  
+|`usingActiveDirectory`|Valore booleano che specifica se convertire gli indirizzi delle code mediante Active Directory.<br /><br /> Gli indirizzi delle code MSMQ possono essere costituiti da nomi di percorso o da nomi di formato Direct. Con un nome di formato Direct, MSMQ risolve il nome del computer usando DNS, NetBIOS o IP. Con un nome di percorso, MSMQ risolve il nome del computer usando Active Directory.<br /><br /> Per impostazione predefinita, il trasporto in coda Windows Communication Foundation (WCF) converte l'URI di una coda di messaggi in un nome di formato diretto. L'impostazione della proprietà `UseActiveDirectory` su true consente a un'applicazione di specificare che il trasporto in coda deve risolvere il nome del computer usando Active Directory invece di DNS, NetBIOS o IP.|  
 |`useMsmqTracing`|Valore booleano che specifica se i messaggi elaborati da questa associazione devono essere tracciati. Il valore predefinito è `false`. Quando la traccia è attivata, i messaggi di rapporto vengono creati e inviati alla coda dei rapporti ogni volta che il messaggio viene inviato o ricevuto da un computer in cui è installato il sistema di accodamento messaggi.|  
 |`useSourceJournal`|Valore booleano che specifica se le copie dei messaggi elaborati da questa associazione devono essere archiviate nella coda journal di origine. Il valore predefinito è `false`.<br /><br /> Le applicazioni in coda che devono tenere un registro dei messaggi che hanno lasciato la coda in uscita del computer possono copiare i messaggi in una coda journal. Quando un messaggio lascia la coda in uscita e viene ricevuto un riconoscimento che il messaggio è stato ricevuto nel computer di destinazione, una copia del messaggio viene mantenuta nella coda journal del sistema del computer di invio.|  
   
@@ -92,16 +92,16 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<security>](security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- L'associazione `netMsmqBinding` fornisce il supporto per la gestione tramite coda basata sul sistema di accodamento dei messaggi MSMQ come trasporto. Tale associazione fornisce inoltre il supporto per le applicazioni a regime di controllo libero, per l'isolamento degli errori, per la distribuzione ottimale dei carichi e per le operazioni disconnesse. Per una descrizione di queste funzionalità, vedere [code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ L'associazione `netMsmqBinding` fornisce il supporto per la gestione tramite coda basata sul sistema di accodamento dei messaggi MSMQ come trasporto. Tale associazione fornisce inoltre il supporto per le applicazioni a regime di controllo libero, per l'isolamento degli errori, per la distribuzione ottimale dei carichi e per le operazioni disconnesse. Per una descrizione di queste funzionalità, vedere [code in WCF](../../../wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -141,8 +141,8 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [\<binding>](../../../misc/binding.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [Code in WCF](../../../wcf/feature-details/queues-in-wcf.md)

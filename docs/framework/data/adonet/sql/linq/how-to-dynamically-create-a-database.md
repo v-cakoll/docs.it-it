@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623856"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940078"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procedura: Creare un database in modo dinamico
 In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database relazionale. Per descrivere la struttura del database relazionale è possibile eseguire il mapping basato sull'attributo o usare un file di mapping esterno. Entrambi gli scenari dispongono di informazioni sul database relazionale sufficienti per creare una nuova istanza del database mediante il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -26,7 +26,7 @@ In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database r
  È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> con SQL Server mediante un file con estensione mdf o con un nome di catalogo, a seconda della stringa di connessione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione per definire il database da creare e il server su cui dovrà essere creato il database.  
   
 > [!NOTE]
->  Se possibile, usare la sicurezza integrata di Windows per connettersi al database in modo che non vengano richieste le password nella stringa di connessione.  
+> Se possibile, usare la sicurezza integrata di Windows per connettersi al database in modo che non vengano richieste le password nella stringa di connessione.  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene fornito un esempio della creazione di un nuovo database denominato MyDVDs.mdf.  

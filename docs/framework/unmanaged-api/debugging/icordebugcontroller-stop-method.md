@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 363d8f7d8cf960fb23210225c4545f73d597d663
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912836"
 ---
 # <a name="icordebugcontrollerstop-method"></a>Metodo ICorDebugController::Stop
-Esegue un arresto cooperativo in tutti i thread che eseguono il codice gestito nel processo.  
+Esegue un arresto cooperativo su tutti i thread che eseguono codice gestito nel processo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,19 +40,19 @@ HRESULT Stop (
  Non usato.  
   
 ## <a name="remarks"></a>Note  
- `Stop` esegue un'interruzione cooperativa in tutti i thread che esegue codice gestito nel processo. Durante una sessione di debug solo gestito, i thread non gestiti possono continuare a eseguire (ma verrà bloccata durante il tentativo di chiamare codice gestito). Durante una sessione di debug di interoperabilità, i thread non gestiti verranno arrestati. Il `dwTimeoutIgnored` valore viene attualmente ignorato e trattato come INFINITE (-1). Se l'arresto cooperativo ha esito negativo a causa di un deadlock, tutti i thread vengono sospesi ed E_TIMEOUT viene restituito.  
+ `Stop`esegue un arresto cooperativo su tutti i thread che eseguono codice gestito nel processo. Durante una sessione di debug solo gestita, i thread non gestiti possono continuare a essere eseguiti (ma verranno bloccati quando si tenta di chiamare il codice gestito). Durante una sessione di debug di interoperabilità, verranno arrestati anche i thread non gestiti. Il `dwTimeoutIgnored` valore è attualmente ignorato e considerato infinito (-1). Se l'arresto cooperativo non riesce a causa di un deadlock, tutti i thread vengono sospesi e viene restituito E_TIMEOUT.  
   
 > [!NOTE]
->  `Stop` è l'unico metodo sincrono nell'API di debug. Quando si `Stop` restituisce S_OK, il processo è stato arrestato. Non viene assegnato alcun callback per notificare ai listener dell'interruzione. Il debugger deve chiamare [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per consentire la ripresa del processo.  
+> `Stop`è l'unico metodo sincrono nell'API di debug. Quando `Stop` restituisce S_OK, il processo viene arrestato. Non viene specificato alcun callback per notificare ai listener l'arresto. Il debugger deve chiamare [ICorDebugController:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) per consentire la ripresa del processo.  
   
- Il debugger mantiene un contatore di arresto. Quando il conteggio arrivasse a zero, viene ripreso il controller. Ogni chiamata a `Stop` o ogni callback inviato viene incrementato il contatore. Ogni chiamata a `ICorDebugController::Continue` decrementa il contatore.  
+ Il debugger mantiene un contatore di interruzioni. Quando il contatore va a zero, il controller viene ripreso. Ogni chiamata a `Stop` o a ogni callback inviato incrementa il contatore. Ogni chiamata a `ICorDebugController::Continue` decrementa il contatore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

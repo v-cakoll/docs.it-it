@@ -2,18 +2,18 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934241"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<reliableSession>  
@@ -48,20 +48,20 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
 |reliableMessagingVersion|Un valore valido da <xref:System.ServiceModel.ReliableMessagingVersion> che specifica la versione di WS-ReliableMessaging da usare.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
  Le sessioni affidabili forniscono funzionalità per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. Questo elemento fornisce inoltre il recapito ordinato dei messaggi (facoltativo). Questa sessione implementata può attraversare intermediari SOAP e di trasporto.  
   
  Ogni elemento di associazione rappresenta una fase di elaborazione durante l'invio o la ricezione di messaggi. In fase di esecuzione gli elementi di associazione creano le channel factory e i listener necessari per compilare stack di canali in uscita e in ingresso richiesti per l'invio e la ricezione di messaggi. La classe `reliableSession` fornisce un livello facoltativo nello stack che può stabilire una sessione affidabile tra endpoint e configurare il comportamento di questa sessione.  
   
- Per altre informazioni, vedere [sessioni affidabili](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Per altre informazioni, vedere [sessioni affidabili](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è dimostrato come configurare un'associazione personalizzata con vari elementi di codifica di trasporto e messaggio, in particolare l'attivazione di sessioni affidabili, che mantiene lo stato client e specifica assicurazioni di recapito nell'ordine. Questa funzionalità è configurata nei file di configurazione dell'applicazione per il client e il servizio. Nell'esempio è illustrata la configurazione del servizio.  
@@ -124,8 +124,8 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [Sessioni affidabili](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Sessioni affidabili](../../../wcf/feature-details/reliable-sessions.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

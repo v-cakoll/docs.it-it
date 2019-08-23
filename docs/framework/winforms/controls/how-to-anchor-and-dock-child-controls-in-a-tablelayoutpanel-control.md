@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586182"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922814"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Procedura: Ancorare e agganciare controlli figlio in un controllo TableLayoutPanel
 Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
@@ -26,26 +26,25 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
   
 1. Creare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel form.  
   
-2. Impostare il valore della <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> delle proprietà per **1**.  
+2. Impostare il valore <xref:System.Windows.Forms.TableLayoutPanel> delle proprietà <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> del controllo su **1**.  
   
-3. Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>. 
-  <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
+3. Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>. <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
   
 4. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.Control.Anchor%2A> , su `Left`. Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.  
   
     > [!NOTE]
-    >  Questo comportamento è diverso dal comportamento di altri controlli contenitore. In altri controlli contenitore, il controllo figlio non viene spostato quando viene impostata la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e la distanza tra il controllo ancorato e i limiti del contenitore padre viene stabilita al momento dell’impostazione della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.  
+    > Questo comportamento è diverso dal comportamento di altri controlli contenitore. In altri controlli contenitore, il controllo figlio non viene spostato quando viene impostata la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e la distanza tra il controllo ancorato e i limiti del contenitore padre viene stabilita al momento dell’impostazione della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.  
   
 5. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.Control.Anchor%2A> , su `Top, Left`. Il controllo <xref:System.Windows.Forms.Button> viene spostato in modo che occupi l'angolo superiore sinistro della cella.  
   
-6. Ripetere il passaggio 5 con un valore di `Top, Right` spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo superiore destro della cella. Ripetere l'operazione con i valori di `Bottom, Left` e `Bottom, Right`.  
+6. Ripetere il passaggio 5 con un valore `Top, Right` per spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo superiore destro della cella. Ripetere l'operazione con i valori di `Bottom, Left` e `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Per estendere un controllo figlio in una cella TableLayoutPanel  
   
 1. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.Control.Anchor%2A> , su `Left, Right`. Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi per tutta la cella.  
   
     > [!NOTE]
-    >  Questo comportamento è diverso dal comportamento di altri controlli contenitore. In altri controlli contenitore, il controllo figlio non viene ridimensionato quando la <xref:System.Windows.Forms.Control.Anchor%2A> è impostata su `Left, Right` o `Top, Bottom`.  
+    > Questo comportamento è diverso dal comportamento di altri controlli contenitore. In altri controlli contenitore, il controllo figlio non viene ridimensionato quando la <xref:System.Windows.Forms.Control.Anchor%2A> proprietà è impostata su `Left, Right` o `Top, Bottom`.  
   
 2. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.Control.Anchor%2A> , su `Top, Bottom`. Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi dalla parte superiore a quella inferiore della cella.  
   
@@ -56,7 +55,7 @@ Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà
 5. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle.Left>. Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella. Il controllo <xref:System.Windows.Forms.Button> conserva la larghezza, ma l'altezza viene ridimensionata per riempire la cella in verticale.  
   
     > [!NOTE]
-    >  È lo stesso comportamento che si verifica in altri controlli contenitore.  
+    > È lo stesso comportamento che si verifica in altri controlli contenitore.  
   
 6. Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle.Fill>. Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per riempire la cella.  
   

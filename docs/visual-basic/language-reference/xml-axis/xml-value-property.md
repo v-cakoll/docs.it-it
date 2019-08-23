@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 1c7aa1cc32bc1c5ef637f7a606db7e695f1dfaee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9edf95c7cedced55ab2441baf51b7c2052e4654c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942985"
 ---
 # <a name="xml-value-property-visual-basic"></a>Proprietà Value XML (Visual Basic)
-Fornisce l'accesso al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
+Consente di accedere al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,26 +29,26 @@ object.Value
   
 |Termine|Definizione|  
 |---|---|  
-|`object`|Obbligatorio. Raccolta di oggetti <xref:System.Xml.Linq.XElement>.|  
+|`object`|Richiesto. Raccolta di oggetti <xref:System.Xml.Linq.XElement>.|  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto `String` che contiene il valore del primo elemento della raccolta, o `Nothing` se la raccolta è vuota.  
+ Oggetto `String` che contiene il valore del primo elemento della raccolta o `Nothing` se l'insieme è vuoto.  
   
 ## <a name="remarks"></a>Note  
- Il <xref:System.Xml.Linq.XElement.Value%2A> proprietà rende più semplice accedere al valore del primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti. Questa proprietà controlla innanzitutto se la raccolta contiene almeno un oggetto. Se la raccolta è vuota, questa proprietà restituisce `Nothing`. In caso contrario, questa proprietà restituisce il valore della <xref:System.Xml.Linq.XElement.Value%2A> proprietà del primo elemento nella raccolta.  
+ La <xref:System.Xml.Linq.XElement.Value%2A> proprietà consente di accedere facilmente al valore del primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti. Questa proprietà verifica innanzitutto se la raccolta contiene almeno un oggetto. Se la raccolta è vuota, questa proprietà restituisce `Nothing`. In caso contrario, questa proprietà restituisce il valore <xref:System.Xml.Linq.XElement.Value%2A> della proprietà del primo elemento nella raccolta.  
   
 > [!NOTE]
->  Quando si accede al valore di un attributo XML utilizzando il '\@' identificatore, viene restituito il valore dell'attributo come un `String` e non è necessario specificare in modo esplicito il <xref:System.Xml.Linq.XAttribute.Value%2A> proprietà.  
+> Quando si accede al valore di un attributo XML usando l'identificatore\@'', il valore dell'attributo viene restituito `String` come e non è necessario specificare in modo esplicito la <xref:System.Xml.Linq.XAttribute.Value%2A> proprietà.  
   
- Per accedere agli altri elementi in una raccolta, è possibile usare la proprietà dell'indicizzatore di estensione XML. Per altre informazioni, vedere [proprietà dell'indicizzatore di estensione](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Per accedere ad altri elementi di una raccolta, è possibile usare la proprietà dell'indicizzatore di estensione XML. Per altre informazioni, vedere [Proprietà Indexer di estensione](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
 ## <a name="inheritance"></a>Ereditarietà  
- La maggior parte degli utenti non dovranno implementare <xref:System.Collections.Generic.IEnumerable%601>e pertanto possono ignorare questa sezione.  
+ La maggior parte degli utenti non dovrà <xref:System.Collections.Generic.IEnumerable%601>implementare e pertanto può ignorare questa sezione.  
   
- Il <xref:System.Xml.Linq.XElement.Value%2A> è una proprietà estensione per i tipi che implementano `IEnumerable(Of XElement)`. L'associazione di questa proprietà di estensione è simile all'associazione di metodi di estensione: se un tipo implementa una delle interfacce e definisce una proprietà con il nome "Value", tale proprietà ha la precedenza sulla proprietà di estensione. In altre parole, ciò <xref:System.Xml.Linq.XElement.Value%2A> può eseguire l'override di proprietà mediante la definizione di una nuova proprietà in una classe che implementa `IEnumerable(Of XElement)`.  
+ La <xref:System.Xml.Linq.XElement.Value%2A> proprietà è una proprietà di estensione per i tipi `IEnumerable(Of XElement)`che implementano. Il binding di questa proprietà di estensione è analogo all'associazione dei metodi di estensione: se un tipo implementa una delle interfacce e definisce una proprietà con il nome "value", la proprietà ha la precedenza sulla proprietà di estensione. In altre parole, è <xref:System.Xml.Linq.XElement.Value%2A> possibile eseguire l'override di questa proprietà definendo una nuova proprietà in una classe che `IEnumerable(Of XElement)`implementa.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Xml.Linq.XElement.Value%2A> per accedere al primo nodo in una raccolta di proprietà <xref:System.Xml.Linq.XElement> oggetti. L'esempio Usa la proprietà child axis per ottenere la raccolta di tutti i nodi figlio denominati `phone` che si trovano i `contact` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare la <xref:System.Xml.Linq.XElement.Value%2A> proprietà per accedere al primo nodo di una raccolta di <xref:System.Xml.Linq.XElement> oggetti. Nell'esempio viene utilizzata la proprietà Axis Child per ottenere la raccolta di tutti i nodi `phone` figlio denominati `contact` presenti nell'oggetto.  
   
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
@@ -57,7 +57,7 @@ object.Value
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come ottenere il valore di un attributo XML da una raccolta di <xref:System.Xml.Linq.XAttribute> oggetti. L'esempio Usa la proprietà axis dell'attributo per visualizzare il valore della `type` attributo per tutti i `phone` elementi.  
+ Nell'esempio seguente viene illustrato come ottenere il valore di un attributo XML da una raccolta di <xref:System.Xml.Linq.XAttribute> oggetti. Nell'esempio viene utilizzata la proprietà axis dell'attributo per visualizzare il valore `type` dell'attributo per tutti `phone` gli elementi.  
   
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   

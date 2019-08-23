@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a7be97ef3184c6836cd67e47b4e9383214f1b5f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7ff68ce5f612255f41ce3a7c6f2526c3a340cfcd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629405"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967318"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quando si verificano due problemi diversi:  
@@ -31,7 +31,7 @@ L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quand
   
 - Lo stato di apartment COM di un thread è diverso da quello richiesto. Questo problema può causare l'uso di proxy per componenti COM associati a un modello di threading diverso da quello corrente. A sua volta, questo comportamento può provocare la generazione di un'eccezione <xref:System.InvalidCastException> quando viene chiamato l'oggetto COM tramite interfacce che non sono configurate per il marshalling tra diversi apartment.  
   
-- Lo stato di apartment COM del thread è diverso da quello previsto. Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md) (RCW). Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.  
+- Lo stato di apartment COM del thread è diverso da quello previsto. Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW). Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.  
   
 ## <a name="cause"></a>Causa  
   

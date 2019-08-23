@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 4565781dd6e30bd88c899a9c098c28e3fd5b3870
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922263"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
 Classi e struct sono due dei costrutti di base del Common Type System in .NET Framework. Ognuno di essi è costituito essenzialmente da una struttura di dati che incapsula un set di dati e comportamenti che formano insieme un'unità logica. I dati e i comportamenti sono i *membri* della classe o del tipo struct e ne includono i metodi, le proprietà, gli eventi e così via, come illustrato più avanti in questo argomento.  
@@ -60,7 +60,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
   
 - [Indicizzatori](../indexers/index.md)  
   
-- [Operatori](../statements-expressions-operators/operators.md)  
+- [Operatori](../../language-reference/operators/index.md)  
   
 - [Tipi annidati](./nested-types.md)  
   

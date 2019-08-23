@@ -1,23 +1,23 @@
 ---
-title: <message> elemento di <wsFederationHttpBinding>
+title: <message>elemento di<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769876"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931584"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<messaggio > dell'elemento \<wsFederationHttpBinding >
-Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<elemento > del messaggio \<di WSFederationHttpBinding >
+Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<associazione WSFederationHttpBinding >](wsfederationhttpbinding.md).  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<wsFederatedBinding>  
 \<binding>  
 \<security>  
-\<messaggio >  
+\<> messaggi  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,16 +84,16 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<wsF
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |algorithmSuite|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. Vedere la tabella "Attributo algorithmSuite" per i valori validi di questo attributo. Il valore predefinito è `Basic256`.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).|  
-|issuedKeyType|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Il valore predefinito è `SymmetricKey`. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedKeyType|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -Dipero<br />-PublicKey<br /><br /> Il valore predefinito è `SymmetricKey`. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Stringa che contiene un URI che specifica il tipo di token da emettere. Il valore predefinito è `null`.|  
 |negotiateServiceCredential|Valore booleano che specifica se la credenziale del servizio deve essere scambiata come parte della negoziazione o se è disponibile fuori banda. L'impostazione predefinita è `true`, a indicare che la credenziale del servizio viene negoziata.|  
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Basic128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Basic192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -114,18 +114,18 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<wsF
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Specifica un endpoint che emette un token di sicurezza. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Specifica l'indirizzo dell'endpoint dell'emittente.|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Raccolta di parametri della richiesta di token. Ciascun parametro è un elemento XML.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Raccolta di parametri della richiesta di token. Ciascun parametro è un elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -133,8 +133,8 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<wsF
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

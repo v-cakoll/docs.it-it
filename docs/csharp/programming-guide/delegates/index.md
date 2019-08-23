@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: dfb957247a50d16d2aa4c3c4be147e6badf0703a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 80878ec1a592a368db246fc294ebc42556874832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590610"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921936"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -23,7 +23,7 @@ Un [delegate](../../language-reference/keywords/delegate.md) è un tipo che rapp
  Qualsiasi metodo di qualsiasi classe o struct accessibile che corrisponde al tipo di delegato può essere assegnato al delegato. Il metodo può essere un metodo statico o di istanza. In questo modo è possibile modificare le chiamate ai metodi a livello di codice, nonché inserire nuovo codice nelle classi esistenti.  
   
 > [!NOTE]
->  Nel contesto di overload dei metodi, la firma di un metodo non include il valore restituito, mentre nel contesto dei delegati, la firma include il valore restituito. In altre parole, un metodo deve restituire lo stesso tipo del delegato.  
+> Nel contesto di overload dei metodi, la firma di un metodo non include il valore restituito, mentre nel contesto dei delegati, la firma include il valore restituito. In altre parole, un metodo deve restituire lo stesso tipo del delegato.  
   
  La possibilità di fare riferimento a un metodo come parametro rende i delegati ideali per la definizione di metodi di callback. È ad esempio possibile passare un riferimento a un metodo per il confronto di due oggetti passati come argomento a un algoritmo di ordinamento. Poiché il codice di confronto è in una routine separata, l'algoritmo di ordinamento può essere scritto in modo più generale.  
   

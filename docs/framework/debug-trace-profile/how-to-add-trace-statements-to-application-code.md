@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948016"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione
-I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Scrivere**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, e **esito negativo**. Questi metodi possono essere suddivisi in due categorie: **Scrivere**, **WriteLine**, e **esito negativo** tutti generano output in modo non condizionale, mentre **WriteIf**, **WriteLineIf**e  **L'asserzione** verificano una condizione booleana e scrivono o non scrivono sul valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
+I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine**e Fail generano l'output in modo **non** condizionale, mentre **WriteIf**, **WriteLineIf**e **Assert** verificano una condizione booleana e scrivono o non scrivono in base al valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
   
  Quando si progetta la traccia e si esegue il debug strategia, è necessario considerare come si desidera visualizzare l'output. Più istruzioni **Write** costituite da informazioni non correlate creeranno un log che è difficile da leggere. D'altra parte, usando **WriteLine** per inserire istruzioni correlate in righe separate, potrebbe essere difficile distinguere quali informazioni sono correlate. In generale, usare più istruzioni **Write** quando si vogliono combinare informazioni provenienti da più origini per creare un singolo messaggio informativo e usare l’istruzione **WriteLine** quando si intende creare un unico messaggio completo.  
   
@@ -82,7 +82,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
     ```  
   
     > [!NOTE]
-    >  È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
+    > È possibile usare **Assert** con operazioni di traccia e debug. In questo esempio viene restituito lo stack di chiamate nella raccolta **Listeners**. Per altre informazioni, vedere [Asserzioni nel codice gestito](/visualstudio/debugger/assertions-in-managed-code) e <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

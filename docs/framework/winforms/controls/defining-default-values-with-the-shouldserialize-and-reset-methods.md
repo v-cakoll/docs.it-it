@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969089"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-`ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile specificare per una proprietà, se la proprietà non presenta un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare il <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:
+`ShouldSerialize`e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non dispone di un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è necessario applicare <xref:System.ComponentModel.DefaultValueAttribute> e fornire il valore predefinito al costruttore della classe Attribute. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:
 
-- La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.
+- La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stata modificata rispetto al valore predefinito.
 
-- L'utente può fare doppio clic sulla proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.
+- L'utente può fare clic con il pulsante destro del mouse sulla proprietà e scegliere **Reimposta** per ripristinare il valore predefinito della proprietà.
 
 - La finestra di progettazione genera codice più efficiente.
 
     > [!NOTE]
-    >  Entrambi si applicano i <xref:System.ComponentModel.DefaultValueAttribute> o fornire `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* metodi. Non utilizzare entrambi.
+    > Applicare o fornire <xref:System.ComponentModel.DefaultValueAttribute> `Reset`i metodi *PropertyName* e `ShouldSerialize` *PropertyName* . Non usare entrambi.
 
- Il `Reset` *NomeProprietà* metodo imposta una proprietà sul valore predefinito, come illustrato nel frammento di codice seguente.
+ Il `Reset`metodo *PropertyName* imposta una proprietà sul relativo valore predefinito, come illustrato nel frammento di codice seguente.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  Se una proprietà non ha un `Reset` metodo, non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito fornito nella relativa dichiarazione, il `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in Visual Studio.
+> Se una proprietà non dispone di un `Reset` metodo, non è contrassegnata con <xref:System.ComponentModel.DefaultValueAttribute>un oggetto e non dispone di un valore predefinito specificato nella relativa dichiarazione, `Reset` l'opzione per tale proprietà è disabilitata nel menu di scelta rapida della finestra **Proprietà** di Progettazione Windows Form in Visual Studio.
 
- Finestre di progettazione, ad esempio Visual Studio usare il `ShouldSerialize` *NomeProprietà* metodo per verificare se una proprietà è stata modificata rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo in tal modo per il codice più efficiente generazione. Ad esempio:
+ Le finestre di progettazione, ad esempio `ShouldSerialize`Visual Studio, usano il metodo *PropertyName* per verificare se una proprietà è cambiata rispetto al valore predefinito e scrivere codice nel form solo se una proprietà viene modificata, consentendo così una generazione di codice più efficiente. Ad esempio:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Segue un esempio di codice completo.
+ Di seguito è riportato un esempio di codice completo.
 
 ```vb
 Option Explicit
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- In questo caso, anche quando il valore della variabile privata accessibile dal `MyFont` proprietà è `null`, il Visualizzatore proprietà non viene visualizzata `null`; in alternativa, viene visualizzato il <xref:System.Windows.Forms.Control.Font%2A> proprietà dell'elemento padre, se non è `null`, o il valore predefinito <xref:System.Windows.Forms.Control.Font%2A> valore definito <xref:System.Windows.Forms.Control>. In questo modo il valore predefinito per `MyFont` non è possibile impostare semplicemente e un <xref:System.ComponentModel.DefaultValueAttribute> non può essere applicato a questa proprietà. Al contrario, il `ShouldSerialize` e `Reset` devono essere implementati i metodi per il `MyFont` proprietà.
+ In questo caso, anche quando il valore della variabile privata a cui si accede `MyFont` tramite la `null`proprietà è, il Visualizzatore proprietà non `null`viene visualizzato; in caso contrario <xref:System.Windows.Forms.Control.Font%2A> , Visualizza la proprietà dell'elemento padre, in `null`caso contrario. o il valore <xref:System.Windows.Forms.Control.Font%2A> predefinito definito in <xref:System.Windows.Forms.Control>. Pertanto, il valore predefinito `MyFont` di non può essere semplicemente impostato e <xref:System.ComponentModel.DefaultValueAttribute> non è possibile applicare un oggetto a questa proprietà. Al contrario, `ShouldSerialize` è `Reset` necessario implementare i metodi e per `MyFont` la proprietà.
 
 ## <a name="see-also"></a>Vedere anche
 
