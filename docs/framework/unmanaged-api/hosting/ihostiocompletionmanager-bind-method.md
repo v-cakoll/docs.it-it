@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d73b8b635be78472374668bbcc36541616705651
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de39de96cd7c7ba0be2dc1bea78f79cfe996575c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736552"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937559"
 ---
-# <a name="ihostiocompletionmanagerbind-method"></a><span data-ttu-id="ac2f6-102">Metodo IHostIoCompletionManager::Bind</span><span class="sxs-lookup"><span data-stu-id="ac2f6-102">IHostIoCompletionManager::Bind Method</span></span>
-<span data-ttu-id="ac2f6-103">Associa l'handle specificato per una porta di completamento i/o che è stata creata da una precedente chiamata a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span><span class="sxs-lookup"><span data-stu-id="ac2f6-103">Binds the specified handle to an I/O completion port that has been created by an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
+# <a name="ihostiocompletionmanagerbind-method"></a><span data-ttu-id="5f9aa-102">Metodo IHostIoCompletionManager::Bind</span><span class="sxs-lookup"><span data-stu-id="5f9aa-102">IHostIoCompletionManager::Bind Method</span></span>
+<span data-ttu-id="5f9aa-103">Associa l'handle specificato a una porta di completamento di I/O creata da una chiamata precedente a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span><span class="sxs-lookup"><span data-stu-id="5f9aa-103">Binds the specified handle to an I/O completion port that has been created by an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac2f6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ac2f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f9aa-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5f9aa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Bind (  
@@ -36,39 +36,39 @@ HRESULT Bind (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac2f6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ac2f6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f9aa-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5f9aa-105">Parameters</span></span>  
  `hPort`  
- <span data-ttu-id="ac2f6-106">[in] La porta di completamento i/o a cui associare `hHandle`.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-106">[in] The I/O completion port to which to bind `hHandle`.</span></span> <span data-ttu-id="ac2f6-107">Se il valore di `hPort` è null, `hHandle` è associata alla porta di completamento i/o predefinito.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-107">If the value of `hPort` is null, `hHandle` is bound to the default I/O completion port.</span></span>  
+ <span data-ttu-id="5f9aa-106">in Porta di completamento I/O a cui eseguire l' `hHandle`associazione.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-106">[in] The I/O completion port to which to bind `hHandle`.</span></span> <span data-ttu-id="5f9aa-107">Se il valore di `hPort` è null, `hHandle` viene associato alla porta di completamento i/O predefinita.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-107">If the value of `hPort` is null, `hHandle` is bound to the default I/O completion port.</span></span>  
   
  `hHandle`  
- <span data-ttu-id="ac2f6-108">[in] L'handle del sistema operativo a cui associarsi `hPort`.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-108">[in] The operating system handle to bind to `hPort`.</span></span>  
+ <span data-ttu-id="5f9aa-108">in Handle del sistema operativo a cui eseguire `hPort`l'associazione.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-108">[in] The operating system handle to bind to `hPort`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ac2f6-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ac2f6-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f9aa-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5f9aa-109">Return Value</span></span>  
   
-|<span data-ttu-id="ac2f6-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ac2f6-110">HRESULT</span></span>|<span data-ttu-id="ac2f6-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ac2f6-111">Description</span></span>|  
+|<span data-ttu-id="5f9aa-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5f9aa-110">HRESULT</span></span>|<span data-ttu-id="5f9aa-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5f9aa-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ac2f6-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="ac2f6-112">S_OK</span></span>|<span data-ttu-id="ac2f6-113">`Bind` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-113">`Bind` returned successfully.</span></span>|  
-|<span data-ttu-id="ac2f6-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ac2f6-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ac2f6-115">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ac2f6-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ac2f6-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ac2f6-117">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-117">The call timed out.</span></span>|  
-|<span data-ttu-id="ac2f6-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ac2f6-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ac2f6-119">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ac2f6-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ac2f6-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ac2f6-121">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ac2f6-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ac2f6-122">E_FAIL</span></span>|<span data-ttu-id="ac2f6-123">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ac2f6-124">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ac2f6-125">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5f9aa-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="5f9aa-112">S_OK</span></span>|<span data-ttu-id="5f9aa-113">`Bind`la restituzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-113">`Bind` returned successfully.</span></span>|  
+|<span data-ttu-id="5f9aa-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5f9aa-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5f9aa-115">Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5f9aa-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5f9aa-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5f9aa-117">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-117">The call timed out.</span></span>|  
+|<span data-ttu-id="5f9aa-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5f9aa-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5f9aa-119">Il chiamante non è il proprietario del blocco.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5f9aa-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5f9aa-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5f9aa-121">Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5f9aa-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5f9aa-122">E_FAIL</span></span>|<span data-ttu-id="5f9aa-123">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5f9aa-124">Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5f9aa-125">Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ac2f6-126">Note</span><span class="sxs-lookup"><span data-stu-id="ac2f6-126">Remarks</span></span>  
- <span data-ttu-id="ac2f6-127">Una porta di completamento i/o viene creata mediante una chiamata a `CreateIoCompletionPort`.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-127">An I/O completion port is created by using a call to `CreateIoCompletionPort`.</span></span> <span data-ttu-id="ac2f6-128">CLR chiama `Bind` per associare un handle a tale porta.</span><span class="sxs-lookup"><span data-stu-id="ac2f6-128">The CLR calls `Bind` to bind a handle to that port.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f9aa-126">Note</span><span class="sxs-lookup"><span data-stu-id="5f9aa-126">Remarks</span></span>  
+ <span data-ttu-id="5f9aa-127">Viene creata una porta di completamento di I/O tramite una chiamata `CreateIoCompletionPort`a.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-127">An I/O completion port is created by using a call to `CreateIoCompletionPort`.</span></span> <span data-ttu-id="5f9aa-128">CLR chiama `Bind` per associare un handle a tale porta.</span><span class="sxs-lookup"><span data-stu-id="5f9aa-128">The CLR calls `Bind` to bind a handle to that port.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ac2f6-129">Quando viene completata una richiesta dei / o, l'host deve chiamare il [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="ac2f6-129">When an I/O request completes, the host must call the [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) method.</span></span>  
+> <span data-ttu-id="5f9aa-129">Quando una richiesta di I/O viene completata, l'host deve chiamare il metodo [ICLRIoCompletionManager:: OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) .</span><span class="sxs-lookup"><span data-stu-id="5f9aa-129">When an I/O request completes, the host must call the [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac2f6-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ac2f6-130">Requirements</span></span>  
- <span data-ttu-id="ac2f6-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac2f6-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f9aa-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5f9aa-130">Requirements</span></span>  
+ <span data-ttu-id="5f9aa-131">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f9aa-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac2f6-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ac2f6-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5f9aa-132">**Intestazione:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="5f9aa-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ac2f6-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ac2f6-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5f9aa-133">**Libreria** Incluso come risorsa in MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="5f9aa-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ac2f6-134">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac2f6-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5f9aa-134">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f9aa-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac2f6-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ac2f6-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f9aa-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5f9aa-135">See also</span></span>
 
-- [<span data-ttu-id="ac2f6-136">Interfaccia ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="ac2f6-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="5f9aa-136">Interfaccia ICLRIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="5f9aa-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
