@@ -3,12 +3,12 @@ title: "Procedura: Compilare un'applicazione Web Form ASP.NET che può riconosce
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910590"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941288"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -62,7 +62,7 @@ ms.locfileid: "64910590"
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Per configurare l'applicazione ASP.NET per l'autenticazione basata su attestazioni  
   
-1. Aggiungere le seguenti voci di sezione di configurazione al file di configurazione *Web.config* subito dopo l'elemento di apertura **\<configuration>**:  
+1. Aggiungere le seguenti voci di sezione di configurazione al file di configurazione *Web.config* subito dopo l'elemento di apertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910590"
     </system.webServer>  
     ```  
   
-5. Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
+5. Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>** , all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>** . Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910590"
 2. Salvare **Default.aspx** e quindi aprire il file code-behind denominato **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  Il file **Default.aspx.cs** potrebbe essere nascosto sotto **Default.aspx** in Esplora soluzioni. Se **Default.aspx.cs** non è visibile, espandere **Default.aspx** facendo clic sul triangolo accanto.  
+    > Il file **Default.aspx.cs** potrebbe essere nascosto sotto **Default.aspx** in Esplora soluzioni. Se **Default.aspx.cs** non è visibile, espandere **Default.aspx** facendo clic sul triangolo accanto.  
   
 3. Sostituire il codice esistente nel metodo **Page_Load** in **Default.aspx.cs** con il codice seguente:  
   

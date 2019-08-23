@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671922"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917479"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperatività di WPF e Win32
 Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, se si ha una grande quantità di codice [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], può essere più efficace riutilizzare tale codice.  
@@ -44,7 +44,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
  Usare l'approccio che meglio soddisfa le esigenze.  
   
 > [!NOTE]
->  Se non è stato usato C++/CLI in precedenza, è possibile notare alcune parole chiave "nuove" `gcnew` , `nullptr` ad esempio e negli esempi di codice di interoperabilità. Queste parole chiave sostituiscono la sintassi di doppio sottolineatura`__gc`precedente () e forniscono una sintassi più naturale per il C++codice gestito in.  Per ulteriori informazioni sulle funzionalità C++gestite di/CLI, vedere [estensioni dei componenti per le piattaforme di runtime](/cpp/windows/component-extensions-for-runtime-platforms) e [Hello, C++/CLI](https://go.microsoft.com/fwlink/?LinkId=98739).  
+> Se non è stato usato C++/CLI in precedenza, è possibile notare alcune parole chiave "nuove" `gcnew` , `nullptr` ad esempio e negli esempi di codice di interoperabilità. Queste parole chiave sostituiscono la sintassi di doppio sottolineatura`__gc`precedente () e forniscono una sintassi più naturale per il C++codice gestito in.  Per ulteriori informazioni sulle funzionalità C++gestite di/CLI, vedere [estensioni dei componenti per le piattaforme di runtime](/cpp/windows/component-extensions-for-runtime-platforms) e [Hello, C++/CLI](https://go.microsoft.com/fwlink/?LinkId=98739).  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>Modo d'uso degli handle di finestra (HWND) in WPF  
@@ -83,7 +83,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
 8. Comunicare con l'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando il riferimento archiviato nel campo statico per impostare proprietà, chiamare metodi e così via.  
   
 > [!NOTE]
->  Tutte le attività di definizione della classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o alcune di esse, per il primo passaggio in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] possono essere eseguite usando la classe parziale predefinita della classe contenuto, se si genera un assembly separato e quindi vi si fa riferimento. Sebbene in genere si <xref:System.Windows.Application> includa un oggetto come parte della compilazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] di in un assembly, <xref:System.Windows.Application> non si finisce di usarlo come parte dell'interoperabilità, ma si usano solo una o più classi radice per i [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file a cui si fa riferimento a dall'applicazione e fanno riferimento alle relative classi parziali. La parte restante della procedura è essenzialmente simile a quella appena descritta.  
+> Tutte le attività di definizione della classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o alcune di esse, per il primo passaggio in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] possono essere eseguite usando la classe parziale predefinita della classe contenuto, se si genera un assembly separato e quindi vi si fa riferimento. Sebbene in genere si <xref:System.Windows.Application> includa un oggetto come parte della compilazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] di in un assembly, <xref:System.Windows.Application> non si finisce di usarlo come parte dell'interoperabilità, ma si usano solo una o più classi radice per i [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file a cui si fa riferimento a dall'applicazione e fanno riferimento alle relative classi parziali. La parte restante della procedura è essenzialmente simile a quella appena descritta.  
 >   
 >  Ognuno di questi passaggi viene illustrato tramite il codice nell'argomento [procedura dettagliata: Hosting di contenuto WPF in](walkthrough-hosting-wpf-content-in-win32.md)Win32.  
   

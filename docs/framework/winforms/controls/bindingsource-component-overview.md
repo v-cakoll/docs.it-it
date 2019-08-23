@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917816"
 ---
 # <a name="bindingsource-component-overview"></a>Cenni preliminari sul componente BindingSource
 Il componente <xref:System.Windows.Forms.BindingSource> è progettato per semplificare il processo di associazione di controlli a un'origine dati sottostante. Il componente <xref:System.Windows.Forms.BindingSource> funge da canale e da origine dati per altri controlli a cui associarli. Fornisce un'astrazione della connessione dati del form passando i comandi all'elenco dei dati sottostante. Inoltre, è possibile aggiungervi dati direttamente, in modo che il componente stesso funga da origine dati.  
@@ -25,7 +25,7 @@ Il componente <xref:System.Windows.Forms.BindingSource> è progettato per sempli
  ![Architettura di data binding e origine associazione](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  In fase di progettazione, alcune azioni, ad esempio il trascinamento di una tabella di database da una finestra dei dati in un form vuoto, comporta la creazione del componente <xref:System.Windows.Forms.BindingSource>, la sua associazione all'origine dati sottostante e l'aggiunta dei controlli con supporto dati in un'unica operazione. Vedere anche [Associare i controlli di Windows Form ai dati in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+> In fase di progettazione, alcune azioni, ad esempio il trascinamento di una tabella di database da una finestra dei dati in un form vuoto, comporta la creazione del componente <xref:System.Windows.Forms.BindingSource>, la sua associazione all'origine dati sottostante e l'aggiunta dei controlli con supporto dati in un'unica operazione. Vedere anche [Associare i controlli di Windows Form ai dati in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>Componente BindingSource come origine dati  
  Se si avvia l'aggiunta di elementi al componente <xref:System.Windows.Forms.BindingSource> senza prima specificare un elenco a cui associarlo, il componente funge da origine dati list-style e accetta tali elementi aggiunti.  
@@ -38,7 +38,7 @@ Il componente <xref:System.Windows.Forms.BindingSource> è progettato per sempli
 ## <a name="data-manipulation"></a>Modifica dei dati  
  L'oggetto <xref:System.Windows.Forms.BindingSource> agisce come <xref:System.Windows.Forms.CurrencyManager> per tutte le associazioni e può, pertanto, fornire l'accesso alle informazioni su valuta e posizione relativamente all'origine dati. La tabella seguente illustra i membri che il componente <xref:System.Windows.Forms.BindingSource> fornisce per l'accesso e la modifica dei dati sottostanti.  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
 |Proprietà<xref:System.Windows.Forms.BindingSource.Current%2A>|Ottiene l'elemento corrente dell'origine dati.|  
 |Proprietà<xref:System.Windows.Forms.BindingSource.Position%2A>|Ottiene o imposta la posizione corrente nell'elenco sottostante.|  
@@ -52,7 +52,7 @@ Il componente <xref:System.Windows.Forms.BindingSource> è progettato per sempli
 ## <a name="sorting-and-filtering"></a>Ordinamento e filtro  
  In genere, l'utente lavora con una visualizzazione ordinata o filtrata dell'origine dati. La tabella seguente illustra i membri forniti dall'origine dati del componente <xref:System.Windows.Forms.BindingSource>.  
   
-|Member|DESCRIZIONE|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |Proprietà<xref:System.Windows.Forms.BindingSource.Sort%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingList>, ottiene o imposta un nome di colonna usato per l'ordinamento e il criterio di ordinamento. Se l'origine dati è un <xref:System.ComponentModel.IBindingListView> e supporta l'ordinamento avanzato, ottiene più nomi di colonna usati per l'ordinamento e il criterio di ordinamento|  
 |Proprietà<xref:System.Windows.Forms.BindingSource.Filter%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingListView>, ottiene o imposta l'espressione usata per filtrare le righe da visualizzare.|  

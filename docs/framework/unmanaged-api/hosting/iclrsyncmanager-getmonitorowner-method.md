@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c986de068cd79ae3662c82ed24906d42bf2780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e08af840d1c4a654fa9b9ff8b2064f5265afaf9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943248"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>Metodo ICLRSyncManager::GetMonitorOwner
-Ottiene il [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza che possiede il monitoraggio identificato dal cookie specificato.  
+Ottiene l'istanza di [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) a cui appartiene il monitoraggio identificato dal cookie specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,36 +38,36 @@ HRESULT GetMonitorOwner (
   
 ## <a name="parameters"></a>Parametri  
  `cookie`  
- [in] Il cookie associato al monitoraggio.  
+ in Cookie associato al monitoraggio.  
   
  `ppOwnerHostTask`  
- [out] Un puntatore al `IHostTask` che possiede attualmente il monitoraggio o null se la proprietà non dispone di alcuna attività.  
+ out Puntatore all'oggetto `IHostTask` che attualmente possiede il monitoraggio oppure null se nessuna attività ha la proprietà.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`GetMonitorOwner`la restituzione è riuscita.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- L'host chiama in genere `GetMonitorOwner` come parte di un meccanismo di rilevamento di deadlock. Il cookie è associato a un monitoraggio quando viene creato mediante una chiamata a [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).  
+ L'host chiama `GetMonitorOwner` in genere come parte di un meccanismo di rilevamento di deadlock. Il cookie è associato a un monitoraggio quando viene creato tramite una chiamata a [IHostSyncManager:: CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).  
   
 > [!NOTE]
->  Una chiamata a rilasciare l'evento sottostante il monitoraggio potrebbe essere bloccata, ma non un deadlock, ovvero se una chiamata a questo metodo è attualmente in vigore nel cookie associato che monitora il. Altre attività può anche bloccare se tentano di acquisire il monitor.  
+> Una chiamata per rilasciare l'evento sottostante al monitoraggio potrebbe bloccarsi, ma non deadlock, se una chiamata a questo metodo è attualmente attiva sul cookie associato a tale monitoraggio. Anche altre attività potrebbero bloccarsi se tentano di acquisire questo monitoraggio.  
   
- `GetMonitorOwner` sempre restituisce immediatamente un valore e può essere chiamato in qualsiasi momento dopo una chiamata a `CreateMonitorEvent`. L'host non è necessario attendere un'attività è in attesa dell'evento.  
+ `GetMonitorOwner`viene sempre restituito immediatamente e può essere chiamato in qualsiasi momento dopo una `CreateMonitorEvent`chiamata a. L'host non deve attendere finché un'attività non è in attesa dell'evento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

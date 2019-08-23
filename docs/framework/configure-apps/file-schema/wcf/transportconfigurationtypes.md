@@ -2,12 +2,12 @@
 title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: b3683a198ec403fb9966bb902c936108fd043bfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfd2147a8e772848fc98cab7a875a51bdb53b5cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941165"
 ---
 # <a name="transportconfigurationtypes"></a>\<transportConfigurationTypes>
 Rappresenta una raccolta di elementi di configurazione che identificano il tipo di un determinato trasporto. Può essere usato per aggiungere protocolli WAS personalizzati.  
@@ -41,17 +41,17 @@ Rappresenta una raccolta di elementi di configurazione che identificano il tipo 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-transportconfigurationtype.md)|Aggiunge un elemento di configurazione che identifica il tipo di un determinato trasporto.|  
+|[\<add>](add-of-transportconfigurationtype.md)|Aggiunge un elemento di configurazione che identifica il tipo di un determinato trasporto.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto.|  
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto.|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

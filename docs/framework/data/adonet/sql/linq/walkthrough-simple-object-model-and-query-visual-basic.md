@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971791"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946773"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)
 
@@ -121,7 +121,7 @@ Viene inoltre dichiarato un oggetto `Table(Of Customer)` che fungerà da tabella
 
 ## <a name="creating-a-simple-query"></a>Creazione di una query semplice
 
-In questo passaggio viene creata una query per cercare i clienti nella tabella di database Customers residenti nell'area londinese. Il codice della query in questo passaggio descrive semplicemente la query, ma non la esegue. Questo approccio è noto come *esecuzione posticipata*. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+In questo passaggio viene creata una query per cercare i clienti nella tabella di database Customers residenti nell'area londinese. Il codice della query in questo passaggio descrive semplicemente la query, ma non la esegue. Questo approccio è noto come *esecuzione posticipata*. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Verrà anche prodotto un output del log per mostrare i comandi SQL generati da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Questa funzionalità di registrazione, che usa <xref:System.Data.Linq.DataContext.Log%2A>, è utile per eseguire il debug e per determinare che i comandi inviati al database rappresentano accuratamente la query.
 

@@ -1,5 +1,5 @@
 ---
-title: Istruzione end (Visual Basic)
+title: Istruzione End (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944459"
 ---
 # <a name="end-statement"></a>Istruzione End
-Termina l'esecuzione immediatamente.  
+Termina immediatamente l'esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,24 +31,24 @@ End
 ```  
   
 ## <a name="remarks"></a>Note  
- È possibile inserire il `End` istruzione in un punto qualsiasi in una procedura per forzare l'intera applicazione per arrestare l'esecuzione. `End` Chiude tutti i file aperti con un `Open` istruzione e Cancella tutte le variabili dell'applicazione. L'applicazione viene chiusa non appena non sono presenti altri programmi che contiene riferimenti a oggetti e non del relativo codice è in esecuzione.  
+ È possibile inserire l' `End` istruzione in un punto qualsiasi di una procedura per forzare l'arresto dell'esecuzione dell'intera applicazione. `End`chiude tutti i file aperti con `Open` un'istruzione e cancella tutte le variabili dell'applicazione. L'applicazione viene chiusa non appena non è presente alcun altro programma che contiene riferimenti ai relativi oggetti e nessun codice è in esecuzione.  
   
 > [!NOTE]
->  Il `End` istruzione interrompe l'esecuzione di codice in modo anomalo e non richiama i `Dispose` o `Finalize` metodo o qualsiasi altro codice di Visual Basic. Riferimenti a oggetti attivati da altri programmi vengono invalidati. Se un' `End` viene rilevata l'istruzione all'interno di un `Try` oppure `Catch` blocco di controllo non viene passato al corrispondente `Finally` blocco.  
+> L' `End` istruzione arresta l'esecuzione del codice improvvisamente e non richiama il `Dispose` metodo o `Finalize` o qualsiasi altro codice Visual Basic. I riferimenti agli oggetti contenuti in altri programmi vengono invalidati. Se viene `End` rilevata un'istruzione `Try` all' `Catch` interno di un blocco o, il controllo non `Finally` passa al blocco corrispondente.  
   
- Il `Stop` istruzione sospende l'esecuzione, ma a differenza `End`, non chiudere qualsiasi file o cancellare le variabili di qualsiasi tipo, a meno che non si è verificato in un file eseguibile compilato (.exe).  
+ L' `Stop` istruzione sospende l'esecuzione, ma, a `End`differenza di, non chiude alcun file né cancella alcuna variabile, a meno che non venga rilevata in un file eseguibile compilato (exe).  
   
- Poiché `End` termina l'applicazione senza tenere conto di tutte le risorse che potrebbero essere aperte, è consigliabile provare a chiudere correttamente l'applicazione prima di poterla usare. Ad esempio, se l'applicazione presenta i form aperti, è necessario chiuderli prima che venga raggiunta la `End` istruzione.  
+ Poiché `End` termina l'applicazione senza dover partecipare a risorse che potrebbero essere aperte, provare a chiuderla prima di usarla. Se ad esempio nell'applicazione sono presenti moduli aperti, è necessario chiuderli prima che il controllo raggiunga l' `End` istruzione.  
   
- È consigliabile usare `End` sporadicamente e solo quando è necessario arrestare immediatamente. Le modalità usuali per interrompere una routine ([istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) e [Esci da istruzione](../../../visual-basic/language-reference/statements/exit-statement.md)) non solo la routine, ma anche offrire l'opportunità di chiudere correttamente il codice chiamante. Un'applicazione console, ad esempio, può semplicemente `Return` dal `Main` procedure.  
+ Si consiglia di `End` usare con parsimonia e solo quando è necessario arrestare immediatamente. I modi normali per terminare una procedura (istruzione[return](../../../visual-basic/language-reference/statements/return-statement.md) e [istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)) non solo chiudono la stored procedure, ma forniscono anche al codice chiamante la possibilità di chiudere in modo corretto. Un'applicazione console, ad esempio, può semplicemente `Return` `Main` dalla procedura.  
   
 > [!IMPORTANT]
->  Il `End` istruzione chiama il <xref:System.Environment.Exit%2A> metodo il <xref:System.Environment> classe il <xref:System> dello spazio dei nomi. <xref:System.Environment.Exit%2A> è necessario disporre `UnmanagedCode` l'autorizzazione. In caso contrario, un <xref:System.Security.SecurityException> errore si verifica.  
+> L' `End` istruzione chiama il <xref:System.Environment.Exit%2A> <xref:System.Environment> metodo<xref:System> della classe nello spazio dei nomi. <xref:System.Environment.Exit%2A>richiede l' `UnmanagedCode` autorizzazione. In caso contrario, si verificherà un <xref:System.Security.SecurityException> errore.  
   
- Quando è seguito da una parola chiave aggiuntiva, [finali \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delinea la fine della definizione di procedura appropriata o il blocco. Ad esempio, `End Function` termina la definizione di un `Function` procedure.  
+ Quando seguito da una parola chiave aggiuntiva, la [parola chiave End \<> istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delimita la fine della definizione della procedura o del blocco appropriato. Ad esempio, `End Function` termina la definizione di una `Function` stored procedure.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `End` istruzione per terminare l'esecuzione di codice se l'utente lo richiede.  
+ Nell'esempio seguente viene utilizzata `End` l'istruzione per terminare l'esecuzione del codice se richiesto dall'utente.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
@@ -59,4 +59,4 @@ End
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Istruzione Stop](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Fine \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Istruzione \<end > parola chiave](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

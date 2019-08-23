@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833795"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935734"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 
@@ -117,7 +117,7 @@ Per la pulizia delle risorse del sistema operativo, usare <xref:System.Runtime.I
 
 CLR deve essere in grado di identificare i casi di blocco del codice, in modo da stabilire se procedere all'eliminazione dell'oggetto <xref:System.AppDomain> invece di interrompere semplicemente il thread.  L'interruzione del thread può risultare pericolosa perché i dati elaborati dal thread possono rimanere in uno stato incoerente. È pertanto necessario riciclare l'intero oggetto <xref:System.AppDomain>.  La mancata identificazione di un blocco può causare deadlock o risultati non corretti. Per identificare le aree di blocco, usare i metodi <xref:System.Threading.Thread.BeginCriticalRegion%2A> e <xref:System.Threading.Thread.EndCriticalRegion%2A>.  Si tratta di metodi statici inclusi nella classe <xref:System.Threading.Thread> che si applicano solo al thread corrente e aiutano a impedire che un thread modifichi il conteggio dei blocchi di un altro thread.
 
-Poiché <xref:System.Threading.Monitor.Enter%2A> e <xref:System.Threading.Monitor.Exit%2A> hanno questa notifica CLR incorporata, si consiglia il loro uso. Lo stesso vale per l'[istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md), che usa questi metodi.
+Poiché <xref:System.Threading.Monitor.Enter%2A> e <xref:System.Threading.Monitor.Exit%2A> hanno questa notifica CLR incorporata, si consiglia il loro uso. Lo stesso vale per l'[istruzione lock](../../csharp/language-reference/keywords/lock-statement.md), che usa questi metodi.
 
 Gli altri meccanismi di blocco, ad esempio gli spinlock e l'oggetto <xref:System.Threading.AutoResetEvent>, devono chiamare questi metodi per notificare a CLR l'ingresso in una sezione critica.  Questi metodi non acquisiscono alcun blocco, ma informano CLR che il codice è in esecuzione in una sezione critica e che l'interruzione del thread può causare problemi di incoerenza dello stato condiviso.  Se è stato definito un tipo di blocco specifico, ad esempio una classe <xref:System.Threading.ReaderWriterLock> personalizzata, usare questi metodi di conteggio dei blocchi.
 
@@ -143,7 +143,7 @@ Se il codice usa un oggetto COM, evitare di condividere tale oggetto COM tra dom
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>I blocchi non funzionano a livello di processo o tra domini delle applicazioni.
 
-In precedenza, <xref:System.Threading.Monitor.Enter%2A> e l'[istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md) venivano usati per creare blocchi di processo globali.  Ciò si verifica, ad esempio, quando si applica un blocco sulle classi Agile di <xref:System.AppDomain>, ad esempio le istanze di <xref:System.Type> da assembly non condivisi, gli oggetti <xref:System.Threading.Thread>, le stringhe centralizzate e alcune stringhe condivise tra domini delle applicazioni tramite la comunicazione remota.  Questi blocchi non sono più a livello di processo.  Per identificare la presenza di un blocco tra diversi domini delle applicazioni a livello di processo, determinare se il codice all'interno del blocco fa uso di risorse esterne persistenti, ad esempio un file su disco o eventualmente un database.
+In precedenza, <xref:System.Threading.Monitor.Enter%2A> e l'[istruzione lock](../../csharp/language-reference/keywords/lock-statement.md) venivano usati per creare blocchi di processo globali.  Ciò si verifica, ad esempio, quando si applica un blocco sulle classi Agile di <xref:System.AppDomain>, ad esempio le istanze di <xref:System.Type> da assembly non condivisi, gli oggetti <xref:System.Threading.Thread>, le stringhe centralizzate e alcune stringhe condivise tra domini delle applicazioni tramite la comunicazione remota.  Questi blocchi non sono più a livello di processo.  Per identificare la presenza di un blocco tra diversi domini delle applicazioni a livello di processo, determinare se il codice all'interno del blocco fa uso di risorse esterne persistenti, ad esempio un file su disco o eventualmente un database.
 
 Si noti che l'acquisizione di un blocco all'interno di un oggetto <xref:System.AppDomain> può provocare problemi se il codice protetto usa una risorsa esterna, perché il codice può essere eseguito simultaneamente tra più domini delle applicazioni.  Ciò può costituire un problema quando si scrive in un file di log o si esegue il binding a un socket per l'intero processo.  Queste modifiche indicano che non esiste un modo semplice, usando il codice gestito, per ottenere un blocco globale del processo, se non usando un'istanza denominata di <xref:System.Threading.Mutex> o <xref:System.Threading.Semaphore>.  Creare codice che non viene eseguito simultaneamente in due domini delle applicazioni oppure usare la classe <xref:System.Threading.Mutex> o <xref:System.Threading.Semaphore>.  Se non è possibile modificare il codice esistente, non usare un mutex denominato Win32 per ottenere la sincronizzazione, perché l'esecuzione in modalità fiber implica l'impossibilità di garantire che un mutex venga acquisito e rilasciato dallo stesso thread del sistema operativo.  È necessario usare la classe gestita <xref:System.Threading.Mutex>, una classe denominata <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.AutoResetEvent> oppure una classe <xref:System.Threading.Semaphore> per sincronizzare il blocco del codice in modo che CLR ne sia consapevole invece che sincronizzare il blocco tramite codice non gestito.
 
@@ -241,7 +241,7 @@ Per SQL Server, tutti i metodi usati per introdurre la sincronizzazione o il thr
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Non applicare blocchi indefiniti nel codice non gestito
 
-L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco utilizzando un Windows primitiva di sincronizzazione è un chiaro esempio è ammissibile.  Il blocco in una chiamata a `ReadFile` su un socket deve essere evitata, se possibile, idealmente l'API di Windows deve fornire un meccanismo di timeout un'operazione simile al seguente.
+L'inserimento di un blocco nel codice non gestito invece che in quello gestito può determinare un attacco Denial of Service perché CLR non è in grado di interrompere il thread.  Un thread bloccato impedisce a CLR di scaricare <xref:System.AppDomain>, se non mediante l'esecuzione di operazioni assolutamente non sicure.  Il blocco mediante una primitiva di sincronizzazione di Windows è un esempio chiaro di qualcosa che non è consentito.  Il blocco in una chiamata `ReadFile` a in un socket deve essere evitato se possibile. idealmente, l'API Windows deve fornire un meccanismo per il timeout di un'operazione di questo tipo.
 
 Tutti i metodi che effettuano chiamate nel codice nativo dovrebbero usare una chiamata Win32 con un valore finito e ragionevole di timeout.  Anche se autorizzato a specificare il timeout, l'utente non deve avere la possibilità di impostare un timeout infinito, a meno che non abbia autorizzazioni di sicurezza specifiche.  Come indicazione generale, tenere presente che, se un metodo si blocca per più di circa 10 secondi, sarà necessario usare una versione che supporta i timeout oppure disporre di supporto CLR aggiuntivo.
 
@@ -265,7 +265,7 @@ I finalizzatori non devono avere alcun problema di sincronizzazione. Non usare u
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Evitare la memoria non gestita, se possibile
 
-La memoria non gestita può andare perduta, proprio come un handle del sistema operativo. Se possibile, provare a usare la memoria nello stack tramite [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), un oggetto gestito bloccato, come l'[istruzione fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md), o un oggetto <xref:System.Runtime.InteropServices.GCHandle> che fa uso di un byte[]. Alla fine, <xref:System.GC> eseguirà la pulizia di questi elementi. Se tuttavia è necessario allocare memoria non gestita, prendere in considerazione l'uso di una classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> per eseguire il wrapping dell'allocazione della memoria.
+La memoria non gestita può andare perduta, proprio come un handle del sistema operativo. Se possibile, provare a usare la memoria nello stack tramite [stackalloc](../../csharp/language-reference/operators/stackalloc.md), un oggetto gestito bloccato, come l'[istruzione fixed](../../csharp/language-reference/keywords/fixed-statement.md), o un oggetto <xref:System.Runtime.InteropServices.GCHandle> che fa uso di un byte[]. Alla fine, <xref:System.GC> eseguirà la pulizia di questi elementi. Se tuttavia è necessario allocare memoria non gestita, prendere in considerazione l'uso di una classe che deriva da <xref:System.Runtime.InteropServices.SafeHandle> per eseguire il wrapping dell'allocazione della memoria.
 
 Si noti che c'è almeno un caso in cui l'oggetto <xref:System.Runtime.InteropServices.SafeHandle> non è adeguato.  Per le chiamate ai metodi COM che allocano o liberano memoria, viene in genere usata una DLL per allocare la memoria tramite `CoTaskMemAlloc`, seguita da un'altra DLL per liberare la memoria con `CoTaskMemFree`.  L'uso di <xref:System.Runtime.InteropServices.SafeHandle> in questi contesti risulta inappropriato perché questo oggetto tenta di legare la durata della memoria non gestita alla durata di <xref:System.Runtime.InteropServices.SafeHandle>, invece di consentire che venga controllata dall'altra DLL.
 
@@ -277,7 +277,7 @@ Prendere in considerazione l'opportunità di modificare tutti i punti in cui ven
 
 #### <a name="code-analysis-rule"></a>Regola per l'analisi del codice
 
-Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  In C#, questo significa contrassegnare sia `catch` {} e `catch(Exception)` {}.  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.
+Esaminare tutti i blocchi catch nel codice gestito che intercettano tutti gli oggetti o tutte le eccezioni.  In C#, questo significa contrassegnare sia `catch` {} che `catch(Exception)` {}.  Prendere in considerazione l'opportunità di rendere molto specifico il tipo di eccezione oppure esaminare il codice per assicurarsi che non si verifichino comportamenti non corretti qualora venga intercettata un'eccezione di tipo imprevisto.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Non presupporre che un thread gestito sia un thread Win32: è un fiber
 

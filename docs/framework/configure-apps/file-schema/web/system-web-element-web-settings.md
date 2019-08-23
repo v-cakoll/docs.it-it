@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486673"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941389"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System. Web > (impostazioni Web)
-Contiene informazioni su come il livello di hosting ASP.NET gestisce il comportamento a livello di processo.  
+# <a name="systemweb-element-web-settings"></a>\<Elemento System. Web > (impostazioni Web)
+Contiene informazioni sul modo in cui il livello di hosting di ASP.NET gestisce il comportamento a livello di processo.  
   
  \<configuration>  
-\<System. Web > (impostazioni Web)  
+\<Elemento System. Web > (impostazioni Web)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ Contiene informazioni su come il livello di hosting ASP.NET gestisce il comporta
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Specifica le impostazioni di configurazione per i pool di applicazioni IIS in un file ASPNET config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Specifica le impostazioni di configurazione per i pool di applicazioni IIS in un file Aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Specifica l'elemento radice in ogni file di configurazione che viene usato per il common language runtime e le applicazioni .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|Specifica l'elemento radice in ogni file di configurazione usato dalle applicazioni Common Language Runtime e .NET Framework.|  
   
 ## <a name="remarks"></a>Note  
- Il `system.web` elemento e del relativo figlio `applicationPool` elemento sono stati aggiunti a .NET Framework a partire da .NET Framework 3.5 SP1. Quando si esegue IIS 7.0 o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare come ASP.NET gestisce i thread e mette in coda le richieste quando ASP.NET è ospitato in un pool di applicazioni IIS. Se si esegue IIS 7.0 o versioni successive in modalità classica o di ISAPI, queste impostazioni vengono ignorate.  
+ L' `system.web` elemento e il relativo `applicationPool` elemento figlio sono stati aggiunti all'.NET Framework a partire da .NET Framework 3,5 SP1. Quando si esegue IIS 7,0 o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare il modo in cui ASP.NET gestisce i thread e come Accoda le richieste quando ASP.NET è ospitato in un pool di applicazioni IIS. Se si esegue IIS 7,0 o versioni successive in modalità classica o ISAPI, queste impostazioni verranno ignorate.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo ASP.NET nel file Aspnet. config quando ASP.NET è ospitato in un pool di applicazioni IIS. Nell'esempio si presuppone che IIS sia in esecuzione in modalità integrata modalità e che l'applicazione usa .NET Framework 3.5 SP1 o versione successiva. Questo comportamento non viene eseguito nelle versioni di .NET Framework precedenti a .NET Framework 3.5 SP1. I valori nell'esempio sono i valori predefiniti.  
+ Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo di ASP.NET nel file Aspnet. config quando ASP.NET è ospitato in un pool di applicazioni IIS. Nell'esempio si presuppone che IIS sia in esecuzione in modalità integrata e che l'applicazione utilizzi la .NET Framework 3,5 SP1 o una versione successiva. Questo comportamento non si verifica nelle versioni del .NET Framework precedenti al .NET Framework 3,5 SP1. I valori nell'esempio sono i valori predefiniti.  
   
 ```xml  
 <configuration>  
@@ -74,4 +74,4 @@ Contiene informazioni su come il livello di hosting ASP.NET gestisce il comporta
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Elemento \<applicationPool> (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [Elemento \<applicationPool> (impostazioni Web)](applicationpool-element-web-settings.md)

@@ -2,18 +2,18 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940312"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 Elemento di configurazione usato per specificare le impostazioni relative a Web Socket.  
   
 \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -58,7 +58,7 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
 |Never|Non usare mai il protocollo Web Socket.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -67,7 +67,7 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
 |\<netHttpBinding>|Specifica NetHttpBinding|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il \<webSocketSettings > elemento.  
+ Nell'esempio seguente viene illustrato come utilizzare l' \<elemento webSocketSettings >.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

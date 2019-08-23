@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927424"
 ---
 # <a name="enforcefipspolicy-element"></a>\<Elemento > enforceFIPSPolicy
 Specifica se applicare un requisito di configurazione del computer che specifica che gli algoritmi di crittografia devono essere conformi a FIPS (Federal Information Processing Standards).  
@@ -40,7 +40,7 @@ Specifica se applicare un requisito di configurazione del computer che specifica
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |`true`|Se il computer è configurato per richiedere che gli algoritmi di crittografia siano conformi a FIPS, il requisito viene applicato. Se una classe implementa un algoritmo non conforme a FIPS, i costruttori o `Create` i metodi di tale classe generano eccezioni quando vengono eseguiti nel computer. Questa è l'impostazione predefinita.|  
 |`false`|Gli algoritmi di crittografia utilizzati dall'applicazione non devono essere conformi a FIPS, indipendentemente dalla configurazione del computer.|  
@@ -75,4 +75,4 @@ Specifica se applicare un requisito di configurazione del computer che specifica
 
 - [Schema delle impostazioni di runtime](index.md)
 - [Schema dei file di configurazione](../index.md)
-- [Modello di crittografia](../../../../../docs/standard/security/cryptography-model.md)
+- [Modello di crittografia](../../../../standard/security/cryptography-model.md)

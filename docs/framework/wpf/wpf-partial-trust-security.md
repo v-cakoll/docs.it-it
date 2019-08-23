@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567525"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962812"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, i linguaggi di scripting lato client e HTML non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un set di restrizioni simile. Per applicare queste restrizioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla sicurezza dall'accesso di codice (CAS) e su ClickOnce (vedere [strategia di sicurezza di WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono il set di autorizzazioni dell'area Internet, indipendentemente dal fatto che vengano avviate da Internet, dall'Intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -87,7 +87,7 @@ ms.locfileid: "69567525"
 |Internet|Esito negativo con "Attendibilità non concessa"|Firma dell'applicazione XBAP con un certificato.|  
   
 > [!NOTE]
->  Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
+> Il comportamento descritto nella tabella precedente è relativo alle applicazioni XBAP con attendibilità totale che non seguono il modello di distribuzione attendibile di ClickOnce.  
   
  In genere, è probabile che il codice che richiede autorizzazioni ulteriori rispetto a quelle consentite sia codice comune condiviso dalle applicazioni autonome e da quelle ospitate dal browser. CA e [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] offrono diverse tecniche per la gestione di questo scenario.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567525"
  L'uso di CA per verificare le autorizzazioni è una tecnica adatta quando è necessario verificare l'autorizzazione per ogni singola autorizzazione. Tuttavia, tale tecnica dipende dal rilevamento di eccezioni durante la normale elaborazione, operazione che in genere non è consigliata e che può causare problemi di prestazioni. Se invece il [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] viene eseguito solo nella sandbox dell'area Internet, è possibile usare la <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> proprietà, che restituisce true per [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>consente di distinguere solo se un'applicazione è in esecuzione in un browser, non in quale set di autorizzazioni viene eseguita un'applicazione.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>consente di distinguere solo se un'applicazione è in esecuzione in un browser, non in quale set di autorizzazioni viene eseguita un'applicazione.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Gestione delle autorizzazioni  
@@ -131,25 +131,25 @@ ms.locfileid: "69567525"
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Sì|No|  
+|Variabili di ambiente|Lettura|Yes|No|  
 |Finestre di dialogo file|Apri|Sì|Yes|  
-|Finestre di dialogo file|Senza restrizioni|Sì|No|  
+|Finestre di dialogo file|Senza restrizioni|Yes|No|  
 |Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
-|Supporti|Audio, video e immagini sicuri|Sì|Yes|  
-|Stampa|Stampa predefinita|Yes|No|  
-|Stampa|Stampa sicura|Yes|Sì|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Yes|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
+|Supporti|Audio, video e immagini sicuri|Sì|Sì|  
+|Stampa|Stampa predefinita|Sì|No|  
+|Stampa|Stampa sicura|Sì|Sì|  
 |Reflection|Emissione|Yes|No|  
-|Security|Esecuzione del codice gestito|Sì|Sì|  
+|Security|Esecuzione del codice gestito|Sì|Yes|  
 |Security|Asserzione autorizzazioni concesse|Yes|No|  
 |Interfaccia utente|Senza restrizioni|Sì|No|  
-|Interfaccia utente|Finestre di primo livello sicure|Sì|Yes|  
-|Interfaccia utente|Appunti personali|Sì|Yes|  
-|Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  
+|Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
+|Interfaccia utente|Appunti personali|Yes|Sì|  
+|Web browser|Navigazione sicura dei frame in HTML|Sì|Yes|  
   
 > [!NOTE]
->  L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  
+> L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  
   
  Per aumentare il numero di autorizzazioni, è necessario modificare le impostazioni del progetto e il manifesto dell'applicazione ClickOnce. Per altre informazioni, vedere [Panoramica delle applicazioni browser XAML di WPF](./app-development/wpf-xaml-browser-applications-overview.md). Anche i seguenti documenti possono rivelarsi utili.  
   

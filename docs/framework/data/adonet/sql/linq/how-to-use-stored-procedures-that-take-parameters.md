@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938706"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedura: Usare stored procedure che accettano parametri
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping dei parametri di output ai parametri di riferimento, mentre per i tipi di valori il parametro viene dichiarato come nullable.  
   
- Per un esempio di come usare un parametro di input in una query che restituisce un set di righe, vedere [come: Restituire rowset](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ Per un esempio di come usare un parametro di input in una query che restituisce un set di righe [, vedere Procedura: Restituisce set di](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)righe.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene accettato un solo parametro di input (l'ID del cliente) e viene restituito un parametro out (le vendite totali per quel cliente).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Uso dei tipi nullable](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Tipi di valori nullable](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Uso dei tipi nullable](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Tipi di valori nullable](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

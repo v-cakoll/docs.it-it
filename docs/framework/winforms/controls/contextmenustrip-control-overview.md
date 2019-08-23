@@ -8,28 +8,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962162"
 ---
 # <a name="contextmenustrip-control-overview"></a>Cenni preliminari sul controllo ContextMenuStrip
 > [!NOTE]
->  Il <xref:System.Windows.Forms.ContextMenuStrip> sostituisce e aggiunge funzionalità per il <xref:System.Windows.Forms.ContextMenu> controllare; tuttavia, il <xref:System.Windows.Forms.ContextMenu> controllo è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario.  
+> Il <xref:System.Windows.Forms.ContextMenuStrip> controllo sostituisce e aggiunge funzionalità <xref:System.Windows.Forms.ContextMenu> al controllo; tuttavia, il <xref:System.Windows.Forms.ContextMenu> controllo viene mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se lo si sceglie.  
   
- Menu di scelta rapida, l'acronimo di menu di scelta rapida, vengono visualizzate in corrispondenza della posizione del mouse quando l'utente sceglie il pulsante destro del mouse. Scelta rapida *menu* offrono opzioni per l'area client o il controllo nella posizione del puntatore del mouse.  
+ I menu di scelta rapida, detti anche menu di scelta rapida, vengono visualizzati nella posizione del mouse quando l'utente fa clic con il pulsante destro del mouse. I *menu* di scelta rapida forniscono le opzioni per l'area client o il controllo nella posizione del puntatore del mouse.  
   
- Il <xref:System.Windows.Forms.ContextMenuStrip> controllo è progettato per integrarsi perfettamente con il nuovo <xref:System.Windows.Forms.ToolStrip> e i controlli correlati, ma è possibile associare un <xref:System.Windows.Forms.ContextMenuStrip> con altri controlli altrettanto facilmente.  
+ Il <xref:System.Windows.Forms.ContextMenuStrip> controllo è progettato per funzionare senza problemi con i <xref:System.Windows.Forms.ToolStrip> nuovi controlli e correlati, ma è possibile associare <xref:System.Windows.Forms.ContextMenuStrip> un oggetto ad altri controlli in modo altrettanto semplice.  
   
- La tabella seguente illustra l'importante <xref:System.Windows.Forms.ContextMenuStrip> classi correlate.  
+ Nella tabella seguente vengono illustrate <xref:System.Windows.Forms.ContextMenuStrip> le principali classi complementari.  
   
-|Classe|Descrizione|  
+|Classe|DESCRIZIONE|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Rappresenta un'opzione selezionabile visualizzata in una <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Rappresenta un controllo che consente all'utente di selezionare un singolo elemento da un elenco che viene visualizzato quando l'utente sceglie un <xref:System.Windows.Forms.ToolStripDropDownButton> o una voce di menu di livello superiore.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Fornisce funzionalità di base per i controlli derivano da <xref:System.Windows.Forms.ToolStripItem> che visualizzano gli elementi di elenco a discesa quando si fa clic.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Rappresenta un'opzione selezionabile visualizzata in un <xref:System.Windows.Forms.MenuStrip> oggetto <xref:System.Windows.Forms.ContextMenuStrip>o.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Rappresenta un controllo che consente all'utente di selezionare un singolo elemento da un elenco visualizzato quando l'utente fa clic su <xref:System.Windows.Forms.ToolStripDropDownButton> o su una voce di menu di livello superiore.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Fornisce la funzionalità di base per i <xref:System.Windows.Forms.ToolStripItem> controlli derivati da che visualizzano gli elementi a discesa quando vengono selezionate.|  
   
 ## <a name="see-also"></a>Vedere anche
 

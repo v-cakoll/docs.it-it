@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956278"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome forniscono le proprie finestre usando <xref:System.Windows.Window> la classe. Questo argomento introduce <xref:System.Windows.Window> le nozioni di base relative alla creazione e alla gestione delle finestre in applicazioni autonome.  
   
 > [!NOTE]
->  Le applicazioni ospitate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] da browser [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , incluse [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] le pagine separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Le applicazioni ospitate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] da browser [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] , incluse [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] le pagine separate, non forniscono finestre personalizzate. Sono invece ospitati in Windows fornito da Windows Internet Explorer. Vedere [Cenni preliminari sulle applicazioni browser XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
@@ -88,14 +88,14 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Per consentire l' [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] interazione tra un file di markup e un file code-behind, è necessario quanto segue:  
   
-- Nel markup l' `Window` elemento deve includere l' `x:Class` attributo. Quando l'applicazione viene compilata, l' `x:Class` esistenza di nel file di [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] markup fa sì `partial` che crei una classe che <xref:System.Windows.Window> deriva da e il cui nome è specificato dall' `x:Class` attributo. Questa operazione richiede l'aggiunta di [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] una dichiarazione dello spazio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dei nomi `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` per lo schema (). La classe `partial` generata implementa il `InitializeComponent` metodo, che viene chiamato per registrare gli eventi e impostare le proprietà implementate nel markup.  
+- Nel markup l' `Window` elemento deve includere l' `x:Class` attributo. Quando l'applicazione viene compilata, l' `x:Class` esistenza di nel file di markup fa sì che Microsoft Build Engine (MSBuild `partial` ) crei una classe che <xref:System.Windows.Window> deriva da e `x:Class` ha il nome specificato dall'attributo. Questa operazione richiede l'aggiunta di [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] una dichiarazione dello spazio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dei nomi `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` per lo schema (). La classe `partial` generata implementa il `InitializeComponent` metodo, che viene chiamato per registrare gli eventi e impostare le proprietà implementate nel markup.  
   
 - Nel code-behind la classe deve essere una `partial` classe con lo stesso nome specificato `x:Class` dall'attributo nel markup e deve derivare da <xref:System.Windows.Window>. Ciò consente di associare `partial` il file code-behind alla classe generata per il file di markup quando viene compilata l'applicazione (vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)).  
   
 - Nel code-behind la <xref:System.Windows.Window> classe deve implementare un costruttore che chiama il `InitializeComponent` metodo. `InitializeComponent`viene implementato dalla classe generata `partial` del file di markup per registrare gli eventi e impostare le proprietà definite nel markup.  
   
 > [!NOTE]
->  Quando si aggiunge un nuovo <xref:System.Windows.Window> al progetto [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]utilizzando, <xref:System.Windows.Window> viene implementato utilizzando markup e code-behind e include la configurazione necessaria per creare l'associazione tra i file di markup e code-behind come descritto qui.  
+> Quando si aggiunge un nuovo <xref:System.Windows.Window> al progetto [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]utilizzando, <xref:System.Windows.Window> viene implementato utilizzando markup e code-behind e include la configurazione necessaria per creare l'associazione tra i file di markup e code-behind come descritto qui.  
   
  Con questa configurazione, è possibile concentrarsi sulla definizione dell'aspetto della finestra nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e sull'implementazione del relativo comportamento nel code-behind. Nell'esempio seguente viene illustrata una finestra con un pulsante, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementato nel markup, e un gestore eventi per l' <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento del pulsante, implementato nel code-behind.  
   
@@ -106,13 +106,13 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurazione di una definizione di finestra per MSBuild  
- La modalità di implementazione della finestra determina il modo in [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]cui è configurata. Per una finestra definita tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e code-behind:  
+ La modalità di implementazione della finestra determina il modo in cui viene configurata per MSBuild. Per una finestra definita tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e code-behind:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i file di markup sono [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurati come `Page` elementi.  
+- I file di markup XAML sono configurati come elementi MSBuild `Page` .  
   
-- I file code-behind sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementi.  
+- I file code-behind sono configurati come elementi MSBuild `Compile` .  
   
- Questa operazione viene illustrata nel [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] file di progetto seguente.  
+ Questa operazione viene illustrata nel file di progetto MSBuild seguente.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  Una finestra aperta <xref:System.Windows.Window.Show%2A> chiamando è una finestra non modale, il che significa che l'applicazione funziona in una modalità che consente agli utenti di attivare altre finestre nella stessa applicazione.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>viene chiamato per aprire finestre, ad esempio le finestre di dialogo modali. Per ulteriori informazioni, vedere [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md) .  
+> <xref:System.Windows.Window.ShowDialog%2A>viene chiamato per aprire finestre, ad esempio le finestre di dialogo modali. Per ulteriori informazioni, vedere [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md) .  
   
  Quando <xref:System.Windows.Window.Show%2A> viene chiamato, una finestra esegue operazioni di inizializzazione prima che venga visualizzato per stabilire l'infrastruttura che consente di ricevere l'input dell'utente. Quando la finestra viene inizializzata, <xref:System.Windows.Window.SourceInitialized> viene generato l'evento e viene visualizzata la finestra.  
   
@@ -205,7 +205,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  Quando una finestra viene aperta per la prima volta, diventa la finestra attiva, a meno che non <xref:System.Windows.Window.ShowActivated%2A> sia visualizzata `false`con impostato su. La *finestra attiva* è la finestra che attualmente acquisisce l'input dell'utente, ad esempio i tratti chiave e i clic del mouse. Quando una finestra diventa attiva, genera l' <xref:System.Windows.Window.Activated> evento.  
   
 > [!NOTE]
->  Quando una finestra viene aperta per la prima <xref:System.Windows.FrameworkElement.Loaded> volta <xref:System.Windows.Window.ContentRendered> , gli eventi e vengono generati <xref:System.Windows.Window.Activated> solo dopo la generazione dell'evento. Tenendo presente questo aspetto, una finestra può essere considerata effettivamente aperta quando <xref:System.Windows.Window.ContentRendered> viene generato.  
+> Quando una finestra viene aperta per la prima <xref:System.Windows.FrameworkElement.Loaded> volta <xref:System.Windows.Window.ContentRendered> , gli eventi e vengono generati <xref:System.Windows.Window.Activated> solo dopo la generazione dell'evento. Tenendo presente questo aspetto, una finestra può essere considerata effettivamente aperta quando <xref:System.Windows.Window.ContentRendered> viene generato.  
   
  Dopo l'attivazione di una finestra, un utente può attivare un'altra finestra nella stessa applicazione oppure attivare un'altra applicazione. In tal caso, la finestra attualmente attiva viene disattivata e genera l' <xref:System.Windows.Window.Deactivated> evento. Analogamente, quando l'utente seleziona una finestra attualmente disattivata, la finestra diventa nuovamente attiva <xref:System.Windows.Window.Activated> e viene generato.  
   
@@ -221,7 +221,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  Se un'attività in background viene completata, una finestra potrebbe voler inviare una notifica all'utente in modo più <xref:System.Windows.Window.Activate%2A> urgente chiamando il metodo. Se l'utente sta interagendo con un'altra applicazione attivata quando <xref:System.Windows.Window.Activate%2A> viene chiamato, il pulsante della barra delle applicazioni della finestra lampeggerà. Se un utente interagisce con l'applicazione corrente, la chiamata <xref:System.Windows.Window.Activate%2A> a consente di portare la finestra in primo piano.  
   
 > [!NOTE]
->  È possibile gestire l'attivazione dell'ambito dell'applicazione <xref:System.Windows.Application.Activated?displayProperty=nameWithType> usando <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> gli eventi e.  
+> È possibile gestire l'attivazione dell'ambito dell'applicazione <xref:System.Windows.Application.Activated?displayProperty=nameWithType> usando <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> gli eventi e.  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>Chiusura di una finestra  
@@ -262,9 +262,9 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  Se <xref:System.Windows.Window.Closing> non viene gestito oppure viene gestito ma non annullato, la finestra verrà chiusa. <xref:System.Windows.Window.Closed> Viene generato immediatamente prima della chiusura di una finestra. A questo punto, non è più possibile impedire la chiusura di una finestra.  
   
 > [!NOTE]
->  Un'applicazione può essere configurata in modo che venga arrestata automaticamente quando la finestra principale <xref:System.Windows.Application.MainWindow%2A>dell'applicazione si chiude (vedere) o l'ultima finestra viene chiusa. Per informazioni dettagliate, vedere <xref:System.Windows.Application.ShutdownMode%2A>.  
+> Un'applicazione può essere configurata in modo che venga arrestata automaticamente quando la finestra principale <xref:System.Windows.Application.MainWindow%2A>dell'applicazione si chiude (vedere) o l'ultima finestra viene chiusa. Per informazioni dettagliate, vedere <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Mentre una finestra può essere chiusa in modo esplicito tramite meccanismi forniti nelle aree client e non client, una finestra può anche essere chiusa in modo implicito come risultato del comportamento in altre parti dell'applicazione o [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], incluse le seguenti:  
+ Mentre una finestra può essere chiusa in modo esplicito tramite meccanismi forniti nelle aree client e non client, una finestra può anche essere chiusa in modo implicito come risultato del comportamento in altre parti dell'applicazione o di Windows, incluse le seguenti:  
   
 - Un utente si disconnette o arresta Windows.  
   
@@ -275,7 +275,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
 - Chiamata del metodo <xref:System.Windows.Application.Shutdown%2A>.  
   
 > [!NOTE]
->  Una volta chiusa, una finestra non può più essere riaperta.  
+> Una volta chiusa, una finestra non può più essere riaperta.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventi di durata di una finestra  
@@ -325,13 +325,13 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
   
  Se si vuole che la larghezza e l'altezza della finestra abbiano una dimensione che corrisponda alle dimensioni del contenuto della finestra, è possibile usare la <xref:System.Windows.Window.SizeToContent%2A> proprietà, che presenta i valori seguenti:  
   
-- [https://login.microsoftonline.com/common/](<xref:System.Windows.SizeToContent.Manual>). Nessun effetto (impostazione predefinita).  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Manual>). Nessun effetto (impostazione predefinita).  
   
 - <xref:System.Windows.SizeToContent.Width>. Adattarsi alla larghezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinWidth%2A> di <xref:System.Windows.FrameworkElement.MaxWidth%2A> e sulla larghezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.Height>. Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Height>). Adatta all'altezza del contenuto, che ha lo stesso effetto dell'impostazione <xref:System.Windows.FrameworkElement.MinHeight%2A> di <xref:System.Windows.FrameworkElement.MaxHeight%2A> e sull'altezza del contenuto.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell' <xref:System.Windows.FrameworkElement.MinHeight%2A> impostazione <xref:System.Windows.FrameworkElement.MaxHeight%2A> di e sull'altezza del <xref:System.Windows.FrameworkElement.MinWidth%2A> contenuto e dell'impostazione di e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.WidthAndHeight>). Adattarsi alla larghezza e all'altezza del contenuto, che ha lo stesso effetto dell' <xref:System.Windows.FrameworkElement.MinHeight%2A> impostazione <xref:System.Windows.FrameworkElement.MaxHeight%2A> di e sull'altezza del <xref:System.Windows.FrameworkElement.MinWidth%2A> contenuto e dell'impostazione di e <xref:System.Windows.FrameworkElement.MaxWidth%2A> sulla larghezza del contenuto.  
   
  L'esempio seguente mostra una finestra che si ridimensiona automaticamente in base al contenuto, sia in verticale sia in orizzontale, quando viene visualizzata per la prima volta.  
   
@@ -377,7 +377,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  Una finestra con uno stato ingrandito si espande fino alla dimensione massima che può essere, che sarà sufficiente <xref:System.Windows.FrameworkElement.MaxWidth%2A>per le proprietà, <xref:System.Windows.FrameworkElement.MaxHeight%2A>e <xref:System.Windows.Window.SizeToContent%2A> . Come per una finestra ridotta a icona, una finestra ingrandita non può essere ridimensionata tramite un controllo di ridimensionamento o trascinandone il bordo.  
   
 > [!NOTE]
->  I valori delle <xref:System.Windows.Window.Top%2A>proprietà, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>e <xref:System.Windows.FrameworkElement.Height%2A> di una finestra rappresentano sempre i valori per lo stato normale, anche quando la finestra è attualmente ingrandita o ridotta a icona.  
+> I valori delle <xref:System.Windows.Window.Top%2A>proprietà, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>e <xref:System.Windows.FrameworkElement.Height%2A> di una finestra rappresentano sempre i valori per lo stato normale, anche quando la finestra è attualmente ingrandita o ridotta a icona.  
   
  Lo stato di una finestra può essere configurato impostando la <xref:System.Windows.Window.WindowState%2A> relativa proprietà, che può avere uno dei seguenti <xref:System.Windows.WindowState> valori di enumerazione:  
   

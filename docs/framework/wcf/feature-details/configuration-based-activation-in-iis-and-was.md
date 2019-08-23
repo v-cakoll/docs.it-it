@@ -2,23 +2,23 @@
 title: Attivazione basata sulla configurazione in IIS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 99f6c7d41620a7bafea0981cbeaa5cdcbad5ef12
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636132"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909779"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Attivazione basata sulla configurazione in IIS e WAS
 
-In genere quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS) o Windows Process Activation Service (WAS), è necessario fornire un file con estensione svc. Il file con estensione svc contiene il nome del servizio e una factory di host del servizio personalizzata facoltativa. Quest'ulteriore file comporta un sovraccarico ai fini della gestibilità. Con la funzionalità di attivazione basata sulla configurazione non è più necessario disporre di un file con estensione svc e quindi tale sovraccarico viene evitato.
+In genere, quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Services (IIS) o nel servizio Attivazione processo Windows (WAS), è necessario fornire un file con estensione svc. Il file con estensione svc contiene il nome del servizio e una factory di host del servizio personalizzata facoltativa. Quest'ulteriore file comporta un sovraccarico ai fini della gestibilità. Con la funzionalità di attivazione basata sulla configurazione non è più necessario disporre di un file con estensione svc e quindi tale sovraccarico viene evitato.
 
 ## <a name="configuration-based-activation"></a>Attivazione basata sulla configurazione
 
-L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno di <`serviceHostingEnvironment`> elemento non è presente un <`serviceActivations`> elemento. All'interno di <`serviceActivations`> sono uno o più <`add`> elementi, uno per ogni servizio ospitato. Il <`add`> elemento contiene attributi che consentono di impostare il relativo indirizzo per il servizio e il tipo di servizio o una factory dell'host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
+L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel file con estensione svc e li sposta nel file Web.config. All'interno dell'`serviceHostingEnvironment`elemento < > è presente un`serviceActivations`elemento < >. All'interno dell'`serviceActivations`elemento < > sono presenti uno o`add`più elementi < >, uno per ogni servizio ospitato. L'elemento`add`< > contiene attributi che consentono di impostare l'indirizzo relativo per il servizio e il tipo di servizio o una factory di host del servizio. Nell'esempio di codice di configurazione riportato di seguito viene illustrato come utilizzare questa sezione.
 
 > [!NOTE]
->  Ogni <`add`> elemento deve specificare un servizio o un attributo della factory. È consentita la specifica sia degli attributi del servizio che della factory.
+> Ogni elemento`add`< > deve specificare un servizio o un attributo Factory. È consentita la specifica sia degli attributi del servizio che della factory.
 
 ```xml
 <serviceHostingEnvironment>
@@ -32,7 +32,7 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
 
 > [!NOTE]
 > - Quando si utilizza l'attivazione basata sulla configurazione, il codice inline presente nei file con estensione svc non è supportato.
-> - Il `relativeAddress` attributo deve essere impostato su un indirizzo relativo, ad esempio "\<sottodirectory > / Service. svc" o "~ /\<secondari-directory/Service. svc".
+> - L' `relativeAddress` attributo deve essere impostato su un indirizzo relativo, ad esempio\<"sub-directory >/Service.svc" o "~\</Sub-Directory/Service. svc".
 > - Se si registra un indirizzo relativo che non dispone di un'estensione nota associata a WCF, viene generata un'eccezione di configurazione.
 > - L'indirizzo specificato è relativo alla radice dell'applicazione virtuale.
 > - A causa del modello gerarchico della configurazione, gli indirizzi relativi registrati a livello del computer e del sito vengono ereditati dalle applicazioni virtuali.

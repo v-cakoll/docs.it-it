@@ -2,18 +2,18 @@
 title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961093"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
 Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né rilasciare utenti da un database che contiene oggetti di cui sono proprietari.  
   
 ## <a name="user-schema-separation"></a>Distinzione tra utente e schema  
- La distinzione tra utente e schema offre una maggiore flessibilità nella gestione delle autorizzazioni per gli oggetti di database. Oggetto *schema* è un contenitore denominato per gli oggetti di database, che consente di raggruppare gli oggetti in spazi dei nomi separato. Ad esempio, il database di esempio AdventureWorks contiene gli schemi per Production, Sales e HumanResources.  
+ La distinzione tra utente e schema offre una maggiore flessibilità nella gestione delle autorizzazioni per gli oggetti di database. Uno *schema* è un contenitore denominato per gli oggetti di database che consente di raggruppare gli oggetti in spazi dei nomi distinti. Ad esempio, il database di esempio AdventureWorks contiene gli schemi per Production, Sales e HumanResources.  
   
  Usando la sintassi di denominazione in quattro parti per fare riferimento agli oggetti viene specificato il nome dello schema.  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Se questi schemi vengono eliminati dal database modello, non saranno presenti nei nuovi database.  
   
 > [!NOTE]
->  Gli schemi `sys` e `INFORMATION_SCHEMA` sono riservati per gli oggetti di sistema. Non è possibile creare oggetti in questi schemi e non è possibile rilasciarli.  
+> Gli schemi `sys` e `INFORMATION_SCHEMA` sono riservati per gli oggetti di sistema. Non è possibile creare oggetti in questi schemi e non è possibile rilasciarli.  
   
 #### <a name="the-dbo-schema"></a>Schema dbo  
  Lo schema `dbo` è quello predefinito per i nuovi database creati. Lo schema `dbo` è di proprietà dell'account utente `dbo`. Per impostazione predefinita, gli utenti creati con l'istruzione Transact-SQL CREATE USER hanno `dbo` come schema predefinito.  
@@ -48,14 +48,14 @@ Server.Database.DatabaseSchema.DatabaseObject
  Gli utenti cui viene assegnato lo schema `dbo` non ereditano le autorizzazioni dell'account utente `dbo`. Gli utenti non ereditano autorizzazioni da uno schema. Le autorizzazioni di uno schema vengono ereditate dagli oggetti di database contenuti nello schema.  
   
 > [!NOTE]
->  Quando agli oggetti di database viene fatto riferimento con un nome a una parte, in SQL Server viene innanzitutto esaminato lo schema predefinito dell'utente. Se l'oggetto non viene trovato, viene esaminato lo schema `dbo`. Se l'oggetto non si trova nello schema `dbo`, viene restituito un errore.  
+> Quando agli oggetti di database viene fatto riferimento con un nome a una parte, in SQL Server viene innanzitutto esaminato lo schema predefinito dell'utente. Se l'oggetto non viene trovato, viene esaminato lo schema `dbo`. Se l'oggetto non si trova nello schema `dbo`, viene restituito un errore.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni sulla proprietà degli oggetti e sugli schemi, vedere le risorse seguenti.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Separazione Schema-utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Separazione schema utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 

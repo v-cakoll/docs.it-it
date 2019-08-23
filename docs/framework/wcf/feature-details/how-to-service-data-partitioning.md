@@ -2,22 +2,22 @@
 title: 'Procedura: Partizionamento dei dati del servizio'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947864"
 ---
 # <a name="how-to-service-data-partitioning"></a>Procedura: Partizionamento dei dati del servizio
-In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. Ad esempio, i messaggi provenienti da valore elevato o "Gold" clienti potrebbe essere necessario per l'elaborazione una priorità più alta rispetto ai messaggi da un cliente standard.  
+In questo argomento vengono descritti i passaggi di base necessari per partizionare messaggi tra più istanze dello stesso servizio di destinazione. Il partizionamento dei dati del servizio viene in genere utilizzato quando è necessario ridimensionare un servizio per fornire un livello migliore di qualità del servizio o gestire richieste da diversi clienti in modo specifico. Ad esempio, potrebbe essere necessario elaborare i messaggi di clienti di valore elevato o "Gold" con una priorità più alta rispetto ai messaggi di un cliente standard.  
   
  In questo esempio i messaggi vengono indirizzati a una o due istanze del servizio regularCalc. Entrambe le istanze del servizio sono identiche. Il servizio rappresentato dall'endpoint di calculator1 elabora tuttavia i messaggi ricevuti dai clienti di valore elevato, mentre l'endpoint di calculator2 elabora i messaggi ricevuti dagli altri clienti  
   
  Il messaggio inviato dal client non dispone di dati univoci che possono essere utilizzati per identificare l'istanza del servizio a cui indirizzare il messaggio. Per consentire a ogni client di indirizzare dati a un servizio di destinazione specifico, verranno implementati due endpoint servizio che verranno utilizzati per ricevere messaggi.  
   
 > [!NOTE]
->  Mentre in questo esempio vengono utilizzati endpoint specifici per partizionare dati, è possibile portare a termine questa operazione anche utilizzando le informazioni contenute all'interno del messaggio stesso, ad esempio l'intestazione o i dati del corpo.  
+> Mentre in questo esempio vengono utilizzati endpoint specifici per partizionare dati, è possibile portare a termine questa operazione anche utilizzando le informazioni contenute all'interno del messaggio stesso, ad esempio l'intestazione o i dati del corpo.  
   
 ### <a name="implement-service-data-partitioning"></a>Implementare il partizionamento dei dati del servizio  
   
@@ -85,7 +85,7 @@ In questo argomento vengono descritti i passaggi di base necessari per partizion
     </filterTables>  
     ```  
   
-4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. L'esempio seguente illustra l'associazione di "filterTable1" agli endpoint servizio:  
+4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" con gli endpoint del servizio:  
   
     ```xml  
     <behaviors>  

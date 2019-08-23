@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962766"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Routine Main in Visual Basic
 Ogni applicazione Visual Basic deve contenere una procedura denominata `Main`. Questa procedura funge da punto di partenza e controllo generale per l'applicazione. Il .NET Framework chiama la `Main` procedura quando ha caricato l'applicazione ed è pronta per passare il controllo. A meno che non si stia creando una Windows Forms Application, è necessario `Main` scrivere la procedura per le applicazioni che vengono eseguite autonomamente.
@@ -33,7 +33,7 @@ Ogni applicazione Visual Basic deve contenere una procedura denominata `Main`. Q
  Esistono quattro modi per dichiarare la `Main` procedura. Può assumere o meno argomenti e può restituire un valore.
 
 > [!NOTE]
->  Se si dichiara `Main` in una classe, è necessario usare la `Shared` parola chiave. In un modulo `Main` non è necessario che sia `Shared`.
+> Se si dichiara `Main` in una classe, è necessario usare la `Shared` parola chiave. In un modulo `Main` non è necessario che sia `Shared`.
 
 - Il modo più semplice consiste nel dichiarare una `Sub` routine che non accetta argomenti o restituisce un valore.
 

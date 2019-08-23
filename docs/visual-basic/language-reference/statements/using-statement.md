@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 111dba1316691b9c6c999b4c021ac06dac7c7a8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 346a26ad5751599831d8b0d3e0497e4d488eb76c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957538"
 ---
 # <a name="using-statement-visual-basic"></a>Istruzione Using (Visual Basic)
-Dichiara l'inizio di un `Using` in blocchi e, facoltativamente, acquisisce le risorse di sistema che controlla il blocco.  
+Dichiara l'inizio di un `Using` blocco e, facoltativamente, acquisisce le risorse di sistema controllate dal blocco.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,12 +31,12 @@ End Using
   
 |Termine|Definizione|  
 |---|---|  
-|`resourcelist`|Obbligatorio se non si fornisce `resourceexpression`. Elenco di uno o più risorse di sistema che questo `Using` blocco dei controlli, separati da virgole.|  
-|`resourceexpression`|Obbligatorio se non si fornisce `resourcelist`. Variabile di riferimento o un'espressione che fa riferimento a una risorsa di sistema da parte di questo `Using` blocco.|  
-|`statements`|Facoltativo. Blocco di istruzioni che la `Using` bloccare l'esecuzione.|  
-|`End Using`|Obbligatorio. Termina la definizione del `Using` blocco ed Elimina tutte le risorse da essa controllati.|  
+|`resourcelist`|Obbligatorio se non si specifica `resourceexpression`. Elenco di una o più risorse di sistema che `Using` questo blocco controlla, separate da virgole.|  
+|`resourceexpression`|Obbligatorio se non si specifica `resourcelist`. Variabile di riferimento o espressione che fa riferimento a una risorsa di sistema che deve essere `Using` controllata da questo blocco.|  
+|`statements`|facoltativo. Blocco di istruzioni eseguite dal `Using` blocco.|  
+|`End Using`|Richiesto. Termina la definizione del `Using` blocco ed Elimina tutte le risorse che controlla.|  
   
- Ogni risorsa nel `resourcelist` parte ha la sintassi e le parti seguenti:  
+ Ogni risorsa `resourcelist` della parte presenta la sintassi e le parti seguenti:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
@@ -44,43 +44,43 @@ End Using
   
  `resourcename As resourcetype = resourceexpression`  
   
-## <a name="resourcelist-parts"></a>Parti resourcelist  
+## <a name="resourcelist-parts"></a>Parti Resources  
   
 |Termine|Definizione|  
 |---|---|  
-|`resourcename`|Obbligatorio. Variabile di riferimento che fa riferimento a una risorsa di sistema che la `Using` blocco dei controlli.|  
-|`New`|Obbligatorio se il `Using` istruzione acquisisce la risorsa. Se la risorsa è già stata acquisita, usare la seconda alternativa di sintassi.|  
-|`resourcetype`|Obbligatorio. La classe della risorsa. La classe deve implementare il <xref:System.IDisposable> interfaccia.|  
-|`arglist`|Facoltativo. Elenco di argomenti passati al costruttore per creare un'istanza di `resourcetype`. Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Obbligatorio. Variabile o espressione che fa riferimento a una risorsa di sistema che soddisfano i requisiti di `resourcetype`. Se si usa la seconda alternativa di sintassi, è necessario acquisire la risorsa prima di passare il controllo al `Using` istruzione.|  
+|`resourcename`|Richiesto. Variabile di riferimento che fa riferimento a una risorsa di `Using` sistema controllata dal blocco.|  
+|`New`|Obbligatorio se l' `Using` istruzione acquisisce la risorsa. Se la risorsa è già stata acquisita, utilizzare la seconda alternativa della sintassi.|  
+|`resourcetype`|Richiesto. Classe della risorsa. La classe deve implementare l' <xref:System.IDisposable> interfaccia.|  
+|`arglist`|facoltativo. Elenco di argomenti passati al costruttore per creare un'istanza di `resourcetype`. Vedere [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`resourceexpression`|Richiesto. Variabile o espressione che fa riferimento a una risorsa di sistema che soddisfa i `resourcetype`requisiti di. Se si usa la seconda sintassi alternativa, è necessario acquisire la risorsa prima di passare il `Using` controllo all'istruzione.|  
   
 ## <a name="remarks"></a>Note  
- In alcuni casi il codice richiede una risorsa non gestita, ad esempio un handle di file, un wrapper COM o una connessione SQL. Oggetto `Using` blocco garantisce l'eliminazione di uno o più di tali risorse al termine del codice con essi. Ciò li rende disponibili per altro codice da usare.  
+ A volte il codice richiede una risorsa non gestita, ad esempio un handle di file, un wrapper COM o una connessione SQL. Un `Using` blocco garantisce l'eliminazione di una o più risorse di questo tipo al termine del codice. In modo da renderli disponibili per l'utilizzo da altro codice.  
   
- Le risorse gestite vengono eliminate dal garbage collector (GC) di .NET Framework senza scrivere codice aggiuntivo da parte dell'utente. Non è necessario un `Using` blocco per le risorse gestite. Tuttavia, è comunque possibile usare un `Using` blocco per forzare l'eliminazione di una risorsa gestita anziché attendere che il garbage collector.  
+ Le risorse gestite vengono eliminate dal .NET Framework Garbage Collector (GC) senza alcuna codifica aggiuntiva da parte dell'utente. Non è necessario un `Using` blocco per le risorse gestite. Tuttavia, è comunque possibile usare un `Using` blocco per forzare l'eliminazione di una risorsa gestita anziché attendere il Garbage Collector.  
   
- Oggetto `Using` blocco è costituito da tre parti: acquisizione, utilizzo ed eliminazione.  
+ Un `Using` blocco è costituito da tre parti: acquisizione, utilizzo e eliminazione.  
   
-- *Acquisizione* implica la creazione di una variabile e inizializzarla per fare riferimento alla risorsa di sistema. Il `Using` istruzione può acquisire una o più risorse, oppure è possibile acquisire esattamente una risorsa prima di immettere il blocco e forniscono al `Using` istruzione. Se si specificano `resourceexpression`, è necessario acquisire la risorsa prima di passare il controllo al `Using` istruzione.  
+- L' *acquisizione* significa creare una variabile e inizializzarla per fare riferimento alla risorsa di sistema. L' `Using` istruzione può acquisire una o più risorse oppure è possibile acquisire esattamente una risorsa prima `Using` di immettere il blocco e fornirla all'istruzione. Se si specifica `resourceexpression`, è necessario acquisire la risorsa prima di passare il `Using` controllo all'istruzione.  
   
-- *Utilizzo* significa accedere alle risorse e l'esecuzione di operazioni su tali elementi. Le istruzioni comprese tra `Using` e `End Using` rappresentano l'utilizzo delle risorse.  
+- L' *utilizzo* indica l'accesso alle risorse e l'esecuzione di azioni con loro. Le istruzioni tra `Using` e `End Using` rappresentano l'utilizzo delle risorse.  
   
-- *Disposizione* significa che la chiamata di <xref:System.IDisposable.Dispose%2A> metodo sull'oggetto nelle `resourcename`. In questo modo l'oggetto di terminare correttamente le relative risorse. Il `End Using` istruzione elimina le risorse sotto il `Using` controllo del blocco.  
+- Per *eliminazione* si intende <xref:System.IDisposable.Dispose%2A> la chiamata al metodo sull' `resourcename`oggetto in. Questo consente all'oggetto di terminare in modo corretto le risorse. L' `End Using` istruzione Elimina le risorse sotto il `Using` controllo del blocco.  
   
 ## <a name="behavior"></a>Comportamento  
- Oggetto `Using` blocco si comporta come un `Try`... `Finally` costruzione in cui la `Try` blocco Usa le risorse e il `Finally` blocco le Elimina. Per questo motivo, il `Using` blocco garantisce l'eliminazione delle risorse, indipendentemente dal modo in cui si esce dal blocco. Questo vale anche in caso di un'eccezione non gestita, ad eccezione di un <xref:System.StackOverflowException>.  
+ Un `Using` blocco si comporta `Try`come... costruzione in cui il `Try` blocco utilizza le risorse e il `Finally` blocco ne comporta l'eliminazione. `Finally` Per questo motivo, il `Using` blocco garantisce l'eliminazione delle risorse, indipendentemente dal modo in cui si esce dal blocco. Questo vale anche nel caso di un'eccezione non gestita, ad eccezione di <xref:System.StackOverflowException>.  
   
- L'ambito di ogni variabile di risorsa acquisita dal `Using` istruzione è limitata al `Using` blocco.  
+ L'ambito di ogni variabile di risorsa acquisita `Using` dall'istruzione è limitato `Using` al blocco.  
   
- Se si specifica più di una risorsa di sistema nel `Using` istruzione, l'effetto è lo stesso come se annidati `Using` blocca l'uno all'interno di altra.  
+ Se nell' `Using` istruzione si specifica più di una risorsa di sistema, l'effetto sarà identico a quello di un `Using` blocco annidato in un altro.  
   
- Se `resourcename` viene `Nothing`, nessuna chiamata a <xref:System.IDisposable.Dispose%2A> viene effettuata, e viene generata alcuna eccezione.  
+ Se `resourcename` <xref:System.IDisposable.Dispose%2A> è `Nothing`, non viene effettuata alcuna chiamata a e non viene generata alcuna eccezione.  
   
-## <a name="structured-exception-handling-within-a-using-block"></a>All'interno di un blocco tramite gestione strutturata delle eccezioni  
- Se è necessario gestire un'eccezione che potrebbe verificarsi all'interno di `Using` blocco, è possibile aggiungere una completa `Try`... `Finally` costruzione a esso. Se è necessario gestire il caso in cui il `Using` istruzione non ha esito positivo l'acquisizione di una risorsa, è possibile verificare se `resourcename` è `Nothing`.  
+## <a name="structured-exception-handling-within-a-using-block"></a>Gestione strutturata delle eccezioni in un blocco using  
+ Se è necessario gestire un'eccezione che può verificarsi all'interno del `Using` blocco, è possibile aggiungere `Try`un... `Finally` creazione. Se è necessario gestire il caso in cui l' `Using` istruzione non riesce ad acquisire una risorsa, è possibile verificare se `resourcename` è `Nothing`.  
   
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Invece di un blocco tramite gestione strutturata delle eccezioni  
- Se è necessario un controllo più preciso l'acquisizione delle risorse oppure è necessario codice aggiuntivo nel `Finally` blocco, è possibile riscrivere il `Using` block come un `Try`... `Finally` costruzione. L'esempio seguente mostra scheletro `Try` e `Using` costruzioni equivalenti nell'acquisizione e l'eliminazione di `resource`.  
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Gestione strutturata delle eccezioni anziché un blocco using  
+ Se è necessario un `Finally` `Try`controllo più preciso sull'acquisizione delle risorse o se è necessario codice aggiuntivo nel blocco, è possibile riscrivere il `Using` blocco come... `Finally` creazione. Nell'esempio seguente vengono illustrati `Using` scheletri `Try` e costruzioni equivalenti nell'acquisizione e nell'eliminazione di `resource`.  
   
 ```vb  
 Using resource As New resourceType   
@@ -100,12 +100,12 @@ End Try
 ```  
   
 > [!NOTE]
->  Il codice all'interno di `Using` blocco non è necessario assegnare l'oggetto in `resourcename` a un'altra variabile. Quando si esce dal `Using` blocco, la risorsa viene eliminato e l'altra variabile non è possibile accedere alla risorsa a cui punta.  
+> Il codice all'interno `Using` del blocco non deve assegnare l'oggetto `resourcename` in a un'altra variabile. Quando si esce dal `Using` blocco, la risorsa viene eliminata e l'altra variabile non può accedere alla risorsa a cui fa riferimento.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea un file denominato log. txt e scrive due righe di testo nel file. Nell'esempio viene inoltre legge tale file e visualizza le righe di testo.  
+ Nell'esempio seguente viene creato un file denominato log. txt che scrive due righe di testo nel file. Nell'esempio viene inoltre letto lo stesso file e vengono visualizzate le righe di testo.  
   
- Poiché il <xref:System.IO.TextWriter> e <xref:System.IO.TextReader> sono classi che implementano le <xref:System.IDisposable> interfaccia, è possibile usare il codice `Using` istruzioni per assicurarsi che il file viene chiuso dopo l'operazione di scrittura correttamente e le operazioni di lettura.  
+ Poiché le classi <xref:System.IO.TextReader>eimplementano l' <xref:System.IDisposable> interfaccia, il codice può `Using` utilizzare le istruzioni per garantire che il file venga chiuso correttamente dopo le operazioni di scrittura e lettura. <xref:System.IO.TextWriter>  
   
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]  
   

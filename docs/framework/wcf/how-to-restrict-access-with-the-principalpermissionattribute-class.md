@@ -9,37 +9,37 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 1cf09b945a21ca51f73c3948ffdf86da4225ac22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751223"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951016"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute
-Il controllo dell'accesso alle risorse di un computer appartenente a un dominio Windows è un'attività di sicurezza di base. Ad esempio, solo determinati utenti devono essere in grado di visualizzare i dati riservati, ad esempio le informazioni sulle retribuzioni dei dipendenti. In questo argomento viene descritto come consentire l'accesso a un metodo specifico esclusivamente agli utenti che appartengono a un determinato gruppo. Per un esempio funzionante, vedere [autorizzare l'accesso alle operazioni del servizio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Il controllo dell'accesso alle risorse di un computer appartenente a un dominio Windows è un'attività di sicurezza di base. Ad esempio, solo determinati utenti devono essere in grado di visualizzare i dati riservati, ad esempio le informazioni sulle retribuzioni dei dipendenti. In questo argomento viene descritto come consentire l'accesso a un metodo specifico esclusivamente agli utenti che appartengono a un determinato gruppo. Per un esempio funzionante, vedere [autorizzazione dell'accesso alle operazioni del servizio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  Questa attività è costituita da due procedure distinte. La prima crea il gruppo e lo popola di utenti, mentre la seconda applica la classe <xref:System.Security.Permissions.PrincipalPermissionAttribute> per definire il gruppo.  
   
 ### <a name="to-create-a-windows-group"></a>Per creare un gruppo di Windows  
   
-1. Aprire il **Gestione Computer** console.  
+1. Aprire la console di **Gestione computer** .  
   
-2. Nel riquadro sinistro, fare clic su **utenti e gruppi locali**.  
+2. Nel riquadro sinistro fare clic su **utenti e gruppi locali**.  
   
-3. Fare doppio clic su **gruppi**, fare clic su **nuovo gruppo**.  
+3. Fare clic con il pulsante destro del mouse su **gruppi**, quindi scegliere **nuovo gruppo**.  
   
-4. Nel **nome gruppo** , digitare un nome per il nuovo gruppo.  
+4. Nella casella **nome gruppo** Digitare un nome per il nuovo gruppo.  
   
-5. Nel **descrizione** , digitare una descrizione del nuovo gruppo.  
+5. Nella casella **Descrizione** Digitare una descrizione del nuovo gruppo.  
   
-6. Scegliere il **Add** pulsante per aggiungere nuovi membri al gruppo.  
+6. Fare clic sul pulsante **Aggiungi** per aggiungere nuovi membri al gruppo.  
   
 7. Gli utenti che si aggiungono al gruppo e desiderano testare il codice seguente devono disconnettersi dal computer e quindi connettersi nuovamente per essere inclusi effettivamente nel gruppo.  
   
 ### <a name="to-demand-user-membership"></a>Per richiedere l'appartenenza dell'utente  
   
-1. Aprire il file di codice di Windows Communication Foundation (WCF) che contiene il codice del contratto di servizio implementato. Per altre informazioni sull'implementazione di un contratto, vedere [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Aprire il file di codice Windows Communication Foundation (WCF) che contiene il codice del contratto di servizio implementato. Per ulteriori informazioni sull'implementazione di un contratto, vedere [implementazione di contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2. Applicare l'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> a ogni metodo per cui si desidera che l'accesso sia consentito esclusivamente a un gruppo specifico. Impostare la proprietà <xref:System.Security.Permissions.SecurityAttribute.Action%2A> su <xref:System.Security.Permissions.SecurityAction.Demand> e la proprietà <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> sul nome del gruppo. Ad esempio:  
   
@@ -47,12 +47,12 @@ Il controllo dell'accesso alle risorse di un computer appartenente a un dominio 
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
   
     > [!NOTE]
-    >  Se si applica l'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> ad un contratto, verrà generata la classe <xref:System.Security.SecurityException>. È possibile applicare l'attributo soltanto a livello di metodo.  
+    > Se si applica l'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> ad un contratto, verrà generata la classe <xref:System.Security.SecurityException>. È possibile applicare l'attributo soltanto a livello di metodo.  
   
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Utilizzo di un certificato per controllare l'accesso a un metodo  
  Se il tipo di credenziale client è un certificato, l'accesso a un metodo può anche essere controllato mediante la classe `PrincipalPermissionAttribute`. A tale scopo è necessario disporre del soggetto e dell'identificazione personale del certificato.  
   
- Per esaminare un certificato per le relative proprietà, vedere [come: Visualizzare i certificati con lo Snap-in MMC](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Per trovare il valore di identificazione personale, vedere [come: Recuperare l'identificazione personale di un certificato](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Per esaminare un certificato per le relative proprietà, [vedere Procedura: Visualizzare i certificati con lo snap-in](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)MMC. Per trovare il valore di identificazione personale [, vedere Procedura: Recuperare l'identificazione personale di un](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)certificato.  
   
 #### <a name="to-control-access-using-a-certificate"></a>Per controllare l'accesso tramite un certificato  
   
@@ -77,7 +77,7 @@ Il controllo dell'accesso alle risorse di un computer appartenente a un dominio 
     </behaviors>  
     ```  
   
-     L'impostazione di questo valore su `UseAspNetRoles` indica che la proprietà `Name` dell'elemento `PrincipalPermissionAttribute` viene utilizzata per eseguire un confronto tra stringhe. Quando viene usato un certificato come credenziale client, per impostazione predefinita WCF consente di concatenare il nome comune del certificato e l'identificazione personale da un punto e virgola per creare un valore univoco per l'identità primaria del client. Se nel servizio la modalità `UseAspNetRoles` è stata impostata su `PrincipalPermissionMode`, questo valore di identità primaria viene confrontato con il valore della proprietà `Name` per determinare i diritti di accesso dell'utente.  
+     L'impostazione di questo valore su `UseAspNetRoles` indica che la proprietà `Name` dell'elemento `PrincipalPermissionAttribute` viene utilizzata per eseguire un confronto tra stringhe. Quando un certificato viene utilizzato come credenziale client, per impostazione predefinita WCF concatena il nome comune del certificato e l'identificazione digitale con un punto e virgola per creare un valore univoco per l'identità principale del client. Se nel servizio la modalità `UseAspNetRoles` è stata impostata su `PrincipalPermissionMode`, questo valore di identità primaria viene confrontato con il valore della proprietà `Name` per determinare i diritti di accesso dell'utente.  
   
      In alternativa, quando si crea un servizio indipendente, impostare la proprietà <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> in codice, come mostrato nel codice seguente:  
   

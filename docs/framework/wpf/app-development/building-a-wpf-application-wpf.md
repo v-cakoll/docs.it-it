@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958712"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
 
@@ -24,7 +24,7 @@ Le applicazioni Windows Presentation Foundation (WPF) possono essere compilate c
 
 Un'applicazione WPF può essere compilata nei modi seguenti:
 
-- Dalla riga di comando. L'applicazione deve contenere solo codice (non XAML) e un file di definizione dell'applicazione (ADF). Per altre informazioni, vedere [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) oppure [Compilazione dalla riga di comando (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Dalla riga di comando. L'applicazione deve contenere solo codice (non XAML) e un file di definizione dell'applicazione (ADF). Per altre informazioni, vedere [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) oppure [Compilazione dalla riga di comando (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - Microsoft Build Engine (MSBuild). Oltre ai file di codice e XAML, l'applicazione deve contenere un file di progetto MSBuild. Per altre informazioni, vedere "MSBuild".
 
@@ -42,7 +42,7 @@ Quando si compila un progetto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2s
 
 ### <a name="pre-build-initializations"></a>Inizializzazioni pre-compilazione
 
-Prima della compilazione, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] determina la posizione di importanti strumenti e librerie, inclusi gli elementi seguenti:
+Prima della compilazione, MSBuild determina la posizione di strumenti e librerie importanti, inclusi i seguenti:
 
 - .NET Framework.
 
@@ -52,7 +52,7 @@ Prima della compilazione, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2s
 
 - La proprietà per i percorsi di ricerca degli assembly.
 
-La prima posizione in cui [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] cerca gli assembly è la directory dell'assembly di riferimento (%Programmi%\Reference Assemblies\Microsoft\Framework\v3.0\\). Durante questo passaggio, il processo di compilazione inizializza anche le varie proprietà e i gruppi di elementi, quindi esegue le operazioni di pulizia necessarie.
+La prima posizione in cui MSBuild cerca gli assembly è la directory dell'assembly di riferimento\\(%programmi%\Reference%SYSTEMDRIVE%\Programmi\Reference Assemblies\Microsoft\Framework\v3.0.). Durante questo passaggio, il processo di compilazione inizializza anche le varie proprietà e i gruppi di elementi, quindi esegue le operazioni di pulizia necessarie.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Per impostazione predefinita, la compilazione del markup viene <xref:System.AppDomain> eseguita nello [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] stesso modo del motore. In questo modo si ottengono miglioramenti significativi delle prestazioni. Questo comportamento può essere attivato o disattivato tramite la proprietà `AlwaysCompileMarkupFilesInSeparateDomain`. Questo ha il vantaggio di scaricare tutti gli assembly di riferimento scaricando l'oggetto separato <xref:System.AppDomain>.
+Per impostazione predefinita, la compilazione del markup viene <xref:System.AppDomain> eseguita nello stesso modo del motore MSBuild. In questo modo si ottengono miglioramenti significativi delle prestazioni. Questo comportamento può essere attivato o disattivato tramite la proprietà `AlwaysCompileMarkupFilesInSeparateDomain`. Questo ha il vantaggio di scaricare tutti gli assembly di riferimento scaricando l'oggetto separato <xref:System.AppDomain>.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

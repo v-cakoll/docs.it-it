@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 8a9dc5874629c1687318496bd7c4016eb318c25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a839a7d05d05066f6c0f774a683c8fc83c19643
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783936"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957729"
 ---
 # <a name="removehandler-statement"></a>Istruzione RemoveHandler
 Rimuove l'associazione tra un evento e un gestore eventi.  
@@ -29,14 +29,14 @@ RemoveHandler event, AddressOf eventhandler
   
 |Termine|Definizione|  
 |---|---|  
-|`event`|Il nome dell'evento gestito.|  
-|`eventhandler`|Il nome della routine che gestisce l'evento.|  
+|`event`|Nome dell'evento da gestire.|  
+|`eventhandler`|Nome della stored procedure che gestisce attualmente l'evento.|  
   
 ## <a name="remarks"></a>Note  
- Il `AddHandler` e `RemoveHandler` istruzioni consentono di avviare e arrestare la gestione degli eventi per un evento specifico in qualsiasi momento durante l'esecuzione del programma.  
+ Le `AddHandler` istruzioni `RemoveHandler` e consentono di avviare e arrestare la gestione degli eventi per un evento specifico in qualsiasi momento durante l'esecuzione del programma.  
   
 > [!NOTE]
->  Per gli eventi personalizzati, il `RemoveHandler` istruzione richiama l'evento `RemoveHandler` della funzione di accesso. Per altre informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Per gli eventi personalizzati, `RemoveHandler` l'istruzione richiama la funzione di `RemoveHandler` accesso dell'evento. Per ulteriori informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

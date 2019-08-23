@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960619"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: Creare un'interfaccia di tipo Esplora risorse in un Windows Form
 Esplora risorse è una scelta di interfaccia utente comune per le applicazioni grazie alla sua dimestichezza.
@@ -35,7 +35,7 @@ Esplora risorse è una scelta di interfaccia utente comune per le applicazioni g
 3. Selezionare tutti e tre i controlli premendo il tasto CTRL e facendo clic su di essi a sua volta. Quando si seleziona il <xref:System.Windows.Forms.SplitContainer> controllo, fare clic sulla barra di divisione anziché sui pannelli.
 
     > [!NOTE]
-    >  Non utilizzare il comando **Seleziona tutto** nel menu **modifica** . In tal caso, la proprietà necessaria nel passaggio successivo non verrà visualizzata nella finestra **Proprietà** .
+    > Non utilizzare il comando **Seleziona tutto** nel menu **modifica** . In tal caso, la proprietà necessaria nel passaggio successivo non verrà visualizzata nella finestra **Proprietà** .
 
 4. Nella finestra **Proprietà** impostare la proprietà <xref:System.Windows.Forms.SplitContainer.Dock%2A> su <xref:System.Windows.Forms.DockStyle.Fill>.
 
@@ -44,7 +44,7 @@ Esplora risorse è una scelta di interfaccia utente comune per le applicazioni g
      Il modulo Visualizza un'interfaccia utente in due parti, simile a quella di Esplora risorse.
 
     > [!NOTE]
-    >  Quando si trascina la barra di divisione, i pannelli si ridimensionano.
+    > Quando si trascina la barra di divisione, i pannelli si ridimensionano.
 
 ## <a name="see-also"></a>Vedere anche
 

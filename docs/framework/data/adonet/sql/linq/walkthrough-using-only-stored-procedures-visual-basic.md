@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742555"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946633"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
   
 > [!NOTE]
->  È inoltre possibile usare stored procedure nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per eseguire l'override del comportamento predefinito, specialmente per i processi `Create`, `Update` e `Delete`. Per altre informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminare](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> È inoltre possibile usare stored procedure nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per eseguire l'override del comportamento predefinito, specialmente per i processi `Create`, `Update` e `Delete`. Per ulteriori informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Ai fini di questa procedura dettagliata, si userà due metodi che sono stato eseguito il mapping alle stored procedure nel database di esempio Northwind: CustOrdersDetail e CustOrderHist. Il mapping si verifica quando si esegue lo strumento da riga di comando SqlMetal per generare un file di Visual Basic. Per altre informazioni, vedere la sezione successiva relativa ai prerequisiti.  
+ Ai fini di questa procedura dettagliata, si utilizzeranno due metodi mappati a stored procedure nel database di esempio Northwind: CustOrdersDetail e CustOrderHist. Il mapping viene eseguito quando si esegue lo strumento da riga di comando SqlMetal per generare un file di Visual Basic. Per altre informazioni, vedere la sezione successiva relativa ai prerequisiti.  
   
- Questa procedura dettagliata non basarsi su Progettazione relazionale oggetti. Gli sviluppatori che usano Visual Studio possono anche usare O/R Designer per implementare la funzionalità delle stored procedure. Visualizzare [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Questa procedura dettagliata non si basa sul Object Relational Designer. Gli sviluppatori che usano Visual Studio possono usare anche la finestra di progettazione relazionale oggetti per implementare stored procedure funzionalità. Vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -32,7 +32,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 - Il database di esempio Northwind.  
   
-     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest3.  
+     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest3.  
   
 - Un file di codice Visual Basic generato dal database Northwind.  
   
@@ -45,7 +45,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
   
-- Configurare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
+- Configurazione della [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soluzione in Visual Studio.  
   
 - Aggiunta dell'assembly System.Data.Linq al progetto.  
   
@@ -58,7 +58,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 - Esecuzione e test dell'applicazione.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Creazione di una soluzione LINQ to SQL  
- In questa prima attività, si crea una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
+ In questa prima attività viene creata una soluzione di Visual Studio che contiene i riferimenti necessari per compilare ed eseguire un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetto.  
   
 ### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
@@ -68,7 +68,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 3. Nel riquadro **Modelli** scegliere **Applicazione Windows Form**.  
   
-4. Nel **Name** , digitare **SprocOnlyApp**.  
+4. Nella casella **nome** digitare **SprocOnlyApp nella**.  
   
 5. Fare clic su **OK**.  
   
@@ -79,11 +79,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ### <a name="to-add-systemdatalinqdll"></a>Per aggiungere System.Data.Linq.dll  
   
-1. Nelle **Esplora soluzioni**, fare clic su **Mostra tutti i file**.  
+1. In **Esplora soluzioni**fare clic su **Mostra tutti i file**.  
   
-2. Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+2. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **riferimenti**, quindi scegliere **Aggiungi riferimento**.  
   
-3. Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
+3. Nella finestra di dialogo **Aggiungi riferimento** fare clic su **.NET**, selezionare l'assembly System. Data. Linq, quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
@@ -92,9 +92,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
-1. Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
+1. Scegliere **Aggiungi elemento esistente**dal menu **progetto** .  
   
-2. Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest3\northwind.vb e quindi fare clic su **Add**.  
+2. Nella finestra di dialogo **Aggiungi elemento esistente** passare a c:\linqtest3\northwind.vb e quindi fare clic su **Aggiungi**.  
   
      Il file northwind.vb viene aggiunto al progetto.  
   
@@ -103,7 +103,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ### <a name="to-create-the-database-connection"></a>Per creare la connessione al database  
   
-1. Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Form1. vb**, quindi scegliere **Visualizza codice**.  
   
      `Class Form1` verrà visualizzato nell'editor di codice.  
   
@@ -116,40 +116,40 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ### <a name="to-set-up-the-user-interface"></a>Per impostare l'interfaccia utente  
   
-1. Tornare a di Windows Form della finestra di progettazione (**Form1.vb]** ).  
+1. Tornare al Progettazione Windows Form (**Form1. vb [Design]** ).  
   
 2. Scegliere **Casella degli strumenti** dal menu **Visualizza**.  
   
      Verrà aperta la Casella degli strumenti.  
   
     > [!NOTE]
-    >  Scegliere il **Nascondi automaticamente** puntina da disegno per tenere aperta la casella degli strumenti mentre si eseguono i rimanenti passaggi in questa sezione.  
+    > Fare clic sulla puntina da disegno **Nascondi automaticamente** per mantenere aperta la casella degli strumenti mentre si eseguono i passaggi rimanenti di questa sezione.  
   
-3. Trascinare due pulsanti, due caselle di testo e due etichette dalla casella degli strumenti **Form1**.  
+3. Trascinare due pulsanti, due caselle di testo e due etichette nella casella degli strumenti in **Form1**.  
   
-     Disporre i controlli come raffigurato nell'illustrazione. Espandere **Form1** in modo che i controlli di adattarsi con facilità.  
+     Disporre i controlli come raffigurato nell'illustrazione. Espandere **Form1** in modo che i controlli si adattano facilmente.  
   
-4. Fare doppio clic su **Label1**, quindi fare clic su **proprietà**.  
+4. Fare clic con il pulsante destro del mouse su **Label1**, quindi scegliere **Proprietà**.  
   
-5. Modifica il **testo** proprietà dal **Label1** al **Enter OrderID:** .  
+5. Modificare la proprietà **Text** da **Label1** in **Enter OrderID:** .  
   
-6. Nello stesso modo per **Label2**, modificare il **testo** proprietà dal **Label2** al **Enter CustomerID:** .  
+6. Allo stesso modo per **Label2**, modificare la proprietà **Text** da **Label2** in **Enter CustomerID:** .  
   
-7. Nello stesso modo, modificare il **testo** proprietà per **Button1** al **Order Details**.  
+7. Allo stesso modo, modificare la proprietà **Text** per **Button1** in **Order**details.  
   
-8. Modifica il **testo** proprietà per **Button2** al **Order History**.  
+8. Modificare la proprietà **Text** per **Button2** in **Order History**.  
   
      Ampliare i controlli pulsante in modo che tutto il testo sia visibile.  
   
 ### <a name="to-handle-button-clicks"></a>Per gestire i clic sui pulsanti  
   
-1. Fare doppio clic su **Order Details** sul **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
+1. Fare doppio clic su **Order** Details in **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
   
 2. Digitare il codice riportato di seguito nel gestore eventi `Button1`:  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3. A questo punto fare doppio clic su **Button2** su Form1 per creare il `Button2` gestore eventi e aprire l'editor di codice.  
+3. A questo punto, fare doppio clic su **Button2** in `Button2` Form1 per creare il gestore eventi e aprire l'editor di codice.  
   
 4. Digitare il codice riportato di seguito nel gestore eventi `Button2`:  
   
@@ -164,29 +164,29 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Viene visualizzato Form1.  
   
-2. Nel **Enter OrderID** , digitare **10249** e quindi fare clic su **Order Details**.  
+2. Nella casella **Enter OrderID** Digitare **10249** , quindi fare clic su **Order**details.  
   
      I prodotti inclusi nell'ordine 10249 vengono elencati in una finestra di messaggio.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-3. Nel **Enter CustomerID** , digitare `ALFKI`, quindi fare clic su **Order History**.  
+3. Nella casella **immettere CustomerID** Digitare `ALFKI`, quindi fare clic su **Cronologia ordini**.  
   
      In una finestra di messaggio viene elencata la cronologia degli ordini per il cliente ALFKI.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-4. Nel **Enter OrderID** , digitare `123`, quindi fare clic su **Order Details**.  
+4. Nella casella **Enter OrderID** Digitare `123`, quindi fare clic su **Order**details.  
   
      Viene visualizzata una finestra di messaggio con l'indicazione che non è stato trovato alcun risultato.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-5. Nel **Debug** menu, fare clic su **arrestare il debug**.  
+5. Scegliere **Interrompi debug**dal menu **debug** .  
   
      La sessione di debug viene chiusa.  
   
-6. Se si al termine delle prove, è possibile fare clic su **Chiudi progetto** nel **File** menu e salvare il progetto quando viene richiesto.  
+6. Se è stata completata la sperimentazione, è possibile fare clic su **Chiudi progetto** nel menu **file** e salvare il progetto quando richiesto.  
   
 ## <a name="next-steps"></a>Fasi successive  
  Questo progetto può essere migliorato apportandovi alcune modifiche. Ad esempio, è possibile elencare le stored procedure disponibili in una casella di riepilogo, in modo che l'utente possa selezionare quella da eseguire. È inoltre possibile trasmettere l'output dei rapporti a un file di testo.  

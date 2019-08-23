@@ -2,12 +2,12 @@
 title: 'Procedura: Confrontare il contenuto di due cartelle (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593016"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940671"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedura: Confrontare il contenuto di due cartelle (LINQ) (Visual Basic)
 In questo esempio vengono illustrati tre modi per confrontare due elenchi di file:  
@@ -19,7 +19,7 @@ In questo esempio vengono illustrati tre modi per confrontare due elenchi di fil
 - Eseguendo una query sulla differenza tra set per recuperare i file che sono presenti in una cartella, ma non nell'altra.  
   
     > [!NOTE]
-    >  Le tecniche illustrate di seguito possono essere adattate per confrontare le sequenze di oggetti di qualsiasi tipo.  
+    > Le tecniche illustrate di seguito possono essere adattate per confrontare le sequenze di oggetti di qualsiasi tipo.  
   
  La classe `FileComparer` descritta in questo argomento illustra come usare una classe di operatori di confronto personalizzata insieme con gli operatori query standard. La classe non è destinata all'uso in scenari reali. Si limita a usare il nome e la lunghezza in byte di ogni file per determinare se il contenuto di ogni cartella è identico o meno. In uno scenario reale è necessario modificare questo operatore di confronto per eseguire un controllo di uguaglianza più rigoroso.  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
+ Creare un progetto di applicazione console VB.NET con un' `Imports` istruzione per lo spazio dei nomi System. Linq.
  
 ## <a name="see-also"></a>Vedere anche
 

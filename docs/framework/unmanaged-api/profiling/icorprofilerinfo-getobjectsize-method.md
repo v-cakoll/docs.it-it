@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd337ca6d7b03ad22f178c9c7084cfa2585da73c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad2092c902b137df0dfe108743ef4081ca5f04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948120"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>Metodo ICorProfilerInfo::GetObjectSize
 Ottiene le dimensioni di un oggetto specificato.  
@@ -37,30 +37,30 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parametri  
  `objectId`  
- [in] L'ID dell'oggetto.  
+ in ID dell'oggetto.  
   
  `pcSize`  
- [out] Puntatore alla dimensione dell'oggetto, in byte.  
+ out Puntatore alla dimensione dell'oggetto, in byte.  
   
 ## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  Questo metodo è obsoleto. Restituisce COR_E_OVERFLOW per gli oggetti maggiori di 4GB su piattaforme a 64 bit. Usare la [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) metodo invece.  
+> Questo metodo è obsoleto. Restituisce COR_E_OVERFLOW per gli oggetti di dimensioni maggiori di 4 GB sulle piattaforme a 64 bit. Usare invece il metodo [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) .  
   
- Oggetti diversi dello stesso tipo sono spesso le stesse dimensioni. Tuttavia, alcuni tipi, ad esempio le matrici o stringhe, potrebbero essere una dimensione diversa per ogni oggetto.  
+ Oggetti diversi degli stessi tipi spesso hanno le stesse dimensioni. Tuttavia, alcuni tipi, ad esempio matrici o stringhe, possono avere dimensioni diverse per ogni oggetto.  
   
- Le dimensioni restituite dal `GetObjectSize` (metodo) non include eventuali spaziature interne di allineamento che possono essere visualizzati dopo che l'oggetto è nell'heap di garbage collection. Se si usa il `GetObjectSize` metodo per passare da un oggetto a un oggetto nell'heap di garbage collection, aggiungere padding manualmente, in base alle esigenze di allineamento.  
+ Le dimensioni restituite dal `GetObjectSize` metodo non includono la spaziatura interna dell'allineamento che può comparire dopo che l'oggetto si trova nell'heap del Garbage Collection. Se si usa il `GetObjectSize` metodo per passare da oggetto a oggetto nell'heap del Garbage Collection, aggiungere la spaziatura interna dell'allineamento manualmente, se necessario.  
   
-- In Windows a 32 bit, COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP Usa l'allineamento a 8 byte.  
+- Su Windows a 32 bit, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP usa l'allineamento a 8 byte.  
   
-- In Windows a 64 bit, l'allineamento è sempre 8 byte.  
+- In Windows a 64 bit, l'allineamento è sempre di 8 byte.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl, CorProf.h  
+ **Intestazione:** CorProf. idl, CorProf. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

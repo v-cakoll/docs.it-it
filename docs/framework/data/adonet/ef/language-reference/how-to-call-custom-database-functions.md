@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936035"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Procedura: Chiamare funzioni di database personalizzate
 In questo argomento viene descritto come chiamare funzioni personalizzate definite nel database dall'interno di query LINQ to Entities.  
@@ -23,23 +23,23 @@ In questo argomento viene descritto come chiamare funzioni personalizzate defini
   
 1. Creare una funzione personalizzata nel database.  
   
-     Per altre informazioni sulla creazione di funzioni personalizzate in SQL Server, vedere [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
+     Per ulteriori informazioni sulla creazione di funzioni personalizzate in SQL Server, vedere [create function (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
 2. Dichiarare una funzione nel linguaggio Store Schema Definition Language (SSDL) del file .edmx. Il nome della funzione deve essere identico a quello della funzione dichiarata nel database.  
   
-     Per altre informazioni, vedere [Function. Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
+     Per ulteriori informazioni, vedere [elemento Function (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
 3. Aggiungere un metodo corrispondente a una classe nel codice dell'applicazione e applicare un <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale. La risoluzione del nome della funzione per LINQ rileva la distinzione tra maiuscole e minuscole.  
   
 4. Chiamare il metodo in una query LINQ to Entities.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene mostrato come chiamare una funzione di database personalizzata dall'interno una query LINQ to Entities. Nell'esempio viene usato il modello School. Per informazioni sul modello School, vedere [creazione del Database di esempio School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [genera il File con estensione edmx School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ Nell'esempio seguente viene mostrato come chiamare una funzione di database personalizzata dall'interno una query LINQ to Entities. Nell'esempio viene usato il modello School. Per informazioni sul modello School, vedere [creazione del database di esempio School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [generazione del file School. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
  Nel codice seguente viene aggiunta la funzione `AvgStudentGrade` al database di esempio School.  
   
 > [!NOTE]
->  I passaggi per la chiamata di una funzione di database personalizzata sono gli stessi indipendentemente dal server database. Tuttavia, il codice seguente è specifico per la creazione di una funzione in un database SQL Server. Il codice per la creazione di una funzione personalizzata in altri server database potrebbe essere differente.  
+> I passaggi per la chiamata di una funzione di database personalizzata sono gli stessi indipendentemente dal server database. Tuttavia, il codice seguente è specifico per la creazione di una funzione in un database SQL Server. Il codice per la creazione di una funzione personalizzata in altri server database potrebbe essere differente.  
   
  [!code-sql[DP L2E MapToDBFunction#1](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp l2e maptodbfunction/tsql/create_avgstudentgrade.sql#1)]  
   
@@ -62,5 +62,5 @@ In questo argomento viene descritto come chiamare funzioni personalizzate defini
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

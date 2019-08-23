@@ -2,14 +2,14 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940573"
 ---
-# <a name="userdefinedtype"></a>\<userDefinedType>
+# <a name="userdefinedtype"></a>\<> di
 Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contratto di servizio.  
   
  \<system.ServiceModel>  
@@ -50,7 +50,7 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |`userDefinedTypes`|Raccolta di elementi `userDefinedType`.|  
   
@@ -59,7 +59,7 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
   
  Per aggirare questo problema, è possibile aggiungere tipi definiti dall'utente al file di configurazione in modo che possano essere inclusi come tipi noti nel contratto di servizio appropriato. A tale scopo, è necessario identificare in modo univoco i tipi definiti dall'utente e i contratti, ovvero le interfacce COM originali che li usano.  
   
- Nell'esempio seguente viene illustrato come aggiungere due tipi definiti dall'utente specifici per la <`userDefinedTypes`> sezione del file di configurazione per questo scopo.  
+ Nell'esempio seguente viene illustrata l'aggiunta di due tipi`userDefinedTypes`specifici definiti dall'utente alla sezione < > del file di configurazione a tale scopo.  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integrazione con applicazioni COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Procedura: Configurare le impostazioni di servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integrazione con applicazioni COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Procedura: Configurare le impostazioni del servizio COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

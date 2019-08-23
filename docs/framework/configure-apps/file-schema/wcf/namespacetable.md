@@ -2,20 +2,20 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933161"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 
 Rappresenta una sezione di configurazione per la definizione di un set di elementi contenenti lo spazio dei nomi da anteporre ai mapping che possono quindi essere usati nei filtri XPath per il routing.
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<routing>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+**\<system.serviceModel>**    
+&nbsp;&nbsp; **\<routing>**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable>**
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +36,19 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-nessuno
+Nessuna
 
 ### <a name="child-elements"></a>Elementi figlio
 
 |     | Descrizione |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Definisce un mapping del prefisso dello spazio dei nomi usato per espressioni XPath. |
+| [ **\<filter>** ](filter.md) | Definisce un mapping del prefisso dello spazio dei nomi usato per espressioni XPath. |
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|     | Descrizione |
+|     | DESCRIZIONE |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing, che determinano il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo, nonché di routing che definiscono gli endpoint di destinazione per tabelle inviare messaggi a quando un filtro corrisponda. |
+| [ **\<routing>** ](routing.md) | Rappresenta una sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di<xref:System.ServiceModel.Dispatcher.MessageFilter> Windows Communication Foundation (WCF) da utilizzare durante la valutazione di messaggi in arrivo, nonché di tabelle di routing che definiscono gli endpoint di destinazione Invia messaggi a quando viene individuato un filtro. |
 
 ## <a name="see-also"></a>Vedere anche
 

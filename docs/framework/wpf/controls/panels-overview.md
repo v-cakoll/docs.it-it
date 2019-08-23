@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545261"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944815"
 ---
 # <a name="panels-overview"></a>Cenni preliminari sugli elementi Panel
 <xref:System.Windows.Controls.Panel>gli elementi sono componenti che controllano il rendering degli elementi, ovvero le dimensioni e le dimensioni, la posizione e la disposizione del contenuto figlio. Fornisce una serie di elementi predefiniti <xref:System.Windows.Controls.Panel> , nonché la possibilità di creare elementi personalizzati <xref:System.Windows.Controls.Panel>. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -65,8 +65,8 @@ ms.locfileid: "69545261"
 |Nome elemento|Elemento Panel dell'interfaccia utente?|Descrizione|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Sì|Definisce un'area all'interno della <xref:System.Windows.Controls.Canvas> quale è possibile posizionare in modo esplicito gli elementi figlio in base alle coordinate relative all'area.|  
-|<xref:System.Windows.Controls.DockPanel>|Sì|Definisce un'area all'interno della quale è possibile disporre elementi figlio in orizzontale o in verticale, l'uno rispetto all'altro.|  
-|<xref:System.Windows.Controls.Grid>|Yes|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di <xref:System.Windows.Controls.Grid> un oggetto possono essere posizionati <xref:System.Windows.FrameworkElement.Margin%2A> con precisione utilizzando la proprietà.|  
+|<xref:System.Windows.Controls.DockPanel>|Yes|Definisce un'area all'interno della quale è possibile disporre elementi figlio in orizzontale o in verticale, l'uno rispetto all'altro.|  
+|<xref:System.Windows.Controls.Grid>|Sì|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di <xref:System.Windows.Controls.Grid> un oggetto possono essere posizionati <xref:System.Windows.FrameworkElement.Margin%2A> con precisione utilizzando la proprietà.|  
 |<xref:System.Windows.Controls.StackPanel>|Sì|Dispone gli elementi figlio su una sola riga che può essere orientata orizzontalmente o verticalmente.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|No|Gestisce il layout dei pulsanti di tabulazione <xref:System.Windows.Controls.TabControl>in un oggetto.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|No|Dispone il contenuto all'interno <xref:System.Windows.Controls.ToolBar> di un controllo.|  
@@ -149,7 +149,7 @@ ms.locfileid: "69545261"
  <xref:System.Windows.Controls.Grid> Le<xref:System.Windows.GridUnitType.Star> colonne e le righe definite all'interno di un possono sfruttare il dimensionamento per distribuire lo spazio rimanente in modo proporzionale. Quando <xref:System.Windows.GridUnitType.Star> si seleziona l'altezza o la larghezza di una riga o di una colonna, tale colonna o riga riceve una proporzione ponderata dello spazio disponibile rimanente. Si tratta di un contrasto <xref:System.Windows.GridUnitType.Auto>rispetto a, che consente di distribuire lo spazio in modo uniforme in base alle dimensioni del contenuto all'interno di una colonna o di una riga. Questo valore viene espresso come `*` o come `2*` quando si usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Nel primo caso la riga o la colonna riceverebbe una volta lo spazio disponibile, nel secondo caso lo riceverebbe due volte e così via. Combinando questa tecnica per la distribuzione proporzionale <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> dello <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> spazio con `Stretch` un valore e, è possibile partizionare lo spazio del layout in base alla percentuale dello spazio dello schermo. <xref:System.Windows.Controls.Grid>è l'unico pannello di layout in grado di distribuire lo spazio in questo modo.  
   
 #### <a name="defining-and-using-a-grid"></a>Definizione e uso di un elemento Grid  
- L'esempio seguente illustra come creare una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] analoga a quella presente nella finestra Esegui disponibile nel menu Start di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Nell'esempio seguente viene illustrato come creare un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] oggetto simile a quello presente nella finestra di dialogo Esegui disponibile nel menu Start di Windows.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

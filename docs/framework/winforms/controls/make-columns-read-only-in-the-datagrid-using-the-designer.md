@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952097"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare le colonne come di sola lettura nel controllo DataGridView di Windows Forms usando la finestra di progettazione
 Per impostazione predefinita, gli utenti possono modificare il testo e i dati numerici <xref:System.Windows.Forms.DataGridView> visualizzati nel controllo Windows Forms. Se si desidera visualizzare dati non destinati alla modifica, è necessario rendere le colonne che contengono i dati di sola lettura. Per informazioni su come rendere il controllo interamente di sola lettura, vedere [How to: Impedire l'aggiunta e l'eliminazione di righe nel controllo Windows Forms DataGridView utilizzando](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)la finestra di progettazione.
@@ -28,7 +28,7 @@ Per impostazione predefinita, gli utenti possono modificare il testo e i dati nu
 3. Nella griglia **Proprietà colonna** impostare la <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> proprietà su `true`.
 
     > [!NOTE]
-    >  È inoltre possibile rendere una colonna di sola lettura quando viene aggiunta selezionando la casella di controllo **sola lettura** nella finestra di dialogo **Aggiungi colonna** .
+    > È inoltre possibile rendere una colonna di sola lettura quando viene aggiunta selezionando la casella di controllo **sola lettura** nella finestra di dialogo **Aggiungi colonna** .
 
 ## <a name="see-also"></a>Vedere anche
 

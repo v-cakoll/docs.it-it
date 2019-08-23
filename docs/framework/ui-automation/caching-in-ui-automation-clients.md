@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 405199ff0652303fa5ccae18770307ea10e38b52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05738fae72d11e66b28acdc22fa1a8745ca7a083
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932705"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
  Questo argomento presenta la memorizzazione nella cache delle proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e dei pattern di controllo.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]la memorizzazione nella cache corrisponde al recupero preliminare dei dati. I dati diventano quindi accessibili senza un'ulteriore comunicazione tra processi. La memorizzazione nella cache in genere viene usata dalle applicazioni client di automazione interfaccia utente per recuperare in massa proprietà e pattern di controllo. Le informazioni vengono quindi recuperate dalla cache in base alle necessità. L'applicazione aggiorna periodicamente la cache, in genere come risposta a eventi indicanti che è cambiato qualcosa nell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- I vantaggi della memorizzazione nella cache sono più evidenti con controlli Windows Presentation Foundation (WPF) e i controlli personalizzati con provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ I vantaggi della memorizzazione nella cache sono molto evidenti con i controlli Windows Presentation Foundation (WPF) e i controlli personalizzati con provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
   
  La memorizzazione nella cache si verifica quando l'applicazione attiva un elemento <xref:System.Windows.Automation.CacheRequest> e quindi usa un metodo o una proprietà che restituisce un elemento <xref:System.Windows.Automation.AutomationElement>, ad esempio <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. I metodi della classe <xref:System.Windows.Automation.TreeWalker> sono un'eccezione. La memorizzazione nella cache viene eseguita solo se un elemento <xref:System.Windows.Automation.CacheRequest> viene specificato come parametro (ad esempio, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "64647224"
 ## <a name="activating-the-cacherequest"></a>Attivazione di CacheRequest  
  La memorizzazione nella cache viene eseguita solo quando gli oggetti <xref:System.Windows.Automation.AutomationElement> vengono recuperati mentre un oggetto <xref:System.Windows.Automation.CacheRequest> è attivo per il thread corrente. Esistono due diverse modi per attivare un oggetto <xref:System.Windows.Automation.CacheRequest>.  
   
- Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . Il modo più semplice per controllare la durata dell'oggetto consiste nel racchiudere la chiamata all'interno di un `using` (c#) o `Using` blocco (Visual Basic). In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
+ Il modo consueto consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Questo metodo restituisce un oggetto che implementa <xref:System.IDisposable>. La richiesta rimane attiva finché esiste l'oggetto <xref:System.IDisposable> . Il modo più semplice per controllare la durata dell'oggetto consiste nel racchiudere la chiamata all'interno `using` diC#un blocco `Using` () o (Visual Basic). In questo modo la richiesta verrà sicuramente estratta dallo stack anche se verrà generata un'eccezione.  
   
  Un altro modo, utile quando si vuole annidare le richieste della cache, consiste nel chiamare <xref:System.Windows.Automation.CacheRequest.Push%2A>, che inserisce la richiesta in uno stack e la attiva. La richiesta rimane attiva finché viene rimossa dallo stack da <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La richiesta diventa temporaneamente inattiva se viene effettuato il push di un'altra richiesta nello stack. Solo la richiesta principale dello stack è attiva.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64647224"
  Se <xref:System.Windows.Automation.TreeScope.Element> è stato incluso nell'ambito della richiesta della cache, l'elemento radice della richiesta è successivamente disponibile nella proprietà <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> di qualsiasi elemento figlio.  
   
 > [!NOTE]
->  Non è possibile memorizzare nella cache elementi padre o predecessori dell'elemento radice della richiesta.  
+> Non è possibile memorizzare nella cache elementi padre o predecessori dell'elemento radice della richiesta.  
   
 <a name="Updating_the_Cache"></a>   
 ## <a name="updating-the-cache"></a>Aggiornamento della cache  
@@ -105,4 +105,4 @@ ms.locfileid: "64647224"
 
 - [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
 - [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [Esempio di FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Esempio FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

@@ -2,17 +2,17 @@
 title: Mapping del tipo personalizzato SQL-CLR
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037050"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945051"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapping del tipo personalizzato SQL-CLR
 Il mapping dei tipi tra SQL Server e CLR (Common Language Runtime) viene specificato automaticamente quando si usa lo strumento da riga di comando SQLMetal o Progettazione relazionale oggetti.  
   
- Quando non viene eseguito alcun mapping personalizzato, tali strumenti assegnano predefinito i mapping dei tipi come descritto in [Mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Se si desidera usare mapping dei tipi diversi da quelli predefiniti, è necessario personalizzarli.  
+ Quando non viene eseguito alcun mapping personalizzato, questi strumenti assegnano i mapping dei tipi predefiniti come descritto in [mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Se si desidera usare mapping dei tipi diversi da quelli predefiniti, è necessario personalizzarli.  
   
  Quando si personalizzano i mapping dei tipi, l'approccio consigliato consiste nell'apportare le modifiche in un file DBML intermedio. Il file DBML personalizzato può quindi essere usato quando si creano i file di codice e di mapping con SQLMetal o Progettazione relazionale oggetti.  
   
@@ -21,10 +21,10 @@ Il mapping dei tipi tra SQL Server e CLR (Common Language Runtime) viene specifi
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>Personalizzazione con SQLMetal o Progettazione relazionale oggetti  
  Con SQLMetal e Progettazione relazionale oggetti è possibile creare automaticamente un modello a oggetti che include le informazioni sul mapping dei tipi all'interno o all'esterno del file di codice. Poiché questi file vengono sovrascritti da SQLMetal o da Progettazione relazionale oggetti ogni volta che si ricreano i mapping, l'approccio consigliato per specificare mapping dei tipi personalizzati consiste nel personalizzare un file DBML.  
   
- Per personalizzare i mapping dei tipi con SQLMetal o con Progettazione relazionale oggetti, generare innanzitutto un file DBML. Prima di generare il file di codice o di mapping, modificare quindi il file DBML per identificare i mapping dei tipi desiderati. Con SQLMetal, è necessario modificare manualmente gli attributi `Type` e `DbType` nel file DBML per personalizzare il mapping dei tipi. Con Progettazione relazionale oggetti, è possibile apportare le modifiche all'interno della finestra di progettazione. Per altre informazioni sull'uso di O/R Designer, vedere [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Per personalizzare i mapping dei tipi con SQLMetal o con Progettazione relazionale oggetti, generare innanzitutto un file DBML. Prima di generare il file di codice o di mapping, modificare quindi il file DBML per identificare i mapping dei tipi desiderati. Con SQLMetal, è necessario modificare manualmente gli attributi `Type` e `DbType` nel file DBML per personalizzare il mapping dei tipi. Con Progettazione relazionale oggetti, è possibile apportare le modifiche all'interno della finestra di progettazione. Per ulteriori informazioni sull'utilizzo di O/R Designer, vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
->  Alcuni mapping dei tipi possono comportare eccezioni di overflow o di perdita di dati durante la conversione da o verso il database. Esaminare attentamente la matrice del comportamento in fase di esecuzione del mapping dei tipi nella [Mapping dei tipi SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) prima di apportare le eventuali personalizzazioni.  
+> Alcuni mapping dei tipi possono comportare eccezioni di overflow o di perdita di dati durante la conversione da o verso il database. Esaminare attentamente la matrice del comportamento in fase di esecuzione del mapping dei tipi nel [mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) prima di apportare qualsiasi personalizzazione.  
   
  Affinché le personalizzazioni del mapping dei tipi siano riconosciute da SQLMetal o da Progettazione relazionale oggetti, è necessario assicurarsi che questi strumenti dispongano del percorso al file DBML personalizzato quando si genera il file di codice o il file di mapping esterno. Sebbene non sia necessario per la personalizzazione del mapping dei tipi, è consigliabile separare sempre le informazioni sul mapping dei tipi dal file di codice e generare il file di mapping dei tipi esterno aggiuntivo. In questo modo, si garantisce maggiore flessibilità in quanto non è necessaria la ricompilazione del file di codice.  
   

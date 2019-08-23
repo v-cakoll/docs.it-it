@@ -10,26 +10,26 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cde7c32b48dff3d6d054e700b2f95771ba3b3773
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930155"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Procedura: Controllare un oggetto MediaElement (riproduzione, sospensione, interruzione, volume e velocità)
-Nell'esempio seguente viene illustrato come controllare la riproduzione dei supporti tramite un <xref:System.Windows.Controls.MediaElement>. Nell'esempio viene creato un semplice lettore multimediale che consente di riprodurre, sospendere, arrestare e andare avanti e indietro nei supporti, nonché imposta la proporzione di volume e velocità.  
+Nell'esempio seguente viene illustrato come controllare la riproduzione dei supporti utilizzando <xref:System.Windows.Controls.MediaElement>un oggetto. Nell'esempio viene creato un semplice lettore multimediale che consente di riprodurre, sospendere, arrestare e ignorare i supporti, nonché di modificare il volume e il rapporto di velocità.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente crea l'interfaccia utente.  
   
 > [!NOTE]
->  Il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> proprietà di <xref:System.Windows.Controls.MediaElement> deve essere impostata su `Manual` affinché sia in grado di arrestare in modo interattivo, sospendere e riprodurre i contenuti multimediali.  
+> La <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> proprietà di <xref:System.Windows.Controls.MediaElement> deve essere impostata su `Manual` per poter arrestare, sospendere e riprodurre i file multimediali in modo interattivo.  
   
  [!code-xaml[MediaGallery_snip#MediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente implementa la funzionalità dei controlli dell'interfaccia utente di esempio. Il <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, e <xref:System.Windows.Controls.MediaElement.Stop%2A> metodi vengono utilizzati rispettivamente play, sospendere e arrestare i contenuti multimediali. Modifica il <xref:System.Windows.Controls.MediaElement.Position%2A> proprietà del <xref:System.Windows.Controls.MediaElement> consente di spostarsi nel supporto. Infine, il <xref:System.Windows.Controls.MediaElement.Volume%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> proprietà vengono utilizzate per regolare la velocità di volume e la riproduzione dei contenuti multimediali.  
+ Il codice seguente implementa la funzionalità dei controlli dell'interfaccia utente di esempio. I <xref:System.Windows.Controls.MediaElement.Play%2A>metodi <xref:System.Windows.Controls.MediaElement.Pause%2A>, e<xref:System.Windows.Controls.MediaElement.Stop%2A> vengono utilizzati rispettivamente per riprodurre, sospendere e arrestare il supporto. La modifica <xref:System.Windows.Controls.MediaElement.Position%2A> della proprietà <xref:System.Windows.Controls.MediaElement> del consente di ignorare il contenuto multimediale. Infine, le <xref:System.Windows.Controls.MediaElement.Volume%2A> proprietà <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> e vengono utilizzate per regolare la velocità del volume e della riproduzione del supporto.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaElementExample.xaml.cs#codebehindmediaelementexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  

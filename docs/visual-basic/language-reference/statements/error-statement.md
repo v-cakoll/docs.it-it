@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944448"
 ---
 # <a name="error-statement"></a>Istruzione Error
-Simula il verificarsi di un errore.  
+Simula l'occorrenza di un errore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Parti  
  `errornumber`  
- Obbligatorio. Può essere qualsiasi numero errore valido.  
+ Richiesto. Può essere qualsiasi numero di errore valido.  
   
 ## <a name="remarks"></a>Note  
- Il `Error` istruzione è supportata per compatibilità con le versioni precedenti. Nel nuovo codice, soprattutto quando si creano oggetti, usare il `Err` dell'oggetto `Raise` metodo per generare errori di run-time.  
+ L' `Error` istruzione è supportata per la compatibilità con le versioni precedenti. Nel nuovo codice, in particolare quando si creano oggetti, `Err` utilizzare il `Raise` metodo dell'oggetto per generare errori di run-time.  
   
- Se `errornumber` è definito, il `Error` istruzione chiama il gestore degli errori dopo le proprietà del `Err` oggetto vengono assegnati i valori predefiniti seguenti:  
+ Se `errornumber` è definito, l' `Error` istruzione chiama il gestore degli errori `Err` dopo che alle proprietà dell'oggetto sono stati assegnati i valori predefiniti seguenti:  
   
 |Proprietà|Value|  
 |--------------|-----------|  
-|`Number`|Valore specificato come argomento per `Error` istruzione. Può essere qualsiasi numero errore valido.|  
+|`Number`|Valore specificato come argomento `Error` dell'istruzione. Può essere qualsiasi numero di errore valido.|  
 |`Source`|Nome del progetto Visual Basic corrente.|  
-|`Description`|Espressione corrispondente al valore restituito della stringa di `Error` funzione per l'oggetto specificato `Number`, se questa stringa è presente. Se la stringa non esiste, `Description` contiene una stringa di lunghezza zero ("").|  
-|`HelpFile`|Il completo dell'unità, percorso e nome file del file della Guida di Visual Basic appropriato.|  
-|`HelpContext`|La Guida di Visual Basic di ID di contesto relativo all'errore corrispondente al file il `Number` proprietà.|  
+|`Description`|Espressione stringa corrispondente al valore restituito della `Error` funzione per l'oggetto specificato `Number`, se questa stringa esiste. Se la stringa non esiste, `Description` contiene una stringa di lunghezza zero ("").|  
+|`HelpFile`|L'unità, il percorso e il nome file completi del file della Guida Visual Basic appropriato.|  
+|`HelpContext`|ID del contesto del file della Guida Visual Basic appropriato per l'errore corrispondente `Number` alla proprietà.|  
 |`LastDLLError`|Zero.|  
   
- Se nessun gestore di errori non esiste o non è attivato, un messaggio di errore verrà creato e visualizzato dal `Err` le proprietà dell'oggetto.  
+ Se non esiste alcun gestore di errori o se non ne è abilitato alcuno, viene creato un messaggio di errore `Err` che viene visualizzato dalle proprietà dell'oggetto.  
   
 > [!NOTE]
->  Alcune applicazioni di host di Visual Basic non è possibile creare oggetti. Vedere la documentazione dell'applicazione host per determinare se può creare classi e oggetti.  
+> Alcune applicazioni host Visual Basic non possono creare oggetti. Per determinare se è possibile creare classi e oggetti, vedere la documentazione dell'applicazione host.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene usato il `Error` istruzione per generare il numero di errore 11.  
+ In questo esempio viene `Error` utilizzata l'istruzione per generare il numero di errore 11.  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -60,7 +60,7 @@ Error 11   ' Simulate the "Division by zero" error.
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

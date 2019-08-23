@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949908"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
 
-Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).
+Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere funzionamento dell' [input del mouse in Windows Forms](how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Forms)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Forms)](events-overview-windows-forms.md).
 
 ## <a name="mouse-information"></a>Informazioni sul mouse
 
@@ -66,7 +66,7 @@ L'ordine degli eventi generati per un doppio clic del pulsante del mouse è il s
 
 8. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-Per un esempio di codice che illustri l'ordine del mouse fare clic su eventi, vedere [come: L'Input dell'utente di handle di eventi in Windows Form controlli](how-to-handle-user-input-events-in-windows-forms-controls.md).
+Per un esempio di codice che illustra l'ordine degli eventi click del mouse, [vedere Procedura: Gestire gli eventi di input utente nei](how-to-handle-user-input-events-in-windows-forms-controls.md)controlli Windows Forms.
 
 ### <a name="individual-controls"></a>Controlli autonomi
 
@@ -79,11 +79,11 @@ I controlli seguenti non sono conformi al comportamento standard dell'evento Cli
 
   - Clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Fare clic sul pulsante destro del mouse: Nessun evento click generato
+  - Clic con pulsante destro: Nessun evento Click generato
 
   - Doppio clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - A destra fare doppio clic: Nessun evento click generato
+  - Doppio clic con il pulsante destro del mouse: Nessun evento Click generato
 
 - Controlli <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> e <xref:System.Windows.Forms.CheckedListBox>
 
@@ -92,11 +92,11 @@ I controlli seguenti non sono conformi al comportamento standard dell'evento Cli
 
   - Clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Fare clic sul pulsante destro del mouse: Nessun evento click generato
+  - Clic con pulsante destro: Nessun evento Click generato
 
   - Doppio clic con pulsante sinistro: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - A destra fare doppio clic: Nessun evento click generato
+  - Doppio clic con il pulsante destro del mouse: Nessun evento Click generato
 
 - Controllo <xref:System.Windows.Forms.ListView>
 
@@ -145,7 +145,7 @@ I controlli di attivazione/disattivazione, quali quelli che derivano dalla class
 8. Viene generato l'evento <xref:System.Windows.Forms.Control.MouseUp>.
 
     > [!NOTE]
-    >  Se l'utente sposta il puntatore all'esterno del controllo di attivazione/disattivazione mentre il pulsante del mouse è premuto, ad esempio spostando il mouse dal controllo <xref:System.Windows.Forms.Button> mentre il pulsante è premuto, il controllo di attivazione/disattivazione viene disegnato nello stato generato e si verifica solo l'evento <xref:System.Windows.Forms.Control.MouseUp>. In tale situazione l'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> non si verificherà.
+    > Se l'utente sposta il puntatore all'esterno del controllo di attivazione/disattivazione mentre il pulsante del mouse è premuto, ad esempio spostando il mouse dal controllo <xref:System.Windows.Forms.Button> mentre il pulsante è premuto, il controllo di attivazione/disattivazione viene disegnato nello stato generato e si verifica solo l'evento <xref:System.Windows.Forms.Control.MouseUp>. In tale situazione l'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> non si verificherà.
 
 ## <a name="see-also"></a>Vedere anche
 

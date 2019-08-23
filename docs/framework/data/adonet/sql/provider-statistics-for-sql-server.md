@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946580"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche di provider per SQL Server
 A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. È necessario abilitare le statistiche impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto di connessione valido. Dopo aver abilitato le statistiche, è possibile visualizzarle come "snapshot" recuperando un riferimento <xref:System.Collections.IDictionary> mediante il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci di dizionario delle coppie nome/valore. Queste coppie nome/valore non seguono alcun ordine. È possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per azzerare i contatori in qualsiasi momento. Se non è stata abilitata la raccolta delle statistiche, non viene generata alcuna eccezione. Inoltre, se il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ciascuna voce. Se vengono abilitate le statistiche, eseguire l'applicazione, quindi disabilitare le statistiche. I valori recuperati rifletteranno i valori raccolti fino al momento in cui le statistiche sono state disabilitate. Tutti i valori delle statistiche vengono raccolti in base alla connessione.  
   
 ## <a name="statistical-values-available"></a>Valori statistici disponibili  
- Attualmente sono disponibili 18 voci diverse del provider Microsoft SQL Server. Il numero di elementi disponibili è accessibile tramite il **conteggio** proprietà delle <xref:System.Collections.IDictionary> restituito dal riferimento all'interfaccia <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori per statistiche di provider usano common language runtime <xref:System.Int64> tipo (**lungo** in c# e Visual Basic), ovvero con ampiezza 64 bit. Il valore massimo dei **int64** tipo di dati, come definito dal **int64. MaxValue** campo, ((2^63)-1)). Quando i valori del contatore raggiungono il valore massimo, non possono più essere considerati esatti. Ciò significa che **int64. MaxValue**-1((2^63)-2) è effettivamente il valore massimo valido per le statistiche.  
+ Attualmente sono disponibili 18 voci diverse del provider Microsoft SQL Server. È possibile accedere al numero di elementi disponibili tramite la proprietà **count** del riferimento <xref:System.Collections.IDictionary> all'interfaccia restituito da <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Tutti i contatori per le statistiche del provider utilizzano il <xref:System.Int64> tipo di Common Language Runtime ( C# **Long** in e Visual Basic), ovvero 64 bit. Valore massimo del tipo di dati **Int64** , definito da **Int64.** Il campo MaxValue è ((2 ^ 63)-1)). Quando i valori del contatore raggiungono il valore massimo, non possono più essere considerati esatti. Ciò significa che **Int64. MaxValue**-1 ((2 ^ 63)-2) è effettivamente il valore valido più grande per qualsiasi statistica.  
   
 > [!NOTE]
->  Viene usato un dizionario per restituire le statistiche del provider poiché il numero, i nomi e l'ordine delle statistiche restituite può variare nel tempo. Le applicazioni non devono fare riferimento a un valore specifico rilevato nel dizionario, ma devono controllare se il valore è presente e creare rami di conseguenza.  
+> Viene usato un dizionario per restituire le statistiche del provider poiché il numero, i nomi e l'ordine delle statistiche restituite può variare nel tempo. Le applicazioni non devono fare riferimento a un valore specifico rilevato nel dizionario, ma devono controllare se il valore è presente e creare rami di conseguenza.  
   
  Nella tabella seguente vengono descritti i valori statistici disponibili. Si noti che i nomi delle chiavi per i singoli valori non sono localizzati nelle versioni internazionali di Microsoft .NET Framework.  
   
@@ -48,7 +48,7 @@ A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per
  Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare quattro singoli valori statistici e riportarli nella finestra della console.  
   
 > [!NOTE]
->  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+> Nell'esempio seguente viene utilizzato il database **AdventureWorks** di esempio incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  Nell'applicazione console seguente viene illustrato come abilitare le statistiche su una connessione, recuperare tutti i valori statistici con l'enumeratore e riportarli nella finestra della console.  
   
 > [!NOTE]
->  L'esempio seguente usa il codice di esempio **AdventureWorks** database incluso con SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
+> Nell'esempio seguente viene utilizzato il database **AdventureWorks** di esempio incluso in SQL Server. Per la stringa di connessione fornita nel codice di esempio si presuppone che il database sia installato e disponibile nel computer locale. Modificare la stringa di connessione per adattarla all'ambiente, se necessario.  
   
 ```vb  
 Option Strict On  

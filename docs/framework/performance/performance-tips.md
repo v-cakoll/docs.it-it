@@ -9,30 +9,30 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f020e50cfe53c2b6ba134308ed6587876ca21a42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943370"
 ---
 # <a name="net-performance-tips"></a>Suggerimenti sulle prestazioni .NET
 Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di un programma. In alcuni casi, è possibile aumentare la velocità di esecuzione seguendo determinate regole di base nel codice sorgente. In alcuni programmi, è importante esaminare attentamente il codice e usare i profiler per verificare che venga eseguito il più velocemente possibile. In altri programmi, non è necessario eseguire questa ottimizzazione perché il codice viene eseguito con una velocità ragionevole così com'è scritto. In questo articolo sono elencate alcune aree in cui si verificano comunemente problemi di prestazioni e vengono proposti suggerimenti per migliorarle, oltre a collegamenti ad altri argomenti dedicati alle prestazioni. Per altre informazioni sulla pianificazione e la misurazione delle prestazioni, vedere [Prestazioni](../../../docs/framework/performance/index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Boxing e unboxing  
- È consigliabile evitare l'uso di tipi valore nelle situazioni in cui devono essere sottoposti a conversione boxing un numero elevato di volte, ad esempio nelle classi di raccolte non generiche, come <xref:System.Collections.ArrayList?displayProperty=nameWithType>. È possibile evitare la conversione boxing di tipi valore usando raccolte generiche, come <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Le conversioni boxing e unboxing sono processi onerosi dal punto di vista del calcolo. Quando un tipo valore viene sottoposto a conversione boxing, è necessario creare un oggetto completamente nuovo. L'operazione può richiedere fino a 20 volte più tempo rispetto a una semplice assegnazione di riferimento. Durante l'unboxing, il processo di cast può richiedere il quadruplo del tempo rispetto a un'assegnazione. Per altre informazioni, vedere [Boxing e unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+ È consigliabile evitare l'uso di tipi valore nelle situazioni in cui devono essere sottoposti a conversione boxing un numero elevato di volte, ad esempio nelle classi di raccolte non generiche, come <xref:System.Collections.ArrayList?displayProperty=nameWithType>. È possibile evitare la conversione boxing di tipi valore usando raccolte generiche, come <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Le conversioni boxing e unboxing sono processi onerosi dal punto di vista del calcolo. Quando un tipo valore viene sottoposto a conversione boxing, è necessario creare un oggetto completamente nuovo. L'operazione può richiedere fino a 20 volte più tempo rispetto a una semplice assegnazione di riferimento. Durante l'unboxing, il processo di cast può richiedere il quadruplo del tempo rispetto a un'assegnazione. Per altre informazioni, vedere [Boxing e unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Stringhe  
- Quando si concatena un numero elevato di variabili stringa, ad esempio in un ciclo rigido, usare <xref:System.Text.StringBuilder?displayProperty=nameWithType> invece dell'[operatore +](~/docs/csharp/language-reference/operators/addition-operator.md) C# o degli [operatori di concatenazione](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) di Visual Basic. Per altre informazioni, vedere [Procedura: Concatenare più stringhe](../../csharp/how-to/concatenate-multiple-strings.md) e [operatori di concatenazione in Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Quando si concatena un numero elevato di variabili stringa, ad esempio in un ciclo rigido, usare <xref:System.Text.StringBuilder?displayProperty=nameWithType> invece dell'[operatore +](../../csharp/language-reference/operators/addition-operator.md) C# o degli [operatori di concatenazione](../../visual-basic/language-reference/operators/concatenation-operators.md) di Visual Basic. Per altre informazioni, vedere [Procedura: Concatenare più](../../csharp/how-to/concatenate-multiple-strings.md) stringhe e [operatori di concatenazione in Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Distruttori  
- Non usare distruttori vuoti. Quando una classe contiene un distruttore, viene creata una voce nella coda Finalize. Quando si chiama il distruttore, viene richiamato Garbage Collector per elaborare la coda. Se il distruttore è vuoto, si verifica semplicemente un calo di prestazioni. Per altre informazioni, vedere [distruttori](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) e [durata degli oggetti: Come gli oggetti vengono creati e distrutti](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Non usare distruttori vuoti. Quando una classe contiene un distruttore, viene creata una voce nella coda Finalize. Quando si chiama il distruttore, viene richiamato Garbage Collector per elaborare la coda. Se il distruttore è vuoto, si verifica semplicemente un calo di prestazioni. Per ulteriori informazioni, vedere [distruttori](../../csharp/programming-guide/classes-and-structs/destructors.md) e [durata degli oggetti: Modalità di creazione e distruzione](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)degli oggetti.  
   
 ## <a name="other-resources"></a>Altre risorse  
   
-- [Writing Faster Managed Code: Conoscere il costo delle cose](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [Scrittura di codice gestito più veloce: Informazioni sui costi](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
-- [La scrittura di High-Performance Managed Applications: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [Scrittura di applicazioni gestite a prestazioni elevate: Una nozioni di fondo](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
 - [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (Concetti di base di Garbage Collector e suggerimenti per le prestazioni)  
   
@@ -40,7 +40,7 @@ Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di 
 
 - [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Suggerimenti per le prestazioni di Rico Mariani)  
 
-- [Blog di Vance](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog di Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Vedere anche
 

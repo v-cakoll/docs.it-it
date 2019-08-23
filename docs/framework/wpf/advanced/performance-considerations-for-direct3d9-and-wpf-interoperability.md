@@ -5,63 +5,63 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02a91c1824c5d6374f37b0af66a3308d33210c4a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932485"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considerazioni sulle prestazioni per l'interoperabilità fra Direct3D9 e WPF
-È possibile ospitare contenuto Direct3D9 usando il <xref:System.Windows.Interop.D3DImage> classe. Hosting di contenuto Direct3D9 può influire sulle prestazioni dell'applicazione. In questo argomento descrive le procedure consigliate per ottimizzare le prestazioni durante l'hosting di contenuto Direct3D9 in un'applicazione Windows Presentation Foundation (WPF). Queste procedure consigliate includono come usare <xref:System.Windows.Interop.D3DImage> e procedure consigliate quando si utilizza Windows Vista, Windows XP, e viene visualizzato con più monitor.  
+È possibile ospitare il contenuto di Direct3D9 usando <xref:System.Windows.Interop.D3DImage> la classe. L'hosting del contenuto di Direct3D9 può influire sulle prestazioni dell'applicazione. In questo argomento vengono descritte le procedure consigliate per ottimizzare le prestazioni quando si ospita il contenuto Direct3D9 in un'applicazione Windows Presentation Foundation (WPF). Queste procedure consigliate includono l'utilizzo <xref:System.Windows.Interop.D3DImage> e le procedure consigliate quando si utilizzano le visualizzazioni di Windows Vista, Windows XP e multimonitor.  
   
 > [!NOTE]
->  Per esempi di codice che illustrano le procedure consigliate, vedere [interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).  
+> Per esempi di codice che illustrano queste procedure consigliate, vedere l'interoperatività di [WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
-## <a name="use-d3dimage-sparingly"></a>Utilizzare in modo sporadico D3DImage  
- Direct3D9 contenuto ospitato un <xref:System.Windows.Interop.D3DImage> istanza non sottoposti a rendering come veloce come in un'applicazione Direct3D. L'area di copia e lo scaricamento buffer dei comandi possono essere operazioni costose. Come il numero di <xref:System.Windows.Interop.D3DImage> aumenta istanze, viene eseguita una svuotamento aumentano e comporta una riduzione delle prestazioni. Pertanto, è necessario utilizzare <xref:System.Windows.Interop.D3DImage> quando strettamente necessario.  
+## <a name="use-d3dimage-sparingly"></a>USA D3DImage sporadicamente  
+ Il rendering del contenuto Direct3D9 <xref:System.Windows.Interop.D3DImage> ospitato in un'istanza non viene eseguito in modo rapido come in un'applicazione Direct3D pura. La copia della superficie e lo svuotamento del buffer dei comandi possono essere operazioni costose. Con l'aumentare del <xref:System.Windows.Interop.D3DImage> numero di istanze, si verifica una maggiore scaricamento e peggioramento delle prestazioni. Pertanto, è consigliabile utilizzare <xref:System.Windows.Interop.D3DImage> con moderazione.  
   
-## <a name="best-practices-on-windows-vista"></a>Le procedure consigliate in Windows Vista  
- Per prestazioni ottimali su Windows Vista con una visualizzazione che è configurata per utilizzare Windows Visualizza Driver Model (WDDM), creare la superficie Direct3D9 in un `IDirect3DDevice9Ex` dispositivo. In questo modo la condivisione della superficie. La scheda video deve supportare le `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` e `D3DCAPS2_CANSHARERESOURCE` le funzionalità del driver in Windows Vista. Tutte le altre impostazioni causano la superficie deve essere copiato tramite software, che riduce significativamente le prestazioni.  
+## <a name="best-practices-on-windows-vista"></a>Procedure consigliate in Windows Vista  
+ Per prestazioni ottimali in Windows Vista con uno schermo configurato per l'uso di Windows Display Driver Model (WDDM), creare la superficie Direct3D9 in un `IDirect3DDevice9Ex` dispositivo. In questo modo viene abilitata la condivisione della superficie. La scheda video deve supportare le `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` funzionalità `D3DCAPS2_CANSHARERESOURCE` del driver e in Windows Vista. Tutte le altre impostazioni comportano la copia della superficie tramite software, riducendo in modo significativo le prestazioni.  
   
 > [!NOTE]
->  Se Windows Vista ha una visualizzazione a cui è configurata per l'utilizzo di Windows XP XDDM Display Driver Model (), l'area viene sempre copiato tramite software, indipendentemente dalle impostazioni. Con le impostazioni appropriate e la scheda video, si noteranno prestazioni migliori su Windows Vista quando si usa il WDDM perché vengono eseguite le copie della superficie in hardware.  
+> Se Windows Vista dispone di una visualizzazione configurata per l'utilizzo di Windows XP Display Driver Model (XDDM), la superficie viene sempre copiata tramite software, indipendentemente dalle impostazioni. Con le impostazioni e la scheda video appropriate, è possibile ottenere prestazioni migliori in Windows Vista quando si usa WDDM, perché le copie di superficie vengono eseguite nell'hardware.  
   
 ## <a name="best-practices-on-windows-xp"></a>Procedure consigliate su Windows XP  
- Per ottenere prestazioni ottimali su Windows XP, che utilizza il Windows Display Driver Model XDDM (XP), creare una superficie bloccabile che funziona correttamente quando il `IDirect3DSurface9::GetDC` viene chiamato il metodo. Internamente, il `BitBlt` metodo trasferisce la superficie su dispositivi hardware. Il `GetDC` metodo è sempre valido su superfici XRGB. Tuttavia, se il computer client è in esecuzione Windows XP con SP2 o SP3, e se il client ha anche l'hotfix per la funzionalità delle finestre sovrapposte, questo metodo funziona solo nelle aree ARGB. La scheda video deve supportare la `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` funzionalità del driver.  
+ Per prestazioni ottimali in Windows XP, che utilizza il modello di driver di visualizzazione di Windows XP (XDDM), creare una superficie bloccabile che funziona correttamente `IDirect3DSurface9::GetDC` quando viene chiamato il metodo. Internamente, `BitBlt` il metodo trasferisce la superficie tra i dispositivi nell'hardware. Il `GetDC` metodo funziona sempre sulle superfici sulle XRGB mentre. Tuttavia, se nel computer client è in esecuzione Windows XP con SP3 o SP2 e se il client dispone anche dell'hotfix per la funzionalità finestra a più livelli, questo metodo funziona solo su superfici ARGB. La scheda video deve supportare la `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` funzionalità del driver.  
   
- Una profondità di monitor per desktop a 16 bit può ridurre notevolmente le prestazioni. È consigliabile un desktop a 32 bit.  
+ Una profondità di visualizzazione desktop a 16 bit può ridurre significativamente le prestazioni. È consigliabile usare un desktop a 32 bit.  
   
- Se si sviluppa per Windows Vista e Windows XP, test delle prestazioni in Windows XP. Esaurimento memoria video su Windows XP è un problema. Inoltre, <xref:System.Windows.Interop.D3DImage> in Windows XP utilizza più memoria video e della larghezza di banda rispetto a Windows Vista WDDM, a causa di una copia di memoria video aggiuntiva necessaria. Pertanto, è possibile prevedere prestazioni peggiori in Windows XP a Windows Vista sono per lo stesso hardware video.  
+ Se si sta sviluppando per Windows Vista e Windows XP, testare le prestazioni in Windows XP. L'esaurimento della memoria del video in Windows XP costituisce un problema. Inoltre, <xref:System.Windows.Interop.D3DImage> in Windows XP utilizza una maggiore quantità di memoria e larghezza di banda del video rispetto a Windows Vista WDDM, a causa di una copia di memoria video aggiuntiva necessaria. Pertanto, è possibile che le prestazioni siano peggiori in Windows XP rispetto a Windows Vista per lo stesso hardware video.  
   
 > [!NOTE]
->  XDDM è disponibile in Windows XP e Windows Vista. Tuttavia, WDDM è disponibile solo in Windows Vista.  
+> XDDM è disponibile sia in Windows XP che in Windows Vista. Tuttavia, WDDM è disponibile solo in Windows Vista.  
   
 ## <a name="general-best-practices"></a>Procedure consigliate generali  
- Quando si crea il dispositivo, usare il `D3DCREATE_MULTITHREADED` flag di creazione. Ciò riduce le prestazioni, ma il sistema di rendering WPF chiama metodi su questo dispositivo da un altro thread. Assicurarsi di seguire correttamente, il protocollo di blocco in modo che nessun due thread di accedere al dispositivo nello stesso momento.  
+ Quando si crea il dispositivo, usare il `D3DCREATE_MULTITHREADED` flag di creazione. Questo consente di ridurre le prestazioni, ma il sistema di rendering WPF chiama i metodi su questo dispositivo da un altro thread. Assicurarsi di seguire correttamente il protocollo di blocco, in modo che nessuno dei due thread acceda al dispositivo nello stesso momento.  
   
- Se il rendering viene eseguito su un thread gestito WPF, è consigliabile creare il dispositivo con il `D3DCREATE_FPU_PRESERVE` flag di creazione. Senza questa impostazione, il rendering di D3D può ridurre la precisione delle operazioni con precisione doppia WPF e introdurre problemi di rendering.  
+ Se il rendering viene eseguito su un thread gestito WPF, è consigliabile creare il dispositivo con il `D3DCREATE_FPU_PRESERVE` flag di creazione. Senza questa impostazione, il rendering D3D può ridurre l'accuratezza delle operazioni di precisione doppia WPF e introdurre problemi di rendering.  
   
- Affiancamento di un <xref:System.Windows.Interop.D3DImage> è veloce, a meno che non è affiancare un'area di non-pow2 senza il supporto di hardware o se è affiancare un <xref:System.Windows.Media.DrawingBrush> oppure <xref:System.Windows.Media.VisualBrush> che contiene un <xref:System.Windows.Interop.D3DImage>.  
+ L'affiancamento a <xref:System.Windows.Interop.D3DImage> è veloce, a meno che non si riquadri una superficie non pow2 senza supporto hardware oppure se si <xref:System.Windows.Media.VisualBrush> affianca un <xref:System.Windows.Media.DrawingBrush> oggetto <xref:System.Windows.Interop.D3DImage>o che contiene un oggetto.  
   
-## <a name="best-practices-for-multi-monitor-displays"></a>Le procedure consigliate per gli schermi con più Monitor  
- Se si utilizza un computer che dispone di più monitor, è necessario seguire le procedure consigliate descritte in precedenza. Esistono inoltre alcune considerazioni aggiuntive sulle prestazioni per una configurazione con più monitor.  
+## <a name="best-practices-for-multi-monitor-displays"></a>Procedure consigliate per la visualizzazione di più monitor  
+ Se si utilizza un computer che dispone di più monitoraggi, è necessario attenersi alle procedure consigliate descritte in precedenza. Esistono inoltre alcune considerazioni aggiuntive sulle prestazioni per una configurazione a più monitor.  
   
- Quando si crea il buffer nascosto, viene creato in un dispositivo specifico e un adapter, ma WPF può visualizzare il buffer di front con qualsiasi scheda. Copia tra gli adattatori per aggiornare il front buffer può essere molto dispendiosa. In Windows Vista che è configurato per l'uso di WDDM con più schede video e con un `IDirect3DDevice9Ex` dispositivo, se il buffer anteriore è su una scheda diversa ma nella stessa scheda video, non vi è alcuna riduzione delle prestazioni. Tuttavia, in Windows XP e il XDDM con più schede video, vi è una riduzione significativa delle prestazioni quando front buffer viene visualizzato in una scheda diversa rispetto al buffer nascosto. Per altre informazioni, vedere [interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).  
+ Quando si crea il buffer nascosto, questo viene creato su un dispositivo e un adattatore specifici, ma WPF può visualizzare il buffer anteriore su qualsiasi scheda. La copia tra gli adapter per aggiornare il buffer anteriore può essere molto costosa. In Windows Vista, configurato per l'uso di WDDM con più schede video e con un `IDirect3DDevice9Ex` dispositivo, se il buffer anteriore si trova in una scheda diversa ma ancora la stessa scheda video, non si verifica alcuna riduzione delle prestazioni. Tuttavia, in Windows XP e XDDM con più schede video, si verifica un calo significativo delle prestazioni quando il buffer anteriore viene visualizzato su un adattatore diverso rispetto al buffer nascosto. Per ulteriori informazioni, vedere l'interoperatività di [WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
-## <a name="performance-summary"></a>Riepilogo delle prestazioni  
- La tabella seguente mostra le prestazioni dell'aggiornamento front buffer come una funzione del sistema operativo, il formato pixel e bloccabilità surface. Il buffer anteriore e buffer nascosto rientrano nella stessa scheda. A seconda della configurazione di adapter, gli aggiornamenti hardware sono in genere molto più veloci rispetto agli aggiornamenti software.  
+## <a name="performance-summary"></a>Riepilogo prestazioni  
+ La tabella seguente illustra le prestazioni dell'aggiornamento del buffer anteriore come funzione del sistema operativo, del formato pixel e della blocco della superficie. Si presuppone che il buffer anteriore e il buffer indietro si trovino nella stessa scheda. A seconda della configurazione dell'adapter, gli aggiornamenti hardware sono in genere molto più veloci degli aggiornamenti software.  
   
-|Formato pixel della superficie|9Ex, WDDM e Windows Vista|Altre configurazioni di Windows Vista|Windows XP SP3 o SP2 con aggiornamento rapido|Windows XP SP2|  
+|Formato pixel superficie|Windows Vista, WDDM e 9Ex|Altre configurazioni di Windows Vista|Windows XP SP3 o SP2 w/hotfix|Windows XP SP2|  
 |--------------------------|---------------------------------|----------------------------------------|--------------------------------------|--------------------|  
-|D3DFMT_X8R8G8B8 (non bloccabile)|**Aggiornamento dell'hardware**|Aggiornamento software|Aggiornamento software|Aggiornamento software|  
-|D3DFMT_X8R8G8B8 (lockable)|**Aggiornamento dell'hardware**|Aggiornamento software|**Aggiornamento dell'hardware**|**Aggiornamento dell'hardware**|  
-|D3DFMT_A8R8G8B8 (non bloccabile)|**Aggiornamento dell'hardware**|Aggiornamento software|Aggiornamento software|Aggiornamento software|  
-|D3DFMT_A8R8G8B8 (lockable)|**Aggiornamento dell'hardware**|Aggiornamento software|**Aggiornamento dell'hardware**|Aggiornamento software|  
+|D3DFMT_X8R8G8B8 (non bloccabile)|**Aggiornamento hardware**|Aggiornamento software|Aggiornamento software|Aggiornamento software|  
+|D3DFMT_X8R8G8B8 (bloccabile)|**Aggiornamento hardware**|Aggiornamento software|**Aggiornamento hardware**|**Aggiornamento hardware**|  
+|D3DFMT_A8R8G8B8 (non bloccabile)|**Aggiornamento hardware**|Aggiornamento software|Aggiornamento software|Aggiornamento software|  
+|D3DFMT_A8R8G8B8 (bloccabile)|**Aggiornamento hardware**|Aggiornamento software|**Aggiornamento hardware**|Aggiornamento software|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md)
-- [Procedura dettagliata: Creazione di contenuto Direct3D9 per l'Hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Procedura dettagliata: Creazione di contenuto Direct3D9 per l'hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
 - [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934450"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modifica di dati con un oggetto DbDataAdapter
 Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un oggetto <xref:System.Data.Common.DbProviderFactory> fornisce un oggetto <xref:System.Data.Common.DbDataAdapter> fortemente tipizzato al provider sottostante specificato durante la creazione della factory. È quindi possibile usare un oggetto <xref:System.Data.Common.DbCommandBuilder> per creare i comandi che consentono di inserire, aggiornare ed eliminare dati da un <xref:System.Data.DataSet> a un'origine dati.  
@@ -40,7 +40,7 @@ Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un
  Il modello di factory non è utile per la creazione di oggetti `DbCommand` e `DbDataAdapter` con parametri. Sarà necessario creare rami del codice per creare parametri personalizzati in base al provider di dati.  
   
 > [!IMPORTANT]
->  Per motivi di sicurezza, è consigliabile evitare di usare parametri specifici del provider unitamente alla concatenazione di stringhe per costruire istruzioni SQL dirette. Se anziché i parametri si usa la concatenazione di stringhe, l'applicazione rimane vulnerabile ad attacchi SQL injection.  
+> Per motivi di sicurezza, è consigliabile evitare di usare parametri specifici del provider unitamente alla concatenazione di stringhe per costruire istruzioni SQL dirette. Se anziché i parametri si usa la concatenazione di stringhe, l'applicazione rimane vulnerabile ad attacchi SQL injection.  
   
 ## <a name="see-also"></a>Vedere anche
 

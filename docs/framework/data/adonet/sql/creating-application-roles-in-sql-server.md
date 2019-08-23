@@ -2,18 +2,18 @@
 title: Creazione di ruoli applicazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961172"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Creazione di ruoli applicazione in SQL Server
 I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database. Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione. Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  
   
 > [!IMPORTANT]
->  I ruoli applicazione vengono attivati quando un'applicazione client fornisce un nome e una password di ruolo applicazione nella stringa di connessione. Presentano una vulnerabilità di sicurezza nelle applicazioni a 2 livelli perché la password deve essere archiviata nel computer client. Nelle applicazioni a 3 livelli è possibile archiviare la password in modo che non sia accessibile agli utenti dell'applicazione.  
+> I ruoli applicazione vengono attivati quando un'applicazione client fornisce un nome e una password di ruolo applicazione nella stringa di connessione. Presentano una vulnerabilità di sicurezza nelle applicazioni a 2 livelli perché la password deve essere archiviata nel computer client. Nelle applicazioni a 3 livelli è possibile archiviare la password in modo che non sia accessibile agli utenti dell'applicazione.  
   
 ## <a name="application-role-features"></a>Funzionalità dei ruoli applicazione  
  Le funzionalità dei ruoli applicazione includono:  
@@ -47,9 +47,9 @@ I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione an
   
  Può essere opportuno considerare le seguenti alternative.  
   
-- Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per altre informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per ulteriori informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per altre informazioni, vedere [firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per ulteriori informazioni, vedere la pagina relativa alla [firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le seguenti risorse.  

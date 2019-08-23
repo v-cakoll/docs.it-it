@@ -3,15 +3,15 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667340"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941888"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
-Configura il <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Questo elemento può essere presente solo se il `mode` attributo del `<cookieHandler>` elemento è "Default" o "Chunked".  
+<xref:System.IdentityModel.Services.ChunkedCookieHandler>Configura. Questo elemento può essere presente solo se l' `mode` attributo `<cookieHandler>` dell'elemento è "default" o "Chunked".  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,24 +38,24 @@ Configura il <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Questo e
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|chunkSize|Le dimensioni massime, in caratteri, i dati di cookie HTTP per di un cookie HTTP. È necessario prestare attenzione quando si modifica la dimensione del blocco. Web browser hanno diversi limiti sulle dimensioni del cookie e il numero consentito per ogni dominio. Ad esempio, la specifica di Netscape originale stipulata questi limiti: Totale 300 cookie, 4096 byte per ogni intestazione del cookie (inclusi i metadati, non solo il valore del cookie) e i 20 cookie per ogni dominio. Il valore predefinito è 2000. Obbligatorio.|  
+|chunkSize|Dimensione massima, in caratteri, dei dati del cookie HTTP per un cookie HTTP. È necessario prestare attenzione quando si modificano le dimensioni del blocco. I Web browser hanno limiti diversi sulle dimensioni dei cookie e sul numero consentito per dominio. Ad esempio, la specifica Netscape originale ha stabilito questi limiti: 300 cookie totali, 4096 byte per intestazione cookie (inclusi i metadati, non solo il valore del cookie) e 20 cookie per dominio. Il valore predefinito è 2000. Richiesto.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il <xref:System.IdentityModel.Services.CookieHandler> che la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) utilizzato per leggere e scrivere i cookie.|  
+|[\<cookieHandler>](cookiehandler.md)|Configura l'oggetto <xref:System.IdentityModel.Services.CookieHandler> usato da <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) per la lettura e la scrittura dei cookie.|  
   
 ## <a name="remarks"></a>Note  
- Quando si specifica un <xref:System.IdentityModel.Services.ChunkedCookieHandler> impostando la `mode` attributo delle `<cookieHandler>` elemento "Default" o "Chunked", è possibile specificare la dimensione di blocco che il gestore di cookie viene utilizzato per leggere e scrivere i cookie, includendo un `<chunkedCookieHandler>` elemento figlio e l'impostazione relativa `chunkSize` attributo. Se il `<chunkedCookieHandler>` elemento non è presente, viene utilizzata la dimensione di blocco predefinito di 2000 byte. Questo elemento non può essere specificato quando il `mode` attributo è impostato su "Custom".  
+ Quando si specifica un <xref:System.IdentityModel.Services.ChunkedCookieHandler> oggetto impostando `mode` l'attributo dell' `<cookieHandler>` elemento su "default" o "Chunked", è possibile specificare la dimensione del blocco utilizzata dal gestore di cookie per leggere e scrivere cookie includendo `<chunkedCookieHandler>` un elemento figlio e impostazione del `chunkSize` relativo attributo. Se l' `<chunkedCookieHandler>` elemento non è presente, viene utilizzata la dimensione del blocco predefinita di 2000 byte. Impossibile specificare questo elemento quando l' `mode` attributo è impostato su "Custom".  
   
- Il `<chunkedCookieHandler>` elemento è rappresentato dal <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> classe.  
+ L' `<chunkedCookieHandler>` elemento è rappresentato <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> dalla classe.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente configura un gestore di cookie chunked che scrive i cookie in blocchi di 3000 byte.  
+ Nell'esempio seguente viene configurato un gestore di cookie Chunked che scrive cookie in blocchi di 3000 byte.  
   
 ```xml  
 <cookieHandler mode="Chunked">  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958733"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità della <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -74,7 +74,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 - Nel code-behind la classe deve essere una `partial` classe con lo stesso nome specificato `x:Class` dall'attributo nel markup e deve derivare da <xref:System.Windows.Application>. Ciò consente di associare `partial` il file code-behind alla classe generata per il file di markup quando viene compilata l'applicazione (vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Quando si crea un nuovo progetto di applicazione WPF o un progetto di applicazione browser WPF utilizzando Visual Studio, per impostazione predefinita viene inclusa una definizione dell'applicazione e viene definito utilizzando markup e code-behind.  
+> Quando si crea un nuovo progetto di applicazione WPF o un progetto di applicazione browser WPF utilizzando Visual Studio, per impostazione predefinita viene inclusa una definizione dell'applicazione e viene definito utilizzando markup e code-behind.  
   
  Questo codice è quello minimo necessario per implementare una definizione di applicazione. Tuttavia, è necessario eseguire una configurazione aggiuntiva di MSBuild per la definizione dell'applicazione prima di compilare ed eseguire l'applicazione.  
   
@@ -148,7 +148,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Il primo <xref:System.Windows.Window> oggetto di cui creare un'istanza in un'applicazione autonoma diventa la finestra principale dell'applicazione per impostazione predefinita. <xref:System.Windows.Window> La<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> proprietà fa riferimento a questo oggetto. Il valore della <xref:System.Windows.Application.MainWindow%2A> proprietà può essere modificato a livello di codice se una finestra diversa dal primo oggetto di <xref:System.Windows.Window> cui è stata creata un'istanza deve essere la finestra principale.  
+> Il primo <xref:System.Windows.Window> oggetto di cui creare un'istanza in un'applicazione autonoma diventa la finestra principale dell'applicazione per impostazione predefinita. <xref:System.Windows.Window> La<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> proprietà fa riferimento a questo oggetto. Il valore della <xref:System.Windows.Application.MainWindow%2A> proprietà può essere modificato a livello di codice se una finestra diversa dal primo oggetto di <xref:System.Windows.Window> cui è stata creata un'istanza deve essere la finestra principale.  
   
  Quando un'applicazione XBAP viene avviata per la prima volta, è <xref:System.Windows.Controls.Page>molto probabile che si passi a un. Questo comportamento viene mostrato nel codice seguente.  
   
@@ -170,7 +170,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  Questo markup ha lo stesso effetto del codice precedente per l'apertura di una finestra.  
   
 > [!NOTE]
->  Per altre informazioni sulla navigazione, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
+> Per altre informazioni sulla navigazione, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
   
  È necessario gestire l' <xref:System.Windows.Application.Startup> evento per aprire un oggetto <xref:System.Windows.Window> se è necessario crearne un'istanza usando un costruttore senza parametri oppure è necessario impostare le proprietà o sottoscrivere gli eventi prima di visualizzarli oppure elaborare gli argomenti della riga di comando fornito quando l'applicazione è stata avviata.  
   
@@ -219,7 +219,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  Un <xref:System.Windows.Window> oggetto può anche essere attivato e disattivato. Per altre informazioni, vedere <xref:System.Windows.Window.Activated?displayProperty=nameWithType> e <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Né né <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> vengono generati per le applicazioni XBAP. <xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
+> Né né <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> vengono generati per le applicazioni XBAP. <xref:System.Windows.Application.Activated?displayProperty=nameWithType>  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Arresto dell'applicazione  
@@ -236,7 +236,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  Per semplificare la gestione dell'arresto dell' <xref:System.Windows.Application> applicazione, <xref:System.Windows.Application.Shutdown%2A> fornisce il metodo <xref:System.Windows.Application.ShutdownMode%2A> , la proprietà e <xref:System.Windows.Application.SessionEnding> gli <xref:System.Windows.Application.Exit> eventi e.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>può essere chiamato solo da applicazioni <xref:System.Security.Permissions.UIPermission>con. Le applicazioni WPF autonome dispongono sempre di questa autorizzazione. Tuttavia, le applicazioni XBAP in esecuzione nella sandbox di sicurezza con attendibilità parziale dell'area Internet non lo sono.  
+> <xref:System.Windows.Application.Shutdown%2A>può essere chiamato solo da applicazioni <xref:System.Security.Permissions.UIPermission>con. Le applicazioni WPF autonome dispongono sempre di questa autorizzazione. Tuttavia, le applicazioni XBAP in esecuzione nella sandbox di sicurezza con attendibilità parziale dell'area Internet non lo sono.  
   
 #### <a name="shutdown-mode"></a>Modalità di arresto  
  La maggior parte delle applicazioni viene arrestata quando vengono chiuse tutte le finestre o quando viene chiusa la finestra principale. A volte, tuttavia, l'arresto può essere determinato da altre condizioni specifiche dell'applicazione. È possibile specificare le condizioni in base alle quali l'applicazione viene arrestata <xref:System.Windows.Application.ShutdownMode%2A> impostando con uno dei <xref:System.Windows.ShutdownMode> valori di enumerazione seguenti:  
@@ -254,7 +254,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  Quando si hanno condizioni di chiusura specifiche dell'applicazione, impostare <xref:System.Windows.Application.ShutdownMode%2A> su <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. In questo caso, è responsabilità dell'utente arrestare un'applicazione chiamando in modo esplicito il <xref:System.Windows.Application.Shutdown%2A> metodo; in caso contrario, l'applicazione continuerà a essere eseguita anche se tutte le finestre sono chiuse. Si noti <xref:System.Windows.Application.Shutdown%2A> che viene chiamato in modo implicito <xref:System.Windows.Application.ShutdownMode%2A> quando <xref:System.Windows.ShutdownMode.OnLastWindowClose> è <xref:System.Windows.ShutdownMode.OnMainWindowClose>o.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>può essere impostata da un'applicazione XBAP, ma viene ignorata. un'applicazione XBAP viene sempre chiusa quando si esce da un browser o quando il browser che ospita l'applicazione XBAP viene chiuso. Per altre informazioni, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
+> <xref:System.Windows.Application.ShutdownMode%2A>può essere impostata da un'applicazione XBAP, ma viene ignorata. un'applicazione XBAP viene sempre chiusa quando si esce da un browser o quando il browser che ospita l'applicazione XBAP viene chiuso. Per altre informazioni, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Fine della sessione  
  Le condizioni di arresto descritte dalla <xref:System.Windows.Application.ShutdownMode%2A> proprietà sono specifiche di un'applicazione. In alcuni casi, tuttavia, un'applicazione può essere arrestata come conseguenza di una condizione esterna. La condizione esterna più comune si verifica quando un utente termina la sessione di Windows eseguendo le azioni seguenti:  
@@ -277,7 +277,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  In questo esempio, il codice controlla la <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> proprietà per determinare il modo in cui la sessione di Windows sta terminando. Il codice usa quindi questo valore per visualizzare un messaggio di conferma all'utente. Se l'utente non desidera che la sessione termini, il codice imposta <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> su `true` per impedire che la sessione di Windows venga terminata.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>non viene generato per le applicazioni XBAP.
+> <xref:System.Windows.Application.SessionEnding>non viene generato per le applicazioni XBAP.
 
 #### <a name="exit"></a>Esci  
  Quando un'applicazione viene arrestata, potrebbe dover eseguire alcune attività di elaborazione, come il salvataggio permanente dello stato dell'applicazione. Per queste situazioni, è possibile gestire l' <xref:System.Windows.Application.Exit> evento, come nel `App_Exit` caso del gestore dell'evento nell'esempio seguente. Viene definito come un gestore eventi nel file *app. XAML* . La relativa implementazione viene evidenziata nei file *app.XAML.cs* e *Application. XAML. vb* .
@@ -301,7 +301,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  Nella maggior parte dei casi, le applicazioni vengono avviate dal sistema operativo in risposta a una richiesta dell'utente. Tuttavia, un'applicazione può essere avviata da un'altra applicazione per l'esecuzione di alcune attività specifiche. Quando l'applicazione avviata viene arrestata, l'applicazione che ne esegue l'avvio potrebbe voler identificare la condizione in base alla quale è stata arrestata l'applicazione avviata. In queste situazioni, Windows consente alle applicazioni di restituire un codice di uscita dell'applicazione all'arresto. Per impostazione predefinita, le applicazioni WPF restituiscono un valore del codice di uscita pari a 0.  
   
 > [!NOTE]
->  Quando si esegue il debug da Visual Studio, il codice di uscita dell'applicazione viene visualizzato nella finestra di **output** quando l'applicazione viene arrestata, in un messaggio simile al seguente:  
+> Quando si esegue il debug da Visual Studio, il codice di uscita dell'applicazione viene visualizzato nella finestra di **output** quando l'applicazione viene arrestata, in un messaggio simile al seguente:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
  È possibile rilevare il valore del codice di uscita e modificarlo gestendo l' <xref:System.Windows.Application.Exit> evento. Al <xref:System.Windows.Application.Exit> gestore dell'evento viene passato <xref:System.Windows.ExitEventArgs> un oggetto che fornisce l'accesso al codice di <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> uscita con la proprietà. Per altre informazioni, vedere <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  È possibile impostare il codice di uscita sia in applicazioni autonome che in XBAP. Tuttavia, il valore del codice di uscita viene ignorato per le applicazioni XBAP.  
+> È possibile impostare il codice di uscita sia in applicazioni autonome che in XBAP. Tuttavia, il valore del codice di uscita viene ignorato per le applicazioni XBAP.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>Eccezioni non gestite  

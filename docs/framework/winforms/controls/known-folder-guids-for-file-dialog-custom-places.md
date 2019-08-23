@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962592"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
-Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono le cartelle da un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> raccolta. GUID della cartella nota non sono tra maiuscole e minuscole e vengono definiti nel file KnownFolders. H in Windows SDK.  
+Usare un oggetto <xref:System.Guid> per specificare una [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono cartelle a <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> una raccolta. I GUID di cartella noti non fanno distinzione tra maiuscole e minuscole e sono definiti nel file KnownFolders. h nella Windows SDK.  
   
 > [!NOTE]
->  In alcuni casi, aggiungere una cartella nota di <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verranno visualizzati nei **collegamenti Preferiti** area. Ad esempio, se la cartella nota specificato non è presente nel computer che esegue l'applicazione, nella cartella noto non viene visualizzata.  
+> In alcuni casi, una cartella nota aggiunta a <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> non verrà visualizzata nell'area **collegamenti preferiti** . Se, ad esempio, la cartella nota specificata non è presente nel computer in cui è in esecuzione l'applicazione, la cartella nota non viene visualizzata.  
   
 ## <a name="list-of-guids"></a>Elenco di GUID  
- La tabella seguente elenca [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartelle note e i relativi <xref:System.Guid>.  
+ Nella tabella seguente sono [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] elencate le cartelle note e <xref:System.Guid>il relativo oggetto associato.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -64,7 +64,7 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  Conflitto  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
- Connessioni  
+ connessioni  
  6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD  
   
  Contatti  
@@ -133,7 +133,7 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  Immagini  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- Elenchi di riproduzione  
+ Playlist  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
  Stampanti  
@@ -223,7 +223,7 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  SampleVideos  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- SavedGames  
+ Tes partenze  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
  SavedSearches  
@@ -262,7 +262,7 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
- System  
+ Sistema  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
  SystemX86  
@@ -274,7 +274,7 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  TreeProperties  
  5B3749AD-B49F-49C1-83EB-15370FBD4882  
   
- UserProfiles  
+ UserProfile  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
  UsersFiles  
@@ -283,10 +283,10 @@ Usa un' <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../i
  Video  
  18989B1D-99B5-455B-841C-AB7C74E4DDFC  
   
- WINDOWS  
+ Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Procedura: Aggiungere una posizione personalizzata a una finestra di dialogo file](how-to-add-a-custom-place-to-a-file-dialog-box.md)

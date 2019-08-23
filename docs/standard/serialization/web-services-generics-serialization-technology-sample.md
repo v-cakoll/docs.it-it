@@ -2,12 +2,12 @@
 title: Esempio di tecnologia per la serializzazione di generics dei servizi Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: b4aa9c21fa2bafce16e93a5d2479b17946dba41b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 467bfe1fd9eb8a0222385c34cb29a90df00dc937
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960756"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Esempio di tecnologia per la serializzazione di generics dei servizi Web
 [Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -27,19 +27,19 @@ ms.locfileid: "66490765"
 5. Scegliere **Compila soluzione** dal menu **Compila**.  
   
 > [!NOTE]
->  I primi cinque passaggi di questo elenco sono facoltativi. Il runtime di .NET Framework genererà automaticamente il servizio Web la prima volta che verrà richiesto.  
+> I primi cinque passaggi di questo elenco sono facoltativi. Il runtime di .NET Framework genererà automaticamente il servizio Web la prima volta che verrà richiesto.  
   
 > [!NOTE]
->  Di seguito sono indicati i passaggi necessari per compilare l'esempio.  
+> Di seguito sono indicati i passaggi necessari per compilare l'esempio.  
   
-1. Aprire Esplora File e passare alla sottodirectory \CS.  
+1. Aprire Esplora file e passare alla sottodirectory nella \CS.  
   
 2. Fare clic con il pulsante destro del mouse sull'icona della sottodirectory GenericsService e quindi scegliere **Condivisione e sicurezza**.  
   
 3. Nella scheda **Condivisione Web** selezionare **Condividi questa cartella**.  
   
 > [!IMPORTANT]
->  Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.  
+> Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.  
   
 ### <a name="to-build-the-sample-using-internet-information-services"></a>Per compilare l'esempio utilizzando Internet Information Services  
   
@@ -52,13 +52,13 @@ ms.locfileid: "66490765"
 4. Immettere il percorso della directory in cui è stato salvato l'esempio (generalmente la sottodirectory \CS\GenericsService) e fare clic su **Avanti**. Fare clic su **Avanti** per terminare la procedura guidata.  
   
 > [!IMPORTANT]
->  Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.  
+> Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.  
   
 ### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
 1. Aprire una finestra del browser, quindi fare clic sulla barra degli indirizzi.  
   
-2. Tipo di `http://localhost/[virtual directory]/Service.asmx`, dove `[virtual directory]` rappresenta la directory virtuale creata durante la compilazione dell'esempio.  
+2. Digitare `http://localhost/[virtual directory]/Service.asmx`, dove `[virtual directory]` rappresenta la directory virtuale creata durante la compilazione dell'esempio.  
   
 ## <a name="remarks"></a>Note  
  Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web. Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione. Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w3h45ebk(v=vs.100)).  

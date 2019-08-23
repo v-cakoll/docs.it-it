@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d29e8771d61c04cf35aa71b5ba7fbba0d308c730
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965683"
 ---
 # <a name="character-data-types-visual-basic"></a>Dati di tipo carattere (Visual Basic)
-Visual Basic fornisce *tipi di dati character* per affrontare i caratteri stampabili e visualizzabili. Mentre entrambi gestiscano i caratteri Unicode `Char` contiene un singolo carattere mentre `String` contiene un numero indefinito di caratteri.  
+Visual Basic fornisce *tipi di dati di tipo carattere* per gestire i caratteri stampabili e visualizzabili. Mentre entrambi gestiscono i caratteri Unicode, `Char` contiene un singolo carattere mentre `String` contiene un numero di caratteri indefinito.  
   
- Per una tabella che visualizza un confronto side-by-side dei tipi di dati Visual Basic, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
+ Per una tabella in cui viene visualizzato un confronto affiancato dei tipi di dati Visual Basic, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="char-type"></a>Char (tipo)  
- Il `Char` tipo di dati è un singolo carattere di Unicode a due byte (16 bit). Se una variabile archivia sempre esattamente un carattere, dichiararlo come `Char`. Ad esempio:  
+## <a name="char-type"></a>Tipo char  
+ Il `Char` tipo di dati è un singolo carattere Unicode a due byte (a 16 bit). Se una variabile archivia sempre esattamente un carattere, dichiararlo `Char`come. Ad esempio:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Ogni possibile valore in una `Char` oppure `String` variabile è un *punto di codice*, o il codice carattere nel set di caratteri Unicode. I caratteri Unicode includono set di caratteri ASCII di base, diverse altre lettere dell'alfabeto, accenti, i simboli di valuta, frazioni, i segni diacritici e i simboli matematici e tecnici.  
+ Ogni valore possibile in una `Char` variabile `String` o è un *punto di codice*, o codice carattere, nel set di caratteri Unicode. I caratteri Unicode includono il set di caratteri ASCII di base, diverse altre lettere di alfabeto, accenti, simboli di valuta, frazioni, segni diacritici e simboli matematici e tecnici.  
   
 > [!NOTE]
->  Set di caratteri Unicode i punti di codice D800 a DFFF (da 55296 55551 decimale) per le riserve *coppie di surrogati*, che richiede due valori a 16 bit per rappresentare un singolo punto di codice. Oggetto `Char` variabile non può contenere una coppia di surrogati e un `String` usa due posizioni per contenere tale coppia.  
+> Il set di caratteri Unicode riserva i punti di codice da D800 a DFFF (da 55296 a 55551 Decimal) per le *coppie*di surrogati, che richiedono valori 2 16 bit per rappresentare un singolo punto di codice. Una `Char` variabile non può avere una coppia di surrogati `String` e un oggetto usa due posizioni per mantenere tale coppia.  
   
- Per altre informazioni, vedere [tipo di dati Char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
+ Per altre informazioni, vedere [tipo di dati char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
-## <a name="string-type"></a>Tipo di stringa  
- Il `String` tipo di dati è una sequenza di zero o più caratteri Unicode a due byte (16 bit). Se una variabile può contenere un numero indefinito di caratteri, dichiararla come `String`. Ad esempio:  
+## <a name="string-type"></a>Tipo stringa  
+ Il `String` tipo di dati è una sequenza di zero o più caratteri Unicode a 2 byte (a 16 bit). Se una variabile può contenere un numero indefinito di caratteri, dichiararla `String`come. Ad esempio:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- Per altre informazioni, vedere [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Per ulteriori informazioni, vedere [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: <add> di <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 690fd07159e07b7e037f7330b31fdcba423e80f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920133"
 ---
 # <a name="add-of-entries"></a>\<aggiungere > di \<voci >
 Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint client definito in precedenza. I messaggi che corrispondono a questo filtro verranno inviati a questa destinazione.  
@@ -55,7 +55,7 @@ Rappresenta una voce di routing che esegue il mapping di un filtro a un endpoint
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sezione di configurazione contenente voci di mapping di routing.|  
+|[\<routing>](routing.md)|Sezione di configurazione contenente voci di mapping di routing.|  
   
 ## <a name="see-also"></a>Vedere anche
 

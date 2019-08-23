@@ -2,20 +2,20 @@
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: a1190eb1c015ba07488ff5a5952f2f5f1b10974c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91e7bd63bf496f2c38776d88173ed2ac12a3b888
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926314"
 ---
 # <a name="callbackdebug"></a>\<callbackDebug>
-Specifica il debug del servizio per un oggetto di callback Windows Communication Foundation (WCF).  
+Specifica il debug del servizio per un oggetto callback di Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<endpointBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<callbackDebug>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -24,7 +24,7 @@ Specifica il debug del servizio per un oggetto di callback Windows Communication
 <callbackDebug includeExceptionDetailInFaults="Boolean" />
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -43,7 +43,7 @@ Specifica il debug del servizio per un oggetto di callback Windows Communication
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
   
 ## <a name="see-also"></a>Vedere anche
 

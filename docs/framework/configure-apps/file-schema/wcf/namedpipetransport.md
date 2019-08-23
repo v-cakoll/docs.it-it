@@ -2,18 +2,18 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 473d0fbd543a056ec2b152f43a76a0417a18016f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933211"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 Definisce un trasporto che induce un canale a trasferire messaggi usando named pipe quando è incluso in un'associazione personalizzata.  
   
 \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<namePipeTransport>  
@@ -48,24 +48,24 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Ottiene o imposta un <xref:System.TimeSpan> che determina il tempo massimo di un canale può trovarsi nello stato di inizializzazione prima della disconnessione.|  
+|ChannelInitializationTimeout|Ottiene o imposta un <xref:System.TimeSpan> oggetto che determina il tempo massimo durante il quale un canale può trovarsi nello stato di inizializzazione prima della disconnessione.|  
 |ConnectionBufferSize|Ottiene o imposta la dimensione del buffer utilizzato per trasmettere un blocco del messaggio serializzato in transito dal client o servizio.|  
 |hostNameComparisonMode|Ottiene o imposta un valore che indica se viene utilizzato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.|  
 |manualAddressing|Ottiene o imposta un valore che indica se è richiesto l'indirizzamento manuale del messaggio.|  
-|maxBufferPoolSize|Ottiene o imposta la dimensione massima, in byte, del pool di buffer utilizzati dal trasporto.|  
+|maxBufferPoolSize|Ottiene o imposta la dimensione massima in byte di qualsiasi pool di buffer utilizzato dal trasporto.|  
 |maxBufferSize|Ottiene o imposta la dimensione massima del buffer da utilizzare. Per i messaggi trasmessi come flusso, questo valore deve essere uguale o superiore alla dimensione massima possibile delle intestazioni di messaggio, che vengono lette in modalità di memorizzazione nel buffer.|  
 |maxOutputDelay|Ottiene o imposta l'intervallo di tempo massimo per cui un blocco di un messaggio o un messaggio intero può rimanere memorizzato nel buffer prima dell'invio.|  
-|maxPendingAccepts|Ottiene o imposta il numero massimo di canali di che un servizio può avere in attesa di un listener per l'elaborazione delle connessioni in ingresso al servizio.|  
+|maxPendingAccepts|Ottiene o imposta il numero massimo di canali che un servizio può attendere su un listener per l'elaborazione delle connessioni in ingresso al servizio.|  
 |maxPendingConnections|Ottiene o imposta il numero massimo di connessioni in attesa dell'invio nel servizio.|  
-|maxReceivedMessageSize|Ottiene e imposta la dimensione massima consentita del messaggio, in byte, che possono essere ricevuti.|  
+|maxReceivedMessageSize|Ottiene e imposta la dimensione massima consentita del messaggio, in byte, che può essere ricevuta.|  
 |transferMode|Ottiene o imposta un valore che indica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.|  
-|[\<connectionPoolSettings > di \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.|  
+|[\<> connectionPoolSettings di \<namedPipeTransport >](connectionpoolsettings.md)|Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
 Questo trasporto usa URI nel formato "net.pipe://nomehost/percorso". Gli altri componenti URI sono facoltativi.  
@@ -78,9 +78,9 @@ L'elemento `namedPipeTransport` rappresenta il punto iniziale per la creazione d
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Trasporti](../../../wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

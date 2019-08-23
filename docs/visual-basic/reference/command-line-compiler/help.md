@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051689"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938219"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Visualizza le opzioni del compilatore.  
@@ -28,13 +28,13 @@ Visualizza le opzioni del compilatore.
 ```  
   
 ## <a name="remarks"></a>Note  
- Se si include questa opzione in una compilazione, non viene creato alcun file di output e avrà luogo alcuna compilazione.  
+ Se si include questa opzione in una compilazione, non viene creato alcun file di output e non si verifica alcuna compilazione.  
   
 > [!NOTE]
->  Il `-help` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
+> L' `-help` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente visualizza la Guida dalla riga di comando.  
+ Il codice seguente Visualizza la guida dalla riga di comando.  
   
 ```  
 vbc -help  

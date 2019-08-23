@@ -1,30 +1,30 @@
 ---
-title: Persistenza di un oggetto in Visual Studio (Visual Basic)
+title: Salvataggio permanente di un oggetto in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3e1ae81b2871899e6efc4be4dfc7c62ed45a133a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937369"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Salvataggio permanente di un oggetto in Visual Studio (Visual Basic)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
   
 > [!NOTE]
->  In Visual Basic, per archiviare dati semplici, ad esempio un nome o numero, è possibile usare l'oggetto `My.Settings`. Per altre informazioni, vedere [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> In Visual Basic, per archiviare dati semplici, ad esempio un nome o numero, è possibile usare l'oggetto `My.Settings`. Per altre informazioni, vedere [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
  In questa procedura verrà creato un oggetto `Loan` semplice i cui dati verranno resi persistenti in un file. I dati verranno quindi recuperati dal file quando si ricrea l'oggetto.  
   
 > [!IMPORTANT]
->  Questo esempio crea un nuovo file, se il file non esiste. Se un'applicazione deve creare un file, per tale applicazione deve essere disponibile l'autorizzazione `Create` per la cartella. Le autorizzazioni vengono impostate usando gli elenchi di controllo di accesso. Se il file esiste già, per l'applicazione è necessaria solo l'autorizzazione `Write`, di livello inferiore. Se possibile, è più sicuro creare il file durante la distribuzione e concedere solo autorizzazioni `Read` per un singolo file, anziché autorizzazioni Create per una cartella. Inoltre, è più sicuro scrivere dati nelle cartelle utente anziché nella cartella radice o nella cartella dei file di programma.  
+> Questo esempio crea un nuovo file, se il file non esiste. Se un'applicazione deve creare un file, per tale applicazione deve essere disponibile l'autorizzazione `Create` per la cartella. Le autorizzazioni vengono impostate usando gli elenchi di controllo di accesso. Se il file esiste già, per l'applicazione è necessaria solo l'autorizzazione `Write`, di livello inferiore. Se possibile, è più sicuro creare il file durante la distribuzione e concedere solo autorizzazioni `Read` per un singolo file, anziché autorizzazioni Create per una cartella. Inoltre, è più sicuro scrivere dati nelle cartelle utente anziché nella cartella radice o nella cartella dei file di programma.  
   
 > [!IMPORTANT]
->  In questo esempio i dati vengono archiviati in un file binario. Non usare questi formati per i dati riservati, ad esempio password o informazioni sulla carta di credito.  
+> In questo esempio i dati vengono archiviati in un file binario. Non usare questi formati per i dati riservati, ad esempio password o informazioni sulla carta di credito.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Creare l'oggetto Loan  
  Il primo passaggio consiste nel creare una classe `Loan` e un'applicazione di test che usa la classe.  

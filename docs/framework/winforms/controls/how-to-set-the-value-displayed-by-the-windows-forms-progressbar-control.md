@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 10e864ccfeb22113e5704a4063f903d7a91fedcd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2e0134206ba3ebdce35f5374cbad575e34483d58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591584"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956087"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procedura: Impostare il valore visualizzato dal controllo ProgressBar di Windows Forms
 > [!IMPORTANT]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
+> Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- .NET Framework offre diversi modi per visualizzare un determinato valore all'interno di <xref:System.Windows.Forms.ProgressBar> controllo. Il metodo scelto varia in base all'attività in corso o il problema da risolvere. Nella tabella seguente mostra gli approcci che è possibile scegliere.  
+ Il .NET Framework offre diversi modi per visualizzare un determinato valore all'interno del <xref:System.Windows.Forms.ProgressBar> controllo. L'approccio scelto dipenderà dall'attività a disposizione o dal problema che si sta risolvendo. La tabella seguente illustra gli approcci che è possibile scegliere.  
   
 |Approccio|Descrizione|  
 |--------------|-----------------|  
-|Impostare il valore della <xref:System.Windows.Forms.ProgressBar> controllare direttamente.|Questo approccio è utile per le attività in cui si conosce il totale dell'elemento misurato che sarà coinvolti, quali la lettura dei record da un'origine dati. Inoltre, se è solo necessario impostare il valore di una o due volte, questo è un modo semplice per eseguire questa operazione. Infine, usare questo processo se è necessario diminuire il valore visualizzato per l'indicatore di stato.|  
-|Aumentare il <xref:System.Windows.Forms.ProgressBar> visualizzare da un valore fisso.|Questo approccio è utile quando si visualizzano un semplice conteggio tra i valori minimo e massimo, ad esempio il tempo trascorso o il numero di file che sono stati elaborati su un totale noto.|  
-|Aumentare il <xref:System.Windows.Forms.ProgressBar> visualizzare da un valore diverso.|Questo approccio è utile quando è necessario modificare il valore visualizzato un numero di volte in importi diversi. La quantità di spazio su disco utilizzato durante la scrittura di una serie di file su disco viene indicato un esempio.|  
+|Impostare direttamente il valore del <xref:System.Windows.Forms.ProgressBar> controllo.|Questo approccio è utile per le attività in cui si conosce il totale dell'elemento misurato, ad esempio la lettura di record da un'origine dati. Inoltre, se è necessario impostare il valore solo una volta o due volte, questo è un modo semplice per eseguire questa operazione. Usare infine questo processo se è necessario ridurre il valore visualizzato dall'indicatore di stato.|  
+|Aumentare la <xref:System.Windows.Forms.ProgressBar> visualizzazione in base a un valore fisso.|Questo approccio è utile quando si visualizza un conteggio semplice tra il valore minimo e massimo, ad esempio il tempo trascorso o il numero di file elaborati da un totale noto.|  
+|Aumentare la <xref:System.Windows.Forms.ProgressBar> visualizzazione in base a un valore che varia.|Questo approccio è utile quando è necessario modificare il valore visualizzato per un numero di volte in importi diversi. Un esempio mostra la quantità di spazio su disco rigido utilizzata durante la scrittura di una serie di file sul disco.|  
   
- Il modo più diretto per impostare il valore visualizzato da una barra di stato di avanzamento consiste nell'impostare il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà. Questa operazione può essere eseguita in fase di progettazione o in fase di esecuzione.  
+ Il modo più diretto per impostare il valore visualizzato da un indicatore di stato consiste nell'impostare <xref:System.Windows.Forms.ProgressBar.Value%2A> la proprietà. Questa operazione può essere eseguita in fase di progettazione o in fase di esecuzione.  
   
-### <a name="to-set-the-progressbar-value-directly"></a>Per impostare il valore ProgressBar direttamente  
+### <a name="to-set-the-progressbar-value-directly"></a>Per impostare direttamente il valore ProgressBar  
   
-1. Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.  
+1. Impostare i <xref:System.Windows.Forms.ProgressBar> valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e<xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo.  
   
-2. Nel codice, impostare il controllo <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà a valore intero compreso tra i valori minimi e massimo è stato stabilito.  
+2. Nel codice impostare la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà del controllo su un valore intero compreso tra i valori minimo e massimo stabiliti.  
   
     > [!NOTE]
-    >  Se si imposta la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà esterna ai limiti stabiliti dal <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> delle proprietà, il controllo genera un <xref:System.ArgumentException> eccezione.  
+    > Se si imposta la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà al <xref:System.Windows.Forms.ProgressBar.Minimum%2A> di fuori dei limiti stabiliti <xref:System.Windows.Forms.ProgressBar.Maximum%2A> dalle proprietà e, il controllo <xref:System.ArgumentException> genera un'eccezione.  
   
-     Esempio di codice seguente viene illustrato come impostare il <xref:System.Windows.Forms.ProgressBar> valore direttamente. Il codice legge i record da un'origine dati e aggiorna l'indicatore di stato e l'etichetta ogni volta che viene letto un record dei dati. Questo esempio richiede che il form contenga un <xref:System.Windows.Forms.Label> (controllo), una <xref:System.Windows.Forms.ProgressBar> controllo e una tabella dati con una riga chiamata `CustomerRow` con `FirstName` e `LastName` campi.  
+     Nell'esempio di codice riportato di seguito viene illustrato come <xref:System.Windows.Forms.ProgressBar> impostare direttamente il valore. Il codice legge i record da un'origine dati e aggiorna l'indicatore di stato e l'etichetta ogni volta che viene letto un record di dati. Questo esempio richiede che il form disponga di <xref:System.Windows.Forms.Label> un controllo, <xref:System.Windows.Forms.ProgressBar> di un controllo e di una tabella di dati con `CustomerRow` una riga `LastName` denominata con `FirstName` i campi e.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "65591584"
     }  
     ```  
   
-     Se viene visualizzato lo stato di avanzamento che consente di passare da un intervallo fisso, è possibile impostare il valore e quindi chiamare un metodo che consentono di aumentare la <xref:System.Windows.Forms.ProgressBar> valore del controllo in base a tale intervallo. Ciò è utile per i timer e altri scenari in cui si sta misurando non lo stato di avanzamento in percentuale rispetto al totale.  
+     Se si visualizza lo stato di avanzamento che procede da un intervallo fisso, è possibile impostare il valore e quindi chiamare un metodo che aumenta <xref:System.Windows.Forms.ProgressBar> il valore del controllo in base a tale intervallo. Questa operazione è utile per i timer e per altri scenari in cui non si sta misurando lo stato di avanzamento come percentuale dell'intero.  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Per aumentare l'indicatore di stato da un valore fisso  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Per aumentare l'indicatore di stato in base a un valore fisso  
   
-1. Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.  
+1. Impostare i <xref:System.Windows.Forms.ProgressBar> valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e<xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo.  
   
-2. Impostare il controllo <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà a valore integer che rappresenta la quantità per aumentare l'indicatore di stato valore visualizzato.  
+2. Impostare la <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà del controllo su un intero che rappresenta la quantità per aumentare il valore visualizzato dell'indicatore di stato.  
   
-3. Chiamare il <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metodo per modificare il valore visualizzato per il valore impostato il <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà.  
+3. Chiamare il <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metodo per modificare il valore visualizzato dalla quantità impostata <xref:System.Windows.Forms.ProgressBar.Step%2A> nella proprietà.  
   
-     Esempio di codice seguente viene illustrato come un indicatore di stato può mantenere un conteggio dei file in un'operazione di copia.  
+     Nell'esempio di codice seguente viene illustrato come un indicatore di stato può mantenere un conteggio dei file in un'operazione di copia.  
   
-     Nell'esempio seguente, perché ogni file viene letto in memoria, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere che i numero totale di file di lettura. Questo esempio richiede che il form contenga un <xref:System.Windows.Forms.Label> controllo e un <xref:System.Windows.Forms.ProgressBar> controllo.  
+     Nell'esempio seguente, quando ogni file viene letto in memoria, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere il totale dei file letti. Questo esempio richiede che il form disponga di <xref:System.Windows.Forms.Label> un controllo e <xref:System.Windows.Forms.ProgressBar> di un controllo.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,17 +149,17 @@ ms.locfileid: "65591584"
     }  
     ```  
   
-     Infine, è possibile aumentare il valore visualizzato da un indicatore di stato in modo che ogni incremento è una quantità univoca. Ciò è utile quando si sta tenendo traccia di una serie di operazioni univoche, ad esempio la scrittura di file di dimensioni diverse in un disco rigido o misurare lo stato di avanzamento come percentuale dell'intero.  
+     Infine, è possibile aumentare il valore visualizzato da un indicatore di stato in modo che ogni incremento sia un importo univoco. Questa operazione è utile quando si tiene traccia di una serie di operazioni univoche, ad esempio la scrittura di file di dimensioni diverse in un disco rigido o la misurazione dello stato di avanzamento come percentuale dell'intero.  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Per aumentare l'indicatore di stato di un valore dinamico  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Per aumentare l'indicatore di stato in base a un valore dinamico  
   
-1. Impostare il <xref:System.Windows.Forms.ProgressBar> del controllo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> valori.  
+1. Impostare i <xref:System.Windows.Forms.ProgressBar> valori <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e<xref:System.Windows.Forms.ProgressBar.Maximum%2A> del controllo.  
   
-2. Chiamare il <xref:System.Windows.Forms.ProgressBar.Increment%2A> metodo per modificare il valore visualizzato da un intero specificato.  
+2. Chiamare il <xref:System.Windows.Forms.ProgressBar.Increment%2A> metodo per modificare il valore visualizzato da un Integer specificato.  
   
-     Esempio di codice seguente viene illustrato come un indicatore di stato possibile calcolare quanto spazio su disco è stato utilizzato durante un'operazione di copia.  
+     Nell'esempio di codice seguente viene illustrato come un indicatore di stato può calcolare la quantità di spazio su disco utilizzata durante un'operazione di copia.  
   
-     Nell'esempio seguente, perché ogni file viene scritto sul disco rigido, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere la quantità di spazio su disco disponibile. Questo esempio richiede che il form contenga un <xref:System.Windows.Forms.Label> controllo e un <xref:System.Windows.Forms.ProgressBar> controllo.  
+     Nell'esempio seguente, quando ogni file viene scritto sul disco rigido, l'indicatore di stato e l'etichetta vengono aggiornati per riflettere la quantità di spazio disponibile su disco rigido. Questo esempio richiede che il form disponga di <xref:System.Windows.Forms.Label> un controllo e <xref:System.Windows.Forms.ProgressBar> di un controllo.  
   
     ```vb  
     Public Sub ReadFiles()  
