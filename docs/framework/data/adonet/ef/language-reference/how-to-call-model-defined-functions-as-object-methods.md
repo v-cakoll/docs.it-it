@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 53ec7122a3601a2da53513f25a546a08c2aa4307
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936006"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedura: Chiamare funzioni definite dal modello come metodi di oggetto
-In questo argomento viene descritto come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> oppure come metodo statico di una classe personalizzata. Oggetto *funzione definita dal modello* è una funzione definita nel modello concettuale. Le procedure descritte in questo argomento mostrano come chiamare queste funzioni direttamente anziché chiamarle da query LINQ to Entities. Per informazioni sulla chiamata di funzioni definite dal modello in LINQ alle query di entità, vedere [come: Chiamare funzioni definite dal modello in query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+In questo argomento viene descritto come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> oppure come metodo statico di una classe personalizzata. Una *funzione definita dal modello* è una funzione definita nel modello concettuale. Le procedure descritte in questo argomento mostrano come chiamare queste funzioni direttamente anziché chiamarle da query LINQ to Entities. Per informazioni sulla chiamata di funzioni definite dal modello in LINQ to Entities query, [vedere How to: Chiamare funzioni definite dal modello nelle query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Sia che si chiami una funzione definita dal modello come metodo <xref:System.Data.Objects.ObjectContext> o come metodo statico in una classe personalizzata, è necessario innanzitutto eseguire il mapping del metodo alla funzione definita dal modello con un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tuttavia, quando si definisce un metodo nella classe <xref:System.Data.Objects.ObjectContext>, è necessario usare la proprietà <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> per esporre il provider LINQ, mentre quando si definisce un metodo statico in una classe personalizzata, è necessario usare la proprietà <xref:System.Linq.IQueryable.Provider%2A> per esporre il provider LINQ. Per altre informazioni, vedere gli esempi che seguono le procedure.  
   
- Le procedure descritte di seguito forniscono strutture di alto livello per la chiamata di una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> e come metodo statico in una classe personalizzata. Negli esempi che seguono vengono forniti dettagli aggiuntivi sui passaggi delle procedure. In queste procedure si presuppone che sia stata definita una funzione nel modello concettuale. Per altre informazioni, vedere [Procedura: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
+ Le procedure descritte di seguito forniscono strutture di alto livello per la chiamata di una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> e come metodo statico in una classe personalizzata. Negli esempi che seguono vengono forniti dettagli aggiuntivi sui passaggi delle procedure. In queste procedure si presuppone che sia stata definita una funzione nel modello concettuale. Per altre informazioni, vedere [Procedura: Definire funzioni personalizzate nel modello](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))concettuale.  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Per chiamare una funzione definita dal modello come metodo in un oggetto ObjectContext  
   
@@ -46,9 +46,9 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
 ## <a name="example"></a>Esempio  
  **Chiamata di una funzione definita dal modello come metodo in un oggetto ObjectContext**  
   
- Nell'esempio seguente viene mostrato come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext>. L'esempio Usa la [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
+ Nell'esempio seguente viene mostrato come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext>. Nell'esempio viene utilizzato il [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
- Considerare la seguente funzione del modello concettuale che restituisce il ricavo di prodotto per un prodotto specificato. (Per informazioni sull'aggiunta della funzione al modello concettuale, vedere [come: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
+ Considerare la seguente funzione del modello concettuale che restituisce il ricavo di prodotto per un prodotto specificato. Per informazioni sull'aggiunta della funzione al modello concettuale, vedere [procedura: Definire funzioni personalizzate nel modello](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))concettuale.  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -82,14 +82,14 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Esempio  
- **Chiamata a una funzione definita dal modello come metodo statico in una classe personalizzata**  
+ **Chiamata di una funzione definita dal modello come metodo statico in una classe personalizzata**  
   
- Nell'esempio seguente viene dimostrato come chiamare una funzione definita dal modello come metodo statico in una classe personalizzata. L'esempio Usa la [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
+ Nell'esempio seguente viene dimostrato come chiamare una funzione definita dal modello come metodo statico in una classe personalizzata. Nell'esempio viene utilizzato il [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 > [!NOTE]
->  Quando si chiama una funzione definita dal modello come metodo statico in una classe personalizzata, la funzione definita dal modello deve accettare una raccolta e restituire un'aggregazione di valori nella raccolta.  
+> Quando si chiama una funzione definita dal modello come metodo statico in una classe personalizzata, la funzione definita dal modello deve accettare una raccolta e restituire un'aggregazione di valori nella raccolta.  
   
- Considerare la seguente funzione del modello concettuale che restituisce il ricavo di prodotto per una raccolta SalesOrderDetail. (Per informazioni sull'aggiunta della funzione al modello concettuale, vedere [come: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).).  
+ Considerare la seguente funzione del modello concettuale che restituisce il ricavo di prodotto per una raccolta SalesOrderDetail. Per informazioni sull'aggiunta della funzione al modello concettuale, vedere [procedura: Definire funzioni personalizzate nel modello](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))concettuale.  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -107,6 +107,6 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Chiamata di funzioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

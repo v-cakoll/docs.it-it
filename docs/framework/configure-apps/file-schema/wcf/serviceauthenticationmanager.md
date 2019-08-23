@@ -2,20 +2,20 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936418"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 Fornisce un elemento di configurazione del flusso di lavoro che stabilisce a livello di servizio la validità di una trasmissione, un messaggio o un'origine.  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +46,7 @@ Fornisce un elemento di configurazione del flusso di lavoro che stabilisce a liv
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="see-also"></a>Vedere anche
 

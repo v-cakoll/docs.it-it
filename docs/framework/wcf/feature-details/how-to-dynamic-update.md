@@ -2,21 +2,21 @@
 title: 'Procedura: Aggiornamento dinamico'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911146"
 ---
 # <a name="how-to-dynamic-update"></a>Procedura: Aggiornamento dinamico
 In questo argomento vengono descritti i passaggi di base necessari per creare e aggiornare in modo dinamico la configurazione del routing. In questo esempio, la configurazione iniziale del routing viene ottenuta dal file di configurazione e indirizza tutti i messaggi al servizio di calcolo regularCalc. Viene tuttavia aggiornata in un secondo momento a livello di codice per modificare l'endpoint di destinazione del servizio roundingCalc.  
   
 > [!NOTE]
->  In molte implementazioni la configurazione sarà completamente dinamica e non si baserà su una configurazione predefinita. Tuttavia, in alcuni scenari, come quello citato in questo argomento, è preferibile disporre di uno stato di configurazione predefinito all'avvio del servizio.  
+> In molte implementazioni la configurazione sarà completamente dinamica e non si baserà su una configurazione predefinita. Tuttavia, in alcuni scenari, come quello citato in questo argomento, è preferibile disporre di uno stato di configurazione predefinito all'avvio del servizio.  
   
 > [!NOTE]
->  Gli aggiornamenti dinamici si verificano solo nella memoria e non comportano la modifica dei file di configurazione.  
+> Gli aggiornamenti dinamici si verificano solo nella memoria e non comportano la modifica dei file di configurazione.  
   
  Sia regularCalc sia roundingCalc supportano le stesse operazioni di aggiunta, sottrazione, moltiplicazione e divisione. roundingCalc esegue tuttavia l'arrotondamento di tutti i calcoli all'integer più vicino prima della restituzione. Viene utilizzato un file di configurazione per configurare il servizio al fine di indirizzare tutti i messaggi al servizio regularCalc. Una volta avviato il servizio di routing, viene utilizzato <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> per riconfigurare il servizio al fine di indirizzare messaggi al servizio roundingCalc.  
   
@@ -64,7 +64,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare e 
     </filterTables>  
     ```  
   
-3. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. L'esempio seguente illustra l'associazione "filterTable1" agli endpoint del servizio.  
+3. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata l'associazione di "filterTable1" all'endpoint di servizio.  
   
     ```xml  
     <behaviors>  

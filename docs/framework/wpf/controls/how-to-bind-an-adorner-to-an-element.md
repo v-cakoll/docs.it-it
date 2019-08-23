@@ -8,30 +8,30 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: b6909fec466c2b31a7f4156c43b21a0c724f0217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c7eb929042bfe1455bfc9bf459fc466de5c397
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018970"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923501"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Procedura: Associare uno strumento decorativo a un elemento
-Questo esempio illustra come associare programmaticamente uno strumento decorativo a un oggetto specificato <xref:System.Windows.UIElement>.  
+Questo esempio illustra come associare uno strumento decorativo a livello di codice a <xref:System.Windows.UIElement>un oggetto specificato.  
   
 ## <a name="example"></a>Esempio  
- Per associare uno strumento decorativo a un determinato <xref:System.Windows.UIElement>, seguire questa procedura:  
+ Per associare uno strumento decorativo a un <xref:System.Windows.UIElement>particolare, attenersi alla seguente procedura:  
   
-1. Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> dell'oggetto per il <xref:System.Windows.UIElement> da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> risale la struttura ad albero visuale, iniziando in corrispondenza di oggetto specificato **UIElement**e restituisce il primo livello dello strumento decorativo trovato. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
+1. Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> oggetto per l' <xref:System.Windows.UIElement> oggetto da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>esamina la struttura ad albero visuale, iniziando dall' **oggetto UIElement**specificato e restituisce il primo livello dello strumento decorativo rilevato. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
   
-2. Chiamare il <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo a cui associare lo strumento decorativo visuale di destinazione **UIElement**.  
+2. Chiamare il <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo per associare lo strumento decorativo visuale all' **oggetto UIElement**di destinazione.  
   
- Nell'esempio seguente viene associato un SimpleCircleAdorner (illustrato in precedenza) a un <xref:System.Windows.Controls.TextBox> denominate *myTextBox*.  
+ Nell'esempio seguente viene associato un SimpleCircleAdorner (illustrato in precedenza) a <xref:System.Windows.Controls.TextBox> un *oggetto denominato TextBox*.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  Non è attualmente possibile usare [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] per associare uno strumento decorativo a un altro elemento.  
+> Non è attualmente possibile usare [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] per associare uno strumento decorativo a un altro elemento.  
   
 ## <a name="see-also"></a>Vedere anche
 

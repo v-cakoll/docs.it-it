@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le immagini in fase di esecuzione (Windows Form)'
+title: 'Procedura: Impostare le immagini in fase di esecuzione (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917534"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: Impostare le immagini in fase di esecuzione (Windows Form)
-È possibile impostare a livello di codice l'immagine visualizzata da un controllo Windows Form <xref:System.Windows.Forms.PictureBox> controllo.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: Impostare le immagini in fase di esecuzione (Windows Forms)
+È possibile impostare a livello di codice l'immagine visualizzata da <xref:System.Windows.Forms.PictureBox> un controllo Windows Forms.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Per impostare un'immagine a livello di codice  
   
-- Impostare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo il <xref:System.Drawing.Image> classe.  
+- Impostare la <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo della <xref:System.Drawing.Image> classe.  
   
-     Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Questa operazione viene eseguita, perché si presume che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. L'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
+     Nell'esempio seguente, il percorso impostato per il percorso dell'immagine è la cartella documenti. Questa operazione viene eseguita perché è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includa questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone che un modulo <xref:System.Windows.Forms.PictureBox> con un controllo sia già stato aggiunto.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -65,9 +65,9 @@ ms.locfileid: "64609406"
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Per cancellare un'immagine  
+### <a name="to-clear-a-graphic"></a>Per cancellare una rappresentazione grafica  
   
-- In primo luogo, rilasciare la memoria utilizzata dall'immagine e quindi deselezionare l'icona. Operazione di Garbage collection consente di liberare la memoria in un secondo momento se la gestione della memoria diventa un problema.  
+- Per prima cosa, rilasciare la memoria usata dall'immagine, quindi deselezionare la rappresentazione grafica. Il processo di Garbage Collection libera la memoria in un secondo momento se la gestione della memoria costituisce un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,9 +93,9 @@ ms.locfileid: "64609406"
     ```  
   
     > [!NOTE]
-    >  Per altre informazioni sui motivi per cui è consigliabile usare la <xref:System.Drawing.Image.Dispose%2A> metodo in questo modo, vedere [pulizia di risorse non gestite](../../../standard/garbage-collection/unmanaged.md).  
+    > Per altre informazioni sui motivi per cui è necessario <xref:System.Drawing.Image.Dispose%2A> usare il metodo in questo modo, vedere [pulizia delle risorse non gestite](../../../standard/garbage-collection/unmanaged.md).  
   
-     Questo codice verrà cancellata l'immagine, anche se un oggetto grafico è stato caricato nel controllo in fase di progettazione.  
+     Questo codice cancellerà l'immagine anche se un grafico è stato caricato nel controllo in fase di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951875"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Metodo IMetaDataImport::ResolveTypeRef
 Risolve un <xref:System.Type> riferimento rappresentato dal token TypeRef specificato.  
@@ -40,32 +40,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametri  
  `tr`  
- [in] Il token di metadati TypeRef per restituire informazioni sul tipo di riferimento per.  
+ in Token di metadati TypeRef per cui restituire le informazioni sul tipo a cui si fa riferimento.  
   
  `riid`  
- [in] IID dell'interfaccia da restituire `ppIScope`. In genere, questa sarebbe IID_IMetaDataImport.  
+ in IID dell'interfaccia da restituire in `ppIScope`. Si tratta in genere di IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] Interfaccia per l'ambito del modulo in cui è definito il tipo di riferimento.  
+ out Interfaccia per l'ambito del modulo in cui è definito il tipo a cui si fa riferimento.  
   
  `ptd`  
- [out] Puntatore a un token TypeDef che rappresenta il tipo di riferimento.  
+ out Puntatore a un token TypeDef che rappresenta il tipo a cui si fa riferimento.  
   
 ## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  Non utilizzare questo metodo se sono caricati più domini dell'applicazione. Il metodo non rispetta i limiti del dominio applicazione. Se sono caricate più versioni di un assembly e che contengono lo stesso tipo con lo stesso spazio dei nomi, il metodo restituisce l'ambito del modulo del primo tipo trovato.  
+> Non usare questo metodo se vengono caricati più domini applicazione. Il metodo non rispetta i limiti del dominio applicazione. Se vengono caricate più versioni di un assembly e contengono lo stesso tipo con lo stesso spazio dei nomi, il metodo restituisce l'ambito del modulo del primo tipo trovato.  
   
- Il `ResolveTypeRef` metodo cerca la definizione del tipo in altri moduli. Se viene trovata la definizione del tipo, `ResolveTypeRef` restituisce un'interfaccia per tale ambito di modulo, nonché il token TypeDef per il tipo.  
+ Il `ResolveTypeRef` metodo cerca la definizione del tipo in altri moduli. Se viene trovata la definizione del tipo `ResolveTypeRef` , restituisce un'interfaccia a tale ambito del modulo e il token typedef per il tipo.  
   
- Se il riferimento al tipo da risolvere dispone di un ambito di risoluzione di AssemblyRef, il `ResolveTypeRef` metodo cerca una corrispondenza solo negli ambiti dei metadati che sono già stati aperti mediante chiamate al metodo il [IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)metodo o la [IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) (metodo). Infatti, `ResolveTypeRef` non è possibile stabilire dal solo nell'ambito di AssemblyRef in cui è archiviato l'assembly sul disco o nella global assembly cache.  
+ Se il riferimento al tipo da risolvere ha un ambito di risoluzione di AssemblyRef, `ResolveTypeRef` il metodo cerca una corrispondenza solo negli ambiti dei metadati già aperti con le chiamate al metodo [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) o [ Metodo IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Ciò è dovuto `ResolveTypeRef` al fatto che non è in grado di determinare solo dall'ambito AssemblyRef in cui è archiviato l'assembly su disco o nel Global assembly cache.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

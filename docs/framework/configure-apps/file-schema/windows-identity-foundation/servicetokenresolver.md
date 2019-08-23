@@ -3,15 +3,15 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69d34cb54c2236f178ac4291ed24a3f5b45db48e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793809"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923102"
 ---
 # <a name="servicetokenresolver"></a>\<serviceTokenResolver>
-Registra il resolver dei token di servizio che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token di servizio viene usato per risolvere il token di crittografia token in arrivo e messaggi.  
+Registra il resolver del token di servizio utilizzato dai gestori nella raccolta di gestori di token. Il resolver del token del servizio viene usato per risolvere il token di crittografia sui token e i messaggi in ingresso.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,26 +39,26 @@ Registra il resolver dei token di servizio che viene usato dai gestori nella rac
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|tipo|Specifica il tipo di resolver di token del servizio. Entrambi i <xref:System.IdentityModel.Selectors.SecurityTokenResolver> tipo o un tipo che deriva dal <xref:System.IdentityModel.Selectors.SecurityTokenResolver> classe. Per altre informazioni su come specificare il `type` attributo, vedere [riferimenti a tipi personalizzati]. Obbligatorio.|  
+|type|Specifica il tipo del resolver del token del servizio. Tipo o un tipo che deriva <xref:System.IdentityModel.Selectors.SecurityTokenResolver> dalla classe. <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Per ulteriori informazioni su come specificare l'attributo `type` , vedere [riferimenti ai tipi personalizzati]. Richiesto.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza i gestori di token.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di gestori di token di sicurezza.|  
   
 ## <a name="remarks"></a>Note  
- Il resolver dei token di servizio è utilizzabile per risolvere il token di crittografia token in arrivo e messaggi. Utilizzato per recuperare la chiave da usare per decrittografare i token in ingresso. È necessario specificare il `type` attributo. Il tipo specificato può essere <xref:System.IdentityModel.Selectors.SecurityTokenResolver> o un tipo personalizzato che deriva dal <xref:System.IdentityModel.Selectors.SecurityTokenResolver> classe.  
+ Il resolver del token del servizio può essere usato per risolvere il token di crittografia sui token e i messaggi in ingresso. Viene usato per recuperare la chiave che deve essere usata per decrittografare i token in ingresso. È necessario specificare l' `type` attributo. Il tipo specificato può essere <xref:System.IdentityModel.Selectors.SecurityTokenResolver> o un tipo personalizzato che deriva <xref:System.IdentityModel.Selectors.SecurityTokenResolver> dalla classe.  
   
- Alcuni gestori di token consentono di specificare le impostazioni di resolver dei token del servizio nella configurazione. Le impostazioni ai singoli gestori di token sostituiscono quelle specificate nella raccolta di gestori di token di sicurezza.  
+ Alcuni gestori di token consentono di specificare le impostazioni del resolver del token del servizio nella configurazione. Le impostazioni sui singoli gestori di token eseguono l'override di quelle specificate nella raccolta di gestori di token di sicurezza.  
   
 > [!NOTE]
->  Specifica la `<serviceTokenResolver>` come elemento figlio dell'elemento di [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato deprecato, ma è ancora supportata per la compatibilità con le versioni precedenti. Le impostazioni nel `<securityTokenHandlerConfiguration>` elemento sostituiscono quelle di `<identityConfiguration>` elemento.  
+> Specificare l' `<serviceTokenResolver>` elemento come elemento figlio [ \<dell'elemento > IdentityConfiguration](identityconfiguration.md) è stato deprecato, ma è ancora supportato per la compatibilità con le versioni precedenti. Le impostazioni sull' `<securityTokenHandlerConfiguration>` elemento eseguono l'override `<identityConfiguration>` di quelle nell'elemento.  
   
 ## <a name="example"></a>Esempio  
   

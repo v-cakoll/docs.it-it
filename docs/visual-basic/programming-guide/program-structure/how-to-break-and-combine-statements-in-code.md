@@ -21,40 +21,40 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946209"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
-Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lunga durate che richiedono uno scorrimento orizzontale nell'Editor del codice. Anche se ciò non influiscono sulla modalità di esecuzione del codice, rende difficile per te o per altri utenti a leggere il codice visualizzato sul monitor. In questi casi, è necessario considerare suddividendo la singola istruzione lunga in più righe.  
+Quando si scrive il codice, è possibile creare a volte istruzioni lunghe che richiedono lo scorrimento orizzontale nell'editor di codice. Sebbene questa operazione non influisca sul modo in cui viene eseguito il codice, è difficile per l'utente o per chiunque legga il codice visualizzato sul monitor. In questi casi, è consigliabile suddividere la singola istruzione Long in più righe.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Per suddividere una singola istruzione in più righe  
   
-- Usare il carattere di continuazione di riga, ovvero un carattere di sottolineatura (`_`), nel punto in cui si desidera interrompere la riga. Il carattere di continuazione di riga deve essere preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo).  
+- Utilizzare il carattere di continuazione di riga, ovvero un carattere di`_`sottolineatura (), nel punto in cui si desidera che la riga si interrompa. Il carattere di continuazione di riga deve essere preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo).  
   
     > [!NOTE]
-    >  In alcuni casi, se si omette il carattere di continuazione di riga, il compilatore Visual Basic in modo implicito continuerà l'istruzione nella riga successiva del codice. Per un elenco di elementi della sintassi per il quale è possibile omettere il carattere di continuazione di riga, vedere "Continuazione di riga implicita" nella [istruzioni](../../../visual-basic/programming-guide/language-features/statements.md).  
+    > In alcuni casi, se si omette il carattere di continuazione di riga, il Visual Basic compilatore continuerà in modo implicito l'istruzione alla riga di codice successiva. Per un elenco degli elementi della sintassi per i quali è possibile omettere il carattere di continuazione di riga, vedere "continuazione di riga implicita" nelle [istruzioni](../../../visual-basic/programming-guide/language-features/statements.md).  
   
-     Nell'esempio seguente, l'istruzione viene suddivisa in quattro righe con terminazione di tutti i caratteri di continuazione di riga, ma l'ultima riga.  
+     Nell'esempio seguente l'istruzione è suddivisa in quattro righe con caratteri di continuazione di riga che terminano tutti tranne l'ultima riga.  
   
      [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
-     Utilizzo di questa sequenza rende il codice più leggibile, stampati sia online e quando.  
+     L'uso di questa sequenza rende il codice più facile da leggere, sia online che quando viene stampato.  
   
-     Il carattere di continuazione di riga deve essere l'ultimo carattere in una riga. È non è possibile seguirla con altre operazioni sulla stessa riga.  
+     Il carattere di continuazione di riga deve essere l'ultimo carattere su una riga. Non è possibile seguire altre operazioni sulla stessa riga.  
   
-     Esistono alcune limitazioni riguardo in cui è possibile usare il carattere di continuazione di riga. è ad esempio, non è possibile usarlo all'interno di un nome di argomento. È possibile interrompere un elenco di argomenti con il carattere di continuazione di riga, ma i singoli tipi degli argomenti devono rimanere invariati.  
+     Esistono alcune limitazioni per la posizione in cui è possibile utilizzare il carattere di continuazione di riga; ad esempio, non è possibile usarlo nel mezzo di un nome di argomento. È possibile suddividere un elenco di argomenti con il carattere di continuazione di riga, ma i singoli nomi degli argomenti devono rimanere intatti.  
   
-     È possibile proseguire un commento con un carattere di continuazione di riga. Il compilatore non esamina i caratteri in un commento per un significato speciale. Per commenti su più righe, ripetere il simbolo di commento (`'`) per ogni riga.  
+     Non è possibile continuare un commento usando un carattere di continuazione di riga. Il compilatore non esamina i caratteri in un commento per un significato speciale. Per un commento su più righe, ripetere il simbolo di commento`'`() in ogni riga.  
   
- Anche se il metodo consigliato consiste nell'inserire ogni istruzione in una riga distinta, Visual Basic consente inoltre di inserire istruzioni di più sulla stessa riga.  
+ Sebbene ogni istruzione venga posizionata in una riga distinta è il metodo consigliato, Visual Basic consente anche di inserire più istruzioni nella stessa riga.  
   
-### <a name="to-place-multiple-statements-on-the-same-line"></a>Per inserire più istruzioni sulla stessa riga  
+### <a name="to-place-multiple-statements-on-the-same-line"></a>Per inserire più istruzioni nella stessa riga  
   
-- Separare le istruzioni con un carattere due punti (`:`), come illustrato nell'esempio seguente.  
+- Separare le istruzioni con i due punti`:`(), come nell'esempio seguente.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

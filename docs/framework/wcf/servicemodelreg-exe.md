@@ -2,12 +2,12 @@
 title: Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 519f303507ed873266cc05a7556073887b66ba6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923034"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Strumento di registrazione ServiceModel (ServiceModelReg.exe)
 Questo strumento da riga di comando offre la possibilità di gestire la registrazione di componenti WCF e WF in un singolo computer. In condizioni normali l'utilizzo di questo strumento non è consigliabile perché i componenti WCF e WF vengono configurati quando installati. Tuttavia, se si verificano problemi con l'attivazione del servizio, si può tentare la registrazione dei componenti tramite questo strumento.  
@@ -24,25 +24,25 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
->  Quando lo strumento di registrazione ServiceModel viene eseguito nel [!INCLUDE[wv](../../../includes/wv-md.md)], il **funzionalità Windows** dialogo potrebbe non riflettere che il **Attivazione HTTP Windows Communication Foundation** opzione in **Microsoft .NET Framework 3.0** è attivata. Il **funzionalità di Windows** finestra di dialogo è accessibile facendo clic **avviare**, quindi fare clic su **eseguire** e quindi digitando **OptionalFeatures**.  
+> Quando lo strumento di registrazione ServiceModel viene eseguito [!INCLUDE[wv](../../../includes/wv-md.md)]in, la finestra di dialogo delle **funzionalità di Windows** potrebbe non riflettere che l'opzione di **attivazione HTTP Windows Communication Foundation** in **Microsoft .NET Framework 3,0** è attivata. È possibile accedere alla finestra di dialogo **funzionalità Windows** facendo clic sul pulsante **Start**, quindi su **Esegui** e digitando **OptionalFeatures**.  
   
  Nella tabella riportata di seguito sono descritte le opzioni che possono essere utilizzate con ServiceModelReg.exe.  
   
-|Opzione|Descrizione|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |`-ia`|Installa tutti i componenti WCF e WF.|  
 |`-ua`|Disinstalla tutti i componenti WCF e WF.|  
 |`-r`|Ripristina tutti i componenti WCF e WF.|  
 |`-i`|Installa tutti i componenti WCF e WF specificati con -c.|  
 |`-u`|Disinstalla tutti i componenti WCF e WF specificati con -c.|  
-|`-c`|Installa o disinstalla un componente:<br /><br /> -httpnamespace-prenotazione Namespace HTTP<br />porta TCP - tcpportsharing-servizio di condivisione<br />servizio di attivazione - tcpactivation-TCP (non supportato in .NET 4 Client Profile)<br />-namedpipeactivation-Named pipe activation service (non supportato in .NET 4 Client Profile<br />servizio di attivazione - msmqactivation-MSMQ (non supportato in .NET 4 Client Profile<br />ETW - etw-manifesti di traccia eventi (Windows Vista o versioni successive)|  
+|`-c`|Installa o disinstalla un componente:<br /><br /> -httpnamespace – prenotazione dello spazio dei nomi HTTP<br />-tcpportsharing-servizio di condivisione porte TCP<br />-tcpactivation-servizio di attivazione TCP (non supportato in .NET 4 Client Profile)<br />-namedpipeactivation-servizio di attivazione named pipe (non supportato in .NET 4 Client Profile<br />-msmqactivation-servizio di attivazione MSMQ (non supportato in .NET 4 Client Profile<br />-ETW-manifesti di traccia eventi ETW (Windows Vista o versioni successive)|  
 |`-q`|Modalità non interattiva (solo registrazione errori visualizzata)|  
 |`-v`|Modalità dettagliata.|  
 |`-nologo`|Elimina le informazioni di copyright e il messaggio di avvio.|  
 |`-?`|Visualizza il testo della Guida|  
   
-## <a name="fixing-the-fileloadexception-error"></a>Correzione dell’errore FileLoadException   
- Se sono installate versioni precedenti di WCF nel computer, è possibile ottenere un `FileLoadFoundException` errore quando si esegue lo strumento ServiceModelReg per registrare una nuova installazione. Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.  
+## <a name="fixing-the-fileloadexception-error"></a>Correzione dell’errore FileLoadException  
+ Se sono state installate versioni precedenti di WCF nel computer, è possibile che venga `FileLoadFoundException` ricevuto un errore quando si esegue lo strumento ServiceModelReg per registrare una nuova installazione. Ciò può verificarsi anche se sono stati rimossi manualmente file dall’installazione precedente, ma sono state mantenute intatte le impostazioni machine.config.  
   
  Verrà visualizzato un messaggio di errore simile al seguente:  
   
@@ -51,7 +51,7 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview (CTP). La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0. Di conseguenza, questo problema si verifica quando si desidera installare la versione ufficiale di WCF in un computer in cui una prima versione CTP di WCF è stata installata ma non completamente disinstallata.  
+ È necessario notare dal messaggio di errore che è stato installato l’assembly System.ServiceModel Versione 2.0.0.0 di una precedente versione di Customer Technology Preview (CTP). La versione corrente dell'assembly System.ServiceModel rilasciata è invece 3.0.0.0. Questo problema si verifica quindi quando si desidera installare la versione ufficiale di WCF in un computer in cui è stata installata una versione CTP iniziale di WCF, ma non completamente disinstallata.  
   
  ServiceModelReg.exe non può eseguire la pulizia di voci della versione precedente, né può registrare voci della versione nuova. L’unica soluzione alternativa è modificare manualmente machine.config. È possibile trovare questo file al percorso seguente.  
   
@@ -59,13 +59,13 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- Se si eseguono WCF in un computer a 64 bit, è necessario modificare anche lo stesso file in questa posizione.  
+ Se si esegue WCF in un computer a 64 bit, è necessario modificare anche lo stesso file in questa posizione.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   
 ```  
   
- Individuare tutti i nodi XML nel file che fanno riferimento a "System. ServiceModel, Version = 2.0.0.0", eliminare tali nodi e tutti i nodi figlio. Per risolvere il problema, salvare il file e ripetere l'esecuzione di ServiceModelReg.exe.  
+ Individuare tutti i nodi XML in questo file che fanno riferimento a "System. ServiceModel, Version = 2.0.0.0", eliminarli e tutti i nodi figlio. Per risolvere il problema, salvare il file e ripetere l'esecuzione di ServiceModelReg.exe.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come utilizzare le opzioni più comuni dello strumento ServiceModelReg.exe.  

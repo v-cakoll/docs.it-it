@@ -1,24 +1,24 @@
 ---
-title: <authentication> di <clientCertificate> elemento
+title: <authentication>dell' <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 2cbc850331dc6bf76c352f975fda834a309564c6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4a7fee3bd8441a9612e954160397cc56aca163d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926516"
 ---
-# <a name="authentication-of-clientcertificate-element"></a>\<autenticazione > di \<clientCertificate > elemento
+# <a name="authentication-of-clientcertificate-element"></a>\<> di autenticazione \<dell'elemento > ClientCertificate
 Specifica i comportamenti di autenticazione per i certificati client utilizzati da un servizio.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceCredentials>  
 \<clientCertificate>  
-\<authentication>  
+\<> di autenticazione  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,36 +36,36 @@ Specifica i comportamenti di autenticazione per i certificati client utilizzati 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |customCertificateValidatorType|Stringa facoltativa. Un tipo e un assembly usati per convalidare un tipo personalizzato. Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.|  
 |certificateValidationMode|Enumerazione facoltativa. Specifica una delle modalità usate per convalidare credenziali. L'attributo è di tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se impostato su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, è necessario fornire anche un `customCertificateValidator`. Il valore predefinito è <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
 |includeWindowsGroups|Valore booleano facoltativo. Specifica se i gruppi di Windows sono inclusi nel contesto di sicurezza. L'impostazione di questo attributo su `true` determina un effetto sulle prestazioni in quanto comporta un'espansione completa del gruppo. Impostare questo attributo su `false` se non è necessario stabilire l'elenco di gruppi a cui appartiene un utente.|  
-|mapClientCertificateToWindowsAccount|Proprietà di tipo Boolean. Specifica se è possibile eseguire il mapping del client a un'identità di Windows usando il certificato. A tal scopo è necessario che Active Directory sia attivato.|  
+|mapClientCertificateToWindowsAccount|Booleano. Specifica se è possibile eseguire il mapping del client a un'identità di Windows usando il certificato. A tal scopo è necessario che Active Directory sia attivato.|  
 |revocationMode|Enumerazione facoltativa. Una delle modalità usate per verificare un elenco dei certificati revocati. Il valore predefinito è `Online`. Questo valore viene ignorato quando si usa la sicurezza del trasporto HTTP.|  
-|trustedStoreLocation|Enumerazione facoltativa. Uno di due percorsi dell'archivio di sistema: `LocalMachine` o `CurrentUser`. Questo valore viene usato quando viene negoziato un certificato del servizio con il client. La convalida viene eseguita sul **persone attendibili** archiviare nel percorso dell'archivio specificato. Il valore predefinito è `CurrentUser`.|  
+|trustedStoreLocation|Enumerazione facoltativa. Uno di due percorsi dell'archivio di sistema: `LocalMachine` o `CurrentUser`. Questo valore viene usato quando viene negoziato un certificato del servizio con il client. La convalida viene eseguita sull'archivio **persone attendibili** nel percorso di archiviazione specificato. Il valore predefinito è `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Attributo customCertificateValidatorType  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|Stringa|Specifica il nome e l'assembly del tipo e altri dati usati per trovare il tipo.|  
+|String|Specifica il nome e l'assembly del tipo e altri dati usati per trovare il tipo.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>Attributo certificateValidationMode  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|Enumerazione|Uno dei valori seguenti: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Per altre informazioni, vedere [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumerazione|Uno dei valori seguenti: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Attributo revocationMode  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|Enumerazione|Uno dei valori seguenti: NoCheck, Online, Offline. Per altre informazioni, vedere [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumerazione|Uno dei valori seguenti: NOCHECK, online, offline. Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Attributo trustedStoreLocation  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Enumerazione|Uno dei valori seguenti: `LocalMachine` o `CurrentUser`. Il valore predefinito è `CurrentUser`. Se l'applicazione client viene eseguita con un account di sistema, il certificato è generalmente situato in `LocalMachine`. Se l'applicazione client viene eseguita con un account utente, il certificato è generalmente situato in `CurrentUser`.|  
   
@@ -76,12 +76,12 @@ Specifica i comportamenti di autenticazione per i certificati client utilizzati 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Definisce un certificato X.509 utilizzato dal client per autenticare un servizio.|  
+|[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|Definisce un certificato X.509 utilizzato dal client per autenticare un servizio.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento `<authentication>` corrisponde alla classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>. Consente di personalizzare la modalità di autenticazione dei client. A tale scopo, l'attributo `certificateValidationMode` può essere impostato su `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` o `Custom`. Per impostazione predefinita, il livello è impostato su `ChainTrust`, che consente di specificare che ogni certificato appartenga a una gerarchia di certificati che termina con un *autorità radice* nella parte superiore della catena. Si tratta della modalità più protetta. Il livello può inoltre essere impostato su `PeerOrChainTrust`, a indicare che sia i certificati autocertificati (trust peer) sia i certificati appartenenti a una catena di trust sono ritenuti attendibili. Poiché i certificati autocertificati non devono essere acquistati da un'autorità attendibile, questo livello viene usato in fase di sviluppo e di debug dei client e dei servizi. Quando si distribuisce un client è invece opportuno usare il livello `ChainTrust`.  
+ L'elemento `<authentication>` corrisponde alla classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>. Consente di personalizzare la modalità di autenticazione dei client. A tale scopo, l'attributo `certificateValidationMode` può essere impostato su `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` o `Custom`. Per impostazione predefinita, il livello è impostato `ChainTrust`su, che specifica che ogni certificato deve trovarsi in una gerarchia di certificati che terminano con un' *autorità radice* nella parte superiore della catena. Si tratta della modalità più protetta. Il livello può inoltre essere impostato su `PeerOrChainTrust`, a indicare che sia i certificati autocertificati (trust peer) sia i certificati appartenenti a una catena di trust sono ritenuti attendibili. Poiché i certificati autocertificati non devono essere acquistati da un'autorità attendibile, questo livello viene usato in fase di sviluppo e di debug dei client e dei servizi. Quando si distribuisce un client è invece opportuno usare il livello `ChainTrust`.  
   
- Un altro livello disponibile è `Custom`. Quando si imposta il livello `Custom` è necessario impostare anche l'attributo `customCertificateValidatorType` sull'assembly e sul tipo usati per convalidare il certificato. Per creare un validator personalizzato è necessario ereditare una classe dalla classe astratta <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Per altre informazioni, vedere [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Un altro livello disponibile è `Custom`. Quando si imposta il livello `Custom` è necessario impostare anche l'attributo `customCertificateValidatorType` sull'assembly e sul tipo usati per convalidare il certificato. Per creare un validator personalizzato è necessario ereditare una classe dalla classe astratta <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Per altre informazioni, vedere [Procedura: Creare un servizio che usa un validator](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)del certificato personalizzato.  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente sono specificati un certificato X.509 e un tipo di convalida personalizzato nell'elemento `<authentication>`.  
@@ -111,6 +111,6 @@ Specifica i comportamenti di autenticazione per i certificati client utilizzati 
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
-- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Comportamenti di sicurezza](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Procedura: Creare un servizio che usa un validator del certificato personalizzato](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Uso di certificati](../../../wcf/feature-details/working-with-certificates.md)

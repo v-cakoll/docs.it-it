@@ -7,88 +7,88 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655580"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916287"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
-Quando gli utenti immettono dati nell'applicazione, è possibile verificare che i dati siano validi prima che vengano utilizzati dall'applicazione. Potrebbe essere necessario che alcuni campi di testo non essere a lunghezza zero, che un campo formattato come un numero di telefono o altro tipo di dati in formato corretto o che una stringa non contenga caratteri non sicuri che può essere usati per compromettere la protezione di un database. Windows Form fornisce diversi metodi per convalidare l'input nell'applicazione.  
+Quando gli utenti immettono dati nell'applicazione, è consigliabile verificare che i dati siano validi prima che l'applicazione lo usi. Potrebbe essere necessario che determinati campi di testo non siano di lunghezza zero, che un campo venga formattato come numero di telefono o altro tipo di dati ben formati o che una stringa non contenga caratteri non sicuri che potrebbero essere usati per compromettere la sicurezza di un database. Windows Forms offre diversi modi per convalidare l'input nell'applicazione.  
   
-## <a name="validation-with-the-maskedtextbox-control"></a>Convalida del controllo MaskedTextBox  
- Se è necessario richiedere agli utenti di immettere i dati in un formato ben definito, ad esempio un numero di telefono o un numero di parte, è possibile farlo rapidamente e con quantità minima di codice usando il <xref:System.Windows.Forms.MaskedTextBox> controllo. Oggetto *mask* è una stringa costituita da caratteri in un linguaggio di definizione della maschera che specifica i caratteri che possono essere inseriti in una posizione specificata nella casella di testo. Il controllo Visualizza una serie di richieste all'utente. Se l'utente digita una voce non valida, ad esempio, l'utente digita una lettera di quando è necessaria una cifra, il controllo verrà rifiutato automaticamente l'input.  
+## <a name="validation-with-the-maskedtextbox-control"></a>Convalida con il controllo MaskedTextBox  
+ Se è necessario richiedere agli utenti di immettere dati in un formato ben definito, ad esempio un numero di telefono o un numero di parte, è possibile eseguire questa operazione rapidamente e con codice minimo usando <xref:System.Windows.Forms.MaskedTextBox> il controllo. Una *maschera* è una stringa costituita da caratteri di un linguaggio di mascheramento che specifica i caratteri che possono essere immessi in una determinata posizione nella casella di testo. Il controllo Visualizza un set di richieste all'utente. Se l'utente digita una voce non corretta, ad esempio, l'utente digita una lettera quando è richiesta una cifra, il controllo rifiuterà automaticamente l'input.  
   
- Il linguaggio di mascheramento che viene usato da <xref:System.Windows.Forms.MaskedTextBox> è molto flessibile. Consente di specificare caratteri necessari, caratteri facoltativi, i caratteri letterali, ad esempio trattini e parentesi, valuta caratteri e separatori di Data. Il controllo funziona anche quando è associato a un'origine dati. Il <xref:System.Windows.Forms.Binding.Format> evento su un'associazione di dati può essere utilizzato per riformattare i dati in ingresso per garantire la conformità con la maschera e <xref:System.Windows.Forms.Binding.Parse> evento può essere utilizzato per riformattare i dati in uscita per garantire la conformità con le specifiche del campo dati.  
+ Il linguaggio di mascheramento utilizzato da <xref:System.Windows.Forms.MaskedTextBox> è molto flessibile. Consente di specificare i caratteri obbligatori, i caratteri facoltativi, i caratteri letterali, ad esempio trattini e parentesi, caratteri di valuta e separatori di data. Il controllo funziona anche correttamente quando è associato a un'origine dati. L' <xref:System.Windows.Forms.Binding.Format> evento su un data binding può essere utilizzato per riformattare i dati in arrivo in modo che siano conformi alla <xref:System.Windows.Forms.Binding.Parse> maschera e l'evento può essere utilizzato per riformattare i dati in uscita in modo che siano conformi alle specifiche del campo dati.  
   
  Per altre informazioni, vedere [controllo MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md).  
   
-## <a name="event-driven-validation"></a>Convalida basata su eventi  
- Se si vuole il controllo completo a livello di codice sulla convalida, o necessario eseguire controlli di convalida complessi, si devono usare gli eventi di convalida incorporati in maggior parte dei controlli Windows Form. Ogni controllo che accetta l'input dell'utente in formato libero ha un <xref:System.Windows.Forms.Control.Validating> evento che si verifica ogni volta che il controllo richiede la convalida dei dati. Nel <xref:System.Windows.Forms.Control.Validating> metodo di gestione degli eventi, è possibile convalidare l'input dell'utente in diversi modi. Ad esempio, se si dispone di una casella di testo che deve contenere un codice postale, è possibile eseguire la convalida nei modi seguenti:  
+## <a name="event-driven-validation"></a>Convalida guidata dagli eventi  
+ Se si desidera controllare completamente a livello di codice la convalida o eseguire controlli di convalida complessi, è necessario utilizzare gli eventi di convalida incorporati nella maggior parte dei controlli Windows Forms. Ogni controllo che accetta input utente in formato libero ha un <xref:System.Windows.Forms.Control.Validating> evento che si verificherà ogni volta che il controllo richiede la convalida dei dati. Nel metodo <xref:System.Windows.Forms.Control.Validating> di gestione degli eventi è possibile convalidare l'input dell'utente in diversi modi. Ad esempio, se si dispone di una casella di testo che deve contenere un CAP, è possibile eseguire la convalida nei modi seguenti:  
   
-- Se il codice postale deve appartenere a un gruppo specifico di codici postali, è possibile eseguire un confronto tra stringhe di input per convalidare i dati immessi dall'utente. Ad esempio, se nel set di {10001 e 10002 10003} deve essere il codice postale, quindi è possibile utilizzare un confronto tra stringhe per convalidare i dati.  
+- Se il codice postale deve appartenere a un gruppo specifico di codici postali, è possibile eseguire un confronto tra stringhe sull'input per convalidare i dati immessi dall'utente. Se, ad esempio, il codice postale deve essere nel set {10001, 10002, 10003}, è possibile usare un confronto tra stringhe per convalidare i dati.  
   
-- Se il codice postale deve avere un formato specifico è possibile usare espressioni regolari per convalidare i dati immessi dall'utente. Ad esempio, per convalidare il modulo `#####` oppure `#####-####`, è possibile usare l'espressione regolare `^(\d{5})(-\d{4})?$`. Per convalidare il modulo `A#A #A#`, è possibile usare l'espressione regolare `[A-Z]\d[A-Z] \d[A-Z]\d`. Per altre informazioni sulle espressioni regolari, vedere [espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md) e [esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md).  
+- Se il codice postale deve essere in un formato specifico, è possibile utilizzare le espressioni regolari per convalidare i dati immessi dall'utente. Per convalidare il form `#####` o `#####-####`, ad esempio, è possibile utilizzare l' `^(\d{5})(-\d{4})?$`espressione regolare. Per convalidare `A#A #A#`il form, è possibile utilizzare l' `[A-Z]\d[A-Z] \d[A-Z]\d`espressione regolare. Per ulteriori informazioni sulle espressioni regolari, vedere [.NET Framework espressioni regolari](../../standard/base-types/regular-expressions.md) ed [esempi](../../standard/base-types/regular-expression-examples.md)di espressioni regolari.  
   
-- Se il codice postale deve essere un codice postale degli Stati Uniti valido, è possibile chiamare un servizio Web di CAP per convalidare i dati immessi dall'utente.  
+- Se il codice postale deve essere un Stati Uniti CAP valido, è possibile chiamare un servizio Web di codice postale per convalidare i dati immessi dall'utente.  
   
- Il <xref:System.Windows.Forms.Control.Validating> evento viene fornito un oggetto di tipo <xref:System.ComponentModel.CancelEventArgs>. Se si determina che i dati del controllo non sono validi, è possibile annullare il <xref:System.Windows.Forms.Control.Validating> evento mediante l'impostazione dell'oggetto <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà `true`. Se non si impostano i <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà, Windows Form verrà presuppongono che la convalida ha avuto esito positivo per il controllo e generare il <xref:System.Windows.Forms.Control.Validated> evento.  
+ All' <xref:System.Windows.Forms.Control.Validating> evento viene fornito un oggetto di tipo <xref:System.ComponentModel.CancelEventArgs>. Se si determina che i dati del controllo non sono validi, è possibile annullare l' <xref:System.Windows.Forms.Control.Validating> evento impostando la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà di questo oggetto `true`su. Se non si imposta la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà, Windows Forms presuppone che la convalida abbia esito positivo per il controllo e genera l' <xref:System.Windows.Forms.Control.Validated> evento.  
   
- Per un esempio di codice che convalida un indirizzo di posta elettronica in un <xref:System.Windows.Controls.TextBox>, vedere <xref:System.Windows.Forms.Control.Validating>.  
+ Per un esempio di codice che convalida un indirizzo di posta elettronica <xref:System.Windows.Controls.TextBox>in un <xref:System.Windows.Forms.Control.Validating>, vedere.  
   
-### <a name="data-binding-and-event-driven-validation"></a>Data Binding e la convalida basata su eventi  
- La convalida è molto utile quando si sono associati i controlli a un'origine dati, ad esempio una tabella di database. Mediante la convalida, è possibile assicurarsi che i dati del controllo soddisfano il formato richiesto dall'origine dati e che non contengono caratteri speciali, ad esempio racchiusi tra virgolette e barre rovesciate che potrebbe essere non sicuro.  
+### <a name="data-binding-and-event-driven-validation"></a>Associazione dati e convalida basata su eventi  
+ La convalida è molto utile quando i controlli vengono associati a un'origine dati, ad esempio una tabella di database. Utilizzando la convalida, è possibile verificare che i dati del controllo soddisfino il formato richiesto dall'origine dati e che non contenga caratteri speciali, ad esempio virgolette e barre rovesciate che potrebbero non essere sicure.  
   
- Quando si usa l'associazione dati, i dati nel controllo viene sincronizzati con l'origine dati durante l'esecuzione del <xref:System.Windows.Forms.Control.Validating> evento. Se si annulla la <xref:System.Windows.Forms.Control.Validating> eventi, i dati non verranno sincronizzati con l'origine dati.  
+ Quando si utilizza Data Binding, i dati nel controllo vengono sincronizzati con l'origine dati durante l'esecuzione dell' <xref:System.Windows.Forms.Control.Validating> evento. Se si annulla l' <xref:System.Windows.Forms.Control.Validating> evento, i dati non verranno sincronizzati con l'origine dati.  
   
 > [!IMPORTANT]
->  Se si dispone di convalida personalizzata che ha luogo dopo la <xref:System.Windows.Forms.Control.Validating> evento, non avrà alcun effetto il data binding. Ad esempio, se si dispone di codice un <xref:System.Windows.Forms.Control.Validated> evento che tenta di annullare l'associazione dati, il data binding verrà ancora generato. In questo caso, per eseguire la convalida nel <xref:System.Windows.Forms.Control.Validated> evento, il controllo delle modifiche **modalità aggiornamento origine dati** proprietà (**sotto (Databindings)**\\ **(avanzate)** ) da **OnValidation** al **Never**, quindi aggiungere *controllo*`.DataBindings["`*\<campo >*  `"].WriteValue()` nel codice di convalida.  
+> Se si dispone di una convalida personalizzata che si verifica <xref:System.Windows.Forms.Control.Validating> dopo l'evento, non influirà sul data binding. Se, ad esempio, si dispone di codice <xref:System.Windows.Forms.Control.Validated> in un evento che tenta di annullare la data binding, il Data Binding verrà comunque eseguito. In <xref:System.Windows.Forms.Control.Validated> questo caso, per eseguire la convalida nell'evento, modificare la proprietà modalità di aggiornamento dell' **origine dati** del controllo (**in (DataBindings)** \\ **(avanzate)** ) da OnValidation a **Never**e aggiungere  *Controllare*`.DataBindings["`campo>`"].WriteValue()` al codice di convalida. *\<*  
   
 ### <a name="implicit-and-explicit-validation"></a>Convalida implicita ed esplicita  
- Pertanto, quando di un controllo vengono convalidati i dati? Ciò è responsabilità dell'utente, lo sviluppatore. È possibile usare la convalida implicita o esplicita, a seconda delle esigenze dell'applicazione.  
+ Quando vengono convalidati i dati di un controllo? Questo è lo sviluppatore. È possibile usare la convalida implicita o esplicita, a seconda delle esigenze dell'applicazione.  
   
 #### <a name="implicit-validation"></a>Convalida implicita  
- La convalida implicita convalida dei dati quando l'utente ne immette lo. È possibile convalidare i dati come i dati vengono immessi in un controllo, leggere le chiavi come vengono premuti, o più comunemente ogni volta che l'utente accetta l'input lo stato attivo da un controllo e passa al successivo. Questo approccio è utile quando si desidera assegnare all'utente un feedback immediato sui dati che sta elaborando.  
+ L'approccio di convalida implicita convalida i dati quando l'utente lo immette. È possibile convalidare i dati quando i dati vengono immessi in un controllo leggendo le chiavi quando vengono premuti oppure, più comunemente, ogni volta che l'utente preleva lo stato attivo di input da un controllo e passa a quello successivo. Questo approccio è utile quando si desidera fornire all'utente un feedback immediato sui dati man mano che funzionano.  
   
- Se si desidera utilizzare la convalida implicita per un controllo, è necessario impostare che controllano <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> proprietà `true`. Se si annulla la <xref:System.Windows.Forms.Control.Validating> evento, il comportamento del controllo verrà determinato dal valore assegnato a <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>. Se è stato assegnato <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>, l'evento di annullamento causerà il <xref:System.Windows.Forms.Control.Validated> evento non si verifichi. Lo stato attivo input rimarranno sul controllo corrente fino a quando l'utente modifica i dati in un formato valido. Se è stato assegnato <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>, il <xref:System.Windows.Forms.Control.Validated> evento non si verificherà quando si annulla l'evento, ma lo stato attivo passerà al controllo successivo.  
+ Se si desidera utilizzare la convalida implicita per un controllo, è necessario impostare la proprietà <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> del controllo `true`su. Se si annulla l' <xref:System.Windows.Forms.Control.Validating> evento, il comportamento del controllo sarà determinato dal valore assegnato a. <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Se è stato <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>assegnato, se si annulla l'evento, <xref:System.Windows.Forms.Control.Validated> l'evento non verrà generato. Lo stato attivo per l'input rimarrà sul controllo corrente fino a quando l'utente non modifica i dati in un input valido. Se è stato <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>assegnato, <xref:System.Windows.Forms.Control.Validated> l'evento non si verificherà quando si annulla l'evento, ma lo stato attivo verrà comunque modificato nel controllo successivo.  
   
- Assegnazione <xref:System.Windows.Forms.AutoValidate.Disable> per il <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> proprietà impedisce la convalida implicita del tutto. Per convalidare i controlli, è necessario utilizzare la convalida esplicita.  
+ L'assegnazione <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> alla proprietà impedisce completamente la convalida implicita. <xref:System.Windows.Forms.AutoValidate.Disable> Per convalidare i controlli, sarà necessario usare la convalida esplicita.  
   
 #### <a name="explicit-validation"></a>Convalida esplicita  
- L'approccio esplicito convalida convalida dei dati in una sola volta. È possibile convalidare i dati in risposta a un'azione dell'utente, ad esempio la selezione di un pulsante di salvataggio o un collegamento successivo. Quando si verifica l'azione dell'utente, è possibile attivare la convalida esplicita in uno dei modi seguenti:  
+ L'approccio di convalida esplicita convalida i dati in una sola volta. È possibile convalidare i dati in risposta a un'azione dell'utente, ad esempio facendo clic su un pulsante Salva o su un collegamento successivo. Quando si verifica l'azione dell'utente, è possibile attivare la convalida esplicita in uno dei modi seguenti:  
   
-- Chiamare <xref:System.Windows.Forms.ContainerControl.Validate%2A> per convalidare l'ultimo controllo nello stato di attivazione.  
+- Chiamare <xref:System.Windows.Forms.ContainerControl.Validate%2A> per convalidare l'ultimo controllo in modo che abbia perso lo stato attivo.  
   
-- Chiamare <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> per convalidare tutti i controlli figlio in un form o un controllo contenitore.  
+- Chiamare <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> per convalidare tutti i controlli figlio in un form o in un controllo contenitore.  
   
-- Chiamare un metodo personalizzato per convalidare i dati nei controlli manualmente.  
+- Chiamare un metodo personalizzato per convalidare manualmente i dati nei controlli.  
   
-#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Controlli di convalida implicita predefinita per Windows Form  
- I diversi controlli Windows Form hanno diverse impostazioni predefinite per loro <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> proprietà. La tabella seguente illustra i controlli più comuni e sui valori predefiniti.  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Comportamento predefinito della convalida implicita per i controlli Windows Forms  
+ Diversi controlli di Windows Forms hanno impostazioni predefinite diverse per <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> la proprietà. La tabella seguente illustra i controlli più comuni e le relative impostazioni predefinite.  
   
-|Control|Comportamento predefinito della convalida|  
+|Control|Comportamento di convalida predefinito|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
-|<xref:System.Windows.Forms.PropertyGrid>|Proprietà non esposte in Visual Studio|  
-|<xref:System.Windows.Forms.ToolStripContainer>|Proprietà non esposte in Visual Studio|  
+|<xref:System.Windows.Forms.PropertyGrid>|Proprietà non esposta in Visual Studio|  
+|<xref:System.Windows.Forms.ToolStripContainer>|Proprietà non esposta in Visual Studio|  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## <a name="closing-the-form-and-overriding-validation"></a>Chiusura del Form e si esegue l'override di convalida  
- Quando un controllo mantiene lo stato attivo perché i dati che contiene non sono validi, non è possibile chiudere il form padre in uno dei modi consueto:  
+## <a name="closing-the-form-and-overriding-validation"></a>Chiusura del form e override della convalida  
+ Quando un controllo mantiene lo stato attivo perché i dati in esso contenuti non sono validi, non è possibile chiudere il form padre in uno dei modi usuali:  
   
-- Facendo clic la **Chiudi** pulsante.  
+- Facendo clic sul pulsante **Chiudi** .  
   
-- Selezionando **Close** nel **sistema** menu.  
+- Selezionando **Chiudi** nel menu **sistema** .  
   
 - Chiamando il <xref:System.Windows.Forms.Form.Close%2A> metodo a livello di codice.  
   
- Tuttavia, in alcuni casi, potrebbe voler consentire all'utente di chiudere il modulo indipendentemente dal fatto che i valori nei controlli sono validi. È possibile eseguire l'override di convalida e chiudere un modulo che contiene ancora dati non valido tramite la creazione di un gestore per il form <xref:System.Windows.Forms.Form.Closing> evento. Nell'evento, impostare il <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà `false`. Forza la chiusura del form. Per altre informazioni e un esempio, vedere <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ In alcuni casi, tuttavia, potrebbe essere necessario lasciare che l'utente chiuda il form indipendentemente dal fatto che i valori nei controlli siano validi. È possibile eseguire l'override della convalida e chiudere un modulo che contiene ancora dati non validi creando un gestore per <xref:System.Windows.Forms.Form.Closing> l'evento del modulo. Nell'evento, impostare la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà su. `false` Questa operazione impone la chiusura del form. Per altre informazioni e un esempio, vedere <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Se si forza la chiusura in questo modo il form, i dati nei controlli del modulo che non sono già stati salvati vanno persi. Inoltre, i form modali non convalidano il contenuto dei controlli quando vengono chiusi. È comunque possibile usare la convalida del controllo per bloccare lo stato attivo a un controllo, ma non è importante il comportamento associato chiudendo il form.  
+> Se si impone la chiusura del form in questo modo, tutti i dati nei controlli del form che non sono già stati salvati andranno persi. Inoltre, i form modali non convalidano il contenuto dei controlli quando vengono chiusi. È comunque possibile usare la convalida dei controlli per bloccare lo stato attivo su un controllo, ma non è necessario preoccuparsi del comportamento associato alla chiusura del modulo.  
   
 ## <a name="see-also"></a>Vedere anche
 

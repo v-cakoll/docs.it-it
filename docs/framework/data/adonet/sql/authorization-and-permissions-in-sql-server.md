@@ -2,12 +2,12 @@
 title: Autorizzazioni in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918103"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorizzazioni in SQL Server
 Quando si creano oggetti di database, è necessario concedere in modo esplicito le autorizzazioni per renderli accessibili agli utenti. Ogni oggetto a protezione diretta dispone di autorizzazioni che possono essere concesse a un'entità di sicurezza usando istruzioni di autorizzazione.  
@@ -18,7 +18,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
  Attenersi sempre al principio dei privilegi minimi quando si concedono autorizzazioni agli utenti del database. Concedere le autorizzazioni minime necessarie per consentire a un utente o a un ruolo di eseguire una determinata attività.  
   
 > [!IMPORTANT]
->  Lo sviluppo e il test di un'applicazione per la quale è stato usato l'approccio basato su un account utente con privilegi minimi implica maggiori difficoltà durante il processo di sviluppo. È infatti più agevole creare oggetti e scrivere codice quando si è connessi come amministratore di sistema o proprietario del database rispetto a quando si usa un account con privilegi minimi. Tuttavia, lo sviluppo di applicazioni con un account dotato di privilegi maggiori può offuscare l'impatto di funzionalità ridotte quando utenti con privilegi minimi tentano di eseguire un'applicazione per il cui corretto funzionamento sono richieste autorizzazioni elevate. D'altro canto, concedere agli utenti autorizzazioni eccessive per consentire loro di disporre nuovamente delle funzionalità perse può esporre l'applicazione a potenziali attacchi. La progettazione, lo sviluppo e il test dell'applicazione per il cui accesso viene usato un account con privilegi minimi consentono invece di applicare un approccio disciplinato alla pianificazione della sicurezza, eliminando sorprese sgradite ed impedendo di cedere alla tentazione di concedere privilegi elevati per risolvere rapidamente il problema. Per il test è possibile usare un account di accesso SQL Server anche se per la distribuzione dell'applicazione si intende usare l'autenticazione di Windows.  
+> Lo sviluppo e il test di un'applicazione per la quale è stato usato l'approccio basato su un account utente con privilegi minimi implica maggiori difficoltà durante il processo di sviluppo. È infatti più agevole creare oggetti e scrivere codice quando si è connessi come amministratore di sistema o proprietario del database rispetto a quando si usa un account con privilegi minimi. Tuttavia, lo sviluppo di applicazioni con un account dotato di privilegi maggiori può offuscare l'impatto di funzionalità ridotte quando utenti con privilegi minimi tentano di eseguire un'applicazione per il cui corretto funzionamento sono richieste autorizzazioni elevate. D'altro canto, concedere agli utenti autorizzazioni eccessive per consentire loro di disporre nuovamente delle funzionalità perse può esporre l'applicazione a potenziali attacchi. La progettazione, lo sviluppo e il test dell'applicazione per il cui accesso viene usato un account con privilegi minimi consentono invece di applicare un approccio disciplinato alla pianificazione della sicurezza, eliminando sorprese sgradite ed impedendo di cedere alla tentazione di concedere privilegi elevati per risolvere rapidamente il problema. Per il test è possibile usare un account di accesso SQL Server anche se per la distribuzione dell'applicazione si intende usare l'autenticazione di Windows.  
   
 ## <a name="role-based-permissions"></a>Autorizzazioni basate sui ruoli  
  La concessione delle autorizzazioni ai ruoli anziché agli utenti consente di semplificare l'amministrazione della sicurezza. I set di autorizzazioni assegnati ai ruoli vengono ereditati da tutti i membri del ruolo. È più semplice aggiungere o rimuovere utenti da un ruolo anziché ricreare set di autorizzazioni distinti per i singoli utenti. I ruoli possono essere annidati, tuttavia un numero eccessivo di livelli di annidamento può comportare problemi di prestazioni. Per semplificare l'assegnazione delle autorizzazioni, è inoltre possibile aggiungere utenti a ruoli predefiniti del database.  
@@ -31,7 +31,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 ## <a name="permission-statements"></a>Istruzioni di autorizzazione  
  La tabella seguente descrive le tre istruzioni di autorizzazione Transact-SQL.  
   
-|Istruzione di autorizzazione|Descrizione|  
+|Istruzione di autorizzazione|DESCRIZIONE|  
 |--------------------------|-----------------|  
 |GRANT|Consente di concedere un'autorizzazione.|  
 |REVOKE|Consente di revocare un'autorizzazione. Corrisponde allo stato predefinito di un nuovo oggetto. Un'autorizzazione revocata a un utente o a un ruolo può tuttavia ancora essere ereditata da altri gruppi o ruoli a cui è assegnata l'entità di sicurezza.|  
@@ -40,7 +40,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 - L'istruzione GRANT consente di assegnare a un gruppo o un ruolo autorizzazioni che possono essere ereditate dagli utenti del database. Tuttavia, poiché l'istruzione DENY ha la precedenza su tutte le altre istruzioni di autorizzazione, un utente al quale è stata negata un'autorizzazione non può ereditarla da un altro ruolo.  
   
 > [!NOTE]
->  Non è possibile negare autorizzazioni ai membri del ruolo predefinito del server `sysadmin` e ai proprietari dell'oggetto.  
+> Non è possibile negare autorizzazioni ai membri del ruolo predefinito del server `sysadmin` e ai proprietari dell'oggetto.  
   
 ## <a name="ownership-chains"></a>Catene di proprietà  
  SQL Server assicura che l'accesso agli oggetti sia consentito solo alle entità di sicurezza cui è stata concessa l'autorizzazione. Se più oggetti di database accedono ad altri oggetti di database, la sequenza viene denominata catena. Quando SQL Server attraversa i collegamenti della catena, valuta le autorizzazioni in modo diverso rispetto a quanto avviene durante l'accesso a singoli elementi. Quando l'accesso a un oggetto avviene tramite una catena, SQL Server confronta dapprima il proprietario dell'oggetto con il proprietario dell'oggetto chiamante, ovvero il collegamento precedente nella catena. Se il proprietario di entrambi oggetti è lo stesso, le autorizzazioni sull'oggetto a cui viene fatto riferimento non vengono controllate. Ogni volta che un oggetto accede a un altro oggetto il cui proprietario è diverso, la catena di proprietà viene interrotta e SQL Server deve controllare il contesto di sicurezza del chiamante.  
@@ -49,12 +49,12 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
  Si supponga che un utente siano concesse autorizzazioni di esecuzione su una stored procedure che seleziona dati da una tabella. Se il proprietario della stored procedure e della tabella è lo stesso, non è necessario che all'utente vengano concesse autorizzazioni sulla tabella ed è persino possibile negarle. Tuttavia, se i proprietari della stored procedure e della tabella sono diversi, SQL Server deve controllare le autorizzazioni dell'utente sulla tabella prima di consentire l'accesso ai dati.  
   
 > [!NOTE]
->  Il concatenamento delle proprietà non si applica nel caso di istruzioni SQL dinamiche. Per chiamare una procedura che esegue un'istruzione SQL, è necessario che al chiamante siano concesse autorizzazioni sulle tabelle sottostanti, esponendo in tal l'applicazione ad attacchi SQL injection. In SQL Server vengono forniti nuovi meccanismi, ad esempio la rappresentazione e la firma di moduli con i certificati, per i quali non è richiesta la concessione di autorizzazioni sulle tabelle sottostanti e che possono essere usati anche con stored procedure CLR.  
+> Il concatenamento delle proprietà non si applica nel caso di istruzioni SQL dinamiche. Per chiamare una procedura che esegue un'istruzione SQL, è necessario che al chiamante siano concesse autorizzazioni sulle tabelle sottostanti, esponendo in tal l'applicazione ad attacchi SQL injection. In SQL Server vengono forniti nuovi meccanismi, ad esempio la rappresentazione e la firma di moduli con i certificati, per i quali non è richiesta la concessione di autorizzazioni sulle tabelle sottostanti e che possono essere usati anche con stored procedure CLR.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|Descrizione|  
+|Risorsa|DESCRIZIONE|  
 |--------------|-----------------|  
 |[Autorizzazioni](/sql/relational-databases/security/permissions-database-engine)|Contiene argomenti che illustrano la gerarchia delle autorizzazioni, le viste del catalogo e le autorizzazioni dei ruoli predefiniti del server e del database.|
   

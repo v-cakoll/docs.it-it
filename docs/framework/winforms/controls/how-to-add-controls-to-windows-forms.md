@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912620"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: Aggiungere controlli a Windows Forms
 La maggior parte dei moduli è progettata mediante l'aggiunta di controlli all'area del form per definire un'interfaccia utente (UI). Un *controllo* è un componente di un form usato per visualizzare informazioni o accettare l'input dell'utente. Per ulteriori informazioni sui controlli, vedere [controlli Windows Forms](index.md).
@@ -30,7 +30,7 @@ La maggior parte dei moduli è progettata mediante l'aggiunta di controlli all'a
      Il controllo viene aggiunto al form con la posizione e le dimensioni specificate.
 
     > [!NOTE]
-    >  Ogni controllo ha una dimensione predefinita definita. È possibile aggiungere un controllo al form nelle dimensioni predefinite del controllo trascinandoli dalla **casella degli strumenti** nel form.
+    > Ogni controllo ha una dimensione predefinita definita. È possibile aggiungere un controllo al form nelle dimensioni predefinite del controllo trascinandoli dalla **casella degli strumenti** nel form.
 
 ## <a name="to-drag-a-control-to-a-form"></a>Per trascinare un controllo in un form
 
@@ -41,12 +41,12 @@ La maggior parte dei moduli è progettata mediante l'aggiunta di controlli all'a
      Il controllo viene aggiunto al form in corrispondenza della posizione specificata nelle dimensioni predefinite.
 
     > [!NOTE]
-    >  È possibile fare doppio clic su un controllo nella **casella degli strumenti** per aggiungerlo all'angolo superiore sinistro del form in base alle dimensioni predefinite.
+    > È possibile fare doppio clic su un controllo nella **casella degli strumenti** per aggiungerlo all'angolo superiore sinistro del form in base alle dimensioni predefinite.
 
      È anche possibile aggiungere controlli in modo dinamico a un modulo in fase di esecuzione. Nell'esempio di codice seguente viene aggiunto <xref:System.Windows.Forms.TextBox> un controllo al form quando si fa clic su <xref:System.Windows.Forms.Button> un controllo.
 
     > [!NOTE]
-    >  La procedura seguente richiede l'esistenza di un form con un controllo **Button** , `Button1`, già inserito.
+    > La procedura seguente richiede l'esistenza di un form con un controllo **Button** , `Button1`, già inserito.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Per aggiungere un controllo a un modulo a livello di codice
 
@@ -81,7 +81,7 @@ La maggior parte dei moduli è progettata mediante l'aggiunta di controlli all'a
     ```
 
     > [!NOTE]
-    >  È anche possibile aggiungere codice per inizializzare altre proprietà del controllo.
+    > È anche possibile aggiungere codice per inizializzare altre proprietà del controllo.
 
     > [!IMPORTANT]
     >  È possibile esporre il computer locale a un rischio di sicurezza attraverso la rete facendo riferimento a `UserControl`un dannoso. Questo potrebbe costituire un problema solo nel caso di un utente malintenzionato che crea un controllo personalizzato dannoso, seguito da un'operazione erroneamente aggiunta al progetto.

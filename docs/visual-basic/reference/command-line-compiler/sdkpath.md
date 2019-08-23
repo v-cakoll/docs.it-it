@@ -9,15 +9,15 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 91f64756b2fbf14dc96550420cd936973e6bec87
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 25368d23c398fb3674d5c2d75d4997f917a1c3d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937347"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-Specifica il percorso dei file mscorlib. dll e VisualBasic.  
+Specifica il percorso dei file mscorlib. dll e Microsoft. VisualBasic. dll.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,18 +27,18 @@ Specifica il percorso dei file mscorlib. dll e VisualBasic.
   
 ## <a name="arguments"></a>Argomenti  
  `path`  
- La directory che contiene le versioni di mscorlib. dll e VisualBasic da utilizzare per la compilazione. Questo percorso non viene verificato fino a quando non viene caricato. Racchiudere il nome della directory tra virgolette ("") se contiene uno spazio.  
+ Directory contenente le versioni di mscorlib. dll e Microsoft. VisualBasic. dll da utilizzare per la compilazione. Questo percorso non viene verificato fino a quando non viene caricato. Racchiudere il nome della directory tra virgolette ("") se contiene uno spazio.  
   
 ## <a name="remarks"></a>Note  
- Questa opzione indica al compilatore di Visual Basic per caricare il file mscorlib. dll e file VisualBasic da un percorso non predefinito. Il `-sdkpath` opzione è stata progettata per essere usata con [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). .NET Compact Framework Usa diverse versioni di queste librerie di supporto per evitare l'utilizzo di tipi e le funzionalità del linguaggio non trovate nei dispositivi.  
+ Questa opzione indica al compilatore Visual Basic di caricare i file mscorlib. dll e Microsoft. VisualBasic. dll da un percorso non predefinito. L' `-sdkpath` opzione è stata progettata per essere utilizzata con [-netcf (](../../../visual-basic/reference/command-line-compiler/netcf.md). Il .NET Compact Framework utilizza versioni diverse di queste librerie di supporto per evitare l'utilizzo di tipi e funzionalità del linguaggio non disponibili nei dispositivi.  
   
 > [!NOTE]
->  Il `-sdkpath` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando. Il `-sdkpath` opzione viene impostata quando viene caricato un progetto di Visual Basic dispositivo.  
+> L' `-sdkpath` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando. L' `-sdkpath` opzione viene impostata quando viene caricato un progetto Visual Basic dispositivo.  
   
- È possibile specificare che il compilatore esegue la compilazione senza un riferimento alla libreria di Runtime di Visual Basic usando il `-vbruntime` opzione del compilatore. Per altre informazioni, vedere [- /vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ È possibile specificare che il compilatore deve eseguire la compilazione senza un riferimento alla libreria di runtime Visual Basic usando `-vbruntime` l'opzione del compilatore. Per ulteriori informazioni, vedere [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `Myfile.vb` con .NET Compact Framework, con le versioni di mscorlib. dll e VisualBasic trovato nella directory di installazione predefinita di .NET Compact Framework nell'unità C. In genere, si utilizzerebbe la versione più recente di .NET Compact Framework.  
+ Il codice seguente viene compilato `Myfile.vb` con il .NET Compact Framework, usando le versioni di mscorlib. dll e Microsoft. VisualBasic. dll disponibili nella directory di installazione predefinita del .NET Compact Framework nell'unità C. In genere, si utilizzerà la versione più recente del .NET Compact Framework.  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

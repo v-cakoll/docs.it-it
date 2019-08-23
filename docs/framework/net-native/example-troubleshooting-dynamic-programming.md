@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052613"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910611"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Esempio: Risoluzione dei problemi di programmazione dinamica
 > [!NOTE]
->  In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).  
+> In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).  
   
- Non tutti gli errori di ricerca di metadati nelle App sviluppate con il risultato di catena degli strumenti .NET Native in un'eccezione.  Alcuni possono manifestarsi in maniera imprevista in un'applicazione.  Nell'esempio seguente viene illustrata una violazione di accesso causata da riferimento a un oggetto null:  
+ Non tutti gli errori di ricerca dei metadati nelle app sviluppate con la catena di strumenti .NET Native generano un'eccezione.  Alcuni possono manifestarsi in maniera imprevista in un'applicazione.  Nell'esempio seguente viene illustrata una violazione di accesso causata da riferimento a un oggetto null:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  In questo caso, l'aggiunta di una direttiva di runtime per `App.Core.ViewModels` ha risolto il problema. La causa radice è stata una chiamata API al metodo <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> che ha restituito **null** e l'applicazione ha automaticamente ignorato il problema fino a quando non si è verificato un arresto anomalo del sistema.  
   
- Nella programmazione dinamica, una buona norma quando si usano le API in .NET Native di reflection consiste nell'usare il <xref:System.Type.GetType%2A?displayProperty=nameWithType> overload che generano un'eccezione in caso di errore.  
+ Nella programmazione dinamica, una procedura consigliata quando si usano le API di reflection in .NET native <xref:System.Type.GetType%2A?displayProperty=nameWithType> consiste nell'usare gli overload che generano un'eccezione in caso di errore.  
   
 ## <a name="is-this-an-isolated-case"></a>Si tratta di un caso isolato?  
  Quando si usa `App.Core.ViewModels` potrebbero insorgere altri problemi.  È necessario decidere se vale la pena identificare e correggere ogni eccezione dei metadati mancanti, oppure risparmiare tempo e aggiungere le direttive per una classe di tipi maggiore.  In questo caso, l'aggiunta dei metadati `dynamic` per `App.Core.ViewModels` potrebbe essere l'approccio migliore se l'aumento delle dimensioni del file binario di output risultante non è un problema.  
@@ -63,4 +63,4 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Esempio: La gestione delle eccezioni durante l'associazione dati](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Esempio: Gestione delle eccezioni durante l'associazione dei dati](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

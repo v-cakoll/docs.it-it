@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17a596d9fc223dc53268ae9c91f7d02357b0a9b8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910936"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Autorizzazioni pericolose e amministrazione dei criteri
 Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazioni possono potenzialmente consentire l'elusione del sistema di sicurezza. Queste autorizzazioni pericolose devono essere fornite solo a codice attendibile e solo se necessario. Non esiste in genere alcuna difesa contro malware se viene concesso questo tipo di autorizzazioni.  
   
 > [!NOTE]
->  In .NET Framework 4, sono state apportate importanti modifiche al modello di sicurezza di .NET Framework e terminologia. Per altre informazioni su queste modifiche, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+> Nel .NET Framework 4 sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
   
  Le autorizzazioni pericolose sono illustrate nella tabella seguente.  
   
@@ -40,4 +40,4 @@ Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)

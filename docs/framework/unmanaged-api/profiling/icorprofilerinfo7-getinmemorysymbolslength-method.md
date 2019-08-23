@@ -1,5 +1,5 @@
 ---
-title: Metodo ICorProfilerInfo7::GetInMemorySymbolsLength
+title: 'Metodo ICorProfilerInfo7:: GetInMemorySymbolsLength'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -11,14 +11,14 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955418"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Metodo ICorProfilerInfo7::GetInMemorySymbolsLength
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Metodo ICorProfilerInfo7:: GetInMemorySymbolsLength
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
   
  Restituisce la lunghezza di un flusso di simboli in memoria.  
@@ -34,28 +34,28 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="parameters"></a>Parametri  
  `moduleId`  
- [in] L'identificatore del modulo contenente il flusso in memoria.  
+ in Identificatore del modulo contenente il flusso in memoria.  
   
  pCountSymbolBytes  
- [out] Un puntatore a un `DWORD` valore che, quando il metodo viene restituito, contiene la lunghezza in byte del flusso.  
+ out Puntatore a un `DWORD` valore che, quando il metodo viene restituito, contiene la lunghezza del flusso in byte.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il metodo restituisce `S_OK` se la lunghezza del flusso di memoria può essere determinata, anche se è zero (0).  
+ Il metodo restituisce `S_OK` se è possibile determinare la lunghezza del flusso di memoria, anche se è zero (0).  
   
- Il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC` se il metodo è stato creato utilizzando <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC` se il metodo è stato creato <xref:System.Reflection.Emit?displayProperty=nameWithType>utilizzando.  
   
 ## <a name="remarks"></a>Note  
- Se il modulo include i simboli in memoria, la lunghezza del flusso viene attivata `pCountSymbolBytes`. Se il modulo non dispone di simboli in memoria, `*pCountSymbolBytes = 0`.  
+ Se il modulo dispone di simboli in memoria, la lunghezza del flusso viene posizionata in `pCountSymbolBytes`. Se il modulo non dispone di simboli in memoria, `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
->  L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato tramite Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> L'implementazione corrente non supporta Reflection. Emit. Se il modulo è stato creato usando Reflection. Emit, il metodo restituisce `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl, CorProf.h  
+ **Intestazione:** CorProf. idl, CorProf. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

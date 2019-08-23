@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947018"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
 I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la dimensione massima di 8 kilobyte (KB) per le righe. In SQL Server viene fornito un identificatore `max` per i tipi di dati `varchar`, `nvarchar` e `varbinary` per consentire l'archiviazione di valori di dimensioni pari a 2^32 byte. Nelle colonne di tabelle e nelle variabili Transact-SQL possono essere specificati tipi di dati `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. In ADO.NET i tipi di dati `max` possono essere recuperati da un `DataReader` e possono inoltre essere specificati come parametri di input e di output senza richiedere una gestione speciale. Per tipi di dati `varchar` di grandi dimensioni, è possibile recuperare e aggiornare i dati in modo incrementale.  
@@ -21,7 +21,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
   
  **Documentazione online di SQL Server**  
   
-1. [Utilizzo di tipi di dati di valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Utilizzo di tipi di dati con valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrizioni per i tipi di valori di grandi dimensioni  
  Le seguenti restrizioni si applicano ai tipi di dati `max` e non ai tipi di dati di dimensioni minori:  
@@ -37,9 +37,9 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
   
  La funzione `OPENROWSET` include il provider di set di righe `BULK`, che consente di leggere i dati direttamente da un file senza caricare i dati in una tabella di destinazione. Questo consente l'uso di `OPENROWSET` in una semplice istruzione INSERT SELECT.  
   
- Il `OPENROWSET BULK` gli argomenti dell'opzione forniscono un controllo notevole sul punto in cui iniziare e terminare la lettura dei dati, come gestire gli errori e interpretazione dei dati. È ad esempio possibile specificare che il file di dati venga letto come una singola riga o come un set di righe di una singola colonna di tipo `varbinary`, `varchar` o `nvarchar`. Per la sintassi e le opzioni complete, vedere la documentazione online di SQL Server.  
+ Gli `OPENROWSET BULK` argomenti dell'opzione forniscono un controllo significativo sul punto in cui iniziare e terminare la lettura dei dati, le modalità di gestione degli errori e il modo in cui i dati vengono interpretati. È ad esempio possibile specificare che il file di dati venga letto come una singola riga o come un set di righe di una singola colonna di tipo `varbinary`, `varchar` o `nvarchar`. Per la sintassi e le opzioni complete, vedere la documentazione online di SQL Server.  
   
- Nell'esempio seguente viene inserita una foto nella tabella ProductPhoto del database di esempio AdventureWorks. Quando si usa il `BULK OPENROWSET` provider, è necessario fornire l'elenco di colonne pari denominato se non si inseriscono valori in ogni colonna. In questo caso, la chiave primaria è definita come colonna Identity e può essere omessa dall'elenco di colonne. Notare che è necessario fornire anche un nome di correlazione alla fine dell'istruzione `OPENROWSET`, che in questo caso è ThumbnailPhoto. Tale nome è correlato alla colonna della tabella `ProductPhoto` in cui viene caricato il file.  
+ Nell'esempio seguente viene inserita una foto nella tabella ProductPhoto del database di esempio AdventureWorks. Quando si usa `BULK OPENROWSET` il provider, è necessario fornire l'elenco di colonne denominato anche se non si inseriscono valori in ogni colonna. In questo caso, la chiave primaria è definita come colonna Identity e può essere omessa dall'elenco di colonne. Notare che è necessario fornire anche un nome di correlazione alla fine dell'istruzione `OPENROWSET`, che in questo caso è ThumbnailPhoto. Tale nome è correlato alla colonna della tabella `ProductPhoto` in cui viene caricato il file.  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -61,19 +61,19 @@ FROM OPENROWSET
   
  SET  
   
- { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
+ { *column_name* = {. WRITE ( *espressione* , @Offset , @Length )}  
   
- Il metodo WRITE specifica che una sezione del valore della *column_name* verrà modificato. L'espressione è il valore che verrà copiato il *column_name*, il `@Offset` è il punto di inizio in corrispondenza del quale verrà scritta l'espressione e il `@Length` argomento è la lunghezza della sezione nella colonna.  
+ Il metodo WRITE specifica che una sezione del valore di *column_name* verrà modificata. L'espressione è il valore che verrà copiato in *column_name*, `@Offset` è il punto di inizio in cui verrà scritta l'espressione e l' `@Length` argomento è la lunghezza della sezione nella colonna.  
   
-|Se|Quindi|  
+|Se|Allora|  
 |--------|----------|  
-|L'espressione è impostata su NULL.|`@Length` viene ignorato e il valore in *column_name* viene troncato in corrispondenza `@Offset`.|  
-|`@Offset` è NULL|L'operazione di aggiornamento aggiunge l'espressione alla fine dell'oggetto esistente *column_name* valore e `@Length` viene ignorato.|  
+|L'espressione è impostata su NULL.|`@Length`viene ignorato e il valore in *column_name* viene troncato in corrispondenza dell' `@Offset`oggetto specificato.|  
+|`@Offset`è NULL|L'operazione di aggiornamento aggiunge l'espressione alla fine del valore di *column_name* esistente e `@Length` viene ignorata.|  
 |Il valore di `@Offset` è maggiore della lunghezza del valore di column_name.|SQL Server restituisce un errore.|  
-|`@Length` è NULL|L'operazione di aggiornamento rimuove tutti i dati a partire da `@Offset` alla fine del valore di `column_name`.|  
+|`@Length`è NULL|L'operazione di aggiornamento rimuove tutti i dati a partire da `@Offset` alla fine del valore di `column_name`.|  
   
 > [!NOTE]
->  Il valore di `@Offset` o di `@Length` non può essere un numero negativo.  
+> Il valore di `@Offset` o di `@Length` non può essere un numero negativo.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio di Transact-SQL viene aggiornato un valore parziale di DocumentSummary, una colonna `nvarchar(max)` della tabella Document nel database AdventureWorks. La parola "components" viene sostituita con la parola "features" specificando la parola di sostituzione, la posizione iniziale (offset) della parola da sostituire nei dati esistenti e il numero di caratteri da sostituire (lunghezza). Per confrontare i risultati, nell'esempio sono incluse le istruzioni SELECT precedenti e successive all'istruzione UPDATE.  
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>Uso di tipi di valori di grandi dimensioni in ADO.NET  
- È possibile usare con i tipi di valori di grandi dimensioni in ADO.NET specificandoli large value types out come <xref:System.Data.SqlClient.SqlParameter> oggetti un <xref:System.Data.SqlClient.SqlDataReader> per restituire un risultato set oppure tramite un <xref:System.Data.SqlClient.SqlDataAdapter> per compilare un `DataSet` / `DataTable`. Non vi è differenza tra il modo di usare un tipo di valore di grandi dimensioni e il relativo tipo di dati del valore di dimensioni minori.  
+ È possibile utilizzare tipi di valore di grandi dimensioni in ADO.NET specificando tipi di <xref:System.Data.SqlClient.SqlParameter> valore di grandi <xref:System.Data.SqlClient.SqlDataReader> dimensioni come oggetti in un oggetto per restituire un set <xref:System.Data.SqlClient.SqlDataAdapter> di risultati o `DataSet`utilizzando un oggetto per riempire un oggetto /. `DataTable` Non vi è differenza tra il modo di usare un tipo di valore di grandi dimensioni e il relativo tipo di dati del valore di dimensioni minori.  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>Uso di GetSqlBytes per il recupero di dati  
  È possibile usare il metodo `GetSqlBytes` del tipo <xref:System.Data.SqlClient.SqlDataReader> per recuperare il contenuto di una colonna `varbinary(max)`. Il seguente frammento di codice presuppone un oggetto <xref:System.Data.SqlClient.SqlCommand> denominato `cmd` che consente di selezionare dati `varbinary(max)` da una tabella e un oggetto <xref:System.Data.SqlClient.SqlDataReader> denominato `reader` che consente di recuperare i dati come tipo <xref:System.Data.SqlTypes.SqlBytes>.  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>Esempio  
- Il codice seguente consente di recuperare il nome e l'oggetto `LargePhoto` dalla tabella `ProductPhoto` del database `AdventureWorks` e di salvarlo in un file. È necessario compilare l'assembly con un riferimento allo spazio dei nomi <xref:System.Drawing>.  Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> del tipo <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.SqlTypes.SqlBytes> che espone una proprietà `Stream`. Il codice si usa per creare una nuova `Bitmap` dell'oggetto e quindi lo salva in Gif `ImageFormat`.  
+ Il codice seguente consente di recuperare il nome e l'oggetto `LargePhoto` dalla tabella `ProductPhoto` del database `AdventureWorks` e di salvarlo in un file. È necessario compilare l'assembly con un riferimento allo spazio dei nomi <xref:System.Drawing>.  Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> del tipo <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.SqlTypes.SqlBytes> che espone una proprietà `Stream`. Il codice lo usa per creare un nuovo `Bitmap` oggetto e quindi lo salva nel formato gif. `ImageFormat`  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>Utilizzo dei parametri di tipi di valore di grandi dimensioni  
- I tipi di valore di grandi dimensioni possono essere usati negli oggetti <xref:System.Data.SqlClient.SqlParameter> nello stesso modo in cui si usano tipi di valore di dimensioni minori in oggetti <xref:System.Data.SqlClient.SqlParameter>. È possibile recuperare tipi di valori di grandi dimensioni come <xref:System.Data.SqlClient.SqlParameter> i valori, come illustrato nell'esempio seguente. Il codice presuppone l'esistenza della seguente stored procedure GetDocumentSummary nel database di esempio AdventureWorks. La stored procedure accetta un parametro di input denominato @DocumentID e restituisce il contenuto della colonna DocumentSummary nel @DocumentSummary parametro di output.  
+ I tipi di valore di grandi dimensioni possono essere usati negli oggetti <xref:System.Data.SqlClient.SqlParameter> nello stesso modo in cui si usano tipi di valore di dimensioni minori in oggetti <xref:System.Data.SqlClient.SqlParameter>. È possibile recuperare i tipi di valore <xref:System.Data.SqlClient.SqlParameter> di grandi dimensioni come valori, come illustrato nell'esempio seguente. Il codice presuppone l'esistenza della seguente stored procedure GetDocumentSummary nel database di esempio AdventureWorks. Il stored procedure accetta un parametro di input @DocumentID denominato e restituisce il contenuto della colonna DocumentSummary @DocumentSummary nel parametro di output.  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Esempio  
- Il codice di ADO.NET crea oggetti <xref:System.Data.SqlClient.SqlConnection> e <xref:System.Data.SqlClient.SqlCommand> per eseguire la stored procedure GetDocumentSummary e recuperare le informazioni di riepilogo del documento archiviate come tipo di valore di grandi dimensioni. Il codice passa un valore il @DocumentID parametro di input e consente di visualizzare i risultati passati nuovamente il @DocumentSummary parametro nella finestra della Console di output.  
+ Il codice di ADO.NET crea oggetti <xref:System.Data.SqlClient.SqlConnection> e <xref:System.Data.SqlClient.SqlCommand> per eseguire la stored procedure GetDocumentSummary e recuperare le informazioni di riepilogo del documento archiviate come tipo di valore di grandi dimensioni. Il codice passa un valore per il @DocumentID parametro di input e Visualizza i risultati restituiti @DocumentSummary nel parametro di output nella finestra della console.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  

@@ -2,22 +2,22 @@
 title: <connectionPoolSettings> di <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787b50296b7ed4f6fdceef244a99dffffae63c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919405"
 ---
-# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > di \<tcpTransport >
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<> connectionPoolSettings di \<TcpTransport >
 Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<tcpTransport>  
-\<connectionPoolSettings>  
+\<> connectionPoolSettings  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +33,7 @@ Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`groupName`|Stringa che definisce il nome del pool di connessioni usato per canali in uscita. In modalità di invio nel flusso, le connessioni non sono condivise, pertanto il pool di connessioni è disabilitato. Il valore predefinito è una stringa "default". È possibile modificare questo valore per isolare le connessioni per un particolare client in gruppi separati.|  
 |`idleTimeout`|Elemento <xref:System.TimeSpan> positivo che specifica il periodo massimo di inattività della connessione prima che venga interrotta. L'impostazione predefinita è 00:02:00.|  
@@ -47,7 +47,7 @@ Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definisce un trasporto che fa in modo che un canale trasferisca messaggi usando named pipe.|  
+|[\<namedPipeTransport>](namedpipetransport.md)|Definisce un trasporto che fa in modo che un canale trasferisca messaggi usando named pipe.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -56,9 +56,9 @@ Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Trasporti](../../../wcf/feature-details/transports.md)
+- [Scelta di un trasporto](../../../wcf/feature-details/choosing-a-transport.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

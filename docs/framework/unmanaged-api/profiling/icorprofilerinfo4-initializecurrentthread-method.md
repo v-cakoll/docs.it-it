@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b9bb5a2629e435d76691d48feef6689191b66373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957893"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>Metodo ICorProfilerInfo4::InitializeCurrentThread
-Inizializza il thread corrente prima di profiler successive chiamate API sullo stesso thread, in modo tale deadlock può essere evitato.  
+Inizializza il thread corrente prima delle chiamate API del profiler successive sullo stesso thread, in modo che il deadlock possa essere evitato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +34,17 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Note  
- Si consiglia di chiamare `InitializeCurrentThread` in qualsiasi thread che chiama un profiler API mentre vi sono sospese thread. Questo metodo viene utilizzato generalmente per i profiler di campionamento che creano i propri thread per chiamare il [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metodo per eseguire stack descrive mentre il thread di destinazione è sospesa. Chiamando `InitializeCurrentThread` una volta quando il profiler crea innanzitutto il thread di campionamento, i profiler possono assicurarsi che l'inizializzazione differita per ogni thread che CLR altrimenti verrebbero eseguite durante la prima chiamata a `DoStackSnapshot` può ora avvenire in modo sicuro quando nessun altro thread è sospeso.  
+ Si consiglia di chiamare `InitializeCurrentThread` su qualsiasi thread che chiamerà un'API del profiler mentre sono presenti thread sospesi. Questo metodo viene in genere usato dai profiler di campionamento che creano il proprio thread per chiamare il metodo [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) per eseguire i percorsi dello stack mentre il thread di destinazione è sospeso. Chiamando `InitializeCurrentThread` una volta quando il profiler crea prima il thread di campionamento, i profiler possono garantire che l'inizializzazione Lazy per thread che CLR verrebbe eseguita durante `DoStackSnapshot` la prima chiamata a può ora verificarsi in modo sicuro quando non sono presenti altri thread sospeso.  
   
 > [!NOTE]
->  `InitializeCurrentThread` esegue l'inizializzazione in anticipo per completare le attività accettano blocchi e possono causare un deadlock. Chiamare `InitializeCurrentThread` solo quando nessun thread sospesi.  
+> `InitializeCurrentThread`esegue l'inizializzazione in anticipo per completare le attività che accettano blocchi ed è possibile che si verifichi un deadlock. Chiamare `InitializeCurrentThread` solo quando non sono presenti thread sospesi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl, CorProf.h  
+ **Intestazione:** CorProf. idl, CorProf. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

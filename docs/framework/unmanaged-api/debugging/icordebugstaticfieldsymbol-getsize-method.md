@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a30778a287b4115df552444549a92c006288005
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d99e06c1093dbc67e9c1999e4b9ccabd6579340e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962670"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>Metodo ICorDebugStaticFieldSymbol::GetSize
 Ottiene le dimensioni in byte del campo statico  
@@ -29,14 +29,14 @@ HRESULT GetSize(
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo metodo è disponibile solo con .NET Native.  
+> Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

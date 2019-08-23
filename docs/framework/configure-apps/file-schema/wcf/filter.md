@@ -2,18 +2,18 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918888"
 ---
-# <a name="filter"></a>\<filter>
+# <a name="filter"></a>\<Filtra >
 
-Definisce un filtro di routing che determina il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo, come i dati di supporto o i parametri richiesti dal filtro.
+Definisce un filtro di routing che determina il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo, nonché qualsiasi dato o parametro di supporto richiesto dal filtro.
 
-\<system.serviceModel> \<routing> \<filters> \<filter>
+\<System. ServiceModel > \<routing > \<filtri > \<filtro >
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,9 +34,9 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-| Attributo  | Descrizione |
+| Attributo  | DESCRIZIONE |
 | ---------- | ----------- |
-| customType | Stringa contenente il nome di tipo completo del tipo personalizzato da utilizzare come filtro. Se `filterType` è impostata su `custom`, questo attributo contiene il nome del tipo completo della classe da creare.  `filterData` può inoltre contenere valori da utilizzare durante la valutazione del filtro di tipo personalizzato. |
+| customType | Stringa contenente il nome di tipo completo del tipo personalizzato da utilizzare come filtro. Se `filterType` è impostato su `custom`, questo attributo contiene il nome completo del tipo della classe da creare.  `filterData`può contenere anche valori da usare durante la valutazione del filtro di tipo personalizzato. |
 | filterData | Stringa contenente i dati del filtro. Per altre informazioni su come specificare questo attributo, vedere <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Stringa contenente i tipo di filtro. L'attributo è di tipo <xref:System.ServiceModel.Routing.Configuration.FilterType>.  Per altre informazioni sul funzionamento con l'attributo `filterData`, vedere <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | name       | Stringa contenente il nome univoco di questo elemento di filtro. |
@@ -49,7 +49,7 @@ Nessuno.
 
 | Elemento | Descrizione |
 | ------- | ----------- |
-| [\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Una sezione di configurazione per la definizione di un set di filtri di routing, che determinano il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in ingresso. |
+| [\<routing>](routing.md) | Sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di Windows Communication Foundation<xref:System.ServiceModel.Dispatcher.MessageFilter> (WCF) da utilizzare durante la valutazione di messaggi in arrivo. |
 
 ## <a name="see-also"></a>Vedere anche
 

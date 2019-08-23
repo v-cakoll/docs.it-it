@@ -2,18 +2,18 @@
 title: Attività di raccolta in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935450"
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
-Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection` e `RemoveFromCollection` hanno un' <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
+Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
   
 > [!IMPORTANT]
->  Se un'attività di raccolta viene eseguita prima di impostare l'oggetto della raccolta sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  
+> Se un'attività di raccolta viene eseguita prima di impostare l'oggetto della raccolta sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  
   
 ## <a name="collection-activities"></a>Attività di raccolta  
   

@@ -2,15 +2,15 @@
 title: Richiamo della convalida di attività
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b45840081f5fc142cf3ec88853dea984b204c9d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791079"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934971"
 ---
 # <a name="invoking-activity-validation"></a>Richiamo della convalida di attività
-La convalida delle attività offre un metodo per identificare e segnalare errori nella configurazione di qualsiasi attività prima della relativa esecuzione. Viene eseguita quando un flusso di lavoro viene modificato nell'utilità di progettazione del flusso di lavoro e gli eventuali errori o avvisi di convalida vengono visualizzati in tale utilità. La convalida avviene anche in fase di esecuzione quando un flusso di lavoro viene richiamato e, se si verificano errori di convalida, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException> dalla logica di convalida predefinita. Windows Workflow Foundation (WF) fornisce il <xref:System.Activities.Validation.ActivityValidationServices> classe che può essere utilizzata dagli sviluppatori di strumenti e applicazioni del flusso di lavoro per convalidare in modo esplicito un'attività. In questo argomento viene descritto come usare l'oggetto <xref:System.Activities.Validation.ActivityValidationServices> per eseguire la convalida delle attività.  
+La convalida delle attività offre un metodo per identificare e segnalare errori nella configurazione di qualsiasi attività prima della relativa esecuzione. Viene eseguita quando un flusso di lavoro viene modificato nell'utilità di progettazione del flusso di lavoro e gli eventuali errori o avvisi di convalida vengono visualizzati in tale utilità. La convalida avviene anche in fase di esecuzione quando un flusso di lavoro viene richiamato e, se si verificano errori di convalida, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException> dalla logica di convalida predefinita. Windows Workflow Foundation (WF) fornisce la <xref:System.Activities.Validation.ActivityValidationServices> classe che può essere utilizzata dagli sviluppatori di applicazioni e strumenti del flusso di lavoro per convalidare in modo esplicito un'attività. In questo argomento viene descritto come usare l'oggetto <xref:System.Activities.Validation.ActivityValidationServices> per eseguire la convalida delle attività.  
   
 ## <a name="using-activityvalidationservices"></a>Uso di ActivityValidationServices  
  L'oggetto <xref:System.Activities.Validation.ActivityValidationServices> dispone di due overload <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> usati per richiamare la logica di convalida di un'attività. Il primo overload accetta l'attività radice da convalidare e restituisce una raccolta di errori e di avvisi di convalida. Nell'esempio seguente viene usata un'attività `Add` personalizzata con due argomenti obbligatori.  
@@ -76,8 +76,8 @@ else
   
  Quando il metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> viene chiamato in questo flusso di lavoro di esempio, vengono restituiti due errori di convalida.  
   
- **Errore: Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand2'.**  
-**Errore: Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand1'.**  Se questo flusso di lavoro viene richiamato, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException>, come illustrato nell'esempio seguente.  
+ **Errore: Valore non specificato per un argomento di attività' operand2' obbligatorio.**  
+**Errore: Valore non specificato per un argomento di attività' Operand1' obbligatorio.**  Se questo flusso di lavoro viene richiamato, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException>, come illustrato nell'esempio seguente.  
   
 ```csharp  
 try  
@@ -91,9 +91,9 @@ catch (Exception ex)
 ```  
   
  **System.Activities.InvalidWorkflowException:**  
-**Durante l'elaborazione dell'albero del flusso di lavoro sono stati rilevati gli errori seguenti:**   
-**'Aggiungi': Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand2'.**   
-**'Aggiungi': Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand1'.**  Affinché questo flusso di lavoro di esempio sia valido, è necessario associare i due argomenti obbligatori dell'attività `Add`. Nell'esempio seguente i due argomenti obbligatori vengono associati alle variabili del flusso di lavoro insieme al valore di risultato. In questo esempio l'argomento <xref:System.Activities.Activity%601.Result%2A> viene associato insieme ai due argomenti obbligatori. L'argomento <xref:System.Activities.Activity%601.Result%2A> non deve essere associato e tale condizione non genera un errore di convalida. È compito dell'autore del flusso di lavoro associare la proprietà <xref:System.Activities.Activity%601.Result%2A> qualora il relativo valore venisse usato in altri punti all'interno del flusso di lavoro.  
+**Durante l'elaborazione dell'albero del flusso di lavoro sono stati rilevati gli errori seguenti:**    
+**' Aggiungi ': Valore non specificato per un argomento di attività' operand2' obbligatorio.**    
+**' Aggiungi ': Valore non specificato per un argomento di attività' Operand1' obbligatorio.**  Affinché questo flusso di lavoro di esempio sia valido, è necessario associare i due argomenti obbligatori dell'attività `Add`. Nell'esempio seguente i due argomenti obbligatori vengono associati alle variabili del flusso di lavoro insieme al valore di risultato. In questo esempio l'argomento <xref:System.Activities.Activity%601.Result%2A> viene associato insieme ai due argomenti obbligatori. L'argomento <xref:System.Activities.Activity%601.Result%2A> non deve essere associato e tale condizione non genera un errore di convalida. È compito dell'autore del flusso di lavoro associare la proprietà <xref:System.Activities.Activity%601.Result%2A> qualora il relativo valore venisse usato in altri punti all'interno del flusso di lavoro.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: Impostazioni degli argomenti dell'attività radice non sono corrette.**  
-**Correggere la definizione del flusso di lavoro o fornire i valori di input per risolvere questi errori:**   
-**'Aggiungi': Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand2'.**   
-**'Aggiungi': Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand1'.**  Una volta passati gli argomenti appropriati, il flusso di lavoro viene completato correttamente, come illustrato nell'esempio seguente.  
+ **System.ArgumentException: Le impostazioni degli argomenti dell'attività radice non sono corrette.**  
+**Correggere la definizione del flusso di lavoro o fornire i valori di input per correggere gli errori:**    
+**' Aggiungi ': Valore non specificato per un argomento di attività' operand2' obbligatorio.**    
+**' Aggiungi ': Valore non specificato per un argomento di attività' Operand1' obbligatorio.**  Una volta passati gli argomenti appropriati, il flusso di lavoro viene completato correttamente, come illustrato nell'esempio seguente.  
   
 ```csharp  
 Add wf = new Add();  
@@ -229,12 +229,12 @@ else
 ```  
   
  **Errore: Il costo deve essere minore o uguale al prezzo.**  
-**Errore: Non è stato fornito alcun valore per un argomento di attività richiesta 'Description'.**    
+**Errore: Il valore per un argomento di attività' Description ' obbligatorio non è stato specificato.**    
 > [!NOTE]
->  Gli autori di attività personalizzate possono fornire la logica di convalida nell'override di un'attività <xref:System.Activities.CodeActivity.CacheMetadata%2A>. Qualsiasi eccezione generata dal metodo <xref:System.Activities.CodeActivity.CacheMetadata%2A> non viene considerata come errore di convalida. Queste eccezioni saranno escluse dalla chiamata all'oggetto <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e devono essere gestite dal chiamante.  
+> Gli autori di attività personalizzate possono fornire la logica di convalida nell'override di un'attività <xref:System.Activities.CodeActivity.CacheMetadata%2A>. Qualsiasi eccezione generata dal metodo <xref:System.Activities.CodeActivity.CacheMetadata%2A> non viene considerata come errore di convalida. Queste eccezioni saranno escluse dalla chiamata all'oggetto <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e devono essere gestite dal chiamante.  
   
 ## <a name="using-validationsettings"></a>Utilizzo dell'oggetto ValidationSettings  
- Per impostazione predefinita, tutte le attività nell'albero delle attività vengono valutate quando la convalida viene richiamata da <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> consente di personalizzare la convalida in vari modi attraverso la configurazione delle relative tre proprietà. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> specifica se il validator deve analizzare l'intero albero delle attività o applicare semplicemente la logica di convalida all'attività fornita. L'impostazione predefinita per questo valore è `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> specifica il mapping di vincoli aggiuntivi da un tipo a un elenco di vincoli. Per il tipo base di ogni attività nell'albero delle attività convalidata è disponibile una ricerca nella proprietà <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Se viene individuato un elenco di vincoli corrispondente, tutti i vincoli nell'elenco vengono valutati per l'attività. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> specifica se tutti i vincoli o solo quelli specificati in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> devono essere valutati dal validator. Il valore predefinito è `false`. Gli autori di host del flusso di lavoro usano <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> e <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> per aggiungere un'ulteriore convalida ai flussi di lavoro, quali i vincoli di criteri per strumenti come FxCop. Per altre informazioni sui vincoli, vedere [vincoli dichiarativi](declarative-constraints.md).  
+ Per impostazione predefinita, tutte le attività nell'albero delle attività vengono valutate quando la convalida viene richiamata da <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> consente di personalizzare la convalida in vari modi attraverso la configurazione delle relative tre proprietà. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> specifica se il validator deve analizzare l'intero albero delle attività o applicare semplicemente la logica di convalida all'attività fornita. L'impostazione predefinita per questo valore è `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> specifica il mapping di vincoli aggiuntivi da un tipo a un elenco di vincoli. Per il tipo base di ogni attività nell'albero delle attività convalidata è disponibile una ricerca nella proprietà <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Se viene individuato un elenco di vincoli corrispondente, tutti i vincoli nell'elenco vengono valutati per l'attività. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> specifica se tutti i vincoli o solo quelli specificati in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> devono essere valutati dal validator. Il valore predefinito è `false`. Gli autori di host del flusso di lavoro usano <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> e <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> per aggiungere un'ulteriore convalida ai flussi di lavoro, quali i vincoli di criteri per strumenti come FxCop. Per ulteriori informazioni sui vincoli, vedere [vincoli](declarative-constraints.md)dichiarativi.  
   
  Per usare l'oggetto <xref:System.Activities.Validation.ValidationSettings>, configurare le proprietà desiderate, quindi passarlo nella chiamata al metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. In questo esempio viene convalidato un flusso di lavoro che è costituito da un oggetto <xref:System.Activities.Statements.Sequence> con un'attività `Add` personalizzata. L'attività `Add` dispone di due argomenti obbligatori.  
   
@@ -304,4 +304,4 @@ else
   
  Di seguito viene visualizzato l'output del codice:  
   
- **Nessun avviso o errore** anche se il `Add` attività dispone di argomenti obbligatori che non sono associati, la convalida ha esito positivo perché viene valutata solo l'attività radice. Questo tipo di convalida è utile per convalidare solo elementi specifici in un albero delle attività, ad esempio la convalida di una modifica a una proprietà di una singola attività in una finestra di progettazione. Si noti che se questo flusso di lavoro viene richiamato, viene valutata l'intera convalida configurata nel flusso di lavoro ed eventualmente viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException>. <xref:System.Activities.Validation.ActivityValidationServices> e <xref:System.Activities.Validation.ValidationSettings> configurano solo la convalida richiamata in modo esplicito dall'host e non la convalida che viene eseguita quando un flusso di lavoro viene richiamato.
+ **Nessun avviso o errore** Anche se l' `Add` attività dispone di argomenti obbligatori che non sono associati, la convalida ha esito positivo perché viene valutata solo l'attività radice. Questo tipo di convalida è utile per convalidare solo elementi specifici in un albero delle attività, ad esempio la convalida di una modifica a una proprietà di una singola attività in una finestra di progettazione. Si noti che se questo flusso di lavoro viene richiamato, viene valutata l'intera convalida configurata nel flusso di lavoro ed eventualmente viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException>. <xref:System.Activities.Validation.ActivityValidationServices> e <xref:System.Activities.Validation.ValidationSettings> configurano solo la convalida richiamata in modo esplicito dall'host e non la convalida che viene eseguita quando un flusso di lavoro viene richiamato.

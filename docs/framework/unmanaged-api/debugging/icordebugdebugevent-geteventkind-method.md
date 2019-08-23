@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdbc320e13e0cb140f5ef7aa63b878b43ca0189b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a87dda8d8a263df1989a685d94c5163212f41382
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911345"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Metodo ICorDebugDebugEvent::GetEventKind
 Indica il tipo di evento rappresentato dall'oggetto `ICorDebugDebugEvent`.  
@@ -24,20 +24,20 @@ HRESULT GetEventKind(
   
 ## <a name="parameters"></a>Parametri  
  pDebugEventKind  
- Un puntatore a un [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) membro di enumerazione che indica il tipo di evento.  
+ Puntatore a un membro di enumerazione [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) che indica il tipo di evento.  
   
 ## <a name="remarks"></a>Note  
  In base al valore di `pDebugEventKind`, è possibile chiamare `QueryInterface` per ottenere un'interfaccia degli eventi di debug più precisa, contenente dati aggiuntivi.  
   
 > [!NOTE]
->  Questo metodo è disponibile solo con .NET Native.  
+> Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

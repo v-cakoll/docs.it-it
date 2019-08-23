@@ -2,20 +2,20 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e756f49b7054d6553eb6c3f1850f0fbce14943
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926126"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 Specifica le credenziali usate per autenticare il client presso un servizio.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<endpointBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<clientCredentials>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -52,18 +52,18 @@ Specifica le credenziali usate per autenticare il client presso un servizio.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)|Specifica il certificato usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
-|[\<httpDigest>](../../../../../docs/framework/configure-apps/file-schema/wcf/httpdigest-element.md)|Specifica un digest usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Specifica un tipo di token personalizzato usato per autenticare il client presso un servizio token di sicurezza (STS, Secure Token Service). L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>.|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Specifica una credenziale peer corrente. L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Specifica il certificato usato per autenticare il servizio presso il client e fornisce una struttura per l'impostazione delle opzioni del certificato. Questo certificato deve essere fornito fuori banda dal servizio al client. L'elemento è di tipo <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>.|  
-|[\<windows>](../../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)|Specifica una credenziale Windows. Il valore predefinito è la credenziale del thread corrente. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WindowsClientElement>.|  
+|[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|Specifica il certificato usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
+|[\<> httpDigest](httpdigest-element.md)|Specifica un digest usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  
+|[\<issuedToken>](issuedtoken.md)|Specifica un tipo di token personalizzato usato per autenticare il client presso un servizio token di sicurezza (STS, Secure Token Service). L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>.|  
+|[\<peer>](peer-of-clientcredentials-element.md)|Specifica una credenziale peer corrente. L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerCredentialElement>.|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Specifica il certificato usato per autenticare il servizio presso il client e fornisce una struttura per l'impostazione delle opzioni del certificato. Questo certificato deve essere fornito fuori banda dal servizio al client. L'elemento è di tipo <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>.|  
+|[\<windows>](windows-of-clientcredentials-element.md)|Specifica una credenziale Windows. Il valore predefinito è la credenziale del thread corrente. L'elemento è di tipo <xref:System.ServiceModel.Configuration.WindowsClientElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
   
 ## <a name="remarks"></a>Note  
  Le credenziali client sono usate per autenticare i client presso i servizi nei casi in cui non è richiesta l'autenticazione reciproca. È inoltre possibile usare questa sezione di configurazione per specificare i certificati di servizio negli scenari in cui il client deve usare il certificato di un servizio per proteggere i messaggi inviati a un servizio.  
@@ -72,5 +72,5 @@ Specifica le credenziali usate per autenticare il client presso un servizio.
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
-- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
+- [Comportamenti di sicurezza](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Protezione di client](../../../wcf/securing-clients.md)

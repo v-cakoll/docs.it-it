@@ -8,20 +8,20 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe276c686d394ded13ec03f08deae65e4098d03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923569"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Procedura: Aggiungere una filigrana a un oggetto TextBox
-Nell'esempio seguente viene illustrato come migliorare l'usabilità di un <xref:System.Windows.Controls.TextBox> visualizzando un'immagine di sfondo esplicativo all'interno del <xref:System.Windows.Controls.TextBox> fino a quando l'utente immette testo, a quel punto l'immagine viene rimossa. Inoltre, l'immagine di sfondo viene ripristinata nuovamente se l'utente rimuove l'input. Vedere la figura seguente.  
+Nell'esempio seguente viene illustrato come facilitare l'usabilità di <xref:System.Windows.Controls.TextBox> un oggetto visualizzando un'immagine di sfondo esplicativa <xref:System.Windows.Controls.TextBox> all'interno di fino a quando l'utente non immette testo, a quel punto l'immagine viene rimossa. Inoltre, l'immagine di sfondo viene ripristinata di nuovo se l'utente rimuove il proprio input. Vedere la figura seguente.  
   
- ![Una casella di testo con un'immagine di sfondo](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
+ ![Casella di testo con un'immagine di sfondo](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
   
 > [!NOTE]
->  Il motivo per un'immagine di sfondo viene usata in questo esempio piuttosto che modificare semplicemente la <xref:System.Windows.Controls.TextBox.Text%2A> proprietà di <xref:System.Windows.Controls.TextBox>, è che un'immagine di sfondo non interferisce con il data binding.  
+> Il motivo per cui un'immagine di sfondo viene utilizzata in questo esempio invece di modificare <xref:System.Windows.Controls.TextBox.Text%2A> semplicemente la <xref:System.Windows.Controls.TextBox>proprietà di, è che un'immagine di sfondo non interferisce con data binding.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  

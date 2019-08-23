@@ -2,22 +2,22 @@
 title: <transport> di <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788271"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923204"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<Transport > di \<webHttpBinding >
+# <a name="transport-of-webhttpbinding"></a>\<> di trasporto \<di WebHttpBinding >
 Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint del servizio configurato per ricevere richieste HTTP.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<webHttpBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<> di trasporto  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -67,7 +67,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Basic`|Usa l'autenticazione di base.|  
@@ -82,7 +82,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Rappresenta le funzionalità di protezione del [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.|  
+|[\<security>](security-of-webhttpbinding.md)|Rappresenta le funzionalità di sicurezza dell' [ \<elemento > WSHttpBinding](wshttpbinding.md) .|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -90,9 +90,9 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Modello di programmazione HTTP Web di WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [Modello di programmazione HTTP Web di WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

@@ -3,22 +3,22 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944265"
 ---
-# <a name="trustedissuers"></a>\<trustedIssuers>
-Consente di configurare l'elenco dei certificati dell'autorità emittente attendibile usato per il registro dei nomi basato sulla configurazione dell'autorità di certificazione (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
+# <a name="trustedissuers"></a>\<> trustedIssuers
+Configura l'elenco dei certificati dell'autorità emittente attendibile usati dal registro di sistema del nome dell'autorità emittente<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>basata sulla configurazione ().  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<securityTokenHandlerConfiguration>  
 \<issuerNameRegistry>  
-\<trustedIssuers>  
+\<> trustedIssuers  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,29 +44,29 @@ Consente di configurare l'elenco dei certificati dell'autorità emittente attend
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- nessuno  
+ Nessuna  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Aggiunge un certificato per la raccolta di autorità emittenti attendibili. Il certificato è specificato con il `thumbprint` attributo. Questo attributo è obbligatorio e deve contenere il form codificato ASN.1 dell'identificazione digitale del certificato. Il `name` attributo è facoltativo e può essere utilizzato per specificare un nome descrittivo per il certificato.|  
+|`<add thumbprint=xs:string name=xs:string>`|Aggiunge un certificato alla raccolta di autorità emittenti attendibili. Il certificato viene specificato con l' `thumbprint` attributo. Questo attributo è obbligatorio e deve contenere il formato con codifica ASN. 1 dell'identificazione personale del certificato. L' `name` attributo è facoltativo e può essere usato per specificare un nome descrittivo per il certificato.|  
 |`<clear>`|Cancella tutti i certificati dalla raccolta di autorità emittenti attendibili.|  
-|`<remove thumbprint=xs:string>`|Rimuove un certificato dalla raccolta di autorità emittenti attendibili. Il certificato è specificato con il `thumbprint` attributo. Questo attributo è obbligatorio.|  
+|`<remove thumbprint=xs:string>`|Rimuove un certificato dalla raccolta di autorità emittenti attendibili. Il certificato viene specificato con l' `thumbprint` attributo. Questo attributo è obbligatorio.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura il registro dei nomi dell'autorità di certificazione. **Importante:**  Il `type` attributo del `<issuerNameRegistry>` deve fare riferimento a elemento le <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe per il `<trustedIssuers>` elemento sia valido.|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|Configura il registro dei nomi delle autorità emittenti. **Importante:**  L' `type` attributo <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` dell'elemento deve fare riferimento alla classe affinché l'elemento sia valido. `<issuerNameRegistry>`|  
   
 ## <a name="remarks"></a>Note  
- Windows Identity Foundation (WIF) fornisce un'implementazione singola del <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe per impostazione predefinita, il <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Il Registro di sistema configurazione nome dell'autorità emittente mantiene un elenco di autorità emittenti attendibili che viene caricato dalla configurazione. L'elenco associa ogni nome dell'autorità emittente con il certificato X.509 che è necessario per verificare la firma dei token prodotti dall'autorità di certificazione. L'elenco dei certificati di autorità emittenti attendibili viene specificato sotto il `<trustedIssuers>` elemento. Ogni elemento nell'elenco associa un nome dell'autorità di certificazione tasti di scelta rapida con il certificato X.509 che è necessario per verificare la firma dei token prodotti dall'autorità emittente in questione. Attendibili i certificati vengono specificati usando il ASN.1 formato dell'identificazione digitale del certificato con codifica e vengono aggiunti insieme tramite `<add>` elemento. È possibile cancellare o rimuovere autorità emittenti (certificati) dall'elenco utilizzando il `<clear>` e `<remove>` elementi.  
+ Windows Identity Foundation (WIF) fornisce una singola implementazione della <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe predefinita, la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Il registro dei nomi delle autorità emittenti di configurazione mantiene un elenco di autorità emittenti attendibili caricate dalla configurazione. L'elenco associa ogni nome dell'autorità emittente al certificato X. 509 necessario per verificare la firma dei token prodotti dall'autorità emittente. L'elenco dei certificati dell'autorità emittente attendibile viene specificato `<trustedIssuers>` nell'elemento. Ogni elemento nell'elenco associa il nome di un emittente mnemonico al certificato X. 509 necessario per verificare la firma dei token prodotti dall'emittente. I certificati attendibili vengono specificati utilizzando il formato con codifica ASN. 1 dell'identificazione personale del certificato e vengono aggiunti alla raccolta `<add>` tramite l'elemento. È possibile cancellare o rimuovere autorità emittenti (certificati) dall'elenco usando gli `<clear>` elementi e. `<remove>`  
   
- Il `type` attributo del `<issuerNameRegistry>` deve fare riferimento a elemento le <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe per il `<trustedIssuers>` elemento sia valido.  
+ L' `type` attributo <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` dell'elemento deve fare riferimento alla classe affinché l'elemento sia valido. `<issuerNameRegistry>`  
   
 ## <a name="example"></a>Esempio  
- Il codice XML seguente viene illustrato come specificare l'autorità di certificazione di base di configurazione del registro dei nomi.  
+ Nel codice XML seguente viene illustrato come specificare il registro dei nomi delle autorità emittenti basato sulla configurazione.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

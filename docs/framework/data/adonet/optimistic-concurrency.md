@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929236"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica. L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.  
@@ -20,7 +20,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
  Pertanto, in un modello di concorrenza pessimistica, un blocco viene stabilito da un utente che aggiorna una riga. Fino a che tale utente non completa l'aggiornamento e non rilascia il blocco, nessun altro utente sarà in grado di modificare tale riga. La concorrenza pessimistica è quindi consigliabile in caso di durate limitate dei blocchi, ad esempio nell'elaborazione a livello di programmazione dei record, ma non è un'opzione scalabile nel caso in cui gli utenti interagiscano con i dati e provochino il blocco dei record per periodi di tempo relativamente lunghi.  
   
 > [!NOTE]
->  Se è necessario aggiornare più righe nella stessa operazione, la creazione di una transazione garantisce una maggior scalabilità rispetto al blocco associato alla concorrenza pessimistica.  
+> Se è necessario aggiornare più righe nella stessa operazione, la creazione di una transazione garantisce una maggior scalabilità rispetto al blocco associato alla concorrenza pessimistica.  
   
  Al contrario, gli utenti che usano la concorrenza ottimistica sono in grado di leggere una riga senza bloccarla. Quando un utente desidera aggiornare una riga, è necessario che l'applicazione stabilisca se tale riga è stata modificata da un altro utente successivamente alla lettura. La concorrenza ottimistica viene solitamente usata in ambienti in cui il conflitto per l'uso dei dati non è elevato. Questo tipo di concorrenza consente un miglioramento delle prestazioni, poiché non è richiesto alcun blocco dei record, operazione che richiede risorse di server aggiuntive. Per mantenere i blocchi dei record, inoltre, è necessaria una connessione permanente al server database. Poiché tali blocchi non sono necessari se si usa un modello di concorrenza ottimistica, le connessioni al server sono in grado di soddisfare un numero superiore di client in un intervallo di tempo minore.  
   
@@ -30,9 +30,9 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Alle ore 13.00 l'Utente1 legge una riga dal database contenente i seguenti valori:  
   
- **LastName FirstName CustID**  
+ **Nome cognome CustID**  
   
- Bob Smith 101  
+ 101 Smith Bob  
   
 |Nome colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -42,7 +42,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Alle ore 13.01 l'Utente2 legge la stessa colonna.  
   
- In 1 ore 13.03 l'utente2 modifica **FirstName** da "Maria" a "Maria Teresa" e aggiorna il database.  
+ Alle 1:03, User2 modifica **FirstName** da "Bob" a "Robert" e aggiorna il database.  
   
 |Nome colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -71,7 +71,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Per verificare eventuali violazioni alla concorrenza ottimistica quando si aggiorna una riga in **Table1**, è necessario eseguire la seguente istruzione UPDATE:  
+ Per verificare la presenza di una violazione della concorrenza ottimistica quando si aggiorna una riga in **Tabella1**, è necessario eseguire l'istruzione Update seguente:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Quando si usa il modello di concorrenza ottimistica, è possibile applicare anche criteri meno restrittivi. Ad esempio, se si usano solo le colonne di chiave primaria nella clausola WHERE, i dati verranno sovrascritti, indipendentemente dagli eventuali aggiornamenti apportati alle altre colonne successivamente all'ultima query. È inoltre possibile applicare una clausola WHERE solo a colonne specifiche, in modo che i dati vengano sovrascritti a meno che particolari campi non siano stati aggiornati successivamente all'ultima query.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- Il **RowUpdated** eventi del <xref:System.Data.Common.DataAdapter> oggetto può essere utilizzato in combinazione con le tecniche descritte in precedenza, per fornire la notifica all'applicazione di eventuali violazioni alla concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornare una **Modified** riga da una **DataSet**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. Il <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce un **RecordsAffected** proprietà contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando update per verificare la concorrenza ottimistica, la **RecordsAffected** proprietà, di conseguenza, restituirà un valore pari a 0 quando si è verificata una violazione della concorrenza ottimistica, poiché nessun record sono stato aggiornato. In questo caso viene generata un'eccezione. Il **RowUpdated** evento consente di gestire questa occorrenza ed evitare l'eccezione impostando un appropriato **RowUpdatedEventArgs** valore, come  **SkipCurrentRow**. Per altre informazioni sul **RowUpdated** eventi, vedere [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ L'evento **RowUpdated** dell' <xref:System.Data.Common.DataAdapter> oggetto può essere usato in combinazione con le tecniche descritte in precedenza, per fornire una notifica all'applicazione di violazioni della concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornamento di una riga **modificata** da un **set di dati**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. L' <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce una proprietà **RecordsAffected** contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando Update per la verifica della concorrenza ottimistica, la proprietà **RecordsAffected** restituirà, di conseguenza, un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, perché non è stato aggiornato alcun record. In questo caso viene generata un'eccezione. L'evento **RowUpdated** consente di gestire questa occorrenza ed evitare l'eccezione impostando un valore **RowUpdatedEventArgs. status** appropriato, ad esempio **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sull'evento **RowUpdated** , vedere [gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** al **true**, prima di chiamare **Update**e rispondere alle informazioni di errore archiviate nel **RowError** proprietà di una particolare riga quando la **Update** viene completata. Per altre informazioni, vedere [le informazioni sull'errore di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** su **true**, prima di chiamare **Update**e rispondere alle informazioni sugli errori archiviate nella proprietà **RowError** di una determinata riga al termine dell' **aggiornamento** . Per ulteriori informazioni, vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Esempio di concorrenza ottimistica  
- Di seguito è riportato un esempio semplice che consente di impostare il **UpdateCommand** di un **DataAdapter** per eseguire il test della concorrenza ottimistica e quindi Usa il **RowUpdated** dell'evento di test per violazioni alla concorrenza ottimistica. Quando viene rilevata una violazione della concorrenza ottimistica, l'applicazione imposta il **RowError** della riga in cui l'aggiornamento sia stato rilasciato per riflettere una violazione della concorrenza ottimistica.  
+ Di seguito è riportato un semplice esempio che imposta **UpdateCommand** di un **DataAdapter** per verificare la concorrenza ottimistica, quindi utilizza l'evento **RowUpdated** per verificare le violazioni della concorrenza ottimistica. Quando viene rilevata una violazione della concorrenza ottimistica, l'applicazione imposta il **RowError** della riga per cui l'aggiornamento è stato emesso per riflettere una violazione della concorrenza ottimistica.  
   
- Si noti che i valori dei parametri passati alla clausola WHERE del comando di aggiornamento vengono eseguito il mapping per il **originale** i valori delle rispettive colonne.  
+ Si noti che i valori dei parametri passati alla clausola WHERE del comando UPDATE vengono mappati ai valori **originali** delle rispettive colonne.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

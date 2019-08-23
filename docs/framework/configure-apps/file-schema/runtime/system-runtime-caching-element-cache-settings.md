@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927235"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching elemento > (impostazioni cache)
 
@@ -55,7 +55,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 Le classi in questo spazio dei nomi consentono di usare le funzionalità di memorizzazione nella cache come quelle in ASP.NET, ma senza una dipendenza sull'assembly `System.Web` . Per altre informazioni, vedere [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  La funzionalità di memorizzazione nella cache di output e <xref:System.Runtime.Caching> i tipi nello spazio dei nomi sono nuovi in .NET Framework 4.  
+> La funzionalità di memorizzazione nella cache di output e <xref:System.Runtime.Caching> i tipi nello spazio dei nomi sono nuovi in .NET Framework 4.  
   
 ## <a name="example"></a>Esempio
 

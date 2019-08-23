@@ -9,108 +9,108 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8399a56fca87704e10456a4cf8109d7c80d4db45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964409"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
-Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
+La <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare la modalità di riempimento di una forma con colori gradualmente modificati. Ad esempio, è possibile specificare un colore per il centro di un tracciato e un altro colore per il limite di un percorso. È anche possibile specificare colori distinti per ognuno dei diversi punti lungo il limite di un percorso.  
   
 > [!NOTE]
->  In GDI+, un percorso è una sequenza di linee e curve gestita da un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Per altre informazioni sui percorsi di GDI+, vedere [percorsi di oggetti Graphics in GDI+](graphics-paths-in-gdi.md) e [costruzione e creazione di percorsi](constructing-and-drawing-paths.md).  
+> In GDI+ un percorso è una sequenza di linee e curve gestite da un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Per ulteriori informazioni sui percorsi GDI+, vedere [percorsi grafici in GDI+](graphics-paths-in-gdi.md) , [creazione e](constructing-and-drawing-paths.md)creazione di percorsi.  
 
-Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
+Gli esempi in questo articolo sono metodi che vengono chiamati dal gestore <xref:System.Windows.Forms.Control.Paint> eventi di un controllo.  
 
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Per compilare un'ellisse con una sfumatura percorso  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Per riempire un'ellisse con una sfumatura del tracciato  
   
-- Nell'esempio seguente viene compilato un'ellisse con un pennello a sfumatura. Colore centrale è impostato su blu e il colore del limite è impostato su azzurro. La figura seguente mostra l'ellisse piena.  
+- Nell'esempio seguente viene riempita un'ellisse con un pennello sfumatura del percorso. Il colore centrale è impostato su blu e il colore limite è impostato su Aqua. Nell'illustrazione seguente viene mostrata l'ellisse piena.  
   
-     ![Percorso sfumatura riempimento di un'ellisse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
+     ![Il percorso sfumatura riempie un'ellisse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
-     Per impostazione predefinita, un pennello a sfumatura non si estende all'esterno dei limiti del percorso. Se si usa il pennello a sfumatura per riempire una figura di seguito che si estende oltre il limite del percorso, l'area dello schermo all'esterno del percorso non essere compilato.  
+     Per impostazione predefinita, un pennello sfumatura del percorso non si estende al di fuori del limite del percorso. Se si utilizza il pennello sfumatura percorso per riempire una figura che si estende oltre il limite del tracciato, l'area della schermata all'esterno del percorso non verrà compilata.  
   
-     La figura seguente mostra cosa accade se si modifica il <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> chiamare il codice seguente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     La figura seguente mostra cosa accade se si modifica la <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> chiamata nel codice seguente in: `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`  
   
-     ![Percorso sfumatura estesa oltre i limiti del percorso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
+     ![Tracciato sfumato esteso oltre il limite del percorso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     Esempio di codice precedente è progettato per l'uso con Windows Form e richiede la <xref:System.Windows.Forms.PaintEventArgs> e, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+     L'esempio di codice precedente è progettato per l'uso con Windows Forms e richiede l' <xref:System.Windows.Forms.PaintEventArgs> e, che è un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
-### <a name="to-specify-points-on-the-boundary"></a>Per specificare i punti in corrispondenza del limite  
+### <a name="to-specify-points-on-the-boundary"></a>Per specificare i punti sul limite  
   
-- Nell'esempio seguente crea un pennello a sfumatura da un percorso a forma di stella. Il codice imposta il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> proprietà, che imposta il colore al centro della stella e impostato su rosso. Il codice imposta quindi il <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> proprietà per specificare diversi colori (archiviati nel `colors` matrice) a singoli punti nel `points` matrice. L'istruzione di codice finale riempie il percorso a forma di stella con pennello a sfumatura.  
+- Nell'esempio seguente viene creato un pennello sfumatura tracciato da un percorso a forma di stella. Il codice imposta la <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> proprietà, che imposta il colore al centro della stella su rosso. Il codice imposta quindi la <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> proprietà in modo da specificare vari colori (archiviati `colors` nella matrice) nei singoli punti della `points` matrice. L'istruzione del codice finale riempie il tracciato a forma di stella con il pennello sfumatura del percorso.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
-- L'esempio seguente disegna una sfumatura percorso senza un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto nel codice. Il particolare <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> costruttore nell'esempio riceve una matrice di punti, ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che il <xref:System.Drawing.Drawing2D.PathGradientBrush> utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è maggiore di tracciato chiuso usata per definire il pennello, in modo da parte del rettangolo non viene disegnato dal pennello. La figura seguente mostra il rettangolo (linea tratteggiata) e la parte del rettangolo disegnato dal pennello a sfumatura: 
+- Nell'esempio seguente viene disegnata una sfumatura <xref:System.Drawing.Drawing2D.GraphicsPath> del percorso senza un oggetto nel codice. Il costruttore <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> specifico nell'esempio riceve una matrice di punti ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che l' <xref:System.Drawing.Drawing2D.PathGradientBrush> oggetto viene utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è più grande del percorso chiuso usato per definire il pennello, quindi parte del rettangolo non viene disegnata dal pennello. Nella figura seguente viene illustrato il rettangolo (linea tratteggiata) e la parte del rettangolo disegnata dal pennello sfumatura tracciato: 
   
-     ![Sfumatura parte disegnato dal pennello a sfumatura.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
+     ![Parte sfumata disegnata dal pennello sfumatura del percorso.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### <a name="to-customize-a-path-gradient"></a>Per personalizzare una sfumatura percorso  
+### <a name="to-customize-a-path-gradient"></a>Per personalizzare una sfumatura del tracciato  
   
-- Un modo per personalizzare un pennello a sfumatura consiste nell'impostare relativo <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> proprietà. Le proporzioni del fuoco specificano un percorso interno che si trova all'interno del percorso principale. Colore centrale viene visualizzato ovunque all'interno di tale percorso interno e non solo al punto centrale.  
+- Un modo per personalizzare un pennello sfumatura del tracciato consiste nell' <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> impostarne la proprietà. Le scale dello stato attivo specificano un percorso interno che si trova all'interno del percorso principale. Il colore centrale viene visualizzato ovunque all'interno del percorso interno anziché solo al punto centrale.  
   
-     L'esempio seguente crea un pennello a sfumatura in base a un percorso ellittico. Il codice imposta il colore di contorno impostandolo sul blu, imposta il colore centrale azzurro per e quindi Usa il pennello a sfumatura per riempire il percorso ellittico.  
+     Nell'esempio seguente viene creato un pennello sfumatura del percorso basato su un percorso ellittico. Il codice imposta il colore limite su blu, imposta il colore centrale su Aqua, quindi usa il pennello sfumatura tracciato per riempire il percorso ellittico.  
   
-     Successivamente, il codice imposta le proporzioni del fuoco di pennello a sfumatura. La scala di messa a fuoco x è impostata su 0.3 e la dimensione y è impostata su 0,8. Il codice chiama il <xref:System.Drawing.Graphics.TranslateTransform%2A> metodo di un <xref:System.Drawing.Graphics> oggetto in modo che la chiamata successiva al <xref:System.Drawing.Graphics.FillPath%2A> riempie un'ellisse che si trova a destra della prima ellisse.  
+     Il codice imposta quindi le scale dello stato attivo del pennello sfumatura del percorso. La scala dello stato attivo x è impostata su 0,3 e la scala dello stato attivo y è impostata su 0,8. Il codice chiama il <xref:System.Drawing.Graphics.TranslateTransform%2A> metodo di un <xref:System.Drawing.Graphics> oggetto in modo <xref:System.Drawing.Graphics.FillPath%2A> che la chiamata successiva Compili un'ellisse che si trova a destra della prima ellisse.  
   
-     Per visualizzare l'effetto delle scale lo stato attivo, si immagini una piccola ellisse che condivide al proprio centro con i puntini di sospensione principale. Piccola puntini di sospensione (interno) è l'ellisse principale scalata orizzontalmente (intorno al relativo centro) di un fattore di 0.3 e in verticale di un fattore pari a 0,8. Quando si sposta dai limiti dell'ellisse esterno ai limiti dell'ellisse interna, il colore passa gradualmente da blu a verde acqua. Quando si spostano dal limite dell'ellisse interna al centro condiviso, resta il colore azzurro.  
+     Per visualizzare l'effetto delle scale di messa a fuoco, Immaginate una piccola ellisse che condivide il centro con l'ellisse principale. L'ellisse (interna) di piccole dimensioni è l'ellisse principale ridimensionata orizzontalmente (attorno al centro) per un fattore di 0,3 e verticalmente in base a un fattore di 0,8. Quando si passa dal limite dell'ellisse esterna al limite dell'ellisse interna, il colore passa gradualmente da blu a Aqua. Quando si passa dal limite dell'ellisse interna al centro condiviso, il colore rimane Aqua.  
   
-     L'immagine seguente illustra l'output del codice riportato di seguito. Puntini di sospensione a sinistra è aqua solo al punto centrale. Puntini di sospensione a destra è aqua ovunque all'interno del tracciato interno.  
+     L'immagine seguente illustra l'output del codice riportato di seguito. L'ellisse a sinistra è Aqua solo al punto centrale. L'ellisse a destra è Aqua ovunque all'interno del percorso interno.  
   
- ![Effetto sfumatura delle scale messa a fuoco](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
+ ![Effetto sfumatura delle scale dello stato attivo](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### <a name="to-customize-with-interpolation"></a>Personalizzare con interpolazione  
+### <a name="to-customize-with-interpolation"></a>Per personalizzare con l'interpolazione  
   
-- Un altro modo per personalizzare un pennello a sfumatura consiste nello specificare una matrice di colori interpolazione e una matrice di posizioni di interpolazione.  
+- Un altro modo per personalizzare un pennello sfumatura del tracciato consiste nel specificare una matrice di colori di interpolazione e una matrice di posizioni di interpolazione.  
   
-     L'esempio seguente crea un pennello a sfumatura basato su un triangolo. Il codice imposta il <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> proprietà del pennello a sfumatura path per specificare una matrice di colori di interpolazione (azzurro verde scuro, blu) e una matrice di posizioni di interpolazione (0, 0.25, 1). Quando si sposta dai limiti del triangolo per il punto centrale, il colore cambia gradualmente da verde a aqua e quindi da aqua impostandolo sul blu. La modifica da verde a aqua avviene in 25 percento della distanza da verde a blu.  
+     Nell'esempio seguente viene creato un pennello sfumatura del percorso basato su un triangolo. Il codice imposta la <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> proprietà del pennello sfumatura percorso per specificare una matrice di colori di interpolazione (verde scuro, Aqua, blu) e una matrice di posizioni di interpolazione (0, 0,25, 1). Quando si passa dal limite del triangolo al punto centrale, il colore cambia gradualmente da verde scuro a Aqua e quindi da Aqua a blu. Il passaggio da verde scuro a Aqua avviene nel 25% della distanza dal verde scuro al blu.  
   
-     La figura seguente mostra il triangolo riempito con il pennello a sfumatura percorso personalizzato.  
+     Nella figura seguente viene illustrato il triangolo riempito con il pennello sfumatura percorso personalizzato.  
   
-     ![Triangolo riempita con pennello sfumato percorso personalizzato.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
+     ![Triangolo riempito con pennello sfumatura percorso personalizzato.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
 ### <a name="to-set-the-center-point"></a>Per impostare il punto centrale  
   
-- Per impostazione predefinita, il punto centrale di un pennello a sfumatura è al centro del percorso usato per costruire il pennello. È possibile modificare la posizione del punto centrale impostando il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà del <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
+- Per impostazione predefinita, il punto centrale di un pennello sfumatura del tracciato si trova al centro del tracciato usato per costruire il pennello. È possibile modificare la posizione del punto centrale impostando la <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà <xref:System.Drawing.Drawing2D.PathGradientBrush> della classe.  
   
-     L'esempio seguente crea un pennello a sfumatura basato su un'ellisse. È il centro dell'ellisse (70, 35), ma il punto centrale di pennello a sfumatura è impostato su (120, 40).  
+     Nell'esempio seguente viene creato un pennello sfumatura del percorso basato su un'ellisse. Il centro dell'ellisse si trova in (70, 35), ma il punto centrale del pennello sfumatura del tracciato è impostato su (120, 40).  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     La figura seguente mostra l'ellisse con riempimento e il punto centrale di pennello a sfumatura:  
+     Nella figura seguente vengono illustrati l'ellisse piena e il punto centrale del pennello sfumatura tracciato:  
   
-     ![Percorso sfumatura con colorato puntini di sospensione e il punto centrale.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
+     ![Percorso sfumato con ellisse riempita e punto centrale.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
-- È possibile impostare il punto centrale di un pennello a sfumatura in una posizione all'esterno del percorso che è stato usato per costruire il pennello. Nell'esempio seguente sostituisce la chiamata per impostare il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà nel codice precedente.  
+- È possibile impostare il punto centrale di un pennello sfumatura tracciato su una posizione esterna al percorso utilizzato per costruire il pennello. Nell'esempio seguente viene sostituita la chiamata per <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> impostare la proprietà nel codice precedente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Nella figura seguente mostra l'output con questa modifica:  
+     La figura seguente mostra l'output con questa modifica:  
   
-     ![Percorso sfumatura con punto centrale all'esterno del percorso.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
+     ![Tracciato sfumato con punto centrale esterno al percorso.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
-     Nella figura precedente, i punti all'estrema destra dell'ellisse non sono perfettamente blu (anche se sono molto simili). I colori nella sfumatura vengono posizionati come se il riempimento raggiunto il punto (145, 35) in cui il colore sarebbe pure blu (0, 0, 255). Ma non raggiunga mai il riempimento (145, 35) perché consente di disegnare un pennello a sfumatura solo all'interno di relativo percorso.  
+     Nell'illustrazione precedente, i punti all'estrema destra dell'ellisse non sono puri blu (anche se sono molto vicini). I colori della sfumatura sono posizionati come se il riempimento raggiungesse il punto (145, 35) dove il colore sarebbe un blu puro (0, 0, 255). Tuttavia, il riempimento non raggiunge mai (145, 35) perché un pennello sfumatura del percorso disegna solo all'interno del percorso.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Negli esempi precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
+ Gli esempi precedenti sono progettati per l'uso con Windows Forms e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, che <xref:System.Windows.Forms.Control.Paint> è un parametro del gestore eventi.  
   
 ## <a name="see-also"></a>Vedere anche
 

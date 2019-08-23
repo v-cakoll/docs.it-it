@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941089"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966551"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms
-È talvolta utile esaminare tutti i nodi in un form Windows <xref:System.Windows.Forms.TreeView> controllo per eseguire calcoli sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
+A volte è utile esaminare ogni nodo in un controllo Windows Forms <xref:System.Windows.Forms.TreeView> per eseguire un calcolo sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
   
- Ciascuna <xref:System.Windows.Forms.TreeNode> oggetto in una visualizzazione albero include proprietà che è possibile usare per spostarsi nella visualizzazione albero: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore della <xref:System.Windows.Forms.TreeNode.Parent%2A> proprietà è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se sono presenti, vengono elencati nel relativo <xref:System.Windows.Forms.TreeNode.Nodes%2A> proprietà. Il <xref:System.Windows.Forms.TreeView> stesso controllo dispone di <xref:System.Windows.Forms.TreeView.TopNode%2A> proprietà, ovvero il nodo radice dell'intera visualizzazione albero.  
+ Ogni <xref:System.Windows.Forms.TreeNode> oggetto in una visualizzazione albero dispone di proprietà che è possibile utilizzare per spostarsi nella visualizzazione albero <xref:System.Windows.Forms.TreeNode.FirstNode%2A>: <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, e <xref:System.Windows.Forms.TreeNode.Parent%2A>. Il valore della <xref:System.Windows.Forms.TreeNode.Parent%2A> proprietà è il nodo padre del nodo corrente. I nodi figlio del nodo corrente, se presenti, vengono elencati nella relativa <xref:System.Windows.Forms.TreeNode.Nodes%2A> proprietà. Il <xref:System.Windows.Forms.TreeView> controllo stesso dispone della <xref:System.Windows.Forms.TreeView.TopNode%2A> proprietà, che rappresenta il nodo radice dell'intera visualizzazione albero.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Per eseguire l'iterazione in tutti i nodi di un controllo TreeView  
   
@@ -28,7 +28,7 @@ ms.locfileid: "61941089"
   
 2. Chiamare la routine.  
   
-     Nell'esempio seguente viene illustrato come stampare ogni <xref:System.Windows.Forms.TreeNode> dell'oggetto <xref:System.Windows.Forms.TreeNode.Text%2A> proprietà:  
+     Nell'esempio seguente viene illustrato come stampare la <xref:System.Windows.Forms.TreeNode> proprietà di <xref:System.Windows.Forms.TreeNode.Text%2A> ogni oggetto:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ ms.locfileid: "61941089"
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo TreeView](treeview-control-windows-forms.md)
-- [Routine ricorsive](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Routine ricorsive](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

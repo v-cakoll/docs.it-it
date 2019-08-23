@@ -2,18 +2,18 @@
 title: Istruzioni di installazione certificato server IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 728232c4e1d6309ae0cfacb407417173ece145da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50fa7f1094d4b05bcadb229072293da233a18a2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931861"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Istruzioni di installazione certificato server IIS (Internet Information Services)
 Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.  
   
 ## <a name="step-1-creating-certificates"></a>Passaggio 1. Creazione di certificati  
- Per creare un certificato per il computer locale, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire Setup. bat incluso in ognuno degli esempi che utilizzano una comunicazione protetta con IIS. Assicurarsi che il percorso includa la cartella contenente Makecert.exe prima di eseguire questo file batch. Il comando seguente viene utilizzato per creare il certificato nel file Setup.bat.  
+ Per creare un certificato per il computer, aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire il file Setup. bat incluso in tutti gli esempi che usano la comunicazione protetta con IIS. Assicurarsi che il percorso includa la cartella contenente Makecert.exe prima di eseguire questo file batch. Il comando seguente viene utilizzato per creare il certificato nel file Setup.bat.  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
@@ -26,17 +26,17 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1. Aprire lo snap-in MMC della Gestione Internet Information Services (IIS).  
   
-2. Il sito Web predefinito e scegliere **proprietà**.  
+2. Fare clic con il pulsante destro del mouse sul sito Web predefinito e scegliere **Proprietà**.  
   
-3. Selezionare il **sicurezza Directory** scheda.  
+3. Selezionare la scheda **sicurezza directory** .  
   
-4. Scegliere il **certificato del Server** pulsante. Verrà avviata la Procedura guidata certificati server Web.  
+4. Fare clic sul pulsante **certificato server** . Verrà avviata la Procedura guidata certificati server Web.  
   
 5. Completare la procedura guidata. Selezionare l'opzione per assegnare un certificato. Selezionare il certificato server HTTPS ServiceModelSamples nell'elenco di certificati visualizzati.  
   
-     ![IIS Gestione guidata certificati](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![Creazione guidata certificato IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. Testare l'accesso al servizio in un browser usando l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc`.  
+6. Testare l'accesso al servizio in un browser tramite l'indirizzo `https://localhost/servicemodelsamples/service.svc`HTTPS.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Se SSL è stato precedentemente configurato utilizzando Httpcfg.exe  
   
@@ -55,20 +55,20 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Per installare IIS su IIS 7.0 (Windows Vista e Windows Server 2008)  
   
-1. Dal **avviare** menu, fare clic su **eseguito**, quindi digitare **inetmgr** per aprire lo snap-in MMC di Internet Information Services (IIS).  
+1. Dal menu **Start** fare clic su **Esegui**, quindi digitare **inetmgr** per aprire lo snap-in MMC Internet Information Services (IIS).  
   
-2. Fare doppio clic il **sito Web predefinito** e selezionare **Modifica binding...**  
+2. Fare clic con il pulsante destro del mouse sul **sito Web predefinito** e scegliere **Modifica binding...**  
   
-3. Fare clic sui **Add** pulsante del **binding sito** nella finestra di dialogo.  
+3. Fare clic sul pulsante **Aggiungi** della finestra di dialogo **binding sito** .  
   
-4. Selezionare **HTTPS** dalle **tipo** elenco a discesa.  
+4. Selezionare **https** dall'elenco a discesa **tipo** .  
   
-5. Selezionare il **ServiceModelSamples-HTTPS-Server** dalle **certificato SSL** elenco a discesa e fare clic **OK**.  
+5. Selezionare **servicemodelsamples-https-server** dall'elenco a discesa **certificato SSL** e fare clic su **OK**.  
   
-6. Testare l'accesso al servizio in un browser usando l'indirizzo HTTPS `https://localhost/servicemodelsamples/service.svc`.  
+6. Testare l'accesso al servizio in un browser tramite l'indirizzo `https://localhost/servicemodelsamples/service.svc`HTTPS.  
   
 > [!NOTE]
->  Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.  
+> Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.  
   
 ## <a name="removing-certificates"></a>Rimozione dei certificati  
   

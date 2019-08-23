@@ -3,15 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942000"
 ---
 # <a name="add"></a>\<add>
-Aggiunge il gestore di token di sicurezza specificato nella raccolta di gestori di token.  
+Aggiunge il gestore del token di sicurezza specificato alla raccolta di gestori di token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,27 +38,27 @@ Aggiunge il gestore di token di sicurezza specificato nella raccolta di gestori 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|tipo|Il nome del tipo CLR il gestore dei token da aggiungere. Per altre informazioni su come specificare il `type` dell'attributo, vedere [riferimenti a tipi personalizzati](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
+|type|Nome del tipo CLR del gestore di token da aggiungere. Per ulteriori informazioni su come specificare l'attributo `type` , vedere [riferimenti ai tipi personalizzati](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (classe), il <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe o una classe derivata di una di queste classi.|  
-|[\<sessionTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|Fornisce la configurazione per il <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe o le classi derivate.|  
-|[\<userNameSecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|Fornisce la configurazione per il <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> classe o le classi derivate.|  
-|[\<x509SecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|Fornisce una configurazione facoltativa per il <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> classe o le classi derivate.|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Fornisce la configurazione per <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> la classe, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> la classe o una classe derivata di una di queste classi.|  
+|[\<sessionTokenRequirement>](sessiontokenrequirement.md)|Fornisce la configurazione per <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> la classe o le classi derivate.|  
+|[\<userNameSecurityTokenHandlerRequirement>](usernamesecuritytokenhandlerrequirement.md)|Fornisce la configurazione per <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> la classe o le classi derivate.|  
+|[\<x509SecurityTokenHandlerRequirement>](x509securitytokenhandlerrequirement.md)|Fornisce la configurazione facoltativa <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> per la classe o le classi derivate.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza registrati con l'endpoint.|  
   
 ## <a name="remarks"></a>Note  
- Il `<add>` elemento può accettare un singolo elemento figlio che specifica la configurazione per il gestore dei token. Questo dipende dal fatto che la classe del gestore fa riferimento tramite il `type` attributo del `<add>` elemento fornisce il supporto per questa funzionalità. Le classi di gestori di token che forniscono questa funzionalità devono esporre un costruttore che accetta un <xref:System.Xml.XmlElement> oggetto.  
+ L' `<add>` elemento può assumere un singolo elemento figlio che specifica la configurazione per il gestore del token. Questo dipende dal fatto che la classe del gestore a cui viene `type` fatto riferimento tramite `<add>` l'attributo dell'elemento fornisca il supporto per questa funzionalità. Le classi del gestore di token che forniscono questa funzionalità devono esporre un costruttore <xref:System.Xml.XmlElement> che accetta un oggetto.  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,15 +69,15 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- Alcune delle classi di gestori di token di sicurezza predefinite offrono questa funzionalità. Queste classi sono <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ Diverse classi del gestore del token di sicurezza predefinite forniscono questa funzionalità. Queste classi sono <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> ,<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>,, e<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>. <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>  
   
 > [!IMPORTANT]
->  La raccolta di gestori di token può contenere solo un singolo gestore di un determinato tipo. Ciò significa, ad esempio, che se si desidera aggiungere un gestore di è derivato dal <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe alla raccolta, è necessario innanzitutto rimuovere il <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, che è presente per impostazione predefinita, dalla raccolta. È possibile usare la [ \<rimuovere >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) elemento da rimuovere un singolo gestore dalla raccolta o usare i [ \<deselezionare >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) elemento da rimuovere tutti i gestori dall'insieme.  
+> La raccolta di gestori di token può contenere solo un singolo gestore di qualsiasi tipo specificato. Ciò significa, ad esempio, che se si desidera aggiungere un gestore derivato dalla <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe alla raccolta, è necessario innanzitutto <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>rimuovere, che è presente per impostazione predefinita, dalla raccolta. È possibile utilizzare l' [ \<elemento remove >](remove.md) per rimuovere un singolo gestore dalla raccolta oppure utilizzare l' [ \<elemento clear >](clear.md) per rimuovere tutti i gestori dalla raccolta.  
   
- Le impostazioni specificate in un gestore di eseguire l'override equivalenti impostazioni specificate nella raccolta di gestori di token con la [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento e quelli specificati a livello di servizio in il [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  
+ Le impostazioni specificate in un gestore eseguono l'override delle impostazioni equivalenti specificate nella raccolta di gestori di token nell' [ \<elemento securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) e quelle specificate a livello di servizio nel [ \< identityConfiguration >](identityconfiguration.md) elemento.  
   
 ## <a name="example"></a>Esempio  
- Il codice XML seguente viene illustrato come utilizzare il `<add>` e `<remove>` elementi per sostituire il gestore di token di sessione predefinito con un gestore di token di sessione personalizzate. Il codice XML viene prelevato il `ClaimsAwareWebFarm` esempio.  
+ Nel codice XML seguente viene illustrato l'utilizzo `<add>` degli `<remove>` elementi e per sostituire il gestore del token di sessione predefinito con un gestore di token di sessione personalizzato. Il codice XML viene tratto dall' `ClaimsAwareWebFarm` esempio.  
   
 ```xml  
 <securityTokenHandlers>  

@@ -2,18 +2,18 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931409"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 Questo elemento definisce le impostazioni per le funzionalità di registrazione dei messaggi di Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
-\<diagnostica >  
+\<> di diagnostica  
 \<messageLogging>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,7 +40,7 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`logEntireMessage`|Valore che specifica se l'intero messaggio (intestazione e corpo del messaggio) viene registrato. Il valore predefinito è `false` ovvero solo l'intestazione del messaggio viene registrata. Questa impostazione influisce su tutti i livelli di registrazione dei messaggi (servizio, trasporto e formato non valido).|  
 |`logMalformedMessages`|Valore che specifica se i messaggi in formato non valido vengono registrati. I messaggi in formato non valido non vengono conteggiati per `maxMessagesToLog`. Il valore predefinito è `false`.|  
@@ -51,9 +51,9 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|filtri|L'elemento `filters` contiene una raccolta dei filtri di XPath. Se la registrazione dei messaggi di trasporto è attivata (`logMessagesAtTransportLevel` è `true`), verranno registrati solo i messaggi corrispondenti ai filtri.<br /><br /> I filtri vengono applicati solo a livello di trasporto. I filtri non influiscono sulla registrazione dei messaggi a livello di servizio e in formato non valido.<br /><br /> L'unico attributo di questo elemento, `filter`, è un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filters|L'elemento `filters` contiene una raccolta dei filtri di XPath. Se la registrazione dei messaggi di trasporto è attivata (`logMessagesAtTransportLevel` è `true`), verranno registrati solo i messaggi corrispondenti ai filtri.<br /><br /> I filtri vengono applicati solo a livello di trasporto. I filtri non influiscono sulla registrazione dei messaggi a livello di servizio e in formato non valido.<br /><br /> L'unico attributo di questo elemento, `filter`, è un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -127,4 +127,4 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement>
-- [Configurazione della registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [Configurazione della registrazione dei messaggi](../../../wcf/diagnostics/configuring-message-logging.md)

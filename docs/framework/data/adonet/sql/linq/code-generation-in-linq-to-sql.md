@@ -2,12 +2,12 @@
 title: Generazione di codice in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666121"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939168"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generazione di codice in LINQ to SQL
 È possibile generare codice per rappresentare un database usando il Object Relational Designer o lo strumento da riga di comando SqlMetal. In entrambi i casi, si verifica la generazione di codice end-to-end in tre fasi:  
@@ -32,7 +32,7 @@ ms.locfileid: "69666121"
  È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file di mapping esterno. Per ulteriori informazioni, vedere [mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "DbmlSchema. xsd". Per usare correttamente il file XSD per la convalida di un file dbml [, vedere Procedura: Convalidare file](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
+> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "DbmlSchema. xsd". Per usare correttamente il file XSD per la convalida di un file dbml [, vedere Procedura: Convalidare file](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

@@ -2,12 +2,12 @@
 title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: MT
+ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425372"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933963"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -15,13 +15,13 @@ Il servizio di routing fornisce un intermediario SOAP di collegamento generico i
  Questo argomento è destinato a coloro i quali non hanno familiarità con il servizio di routing e ne illustra la configurazione di base e l'hosting.  
   
 ## <a name="configuration"></a>Configurazione  
- Il servizio di routing viene implementato come servizio WCF che espone uno o più endpoint servizio i quali ricevono i messaggi dalle applicazioni client e li indirizzano a uno o più endpoint di destinazione. Il servizio include un elemento <xref:System.ServiceModel.Routing.RoutingBehavior> che viene applicato agli endpoint servizio esposti. Questo comportamento viene usato per configurare diversi aspetti del funzionamento del servizio. Per facilitare la configurazione quando si usa un file di configurazione, vengono specificati i parametri in di **RoutingBehavior**. Negli scenari basati su codice, questi parametri vengono invece specificati come parte di un <xref:System.ServiceModel.Routing.RoutingConfiguration> oggetto, che può quindi essere passato a un **RoutingBehavior**.  
+ Il servizio di routing viene implementato come servizio WCF che espone uno o più endpoint servizio i quali ricevono i messaggi dalle applicazioni client e li indirizzano a uno o più endpoint di destinazione. Il servizio include un elemento <xref:System.ServiceModel.Routing.RoutingBehavior> che viene applicato agli endpoint servizio esposti. Questo comportamento viene usato per configurare diversi aspetti del funzionamento del servizio. Per semplificare la configurazione quando si usa un file di configurazione, i parametri vengono specificati in **RoutingBehavior**. Negli scenari basati sul codice, questi parametri vengono specificati come parte di un <xref:System.ServiceModel.Routing.RoutingConfiguration> oggetto, che può quindi essere passato a un **RoutingBehavior**.  
   
- Inizialmente, questo comportamento aggiunge agli endpoint client <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, il quale è usato per eseguire l'elaborazione SOAP dei messaggi. In questo modo il servizio di Routing trasmettere i messaggi agli endpoint che richiedono una diversa **MessageVersion** rispetto all'endpoint è stato ricevuto il messaggio. Il **RoutingBehavior** registra inoltre un'estensione del servizio, il <xref:System.ServiceModel.Routing.RoutingExtension>, che fornisce un punto di accessibilità per la modifica della configurazione del servizio di Routing in fase di esecuzione.  
+ Inizialmente, questo comportamento aggiunge agli endpoint client <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, il quale è usato per eseguire l'elaborazione SOAP dei messaggi. Ciò consente al servizio di routing di trasmettere messaggi agli endpoint che richiedono un oggetto **MessageVersion** diverso rispetto all'endpoint su cui è stato ricevuto il messaggio. **RoutingBehavior** registra inoltre un'estensione del <xref:System.ServiceModel.Routing.RoutingExtension>servizio,, che fornisce un punto di accessibilità per modificare la configurazione del servizio di routing in fase di esecuzione.  
   
- Il **RoutingConfiguration** classe fornisce un modo coerente per configurare e aggiornare la configurazione del servizio di Routing.  Contiene parametri che agiscono come le impostazioni per il servizio di Routing e viene usati per configurare il **RoutingBehavior** all'avvio del servizio, o viene passato per il **RoutingExtension** per modificare il routing configurazione in fase di esecuzione.  
+ La classe **RoutingConfiguration** fornisce un mezzo coerente per la configurazione e l'aggiornamento della configurazione del servizio di routing.  Contiene i parametri che fungono da impostazioni per il servizio di routing e viene usato per configurare il **RoutingBehavior** all'avvio del servizio o viene passato a **RoutingExtension** per modificare la configurazione del routing in fase di esecuzione.  
   
- La logica di routing usata per indirizzare i messaggi in base al contenuto viene definita raggruppando più oggetti <xref:System.ServiceModel.Dispatcher.MessageFilter> in tabelle di filtri (oggetti <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>). I messaggi in ingresso vengono valutati rispetto ai filtri messaggi contenuti nella tabella dei filtri e per ciascuno **MessageFilter** che corrisponde al messaggio, inoltrato a un endpoint di destinazione. La tabella dei filtri che deve essere usato per il routing dei messaggi viene specificata utilizzando il **RoutingBehavior** nella configurazione o tramite il codice usando la **RoutingConfiguration** oggetto.  
+ La logica di routing usata per indirizzare i messaggi in base al contenuto viene definita raggruppando più oggetti <xref:System.ServiceModel.Dispatcher.MessageFilter> in tabelle di filtri (oggetti <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>). I messaggi in arrivo vengono valutati in base ai filtri messaggi contenuti nella tabella dei filtri e per ogni **MessageFilter** che corrisponde al messaggio, che viene inviato a un endpoint di destinazione. La tabella dei filtri da utilizzare per il routing dei messaggi viene specificata utilizzando **RoutingBehavior** nella configurazione o tramite codice tramite l'oggetto **RoutingConfiguration** .  
   
 ### <a name="defining-endpoints"></a>Definizione di endpoint  
  Sebbene possa sembrare opportuno iniziare la configurazione definendo la logica di routing che verrà usata, è consigliabile che il primo passaggio consista nel determinare la forma degli endpoint a cui verranno indirizzati i messaggi. Il servizio di routing usa contratti che definiscono la forma dei canali usati per ricevere e inviare messaggi, pertanto la forma del canale di input deve corrispondere a quella del canale di output.  Se ad esempio si esegue il routing a endpoint che usano la forma del canale di tipo request/reply, è necessario usare un contratto compatibile negli endpoint in ingresso, ad esempio <xref:System.ServiceModel.Routing.IRequestReplyRouter>.  
@@ -31,9 +31,9 @@ Il servizio di routing fornisce un intermediario SOAP di collegamento generico i
 > [!NOTE]
 > Quando si usano contratti che specificano più modelli di comunicazione (ad esempio una combinazione di operazioni unidirezionali e bidirezionali), una soluzione alternativa è rappresentata dall'uso di un contratto di tipo duplex nel servizio di routing, ad esempio <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Ciò implica tuttavia che l'associazione deve supportare la comunicazione duplex, il che potrebbe non essere possibile per tutti gli scenari. Negli scenari in cui questa soluzione non è possibile, può risultare necessario eseguire il factoring della comunicazione in più endpoint oppure modificare l'applicazione.  
   
- Per altre informazioni sui contratti di routing, vedere [contratti di Routing](routing-contracts.md).  
+ Per ulteriori informazioni sui contratti di routing, vedere [routing dei contratti](routing-contracts.md).  
   
- Dopo aver definito l'endpoint del servizio, è possibile usare la **RoutingBehavior** per associare uno specifico **RoutingConfiguration** con l'endpoint. Quando si configura il servizio di Routing usando un file di configurazione, il **RoutingBehavior** viene usato per specificare la tabella dei filtri che contiene la logica di routing usata per elaborare i messaggi ricevuti sull'endpoint. Se si sta configurando il servizio di Routing a livello di codice è possibile specificare la tabella dei filtri utilizzando la **RoutingConfiguration**.  
+ Dopo aver definito l'endpoint del servizio, è possibile usare **RoutingBehavior** per associare un **RoutingConfiguration** specifico all'endpoint. Quando si configura il servizio di routing utilizzando un file di configurazione, **RoutingBehavior** viene utilizzato per specificare la tabella dei filtri che contiene la logica di routing utilizzata per elaborare i messaggi ricevuti sull'endpoint. Se si configura il servizio di routing a livello di codice, è possibile specificare la tabella dei filtri utilizzando **RoutingConfiguration**.  
   
  Nell'esempio seguente gli endpoint servizio e client usati dal servizio di routing sono definiti sia a livello di codice sia tramite un file di configurazione.  
   
@@ -98,18 +98,18 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Questo esempio configura il servizio di Routing per esporre un singolo endpoint con indirizzo `http://localhost:8000/routingservice/router`, che consente di ricevere messaggi da indirizzare. Poiché i messaggi vengono indirizzati agli endpoint di tipo request/reply, l'endpoint servizio usa il contratto <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Questa configurazione definisce inoltre un singolo endpoint client `http://localhost:8000/servicemodelsample/service` che i messaggi vengano instradati alla. La tabella dei filtri (non illustrata) denominata "routingTable1" contiene la logica di routing usata per instradare i messaggi e viene associata all'endpoint di servizio usando il **RoutingBehavior** (per un file di configurazione) o  **RoutingConfiguration** (per configurazione a livello di codice).  
+ In questo esempio il servizio di routing viene configurato per esporre un singolo endpoint con un `http://localhost:8000/routingservice/router`indirizzo di, che viene utilizzato per ricevere i messaggi da indirizzare. Poiché i messaggi vengono indirizzati agli endpoint di tipo request/reply, l'endpoint servizio usa il contratto <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Questa configurazione definisce anche un endpoint client singolo di `http://localhost:8000/servicemodelsample/service` a cui vengono indirizzati i messaggi. La tabella dei filtri (non mostrata) denominata "routingTable1" contiene la logica di routing usata per indirizzare i messaggi ed è associata all'endpoint servizio tramite **RoutingBehavior** (per un file di configurazione) o **RoutingConfiguration** (per configurazione a livello di codice).  
   
 ### <a name="routing-logic"></a>Logica di routing  
  Per definire la logica di routing usata per indirizzare i messaggi, è necessario stabilire su quali dati contenuti nei messaggi in entrata è possibile intervenire in modo univoco. Se ad esempio tutti gli endpoint di destinazione del routing condividono le stesse azioni SOAP, il valore dell'elemento Action all'interno del messaggio non rappresenta un indicatore utile dell'endpoint specifico a cui deve essere indirizzato il messaggio. Se è necessario indirizzare i messaggi in modo univoco a un endpoint specifico, è consigliabile applicare filtri in base a dati che identificano in modo univoco l'endpoint di destinazione a cui il messaggio viene indirizzato.  
   
- Il servizio di Routing fornisce diversi **MessageFilter** implementazioni che controllano valori specifici all'interno del messaggio, ad esempio l'indirizzo, azione, il nome dell'endpoint o perfino una query XPath. Se nessuna delle implementazioni soddisfa le esigenze è possibile creare una classe personalizzata **MessageFilter** implementazione. Per altre informazioni sui filtri messaggi e un confronto delle implementazioni usate dal servizio di Routing, vedere [filtri messaggi](message-filters.md) e [scelta di un filtro](choosing-a-filter.md).  
+ Il servizio di routing fornisce diverse implementazioni di **MessageFilter** che controllano valori specifici all'interno del messaggio, ad esempio l'indirizzo, l'azione, il nome dell'endpoint o persino una query XPath. Se nessuna di queste implementazioni soddisfa le proprie esigenze, è possibile creare un'implementazione personalizzata di **MessageFilter** . Per ulteriori informazioni sui filtri messaggi e un confronto delle implementazioni utilizzate dal servizio di routing, vedere [filtri messaggi](message-filters.md) e [scelta di un filtro](choosing-a-filter.md).  
   
- Più filtri dei messaggi vengono organizzati insieme in apposite tabelle nelle quali ogni **MessageFilter** con un endpoint di destinazione. Facoltativamente, è inoltre possibile usare la tabella dei filtri per specificare un elenco di endpoint di backup a cui il servizio di routing tenterà di inviare il messaggio qualora si verifichi un errore di trasmissione.  
+ Più filtri messaggi sono organizzati insieme in tabelle dei filtri, che associano ogni **MessageFilter** a un endpoint di destinazione. Facoltativamente, è inoltre possibile usare la tabella dei filtri per specificare un elenco di endpoint di backup a cui il servizio di routing tenterà di inviare il messaggio qualora si verifichi un errore di trasmissione.  
   
- Per impostazione predefinita, tutti i filtri messaggi all'interno di una tabella vengono valutati contemporaneamente. È tuttavia possibile specificare un oggetto <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> che impone la valutazione dei filtri messaggi in un ordine specifico. Tutte le voci con priorità massima vengono valutati per primi, mentre i filtri dei messaggi di priorità inferiore non vengono valutati se viene individuata una corrispondenza a un livello di priorità superiore. Per altre informazioni sulle tabelle dei filtri, vedere [filtri messaggi](message-filters.md).  
+ Per impostazione predefinita, tutti i filtri messaggi all'interno di una tabella vengono valutati contemporaneamente. È tuttavia possibile specificare un oggetto <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> che impone la valutazione dei filtri messaggi in un ordine specifico. Tutte le voci con priorità massima vengono valutati per primi, mentre i filtri dei messaggi di priorità inferiore non vengono valutati se viene individuata una corrispondenza a un livello di priorità superiore. Per ulteriori informazioni sulle tabelle dei filtri, vedere [filtri messaggi](message-filters.md).  
   
- Negli esempi seguenti viene usato <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>, il quale restituisce `true` per tutti i messaggi. Ciò **MessageFilter** viene aggiunto alla tabella dei filtri "routingTable1", che associa le **MessageFilter** con l'endpoint client denominato "CalculatorService". Il **RoutingBehavior** specifica quindi che questa tabella deve essere usata per instradare i messaggi elaborati dall'endpoint del servizio.  
+ Negli esempi seguenti viene usato <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>, il quale restituisce `true` per tutti i messaggi. Questo **MessageFilter** viene aggiunto alla tabella dei filtri "routingTable1", che associa **MessageFilter** all'endpoint client denominato "CalculatorService". **RoutingBehavior** specifica quindi che questa tabella deve essere utilizzata per indirizzare i messaggi elaborati dall'endpoint del servizio.  
   
 ```xml  
 <behaviors>  
@@ -150,7 +150,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 ```  
   
 > [!NOTE]
->  Per impostazione predefinita, il servizio di routing valuta solo le intestazioni del messaggio. Per consentire ai filtri di accedere al corpo del messaggio, è necessario impostare <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> su `false`.  
+> Per impostazione predefinita, il servizio di routing valuta solo le intestazioni del messaggio. Per consentire ai filtri di accedere al corpo del messaggio, è necessario impostare <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> su `false`.  
   
  **Multicast**  
   
@@ -160,7 +160,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 - Più filtri devono restituire `true` in seguito alla valutazione del messaggio.  
   
- Se vengono soddisfatte queste condizioni, il messaggio viene indirizzato a tutti gli endpoint di tutti i filtri che restituiscono `true`. L'esempio seguente definisce una configurazione di routing che determina i messaggi indirizzati a entrambi gli endpoint se l'indirizzo dell'endpoint nel messaggio è `http://localhost:8000/routingservice/router/rounding`.  
+ Se vengono soddisfatte queste condizioni, il messaggio viene indirizzato a tutti gli endpoint di tutti i filtri che restituiscono `true`. Nell'esempio seguente viene definita una configurazione di routing che determina l'indirizzamento dei messaggi a entrambi gli endpoint se l'indirizzo dell'endpoint nel `http://localhost:8000/routingservice/router/rounding`messaggio è.  
   
 ```xml  
 <!--ROUTING SECTION -->  
@@ -189,19 +189,19 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 ```  
   
 ### <a name="soap-processing"></a>Elaborazione SOAP  
- Per supportare il routing dei messaggi tra protocolli diversi, il **RoutingBehavior** per impostazione predefinita viene aggiunto il <xref:System.ServiceModel.Routing.SoapProcessingBehavior> per tutti gli endpoint client che vengono indirizzati i messaggi. Questo comportamento crea automaticamente un nuovo **MessageVersion** prima di routing del messaggio all'endpoint, nonché la creazione di uno schermo compatibile con **MessageVersion** per qualsiasi documento di risposta prima di restituirlo a l'applicazione client richiedente.  
+ Per supportare il routing dei messaggi tra protocolli diversi, per impostazione predefinita **RoutingBehavior** aggiunge a tutti <xref:System.ServiceModel.Routing.SoapProcessingBehavior> gli endpoint client a cui vengono indirizzati i messaggi. Questo comportamento crea automaticamente un nuovo oggetto **MessageVersion** prima di indirizzare il messaggio all'endpoint, nonché di creare un oggetto **MessageVersion** compatibile per qualsiasi documento di risposta prima di restituirlo all'applicazione client richiedente.  
   
- I passaggi eseguiti per creare una nuova **MessageVersion** per il messaggio in uscita sono i seguenti:  
+ I passaggi necessari per creare un nuovo oggetto **MessageVersion** per il messaggio in uscita sono i seguenti:  
   
- **Elaborazione della richiesta**  
+ **Elaborazione richieste**  
   
-- Ottenere il **MessageVersion** del canale di associazione in uscita.  
+- Ottenere l'oggetto **MessageVersion** del canale/binding in uscita.  
   
 - Ottenere il reader del corpo per il messaggio originale.  
   
-- Creare un nuovo messaggio con la stessa azione, reader del corpo e una nuova **MessageVersion**.  
+- Creare un nuovo messaggio con la stessa azione, il lettore del corpo e un nuovo elemento **MessageVersion**.  
   
-- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
+- If <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copia le intestazioni into, from, FaultTo e repiù recenti nel nuovo messaggio.  
   
 - Copiare tutte le proprietà del messaggio nel nuovo messaggio.  
   
@@ -209,26 +209,26 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
 - Restituire il nuovo messaggio di richiesta.  
   
- **Elaborazione delle risposte**  
+ **Elaborazione della risposta**  
   
-- Ottenere il **MessageVersion** del messaggio di richiesta originale.  
+- Ottiene l'oggetto **MessageVersion** del messaggio di richiesta originale.  
   
 - Ottenere il reader del corpo per il messaggio di risposta ricevuto.  
   
-- Creare un nuovo messaggio di risposta con la stessa azione, reader del corpo e il **MessageVersion** del messaggio di richiesta originale.  
+- Creare un nuovo messaggio di risposta con la stessa azione, il lettore del corpo e l'oggetto **MessageVersion** del messaggio di richiesta originale.  
   
-- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
+- If <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copia le intestazioni into, from, FaultTo e repiù recenti nel nuovo messaggio.  
   
 - Copiare le proprietà del messaggio nel nuovo messaggio.  
   
 - Restituire il nuovo messaggio di risposta.  
   
- Per impostazione predefinita, il **SoapProcessingBehavior** viene aggiunta automaticamente agli endpoint client per il <xref:System.ServiceModel.Routing.RoutingBehavior> all'avvio del servizio; tuttavia, è possibile controllare se l'elaborazione SOAP viene aggiunto a tutti gli endpoint client tramite il <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> proprietà. È inoltre possibile aggiungere il comportamento direttamente a un endpoint specifico e abilitare o disabilitare tale comportamento al livello dell'endpoint se è necessario un controllo più granulare dell'elaborazione SOAP.  
+ Per impostazione predefinita, **SoapProcessingBehavior** viene aggiunto automaticamente agli endpoint client da all' <xref:System.ServiceModel.Routing.RoutingBehavior> avvio del servizio. è tuttavia possibile controllare se l'elaborazione SOAP viene aggiunta a tutti gli endpoint client tramite la proprietà <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> . È inoltre possibile aggiungere il comportamento direttamente a un endpoint specifico e abilitare o disabilitare tale comportamento al livello dell'endpoint se è necessario un controllo più granulare dell'elaborazione SOAP.  
   
 > [!NOTE]
->  Se l'elaborazione SOAP è disabilitata per un endpoint che richiede un elemento MessageVersion diverso rispetto a quello del messaggio di richiesta originale, è necessario fornire un meccanismo personalizzato per l'esecuzione di eventuali modifiche SOAP da apportare prima dell'invio del messaggio all'endpoint di destinazione.  
+> Se l'elaborazione SOAP è disabilitata per un endpoint che richiede un elemento MessageVersion diverso rispetto a quello del messaggio di richiesta originale, è necessario fornire un meccanismo personalizzato per l'esecuzione di eventuali modifiche SOAP da apportare prima dell'invio del messaggio all'endpoint di destinazione.  
   
- Negli esempi seguenti, il **soapProcessingEnabled** proprietà viene utilizzata per impedire la **SoapProcessingBehavior** vengano aggiunti automaticamente a tutti gli endpoint client.  
+ Negli esempi seguenti, la proprietà **SoapProcessingEnabled** viene usata per impedire che **SoapProcessingBehavior** venga aggiunto automaticamente a tutti gli endpoint client.  
   
 ```xml  
 <behaviors>  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Configurazione dinamica  
  Quando si aggiungono ulteriori endpoint client oppure occorre modificare i filtri usati per il routing dei messaggi, è necessario disporre di un modo per aggiornare dinamicamente la configurazione in fase di esecuzione allo scopo di evitare interruzioni del servizio per gli endpoint attualmente definiti per la ricezione dei messaggi tramite il servizio di routing. La modifica di un file di configurazione o del codice dell'applicazione host non è sempre sufficiente poiché tali metodi richiedono il riciclo dell'applicazione, il che potrebbe causare la perdita di eventuali messaggi attualmente in transito nonché tempi di inattività durante l'attesa del riavvio del servizio.  
   
- È possibile modificare solo le **RoutingConfiguration** a livello di codice. Sebbene sia possibile configurare il servizio inizialmente tramite un file di configurazione, è possibile modificare solo la configurazione in fase di esecuzione mediante la costruzione di una nuova **RoutingConfiguration** e passarlo come parametro per il <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> (metodo) esposti dal <xref:System.ServiceModel.Routing.RoutingExtension> estensione del servizio. Eventuali messaggi attualmente in transito continuano a essere indirizzati in base alla configurazione precedente, mentre quelli ricevuti dopo la chiamata a **ApplyConfiguration** usare la nuova configurazione. Nell'esempio seguente viene illustrata la creazione di un'istanza del servizio di routing e successivamente la modifica della configurazione.  
+ È possibile modificare solo il **RoutingConfiguration** a livello di codice. Sebbene sia possibile configurare inizialmente il servizio usando un file di configurazione, è possibile modificare la configurazione solo in fase di esecuzione costruendo un nuovo **RoutingConfiguration** e passandolo come parametro al <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> metodo esposto dal parametro <xref:System.ServiceModel.Routing.RoutingExtension>estensione del servizio. Tutti i messaggi attualmente in transito continuano a essere instradati utilizzando la configurazione precedente, mentre i messaggi ricevuti dopo la chiamata a **ApplyConfiguration** utilizzano la nuova configurazione. Nell'esempio seguente viene illustrata la creazione di un'istanza del servizio di routing e successivamente la modifica della configurazione.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  
@@ -274,23 +274,23 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 ```  
   
 > [!NOTE]
->  Per aggiornare il servizio di routing in questo modo è possibile passare solo una nuova configurazione. Non è possibile modificare solo elementi scelti della configurazione corrente o aggiungere nuove voci alla configurazione corrente. È necessario creare e passare una nuova configurazione che sostituisca quella esistente.  
+> Per aggiornare il servizio di routing in questo modo è possibile passare solo una nuova configurazione. Non è possibile modificare solo elementi scelti della configurazione corrente o aggiungere nuove voci alla configurazione corrente. È necessario creare e passare una nuova configurazione che sostituisca quella esistente.  
   
 > [!NOTE]
->  Le eventuali sessioni aperte usando la configurazione precedente continuano a usare quest'ultima. La nuova configurazione viene usata solo dalle nuove sessioni.  
+> Le eventuali sessioni aperte usando la configurazione precedente continuano a usare quest'ultima. La nuova configurazione viene usata solo dalle nuove sessioni.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- Se si verificano eccezioni <xref:System.ServiceModel.CommunicationException> durante il tentativo di inviare un messaggio, viene eseguita la gestione degli errori. Queste eccezioni indicano in genere che si è verificato un problema durante il tentativo di comunicare con l'endpoint client definito, ad esempio <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>. Il codice di gestione degli errori verrà inoltre rilevare e tentare di ripetere l'invio una <xref:System.TimeoutException> si verifica, ovvero un'altra eccezione comune non derivata da **CommunicationException**.  
+ Se si verificano eccezioni <xref:System.ServiceModel.CommunicationException> durante il tentativo di inviare un messaggio, viene eseguita la gestione degli errori. Queste eccezioni indicano in genere che si è verificato un problema durante il tentativo di comunicare con l'endpoint client definito, ad esempio <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>. Il codice di gestione degli errori intercetta inoltre e tenta di ritentare l' <xref:System.TimeoutException> invio quando si verifica un errore, ovvero un'altra eccezione comune non derivata da **CommunicationException**.  
   
  Quando si verifica una delle eccezioni precedenti, il servizio di routing esegue il failover a un elenco di endpoint di backup. Se in tutti gli endpoint di backup si verifica un errore di comunicazione oppure un endpoint restituisce un'eccezione indicante un errore all'interno del servizio di destinazione, il servizio di routing restituisce un errore all'applicazione client.  
   
 > [!NOTE]
->  La funzionalità di gestione degli errori acquisisce e gestisce le eccezioni che si verificano quando si tenta di inviare un messaggio e di chiudere un canale. Il codice di gestione degli errori non può rilevare o gestire eccezioni create dagli endpoint applicazione che sta comunicando con; una <xref:System.ServiceModel.FaultException> generate da un servizio viene visualizzato nel servizio di Routing come un **FaultMessage** e viene propagata al client.  
+> La funzionalità di gestione degli errori acquisisce e gestisce le eccezioni che si verificano quando si tenta di inviare un messaggio e di chiudere un canale. Il codice di gestione degli errori non è progettato per rilevare o gestire le eccezioni create dagli endpoint dell'applicazione con cui sta comunicando; un <xref:System.ServiceModel.FaultException> oggetto generato da un servizio viene visualizzato nel servizio di routing come **FaultMessage** e viene restituito al client.  
 >   
 >  Se si verifica un errore quando il servizio di routing tenta di inoltrare un messaggio, potrebbe essere generata un'eccezione <xref:System.ServiceModel.FaultException> sul lato client, anziché l'eccezione <xref:System.ServiceModel.EndpointNotFoundException> che verrebbe generata di norma in assenza del servizio di routing. Un servizio di routing potrebbe quindi mascherare eventuali eccezioni e non fornire completa trasparenza a meno che non si esamino le eccezioni annidate.  
   
 ### <a name="tracing-exceptions"></a>Traccia delle eccezioni  
- Quando si invia un messaggio a un endpoint in un elenco ha esito negativo, il servizio di Routing tiene traccia dei dati dell'eccezione risultante e collega i dettagli dell'eccezione come proprietà del messaggio denominata **eccezioni**. Ciò consente di mantenere i dati dell'eccezione e l'accesso utente a livello di codice tramite un controllo messaggi.  I dati dell'eccezione vengono archiviati per ciascun messaggio in un dizionario che stabilisce il mapping del nome dell'endpoint ai dettagli dell'eccezione verificatasi durante il tentativo di inviare un messaggio.  
+ Quando si invia un messaggio a un endpoint in un elenco ha esito negativo, il servizio di routing traccia i dati dell'eccezione risultante e alleghi i dettaglidell'eccezione come proprietà del messaggio denominata Exceptions. Ciò consente di mantenere i dati dell'eccezione e l'accesso utente a livello di codice tramite un controllo messaggi.  I dati dell'eccezione vengono archiviati per ciascun messaggio in un dizionario che stabilisce il mapping del nome dell'endpoint ai dettagli dell'eccezione verificatasi durante il tentativo di inviare un messaggio.  
   
 ### <a name="backup-endpoints"></a>Endpoint di backup  
  Ogni voce di filtro all'interno della tabella dei filtri può facoltativamente specificare un elenco di endpoint di backup da usare in caso di errore di trasmissione durante l'invio all'endpoint primario. Se si verifica un errore di questo tipo, il servizio di routing tenta di trasmettere il messaggio alla prima voce nell'elenco di endpoint di backup. Se durante il tentativo di invio si verifica un errore di trasmissione, viene eseguito un tentativo con l'endpoint successivo nell'elenco di quelli di backup. Il servizio di routing continua a inviare il messaggio a ogni endpoint nell'elenco finché il messaggio non viene ricevuto correttamente, tutti gli endpoint restituiscono un errore di trasmissione oppure viene restituito un errore non di trasmissione da un endpoint.  
@@ -359,17 +359,17 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Unidirezionale||||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Se per il messaggio viene usata la trasmissione multicast, solo il messaggio nel canale con errori viene spostato alla relativa destinazione di backup.|  
 |Unidirezionale||✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
 |Unidirezionale|||✓|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che il messaggio viene ricevuto correttamente, completare tutti i contesti di ricezione. Se il messaggio non viene ricevuto correttamente da uno o più endpoint, non completare il contesto di ricezione.<br /><br /> Se per il messaggio viene usata la trasmissione multicast, il contesto di ricezione viene completato solo se il messaggio viene ricevuto correttamente da almeno un endpoint (primario o di backup). Se nessuno degli endpoint in uno o più percorsi multicast riceve correttamente il messaggio, non completare il contesto di ricezione.|  
-|Unidirezionale||✓|✓|Yes|Interrompere la transazione precedente, creare una nuova transazione e inviare nuovamente tutti i messaggi. I messaggi per i quali si verifica un errore vengono trasmessi a una destinazione di backup.<br /><br /> Dopo che è stata creata una transazione in cui tutte le trasmissioni hanno esito positivo, completare i contesti di ricezione ed eseguire il commit della transazione.|  
+|Unidirezionale||✓|✓|Sì|Interrompere la transazione precedente, creare una nuova transazione e inviare nuovamente tutti i messaggi. I messaggi per i quali si verifica un errore vengono trasmessi a una destinazione di backup.<br /><br /> Dopo che è stata creata una transazione in cui tutte le trasmissioni hanno esito positivo, completare i contesti di ricezione ed eseguire il commit della transazione.|  
 |Unidirezionale|✓|||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. In un scenario multicast vengono inviati di nuovo a destinazioni di backup solo i messaggi in una sessione nella quale si è verificato un errore o in una sessione la cui chiusura ha avuto esito negativo.|  
 |Unidirezionale|✓|✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
 |Unidirezionale|✓||✓|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che tutte le operazioni di invio dei messaggi vengono completate senza errori, la sessione indica che non sono presenti altri messaggi e il servizio di routing chiude correttamente tutti i canali di sessione in uscita, tutti i contesti di ricezione vengono completati e il canale di sessione in ingresso viene chiuso.|  
 |Unidirezionale|✓|✓|✓|Yes|Interrompere la transazione corrente e crearne una nuova. Inviare di nuovo tutti i messaggi precedenti nella sessione. Dopo che è stata creata una transazione in cui tutti i messaggi vengono inviati correttamente e la sessione indica che non sono presenti altri messaggi, tutti i canali di sessione in uscita vengono chiusi, i contesti di ricezione vengono tutti completati con la transazione, il canale di sessione in ingresso viene chiuso e viene eseguito il commit della transazione.<br /><br /> Quando per le sessioni viene usata la trasmissione multicast, i messaggi senza errori vengono inviati di nuovo alla stessa destinazione, mentre quelli per i quali si è verificato un errore vengono inviati a destinazioni di backup.|  
-|Bidirezionale||||Yes|Inviare a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
-|Bidirezionale|✓|||Yes|Inviare tutti i messaggi nel canale a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
+|Bidirezionale||||Sì|Inviare a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
+|Bidirezionale|✓|||Sì|Inviare tutti i messaggi nel canale a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
 |Bidirezionale||✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
 |Bidirezionale|✓|✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
 |Duplex||||No|La comunicazione duplex non di sessione non è attualmente supportata.|  
-|Duplex|✓|||Yes|Inviare a una destinazione di backup.|  
+|Duplex|✓|||Sì|Inviare a una destinazione di backup.|  
   
 ## <a name="hosting"></a>Hosting  
  Poiché il servizio di routing viene implementato come servizio WCF, deve essere indipendente all'interno di un'applicazione o ospitato da IIS o WAS. È consigliabile che il servizio di routing sia ospitato in IIS, WAS o un'applicazione di servizio Windows per sfruttare le funzionalità di avvio automatico e di gestione del ciclo di vita disponibili in tali ambienti di hosting.  
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>Servizio di routing e rappresentazione  
- Il servizio di routing di WCF può essere usato con la rappresentazione sia per l'invio sia per la ricezione di messaggi. Si applicano tutti i consueti vincoli di rappresentazione di Windows. Come per la configurazione delle autorizzazioni dell'account o del servizio per usare la rappresentazione durante la scrittura del servizio, questi stessi passaggi sono necessari per usare la rappresentazione con il servizio di routing. Per altre informazioni, vedere [delega e rappresentazione](delegation-and-impersonation-with-wcf.md).  
+ Il servizio di routing di WCF può essere usato con la rappresentazione sia per l'invio sia per la ricezione di messaggi. Si applicano tutti i consueti vincoli di rappresentazione di Windows. Come per la configurazione delle autorizzazioni dell'account o del servizio per usare la rappresentazione durante la scrittura del servizio, questi stessi passaggi sono necessari per usare la rappresentazione con il servizio di routing. Per ulteriori informazioni, vedere [delega e rappresentazione](delegation-and-impersonation-with-wcf.md).  
   
- La rappresentazione con il servizio di routing richiede l'uso della rappresentazione ASP.NET in modalità di compatibilità ASP.NET o l'uso delle credenziali di Windows che sono state configurate per consentire la rappresentazione. Per altre informazioni sulle modalità di compatibilità ASP.NET, vedere [servizi WCF e ASP.NET](wcf-services-and-aspnet.md).  
+ La rappresentazione con il servizio di routing richiede l'uso della rappresentazione ASP.NET in modalità di compatibilità ASP.NET o l'uso delle credenziali di Windows che sono state configurate per consentire la rappresentazione. Per ulteriori informazioni sulla modalità di compatibilità ASP.NET, vedere [servizi WCF e ASP.NET](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
 >  Il servizio di routing di WCF non supporta la rappresentazione con l'autenticazione di base.  

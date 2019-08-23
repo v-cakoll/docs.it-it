@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629936"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964886"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
 In questo argomento viene fornita una panoramica delle impostazioni del registro di sistema di Microsoft ClearType utilizzate dalle applicazioni WPF.  
@@ -29,19 +29,19 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]specifica quattro impostazioni del registro di sistema per il controllo delle funzionalità ClearType:  
   
-|Impostazione|DESCRIZIONE|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |Livello ClearType|Descrive il livello di chiarezza dei colori ClearType.|  
 |Livello di gamma|Descrive il livello della componente cromatica del pixel per un dispositivo di visualizzazione.|  
 |Struttura del pixel|Descrive la disposizione dei pixel per un dispositivo di visualizzazione.|  
 |Livello di contrasto del testo|Descrive il livello di contrasto per il testo visualizzato.|  
   
- È possibile accedere a queste impostazioni mediante un'utilità di configurazione esterna che sa come fare riferimento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]alle impostazioni del registro di sistema ClearType identificate. Per creare o modificare queste impostazioni, è possibile accedere ai valori direttamente usando l'editor del Registro di sistema di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ È possibile accedere a queste impostazioni mediante un'utilità di configurazione esterna che sa come fare riferimento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]alle impostazioni del registro di sistema ClearType identificate. È possibile creare o modificare queste impostazioni anche accedendo direttamente ai valori usando l'editor del registro di sistema di Windows.  
   
- Se le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]impostazioni del registro di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistema ClearType non sono impostate (ovvero lo stato predefinito) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , l'applicazione esegue una query sulle informazioni sui parametri di sistema per le impostazioni di smussatura dei caratteri.  
+ Se le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]impostazioni del registro di sistema ClearType non sono impostate (ovvero lo stato predefinito) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , l'applicazione esegue una query sulle informazioni sui parametri di sistema di Windows per le impostazioni di smussatura dei caratteri.  
   
 > [!NOTE]
->  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, `SystemParametersInfo` vedere la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione.  
+> Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, `SystemParametersInfo` vedere la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Livello ClearType  
@@ -59,7 +59,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
  ![Impostazioni ClearType nell'editor del registro di sistema.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni eseguono il rendering del testo in una delle due modalità, con e senza ClearType. Quando viene eseguito il rendering del testo senza ClearType, viene definito rendering in scala di grigi.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni eseguono il rendering del testo in una delle due modalità, con e senza ClearType. Quando viene eseguito il rendering del testo senza ClearType, viene definito rendering in scala di grigi.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Livello di gamma  
@@ -80,7 +80,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
 ## <a name="pixel-structure"></a>Struttura del pixel  
  La struttura del pixel descrive il tipo di pixel alla base di un dispositivo di visualizzazione. La struttura del pixel è definita come uno di tre tipi:  
   
-|Type|Valore|DESCRIZIONE|  
+|Type|Value|Descrizione|  
 |----------|-----------|-----------------|  
 |Semplice|0|Il dispositivo di visualizzazione non ha struttura del pixel. In questo caso le sorgenti di luce per ogni colore sono distribuite in modo uniforme nell'area dei pixel, condizione nota come rendering in scala di grigi. Questo è il funzionamento di un dispositivo di visualizzazione standard. ClearType non viene mai applicato al testo sottoposto a rendering.|  
 |RGB|1|Il dispositivo di visualizzazione dispone di pixel costituiti da tre strisce nell'ordine seguente: rosso, verde e blu. ClearType viene applicato al testo sottoposto a rendering.|  
@@ -89,7 +89,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
  La struttura dei pixel corrisponde a un valore intero compreso tra 0 e 2. Il livello predefinito è 0, che rappresenta una struttura del pixel flat.  
   
 > [!NOTE]
->  Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, `EnumDisplayDevices` vedere la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione.  
+> Per informazioni sull'enumerazione dei nomi dei dispositivi di visualizzazione, `EnumDisplayDevices` vedere la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione.  
   
 ### <a name="registry-setting"></a>Impostazione del Registro di sistema  
  Il percorso dell'impostazione del Registro di sistema per la struttura del pixel è un'impostazione del computer locale che corrisponde al nome di uno specifico dispositivo di visualizzazione:  

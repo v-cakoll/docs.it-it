@@ -9,19 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a1c8db43579048945d76082e3ebd2862efd7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704505"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920435"
 ---
 # <a name="switches-element"></a>\<Opzioni > elemento
 Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<switches>  
+\<Opzioni >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,9 +38,9 @@ Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni 
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Specifica il livello in cui viene impostata un'opzione di traccia.|  
+|[\<add>](add-element-for-switches.md)|Specifica il livello in cui viene impostata un'opzione di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,10 +50,10 @@ Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni 
 |`System.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="remarks"></a>Note  
- È possibile modificare il livello di un'opzione di traccia inserendolo in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia o debug messaggi generati dall'applicazione.  
+ È possibile modificare il livello di un'opzione di traccia inserendola in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivarla o disattivarla. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare livelli diversi per specificare i tipi di traccia o i messaggi di debug restituiti dall'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<passare >** elemento per cui impostare il `General` opzione di traccia il <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` commutatore di traccia di tipo Boolean.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento Switch >** per impostare l' `General` opzione <xref:System.Diagnostics.TraceLevel> Trace sul livello e abilitare l' `Data` opzione di traccia booleana.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni 
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schema delle impostazioni di traccia e debug](index.md)

@@ -1,25 +1,25 @@
 ---
-title: <activityStateQueries> di WCF
+title: <activityStateQueries>di WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701086"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920292"
 ---
-# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > di WCF
+# <a name="activitystatequeries-of-wcf"></a>\<> activityStateQueries di WCF
 
-Rappresenta una raccolta di query usate per rilevare le modifiche al ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. Ad esempio, è possibile tenere traccia di ogni volta che viene completata l'attività "Invia messaggio" all'interno di un'istanza del flusso di lavoro. Questa query è necessaria affinché un partecipante del rilevamento sottoscriva gli oggetti record di stato. Gli stati disponibili per la sottoscrizione sono specificati in ActivityStates.
+Rappresenta una raccolta di query usate per rilevare le modifiche al ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. È possibile, ad esempio, tenere traccia di ogni volta che l'attività "Invia messaggio di posta elettronica" viene completata in un'istanza del flusso di lavoro. Questa query è necessaria affinché un partecipante del rilevamento sottoscriva gli oggetti record di stato. Gli stati disponibili per la sottoscrizione sono specificati in ActivityStates.
 
-Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md).
 
 \<system.serviceModel>  
-\<tracking>  
-\<i profili >  
+\<rilevamento >  
+\<profili >  
 \<trackingProfile>  
-\<flusso di lavoro >  
+\<> flusso di lavoro  
 \<activityStateQueries>  
 
 ## <a name="syntax"></a>Sintassi  
@@ -58,7 +58,7 @@ Nessuno.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |[\<activityStateQuery>](activitystatequery-of-wcf.md)|Query utilizzata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|
 
@@ -66,11 +66,11 @@ Nessuno.
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.|
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityStateQuery>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Rilevamento e analisi del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)

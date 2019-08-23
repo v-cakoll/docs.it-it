@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951646"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
   
- Per altre informazioni sui termini usati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti di base Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Per ulteriori informazioni sui termini utilizzati nella documentazione di Windows Communication Foundation (WCF), vedere [concetti di base Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  elenco di controllo di accesso (ACL)  
  Elenco di protezioni applicate a un oggetto, che può essere un file, un processo, un evento o un qualsiasi altro elemento a cui è associato un descrittore di sicurezza. Una voce appartenente a un ACL è detta voce di controllo di accesso (ACE, Access Control Entry). Esistono due tipi di ACL: discrezionale e di sistema.  
@@ -24,14 +24,14 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  autenticazione  
  Processo di verifica dell'attestazione di identità di un utente, un computer, un servizio o un processo.  
   
- autorizzazione  
+ authorization  
  Controllo dell'accesso e dei diritti di accesso a una determinata risorsa. È ad esempio possibile autorizzare i membri di un gruppo a leggere un file, ma consentire esclusivamente ai membri di un altro gruppo di modificare tale file.  
   
  Certificato dell'autorità di certificazione (CA)  
- Indica la CA che rilascia i certificati di autenticazione server e client ai server e ai client che li richiedono. Poiché contiene una chiave pubblica utilizzata nelle firme digitali, è detta anche un *certificato di firma*. Se la CA è un'autorità radice, il certificato della CA può essere indicato semplicemente come un *certificato radice*. Noto anche come un *certificato di sito*.  
+ Indica la CA che rilascia i certificati di autenticazione server e client ai server e ai client che li richiedono. Poiché contiene una chiave pubblica usata nelle firme digitali, viene definito anche *certificato di firma*. Se la CA è un'autorità radice, il certificato della CA può essere definito *certificato radice*. Anche noto a volte come *certificato del sito*.  
   
  Gerarchia di CA  
- Una gerarchia di CA contiene più CA, È organizzata in modo che ogni autorità di certificazione è certificata da un'altra CA in un livello superiore della gerarchia fino alla parte superiore della gerarchia, noto anche come il *autorità radice*, viene raggiunto.  
+ Una gerarchia di CA contiene più CA, È organizzata in modo che ogni autorità di certificazione sia certificata da un'altra autorità di certificazione in un livello superiore della gerarchia fino a quando non viene raggiunta la parte superiore della gerarchia, nota anche come *autorità radice*.  
   
  certificato  
  Attestato dotato di firma digitale contenente informazioni su un'entità e sulla relativa chiave pubblica. Un certificato consente quindi di associare fra loro questi due dati. I certificati vengono rilasciati da un'organizzazione (o da un'entità) attendibile, detta autorità di certificazione, dopo che quest'ultima ha verificato l'attestazione di identità dell'entità che richiede il certificato.  
@@ -41,7 +41,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  archivio certificati  
  Un archivio certificati è in genere un archivio permanente in cui vengono memorizzati i certificati, gli elenchi di revoche di certificati (CRL, Certificate Revocation List) e gli elenchi di certificati attendibili (CTL, Certificate Trust List). Quando si utilizzano certificati che non richiedono un'archiviazione permanente è tuttavia possibile creare e aprire un archivio certificati che risiede soltanto in memoria.  
   
- attestazioni  
+ claims  
  Informazioni passate da un'entità a un'altra per verificare l'identità del mittente. Un token nome utente/password e un certificato X.509 sono esempi di attestazioni.  
   
  certificato client  
@@ -63,7 +63,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Coppia di chiavi pubblica/privata utilizzata per crittografare le chiavi di sessione affinché possano essere archiviate e scambiate in modo sicuro con altri utenti.  
   
  hash  
- Valore numerico di dimensioni costanti ottenuto applicando una funzione matematica (vedere il termine "algoritmo di hash") a un quantità arbitraria di dati. I dati in genere contengono dati casuali, noti come una *nonce*. Sia il servizio sia il client contribuiscono con parametri nonce di scambio per aumentare la complessità del risultato. Il risultato è noto anche come un *digest del messaggio*. L'invio di un valore hash è più sicuro rispetto all'invio di dati riservati, ad esempio una password, anche se quest'ultima è crittografata. Affinché sia possibile verificare il valore hash ricevuto, il mittente e il destinatario dell'hash devono utilizzare lo stesso algoritmo di hash e gli stessi parametri nonce.  
+ Valore numerico di dimensioni costanti ottenuto applicando una funzione matematica (vedere il termine "algoritmo di hash") a un quantità arbitraria di dati. I dati includono in genere dati casuali, noti come *nonce*. Sia il servizio sia il client contribuiscono con parametri nonce di scambio per aumentare la complessità del risultato. Il risultato è noto anche come *digest del messaggio*. L'invio di un valore hash è più sicuro rispetto all'invio di dati riservati, ad esempio una password, anche se quest'ultima è crittografata. Affinché sia possibile verificare il valore hash ricevuto, il mittente e il destinatario dell'hash devono utilizzare lo stesso algoritmo di hash e gli stessi parametri nonce.  
   
  algoritmo di hash  
  Algoritmo utilizzato per generare un valore hash relativo a un dato, ad esempio un messaggio o una chiave di sessione. Alcuni esempi tipici di algoritmi di hash sono MD2, MD4, MD5 e SHA-1.  
@@ -77,7 +77,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Negotiate  
  Provider SSP (Security Support Provider) che funziona da livello applicazione tra l'interfaccia SSPI (Security Support Provider Interface) e gli altri provider SSP. Un'applicazione che chiama l'interfaccia SSPI per accedere a una rete può specificare un provider SSP per l'elaborazione della richiesta. Se l'applicazione specifica l'elemento `Negotiate`, il provider `Negotiate` analizza la richiesta e sceglie il miglior provider SSP per gestire la richiesta in base ai criteri di sicurezza configurati dall'utente.  
   
- parametro nonce  
+ nonce  
  Valore generato casualmente utilizzato per respingere gli attacchi di tipo "replay".  
   
  non ripudio  
@@ -90,7 +90,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Standard della sintassi dei messaggi crittografati. Si tratta di una sintassi generale per dati crittografabili, come firme digitali e crittografia, che inoltre fornisce una sintassi per distribuire al messaggio certificati o elenchi di revoche di certificati e altri attributi dei messaggi, ad esempio un timestamp.  
   
  testo non crittografato  
- Messaggio Messaggi di testo normale sono talvolta detti *come testo non crittografato* messaggi.  
+ Messaggio I messaggi in testo non crittografato vengono talvolta indicati come messaggi non crittografati.  
   
  privilegio  
  Diritto di un utente a eseguire varie operazioni di sistema, come l'arresto del sistema, il caricamento dei driver di periferica o la modifica dell'ora del sistema. Il token di accesso di un utente contiene l'elenco dei privilegi assegnati a tale utente o ai gruppi di appartenenza di tale utente.  
@@ -120,7 +120,7 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  CA al livello più elevato della gerarchia di CA. L'autorità radice certifica le CA del livello immediatamente inferiore della gerarchia.  
   
  Secure Hash Algorithm (SHA)  
- Algoritmo di hash che genera un digest del messaggio. SHA è utilizzato insieme a molte tecnologie, fra cui l'algoritmo Digital Signature Algorithm (DSA) dello standard Digital Signature Standard (DSS). Esistono quattro versioni di SHA: SHA-1, SHA-256, SHA-384 e SHA-512. SHA-1 genera un digest del messaggio a 160 bit. SHA-256, SHA-384 e SHA-512 generano rispettivamente un digest del messaggio a 256, 384 e 512 bit. SHA è stato sviluppato dall'istituto National Institute of Standards and Technology (NIST) e dall'agenzia National Security Agency (NSA).  
+ Algoritmo di hash che genera un digest del messaggio. SHA è utilizzato insieme a molte tecnologie, fra cui l'algoritmo Digital Signature Algorithm (DSA) dello standard Digital Signature Standard (DSS). Sono disponibili quattro tipi di SHA: SHA-1, SHA-256, SHA-384 e SHA-512. SHA-1 genera un digest del messaggio a 160 bit. SHA-256, SHA-384 e SHA-512 generano rispettivamente un digest del messaggio a 256, 384 e 512 bit. SHA è stato sviluppato dall'istituto National Institute of Standards and Technology (NIST) e dall'agenzia National Security Agency (NSA).  
   
  Secure Sockets Layer (SSL)  
  Protocollo di sicurezza delle comunicazioni di rete basato su una combinazione di tecnologie a chiave pubblica e a chiave privata.  
@@ -173,10 +173,10 @@ Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza pos
  Software che decide se un determinato file è attendibile. La decisione si basa sul certificato associato al file.  
   
  nome UPN (User Principal Name)  
- Nome dell'account utente (talvolta detto il *nome di accesso utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (per un indirizzo di posta elettronica).  
+ Un nome di account utente (talvolta definito nome di *accesso dell'utente*) e un nome di dominio che identifica il dominio in cui si trova l'account utente. Questo nome rappresenta il formato standard dei nomi di accesso a un dominio Windows. Il formato è: someone@example.com (come per un indirizzo di posta elettronica).  
   
 > [!NOTE]
->  Oltre a formato standard UPN, WCF accetta nomi UPN in forma di livello inferiore, ad esempio, cohowinery.com\someone.  
+> Oltre al formato UPN standard, WCF accetta UPN nel formato di livello inferiore, ad esempio cohowinery. com\someone.  
   
  X.509  
  Standard riconosciuto a livello internazionale che definisce le parti obbligatorie dei certificati.  

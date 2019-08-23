@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: a7a39677bbd975ac384357481ef419f57b96d977
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938439"
 ---
 # <a name="table-valued-parameters"></a>Parametri valutati a livello di tabella
 I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
@@ -18,17 +18,17 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
  I valori di colonna nei parametri valutati a livello di tabella sono accessibili tramite istruzioni Transact-SQL SELECT standard. I parametri con valori di tabella sono fortemente tipizzati e la loro struttura viene convalidata automaticamente. La dimensione dei parametri valutati a livello di tabella è limitata solo dalla memoria del server.  
   
 > [!NOTE]
->  Non è possibile restituire dati in un parametro valutato a livello di tabella. I parametri valutati a livello di tabella sono di solo input. La parola chiave OUTPUT non è supportata.  
+> Non è possibile restituire dati in un parametro valutato a livello di tabella. I parametri valutati a livello di tabella sono di solo input. La parola chiave OUTPUT non è supportata.  
   
  Per altre informazioni sui parametri con valori di tabella, vedere le risorse seguenti.  
   
-|Risorsa|Descrizione|  
+|Risorsa|DESCRIZIONE|  
 |--------------|-----------------|  
-|[Parametri con valori di tabella (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=98363) nella documentazione Online di SQL Server|Viene descritto come creare e usare i parametri con valori di tabella.|  
-|[Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) nella documentazione Online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
+|[Parametri con valori di tabella (motore di database)](https://go.microsoft.com/fwlink/?LinkId=98363) in documentazione online di SQL Server|Viene descritto come creare e usare i parametri con valori di tabella.|  
+|[Tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkId=98364) in documentazione online di SQL Server|Vengono descritti i tipi di tabella definiti dall'utente usati per dichiarare i parametri con valori di tabella.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passaggio di più righe nelle versioni precedenti di SQL Server  
- Prima di parametri con valori di tabella sono stati introdotti in SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o un comando SQL con parametri erano limitate. Per passare più righe al server, uno sviluppatore poteva scegliere tra le opzioni seguenti:  
+ Prima dell'introduzione dei parametri con valori di tabella SQL Server 2008, le opzioni per passare più righe di dati a una stored procedure o a un comando SQL con parametri erano limitate. Per passare più righe al server, uno sviluppatore poteva scegliere tra le opzioni seguenti:  
   
 - Usare una serie di parametri singoli per rappresentare i valori in più colonne e righe di dati. La quantità di dati che è possibile passare tramite questo metodo è limitata dal numero di parametri consentiti. Le routine di SQL Server possono includere al massimo 2100 parametri. Per assemblare questi singoli valori in una variabile di tabella o in una tabella temporanea per l'elaborazione è necessaria la logica sul lato server.  
   
@@ -39,7 +39,7 @@ I parametri valutati a livello di tabella consentono di eseguire facilmente il m
 - Usare l'utilità `bcp` o l'oggetto <xref:System.Data.SqlClient.SqlBulkCopy> per caricare numerose righe di dati in una tabella. Sebbene questa tecnica sia molto efficace, non supporta l'elaborazione sul lato server, a meno che i dati non vengano caricati in una tabella temporanea o in una variabile di tabella.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creazione di tipi di parametri con valori di tabella  
- I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per altre informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) nella documentazione Online di SQL Server.  
+ I parametri con valori di tabella sono basati su strutture di tabella fortemente tipizzate definite tramite istruzioni CREATE TYPE Transact-SQL. Per poter utilizzare i parametri con valori di tabella nelle applicazioni client, è prima necessario creare un tipo di tabella e definire la struttura in SQL Server. Per ulteriori informazioni sulla creazione di tipi di tabella, vedere [tipi di tabella definiti dall'utente](https://go.microsoft.com/fwlink/?LinkID=98364) in documentazione online di SQL Server.  
   
  L'istruzione seguente consente di creare un tipo di tabella denominato CategoryTableType, costituito dalle colonne CategoryID e CategoryName:  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Limitazioni relative ai parametri con valori di tabella  
  Per i parametri con valori di tabella sono previste diverse limitazioni:  
   
-- Non è possibile passare parametri con valori di tabella [funzioni definite dall'utente CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
+- Non è possibile passare parametri con valori di tabella a [funzioni CLR definite dall'utente](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 - I parametri con valori di tabella possono essere indicizzati solo per supportare vincoli UNIQUE o PRIMARY KEY. In SQL Server non vengono gestite statistiche relative ai parametri con valori di tabella.  
   
@@ -86,9 +86,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - Non è possibile usare istruzioni ALTER TABLE per modificare la struttura dei parametri con valori di tabella.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Configurazione di un esempio SqlParameter  
- <xref:System.Data.SqlClient> supporta il popolamento dei parametri con valori di tabella dal <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> oppure <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> oggetti. È necessario specificare un nome di tipo per il parametro con valori di tabella usando la proprietà <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> di un oggetto <xref:System.Data.SqlClient.SqlParameter>. `TypeName` deve corrispondere al nome di un tipo compatibile creato in precedenza nel server. Nel frammento di codice seguente viene illustrato come configurare <xref:System.Data.SqlClient.SqlParameter> per inserire dati.  
+ <xref:System.Data.SqlClient>supporta il popolamento dei parametri con valori <xref:System.Data.DataTable>di <xref:System.Data.Common.DbDataReader> tabella <xref:System.Collections.Generic.IEnumerable%601> da oggetti o  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> . È necessario specificare un nome di tipo per il parametro con valori di tabella usando la proprietà <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> di un oggetto <xref:System.Data.SqlClient.SqlParameter>. `TypeName` deve corrispondere al nome di un tipo compatibile creato in precedenza nel server. Nel frammento di codice seguente viene illustrato come configurare <xref:System.Data.SqlClient.SqlParameter> per inserire dati.  
  
-Nell'esempio seguente, il `addedCategories` variabile contiene un <xref:System.Data.DataTable>. Per vedere come la variabile è popolata, vedere gli esempi nella sezione successiva [passando un parametro con valori di tabella a una Stored Procedure](#passing).
+Nell'esempio seguente la `addedCategories` variabile contiene un oggetto. <xref:System.Data.DataTable> Per vedere come viene popolata la variabile, vedere gli esempi nella sezione successiva, [passaggio di un parametro con valori di tabella a una stored procedure](#passing).
 
 ```csharp  
 // Configure the command and parameter.  
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing"></a> Passaggio di un parametro con valori di tabella a una Stored Procedure  
+## <a name="passing"></a>Passaggio di un parametro con valori di tabella a una stored procedure  
  In questo esempio viene illustrato come passare i dati di un parametro con valori di tabella a una stored procedure. Il codice consente di estrarre le righe aggiunte in un nuovo oggetto <xref:System.Data.DataTable> tramite il metodo <xref:System.Data.DataTable.GetChanges%2A>. Viene quindi definito un oggetto <xref:System.Data.SqlClient.SqlCommand>, impostando la proprietà <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> su <xref:System.Data.CommandType.StoredProcedure>. L'oggetto <xref:System.Data.SqlClient.SqlParameter> viene popolato usando il metodo <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> e la proprietà <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> viene impostata su `Structured`. Viene quindi eseguito <xref:System.Data.SqlClient.SqlCommand> usando il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
@@ -174,7 +174,7 @@ End Using
  Nell'esempio seguente viene illustrato come inserire i dati nella tabella dbo.Categories tramite un'istruzione INSERT con una sottoquery SELECT che dispone di un parametro con valori di tabella come origine dati. Quando si passa un parametro con valori di tabella a un'istruzione SQL con parametri, è necessario specificare un nome di tipo per il parametro con valori di tabella usando la nuova proprietà <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> di un oggetto <xref:System.Data.SqlClient.SqlParameter>. `TypeName` deve corrispondere al nome di un tipo compatibile creato in precedenza nel server. Nel codice di questo esempio viene usata la proprietà `TypeName` per fare riferimento alla struttura di tipi definita in dbo.CategoryTableType.  
   
 > [!NOTE]
->  Se si fornisce un valore per una colonna Identity in un parametro con valori di tabella, è necessario eseguire l'istruzione SET IDENTITY_INSERT per la sessione.  
+> Se si fornisce un valore per una colonna Identity in un parametro con valori di tabella, è necessario eseguire l'istruzione SET IDENTITY_INSERT per la sessione.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
