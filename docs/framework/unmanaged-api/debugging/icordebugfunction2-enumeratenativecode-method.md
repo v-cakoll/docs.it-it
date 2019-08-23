@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917043"
 ---
-# <a name="icordebugfunction2enumeratenativecode-method"></a><span data-ttu-id="9c494-102">Metodo ICorDebugFunction2::EnumerateNativeCode</span><span class="sxs-lookup"><span data-stu-id="9c494-102">ICorDebugFunction2::EnumerateNativeCode Method</span></span>
-<span data-ttu-id="9c494-103">Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le istruzioni di codice nativo nella funzione di cui viene fatto riferimento dall'oggetto ICorDebugFunction2.</span><span class="sxs-lookup"><span data-stu-id="9c494-103">Gets an interface pointer to an ICorDebugCodeEnum object that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>  
+# <a name="icordebugfunction2enumeratenativecode-method"></a><span data-ttu-id="3e4f2-102">Metodo ICorDebugFunction2::EnumerateNativeCode</span><span class="sxs-lookup"><span data-stu-id="3e4f2-102">ICorDebugFunction2::EnumerateNativeCode Method</span></span>
+<span data-ttu-id="3e4f2-103">Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum che contiene le istruzioni di codice nativo nella funzione a cui fa riferimento questo oggetto ICorDebugFunction2.</span><span class="sxs-lookup"><span data-stu-id="3e4f2-103">Gets an interface pointer to an ICorDebugCodeEnum object that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9c494-104">`EnumerateNativeCode` non è implementata nella versione corrente di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9c494-104">`EnumerateNativeCode` is not implemented in the current version of the .NET Framework.</span></span>  
+> <span data-ttu-id="3e4f2-104">`EnumerateNativeCode`non è implementato nella versione corrente del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3e4f2-104">`EnumerateNativeCode` is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c494-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9c494-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e4f2-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3e4f2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateNativeCode (  
@@ -38,5 +38,5 @@ HRESULT EnumerateNativeCode (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9c494-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9c494-106">Requirements</span></span>  
- <span data-ttu-id="9c494-107">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9c494-107">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="3e4f2-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3e4f2-106">Requirements</span></span>  
+ <span data-ttu-id="3e4f2-107">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="3e4f2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>

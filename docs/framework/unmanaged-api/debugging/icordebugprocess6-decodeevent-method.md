@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30df2d4a958b82a5a877b5d3efe5936f6498433b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f81c513447b7c63fb16ff20ae6f83c3e6ef359b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736463"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964047"
 ---
-# <a name="icordebugprocess6decodeevent-method"></a><span data-ttu-id="bc16b-102">Metodo ICorDebugProcess6::DecodeEvent</span><span class="sxs-lookup"><span data-stu-id="bc16b-102">ICorDebugProcess6::DecodeEvent Method</span></span>
-<span data-ttu-id="bc16b-103">Decodifica gli eventi di debug gestiti incapsulati nel payload di eventi di debug per le eccezioni native appositamente predisposte.</span><span class="sxs-lookup"><span data-stu-id="bc16b-103">Decodes managed debug events that have been encapsulated in the payload of specially crafted native exception debug events.</span></span>  
+# <a name="icordebugprocess6decodeevent-method"></a><span data-ttu-id="f2ea0-102">Metodo ICorDebugProcess6::DecodeEvent</span><span class="sxs-lookup"><span data-stu-id="f2ea0-102">ICorDebugProcess6::DecodeEvent Method</span></span>
+<span data-ttu-id="f2ea0-103">Decodifica gli eventi di debug gestiti incapsulati nel payload di eventi di debug per le eccezioni native appositamente predisposte.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-103">Decodes managed debug events that have been encapsulated in the payload of specially crafted native exception debug events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc16b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bc16b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2ea0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f2ea0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DecodeEvent(  
@@ -27,40 +27,40 @@ HRESULT DecodeEvent(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bc16b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bc16b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f2ea0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f2ea0-105">Parameters</span></span>  
  `pRecord`  
- <span data-ttu-id="bc16b-106">[in] Un puntatore a una matrice di byte da un evento di debug per le eccezioni native che include informazioni relative a un evento di debug gestito.</span><span class="sxs-lookup"><span data-stu-id="bc16b-106">[in] A pointer to a byte array from a native exception debug event that includes information about a managed debug event.</span></span>  
+ <span data-ttu-id="f2ea0-106">[in] Un puntatore a una matrice di byte da un evento di debug per le eccezioni native che include informazioni relative a un evento di debug gestito.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-106">[in] A pointer to a byte array from a native exception debug event that includes information about a managed debug event.</span></span>  
   
  `countBytes`  
- <span data-ttu-id="bc16b-107">[in] Il numero di elementi nella matrice di byte `pRecord`.</span><span class="sxs-lookup"><span data-stu-id="bc16b-107">[in] The number of elements in the `pRecord` byte array.</span></span>  
+ <span data-ttu-id="f2ea0-107">[in] Il numero di elementi nella matrice di byte `pRecord`.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-107">[in] The number of elements in the `pRecord` byte array.</span></span>  
   
  `format`  
- <span data-ttu-id="bc16b-108">[in] Oggetto [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) membro di enumerazione che specifica il formato dell'evento di debug non gestito.</span><span class="sxs-lookup"><span data-stu-id="bc16b-108">[in] A [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) enumeration member that specifies the format of the unmanaged debug event.</span></span>  
+ <span data-ttu-id="f2ea0-108">in Membro di enumerazione [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) che specifica il formato dell'evento di debug non gestito.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-108">[in] A [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) enumeration member that specifies the format of the unmanaged debug event.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="bc16b-109">[in] Un campo di bit che dipende dall'architettura di destinazione e che fornisce informazioni aggiuntive relative all'evento di debug.</span><span class="sxs-lookup"><span data-stu-id="bc16b-109">[in] A bit field that depends on the target architecture and that specifies additional information about the debug event.</span></span> <span data-ttu-id="bc16b-110">Per i sistemi Windows, può essere un membro del [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) enumerazione.</span><span class="sxs-lookup"><span data-stu-id="bc16b-110">For Windows systems, it can be a member of the [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="f2ea0-109">[in] Un campo di bit che dipende dall'architettura di destinazione e che fornisce informazioni aggiuntive relative all'evento di debug.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-109">[in] A bit field that depends on the target architecture and that specifies additional information about the debug event.</span></span> <span data-ttu-id="f2ea0-110">Per i sistemi Windows, può essere un membro dell'enumerazione [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="f2ea0-110">For Windows systems, it can be a member of the [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) enumeration.</span></span>  
   
  `dwThreadId`  
- <span data-ttu-id="bc16b-111">[in] L'identificatore del sistema operativo del thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="bc16b-111">[in] The operating system identifier of the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="f2ea0-111">[in] L'identificatore del sistema operativo del thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-111">[in] The operating system identifier of the thread on which the exception was thrown.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="bc16b-112">[out] Un puntatore all'indirizzo di un [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) oggetto che rappresenta un evento di debug gestito decodificato.</span><span class="sxs-lookup"><span data-stu-id="bc16b-112">[out] A pointer to the address of an [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) object that represents a decoded managed debug event.</span></span>  
+ <span data-ttu-id="f2ea0-112">out Puntatore all'indirizzo di un oggetto [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) che rappresenta un evento di debug gestito decodificato.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-112">[out] A pointer to the address of an [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) object that represents a decoded managed debug event.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc16b-113">Note</span><span class="sxs-lookup"><span data-stu-id="bc16b-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f2ea0-113">Note</span><span class="sxs-lookup"><span data-stu-id="f2ea0-113">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bc16b-114">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="bc16b-114">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="f2ea0-114">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="f2ea0-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc16b-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bc16b-115">Requirements</span></span>  
- <span data-ttu-id="bc16b-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc16b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2ea0-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f2ea0-115">Requirements</span></span>  
+ <span data-ttu-id="f2ea0-116">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2ea0-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc16b-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc16b-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f2ea0-117">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f2ea0-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc16b-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc16b-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f2ea0-118">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f2ea0-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc16b-119">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc16b-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="f2ea0-119">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2ea0-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc16b-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc16b-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2ea0-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f2ea0-120">See also</span></span>
 
-- [<span data-ttu-id="bc16b-121">Interfaccia ICorDebugProcess6</span><span class="sxs-lookup"><span data-stu-id="bc16b-121">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [<span data-ttu-id="bc16b-122">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="bc16b-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f2ea0-121">Interfaccia ICorDebugProcess6</span><span class="sxs-lookup"><span data-stu-id="f2ea0-121">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
+- [<span data-ttu-id="f2ea0-122">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="f2ea0-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

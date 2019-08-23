@@ -8,23 +8,23 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964828"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="2a33a-102">Trascinamento e rilascio</span><span class="sxs-lookup"><span data-stu-id="2a33a-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="2a33a-103">fornisce un'infrastruttura di rilascio che supporta il trascinamento dei dati all'interno sia estremamente flessibile [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni nonché altri [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="2a33a-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="48657-102">Trascinamento e rilascio</span><span class="sxs-lookup"><span data-stu-id="48657-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="48657-103">fornisce un'infrastruttura di trascinamento della selezione altamente flessibile che supporta il trascinamento e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'eliminazione di dati all'interno di applicazioni, nonché di altre applicazioni Windows.</span><span class="sxs-lookup"><span data-stu-id="48657-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other Windows applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2a33a-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="2a33a-104">In This Section</span></span>  
- [<span data-ttu-id="2a33a-105">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="2a33a-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
- [<span data-ttu-id="2a33a-106">Dati e oggetti dati</span><span class="sxs-lookup"><span data-stu-id="2a33a-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
- [<span data-ttu-id="2a33a-107">Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente</span><span class="sxs-lookup"><span data-stu-id="2a33a-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="2a33a-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="2a33a-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="48657-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="48657-104">In This Section</span></span>  
+ [<span data-ttu-id="48657-105">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="48657-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="48657-106">Dati e oggetti dati</span><span class="sxs-lookup"><span data-stu-id="48657-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="48657-107">Procedura dettagliata: Abilitazione del trascinamento della selezione in un controllo utente</span><span class="sxs-lookup"><span data-stu-id="48657-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="48657-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="48657-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2a33a-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="2a33a-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="48657-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="48657-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "62010410"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="2a33a-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="2a33a-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="48657-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="48657-110">Related Sections</span></span>
