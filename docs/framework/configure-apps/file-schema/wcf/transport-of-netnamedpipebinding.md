@@ -2,22 +2,22 @@
 title: <transport> di <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e76d0962ea7b4714ef6ca1f9d4c4c3e23df5b6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934677"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<Transport > di \<netNamedPipeBinding >
+# <a name="transport-of-netnamedpipebinding"></a>\<> di trasporto \<di NetNamedPipeBinding >
 Definisce le impostazioni di sicurezza del trasporto per una named pipe.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<netNamedPipeBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<> di trasporto  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,18 +36,18 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|protectionLevel|Definisce il livello di protezione della named pipe. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessuna protezione.<br />-Accesso: I messaggi vengono firmati.<br />-   EncryptAndSign: I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è EncryptAndSign.|  
+|protectionLevel|Definisce il livello di protezione della named pipe. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> Nessuno Nessuna protezione.<br />Sign I messaggi vengono firmati.<br />EncryptAndSign I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
+|[\<security>](security-of-netnamedpipebinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -55,8 +55,8 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: <remove> elemento per NameValueSectionHandler e DictionarySectionHandler
+title: <remove>elemento per NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 062aa3921d29cffd33db2d96096ef25c2b819030
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300704"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920943"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<rimuovere > elemento per NameValueSectionHandler e DictionarySectionHandler
 
 Rimuove un'impostazione definita in precedenza.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintassi
@@ -40,21 +40,21 @@ Rimuove un'impostazione definita in precedenza.
 
 | Elemento | Descrizione |
 | ------- | ------------|
-| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
+| [SectionName > elemento  **\<** ](custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzate <xref:System.Configuration.NameValueSectionHandler> che <xref:System.Configuration.DictionarySectionHandler> usano le classi e. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
 
 ## <a name="remarks"></a>Note
 
-È possibile usare la  **\<rimuovere >** elemento da cui rimuovere le impostazioni dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.
+È possibile usare l'  **\<elemento remove >** per rimuovere le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare il  **\<rimuovere >** elemento in un file di configurazione dell'applicazione per rimuovere le impostazioni definite in precedenza nel file di configurazione del computer.
+Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento remove >** in un file di configurazione dell'applicazione per rimuovere le impostazioni definite in precedenza nel file di configurazione del computer.
 
-Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >** e aggiunge due impostazioni `key1` e `key2`, a esso:
+Nel codice del file di configurazione del computer seguente `key1` viene dichiarata la sezione  **\<>** e vengono aggiunte `key2`due impostazioni:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Il codice di file di configurazione macchina seguente dichiara la sezione  **\<m
 </configuration>
 ```
 
-Il codice di file di configurazione dell'applicazione seguente rimuove il `key2` impostazione dal  **\<mySection >** :
+Il codice del file di configurazione dell'applicazione `key2` seguente consente di rimuovere l'impostazione dall'  **\<area >** :
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ Il codice di file di configurazione dell'applicazione seguente rimuove il `key2`
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema del file di configurazione per il .NET Framework](index.md)

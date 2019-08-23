@@ -2,20 +2,20 @@
 title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
-ms.openlocfilehash: f188f1ecbfc172995ec7cf6dd38b184c2a96ed55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 03888600a89d72f5216c8c8cac21c9da96879ba8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919969"
 ---
 # <a name="allowedaudienceuris"></a>\<allowedAudienceUris>
 Rappresenta una raccolta di URI di destinazione ai quali può essere destinato il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché venga considerato valido da un'istanza di <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceCredentials>  
 \<issuedTokenAuthentication>  
 \<allowedAudienceUris>  
@@ -36,15 +36,15 @@ Rappresenta una raccolta di URI di destinazione ai quali può essere destinato i
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)|Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché venga considerato valido da un'istanza di <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
+|[\<add>](add-of-allowedaudienceuris.md)|Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché venga considerato valido da un'istanza di <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|Specifica un token emesso da una credenziale del servizio.|  
+|[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|Specifica un token emesso da una credenziale del servizio.|  
   
 ## <a name="remarks"></a>Note  
  Usare questa raccolta in un'applicazione federata che usa un servizio token di sicurezza (STS, Security Token Service) che emette token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken>. Quando emette il token di sicurezza, il servizio STS può specificare l'URI dei servizi Web per cui si desidera usare il token di sicurezza tramite l'aggiunta di una condizione <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> al token di sicurezza. Ciò consente all'autenticatore <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> del servizio Web di destinazione di verificare che il token di sicurezza emesso sia associato a questo servizio Web specificando che questo controllo deve essere svolto mediante l'esecuzione delle operazioni seguenti:  
@@ -55,7 +55,7 @@ Rappresenta una raccolta di URI di destinazione ai quali può essere destinato i
   
  Per altre informazioni, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Per altre informazioni sull'uso di questo elemento di configurazione, vedere [come: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Per altre informazioni sull'uso di questo elemento di configurazione [, vedere Procedura: Configurare le credenziali in un](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)servizio federativo.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -66,8 +66,8 @@ Rappresenta una raccolta di URI di destinazione ai quali può essere destinato i
 - <xref:System.ServiceModel.Configuration.AllowedAudienceUriElementCollection>
 - <xref:System.ServiceModel.Configuration.AllowedAudienceUriElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowedAudienceUris%2A>
-- [\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)
-- [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Procedura: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)
+- [\<add>](add-of-allowedaudienceuris.md)
+- [Comportamenti di sicurezza](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Procedura: Configurare le credenziali in un Servizio federativo](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 51e18555a322e32f0877167d42cd30776068c746
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 609878416be26786ce865168c996c78e18b1897f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917881"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Associare dati al controllo DataGridView di Windows Forms usando la finestra di progettazione
 È possibile utilizzare la finestra di progettazione per <xref:System.Windows.Forms.DataGridView> connettere un controllo alle origini dati di diverse varietà, tra cui database, oggetti business o servizi Web. Quando si associa il controllo a un'origine dati utilizzando la finestra di progettazione, il controllo viene associato automaticamente <xref:System.Windows.Forms.BindingSource> a un componente che rappresenta l'origine dati. Inoltre vengono generate automaticamente colonne nel controllo, in modo corrispondente alle informazioni di schema fornite dall'origine dati.
@@ -39,7 +39,7 @@ ms.locfileid: "69040029"
 6. Per creare una relazione master/dettaglio, nella finestra di riepilogo a discesa **Scegli origine dati** per un secondo <xref:System.Windows.Forms.DataGridView> controllo espandere il <xref:System.Windows.Forms.BindingSource> creato per la tabella padre, quindi selezionare la tabella figlio correlata nell'elenco visualizzato.
 
     > [!NOTE]
-    >  Se il progetto include già un'origine dati, è possibile anche usare la finestra **Origini dati** per creare un modulo dati. Per altre informazioni, vedere [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
+    > Se il progetto include già un'origine dati, è possibile anche usare la finestra **Origini dati** per creare un modulo dati. Per altre informazioni, vedere [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).
 
 ## <a name="see-also"></a>Vedere anche
 

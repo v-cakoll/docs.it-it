@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54e72205f8f976498df3b1fe1e055fb7df12d68e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c43f906961b9e76d5f0f34ba5a5b2f656f5b1488
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937509"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>Metodo IHostIoCompletionManager::GetHostOverlappedSize
-Ottiene le dimensioni dei dati personalizzati che nelle intenzioni di host da aggiungere alle richieste dei / o.  
+Ottiene le dimensioni dei dati personalizzati che l'host intende accodare alle richieste di I/O.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,38 +37,38 @@ HRESULT GetHostOverlappedSize (
   
 ## <a name="parameters"></a>Parametri  
  `pcbSize`  
- [out] Un puntatore al numero di byte che common language runtime (CLR) è consigliabile allocare oltre alla dimensione di Win32 `OVERLAPPED` oggetto.  
+ out Puntatore al numero di byte che deve essere allocato dall'Common Language Runtime (CLR) oltre alla dimensione dell'oggetto Win32 `OVERLAPPED` .  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`GetHostOverlappedSize`la restituzione è riuscita.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Tutte le chiamate dei / o asincrone alle API della piattaforma Windows richiedere Win32 `OVERLAPPED` oggetto, che fornisce informazioni quali la posizione del puntatore di file. Per mantenere lo stato, le applicazioni che effettuano chiamate dei / o asincrone in genere aggiungono dati personalizzati alla struttura. `GetHostOverlappedSize` e [InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) offrono l'opportunità per l'host da includere tali dati.  
+ Tutte le chiamate di i/O asincrone alle API della piattaforma Windows `OVERLAPPED` accettano un oggetto Win32, che fornisce informazioni come la posizione del puntatore del file. Per mantenere lo stato, le applicazioni che effettuano chiamate di I/O asincrone aggiungono in genere dati personalizzati alla struttura. `GetHostOverlappedSize`e [IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) offrono la possibilità per l'host di includere tali dati personalizzati.  
   
- CLR chiama il `GetHostOverlappedSize` metodo per determinare le dimensioni dei dati personalizzati che l'host da aggiungere al `OVERLAPPED` oggetto.  
+ CLR chiama il `GetHostOverlappedSize` metodo per determinare le dimensioni dei dati personalizzati che l'host intende accodare `OVERLAPPED` all'oggetto.  
   
 > [!NOTE]
->  `GetHostOverlappedSize` viene chiamato una sola volta. Dati personalizzati dell'host devono avere le stesse dimensioni per ogni richiesta dei / o.  
+> `GetHostOverlappedSize`viene chiamato una sola volta. I dati personalizzati dell'host devono avere le stesse dimensioni per ogni richiesta di I/O.  
   
 > [!IMPORTANT]
->  Le dimensioni dei `OVERLAPPED` oggetto stesso non è incluso nel valore di `pcbSize`.  
+> Le dimensioni dell' `OVERLAPPED` oggetto stesso non sono incluse nel valore di `pcbSize`.  
   
- Per altre informazioni sul `OVERLAPPED` struttura, vedere la documentazione della piattaforma Windows.  
+ Per ulteriori informazioni sulla `OVERLAPPED` struttura, vedere la documentazione della piattaforma Windows.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

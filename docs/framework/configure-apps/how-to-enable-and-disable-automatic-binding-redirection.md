@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733444"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913039"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
 
@@ -91,15 +91,15 @@ Per aggiungere reindirizzamenti di binding a un file **Web. config** :
 
 1. In Visual Studio compilare l'app e cercare eventuali avvisi di compilazione.
 
-   ![Avviso di compilazione per conflitti di riferimento all'assembly](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Avviso di compilazione per conflitti di riferimento all'assembly](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. In caso di conflitti di associazione a livello di assembly, viene visualizzato un avviso. Fare doppio clic sull'avviso oppure selezionare l'avviso e premere **invio**.
 
    Viene visualizzata una finestra di dialogo che consente di aggiungere automaticamente i reindirizzamenti di binding necessari al file **Web. config** di origine.
 
-   ![Finestra di dialogo di autorizzazione Reindirizzamento binding](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Finestra di dialogo di autorizzazione Reindirizzamento binding](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Elemento > bindingRedirect](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md)

@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9a87ae4381ec5bc0d8c416ef4ee4c13b04a862f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c6a8ee1bcc65e640ef871e57acdeef21acd7896
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606892"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930828"
 ---
 # <a name="icordebugdatatarget-interface"></a>Interfaccia ICorDebugDataTarget
 Fornisce un'interfaccia di callback che consente di accedere a un determinato processo di destinazione.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
-|[Metodo GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Fornisce informazioni sulla piattaforma, tra cui architettura del processore e del sistema operativo, in cui viene eseguito il processo di destinazione.|  
+|[Metodo GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|Fornisce informazioni sulla piattaforma, tra cui l'architettura del processore e il sistema operativo in cui è in esecuzione il processo di destinazione.|  
 |[Metodo ReadVirtual](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Ottiene un blocco di memoria contigua a partire dall'indirizzo specificato e lo restituisce nel buffer fornito.|  
 |[Metodo GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Richiede il contesto del thread corrente per il thread specificato.|  
   
 ## <a name="remarks"></a>Note  
- `ICorDebugDataTarget` e i relativi metodi presentano le caratteristiche seguenti:  
+ `ICorDebugDataTarget`e i relativi metodi hanno le caratteristiche seguenti:  
   
-- I servizi di debug chiamare metodi su questa interfaccia per accedere ai dati di memoria e altre nel processo di destinazione.  
+- I servizi di debug chiamano metodi su questa interfaccia per accedere alla memoria e ad altri dati nel processo di destinazione.  
   
-- Il client di debugger debba implementare questa interfaccia in modo appropriato per la destinazione specifica (ad esempio, un processo in tempo reale o un dump di memoria).  
+- Il client del debugger deve implementare questa interfaccia in modo appropriato per la destinazione specifica (ad esempio, un processo attivo o un dump della memoria).  
   
-- Il `ICorDebugDataTarget` metodi possono essere richiamati solo dall'interno di metodi implementati in altri `ICorDebug*` interfacce. Ciò garantisce che il client del debugger dispone di controllo su quale thread viene richiamato e la.  
+- I `ICorDebugDataTarget` metodi possono essere richiamati solo dall'interno dei metodi `ICorDebug*` implementati in altre interfacce. In questo modo si garantisce che il client del debugger disponga del controllo su quale thread viene richiamato e quando.  
   
-- Il `ICorDebugDataTarget` implementazione deve restituire sempre informazioni aggiornate sulla destinazione.  
+- L' `ICorDebugDataTarget` implementazione deve sempre restituire informazioni aggiornate sulla destinazione.  
   
- Il processo di destinazione deve essere arrestato e non modificato in alcun modo durante `ICorDebug*` interfacce (e pertanto `ICorDebugDataTarget` metodi) vengono chiamati. Se la destinazione è un processo in tempo reale e il relativo stato cambia, il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metodo deve essere chiamata nuovamente per fornire un'istanza di ICorDebugProcess sostitutiva.  
+ Il processo di destinazione deve essere interrotto e non modificato in alcun modo `ICorDebug*` durante la chiamata di `ICorDebugDataTarget` interfacce (e di conseguenza metodi). Se la destinazione è un processo attivo e il relativo stato viene modificato, è necessario chiamare nuovamente il metodo [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) per fornire un'istanza di ICorDebugProcess sostitutiva.  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

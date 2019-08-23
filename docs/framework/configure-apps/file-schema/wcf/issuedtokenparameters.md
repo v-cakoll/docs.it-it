@@ -2,18 +2,18 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07fc2c4c52c29de1cfc9f498a6dc6b6da887b502
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925337"
 ---
 # <a name="issuedtokenparameters"></a>\<issuedTokenParameters>
 Specifica i parametri per un token di sicurezza emesso in uno scenario di sicurezza federata.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<security>  
@@ -38,7 +38,7 @@ Specifica i parametri per un token di sicurezza emesso in uno scenario di sicure
 </issuedTokenParameters>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -58,17 +58,17 @@ Specifica i parametri per un token di sicurezza emesso in uno scenario di sicure
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Raccolta di elementi di configurazione che specificano parametri di richiesta aggiuntivi.|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione obbligatori.<br /><br /> In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Ogni elemento di questa raccolta specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata.|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Elemento di configurazione che specifica l'endpoint che emette il token corrente.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Elemento di configurazione che specifica l'indirizzo dell'endpoint dei metadati dell'emittente del token.|  
+|[\<additionalRequestParameters>](additionalrequestparameters-element.md)|Raccolta di elementi di configurazione che specificano parametri di richiesta aggiuntivi.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione obbligatori.<br /><br /> In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Ogni elemento di questa raccolta specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata.|  
+|[\<issuer>](issuer-of-issuedtokenparameters.md)|Elemento di configurazione che specifica l'endpoint che emette il token corrente.|  
+|[\<issuerMetadata>](issuermetadata-of-issuedtokenparameters.md)|Elemento di configurazione che specifica l'indirizzo dell'endpoint dei metadati dell'emittente del token.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Specifica le opzioni di sicurezza di un'associazione personalizzata.|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
+|[\<security>](security-of-custombinding.md)|Specifica le opzioni di sicurezza di un'associazione personalizzata.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -76,13 +76,13 @@ Specifica i parametri per un token di sicurezza emesso in uno scenario di sicure
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
-- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Funzionalità di sicurezza con associazioni personalizzate](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sicurezza delle associazioni personalizzate](../../../wcf/samples/custom-binding-security.md)
+- [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Funzionalità di sicurezza con associazioni personalizzate](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)

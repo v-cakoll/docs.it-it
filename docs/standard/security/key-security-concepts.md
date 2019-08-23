@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917249"
 ---
 # <a name="key-security-concepts"></a>Concetti principali sulla sicurezza
 Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i problemi di sicurezza relativi al codice mobile e per fornire un supporto che consenta di abilitare i componenti per determinare le operazioni per cui gli utenti dispongono di autorizzazioni.  
@@ -43,7 +43,7 @@ Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i pro
   
  Per altre informazioni, vedere [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
   
-## <a name="authentication"></a>Autenticazione  
+## <a name="authentication"></a>Authentication  
  L'autenticazione è il processo di individuazione e verifica dell'identità di un'entità eseguito esaminando e convalidando le credenziali dell'utente rispetto a un'autorità specificata. Le informazioni ottenute durante l'autenticazione possono essere usate direttamente dal codice. È anche possibile usare la sicurezza basata sui ruoli di .NET Framework per autenticare l'utente corrente e per determinare se consentire a tale entità di accedere al codice. Vedere gli overload del metodo <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> per esempi su come autenticare l'entità per ruoli specifici. Ad esempio, è possibile usare l'overload <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> per determinare se l'utente corrente è un membro del gruppo Administrators.  
   
  Un'ampia gamma di meccanismi di autenticazione usati oggi, molti dei quali possono essere usati con la sicurezza basata sui ruoli di .NET Framework. Alcuni dei meccanismi più diffusi sono il meccanismo di base, il digest, il Passport, il sistema operativo (ad esempio NTLM o Kerberos) o i meccanismi definiti dall'applicazione.  
@@ -52,7 +52,7 @@ Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i pro
  L'esempio seguente richiede che l'entità attiva sia un amministratore. Il parametro `name` è `null`, che consente a qualsiasi utente con ruolo di amministratore di passare la richiesta.  
   
 > [!NOTE]
->  In Windows Vista, 	la funzionalità Controllo dell'account utente determina i privilegi di un utente. Ai membri del gruppo Administrators predefinito vengono assegnati due token di accesso in fase di esecuzione, ovvero un token di accesso utente standard e un token di accesso amministratore. Per impostazione predefinita, viene assegnato il ruolo dell'utente standard. Per eseguire il codice che richiede un ruolo da amministratore è necessario elevare i privilegi da utente standard ad amministratore. È possibile farlo quando si avvia un'applicazione facendo clic con il pulsante destro del mouse sull'icona dell'applicazione e indicando l'opzione di esecuzione come amministratore.  
+> In Windows Vista, 	la funzionalità Controllo dell'account utente determina i privilegi di un utente. Ai membri del gruppo Administrators predefinito vengono assegnati due token di accesso in fase di esecuzione, ovvero un token di accesso utente standard e un token di accesso amministratore. Per impostazione predefinita, viene assegnato il ruolo dell'utente standard. Per eseguire il codice che richiede un ruolo da amministratore è necessario elevare i privilegi da utente standard ad amministratore. È possibile farlo quando si avvia un'applicazione facendo clic con il pulsante destro del mouse sull'icona dell'applicazione e indicando l'opzione di esecuzione come amministratore.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
@@ -64,5 +64,5 @@ Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i pro
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Autorizzazione  
+## <a name="authorization"></a>Authorization  
  L'autorizzazione è il processo che consente di determinare se un'entità è autorizzata a eseguire un'azione richiesta. L'autorizzazione si verifica dopo l'autenticazione e usa le informazioni di identità e i ruoli dell'entità per determinare a quali risorse può accedere. È possibile usare la sicurezza basata sui ruoli di .NET Framework per implementare l'autorizzazione.

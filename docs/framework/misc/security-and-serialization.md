@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c275e7179daf0dfdf2dda8bf364a4682565f28a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0b1f8979929dbb6872bbd53e1840b2d0520a31d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910665"
 ---
 # <a name="security-and-serialization"></a>Sicurezza e serializzazione
 Poiché la serializzazione può consentire a un altro codice di visualizzare o modificare i dati dell'istanza di un oggetto che sarebbero altrimenti inaccessibili, è necessaria una speciale autorizzazione per il codice che esegue la serializzazione: <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> specificato. In base ai criteri predefiniti, questa autorizzazione non è concessa a codice scaricato da Internet o a codice Intranet, ma solo al codice presente sul computer locale.  
@@ -49,4 +49,4 @@ Poiché la serializzazione può consentire a un altro codice di visualizzare o m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)

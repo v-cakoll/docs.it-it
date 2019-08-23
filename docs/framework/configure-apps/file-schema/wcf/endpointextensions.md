@@ -2,12 +2,12 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925706"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
 Contenuto della sezione viene registrato un nuovo endpoint standard nella sezione delle estensioni di un file di configurazione di un computer o di un'applicazione. È possibile aggiungere un endpoint standard a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento sul tipo di endpoint, nonché l'attributo `name` sul nome dell'endpoint standard.  
@@ -25,7 +25,7 @@ Contenuto della sezione viene registrato un nuovo endpoint standard nella sezion
 </system.serviceModel>
 ```  
   
- Dopo aver registrato l'endpoint standard, sarà possibile usarlo come illustrato nell'esempio seguente. Nel [ \<endpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento, il `kind` attributo specifica il tipo di endpoint standard che è stato registrato nel `<endpointExtensions>` sezione. Il `endpointConfiguration` sarà identico all'attributo il `name` attributo dell'elemento di configurazione dell'endpoint standard nella `<standardEndpoints>` sezione.  
+ Dopo aver registrato l'endpoint standard, sarà possibile usarlo come illustrato nell'esempio seguente. Nell'elemento `kind` `<endpointExtensions>` > dell' [ endpoint,l'attributospecificailtipodiendpointstandardcheèstatoregistratonellasezione.\<](endpoint-element.md) L' `endpointConfiguration` attributo sarà identico `name` all'attributo dell'elemento di configurazione dell'endpoint standard nella `<standardEndpoints>` sezione.  
   
 ```xml  
 <system.serviceModel>

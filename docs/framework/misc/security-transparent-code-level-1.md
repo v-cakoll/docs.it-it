@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910715"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- La trasparenza consente agli sviluppatori di scrivere in modo più sicuro le librerie .NET Framework che espongono funzionalità a codice parzialmente attendibile. La trasparenza di livello 1 è stata introdotta in .NET Framework versione 2.0 ed è stata usata principalmente solo all'interno di Microsoft. A partire da .NET Framework 4, è possibile usare [trasparenza di livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Tuttavia, la trasparenza di livello 1 è stata mantenuta in modo che sia possibile identificare il codice legacy che deve essere eseguito con le regole di sicurezza precedente.  
+ La trasparenza consente agli sviluppatori di scrivere in modo più sicuro le librerie .NET Framework che espongono funzionalità a codice parzialmente attendibile. La trasparenza di livello 1 è stata introdotta in .NET Framework versione 2.0 ed è stata usata principalmente solo all'interno di Microsoft. A partire da .NET Framework 4, è possibile usare la [trasparenza di livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Tuttavia, la trasparenza di livello 1 è stata mantenuta in modo che sia possibile identificare il codice legacy che deve essere eseguito con le regole di sicurezza precedenti.  
   
 > [!IMPORTANT]
->  È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per .NET Framework 4, usare sempre la trasparenza di livello 2.  
+> È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per il .NET Framework 4, usare sempre la trasparenza di livello 2.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
-- [Il modello di trasparenza di livello 1](#the_level_1_transparency_model)  
+- [Modello di trasparenza di livello 1](#the_level_1_transparency_model)  
   
 - [Attributi di trasparenza](#transparency_attributes)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66487867"
  È necessario applicare la trasparenza in modo esplicito. La maggior parte del codice che gestisce la logica e la modifica dei dati può in genere essere contrassegnata come SecurityTransparent, mentre una quantità minore di codice che esegue le elevazioni dei privilegi viene contrassegnata come SecurityCritical o SecuritySafeCritical.  
   
 > [!IMPORTANT]
->  La trasparenza di livello 1 è limitata all'ambito degli assembly e non viene applicata tra assembly. La trasparenza di livello 1 veniva usata principalmente da Microsoft per i controlli di sicurezza. È possibile accedere ai tipi e ai membri SecurityCritical all'interno di un assembly di livello 1 dal codice SecurityTransparent di altri assembly. È importante eseguire richieste di collegamento per l'attendibilità totale in tutti i tipi e i membri SecurityCritical di livello 1. I tipi e i membri SecuritySafeCritical devono inoltre verificare che i chiamanti dispongano di autorizzazioni per le risorse protette a cui il tipo o il membro accede.  
+> La trasparenza di livello 1 è limitata all'ambito degli assembly e non viene applicata tra assembly. La trasparenza di livello 1 veniva usata principalmente da Microsoft per i controlli di sicurezza. È possibile accedere ai tipi e ai membri SecurityCritical all'interno di un assembly di livello 1 dal codice SecurityTransparent di altri assembly. È importante eseguire richieste di collegamento per l'attendibilità totale in tutti i tipi e i membri SecurityCritical di livello 1. I tipi e i membri SecuritySafeCritical devono inoltre verificare che i chiamanti dispongano di autorizzazioni per le risorse protette a cui il tipo o il membro accede.  
   
  Per compatibilità con le versioni precedenti di .NET Framework, tutti i membri non annotati con attributi di trasparenza vengono considerati SecuritySafeCritical. Tutti i tipi non annotati vengono considerati Transparent. Non ci sono regole di analisi statica per convalidare la trasparenza. Potrebbe quindi essere necessario eseguire il debug degli errori di trasparenza in fase di esecuzione.  
   

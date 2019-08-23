@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052700"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910616"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Esempio: Gestione delle eccezioni durante il data binding
 > [!NOTE]
->  In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).  
+> In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).  
   
- Nell'esempio seguente viene illustrato come risolvere un [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) eccezione generata quando un'app compilata con la catena di strumenti .NET Native tenta di associare i dati. Queste sono le informazioni sull'eccezione:  
+ Nell'esempio seguente viene illustrato come risolvere un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) generata quando un'app compilata con la catena di strumenti .NET native tenta di associare i dati. Queste sono le informazioni sull'eccezione:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Che cosa stava eseguendo l'app?  
- Alla base dello stack, i frame dal <xref:Windows.UI.Xaml?displayProperty=nameWithType> dello spazio dei nomi indicano che il motore di rendering XAML era in esecuzione.   L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.  
+ Alla base dello stack, i frame dello <xref:Windows.UI.Xaml?displayProperty=nameWithType> spazio dei nomi indicano che il motore di rendering XAML era in esecuzione.   L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.  
   
  Il primo passaggio per la fornitura di una direttiva di metadati consiste nell'aggiunta di metadati `serialize` per il tipo che ne rende accessibili le proprietà:  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Il codice può essere riscritto per escludere l'uso della reflection?  
  Il data binding ha un elevato livello di reflection, pertanto la modifica del codice per impedire la reflection non è consentita.  
   
- Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.  Ad esempio, è possibile applicare il <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attributo proprietà. In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.  
+ Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.  Ad esempio, è possibile applicare l' <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attributo alle proprietà. In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.  
   
 ## <a name="see-also"></a>Vedere anche
 

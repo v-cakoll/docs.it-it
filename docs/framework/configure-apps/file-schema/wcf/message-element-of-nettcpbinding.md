@@ -1,23 +1,23 @@
 ---
-title: <message> elemento di <netTcpBinding>
+title: <message>elemento di<netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbbacee00533b72d9e06ee3a79d1e9c0414b337c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767559"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931640"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<messaggio > dell'elemento \<netTcpBinding >
-Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+# <a name="message-element-of-nettcpbinding"></a>\<message > elemento di \<NetTcpBinding >
+Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con [ \<NetTcpBinding >](nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<netTcpBinding>  
 \<binding>  
 \<security>  
-\<messaggio >  
+\<> messaggi  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -61,20 +61,20 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|nessuno|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
-|WINDOWS|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
-|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. WCF non supporta l'invio di un digest delle password o la derivazione delle chiavi utilizzano password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali UserName. Questa modalità di credenziale produce un scambio interoperabile o una negoziazione non interoperabile basata sull'attributo `negotiateServiceCredential`.|  
+|Nessuna|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
+|Windows|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
+|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. WCF non supporta l'invio di un digest della password o la derivazione di chiavi tramite password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. Di conseguenza, WCF impone che il trasporto sia protetto quando si utilizzano le credenziali del nome utente. Questa modalità di credenziale produce un scambio interoperabile o una negoziazione non interoperabile basata sull'attributo `negotiateServiceCredential`.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato. Se viene usata la modalità di sicurezza del messaggio e l'attributo `negotiateServiceCredential` è impostato su `false`, sarà necessario eseguire il provisioning del client tramite il certificato del servizio.|  
 |IssuedToken|Specifica un token personalizzato, emesso da un servizio di token di sicurezza.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definisce le funzionalità di sicurezza dell'<xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](security-of-nettcpbinding.md)|Definisce le funzionalità di sicurezza dell'<xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Note  
  Il messaggio usa la sicurezza a livello di messaggio per garantire l'integrità e la riservatezza del messaggio SOAP e per svolgere l'autenticazione reciproca dei peer di comunicazione. Se questa modalità di sicurezza viene selezionata per un'associazione, nello stack di canali vengono configurati elementi di associazione di sicurezza dei messaggi e i messaggi SOAP vengono protetti in conformità agli standard WS-Security*.  
@@ -85,8 +85,8 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

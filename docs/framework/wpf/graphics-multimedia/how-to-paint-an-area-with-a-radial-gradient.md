@@ -9,28 +9,28 @@ helpviewer_keywords:
 - radial gradients [WPF], painting with
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5762ef1a1526ba6f004917c8a947e35ce731c86d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916095"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Procedura: Disegnare un'area con una sfumatura radiale
-In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.RadialGradientBrush> classe disegnare un'area con una sfumatura radiale.  
+Questo esempio illustra come usare la <xref:System.Windows.Media.RadialGradientBrush> classe per disegnare un'area con una sfumatura radiale.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa un <xref:System.Windows.Media.RadialGradientBrush> per disegnare un rettangolo con una sfumatura radiale che effettua la transizione da giallo a rosso a blu al verde limone.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.RadialGradientBrush> un oggetto per disegnare un rettangolo con una sfumatura radiale che passa da giallo a rosso a blu a verde limone.  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
  [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- Nella figura seguente illustra la sfumatura dell'esempio precedente. È stata evidenziata della sfumatura.  
+ Nella figura seguente viene illustrata la sfumatura dell'esempio precedente. I cursori della sfumatura sono stati evidenziati.  
   
  ![Cursori sfumatura in una sfumatura radiale](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  Gli esempi in questo argomento usano il sistema di coordinate predefinito per l'impostazione di punti di controllo. Il sistema di coordinate è relativo a un rettangolo: 0 indica lo 0% del rettangolo di selezione, mentre 1 indica il 100% del rettangolo di selezione. È possibile modificare il sistema di coordinate impostando il <xref:System.Windows.Media.GradientBrush.MappingMode%2A> il valore della proprietà <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un sistema di coordinate assoluto non è relativo a un rettangolo di selezione. I valori vengono interpretati direttamente nello spazio locale.  
+> Negli esempi di questo argomento viene utilizzato il sistema di coordinate predefinito per l'impostazione dei punti di controllo. Il sistema di coordinate predefinito è relativo a un rettangolo di delimitazione: 0 indica lo 0% del riquadro e 1 indica il 100% del riquadro. È possibile modificare questo sistema di coordinate impostando <xref:System.Windows.Media.GradientBrush.MappingMode%2A> la proprietà sul valore <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un sistema di coordinate assoluto non è relativo a un rettangolo di selezione. I valori vengono interpretati direttamente nello spazio locale.  
   
- Per ulteriori <xref:System.Windows.Media.RadialGradientBrush> esempi, vedere la [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973). Per altre informazioni su sfumature e altri tipi di pennelli, vedere [disegno con colori a tinta unita e sfumature Panoramica](painting-with-solid-colors-and-gradients-overview.md).
+ Per altri <xref:System.Windows.Media.RadialGradientBrush> esempi, vedere l' [esempio](https://go.microsoft.com/fwlink/?LinkID=159973)di pennelli. Per ulteriori informazioni sui gradienti e sugli altri tipi di pennelli, vedere [Cenni preliminari sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md).

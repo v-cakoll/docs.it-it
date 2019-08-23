@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927321"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<Elemento > legacyImpersonationPolicy
 Specifica che l'identità di Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.  
@@ -42,7 +42,7 @@ Specifica che l'identità di Windows non passa attraverso punti asincroni, indip
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity>scorre tra punti asincroni a seconda delle impostazioni <xref:System.Threading.ExecutionContext> del flusso per il thread corrente. Questa è l'impostazione predefinita.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity>non viene propagata tra punti asincroni, indipendentemente <xref:System.Threading.ExecutionContext> dalle impostazioni del flusso sul thread corrente.|  
@@ -63,7 +63,7 @@ Specifica che l'identità di Windows non passa attraverso punti asincroni, indip
  A partire da .NET Framework 2,0, è possibile usare l' `<legacyImpersonationPolicy>` elemento per specificare che <xref:System.Security.Principal.WindowsIdentity> non scorre tra punti asincroni.  
   
 > [!NOTE]
->  Il Common Language Runtime (CLR) rileva le operazioni di rappresentazione eseguite utilizzando solo codice gestito, non la rappresentazione eseguita all'esterno del codice gestito, ad esempio tramite platform invoke al codice non gestito o tramite chiamate dirette alle funzioni Win32. Solo gli <xref:System.Security.Principal.WindowsIdentity> oggetti gestiti possono fluire tra punti asincroni, a meno `alwaysFlowImpersonationPolicy` che l'elemento non sia impostato su`<alwaysFlowImpersonationPolicy enabled="true"/>`true (). Impostando `alwaysFlowImpersonationPolicy` l'elemento su true, viene specificato che l'identità di Windows scorre sempre tra punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione. Per ulteriori informazioni sulla propagazione della rappresentazione non gestita tra punti asincroni, vedere [ \<alwaysFlowImpersonationPolicy > Element](alwaysflowimpersonationpolicy-element.md).  
+> Il Common Language Runtime (CLR) rileva le operazioni di rappresentazione eseguite utilizzando solo codice gestito, non la rappresentazione eseguita all'esterno del codice gestito, ad esempio tramite platform invoke al codice non gestito o tramite chiamate dirette alle funzioni Win32. Solo gli <xref:System.Security.Principal.WindowsIdentity> oggetti gestiti possono fluire tra punti asincroni, a meno `alwaysFlowImpersonationPolicy` che l'elemento non sia impostato su`<alwaysFlowImpersonationPolicy enabled="true"/>`true (). Impostando `alwaysFlowImpersonationPolicy` l'elemento su true, viene specificato che l'identità di Windows scorre sempre tra punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione. Per ulteriori informazioni sulla propagazione della rappresentazione non gestita tra punti asincroni, vedere [ \<alwaysFlowImpersonationPolicy > Element](alwaysflowimpersonationpolicy-element.md).  
   
  È possibile modificare questo comportamento predefinito in altri due modi:  
   

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: bf7cdc5074cfe6548a13610e6f0af090d2359177
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607150"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911546"
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
  La notifica degli eventi di[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è una funzionalità chiave per dispositivi di assistive technology, quali utilità per la lettura dello schermo e lenti d'ingrandimento. I client di automazione interfaccia utente tengono traccia degli eventi generati dai provider di automazione interfaccia utente quando si verifica un evento nell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e usano le informazioni per inviare notifiche agli utenti finali.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "64607150"
 ## <a name="ui-automation-event-arguments"></a>Argomenti di eventi di automazione interfaccia utente  
  Le classi seguenti incapsulano argomenti di eventi.  
   
-|Classe|Descrizione|  
+|Classe|DESCRIZIONE|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contiene informazioni sul caricamento asincrono del contenuto, compresa la percentuale di completamento del caricamento.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Contiene informazioni su un evento semplice che non richiede dati aggiuntivi.|  

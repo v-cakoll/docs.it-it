@@ -2,23 +2,23 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08fda249b526961ff711f439cf729a18e15b412b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929367"
 ---
-# <a name="issuer"></a>\<issuer>
+# <a name="issuer"></a>\<> autorità di certificazione
 Specifica il servizio token di sicurezza (STS, Security Token Service) che emette token di sicurezza.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<wsFederationHttpBinding>  
 \<binding>  
 \<security>  
-\<messaggio >  
-\<issuer>  
+\<> messaggi  
+\<> autorità di certificazione  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,29 +50,29 @@ Specifica il servizio token di sicurezza (STS, Security Token Service) che emett
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|indirizzo|Stringa obbligatoria. URL del servizio STS.|  
+|Address|Stringa obbligatoria. URL del servizio STS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Raccolta delle intestazioni di indirizzi per gli endpoint che il generatore può creare.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Quando si usa un token emesso, specifica le impostazioni che consentono al client di autenticare il server.|  
+|[\<intestazioni >](headers-element.md)|Raccolta delle intestazioni di indirizzi per gli endpoint che il generatore può creare.|  
+|[\<identity>](identity.md)|Quando si usa un token emesso, specifica le impostazioni che consentono al client di autenticare il server.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<messaggio >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento.|  
+|[\<> messaggi](message-element-of-wsfederationhttpbinding.md)|Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<elemento wsFederationHttpBinding >](wsfederationhttpbinding.md) .|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Funzionalità di sicurezza con associazioni personalizzate](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Federazione e token rilasciati](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Funzionalità di sicurezza con associazioni personalizzate](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)

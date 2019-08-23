@@ -1,5 +1,5 @@
 ---
-title: <add> elemento per NameValueSectionHandler e DictionarySectionHandler
+title: <add>elemento per NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921327"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Aggiungi > elemento per NameValueSectionHandler e DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<aggiungere > elemento per NameValueSectionHandler e DictionarySectionHandler
 
-Aggiunge impostazioni personalizzate dell'applicazione. Ciascuna  **\<Aggiungi >** tag contiene una coppia chiave/valore.
+Aggiunge le impostazioni dell'applicazione personalizzata. Ogni tag Add > contiene una coppia chiave/valore.  **\<**
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Sintassi
@@ -32,24 +32,24 @@ Aggiunge impostazioni personalizzate dell'applicazione. Ciascuna  **\<Aggiungi >
 
 ## <a name="attributes"></a>Attributi
 
-| Attributo | Descrizione |
+| Attributo | DESCRIZIONE |
 | --------- | ----------- |
 | **key**   | Attributo obbligatorio.<br><br>Specifica il nome dell'impostazione. |
 | **value** | Attributo obbligatorio.<br><br>Specifica il valore dell'impostazione. |
 
 ## <a name="parent-element"></a>Elemento padre
 
-| Elemento | Descrizione |
+| Elemento | DESCRIZIONE |
 | ------- | ------------|
-| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
+| [SectionName > elemento  **\<** ](custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzate <xref:System.Configuration.NameValueSectionHandler> che <xref:System.Configuration.DictionarySectionHandler> usano le classi e. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come definire una sezione di configurazione personalizzato e usare la  **\<Aggiungi >** elemento da inserire nella sezione impostazioni:
+Nell'esempio seguente viene illustrato come definire una sezione di configurazione personalizzata e utilizzare l'  **\<elemento Add >** per inserire le impostazioni nella sezione:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Nell'esempio seguente viene illustrato come definire una sezione di configurazio
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema del file di configurazione per il .NET Framework](index.md)

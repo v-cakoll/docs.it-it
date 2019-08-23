@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
-ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1971d5fe9422c5138f140517e6fd4c9f9b2cf48b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913922"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Procedura: Utilizzare un MatrixTransform per creare trasformazioni personalizzate
-In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.MatrixTransform> traslare (spostare) la posizione dell'estensione e l'inclinazione di un <xref:System.Windows.Controls.Button>.  
+Questo esempio illustra come usare un oggetto <xref:System.Windows.Media.MatrixTransform> per tradurre (spostare) la posizione, l'estensione e l'inclinazione <xref:System.Windows.Controls.Button>di un oggetto.  
   
 > [!NOTE]
->  Usare la <xref:System.Windows.Media.MatrixTransform> classe per creare trasformazioni personalizzate non disponibili per il <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.SkewTransform>, <xref:System.Windows.Media.ScaleTransform>, o <xref:System.Windows.Media.TranslateTransform> classi.  
+> Utilizzare la <xref:System.Windows.Media.MatrixTransform> classe per creare trasformazioni personalizzate che non sono fornite <xref:System.Windows.Media.RotateTransform>dalle classi, <xref:System.Windows.Media.SkewTransform>, <xref:System.Windows.Media.ScaleTransform>o <xref:System.Windows.Media.TranslateTransform> .  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[Transforms_snip#MatrixTransform](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MatrixTransformExample.xaml#matrixtransform)]  

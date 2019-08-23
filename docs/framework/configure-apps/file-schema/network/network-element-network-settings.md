@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659320"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920979"
 ---
 # <a name="network-element-network-settings"></a>\<Elemento > di rete (impostazioni di rete)
 Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol) esterno.  
@@ -60,7 +60,7 @@ Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol)
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<Elemento > SMTP (impostazioni di rete)](smtp-element-network-settings.md)|Configura le opzioni di invio di posta elettronica SMTP (Simple Mail Transport Protocol).|  
   
@@ -70,7 +70,7 @@ Configura le opzioni di rete per un server SMTP (Simple Mail Transport Protocol)
  È inoltre possibile utilizzare l'autenticazione di base (nome utente e password) per eseguire l'autenticazione al server SMTP. Per utilizzare questa opzione, è necessario specificare un nome utente e una password validi per il server SMTP specificato.  
   
 > [!NOTE]
->  L'autenticazione di base `userName` Invia `password` i valori e al server non crittografato. Chiunque monitora il traffico di rete può visualizzare le credenziali e usarle per connettersi al server. È consigliabile utilizzare un meccanismo di autenticazione più protetto, ad esempio Kerberos o NT LAN Manager (NTLM). Se `defaultCredentials` è`true`, verrà utilizzato Kerberos o NTLM se il server supporta questi protocolli.  
+> L'autenticazione di base `userName` Invia `password` i valori e al server non crittografato. Chiunque monitora il traffico di rete può visualizzare le credenziali e usarle per connettersi al server. È consigliabile utilizzare un meccanismo di autenticazione più protetto, ad esempio Kerberos o NT LAN Manager (NTLM). Se `defaultCredentials` è`true`, verrà utilizzato Kerberos o NTLM se il server supporta questi protocolli.  
   
  Le opzioni di autenticazione di base e credenziali di rete predefinite si escludono a vicenda. Se si imposta `defaultCredentials` su `true` e si specifica un nome utente e una password, vengono utilizzate le credenziali di rete predefinite e i dati di autenticazione di base vengono ignorati.  
   

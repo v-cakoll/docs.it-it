@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c7559a95099608ea462c838591ddb43e18d8f80c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301226"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921212"
 ---
 # <a name="configuration-sections-schema"></a>Schema delle sezioni di configurazione
 
-Lo schema di sezioni di configurazione contiene elementi che definiscono le impostazioni personalizzate nei file di configurazione. Per informazioni generali su schemi e i file di configurazione, vedere [schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).
+Lo schema delle sezioni di configurazione contiene elementi che definiscono impostazioni personalizzate nei file di configurazione. Per informazioni generali sui file di configurazione e sugli schemi, vedere [schema dei file di configurazione per il .NET Framework](index.md).
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md)   
-[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md)   
-[ **\<sezione >** ](~/docs/framework/configure-apps/file-schema/section-element.md)   
-[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+[ **\<configuration>** ](configuration-element.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
+[ **\<> sezione**](section-element.md)   
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
-|     | Descrizione |
+|     | DESCRIZIONE |
 | --- | ----------- |
-| [ **\<Cancella >** per  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Cancella tutte le sezioni definite in precedenza e i gruppi. |
-| [ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene le dichiarazioni dello spazio dei nomi e sezione di configurazione. |
-| [ **\<rimuovere >** per  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Rimuove una sezione predefiniti o un gruppo di sezioni. |
-| [ **\<sezione >** per  **\<configSections >** e  **\<sectionGroup >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
-| [ **\<sectionGroup >** per  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |
+| [Cancella > per  **\<**  **configSections>\<** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | Cancella tutte le sezioni e i gruppi di sezioni definiti in precedenza. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | Contiene la sezione di configurazione e le dichiarazioni dello spazio dei nomi. |
+| [rimuovere > per  **\<**  **configSections>\<** ](remove-element-for-configsections.md) | Rimuove una sezione o un gruppo di sezioni predefinito. |
+| [sezione > **per configSections>\<** e  **sectionGroup\<>**  **\<** ](section-element.md) | Contiene una dichiarazione della sezione di configurazione. |
+| [> sectionGroup per  **\<**  **configSections>\<** ](sectiongroup-element-for-configsections.md) | Definisce uno spazio dei nomi per le sezioni di configurazione. |

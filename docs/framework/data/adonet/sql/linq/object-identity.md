@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767540"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915722"
 ---
 # <a name="object-identity"></a>Identità dell'oggetto
 Gli oggetti in runtime hanno identità univoche. Se due variabili fanno riferimento allo stesso oggetto, si riferiscono in effetti alla stessa istanza dell'oggetto. Per questo motivo le modifiche apportate per mezzo di un percorso tramite una variabile sono immediatamente visibili tramite l'altra.  
@@ -21,12 +21,12 @@ Gli oggetti in runtime hanno identità univoche. Se due variabili fanno riferime
   
  Con gli oggetti il comportamento previsto è molto diverso. Infatti è prevedibile che se viene inviata ripetutamente una richiesta a <xref:System.Data.Linq.DataContext> per ottenere le stesse informazioni, verrà in effetti restituita la stessa istanza dell'oggetto. Questo comportamento è prevedibile in quanto gli oggetti hanno un significato particolare per l'applicazione ed è implicito che si comportino come oggetti. Sono infatti stati progettati come gerarchie o grafici, quindi si deduce che vengano recuperati come tali e non che vengano restituite molteplici istanze replicate solo perché è stata inviata più volte la stessa richiesta.  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'identità degli oggetti viene gestita da <xref:System.Data.Linq.DataContext>. Ogni qualvolta si recupera una nuova riga dal database, la riga viene registrata in una tabella di identità in base alla relativa chiave primaria e viene creato un nuovo oggetto. Quando si recupera quella riga, viene restituita all'applicazione l'istanza dell'oggetto originale. In questo modo il concetto di identità riconosciuto dal database, ovvero le chiavi primarie, viene convertito da <xref:System.Data.Linq.DataContext> nel concetto di identità riconosciuto dal linguaggio, ovvero le istanze. L'oggetto viene visto dall'applicazione nello stato in cui è stato recuperato la prima volta. I dati nuovi, se diversi, vengono ignorati. Per altre informazioni, vedere [recupero di oggetti dalla Cache delle identità](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'identità degli oggetti viene gestita da <xref:System.Data.Linq.DataContext>. Ogni qualvolta si recupera una nuova riga dal database, la riga viene registrata in una tabella di identità in base alla relativa chiave primaria e viene creato un nuovo oggetto. Quando si recupera quella riga, viene restituita all'applicazione l'istanza dell'oggetto originale. In questo modo il concetto di identità riconosciuto dal database, ovvero le chiavi primarie, viene convertito da <xref:System.Data.Linq.DataContext> nel concetto di identità riconosciuto dal linguaggio, ovvero le istanze. L'oggetto viene visto dall'applicazione nello stato in cui è stato recuperato la prima volta. I dati nuovi, se diversi, vengono ignorati. Per altre informazioni, vedere [recupero di oggetti dalla cache di identità](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usa questo approccio per gestire l'integrità degli oggetti locali per supportare gli aggiornamenti ottimistici. Poiché le uniche modifiche che si verificano dopo la creazione iniziale dell'oggetto sono quelle apportate dall'applicazione, lo scopo dell'applicazione risulta chiaro. Se nel frattempo sono state apportate modifiche da una parte di un elemento esterno, queste vengono identificate al momento della chiamata a `SubmitChanges()`.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Usa questo approccio per gestire l'integrità degli oggetti locali in modo da supportare gli aggiornamenti ottimistici. Poiché le uniche modifiche che si verificano dopo la creazione iniziale dell'oggetto sono quelle apportate dall'applicazione, lo scopo dell'applicazione risulta chiaro. Se nel frattempo sono state apportate modifiche da una parte di un elemento esterno, queste vengono identificate al momento della chiamata a `SubmitChanges()`.  
   
 > [!NOTE]
->  Se l'oggetto richiesto dalla query è facilmente identificabile come oggetto già recuperato, la query non viene eseguita. La tabella di identità funge come una cache di tutti gli oggetti precedentemente recuperati.  
+> Se l'oggetto richiesto dalla query è facilmente identificabile come oggetto già recuperato, la query non viene eseguita. La tabella di identità funge come una cache di tutti gli oggetti precedentemente recuperati.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -2,18 +2,18 @@
 title: Esempio di base
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d227b3ac64108901b8280ac7887adc30b0fab13e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002638"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915443"
 ---
 # <a name="basic-sample"></a>Esempio di base
 In questo esempio viene illustrato come rendere individuabile un servizio e come cercare e chiamare un servizio individuabile. Questo esempio è costituito da due progetti, ovvero il servizio e il client.
 
 > [!NOTE]
->  In questo esempio l'individuazione viene implementata nel codice.  Per un esempio che implementa l'individuazione nella configurazione, vedere [configurazione](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+> In questo esempio l'individuazione viene implementata nel codice.  Per un esempio di implementazione dell'individuazione nella configurazione, vedere [configurazione](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
 ## <a name="service"></a>Service  
  Si tratta di una semplice implementazione del servizio di calcolatrice. Il codice correlato all'individuazione è disponibile in `Main` dove un oggetto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> viene aggiunto all'host del servizio e un oggetto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> viene aggiunto come illustrato nel codice seguente.  
@@ -82,9 +82,9 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per altre informazioni, vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per ulteriori informazioni, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. In Visual Studio 2012 aprire sln e compilare l'esempio.  
+2. Utilizzando Visual Studio 2012, aprire il. sln di base e compilare l'esempio.  
   
 3. Eseguire l'applicazione service.exe.  
   
@@ -97,6 +97,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  

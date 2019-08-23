@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ba0f7f02b548a5d9ea1a99605a668f449b3e4a9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013244"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923632"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedura: Impostare la dimensione dei pannelli della barra di stato
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
+> Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- Ogni istanza del <xref:System.Windows.Forms.StatusBarPanel> classe all'interno di un [controllo StatusBar](statusbar-control-windows-forms.md) controllo ha un numero di proprietà dinamiche che determinano la larghezza e il ridimensionamento in fase di esecuzione.  
+ Ogni istanza della <xref:System.Windows.Forms.StatusBarPanel> classe all'interno di un controllo [StatusBar](statusbar-control-windows-forms.md) dispone di un numero di proprietà dinamiche che ne determinano il comportamento di ridimensionamento e larghezza in fase di esecuzione.  
   
-### <a name="to-set-the-size-of-a-panel"></a>Per impostare le dimensioni di un controllo panel  
+### <a name="to-set-the-size-of-a-panel"></a>Per impostare le dimensioni di un pannello  
   
-1. In una procedura, impostare il <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> delle proprietà (o qualsiasi subset al suo interno) per la barra di stato pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà del <xref:System.Windows.Forms.StatusBarPanel> raccolta.  
+1. In una routine, impostare le <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>proprietà <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> (o qualsiasi subset ivi) per i pannelli della barra di stato usando l'indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà della <xref:System.Windows.Forms.StatusBarPanel> raccolta.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -70,5 +70,5 @@ ms.locfileid: "62013244"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Procedura: Determinare il pannello in cui è stato fatto clic sul controllo Windows Forms StatusBar](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

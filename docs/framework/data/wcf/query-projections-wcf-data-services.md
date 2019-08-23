@@ -10,22 +10,22 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931161"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 
-Proiezione fornisce un meccanismo nel [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per ridurre la quantità di dati nel feed restituito da una query specificando che solo determinate proprietà di un'entità vengano restituite nella risposta. Per altre informazioni, vedere [OData: Selezionare l'opzione di Query di sistema ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).
+La proiezione fornisce un meccanismo in [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per ridurre la quantità di dati nel feed restituiti da una query specificando che nella risposta vengono restituite solo determinate proprietà di un'entità. Per ulteriori informazioni, vedere [OData: Selezionare l'opzione query di sistema (](https://go.microsoft.com/fwlink/?LinkId=186076)$Select).
 
 In questo argomento viene descritto come definire una proiezione di query e quali sono i requisiti per i tipi di entità e non entità. Viene inoltre illustrato come eseguire gli aggiornamenti dei risultati proiettati e creare i tipi proiettati e vengono elencate alcune considerazioni sulla proiezione.
 
 ## <a name="defining-a-query-projection"></a>Definizione di una proiezione di query
 
-È possibile aggiungere una clausola di proiezione a una query usando il `$select` opzione in un URI o tramite query le [selezionare](~/docs/csharp/language-reference/keywords/select-clause.md) clausola ([selezionare](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. I dati di entità restituiti possono essere proiettati in tipi di entità o non entità sul client. Negli esempi di questo argomento viene illustrato l'uso della clausola `select` in una query LINQ.
+È possibile aggiungere una clausola di proiezione a una query usando l' `$select` opzione query in un URI o usando la clausola [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in una query LINQ. I dati di entità restituiti possono essere proiettati in tipi di entità o non entità sul client. Negli esempi di questo argomento viene illustrato l'uso della clausola `select` in una query LINQ.
 
 > [!IMPORTANT]
 > Quando si salvano gli aggiornamenti apportati ai tipi proiettati, potrebbe verificarsi una perdita di dati nel servizio dati. Per altre informazioni, vedere [considerazioni sulla proiezione](#considerations).
@@ -38,7 +38,7 @@ I tipi di entità devono disporre di una o più proprietà Identity che costitui
 
 - Tramite la proprietà `ID` del tipo.
 
-- Quando il tipo ha una proprietà denominata *tipo*`ID`, dove *tipo* è il nome del tipo.
+- Quando il tipo dispone di una proprietà denominata *Type*`ID`, dove *Type* è il nome del tipo.
 
 Per impostazione predefinita, quando si proiettano i risultati delle query in un tipo definito nel client, le proprietà richieste nella proiezione devono esistere nel tipo di client. Tuttavia, quando si specifica un valore `true` per la proprietà <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> di <xref:System.Data.Services.Client.DataServiceContext>, non è necessario che le proprietà specificate nella proiezione siano presenti nel tipo di client.
 
@@ -46,7 +46,7 @@ Per impostazione predefinita, quando si proiettano i risultati delle query in un
 
 Quando si proiettano i risultati di una query in tipi di entità nel client, <xref:System.Data.Services.Client.DataServiceContext> può rilevare gli oggetti con aggiornamenti da restituire al servizio dati quando viene chiamato il metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Tuttavia, gli aggiornamenti apportati ai dati proiettati in tipi di non entità nel client non possono essere restituiti al servizio dati, perché il servizio dati non può aggiornare l'entità corretta nell'origine dati senza una chiave per identificare l'istanza di entità. I tipi di non entità non vengono associati a <xref:System.Data.Services.Client.DataServiceContext>.
 
-Quando una o più proprietà di un tipo di entità definito nel servizio dati non sono presenti nel tipo di client in cui viene proiettata l'entità, gli inserimenti di nuove entità non conterranno le proprietà mancanti. In questo caso, gli aggiornamenti apportati alle entità esistenti verranno **inoltre** non includono le proprietà mancanti. Quando esiste un valore per la proprietà, l'aggiornamento ripristina il valore predefinito della proprietà, secondo quanto definito nell'origine dati.
+Quando una o più proprietà di un tipo di entità definito nel servizio dati non sono presenti nel tipo di client in cui viene proiettata l'entità, gli inserimenti di nuove entità non conterranno le proprietà mancanti. In questo caso, **anche** gli aggiornamenti apportati alle entità esistenti non includeranno le proprietà mancanti. Quando esiste un valore per la proprietà, l'aggiornamento ripristina il valore predefinito della proprietà, secondo quanto definito nell'origine dati.
 
 ### <a name="creating-projected-types"></a>Creazione di tipi proiettati
 
@@ -61,9 +61,9 @@ Inoltre, i dati del tipo `Customer` vengono proiettati in un'istanza del tipo di
 
 Le impostazioni <xref:System.Data.Services.Client.MergeOption> di <xref:System.Data.Services.Client.DataServiceContext> vengono usate per la risoluzione di identità durante la proiezione di query. Pertanto, se un'istanza del tipo `Customer` esiste già in <xref:System.Data.Services.Client.DataServiceContext>, un'istanza di `CustomerAddress` con la stessa identità seguirà le regole di risoluzione di identità specificate da <xref:System.Data.Services.Client.MergeOption>
 
-Di seguito vengono descritti i comportamenti durante la proiezione dei risultati in tipi di entità e non di entità:
+Di seguito vengono descritti i comportamenti quando si proiettano i risultati in tipi di entità e non entità:
 
-**La creazione di una nuova istanza proiettata tramite inizializzatori**
+**Creazione di una nuova istanza proiettata tramite inizializzatori**
 
 - Esempio:
 
@@ -72,7 +72,7 @@ Di seguito vengono descritti i comportamenti durante la proiezione dei risultati
 
 - Tipo di entità: Supportato
 
-- Tipo di non entità: Supportato
+- Tipo non entità: Supportato
 
 **Creazione di una nuova istanza proiettata tramite costruttori**
 
@@ -83,9 +83,9 @@ Di seguito vengono descritti i comportamenti durante la proiezione dei risultati
 
 - Tipo di entità: Viene generato un oggetto <xref:System.NotSupportedException>.
 
-- Tipo di non entità: Supportato
+- Tipo non entità: Supportato
 
-**Uso di proiezione per trasformare un valore della proprietà**
+**Uso della proiezione per trasformare un valore di proprietà**
 
 - Esempio:
 
@@ -94,7 +94,7 @@ Di seguito vengono descritti i comportamenti durante la proiezione dei risultati
 
 - Tipo di entità: Questa trasformazione non è supportata per i tipi di entità perché può generare confusione e la potenziale sovrascrittura dei dati nell'origine dati appartenenti a un'altra entità. Viene generato un oggetto <xref:System.NotSupportedException>.
 
-- Tipo di non entità: Supportato
+- Tipo non entità: Supportato
 
 <a name="considerations"></a>
 
@@ -102,7 +102,7 @@ Di seguito vengono descritti i comportamenti durante la proiezione dei risultati
 
 Alla definizione di una proiezione di query si applicano le considerazioni aggiuntive seguenti:
 
-- Quando si definiscono feed personalizzati per il formato Atom, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate vengano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [personalizzazione di Feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Quando si definiscono feed personalizzati per il formato Atom, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate vengano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [personalizzazione del feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
 
 - Quando vengono apportati inserimenti a un tipo proiettato che non contiene tutte le proprietà dell'entità nel modello di dati del servizio dati, le proprietà non incluse nella proiezione vengono impostate sui valori predefiniti nel client.
 
@@ -112,9 +112,9 @@ Alla definizione di una proiezione di query si applicano le considerazioni aggiu
 
 - Quando una proiezione include una proprietà di navigazione, gli oggetti correlati vengono caricati in modo implicito senza necessità di chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. Il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> non è supportato in una query proiettata.
 
-- Le proiezioni di query eseguite nel client vengono convertite per l'uso dell'opzione query `$select` nell'URI della richiesta. Se una query con proiezione viene eseguita su una versione precedente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che non supporta l'opzione query `$select`, viene restituito un errore. Questa situazione può inoltre verificarsi quando <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> di <xref:System.Data.Services.DataServiceBehavior> per il servizio dati viene impostato su un valore pari a <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Per altre informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Le proiezioni di query eseguite nel client vengono convertite per l'uso dell'opzione query `$select` nell'URI della richiesta. Se una query con proiezione viene eseguita su una versione precedente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che non supporta l'opzione query `$select`, viene restituito un errore. Questa situazione può inoltre verificarsi quando <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> di <xref:System.Data.Services.DataServiceBehavior> per il servizio dati viene impostato su un valore pari a <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
 
-Per altre informazioni, vedere [Procedura: Proiettare i risultati delle Query](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).
+Per altre informazioni, vedere [Procedura: Risultati](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)della query di progetto.
 
 ## <a name="see-also"></a>Vedere anche
 

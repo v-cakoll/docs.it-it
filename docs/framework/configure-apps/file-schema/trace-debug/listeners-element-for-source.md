@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920497"
 ---
-# <a name="listeners-element-for-source"></a>\<i listener > (elemento) per \<origine >
-Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSource.Listeners%2A> insieme per un <xref:System.Diagnostics.TraceSource>. I listener indirizzano l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
+# <a name="listeners-element-for-source"></a>\<Listeners > elemento per \<l'origine >
+Aggiunge o rimuove i <xref:System.Diagnostics.TraceSource.Listeners%2A> listener nella raccolta per un oggetto. <xref:System.Diagnostics.TraceSource> Un listener indirizza l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<origine >  
-\<i listener > elemento  
+\<origini >  
+\<> di origine  
+\<Listeners > elemento  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,9 +43,9 @@ Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSour
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners`.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Rimuove un listener dal `Listeners` raccolta.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Aggiunge un listener alla raccolta `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Rimuove un listener dalla `Listeners` raccolta.|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|Cancella la raccolta `Listeners` per un'origine di traccia.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -59,10 +59,10 @@ Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSour
 ## <a name="remarks"></a>Note  
   
 ## <a name="configuration-file"></a>File di configurazione  
- Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `<listeners>` elemento a cui aggiungere un listener di traccia console il `mySource` origine e di rimuovere il listener di traccia predefinito.  
+ Nell'esempio seguente viene illustrato come utilizzare l' `<listeners>` elemento per aggiungere un listener `mySource` di traccia della console all'origine e per rimuovere il listener di traccia predefinito.  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSour
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Diagnostics.TraceListener>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schema delle impostazioni di traccia e debug](index.md)
+- [Listener di traccia](../../../debug-trace-profile/trace-listeners.md)

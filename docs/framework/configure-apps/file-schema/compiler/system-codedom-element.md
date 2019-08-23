@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927700"
 ---
 # <a name="systemcodedom-element"></a>\<Elemento > System. CodeDom
 Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.  
@@ -56,7 +56,7 @@ Specifica le impostazioni di configurazione del compilatore per i provider di li
  Gli sviluppatori e i fornitori di compilatori possono aggiungere impostazioni di configurazione al file di configurazione del computer ( <xref:System.CodeDom.Compiler.CodeDomProvider> Machine. config) per una nuova implementazione. Usare il <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> metodo per enumerare a livello di codice sia i provider di lingua predefiniti che i provider di linguaggio identificati dalle impostazioni di configurazione del compilatore in un computer.  
   
 > [!NOTE]
->  Nelle versioni .NET Framework 1,0 e 1,1, i provider di lingua predefiniti forniti dall'.NET Framework sono identificati nell' [ \<elemento >](compilers-element.md) compilatori. In .NET Framework versione 2,0 i provider di lingua predefiniti non sono identificati nell' <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> [ \<elemento > compilatori](compilers-element.md) , ma possono essere enumerati utilizzando il metodo.  
+> Nelle versioni .NET Framework 1,0 e 1,1, i provider di lingua predefiniti forniti dall'.NET Framework sono identificati nell' [ \<elemento >](compilers-element.md) compilatori. In .NET Framework versione 2,0 i provider di lingua predefiniti non sono identificati nell' <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> [ \<elemento > compilatori](compilers-element.md) , ma possono essere enumerati utilizzando il metodo.  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework versioni 1,0 e 1,1  
  L'elemento > [System. CodeDom contiene le impostazioni di configurazione del compilatore per i provider del linguaggio in un computer. \<](system-codedom-element.md) [ Il\<compilatore >](compilers-element.md) elemento contiene zero o più [ \<elementi > del compilatore](compiler-element.md) . Ogni elemento > del compilatore specifica gli attributi di configurazione del compilatore per un provider di linguaggio specifico. [ \<](compiler-element.md)  

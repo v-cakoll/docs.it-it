@@ -2,12 +2,12 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919782"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions>
 Questa sezione consente l'uso di un'associazione definita dall'utente dal file di configurazione di un computer o di un'applicazione. È possibile aggiungere un binding definito dall'utente a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento su un'associazione definita dall'utente e anche l'attributo `name` sul nome dell'associazione definita dall'utente.  
@@ -43,4 +43,4 @@ Questa sezione consente l'uso di un'associazione definita dall'utente dal file d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)

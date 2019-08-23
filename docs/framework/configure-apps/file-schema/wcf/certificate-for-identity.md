@@ -2,20 +2,20 @@
 title: <certificate> per <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919609"
 ---
-# <a name="certificate-for-identity"></a>\<certificato > per \<identità >
+# <a name="certificate-for-identity"></a>\<> del certificato \<per l'identità >
 Specifica un certificato X.509 usato per convalidare un server presso un client.  
   
- Per altre informazioni sull'impostazione del valore dell'elemento, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Per ulteriori informazioni sull'impostazione del valore dell'elemento, vedere [identità e autenticazione del servizio](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identity>  
-\<certificate>  
+\<> certificato  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -28,7 +28,7 @@ Specifica un certificato X.509 usato per convalidare un server presso un client.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |encodedValue|Codifica Base64 del certificato.|  
   
@@ -39,7 +39,7 @@ Specifica un certificato X.509 usato per convalidare un server presso un client.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
+|[\<identity>](identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene specificata la rappresentazione codificata di un certificato usato per convalidare un server presso un client.  
@@ -56,5 +56,5 @@ Specifica un certificato X.509 usato per convalidare un server presso un client.
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

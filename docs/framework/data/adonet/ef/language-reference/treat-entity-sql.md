@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879567"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929296"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Consente di trattare un oggetto di un tipo di base particolare come oggetto del tipo derivato specificato.  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  Qualsiasi espressione di query valida che restituisce un'entità.  
   
 > [!NOTE]
->  Il tipo dell'espressione specificata deve essere un sottotipo del tipo di dati specificato oppure il tipo di dati deve essere un sottotipo del tipo di espressione.  
+> Il tipo dell'espressione specificata deve essere un sottotipo del tipo di dati specificato oppure il tipo di dati deve essere un sottotipo del tipo di espressione.  
   
  `type`  
  Tipo di entità. Il tipo deve essere qualificato da uno spazio dei nomi.  
   
 > [!NOTE]
->  L'espressione specificata deve essere un sottotipo del tipo di dati specificato oppure il tipo di dati deve essere un sottotipo dell'espressione.  
+> L'espressione specificata deve essere un sottotipo del tipo di dati specificato oppure il tipo di dati deve essere un sottotipo dell'espressione.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore del tipo di dati specificato.  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  Questa query consente di eseguire l'upcast delle entità `Person` al tipo `Employee` . Se il valore di p non è di tipo `Employee`, l'espressione restituisce il valore `null`.  
   
 > [!NOTE]
->  L'espressione specificata `Employee` deve essere un sottotipo del tipo di dati specificato `Person`, o il tipo di dati deve essere un sottotipo dell'espressione. In caso contrario, l'espressione comporterà la generazione di un errore in fase di compilazione.  
+> L'espressione `Employee` specificata deve essere un sottotipo del tipo `Person`di dati specificato oppure il tipo di dati deve essere un sottotipo dell'espressione. In caso contrario, l'espressione comporterà la generazione di un errore in fase di compilazione.  
   
  Nella tabella seguente viene illustrato il comportamento di TREAT su alcuni modelli tipici e su alcuni modelli meno comuni. Tutte le eccezioni vengono generate sul lato client prima che il provider venga richiamato:  
   

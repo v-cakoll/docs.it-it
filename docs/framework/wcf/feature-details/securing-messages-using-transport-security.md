@@ -2,18 +2,18 @@
 title: Protezione dei messaggi mediante protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911713"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protezione dei messaggi mediante protezione del trasporto
 Contenuto della sezione viene descritta la protezione del trasporto di Accodamento messaggi (MSMQ), che è possibile utilizzare per proteggere messaggi inviati a una coda.  
   
 > [!NOTE]
->  Prima di leggere questo argomento, è consigliabile leggere i [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Prima di leggere questo argomento, è consigliabile leggere i [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  Nella figura seguente viene illustrato un modello concettuale della comunicazione in coda con Windows Communication Foundation (WCF). L'illustrazione e la terminologia vengono utilizzate per spiegare i concetti di sicurezza del trasporto.  
   
@@ -53,7 +53,7 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
  La scelta di utilizzare la sicurezza di Windows comporta l'integrazione di Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> è la modalità di sicurezza del trasporto predefinita. Quando questa proprietà è impostata, il canale WCF connette il SID di Windows al messaggio MSMQ e utilizza il certificato interno ottenuto da Active Directory. Questo certificato interno viene quindi utilizzato per proteggere il messaggio. Il gestore delle code di destinazione utilizza Active Directory per cercare e trovare un certificato corrispondente per autenticare il client e controlla inoltre che il SID corrisponda a quello del client. Questo passaggio di autenticazione viene eseguito se un certificato, generato internamente nel caso della modalità di autenticazione `WindowsDomain` o generato esternamente nel caso della modalità di autenticazione `Certificate`, è allegato al messaggio anche se la coda di destinazione non è contrassegnata per l'autenticazione.  
   
 > [!NOTE]
->  Durante la creazione di una coda, è possibile contrassegnare la coda come autenticata per indicare che richiede l'autenticazione del client che invia messaggi alla coda. In questo modo si ha la certezza che nessun messaggio non autenticato venga accettato nella coda.  
+> Durante la creazione di una coda, è possibile contrassegnare la coda come autenticata per indicare che richiede l'autenticazione del client che invia messaggi alla coda. In questo modo si ha la certezza che nessun messaggio non autenticato venga accettato nella coda.  
   
  Anche il SID allegato al messaggio viene utilizzato per eseguire un controllo a fronte dell'ACL della coda di destinazione per accertare se il client è autorizzato a inviare messaggi alla coda.  
   
@@ -76,13 +76,13 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
  Oltre a essere firmato, il messaggio MSMQ viene crittografato mediante la chiave pubblica del certificato ottenuta da Active Directory appartenente al gestore delle code di destinazione in cui risiede la coda di destinazione. Il gestore delle code di origine garantisce che il messaggio MSMQ è crittografato in transito. Il gestore delle code di destinazione gestione esegue la decrittografia del messaggio MSMQ mediante la chiave privata del certificato interno e archivia il messaggio nella coda (se autenticato e autorizzato) in testo non crittografato.  
   
 > [!NOTE]
->  Per crittografare il messaggio è necessario l'accesso ad Active Directory (la proprietà`UseActiveDirectory` di <xref:System.ServiceModel.NetMsmqBinding> deve essere impostata su `true`) che può essere utilizzato con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
+> Per crittografare il messaggio è necessario l'accesso ad Active Directory (la proprietà`UseActiveDirectory` di <xref:System.ServiceModel.NetMsmqBinding> deve essere impostata su `true`) che può essere utilizzato con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="none-protection-level"></a>Nessun livello di protezione  
  È implicita l'assenza di protezione quando la proprietà <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> è impostata su <xref:System.Net.Security.ProtectionLevel.None>. Non può trattarsi di un valore valido per qualsiasi altra modalità di autenticazione.  
   
 > [!NOTE]
->  Se il messaggio MSMQ è firmato, MSMQ controlla se è firmato con il certificato allegato (interno o esterno) indipendentemente dallo stato della coda, ovvero se autenticata o no.  
+> Se il messaggio MSMQ è firmato, MSMQ controlla se è firmato con il certificato allegato (interno o esterno) indipendentemente dallo stato della coda, ovvero se autenticata o no.  
   
 ### <a name="msmq-encryption-algorithm"></a>Algoritmo di crittografia MSMQ  
  L'algoritmo di crittografia consente di specificare l'algoritmo da utilizzare per crittografare il messaggio MSMQ in transito. Questa proprietà viene utilizzata solo se la proprietà <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> è impostata su <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  

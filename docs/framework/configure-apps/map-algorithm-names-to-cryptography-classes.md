@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566731"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912873"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapping di nomi di algoritmi a classi di crittografia
 Esistono quattro modi per creare un oggetto di crittografia usando il Windows SDK:  
@@ -58,16 +58,16 @@ Esistono quattro modi per creare un oggetto di crittografia usando il Windows SD
 </configuration>  
 ```  
   
- È possibile specificare il nome dell'attributo nell' [elemento < CryptoClass\> ](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (l'esempio precedente assegna un nome all'attributo `MySHA1Hash`). Il valore dell'attributo nell'  **\<elemento > CryptoClass** è una stringa utilizzata dal Common Language Runtime per trovare la classe. È possibile usare qualsiasi stringa che soddisfi i requisiti specificati per [specificare nomi di tipo completi](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ È possibile specificare il nome dell'attributo nell' [elemento < CryptoClass\> ](./file-schema/cryptography/cryptoclass-element.md) (l'esempio precedente assegna un nome all'attributo `MySHA1Hash`). Il valore dell'attributo nell'  **\<elemento > CryptoClass** è una stringa utilizzata dal Common Language Runtime per trovare la classe. È possibile usare qualsiasi stringa che soddisfi i requisiti specificati per [specificare nomi di tipo completi](../reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Molti nomi di algoritmi possono essere mappati alla stessa classe. L' [ \<elemento > nameEntry](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) esegue il mapping di una classe a un nome di algoritmo descrittivo. L'attributo **Name** può essere una stringa utilizzata quando si chiama il metodo **System. Security. Cryptography. CryptoConfig. CreateFromName** o il nome di una <xref:System.Security.Cryptography> classe di crittografia astratta nello spazio dei nomi. Il valore dell'attributo **Class** è il nome dell'attributo nell'  **\<elemento > CryptoClass** .  
+ Molti nomi di algoritmi possono essere mappati alla stessa classe. L' [ \<elemento > nameEntry](./file-schema/cryptography/nameentry-element.md) esegue il mapping di una classe a un nome di algoritmo descrittivo. L'attributo **Name** può essere una stringa utilizzata quando si chiama il metodo **System. Security. Cryptography. CryptoConfig. CreateFromName** o il nome di una <xref:System.Security.Cryptography> classe di crittografia astratta nello spazio dei nomi. Il valore dell'attributo **Class** è il nome dell'attributo nell'  **\<elemento > CryptoClass** .  
   
 > [!NOTE]
->  È possibile ottenere un algoritmo SHA1 chiamando il <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodo o il metodo **Security. CryptoConfig. CreateFromName ("SHA1")** . Ogni metodo garantisce solo che restituisca un oggetto che implementa l'algoritmo SHA1. Non è necessario eseguire il mapping di ogni nome descrittivo di un algoritmo alla stessa classe nel file di configurazione.  
+> È possibile ottenere un algoritmo SHA1 chiamando il <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> metodo o il metodo **Security. CryptoConfig. CreateFromName ("SHA1")** . Ogni metodo garantisce solo che restituisca un oggetto che implementa l'algoritmo SHA1. Non è necessario eseguire il mapping di ogni nome descrittivo di un algoritmo alla stessa classe nel file di configurazione.  
   
  Per un elenco di nomi predefiniti e le classi a cui eseguono il mapping <xref:System.Security.Cryptography.CryptoConfig>, vedere.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [Configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [Configurazione di classi di crittografia](configure-cryptography-classes.md)

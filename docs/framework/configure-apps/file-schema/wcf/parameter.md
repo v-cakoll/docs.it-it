@@ -2,22 +2,22 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932840"
 ---
-# <a name="parameter"></a>\<Parametro >
+# <a name="parameter"></a>\<> parametro
 Specifica il parametro generico quando un tipo dichiarato è un tipo generico.  
   
  \<system.runtime.serialization>  
 \<dataContractSerializer>  
-\<declaredTypes > elemento  
-\<aggiungere > (elemento) per \<declaredTypes >  
-\<knownType > elemento  
-\<parametro > elemento  
+\<Elemento > declaredTypes  
+\<aggiungere > elemento per \<declaredTypes >  
+\<Elemento > knownType  
+\<Parameter > elemento  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,12 +33,12 @@ Specifica il parametro generico quando un tipo dichiarato è un tipo generico.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|indice|Quando il tipo dichiarato è un tipo generico, specifica il parametro generico che restituirà il tipo conosciuto.|  
-|tipo|Stringa che descrive il tipo conosciuto usato per la serializzazione e la deserializzazione.|  
+|index|Quando il tipo dichiarato è un tipo generico, specifica il parametro generico che restituirà il tipo conosciuto.|  
+|type|Stringa che descrive il tipo conosciuto usato per la serializzazione e la deserializzazione.|  
   
 ## <a name="index-attribute"></a>Attributo index  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |"0"|Primo parametro del tipo generico. Ad esempio, un elenco <xref:System.Collections.Generic.List%601> presenta un solo parametro. Se tale parametro viene usato come tipo dichiarato, impostare l'attributo index su "0".|  
 |"1"|Secondo parametro di un tipo generico. Ad esempio, un dizionario <xref:System.Collections.Generic.Dictionary%602> presenta due parametri. Se il tipo conosciuto viene restituito dal secondo parametro, impostare l'attributo index su "1".|  
@@ -50,18 +50,18 @@ Specifica il parametro generico quando un tipo dichiarato è un tipo generico.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<knownType>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Specifica un tipo conosciuto restituibile da un campo o da una proprietà del tipo dichiarato.|  
+|[\<knownType>](knowntype.md)|Specifica un tipo conosciuto restituibile da un campo o da una proprietà del tipo dichiarato.|  
   
 ## <a name="remarks"></a>Note  
- Per altre informazioni sui tipi noti, vedere [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Per ulteriori informazioni sui tipi noti, vedere [tipi noti del contratto dati](../../../wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Vedere le [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) per un esempio di utilizzo di questo elemento.  
+ Per un esempio di utilizzo di questo elemento, vedere la [ \<> DataContractSerializer](datacontractserializer-element.md) .  
   
  Questo elemento di configurazione non può avere contemporaneamente entrambi gli attributi. Se si impostano entrambi gli attributi, si verifica un'eccezione <xref:System.Configuration.ConfigurationErrorsException>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Tipi noti di contratto di dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [Tipi noti di contratto di dati](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

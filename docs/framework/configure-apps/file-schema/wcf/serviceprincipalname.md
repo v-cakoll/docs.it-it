@@ -2,17 +2,17 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28ae27481ea9cb86c31b5be1f12b5491f8ca143e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758184"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936162"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 Specifica l'identità di un servizio in base al relativo nome dell'entità servizio (SPN, Service Principal Name).  
   
- Per altre informazioni sull'impostazione del nome SPN, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Per ulteriori informazioni sull'impostazione del nome SPN, vedere [identità e autenticazione del servizio](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identity>  
 \<servicePrincipalName>  
@@ -30,7 +30,7 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|predefinito|Nome in base al quale un client identifica in modo univoco un'istanza di un servizio. Se si installano più istanze di un servizio in computer distribuiti in una foresta, a ogni istanza deve essere associato un nome SPN distinto. Se i client possono usare più nomi per l'autenticazione, una determinata istanza di servizio può presentare più SPN.|  
+|value|Nome in base al quale un client identifica in modo univoco un'istanza di un servizio. Se si installano più istanze di un servizio in computer distribuiti in una foresta, a ogni istanza deve essere associato un nome SPN distinto. Se i client possono usare più nomi per l'autenticazione, una determinata istanza di servizio può presentare più SPN.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -39,10 +39,10 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
+|[\<identity>](identity.md)|Specifica l'identità del servizio da autenticare presso il client.|  
   
 ## <a name="remarks"></a>Note  
- Un client Windows Communication Foundation (WCF) sicuro che si connette a un endpoint con questa identità usa il nome SPN quando si esegue l'autenticazione SSPI con l'endpoint.  
+ Un client Windows Communication Foundation protetto (WCF) che si connette a un endpoint con questa identità usa il nome SPN quando esegue l'autenticazione SSPI con l'endpoint.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -50,5 +50,5 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.SpnEndpointIdentity>
-- [Identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Identità del servizio e autenticazione](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

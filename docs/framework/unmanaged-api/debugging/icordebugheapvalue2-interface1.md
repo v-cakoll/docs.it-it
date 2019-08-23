@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 870de1d3db1e415792437e9763dc13bf8066913f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700917"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910216"
 ---
 # <a name="icordebugheapvalue2-interface"></a>Interfaccia ICorDebugHeapValue2
 
-Estensione di ICorDebugHeapValue che fornisce il supporto per gli handle di common language runtime (CLR).  
+Estensione di ICorDebugHeapValue che fornisce supporto per gli handle di Common Language Runtime (CLR).  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per l'oggetto `ICorDebugHeapValue2` oggetto.|  
+|[Metodo CreateHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Crea un handle del tipo specificato per questo `ICorDebugHeapValue2` oggetto.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,18 +2,18 @@
 title: Documenti XML di esempio (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916535"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documenti XML di esempio (LINQ to XML)
 I file di esempio seguenti vengono usati negli esempi e nei frammenti di codice in tutta la documentazione [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
->  Ogni riferimento a società, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, logo, persone, luoghi ed eventi è puramente casuale. Nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, logo, persona, luogo o evento è intenzionale o può essere presupposta.  
+> Ogni riferimento a società, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, logo, persone, luoghi ed eventi è puramente casuale. Nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, logo, persona, luogo o evento è intenzionale o può essere presupposta.  
   
 ## <a name="in-this-section"></a>In questa sezione  
   

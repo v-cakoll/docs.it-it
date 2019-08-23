@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce43ef1a24a0b9bcf0248647245cc35838700295
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910507"
 ---
 # <a name="getting-started-with-net-native"></a>Introduzione di .NET Native
 
@@ -24,7 +24,7 @@ ms.locfileid: "66052631"
 4. [Risolvere manualmente i metadati mancanti](#Step4)e ripetere il [passaggio 3](#Step3) finché non vengono risolti tutti i problemi.
 
 > [!NOTE]
-> Se si sta migrando un'app Windows Store esistente a .NET Native, assicurarsi di rivedere [migrazione dell'App di Windows Store a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Se si esegue la migrazione di un'app di Windows Store esistente a .NET Native, assicurarsi di consultare la pagina relativa alla [migrazione dell'app di Windows Store a .NET native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 <a name="Step1"></a>
 
@@ -36,16 +36,16 @@ Per sviluppare una nuova app ed eseguire la migrazione di un'app esistente, si s
 
 2. Sono presenti alcuni problemi noti di compatibilità tra i progetti di app UWP compilati con o senza la catena di strumenti .NET Native. Per altre informazioni, vedere la [guida alla migrazione](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .
 
-È ora possibile scrivere C# o codice Visual Basic per l'area della superficie .NET Native che viene eseguito nel sistema locale (o nel simulatore).
+È ora possibile scrivere C# o Visual Basic codice sulla superficie di attacco .NET native in esecuzione nel sistema locale (o nel simulatore).
 
 > [!IMPORTANT]
 > Quando si sviluppa l'app, annotare qualsiasi uso di serializzazione o reflection nel codice.
 
-Per impostazione predefinita, le compilazioni di debug vengono compilati tramite JIT per abilitare la distribuzione rapida tramite F5, mentre le build di rilascio vengono compilate usando la tecnologia di precompilazione .NET Native. Quindi, è necessario compilare e testare le build di debug dell'app per verificarne il normale funzionamento prima di compilarle con la catena di strumenti .NET Native.
+Per impostazione predefinita, le compilazioni di debug vengono compilate tramite JIT per consentire la distribuzione rapida F5, mentre le build di rilascio vengono compilate utilizzando la .NET Native tecnologia di pre-compilazione. Quindi, è necessario compilare e testare le build di debug dell'app per verificarne il normale funzionamento prima di compilarle con la catena di strumenti .NET Native.
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Passaggio 2: Gestire l'uso della serializzazione e la reflection aggiuntiva
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Passaggio 2: Gestisci l'utilizzo della reflection e della serializzazione aggiuntivi
 
 Default.rd.xml, il file di direttive di runtime, aggiunto automaticamente al progetto al momento della creazione, si trova nella cartella **Proprietà** del progetto se si sviluppa in C#, nella cartella **Progetto personale** del progetto se si sviluppa in Visual Basic.
 
@@ -60,15 +60,15 @@ Esistono due categorie di serializzatori ed entrambe possono richiedere voci agg
 
 - Serializzatori non basati sulla reflection. I serializzatori nella libreria di classi .NET Framework, ad esempio le classi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>e <xref:System.Xml.Serialization.XmlSerializer> , non si basano sulla reflection. Tuttavia, richiedono che il codice venga generato in base all'oggetto da serializzare o deserializzare.  Per altre informazioni, vedere la sezione "Serializzatori Microsoft" in [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
 
-- Serializzatori di terze parti. Le librerie di serializzazione di terze parti, la più nota delle quali è il serializzatore JSON di NewtonSoft, sono generalmente basate sulla reflection e richiedono delle voci nel file *.rd.xml per supportare la serializzazione e la deserializzazione degli oggetti. Per altre informazioni, vedere la sezione "Serializzatori di terze parti" in [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
+- Serializzatori di terze parti. Le librerie di serializzazione di terze parti, la più comune delle quali è il serializzatore JSON di Newtonsoft, sono generalmente basate sulla \*Reflection e richiedono voci nel file. Rd. XML per supportare la serializzazione e la deserializzazione degli oggetti. Per altre informazioni, vedere la sezione "Serializzatori di terze parti" in [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).
 
 **Metodi basati sulla reflection**
 
 In alcuni casi, l'uso della reflection nel codice non è scontato. Alcuni modelli di programmazione o API comuni non sono considerati parte dell'API di reflection ma si basano sulla reflection per una corretta esecuzione Sono inclusi i seguenti metodi di creazione di un'istanza del tipo di costruzione del metodo:
 
-- Metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 
+- Metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>
 
-- Metodi <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> e <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 
+- Metodi <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> e <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>
 
 - Metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> .
 
@@ -83,15 +83,15 @@ Per altre informazioni, vedere [APIs That Rely on Reflection](../../../docs/fram
 
 Dopo aver aggiornato il file di direttive di runtime, è possibile ricompilare e distribuire le build di rilascio dell'app. I file binari di .NET Native vengono inseriti nella sottodirectory ILC.out della directory specificata nella casella di testo **Percorso dell'output di compilazione** della scheda **Compila** della finestra di dialogo **Proprietà** . I file binari non inclusi nella cartella non sono stati compilati con .NET Native. Testare accuratamente l'app e tutti gli scenari, inclusi gli scenari di errore, in ogni piattaforma di destinazione.
 
-Se l'app non funziona correttamente (in particolare nei casi in cui viene generato [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) oppure [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) eccezioni in fase di esecuzione), seguire le istruzioni entro i prossimi sezione [passaggio 4: Risolvere manualmente i metadati mancanti](#Step4). L'abilitazione di eccezioni first-chance aiuta a individuare i bug.
+Se l'app non funziona correttamente (in particolare nei casi in cui genera eccezioni [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) in fase di esecuzione), seguire le istruzioni nella sezione successiva [, passaggio 4: Risolvere manualmente i metadati](#Step4)mancanti. L'abilitazione di eccezioni first-chance aiuta a individuare i bug.
 
-Dopo aver testato ed eseguito il debug di build dell'app e si è certi di aver eliminato il [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) eccezioni, è consigliabile testare l'app come un'app .NET Native ottimizzata. Per eseguire questa operazione, modificare la configurazione del progetto attiva da **Debug** a **Rilascio**.
+Quando sono state testate e sottoposte a debug le build di debug dell'app e si è certi di aver eliminato le eccezioni [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) , è consigliabile testare l'app come un'app ottimizzata .NET native. Per eseguire questa operazione, modificare la configurazione del progetto attiva da **Debug** a **Rilascio**.
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>Passaggio 4: Risolvere manualmente i metadati mancanti
 
-L'errore più comune che si incontrano con .NET Native che non si verifica sul desktop è un runtime [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), o [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) eccezione. In alcuni casi, l'assenza di metadati può causare un comportamento imprevisto o anche errori dell'app. In questa sezione viene descritto come eseguire il debug e risolvere tali eccezioni aggiungendo delle direttive al file di direttive di runtime. Per informazioni sul formato delle direttive di runtime, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Dopo aver aggiunto le direttive di runtime, [distribuire e testare di nuovo l'app](#Step3) e risolvere eventuali nuove eccezioni [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) e [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) finché non ne vengono più generate.
+L'errore più comune che si verificherà con .NET Native che non si verificano sul desktop è un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)o [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) in fase di esecuzione. In alcuni casi, l'assenza di metadati può causare un comportamento imprevisto o anche errori dell'app. In questa sezione viene descritto come eseguire il debug e risolvere tali eccezioni aggiungendo delle direttive al file di direttive di runtime. Per informazioni sul formato delle direttive di runtime, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Dopo aver aggiunto le direttive di runtime, [distribuire e testare di nuovo l'app](#Step3) e risolvere eventuali nuove eccezioni [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) e [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) finché non ne vengono più generate.
 
 > [!TIP]
 > Specificare le direttive di runtime a un alto livello per rendere l'app adattabile alle modifiche del codice.  Si consiglia di aggiungere le direttive di runtime a livello degli spazi dei nomi e dei tipi e non a livello dei membri. Potrebbe essere necessario un compromesso tra resilienza, file binari di grandi dimensioni e tempi di compilazione più lunghi.
@@ -113,11 +113,11 @@ Quando si risolve un'eccezione relativa a metadati mancanti, prendere in conside
   - Il codice chiama un metodo basato sulla reflection quando è disponibile un'alternativa migliore?
 
 > [!NOTE]
-> Per ulteriori informazioni sulla gestione dei problemi derivanti dalle differenze relative alla reflection e alla disponibilità dei metadati nelle App desktop e .NET Native, vedere [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Per ulteriori informazioni sulla gestione dei problemi derivanti dalle differenze nella reflection e sulla disponibilità dei metadati nelle app desktop e .NET Native, vedere [API basate sulla reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 Per alcuni esempi specifici di gestione delle eccezioni e di altri problemi relativi ai test dell'app, vedere:
 
-- [Esempio: La gestione delle eccezioni durante l'associazione dati](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Esempio: Gestione delle eccezioni durante l'associazione dei dati](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
 
 - [Esempio: Risoluzione dei problemi di programmazione dinamica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
 
@@ -126,7 +126,7 @@ Per alcuni esempi specifici di gestione delle eccezioni e di altri problemi rela
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Installazione e configurazione .NET native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Installazione e configurazione di .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native e compilazione](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API basate sulla reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

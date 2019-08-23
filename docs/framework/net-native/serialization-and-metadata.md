@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913794"
 ---
 # <a name="serialization-and-metadata"></a>Serializzazione e metadati
 
@@ -39,7 +39,7 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
   
 ### <a name="typeof-used-in-the-constructor"></a>typeof usato nel costruttore
 
- Se si chiama un costruttore di queste classi di serializzazione e C# si include l'operatore [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) nella chiamata al metodo, **non è necessario eseguire operazioni aggiuntive**. Ad esempio, in ognuna delle seguenti chiamate a un costruttore di classe di serializzazione, la parola chiave `typeof` viene usata come parte dell'espressione passata al costruttore.  
+ Se si chiama un costruttore di queste classi di serializzazione e C# si include l'operatore [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) nella chiamata al metodo, **non è necessario eseguire operazioni aggiuntive**. Ad esempio, in ognuna delle seguenti chiamate a un costruttore di classe di serializzazione, la parola chiave `typeof` viene usata come parte dell'espressione passata al costruttore.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ Se l'applicazione serializza e deserializza oggetti, potrebbe essere necessario 
   
 ### <a name="typeof-used-outside-the-constructor"></a>typeof usato fuori dal costruttore
 
- Se si chiama un costruttore di queste classi di serializzazione e C# si usa l'operatore [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) al di fuori dell'espressione <xref:System.Type> fornita al parametro del costruttore, come nel codice seguente, il compilatore .NET native non può risolvere il tipo:  
+ Se si chiama un costruttore di queste classi di serializzazione e C# si usa l'operatore [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) al di fuori dell'espressione <xref:System.Type> fornita al parametro del costruttore, come nel codice seguente, il compilatore .NET native non può risolvere il tipo:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

@@ -1,5 +1,5 @@
 ---
-title: <remove> Elemento per <listeners> per <trace>
+title: <remove>Elemento per <listeners> per<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920481"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<rimuovere > (elemento) per \<listeners > per \<traccia >
-Rimuove un listener dal **listener** raccolta.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<rimuovere > elemento per \<i listener > per \<la traccia >
+Rimuove un listener dalla raccolta **Listeners** .  
   
  \<configuration>  
 \<system.diagnostics>  
-\<trace>  
-\<listeners>  
+\<traccia >  
+\<listener >  
 \<remove>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ Rimuove un listener dal **listener** raccolta.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Il nome del listener da rimuovere dal **listener** raccolta.|  
+|**name**|Attributo obbligatorio.<br /><br /> Nome del listener da rimuovere dalla raccolta Listeners .|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -46,17 +46,17 @@ Rimuove un listener dal **listener** raccolta.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`listeners`|Specifica un listener che raccoglie, archivia e indirizza i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.|  
+|`listeners`|Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.|  
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
-|`trace`|Configura il servizio traccia ASP.NET.|  
+|`trace`|Configura il servizio di traccia ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Rimozione di <xref:System.Diagnostics.DefaultTraceListener> dal `Listeners` raccolta modifica il comportamento della <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> metodi. La chiamata a un `Assert` o `Fail` metodo in genere comporta la visualizzazione di una finestra di messaggio, ma la finestra di messaggio non viene visualizzata se il <xref:System.Diagnostics.DefaultTraceListener> non si trova nel `Listeners` raccolta.  
+> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> Larimozionedidalla<xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>raccoltamodificail comportamento dei metodi,, e. `Listeners` <xref:System.Diagnostics.DefaultTraceListener> La chiamata `Assert` di `Fail` un metodo o determina in genere la visualizzazione di una finestra di messaggio, ma la finestra di messaggio non <xref:System.Diagnostics.DefaultTraceListener> viene visualizzata se `Listeners` l'oggetto non è presente nella raccolta.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come rimuovere il listener di traccia predefinito dalla traccia **listener** raccolta.  
+ Nell'esempio seguente viene illustrato come rimuovere il listener di traccia predefinito dalla raccolta di **listener** di traccia.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Rimuove un listener dal **listener** raccolta.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schema delle impostazioni di traccia e debug](index.md)

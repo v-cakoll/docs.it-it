@@ -1,25 +1,25 @@
 ---
-title: <workflowInstanceQuery> di WCF
+title: <workflowInstanceQuery>di WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e15d7654aeafa5fa7b87922283d6520d5493242
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672965"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915230"
 ---
-# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > di WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<> workflowInstanceQuery di WCF
 
 Rappresenta una query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.  
   
-Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<tracking>  
-\<i profili >  
+\<rilevamento >  
+\<profili >  
 \<trackingProfile>  
-\<flusso di lavoro >  
+\<> flusso di lavoro  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
   
@@ -55,7 +55,7 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<states>](states-of-wcf-workflowinstancequery.md)|Raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.|  
+|[\<Stati >](states-of-wcf-workflowinstancequery.md)|Raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -95,5 +95,5 @@ La configurazione seguente sottoscrive i record di rilevamento a livello di ista
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Rilevamento e analisi del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)

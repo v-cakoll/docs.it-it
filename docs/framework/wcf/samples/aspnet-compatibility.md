@@ -2,41 +2,41 @@
 title: Compatibilità con ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: a718b3f3bcbfd4bc2b74a14ba8f20cd8c335877f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925271"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilità con ASP.NET
-In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). Servizi in esecuzione nella compatibilità ASP.NET partecipano completamente la pipeline dell'applicazione ASP.NET di modalità e può rendere usano le funzionalità ASP.NET, ad esempio l'autorizzazione file/URL, lo stato della sessione e <xref:System.Web.HttpContext> classe. Il <xref:System.Web.HttpContext> classe consente l'accesso ai cookie, le sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.  
+In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). I servizi in esecuzione in modalità di compatibilità ASP.NET partecipano completamente alla pipeline dell'applicazione ASP.NET e possono usare le funzionalità di ASP.NET, ad esempio l'autorizzazione file/URL <xref:System.Web.HttpContext> , lo stato della sessione e la classe. La <xref:System.Web.HttpContext> classe consente l'accesso a cookie, sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.  
   
  In questo esempio, il client è un'applicazione console (un file eseguibile) e il servizio è ospitato da Internet Information Services (IIS).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 Per eseguire questo esempio è necessario un pool di applicazioni di [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Per creare un nuovo pool di applicazioni o modificare il pool di applicazioni predefinito, attenersi alla procedura seguente.  
 
-1. Aprire il **Pannello di controllo**.  Aprire il **strumenti di amministrazione** applet sotto il **sistema e sicurezza** intestazione. Aprire il **Internet Information Services (IIS) Manager** applet.  
+1. Aprire il **Pannello di controllo**.  Aprire l'applet **strumenti di amministrazione** sotto l'intestazione **sistema e sicurezza** . Aprire l'applet **gestione Internet Information Services (IIS)** .  
 
-2. Espandere il treeview nel **connessioni** riquadro. Selezionare il **pool di applicazioni** nodo.  
+2. Espandere TreeView nel riquadro **connessioni** . Selezionare il nodo **pool di applicazioni** .  
 
-3. Per impostare il pool di applicazioni predefinito da utilizzare [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare doppio clic il **DefaultAppPool** voce di elenco e selezionare **le impostazioni di base...** . Impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versioni successive).  
+3. Per impostare il pool di applicazioni predefinito per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] l'utilizzo di (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare clic con il pulsante destro del mouse sull'elemento dell'elenco **DefaultAppPool** e selezionare **impostazioni di base.** Impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive).  
 
-4. Per creare un nuovo pool di applicazioni che utilizza [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (per mantenere la compatibilità per le altre applicazioni), fare doppio clic il **pool di applicazioni** nodo e selezionare **Aggiungi Pool di applicazioni...** . Denominare il nuovo pool di applicazioni e impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versione successiva). Dopo che esegue l'installazione i passaggi di seguito, fare doppio clic il **ServiceModelSamples** dell'applicazione e selezionare **Gestisci applicazione**, **impostazioni avanzate...** . Impostare il **Pool di applicazioni** al nuovo pool di applicazioni.  
+4. Per creare un nuovo pool di applicazioni che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] usi (per mantenere la compatibilità per altre applicazioni), fare clic con il pulsante destro del mouse sul nodo **pool di applicazioni** e scegliere **Aggiungi pool di applicazioni.** Assegnare un nome al nuovo pool di applicazioni e impostare il pull della **versione di .NET Framework** su **.NET Framework v 4.0.30128** (o versioni successive). Dopo aver eseguito la procedura di installazione riportata di seguito, fare clic con il pulsante destro del mouse sull'applicazione **servicemodelsamples** e scegliere **Gestisci applicazione**, **Impostazioni avanzate.** Impostare il **pool di applicazioni** sul nuovo pool di applicazioni.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
- In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa un servizio di calcolatrice. Il contratto `ICalculator` è stato modificato al contratto `ICalculatorSession` per consentire l'esecuzione di un set di operazioni mantenendo il risultato della sessione.  
+ Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa un servizio di calcolatrice. Il contratto `ICalculator` è stato modificato al contratto `ICalculatorSession` per consentire l'esecuzione di un set di operazioni mantenendo il risultato della sessione.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -59,12 +59,12 @@ public interface ICalculatorSession
   
  Usando questa funzionalità il servizio mantiene lo stato di ogni client, mentre vengono chiamate più operazioni del servizio per eseguire un calcolo. Il client può recuperare il risultato corrente chiamando `Result` e può azzerare il risultato chiamando `Clear`.  
   
- Il servizio Usa la sessione ASP.NET per memorizzare il risultato per ogni sessione client. Questo consente al servizio di mantenere il risultato della sessione per ogni client, su più chiamate al servizio.  
+ Il servizio usa la sessione ASP.NET per archiviare il risultato per ogni sessione client. Questo consente al servizio di mantenere il risultato della sessione per ogni client, su più chiamate al servizio.  
   
 > [!NOTE]
-> Stato della sessione ASP.NET e WCF sessioni sono molto diversi. Visualizzare [sessione](../../../../docs/framework/wcf/samples/session.md) per informazioni dettagliate sulle sessioni WCF.
+> Lo stato della sessione ASP.NET e le sessioni WCF sono molto diversi. Per informazioni dettagliate sulle sessioni WCF, vedere la [sessione](../../../../docs/framework/wcf/samples/session.md) .
   
- Il servizio ha una dipendenza stretta sullo stato della sessione ASP.NET e richiede la modalità di compatibilità ASP.NET per funzionare correttamente. Questi requisiti vengono espressi in modo dichiarativo applicando l'attributo `AspNetCompatibilityRequirements`.  
+ Il servizio ha una dipendenza intima dallo stato della sessione ASP.NET e richiede la modalità di compatibilità ASP.NET per funzionare correttamente. Questi requisiti vengono espressi in modo dichiarativo applicando l'attributo `AspNetCompatibilityRequirements`.  
   
 ```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
@@ -119,14 +119,14 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Dopo che la soluzione è stata compilata, eseguire Setup. bat per configurare l'applicazione ServiceModelSamples in IIS 7.0. La directory ServiceModelSamples verrà ora visualizzato come applicazione IIS 7.0.  
+3. Una volta compilata la soluzione, eseguire Setup. bat per configurare l'applicazione ServiceModelSamples in IIS 7,0. La directory ServiceModelSamples dovrebbe ora essere visualizzata come applicazione IIS 7,0.  
   
-4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Esempi di persistenza e hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

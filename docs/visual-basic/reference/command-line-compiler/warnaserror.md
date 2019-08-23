@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937244"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Indica al compilatore di considerare la prima occorrenza di un avviso come errore.  
@@ -26,8 +26,8 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
   
 |Termine|Definizione|  
 |---|---|  
-|+ &#124; -|Facoltativo. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
-|`numberList`|Facoltativo. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
+|+ &#124; -|facoltativo. Per impostazione predefinita, l'opzione `-warnaserror-` è attiva. Gli avvisi non impediscono al compilatore di produrre un file di output. Con l'opzione `-warnaserror`, equivalente a `-warnaserror+`, gli avvisi vengono considerati errori.|  
+|`numberList`|facoltativo. Elenco delimitato da virgole di numeri di ID di avviso a cui si applica l'opzione `-warnaserror`. Se non viene specificato alcun ID di avviso, l'opzione `-warnaserror` si applica a tutti gli avvisi.|  
   
 ## <a name="remarks"></a>Note  
  L'opzione `-warnaserror` considera tutti gli avvisi come errori. Qualsiasi messaggio segnalato di norma come avviso viene invece segnalato come errore. Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.  
@@ -37,7 +37,7 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
  Se si vuole che solo determinati avvisi vengano considerati errori, è possibile specificare un elenco delimitato da virgole di numeri di avvisi da considerare errori.  
   
 > [!NOTE]
->  L'opzione `-warnaserror` non controlla la modalità di visualizzazione degli avvisi. Usare l'opzione [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) per disabilitare gli avvisi.  
+> L'opzione `-warnaserror` non controlla la modalità di visualizzazione degli avvisi. Usare l'opzione [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) per disabilitare gli avvisi.  
   
 |Per impostare -warnaserror in modo da considerare tutti gli avvisi come errori nell'IDE di Visual Studio|  
 |---|  

@@ -2,22 +2,22 @@
 title: <transport> di <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911979"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<Transport > di \<ws2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<> di trasporto \<di WS2007HttpBinding >
 Definisce le impostazioni di autenticazione per il trasporto HTTP.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<ws2007HttpBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<> di trasporto  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,7 +27,7 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
            realm="string" />
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -43,34 +43,34 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|nessuno|La sicurezza è disabilitata.|  
+|Nessuna|La sicurezza è disabilitata.|  
 |Basic|Usa l'autenticazione di base.|  
 |Digest|Usa l'autenticazione digest.|  
 |Ntlm|Usa l'autenticazione NTLM come fallback con un dominio Windows.|  
-|WINDOWS|Usa l'autenticazione integrata di Windows.|  
+|Windows|Usa l'autenticazione integrata di Windows.|  
 |Certificato|Usa certificati X.509 per autenticare il client.|  
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|nessuno|La sicurezza è disabilitata.|  
+|Nessuna|La sicurezza è disabilitata.|  
 |Basic|Usa l'autenticazione di base.|  
 |Digest|Usa l'autenticazione digest.|  
 |Ntlm|Usa NTLM come fallback con un dominio Windows.|  
-|WINDOWS|Usa l'autenticazione integrata di Windows.|  
+|Windows|Usa l'autenticazione integrata di Windows.|  
 |Certificato|Usa certificati X.509 per autenticare il client.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Rappresenta le funzionalità di protezione del [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.|  
+|[\<security>](security-of-ws2007httpbinding.md)|Rappresenta le funzionalità di sicurezza dell' [ \<elemento > WS2007HttpBinding](ws2007httpbinding.md) .|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -78,8 +78,8 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

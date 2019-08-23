@@ -11,45 +11,45 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910678"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizzo di librerie da codice parzialmente attendibile
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  In questo argomento viene descritto il comportamento degli assembly con nome sicuro e si applica solo a [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assembly. [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) gli assembly in .NET Framework 4 o versioni successive non sono interessati dai nomi sicuri. Per altre informazioni sulle modifiche apportate al sistema di sicurezza, vedere [modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+> Questo argomento illustra il comportamento degli assembly con nome sicuro e si applica solo agli assembly di [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) . Gli assembly con [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md) in .NET Framework 4 o versioni successive non sono interessati dai nomi sicuri. Per ulteriori informazioni sulle modifiche apportate al sistema di sicurezza, vedere [modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
   
- Le applicazioni che non sono ritenute del tutto attendibili dall'host o sandbox non possono chiamare librerie gestite condivise a meno che il writer delle librerie non lo consenta in modo specifico mediante l'uso dell'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, i writer delle applicazioni devono tenere presente che alcune librerie non saranno disponibili da un contesto parzialmente attendibile. Per impostazione predefinita, tutto il codice eseguito in una relazione di trust parziale [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) e non è in elenco di assembly totalmente attendibili è parzialmente attendibile. Se non si prevede che il codice venga eseguito da un contesto parzialmente attendibile o venga chiamato da un codice parzialmente attendibile, non sono rilevanti le informazioni contenute in questa sezione. Se tuttavia si scrive codice che deve interagire con codice parzialmente attendibile o agire da un contesto parzialmente attendibile, si devono prendere in considerazione i seguenti fattori:  
+ Le applicazioni che non sono ritenute del tutto attendibili dall'host o sandbox non possono chiamare librerie gestite condivise a meno che il writer delle librerie non lo consenta in modo specifico mediante l'uso dell'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Di conseguenza, i writer delle applicazioni devono tenere presente che alcune librerie non saranno disponibili da un contesto parzialmente attendibile. Per impostazione predefinita, tutto il codice eseguito in una [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) con attendibilità parziale e non è incluso nell'elenco di assembly con attendibilità totale è parzialmente attendibile. Se non si prevede che il codice venga eseguito da un contesto parzialmente attendibile o venga chiamato da un codice parzialmente attendibile, non sono rilevanti le informazioni contenute in questa sezione. Se tuttavia si scrive codice che deve interagire con codice parzialmente attendibile o agire da un contesto parzialmente attendibile, si devono prendere in considerazione i seguenti fattori:  
   
 - Le librerie devono essere firmate con un nome sicuro per essere condivise da più applicazioni. I nomi sicuri consentono al codice di essere inserito in Global Assembly Cache o aggiunto all'elenco totalmente attendibile di un <xref:System.AppDomain> di sandboxing e consente agli utenti di verificare da quale altro utente ha origine una particolare parte di codice mobile.  
   
-- Per impostazione predefinita, nome sicuro [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) librerie condivise eseguono implicita [LinkDemand](../../../docs/framework/misc/link-demands.md) per l'attendibilità totale automaticamente, senza il writer delle librerie debba eseguire alcuna operazione.  
+- Per impostazione predefinita, le librerie condivise di [livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md) con nome sicuro eseguono automaticamente un [LinkDemand](../../../docs/framework/misc/link-demands.md) implicito per l'attendibilità totale, senza che il writer della libreria debba eseguire alcuna operazione.  
   
 - Se un chiamante non dispone dell'attendibilità totale ma continua a chiamare quel tipo di libreria, il runtime genera un'eccezione <xref:System.Security.SecurityException> e al chiamante non è consentito collegarsi alla libreria.  
   
-- Per disabilitare il **LinkDemand** e impedire che venga generata l'eccezione, è possibile inserire le **AllowPartiallyTrustedCallersAttribute** attributo nell'ambito degli assembly di una scheda SCSI libreria. Questo attributo consente alle librerie di essere chiamate da un codice gestito parzialmente attendibile.  
+- Per disabilitare la funzione **LinkDemand** automatica e impedire che venga generata l'eccezione, è possibile inserire l'attributo **AllowPartiallyTrustedCallersAttribute** nell'ambito dell'assembly di una libreria condivisa. Questo attributo consente alle librerie di essere chiamate da un codice gestito parzialmente attendibile.  
   
 - Il codice parzialmente attendibile a cui è concesso l'accesso a una libreria con questo attributo continua a essere oggetto di altre restrizioni definite da <xref:System.AppDomain>.  
   
-- Non vi è alcuna modalità programmatica per codice parzialmente attendibile di chiamare una libreria che non ha il **AllowPartiallyTrustedCallersAttribute** attributo.  
+- Non esiste un modo programmatico per il codice parzialmente attendibile per chiamare una libreria che non dispone dell'attributo **AllowPartiallyTrustedCallersAttribute** .  
   
- Le librerie che appartengono a un'applicazione specifica non richiedono un nome sicuro o la **AllowPartiallyTrustedCallersAttribute** attributo e non è possibile farvi riferimento da codice potenzialmente dannoso di fuori dell'applicazione. Questo tipo di codice è protetto da un uso improprio intenzionale o non intenzionale mediante codice mobile parzialmente attendibile senza altre operazioni da parte dello sviluppatore.  
+ Le librerie private di un'applicazione specifica non richiedono un nome sicuro o l'attributo **AllowPartiallyTrustedCallersAttribute** e non è possibile farvi riferimento da codice potenzialmente dannoso all'esterno dell'applicazione. Questo tipo di codice è protetto da un uso improprio intenzionale o non intenzionale mediante codice mobile parzialmente attendibile senza altre operazioni da parte dello sviluppatore.  
   
  È consigliabile abilitare in modo esplicito l'utilizzo di codice parzialmente attendibile per i tipi di codice seguenti:  
   
-- Codice che ha stato attentamente sottoposto a test per le vulnerabilità di sicurezza ed è conforme con le linee guida descritte nel [indicazioni per la codifica protetto](../../../docs/standard/security/secure-coding-guidelines.md).  
+- Codice che è stato testato diligentemente per individuare le vulnerabilità di sicurezza ed è conforme alle linee guida descritte in [linee guida per la codifica sicura](../../standard/security/secure-coding-guidelines.md).  
   
 - Librerie del codice con nome sicuro che sono scritte in modo specifico per scenari parzialmente attendibili.  
   
 - Tutti i componenti (parzialmente o totalmente attendibili) firmati con un nome sicuro che saranno chiamati dal codice scaricato da Internet.  
   
 > [!NOTE]
->  Alcune classi nella libreria di classi .NET Framework non è il **AllowPartiallyTrustedCallersAttribute** attributo e non può essere chiamato da codice parzialmente attendibile.  
+> Alcune classi della libreria di classi .NET Framework non hanno l'attributo **AllowPartiallyTrustedCallersAttribute** e non possono essere chiamate da codice parzialmente attendibile.  
   
 ## <a name="see-also"></a>Vedere anche
 

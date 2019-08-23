@@ -1,23 +1,23 @@
 ---
-title: <add> di <claimTypeRequirements> elemento
+title: <add>dell' <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 249227c20dd1610cba088017ae39e84d6cb683d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920201"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<aggiungere > di \<claimTypeRequirements > elemento
+# <a name="add-of-claimtyperequirements-element"></a>\<Aggiungi > dell' \<elemento > ClaimTypeRequirements
 Specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata. Ad esempio, i servizi definiscono requisiti per le credenziali in entrata affinché dispongano di un determinato set di tipi di attestazione.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 \<wsFederatedBinding>  
 \<binding>  
 \<security>  
-\<messaggio >  
+\<> messaggi  
 \<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,7 +46,7 @@ Specifica i tipi di attestazione obbligatori e facoltativi previsti in una crede
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Specifica una raccolta di tipi di attestazione obbligatori. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Ogni elemento di questa raccolta specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata.|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|Specifica una raccolta di tipi di attestazione obbligatori. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Ogni elemento di questa raccolta specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata.|  
   
 ## <a name="remarks"></a>Note  
  In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Questo requisito si presenta in un criterio di sicurezza. Quando un client richiede credenziali da un servizio federato (ad esempio CardSpace), tale client inserisce i requisiti in una richiesta di token (RequestSecurityToken) affinché il servizio federato sia in grado di rilasciare le credenziali che soddisfano opportunamente i requisiti.  

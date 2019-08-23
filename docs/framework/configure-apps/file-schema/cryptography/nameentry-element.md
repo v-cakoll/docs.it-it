@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 9270552245b3867f0f09741ded3f9da6a8b6c135
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927565"
 ---
 # <a name="nameentry-element"></a>\<Elemento > nameEntry
 Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.  
@@ -35,7 +35,7 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |**name**|Attributo obbligatorio.<br /><br /> Specifica il nome descrittivo dell'algoritmo implementato dalla classe di crittografia.|  
 |**class**|Attributo obbligatorio.<br /><br /> Specifica il valore per l'attributo **Name** nell' [ \<elemento > CryptoClass](cryptoclass-element.md) .|  
@@ -79,5 +79,5 @@ Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in mo
 
 - [Schema dei file di configurazione](../index.md)
 - [Schema delle impostazioni di crittografia](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../configure-cryptography-classes.md)

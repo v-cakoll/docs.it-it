@@ -2,18 +2,18 @@
 title: <add> di <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704492"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926663"
 ---
 # <a name="add-of-protocolmapping"></a>\<aggiungere > di \<protocolMapping >
-Rappresenta un mapping del protocollo predefinito tra una combinazione di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e un'associazione Windows Communication Foundation (WCF). Quando si creano endpoint predefiniti in fase di esecuzione, WCF esamina i mapping configurati e decide l'associazione da utilizzare per un determinato indirizzo di base.  
+Rappresenta un mapping del protocollo predefinito tra uno schema del protocollo di trasporto (ad esempio http, NET. TCP, NET. pipe e così via) e un'associazione Windows Communication Foundation (WCF). Quando si creano endpoint predefiniti in fase di esecuzione, WCF esamina i mapping configurati e decide il binding da usare per un determinato indirizzo di base.  
   
  \<system.serviceModel>  
-\<protocolMapping>  
+\<> protocolMapping  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,9 +42,9 @@ Rappresenta un mapping del protocollo predefinito tra una combinazione di protoc
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Rappresenta una sezione di configurazione per la definizione di mapping dei protocolli predefiniti tra gli schemi di protocollo di trasporto (ad esempio, http, NET. TCP, NET. pipe, e così via) e le associazioni di Windows Communication Foundation (WCF).|  
+|[\<protocolMapping>](protocolmapping.md)|Rappresenta una sezione di configurazione per la definizione di mapping dei protocolli predefiniti tra gli schemi del protocollo di trasporto (ad esempio http, NET. TCP, NET. pipe e così via) e le associazioni Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene illustrato il mapping del protocollo predefinito nel file machine.config. È possibile eseguire l'override di questo mapping predefinito al livello di computer modificando il file machine.config. In alternativa, se si desidera eseguirne l'override solo nell'ambito di un'applicazione, è possibile eseguire l'override di questa sezione all'interno del file di configurazione dell'applicazione e modificare il mapping per i singoli schemi di protocollo.  

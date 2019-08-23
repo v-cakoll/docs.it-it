@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658980"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920917"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Elemento > AppContextSwitchOverrides
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -138,7 +138,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controlla se le sequenze di chiavi vuote nelle chiavi composte vengono ignorate dalla convalida dello schema XSD. Per altre informazioni, vedere [Mitigazione: Convalida](../../../migration-guide/mitigation-xml-schema-validation.md)di XML Schema.|.NET Framework 4.6|  
   
 > [!NOTE]
->  Invece di aggiungere un `AppContextSwitchOverrides` elemento a un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di `static` codice chiamando C#il metodo `Shared` (in) o <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (in Visual Basic).  
+> Invece di aggiungere un `AppContextSwitchOverrides` elemento a un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di `static` codice chiamando C#il metodo `Shared` (in) o <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (in Visual Basic).  
   
  Gli sviluppatori di librerie possono anche definire opzioni personalizzate per consentire ai chiamanti di rifiutare esplicitamente le funzionalità modificate introdotte nelle versioni successive delle librerie. Per altre informazioni, vedere la classe <xref:System.AppContext>.  
   

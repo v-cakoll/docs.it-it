@@ -9,24 +9,24 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775830"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912992"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: Individuare assembly usando DEVPATH
-Gli sviluppatori desiderano assicurarsi che funzioni correttamente un assembly condiviso in corso di sviluppo con più applicazioni. Anziché inserire continuamente l'assembly nella global assembly cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punta alla directory di output di compilazione per l'assembly.  
+Gli sviluppatori potrebbero voler assicurarsi che un assembly condiviso che compilano funzioni correttamente con più applicazioni. Anziché inserire continuamente l'assembly nel Global Assembly Cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punti alla directory di output di compilazione per l'assembly.  
   
- Ad esempio, si supponga che si sta creando un assembly condiviso denominato MySharedAssembly e la directory di output è C:\MySharedAssembly\Debug. È possibile inserire C:\MySharedAssembly\Debug nella variabile DEVPATH. È quindi necessario specificare il [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento nel file di configurazione del computer. Questo elemento indica a common language runtime da usare DEVPATH per individuare gli assembly.  
+ Si supponga, ad esempio, che si stia compilando un assembly condiviso denominato MySharedAssembly e che la directory di output sia C:\MySharedAssembly\Debug. È possibile inserire C:\MySharedAssembly\Debug nella variabile DEVPATH. È quindi necessario specificare l' [ \<elemento > DevelopmentMode](./file-schema/runtime/developmentmode-element.md) nel file di configurazione del computer. Questo elemento indica al Common Language Runtime di utilizzare DEVPATH per individuare gli assembly.  
   
- L'assembly condiviso deve essere individuabile dal runtime.  Per specificare una cartella privata per la risoluzione dei riferimenti agli assembly, utilizzare il [ \<codeBase > elemento](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) oppure [ \<probing > elemento](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) in un file di configurazione, come descritto in [Che specifica la posizione dell'Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).  È anche possibile inserire l'assembly in una sottodirectory della directory dell'applicazione. Per altre informazioni, vedere [Modalità di individuazione di assembly del runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ L'assembly condiviso deve essere individuabile dal runtime.  Per specificare una directory privata per la risoluzione dei riferimenti ad assembly, usare l' [ \<elemento codeBase >](./file-schema/runtime/codebase-element.md) o [ \<l'elemento >](./file-schema/runtime/probing-element.md) di probe in un file di configurazione, come descritto in [specifica della posizione di un assembly](specify-assembly-location.md).  È anche possibile inserire l'assembly in una sottodirectory della directory dell'applicazione. Per altre informazioni, vedere [Modalità di individuazione di assembly del runtime](../deployment/how-the-runtime-locates-assemblies.md).  
   
 > [!NOTE]
->  Si tratta di una funzionalità avanzata, destinata solo allo sviluppo.  
+> Si tratta di una funzionalità avanzata, destinata solo allo sviluppo.  
   
- Nell'esempio seguente viene illustrato come parte del runtime cercare gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
+ Nell'esempio seguente viene illustrato come fare in modo che il runtime cerchi gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.  
   
 ## <a name="example"></a>Esempio  
   
@@ -38,11 +38,11 @@ Gli sviluppatori desiderano assicurarsi che funzioni correttamente un assembly c
 </configuration>  
 ```  
   
- L'impostazione predefinita è false.  
+ Per impostazione predefinita, questa impostazione è false.  
   
 > [!NOTE]
->  Usare questa impostazione solo in fase di sviluppo. Il runtime non verifica se le versioni di assembly con nome sicuro trovato nel DEVPATH. Utilizza semplicemente il primo assembly individuato.  
+> Usare questa impostazione solo in fase di sviluppo. Il runtime non controlla le versioni in assembly con nome sicuro presenti in DEVPATH. Usa semplicemente il primo assembly trovato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione delle App usando i file di configurazione](index.md)
+- [Configurazione di app tramite file di configurazione](index.md)

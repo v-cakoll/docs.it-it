@@ -1,5 +1,5 @@
 ---
-title: Istruzione Imports - Namespace .NET e il tipo (Visual Basic)
+title: Istruzione Imports-tipo e spazio dei nomi .NET (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Imports
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b7a6a5fd16dc0daa620e6b490ddfdeb0e7c80e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912383"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Istruzione Imports (tipo e spazio dei nomi .NET)
-Consente di digitare i nomi a cui fare riferimento senza qualifica dello spazio dei nomi.  
+Consente di fare riferimento ai nomi dei tipi senza qualifica dello spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,61 +38,61 @@ Imports [ aliasname = ] namespace.element
   
 |Termine|Definizione|  
 |---|---|  
-|`aliasname`|Facoltativo. Un' *alias di importazione* o il nome mediante il quale il codice può fare riferimento a `namespace` anziché la stringa di qualificazione completo. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Obbligatorio. Il nome completo dello spazio dei nomi da importare. Può essere una stringa di spazi dei nomi annidata a qualsiasi livello.|  
-|`element`|Facoltativo. Il nome di un elemento di programmazione è dichiarato nello spazio dei nomi. Può essere qualsiasi elemento del contenitore.|  
+|`aliasname`|facoltativo. Alias o nome di *importazione* a `namespace` cui il codice può fare riferimento al posto della stringa di qualificazione completa. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`namespace`|Richiesto. Nome completo dello spazio dei nomi importato. Può essere una stringa di spazi dei nomi annidati a qualsiasi livello.|  
+|`element`|facoltativo. Nome di un elemento di programmazione dichiarato nello spazio dei nomi. Può essere qualsiasi elemento contenitore.|  
   
 ## <a name="remarks"></a>Note  
- Il `Imports` istruzione consente i tipi che sono contenuti in un determinato spazio dei nomi a cui fare riferimento direttamente.  
+ L' `Imports` istruzione consente di fare riferimento direttamente ai tipi contenuti in un determinato spazio dei nomi.  
   
- È possibile fornire un nome singolo spazio dei nomi o una stringa di spazi dei nomi annidati. Ogni spazio dei nomi annidato è delimitato da spazio dei nomi di livello superiore successivo da un punto (`.`), come illustrato nell'esempio seguente.  
+ È possibile specificare un singolo nome di spazio dei nomi o una stringa di spazi dei nomi annidati. Ogni spazio dei nomi annidato è separato dallo spazio dei nomi di livello superiore`.`successivo per un punto (), come illustrato nell'esempio seguente.  
   
  `Imports System.Collections.Generic`  
   
- Ogni file di origine può contenere un numero qualsiasi di `Imports` istruzioni. Questi devono seguire le dichiarazioni di opzione, ad esempio la `Option Strict` istruzione che devono precedere qualsiasi dichiarazione di elemento di programmazione, ad esempio `Module` o `Class` istruzioni.  
+ Ogni file di origine può contenere un numero `Imports` qualsiasi di istruzioni. Devono seguire qualsiasi dichiarazione di opzione, ad esempio l' `Option Strict` istruzione, e devono precedere qualsiasi dichiarazione di elemento di programmazione, `Module` ad esempio istruzioni o `Class` .  
   
- È possibile usare `Imports` solo a livello di file. Ciò significa che il contesto della dichiarazione per l'importazione deve essere un file di origine e non può essere un spazio dei nomi, classe, struttura, modulo, interfaccia, routine o blocco.  
+ È possibile usare `Imports` solo a livello di file. Ciò significa che il contesto di dichiarazione per l'importazione deve essere un file di origine e non può essere uno spazio dei nomi, una classe, una struttura, un modulo, un'interfaccia, una routine o un blocco.  
   
- Si noti che il `Imports` istruzione non rende disponibili elementi di altri progetti e assembly al progetto. Importazione non è un'alternativa all'impostazione di un riferimento. Rimuove solo la necessità per qualificare i nomi che sono già disponibili per il progetto. Per altre informazioni, vedere "Importazione di elementi contenitore" nella [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Si noti che `Imports` l'istruzione non rende disponibili gli elementi di altri progetti e assembly per il progetto. L'importazione non comporta l'impostazione di un riferimento. Rimuove solo la necessità di qualificare i nomi già disponibili per il progetto. Per ulteriori informazioni, vedere "importazione di elementi contenitore" in [riferimenti a elementi](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)dichiarati.  
   
 > [!NOTE]
->  È possibile definire implicita `Imports` istruzioni utilizzando il [riferimenti (pagina), creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere spazi dei nomi importati (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+> È possibile definire istruzioni `Imports` implicite usando la [pagina riferimenti, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere spazi dei nomi importati](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)(Visual Basic).  
   
 ## <a name="import-aliases"></a>Alias di importazione  
- Un' *alias di importazione* definisce l'alias per un tipo o dello spazio dei nomi. Gli alias di importazione sono utili quando è necessario usare gli elementi con lo stesso nome che vengono dichiarati in uno o più spazi dei nomi. Per altre informazioni e un esempio, vedere "Qualificare un nome di un elemento" nella [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Un *alias di importazione* definisce l'alias per uno spazio dei nomi o un tipo. Gli alias di importazione sono utili quando è necessario usare elementi con lo stesso nome dichiarati in uno o più spazi dei nomi. Per ulteriori informazioni e un esempio, vedere "qualificazione di un nome di elemento" in [riferimenti a elementi](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)dichiarati.  
   
- Non è necessario dichiarare un membro al livello di modulo con lo stesso nome `aliasname`. Se non lo, il compilatore Visual Basic utilizza `aliasname` solo per il membro dichiarato e non sarà più lo riconosce come un alias di importazione.  
+ Non è consigliabile dichiarare un membro a livello di modulo con lo stesso nome `aliasname`di. In tal caso, il compilatore Visual Basic utilizza `aliasname` solo per il membro dichiarato e non lo riconosce più come alias di importazione.  
   
- Sebbene la sintassi usata per dichiarare un alias di importazione è uguale a quella utilizzata per l'importazione di un prefisso dello spazio dei nomi XML, i risultati sono diversi. Un alias di importazione è utilizzabile come espressione nel codice, mentre un prefisso dello spazio dei nomi XML può essere utilizzato solo in valori letterali XML o proprietà axis XML come prefisso per un elemento completo o il nome dell'attributo.  
+ Sebbene la sintassi utilizzata per dichiarare un alias di importazione sia simile a quella utilizzata per l'importazione di un prefisso dello spazio dei nomi XML, i risultati sono diversi. Un alias di importazione può essere usato come espressione nel codice, mentre un prefisso dello spazio dei nomi XML può essere usato solo nei valori letterali XML o nelle proprietà Axis XML come prefisso per un nome di attributo o di elemento completo.  
   
 ### <a name="element-names"></a>Nomi di elementi  
- Se si specificano `element`, dovrà rappresentare un *elemento contenitore*, vale a dire un elemento di programmazione che può contenere altri elementi. Elementi contenitore includono classi, strutture, moduli, interfacce ed enumerazioni.  
+ Se si specifica `element`, deve rappresentare un *elemento contenitore*, ovvero un elemento di programmazione che può contenere altri elementi. Gli elementi contenitore includono classi, strutture, moduli, interfacce ed enumerazioni.  
   
- L'ambito degli elementi messe a disposizione da un `Imports` istruzione dipende dal fatto che vengano specificati `element`. Se si specifica solo `namespace`, tutto in modo univoco denominate membri dello spazio dei nomi e i membri degli elementi contenitore all'interno di tale spazio dei nomi, sono disponibili senza qualifica. Se si specificano entrambe `namespace` e `element`, solo i membri di tale elemento sono disponibili senza qualifica.  
+ L'ambito degli elementi resi disponibili da un' `Imports` istruzione varia a seconda che si specifichi. `element` Se si specificano `namespace`solo, tutti i membri denominati in modo univoco dello spazio dei nomi e i membri degli elementi contenitore all'interno di tale spazio dei nomi sono disponibili senza qualificazione. Se si specificano `namespace` sia `element`che, solo i membri di tale elemento saranno disponibili senza qualifica.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente restituisce tutte le cartelle nella directory c:\. utilizzando il <xref:System.IO.DirectoryInfo> classe.  
+ Nell'esempio seguente vengono restituite tutte le cartelle in C:\ Directory tramite la <xref:System.IO.DirectoryInfo> classe.  
   
- Il codice non ha alcun `Imports` istruzioni all'inizio del file. Pertanto, il `DirectoryInfo`, <xref:System.Text.StringBuilder>, e <xref:Microsoft.VisualBasic.ControlChars.CrLf> riferimenti sono tutte completamente qualificati con gli spazi dei nomi.  
+ Il codice non `Imports` contiene istruzioni all'inizio del file. Pertanto, i `DirectoryInfo`riferimenti <xref:System.Text.StringBuilder>, e <xref:Microsoft.VisualBasic.ControlChars.CrLf> sono tutti completi con gli spazi dei nomi.  
   
  [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente include `Imports` istruzioni per gli spazi dei nomi cui viene fatto riferimento. Di conseguenza, i tipi non sono necessario essere completo con gli spazi dei nomi.  
+ Nell'esempio seguente vengono `Imports` incluse le istruzioni per gli spazi dei nomi a cui si fa riferimento. Pertanto, non è necessario che i tipi siano completi con gli spazi dei nomi.  
   
  [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]  
   
  [!code-vb[VbVbalrStatements#154](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#154)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente include `Imports` istruzioni che creano gli alias per gli spazi dei nomi cui viene fatto riferimento. I tipi sono qualificati con gli alias.  
+ Nell'esempio seguente sono `Imports` incluse istruzioni che consentono di creare alias per gli spazi dei nomi a cui si fa riferimento. I tipi sono qualificati con gli alias.  
   
  [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]  
   
  [!code-vb[VbVbalrStatements#156](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#156)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente include `Imports` istruzioni che creano gli alias dei tipi di riferimento. Gli alias vengono utilizzati per specificare i tipi.  
+ Nell'esempio seguente sono `Imports` incluse istruzioni per la creazione di alias per i tipi a cui si fa riferimento. Gli alias vengono utilizzati per specificare i tipi.  
   
  [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]  
   

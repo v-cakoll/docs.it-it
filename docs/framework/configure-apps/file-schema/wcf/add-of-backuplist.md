@@ -2,12 +2,12 @@
 title: <add> di <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663376"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926880"
 ---
 # <a name="add-of-backuplist"></a>\<Aggiungi > di \<> di backup
 Rappresenta un elemento di configurazione che definisce un elemento dell'endpoint di backup.  
@@ -44,9 +44,9 @@ Rappresenta un elemento di configurazione che definisce un elemento dell'endpoin
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Contiene un elenco di endpoint che si desidera vengano utilizzati dal servizio di routing nel caso in cui non sia possibile raggiungere l'endpoint primario.|  
+|[\<routing>](routing.md)|Contiene un elenco di endpoint che si desidera vengano utilizzati dal servizio di routing nel caso in cui non sia possibile raggiungere l'endpoint primario.|  
   
 ## <a name="see-also"></a>Vedere anche
 

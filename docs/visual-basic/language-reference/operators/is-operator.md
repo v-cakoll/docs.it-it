@@ -9,15 +9,15 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054958"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917210"
 ---
 # <a name="is-operator-visual-basic"></a>Operatore Is (Visual Basic)
-Confronta due variabili di riferimento di oggetto.  
+Confronta due variabili di riferimento a oggetti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,28 +27,28 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio. Qualsiasi `Boolean` valore.  
+ Richiesto. Qualsiasi `Boolean` valore.  
   
  `object1`  
- Obbligatorio. Qualsiasi `Object` nome.  
+ Richiesto. Qualsiasi `Object` nome.  
   
  `object2`  
- Obbligatorio. Qualsiasi `Object` nome.  
+ Richiesto. Qualsiasi `Object` nome.  
   
 ## <a name="remarks"></a>Note  
- Il `Is` operatore determina se due riferimenti a oggetti si riferiscono allo stesso oggetto. Tuttavia, non esegue confronti di valore. Se `object1` e `object2` entrambi la stessa istanza di oggetto, si intende `result` viene `True`; in caso contrario, `result` è `False`.  
+ L' `Is` operatore determina se due riferimenti a oggetti si riferiscono allo stesso oggetto. Tuttavia, non esegue confronti di valori. Se `object1` ed `True` `result` `result` `False`entrambi fanno riferimento alla stessa istanza dell'oggetto, è; in caso contrario, è. `object2`  
   
- `Is` è anche utilizzabile con il `TypeOf` parola chiave per rendere un `TypeOf`... `Is` espressione, che verifica se una variabile oggetto è compatibile con un tipo di dati.  
+ `Is`può essere usato anche con la `TypeOf` parola chiave per creare `TypeOf`un... `Is` espressione, che verifica se una variabile oggetto è compatibile con un tipo di dati.  
   
 > [!NOTE]
->  Il `Is` parola chiave viene usata anche nel [Seleziona... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> La `Is` parola chiave viene inoltre utilizzata nell'oggetto [Select... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Is` operatore per confrontare coppie di riferimenti a oggetti. I risultati vengono assegnati a un `Boolean` valore che indica se i due oggetti sono identici.  
+ Nell'esempio seguente viene usato `Is` l'operatore per confrontare coppie di riferimenti a oggetti. I risultati vengono assegnati a un `Boolean` valore che indica se i due oggetti sono identici.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Come illustrato nell'esempio precedente, è possibile usare il `Is` operatore per eseguire il test sia ad associazione anticipata e gli oggetti ad associazione tardiva.  
+ Come illustrato nell'esempio precedente, è possibile usare l' `Is` operatore per testare gli oggetti ad associazione anticipata e ad associazione tardiva.  
   
 ## <a name="see-also"></a>Vedere anche
 

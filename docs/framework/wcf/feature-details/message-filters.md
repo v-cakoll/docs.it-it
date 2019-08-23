@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785996"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912693"
 ---
 # <a name="message-filters"></a>Filtri messaggi
 Per implementare il routing basato sul contenuto, il servizio di routing usa implementazioni di <xref:System.ServiceModel.Dispatcher.MessageFilter> che controllano sezioni specifiche di un messaggio, ad esempio l'indirizzo, il nome dell'endpoint o un'istruzione XPath. Se nessuno dei filtri messaggi disponibili in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] soddisfa le esigenze specifiche, è possibile creare un filtro personalizzato con un'implementazione della classe <xref:System.ServiceModel.Dispatcher.MessageFilter> di base.  
   
- Quando si configura il servizio di Routing, è necessario definire gli elementi di filtro (<xref:System.ServiceModel.Routing.Configuration.FilterElement> oggetti) che descrivono il tipo di **MessageFilter** ed eventuali dati di supporti necessari per creare il filtro, ad esempio i valori di stringa specifico per la ricerca all'interno del messaggio. Si noti che la creazione di elementi di filtro consente solo di definire i singoli filtri messaggi. Per usare i filtri in modo da valutare e indirizzare i messaggio, è inoltre necessario definire una tabella di filtri (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ Quando si configura il servizio di routing, è necessario definire gli<xref:System.ServiceModel.Routing.Configuration.FilterElement> elementi filtro (oggetti) che descrivono il tipo di **MessageFilter** e tutti i dati di supporto necessari per creare il filtro, ad esempio valori stringa specifici da cercare all'interno del messaggio. . Si noti che la creazione di elementi di filtro consente solo di definire i singoli filtri messaggi. Per usare i filtri in modo da valutare e indirizzare i messaggio, è inoltre necessario definire una tabella di filtri (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
  Ogni voce nella tabella dei filtri fa riferimento a un elemento di filtro e specifica l'endpoint client a cui indirizzare un messaggio se corrispondente ai criteri del filtro stesso. Le voci della tabella dei filtri consentono inoltre di specificare una raccolta di endpoint di backup (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>) che rappresenta un elenco di endpoint a cui deve essere trasmesso il messaggio qualora si verifichi un errore di trasmissione durante l'invio all'endpoint primario. Verrà infatti tentato di inviare il messaggio a tali endpoint nell'ordine in cui sono specificati finché l'operazione non ha esito positivo.  
   
@@ -25,12 +25,12 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
   
 |Tipo di filtro|Descrizione|Significato dei dati del filtro|Filtro di esempio|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Operazione|Usa la classe <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> per individuare i messaggi contenenti un'azione specifica.|L'azione in base a cui filtrare.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Usa il <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> (classe), con <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` per individuare i messaggi contenenti uno specifico indirizzo.|Indirizzo in base al quale applicare il filtro (nell'intestazione To).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Usa il <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> (classe), con <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` per individuare i messaggi che contiene un prefisso di indirizzo specifico.|Indirizzo in base al quale applicare il filtro usando la corrispondenza del prefisso più lunga.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|e|Usa la classe <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> che esegue sempre la valutazione di entrambe le condizioni prima della restituzione.|filterData non è usato; invece filter1 e filter2 hanno i nomi dei filtri messaggi corrispondenti (anche nella tabella), che devono essere **AND**ed insieme.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Azione|Usa la classe <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> per individuare i messaggi contenenti un'azione specifica.|L'azione in base a cui filtrare.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|Usa la <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> classe con per <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A> trovare la corrispondenza con  ==  `true` i messaggi contenenti un indirizzo specifico.|Indirizzo in base al quale applicare il filtro (nell'intestazione To).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|Usa la <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> classe con per <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A> trovare la corrispondenza con  ==  `true` i messaggi contenenti un prefisso di indirizzo specifico.|Indirizzo in base al quale applicare il filtro usando la corrispondenza del prefisso più lunga.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|e|Usa la classe <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> che esegue sempre la valutazione di entrambe le condizioni prima della restituzione.|filterData non è utilizzato. invece filter1 e filter2 hanno i nomi dei filtri messaggi corrispondenti (anche nella tabella), che devono essere **e**ed insieme.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Personalizzato|Tipo definito dall'utente che estende la classe <xref:System.ServiceModel.Dispatcher.MessageFilter> e dispone di un costruttore che accetta una stringa.|L'attributo customType rappresenta il nome completo del tipo della classe da creare; filterData corrisponde alla stringa da passare al costruttore per la creazione del filtro.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|Usa la classe <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> per individuar i messaggi in base al nome dell'endpoint del servizio su cui arrivano.|Il nome dell'endpoint del servizio, ad esempio: "serviceEndpoint1".  Deve essere uno degli endpoint esposti sul servizio di routing.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|EndpointName|Usa la classe <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> per individuar i messaggi in base al nome dell'endpoint del servizio su cui arrivano.|Nome dell'endpoint del servizio, ad esempio: "serviceEndpoint1".  Deve essere uno degli endpoint esposti sul servizio di routing.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Usa la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Questo filtro corrisponde a tutti i messaggi in arrivo.|filterData non è usato. Questo filtro corrisponderà sempre a tutti i messaggi.|\<filter name="matchAll1" filterType="MatchAll" />|  
 |XPath|Usa la classe <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> per individuare la corrispondenza con query XPath specifiche all'interno del messaggio.|Query XPath da usare per verificare la corrispondenza di messaggi.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
@@ -54,7 +54,7 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
 ```  
   
 > [!NOTE]
->  La definizione di un filtro non è sufficiente a determinare la valutazione dei messaggi in base al filtro stesso. È necessario aggiungere il filtro a una tabella di filtri associato all'endpoint servizio esposto dal servizio di routing.  
+> La definizione di un filtro non è sufficiente a determinare la valutazione dei messaggi in base al filtro stesso. È necessario aggiungere il filtro a una tabella di filtri associato all'endpoint servizio esposto dal servizio di routing.  
   
 ### <a name="namespace-table"></a>Tabella degli spazi dei nomi  
  Se si usa un filtro XPath, i relativi dati contenenti la query XPath possono diventare di dimensioni notevoli a causa dell'uso degli spazi dei nomi. Per risolvere questo problema, il servizio di routing consente di definire prefissi degli spazi dei nomi personalizzati mediante un'apposita tabella.  
@@ -71,7 +71,7 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- Se si prevede di usare uno specifico spazio dei nomi nelle query XPath, è possibile aggiungerlo alla tabella degli spazi dei nomi insieme a un prefisso univoco e usare quindi nella query XPath tale prefisso invece dello spazio dei nomi completo. L'esempio seguente definisce un prefisso "Custom" dello spazio dei nomi `"http://my.custom.namespace"`, che viene poi utilizzato nella query XPath contenuta in filterData.  
+ Se si prevede di usare uno specifico spazio dei nomi nelle query XPath, è possibile aggiungerlo alla tabella degli spazi dei nomi insieme a un prefisso univoco e usare quindi nella query XPath tale prefisso invece dello spazio dei nomi completo. Nell'esempio seguente viene definito un prefisso "Custom" per lo spazio `"http://my.custom.namespace"`dei nomi, che viene quindi utilizzato nella query XPath contenuta in FilterData.  
   
 ```xml  
 <namespaceTable>  
@@ -108,7 +108,7 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
  È possibile implementare logica di routing più complessa specificando livelli di priorità per ogni filtro. Il servizio di routing valuterà quindi prima tutti i filtri con priorità massima. Se un messaggio corrisponde a un filtro di questo livello, i filtri con priorità inferiore non vengono elaborati. Ad esempio, un messaggio unidirezionale in ingresso viene prima valutato rispetto a tutti i filtri con priorità 2. Il messaggio non corrisponde ad alcuno filtro di tale livello, pertanto il messaggio viene confrontato con i filtri di priorità 1. Due filtri di priorità 1 corrispondono al messaggio, pertanto si tratta di un messaggio unidirezionale inviato a entrambi gli endpoint di destinazione.  Poiché è stata individuata una corrispondenza con i filtri di priorità 1, non vengono visualizzati quelli con priorità 0.  
   
 > [!NOTE]
->  Se non viene specificata alcuna priorità, viene usata quella predefinita, ovvero 0.  
+> Se non viene specificata alcuna priorità, viene usata quella predefinita, ovvero 0.  
   
  Nell'esempio seguente viene definita una tabella di filtri con le priorità 2, 1 e 0 assegnate ai filtri a cui viene fatto riferimento.  
   
@@ -130,10 +130,10 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
  Nell'esempio precedente, se un messaggio corrisponde a XPathFilter, sarà indirizzato a roundingCalcEndpoint e non verrà valutato nessun altro filtro in quanto di priorità inferiore. Se tuttavia il messaggio non corrisponde a XPathFilter esso sarà valutato rispetto a tutti i filtri del livello di priorità immediatamente successivo, ovvero EndpointNameFilter e PrefixAddressFilter.  
   
 > [!NOTE]
->  Se possibile, usare filtri esclusivi anziché priorità perché la valutazione in base alla priorità può influire negativamente sulle prestazioni.  
+> Se possibile, usare filtri esclusivi anziché priorità perché la valutazione in base alla priorità può influire negativamente sulle prestazioni.  
   
 ### <a name="backup-lists"></a>Elenchi di backup  
- Per ogni filtro nella tabella dei filtri può essere specificato un elenco di backup, ovvero una raccolta denominata di endpoint (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Tale raccolta contiene un elenco ordinato di endpoint a cui trasmettere il messaggio qualora si verifichi un'eccezione <xref:System.ServiceModel.CommunicationException> durante l'invio all'endpoint primario specificato in <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. L'esempio seguente definisce un elenco di backup denominato "backupServiceEndpoints" contente due endpoint.  
+ Per ogni filtro nella tabella dei filtri può essere specificato un elenco di backup, ovvero una raccolta denominata di endpoint (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Tale raccolta contiene un elenco ordinato di endpoint a cui trasmettere il messaggio qualora si verifichi un'eccezione <xref:System.ServiceModel.CommunicationException> durante l'invio all'endpoint primario specificato in <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. Nell'esempio seguente viene definito un elenco di backup denominato "backupServiceEndpoints" che contiene due endpoint.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ Per implementare il routing basato sul contenuto, il servizio di routing usa imp
 </backupLists>  
 ```  
   
- Nell'esempio precedente, se un invio all'endpoint primario "Destination" ha esito negativo, il servizio di Routing tenterà di inviare a ogni endpoint nella sequenza di cui sono elencate, prima di inviare a partire da backupServiceQueue e successivamente l'invio a alternateServiceQueue se la invio a backupServiceQueue avrà esito negativo. Se l'operazione non riesce con nessuno degli endpoint di backup, viene restituito un errore.
+ Nell'esempio precedente, se un invio all'endpoint primario non riesce, il servizio di routing tenterà di inviare a ogni endpoint nella sequenza in cui sono elencati, inviando prima di tutto a backupServiceQueue e successivamente inviando a alternateServiceQueue se il l'invio a backupServiceQueue ha esito negativo. Se l'operazione non riesce con nessuno degli endpoint di backup, viene restituito un errore.

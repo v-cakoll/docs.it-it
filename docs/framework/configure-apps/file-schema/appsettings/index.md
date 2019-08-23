@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: cd836f9ebd4d22ad6542c1fadc204b1ea67d1c26
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921293"
 ---
 # <a name="app-settings-schema"></a>Schema impostazioni applicazione
 
 Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione personalizzata per un'applicazione.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings >** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
 | Elemento | Descrizione |
 | ------- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene i tag **\<add>** , **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Include un attributo **file** facoltativo. |
-| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Definisce un'impostazione. Elemento figlio di **\<appSettings>** . Richiede gli attributi **key** e **value**. |
-| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Deseleziona tutte le impostazioni. Elemento figlio di **\<appSettings>** . Non ha attributi. |
-| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Rimuove un'impostazione. Elemento figlio di **\<appSettings>** . Richiede un attributo **key**. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene i tag **\<add>** , **\<clear>** e **\<remove>** per controllare le impostazioni dell'applicazione. Include un attributo **file** facoltativo. |
+| [ **\<add>** ](add-element-for-appsettings.md) | Definisce un'impostazione. Elemento figlio di **\<appSettings>** . Richiede gli attributi **key** e **value**. |
+| [ **\<clear>** ](clear-element-for-appsettings.md) | Deseleziona tutte le impostazioni. Elemento figlio di **\<appSettings>** . Non ha attributi. |
+| [ **\<remove>** ](remove-element-for-appsettings.md) | Rimuove un'impostazione. Elemento figlio di **\<appSettings>** . Richiede un attributo **key**. |
 
 ## <a name="appsettings-element"></a>Elemento \<appSettings>
 
@@ -72,5 +72,5 @@ Nell'esempio seguente viene illustrato un file di configurazione dell'applicazio
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulle impostazioni delle applicazioni](~/docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Cenni preliminari sulle impostazioni delle applicazioni](../../../winforms/advanced/application-settings-overview.md)
+- [Application Settings Architecture](../../../winforms/advanced/application-settings-architecture.md)
