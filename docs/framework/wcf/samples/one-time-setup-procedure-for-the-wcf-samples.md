@@ -2,30 +2,30 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: edecdbd956fcb924ace076abe373b1c9683bf818
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965622"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
-La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) ed eseguire da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale IIS denominato **ServiceModelSamples**.
+La maggior parte degli esempi di Windows Communication Foundation (WCF) sono ospitati in Internet Information Services (IIS) ed eseguiti da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco; viene inoltre aggiunta una directory virtuale a IIS denominata **servicemodelsamples**.
 
- Il **ServiceModelSamples** directory virtuale viene usato per compilare ed eseguire tutti gli esempi che utilizzano un servizio ospitato da IIS. Si tratta della sola directory virtuale richiesta per eseguire gli esempi. La compilazione di un esempio determinerà la sostituzione dei servizi distribuiti in precedenza in questa directory virtuale. Solo l'esempio compilato più di recente verrà distribuito e reso disponibile in tale directory.
+ La directory virtuale **servicemodelsamples** viene utilizzata per la compilazione e l'esecuzione di tutti gli esempi che utilizzano un servizio ospitato da IIS. Si tratta della sola directory virtuale richiesta per eseguire gli esempi. La compilazione di un esempio determinerà la sostituzione dei servizi distribuiti in precedenza in questa directory virtuale. Solo l'esempio compilato più di recente verrà distribuito e reso disponibile in tale directory.
 
 > [!NOTE]
->  Tutti i comandi devono essere eseguiti con un account di amministratore locale. Se si utilizza Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] o Windows Server 2008 R2, sarà inoltre necessario eseguire il prompt dei comandi con privilegi elevati. A tale scopo, fare doppio clic sull'icona del prompt dei comandi e quindi scegliere **Esegui come amministratore**. Tutti i comandi illustrati in questo argomento devono essere eseguiti in un prompt dei comandi che dispone delle impostazioni del percorso appropriate.  Il modo più semplice per garantire che questo requisito venga soddisfatto consiste nell'utilizzare il prompt dei comandi di Visual Studio. Per aprire questo prompt, fare clic su **avviare**, selezionare **tutti i programmi**, scorrere verso il basso **Visual Studio 2010**, selezionare **Visual Studio Tools**, Fare doppio clic su **prompt dei comandi di Visual Studio (2010)**, quindi fare clic su **Esegui come amministratore**. Se si dispone di una delle edizioni di Visual Studio Express installate, il prompt dei comandi non sarà disponibile e sarà necessario aggiungere "C:\Windows\Microsoft.Net\Framework\v4.0" al percorso di sistema.  
+> Tutti i comandi devono essere eseguiti con un account di amministratore locale. Se si utilizza Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] o Windows Server 2008 R2, sarà inoltre necessario eseguire il prompt dei comandi con privilegi elevati. A tale scopo, fare clic con il pulsante destro del mouse sull'icona del prompt dei comandi, quindi scegliere **Esegui come amministratore**. Tutti i comandi illustrati in questo argomento devono essere eseguiti in un prompt dei comandi che dispone delle impostazioni del percorso appropriate.  Il modo più semplice per garantire che questo requisito venga soddisfatto consiste nell'utilizzare il prompt dei comandi di Visual Studio. Per aprire questo prompt, fare clic sul pulsante **Start**, scegliere **tutti i programmi**, scorrere verso il basso fino a **visual Studio 2010**, selezionare **strumenti di Visual Studio**, fare clic con il pulsante destro del mouse su **prompt dei comandi di Visual Studio (2010)** e quindi scegliere **Esegui come amministratore** . Se si dispone di una delle edizioni di Visual Studio Express installate, il prompt dei comandi non sarà disponibile e sarà necessario aggiungere "C:\Windows\Microsoft.Net\Framework\v4.0" al percorso di sistema.  
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura di installazione singola per esempi WCF  
   
-1. Verificare che ASP.NET sia configurato. Per altre informazioni su come configurare ASP.NET, vedere [istruzioni di Hosting Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Verificare che ASP.NET sia configurato. Per ulteriori informazioni su come configurare ASP.NET, vedere istruzioni per l' [hosting di Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2. Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Cercare le seguenti directory per v4.0 (o versioni successive): **\Windows\Microsoft.NET\Framework.**  
+2. Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Eseguire una ricerca nella directory seguente per la versione 4.0 (o versione successiva): **\Windows\Microsoft.NET\Framework**  
   
-3. Se non è installato Visual Studio 2012 e il sistema operativo non è Windows Server 2008 SP2 o versioni successive, installare [aggiornamento rapido 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3. Se Visual Studio 2012 non è installato e il sistema operativo in uso non è Windows Server 2008 SP2 o versione successiva, installare l' [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4. Eseguire i comandi seguenti: Per altre informazioni sui motivi per cui è necessario eseguire questi comandi, vedere [IIS ospitata servizio ha esito negativo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
+4. Eseguire i comandi seguenti: Per ulteriori informazioni sui motivi per cui è necessario eseguire questi comandi, vedere la pagina relativa all' [esito negativo del servizio ospitato IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Se IIS viene reinstallato, nei comandi seguenti sarà necessario eseguirlo nuovamente.
@@ -36,35 +36,35 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
     ```
 
     > [!WARNING]
-    >  Esecuzione del comando `aspnet_regiis –i –enable` renderà esecuzione usando il Pool di applicazioni predefinito [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], che potrebbe produrre problemi di incompatibilità per altre applicazioni nello stesso computer.  
+    >  L'esecuzione del `aspnet_regiis –i –enable` comando rende l'esecuzione del pool di applicazioni [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]predefinito tramite, che può produrre problemi di incompatibilità per altre applicazioni nello stesso computer.  
   
-5. Seguire le [istruzioni del Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) per abilitare le porte utilizzate dagli esempi.  
+5. Seguire le [istruzioni del firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) per abilitare le porte usate dagli esempi.  
   
-6. Cercare la directory predefinita seguente: \<InstallDrive>:**\WF_WCF_Samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.  
+6. Verificare la directory predefinita seguente: \<Unitàinstallazione >: **\WF_WCF_Samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.  
   
-7. Se gli esempi non sono installati, installarli dal percorso di download di esempi per [Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939) oppure [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7. Se gli esempi non sono installati, installarli dal percorso di download degli esempi [per C# Visual](https://go.microsoft.com/fwlink/?LinkId=190939) o [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8. Dopo aver installato gli esempi, vedere: \<Unitàinstallazione >:**\WF_WCF_Samples\WCF\Setup\\**  
+8. Dopo aver installato gli esempi, passare a: \<> Unitàinstallazione: **\WF_WCF_Samples\WCF\Setup\\**  
   
-9. Eseguire la **setupvroot** file batch. Vengono eseguiti i passaggi seguenti.  
+9. Eseguire il file batch **Setupvroot. bat** . Vengono eseguiti i passaggi seguenti.  
   
     - In IIS verrà creata una directory virtuale denominata ServiceModelSamples.  
   
     - Vengono create nuove directory su disco denominate %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin.  
   
-     Se si preferisce configurare manualmente queste directory, vedere la [istruzioni di configurazione di Directory virtuale](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Per ripristinare tutte le modifiche apportate in questo passaggio, eseguire cleanupvroot.bat dopo aver terminato di utilizzare gli esempi.  
+     Se si preferisce configurare manualmente queste directory, vedere le istruzioni per la [configurazione della directory virtuale](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Per ripristinare tutte le modifiche apportate in questo passaggio, eseguire cleanupvroot.bat dopo aver terminato di utilizzare gli esempi.  
   
     > [!NOTE]
     >  Questa procedura deve essere eseguita solo una volta in un computer, a meno che non venga eseguito cleanupvroot.bat.
 
-10. All'account con cui vengono compilati gli esempi e all'utente con account Servizio di rete è necessario concedere le autorizzazioni per la modifica di %SystemDrive%\inetpub\wwwroot. Durante la compilazione, alcuni esempi ospitati sul Web potrebbero tentare di copiare i file binari compilati nel percorso indicato in precedenza e se non sono state impostate le autorizzazioni appropriate, la compilazione si interromperà. In alternativa, è possibile lasciare le autorizzazioni come sono ed eseguire il prompt dei comandi SDK o un prompt dei comandi di Visual Studio (2012) come amministratore o compilare gli esempi in Visual Studio 2012, inoltre Esegui come amministratore.
+10. All'account con cui vengono compilati gli esempi e all'utente con account Servizio di rete è necessario concedere le autorizzazioni per la modifica di %SystemDrive%\inetpub\wwwroot. Durante la compilazione, alcuni esempi ospitati sul Web potrebbero tentare di copiare i file binari compilati nel percorso indicato in precedenza e se non sono state impostate le autorizzazioni appropriate, la compilazione si interromperà. In alternativa, è possibile lasciare invariate le autorizzazioni ed eseguire il prompt dei comandi SDK o il prompt dei comandi di Visual Studio (2012) come amministratore oppure compilare gli esempi in Visual Studio 2012, anche Esegui come amministratore.
 
     > [!NOTE]
     >  Se questo passaggio non viene completato, tutti gli esempi ospitati in IIS genereranno un errore durante la compilazione. Assicurarsi di impostare correttamente le autorizzazioni oppure eseguire il prompt dei comandi SDK e il prompt dei comandi di Visual Studio (2012) come amministratore.
 
-11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)], e Windows Server 2008 R2, questo account viene **Network Service**. Per [!INCLUDE[lserver](../../../../includes/lserver-md.md)], l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], l'account è ASPNET.
+11. Creare una directory C:\logs nel computer. Alcuni esempi potrebbero prevederne l'esistenza. Verificare che l'account appropriato disponga dell'accesso in scrittura a questa cartella. Per Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]e Windows Server 2008 R2, questo account è **servizio di rete**. Per [!INCLUDE[lserver](../../../../includes/lserver-md.md)], l'account è NT Authority\Network Service. Per [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], l'account è ASPNET.
 
-12. Eseguire il file Setupcerttool.bat. Questo file si trova nel \<InstallPath > cartella \WF_WCF_Samples\WCF\Setup\.  Tramite questo script verranno eseguite le attività seguenti:
+12. Eseguire il file Setupcerttool.bat. Questo file si trova nella \<cartella installpath > \WF_WCF_Samples\WCF\Setup\  Tramite questo script verranno eseguite le attività seguenti:
 
     - Compilazione dello strumento FindPrivateKey.
 
@@ -79,9 +79,9 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
 
 13. Per gli esempi indipendenti (non ospitati in IIS) è necessaria un'autorizzazione per la registrazione degli indirizzi HTTP nel computer in ascolto. L'autorizzazione per una prenotazione dello spazio dei nomi HTTP viene dall'account utente utilizzato per eseguire l'esempio. Per impostazione predefinita, gli account amministratore dispongono delle autorizzazioni per registrare qualsiasi indirizzo HTTP. Agli account non amministratore è necessario concedere l'autorizzazione per gli spazi dei nomi HTTP utilizzati da questi esempi. Per altre informazioni su come configurare le prenotazioni dello spazio dei nomi, vedere [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) (Configurazione di HTTP e HTTPS).
 
-14. Alcuni esempi richiedono Accodamento messaggi. Visualizzare [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) per le istruzioni di installazione.
+14. Alcuni esempi richiedono Accodamento messaggi. Per istruzioni sull'installazione, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) .
 
     > [!NOTE]
     >  Assicurarsi di avviare il servizio MSMQ prima di eseguire gli esempi per i quali è necessario Accodamento messaggi.
 
-15. Alcuni esempi richiedono l'utilizzo di certificati. Visualizzare [istruzioni di installazione certificato Server (IIS) di Internet Information Services](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
+15. Alcuni esempi richiedono l'utilizzo di certificati. Vedere [le istruzioni di installazione del certificato Server Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).

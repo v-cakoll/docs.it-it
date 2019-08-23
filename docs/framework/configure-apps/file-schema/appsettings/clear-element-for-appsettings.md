@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921305"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Cancella > (elemento) per \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<Cancella > elemento per \<appSettings >
 
 Cancella le impostazioni dell'applicazione personalizzata.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings >** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintassi
@@ -34,21 +34,21 @@ Cancella le impostazioni dell'applicazione personalizzata.
 
 ## <a name="attributes"></a>Attributi
 
-nessuno
+Nessuna
 
 ## <a name="parent-element"></a>Elemento padre
 
 |     | Descrizione |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene le impostazioni dell'applicazione personalizzata, ad esempio i percorsi dei file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione dell'applicazione personalizzata. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene le impostazioni dell'applicazione personalizzate, ad esempio i percorsi di file, gli URL del servizio Web XML o qualsiasi altra informazione di configurazione dell'applicazione personalizzata. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente illustra come cancellare le impostazioni di configurazione personalizzato:
+Nell'esempio seguente viene illustrato come cancellare le impostazioni di configurazione personalizzate:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ Nell'esempio seguente illustra come cancellare le impostazioni di configurazione
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema del file di configurazione per il .NET Framework](../index.md)

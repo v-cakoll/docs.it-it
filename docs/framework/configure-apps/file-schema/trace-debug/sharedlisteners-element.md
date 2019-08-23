@@ -11,15 +11,15 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926976"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > elemento
-Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono tutte le tracce per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o delle tracce in base al nome.  
+# <a name="sharedlisteners-element"></a>\<Elemento > sharedListeners
+Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono alcuna traccia per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o alle tracce in base al nome.  
   
  \<configuration>  
 \<system.diagnostics>  
@@ -43,7 +43,7 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `sharedListeners`.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -53,12 +53,12 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- Aggiunta di un listener per la raccolta di listener condivisi non renderlo un listener attivo. È necessario comunque aggiungerlo a un'origine di traccia o da una traccia, aggiungerlo al `Listeners` raccolta per tale elemento di traccia. Le classi di listener in .NET Framework derivano dal <xref:System.Diagnostics.TraceListener> classe.  
+ L'aggiunta di un listener alla raccolta di listener condivisi non lo rende un listener attivo. È comunque necessario aggiungerlo a un'origine di traccia o a una traccia aggiungendolo alla `Listeners` raccolta per l'elemento Trace. Le classi listener nel .NET Framework derivano dalla <xref:System.Diagnostics.TraceListener> classe.  
   
- Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `<sharedListeners>` elemento a cui aggiungere il listener `console` per il `Listeners` raccolta sia per il <xref:System.Diagnostics.TraceSource> e <xref:System.Diagnostics.Trace> classi. Il listener di traccia console scrive le informazioni di traccia nella console mediante chiamate a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace>.  
+ Nell'esempio seguente viene illustrato come utilizzare l' `<sharedListeners>` elemento per aggiungere il listener `console` alla `Listeners` raccolta per entrambe le <xref:System.Diagnostics.TraceSource> classi e <xref:System.Diagnostics.Trace> . Il listener di traccia della console scrive le informazioni di traccia nella console tramite <xref:System.Diagnostics.TraceSource> chiamate <xref:System.Diagnostics.Trace>a o.  
   
 ```xml  
 <configuration>  
@@ -91,5 +91,5 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Diagnostics.TraceListener>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schema delle impostazioni di traccia e debug](index.md)
+- [Listener di traccia](../../../debug-trace-profile/trace-listeners.md)

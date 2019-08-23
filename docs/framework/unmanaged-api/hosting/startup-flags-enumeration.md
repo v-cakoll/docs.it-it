@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916229"
 ---
-# <a name="startupflags-enumeration"></a>Enumerazione STARTUP_FLAGS
-Contiene valori che indicano il comportamento di avvio di common language runtime (CLR). Per impostazione predefinita, la garbage collection è non simultanea e solo la libreria di classi di base viene caricata nell'area indipendenti dal dominio.  
+# <a name="startup_flags-enumeration"></a>Enumerazione STARTUP_FLAGS
+Contiene valori che indicano il comportamento di avvio del Common Language Runtime (CLR). Per impostazione predefinita, Garbage Collection non è simultanea e solo la libreria di classi di base viene caricata nell'area indipendente dal dominio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,33 +53,33 @@ typedef enum {
 } STARTUP_FLAGS;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Specifica che deve essere utilizzata garbage collection simultanea. Se il chiamante richiede garbage collection simultanea e il server su un computer a processore singolo, la build di workstation e non simultanea garbage collection vengono eseguite in alternativa. **Nota:**  Garbage collection simultanea non è supportata nelle applicazioni che eseguono il WOW64 x86 dell'emulatore su sistemi a 64 bit che implementino l'architettura Intel Itanium (in precedenza denominato IA-64). Per altre informazioni sull'utilizzo di WOW64 nei sistemi Windows a 64 bit, vedere [delle applicazioni in esecuzione a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).|  
-|`STARTUP_LOADER_OPTIMIZATION_MASK`|Specifica che l'ottimizzazione del caricatore deve verificarsi.|  
-|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Specifica che nessun assembly viene caricato come indipendenti dal dominio.|  
+|`STARTUP_CONCURRENT_GC`|Specifica che deve essere utilizzata la Garbage Collection simultanea. Se il chiamante richiede la compilazione del server e la Garbage Collection simultanea in un computer a processore singolo, vengono eseguite invece le Garbage Collection di compilazione e non simultanee della workstation. **Nota:**  La Garbage Collection simultanea non è supportata nelle applicazioni che eseguono l'emulatore WOW64 x86 nei sistemi a 64 bit che implementano l'architettura Intel Itanium (denominata in precedenza IA-64). Per ulteriori informazioni sull'utilizzo di WOW64 in sistemi Windows a 64 bit, vedere [esecuzione di applicazioni a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_LOADER_OPTIMIZATION_MASK`|Specifica che deve essere eseguita l'ottimizzazione del caricatore.|  
+|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Specifica che nessun assembly viene caricato come indipendente dal dominio.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Specifica che tutti gli assembly vengono caricati come indipendenti dal dominio.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Specifica che tutti gli assembly con nome sicuro vengono caricati come indipendenti dal dominio.|  
-|`STARTUP_LOADER_SAFEMODE`|Specifica che i criteri di versione CLR non essere applicati alla versione passata. L'esatta versione specificata di CLR verrà caricato. Lo shim non valutare i criteri per determinare la versione più recente compatibile.|  
-|`STARTUP_LOADER_SETPREFERENCE`|Specifica che il runtime preferito verrà impostato, ma non effettivamente avviato.|  
-|`STARTUP_SERVER_GC`|Specifica che verrà usata la garbage collection per server.|  
-|`STARTUP_HOARD_GC_VM`|Specifica che la garbage collection manterrà l'indirizzo virtuale usato.|  
-|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Specifica che si unisce un'interfaccia di hosting non sarà possibile.|  
-|`STARTUP_LEGACY_IMPERSONATION`|Specifica che la rappresentazione non deve passare attraverso punti asincroni per impostazione predefinita.|  
-|`STARTUP_DISABLE_COMMITTHREADSTACK`|Specifica che lo stack di thread completo non deve essere eseguito il commit quando viene avviato il thread in esecuzione.|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Specifica che rappresentazioni gestite e rappresentazioni ottenute tramite platform invoke verrà passa attraverso punti asincroni. Per impostazione predefinita, solo le rappresentazioni gestite transiterà attraverso punti asincroni.|  
-|`STARTUP_TRIM_GC_COMMIT`|Specifica che la garbage collection utilizzerà meno spazio quando la memoria di sistema è insufficiente. Visualizzare `gcTrimCommitOnLowMemory` nelle [ottimizzazione per l'Hosting Web condiviso](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Specifica che di event tracing for Windows (ETW) è abilitata per gli eventi di common language runtime. A partire da Windows Vista, la traccia eventi è sempre abilitata, pertanto questo flag non ha alcun effetto. Visualizzare [controllo della registrazione di .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Specifica che il monitoraggio delle risorse al dominio di applicazione è abilitata. Vedere le <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> proprietà e [ \<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_LOADER_SAFEMODE`|Specifica che i criteri della versione CLR non verranno applicati alla versione passata. Verrà caricata la versione esatta specificata di CLR. Lo shim non valuta i criteri per determinare la versione compatibile più recente.|  
+|`STARTUP_LOADER_SETPREFERENCE`|Specifica che verrà impostato il runtime preferito, ma non effettivamente avviato.|  
+|`STARTUP_SERVER_GC`|Specifica che verrà utilizzato il server Garbage Collection.|  
+|`STARTUP_HOARD_GC_VM`|Specifica che Garbage Collection manterrà l'indirizzo virtuale usato.|  
+|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Specifica che la combinazione di un'interfaccia di hosting non sarà consentita.|  
+|`STARTUP_LEGACY_IMPERSONATION`|Specifica che la rappresentazione non deve fluire tra i punti asincroni per impostazione predefinita.|  
+|`STARTUP_DISABLE_COMMITTHREADSTACK`|Specifica che non deve essere eseguito il commit dello stack di thread completo all'avvio dell'esecuzione del thread.|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Specifica che le rappresentazioni gestite e le rappresentazioni realizzate tramite platform invoke propagano tra punti asincroni. Per impostazione predefinita, solo le rappresentazioni gestite si propagano tra punti asincroni.|  
+|`STARTUP_TRIM_GC_COMMIT`|Specifica che Garbage Collection utilizzerà uno spazio meno vincolato quando la memoria di sistema è insufficiente. Vedere `gcTrimCommitOnLowMemory` in [ottimizzazione per l'hosting Web condiviso](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Specifica che traccia eventi per Windows (ETW) è abilitato per gli eventi Common Language Runtime. A partire da Windows Vista, la traccia eventi è sempre abilitata, quindi questo flag non ha alcun effetto. Vedere [controllo .NET Framework registrazione](../../../../docs/framework/performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Specifica che il monitoraggio delle risorse del dominio applicazione è abilitato. Vedere l' <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> elemento Property e [ \<appDomainResourceMonitoring >](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria** MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

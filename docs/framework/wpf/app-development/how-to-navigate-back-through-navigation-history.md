@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969359"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Procedura: Spostarsi indietro nella cronologia di spostamento
 Questo esempio illustra come passare alle voci nella cronologia di navigazione indietro.  
@@ -29,4 +29,4 @@ Questo esempio illustra come passare alle voci nella cronologia di navigazione i
  **CanGoBack** e **GoBack** sono implementati <xref:System.Windows.Navigation.NavigationWindow>da <xref:System.Windows.Controls.Frame>, e <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  Se si chiama **GoBack**e non sono presenti voci nella cronologia di navigazione indietro, viene <xref:System.InvalidOperationException> generato un oggetto.
+> Se si chiama **GoBack**e non sono presenti voci nella cronologia di navigazione indietro, viene <xref:System.InvalidOperationException> generato un oggetto.

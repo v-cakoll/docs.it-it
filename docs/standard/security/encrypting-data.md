@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968697"
 ---
 # <a name="encrypting-data"></a>Crittografia dei dati
 La crittografia simmetrica e quella asimmetrica vengono eseguite usando processi diversi. La crittografia simmetrica viene eseguita sui flussi e di conseguenza è utile per crittografare grandi quantità di dati. La crittografia asimmetrica viene eseguita su un numero ridotto di byte e di conseguenza è utile solo per piccole quantità di dati.  
@@ -43,7 +43,7 @@ CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor()
  L'esempio seguente illustra l'intero processo di creazione di un flusso, decrittografia del flusso, scrittura nel flusso e chiusura del flusso. Questo esempio crea un flusso di rete che viene crittografato con le classi **CryptoStream** e **RijndaelManaged** . Viene scritto un messaggio al flusso crittografato con la classe <xref:System.IO.StreamWriter> .  
   
 > [!NOTE]
->  È possibile usare questo esempio anche per scrivere in un file. A questo scopo, eliminare il riferimento <xref:System.Net.Sockets.TcpClient> e sostituire <xref:System.Net.Sockets.NetworkStream> con <xref:System.IO.FileStream>.  
+> È possibile usare questo esempio anche per scrivere in un file. A questo scopo, eliminare il riferimento <xref:System.Net.Sockets.TcpClient> e sostituire <xref:System.Net.Sockets.NetworkStream> con <xref:System.IO.FileStream>.  
   
 ```vb  
 Imports System  

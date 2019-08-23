@@ -2,15 +2,15 @@
 title: <add> di <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24f1478b99aef909ae93f87a70be257e9ba10d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926741"
 ---
-# <a name="add-of-contracttypenames"></a>\<aggiungere > di \<contractTypeNames >
-Elemento di configurazione che specifica il nome del contratto dei servizi ricercati e i criteri usati in genere durante la ricerca di un servizio. Se si specificano più nomi di contratto, risponderanno solo gli endpoint del servizio corrispondenti a tutti i contratti. Si noti che in Windows Communication Foundation (WCF), un endpoint può supportare un solo contratto.  
+# <a name="add-of-contracttypenames"></a>\<aggiungere > di \<ContractTypeNames >
+Elemento di configurazione che specifica il nome del contratto dei servizi ricercati e i criteri usati in genere durante la ricerca di un servizio. Se si specificano più nomi di contratto, risponderanno solo gli endpoint del servizio corrispondenti a tutti i contratti. Si noti che in Windows Communication Foundation (WCF) un endpoint può supportare un solo contratto.  
   
  \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -52,13 +52,13 @@ Elemento di configurazione che specifica il nome del contratto dei servizi ricer
 |namespace|Stringa che specifica lo spazio dei nomi del tipo di contratto.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Raccolta di nomi di tipi di contratto.|  
+|[\<contractTypeNames>](contracttypenames.md)|Raccolta di nomi di tipi di contratto.|  
   
 ## <a name="see-also"></a>Vedere anche
 

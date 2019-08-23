@@ -16,61 +16,61 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c04cd0928eb83aabcd1f0f4b1b43f8ae6d356d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969330"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Risoluzione dei problemi relativi all'interoperabilità (Visual Basic)
-Durante l'interazione tra COM e il codice gestito di .NET Framework, è possibile riscontrare uno o più dei seguenti problemi comuni.  
+Quando si interagisce tra COM e il codice gestito del .NET Framework, è possibile che si verifichino uno o più dei seguenti problemi comuni.  
   
-## <a name="vbconinteroperabilitymarshalinganchor1"></a> Marshalling di interoperabilità  
- In alcuni casi, è possibile usare i tipi di dati che non fanno parte di .NET Framework. Assembly di interoperabilità di gestire la maggior parte del lavoro per gli oggetti COM, ma potrebbe essere necessario controllare i tipi di dati che vengono usati quando gli oggetti gestiti sono esposti a COM. Ad esempio, è necessario specificare le strutture nelle librerie di classi di `BStr` tipo nelle stringhe inviate agli oggetti COM creati da Visual Basic 6.0 e versioni precedenti non gestito. In questi casi, è possibile usare il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo in modo tipi gestiti da esporre come tipi non gestiti.  
+## <a name="vbconinteroperabilitymarshalinganchor1"></a>Marshalling di interoperabilità  
+ In alcuni casi, potrebbe essere necessario utilizzare tipi di dati che non fanno parte del .NET Framework. Gli assembly di interoperabilità gestiscono la maggior parte del lavoro per gli oggetti COM, ma potrebbe essere necessario controllare i tipi di dati utilizzati quando gli oggetti gestiti vengono esposti a COM. Ad esempio, le strutture nelle librerie di classi devono `BStr` specificare il tipo non gestito sulle stringhe inviate a oggetti COM creati da Visual Basic 6,0 e versioni precedenti. In questi casi, è possibile usare l' <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo per fare in modo che i tipi gestiti vengano esposti come tipi non gestiti.  
   
-## <a name="vbconinteroperabilitymarshalinganchor2"></a> Esportazione delle stringhe a lunghezza fissa a codice non gestito  
- In Visual Basic 6.0 e versioni precedenti, le stringhe vengono esportate a oggetti COM come sequenze di byte senza un carattere di terminazione null. Per garantire la compatibilità con altri linguaggi, Visual Basic .NET include un carattere di terminazione quando si esportano le stringhe. Il modo migliore per risolvere i problemi di compatibilità consiste nell'esportare che non dispongono di carattere di terminazione come matrici di stringhe `Byte` o `Char`.  
+## <a name="vbconinteroperabilitymarshalinganchor2"></a>Esportazione di stringhe a lunghezza fissa in codice non gestito  
+ In Visual Basic 6,0 e versioni precedenti, le stringhe vengono esportate in oggetti COM come sequenze di byte senza un carattere di terminazione null. Per la compatibilità con altri linguaggi, Visual Basic .NET include un carattere di terminazione durante l'esportazione delle stringhe. Il modo migliore per risolvere questa incompatibilità consiste nell'esportare stringhe che non dispongono del carattere di terminazione come matrici `Byte` di `Char`o.  
   
-## <a name="vbconinteroperabilitymarshalinganchor3"></a> Esportazione delle gerarchie di ereditarietà  
- Classe gerarchie spianare quando esposte come oggetti COM gestita. Ad esempio, se si definisce una classe di base con un membro e quindi eredita la classe di base in una classe derivata che viene esposta come oggetto COM, i client che usano la classe derivata dell'oggetto COM non sarà in grado di usare i membri ereditati. I membri di classe di base sono accessibili dagli oggetti COM soltanto come istanze di una classe di base e quindi solo se la classe di base viene anche creata come oggetto COM.  
+## <a name="vbconinteroperabilitymarshalinganchor3"></a>Esportazione di gerarchie di ereditarietà  
+ Le gerarchie di classi gestite vengono appiattite quando vengono esposte come oggetti COM. Se, ad esempio, si definisce una classe base con un membro e quindi si eredita la classe di base in una classe derivata esposta come oggetto COM, i client che utilizzano la classe derivata nell'oggetto COM non saranno in grado di utilizzare i membri ereditati. È possibile accedere ai membri della classe di base dagli oggetti COM solo come istanze di una classe di base e quindi solo se la classe di base viene creata anche come oggetto COM.  
   
 ## <a name="overloaded-methods"></a>Metodi di overload  
- Sebbene sia possibile creare metodi di overload con Visual Basic, questi non sono supportati da COM. Quando una classe che contiene i metodi di overload è esposta come oggetto COM, i nuovi nomi di metodo vengono generati per i metodi di overload.  
+ Sebbene sia possibile creare metodi di overload con Visual Basic, non sono supportati da COM. Quando una classe che contiene metodi di overload viene esposta come oggetto COM, vengono generati nuovi nomi di metodo per i metodi di overload.  
   
- Ad esempio, si consideri una classe che ha due overload del `Synch` (metodo). Quando la classe viene esposta come oggetto COM, i nuovi nomi di metodo generato potrebbe rappresentare `Synch` e `Synch_2`.  
+ Si consideri, ad esempio, una classe che dispone di due `Synch` overload del metodo. Quando la classe viene esposta come oggetto com, i nuovi nomi di metodo generati potrebbero essere `Synch` e `Synch_2`.  
   
  La ridenominazione può causare due problemi per i consumer dell'oggetto COM.  
   
-1. I client potrebbero non prevedere i nomi di metodo generato.  
+1. I client potrebbero non prevedere i nomi dei metodi generati.  
   
-2. I nomi di metodo generato nella classe esposta come oggetto COM possono cambiare quando vengono aggiunti nuovi overload per la classe o la relativa classe base. Ciò può provocare problemi di controllo delle versioni.  
+2. I nomi dei metodi generati nella classe esposti come oggetto COM possono essere modificati quando vengono aggiunti nuovi overload alla classe o alla relativa classe di base. Questo può causare problemi di controllo delle versioni.  
   
- Per risolvere entrambi i problemi, assegnare ogni metodo un nome univoco, invece di usare l'overload, quando si sviluppano oggetti che saranno esposti come oggetti COM.  
+ Per risolvere entrambi i problemi, assegnare a ogni metodo un nome univoco, anziché usare l'overload, quando si sviluppano oggetti che verranno esposti come oggetti COM.  
   
-## <a name="vbconinteroperabilitymarshalinganchor4"></a> Uso di oggetti COM mediante assembly di interoperabilità  
- Si usano assembly di interoperabilità quasi come se fossero in sostituzione di codice gestito per gli oggetti COM che rappresentano. Tuttavia, poiché sono wrapper e gli oggetti COM non effettivi, esistono alcune differenze tra l'uso di assembly di interoperabilità e assembly standard. Le differenze includono l'esposizione di classi e tipi di dati per i parametri e valori restituiti.  
+## <a name="vbconinteroperabilitymarshalinganchor4"></a>Utilizzo di oggetti COM tramite assembly di interoperabilità  
+ Gli assembly di interoperabilità vengono usati quasi come se fossero sostituzioni di codice gestito per gli oggetti COM che rappresentano. Tuttavia, poiché si tratta di wrapper e non di oggetti COM effettivi, esistono alcune differenze tra l'utilizzo degli assembly di interoperabilità e degli assembly standard. Queste aree di differenza includono l'esposizione delle classi e i tipi di dati per i parametri e i valori restituiti.  
   
-## <a name="vbconinteroperabilitymarshalinganchor5"></a> Le classi esposte come entrambe le interfacce e classi  
- A differenza delle classi negli assembly standard, le classi COM vengono esposte nell'assembly di interoperabilità come un'interfaccia sia una classe che rappresenta la classe COM. Nome dell'interfaccia è identico a quella della classe COM. Il nome della classe di interoperabilità è uguale a quello della classe COM originale, ma con la parola "Class" aggiunto. Si supponga, ad esempio, che si dispone di un progetto con un riferimento a un assembly di interoperabilità per un oggetto COM. Se la classe COM è denominata `MyComClass`, IntelliSense e il Visualizzatore Mostra un'interfaccia denominata `MyComClass` e una classe denominata `MyComClassClass`.  
+## <a name="vbconinteroperabilitymarshalinganchor5"></a>Classi esposte come interfacce e classi  
+ A differenza delle classi negli assembly standard, le classi COM vengono esposte negli assembly di interoperabilità sia come interfaccia sia come classe che rappresenta la classe COM. Il nome dell'interfaccia è identico a quello della classe COM. Il nome della classe di interoperabilità è identico a quello della classe COM originale, ma con la parola "class" accodata. Si supponga, ad esempio, di disporre di un progetto con un riferimento a un assembly di interoperabilità per un oggetto COM. Se la classe com è denominata `MyComClass`, IntelliSense e il Visualizzatore oggetti mostrano un'interfaccia denominata `MyComClass` e una classe denominata `MyComClassClass`.  
   
-## <a name="vbconinteroperabilitymarshalinganchor6"></a> Creazione di istanze di classi .NET Framework  
- In genere, si crea un'istanza di una classe .NET Framework utilizzando il `New` istruzione con un nome di classe. Quando una classe COM rappresentata da un assembly di interoperabilità è un caso in cui è possibile usare il `New` istruzione con un'interfaccia. A meno che non si usa la classe COM con un `Inherits` istruzione, è possibile usare l'interfaccia esattamente come se fosse una classe. Il codice seguente viene illustrato come creare un `Command` oggetto in un progetto che contiene un riferimento all'oggetto Microsoft ActiveX Data oggetti 2.8 libreria COM:  
+## <a name="vbconinteroperabilitymarshalinganchor6"></a>Creazione di istanze di una classe .NET Framework  
+ In genere, si crea un'istanza di una classe .NET Framework usando `New` l'istruzione con un nome di classe. La presenza di una classe com rappresentata da un assembly di interoperabilità è un caso in `New` cui è possibile utilizzare l'istruzione con un'interfaccia. A meno che non si usi la classe com con `Inherits` un'istruzione, è possibile usare l'interfaccia esattamente come si farebbe con una classe. Il codice seguente illustra come creare un `Command` oggetto in un progetto che contiene un riferimento all'oggetto com della libreria Microsoft ActiveX Data Objects 2,8:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
- Tuttavia, se si usa la classe COM come base per una classe derivata, è necessario utilizzare la classe di interoperabilità che rappresenta la classe COM, come nel codice seguente:  
+ Tuttavia, se si utilizza la classe COM come base per una classe derivata, è necessario utilizzare la classe di interoperabilità che rappresenta la classe COM, come nel codice seguente:  
   
  [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
->  Assembly di interoperabilità in modo implicito implementano interfacce che rappresentano le classi COM. È consigliabile non usare il `Implements` determinerà l'istruzione per implementare queste interfacce o un errore.  
+> Gli assembly di interoperabilità implementano in modo implicito interfacce che rappresentano classi COM. Non provare a usare l' `Implements` istruzione per implementare queste interfacce o verrà generato un errore.  
   
-## <a name="vbconinteroperabilitymarshalinganchor7"></a> Tipi di dati per i parametri e valori restituiti  
- A differenza dei membri dell'assembly standard, i membri di assembly di interoperabilità abbia i tipi di dati che differiscono da quelli utilizzati nella dichiarazione dell'oggetto originale. Anche se gli assembly di interoperabilità convertono implicita dei tipi COM per tipi di common language runtime compatibile, è necessario prestare attenzione ai tipi di dati che vengono usate per entrambi i lati per evitare errori di runtime. Ad esempio, negli oggetti COM creati in Visual Basic 6.0 e versioni precedenti, i valori di tipo `Integer` presupporre il tipo equivalente di .NET Framework, `Short`. È consigliabile utilizzare il Visualizzatore oggetti per esaminare le caratteristiche dei membri importati prima di usarli.  
+## <a name="vbconinteroperabilitymarshalinganchor7"></a>Tipi di dati per parametri e valori restituiti  
+ A differenza dei membri degli assembly standard, i membri dell'assembly di interoperabilità possono avere tipi di dati diversi da quelli usati nella dichiarazione dell'oggetto originale. Sebbene gli assembly di interoperabilità convertano in modo implicito i tipi COM in tipi di Common Language Runtime compatibili, è necessario prestare attenzione ai tipi di dati utilizzati da entrambi i lati per evitare errori di Runtime. Ad esempio, negli oggetti COM creati in Visual Basic 6,0 e versioni precedenti, i valori di `Integer` tipo presuppongono il tipo `Short`equivalente .NET Framework,. È consigliabile usare il Visualizzatore oggetti per esaminare le caratteristiche dei membri importati prima di usarli.  
   
-## <a name="vbconinteroperabilitymarshalinganchor8"></a> Metodi COM a livello di modulo  
- Vengono utilizzati quasi tutti gli oggetti COM mediante la creazione di un'istanza di una classe COM mediante la `New` (parola chiave) e quindi chiamando i metodi dell'oggetto. Un'eccezione a questa regola riguarda gli oggetti COM che contengono `AppObj` o `GlobalMultiUse` classi COM. Tali classi sono simili a metodi a livello di modulo in classi Visual Basic .NET. Visual Basic 6.0 e versioni precedenti in modo implicito creano istanze di tali oggetti è la prima volta che viene chiamato uno dei relativi metodi. In Visual Basic 6.0, ad esempio, è possibile aggiungere un riferimento per la libreria di oggetti 3.6 DAO e chiamare il `DBEngine` metodo senza dover prima creare un'istanza:  
+## <a name="vbconinteroperabilitymarshalinganchor8"></a>Metodi COM a livello di modulo  
+ La maggior parte degli oggetti com viene utilizzata creando un'istanza di una classe com `New` utilizzando la parola chiave e chiamando quindi i metodi dell'oggetto. Un'eccezione a questa regola riguarda gli oggetti com che `AppObj` contengono `GlobalMultiUse` classi com o. Tali classi sono simili ai metodi a livello di modulo in Visual Basic le classi .NET. Visual Basic 6,0 e versioni precedenti creano in modo implicito istanze di tali oggetti per la prima volta che si chiama uno dei relativi metodi. Ad esempio, in Visual Basic 6,0 è possibile aggiungere un riferimento alla libreria di oggetti Microsoft DAO 3,6 e chiamare il `DBEngine` metodo senza prima creare un'istanza:  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,52 +79,52 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET è necessario creare istanze degli oggetti COM sempre prima di poter usare i relativi metodi. Per usare questi metodi in Visual Basic, dichiarare una variabile della classe desiderata e usare la parola chiave new per assegnare l'oggetto alla variabile di oggetto. Il `Shared` parola chiave può essere utilizzata quando si desidera assicurarsi che viene creata solo un'istanza della classe.  
+ Visual Basic .NET richiede di creare sempre istanze di oggetti COM prima di poter usare i relativi metodi. Per usare questi metodi in Visual Basic, dichiarare una variabile della classe desiderata e usare la parola chiave New per assegnare l'oggetto alla variabile oggetto. La `Shared` parola chiave può essere utilizzata quando si desidera assicurarsi che venga creata una sola istanza della classe.  
   
  [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor9"></a> Errori non gestiti nei gestori eventi  
- Un problema comune che interoperabilità comporta errori nei gestori di eventi che gestiscono gli eventi generati dagli oggetti COM. Tali errori vengono ignorati a meno che non un controllo specifico per gli errori usando `On Error` o `Try...Catch...Finally` istruzioni. Nell'esempio seguente viene ad esempio, da un progetto di Visual Basic .NET che presenta un riferimento all'oggetto Microsoft ActiveX Data oggetti 2.8 libreria COM.  
+## <a name="vbconinteroperabilitymarshalinganchor9"></a>Errori non gestiti nei gestori eventi  
+ Un problema di interoperabilità comune implica errori nei gestori eventi che gestiscono gli eventi generati dagli oggetti COM. Tali errori vengono ignorati a meno che non si verifichino `On Error` errori `Try...Catch...Finally` specifici utilizzando le istruzioni o. Ad esempio, l'esempio seguente è riportato da un progetto Visual Basic .NET che contiene un riferimento all'oggetto COM della libreria Microsoft ActiveX Data Objects 2,8.  
   
  [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
- In questo esempio genera un errore nel modo previsto. Tuttavia, se si prova lo stesso esempio senza il `Try...Catch...Finally` blocco, l'errore viene ignorato perché se è stato usato il `OnError Resume Next` istruzione. Senza la gestione degli errori di divisione per zero non riuscirà automaticamente. Poiché tali errori non generano mai gli errori di eccezione non gestita, è importante usare qualche forma di gestione delle eccezioni in gestori di eventi che gestiscono gli eventi dagli oggetti COM.  
+ Questo esempio genera un errore come previsto. Tuttavia, se si prova lo stesso esempio senza il `Try...Catch...Finally` blocco, l'errore viene ignorato come se fosse stata usata `OnError Resume Next` l'istruzione. Senza la gestione degli errori, la divisione per zero non riesce automaticamente. Poiché tali errori non generano mai errori di eccezione non gestiti, è importante usare una forma di gestione delle eccezioni nei gestori eventi che gestiscono gli eventi dagli oggetti COM.  
   
 ### <a name="understanding-com-interop-errors"></a>Informazioni sugli errori di interoperabilità COM  
- Senza la gestione degli errori, le chiamate di interoperabilità generano spesso errori che forniscono informazioni limitate. Se possibile, utilizzare gestione per fornire ulteriori informazioni sui problemi quando si verificano errori strutturata. Ciò può essere particolarmente utile quando si esegue il debug delle applicazioni. Ad esempio:  
+ Senza la gestione degli errori, le chiamate di interoperabilità generano spesso errori che forniscono scarse informazioni. Quando possibile, usare la gestione degli errori strutturati per fornire altre informazioni sui problemi che si verificano. Questo può essere particolarmente utile quando si esegue il debug delle applicazioni. Ad esempio:  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
- È possibile trovare informazioni quali l'origine degli errori COM, HRESULT e la descrizione dell'errore esaminando il contenuto dell'oggetto eccezione.  
+ È possibile trovare informazioni quali la descrizione dell'errore, HRESULT e l'origine di errori COM esaminando il contenuto dell'oggetto eccezione.  
   
-## <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemi relativi al controllo ActiveX  
- La maggior parte dei controlli ActiveX che funzionano con Visual Basic 6.0 funzionano con Visual Basic .NET senza problemi. Le principali eccezioni sono controlli contenitore, o controlli visivamente contenenti altri controlli. Alcuni esempi di controlli precedenti che non funzionano correttamente con Visual Studio sono come segue:  
+## <a name="vbconinteroperabilitymarshalinganchor10"></a>Problemi di controllo ActiveX  
+ La maggior parte dei controlli ActiveX che funzionano con Visual Basic 6,0 funzionano con Visual Basic .NET senza problemi. Le eccezioni principali sono controlli contenitore o controlli che contengono visivamente altri controlli. Di seguito sono riportati alcuni esempi di controlli precedenti che non funzionano correttamente con Visual Studio:  
   
-- Controllo di Microsoft Forms 2.0 Frame  
+- Controllo frame Microsoft Forms 2,0  
   
-- Controllo di scorrimento, noto anche come il controllo di selezione  
+- Controllo di scorrimento, noto anche come controllo di selezione  
   
-- Schede Sheridan  
+- Controllo scheda Sheridan  
   
- Sono disponibili solo alcune soluzioni alternative per problemi di controlli ActiveX non supportati. Se si è proprietari del codice sorgente originale, è possibile migrare i controlli esistenti a Visual Studio. In caso contrario, è possibile controllare con fornitori di software per l'aggiornamento. Le versioni compatibili di NET dei controlli da sostituire non supportati controlli ActiveX.  
+ Esistono solo alcune soluzioni alternative per i problemi di controllo ActiveX non supportati. È possibile eseguire la migrazione di controlli esistenti a Visual Studio se si è proprietari del codice sorgente originale. In caso contrario, è possibile verificare che i fornitori di software siano aggiornati. Versioni di controlli compatibili con .NET per sostituire i controlli ActiveX non supportati.  
   
-## <a name="vbconinteroperabilitymarshalinganchor11"></a> Passaggio delle proprietà di sola lettura ByRef typu ByRef controlli  
- Visual Basic .NET a volte genera errori COM, ad esempio, "Errore 0x800A017F CTL_E_SETNOTSUPPORTED", quando si passano `ReadOnly` delle proprietà di alcuni controlli ActiveX precedente come `ByRef` parametri alle altre procedure. Chiamate di procedure simili da Visual Basic 6.0 non generano un errore e i parametri vengono considerati come se li si passati per valore. Il messaggio di errore di Visual Basic .NET indica che si sta tentando di modificare una proprietà che non dispone di una proprietà `Set` procedure.  
+## <a name="vbconinteroperabilitymarshalinganchor11"></a>Passaggio delle proprietà di sola lettura dei controlli ByRef  
+ Visual Basic .NET a volte genera errori com, ad esempio "Error 0x800A017F CTL_E_SETNOTSUPPORTED", quando si `ReadOnly` passano le proprietà di alcuni controlli ActiveX `ByRef` meno recenti come parametri ad altre procedure. Chiamate di procedura analoghe da Visual Basic 6,0 non generano un errore e i parametri vengono considerati come se fossero stati passati per valore. Il messaggio di errore Visual Basic .NET indica che si sta tentando di modificare una proprietà che non dispone di `Set` una routine della proprietà.  
   
- Se si ha accesso per la routine chiamata, è possibile impedire questo errore tramite il `ByVal` parola chiave per dichiarare i parametri che accettano `ReadOnly` proprietà. Ad esempio:  
+ Se si ha accesso alla routine chiamata, è possibile evitare questo errore usando la parola chiave per `ByVal` dichiarare i parametri che accettano `ReadOnly` le proprietà. Ad esempio:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
- Se non si ha accesso al codice sorgente per la routine chiamata, è possibile forzare la proprietà può essere passato per valore mediante l'aggiunta di un set aggiuntivo di parentesi quadre intorno alla routine chiamante. Ad esempio, in un progetto che contiene un riferimento all'oggetto COM della libreria di Microsoft ActiveX Data oggetti 2.8, è possibile usare:  
+ Se non si ha accesso al codice sorgente per la routine chiamata, è possibile forzare il passaggio della proprietà in base al valore aggiungendo un set aggiuntivo di parentesi quadre alla procedura chiamante. Ad esempio, in un progetto che contiene un riferimento all'oggetto COM della libreria Microsoft ActiveX Data Objects 2,8, è possibile usare:  
   
  [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor12"></a> Distribuzione di assembly che espongono l'interoperabilità  
- Distribuzione di assembly che espongono interfacce COM presenta alcune sfide univoche. Ad esempio, un potenziale problema si verifica quando applicazioni separate che fa riferimento allo stesso assembly COM. Questa situazione è comune quando si installa una nuova versione di un assembly e un'altra applicazione utilizza ancora la versione precedente dell'assembly. Se si disinstalla un assembly che condivide una DLL, è possibile involontariamente renderlo disponibile per gli altri assembly.  
+## <a name="vbconinteroperabilitymarshalinganchor12"></a>Distribuzione degli assembly che espongono l'interoperabilità  
+ La distribuzione di assembly che espongono interfacce COM presenta alcune esigenze specifiche. Ad esempio, un potenziale problema si verifica quando applicazioni separate fanno riferimento allo stesso assembly COM. Questa situazione è comune quando viene installata una nuova versione di un assembly e un'altra applicazione usa ancora la versione precedente dell'assembly. Se si disinstalla un assembly che condivide una DLL, è possibile renderlo involontariamente non disponibile agli altri assembly.  
   
- Per evitare questo problema, è necessario installare gli assembly condivisi alla Global Assembly Cache (GAC) e usare un MergeModule per il componente. Se non è possibile installare l'applicazione nella Global Assembly Cache, questo servizio deve essere installato in CommonFilesFolder in una sottodirectory specifica della versione.  
+ Per evitare questo problema, è necessario installare assembly condivisi nella global assembly cache (GAC) e usare un MergeModule per il componente. Se non è possibile installare l'applicazione nella GAC, è necessario installarla in CommonFilesFolder in una sottodirectory specifica della versione.  
   
- Gli assembly che non sono condivisi devono trovarsi side-by-side nella stessa directory dell'applicazione chiamante.  
+ Gli assembly non condivisi devono trovarsi side-by-side nella directory con l'applicazione chiamante.  
   
 ## <a name="see-also"></a>Vedere anche
 

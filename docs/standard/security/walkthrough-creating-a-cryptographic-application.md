@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916278"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: Creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
@@ -29,7 +29,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
 - Usare <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo generato automaticamente, per crittografare e decrittografare la chiave di dati crittografati da <xref:System.Security.Cryptography.RijndaelManaged>. Gli algoritmi asimmetrici sono ideali per più piccole quantità di dati, come ad esempio una chiave.  
   
     > [!NOTE]
-    >  Se si vogliono proteggere dati sul computer anziché scambiare contenuto crittografato con altri utenti, è possibile usare le classi <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
+    > Se si vogliono proteggere dati sul computer anziché scambiare contenuto crittografato con altri utenti, è possibile usare le classi <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
   
  Nella seguente tabella sono riepilogate le attività crittografate in questo argomento.  
   
@@ -53,7 +53,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
 ## <a name="creating-a-windows-forms-application"></a>Creazione di un'applicazione Windows Forms  
  La maggior parte degli esempi di codice in questa procedura dettagliata sono progettati per essere gestori di eventi per i controlli pulsante. Nella tabella seguente sono elencati i controlli necessari per l'applicazione di esempio e i relativi nomi richiesti per la corrispondenza con gli esempi di codice.  
   
-|Control|Nome|Proprietà di testo (in base alle necessità)|  
+|Control|Name|Proprietà di testo (in base alle necessità)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Crittografa un file|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Decrittografa un file|  
@@ -82,7 +82,7 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Crittografia di un file  
- Questa attività vengono usati due metodi: il metodo del gestore eventi per il `Encrypt File` pulsante (`buttonEncryptFile_Click`) e il `EncryptFile` (metodo). Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
+ Questa attività include due metodi: il metodo del gestore eventi per `Encrypt File` il pulsante`buttonEncryptFile_Click`() e `EncryptFile` il metodo. Il primo metodo visualizza una finestra di dialogo per la selezione di un file e passa il nome file al secondo metodo, che esegue la crittografia.  
   
  Il contenuto, la chiave e il vettore di inizializzazione (IV) crittografati vengono tutti salvati in un <xref:System.IO.FileStream>, a cui si fa riferimento come pacchetto di crittografia.  
   

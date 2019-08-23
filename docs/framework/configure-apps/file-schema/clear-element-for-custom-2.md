@@ -1,5 +1,5 @@
 ---
-title: <clear> elemento per NameValueSectionHandler e DictionarySectionHandler
+title: <clear>elemento per NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301240"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927702"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Cancella > elemento per NameValueSectionHandler e DictionarySectionHandler
 
 Cancella tutte le impostazioni definite in precedenza in una sezione.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintassi
@@ -32,27 +32,27 @@ Cancella tutte le impostazioni definite in precedenza in una sezione.
 
 ## <a name="attributes"></a>Attributi
 
-nessuno
+Nessuna
 
 ## <a name="parent-element"></a>Elemento padre
 
 |     | Descrizione |
 | --- | ------------|
-| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi. |
+| [SectionName > elemento  **\<** ](custom-element-2.md) | Definisce le impostazioni per le sezioni di configurazione personalizzate <xref:System.Configuration.NameValueSectionHandler> che <xref:System.Configuration.DictionarySectionHandler> usano le classi e. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
 
 ## <a name="remarks"></a>Note
 
-È possibile usare la  **\<clear >** elemento da cui rimuovere tutte le impostazioni dall'applicazione che sono stati definiti a un livello superiore nella gerarchia di file di configurazione.
+È possibile utilizzare l'  **\<elemento clear >** per rimuovere tutte le impostazioni dall'applicazione definite a un livello superiore nella gerarchia dei file di configurazione.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio definisce un file di configurazione di computer e un file di configurazione dell'applicazione e viene illustrato come utilizzare il  **\<clear >** elemento in un file di configurazione dell'applicazione per cancellare le sezioni definite in precedenza di file di configurazione macchina.
+Questo esempio definisce un file di configurazione del computer e un file di configurazione dell'applicazione e Mostra come usare l'  **\<elemento clear >** in un file di configurazione dell'applicazione per cancellare le sezioni precedentemente definite nella configurazione del computer file.
 
-Il codice di file di configurazione macchina seguente dichiara la sezione  **\<mySection >** :
+Il seguente codice del file di configurazione del computer dichiara la sezione  **\<>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Il codice di file di configurazione macchina seguente dichiara la sezione  **\<m
 </configuration>
 ```
 
-Il codice di file di configurazione dell'applicazione seguente rimuove tutte le impostazioni nelle  **\<mySection >** . L'applicazione non è possibile recuperare le impostazioni che sono state dichiarate nel nel  **\<mySection >** sezione del file di configurazione della macchina.
+Il codice del file di configurazione dell'applicazione seguente consente di rimuovere tutte le impostazioni dalla  **\<sezione >** . L'applicazione non è in  **\<** grado di recuperare le impostazioni dichiarate nella sezione > della sezione del file di configurazione del computer.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ Il codice di file di configurazione dell'applicazione seguente rimuove tutte le 
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema del file di configurazione per il .NET Framework](index.md)

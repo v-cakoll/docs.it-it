@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930172"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms usando la finestra di progettazione
 Nella procedura seguente verrà creata un'interfaccia utente a più riquadri simile a quella usata in Microsoft Outlook, con un elenco di **cartelle** , un riquadro **messaggi** e un riquadro di **Anteprima** . Questa disposizione viene eseguita principalmente tramite l'ancoraggio dei controlli con il modulo.
@@ -39,7 +39,7 @@ Nella procedura seguente verrà creata un'interfaccia utente a più riquadri sim
      A questo punto, se si preme F5 per eseguire l'applicazione, nel modulo verrà visualizzata un'interfaccia utente in tre parti, simile a quella di Microsoft Outlook.
 
     > [!NOTE]
-    >  Quando si posiziona il puntatore del mouse su uno dei separatori all'interno <xref:System.Windows.Forms.SplitContainer> dei controlli, è possibile ridimensionare le dimensioni interne.
+    > Quando si posiziona il puntatore del mouse su uno dei separatori all'interno <xref:System.Windows.Forms.SplitContainer> dei controlli, è possibile ridimensionare le dimensioni interne.
 
 A questo punto, nello sviluppo di applicazioni, è stata creata un'interfaccia utente sofisticata. Il passaggio successivo consiste nel procedere con la programmazione dell'applicazione stessa, forse connettendo il controllo <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ListView> i controlli a un tipo di origine dati. Per ulteriori informazioni sulla connessione di controlli ai dati, vedere [Data Binding e Windows Forms](../data-binding-and-windows-forms.md).
 

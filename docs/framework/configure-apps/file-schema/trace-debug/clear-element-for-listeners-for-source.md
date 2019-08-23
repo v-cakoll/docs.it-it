@@ -1,5 +1,5 @@
 ---
-title: <clear> Elemento per <listeners> per <source>
+title: <clear>Elemento per <listeners> per<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673785"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920541"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Cancella > (elemento) per \<listeners > per \<origine >
+# <a name="clear-element-for-listeners-for-source"></a>\<Cancella > elemento per \<i listener > per \<l'origine >
 Cancella la raccolta `Listeners` per un'origine di traccia.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<sources>  
-\<origine >  
-\<listeners>  
-\<clear>  
+\<origini >  
+\<> di origine  
+\<listener >  
+\<Cancella >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,16 +47,16 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
 |`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
 |`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
-|`listeners`|Specifica i listener di raccolgono, archiviano e indirizzano i messaggi.|  
+|`listeners`|Specifica i listener che raccolgono, archiviano e indirizzano i messaggi.|  
   
 ## <a name="remarks"></a>Note  
- Il `<clear>` elemento rimuove tutti i listener dal `Listeners` insieme per un'origine di traccia, tra cui la <xref:System.Diagnostics.DefaultTraceListener>. È possibile usare la `<clear>` elemento prima di usare il `<add>` elemento per essere certi che non sono presenti altri listener attivi nella raccolta.  
+ L' `<clear>` elemento rimuove tutti i listener `Listeners` dalla raccolta per un'origine di <xref:System.Diagnostics.DefaultTraceListener>traccia, incluso. È possibile usare l' `<clear>` elemento prima di usare `<add>` l'elemento per assicurarsi che non ci siano altri listener attivi nella raccolta.  
   
 ## <a name="configuration-file"></a>File di configurazione  
- Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.  
+ Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `<clear>` elemento prima di usare il `<add>` elementi da aggiungere i listener `console` e `textListener` per il `Listeners` raccolta per l'origine di traccia `TraceSourceApp`.  
+ Nell'esempio seguente viene illustrato come utilizzare l' `<clear>` elemento prima `console` di `<add>` utilizzare gli elementi per aggiungere i `Listeners` listener e `textListener` alla raccolta per l'origine `TraceSourceApp`di traccia.  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schema delle impostazioni di traccia e debug](index.md)
+- [Listener di traccia](../../../debug-trace-profile/trace-listeners.md)

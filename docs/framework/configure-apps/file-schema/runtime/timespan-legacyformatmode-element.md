@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920685"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<Elemento > TimeSpan_LegacyFormatMode
 
@@ -64,7 +64,7 @@ Nessuno.
 
 A partire da .NET Framework 4, la <xref:System.TimeSpan?displayProperty=nameWithType> struttura implementa l' <xref:System.IFormattable> interfaccia e supporta le operazioni di formattazione con stringhe di formato standard e personalizzate. Se un metodo di analisi rileva un identificatore di formato non supportato o una stringa di formato, viene generata un' <xref:System.FormatException>eccezione.
 
-Nelle versioni precedenti del .NET Framework la struttura non <xref:System.TimeSpan> implementava <xref:System.IFormattable> e non supportava le stringhe di formato. Tuttavia, molti sviluppatori presumevano erroneamente che <xref:System.TimeSpan> supportivano un set di stringhe di formato e le usavano in [operazioni di formattazione composita](../../../../../docs/standard/base-types/composite-formatting.md) <xref:System.String.Format%2A?displayProperty=nameWithType>con metodi come. In genere, se un tipo implementa <xref:System.IFormattable> e supporta le stringhe di formato, le chiamate ai metodi di formattazione con stringhe di formato non <xref:System.FormatException>supportate in genere generano una. Tuttavia, poiché <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable>, il runtime ignora la stringa di formato e chiama invece <xref:System.TimeSpan.ToString?displayProperty=nameWithType> il metodo. Ciò significa che, anche se le stringhe di formato non hanno effetto sull'operazione di formattazione, la loro presenza non ha <xref:System.FormatException>restituito un.
+Nelle versioni precedenti del .NET Framework la struttura non <xref:System.TimeSpan> implementava <xref:System.IFormattable> e non supportava le stringhe di formato. Tuttavia, molti sviluppatori presumevano erroneamente che <xref:System.TimeSpan> supportivano un set di stringhe di formato e le usavano in [operazioni di formattazione composita](../../../../standard/base-types/composite-formatting.md) <xref:System.String.Format%2A?displayProperty=nameWithType>con metodi come. In genere, se un tipo implementa <xref:System.IFormattable> e supporta le stringhe di formato, le chiamate ai metodi di formattazione con stringhe di formato non <xref:System.FormatException>supportate in genere generano una. Tuttavia, poiché <xref:System.TimeSpan> non ha implementato <xref:System.IFormattable>, il runtime ignora la stringa di formato e chiama invece <xref:System.TimeSpan.ToString?displayProperty=nameWithType> il metodo. Ciò significa che, anche se le stringhe di formato non hanno effetto sull'operazione di formattazione, la loro presenza non ha <xref:System.FormatException>restituito un.
 
 Per i casi in cui il codice legacy passa un metodo di formattazione composita e una stringa di formato non valida e tale codice non può essere ricompilato `<TimeSpan_LegacyFormatMode>` , è possibile usare l' <xref:System.TimeSpan> elemento per ripristinare il comportamento legacy. Quando si imposta l' `enabled` attributo di questo elemento su `true`, il metodo di formattazione composita genera <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>una chiamata <xref:System.TimeSpan.ToString?displayProperty=nameWithType> a anziché e non viene <xref:System.FormatException> generata un'eccezione.
 

@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925310"
 ---
 # <a name="corexitprocess-function"></a>Funzione CorExitProcess
 Arresta il processo non gestito corrente.  
   
- Questa funzione è stata deprecata in .NET Framework 4. Usare la [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) metodo invece.  
+ Questa funzione è stata deprecata nel .NET Framework 4. Usare invece il metodo [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ void STDMETHODCALLTYPE CorExitProcess (
   
 ## <a name="parameters"></a>Parametri  
  `exitCode`  
- Valore intero che specifica il codice di uscita del processo.  
+ Integer che specifica il codice di uscita del processo.  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  A partire da .NET Framework 4, `CorExitProcess` chiude ogni runtime avviato il processo, non solo il runtime a cui sono state associate le API legacy.  
+> A partire da .NET Framework 4, `CorExitProcess` chiude ogni runtime avviato nel processo, non solo il runtime a cui sono state associate le API legacy.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria** MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

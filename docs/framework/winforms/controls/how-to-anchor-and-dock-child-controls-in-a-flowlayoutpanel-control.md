@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922913"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel
 Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
@@ -21,16 +21,16 @@ Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà 
   
 1. Creare un controllo <xref:System.Windows.Forms.FlowLayoutPanel> nel form.  
   
-2. Impostare il <xref:System.Windows.Forms.Control.Width%2A> del <xref:System.Windows.Forms.FlowLayoutPanel> controllo **300**e impostare relativo <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> per <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Impostare la <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel> proprietà del controllo su **300**e impostare la relativa <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> proprietà <xref:System.Windows.Forms.FlowDirection.TopDown>su.  
   
 3. Creare due controlli <xref:System.Windows.Forms.Button> e inserirli nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4. Impostare il <xref:System.Windows.Forms.Control.Width%2A> del primo pulsante su **200**.  
+4. Impostare la <xref:System.Windows.Forms.Control.Width%2A> del primo pulsante su **200**.  
   
 5. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
-    >  Il secondo pulsante assume la stessa larghezza del primo. Non si adatta alla larghezza del controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
+    > Il secondo pulsante assume la stessa larghezza del primo. Non si adatta alla larghezza del controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
 6. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su `None`. Verrà ripristinata la larghezza originale del pulsante.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965129"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Metodo ICLRDebuggingLibraryProvider::ProvideLibrary
-Ottiene un provider di librerie di interfaccia di callback che consente a common language runtime (CLR) le librerie di debug specifiche della versione di individuare e caricare su richiesta.  
+Ottiene un'interfaccia di callback del provider di librerie che consente di trovare e caricare su richiesta Common Language Runtime librerie di debug specifiche della versione di CLR.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT ProvideLibrary(
   
 ## <a name="parameters"></a>Parametri  
  `pwszFilename`  
- [in] Nome del modulo richiesto.  
+ in Nome del modulo richiesto.  
   
  `dwTimestamp`  
- [in] Timestamp data archiviato nell'intestazione COFF dei file PE.  
+ in Indicatore di data e ora archiviato nell'intestazione del file COFF dei file PE.  
   
  `pLibraryProvider`  
- [in] Il `SizeOfImage` campo archiviato nell'intestazione COFF file facoltativo del file PE.  
+ in `SizeOfImage` Campo archiviato nell'intestazione file facoltativa COFF dei file PE.  
   
  `hModule`  
- [out] L'handle del modulo richiesto.  
+ out Handle per il modulo richiesto.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -60,21 +60,21 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Eccezioni  
   
 ## <a name="remarks"></a>Note  
- `ProvideLibrary` consente al debugger fornire i moduli necessari per il debug di file specifici di CLR, ad esempio mscordbi. dll e mscordacwks. Gli handle del modulo devono rimanere validi fino a una chiamata per il [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) metodo indica che essi possono essere liberate, a questo punto è responsabilità del chiamante liberare l'handle.  
+ `ProvideLibrary`consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.  
   
- Il debugger può usare qualsiasi strumento disponibile per individuare oppure ottenere il modulo di debug.  
+ Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procurare il modulo di debug.  
   
 > [!IMPORTANT]
->  Questa funzionalità consente al chiamante di API fornire i moduli che contengono codice eseguibile e potenzialmente dannoso. Come precauzione di sicurezza, il chiamante non deve utilizzare `ProvideLibrary` per distribuire qualsiasi codice che non è disposto da eseguire se stesso.  
+> Questa funzionalità consente al chiamante dell'API di fornire moduli che contengono codice eseguibile e possibilmente dannoso. Per motivi di sicurezza, il chiamante non deve usare `ProvideLibrary` per distribuire il codice che non è disposto a eseguire se stesso.  
 >   
->  Se viene rilevato un problema serio di protezione in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks, lo shim può essere corretto in modo che riconosca le versioni dei file non valide. Lo shim può quindi inviare le richieste per le versioni con patch dei file e rifiutare le versioni non sicure, se vengono forniti in risposta a tutte le richieste. Ciò può verificarsi solo se l'utente è applicata una patch a una nuova versione dello shim. Le versioni patch rimane vulnerabile.  
+>  Se viene individuato un problema di sicurezza grave in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks. dll, è possibile applicare una patch allo shim per riconoscere le versioni non valide dei file. Lo shim può quindi inviare richieste per le versioni con patch dei file e rifiutare le versioni non valide se vengono fornite in risposta a una richiesta. Questa situazione può verificarsi solo se l'utente ha eseguito la correzione a una nuova versione dello shim. Le versioni senza patch rimarranno vulnerabili.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

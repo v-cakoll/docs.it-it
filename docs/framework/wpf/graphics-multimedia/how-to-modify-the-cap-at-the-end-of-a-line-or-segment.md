@@ -6,25 +6,25 @@ helpviewer_keywords:
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53487417636dae8d855fe70b7b9255351a2dfb1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916125"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procedura: Modificare il delimitatore alla fine di una linea o di un segmento
-Questo esempio viene illustrato come modificare la forma all'inizio o alla fine di un elemento aperto <xref:System.Windows.Shapes.Shape> elemento. Per modificare il limite all'inizio di un oggetto aperto <xref:System.Windows.Shapes.Shape>, usare il <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> proprietà. Per modificare il delimitatore alla fine di un oggetto aperto <xref:System.Windows.Shapes.Shape>, usare il <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> proprietà. Per visualizzare le terminazioni riga disponibili, vedere il <xref:System.Windows.Media.PenLineCap> enumerazione.  
+Questo esempio illustra come modificare la forma all'inizio o alla fine di un elemento aperto <xref:System.Windows.Shapes.Shape> . Per modificare la terminazione all'inizio di un oggetto <xref:System.Windows.Shapes.Shape>aperto, utilizzare <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> la relativa proprietà. Per modificare la terminazione alla fine di un oggetto <xref:System.Windows.Shapes.Shape>aperto, utilizzare <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> la relativa proprietà. Per visualizzare i limiti di riga disponibili, vedere <xref:System.Windows.Media.PenLineCap> l'enumerazione.  
   
 > [!NOTE]
->  Questa proprietà influisce solo su una forma aperta, ad esempio un <xref:System.Windows.Shapes.Line>, una <xref:System.Windows.Shapes.Polyline>, o un elemento aperto <xref:System.Windows.Shapes.Path> elemento.  
+> Questa proprietà ha effetto solo su una forma aperta, ad <xref:System.Windows.Shapes.Line>esempio un <xref:System.Windows.Shapes.Polyline>oggetto, un oggetto <xref:System.Windows.Shapes.Path> o un elemento aperto.  
   
- L'esempio seguente disegna quattro <xref:System.Windows.Shapes.Polyline> elementi e Usa un set diverso di forme alle estremità della ognuno.  
+ Nell'esempio seguente vengono disegnati quattro <xref:System.Windows.Shapes.Polyline> elementi e viene utilizzato un set di forme diverso alle estremità di ogni.  
   
 ## <a name="example"></a>Esempio  
  [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi Shape](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Vedere anche
 

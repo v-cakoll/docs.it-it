@@ -2,24 +2,24 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: dce706a9c09558bfb39f0d65bd56b57787488d06
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86c7e9fae270e75d1ba7e9725ded22ea1961311a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911996"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è un componente di .NET Framework versione 3.5 che fornisce un'infrastruttura di runtime per la gestione dei dati relazionali come oggetti.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è un componente di .NET Framework versione 3,5 che fornisce un'infrastruttura in fase di esecuzione per la gestione di dati relazionali come oggetti.  
   
 > [!NOTE]
->  I dati relazionali vengono visualizzati come una raccolta di tabelle bidimensionali (*relazioni* o *file flat*), in cui le colonne comuni collegano tra loro le tabelle. Per usare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in modo efficiente, è necessario avere familiarità con i principi di base dei database relazionali.  
+> I dati relazionali vengono visualizzati come una raccolta di tabelle bidimensionali (*relazioni* o *file flat*), in cui le colonne comuni collegano tra loro le tabelle. Per usare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in modo efficiente, è necessario avere familiarità con i principi di base dei database relazionali.  
   
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping del modello dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione dello sviluppatore. Quando viene eseguita l'applicazione, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] li converte di nuovo in oggetti che possono essere utilizzati nel linguaggio di programmazione dello sviluppatore.  
   
- Gli sviluppatori che usano Visual Studio in genere usano Progettazione relazionale oggetti, che fornisce un'interfaccia utente per l'implementazione di molte delle funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Gli sviluppatori che usano Visual Studio in genere usano la Object Relational Designer, che fornisce un'interfaccia utente per l'implementazione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]molte delle funzionalità di.  
   
- Nella documentazione inclusa in questa versione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritti i blocchi di compilazione di base, il processi e le tecniche necessari per la compilazione di applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. È possibile anche cercare problemi specifici di Docs Microsoft e per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, il [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) white paper su Dettagli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e c#.  
+ Nella documentazione inclusa in questa versione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritti i blocchi di compilazione di base, il processi e le tecniche necessari per la compilazione di applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. È anche possibile cercare Microsoft Docs per problemi specifici ed è possibile partecipare al forum su [LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, la [LINQ to SQL: query integrata nel linguaggio .NET per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205) white paper [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la tecnologia di dettagli, complete C# di Visual Basic ed esempi di codice.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -32,17 +32,17 @@ ms.locfileid: "67743268"
  Fornisce informazioni di riferimento sui diversi aspetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Tra gli argomenti vengono descritti il mapping dei tipi CLR SQL, la conversione dell'operatore di query standard e altri.  
   
  [Esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- Vengono forniti collegamenti a esempi di Visual Basic e c#.  
+ Vengono forniti collegamenti a Visual Basic C# ed esempi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
+ [LINQ (Language-Integrated Query)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  Viene fornita una panoramica delle tecnologie LINQ in C#.
  
  [LINQ (Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Viene fornita una panoramica delle tecnologie LINQ in Visual Basic.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Descrive [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tecnologie per gli utenti di Visual Basic.  
+ Descrive [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] le tecnologie per Visual Basic utenti.  
   
  [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Collegamenti al portale di ADO.NET.  
@@ -53,5 +53,5 @@ ms.locfileid: "67743268"
  [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Viene descritto come scaricare i database di esempio usati nella documentazione.  
   
- [Cenni preliminari sul controllo Server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Viene descritto come la <xref:System.Web.UI.WebControls.LinqDataSource> controllo espone [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] agli sviluppatori Web tramite l'architettura del controllo origine dati ASP.NET.
+ [Cenni preliminari sul controllo server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
+ Viene descritto il <xref:System.Web.UI.WebControls.LinqDataSource> modo in [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] cui il controllo espone agli sviluppatori Web tramite l'architettura del controllo origine dati ASP.NET.

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916391"
 ---
-# <a name="corprfjitcache-enumeration"></a>Enumerazione COR_PRF_JIT_CACHE
+# <a name="cor_prf_jit_cache-enumeration"></a>Enumerazione COR_PRF_JIT_CACHE
 Indica il risultato della ricerca di una funzione memorizzata nella cache.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` ha un valore pari a zero, pertanto, `COR_PRF_JIT_CACHE` non può essere utilizzato come un surrogato booleano.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`ha un valore pari a zero, `COR_PRF_JIT_CACHE` quindi non può essere usato come surrogato booleano.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ typedef enum {
 } COR_PRF_JIT_CACHE;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -46,11 +46,11 @@ typedef enum {
 |`COR_PRF_FUNCTION_NOT_FOUND`|La ricerca non ha trovato la funzione.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorProf.idl, CorProf.h  
+ **Intestazione:** CorProf. idl, CorProf. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

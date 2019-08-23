@@ -2,22 +2,22 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758132"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918670"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching>
+# <a name="transactedbatching"></a>\<> transactedBatching
 
 Specifica se il batch delle transazioni è supportato per le operazioni di ricezione.
 
 \<system.ServiceModel>\
-\<behaviors>\
+\<comportamenti > \
 \<endpointBehaviors>\
-\<behavior>\
-\<transactedBatching>
+\<comportamento > \
+\<> transactedBatching
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,7 +31,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|Descrizione|
+|Attributo|DESCRIZIONE|
 |---------------|-----------------|
 |`maxBatchSize`|Numero intero che specifica il numero massimo di operazioni di ricezione che possono essere raggruppate in una transazione. Il valore predefinito è 0.|
 
@@ -43,7 +43,7 @@ Nessuno.
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|
 
 ## <a name="remarks"></a>Note
 

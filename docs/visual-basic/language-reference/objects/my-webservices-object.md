@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c887f9b7c5a41c0aa02016354c46d5507b103d25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050285"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918172"
 ---
 # <a name="mywebservices-object"></a>Oggetto My.WebServices
-Fornisce le proprietà per la creazione e l'accesso a una singola istanza di ogni servizio Web XML a cui fanno riferimento al progetto corrente.  
+Fornisce le proprietà per la creazione e l'accesso a una singola istanza di ogni servizio Web XML a cui fa riferimento il progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente. Ogni istanza viene creata su richiesta. È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`. Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede. Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web. Per informazioni sull'aggiunta di servizi Web a un progetto, vedere [l'accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ L'oggetto `My.WebServices` fornisce un'istanza di ogni servizio Web a cui si fa riferimento nel progetto corrente. Ogni istanza viene creata su richiesta. È possibile accedere a questi servizi Web tramite le proprietà dell'oggetto `My.WebServices`. Il nome della proprietà è uguale al nome del servizio Web a cui la proprietà accede. Qualsiasi classe che eredita da <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> è un servizio Web. Per informazioni sull'aggiunta di servizi Web a un progetto, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Il `My.WebServices` oggetto espone solo i servizi Web associati al progetto corrente. Non fornisce accesso ai servizi Web dichiarati nelle DLL di cui viene fatto riferimento. Per accedere a un servizio Web che fornisce una DLL, è necessario usare il nome completo del servizio Web, nel formato *DllName*. *WebServiceName*. Per altre informazioni, vedere [l'accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ L' `My.WebServices` oggetto espone solo i servizi Web associati al progetto corrente. Non fornisce l'accesso ai servizi Web dichiarati in dll a cui si fa riferimento. Per accedere a un servizio Web fornito da una DLL, è necessario utilizzare il nome completo del servizio Web nel formato *dllname*.WebServiceName. Per ulteriori informazioni, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
  L'oggetto e le relative proprietà non sono disponibili per le applicazioni Web.  
   
-## <a name="properties"></a>Proprietà  
- Ogni proprietà del `My.WebServices` oggetto consente di accedere a un'istanza di un servizio Web a cui fanno riferimento al progetto corrente. Il nome della proprietà è identico al nome del servizio Web che accede a proprietà e il tipo della proprietà è identico al tipo del servizio Web.  
+## <a name="properties"></a>Properties  
+ Ogni proprietà dell' `My.WebServices` oggetto fornisce l'accesso a un'istanza di un servizio Web a cui fa riferimento il progetto corrente. Il nome della proprietà è uguale al nome del servizio Web a cui accede la proprietà e il tipo della proprietà è uguale al tipo del servizio Web.  
   
 > [!NOTE]
->  Se si verifica un conflitto di nomi, il nome della proprietà per l'accesso a un servizio Web viene *RootNamespace*_*Namespace*\_*ServiceName*. Si consideri ad esempio due servizi Web denominati `Service1`. Se uno di questi servizi è nello spazio dei nomi radice `WindowsApplication1` e nello spazio dei nomi `Namespace1`, si accederà a tale servizio utilizzando `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
+> Se si verifica un conflitto di nomi, il nome della proprietà per accedere a un servizio Web è *RootNamespace*_*namespace*\_*ServiceName*. Si considerino, ad esempio, due `Service1`servizi Web denominati. Se uno di questi servizi si trova nello spazio dei `WindowsApplication1` nomi radice e nello `Namespace1`spazio dei nomi, si accederà a `My.WebServices.WindowsApplication1_Namespace1_Service1`tale servizio utilizzando.  
   
- Quando si accede a uno del `My.WebServices` proprietà dell'oggetto, crea una nuova istanza del servizio Web e lo archivia. Gli accessi successivi di tale proprietà restituiscono quell'istanza del servizio Web.  
+ Quando si accede per la `My.WebServices` prima volta a una delle proprietà dell'oggetto, viene creata una nuova istanza del servizio Web che viene archiviata. Gli accessi successivi di tale proprietà restituiscono l'istanza del servizio Web.  
   
- È possibile eliminare un servizio Web tramite l'assegnazione di `Nothing` alla proprietà per il servizio Web. Assegna i setter delle proprietà `Nothing` al valore archiviato. Se si assegna un valore qualsiasi diverso da `Nothing` alla proprietà setter genera un <xref:System.ArgumentException> eccezione.  
+ È possibile eliminare un servizio Web assegnando `Nothing` alla proprietà per il servizio Web. Il metodo `Nothing` di impostazione della proprietà viene assegnato al valore archiviato. Se si assegna un valore diverso `Nothing` da alla proprietà, il setter genera un' <xref:System.ArgumentException> eccezione.  
   
- È possibile verificare se una proprietà del `My.WebServices` oggetto archivia un'istanza del servizio Web usando il `Is` o `IsNot` operatore. È possibile usare tali operatori per verificare se il valore della proprietà è `Nothing`.  
+ È possibile verificare se una proprietà dell' `My.WebServices` oggetto archivia un'istanza del servizio Web utilizzando l' `Is` operatore OR `IsNot` . È possibile utilizzare gli operatori per verificare se il valore della proprietà è `Nothing`.  
   
 > [!NOTE]
->  In genere, il `Is` o `IsNot` operatore ha leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà attualmente Archivia `Nothing`, la proprietà crea una nuova istanza del servizio Web e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà del `My.WebServices` dell'oggetto in modo specifico e consente la `Is` o `IsNot` operatore per controllare lo stato della proprietà senza modificarne il valore.  
+> In genere, `Is` l' `IsNot` operatore o deve leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà è attualmente `Nothing`archiviata, la proprietà crea una nuova istanza del servizio Web e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà dell' `My.WebServices` oggetto in modo specifico e consente all' `Is` operatore OR `IsNot` di controllare lo stato della proprietà senza modificarne il valore.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio chiama il `FahrenheitToCelsius` metodo del `TemperatureConverter` servizio Web XML e restituisce il risultato.  
+ In questo esempio viene `FahrenheitToCelsius` chiamato il metodo `TemperatureConverter` del servizio Web XML e viene restituito il risultato.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- Per questo esempio funzioni, il progetto deve fare riferimento a un servizio Web denominato `Converter`, e tale servizio Web deve esporre il `ConvertTemperature` (metodo). Per altre informazioni, vedere [l'accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ Per il corretto funzionamento di questo esempio, il progetto deve fare riferimento a `Converter`un servizio Web denominato e il servizio Web `ConvertTemperature` deve esporre il metodo. Per ulteriori informazioni, vedere [accesso ai servizi Web dell'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
  Questo codice non funziona in un progetto di applicazione Web.  
   
 ## <a name="requirements"></a>Requisiti  
   
-### <a name="availability-by-project-type"></a>Disponibilità dal tipo di progetto  
+### <a name="availability-by-project-type"></a>Disponibilità per tipo di progetto  
   
 |Tipo di progetto|Disponibile|  
 |---|---|  

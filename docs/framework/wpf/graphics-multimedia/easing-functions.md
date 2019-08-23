@@ -15,41 +15,41 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: a74142b8d8ee3a68daa9966e3f20f3b8e3becb72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 72118711dfd40ad8c665157e09f01c60085db903
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965737"
 ---
 # <a name="easing-functions"></a>Funzioni di interpolazione
 Le funzioni di interpolazione consentono di applicare formule matematiche personalizzate alle animazioni. Si può ad esempio fare in modo che un oggetto rimbalzi in modo realistico o si comporti come se fosse su una molla. È possibile usare animazioni con fotogrammi chiave o anche animazioni From/To/By per simulare questi effetti, ma l'operazione richiederebbe una quantità significativa di lavoro e l'animazione risulterebbe meno accurata rispetto all'uso di una formula matematica.  
   
- Oltre a creare una funzione di interpolazione personalizzata ereditando da <xref:System.Windows.Media.Animation.EasingFunctionBase>, è possibile usare una delle numerose funzioni di interpolazione fornite dal runtime per creare effetti di uso comune.  
+ Oltre a creare una funzione di interpolazione personalizzata ereditando da <xref:System.Windows.Media.Animation.EasingFunctionBase>, è possibile usare una delle diverse funzioni di interpolazione fornite dal runtime per creare effetti comuni.  
   
-- <xref:System.Windows.Media.Animation.BackEase>: Ritrae leggermente il movimento di un'animazione prima che inizi ad animarsi nel tracciato indicato.  
+- <xref:System.Windows.Media.Animation.BackEase>: Ritira leggermente il movimento di un'animazione prima che inizi ad animare nel percorso indicato.  
   
 - <xref:System.Windows.Media.Animation.BounceEase>: Crea un effetto di rimbalzo.  
   
-- <xref:System.Windows.Media.Animation.CircleEase>: Crea un'animazione che accelera e/o rallenta usando una funzione circolare.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Crea un'animazione che accelera e/o decelera utilizzando una funzione circolare.  
   
-- <xref:System.Windows.Media.Animation.CubicEase>: Crea un'animazione che accelera e/o decelera utilizzando la formula *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Crea un'animazione che accelera e/o decelera usando la formula *f*(*t*) = *t*<sup>3</sup>.  
   
-- <xref:System.Windows.Media.Animation.ElasticEase>: Crea un'animazione simile a una molla che oscilla avanti e indietro fino ad arrestarsi.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Crea un'animazione simile a una molla che oscilla avanti e indietro fino a quando non passa a Rest.  
   
-- <xref:System.Windows.Media.Animation.ExponentialEase>: Crea un'animazione che accelera e/o rallenta usando una formula esponenziale.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Crea un'animazione che accelera e/o decelera utilizzando una formula esponenziale.  
   
-- <xref:System.Windows.Media.Animation.PowerEase>: Crea un'animazione che accelera e/o decelera utilizzando la formula *f*(*t*) = *t*<sup>p</sup> dove p è uguale al <xref:System.Windows.Media.Animation.PowerEase.Power%2A>proprietà.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Crea un'animazione che accelera e/o decelera usando la formula *f*(*t*) = *t*<sup>p</sup> dove p è uguale alla <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà.  
   
-- <xref:System.Windows.Media.Animation.QuadraticEase>: Crea un'animazione che accelera e/o decelera utilizzando la formula *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Crea un'animazione che accelera e/o decelera usando la formula *f*(*t*) = *t*<sup>2</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuarticEase>: Crea un'animazione che accelera e/o decelera utilizzando la formula *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Crea un'animazione che accelera e/o decelera usando la formula *f*(*t*) = *t*<sup>4</sup>.  
   
-- <xref:System.Windows.Media.Animation.QuinticEase>: Creare un'animazione che accelera e/o decelera utilizzando la formula *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Creare un'animazione che accelera e/o decelera usando la formula *f*(*t*) = *t*<sup>5</sup>.  
   
-- <xref:System.Windows.Media.Animation.SineEase>: Crea un'animazione che accelera e/o decelera usando una formula sinusoidale.  
+- <xref:System.Windows.Media.Animation.SineEase>: Crea un'animazione che accelera e/o decelera utilizzando una formula seno.  
   
- Per applicare una funzione di interpolazione a un'animazione, usare il `EasingFunction` proprietà dell'animazione specificare la funzione di interpolazione da applicare all'animazione. L'esempio seguente applica un' <xref:System.Windows.Media.Animation.BounceEase> funzione di interpolazione un <xref:System.Windows.Media.Animation.DoubleAnimation> per creare un effetto di rimbalzo.  
+ Per applicare una funzione di interpolazione a un'animazione `EasingFunction` , utilizzare la proprietà dell'animazione per specificare la funzione di interpolazione da applicare all'animazione. Nell'esempio seguente viene applicata <xref:System.Windows.Media.Animation.BounceEase> una funzione di interpolazione a un oggetto <xref:System.Windows.Media.Animation.DoubleAnimation> per creare un effetto di rimbalzo.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](~/samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
@@ -57,15 +57,15 @@ Le funzioni di interpolazione consentono di applicare formule matematiche person
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](~/samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- È possibile usare il <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> proprietà per modificare l'interpolazione comportamento della funzione, vale a dire, modificare la modalità di interpolazione dell'animazione. Esistono tre possibili valori è possibile concedere per <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ È possibile usare la <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> proprietà per modificare il comportamento della funzione di interpolazione, ovvero modificare la modalità di interpolazione dell'animazione. Esistono tre possibili valori che è possibile assegnare per <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
 - <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: L'interpolazione segue la formula matematica associata alla funzione di interpolazione.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: L'interpolazione segue l'interpolazione al 100% meno l'output della formula associata alla funzione di interpolazione.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: L'interpolazione segue l'interpolazione del 100% meno l'output della formula associata alla funzione di interpolazione.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Usa l'interpolazione <xref:System.Windows.Media.Animation.EasingMode.EaseIn> nella prima metà dell'animazione e <xref:System.Windows.Media.Animation.EasingMode.EaseOut> per la seconda metà.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: L'interpolazione utilizza <xref:System.Windows.Media.Animation.EasingMode.EaseIn> per la prima metà dell'animazione <xref:System.Windows.Media.Animation.EasingMode.EaseOut> e per la seconda metà.  
   
- I grafici seguenti illustrano i diversi valori della <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> in cui *f*(*x*) rappresenta l'avanzamento dell'animazione e *t* rappresenta l'ora.  
+ I grafici seguenti illustrano i diversi valori di <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> dove *f*(*x*) rappresenta lo stato di avanzamento dell'animazione e *t* rappresenta l'ora.  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
@@ -112,9 +112,9 @@ Le funzioni di interpolazione consentono di applicare formule matematiche person
  ![SineEase per valori di EasingMode diversi](./media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  È possibile usare <xref:System.Windows.Media.Animation.PowerEase> per creare lo stesso comportamento <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, e <xref:System.Windows.Media.Animation.QuinticEase> usando la <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà. Ad esempio, se si desidera utilizzare <xref:System.Windows.Media.Animation.PowerEase> per sostituire <xref:System.Windows.Media.Animation.CubicEase>, specificare un <xref:System.Windows.Media.Animation.PowerEase.Power%2A> valore 3.  
+> È possibile utilizzare <xref:System.Windows.Media.Animation.PowerEase> per creare lo stesso <xref:System.Windows.Media.Animation.CubicEase>comportamento di, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>e <xref:System.Windows.Media.Animation.QuinticEase> utilizzando la <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà. Se ad esempio si desidera utilizzare <xref:System.Windows.Media.Animation.PowerEase> per <xref:System.Windows.Media.Animation.CubicEase>sostituire, specificare un <xref:System.Windows.Media.Animation.PowerEase.Power%2A> valore pari a 3.  
   
- Oltre a usare le funzioni di interpolazione incluse in fase di esecuzione, è possibile creare funzioni di interpolazione personalizzate ereditando da <xref:System.Windows.Media.Animation.EasingFunctionBase>. L'esempio seguente illustra come creare una semplice funzione di interpolazione personalizzata. È possibile aggiungere logica matematica personalizzata per determinare la funzione di interpolazione comportamento eseguendo l'override di <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> (metodo).   
+ Oltre a usare le funzioni di interpolazione incluse in fase di esecuzione, è possibile creare funzioni di interpolazione personalizzate ereditando <xref:System.Windows.Media.Animation.EasingFunctionBase>da. L'esempio seguente illustra come creare una semplice funzione di interpolazione personalizzata. È possibile aggiungere una logica matematica personalizzata per il comportamento della funzione di interpolazione eseguendo l'override <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> del metodo.   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aa3d428d311fd954d092c3859cf8ad273e8a5c1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613808"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915545"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -23,34 +23,34 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
   
  Quando gli utenti finali interagiscono con l'app, si aspettano che sia reattiva. La digitazione o la gestione dei comandi non devono essere mai bloccate. Le informazioni di supporto devono essere visualizzate rapidamente o scomparire se l'utente continua a digitare. L'app deve evitare di bloccare il thread dell'interfaccia utente con calcoli di lunga durata, che potrebbero dare l'impressione di lentezza dell'app. 
   
- Per altre informazioni sui compilatori Roslyn, vedere [The .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
+ Per ulteriori informazioni sui compilatori Roslyn, vedere [il .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
   
 ## <a name="just-the-facts"></a>Considerazioni essenziali  
  Quando si ottimizzano le prestazioni e si creano app .NET Framework reattive, occorre prestare attenzione alle considerazioni seguenti. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Considerazione 1: Non eseguire prematuramente l'ottimizzazione  
+### <a name="fact-1-dont-prematurely-optimize"></a>Fatto 1: Non ottimizzare in modo prematuro  
  La scrittura di codice più complesso del necessario comporta costi di gestione, debug e ottimizzazione. I programmatori esperti sono in grado di risolvere problemi di codifica e di scrivere codice più efficiente in modo intuitivo. A volte, però, ottimizzano il codice con troppo anticipo. Ad esempio, usano una tabella hash quando sarebbe sufficiente una semplice matrice o usano una procedura complessa per la memorizzazione nella cache, che può provocare la perdita di memoria, invece di ricalcolare semplicemente i valori. Anche se si è programmatori esperti, è consigliabile eseguire test relativi alle prestazioni e analizzare il codice in caso di problemi. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Considerazione 2: Se non si desidera misurare, assicurano  
- I profili e le misurazioni sono attendibili. I profili indicano se la CPU è caricata completamente o se si è verificato un blocco di I/O del disco. Specificano inoltre il tipo e la quantità di memoria allocata e se la CPU dedica molto tempo a operazioni di [Garbage Collection](../../../docs/standard/garbage-collection/index.md) (GC). 
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fatto 2: Se non si sta eseguendo la misurazione, si sta indovinando  
+ I profili e le misurazioni sono attendibili. I profili indicano se la CPU è caricata completamente o se si è verificato un blocco di I/O del disco. Specificano inoltre il tipo e la quantità di memoria allocata e se la CPU dedica molto tempo a operazioni di [Garbage Collection](../../standard/garbage-collection/index.md) (GC). 
   
  È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni. Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice. Stabilire misure iniziali per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni. Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: Strumenti utili la vera differenza  
- Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft offre un'ampia gamma di strumenti per le prestazioni, ad esempio [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Fact 3: Strumenti efficaci che rendono la differenza  
+ Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft fornisce un'ampia gamma di strumenti per le prestazioni, ad esempio [Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling) Profiler e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria. È possibile acquisire eventi ETW ([Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread. PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Considerazione 4: Le allocazioni è importantissime  
+### <a name="fact-4-its-all-about-allocations"></a>Fatto 4: Si tratta di allocazioni  
  Si potrebbe pensare che la creazione di un'app .NET Framework reattiva dipenda completamente dagli algoritmi, ad esempio dall'uso dell'ordinamento rapido invece dell'ordinamento a bolle, ma non è così. Il fattore principale nella creazione di un'app reattiva è costituito dall'allocazione della memoria, in particolare se le dimensioni dell'app sono molto elevate o se l'app elabora quantità elevate di dati. 
   
- Quasi tutte le operazioni relative alla creazione di esperienze IDE reattive con le API del nuovo compilatore comportano il tentativo di evitare allocazioni e la gestione delle strategie per la memorizzazione nella cache. Le tracce di PerfView mostrano che le prestazioni dei nuovi compilatori C# e Visual Basic è associato raramente alla CPU. I compilatori possono essere associati a I/O durante la lettura di centinaia di migliaia o di milioni di righe di codice, la lettura di metadati o l'emissione di codice generato. I ritardi dei thread dell'interfaccia utente sono quasi sempre dovuti a operazioni di Garbage Collection. Le operazioni di Garbage Collection di .NET Framework sono ottimizzate al massimo per le prestazioni e sono eseguite nella maggior parte dei casi simultaneamente all'esecuzione del codice dell'app. Una singola allocazione può tuttavia attivare una raccolta [gen2](../../../docs/standard/garbage-collection/fundamentals.md) dispendiosa, arrestando tutti i thread. 
+ Quasi tutte le operazioni relative alla creazione di esperienze IDE reattive con le API del nuovo compilatore comportano il tentativo di evitare allocazioni e la gestione delle strategie per la memorizzazione nella cache. Le tracce di PerfView mostrano che le prestazioni dei nuovi compilatori C# e Visual Basic è associato raramente alla CPU. I compilatori possono essere associati a I/O durante la lettura di centinaia di migliaia o di milioni di righe di codice, la lettura di metadati o l'emissione di codice generato. I ritardi dei thread dell'interfaccia utente sono quasi sempre dovuti a operazioni di Garbage Collection. Le operazioni di Garbage Collection di .NET Framework sono ottimizzate al massimo per le prestazioni e sono eseguite nella maggior parte dei casi simultaneamente all'esecuzione del codice dell'app. Una singola allocazione può tuttavia attivare una raccolta [gen2](../../standard/garbage-collection/fundamentals.md) dispendiosa, arrestando tutti i thread. 
   
 ## <a name="common-allocations-and-examples"></a>Allocazioni comuni ed esempi  
  Le espressioni di esempio in questa sezione includono allocazioni nascoste apparentemente di piccole dimensioni. Se tuttavia un'app di grandi dimensioni esegue le espressioni per un numero sufficiente di volte, è possibile che ciò generi centinaia di megabyte o addirittura gigabyte di allocazioni. Ad esempio, test di un minuto che simulano la digitazione nell'editor da parte di uno sviluppatore hanno provocato l'allocazione di gigabyte di memoria e hanno portato il team responsabile delle prestazioni a esaminare a fondo gli scenari relativi alla digitazione. 
   
 ### <a name="boxing"></a>Boxing  
- La [conversione boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) si verifica quando si esegue il wrapping in un oggetto di tipi di valori che normalmente si trovano nello stack o in strutture di dati, ovvero quando si alloca un oggetto per l'inclusione dei dati e quindi si restituisce un puntatore a quell'oggetto. La conversione boxing dei valori è a volte eseguita in .NET Framework a causa della firma di un metodo o del tipo di posizione di archiviazione. Il wrapping di un tipo di valore in un oggetto provoca l'allocazione di memoria. Molte operazioni di conversione boxing possono comportare megabyte o gigabyte di allocazioni nell'app e quindi l'app provocherà più operazioni di Garbage Collection. I compilatori di linguaggi e .NET Framework evitano la conversione boxing quando possibile, ma a volte questa conversione si verifica in modo imprevisto. 
+ La [conversione boxing](../../csharp/programming-guide/types/boxing-and-unboxing.md) si verifica quando si esegue il wrapping in un oggetto di tipi di valori che normalmente si trovano nello stack o in strutture di dati, ovvero quando si alloca un oggetto per l'inclusione dei dati e quindi si restituisce un puntatore a quell'oggetto. La conversione boxing dei valori è a volte eseguita in .NET Framework a causa della firma di un metodo o del tipo di posizione di archiviazione. Il wrapping di un tipo di valore in un oggetto provoca l'allocazione di memoria. Molte operazioni di conversione boxing possono comportare megabyte o gigabyte di allocazioni nell'app e quindi l'app provocherà più operazioni di Garbage Collection. I compilatori di linguaggi e .NET Framework evitano la conversione boxing quando possibile, ma a volte questa conversione si verifica in modo imprevisto. 
   
  Per verificare la conversione boxing in PerfView, aprire una traccia ed esaminare gli stack di allocazione heap corrispondenti al nome di processo dell'app. Occorre ricordare che PerfView crea report relativi a tutti i processi. Se alle allocazioni sono associati tipi quali <xref:System.Int32?displayProperty=nameWithType> e <xref:System.Char?displayProperty=nameWithType>, si sta eseguendo la conversione boxing dei tipi di valore. Se si sceglie uno di questi tipi, saranno visualizzati gli stack e le funzioni in cui ne è eseguita la conversione boxing. 
   
@@ -195,7 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota. Inoltre verificato se "/ / /". Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione. Trova il primo carattere che non è lo spazio vuoto e quindi controlla carattere per carattere per verificare se la stringa inizia con "/ / /". Il nuovo codice Usa `IndexOfFirstNonWhiteSpaceChar` invece di <xref:System.String.TrimStart%2A> per restituire il primo indice (dopo un indice iniziale specificato) in cui si è un carattere di spazio non vuoto. La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa. Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`. 
+ La prima versione di `WriteFormattedDocComment()` esegue l'allocazione di una matrice, alcune sottostringhe e una sottostringa ritagliata, insieme a una matrice di `params` vuota. È stata verificata anche la presenza di "///". Il codice rivisto usa solo l'indicizzazione e non esegue alcuna allocazione. Trova il primo carattere che non è uno spazio vuoto, quindi controlla il carattere per carattere per verificare se la stringa inizia con "///". Il nuovo codice usa `IndexOfFirstNonWhiteSpaceChar` <xref:System.String.TrimStart%2A> anziché per restituire il primo indice (dopo un indice iniziale specificato) in cui si verifica un carattere diverso da uno spazio vuoto. La correzione non è completa, ma è semplice intuire come applicare correzioni simili per ottenere una soluzione completa. Applicando questo approccio a tutto il codice sarà possibile rimuovere tutte le allocazioni in `WriteFormattedDocComment()`. 
   
  **Esempio 4: StringBuilder**  
   
@@ -276,9 +276,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Questa semplice strategia per la memorizzazione nella cache rispetta le indicazioni per una progettazione ottimale della cache, poiché prevede un limite per le dimensioni. La quantità di codice, tuttavia, è superiore rispetto all'originale e ciò comporta maggiori costi di gestione. È consigliabile adottare la strategia per la memorizzazione nella cache solo se si sono verificati problemi di prestazioni e se PerfView ha mostrato che le allocazioni di <xref:System.Text.StringBuilder> contribuiscono in modo significativo a questi problemi. 
   
 ### <a name="linq-and-lambdas"></a>LINQ ed espressioni lambda  
-Language-Integrated Query (LINQ), in combinazione con le espressioni lambda, è un esempio di una funzionalità di produttività. Tuttavia, l'uso può avere un impatto significativo sulle prestazioni nel corso del tempo e si potrebbe rilevare che è necessario riscrivere il codice.
+LINQ (Language-Integrated Query), insieme alle espressioni lambda, è un esempio di funzionalità di produttività. Tuttavia, il suo utilizzo potrebbe avere un impatto significativo sulle prestazioni nel tempo e potrebbe essere necessario riscrivere il codice.
   
- **Esempio 5: Le espressioni lambda, elenco\<T > e IEnumerable\<T >**  
+ **Esempio 5: Espressioni lambda, List\<t > e IEnumerable\<t >**  
   
  Questo esempio usa [LINQ e il codice di stile funzionale](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) per individuare un simbolo nel modello del compilatore, a partire da una stringa di nome:  
   
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Nella prima riga, il [espressione lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [si chiude sulla](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variabile locale `name`. Ciò significa che, oltre ad allocare un oggetto per il [delegato](~/docs/csharp/language-reference/keywords/delegate.md) incluso in `predicate`, il codice esegue l'allocazione di una classe statica in cui includere l'ambiente che acquisisce il valore di `name`. Il compilatore genera codice analogo al seguente:  
+ Nella prima riga l' [espressione](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` lambda si [chiude sulla](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) variabile `name`locale. Ciò significa che, oltre ad allocare un oggetto per il [delegato](../../csharp/language-reference/keywords/delegate.md) incluso in `predicate`, il codice esegue l'allocazione di una classe statica in cui includere l'ambiente che acquisisce il valore di `name`. Il compilatore genera codice analogo al seguente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -408,11 +408,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- Il nuovo codice con memorizzazione nella cache include un campo `SyntaxTree` con nome `cachedResult`. Quando questo campo è Null, `GetSyntaxTreeAsync()` esegue le operazioni e salva il risultato nella cache. `GetSyntaxTreeAsync()` Restituisce il `SyntaxTree` oggetto. Se però è disponibile una funzione di tipo `async``Task<SyntaxTree>` e si restituisce un valore di tipo `SyntaxTree`, il compilatore emette codice per allocare un oggetto Task in cui includere il risultato, usando `Task<SyntaxTree>.FromResult()`. L'oggetto Task è contrassegnato come completato e il risultato è immediatamente disponibile. Nel codice per i nuovi compilatori gli oggetti <xref:System.Threading.Tasks.Task> già completati erano così frequenti che la correzione di queste allocazioni ha permesso un notevole miglioramento della reattività. 
+ Il nuovo codice con memorizzazione nella cache include un campo `SyntaxTree` con nome `cachedResult`. Quando questo campo è Null, `GetSyntaxTreeAsync()` esegue le operazioni e salva il risultato nella cache. `GetSyntaxTreeAsync()`Restituisce l' `SyntaxTree` oggetto. Se però è disponibile una funzione di tipo `async``Task<SyntaxTree>` e si restituisce un valore di tipo `SyntaxTree`, il compilatore emette codice per allocare un oggetto Task in cui includere il risultato, usando `Task<SyntaxTree>.FromResult()`. L'oggetto Task è contrassegnato come completato e il risultato è immediatamente disponibile. Nel codice per i nuovi compilatori gli oggetti <xref:System.Threading.Tasks.Task> già completati erano così frequenti che la correzione di queste allocazioni ha permesso un notevole miglioramento della reattività. 
   
  **Correzione per l'esempio 6**  
   
- Per rimuovere completato <xref:System.Threading.Tasks.Task> allocazione, è possibile memorizzare nella cache l'oggetto Task con il risultato completato:  
+ Per rimuovere l'allocazione completata <xref:System.Threading.Tasks.Task> , è possibile memorizzare nella cache l'oggetto attività con il risultato completato:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -436,7 +436,7 @@ class Compilation { /*...*/
   
  Questo codice modifica il tipo di `cachedResult` in `Task<SyntaxTree>` e usa una funzione `async` dell'helper che include il codice originale da `GetSyntaxTreeAsync()`. `GetSyntaxTreeAsync()` usa ora l'[operatore Null-coalescing](../../csharp/language-reference/operators/null-coalescing-operator.md) per restituire `cachedResult` nel caso in cui non sia Null. Se `cachedResult` è Null, `GetSyntaxTreeAsync()` chiama `GetSyntaxTreeUncachedAsync()` e memorizza il risultato nella cache. Si noti che `GetSyntaxTreeAsync()` non attende la chiamata a `GetSyntaxTreeUncachedAsync()`, come farebbe normalmente il codice. Se non si attende, quando `GetSyntaxTreeUncachedAsync()` restituisce l'oggetto <xref:System.Threading.Tasks.Task> corrispondente, `GetSyntaxTreeAsync()` restituisce immediatamente l'oggetto <xref:System.Threading.Tasks.Task>. Il risultato memorizzato nella cache è ora un oggetto <xref:System.Threading.Tasks.Task> e non sono quindi presenti allocazioni per la restituzione del risultato memorizzato nella cache. 
   
-### <a name="additional-considerations"></a>Ulteriori considerazioni  
+### <a name="additional-considerations"></a>Considerazioni aggiuntive  
  Di seguito sono riportate altre considerazioni sui potenziali problemi relativi ad app di grandi dimensioni o app che elaborano quantità elevate di dati. 
   
  **Dizionari**  
@@ -467,6 +467,6 @@ class Compilation { /*...*/
 - [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Prestazioni](../../../docs/framework/performance/index.md)
 - [Suggerimenti sulle prestazioni .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Channel 9 esercitazioni di PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
-- [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
-- [repository dotnet/roslyn su GitHub](https://github.com/dotnet/roslyn)
+- [Esercitazioni su Channel 9 PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
+- [SDK .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
+- [repository DotNet/Roslyn su GitHub](https://github.com/dotnet/roslyn)

@@ -2,29 +2,29 @@
 title: Mapping basato su attributi
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964100"
 ---
 # <a name="attribute-based-mapping"></a>Mapping basato su attributi
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue il mapping di un database di SQL Server a un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti applicando attributi o usando un file di mapping esterno. In questo argomento viene descritto l'approccio basato sugli attributi.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]esegue il mapping di un database [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di SQL Server a un modello a oggetti applicando attributi o utilizzando un file di mapping esterno. In questo argomento viene descritto l'approccio basato sugli attributi.  
   
- Nella forma più elementare, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping di un database a un oggetto <xref:System.Data.Linq.DataContext>, di una tabella a una classe e di colonne e relazioni alle proprietà in tali classi. È inoltre possibile usare attributi per eseguire il mapping di una gerarchia di ereditarietà nel modello a oggetti. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic o C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Nella forma più elementare, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping di un database a un oggetto <xref:System.Data.Linq.DataContext>, di una tabella a una classe e di colonne e relazioni alle proprietà in tali classi. È inoltre possibile usare attributi per eseguire il mapping di una gerarchia di ereditarietà nel modello a oggetti. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
   
- Gli sviluppatori che usano Visual Studio in genere eseguono il mapping di basato sugli attributi tramite Progettazione relazionale oggetti. È anche possibile usare lo strumento da riga di comando SQLMetal o codificare gli attributi manualmente. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic o C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Gli sviluppatori che usano Visual Studio in genere eseguono il mapping basato sugli attributi usando il Object Relational Designer. È anche possibile usare lo strumento da riga di comando SQLMetal o codificare gli attributi manualmente. Per altre informazioni, vedere [Procedura: Generare il modello a oggetti in Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
   
 > [!NOTE]
->  Il mapping può inoltre essere eseguito usando un file XML esterno. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Il mapping può inoltre essere eseguito usando un file XML esterno. Per ulteriori informazioni, vedere [mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  Nelle sezioni seguenti viene descritto in dettaglio il mapping basato sugli attributi. Per altre informazioni, vedere lo spazio dei nomi <xref:System.Data.Linq.Mapping>.  
   
 ## <a name="databaseattribute-attribute"></a>Attributo DatabaseAttribute  
  Usare questo attributo per specificare il nome predefinito del database quando non viene fornito un nome dalla connessione. Questo attributo è facoltativo, ma se viene usato è necessario applicare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, come descritto nella tabella seguente.  
   
-|Proprietà|Type|Predefinito|DESCRIZIONE|  
+|Proprietà|Type|Predefinito|Descrizione|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|Vedere <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Usato con la relativa proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, consente di specificare il nome del database.|  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67743625"
 ## <a name="tableattribute-attribute"></a>Attributo TableAttribute  
  Usare questo attributo per definire una classe come classe dell'entità associata a una visualizzazione o tabella di database. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le classi con questo attributo vengono gestite come classi persistenti. La tabella seguente descrive la proprietà <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
   
-|Proprietà|Type|Predefinito|Descrizione|  
+|Proprietà|Type|Predefinito|DESCRIZIONE|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|Stessa stringa del nome della classe|Consente di definire una classe come classe dell'entità associata a una tabella di database.|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67743625"
   
 |Proprietà|Type|Predefinito|Descrizione|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|Indica a Common Language Runtime (CLR) di recuperare il valore dopo un'operazione di inserimento o di aggiornamento.<br /><br /> Opzioni: Always, Never, OnUpdate, OnInsert.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|Indica a Common Language Runtime (CLR) di recuperare il valore dopo un'operazione di inserimento o di aggiornamento.<br /><br /> Opzioni: Sempre, mai, OnUpdate, OnInsert.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Indica che una colonna può contenere valori null.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|Tipo di colonna di database dedotto|Consente di usare tipi di database e modificatori per specificare il tipo di colonna del database.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|Empty|Consente di definire una colonna calcolata in un database.|  
@@ -61,10 +61,10 @@ ms.locfileid: "67743625"
  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere tra maiuscole e minuscole, tra cui Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere sensibili alla distinzione tra maiuscole e minuscole, incluso Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Attributo AssociationAttribute  
- Usare questo attributo per definire una proprietà che rappresenti un'associazione nel database, ad esempio una relazione da chiave esterna a chiave primaria. Per altre informazioni sulle relazioni, vedere [come: Eseguire il mapping delle relazioni di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Usare questo attributo per definire una proprietà che rappresenti un'associazione nel database, ad esempio una relazione da chiave esterna a chiave primaria. Per ulteriori informazioni sulle relazioni, vedere [procedura: Eseguire il mapping delle relazioni di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
  La tabella seguente descrive le proprietà di questo attributo.  
   
@@ -80,14 +80,14 @@ ms.locfileid: "67743625"
  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere tra maiuscole e minuscole, tra cui Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere sensibili alla distinzione tra maiuscole e minuscole, incluso Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Attributo InheritanceMappingAttribute  
  Usare questo attributo per eseguire il mapping di una gerarchia di ereditarietà.  
   
  La tabella seguente descrive le proprietà di questo attributo.  
   
-|Proprietà|Type|Predefinito|DESCRIZIONE|  
+|Proprietà|Type|Predefinito|Descrizione|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|No. È necessario specificare un valore.|Consente di specificare il valore del codice del discriminatore.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|Se è impostata su True, consente di creare un'istanza di un oggetto di questo tipo quando nessun valore discriminante nell'archivio corrisponde a uno dei valori specificati.|  
@@ -100,7 +100,7 @@ ms.locfileid: "67743625"
   
  La tabella seguente descrive le proprietà di questo attributo.  
   
-|Proprietà|Type|Predefinito|DESCRIZIONE|  
+|Proprietà|Type|Predefinito|Descrizione|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Se è impostata su false, indica il mapping a una stored procedure. Se è impostata su True, indica il mapping a una funzione definita dall'utente.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|La stessa stringa del nome nel database|Consente di specificare il nome della stored procedure o della funzione definita dall'utente.|  
@@ -124,7 +124,7 @@ ms.locfileid: "67743625"
   
  La tabella seguente descrive le proprietà di questo attributo.  
   
-|Proprietà|Type|Predefinito|DESCRIZIONE|  
+|Proprietà|Type|Predefinito|Descrizione|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|Type|(Nessuno)|Usata per i metodi di cui è stato eseguito il mapping a stored procedure che restituiscono <xref:System.Data.Linq.IMultipleResults>. Consente di dichiarare i mapping dei tipi validi o previsti per la stored procedure.|  
   

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4ba64bc4bbec94171cee73625d18330728b66d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964439"
 ---
 # <a name="splitter-control-windows-forms"></a>Controllo Splitter (Windows Form)
-Windows Form `Splitter` controlli vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il `Splitter` controllo viene spesso usato nei form con controlli che dispongono di diverse lunghezze dei dati per la presentazione, ad esempio Windows Explorer, la cui riquadri dati contengono informazioni diverse di larghezze in momenti diversi.  
+I `Splitter` controlli Windows Forms vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il `Splitter` controllo viene spesso usato nei form con controlli con lunghezze diverse di dati da presentare, ad esempio Esplora risorse, i cui riquadri dati contengono informazioni di larghezze variabili in momenti diversi.  
   
 > [!NOTE]
->  Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge funzionalità per il `Splitter` controllo delle versioni precedenti, `Splitter` è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario.  
+> Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge funzionalità al controllo `Splitter` delle versioni precedenti, viene `Splitter` mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se lo si sceglie.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo Splitter](splitter-control-overview-windows-forms.md)  

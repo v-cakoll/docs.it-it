@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666795"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913675"
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
   
 > [!NOTE]
->  Lo strumento LocBaml non è un'applicazione di produzione. Viene presentato come esempio in cui vengono usate alcune delle API di localizzazione e illustra come scrivere uno strumento di localizzazione.  
+> Lo strumento LocBaml non è un'applicazione di produzione. Viene presentato come esempio in cui vengono usate alcune delle API di localizzazione e illustra come scrivere uno strumento di localizzazione.  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>Panoramica  
@@ -28,9 +28,9 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>Requisiti  
- Nel corso di questa discussione verrà usato [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], un compilatore eseguito dalla riga di comando.  
+ Nel corso di questa discussione verrà usato Microsoft Build Engine (MSBuild), che è un compilatore eseguito dalla riga di comando.  
   
- Inoltre, verrà spiegato come usare un file di progetto. Per istruzioni su come usare [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] e i file di progetto, vedere [compilazione e distribuzione](../app-development/building-and-deploying-wpf-applications.md).  
+ Inoltre, verrà spiegato come usare un file di progetto. Per istruzioni sull'uso di MSBuild e dei file di progetto, vedere [compilazione e distribuzione](../app-development/building-and-deploying-wpf-applications.md).  
   
  Tutti gli esempi di questa discussione usano en-US (inglese-Stati Uniti) come impostazioni cultura. In questo modo è possibile eseguire i passaggi degli esempi senza installare un'altra lingua.  
   
@@ -40,7 +40,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 1. Sviluppare l'applicazione fino al punto in cui si vuole iniziare la localizzazione.  
   
-2. Specificare la lingua di sviluppo nel file di progetto in modo che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] possa generare un assembly principale e un assembly satellite (un file con estensione .resources.dll) in cui includere le risorse della lingua di sistema. Il file di progetto nell'esempio HelloApp è HelloApp.csproj. In questo file la lingua di sviluppo viene identificata come segue:  
+2. Specificare il linguaggio di sviluppo nel file di progetto in modo che MSBuild generi un assembly principale e un assembly satellite (un file con estensione resources. dll) per contenere le risorse della lingua neutra. Il file di progetto nell'esempio HelloApp è HelloApp.csproj. In questo file la lingua di sviluppo viene identificata come segue:  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
     - **dettagliato** Visualizza le informazioni sulla modalità dettagliata.  
   
     > [!NOTE]
-    >  Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml. exe** e premere INVIO.  
+    > Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml. exe** e premere INVIO.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Usare LocBaml per analizzare un file  
@@ -121,7 +121,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
-    >  Se il file di input, HelloApp.resources.dll, non è nella stessa directory di LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
+    > Se il file di input, HelloApp.resources.dll, non è nella stessa directory di LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
   
 3. Quando si esegue LocBaml per analizzare i file, l'output è costituito da sette campi delimitati da virgole (file CSV) o da tabulazioni (file TXT). Di seguito viene visualizzato il file CSV analizzato per HelloApp.resources.dll:
 
@@ -172,7 +172,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
-    >  Se il file di input Hello.csv non è presente nella stessa directory del file eseguibile LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
+    > Se il file di input Hello.csv non è presente nella stessa directory del file eseguibile LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
   
 2. Sostituire il file HelloApp.resources.dll precedente nella directory C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll con il file HelloApp.resources.dll appena creato.  
   

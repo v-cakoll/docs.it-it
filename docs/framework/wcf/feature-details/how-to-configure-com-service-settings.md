@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912200"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Procedura: Configurare le impostazioni del servizio COM+
-Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. Nella modalità di hosting COM+, il file Application config viene inserito nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus applicazioni\\{appid} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
+Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione. In modalità hosted com+, il file Application. config si trova nella directory radice dell'applicazione (%programmi%\COMPlus Applications Applications\\{AppID} è l'impostazione predefinita). In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
   
 > [!NOTE]
->  Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi. Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto. Come per i servizi Windows Communication Foundation (WCF), è consigliabile usare la limitazione delle richieste per limitare il numero di chiamate simultanee, le connessioni, istanze e operazioni in sospeso. Ciò consente di evitare un utilizzo eccessivo di risorse. Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
+> Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi. Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto. Come per i servizi Windows Communication Foundation (WCF), è consigliabile usare la limitazione delle richieste per limitare il numero di chiamate simultanee, connessioni, istanze e operazioni in sospeso. Ciò consente di evitare un utilizzo eccessivo di risorse. Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
   
 ## <a name="example"></a>Esempio  
  Si consideri un componente che implementa l'interfaccia seguente:  
@@ -45,17 +45,17 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  L'IID fa parte dello spazio dei nomi iniziale per il contratto.  
+> L'IID fa parte dello spazio dei nomi iniziale per il contratto.  
   
  Le applicazioni client che usano questo servizio dovrebbero essere conformi a questo contratto, nonché usare un'associazione che sia compatibile con quella specificata nella configurazione dell'applicazione.  
   
- Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito. Essendo un servizio Web di Windows Communication Foundation (WCF), ciò è conforme allo schema di configurazione del modello di servizio standard e può essere modificata nella esattamente come altri file di configurazione di servizi WCF.  
+ Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito. Essendo un servizio Web Windows Communication Foundation (WCF), è conforme allo schema di configurazione del modello di servizio standard e può essere modificato in modo analogo ad altri file di configurazione dei servizi WCF.  
   
  Modifiche tipiche includono:  
   
 - Modifica dell'indirizzo endpoint dal modulo ApplicationName/ComponentName/InterfaceName predefinito in un modulo maggiormente utilizzabile.  
   
-- Modifica lo spazio dei nomi del servizio da quello predefinito `http://tempuri.org/InterfaceID` form da un modulo più attinente.  
+- Modifica dello spazio dei nomi del servizio dal modulo `http://tempuri.org/InterfaceID` predefinito a un form più pertinente.  
   
 - Modifica dell'endpoint per l'uso di un'associazione del trasporto differente.  
   

@@ -1,19 +1,19 @@
 ---
-title: <diagnostics> per l'attivazione
+title: <diagnostics>per l'attivazione
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704258"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919216"
 ---
-# <a name="diagnostics-for-activation"></a>\<diagnostica > per Activation
-Configura le funzionalità di diagnostica del listener di Windows Communication Foundation (WCF).  
+# <a name="diagnostics-for-activation"></a>\<> di diagnostica per l'attivazione
+Configura le funzionalità di diagnostica del listener Windows Communication Foundation (WCF).  
   
  \<system.serviceModel.activation>  
-\<diagnostica >  
+\<> di diagnostica  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -25,7 +25,7 @@ Configura le funzionalità di diagnostica del listener di Windows Communication 
 </configuration>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -33,7 +33,7 @@ Configura le funzionalità di diagnostica del listener di Windows Communication 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`performanceCountersEnabled`|Valore booleano che indica se sono i contatori delle prestazioni stati attivati a fini diagnostici.|  
   
@@ -44,7 +44,7 @@ Configura le funzionalità di diagnostica del listener di Windows Communication 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
   
 ## <a name="see-also"></a>Vedere anche
 

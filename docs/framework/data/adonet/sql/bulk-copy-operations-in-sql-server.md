@@ -2,15 +2,15 @@
 title: Operazioni di copia di massa in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efa13eb1633fce3b59040ef8da79dba0f6ea81d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649553"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918056"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia di massa in SQL Server
-Microsoft SQL Server include una popolare utilità della riga di comando denominata **bcp** per rapidamente la copia di massa file di grandi dimensioni in tabelle o viste nei database di SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri metodi per caricare dati in una tabella SQL Server (ad esempio con l'istruzione INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre prestazioni molto più vantaggiose.  
+Microsoft SQL Server include una nota utilità da riga di comando denominata **bcp** per la copia bulk di file di grandi dimensioni in tabelle o viste nei database SQL Server. La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere soluzioni di codice gestito che offrono funzionalità simili. Esistono altri metodi per caricare dati in una tabella SQL Server (ad esempio con l'istruzione INSERT) ma <xref:System.Data.SqlClient.SqlBulkCopy> offre prestazioni molto più vantaggiose.  
   
  La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Tuttavia l'origine dati non si limita a SQL Server ed è possibile usare qualsiasi origine i cui dati possano essere caricati in un'istanza <xref:System.Data.DataTable> oppure letti con un'istanza <xref:System.Data.IDataReader>.  
   
@@ -23,7 +23,7 @@ Microsoft SQL Server include una popolare utilità della riga di comando denomin
 - Copia bulk all'interno di una transazione  
   
 > [!NOTE]
->  Quando si usa .NET Framework versione 1.1 o precedente (che non supporta il <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire SQL Server Transact-SQL **BULK INSERT** istruzione che usa il <xref:System.Data.SqlClient.SqlCommand> oggetto.  
+> Quando si usa .NET Framework versione 1,1 o precedente (che non supporta la <xref:System.Data.SqlClient.SqlBulkCopy> classe), è possibile eseguire l'istruzione SQL Server **BULK INSERT** Transact-SQL usando l' <xref:System.Data.SqlClient.SqlCommand> oggetto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Creazione di esempi di copia di massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  

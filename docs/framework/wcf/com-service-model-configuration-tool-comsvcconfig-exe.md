@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608840"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964194"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Strumento per la configurazione del modello di servizio di COM+ (ComSvcConfig.exe)
 Lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) consente di configurare le interfacce COM+ che si desidera siano esposte come servizi Web.  
@@ -24,17 +24,17 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Per utilizzare ComSvcConfig.exe è necessario disporre dei privilegi di amministratore per il computer.  
+> Per utilizzare ComSvcConfig.exe è necessario disporre dei privilegi di amministratore per il computer.  
   
  Lo strumento si trova nel percorso seguente  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- Per altre informazioni sulle ComSvcConfig.exe, vedere [come: Usare lo strumento di configurazione modello di servizio COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+ Per ulteriori informazioni su ComSvcConfig. exe, vedere [procedura: Utilizzare lo strumento](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)di configurazione del modello di servizi com+.  
   
  Nella tabella riportata di seguito sono descritti le modalità di utilizzo di ComSvcConfig.exe.  
   
-|Opzione|Descrizione|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |`install`|Installa una configurazione per un'interfaccia COM+ per l'integrazione del Modello di servizio.<br /><br /> Forma abbreviata `/i`.|  
 |`uninstall`|Disinstalla una configurazione per un'interfaccia COM+ dall'integrazione del Modello di servizio.<br /><br /> Forma abbreviata `/u`.|  
@@ -45,9 +45,9 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Specifica l'applicazione COM+ da configurare.<br /><br /> Forma abbreviata `/a`.|  
-|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Specifica componente e interfaccia COM+ che verranno configurati come contratto del servizio.<br /><br /> Forma abbreviata `/c`.<br /><br /> Mentre il carattere jolly (\*) può essere utilizzato quando si specificano i nomi di componente e interfaccia, è consigliabile non utilizzare, in quanto si potrebbero esporre interfacce che non intendeva.|  
+|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Specifica componente e interfaccia COM+ che verranno configurati come contratto del servizio.<br /><br /> Forma abbreviata `/c`.<br /><br /> Sebbene sia possibile utilizzare il\*carattere jolly () quando si specificano i nomi dei componenti e delle interfacce, è consigliabile non utilizzarlo perché è possibile esporre interfacce che non si intendevano.|  
 |`/hosting:` \<*complus*  &#124; *was*\>|Specifica se utilizzare la modalità di hosting COM+ o Web.<br /><br /> Forma abbreviata `/h`.<br /><br /> L'utilizzo della modalità di hosting COM+ richiede l’attivazione esplicita dell'applicazione COM+. L'utilizzo della modalità di hosting Web, consente l’attivazione automatica dell’applicazione COM+ come necessario. Se l'applicazione COM+ è un'applicazione della libreria, essa viene eseguita nel processo di Internet Information Services (IIS). Se l'applicazione COM+ è un'applicazione server, essa viene eseguita nel processo di Dllhost.exe.|  
-|`/webSite:` \<*WebsiteName*\>|Specifica il sito Web per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/w`.<br /><br /> Se non viene specificato nessun sito Web, verrà utilizzato il sito Web predefinito.|  
+|`/webSite:`\< *Sito Web*\>|Specifica il sito Web per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/w`.<br /><br /> Se non viene specificato nessun sito Web, verrà utilizzato il sito Web predefinito.|  
 |`/webDirectory:` \<*WebDirectoryName*\>|Specifica la directory virtuale per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/d`.|  
 |`/mex`|Aggiunge l'endpoint del servizio MEX (Metadata Exchange) alla configurazione del servizio predefinita per supportare client che desiderano recuperare una definizione del contratto dal servizio.<br /><br /> Forma abbreviata `/x`.|  
 |`/id`|Visualizza applicazione, componente e informazioni sull'interfaccia come ID.<br /><br /> Forma abbreviata `/k`.|  
@@ -58,7 +58,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>DESCRIZIONE  
  Nell'esempio seguente viene aggiunta l'interfaccia `IFinances` del componente `ItemOrders.IFinancial` (dall'applicazione OnlineStore COM+) al set di interfacce esposte come servizi Web, utilizzando la modalità di hosting COM+. Tutti gli avvisi verranno restituiti oltre a qualsiasi errore incontrato.  
   
 ### <a name="code"></a>Codice  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Usare lo strumento di configurazione modello di servizio COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Procedura: Utilizzare lo strumento di configurazione del modello di servizi COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

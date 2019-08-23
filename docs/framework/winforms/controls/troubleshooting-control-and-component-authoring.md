@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364168"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923601"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
 In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -96,7 +96,7 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
  Per ulteriori informazioni sul debug, vedere [debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [procedura dettagliata: Debug di controlli di Windows Forms personalizzati in](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)fase di progettazione.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>L'evento viene generato due volte nel componente o controllo ereditato  
- Ciò è probabilmente dovuto a una clausola `Handles` duplicata. Per altre informazioni, vedere [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Ciò è probabilmente dovuto a una clausola `Handles` duplicata. Per altre informazioni, vedere [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Errore in fase di progettazione: "Impossibile creare il componente ' nome componente '"  
  Il componente o il controllo deve fornire un costruttore senza parametri senza parametri. Quando l'ambiente di progettazione crea un'istanza del componente o controllo, non tenta di definire parametri per gli overload del costruttore che accettano tali parametri.  

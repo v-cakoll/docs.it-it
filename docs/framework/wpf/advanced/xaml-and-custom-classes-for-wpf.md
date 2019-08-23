@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400828"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917325"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Classi XAML e personalizzate per WPF
 XAML come implementato nei Framework Common Language Runtime (CLR) supporta la possibilità di definire una classe o una struttura personalizzata in qualsiasi linguaggio Common Language Runtime (CLR), quindi accedere a tale classe usando il markup XAML. All'interno dello stesso file di markup è possibile usare una combinazione di tipi definiti da [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e di tipi personalizzati, in genere tramite mapping dei tipi personalizzati al prefisso di uno spazio dei nomi XAML. Questo argomento descrive i requisiti che una classe personalizzata deve soddisfare perché sia utilizzabile come elemento XAML.  
@@ -69,7 +69,7 @@ XAML come implementato nei Framework Common Language Runtime (CLR) supporta la p
  Per essere utilizzabile come evento CLR, l'evento deve essere esposto come evento pubblico in una classe che supporta un costruttore senza parametri o in una classe astratta in cui è possibile accedere all'evento sulle classi derivate. Per essere utilizzato in modo pratico come un evento indirizzato, l'evento CLR deve implementare metodi e `add` `remove` espliciti che aggiungono e rimuovono gestori per la firma dell'evento CLR e inoltrano <xref:System.Windows.UIElement.AddHandler%2A> tali gestori a e <xref:System.Windows.UIElement.RemoveHandler%2A> Metodi. Questi metodi aggiungono o rimuovono i gestori dall'archivio dei gestori degli eventi indirizzati per l'istanza a cui l'evento è associato.  
   
 > [!NOTE]
->  È possibile registrare i gestori direttamente per gli eventi indirizzati usando <xref:System.Windows.UIElement.AddHandler%2A>e per non definire intenzionalmente un evento CLR che espone l'evento indirizzato. Questa operazione non è in genere consigliata. In questo caso, infatti, per l'evento non è abilitata la sintassi degli attributi XAML per il collegamento di gestori e nella classe risultante il codice XAML relativo alle caratteristiche del tipo è meno chiaro.  
+> È possibile registrare i gestori direttamente per gli eventi indirizzati usando <xref:System.Windows.UIElement.AddHandler%2A>e per non definire intenzionalmente un evento CLR che espone l'evento indirizzato. Questa operazione non è in genere consigliata. In questo caso, infatti, per l'evento non è abilitata la sintassi degli attributi XAML per il collegamento di gestori e nella classe risultante il codice XAML relativo alle caratteristiche del tipo è meno chiaro.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>Scrittura delle proprietà delle raccolte  
@@ -92,7 +92,7 @@ XAML come implementato nei Framework Common Language Runtime (CLR) supporta la p
  In CLR ognuno di questi tipi dispone di un metodo `Add`, usato dal processore XAML per aggiungere elementi alla raccolta sottostante durante la creazione dell'oggetto grafico.  
   
 > [!NOTE]
->  Le interfacce `List` e `Dictionary` generiche<xref:System.Collections.Generic.IList%601> ( <xref:System.Collections.Generic.IDictionary%602>e) non sono supportate per il rilevamento della [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] raccolta da parte del processore XAML. Tuttavia, è possibile usare la <xref:System.Collections.Generic.List%601> classe come classe di base, perché implementa <xref:System.Collections.IList> direttamente o <xref:System.Collections.Generic.Dictionary%602> come classe di base, perché implementa <xref:System.Collections.IDictionary> direttamente.  
+> Le interfacce `List` e `Dictionary` generiche<xref:System.Collections.Generic.IList%601> ( <xref:System.Collections.Generic.IDictionary%602>e) non sono supportate per il rilevamento della [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] raccolta da parte del processore XAML. Tuttavia, è possibile usare la <xref:System.Collections.Generic.List%601> classe come classe di base, perché implementa <xref:System.Collections.IList> direttamente o <xref:System.Collections.Generic.Dictionary%602> come classe di base, perché implementa <xref:System.Collections.IDictionary> direttamente.  
   
  Quando si dichiara una proprietà che accetta una raccolta, prestare attenzione alla modalità di inizializzazione del valore di questa proprietà nelle nuove istanze del tipo. Se non si implementa la proprietà come proprietà di dipendenza, è adeguato che la proprietà usi un campo sottostante che chiami il costruttore del tipo della raccolta. Se la proprietà è una proprietà di dipendenza, potrebbe essere necessario inizializzare la proprietà della raccolta come parte del costruttore del tipo predefinito. Ciò è dovuto al fatto che il valore predefinito di una proprietà di dipendenza proviene dai metadati e in genere è necessario evitare che il valore iniziale di una proprietà di una raccolta corrisponda a una raccolta condivisa statica. Deve esistere un'istanza della raccolta per ogni istanza del tipo che la contiene. Per altre informazioni, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).  
   

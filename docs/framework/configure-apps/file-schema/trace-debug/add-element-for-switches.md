@@ -7,19 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673810"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920559"
 ---
-# <a name="add-element-for-switches"></a>\<aggiungere > (elemento) per \<commutatori >
+# <a name="add-element-for-switches"></a>\<Aggiungi elemento > per \<le opzioni >
 Specifica il livello in cui viene impostata un'opzione di traccia.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<switches>  
+\<Opzioni >  
 \<add>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,8 +36,8 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome del commutatore. Il valore di questo attributo corrisponde alla *displayName* parametro che viene passato al costruttore di opzioni.|  
-|**value**|Attributo obbligatorio.<br /><br /> Specifica il livello del commutatore.|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome dell'opzione. Il valore di questo attributo corrisponde al parametro *DisplayName* passato al costruttore Switch.|  
+|**value**|Attributo obbligatorio.<br /><br /> Specifica il livello dell'opzione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -51,10 +51,10 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="remarks"></a>Note  
- È possibile modificare il livello di un'opzione di traccia inserendolo in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia o debug messaggi generati dall'applicazione.  
+ È possibile modificare il livello di un'opzione di traccia inserendola in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivarla o disattivarla. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare livelli diversi per specificare i tipi di traccia o i messaggi di debug restituiti dall'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<aggiungere >** elemento per cui impostare il `General` opzione di traccia il <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` commutatore di traccia di tipo Boolean.  
+ Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento Add >** per impostare l' `General` opzione <xref:System.Diagnostics.TraceLevel> Trace sul livello e abilitare l' `Data` opzione di traccia booleana.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schema delle impostazioni di traccia e debug](index.md)

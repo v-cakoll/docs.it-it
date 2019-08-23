@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52f488bfc77cbe6c0942c0e38c0201fa8d7d2d9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928886"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Definisce un'associazione che fornisce supporto per l'accodamento mediante il routing dei messaggi tramite MSMQ.  
   
  \<system.ServiceModel>  
-\<le associazioni >  
+\<Binding >  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>Sintassi  
@@ -50,7 +50,7 @@ msmqIntegrationBinding
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |closeTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |customDeadLetterQueue|URI che contiene il percorso della coda dei messaggi non recapitabili per applicazione, in cui vengono collocati i messaggi scaduti o che non possono essere trasferiti o recapitati.<br /><br /> La coda dei messaggi non recapitabili è una coda del gestore delle code dell'applicazione di origine contenente i messaggi scaduti che sono risultati non recapitabili.<br /><br /> L'URI specificato da <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> deve usare lo schema net.msmq.|  
@@ -59,12 +59,12 @@ msmqIntegrationBinding
 |exactlyOnce|Valore booleano che indica se ogni messaggio viene recapitato una sola volta. Il mittente riceverà quindi una notifica degli errori di recapito. Quando `durable` è `false`, questo attributo viene ignorato e i messaggi vengono trasferiti senza garanzia di recapito. Il valore predefinito è `true`. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Numero intero positivo che definisce la dimensione massima del messaggio, in byte, comprese le intestazioni, elaborate da questa associazione. Il mittente di un messaggio che supera questo limite riceverà un errore SOAP. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. Il valore predefinito è 65536. Questo vincolo alla dimensione dei messaggi limita l'esposizione agli attacchi di tipo Denial of Service (DoS).|  
 |maxRetryCycles|Numero intero che indica il numero di cicli di ripetizione usati dalla funzionalità di rilevazione dei messaggi non elaborabili. Un messaggio diventa non elaborabile quando falliscono tutti i tentativi di recapito di tutti i cicli. Il valore predefinito è 2. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |receiveErrorHandling|Valore <xref:System.ServiceModel.ReceiveErrorHandling> che specifica come vengono gestiti i messaggi non elaborabili e non distribuibili.|  
 |receiveRetryCount|Numero intero che specifica il numero massimo di tentativi immediati che Gestione code deve tentare se la trasmissione di un messaggio dalla coda dell'applicazione all'applicazione non riesce.<br /><br /> Se viene raggiunto il numero massimo di tentativi di recapito senza che l'applicazione acceda al messaggio, il messaggio viene inviato a una coda di tentativi per essere inviato nuovamente in seguito. Il periodo di tempo prima che il messaggio venga trasferito di nuovo alla coda di invio è controllato dall'elemento `retryCycleDelay`. Se i cicli di ripetizione raggiungono il valore `maxRetryCycles`, il messaggio viene inviato alla coda dei messaggi non elaborabili oppure viene inviato al mittente un messaggio di non riconoscimento.|  
 |receiveTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
-|receiveContextEnabled|Valore booleano che specifica se il contesto di ricezione per l'elaborazione di messaggi nelle code è abilitato. Quando è impostato su `true`, un servizio può "leggere" un messaggio nella coda per avviarne l'elaborazione e, se si verifica un errore e viene generata un'eccezione, il messaggio rimane in coda. Servizi anche possono "bloccare" i messaggi per ritentare l'elaborazione in un secondo momento nel tempo. ReceiveContext offre un meccanismo per il "completamento" del messaggio al termine dell'elaborazione in modo che può essere rimosso dalla coda. Non sono più messaggi vengano letti e riscritti per le code sulla rete e i singoli messaggi non saranno rimbalzati tra diverse istanze del servizio durante l'elaborazione.|  
+|receiveContextEnabled|Valore booleano che specifica se il contesto di ricezione per l'elaborazione di messaggi nelle code è abilitato. Quando è impostato su `true`, un servizio può "visualizzare" un messaggio nella coda per avviarne l'elaborazione. Se si verifica un errore e viene generata un'eccezione, il messaggio rimane nella coda. I servizi possono anche bloccare i messaggi per ritentare l'elaborazione in un momento successivo. ReceiveContext fornisce un meccanismo per il "completamento" del messaggio al termine dell'elaborazione, in modo che possa essere rimosso dalla coda. I messaggi non vengono più letti e riscritti nelle code in rete e i singoli messaggi non vengono rimbalzati tra le diverse istanze del servizio durante l'elaborazione.|  
 |retryCycleDelay|Valore TimeSpan che specifica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente. Il valore definisce solo il tempo di attesa minimo, poiché è possibile che l'attesa effettiva sia più lunga. L'impostazione predefinita è 00:30:00. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |serializationFormat|Definisce il formato usato per la serializzazione del corpo del messaggio. L'attributo è di tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
@@ -77,7 +77,7 @@ msmqIntegrationBinding
 |Value|Descrizione|  
 |-----------|-----------------|  
 |Xml|Formato XML|  
-|Binario|Formato binario|  
+|Binary|Formato binario|  
 |ActiveX|Formato ActiveX|  
 |ByteArray|Serializza l'oggetto in una matrice di byte.|  
 |Flusso|Il corpo viene formattato come un flusso.|  
@@ -86,16 +86,16 @@ msmqIntegrationBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento di associazione può essere usato per consentire alle applicazioni di Windows Communication Foundation (WCF) inviare e ricevere messaggi da applicazioni MSMQ esistenti che usano COM, API native MSMQ o i tipi definiti nel <xref:System.Messaging?displayProperty=nameWithType> dello spazio dei nomi è può usare questo elemento di configurazione per specificare metodi per indirizzare la coda, garanzie di trasferimento, se i messaggi devono essere archiviati in modo durevole e come i messaggi devono essere protetti e autenticati. Per altre informazioni, vedere [Procedura: Scambiare messaggi con endpoint WCF e applicazioni di Accodamento messaggi](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Questo elemento di associazione può essere utilizzato per abilitare le applicazioni Windows Communication Foundation (WCF) per l'invio e la ricezione di messaggi da applicazioni MSMQ esistenti che utilizzano com, API native MSMQ o i tipi definiti nello <xref:System.Messaging?displayProperty=nameWithType> spazio dei nomi può utilizzare questo elemento di configurazione per specificare i modi per indirizzare la coda, le garanzie di trasferimento, se i messaggi devono essere archiviati in modo durevole e come i messaggi devono essere protetti e autenticati. Per altre informazioni, vedere [Procedura: Scambiare messaggi con gli endpoint WCF e le applicazioni](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)di Accodamento messaggi.  
   
 ## <a name="example"></a>Esempio  
   
@@ -134,8 +134,8 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [\<binding>](../../../misc/binding.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Configurazione di associazioni fornite dal sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Uso di associazioni per configurare servizi e client](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [Code in WCF](../../../wcf/feature-details/queues-in-wcf.md)

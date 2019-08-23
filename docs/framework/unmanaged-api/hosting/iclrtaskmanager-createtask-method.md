@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804a295cf74067eb23ed8e8c860252a1f2fcf5d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938312"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Metodo ICLRTaskManager::CreateTask
-Le richieste in modo esplicito che common language runtime (CLR) creare una nuova attività.  
+Richiede in modo esplicito che il Common Language Runtime (CLR) crei una nuova attività.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,34 +37,34 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parametri  
  `pTask`  
- [out] Un puntatore all'indirizzo di un oggetto appena creato [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md), oppure null se non è stato possibile creare l'attività.  
+ out Puntatore all'indirizzo di un oggetto [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)appena creato, o null, se non è stato possibile creare l'attività.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Il metodo è stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|HOST_E_CLRNOTAVAILABLE|CLR non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Memoria insufficiente è disponibile per allocare la risorsa richiesta.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|La memoria disponibile non è sufficiente per allocare la risorsa richiesta.|  
   
 ## <a name="remarks"></a>Note  
- CLR crea una nuova attività automaticamente al momento dell'inizializzazione, quando il codice utente crea un thread usando i tipi nel <xref:System.Threading> dello spazio dei nomi, oppure quando sono aumentata le dimensioni del pool di thread. Crea anche le attività quando il codice non gestito effettua una chiamata di una funzione gestita.  
+ CLR crea una nuova attività automaticamente al momento dell'inizializzazione, quando il codice utente crea un thread utilizzando i <xref:System.Threading> tipi nello spazio dei nomi o quando le dimensioni del pool di thread vengono aumentate. Vengono inoltre create attività quando il codice non gestito effettua una chiamata a una funzione gestita.  
   
- `CreateTask` consente all'host eseguire una richiesta esplicita che Common Language Runtime crea una nuova attività. Ad esempio, l'host può richiamare questo metodo per preinizializzare strutture di dati.  
+ `CreateTask`consente all'host di eseguire una richiesta esplicita che CLR crea una nuova attività. Ad esempio, l'host può richiamare questo metodo per preinizializzare le strutture dei dati.  
   
 > [!IMPORTANT]
->  La nuova attività viene restituita in uno stato sospeso e rimane sospesa fino a quando l'host chiama in modo esplicito [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
+> La nuova attività viene restituita in stato sospeso e rimane sospesa fino a quando l'host non chiama in modo esplicito [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

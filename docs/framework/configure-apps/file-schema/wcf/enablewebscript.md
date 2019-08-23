@@ -2,20 +2,20 @@
 title: <enableWebScript>
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b2cdd29cda7f82ce555b0f6c1a963567b41ff81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 123f58ee3d77bf605db21fa0d9537b3196d56468
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919119"
 ---
 # <a name="enablewebscript"></a>\<enableWebScript>
 Questo elemento attiva il comportamento dell'endpoint che rende possibile l'uso del servizio da pagine Web ASP.NET AJAX.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<endpointBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<enableWebScript>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -37,14 +37,14 @@ Questo elemento attiva il comportamento dell'endpoint che rende possibile l'uso 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica l'insieme di comportamenti dell'endpoint.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica l'insieme di comportamenti dell'endpoint.|  
   
 ## <a name="remarks"></a>Note  
- Questo comportamento deve essere usato solo in combinazione con il [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) associazione standard, o il [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) elemento di associazione.  Per altre informazioni su questo comportamento, vedere <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ Questo comportamento deve essere usato solo in combinazione con l' [ \<associazione WebHttpBinding >](webhttpbinding.md) standard o con l' [ \<](webmessageencoding.md) elemento di associazione > webMessageEncoding.  Per altre informazioni su questo comportamento, vedere <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>
 - <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>
-- [Integrazione AJAX e supporto JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)
+- [Integrazione AJAX e supporto JSON](../../../wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttp>](webhttp.md)

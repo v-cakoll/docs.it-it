@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 9eb762a9691a6127e2419f9ddc25f3010d3383fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039899"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966530"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: Bloccare i controlli di Windows Forms
 Quando si progetta l'interfaccia utente dell'applicazione Windows, è possibile bloccare i controlli una volta posizionati correttamente, in modo che non vengano spostati o ridimensionati inavvertitamente durante l'impostazione di altre proprietà.
@@ -24,14 +24,14 @@ Quando si progetta l'interfaccia utente dell'applicazione Windows, è possibile 
      In alternativa, fare clic con il pulsante destro del mouse sul controllo e scegliere **Blocca controlli**.
 
     > [!NOTE]
-    >  I controlli di blocco ne impediscono il trascinamento in una nuova dimensione o posizione nell'area di progettazione. Tuttavia, è comunque possibile modificare la dimensione o la posizione dei controlli per mezzo della finestra **Proprietà** o nel codice.
+    > I controlli di blocco ne impediscono il trascinamento in una nuova dimensione o posizione nell'area di progettazione. Tuttavia, è comunque possibile modificare la dimensione o la posizione dei controlli per mezzo della finestra **Proprietà** o nel codice.
 
 ## <a name="to-lock-all-the-controls-on-a-form"></a>Per bloccare tutti i controlli in un form
 
 1. Scegliere **Blocca controlli**dal menu **formato** .
 
     > [!NOTE]
-    >  Questo comando blocca anche le dimensioni del form, perché un modulo è un controllo.
+    > Questo comando blocca anche le dimensioni del form, perché un modulo è un controllo.
 
 ## <a name="to-unlock-all-locked-controls-on-a-form"></a>Per sbloccare tutti i controlli bloccati in un form
 

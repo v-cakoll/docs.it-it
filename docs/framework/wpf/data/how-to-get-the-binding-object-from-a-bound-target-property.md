@@ -5,30 +5,30 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7aacc2145ffe98ec7b58afb3b2e3dca151ef0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965428"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Procedura: Ottenere l'oggetto di binding da una proprietà di destinazione associata
 Questo esempio illustra come ottenere l'oggetto di binding da una proprietà di destinazione associata a dati.  
   
 ## <a name="example"></a>Esempio  
- È possibile eseguire il comando seguente per ottenere il <xref:System.Windows.Data.Binding> oggetto:  
+ Per ottenere l' <xref:System.Windows.Data.Binding> oggetto, è possibile eseguire le operazioni seguenti:  
   
  [!code-csharp[BindValidation#GetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
->  È necessario specificare la proprietà di dipendenza per il binding desiderato, poiché è possibile che il data binding sia usato da più di una proprietà dell'oggetto di destinazione.  
+> È necessario specificare la proprietà di dipendenza per il binding desiderato, poiché è possibile che il data binding sia usato da più di una proprietà dell'oggetto di destinazione.  
   
- In alternativa, è possibile ottenere il <xref:System.Windows.Data.BindingExpression> e quindi ottenere il valore della <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> proprietà.  
+ In alternativa, è possibile ottenere <xref:System.Windows.Data.BindingExpression> e quindi ottenere il valore <xref:System.Windows.Data.BindingExpression.ParentBinding%2A> della proprietà.  
   
  Per l'esempio completo, vedere [Binding Validation Sample (Esempio di convalida binding)](https://go.microsoft.com/fwlink/?LinkID=159972).  
   
 > [!NOTE]
->  Se il binding è un <xref:System.Windows.Data.MultiBinding>, usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Se si tratta di un <xref:System.Windows.Data.PriorityBinding>, usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Se si è sicuri se la proprietà di destinazione sia associata utilizzando un <xref:System.Windows.Data.Binding>, una <xref:System.Windows.Data.MultiBinding>, o una <xref:System.Windows.Data.PriorityBinding>, è possibile usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
+> Se l'associazione è un <xref:System.Windows.Data.MultiBinding>, utilizzare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A> Se è <xref:System.Windows.Data.BindingOperations>, usare.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A> <xref:System.Windows.Data.PriorityBinding> Se non si è certi se la proprietà di destinazione è associata usando <xref:System.Windows.Data.Binding> <xref:System.Windows.Data.MultiBinding>, o <xref:System.Windows.Data.PriorityBinding>, è possibile usare.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A> <xref:System.Windows.Data.BindingOperations>  
   
 ## <a name="see-also"></a>Vedere anche
 

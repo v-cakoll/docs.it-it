@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301158"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927494"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
-Definisce le impostazioni in una sezione di configurazione personalizzati che è definita da un \<sezione > elemento e viene utilizzato il <xref:System.Configuration.SingleTagSectionHandler> classe.
+Definisce le impostazioni in una sezione di configurazione personalizzata definita da una \<sezione > elemento e utilizza la <xref:System.Configuration.SingleTagSectionHandler> classe.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Sintassi
@@ -30,25 +30,25 @@ Definisce le impostazioni in una sezione di configurazione personalizzati che è
 
 ## <a name="attributes"></a>Attributi
 
-Gli attributi e valori di attributo sono definiti dall'utente.
+Attributi e valori di attributo sono definiti dall'utente.
 
 ## <a name="parent-element"></a>Elemento padre
 
-|     | Descrizione |
+|     | DESCRIZIONE |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
+| [ **\<configuration>** ](configuration-element.md) | Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework. |
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuna
 
 ## <a name="remarks"></a>Note
 
-Il  **\<sectionName >** è un elemento personalizzato definito da una [  **\<sezione >** ](~/docs/framework/configure-apps/file-schema/section-element.md) contrassegnare nel [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) elemento. Il sistema di configurazione restituisce un <xref:System.Collections.IDictionary> dell'oggetto quando si chiama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+**L'\<elemento sectionName >** è un elemento personalizzato definito da una [ **\<sezione >** ](section-element.md) tag nell' [ **\<elemento > configSections**](configsections-element-for-configuration.md) . Il sistema di configurazione restituisce <xref:System.Collections.IDictionary> un oggetto quando si <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>chiama.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente dichiara un elemento personalizzato chiamato  **\<sampleSection >** che contiene le impostazioni lette dal <xref:System.Configuration.SingleTagSectionHandler> classe:
+Nell'esempio seguente viene dichiarato un elemento personalizzato denominato  **\<sampleSection >** che contiene <xref:System.Configuration.SingleTagSectionHandler> le impostazioni lette dalla classe:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ L'esempio seguente dichiara un elemento personalizzato chiamato  **\<sampleSecti
 
 ## <a name="configuration-file"></a>File di configurazione
 
-Questo elemento può essere usato nel file di configurazione dell'applicazione, file di configurazione computer (*Machine. config*), e *Web. config* file che non sono a livello di directory dell'applicazione.
+Questo elemento può essere utilizzato nel file di configurazione dell'applicazione, nel file di configurazione del computer (*Machine. config*) e nei file *Web. config* che non sono a livello di directory dell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Schema di file di configurazione per .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schema del file di configurazione per il .NET Framework](index.md)
