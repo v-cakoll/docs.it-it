@@ -7,33 +7,33 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dd434492cd688527ddbce5aaffa442a0b40a9e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968310"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo ProgressBar (Windows Form)
 > [!IMPORTANT]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
+> Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- I moduli di Windows <xref:System.Windows.Forms.ProgressBar> controllo indica lo stato di avanzamento di un processo mediante la visualizzazione di un numero appropriato di rettangoli in una barra orizzontale. Una volta completato il processo, la barra è piena. Indicatori di stato vengono comunemente usati per concedere all'utente un'idea di come tempo necessario per un processo da completare; ad esempio, quando un file di grandi dimensioni è il caricamento.  
+ Il controllo <xref:System.Windows.Forms.ProgressBar> Windows Forms indica lo stato di avanzamento di un processo visualizzando un numero appropriato di rettangoli disposti in una barra orizzontale. Al termine del processo, la barra viene compilata. Gli indicatori di stato vengono comunemente usati per fornire all'utente un'idea del tempo di attesa per il completamento di un processo. ad esempio, quando viene caricato un file di grandi dimensioni.  
   
 > [!NOTE]
->  Il <xref:System.Windows.Forms.ProgressBar> controllo può solo essere orientato in senso orizzontale nel form.  
+> Il <xref:System.Windows.Forms.ProgressBar> controllo può essere orientato solo orizzontalmente sul form.  
   
-## <a name="key-properties-and-methods"></a>I metodi e proprietà chiave  
- Le proprietà chiave del <xref:System.Windows.Forms.ProgressBar> controllo vengono <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>, e <xref:System.Windows.Forms.ProgressBar.Maximum%2A>. Il <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> proprietà impostare i valori minimi e massimo possa visualizzare l'indicatore di stato. Il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà rappresenta lo stato di avanzamento compiuto verso il completamento dell'operazione. Poiché l'indicatore visualizzato nel controllo è costituito da blocchi, il valore visualizzato per il <xref:System.Windows.Forms.ProgressBar> controllo solo un'approssimazione di <xref:System.Windows.Forms.ProgressBar.Value%2A> valore corrente della proprietà. In base alla dimensione dei <xref:System.Windows.Forms.ProgressBar> (controllo), il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà determina il momento visualizzare il blocco successivo.  
+## <a name="key-properties-and-methods"></a>Proprietà e metodi chiave  
+ Le <xref:System.Windows.Forms.ProgressBar> proprietà chiave del controllo sono <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>e <xref:System.Windows.Forms.ProgressBar.Maximum%2A>. Le <xref:System.Windows.Forms.ProgressBar.Minimum%2A> proprietà <xref:System.Windows.Forms.ProgressBar.Maximum%2A> e impostano i valori massimi e minimi che possono essere visualizzati nell'indicatore di stato. La <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà rappresenta lo stato di avanzamento che è stato eseguito per completare l'operazione. Poiché la barra visualizzata nel controllo è costituita da blocchi, il valore visualizzato dal <xref:System.Windows.Forms.ProgressBar> controllo indica solo il <xref:System.Windows.Forms.ProgressBar.Value%2A> valore corrente della proprietà. In base alla dimensione del <xref:System.Windows.Forms.ProgressBar> controllo, la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà determina quando visualizzare il blocco successivo.  
   
- Il modo più comune per aggiornare il valore di stato di avanzamento corrente consiste nello scrivere codice per impostare il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà. Nell'esempio di caricamento di un file di grandi dimensioni, è possibile impostare il valore massimo per le dimensioni del file nel kilobyte. Ad esempio, se il <xref:System.Windows.Forms.ProgressBar.Maximum%2A> è impostata su 100, il <xref:System.Windows.Forms.ProgressBar.Minimum%2A> è impostata su 10 e il <xref:System.Windows.Forms.ProgressBar.Value%2A> viene impostata su 50, verranno visualizzati i 5 rettangoli. Questa è la metà del numero di che può essere visualizzato.  
+ Il modo più comune per aggiornare il valore di stato corrente è scrivere codice per impostare la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà. Nell'esempio relativo al caricamento di un file di grandi dimensioni, è possibile impostare il valore massimo per le dimensioni del file, espressa in kilobyte. Se, ad esempio, <xref:System.Windows.Forms.ProgressBar.Maximum%2A> la proprietà è impostata su 100, <xref:System.Windows.Forms.ProgressBar.Minimum%2A> la proprietà è impostata su 10 e la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà è impostata su 50, verranno visualizzati 5 rettangoli. Questa è la metà del numero che è possibile visualizzare.  
   
- Tuttavia, esistono altri modi per modificare il valore visualizzato per il <xref:System.Windows.Forms.ProgressBar> controllo, oltre all'impostazione il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà direttamente. Il <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà può essere utilizzata per specificare un valore da incrementare la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà. Quindi, chiamare il <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> metodo incrementa il valore. Per modificare il valore di incremento, è possibile usare il <xref:System.Windows.Forms.ProgressBar.Increment%2A> metodo e specificare un valore di cui incrementare il <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà.  
+ Tuttavia, esistono altri modi per modificare il valore visualizzato dal <xref:System.Windows.Forms.ProgressBar> controllo, oltre a impostare direttamente la <xref:System.Windows.Forms.ProgressBar.Value%2A> proprietà. La <xref:System.Windows.Forms.ProgressBar.Step%2A> proprietà può essere utilizzata per specificare un valore in base al <xref:System.Windows.Forms.ProgressBar.Value%2A> quale incrementare la proprietà. Quindi, la chiamata <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> al metodo incrementerà il valore. Per variare il valore di incremento, è possibile usare <xref:System.Windows.Forms.ProgressBar.Increment%2A> il metodo e specificare un valore con cui incrementare <xref:System.Windows.Forms.ProgressBar.Value%2A> la proprietà.  
   
- È un altro controllo che graficamente informa l'utente su un'operazione in corso il <xref:System.Windows.Forms.StatusBar> controllo.  
+ Un altro controllo che informa graficamente l'utente di un'azione corrente è il <xref:System.Windows.Forms.StatusBar> controllo.  
   
 > [!IMPORTANT]
->  Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungano funzionalità rispetto al <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli vengono mantenuti per compatibilità con le versioni precedenti e per un uso futuro, se si Scegliere.  
+> I <xref:System.Windows.Forms.StatusStrip> controlli <xref:System.Windows.Forms.ToolStripStatusLabel> e <xref:System.Windows.Forms.StatusBar> sostituiscono e aggiungono funzionalità ai <xref:System.Windows.Forms.StatusBarPanel> controlli e; tuttavia, <xref:System.Windows.Forms.StatusBar> i <xref:System.Windows.Forms.StatusBarPanel> controlli e vengono conservati sia per la compatibilità con le versioni precedenti che per un uso futuro, se scegliere.  
   
 ## <a name="see-also"></a>Vedere anche
 

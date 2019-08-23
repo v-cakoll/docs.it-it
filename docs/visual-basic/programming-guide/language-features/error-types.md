@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab554b60f7ba44ee0b92b76e1362ffdbb25f2afb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965373"
 ---
 # <a name="error-types-visual-basic"></a>Tipi di errore (Visual Basic)
 In Visual Basic gli errori rientrano in una delle tre categorie seguenti: errori di sintassi, errori di run-time ed errori logici.
@@ -24,7 +24,7 @@ In Visual Basic gli errori rientrano in una delle tre categorie seguenti: errori
  Gli *errori di sintassi* sono quelli visualizzati durante la scrittura del codice. Se si usa Visual Studio, Visual Basic controlla il codice durante la digitazione nella finestra dell' **Editor del codice** e avvisa l'utente se si commette un errore, ad esempio l'ortografia di una parola o l'uso errato di un elemento di linguaggio. Se si esegue la compilazione dalla riga di comando, Visual Basic Visualizza un errore del compilatore con informazioni sull'errore di sintassi. Gli errori di sintassi sono il tipo più comune di errori. È possibile correggerli facilmente nell'ambiente di codifica non appena si verificano.
 
 > [!NOTE]
->  L' `Option Explicit` istruzione è un modo per evitare errori di sintassi. Impone di dichiarare in anticipo tutte le variabili da usare nell'applicazione. Pertanto, quando tali variabili vengono utilizzate nel codice, eventuali errori tipografici vengono rilevati immediatamente e possono essere corretti.
+> L' `Option Explicit` istruzione è un modo per evitare errori di sintassi. Impone di dichiarare in anticipo tutte le variabili da usare nell'applicazione. Pertanto, quando tali variabili vengono utilizzate nel codice, eventuali errori tipografici vengono rilevati immediatamente e possono essere corretti.
 
 ## <a name="run-time-errors"></a>Errori di run-time
  Gli *errori di run-time* sono quelli visualizzati solo dopo la compilazione e l'esecuzione del codice. Queste implicano il codice che potrebbe sembrare corretto in quanto non presenta errori di sintassi, ma che non verrà eseguito. Ad esempio, è possibile scrivere correttamente una riga di codice per aprire un file. Tuttavia, se il file non esiste, l'applicazione non è in grado di aprire il file e viene generata un'eccezione. È possibile correggere la maggior parte degli errori di run-time riscrivendo il codice difettoso o utilizzando la [gestione delle eccezioni](../../language-reference/statements/try-catch-finally-statement.md), quindi ricompilando e rieseguendo il codice.

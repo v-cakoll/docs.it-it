@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc5099af23a2b706694bfcb655d295607c97ea8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969275"
 ---
 # <a name="icordebugclass-interface"></a>Interfaccia ICorDebugClass
 
@@ -31,24 +31,24 @@ Rappresenta un tipo, che può essere di base o complesso, ovvero definito dall'u
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Ottiene il modulo che definisce la classe.|  
+|[Metodo GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Ottiene il modulo che definisce questa classe.|  
 |[Metodo GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|Ottiene il valore del campo statico specificato.|  
 |[Metodo GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Ottiene il `TypeDef` token di metadati per questa classe.|  
   
 ## <a name="remarks"></a>Note  
- Il `ICorDebugClass` interfaccia rappresenta un tipo generico privo di istanze. L'interfaccia ICorDebugType rappresenta un tipo generico con istanze. Ad esempio, `Hashtable<K, V>` sarebbe rappresentato da `ICorDebugClass`, mentre `Hashtable<Int32, String>` sarebbe rappresentato da `ICorDebugType`.  
+ L' `ICorDebugClass` interfaccia rappresenta un tipo generico di cui non è stata creata un'istanza. L'interfaccia ICorDebugType rappresenta un tipo generico di cui è stata creata un'istanza. Ad esempio, `Hashtable<K, V>` verrebbe rappresentato da `ICorDebugClass`, mentre `Hashtable<Int32, String>` verrebbe rappresentato da `ICorDebugType`.  
   
- I tipi non generici sono rappresentati da entrambi `ICorDebugClass` e `ICorDebugType`. L'interfaccia di quest'ultima è stato introdotto in .NET Framework versione 2.0 per gestire la creazione di istanze di tipo.  
+ I tipi non generici sono rappresentati `ICorDebugClass` sia `ICorDebugType`da che da. Quest'ultima interfaccia è stata introdotta nella versione .NET Framework 2,0 per gestire la creazione dell'istanza del tipo.  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,19 +2,19 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670398"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936516"
 ---
-# <a name="service"></a>\<service>
+# <a name="service"></a>\<> del servizio
 L'elemento `service` contiene le impostazioni di un servizio Windows Communication Foundation (WCF). Contiene anche endpoint che espongono il servizio.  
   
  \<system.ServiceModel>  
-\<services>  
-\<service>  
+\<> dei servizi  
+\<> del servizio  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,7 +29,7 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare per creare l'istanza del servizio. Il nome del comportamento deve essere nell'ambito del punto in cui il servizio è definito. Il valore predefinito è una stringa vuota.|  
 |name|Attributo stringa obbligatorio che specifica il tipo del servizio per cui creare un'istanza. Questa impostazione deve corrispondere a un tipo valido. Il formato deve essere `Namespace.Class.`.|  
@@ -38,14 +38,14 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Raccolta di elementi `endpoint` che espongono questo servizio.|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Specifica l'host dell'istanza del servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<endpoint>](endpoint-element.md)|Raccolta di elementi `endpoint` che espongono questo servizio.|  
+|[\<host>](host.md)|Specifica l'host dell'istanza del servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Elemento radice di tutti gli elementi di configurazione WCF.|  
+|[\<services>](services.md)|Elemento radice di tutti gli elementi di configurazione WCF.|  
   
 ## <a name="remarks"></a>Note  
  I servizi vengono definiti nella sezione `services` del file di configurazione. Un assembly può contenere un numero qualsiasi di servizi. Ogni servizio dispone di una propria sezione di configurazione `service`. Questa sezione e il relativo contenuto definiscono il contratto di servizio, il comportamento e gli endpoint del particolare servizio.  
@@ -71,4 +71,4 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [Configurazione dei servizi](../../../../../docs/framework/wcf/configuring-services.md)
+- [Configurazione dei servizi](../../../wcf/configuring-services.md)

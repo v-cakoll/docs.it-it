@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d0a85607586a8cdf0a319f2e43d9815d24be21b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966272"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>Metodo ICLRErrorReportingManager::BeginCustomDump
-Specifica la configurazione dei dump dell'heap personalizzato per la segnalazione degli errori.  
+Specifica la configurazione dei dump dell'heap personalizzati per la segnalazione degli errori.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,40 +40,40 @@ HRESULT BeginCustomDump (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlavor`  
- [in] Oggetto [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) valore che indica il tipo di dump di heap su cui basare il dump dell'heap personalizzato.  
+ in Valore [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) che indica il tipo di dump dell'heap su cui compilare il dump dell'heap personalizzato.  
   
  `dwNumItems`  
- [in] La lunghezza del `items` matrice. Se `dwFlavor` DUMP_FLAVOR_Mini, non è `dwNumItems` deve essere zero.  
+ in Lunghezza della `items` matrice. Se `dwFlavor` non è DUMP_FLAVOR_Mini, `dwNumItems` deve essere zero.  
   
  `items`  
- [in] Matrice di [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) istanze, che specifica gli elementi da aggiungere al minidump. Se `dwFlavor` DUMP_FLAVOR_Mini, non è `items` deve essere null.  
+ in Matrice di istanze di [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , che specifica gli elementi da aggiungere al minidump. Se `dwFlavor` non è DUMP_FLAVOR_Mini, `items` deve essere null.  
   
  `dwReserved`  
- [in] Riservato per utilizzi futuri.  
+ in Riservato per usi futuri.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Il metodo è stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Dopo che un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il `BeginCustomDump` metodo imposta la configurazione dump dell'heap personalizzato. Il [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) metodo cancella la configurazione dump dell'heap personalizzato e rilascia qualsiasi stato associato. Deve essere chiamato dopo che il dump dell'heap personalizzato è stato completato.  
+ Il `BeginCustomDump` metodo imposta la configurazione del dump dell'heap personalizzato. Il metodo [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) Cancella la configurazione del dump dell'heap personalizzato e libera qualsiasi stato associato. Deve essere chiamato dopo il completamento del dump dell'heap personalizzato.  
   
 > [!IMPORTANT]
->  Errore durante la chiamata `EndCustomDump` provoca perdita di memoria.  
+> La mancata `EndCustomDump` chiamata causa la perdita della memoria.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

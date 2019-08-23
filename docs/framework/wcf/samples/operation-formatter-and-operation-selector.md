@@ -2,17 +2,17 @@
 title: Formattatore e selettore dell'operazione
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 06f6d3e79844f719efc33788b6ea3bd5326e736b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 977a759b2c3f6d803879fc640439cd0b3465ffbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424978"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965595"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
-Questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quanto si aspetta da WCF. Per impostazione predefinita, i formattatori WCF prevede che i parametri del metodo siano inclusi nel `soap:body` elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
+In questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quello previsto da WCF. Per impostazione predefinita, i formattatori WCF prevedono l'inclusione `soap:body` dei parametri del metodo nell'elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
   
- L'esempio è basato sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. Viene mostrato come i messaggi Add, Subtract, Multiply e Divide possono essere modificati per utilizzare HTTP GET per le richieste client-server e HTTP POST con i messaggi POX per le risposte server-client.  
+ L'esempio è basato sulla [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio. Viene mostrato come i messaggi Add, Subtract, Multiply e Divide possono essere modificati per utilizzare HTTP GET per le richieste client-server e HTTP POST con i messaggi POX per le risposte server-client.  
   
  Per questo scopo, nell'esempio vengono forniti gli elementi seguenti:  
   
@@ -27,10 +27,10 @@ Questo esempio viene illustrato come utilizzare i punti di estendibilità di Win
 - In questo esempio sia il client che il servizio sono applicazioni console (con estensione exe).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 ## <a name="key-concepts"></a>Concetti chiave  
- `QueryStringFormatter` -Il formattatore dell'operazione è il componente in WCF, che è responsabile della conversione di un messaggio in una matrice di oggetti parametro e una matrice di oggetti parametro in un messaggio. Questa operazione viene eseguita nel client utilizzando l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e nel server con l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>. Queste interfacce consentono agli utenti di ottenere i messaggi di richiesta e risposta dai metodi `Serialize` e `Deserialize`.  
+ `QueryStringFormatter`-Il formattatore dell'operazione è il componente in WCF responsabile della conversione di un messaggio in una matrice di oggetti Parameter e di una matrice di oggetti Parameter in un messaggio. Questa operazione viene eseguita nel client utilizzando l'interfaccia <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e nel server con l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>. Queste interfacce consentono agli utenti di ottenere i messaggi di richiesta e risposta dai metodi `Serialize` e `Deserialize`.  
   
  In questo esempio, `QueryStringFormatter` implementa entrambe le interfacce e viene implementato nel client e nel server.  
   
@@ -60,10 +60,10 @@ Questo esempio viene illustrato come utilizzare i punti di estendibilità di Win
   
  La proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> è impostata sull'implementazione di <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.  
   
- Per impostazione predefinita, WCF Usa un filtro dell'indirizzo corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. Usa WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> per questo scopo.  
+ Per impostazione predefinita, WCF utilizza un filtro di indirizzo con corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. USA WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> a questo scopo.  
   
 ### <a name="installing-operation-formatters"></a>Installazione di formattatori dell'operazione  
- I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento sostitutivo, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore del tipo WCF da predefinito e sostituirlo o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  
+ I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento di sostituzione, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore del tipo WCF per impostazione predefinita e sostituirli o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  
   
  Questi comportamenti dei formattatori dell'operazione possono essere impostati a livello di codice prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> o specificando un comportamento dell'operazione da eseguire dopo quello predefinito. Tuttavia, non può essere configurato facilmente da un comportamento dell'endpoint (e pertanto mediante la configurazione) perché il modello di comportamento non consente la sostituzione di un comportamento con un altro o la modifica dell'albero di descrizione.  
   
@@ -166,14 +166,14 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  

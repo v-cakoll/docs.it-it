@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768807"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965353"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Metodo ICLRRuntimeHost::ExecuteApplication
-Usato negli scenari di distribuzione ClickOnce basata su manifesto per specificare l'applicazione da attivare in un nuovo dominio. Per altre informazioni su questi scenari, vedere [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
+Utilizzato negli scenari di distribuzione ClickOnce basati su manifesto per specificare l'applicazione da attivare in un nuovo dominio. Per ulteriori informazioni su questi scenari, vedere [sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Parametri  
  `pwzAppFullName`  
- [in] Il nome completo dell'applicazione, come definito per <xref:System.ApplicationIdentity>.  
+ in Nome completo dell'applicazione, come definito per <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- [in] Il numero di stringhe contenute nel `ppwzManifestPaths` matrice.  
+ in Numero di stringhe contenute nella `ppwzManifestPaths` matrice.  
   
  `ppwzManifestPaths`  
- [in] Facoltativo. Matrice di stringhe che contiene i percorsi di manifesto dell'applicazione.  
+ [in] Facoltativo. Matrice di stringhe che contiene i percorsi dei manifesti per l'applicazione.  
   
  `dwActivationData`  
- [in] Il numero di stringhe contenute nel `ppwzActivationData` matrice.  
+ in Numero di stringhe contenute nella `ppwzActivationData` matrice.  
   
  `ppwzActivationData`  
  [in] Facoltativo. Matrice di stringhe che contiene i dati di attivazione dell'applicazione, ad esempio la parte della stringa di query dell'URL per le applicazioni distribuite sul Web.  
   
  `pReturnValue`  
- [out] Il valore restituito dal punto di ingresso dell'applicazione.  
+ out Valore restituito dal punto di ingresso dell'applicazione.  
   
 ## <a name="return-value"></a>Valore restituito  
   
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`ExecuteApplication`la restituzione è riuscita.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Se un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `ExecuteApplication` Consente di attivare le applicazioni ClickOnce in un dominio applicazione appena creata.  
+ `ExecuteApplication`viene usato per attivare le applicazioni ClickOnce in un dominio applicazione appena creato.  
   
- Il `pReturnValue` parametro di output è impostato sul valore restituito dall'applicazione. Se si specifica un valore null per `pReturnValue`, `ExecuteApplication` ha esito positivo, ma non restituisce un valore.  
+ Il `pReturnValue` parametro di output viene impostato sul valore restituito dall'applicazione. Se si fornisce un valore null per `pReturnValue`, `ExecuteApplication` non ha esito negativo, ma non restituisce alcun valore.  
   
 > [!IMPORTANT]
->  Non si chiama il [metodo Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metodo prima di chiamare il `ExecuteApplication` metodo per attivare un'applicazione basata su manifesto. Se il `Start` viene chiamato prima di tutto la `ExecuteApplication` chiamata al metodo avrà esito negativo.  
+> Non chiamare il metodo [Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) del metodo prima di chiamare `ExecuteApplication` il metodo per attivare un'applicazione basata su manifesto. Se il `Start` metodo viene chiamato per primo, `ExecuteApplication` la chiamata al metodo avrà esito negativo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

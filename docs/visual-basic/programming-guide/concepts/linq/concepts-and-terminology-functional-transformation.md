@@ -2,12 +2,12 @@
 title: Concetti e terminologia (trasformazione funzionale) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 1a2dd2fe835ada29fdb6639905673b4e0b60aca6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea5fb0816dd9eaa1cde905534714d3c6ab96b72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939284"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Concetti e terminologia (trasformazione funzionale) (Visual Basic)
 In questo argomento vengono presentati i concetti e i termini associati alle trasformazioni funzionali pure. La trasformazione funzionale dei dati consente di ottenere codice spesso più rapidamente programmabile, più espressivo e di cui è più facile eseguire il debug e la manutenzione rispetto alla più tradizionale programmazione imperativa.  
@@ -22,7 +22,7 @@ In questo argomento vengono presentati i concetti e i termini associati alle tra
 - *Indipendenti dallo stato*, pertanto eseguendo la stessa funzione o un set specifico di funzioni sullo stesso input si otterrà sempre lo stesso output. Le trasformazioni pure non mantengono in memoria informazioni sull'utilizzo precedente.  
   
 > [!IMPORTANT]
->  Nelle restanti parti di questa esercitazione il termine "funzione pure" viene usato in senso generale per indicare un approccio di programmazione e non una funzionalità specifica del linguaggio.  
+> Nelle restanti parti di questa esercitazione il termine "funzione pure" viene usato in senso generale per indicare un approccio di programmazione e non una funzionalità specifica del linguaggio.  
 >   
 >  Si noti che le funzioni pure devono essere implementate come funzioni in Visual Basic.  
 >   
@@ -31,9 +31,9 @@ In questo argomento vengono presentati i concetti e i termini associati alle tra
 ### <a name="functional-programming"></a>Programmazione funzionale  
  La *programmazione funzionale* è un approccio di programmazione che supporta direttamente la trasformazione funzionale pure.  
   
- Dal punto di vista storico, i linguaggi di programmazione funzionale generici, tra cui ML, Scheme, Haskell e F# sono stati oggetto di interesse principalmente della comunità accademica. Sebbene sia sempre stato possibile scrivere trasformazioni funzionali pure in Visual Basic, la difficoltà di procedere in modo non ha un'opzione interessante per la maggior parte dei programmatori. Con le versioni successive di Visual Basic, tuttavia, nuovi costrutti di linguaggio, ad esempio le espressioni lambda e inferenza del tipo rendere la programmazione funzionale più semplice e più produttivi.  
+ Dal punto di vista storico, i linguaggi di programmazione funzionale generici, tra cui ML, Scheme, Haskell e F# sono stati oggetto di interesse principalmente della comunità accademica. Sebbene sia sempre stato possibile scrivere trasformazioni funzionali pure in Visual Basic, la difficoltà di eseguire questa operazione non ha reso un'opzione interessante alla maggior parte dei programmatori. Con le versioni più recenti di Visual Basic, tuttavia, nuovi costrutti di linguaggio, come le espressioni lambda e l'inferenza del tipo, rendono la programmazione funzionale molto più semplice e produttiva.  
   
- Per altre informazioni sulla programmazione funzionale, vedere [Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
+ Per altre informazioni sulla programmazione funzionale, vedere [Differenze tra programmazione funzionale e Programmazione imperativa (](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)Visual Basic).  
   
 #### <a name="domain-specific-fp-languages"></a>Strumenti della programmazione funzionale specifici per il dominio  
  Sebbene i linguaggi di programmazione funzionale generici non sono stati adottati diffusamente, quelli specifici per il dominio hanno trovato miglior accoglienza. Ad esempio, i CSS (Cascading Style Sheets) vengono usati per determinare l'aspetto di molte pagine Web, mentre i fogli di stile XSLT (Extensible Stylesheet Language Transformations) vengono ampiamente usati per la modifica dei dati XML. Per altre informazioni su XSLT, vedere [Trasformazioni XSLT](../../../../standard/data/xml/xslt-transformations.md).  
@@ -42,9 +42,9 @@ In questo argomento vengono presentati i concetti e i termini associati alle tra
  Nella tabella seguente sono riportate le definizioni di alcuni termini correlati alle trasformazioni funzionali.  
   
  funzione di ordine superiore (prima classe)  
- Funzione che può essere considerata come oggetto a livello di codice. Ad esempio, una funzione di ordine superiore può essere passata ad altre funzioni o restituita da altre funzioni. In Visual Basic, delegati ed espressioni lambda sono funzionalità del linguaggio che supportano le funzioni di ordine superiore. Per scrivere una funzione di ordine superiore, è necessario dichiarare uno o più argomenti che accettano delegati e usare spesso espressioni lambda per la chiamata. Molti degli operatori di query standard sono funzioni di ordine superiore.  
+ Funzione che può essere considerata come oggetto a livello di codice. Ad esempio, una funzione di ordine superiore può essere passata ad altre funzioni o restituita da altre funzioni. In Visual Basic, i delegati e le espressioni lambda sono funzionalità del linguaggio che supportano le funzioni di ordine superiore. Per scrivere una funzione di ordine superiore, è necessario dichiarare uno o più argomenti che accettano delegati e usare spesso espressioni lambda per la chiamata. Molti degli operatori di query standard sono funzioni di ordine superiore.  
   
- Per altre informazioni, vedere [panoramica degli operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  espressione lambda  
  Essenzialmente funzione anonima inline utilizzabile in tutti i casi in cui è previsto un tipo delegato. Questa è una definizione semplificata delle espressioni lambda, sebbene appropriata per gli scopi di questa esercitazione.  
@@ -57,21 +57,21 @@ In questo argomento vengono presentati i concetti e i termini associati alle tra
  tupla (tipi anonimi)  
  Concetto matematico. Corrisponde a una sequenza finita di oggetti, ognuno di un tipo specifico, Una tupla è anche nota come elenco ordinato. I tipi anonimi costituiscono un'implementazione del linguaggio di questo concetto e consentono di dichiarare un tipo di classe senza nome e contemporaneamente di creare un'istanza di un oggetto di tale tipo.  
   
- Per altre informazioni, vedere [i tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Per ulteriori informazioni, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
  inferenza dei tipi (tipizzazione implicita)  
  Capacità di un compilatore di determinare il tipo di una variabile anche in mancanza di una dichiarazione di tipo esplicita.  
   
- Per altre informazioni, vedere [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Per altre informazioni, vedere [inferenza dei tipi locali](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
  esecuzione posticipata e valutazione lazy  
  Azione che consiste nel posticipare la valutazione di un'espressione finché il valore risolto non è effettivamente necessario. L'esecuzione posticipata è supportata nelle raccolte.  
   
- Per altre informazioni, vedere [operazioni di Query di base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) e [esecuzione posticipata e valutazione Lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Per ulteriori informazioni, vedere [operazioni di query di base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) e [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Queste funzionalità del linguaggio saranno usate negli esempi di codice di tutta questa sezione.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle trasformazioni funzionali Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

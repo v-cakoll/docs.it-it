@@ -6,25 +6,25 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d36009fa4fc7b9299708768fe34a75f1fde6797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910729"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Sicurezza e campi di matrice pubblici di sola lettura
-Consente di utilizzare mai i campi di matrice pubblica di sola lettura dalla librerie gestite per definire il comportamento del limite o la sicurezza delle applicazioni perché i campi di matrice pubblica di sola lettura possono essere modificati.  
+Non usare mai i campi di matrice pubblica di sola lettura dalle librerie gestite per definire il comportamento dei limiti o la sicurezza delle applicazioni perché è possibile modificare i campi di matrice pubblica di sola lettura.  
   
 ## <a name="remarks"></a>Note  
- Alcune classi di .NET framework includono campi pubblici di sola lettura che contengono parametri di limiti specifici della piattaforma.  Ad esempio, il <xref:System.IO.Path.InvalidPathChars> campo è una matrice che descrive i caratteri non consentiti in una stringa di percorso di file.  Numero di campi simili è presenti in tutto .NET Framework.  
+ Alcune classi di .NET Framework includono campi pubblici di sola lettura che contengono parametri limite specifici della piattaforma.  Ad esempio, il <xref:System.IO.Path.InvalidPathChars> campo è una matrice che descrive i caratteri non consentiti in una stringa di percorso file.  In .NET Framework sono presenti molti campi simili.  
   
- I valori dei campi pubblici di sola lettura come <xref:System.IO.Path.InvalidPathChars> può essere modificato dal codice o dal codice che condivide il dominio dell'applicazione.  Non si utilizzino i campi di matrice pubblica di sola lettura simile al seguente per definire il comportamento del limite delle applicazioni.  In caso contrario codice dannoso può modificare le definizioni dei limiti e usare il codice in modo imprevisto.  
+ I valori dei campi di sola lettura pubblici come <xref:System.IO.Path.InvalidPathChars> possono essere modificati dal codice o dal codice che condivide il dominio applicazione del codice.  Non usare campi di matrice pubblica di sola lettura come questo per definire il comportamento dei limiti delle applicazioni.  In tal caso, il codice dannoso può modificare le definizioni dei limiti e usare il codice in modi imprevisti.  
   
- Nella versione 2.0 e versioni successive di .NET Framework, è necessario usare i metodi che restituiscono una nuova matrice invece di usare i campi pubblici.  Ad esempio, invece di usare la <xref:System.IO.Path.InvalidPathChars> campo, è consigliabile usare il <xref:System.IO.Path.GetInvalidPathChars%2A> (metodo).  
+ Nella versione 2,0 e successive del .NET Framework, è consigliabile usare metodi che restituiscono una nuova matrice anziché usare campi di matrice pubblici.  Ad esempio, invece di usare il <xref:System.IO.Path.InvalidPathChars> campo, è necessario usare il <xref:System.IO.Path.GetInvalidPathChars%2A> metodo.  
   
- Si noti che i tipi di .NET Framework non utilizzano i campi pubblici per definire tipi di limite internamente.  Al contrario, .NET Framework Usa separati campi privati.  Modifica dei valori di questi campi pubblici non modifica il comportamento dei tipi .NET Framework.  
+ Si noti che i tipi di .NET Framework non usano i campi pubblici per definire i tipi di limite internamente.  Il .NET Framework utilizza invece campi privati distinti.  La modifica dei valori di questi campi pubblici non comporta la modifica del comportamento dei tipi di .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401622"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964845"
 ---
 # <a name="dependency-property-metadata"></a>Metadati delle proprietà di dipendenza
 Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema di proprietà include un sistema di creazione di report dei metadati che va oltre quello che può essere segnalato su una proprietà tramite reflection o caratteristiche generali di Common Language Runtime (CLR). I metadati di una proprietà di dipendenza possono anche essere assegnati in modo univoco dalla classe che definisce una proprietà di dipendenza, possono essere modificati quando la proprietà di dipendenza viene aggiunta a una classe diversa ed è possibile eseguirne specificatamente l'override tramite tutte le classi derivate che ereditano la proprietà di dipendenza dalla classe di base in fase di definizione.  
@@ -38,7 +38,7 @@ Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
  La <xref:System.Windows.PropertyMetadata> classe viene quindi derivata da per fornire metadati più specifici per le divisioni di architettura, ad esempio le classi a livello di Framework WPF. <xref:System.Windows.UIPropertyMetadata>aggiunge la creazione di report <xref:System.Windows.FrameworkPropertyMetadata> di animazione e fornisce le proprietà a livello di Framework WPF indicate nella sezione precedente. Quando le proprietà di dipendenza vengono registrate, possono essere registrate con <xref:System.Windows.PropertyMetadata> queste classi derivate. Quando i metadati vengono esaminati, è <xref:System.Windows.PropertyMetadata> possibile eseguire il cast del tipo di base alle classi derivate in modo da poter esaminare le proprietà più specifiche.  
   
 > [!NOTE]
->  Le caratteristiche della proprietà che è possibile specificare <xref:System.Windows.FrameworkPropertyMetadata> in sono talvolta indicate in questa documentazione come "flag". Quando si creano nuove istanze di metadati da usare nelle registrazioni delle proprietà di dipendenza o negli override dei metadati, è necessario specificare questi <xref:System.Windows.FrameworkPropertyMetadataOptions> valori usando l'enumerazione flag, quindi fornire i valori eventualmente concatenati dell'enumerazione al <xref:System.Windows.FrameworkPropertyMetadata> costruttore. Tuttavia, una volta costruite, queste caratteristiche delle opzioni vengono <xref:System.Windows.FrameworkPropertyMetadata> esposte all'interno di un come una serie di proprietà booleane anziché il valore di enumerazione di costruzione. Le proprietà booleane consentono di verificare ogni istruzione condizionale anziché richiedere l'applicazione di una maschera a un valore di enumerazione basato su flag per ottenere le informazioni necessarie. Il costruttore utilizza l'oggetto concatenato <xref:System.Windows.FrameworkPropertyMetadataOptions> per garantire una ragionevole lunghezza della firma del costruttore, mentre i metadati costruiti effettivi espongono le proprietà discrete per rendere più intuitiva l'esecuzione di query sui metadati.  
+> Le caratteristiche della proprietà che è possibile specificare <xref:System.Windows.FrameworkPropertyMetadata> in sono talvolta indicate in questa documentazione come "flag". Quando si creano nuove istanze di metadati da usare nelle registrazioni delle proprietà di dipendenza o negli override dei metadati, è necessario specificare questi <xref:System.Windows.FrameworkPropertyMetadataOptions> valori usando l'enumerazione flag, quindi fornire i valori eventualmente concatenati dell'enumerazione al <xref:System.Windows.FrameworkPropertyMetadata> costruttore. Tuttavia, una volta costruite, queste caratteristiche delle opzioni vengono <xref:System.Windows.FrameworkPropertyMetadata> esposte all'interno di un come una serie di proprietà booleane anziché il valore di enumerazione di costruzione. Le proprietà booleane consentono di verificare ogni istruzione condizionale anziché richiedere l'applicazione di una maschera a un valore di enumerazione basato su flag per ottenere le informazioni necessarie. Il costruttore utilizza l'oggetto concatenato <xref:System.Windows.FrameworkPropertyMetadataOptions> per garantire una ragionevole lunghezza della firma del costruttore, mentre i metadati costruiti effettivi espongono le proprietà discrete per rendere più intuitiva l'esecuzione di query sui metadati.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Esecuzione dell'override dei metadati e derivazione di una classe  
@@ -78,7 +78,7 @@ Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], le proprietà associate vengono implementate come proprietà di dipendenza. In altri termini, dispongono anche di metadati della proprietà di cui le singole classi possono eseguire l'override. Le considerazioni relative all'ambito per una proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associata in sono in <xref:System.Windows.DependencyObject> genere di cui è possibile impostare una proprietà associata. Pertanto, qualsiasi <xref:System.Windows.DependencyObject> classe derivata può eseguire l'override dei metadati per qualsiasi proprietà associata, in quanto potrebbe essere impostata su un'istanza della classe. È possibile eseguire l'override dei valori predefiniti, dei callback o delle proprietà di segnalazione delle caratteristiche a livello di framework WPF. Se la proprietà associata viene impostata su un'istanza della classe, vengono applicate le caratteristiche dei metadati della proprietà di override. È possibile, ad esempio, eseguire l'override del valore predefinito, in modo che il valore di override venga segnalato come valore della proprietà associata nelle istanze della classe, tutte le volte che la proprietà non viene impostata diversamente.  
   
 > [!NOTE]
->  La <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> proprietà non è pertinente per le proprietà associate.  
+> La <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> proprietà non è pertinente per le proprietà associate.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Aggiunta di un classe come proprietario di una proprietà di dipendenza esistente  

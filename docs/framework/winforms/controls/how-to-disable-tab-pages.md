@@ -9,30 +9,30 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 888228c28dce591b237be16b6a321afee0105208
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967143"
 ---
 # <a name="how-to-disable-tab-pages"></a>Procedura: Disabilitare le schede
-In alcuni casi, è opportuno limitare l'accesso ai dati che sono disponibili all'interno dell'applicazione Windows Form. Un esempio potrebbe essere quando sono presenti dati visualizzati nelle pagine delle schede di un controllo scheda. gli amministratori può contenere informazioni su una pagina della scheda che si desidera impedire agli utenti di basso livello o guest.  
+In alcuni casi, è possibile limitare l'accesso ai dati disponibili all'interno del Windows Forms Application. Un esempio potrebbe essere quando i dati vengono visualizzati nelle schede di un controllo struttura a schede; gli amministratori possono disporre di informazioni su una scheda che si desidera limitare dagli utenti guest o di livello inferiore.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Per disabilitare le schede a livello di codice  
   
-1. Scrivere codice per gestire il controllo struttura a schede <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento. Questo è l'evento generato quando l'utente passa da una scheda a quella successiva.  
+1. Scrivere il codice per gestire l' <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento del controllo Tab. Si tratta dell'evento generato quando l'utente passa da una scheda a quella successiva.  
   
-2. Controllare le credenziali. A seconda delle informazioni presentate, è possibile controllare l'utente ha effettuato l'accesso con il nome dell'utente o un'altra forma di credenziali prima di consentire all'utente di visualizzare la scheda.  
+2. Verificare le credenziali. A seconda delle informazioni presentate, potrebbe essere necessario controllare il nome utente con cui l'utente ha eseguito l'accesso o altre forme di credenziali prima di consentire all'utente di visualizzare la scheda.  
   
-3. Se l'utente ha le credenziali appropriate, visualizzare la scheda in cui è stato fatto clic. Se l'utente non ha le credenziali appropriate, visualizzare una finestra di messaggio o altre interfacce utente che indica che essi non hanno accesso e tornare alla scheda iniziale.  
+3. Se l'utente dispone delle credenziali appropriate, visualizzare la scheda su cui è stato fatto clic. Se l'utente non dispone delle credenziali appropriate, Visualizza una finestra di messaggio o un'altra interfaccia utente che indica che non è possibile accedervi e tornare alla scheda iniziale.  
   
     > [!NOTE]
-    >  Quando si implementa questa funzionalità nelle applicazioni di produzione, è possibile eseguire la verifica delle credenziali durante il modulo <xref:System.Windows.Forms.Form.Load> evento. In questo modo sarà possibile nascondere la scheda prima che qualsiasi interfaccia utente, il codice risulterà più chiaro. La metodologia utilizzata di sotto (controllo delle credenziali e la disabilitazione della scheda durante il <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> eventi) è a scopo illustrativo.  
+    > Quando si implementa questa funzionalità nelle applicazioni di produzione, è possibile eseguire questo controllo delle credenziali durante l' <xref:System.Windows.Forms.Form.Load> evento del modulo. In questo modo sarà possibile nascondere la scheda prima di visualizzare un'interfaccia utente, un approccio molto più semplice alla programmazione. La metodologia utilizzata di seguito (controllando le credenziali e disabilitando <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> la scheda durante l'evento) è a scopo illustrativo.  
   
-4. Facoltativamente, se si dispone di più di due schede, visualizzare una pagina della scheda diversa dall'originale.  
+4. Facoltativamente, se si dispone di più di due schede, visualizzare una scheda diversa dall'originale.  
   
-     Nell'esempio seguente, un <xref:System.Windows.Forms.CheckBox> controllo viene usato al posto di verifica le credenziali, come i criteri per l'accesso alla scheda variano a seconda dell'applicazione. Quando la <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento viene generato se la verifica delle credenziali (vale a dire, viene selezionata la casella di controllo) e la scheda selezionata viene `TabPage2` (la scheda con le informazioni riservate, in questo esempio), quindi `TabPage2` viene visualizzato. In caso contrario, `TabPage3` viene visualizzata e viene visualizzata una finestra di messaggio informa l'utente, non disponevano di privilegi di accesso appropriati. Il codice seguente si presuppone un form con un <xref:System.Windows.Forms.CheckBox> controllo (`CredentialCheck`) e un <xref:System.Windows.Forms.TabControl> controllo con tre schede.  
+     Nell'esempio seguente viene usato un <xref:System.Windows.Forms.CheckBox> controllo anziché controllare le credenziali, in quanto i criteri per l'accesso alla scheda variano in base all'applicazione. Quando viene <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> generato l'evento, se il controllo delle credenziali è true (ovvero la casella di controllo è selezionata) e la scheda selezionata è `TabPage2` (la scheda con le informazioni riservate, in `TabPage2` questo esempio), viene visualizzato. In caso `TabPage3` contrario, viene visualizzato e viene visualizzata una finestra di messaggio all'utente che indica che non dispone dei privilegi di accesso appropriati. Il codice riportato di seguito presuppone un form <xref:System.Windows.Forms.CheckBox> con un`CredentialCheck`controllo () <xref:System.Windows.Forms.TabControl> e un controllo con tre schede.  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -89,7 +89,7 @@ In alcuni casi, è opportuno limitare l'accesso ai dati che sono disponibili all
        }  
     ```  
   
-     (Visual C#, Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore dell'evento.  
+     (Visual C#, Visual C++) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
@@ -104,6 +104,6 @@ In alcuni casi, è opportuno limitare l'accesso ai dati che sono disponibili all
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
-- [Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Procedura: Aggiungere un controllo a una pagina della scheda](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: Aggiungere e rimuovere schede con il controllo TabControl Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Procedura: Modificare l'aspetto del Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

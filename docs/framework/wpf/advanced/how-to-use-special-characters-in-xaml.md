@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 18934e06f45ca4b88f48bce8a310a07b460a5f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61ee38319b2f0aa46690fb063f6ffe6612f993ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051083"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918440"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Procedura: Usare caratteri speciali in XAML
-I file di markup che vengono creati nella [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] vengono salvati automaticamente nel [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] formato di file UTF-8, il che significa che i caratteri speciali, ad esempio gli accenti, vengono codificate correttamente. Tuttavia, esiste un set di caratteri speciali di uso comune che viene gestito diversamente. Questi caratteri speciali seguono il [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] standard per la codifica.  
+I file di markup creati in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] vengono salvati automaticamente nel formato [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] di file UTF-8, il che significa che la maggior parte dei caratteri speciali, ad esempio i contrassegni accentati, sono codificati correttamente. Tuttavia, esiste un set di caratteri speciali di uso comune che viene gestito diversamente. Questi caratteri speciali seguono lo [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] standard per la [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] codifica.  
   
  La tabella seguente illustra la sintassi per la codifica di questo set di caratteri speciali:  
   
@@ -28,7 +28,7 @@ I file di markup che vengono creati nella [!INCLUDE[TLA#tla_visualstu](../../../
 |"|`&quot;`|Simbolo virgoletta doppia.|  
   
 > [!NOTE]
->  Se si crea un file di markup usando un testo dell'editor, ad esempio [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] blocco note, è necessario salvare il file nei [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] formato di file UTF-8 per mantenere i caratteri speciali codificati.  
+> Se si crea un file di markup usando un editor di testo, ad esempio Blocco note di Windows, è necessario salvare [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] il file nel formato di file UTF-8 per mantenere i caratteri speciali codificati.  
   
  L'esempio riportato di seguito mostra come usare i caratteri speciali nel testo durante la creazione del markup.  
   

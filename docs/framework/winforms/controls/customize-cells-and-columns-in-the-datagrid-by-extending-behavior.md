@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929708"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedura: Personalizzare celle e colonne nel controllo DataGridView di Windows Forms estendendone il comportamento e l'aspetto
 Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per personalizzare l'aspetto e il comportamento mediante proprietà, eventi e classi correlate. In alcune situazioni è possibile che i requisiti relativi alle celle non possano essere soddisfatti mediante le funzioni fornite. In questi casi per estendere le funzionalità è possibile creare una propria classe <xref:System.Windows.Forms.DataGridViewCell> personalizzata.  
@@ -26,12 +26,12 @@ Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per p
  Per usare queste classi, creare un form contenente un controllo <xref:System.Windows.Forms.DataGridView>, aggiungere uno o più oggetti `DataGridViewRolloverColumn` all'insieme <xref:System.Windows.Forms.DataGridView.Columns%2A> e popolare il controllo con righe contenenti valori.  
   
 > [!NOTE]
->  L'esempio non funzionerà correttamente se si aggiungono righe vuote. Le righe vuote vengono create, ad esempio, quando si aggiungono righe al controllo mediante l'impostazione della proprietà <xref:System.Windows.Forms.DataGridView.RowCount%2A>. Poiché le righe aggiunte in questo modo vengono automaticamente condivise, non vengono create istanze degli oggetti `DataGridViewRolloverCell` finché non si selezionano le singole celle, rendendo di conseguenza le righe associate non più condivise.  
+> L'esempio non funzionerà correttamente se si aggiungono righe vuote. Le righe vuote vengono create, ad esempio, quando si aggiungono righe al controllo mediante l'impostazione della proprietà <xref:System.Windows.Forms.DataGridView.RowCount%2A>. Poiché le righe aggiunte in questo modo vengono automaticamente condivise, non vengono create istanze degli oggetti `DataGridViewRolloverCell` finché non si selezionano le singole celle, rendendo di conseguenza le righe associate non più condivise.  
   
- Dato che richiede l'uso di righe non condivise, questo tipo di personalizzazione delle celle non è adatto per insiemi di dati di grandi dimensioni. Per altre informazioni sulla condivisione delle righe, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Dato che richiede l'uso di righe non condivise, questo tipo di personalizzazione delle celle non è adatto per insiemi di dati di grandi dimensioni. Per ulteriori informazioni sulla condivisione delle righe, vedere [procedure consigliate per la scalabilità del controllo Windows Forms DataGridView](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 > [!NOTE]
->  Quando si deriva dalla classe <xref:System.Windows.Forms.DataGridViewCell> o <xref:System.Windows.Forms.DataGridViewColumn> e si aggiungono nuove proprietà alla classe derivata, accertarsi di eseguire l'override del metodo `Clone` per copiare le nuove proprietà durante le operazioni di clonazione. È anche necessario chiamare il metodo `Clone` della classe base in modo che le proprietà della classe base vengano copiate nella nuova cella o colonna.  
+> Quando si deriva dalla classe <xref:System.Windows.Forms.DataGridViewCell> o <xref:System.Windows.Forms.DataGridViewColumn> e si aggiungono nuove proprietà alla classe derivata, accertarsi di eseguire l'override del metodo `Clone` per copiare le nuove proprietà durante le operazioni di clonazione. È anche necessario chiamare il metodo `Clone` della classe base in modo che le proprietà della classe base vengano copiate nella nuova cella o colonna.  
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>Per personalizzare celle e colonne nel controllo DataGridView  
   

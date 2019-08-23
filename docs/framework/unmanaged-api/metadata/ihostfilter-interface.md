@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044923"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965781"
 ---
 # <a name="ihostfilter-interface"></a>Interfaccia IHostFilter
 Fornisce un metodo per indicare che un token specificato verrà elaborato.  
   
 > [!NOTE]
->  Il `IHostFilter` interfaccia deve essere implementata dal client.  
+> L' `IHostFilter` interfaccia deve essere implementata dal client.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
 |[Metodo MarkToken](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indica che il token di metadati specificato verrà elaborato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,25 +1,25 @@
 ---
-title: <bookmarkResumptionQuery> di WCF
+title: <bookmarkResumptionQuery>di WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8457645a0b54e21ef27c2891ebea97d6cc547b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926350"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > di WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<> oggetto BookmarkResumptionQuery di WCF
 
 Rappresenta una query usata per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.  
   
-Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)
   
 \<system.serviceModel>  
-\<tracking>  
-\<i profili >  
+\<rilevamento >  
+\<profili >  
 \<trackingProfile>  
-\<flusso di lavoro >  
+\<> flusso di lavoro  
 \<bookmarkResumptionQueries>  
 \<bookmarkResumptionQuery>  
   
@@ -45,7 +45,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`name`|Stringa che specifica il nome del record di segnalibro da sottoscrivere.|  
   
@@ -63,5 +63,5 @@ Nessuno.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Rilevamento e analisi del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)

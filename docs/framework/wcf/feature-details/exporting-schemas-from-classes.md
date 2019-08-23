@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 5365c5274d2810f8fd93f81f10bbedf903756e0b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3db3cc1c529ab40bf775c06a5128e4dabf3c8a56
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963648"
 ---
 # <a name="exporting-schemas-from-classes"></a>Esportazione di schemi dalle classi
 Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel modello del contratto dati, usare la classe <xref:System.Runtime.Serialization.XsdDataContractExporter> . In questo argomento viene illustrato il processo di creazione degli schemi.  
@@ -21,31 +21,31 @@ Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel 
 ## <a name="the-export-process"></a>Processo di esportazione  
  Il processo di esportazione degli schemi ha inizio con uno o più tipi e produce una classe <xref:System.Xml.Schema.XmlSchemaSet> che descrive la proiezione XML di questi tipi.  
   
- Il `XmlSchemaSet` fa parte del .NET Framework modello SOM (Schema Object) che rappresenta un set di documenti dello Schema XSD. Per creare documenti XSD da una classe `XmlSchemaSet`, usare la raccolta di schemi dalla proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> della classe `XmlSchemaSet` . Quindi serializzare ogni oggetto <xref:System.Xml.Schema.XmlSchema> usando <xref:System.Xml.Serialization.XmlSerializer>.  
+ `XmlSchemaSet` Fa parte del modello SOM (Schema Object Model) del .NET Framework che rappresenta un set di documenti dello schema XSD. Per creare documenti XSD da una classe `XmlSchemaSet`, usare la raccolta di schemi dalla proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> della classe `XmlSchemaSet` . Quindi serializzare ogni oggetto <xref:System.Xml.Schema.XmlSchema> usando <xref:System.Xml.Serialization.XmlSerializer>.  
   
 #### <a name="to-export-schemas"></a>Per esportare gli schemi  
   
 1. Creare un'istanza di <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-2. Facoltativo. Passare una classe <xref:System.Xml.Schema.XmlSchemaSet> nel costruttore. In questo caso, lo schema generato durante l'esportazione dello schema viene aggiunto a questa istanza di <xref:System.Xml.Schema.XmlSchemaSet> anziché iniziare con un'istanza di <xref:System.Xml.Schema.XmlSchemaSet>vuota.  
+2. facoltativo. Passare una classe <xref:System.Xml.Schema.XmlSchemaSet> nel costruttore. In questo caso, lo schema generato durante l'esportazione dello schema viene aggiunto a questa istanza di <xref:System.Xml.Schema.XmlSchemaSet> anziché iniziare con un'istanza di <xref:System.Xml.Schema.XmlSchemaSet>vuota.  
   
-3. Facoltativo. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> . Il metodo determina se il tipo specificato può essere esportato. Il metodo presenta gli stessi overload del metodo `Export` nel passaggio successivo.  
+3. facoltativo. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> . Il metodo determina se il tipo specificato può essere esportato. Il metodo presenta gli stessi overload del metodo `Export` nel passaggio successivo.  
   
 4. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> . Sono disponibili tre overload che accettano un <xref:System.Type>, un <xref:System.Collections.Generic.List%601> di oggetti `Type` o un <xref:System.Collections.Generic.List%601> di oggetti <xref:System.Reflection.Assembly> . Nell'ultimo caso, tutti i tipi degli assembly specificati vengono esportati.  
   
      Più chiamate al metodo `Export` determinano l'aggiunta di più elementi alla stessa classe `XmlSchemaSet`. Se esiste già un tipo in `XmlSchemaSet` , non ne viene generato un altro. Pertanto, è preferibile eseguire più chiamate a `Export` sulla stessa classe `XsdDataContractExporter` rispetto alla creazione di più istanze della classe `XsdDataContractExporter` . In questo modo non vengono generati tipi di schema duplicati.  
   
     > [!NOTE]
-    >  Se si verifica un errore durante l'esportazione, lo stato della classe `XmlSchemaSet` sarà imprevedibile.  
+    > Se si verifica un errore durante l'esportazione, lo stato della classe `XmlSchemaSet` sarà imprevedibile.  
   
 5. Accedere a <xref:System.Xml.Schema.XmlSchemaSet> mediante la proprietà <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> .  
   
 ## <a name="export-options"></a>Opzioni di esportazione  
  È possibile impostare la proprietà <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> di <xref:System.Runtime.Serialization.XsdDataContractExporter> su un'istanza della classe <xref:System.Runtime.Serialization.ExportOptions> per controllare vari aspetti del processo di esportazione. In particolare, è possibile impostare le opzioni seguenti:  
   
-- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Questa raccolta di `Type` rappresenta i tipi noti per i tipi da esportare. (Per altre informazioni, vedere [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Questi tipi noti vengono esportati con ogni chiamata a `Export` in aggiunta ai tipi passati al metodo `Export`.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Questa raccolta di `Type` rappresenta i tipi noti per i tipi da esportare. Per ulteriori informazioni, vedere [tipi noti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Questi tipi noti vengono esportati con ogni chiamata a `Export` in aggiunta ai tipi passati al metodo `Export`.  
   
-- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Un'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> può essere fornita tramite questa proprietà per personalizzare il processo di esportazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Un'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> può essere fornita tramite questa proprietà per personalizzare il processo di esportazione. Per ulteriori informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
   
 ## <a name="helper-methods"></a>Metodi helper  
  Oltre al ruolo principale di esportare gli schemi, `XsdDataContractExporter` fornisce molti utili metodi helper che forniscono informazioni sui tipi. tra cui:  

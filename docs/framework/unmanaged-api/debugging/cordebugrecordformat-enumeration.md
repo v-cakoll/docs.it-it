@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739639"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916480"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumerazione CorDebugRecordFormat
 Descrive il formato dei dati in una matrice di byte che contiene informazioni su un evento di debug per le eccezioni native.  
@@ -31,7 +31,7 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -39,17 +39,17 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|I dati corrispondono a un record di eccezione Windows a 64 bit.|  
   
 ## <a name="remarks"></a>Note  
- Un membro del `CorDebugRecordFormat` enumerazione viene passata al [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo per indicare il formato della matrice di byte nella relativa `pRecord` argomento.  
+ Un membro dell' `CorDebugRecordFormat` enumerazione viene passato al metodo [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) per indicare il formato della matrice di `pRecord` byte nell'argomento.  
   
 > [!NOTE]
->  Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.  
+> Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

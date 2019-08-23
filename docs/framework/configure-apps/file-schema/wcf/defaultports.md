@@ -2,22 +2,22 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704115"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925881"
 ---
-# <a name="defaultports"></a>\<defaultPorts>
+# <a name="defaultports"></a>\<> defaultPorts
 Raccolta di porte predefinite in cui sono elencati gli endpoint di comunicazione predefiniti sui quali l'applicazione client è in ascolto.  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<useRequestHeadersForMetadataAddress>  
-\<defaultPorts>  
+\<> defaultPorts  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +40,13 @@ Raccolta di porte predefinite in cui sono elencati gli endpoint di comunicazione
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<aggiungere > di \<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|Endpoint di comunicazione predefinito sul quale l'applicazione client è in ascolto.|  
+|[\<aggiungere > di \<defaultPorts >](add-of-defaultports.md)|Endpoint di comunicazione predefinito sul quale l'applicazione client è in ascolto.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Elenco di porte predefinite.|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|Elenco di porte predefinite.|  
   
 ## <a name="see-also"></a>Vedere anche
 

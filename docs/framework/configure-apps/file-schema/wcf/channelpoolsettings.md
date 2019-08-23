@@ -2,22 +2,22 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 70f7452a22ae08d6eccd7d3644bdc8df45087ae0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: dd81821c74678cae8602458fe796a72bf5d379e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423192"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919563"
 ---
-# <a name="channelpoolsettings"></a>\<channelPoolSettings>
+# <a name="channelpoolsettings"></a>\<> channelPoolSettings
 Specifica le impostazioni del pool di canali per un'associazione personalizzata.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<oneWay>  
-\<channelPoolSettings>  
+\<> channelPoolSettings  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ Specifica le impostazioni del pool di canali per un'associazione personalizzata.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`idleTimeout`|Oggetto <xref:System.TimeSpan> positivo che specifica il periodo massimo di inattività dei canali nel pool prima della disconnessione. L'impostazione predefinita è 00:02:00.|  
 |`leaseTimeout`|Oggetto <xref:System.TimeSpan> che specifica l'intervallo di tempo trascorso il quale un canale, dopo essere stato restituito al pool, viene chiuso. L'impostazione predefinita è 00:10:00.|  
@@ -43,9 +43,9 @@ Specifica le impostazioni del pool di canali per un'associazione personalizzata.
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Attiva il routing dei pacchetti per un'associazione personalizzata.|  
+|[\<oneWay>](oneway.md)|Attiva il routing dei pacchetti per un'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
  Le quote sono usate come meccanismo di criterio per impedire un consumo eccessivo di risorse. Impediscono attacchi di tipo Denial of Service (DoS), dannosi o non intenzionali. Usare questo elemento durante l'impostazione delle quote dei canali in un canale personalizzato.  
@@ -65,8 +65,8 @@ Specifica le impostazioni del pool di canali per un'associazione personalizzata.
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<oneWay>](oneway.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

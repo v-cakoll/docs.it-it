@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965283"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Estensioni di markup e XAML WPF
 Questo argomento introduce le estensioni di markup per XAML, con informazioni sulle regole della sintassi, le finalità e il modello a oggetti di classe sottostante. Le estensioni di markup sono una funzionalità generale del linguaggio XAML e dell'implementazione .NET di servizi XAML. Questo argomento descrive in particolare le estensioni di markup per l'uso in XAML WPF.  
@@ -50,7 +50,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 - `x:Array` supporta la creazione di matrici generali nella sintassi XAML nei casi in cui si sceglie intenzionalmente di non usare il supporto delle raccolte fornito dagli elementi di base e dai modelli di controllo di WPF. Per informazioni dettagliate, vedere [Estensione di markup x:Array](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico degli intrinseci del linguaggio XAML, nell'elemento radice di un file o una produzione XAML. Ad esempio, i modelli di Visual Studio per le applicazioni WPF avviano un file XAML `x:` usando questo mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML per il linguaggio XAML, questa documentazione usa il mapping `x:` predefinito anziché lo spazio dei nomi WPF predefinito o altri spazi dei nomi XAML non correlati a un framework specifico.  
+> Il prefisso `x:` viene usato per il mapping dello spazio dei nomi XAML tipico degli intrinseci del linguaggio XAML, nell'elemento radice di un file o una produzione XAML. Ad esempio, i modelli di Visual Studio per le applicazioni WPF avviano un file XAML `x:` usando questo mapping. Nel mapping dello spazio dei nomi XAML personalizzato è possibile scegliere un token di prefisso diverso. Tuttavia, per identificare le entità che rappresentano una parte definita dello spazio dei nomi XAML per il linguaggio XAML, questa documentazione usa il mapping `x:` predefinito anziché lo spazio dei nomi WPF predefinito o altri spazi dei nomi XAML non correlati a un framework specifico.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Estensioni di markup specifiche di WPF  
@@ -71,7 +71,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 - `ComponentResourceKey` e `ThemeDictionary` supportano alcuni aspetti della ricerca di risorse, in particolare per risorse e temi che contengono controlli personalizzati. Per altre informazioni, vedere [Estensione di markup ComponentResourceKey](componentresourcekey-markup-extension.md), [Estensione di markup ThemeDictionary](themedictionary-markup-extension.md) o [Panoramica della creazione di controlli](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Classi di estensione  
+## <a name="extension-classes"></a>\*Classi di estensione  
  Per il linguaggio XAML generale e per le estensioni di markup specifiche di WPF, il comportamento di ogni estensione di markup viene identificato a un processore `*Extension` XAML tramite una classe che <xref:System.Windows.Markup.MarkupExtension>deriva da e <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> fornisce un'implementazione del Metodo. Questo metodo in ogni estensione fornisce l'oggetto restituito quando viene valutata l'estensione di markup. L'oggetto restituito viene in genere valutato in base ai diversi token di stringa passati all'estensione di markup.  
   
  La <xref:System.Windows.StaticResourceExtension> classe, ad esempio, fornisce l'implementazione della superficie di ricerca effettiva della risorsa <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> in modo che la relativa implementazione restituisca l'oggetto richiesto, con l'input di quell'implementazione specifica che è una stringa utilizzata per ricercare la risorsa in base `x:Key`al relativo. Molti dei dettagli di questa implementazione sono irrilevanti se si usa un'estensione di markup esistente.  
@@ -88,7 +88,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 - Se i singoli token separati non contengono segni di uguale, ogni token viene considerato un argomento del costruttore. Ogni parametro del costruttore deve essere specificato come tipo previsto dalla firma e nell'ordine corretto previsto dalla firma.  
   
     > [!NOTE]
-    >  Un processore XAML deve chiamare il costruttore corrispondente al conteggio di argomenti del numero di coppie. Per questo motivo, se si implementa un'estensione di markup personalizzata, non fornire più costruttori con lo stesso numero di argomenti. Il comportamento di un processore XAML se sono presenti più percorsi del costruttore dell'espressione di markup con lo stesso parametro è indefinito, ma è bene aspettarsi che a un processore XAML è consentito generare un'eccezione sull'utilizzo in presenza di questa situazione nelle definizioni dei tipi di estensione di markup.  
+    > Un processore XAML deve chiamare il costruttore corrispondente al conteggio di argomenti del numero di coppie. Per questo motivo, se si implementa un'estensione di markup personalizzata, non fornire più costruttori con lo stesso numero di argomenti. Il comportamento di un processore XAML se sono presenti più percorsi del costruttore dell'espressione di markup con lo stesso parametro è indefinito, ma è bene aspettarsi che a un processore XAML è consentito generare un'eccezione sull'utilizzo in presenza di questa situazione nelle definizioni dei tipi di estensione di markup.  
   
 - Se i singoli token separati contengono segni di uguale, un processore XAML chiama prima di tutto il costruttore senza parametri per l'estensione di markup. Quindi, ogni coppia nome=valore viene interpretata come nome di una proprietà presente nell'estensione di markup e come valore da assegnare alla proprietà.  
   

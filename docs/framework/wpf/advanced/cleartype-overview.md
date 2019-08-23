@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672050"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964922"
 ---
 # <a name="cleartype-overview"></a>Cenni preliminari su ClearType
 In questo argomento viene fornita una panoramica della tecnologia Microsoft ClearType disponibile nella [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -55,7 +55,7 @@ Testo con anti-aliasing della direzione y ClearType
 ## <a name="hardware-acceleration"></a>Accelerazione hardware  
  ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] può trarre vantaggio dall'accelerazione hardware per migliorare le prestazioni e ridurre i requisiti di memoria di sistema e di carico della CPU. Utilizzando i pixel shader e la memoria video di una scheda grafica, ClearType fornisce un rendering più veloce del testo, in particolare quando viene utilizzata l'animazione.  
   
- ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] non modifica le impostazioni ClearType a livello di sistema. La disabilitazione di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in imposta l'anti-aliasing sulla modalità scala di grigi. Inoltre, ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] non modifica le impostazioni del PowerToy del sintonizzatore [ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] non modifica le impostazioni ClearType a livello di sistema. La disabilitazione di ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Windows imposta l'anti-aliasing sulla modalità scala di grigi. Inoltre, ClearType in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] non modifica le impostazioni del PowerToy del sintonizzatore [ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Una delle decisioni relative alla progettazione dell'architettura di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consiste nel disporre di monitor DPI a risoluzione più elevata con supporto migliorato del layout indipendente dalla risoluzione, di diffusione sempre maggiore. Come conseguenza di tale scelta, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] non supporta il rendering del testo con anti-aliasing o le bitmap in alcuni tipi di carattere asiatici in quanto entrambi sono dipendenti dalla risoluzione.  
   

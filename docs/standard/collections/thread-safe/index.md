@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962986"
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 .NET Framework 4 introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType> che include diverse classi di raccolta thread-safe e scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che più thread scriveranno nella raccolta contemporaneamente. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
@@ -30,11 +30,11 @@ ms.locfileid: "66816203"
  Le classi <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601> non usano alcun blocco. Al contrario, si basano sulle operazioni <xref:System.Threading.Interlocked> per ottenere la thread safety.  
   
 > [!NOTE]
->  Poiché supportano <xref:System.Collections.ICollection>, le classi di raccolta simultanee offrono implementazioni per le proprietà <xref:System.Collections.ICollection.IsSynchronized%2A> e <xref:System.Collections.ICollection.SyncRoot%2A>, anche se queste sono irrilevanti. `IsSynchronized` restituisce sempre `false` e `SyncRoot` è sempre `null` (`Nothing` in Visual Basic).  
+> Poiché supportano <xref:System.Collections.ICollection>, le classi di raccolta simultanee offrono implementazioni per le proprietà <xref:System.Collections.ICollection.IsSynchronized%2A> e <xref:System.Collections.ICollection.SyncRoot%2A>, anche se queste sono irrilevanti. `IsSynchronized` restituisce sempre `false` e `SyncRoot` è sempre `null` (`Nothing` in Visual Basic).  
   
  Nella tabella seguente sono elencati i tipi di raccolta dello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|Description|  
+|Tipo|DESCRIZIONE|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Offre la funzionalità di delimitazione e blocco per qualsiasi tipo che implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Per altre informazioni, vedere [Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementazione thread-safe di un dizionario di coppie chiave-valore.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66816203"
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Panoramica di BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Descrive la funzionalità fornita dal tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
 |[Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descrive come aggiungere e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  

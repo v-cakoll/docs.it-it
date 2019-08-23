@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963830"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recupero di oggetti dalla cache di identità
 In questo argomento vengono descritti i tipi di query LINQ to SQL che restituiscono un oggetto dalla cache delle identità gestita dall'oggetto <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
  In generale, affinché una query LINQ to SQL restituisca un oggetto dalla cache delle identità, la query deve essere basata sulla chiave primaria di un oggetto e deve restituire un unico oggetto. In particolare, il formato della query deve essere uno di quelli illustrati di seguito.  
   
 > [!NOTE]
->  Le query precompilate non restituiranno oggetti dalla cache delle identità. Per altre informazioni sulle query precompilate, vedere <xref:System.Data.Linq.CompiledQuery> e [come: Store e riutilizzare query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+> Le query precompilate non restituiranno oggetti dalla cache delle identità. Per ulteriori informazioni sulle query precompilate, vedere <xref:System.Data.Linq.CompiledQuery> e [procedura: Archiviare e riutilizzare](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)le query.  
   
  Il formato di una query deve essere uno dei formati generali riportati di seguito per poter recuperare un oggetto dalla cache delle identità:  
   

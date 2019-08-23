@@ -2,15 +2,15 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88ce22c9376313db26a5cbe377bdc8aaee83c118
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965564"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
-Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. In questo esempio si basa sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
+Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sull'esempio di [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transazionale. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 
@@ -27,13 +27,13 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 
  Una volta il messaggio è contrassegnato come non elaborabile, viene gestito in base alle impostazioni nell'enumerazione <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Per reiterare i valori possibili:
 
-- Errore (impostazione predefinita): Errore del listener e anche l'host del servizio.
+- Errore (impostazione predefinita): Per generare un errore nel listener e anche nell'host del servizio.
 
-- Rilascio: Per eliminare il messaggio.
+- Goccia Per eliminare il messaggio.
 
-- Sposta: Per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Spostare Per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
-- Reject: Per rifiutare il messaggio, l'invio del messaggio alla coda del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Rifiutare Per rifiutare il messaggio, inviare di nuovo il messaggio alla coda dei messaggi non recapitabili del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` determina lo spostamento del messaggio nella coda secondaria non elaborabile.
 
@@ -209,7 +209,7 @@ public class OrderProcessorService : IOrderProcessor
  Diversamente dal servizio di elaborazione ordini che legge i messaggi dalla coda degli ordini, il servizio messaggi non elaborabili legge i messaggi dalla coda secondaria non elaborabile. La coda non elaborabile è una coda secondaria della coda principale, denominata "non elaborabile" ed è generata automaticamente da MSMQ. Per accedervi, fornire il nome della coda principale seguito da un "," e il nome della coda secondaria, in questo caso -"poison", come illustrato nella configurazione di esempio seguente.
 
 > [!NOTE]
->  Nell'esempio per MSMQ v3.0, il nome della coda non elaborabile non è una coda secondaria, ma la coda nella quale viene spostato il messaggio.
+> Nell'esempio per MSMQ v3.0, il nome della coda non elaborabile non è una coda secondaria, ma la coda nella quale viene spostato il messaggio.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -273,25 +273,25 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1. Aprire Server Manager in Visual Studio 2012.
 
-    2. Espandere la **funzionalità** scheda.
+    2. Espandere la scheda **funzionalità** .
 
-    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare clic con il pulsante destro del mouse su **code di messaggi private**e selezionare **nuova**, **coda privata**.
 
-    4. Verificare i **transazionale** casella.
+    4. Controllare la casella transazionale.
 
-    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Per eseguire l'esempio in una configurazione singola o tra computer, modificare i nomi di coda per riflettere il nome host effettivo anziché localhost e seguire le istruzioni riportate in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, modificare i nomi delle code in modo da riflettere il nome host effettivo anziché localhost e seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Interno accodamento dell'utente messaggi certificati non esiste".
+ Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Il certificato di Accodamento messaggi interno dell'utente non esiste".
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.  
   
-3. Affinché Metadata Exchange funzioni, registriamo un URL con associazione HTTP. Ciò richiede che il servizio venga eseguito in una finestra di comando elevata. In caso contrario, si verifica un'eccezione, ad esempio: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Affinché Metadata Exchange funzioni, registriamo un URL con associazione HTTP. Ciò richiede che il servizio venga eseguito in una finestra di comando elevata. In caso contrario, si otterrà un'eccezione, `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`ad esempio:.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

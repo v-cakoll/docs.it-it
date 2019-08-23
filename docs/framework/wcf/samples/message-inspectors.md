@@ -2,12 +2,12 @@
 title: Controlli messaggi
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa5b68f203164a1c50ae9ef921032bd6e5c7bfb8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930706"
 ---
 # <a name="message-inspectors"></a>Controlli messaggi
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Comportamento  
- I controlli messaggi sono estensioni alla fase di esecuzione del client o della distribuzione. Tali estensioni vengono configurate mediante *comportamenti*. Un comportamento è una classe che modifica il comportamento della fase di esecuzione del modello del servizio modificando la configurazione predefinita o aggiungendole estensioni (ad esempio controlli messaggi).  
+ I controlli messaggi sono estensioni alla fase di esecuzione del client o della distribuzione. Tali estensioni vengono configurate utilizzando i *comportamenti*. Un comportamento è una classe che modifica il comportamento della fase di esecuzione del modello del servizio modificando la configurazione predefinita o aggiungendole estensioni (ad esempio controlli messaggi).  
   
  La classe `SchemaValidationBehavior` seguente rappresenta il comportamento utilizzato per aggiungere il controllo messaggi di questo esempio alla fase di esecuzione del client o della distribuzione. L'implementazione è piuttosto semplice in entrambi casi. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> e <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, il controllo messaggi viene creato e aggiunto alla raccolta <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> della rispettiva fase di esecuzione.  
   
@@ -256,10 +256,10 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
->  Questo particolare comportamento non funge anche da attributo e pertanto non può essere aggiunto in modo dichiarativo a un tipo di contratto di un tipo di servizio. Si tratta di una decisione presa a livello di programmazione perché la raccolta di schemi non può essere caricata in una dichiarazione di attributo e fare riferimento a un ulteriore percorso di configurazione (per esempio alle impostazioni dell'applicazione) in questo attributo significa creare un elemento di configurazione non coerente con il resto della configurazione del modello del servizio. Pertanto, questo comportamento può essere aggiunto soltanto in modo imperativo tramite codice o tramite un'estensione di configurazione del modello del servizio.  
+> Questo particolare comportamento non funge anche da attributo e pertanto non può essere aggiunto in modo dichiarativo a un tipo di contratto di un tipo di servizio. Si tratta di una decisione presa a livello di programmazione perché la raccolta di schemi non può essere caricata in una dichiarazione di attributo e fare riferimento a un ulteriore percorso di configurazione (per esempio alle impostazioni dell'applicazione) in questo attributo significa creare un elemento di configurazione non coerente con il resto della configurazione del modello del servizio. Pertanto, questo comportamento può essere aggiunto soltanto in modo imperativo tramite codice o tramite un'estensione di configurazione del modello del servizio.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Aggiunta del controllo messaggi tramite configurazione  
- Per configurare un comportamento personalizzato in un endpoint nel file di configurazione dell'applicazione, il modello di servizio richiede agli implementatori di creare una configurazione *l'elemento di estensione* rappresentato da una classe derivata da <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Questa estensione deve essere quindi aggiunta alla sezione di configurazione del modello del servizio per le estensioni come illustrato per le seguenti estensioni in questo argomento.  
+ Per la configurazione di un comportamento personalizzato in un endpoint nel file di configurazione dell'applicazione, il modello di servizio richiede agli implementatori di creare un *elemento di estensione* di <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>configurazione rappresentato da una classe derivata da. Questa estensione deve essere quindi aggiunta alla sezione di configurazione del modello del servizio per le estensioni come illustrato per le seguenti estensioni in questo argomento.  
   
 ```xml  
 <system.serviceModel>  
@@ -398,17 +398,17 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: a0de8aee53c5db63952e4baa72827a92c47ccce0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29f0bc77306df5639c188295f9f5dff7f18b4706
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962852"
 ---
 # <a name="wpf-brushes-overview"></a>Cenni preliminari sui pennelli di WPF
-Tutti gli elementi visibili sullo schermo è visibili perché sono stati disegnati con un pennello. Ad esempio, un pennello viene usato per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento introduce i concetti di disegno con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
+Tutto ciò che è visibile sullo schermo è visibile perché è stato disegnato da un pennello. Ad esempio, viene utilizzato un pennello per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento vengono presentati i concetti relativi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al disegno con i pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
   
 <a name="paintingwithbrush"></a>   
 ## <a name="painting-with-a-brush"></a>Disegno con un pennello  
- Oggetto <xref:System.Windows.Media.Brush> "disegna" un'area con il proprio output. Pennelli diversi hanno tipi diversi di output. Alcune pennelli disegnano un'area con un colore a tinta unita, altri utenti con una sfumatura, modello, immagine o disegno. La figura seguente mostra alcuni esempi della ognuno dei diversi <xref:System.Windows.Media.Brush> tipi.  
+ <xref:System.Windows.Media.Brush> "Disegna" un'area con l'output. Pennelli diversi hanno tipi di output diversi. Alcuni pennelli disegnano un'area con un colore a tinta unita, altri con una sfumatura, un motivo, un'immagine o un disegno. Nella figura seguente vengono illustrati esempi di ognuno dei <xref:System.Windows.Media.Brush> diversi tipi.  
   
  ![Tipi di pennello](./media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
-Esempi di pennello  
+Esempi di pennelli  
   
- La maggior parte degli oggetti visivi consentono di specificare la modalità di disegno. La tabella seguente elenca alcuni oggetti e proprietà a cui è possibile utilizzare comuni un <xref:System.Windows.Media.Brush>.  
+ La maggior parte degli oggetti visivi consente di specificare il modo in cui vengono disegnati. Nella tabella seguente sono elencati alcuni oggetti e proprietà comuni con cui è possibile utilizzare <xref:System.Windows.Media.Brush>.  
   
 |Classe|Proprietà dei pennelli|  
 |-----------|----------------------|  
@@ -35,73 +35,73 @@ Esempi di pennello
 |<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
- Le sezioni seguenti descrivono le diverse <xref:System.Windows.Media.Brush> tipi e viene fornito un esempio della ognuno.  
+ Nelle sezioni seguenti vengono descritti i <xref:System.Windows.Media.Brush> diversi tipi e viene fornito un esempio di ciascuna di esse.  
   
 <a name="paintwithsolidcolorbrush"></a>   
-## <a name="paint-with-a-solid-color"></a>Disegno con colori a tinta unita  
- Oggetto <xref:System.Windows.Media.SolidColorBrush> disegna un'area con un solido <xref:System.Windows.Media.Color>. Esistono diversi modi per specificare il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush>: ad esempio, è possibile specificare i canali alfa, rossi, blu e verde o usare uno dei colore predefiniti fornito dal <xref:System.Windows.Media.Colors> classe.  
+## <a name="paint-with-a-solid-color"></a>Disegna con un colore a tinta unita  
+ Disegna un'area con un oggetto a tinta unita <xref:System.Windows.Media.Color>. <xref:System.Windows.Media.SolidColorBrush> Esistono diversi modi per specificare l'oggetto di un <xref:System.Windows.Media.SolidColorBrush.Color%2A> oggetto <xref:System.Windows.Media.SolidColorBrush>. ad esempio, è possibile specificare i relativi canali alfa, rosso, blu e verde oppure utilizzare uno dei colori <xref:System.Windows.Media.Colors> predefiniti forniti dalla classe.  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.SolidColorBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.SolidColorBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
- ![Rettangolo disegnato usando SolidColorBrush](./media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
-Rettangolo disegnato usando SolidColorBrush  
+ ![Rettangolo disegnato usando un oggetto SolidColorBrush](./media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
+Rettangolo disegnato usando un oggetto SolidColorBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.SolidColorBrush> classe, vedere [disegno con colori a tinta unita e sfumature Panoramica](painting-with-solid-colors-and-gradients-overview.md).  
+ Per ulteriori informazioni sulla <xref:System.Windows.Media.SolidColorBrush> classe, vedere Cenni preliminari sul [disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithlineargradientbrush"></a>   
-## <a name="paint-with-a-linear-gradient"></a>Disegno con una sfumatura lineare  
- Oggetto <xref:System.Windows.Media.LinearGradientBrush> disegna un'area con una sfumatura lineare. Una sfumatura lineare unisce due o più dei colori in una riga, l'asse delle sfumature. Si utilizza <xref:System.Windows.Media.GradientStop> oggetti per specificare i colori nella sfumatura e le relative posizioni.  
+## <a name="paint-with-a-linear-gradient"></a>Disegnare con una sfumatura lineare  
+ <xref:System.Windows.Media.LinearGradientBrush> Disegna un'area con una sfumatura lineare. Una sfumatura lineare combina due o più colori su una riga, l'asse delle sfumature. Usare <xref:System.Windows.Media.GradientStop> gli oggetti per specificare i colori nella sfumatura e le rispettive posizioni.  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.LinearGradientBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.LinearGradientBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
- ![Rettangolo disegnato usando LinearGradientBrush](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
-Rettangolo disegnato usando LinearGradientBrush  
+ ![Rettangolo disegnato usando un oggetto LinearGradientBrush](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
+Rettangolo disegnato usando un oggetto LinearGradientBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.LinearGradientBrush> classe, vedere [disegno con colori a tinta unita e sfumature Panoramica](painting-with-solid-colors-and-gradients-overview.md).  
+ Per ulteriori informazioni sulla <xref:System.Windows.Media.LinearGradientBrush> classe, vedere Cenni preliminari sul [disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithradialgradientbrush"></a>   
-## <a name="paint-with-a-radial-gradient"></a>Disegno con una sfumatura radiale  
- Oggetto <xref:System.Windows.Media.RadialGradientBrush> disegna un'area con una sfumatura radiale. Una sfumatura radiale unisce due o più dei colori in un cerchio. Come con le <xref:System.Windows.Media.LinearGradientBrush> (classe), è utilizzare <xref:System.Windows.Media.GradientStop> oggetti per specificare i colori nella sfumatura e le relative posizioni.  
+## <a name="paint-with-a-radial-gradient"></a>Disegnare con una sfumatura radiale  
+ <xref:System.Windows.Media.RadialGradientBrush> Disegna un'area con una sfumatura radiale. Una sfumatura radiale unisce due o più colori in un cerchio. Come per la <xref:System.Windows.Media.LinearGradientBrush> classe, gli oggetti <xref:System.Windows.Media.GradientStop> vengono usati per specificare i colori nella sfumatura e le rispettive posizioni.  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.RadialGradientBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.RadialGradientBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
- ![Rettangolo disegnato usando RadialGradientBrush](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
-Rettangolo disegnato usando RadialGradientBrush  
+ ![Rettangolo disegnato usando un RadialGradientBrush](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
+Rettangolo disegnato usando un RadialGradientBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.RadialGradientBrush> classe, vedere [disegno con colori a tinta unita e sfumature Panoramica](painting-with-solid-colors-and-gradients-overview.md).  
+ Per ulteriori informazioni sulla <xref:System.Windows.Media.RadialGradientBrush> classe, vedere Cenni preliminari sul [disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithimage"></a>   
-## <a name="paint-with-an-image"></a>Disegno con un'immagine  
- Un' <xref:System.Windows.Media.ImageBrush> disegna un'area con un <xref:System.Windows.Media.ImageSource>.  
+## <a name="paint-with-an-image"></a>Disegnare con un'immagine  
+ Disegna un'area con un oggetto <xref:System.Windows.Media.ImageSource>. <xref:System.Windows.Media.ImageBrush>  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.ImageBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.ImageBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
- ![Rettangolo disegnato usando ImageBrush](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
+ ![Rettangolo disegnato da ImageBrush](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
 Rettangolo disegnato usando un'immagine  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.ImageBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
+ Per altre informazioni sulla <xref:System.Windows.Media.ImageBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithdrawing"></a>   
-## <a name="paint-with-a-drawing"></a>Disegno con un disegno  
- Oggetto <xref:System.Windows.Media.DrawingBrush> disegna un'area con un <xref:System.Windows.Media.Drawing>. Oggetto <xref:System.Windows.Media.Drawing> può contenere le forme, immagini, testo e supporti.  
+## <a name="paint-with-a-drawing"></a>Disegnare con un disegno  
+ Disegna un'area con un oggetto <xref:System.Windows.Media.Drawing>. <xref:System.Windows.Media.DrawingBrush> Un <xref:System.Windows.Media.Drawing> oggetto può contenere forme, immagini, testo e supporti.  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.DrawingBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.DrawingBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
  ![Rettangolo disegnato usando DrawingBrush](./media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")  
 Rettangolo disegnato usando DrawingBrush  
@@ -110,55 +110,55 @@ Rettangolo disegnato usando DrawingBrush
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.DrawingBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
+ Per altre informazioni sulla <xref:System.Windows.Media.DrawingBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithvisual"></a>   
-## <a name="paint-with-a-visual"></a>Disegno con un oggetto visivo  
- Oggetto <xref:System.Windows.Media.VisualBrush> disegna un'area con un <xref:System.Windows.Media.Visual> oggetto. Esempi di oggetti visivi <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>, e <xref:System.Windows.Controls.MediaElement>. Oggetto <xref:System.Windows.Media.VisualBrush> consente inoltre di contenuto del progetto da una parte dell'applicazione in un'altra area; è molto utile per la creazione di effetti di reflection e ingrandimento delle parti dello schermo.  
+## <a name="paint-with-a-visual"></a>Disegnare con un oggetto visivo  
+ Disegna un'area con un <xref:System.Windows.Media.Visual> oggetto. <xref:System.Windows.Media.VisualBrush> Esempi di oggetti visivi <xref:System.Windows.Controls.Button>sono <xref:System.Windows.Controls.Page>, e <xref:System.Windows.Controls.MediaElement>. Un <xref:System.Windows.Media.VisualBrush> consente inoltre di proiettare contenuto da una parte dell'applicazione in un'altra area; è molto utile per la creazione di effetti di reflection e l'ingrandimento di parti dello schermo.  
   
- L'esempio seguente usa un' <xref:System.Windows.Media.VisualBrush> per disegnare il <xref:System.Windows.Shapes.Shape.Fill%2A> di un <xref:System.Windows.Shapes.Rectangle>. La figura seguente mostra il rettangolo disegnato.  
+ Nell'esempio seguente viene usato <xref:System.Windows.Media.VisualBrush> un oggetto per <xref:System.Windows.Shapes.Shape.Fill%2A> disegnare l' <xref:System.Windows.Shapes.Rectangle>oggetto di un oggetto. Nella figura seguente viene illustrato il rettangolo disegnato.  
   
- ![Rettangolo disegnato usando VisualBrush](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
-Rettangolo disegnato usando VisualBrush  
+ ![Rettangolo disegnato utilizzando VisualBrush](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
+Rettangolo disegnato utilizzando VisualBrush  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
   
- Per altre informazioni sul <xref:System.Windows.Media.VisualBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
+ Per altre informazioni sulla <xref:System.Windows.Media.VisualBrush> classe, vedere [disegnare con immagini, disegni e oggetti visivi](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
-## <a name="paint-using-predefined-and-system-brushes"></a>Disegnare con pennelli di sistema e predefiniti  
- Per praticità, Windows Presentation Foundation (WPF) fornisce un set di pennelli predefiniti e sistema che è possibile utilizzare per disegnare gli oggetti.  
+## <a name="paint-using-predefined-and-system-brushes"></a>Disegno usando pennelli di sistema e predefiniti  
+ Per praticità, Windows Presentation Foundation (WPF) fornisce un set di pennelli di sistema e predefiniti che è possibile utilizzare per disegnare oggetti.  
   
-- Per un elenco dei pennelli predefiniti disponibili, vedere il <xref:System.Windows.Media.Brushes> classe. Per un esempio che illustra come usare un pennello predefinito, vedere [disegnare un'Area con colori a tinta unita](how-to-paint-an-area-with-a-solid-color.md).  
+- Per un elenco dei pennelli predefiniti disponibili, vedere la <xref:System.Windows.Media.Brushes> classe. Per un esempio che illustra come usare un pennello predefinito, vedere [disegnare un'area con un colore a tinta unita](how-to-paint-an-area-with-a-solid-color.md).  
   
-- Per un elenco dei pennelli di sistema disponibili, vedere il <xref:System.Windows.SystemColors> classe. Per un esempio, vedere [disegnare un'Area con un pennello di sistema](how-to-paint-an-area-with-a-system-brush.md).  
+- Per un elenco dei pennelli di sistema disponibili, <xref:System.Windows.SystemColors> vedere la classe. Per un esempio, vedere [disegnare un'area con un pennello di sistema](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
-## <a name="common-brush-features"></a>Funzionalità comuni dei pennelli  
- <xref:System.Windows.Media.Brush> gli oggetti forniscono un <xref:System.Windows.Media.Brush.Opacity%2A> proprietà che può essere usata per rendere un pennello trasparente o parzialmente trasparenti. Un' <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 0 lo rende completamente trasparente, mentre un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 1 lo rende completamente opaco. L'esempio seguente usa il <xref:System.Windows.Media.Brush.Opacity%2A> proprietà per rendere un <xref:System.Windows.Media.SolidColorBrush> opaco al 25%.  
+## <a name="common-brush-features"></a>Funzionalità di pennelli comuni  
+ <xref:System.Windows.Media.Brush>gli oggetti forniscono <xref:System.Windows.Media.Brush.Opacity%2A> una proprietà che può essere utilizzata per rendere trasparente o parzialmente trasparente un pennello. Il valore 0 rende un pennello completamente trasparente, mentre un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 1 rende un pennello completamente opaco. <xref:System.Windows.Media.Brush.Opacity%2A> Nell'esempio seguente viene utilizzata <xref:System.Windows.Media.Brush.Opacity%2A> la proprietà per <xref:System.Windows.Media.SolidColorBrush> rendere opaco il 25%.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
  [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
- Se il pennello contiene colori parzialmente trasparenti, il valore di opacità del colore viene combinato, tramite la moltiplicazione con il valore di opacità del pennello. Ad esempio, se un pennello ha un valore di opacità pari a 0,5 e un colore utilizzato per il pennello ha anche un valore di opacità pari a 0,5, il colore di output ha un valore di opacità pari 0,25.  
+ Se il pennello contiene colori parzialmente trasparenti, il valore di opacità del colore viene combinato attraverso la moltiplicazione con il valore di opacità del pennello. Se, ad esempio, un pennello ha un valore di opacità pari a 0,5 e un colore usato nel pennello ha anche un valore di opacità pari a 0,5, il colore di output avrà un valore di opacità di 0,25.  
   
 > [!NOTE]
->  È più efficiente per cambiare il valore di opacità di un pennello, piuttosto che modificare l'opacità di un intero elemento usando relativo <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> proprietà.  
+> È più efficiente modificare il valore di opacità di un pennello rispetto a modificare l'opacità di un intero elemento usando la relativa <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> proprietà.  
   
- È possibile ruotare, ridimensionare, inclinare e traslare il contenuto del pennello utilizzando relativi <xref:System.Windows.Media.Brush.Transform%2A> o <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà. Per altre informazioni, vedere [Panoramica di trasformazione Brush](brush-transformation-overview.md).  
+ È possibile ruotare, ridimensionare, inclinare e tradurre il contenuto di un pennello utilizzando <xref:System.Windows.Media.Brush.Transform%2A> le <xref:System.Windows.Media.Brush.RelativeTransform%2A> relative proprietà o. Per altre informazioni, vedere [Cenni preliminari sulla trasformazione](brush-transformation-overview.md)di pennelli.  
   
- Essendo <xref:System.Windows.Media.Animation.Animatable> oggetti, <xref:System.Windows.Media.Brush> oggetti possono essere animati. Per altre informazioni, vedere [Panoramica dell'animazione](animation-overview.md).  
+ Poiché si tratta <xref:System.Windows.Media.Animation.Animatable> di oggetti <xref:System.Windows.Media.Brush> , gli oggetti possono essere animati. Per altre informazioni, vedere [Panoramica dell'animazione](animation-overview.md).  
   
 <a name="freezable_features"></a>   
 ### <a name="freezable-features"></a>Funzionalità di Freezable  
- Poiché eredita dal <xref:System.Windows.Freezable> (classe), il <xref:System.Windows.Media.Brush> classe fornisce diverse funzionalità speciali: <xref:System.Windows.Media.Brush> gli oggetti possono essere dichiarati come [risorse](../advanced/xaml-resources.md), condivisi tra più oggetti e la clonazione. Inoltre, tutti i <xref:System.Windows.Media.Brush> tipi, ad eccezione <xref:System.Windows.Media.VisualBrush> può essere reso di sola lettura per migliorare le prestazioni e resi thread-safe.  
+ Poiché eredita dalla <xref:System.Windows.Freezable> classe, la <xref:System.Windows.Media.Brush> classe fornisce diverse funzionalità speciali: <xref:System.Windows.Media.Brush> gli oggetti possono essere dichiarati come [risorse](../advanced/xaml-resources.md), condivisi tra più oggetti e clonati. Inoltre, tutti i <xref:System.Windows.Media.Brush> tipi eccetto <xref:System.Windows.Media.VisualBrush> possono essere resi di sola lettura per migliorare le prestazioni e rendere thread-safe.  
   
- Per altre informazioni sulle diverse funzionalità fornita da <xref:System.Windows.Freezable> oggetti, vedere [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
+ Per ulteriori informazioni sulle diverse funzionalità fornite dagli <xref:System.Windows.Freezable> oggetti, vedere Cenni preliminari sugli [oggetti Freezable](../advanced/freezable-objects-overview.md).  
   
- Per altre informazioni sui motivi per cui <xref:System.Windows.Media.VisualBrush> gli oggetti non possono essere bloccati, vedere il <xref:System.Windows.Media.VisualBrush> pagina del tipo.  
+ Per ulteriori informazioni sul motivo <xref:System.Windows.Media.VisualBrush> per cui gli oggetti non possono essere <xref:System.Windows.Media.VisualBrush> bloccati, vedere la pagina tipo.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -168,7 +168,7 @@ Rettangolo disegnato usando VisualBrush
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md)
 - [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli)
-- [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Esempio di ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
 - [Procedure relative alle proprietà](brushes-how-to-topics.md)
 - [Altri suggerimenti relativi alle prestazioni](../advanced/optimizing-performance-other-recommendations.md)

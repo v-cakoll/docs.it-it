@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631927"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966871"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Miglioramento del debug tramite gli attributi di visualizzazione del debugger
 
-Gli attributi di visualizzazione del debugger consentono allo sviluppatore del tipo, che specifica e conosce al meglio il comportamento di runtime di tale tipo, di specificare anche quale sarà l'aspetto del tipo quando verrà visualizzato in un debugger. Gli attributi di visualizzazione del debugger che forniscono una proprietà `Target` possono essere applicati a livello di assembly dagli utenti anche senza conoscere il codice sorgente. L'attributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controlla la modalità di visualizzazione di un tipo o di un membro nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e come un campo o una proprietà viene visualizzata nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> specifica un tipo sostituito, o proxy, per un tipo e modifica il modo in cui il tipo viene visualizzato nelle finestre del debugger. Quando si visualizza una variabile con un proxy, o tipo sostituito, il proxy sostituisce il tipo originale nella finestra di visualizzazione del debugger. Nella finestra delle variabili del debugger vengono visualizzati soltanto i membri pubblici del tipo proxy. I membri privati non vengono visualizzati.  
+Gli attributi di visualizzazione del debugger consentono allo sviluppatore del tipo, che specifica e conosce al meglio il comportamento di runtime di tale tipo, di specificare anche quale sarà l'aspetto del tipo quando verrà visualizzato in un debugger. Gli attributi di visualizzazione del debugger che forniscono una proprietà `Target` possono essere applicati a livello di assembly dagli utenti anche senza conoscere il codice sorgente. L'attributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controlla la modalità di visualizzazione di un tipo o di un membro nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e come un campo o una proprietà viene visualizzata nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> specifica un tipo sostituito, o proxy, per un tipo e modifica il modo in cui il tipo viene visualizzato nelle finestre del debugger. Quando si visualizza una variabile con un proxy o un tipo di sostituzione, il proxy si trova in per il tipo originale nella finestra di visualizzazione del debugger. Nella finestra delle variabili del debugger vengono visualizzati soltanto i membri pubblici del tipo proxy. I membri privati non vengono visualizzati.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Uso di DebuggerDisplayAttribute  
 
@@ -52,7 +52,7 @@ Se ad esempio un oggetto C# ha un metodo `ToString()` sottoposto a override, il 
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica che non viene visualizzato il membro in sé, ma gli oggetti costituenti se è presente una matrice o una raccolta.
 
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggerBrowsableAttribute> non è supportato da Visual Basic in .NET Framework versione 2.0.
+> <xref:System.Diagnostics.DebuggerBrowsableAttribute> non è supportato da Visual Basic in .NET Framework versione 2.0.
 
 L'esempio di codice seguente illustra l'uso di <xref:System.Diagnostics.DebuggerBrowsableAttribute> per impedire la visualizzazione della proprietà che lo segue nella finestra di debug della classe.
 
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>Descrizione
 
-L'esempio di codice seguenti può essere visualizzato in Visual Studio per visualizzare il risultato ottenuto applicando la <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, e <xref:System.Diagnostics.DebuggerTypeProxyAttribute> attributi.
+L'esempio di codice seguente può essere visualizzato in Visual Studio per visualizzare i risultati dell'applicazione <xref:System.Diagnostics.DebuggerDisplayAttribute>degli <xref:System.Diagnostics.DebuggerBrowsableAttribute>attributi, <xref:System.Diagnostics.DebuggerTypeProxyAttribute> e.
 
 ### <a name="code"></a>Codice
 

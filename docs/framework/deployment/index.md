@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910964"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 
-Questo articolo consente di iniziare a distribuire .NET Framework con l'applicazione. La maggior parte delle informazioni, sono destinate agli sviluppatori OEM e agli amministratori aziendali. È consigliabile che gli utenti che vogliono installare .NET Framework leggano [Installare .NET Framework](~/docs/framework/install/index.md).
+Questo articolo consente di iniziare a distribuire .NET Framework con l'applicazione. La maggior parte delle informazioni, sono destinate agli sviluppatori OEM e agli amministratori aziendali. È consigliabile che gli utenti che vogliono installare .NET Framework leggano [Installare .NET Framework](../install/index.md).
 
 ## <a name="key-deployment-resources"></a>Risorse principali di distribuzione
 
@@ -32,9 +32,9 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - Opzioni del programma di installazione:
 
-    - [Programma di installazione Web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Programma di installazione Web](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Programma di installazione offline](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Programma di installazione offline](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Modalità di installazione:
 
@@ -44,9 +44,9 @@ Usare i seguenti collegamenti ad altri argomenti di MSDN per informazioni specif
 
   - [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
-- Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori): 
+- Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori):
 
   - [Uso di InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment) in un progetto di installazione e distribuzione
 
@@ -160,7 +160,7 @@ La modalità di distribuzione delle applicazioni dipende anche da alcune conside
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Description|
+|Titolo|DESCRIZIONE|
 |-----------|-----------------|
 |[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Descrive come Common Language Runtime determina l'assembly da usare per eseguire una richiesta di associazione.|
 |[Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Illustra come evitare problemi di identità del tipo che possono causare la generazione di eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori.|

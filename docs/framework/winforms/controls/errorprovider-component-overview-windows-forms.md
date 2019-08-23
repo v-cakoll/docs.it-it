@@ -8,26 +8,26 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: f2a97ab80cde00a47bbdf6830bdba325e1c9f3ef
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3cfd3f306d4a18ce8a194b5197060fbca1d157d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965292"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente ErrorProvider (Windows Form)
-I moduli di Windows [ErrorProvider](errorprovider-component-windows-forms.md) componente viene usato per convalidare l'input dell'utente in un form o controllo. Viene in genere usato in combinazione con la convalida dell'input utente in un form o visualizzare gli errori all'interno di un set di dati. Un provider di errore è un'alternativa migliore rispetto alla visualizzazione di un messaggio di errore in una finestra di messaggio perché una volta che viene chiusa una finestra di messaggio, il messaggio di errore non è più visibile. Il <xref:System.Windows.Forms.ErrorProvider> componente consente di visualizzare un'icona di errore (![un punto esclamativo bianco all'interno di un cerchio rosso.](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif)) accanto al relativo controllo, ad esempio una casella di testo; quando l'utente posiziona il puntatore del mouse sull'icona di errore, viene visualizzata una descrizione comando, che mostra la stringa di messaggio di errore.  
+Il componente Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) viene usato per convalidare l'input dell'utente in un form o un controllo. Viene in genere usato in combinazione con la convalida dell'input dell'utente in un form o la visualizzazione di errori all'interno di un set di dati. Un provider di errori è un'alternativa migliore rispetto alla visualizzazione di un messaggio di errore in una finestra di messaggio, perché quando una finestra di messaggio viene rilasciata, il messaggio di errore non è più visibile. Il <xref:System.Windows.Forms.ErrorProvider> componente Visualizza un'icona di errore![(un punto esclamativo bianco all'interno di](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif)un cerchio rosso) accanto al controllo pertinente, ad esempio una casella di testo. quando l'utente posiziona il puntatore del mouse sull'icona di errore, viene visualizzata una descrizione comando. visualizzazione della stringa del messaggio di errore.  
   
 ## <a name="key-properties"></a>Proprietà chiave  
- Il <xref:System.Windows.Forms.ErrorProvider> sono proprietà di chiave del componente <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, e <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Quando si usa <xref:System.Windows.Forms.ErrorProvider> componente con i controlli con associazione a dati, il <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> proprietà deve essere impostata per il contenitore appropriato (in genere il modulo di Windows) affinché il componente visualizzare un'icona di errore nel modulo. Quando il componente viene aggiunto nella finestra di progettazione, il <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> viene impostata al form contenitore; se si aggiunge il controllo nel codice, è necessario impostarlo manualmente.  
+ Le <xref:System.Windows.Forms.ErrorProvider> proprietà chiave del componente sono <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>e <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Quando si <xref:System.Windows.Forms.ErrorProvider> usa un componente con controlli associati a dati <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> , la proprietà deve essere impostata sul contenitore appropriato (in genere il Windows Form) affinché il componente visualizzi un'icona di errore nel form. Quando il componente viene aggiunto nella finestra di progettazione, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> la proprietà viene impostata sul form che lo contiene; se si aggiunge il controllo nel codice, è necessario impostarlo manualmente.  
   
- Il <xref:System.Windows.Forms.ErrorProvider.Icon%2A> proprietà può essere impostata su un'icona di errore personalizzato anziché il valore predefinito. Quando la <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> è impostata, il <xref:System.Windows.Forms.ErrorProvider> componente può visualizzare i messaggi di errore per un set di dati. Il metodo principale del <xref:System.Windows.Forms.ErrorProvider> componente è il <xref:System.Windows.Forms.ErrorProvider.SetError%2A> (metodo), che consente di specificare la stringa di messaggio di errore e dove dovrebbe essere visualizzata l'icona di errore.  
+ La <xref:System.Windows.Forms.ErrorProvider.Icon%2A> proprietà può essere impostata su un'icona di errore personalizzata anziché sul valore predefinito. Quando viene <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> impostata la proprietà, il <xref:System.Windows.Forms.ErrorProvider> componente può visualizzare i messaggi di errore per un set di dati. Il metodo principale del <xref:System.Windows.Forms.ErrorProvider> componente è il <xref:System.Windows.Forms.ErrorProvider.SetError%2A> metodo, che specifica la stringa del messaggio di errore e il punto in cui deve essere visualizzata l'icona di errore.  
   
 > [!NOTE]
->  Il <xref:System.Windows.Forms.ErrorProvider> componente non fornisce supporto incorporato per i client di accessibilità. Per rendere accessibile l'applicazione quando si usa questo componente, è necessario fornire un meccanismo di commenti e suggerimenti aggiuntivi, accessibile.  
+> Il <xref:System.Windows.Forms.ErrorProvider> componente non fornisce supporto incorporato per i client di accessibilità. Per rendere l'applicazione accessibile quando si utilizza questo componente, è necessario fornire un meccanismo aggiuntivo di feedback accessibile.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Procedura: Visualizzazione degli errori in un set di dati con il componente Windows Forms ErrorProvider](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Procedura: Visualizza le icone di errore per la convalida dei form con il componente Windows Forms ErrorProvider](display-error-icons-for-form-validation-with-wf-errorprovider.md)

@@ -2,19 +2,19 @@
 title: Provider di token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: e1520ef3e2faca88b06cc82ef5ab3035a857314a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969367"
 ---
 # <a name="token-provider"></a>Provider di token
-Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un provider di token di CardSpace. I provider di token personalizzati sono utili nei casi seguenti:
+Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire le credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il provider di token di gestione credenziali predefinito. WCF viene inoltre fornito con un provider di token CardSpace. I provider di token personalizzati sono utili nei casi seguenti:
 
 - Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.
 
-- Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.
+- Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto in cui l'utente fornisce i dettagli su quando il framework client WCF usa le credenziali.
 
 - Se si sta compilando un token personalizzato.
 
@@ -107,7 +107,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
 </system.serviceModel>
 ```
 
- La procedura seguente illustra come sviluppare un provider di token personalizzato e integrarlo nel framework di sicurezza di WCF:
+ Nei passaggi seguenti viene illustrato come sviluppare un provider di token personalizzato e come integrarlo con il Framework di sicurezza di WCF:
 
 1. Scrivere un provider di token personalizzati.
 
@@ -242,20 +242,20 @@ static void DisplayIdentityInformation()
     ```
 
 > [!NOTE]
->  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di SDK di Windows. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.
+> Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di SDK di Windows. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperto con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
-    >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.  
+    >  Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat.  
   
 2. Avviare service.exe da service\bin.  
   
@@ -265,7 +265,7 @@ static void DisplayIdentityInformation()
   
 5. Al prompt della password, utilizzare la stessa stringa digitata per il prompt del nome utente.  
   
-6. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2. Copiare i file di programma del servizio nella directory del servizio sul computer relativo. Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
   
-3. È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file Service.exe.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile creare il certificato server modificando il file batch Setup.bat. Si noti che il file Setup. bat deve essere eseguito da un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. È necessario impostare la variabile `%SERVER_NAME%` sul nome host completo del computer utilizzato per ospitare il servizio.  
+3. È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file Service.exe.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile creare il certificato server modificando il file batch Setup.bat. Si noti che il file Setup. bat deve essere eseguito da un Prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. È necessario impostare la variabile `%SERVER_NAME%` sul nome host completo del computer utilizzato per ospitare il servizio.  
   
 4. Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client. Questo passaggio non è necessario quando il certificato server è emesso da un'autorità emittente client attendibile.  
   
@@ -287,7 +287,7 @@ static void DisplayIdentityInformation()
   
 9. Sul computer client avviare `Client.exe` da una finestra del prompt dei comandi.  
   
-10. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

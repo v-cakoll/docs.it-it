@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967160"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedura: Specificare un'associazione al servizio nella configurazione
-In questo esempio viene definito un contratto `ICalculator` per un servizio calcolatrice di base, il servizio viene implementato nella classe `CalculatorService`, quindi l'endpoint relativo viene configurato nel file Web.config dove viene specificato che il servizio utilizza <xref:System.ServiceModel.BasicHttpBinding>. Per una descrizione di come configurare questo servizio utilizzando codice anziché una configurazione, vedere [come: Specificare un'associazione al servizio nel codice](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
+In questo esempio viene definito un contratto `ICalculator` per un servizio calcolatrice di base, il servizio viene implementato nella classe `CalculatorService`, quindi l'endpoint relativo viene configurato nel file Web.config dove viene specificato che il servizio utilizza <xref:System.ServiceModel.BasicHttpBinding>. Per una descrizione di come configurare questo servizio usando codice anziché una configurazione, vedere [procedura: Specificare un'associazione al servizio nel](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)codice.  
   
  La procedura solitamente consigliata consiste nello specificare in modo dichiarativo l'associazione e le informazioni dell'indirizzo nella configurazione anziché in modo imperativo nel codice. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. Più in generale, se le informazioni su associazione e indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
   
- Tutti i passaggi di configurazione seguenti possono essere effettuati utilizzando il [dello strumento Editor di configurazione (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ È possibile eseguire tutti i passaggi di configurazione seguenti utilizzando lo [strumento Editor di configurazione (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Per la copia di origine di questo esempio, vedere [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).  
+ Per la copia di origine di questo esempio, vedere l'oggetto di [base](../../../docs/framework/wcf/samples/basicbinding.md).  
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Per specificare l'elemento BasicHttpBinding necessario per la configurazione del servizio  
   
@@ -34,7 +34,7 @@ In questo esempio viene definito un contratto `ICalculator` per un servizio calc
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
   
     > [!NOTE]
-    >  L'indirizzo o le informazioni di associazione non sono specificate nell'implementazione del servizio. Non è necessario, inoltre, scrivere codice per recuperare le informazioni dal file di configurazione.  
+    > L'indirizzo o le informazioni di associazione non sono specificate nell'implementazione del servizio. Non è necessario, inoltre, scrivere codice per recuperare le informazioni dal file di configurazione.  
   
 3. Creare un file Web.config per configurare un endpoint per l'elemento  `CalculatorService` che utilizza la classe <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -81,7 +81,7 @@ In questo esempio viene definito un contratto `ICalculator` per un servizio calc
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Per modificare i valori predefiniti delle proprietà dell'associazione  
   
-1. Per modificare uno dei valori delle proprietà predefinito il <xref:System.ServiceModel.WSHttpBinding>, creare un nuovo nome di configurazione di associazione - `<binding name="Binding1">` - interno il [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento e impostare i nuovi valori per gli attributi del associazione in questo elemento di associazione. Per impostare, ad esempio valori di timeout di apertura e chiusura predefiniti di 1-2 minuti, aggiungere quanto segue nel file di configurazione.  
+1. Per modificare uno dei valori di proprietà predefiniti di <xref:System.ServiceModel.WSHttpBinding>, creare un nuovo nome di configurazione dell'associazione, nell' `<binding name="Binding1">` [ \<elemento WSHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e impostare i nuovi valori per gli attributi dell'associazione in questa associazione. elemento. Per impostare, ad esempio valori di timeout di apertura e chiusura predefiniti di 1-2 minuti, aggiungere quanto segue nel file di configurazione.  
   
     ```xml  
     <wsHttpBinding>  

@@ -3,20 +3,20 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940223"
 ---
 # <a name="etwtracking"></a>\<etwTracking>
-Comportamento del servizio che consente a un servizio utilizzare rilevamento ETW mediante un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+Comportamento del servizio che consente a un servizio di utilizzare il rilevamento ETW utilizzando <xref:System.Activities.Tracking.EtwTrackingParticipant>un oggetto.  
   
 \<system.ServiceModel>  
-\<behaviors>  
+\<comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<etwTracking>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -47,7 +47,7 @@ Comportamento del servizio che consente a un servizio utilizzare rilevamento ETW
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento > di \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
+|[\<comportamento > di \<serviceBehaviors >](behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
  Quando viene aggiunto alla configurazione del comportamento del servizio, questo elemento di configurazione configura un partecipante del rilevamento su un servizio flusso di lavoro.  
@@ -57,7 +57,7 @@ Comportamento del servizio che consente a un servizio utilizzare rilevamento ETW
 ## <a name="example"></a>Esempio  
  Nell'esempio di configurazione seguente viene mostrato il partecipante del rilevamento ETW standard configurato nel file Web.config.  
   
- L'Id del Provider usato dal partecipante del rilevamento ETW per scrivere i record di rilevamento in ETW è definito nel  **\<diagnostica >** sezione. Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Ciò viene definito dal **profileName** attributo il  **\<aggiungere >** elemento. Dopo aver definito tali elementi, viene aggiunto il partecipante di rilevamento per il  **\<etwTracking >** comportamento del servizio. che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
+ L'ID del provider utilizzato dal partecipante del rilevamento ETW per la scrittura dei record di rilevamento in ETW è definito nella  **\<sezione diagnostica >** . Al partecipante di rilevamento è associato un profilo per specificare i record di rilevamento che ha sottoscritto. Questa operazione viene definita dall' attributo ProfileName dell'  **\<elemento Add >** . Una volta definiti, il partecipante del rilevamento viene aggiunto al comportamento  **\<** del servizio > di etwTracking. che aggiungerà i partecipanti del rilevamento selezionati alle estensioni dell'istanza del flusso di lavoro, in modo che inizino a ricevere i record di rilevamento.  
   
 ```xml  
 <configuration>   
@@ -88,5 +88,5 @@ Comportamento del servizio che consente a un servizio utilizzare rilevamento ETW
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Partecipanti di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [Rilevamento e analisi del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Partecipanti di rilevamento](../../../windows-workflow-foundation/tracking-participants.md)

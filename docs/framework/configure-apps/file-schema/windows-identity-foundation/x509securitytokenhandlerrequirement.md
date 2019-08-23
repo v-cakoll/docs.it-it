@@ -3,15 +3,15 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2851820460a34d62175929b48ad57914df557059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945174"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-Fornisce una configurazione facoltativa per il <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> classe o le classi derivate.  
+Fornisce la configurazione facoltativa <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> per la classe o le classi derivate.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -46,20 +46,20 @@ Fornisce una configurazione facoltativa per il <xref:System.IdentityModel.Tokens
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|certificateValidationMode|Un <xref:System.ServiceModel.Security.X509CertificateValidationMode> valore che specifica la modalità di convalida da utilizzare per il certificato X.509. Il valore predefinito è "PeerOrChainTrust".|  
-|mapToWindows|Specifica se il gestore di token deve mappare il token di convalida a un account di Windows usando l'attestazione UPN in ingresso. Il valore predefinito è "false".|  
-|revocationMode|Un <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valore che specifica la modalità di revoche di certificati da utilizzare per il certificato X.509. Il valore predefinito è "Online".|  
-|trustedStoreLocation|Oggetto <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica l'archivio certificati X.509. Il valore predefinito è "LocalMachine".|  
-|certificateValidator|Un tipo personalizzato che deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Se il `certificateValidationMode` attributo è "Custom", un'istanza di questo tipo viene usata per la convalida del certificato dell'autorità di certificazione.|  
+|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Valore che specifica la modalità di convalida da utilizzare per il certificato X. 509. Il valore predefinito è "PeerOrChainTrust".|  
+|mapToWindows|Specifica se il gestore di token deve eseguire il mapping del token di convalida a un account di Windows tramite l'attestazione UPN in ingresso. Il valore predefinito è "false".|  
+|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Valore che specifica la modalità di revoca da utilizzare per il certificato X. 509. Il valore predefinito è "online".|  
+|trustedStoreLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Valore che specifica l'archivio certificati X. 509. Il valore predefinito è "LocalMachine".|  
+|certificateValidator|Tipo personalizzato che deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Se l' `certificateValidationMode` attributo è "Custom", un'istanza di questo tipo viene utilizzata per la convalida del certificato dell'autorità emittente.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge il gestore di token di sicurezza specificato nella raccolta di gestori di token.|  
+|[\<add>](add.md)|Aggiunge il gestore del token di sicurezza specificato alla raccolta di gestori di token.|  
   
 ## <a name="example"></a>Esempio  
   

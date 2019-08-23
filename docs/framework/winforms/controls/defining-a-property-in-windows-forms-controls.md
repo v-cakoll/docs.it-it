@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969121"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definizione di una proprietà nei controlli Windows Form
 Per una panoramica delle proprietà, vedere [Cenni preliminari sulle proprietà](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Quando si definisce una proprietà sono da considerare i seguenti elementi:  
   
 - È necessario applicare attributi alle proprietà definite. Gli attributi specificano l'aspetto di una proprietà in una progettazione. Per informazioni dettagliate, vedere [Attributi per componenti in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A> a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo), che consente di ricreare il controllo. Più chiamate alla <xref:System.Windows.Forms.Control.Invalidate%2A> comportare una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
+- Se la modifica della proprietà influisca sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (da <xref:System.Windows.Forms.Control>cui il controllo eredita) dalla `set` funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A>chiama a sua volta <xref:System.Windows.Forms.Control.OnPaint%2A> il metodo, che consente di ricreare il controllo. Più chiamate a <xref:System.Windows.Forms.Control.Invalidate%2A> hanno come risultato una singola chiamata <xref:System.Windows.Forms.Control.OnPaint%2A> a per l'efficienza.  
   
 - La libreria di classi .NET Framework fornisce convertitori di tipi per tipi di dati comuni, ad esempio numeri interi, numeri decimali, valori booleani e altri. Lo scopo di un convertitore di tipi è in genere quello di fornire la conversione da stringa a valore (da dati stringa in altri tipi di dati). I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe in tipi di dati appropriati. Se si definisce una proprietà che è un tipo di dati personalizzati (vale a dire non standard), è necessario applicare un attributo che specifica il convertitore di tipi da associare a tale proprietà. È inoltre possibile usare un attributo per associare un editor di tipi dell'interfaccia utente personalizzato a una proprietà. Un editor di tipi dell'interfaccia utente fornisce un'interfaccia utente per la modifica di un tipo di dati o proprietà. La selezione colori è un esempio di un editor di tipi dell'interfaccia utente. Alla fine di questo argomento vengono forniti esempi di attributi.  
   
     > [!NOTE]
-    >  Se un convertitore di tipi o un editor di tipi dell'interfaccia utente non è disponibile per la proprietà personalizzata, è possibile implementarne uno come descritto in [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
+    > Se un convertitore di tipi o un editor di tipi dell'interfaccia utente non è disponibile per la proprietà personalizzata, è possibile implementarne uno come descritto in [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
   
  Il frammento di codice seguente definisce una proprietà personalizzata, chiamata `EndColor`, per il controllo personalizzato `FlashTrackBar`.  
   
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Nel frammento di codice seguente, un convertitore di tipi viene associato a un editor di tipi dell'interfaccia utente con la proprietà `Value`. In questo caso `Value` è un integer e dispone di un convertitore di tipi predefiniti, ma la <xref:System.ComponentModel.TypeConverterAttribute> attributo viene applicato un convertitore di tipi personalizzati (`FlashTrackBarValueConverter`) che consente la finestra di progettazione per visualizzarlo come percentuale. L'editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor`, consente di rappresentare visivamente la percentuale. In questo esempio viene inoltre mostrato che il convertitore di tipi o editor specificato dal <xref:System.ComponentModel.TypeConverterAttribute> o <xref:System.ComponentModel.EditorAttribute> attributo esegue l'override del convertitore predefinito.  
+ Nel frammento di codice seguente, un convertitore di tipi viene associato a un editor di tipi dell'interfaccia utente con la proprietà `Value`. In questo caso `Value` è un numero intero e ha un convertitore di tipi predefinito, <xref:System.ComponentModel.TypeConverterAttribute> ma l'attributo applica un convertitore di`FlashTrackBarValueConverter`tipi personalizzato () che consente alla finestra di progettazione di visualizzarlo come percentuale. L'editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor`, consente di rappresentare visivamente la percentuale. Questo esempio mostra inoltre che il convertitore di tipi o l'editor specificato <xref:System.ComponentModel.TypeConverterAttribute> dall' <xref:System.ComponentModel.EditorAttribute> attributo o esegue l'override del convertitore predefinito.  
   
 ```vb  
 <Category("Flash"), _  

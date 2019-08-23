@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 38a34a4662d969fd526963744b8bd493952d9cff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d26932c23299c6fbcb53b1389abd7694f529eef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615080"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963321"
 ---
 # <a name="withend-with-statement-visual-basic"></a>Istruzione With...End With (Visual Basic)
 Esegue una serie di istruzioni che fanno riferimento più volte a un singolo oggetto o struttura in modo da poter utilizzare una sintassi semplificata per le istruzioni quando si accede ai membri dell'oggetto o della struttura.  Quando si utilizza una struttura, è possibile leggere solo i valori dei membri o i metodi invoke e ottenere un errore se si tenta di assegnare valori ai membri di una struttura utilizzata in un'istruzione `With...End With`.  
@@ -37,9 +37,9 @@ End With
   
 |Termine|Definizione|  
 |---|---|  
-|`objectExpression`|Obbligatorio. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|  
-|`statements`|Facoltativo. Una o più istruzioni tra `With` e `End With` che possono fare riferimento ai membri di un oggetto che verrà prodotto dalla valutazione di `objectExpression`.|  
-|`End With`|Obbligatorio. Termina la definizione del blocco `With`.|  
+|`objectExpression`|Richiesto. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|  
+|`statements`|facoltativo. Una o più istruzioni tra `With` e `End With` che possono fare riferimento ai membri di un oggetto che verrà prodotto dalla valutazione di `objectExpression`.|  
+|`End With`|Richiesto. Termina la definizione del blocco `With`.|  
   
 ## <a name="remarks"></a>Note  
  Utilizzando `With...End With`, è possibile eseguire una serie di istruzioni in un oggetto specificato senza specificare il nome dell'oggetto più volte. All'interno di un blocco di istruzioni `With`, è possibile specificare un membro dell'oggetto che inizia con un punto, come se l'oggetto dell'istruzione `With` lo precedesse.  
@@ -62,10 +62,10 @@ End With
   
  Non è consentita la creazione di rami in un'istruzione `With` dall'esterno del blocco.  
   
- A meno che il blocco non contenga un ciclo, le istruzioni vengono eseguite una sola volta. È possibile annidare tipi diversi di strutture di controllo. Per altre informazioni, vedere [strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ A meno che il blocco non contenga un ciclo, le istruzioni vengono eseguite una sola volta. È possibile annidare tipi diversi di strutture di controllo. Per altre informazioni, vedere [strutture di controlli annidati](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
->  È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per altre informazioni ed esempi, vedere [gli inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+> È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per ulteriori informazioni ed esempi, vedere [inizializzatori di oggetto: Tipi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) denominati e anonimi e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
 >   
 >  Se si utilizza un blocco `With` solo per inizializzare le proprietà o i campi di un oggetto di cui è stata appena creata un'istanza, è possibile utilizzare un inizializzatore di oggetto.  
   

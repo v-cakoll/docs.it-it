@@ -2,21 +2,21 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962620"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
-Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
+Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transazionale. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
 
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
 > [!NOTE]
->  Questo esempio dimostra la coda di messaggi non recapitabili di ciascuna applicazione che è disponibile solo su [!INCLUDE[wv](../../../../includes/wv-md.md)]. L'esempio può essere modificato per usare le code a livello di sistema predefinite per MSMQ 3.0 su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Questo esempio dimostra la coda di messaggi non recapitabili di ciascuna applicazione che è disponibile solo su [!INCLUDE[wv](../../../../includes/wv-md.md)]. L'esempio può essere modificato per usare le code a livello di sistema predefinite per MSMQ 3.0 su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.
 
@@ -26,11 +26,11 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 - Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
 
-- `None`: Coda dei messaggi non recapitabili è richiesto dal client.
+- `None`: Non è richiesta alcuna coda dei messaggi non recapitabili da parte del client.
 
-- `System`: La coda del sistema viene usato per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
+- `System`: La coda dei messaggi non recapitabili di sistema viene utilizzata per archiviare i messaggi non recapitabili. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
 
-- `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
+- `Custom`: Una coda di messaggi non recapitabili personalizzata <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> specificata utilizzando la proprietà viene utilizzata per archiviare i messaggi non recapitabili. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
 - Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- Il codice del servizio nell'esempio è quello del [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ Il codice del servizio nell'esempio è quello dell' [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)transazionale.
 
  La comunicazione con il servizio avviene all'interno dell'ambito di una transazione. Il servizio legge messaggi dalla coda, esegue l'operazione e quindi visualizza i risultati dell'operazione. L'applicazione crea anche una coda per i messaggi non recapitabili.
 
@@ -111,7 +111,7 @@ class Client
  La configurazione del client specifica una durata breve per il raggiungimento del servizio da parte del messaggio. Se il messaggio non può essere trasmesso entro la durata specificata, scade e viene spostato nella coda di messaggi non recapitabili.
 
 > [!NOTE]
->  Per il client è possibile recapitare il messaggio alla coda del servizio entro il periodo specificato. Per garantire di vedere il servizio dei messaggi non recapitabili in azione, è necessario eseguire il client prima di avviare il servizio. Il messaggio scade e viene recapitato al servizio messaggi non recapitabili.
+> Per il client è possibile recapitare il messaggio alla coda del servizio entro il periodo specificato. Per garantire di vedere il servizio dei messaggi non recapitabili in azione, è necessario eseguire il client prima di avviare il servizio. Il messaggio scade e viene recapitato al servizio messaggi non recapitabili.
 
  L'applicazione deve definire quale coda usare per i messaggi non recapitabili. Se non viene specificata alcuna coda, per accodare i messaggi non recapitabili viene usata la coda di messaggi non recapitabili relativi a transazioni a livello di sistema. In questo esempio, l'applicazione client specifica la propria coda di messaggi non recapitabili.
 
@@ -149,7 +149,7 @@ class Client
  Il servizio di messaggi non recapitabili legge i messaggi dalla coda di messaggi non recapitabili. Il servizio messaggi non recapitabili implementa il contratto `IOrderProcessor`. La relativa implementazione tuttavia non ha lo scopo di elaborare ordini. Il servizio messaggi non recapitabili è un servizio client e non ha funzionalità per elaborare ordini.
 
 > [!NOTE]
->  La coda di messaggi non recapitabili è una coda client ed è locale per il gestore delle code client.
+> La coda di messaggi non recapitabili è una coda client ed è locale per il gestore delle code client.
 
  L'implementazione del servizio messaggi non recapitabili verifica la ragione del mancato recapito di un messaggio e adotta misure correttive. La ragione di un errore di messaggio viene acquisita in due enumerazioni, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> e <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. È possibile recuperare la <xref:System.ServiceModel.Channels.MsmqMessageProperty> dal <xref:System.ServiceModel.OperationContext> come illustrato nel codice di esempio seguente:
 
@@ -268,7 +268,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
  Nell'esempio, per visualizzare il funzionamento della coda di messaggi non recapitabili per ciascuna applicazione è necessario eseguire 3 file eseguibili: il client, il servizio e un servizio messaggi non recapitabili che legge dalla coda di messaggi non recapitabili di ciascuna applicazione e reinvia il messaggio al servizio. Tutte sono applicazioni console con output in finestre di console.
 
 > [!NOTE]
->  Poiché viene usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi. È necessario avviare il servizio e arrestarlo per consentire la creazione della coda.
+> Poiché viene usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi. È necessario avviare il servizio e arrestarlo per consentire la creazione della coda.
 
  Quando viene seguito, il client visualizza il messaggio.
 
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1. Aprire Server Manager in Visual Studio 2012.
 
-    2. Espandere la **funzionalità** scheda.
+    2. Espandere la scheda **funzionalità** .
 
-    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare clic con il pulsante destro del mouse su **code di messaggi private**e selezionare **nuova**, **coda privata**.
 
-    4. Verificare i **transazionale** casella.
+    4. Controllare la casella transazionale.
 
-    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Per eseguire l'esempio in una coda di modifica configurazione singola o tra computer nomi in modo appropriato, sostituendo localhost con il nome completo del computer e seguire le istruzioni riportate in [che eseguono gli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione singola o tra più computer, modificare i nomi della coda in modo appropriato, sostituendo localhost con il nome completo del computer e seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro
 
@@ -350,13 +350,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.
 
 ## <a name="comments"></a>Commenti
- Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Interno accodamento dell'utente messaggi certificati non esiste".
+ Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Il certificato di Accodamento messaggi interno dell'utente non esiste".
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

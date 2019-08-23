@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0925cf217afafe57abf82cf51a77b1992bad5152
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993681"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966836"
 ---
 # <a name="icordebugvalue2-interface"></a>Interfaccia ICorDebugValue2
-Estende l'interfaccia "ICorDebugValue" per fornire il supporto per gli oggetti "ICorDebugType".  
+Estende l'interfaccia "ICorDebugValue" per fornire supporto per gli oggetti "ICorDebugType".  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Ottiene un puntatore a interfaccia a un `ICorDebugType` oggetto che rappresenta il <xref:System.Type> di questo valore.|  
+|[Metodo GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Ottiene un puntatore a interfaccia a `ICorDebugType` un oggetto che rappresenta <xref:System.Type> l'oggetto di questo valore.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

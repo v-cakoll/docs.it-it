@@ -2,28 +2,28 @@
 title: 'Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f25e71aec03f9808b3263f0353328f92888ccc69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378125"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962309"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente
-Le funzionalità di .NET framework 4.5 una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
+.NET Framework 4,5 offre una migliore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro di primo contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto.  
   
 > [!NOTE]
->  In questo argomento viene fornito materiale sussidiario dettagliato per la creazione di un servizio del flusso di lavoro con priorità al contratto ("contract-first"). Per altre informazioni sullo sviluppo di flussi di lavoro contratto di servizio, vedere [sviluppo del servizio del flusso di lavoro prima Contract](contract-first-workflow-service-development.md).  
+> In questo argomento viene fornito materiale sussidiario dettagliato per la creazione di un servizio del flusso di lavoro con priorità al contratto ("contract-first"). Per ulteriori informazioni sullo sviluppo di servizi del flusso di lavoro con il primo contratto, vedere [sviluppo del servizio del flusso di lavoro](contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Creazione del progetto flusso di lavoro  
   
-1. In Visual Studio, selezionare **File**, **nuovo progetto**. Selezionare il **WCF** nodo sotto il **C#** nodo il **modelli** della struttura ad albero e selezionare il **applicazione del servizio del flusso di lavoro WCF** modello.  
+1. In Visual Studio selezionare **file**, **nuovo progetto**. Selezionare il nodo **WCF** sotto il **C#** nodo nell'albero dei **modelli** e selezionare il modello **applicazione del servizio flusso di lavoro WCF** .  
   
-2. Denominare il nuovo progetto `ContractFirst` e fare clic su **accettabile**.  
+2. Assegnare un nome al `ContractFirst` nuovo progetto e fare clic su **OK**.  
   
 ### <a name="creating-the-service-contract"></a>Creazione del contratto di servizio  
   
-1. Fare clic sul progetto in **Esplora soluzioni** e selezionare **Add**, **nuovo elemento...** . Selezionare il **codice** nodo a sinistra e il **classe** modello sul lato destro. Denominare la nuova classe `IBookService` e fare clic su **accettabile**.  
+1. Fare clic con il pulsante destro del mouse sul progetto **Esplora soluzioni** e scegliere **Aggiungi**, **nuovo elemento...** . Selezionare il nodo del **codice** a sinistra e il modello di **classe** a destra. Assegnare un nome alla `IBookService` nuova classe e fare clic su **OK**.  
   
 2. Nella parte superiore della finestra del codice visualizzata, aggiungere un'istruzione Using a `System.Servicemodel`.  
   
@@ -45,20 +45,20 @@ Le funzionalità di .NET framework 4.5 una maggiore integrazione tra i servizi w
         }  
     ```  
   
-4. Compilare il progetto premendo **Ctrl + MAIUSC + B**.  
+4. Compilare il progetto premendo **CTRL + MAIUSC + B**.  
   
 ### <a name="importing-the-service-contract"></a>Importazione del contratto di servizio  
   
-1. Fare clic sul progetto in **Esplora soluzioni** e selezionare **Importa contratto del servizio**. Sotto  **\<progetto corrente >** , aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**.  
+1. Fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e selezionare **Importa contratto del servizio**. **In\<progetto corrente >** aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**.  
   
 2. Verrà visualizzata una finestra di dialogo indicante che l'operazione è stata completata correttamente e che le attività generate verranno inserite nella casella degli strumenti dopo che il progetto sarà stato compilato. Fare clic su **OK**.  
   
-3. Compilare il progetto premendo **Ctrl + MAIUSC + B**, in modo che le attività importate saranno visualizzate nella casella degli strumenti.  
+3. Compilare il progetto premendo **CTRL + MAIUSC + B**, in modo che le attività importate verranno visualizzate nella casella degli strumenti.  
   
-4. Nelle **Esplora soluzioni**, aprire il file Service1.xamlx. Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
+4. In **Esplora soluzioni**Aprire Service1. xamlx. Il servizio del flusso di lavoro verrà visualizzata nella finestra di progettazione.  
   
-5. Selezionare il **sequenza** attività. Nella finestra Proprietà, fare clic su di **...** pulsante di **ImplementedContract** proprietà. Nel **Editor raccolta di tipi** finestra visualizzata, fare clic sui **tipo** elenco a discesa e selezionare il **Cerca tipi...** voce. Nel **individuare e selezionare un tipo .NET** finestra di dialogo, sotto  **\<progetto corrente >** , aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**. Nel **Editor raccolta di tipi** finestra di dialogo, fare clic su **OK**.  
+5. Selezionare l'attività **Sequence** . Nella Finestra Proprietà fare clic su **...** nella proprietà **implementedContract** . Nella finestra **Editor della raccolta di tipi** che viene visualizzata fare clic sull'elenco a discesa **tipo** e selezionare **Cerca tipi...** voce. Nella finestra di dialogo **Cerca e seleziona un tipo .NET** ,  **\<in progetto corrente >** , aprire tutti i sottonodi e selezionare **IBookService**. Fare clic su **OK**. Nella finestra di dialogo **Editor raccolta di tipi** fare clic su **OK**.  
   
-6. Selezionare ed eliminare le **ReceiveRequest** e **SendResponse** attività.  
+6. Selezionare ed eliminare le attività **ReceiveRequest** e **SendResponse** .  
   
-7. Dalla casella degli strumenti, trascinare un **Buy_ReceiveAndSendReply** e una **Checkout_Receive** attività sul **Sequential Service** attività.
+7. Dalla casella degli strumenti trascinare un **Buy_ReceiveAndSendReply** e un'attività **Checkout_Receive** nell'attività **sequenziale del servizio** .

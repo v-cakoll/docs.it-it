@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965225"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integrazione di System.Transactions con SQL Server
-.NET Framework versione 2.0 introdotto un framework per le transazioni che sono accessibili tramite il <xref:System.Transactions> dello spazio dei nomi. Questo framework espone le transazioni in un modo completamente integrato in .NET Framework, tra cui ADO.NET.  
+Nel .NET Framework versione 2,0 è stato introdotto un Framework di transazione a cui è <xref:System.Transactions> possibile accedere tramite lo spazio dei nomi. Questo framework espone le transazioni in modo completamente integrato nel .NET Framework, incluso ADO.NET.  
   
- Oltre a miglioramenti della programmabilità, <xref:System.Transactions> e ADO.NET possono lavorare insieme per coordinare le ottimizzazioni quando si utilizzano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
+ Oltre ai miglioramenti apportati alla programmabilità <xref:System.Transactions> , e ADO.NET possono interagire per coordinare le ottimizzazioni quando si utilizzano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
   
- A partire da ADO.NET 2.0, <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si lavora con SQL Server. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
+ A partire da ADO.NET 2,0 <xref:System.Data.SqlClient> , supporta le transazioni promuovibili quando si lavora con SQL Server. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
   
- Le transazioni promuovibili sono disponibili solo quando si usa il Provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server.  
+ Le transazioni promuovibili sono disponibili solo quando si usa il .NET Framework provider di dati per`SqlClient`SQL Server () con SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Creazione di transazioni promuovibili  
- Il Provider .NET Framework per SQL Server fornisce il supporto per le transazioni promuovibili, che vengono gestite tramite le classi in .NET Framework <xref:System.Transactions> dello spazio dei nomi. Le transazioni promuovibili consentono di ottimizzare le transazioni distribuite rinviandone la creazione finché non è richiesta. Se è necessario un solo gestore di risorse, non si verificherà alcuna transazione distribuita.  
+ Il provider .NET Framework per SQL Server fornisce il supporto per le transazioni promuovibili, che vengono gestite tramite le classi <xref:System.Transactions> nello spazio dei nomi .NET Framework. Le transazioni promuovibili consentono di ottimizzare le transazioni distribuite rinviandone la creazione finché non è richiesta. Se è necessario un solo gestore di risorse, non si verificherà alcuna transazione distribuita.  
   
 > [!NOTE]
->  In un scenario ad attendibilità parziale è richiesto <xref:System.Transactions.DistributedTransactionPermission> quando una transazione viene promossa a transazione distribuita.  
+> In un scenario ad attendibilità parziale è richiesto <xref:System.Transactions.DistributedTransactionPermission> quando una transazione viene promossa a transazione distribuita.  
   
 ## <a name="promotable-transaction-scenarios"></a>Scenari di transazioni promuovibili  
- In genere, le transazioni distribuite richiedono un notevole utilizzo delle risorse, in quanto sono gestite da Microsoft Distributed Transaction Coordinator (MS DTC) che integra tutti i gestori delle risorse a cui si accede nella transazione. Una transazione promuovibile è una forma speciale di un <xref:System.Transactions> transazione che delega in modo efficiente il lavoro da una semplice transazione di SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, e SQL Server coordinano le operazioni relative alla gestione della transazione, promuovendola a una piena transazione distribuita in base alle esigenze.  
+ In genere, le transazioni distribuite richiedono un notevole utilizzo delle risorse, in quanto sono gestite da Microsoft Distributed Transaction Coordinator (MS DTC) che integra tutti i gestori delle risorse a cui si accede nella transazione. Una transazione promuovibile è una forma speciale di <xref:System.Transactions> transazione che delega efficacemente il lavoro a una semplice transazione di SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>e SQL Server coordinano il lavoro necessario per gestire la transazione, promuovendo tale operazione a una transazione distribuita completa in base alle esigenze.  
   
  Il vantaggio derivante dall'utilizzo delle transazioni promuovibili consiste nel fatto che quando si apre una connessione tramite un transazione <xref:System.Transactions.TransactionScope> attiva e non sono presenti altre transazioni aperte, viene eseguito il commit della transazione come tipo semplice, anziché provocare l'overhead aggiuntivo di una piena transazione distribuita.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "65880585"
  Se viene generata un'eccezione all'interno di <xref:System.Transactions.TransactionScope>, la transazione viene contrassegnata come incoerente e viene interrotta. Il rollback verrà eseguito quando viene eliminato il tipo <xref:System.Transactions.TransactionScope> . Se non viene generata alcuna eccezione, verrà eseguito il commit delle transazioni presenti.  
   
 > [!NOTE]
->  Per impostazione predefinita, la classe `TransactionScope` crea una transazione in cui il valore di <xref:System.Transactions.Transaction.IsolationLevel%2A> è `Serializable` . A seconda dell'applicazione in uso, potrebbe essere necessario ridurre il livello di isolamento per evitare un'elevata possibilità di conflitto nell'applicazione.  
+> Per impostazione predefinita, la classe `TransactionScope` crea una transazione in cui il valore di <xref:System.Transactions.Transaction.IsolationLevel%2A> è `Serializable` . A seconda dell'applicazione in uso, potrebbe essere necessario ridurre il livello di isolamento per evitare un'elevata possibilità di conflitto nell'applicazione.  
   
 > [!NOTE]
->  Si consiglia di eseguire solo operazioni di aggiornamento, inserimento ed eliminazione all'interno delle transazioni distribuite, poiché comportano un utilizzo notevole delle risorse di database. Le istruzioni SELECT possono bloccare le risorse di database inutilmente e, in alcuni scenari, può essere necessario usare le transazioni per questo tipo di istruzioni. È necessario eseguire le operazioni non di database al di fuori dell'ambito della transazione, a meno che non richiedano altri gestori di risorse transazionali. Sebbene un'eccezione nell'ambito della transazione impedisca l'esecuzione del commit, la classe <xref:System.Transactions.TransactionScope> non è in grado di eseguire il rollback delle modifiche apportate al codice al di fuori dell'ambito della transazione stessa. Per eseguire operazioni durante il rollback della transazione, è necessario scrivere la propria implementazione dell'interfaccia <xref:System.Transactions.IEnlistmentNotification> ed elencarla in modo esplicito nella transazione.  
+> Si consiglia di eseguire solo operazioni di aggiornamento, inserimento ed eliminazione all'interno delle transazioni distribuite, poiché comportano un utilizzo notevole delle risorse di database. Le istruzioni SELECT possono bloccare le risorse di database inutilmente e, in alcuni scenari, può essere necessario usare le transazioni per questo tipo di istruzioni. È necessario eseguire le operazioni non di database al di fuori dell'ambito della transazione, a meno che non richiedano altri gestori di risorse transazionali. Sebbene un'eccezione nell'ambito della transazione impedisca l'esecuzione del commit, la classe <xref:System.Transactions.TransactionScope> non è in grado di eseguire il rollback delle modifiche apportate al codice al di fuori dell'ambito della transazione stessa. Per eseguire operazioni durante il rollback della transazione, è necessario scrivere la propria implementazione dell'interfaccia <xref:System.Transactions.IEnlistmentNotification> ed elencarla in modo esplicito nella transazione.  
   
 ## <a name="example"></a>Esempio  
  Per usare <xref:System.Transactions> , è necessario un riferimento a System.Transactions.dll.  

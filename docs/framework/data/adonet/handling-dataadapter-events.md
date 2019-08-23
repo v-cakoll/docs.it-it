@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667067"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962751"
 ---
 # <a name="handling-dataadapter-events"></a>Gestione di eventi DataAdapter
 <xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati. Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.  
@@ -28,7 +28,7 @@ ms.locfileid: "61667067"
   
  È possibile usare la proprietà `Status` per determinare se si è verificato un errore durante l'operazione ed eventualmente per controllare le operazioni relative alle righe correnti e risultanti. Quando si verifica l'evento, la proprietà `Status` sarà uguale a `Continue` o `ErrorsOccurred`. Nella tabella seguente sono indicati i valori su cui è possibile impostare la proprietà `Status` per controllare le operazioni successive durante l'aggiornamento.  
   
-|Status|Descrizione|  
+|Stato|DESCRIZIONE|  
 |------------|-----------------|  
 |`Continue`|Continua l'operazione di aggiornamento.|  
 |`ErrorsOccurred`|Interrompe l'operazione di aggiornamento e genera un'eccezione.|  
@@ -39,7 +39,7 @@ ms.locfileid: "61667067"
   
  È inoltre possibile usare la proprietà `ContinueUpdateOnError` per gestire gli errori relativi alle righe aggiornate. Se `DataAdapter.ContinueUpdateOnError` è `true`, quando un aggiornamento di una riga determina la generazione di un'eccezione, il testo dell'eccezione viene inserito nelle informazioni `RowError` della stessa riga e l'elaborazione continua senza generare un'eccezione. In questo modo è possibile rispondere agli errori quando l'evento `Update` è completato, a differenza di quanto avviene con l'evento `RowUpdated` che consente di rispondere agli errori nel momento in cui si verificano.  
   
- Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi. Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp. Il `RowUpdated` gestore dell'evento aggiunge informazioni sull'errore per il `RowError` proprietà della riga del `DataSet`Elimina l'eccezione e continua l'elaborazione (riproducendo quindi il comportamento di `ContinueUpdateOnError`  =  `true`).  
+ Nell'esempio di codice seguente viene illustrato come aggiungere e rimuovere i gestori eventi. Il gestore dell'evento `RowUpdating` scrive un log di tutti i record eliminati con un timestamp. Il `RowUpdated` gestore eventi aggiunge informazioni sull'errore `RowError` alla proprietà `DataSet`della riga in, evita l'eccezione e continua l'elaborazione (il mirroring del comportamento di `ContinueUpdateOnError`  =  `true`).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -191,5 +191,5 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Gestione di eventi di set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [Gestione di eventi DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [Eventi](../../../../docs/standard/events/index.md)
+- [Eventi](../../../standard/events/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

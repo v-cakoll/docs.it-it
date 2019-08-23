@@ -2,18 +2,18 @@
 title: Utilizzo delle attività WF di .NET Framework 3.0 in .NET Framework 4 con l'attività Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: baca65da29fd0b18bd61f9b79ce82429faaed432
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3e7382b25e68c1b01bd11e015b9864ae32f25f9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364144"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965958"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Utilizzo delle attività WF di .NET Framework 3.0 in .NET Framework 4 con l'attività Interop
 L'attività <xref:System.Activities.Statements.Interop> è un'attività di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) che esegue il wrapping di un'attività di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) all'interno di un flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. L'attività di WF 3 può essere una singola attività foglia o un intero albero di attività. L'esecuzione (annullamento e gestione delle eccezioni inclusi) e la persistenza dell'attività di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] si verificano all'interno del contesto dell'istanza del flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione.  
   
 > [!NOTE]
->  L' <xref:System.Activities.Statements.Interop> attività non viene visualizzata nella casella degli strumenti di progettazione flussi di lavoro a meno che l'impostazione del **Framework di destinazione** del progetto del flusso di lavoro non sia impostata su **.NET Framework 4,5**.  
+> L' <xref:System.Activities.Statements.Interop> attività non viene visualizzata nella casella degli strumenti di progettazione flussi di lavoro a meno che l'impostazione del **Framework di destinazione** del progetto del flusso di lavoro non sia impostata su **.NET Framework 4,5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Criteri per l'uso di un'attività di WF 3 con un'attività di interoperabilità  
  Affinché un'attività di WF 3 venga eseguita correttamente all'interno di un'attività <xref:System.Activities.Statements.Interop>, devono essere soddisfatti i seguenti criteri:  

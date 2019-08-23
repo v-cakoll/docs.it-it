@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 472e92e4e7a69c437c66cc9f221ab357292c345e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 200ea1b9c046b8743699a549c07c0baaf285be39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769588"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965028"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>Metodo ICorDebugRegisterSet::SetRegisters
-`SetRegisters` non è implementata in .NET Framework versione 2.0. Non chiamare questo metodo.  
+`SetRegisters`non è implementato nella versione .NET Framework 2,0. Non chiamare questo metodo.  
   
 > [!NOTE]
->  Usare le operazioni di livello superiore, ad esempio [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) oppure [ICorDebugNativeFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).  
+> Utilizzare le operazioni di livello superiore, ad esempio [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) o [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,13 +41,13 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
- **Versioni di .NET framework:** 1.1, 1.0  
+ **Versioni .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Vedere anche
 

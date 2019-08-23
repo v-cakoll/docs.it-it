@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917043"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>Metodo ICorDebugFunction2::EnumerateNativeCode
-Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le istruzioni di codice nativo nella funzione di cui viene fatto riferimento dall'oggetto ICorDebugFunction2.  
+Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum che contiene le istruzioni di codice nativo nella funzione a cui fa riferimento questo oggetto ICorDebugFunction2.  
   
 > [!NOTE]
->  `EnumerateNativeCode` non è implementata nella versione corrente di .NET Framework.  
+> `EnumerateNativeCode`non è implementato nella versione corrente del .NET Framework.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,4 +39,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorDebug.idl, CorDebug.h
+ **Intestazione:** CorDebug. idl, CorDebug. h

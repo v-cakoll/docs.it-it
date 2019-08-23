@@ -8,20 +8,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933240"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strutture e altri elementi di programmazione (Visual Basic)
-È possibile usare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro. Le interazioni di utilizzano la stessa sintassi come questi elementi singolarmente.  
+È possibile utilizzare le strutture insieme a matrici, oggetti e procedure, nonché reciprocamente. Le interazioni utilizzano la stessa sintassi di questi elementi.  
   
 > [!NOTE]
->  Non è possibile inizializzare uno degli elementi struttura nella dichiarazione di struttura. È possibile assegnare valori solo agli elementi di una variabile che è stato dichiarato un tipo di struttura.  
+> Non è possibile inizializzare alcuno degli elementi della struttura nella dichiarazione della struttura. È possibile assegnare valori solo agli elementi di una variabile dichiarata come tipo di struttura.  
   
-## <a name="structures-and-arrays"></a>Strutture e le matrici  
+## <a name="structures-and-arrays"></a>Strutture e matrici  
  Una struttura può contenere una matrice come uno o più dei relativi elementi. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Accedere ai valori di una matrice all'interno di una struttura allo stesso modo si accede a una proprietà su un oggetto. Questa condizione è illustrata nell'esempio seguente.  
+ È possibile accedere ai valori di una matrice all'interno di una struttura nello stesso modo in cui si accede a una proprietà in un oggetto. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Oggetti e strutture  
- Una struttura può contenere un oggetto come uno o più dei relativi elementi. Questa condizione è illustrata nell'esempio seguente.  
+## <a name="structures-and-objects"></a>Strutture e oggetti  
+ Una struttura può contenere un oggetto come uno o più elementi. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,7 +66,7 @@ Protected Structure userInput
 End Structure  
 ```  
   
- È consigliabile usare una classe di oggetto specifico in tale dichiarazione, anziché `Object`.  
+ È consigliabile usare una classe di oggetti specifica in una dichiarazione di questo tipo `Object`, anziché.  
   
 ## <a name="structures-and-procedures"></a>Strutture e procedure  
  È possibile passare una struttura come argomento di routine. Questa condizione è illustrata nell'esempio seguente.  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Nell'esempio precedente passa la struttura *per riferimento*, che consente la procedura per modificare gli elementi in modo che le modifiche diventano effettive nel codice chiamante. Se si desidera proteggere una struttura da tali modifiche, passarlo come valore.  
+ Nell'esempio precedente la struttura viene passata *per riferimento*, che consente alla procedura di modificarne gli elementi in modo che le modifiche abbiano effetto nel codice chiamante. Se si desidera proteggere una struttura in base a tale modifica, passarla per valore.  
   
- È inoltre possibile restituire una struttura da una `Function` procedure. Questa condizione è illustrata nell'esempio seguente.  
+ È anche possibile restituire una struttura da una `Function` routine. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,7 +96,7 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Strutture all'interno delle strutture  
+## <a name="structures-within-structures"></a>Strutture all'interno di strutture  
  Le strutture possono contenere altre strutture. Questa condizione è illustrata nell'esempio seguente.  
   
 ```vb  

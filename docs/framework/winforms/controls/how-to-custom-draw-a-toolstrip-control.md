@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: fee3ee901f3f882091464d7c450f4f144d69a6e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935361"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Procedura: Eseguire un disegno personalizzato di un controllo ToolStrip
 Ai controlli <xref:System.Windows.Forms.ToolStrip> sono associate le classi di rendering (disegno) seguenti:  
@@ -47,7 +47,7 @@ Ai controlli <xref:System.Windows.Forms.ToolStrip> sono associate le classi di r
 - Eseguire l'override di <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ma senza chiamare la classe di base.  
   
 > [!NOTE]
->  Esiste una versione di questo metodo per <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer> e <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
+> Esiste una versione di questo metodo per <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer> e <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
 ### <a name="to-change-the-professionalcolortable"></a>Per modificare la classe ProfessionalColorTable  
   
@@ -139,5 +139,5 @@ Ai controlli <xref:System.Windows.Forms.ToolStrip> sono associate le classi di r
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Controlli con supporto predefinito per il disegno da parte del proprietario](controls-with-built-in-owner-drawing-support.md)
-- [Procedura: Creare e impostare un Renderer personalizzato per il controllo ToolStrip in Windows Form](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Procedura: Creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)

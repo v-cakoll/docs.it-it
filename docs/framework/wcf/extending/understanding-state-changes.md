@@ -2,12 +2,12 @@
 title: Informazioni sui cambiamenti di stato
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963079"
 ---
 # <a name="understanding-state-changes"></a>Informazioni sui cambiamenti di stato
 In questo argomento vengono descritti gli stati e le transizioni dei canali, i tipi utilizzati per strutturare gli stati dei canali e come implementarli.  
@@ -58,7 +58,7 @@ Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stat
  L'oggetto <xref:System.ServiceModel.Channels.CommunicationObject> fornisce le implementazioni di Abort, Close e Open oltre a un metodo Fault che causa la transizione dello stato a Faulted. Nella Figura 2 è illustrata la macchina a stati di <xref:System.ServiceModel.ICommunicationObject> unitamente a ogni transizione identificata dal metodo che la provoca (nell'implementazione del metodo che causa l'ultima transizione con etichetta si verificano transizioni senza etichetta).  
   
 > [!NOTE]
->  Tutte le implementazioni <xref:System.ServiceModel.Channels.CommunicationObject> dello stato della comunicazione get/set sono sincronizzate in base al thread.  
+> Tutte le implementazioni <xref:System.ServiceModel.Channels.CommunicationObject> dello stato della comunicazione get/set sono sincronizzate in base al thread.  
   
  Costruttore  
   
@@ -142,7 +142,7 @@ Eseguire l'override del metodo OnAbort per implementare logica di terminazione p
 |Aperto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Chiuso|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso un oggetto sia stato chiuso da una chiamata precedente ed esplicita ad Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
+|Chiuso|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso un oggetto sia stato chiuso da una chiamata precedente ed esplicita ad Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
 |Chiuso|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Non riuscito|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   

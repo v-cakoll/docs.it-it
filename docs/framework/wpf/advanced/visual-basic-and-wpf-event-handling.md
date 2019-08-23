@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972315"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942123"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e la gestione degli eventi WPF
 Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare la parola chiave `Handles` specifica del linguaggio per associare i gestori eventi alle istanze, anziché collegare i gestori eventi agli attributi o usando il <xref:System.Windows.UIElement.AddHandler%2A> metodo. Tuttavia, la tecnica `Handles` per collegare gestori alle istanze presenta alcuni limiti, in quanto la sintassi `Handles` non è in grado di supportare alcune delle funzioni degli eventi indirizzati specifiche del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -34,13 +34,13 @@ Per il linguaggio Microsoft Visual Basic .NET in particolare, è possibile usare
  `Handles` non è in grado di associare gestori richiamati per eventi che sono già contrassegnati come gestiti. Al contrario, è necessario usare il codice e `handledEventsToo` chiamare l' <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>overload di.  
   
 > [!NOTE]
->  Non usare la `Handles` sintassi nel codice Visual Basic quando si specifica un gestore eventi per lo stesso evento in XAML. In questo caso, il gestore eventi viene chiamato due volte.  
+> Non usare la `Handles` sintassi nel codice Visual Basic quando si specifica un gestore eventi per lo stesso evento in XAML. In questo caso, il gestore eventi viene chiamato due volte.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Come WPF implementa la funzionalità "Handles"  
  Quando una [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagina viene compilata, il file intermedio `Friend` `WithEvents` dichiara i riferimenti a ogni elemento nella pagina in <xref:System.Windows.FrameworkContentElement.Name%2A> cui è presente un set di proprietà (o una [direttiva x:Name](../../xaml-services/x-name-directive.md) dichiarata). Ogni istanza denominata è potenzialmente un elemento che può essere assegnato a un gestore tramite `Handles`.  
   
 > [!NOTE]
->  All' [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]interno di, IntelliSense consente di visualizzare il completamento per cui sono disponibili `Handles` elementi per un riferimento in una pagina. Tuttavia, tale operazione potrebbe richiedere un passaggio di compilazione che consenta al file intermedio di popolare tutti i riferimenti `Friends`.  
+> All' [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]interno di, IntelliSense consente di visualizzare il completamento per cui sono disponibili `Handles` elementi per un riferimento in una pagina. Tuttavia, tale operazione potrebbe richiedere un passaggio di compilazione che consenta al file intermedio di popolare tutti i riferimenti `Friends`.  
   
 ## <a name="see-also"></a>Vedere anche
 

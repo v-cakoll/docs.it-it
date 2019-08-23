@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965470"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedura: Creare ed eseguire il binding a una classe ObservableCollection
 In questo esempio viene illustrato come creare ed eseguire l'associazione a una raccolta che deriva <xref:System.Collections.ObjectModel.ObservableCollection%601> dalla classe, che è una classe di raccolte che fornisce notifiche quando gli elementi vengono aggiunti o rimossi.  
@@ -136,7 +136,7 @@ End Class
  La definizione di `NameItemTemplate` non viene mostrata qui.  
   
 > [!NOTE]
->  Gli oggetti nella raccolta devono soddisfare i requisiti descritti in [Cenni preliminari sulle origini del binding](binding-sources-overview.md). In particolare, se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (ad esempio, si desidera che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] venga aggiornato quando le proprietà di origine cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato della <xref:System.ComponentModel.INotifyPropertyChanged>proprietà,adesempiointerfaccia.  
+> Gli oggetti nella raccolta devono soddisfare i requisiti descritti in [Cenni preliminari sulle origini del binding](binding-sources-overview.md). In particolare, se si utilizza <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (ad esempio, si desidera che il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] venga aggiornato quando le proprietà di origine cambiano in modo dinamico), è necessario implementare un meccanismo di notifica appropriato modificato della <xref:System.ComponentModel.INotifyPropertyChanged>proprietà,adesempiointerfaccia.  
   
  Per altre informazioni, vedere la sezione Associazione alle raccolte in [Panoramica sul data binding](data-binding-overview.md).  
   

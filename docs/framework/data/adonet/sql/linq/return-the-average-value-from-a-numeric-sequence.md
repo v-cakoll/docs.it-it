@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963815"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Restituire il valore medio da una sequenza numerica
 L'operatore <xref:System.Linq.Enumerable.Average%2A> calcola la media di una sequenza di valori numerici.  
   
 > [!NOTE]
->  La conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di `Average` di valori integer viene calcolata come un valore integer, non come un valore double.  
+> La conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di `Average` di valori integer viene calcolata come un valore integer, non come un valore double.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la media dei valori `Freight` nella tabella `Orders`.  

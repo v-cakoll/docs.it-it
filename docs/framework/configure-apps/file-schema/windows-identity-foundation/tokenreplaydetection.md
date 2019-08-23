@@ -3,15 +3,15 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790494"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944290"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token.  
+Abilita il rilevamento della riproduzione dei token e specifica l'ora di scadenza per i token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -28,7 +28,7 @@ Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token
 </system.identityModel>  
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -38,20 +38,20 @@ Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Un valore che specifica se il rilevamento riproduzione token è abilitato; "true" per abilitare token rilevamento riproduzione.|  
-|expirationPeriod|Oggetto <xref:System.TimeSpan> che specifica la quantità massima di tempo prima che un elemento venga considerato scaduto e venga rimosso dalla cache.  Per altre informazioni su come specificare <xref:System.TimeSpan> valori, vedere [valori Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|enabled|Valore che specifica se il rilevamento della riproduzione del token è abilitato; "true" per abilitare il rilevamento della riproduzione del token.|  
+|expirationPeriod|Oggetto <xref:System.TimeSpan> che specifica l'intervallo di tempo massimo prima che un elemento venga considerato scaduto e rimosso dalla cache.  Per ulteriori informazioni su come specificare <xref:System.TimeSpan> i valori, vedere [valori TimeSpan](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza i gestori di token.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di gestori di token di sicurezza.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto `<tokenReplayDetection>` elemento può essere specificato a livello di servizio con il `<identityConfiguration>` elemento o a livello di raccolta gestori di token di sicurezza nel `<securityTokenHandlerConfiguration>` elemento. Le impostazioni in una raccolta di gestori di token sostituiscono quelle specificate nel servizio.  
+ Un `<tokenReplayDetection>` elemento può essere specificato a livello di servizio `<identityConfiguration>` nell'elemento o nel livello di raccolta del gestore del token di sicurezza `<securityTokenHandlerConfiguration>` sotto l'elemento. Le impostazioni in una raccolta di gestori di token eseguono l'override di quelle specificate nel servizio.  
   
- Il tipo di cache di riproduzione dei token è specificato per il [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) elemento.
+ Il tipo della cache di riproduzione dei token viene specificato dall' [ \<elemento > tokenReplayCache](tokenreplaycache.md) .

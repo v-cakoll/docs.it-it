@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964806"
 ---
 # <a name="application-development"></a>Sviluppo di applicazioni
 <a name="introduction"></a>Windows Presentation Foundation (WPF) è un Framework di presentazione che può essere utilizzato per sviluppare i seguenti tipi di applicazioni:  
   
-- Applicazioni autonome, ovvero applicazioni [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dallo stile tradizionale compilate come assembly eseguibili installati nel computer client, da cui vengono eseguite.  
+- Applicazioni autonome (applicazioni Windows di stile tradizionale compilate come assembly eseguibili installate ed eseguite dal computer client).  
   
 - [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](applicazioni composte da pagine di navigazione compilate come assembly eseguibili e ospitate da Web browser quali Microsoft Internet Explorer o Mozilla Firefox).  
   
@@ -24,7 +24,7 @@ ms.locfileid: "68817992"
 - Librerie di classi, ovvero assembly non eseguibili contenenti classi riutilizzabili.  
   
 > [!NOTE]
->  L'uso di tipi WPF in un servizio Windows è fortemente sconsigliato. Se usate in un servizio Windows, queste funzionalità potrebbero non funzionare nel modo previsto.  
+> L'uso di tipi WPF in un servizio Windows è fortemente sconsigliato. Se usate in un servizio Windows, queste funzionalità potrebbero non funzionare nel modo previsto.  
   
  Per compilare questo set di applicazioni, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa una serie di servizi. Questo argomento offre una panoramica dei servizi, con indicazioni sulle risorse in cui trovare altre informazioni.  
 

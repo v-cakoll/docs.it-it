@@ -5,25 +5,25 @@ helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: 2ad6450e26777a4642f0b9c685c9f5e552b5fdc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968295"
 ---
 # <a name="progressbar-control-windows-forms"></a>Controllo ProgressBar (Windows Form)
 > [!IMPORTANT]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
+> Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- I moduli di Windows <xref:System.Windows.Forms.ProgressBar> controllo indica lo stato di avanzamento di un'azione mediante la visualizzazione di un numero appropriato di rettangoli in una barra orizzontale. Una volta completata l'azione, la barra è piena. Indicatori di stato vengono comunemente usati per concedere all'utente un'indicazione del tempo necessario per un'azione prolungata completare, ad esempio, durante il caricamento di un file di grandi dimensioni.  
+ Il controllo <xref:System.Windows.Forms.ProgressBar> Windows Forms indica lo stato di avanzamento di un'azione visualizzando un numero appropriato di rettangoli disposti in una barra orizzontale. Quando l'azione viene completata, la barra viene riempita. Gli indicatori di stato vengono comunemente usati per fornire all'utente un'indicazione del tempo di attesa per il completamento di un'azione prolungata, ad esempio quando viene caricato un file di grandi dimensioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo ProgressBar](progressbar-control-overview-windows-forms.md)  
  Introduce i concetti generali del <xref:System.Windows.Forms.ProgressBar> controllo, che consente di visualizzare graficamente lo stato di avanzamento di un'operazione.  
   
- [Procedura: Impostare il valore visualizzato dal controllo ProgressBar Windows Form](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- Vengono descritti vari modi diversi per aumentare il valore visualizzato per il <xref:System.Windows.Forms.ProgressBar> controllo.  
+ [Procedura: Impostare il valore visualizzato dal controllo Windows Forms ProgressBar](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ Vengono illustrati alcuni modi diversi per aumentare il valore visualizzato dal <xref:System.Windows.Forms.ProgressBar> controllo.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.ProgressBar>  

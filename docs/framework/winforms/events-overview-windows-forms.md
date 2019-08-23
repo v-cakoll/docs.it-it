@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052286"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963470"
 ---
 # <a name="events-overview-windows-forms"></a>Cenni preliminari sugli eventi (Windows Form)
 Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel codice. Gli eventi possono essere generati da un'azione utente, ad esempio un clic del mouse o la pressione di un tasto, oppure da codice programma o dal sistema.
@@ -24,16 +24,16 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
  Un oggetto può generare diversi tipi di eventi, ma molti tipi sono comuni alla maggior parte dei controlli. Ad esempio, la maggior parte degli oggetti gestirà un evento <xref:System.Windows.Forms.Control.Click>. Se un utente fa clic su un form, sarà eseguito il codice disponibile nel gestore eventi <xref:System.Windows.Forms.Control.Click> del codice.
 
 > [!NOTE]
->  Molti eventi si verificano insieme ad altri eventi. Ad esempio, quando si verifica l'evento <xref:System.Windows.Forms.Control.DoubleClick>, si verificano anche gli eventi <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> e <xref:System.Windows.Forms.Control.Click>.
+> Molti eventi si verificano insieme ad altri eventi. Ad esempio, quando si verifica l'evento <xref:System.Windows.Forms.Control.DoubleClick>, si verificano anche gli eventi <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> e <xref:System.Windows.Forms.Control.Click>.
 
  Per informazioni su come generare e utilizzare un evento, vedere [eventi](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Delegati e rispettivo ruolo
- I delegati sono classi usate comunemente in .NET Framework per creare meccanismi di gestione degli eventi. I delegati sono paragonabili ai puntatori a funzione comunemente usati nell'oggetto visivo C++ e altri linguaggi orientate a oggetti. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.
+ I delegati sono classi comunemente utilizzate all'interno del .NET Framework per compilare meccanismi di gestione degli eventi. Delegati approssimativamente equivalenti a puntatori a funzione, comunemente C++ utilizzati in linguaggi visivi e di altro oggetto. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.
 
- Usa questo modello di eventi *delegati* per associare gli eventi ai metodi che vengono usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per altre informazioni su come definire delegati, vedere [eventi](../../standard/events/index.md).
+ Questo modello di eventi usa i delegati per associare gli eventi ai metodi usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per ulteriori informazioni su come definire i delegati, vedere [eventi](../../standard/events/index.md).
 
- I delegati possono essere associati a un singolo metodo o a più metodi (multicast). Quando si crea un delegato per un evento, l'utente (o Windows) in genere creare un evento multicast. Una rara eccezione può essere costituita da un evento che ha come risultato una procedura specifica, ad esempio la visualizzazione di una finestra di dialogo, che non si ripeterebbe in modo logico più volte per un evento. Per informazioni su come creare un delegato multicast, vedere [come: Combinare delegati Multicast](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+ I delegati possono essere associati a un singolo metodo o a più metodi (multicast). Quando si crea un delegato per un evento, l'utente (o Windows) crea in genere un evento multicast. Una rara eccezione può essere costituita da un evento che ha come risultato una procedura specifica, ad esempio la visualizzazione di una finestra di dialogo, che non si ripeterebbe in modo logico più volte per un evento. Per informazioni su come creare un delegato multicast, vedere [procedura: Combinare delegati (delegati multicast)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
 
  Un delegato multicast mantiene un elenco di chiamate dei metodi a cui è associato. Il delegato multicast supporta un metodo <xref:System.Delegate.Combine%2A> per aggiungere un metodo all'elenco di chiamate e un metodo <xref:System.Delegate.Remove%2A> per rimuoverlo.
 

@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 277b93267f0537c8e499a8d8f3b456c4396a975c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966346"
 ---
 # <a name="imetadataerror-interface"></a>Interfaccia IMetaDataError
-Fornisce un meccanismo di callback per la segnalazione degli errori durante il merge dei metadati.  
+Fornisce un meccanismo di callback per la segnalazione di errori durante l'Unione dei metadati.  
   
 > [!NOTE]
->  Il `IMetaDataError` interfaccia deve essere implementata dal client.  
+> L' `IMetaDataError` interfaccia deve essere implementata dal client.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Fornisce la notifica degli errori che si verificano durante il merge dei metadati.|  
+|[Metodo OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Fornisce la notifica degli errori che si verificano durante l'Unione dei metadati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

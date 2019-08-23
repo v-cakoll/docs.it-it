@@ -2,18 +2,18 @@
 title: Esempi di query
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783110"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962747"
 ---
 # <a name="query-examples"></a>Esempi di query
-In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query. Gli sviluppatori che usano Visual Studio è possono trovare ulteriori esempi in una soluzione di esempio disponibile nella sezione esempi. Per altre informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+In questa sezione vengono forniti C# Visual Basic ed esempi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di query tipiche. Gli sviluppatori che usano Visual Studio possono trovare molti altri esempi in una soluzione di esempio disponibile nella sezione degli esempi. Per ulteriori informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *DB* viene spesso usato negli esempi di codice in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione. *DB* presuppone che sia un'istanza di un *Northwind* classe che eredita da <xref:System.Data.Linq.DataContext>.  
+> il *database* viene spesso usato negli esempi di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] codice nella documentazione. si presuppone che *DB* sia un'istanza di una classe *Northwind* che eredita da <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,14 +62,14 @@ In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUD
  Vengono forniti esempi dell'utilizzo della navigazione con chiave esterna nelle clausole `from`, `where` e `select`.  
   
  [Formulare proiezioni](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- Vengono forniti esempi della combinazione `select` con altre funzionalità (ad esempio *tipi anonimi*) per formare proiezioni della query.  
+ Fornisce esempi di combinazione `select` con altre funzionalità, ad esempio *tipi anonimi*, per creare proiezioni di query.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Panoramica degli operatori di query standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Viene illustrato il concetto degli operatori query standard usando C#.  
+ Viene illustrato il concetto di operatori di query C#standard utilizzando.  
   
  [Panoramica degli operatori query standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Viene illustrato il concetto degli operatori query standard con Visual Basic.  
+ Viene illustrato il concetto di operatori di query standard utilizzando Visual Basic.  
   
  [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Viene descritto come vengono usati i concetti applicabili alle query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

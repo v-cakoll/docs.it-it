@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 6a6e057b45c1305a889ce4ed915b437a29ab2794
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964133"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fa parte della famiglia di tecnologie ADO.NET. Si basa sui servizi forniti dal modello di provider ADO.NET. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] con le applicazioni ADO.NET esistenti del codice e la migrazione di soluzioni ADO.NET corrente a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nell'illustrazione seguente viene fornita una panoramica della relazione.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]fa parte della famiglia di tecnologie ADO.NET. Si basa sui servizi forniti dal modello di provider ADO.NET. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] il codice con le applicazioni ADO.NET esistenti ed eseguire la migrazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]delle soluzioni ADO.NET correnti a. Nell'illustrazione seguente viene fornita una panoramica della relazione.  
   
  ![LINQ to SQL e ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
-## <a name="connections"></a>Connessioni  
- È possibile fornire una connessione ADO.NET esistente quando si crea una [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Tutte le operazioni contro il <xref:System.Data.Linq.DataContext> (incluse le query) usare la connessione specificata. Se la connessione è già aperta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] lascia così com'è quando Usa più.  
+## <a name="connections"></a>connessioni  
+ È possibile specificare una connessione ADO.NET esistente quando si crea un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oggetto <xref:System.Data.Linq.DataContext>. Tutte le operazioni eseguite <xref:System.Data.Linq.DataContext> su (incluse le query) utilizzano questa connessione specificata. Se la connessione è già aperta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la lascia invariata al termine dell'operazione.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
@@ -31,12 +31,12 @@ ms.locfileid: "67662071"
 ## <a name="transactions"></a>Transazioni  
  È possibile fornire l'oggetto <xref:System.Data.Linq.DataContext> con la transazione di database personalizzata qualora l'applicazione abbia già avviato la transazione e si desideri che venga usato anche <xref:System.Data.Linq.DataContext>.  
   
- Il metodo preferito di creare transazioni con .NET Framework consiste nell'usare il <xref:System.Transactions.TransactionScope> oggetto. Usando questo approccio, è possibile creare transazioni distribuite che potranno essere usate sia con database che con altri gestori di risorse residenti in memoria. Gli ambiti di transazione richiedono alcune risorse per iniziare. Vengono promossi a transazioni distribuite solo quando sono presenti più connessioni all'interno dell'ambito della transazione.  
+ Il metodo preferito per eseguire transazioni con la .NET Framework consiste nell'utilizzare l' <xref:System.Transactions.TransactionScope> oggetto. Usando questo approccio, è possibile creare transazioni distribuite che potranno essere usate sia con database che con altri gestori di risorse residenti in memoria. Per gli ambiti di transazione è necessario avviare alcune risorse. Si promuovono a transazioni distribuite solo quando sono presenti più connessioni nell'ambito della transazione.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Non è possibile usare questo approccio per tutti i database. Ad esempio, la connessione SqlClient non è possibile alzare di livello le transazioni di sistema quando viene usata con un server SQL Server 2000. Al contrario, viene inserita automaticamente in una transazione distribuita completa quando viene rilevato l'uso di un ambito della transazione.  
+ Non è possibile usare questo approccio per tutti i database. La connessione SqlClient, ad esempio, non è in grado di innalzare di livello le transazioni di sistema quando funziona con un server SQL Server 2000. Al contrario, viene inserita automaticamente in una transazione distribuita completa quando viene rilevato l'uso di un ambito della transazione.  
   
 ## <a name="direct-sql-commands"></a>Comandi SQL diretti  
  In alcune situazioni la capacità di <xref:System.Data.Linq.DataContext> di eseguire query o inviare modifiche è insufficiente per l'attività specifica che si desidera eseguire. In queste circostanze è possibile usare il metodo <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> per inviare comandi SQL al database e convertire i risultati della query in oggetti.  
@@ -46,7 +46,7 @@ ms.locfileid: "67662071"
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Purché i nomi di colonna nei risultati tabulari corrispondano alle proprietà di colonna della classe di entità, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creati oggetti da qualsiasi query SQL.  
+ Finché i nomi di colonna nei risultati tabulari corrispondono alle proprietà di colonna della classe di entità [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , crea gli oggetti da qualsiasi query SQL.  
   
 ### <a name="parameters"></a>Parametri  
  Il metodo <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> accetta l'uso di parametri. Nel codice seguente viene eseguita una query con parametri:  
@@ -55,7 +55,7 @@ ms.locfileid: "67662071"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` sostituisce quindi i parametri con parentesi graffe presenti nella stringa fornita con nomi di parametro generati, ad esempio `@p0`, `@p1` …, `@p(n)`.  
+> I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` sostituisce quindi i parametri con parentesi graffe presenti nella stringa fornita con nomi di parametro generati, ad esempio `@p0`, `@p1` …, `@p(n)`.  
   
 ## <a name="see-also"></a>Vedere anche
 

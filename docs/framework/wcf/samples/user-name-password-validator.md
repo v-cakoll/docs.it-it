@@ -2,12 +2,12 @@
 title: Validator del nome utente e password
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b02533641785b24019f10a3c224b09e252cbb2ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966775"
 ---
 # <a name="user-name-password-validator"></a>Validator del nome utente e password
 In questo esempio viene illustrato come implementare un validator di UserNamePassword personalizzato. Questo processo è utile nei casi in cui nessuna delle modalità di convalida UserNamePassword incorporate è appropriata per i requisiti dell'applicazione; ad esempio, quando le coppie di nome utente/password sono archiviate in un archivio esterno, ad esempio un database. In questo esempio viene illustrato un servizio con un validator personalizzato che verifica due particolari coppie di nome utente/password. Il cliente utilizza tale coppia di nome utente/password per l'autenticazione nel servizio.
@@ -17,12 +17,12 @@ In questo esempio viene illustrato come implementare un validator di UserNamePas
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  Poiché chiunque può costruire una credenziale Username che utilizza le coppie di nome utente/password accettate dal validator personalizzato, il servizio è meno affidabile rispetto al comportamento predefinito fornito dal validator UserNamePassword standard. Il validator UserNamePassword standard tenta di eseguire il mapping della coppia di nome utente/password fornita a un account di Windows e se questo mapping non riesce, l'autenticazione ha esito negativo. Il validator UserNamePassword personalizzato in questo esempio non deve essere utilizzato nel codice di produzione, poiché è concepito per solo scopo illustrativo.
+> Poiché chiunque può costruire una credenziale Username che utilizza le coppie di nome utente/password accettate dal validator personalizzato, il servizio è meno affidabile rispetto al comportamento predefinito fornito dal validator UserNamePassword standard. Il validator UserNamePassword standard tenta di eseguire il mapping della coppia di nome utente/password fornita a un account di Windows e se questo mapping non riesce, l'autenticazione ha esito negativo. Il validator UserNamePassword personalizzato in questo esempio non deve essere utilizzato nel codice di produzione, poiché è concepito per solo scopo illustrativo.
 
  In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:
 
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come implementare un validator di UserNamePas
 
 - Il server viene autenticato tramite il certificato X.509 del server.
 
- Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe standard `wsHttpBinding` che usa per impostazione predefinita l'autenticazione WS-Security e il nome utente. Il comportamento del servizio specifica la modalità `Custom` per la convalida delle coppie nome utente/password client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento `serviceCertificate`. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` nel [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. Per impostazione predefinita, l'associazione viene `wsHttpBinding` configurata con uno standard che utilizza WS-Security e l'autenticazione del nome utente. Il comportamento del servizio specifica la modalità `Custom` per la convalida delle coppie nome utente/password client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento `serviceCertificate`. Il certificato del server deve contenere lo stesso valore per l' `SubjectName` `findValue` oggetto nel [ \<> ServiceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -278,7 +278,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 2. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni seguenti.
 
@@ -287,13 +287,13 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
-    >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.  
+    >  Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat.  
   
 2. Avviare Service.exe da service\bin.  
   
 3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. Sul computer client, avviare Client.exe da una finestra del prompt dei comandi.  
   
-10. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

@@ -30,62 +30,62 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95bef937912e35cd828bf0090b4cf48ccb3290cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967981"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962468"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caratteri speciali nel codice (Visual Basic)
-A volte è necessario usare caratteri speciali nel codice, vale a dire, alcuni caratteri non alfabetici o numerici. La punteggiatura e caratteri speciali nel set di caratteri Visual Basic hanno vari utilizzi, dall'organizzazione del testo di programma alla definizione di attività che esegue il compilatore o il programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione.  
+In alcuni casi è necessario usare caratteri speciali nel codice, ovvero caratteri non alfabetici o numerici. La punteggiatura e i caratteri speciali del set di caratteri Visual Basic hanno diversi usi, dall'organizzazione del testo del programma alla definizione delle attività eseguite dal compilatore o dal programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione.  
   
 ## <a name="parentheses"></a>Parentesi  
- Utilizzare le parentesi quando si definiscono una routine, ad esempio un `Sub` o `Function`. Tutti gli elenchi di argomenti di procedure è necessario racchiudere tra parentesi. Utilizziamo inoltre le parentesi per l'inserimento di variabili o argomenti in gruppi logici, in particolare per l'override dell'ordine predefinito di precedenza degli operatori in un'espressione complessa. Questa condizione è illustrata nell'esempio seguente.  
+ Usare le parentesi quando si definisce una routine, ad esempio `Sub` o. `Function` È necessario racchiudere tra parentesi tutti gli elenchi di argomenti di routine. È inoltre possibile utilizzare le parentesi per inserire variabili o argomenti in gruppi logici, in particolare per eseguire l'override dell'ordine predefinito di precedenza degli operatori in un'espressione complessa. Questa condizione è illustrata nell'esempio seguente.  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
- Dopo l'esecuzione del codice precedente, il valore di `d` sia il valore di 8,225 `e` è 3. Il calcolo per `d` Usa la precedenza predefinito degli `/` failover `+` ed è equivalente a `d = b + (c / a)`. Le parentesi per il calcolo per `e` ignorare l'ordine di precedenza predefiniti.  
+ Dopo l'esecuzione del codice precedente, il valore di `d` è 8,225 e il valore di `e` è 3. Il calcolo per `d` utilizza la precedenza predefinita di `/` over `+` ed è equivalente a `d = b + (c / a)`. Le parentesi nel calcolo per `e` eseguono l'override della precedenza predefinita.  
   
 ## <a name="separators"></a>Separatori  
- I separatori sono ciò che viene suggerito il nome: consentono di separare le sezioni di codice. In Visual Basic, il carattere separatore sia i due punti (`:`). Usare i separatori quando si desidera includere più istruzioni in una singola riga anziché righe separate. Ciò consente di risparmiare spazio e migliora la leggibilità del codice. Nell'esempio seguente mostra tre istruzioni separate da due punti.  
+ I separatori eseguono le operazioni che il nome suggerisce: separano sezioni di codice. In Visual Basic il carattere separatore è costituito dai`:`due punti (). Usare i separatori quando si desidera includere più istruzioni su una sola riga anziché su righe separate. Questo consente di risparmiare spazio e di migliorare la leggibilità del codice. Nell'esempio seguente vengono illustrate tre istruzioni separate da due punti.  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
  Per altre informazioni, vedere [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- I due punti (`:`) carattere viene utilizzato anche per identificare un'etichetta di istruzione. Per altre informazioni, vedere [Procedura: Etichettare le istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Il carattere due`:`punti () viene utilizzato anche per identificare un'etichetta di istruzione. Per altre informazioni, vedere [Procedura: Istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)Label.  
   
 ## <a name="concatenation"></a>Concatenazione  
- Usare la `&` operatore per *concatenazione*, o il collegamento insieme di stringhe. Non confonderla con la `+` operatore, che vengono sommati i valori numerici. Se si usa il `+` operatore per la concatenazione quando si opera su valori numerici, è possibile ottenere risultati non corretti. Nell'esempio che segue viene illustrato quanto descritto.  
+ Utilizzare l' `&` operatore perla concatenazione o collegare le stringhe. Non confonderla con l' `+` operatore, che somma i valori numerici. Se si utilizza l' `+` operatore per concatenare quando si opera su valori numerici, è possibile ottenere risultati non corretti. Nell'esempio che segue viene illustrato quanto descritto.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
- Dopo l'esecuzione del codice precedente, il valore di `resultA` sia il valore di 21,01 `resultB` è "10,0111".  
+ Dopo l'esecuzione del codice precedente, il valore di `resultA` è 21,01 e il valore di `resultB` è "10,0111".  
   
 ## <a name="member-access-operators"></a>Operatori di accesso ai membri  
- Per accedere a un membro di un tipo, si utilizza il punto (`.`) o un punto esclamativo (`!`) operatore tra il nome del tipo e il nome del membro.  
+ Per accedere a un membro di un tipo, usare l'operatore punto`.`() o punto esclamativo (`!`) tra il nome del tipo e il nome del membro.  
   
-### <a name="dot--operator"></a>Punto (.) Operatore  
- Usare il `.` operatore su una classe, struttura, interfaccia o enumerazione come operatore di accesso di membro. Il membro può essere un campo, proprietà, eventi o metodo. Questa condizione è illustrata nell'esempio seguente.  
+### <a name="dot--operator"></a>Punto (.) Operator  
+ Usare l' `.` operatore in una classe, una struttura, un'interfaccia o un'enumerazione come operatore di accesso ai membri. Il membro può essere un campo, una proprietà, un evento o un metodo. Questa condizione è illustrata nell'esempio seguente.  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
-### <a name="exclamation-point--operator"></a>Punto esclamativo (!) Operatore  
- Usare il `!` operatore solo in una classe o interfaccia come operatore di accesso al dizionario. La classe o interfaccia deve avere una proprietà predefinita che accetta un singolo `String` argomento. Identificatore che segue immediatamente il `!` operatore diventa il valore dell'argomento passato alla proprietà predefinita sotto forma di stringa. Nell'esempio che segue viene illustrato quanto descritto.  
+### <a name="exclamation-point--operator"></a>Punto esclamativo (!) Operator  
+ Usare l' `!` operatore solo in una classe o in un'interfaccia come operatore di accesso del dizionario. La classe o l'interfaccia deve avere una proprietà predefinita che accetta un `String` singolo argomento. L'identificatore immediatamente successivo all' `!` operatore diventa il valore dell'argomento passato alla proprietà predefinita sotto forma di stringa. Nell'esempio che segue viene illustrato quanto descritto.  
   
  [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
- Le tre righe di output `MsgBox` visualizzare il valore tutte `32856`. La prima riga Usa l'accesso alla proprietà tradizionali `index`, il secondo Usa il fatto che `index` è la proprietà predefinita della classe `hasDefault`, e il terzo viene utilizzato l'accesso alla classe dizionario.  
+ Le tre righe di output `MsgBox` di tutti visualizzano `32856`il valore. La prima riga usa l'accesso tradizionale alla proprietà `index`, il secondo usa il fatto che `index` è la proprietà predefinita della classe `hasDefault`e la terza usa l'accesso tramite dizionario alla classe.  
   
- Si noti che il secondo operando del `!` operatore deve essere un valido identificatore Visual Basic non racchiusi tra virgolette doppie (`" "`). In altre parole, è possibile utilizzare un valore letterale stringa o variabile di tipo stringa. La modifica seguente all'ultima line-of-i `MsgBox` chiamata genera un errore perché `"X"` è una stringa letterale racchiusa.  
+ Si noti che il secondo operando `!` dell'operatore deve essere un identificatore di Visual Basic valido non racchiuso tra virgolette doppie (`" "`). In altre parole, non è possibile usare un valore letterale stringa o una variabile di stringa. La seguente modifica all'ultima riga della `MsgBox` chiamata genera un errore perché `"X"` è un valore letterale stringa racchiuso.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
->  Riferimenti alle raccolte predefinite devono essere espliciti. In particolare, è possibile usare il `!` operatore su una variabile di associazione tardiva.  
+> I riferimenti alle raccolte predefinite devono essere espliciti. In particolare, non è possibile usare `!` l'operatore su una variabile ad associazione tardiva.  
   
- Il `!` carattere viene usato anche come il `Single` Digita carattere.  
+ Il `!` carattere viene utilizzato anche `Single` come carattere di tipo.  
   
 ## <a name="see-also"></a>Vedere anche
 

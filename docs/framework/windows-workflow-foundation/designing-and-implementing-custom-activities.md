@@ -2,18 +2,18 @@
 title: Progettazione e implementazione di attività personalizzate
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 61a5de5a15835c728c18c0136952cf7ffdbaf000
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0d04572c65fd4e3e0ae96241217c9ae9aa0e2c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945847"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915359"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Progettazione e implementazione di attività personalizzate
 Le attività personalizzate in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono create assemblando le attività fornite dal sistema nelle attività composte o creando nuovi tipi che derivano dall'oggetto <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> o <xref:System.Activities.NativeActivity>. Contenuto della sezione viene illustrato come creare attività personalizzate con uno dei metodi.  
   
 > [!IMPORTANT]
->  Le attività personalizzate vengono visualizzate per impostazione predefinita nella finestra di progettazione del flusso di lavoro come un semplice rettangolo con il nome dell'attività. Per fornire una rappresentazione visiva personalizzata dell'attività nella finestra di progettazione del flusso di lavoro è inoltre necessario creare una finestra di progettazione personalizzata. Per altre informazioni, vedere [usando gli ActivityDesigner personalizzati e modelli](using-custom-activity-designers-and-templates.md).  
+> Le attività personalizzate vengono visualizzate per impostazione predefinita nella finestra di progettazione del flusso di lavoro come un semplice rettangolo con il nome dell'attività. Per fornire una rappresentazione visiva personalizzata dell'attività nella finestra di progettazione del flusso di lavoro è inoltre necessario creare una finestra di progettazione personalizzata. Per altre informazioni, vedere [uso di ActivityDesigner e modelli personalizzati](using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Opzioni di creazione di attività](activity-authoring-options-in-wf.md)  

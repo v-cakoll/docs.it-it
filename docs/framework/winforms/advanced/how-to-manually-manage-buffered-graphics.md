@@ -8,31 +8,31 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6010d52750b20c07db51917621f8643e9d9b47d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968593"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Procedura: Gestire manualmente la grafica memorizzata nel buffer
-Per scenari più avanzati doppio buffering, è possibile usare le classi di .NET Framework per implementare la propria logica di doppio buffer. La classe responsabile dell'allocazione e la gestione di singoli buffer di grafica è la <xref:System.Drawing.BufferedGraphicsContext> classe. Ogni applicazione dispone di un proprio predefinito <xref:System.Drawing.BufferedGraphicsContext> che gestisce tutto il doppio buffer predefinito per tale applicazione. È possibile recuperare un riferimento a questa istanza chiamando il <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
+Per scenari di doppio buffer più avanzati, è possibile utilizzare le classi .NET Framework per implementare la logica di doppio buffer. La classe responsabile dell'allocazione e della gestione dei singoli buffer grafici è <xref:System.Drawing.BufferedGraphicsContext> la classe. Ogni applicazione dispone di un proprio <xref:System.Drawing.BufferedGraphicsContext> valore predefinito che gestisce tutto il doppio buffer predefinito per l'applicazione. È possibile recuperare un riferimento a questa istanza chiamando il <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
   
-### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Per ottenere un riferimento a BufferedGraphicsContext predefinito  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Per ottenere un riferimento al BufferedGraphicsContext predefinito  
   
-- Impostare il <xref:System.Drawing.BufferedGraphicsManager.Current%2A> proprietà, come illustrato nell'esempio di codice seguente.  
+- Impostare la <xref:System.Drawing.BufferedGraphicsManager.Current%2A> proprietà, come illustrato nell'esempio di codice seguente.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  Non è necessario chiamare il `Dispose` metodo sul <xref:System.Drawing.BufferedGraphicsContext> riferimento ricevuto dal <xref:System.Drawing.BufferedGraphicsManager> classe. Il <xref:System.Drawing.BufferedGraphicsManager> provvede a tutto l'allocazione di memoria e la distribuzione per impostazione predefinita <xref:System.Drawing.BufferedGraphicsContext> istanze.  
+    > Non è necessario chiamare il `Dispose` metodo <xref:System.Drawing.BufferedGraphicsContext> sul riferimento ricevuto dalla <xref:System.Drawing.BufferedGraphicsManager> classe. Gestisce tutte le allocazioni di memoria e la distribuzione per le istanze predefinite <xref:System.Drawing.BufferedGraphicsContext>. <xref:System.Drawing.BufferedGraphicsManager>  
   
-     Per le applicazioni a grafica intensiva, ad esempio di animazione, è talvolta possibile migliorare le prestazioni usando un oggetto dedicato <xref:System.Drawing.BufferedGraphicsContext> anziché il <xref:System.Drawing.BufferedGraphicsContext> forniti dal <xref:System.Drawing.BufferedGraphicsManager>. In questo modo è possibile creare e gestire singolarmente, buffer di grafica senza l'overhead delle prestazioni di gestione di tutti gli altri buffer grafici associati all'applicazione, anche se la memoria utilizzata dall'applicazione sarà maggiore.  
+     Per le applicazioni a elevato utilizzo di grafica, ad esempio l'animazione, è possibile migliorare le <xref:System.Drawing.BufferedGraphicsContext> prestazioni utilizzando un <xref:System.Drawing.BufferedGraphicsContext> oggetto dedicato anziché <xref:System.Drawing.BufferedGraphicsManager>l'oggetto fornito da. In questo modo è possibile creare e gestire i buffer grafici singolarmente, senza incorrere nel sovraccarico delle prestazioni della gestione di tutti gli altri elementi grafici memorizzati nel buffer associati all'applicazione, anche se la memoria usata dall'applicazione sarà maggiore.  
   
 ### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Per creare un BufferedGraphicsContext dedicato  
   
-- Dichiarare e creare una nuova istanza di <xref:System.Drawing.BufferedGraphicsContext> classe, come illustrato nell'esempio di codice seguente.  
+- Dichiarare e creare una nuova istanza della <xref:System.Drawing.BufferedGraphicsContext> classe, come illustrato nell'esempio di codice seguente.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  

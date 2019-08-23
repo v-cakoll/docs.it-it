@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f82c260a2cab85270a9f33a87eb9a9f04b72c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743676"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964152"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Aggiunta di logica di business mediante metodi parziali
-È possibile personalizzare Visual Basic e C# nel codice generato le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] progetti, usando *metodi parziali*. Il codice generato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definisce le firme come una parte di un metodo parziale. Se si desidera implementare il metodo, è possibile aggiungere un metodo parziale personalizzato. Se non si aggiunge un'implementazione personalizzata, il compilatore ignora la firma dei metodi parziali e chiama i metodi predefiniti in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+È possibile personalizzare Visual Basic e C# il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] codice generato nei progetti usando *metodi parziali*. Il codice generato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definisce le firme come una parte di un metodo parziale. Se si desidera implementare il metodo, è possibile aggiungere un metodo parziale personalizzato. Se non si aggiunge un'implementazione personalizzata, il compilatore ignora la firma dei metodi parziali e chiama i metodi predefiniti in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  Se si usa Visual Studio, è possibile utilizzare Object Relational Designer per aggiungere la convalida e altre personalizzazioni alle classi di entità.  
+> Se si usa Visual Studio, è possibile usare la Object Relational Designer per aggiungere la convalida e altre personalizzazioni alle classi di entità.  
   
  Ad esempio, il mapping predefinito per la classe `Customer` nel database di esempio Northwind include il seguente metodo parziale:  
   
@@ -28,9 +28,9 @@ ms.locfileid: "67743676"
  [!code-csharp[DLinqOverrideDefault#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefault#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/Module1.vb#3)]  
   
- Questo approccio viene in genere usato nel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per eseguire l'override di metodi predefiniti per `Insert`, `Update`, `Delete`e per convalidare le proprietà durante gli eventi del ciclo di vita di oggetto.  
+ Questo approccio viene in genere usato [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in per eseguire l'override `Insert`dei metodi `Delete`predefiniti per, `Update`, e per convalidare le proprietà durante gli eventi del ciclo di vita dell'oggetto.  
   
- Per altre informazioni, vedere [metodi parziali](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) o [parziale (metodo) (C# riferimento)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
+ Per ulteriori informazioni, vedere [metodi parziali](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) o [partial (MethodC# ) (Reference)](../../../../../csharp/language-reference/keywords/partial-method.md) (C#).  
   
 ## <a name="example"></a>Esempio  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67743676"
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio riportato di seguito viene usata la relazione tra le entità `Shipper` e `Order`. Notare fra i metodi i metodi parziali `InsertShipper` e `DeleteShipper`. Questi metodi eseguono l'override dei metodi parziali predefiniti forniti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapping.  
+ Nell'esempio riportato di seguito viene usata la relazione tra le entità `Shipper` e `Order`. Notare fra i metodi i metodi parziali `InsertShipper` e `DeleteShipper`. Questi metodi eseguono l'override dei metodi parziali [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] predefiniti forniti dal mapping.  
   
 ### <a name="code"></a>Codice  
  [!code-csharp[DLinqOverrideDefault#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#1)]

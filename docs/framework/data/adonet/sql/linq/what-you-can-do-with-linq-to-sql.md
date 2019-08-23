@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946628"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Operazioni eseguibili con LINQ to SQL
 In[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportare tutte le funzionalità principali usate dagli sviluppatori SQL. È possibile creare query per ottenere informazioni ed eseguire operazioni di inserimento, aggiornamento ed eliminazione di dati dalle tabelle.  
@@ -43,7 +43,7 @@ In[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono suppo
  Per eseguire un'operazione `Delete` per un elemento, rimuovere l'elemento dalla raccolta a cui appartiene, quindi chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A> su <xref:System.Data.Linq.DataContext> per eseguire il commit della modifica.  
   
 > [!NOTE]
->  In[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono riconosciute le operazioni di eliminazione a sovrapposizione. Se si desidera eliminare una riga in una tabella contenente vincoli, vedere [come: Eliminare le righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+> In[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono riconosciute le operazioni di eliminazione a sovrapposizione. Se si desidera eliminare una riga in una tabella che contiene vincoli, vedere [procedura: Elimina le righe dal database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Nell'esempio seguente il cliente con il codice `CustomerID` `98128` viene recuperato dal database. Quindi, dopo la conferma che la riga del cliente è stata recuperata, viene chiamato <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> per rimuovere quell'oggetto dalla raccolta. Infine viene chiamato <xref:System.Data.Linq.DataContext.SubmitChanges%2A> per inoltrare l'operazione di eliminazione al database.  
   

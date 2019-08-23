@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc62618c5872a2c3e3740be4c60ae02e386c1868
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 120b839b2b11c85f42bb1a0ae4701de0dea33879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912828"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Metodo ICorDebugDataTarget3::GetLoadedModules
 Ottiene un elenco dei moduli caricati fino a questo momento.  
@@ -32,19 +32,19 @@ HRESULT GetLoadedModules(
  [out] Puntatore al numero di moduli sui quali sono state restituite informazioni.  
   
  `pLoadedModules`  
- [out] Un puntatore a una matrice di [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) gli oggetti che forniscono informazioni sui moduli caricati.  
+ out Puntatore a una matrice di oggetti [Metodo icordebugloadedmodule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) che forniscono informazioni sui moduli caricati.  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo metodo è disponibile solo con .NET Native.  
+> Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

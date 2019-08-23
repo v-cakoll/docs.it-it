@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962636"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Protezione del trasporto con l'autenticazione di base
-La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client. Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per altre informazioni sull'abilitazione dell'autenticazione base in Internet Information Services (IIS), vedere <https://go.microsoft.com/fwlink/?LinkId=83822>.  
+Nella figura seguente vengono illustrati un client e un servizio Windows Communication Foundation (WCF). Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per ulteriori informazioni sull'abilitazione dell'autenticazione di base in Internet Information Services (IIS <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>), vedere.  
   
- ![Screenshot che mostra di sicurezza del trasporto con autenticazione di base.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![Screenshot che mostra la sicurezza del trasporto con l'autenticazione di base.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|DESCRIZIONE|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (usando HTTPS)<br /><br /> Sì (usando nome utente/password).|  
-|Integrità|Yes|  
+|Integrità|Sì|  
 |Riservatezza|Yes|  
 |Trasporto|HTTPS|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Associazione|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
@@ -35,7 +35,7 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
 - Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
   
 ### <a name="code"></a>Codice  
- Nel codice seguente viene illustrato come creare un endpoint del servizio che usa un nome utente del dominio di Windows e una password per la protezione del trasferimento. Si noti che il servizio richiede un certificato X.509 per autenticare il client. Per altre informazioni, vedere [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [come: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Nel codice seguente viene illustrato come creare un endpoint del servizio che usa un nome utente del dominio di Windows e una password per la protezione del trasferimento. Si noti che il servizio richiede un certificato X.509 per autenticare il client. Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [procedura: Configurare una porta con un certificato](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)SSL.  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -75,7 +75,7 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
  Nell'esempio di codice seguente viene mostrato il codice client che include il nome utente e la password. Si noti che l'utente deve fornire un nome utente e una password di Windows validi. Il codice per restituire il nome utente e la password non è incluso. Usare una finestra di dialogo o un'altra interfaccia per eseguire una query per ottenere tali informazioni dall'utente.  
   
 > [!NOTE]
->  Nome utente e password possono essere impostati solo tramite codice.  
+> Nome utente e password possono essere impostati solo tramite codice.  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
@@ -84,7 +84,7 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
  Nel codice seguente viene mostrata la configurazione client.  
   
 > [!NOTE]
->  Non è possibile usare la configurazione per impostare il nome utente e la password. La configurazione mostrata deve essere ampliata usando il codice per impostare il nome utente e la password.  
+> Non è possibile usare la configurazione per impostare il nome utente e la password. La configurazione mostrata deve essere ampliata usando il codice per impostare il nome utente e la password.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

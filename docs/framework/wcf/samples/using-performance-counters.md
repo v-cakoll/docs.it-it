@@ -2,18 +2,18 @@
 title: Utilizzo dei contatori delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2c5042d497a09984a6f6c398a943b443ee9aafb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007604"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966773"
 ---
 # <a name="using-performance-counters"></a>Utilizzo dei contatori delle prestazioni
-Questo esempio viene illustrato come accedere ai contatori delle prestazioni di Windows Communication Foundation (WCF) e come creare contatori delle prestazioni definiti dall'utente. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+In questo esempio viene illustrato come accedere ai contatori delle prestazioni Windows Communication Foundation (WCF) e come creare contatori delle prestazioni definiti dall'utente. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
  In questo esempio, il client chiama i quattro metodi del servizio `ICalculator`. Questa procedura continua fino a quando il client viene interrotto dall'utente. Il servizio rimane inalterato.  
   
@@ -27,43 +27,43 @@ Questo esempio viene illustrato come accedere ai contatori delle prestazioni di 
 </configuration>  
 ```  
   
- Questa attività può anche essere eseguita usando il [dello strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Questa attività può essere eseguita anche tramite lo [strumento Editor di configurazione (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Quando sono abilitati i contatori delle prestazioni, l'intera famiglia di contatori delle prestazioni WCF è abilitata per il servizio. .NET Framework gestisce automaticamente i dati relativi alle prestazioni a tre livelli: `ServiceModelService`, `ServiceModelEndpoint` e `ServiceModelOperation`. Per ognuno di questi livelli sono presenti dei contatori delle prestazioni, ad esempio "Chiamate", "Chiamate al secondo" e "Chiamate di sicurezza non autorizzate".  
+ Quando i contatori delle prestazioni sono abilitati, l'intero gruppo di contatori delle prestazioni WCF è abilitato per il servizio. .NET Framework gestisce automaticamente i dati relativi alle prestazioni a tre livelli: `ServiceModelService`, `ServiceModelEndpoint` e `ServiceModelOperation`. Per ognuno di questi livelli sono presenti dei contatori delle prestazioni, ad esempio "Chiamate", "Chiamate al secondo" e "Chiamate di sicurezza non autorizzate".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-view-performance-data"></a>Per visualizzare i dati relativi alle prestazioni  
   
-1. Avviare lo strumento Performance Monitor facendo **avviare**, **Esegui...** , immettere `perfmon` e fare clic su **OK,** o dal Pannello di controllo, selezionare **strumenti di amministrazione** e fare doppio clic su **prestazioni**.  
+1. Avviare lo strumento Performance Monitor facendo clic sul pulsante **Start**, scegliere **Esegui...** , immettere `perfmon` e fare clic su **OK** oppure nel pannello di controllo selezionare **strumenti di amministrazione** e fare doppio clic su **prestazioni**.  
   
     > [!NOTE]
     >  Non è possibile aggiungere contatori mentre il codice di esempio è in esecuzione.  
   
 2. Rimuovere i contatori delle prestazioni elencati selezionandoli e premendo CANC.  
   
-3. Aggiungere i contatori WCF facendo clic sul riquadro del grafico e selezionando **Aggiungi contatori**. Nel **Aggiungi contatori** finestra di dialogo **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** nell'oggetto prestazione casella a discesa. Selezionare i contatori che si desidera visualizzare nell'elenco.  
+3. Per aggiungere i contatori WCF, fare clic con il pulsante destro del mouse sul riquadro grafico e scegliere **Aggiungi contatori**. Nella finestra di dialogo **Aggiungi contatori** selezionare **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** nella casella di riepilogo a discesa oggetto prestazione. Selezionare i contatori che si desidera visualizzare nell'elenco.  
   
     > [!NOTE]
-    >  Non esistono Nessun contatori delle prestazioni di WCF per un servizio se non sono servizi WCF in esecuzione nel computer.  
+    >  Non sono disponibili contatori delle prestazioni WCF per un servizio se non sono in esecuzione servizi WCF nel computer.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Per utilizzare l'editor di configurazione per abilitare i contatori  
   
 1. Aprire un'istanza di SvcConfigEditor.exe.  
   
-2. Nel menu File fare clic su **aperto** e quindi fare clic su **file Config...** .  
+2. Scegliere **Apri** dal menu file e quindi fare clic su **file di configurazione...** .  
   
 3. Passare alla cartella del servizio dell'applicazione di esempio e aprire il file Web.config.  
   
-4. Fare clic su **diagnostica** nell'albero configurazione.  
+4. Fare clic su **diagnostica** nella struttura di configurazione.  
   
-5. Attiva/disattiva **contatore delle prestazioni** nel **diagnostica** finestra per visualizzare "Tutto".  
+5. Consente di impostare il **contatore delle prestazioni** nella finestra di **diagnostica** per visualizzare ' all'.  
   
 6. Salvare il file di configurazione e uscire dall'editor.  
   
@@ -72,7 +72,7 @@ Questo esempio viene illustrato come accedere ai contatori delle prestazioni di 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963539"
 ---
 # <a name="on-error-statement-visual-basic"></a>Istruzione On Error (Visual Basic)
 Abilita una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. può essere usato anche per disabilitare una routine di gestione degli errori. L' `On Error` istruzione viene utilizzata nella gestione degli errori non strutturata e può essere utilizzata al posto della gestione strutturata delle eccezioni. La [gestione strutturata delle eccezioni](../../../standard/exceptions/index.md) è incorporata in .NET, è in genere più efficiente ed è quindi consigliabile quando si gestiscono errori di runtime nell'applicazione.
@@ -35,7 +35,7 @@ Abilita una routine di gestione degli errori e specifica il percorso della routi
  Senza la gestione degli errori o la gestione delle eccezioni, eventuali errori di run-time che si verificano sono irreversibili: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.
 
 > [!NOTE]
->  La `Error` parola chiave viene inoltre utilizzata nell' [istruzione Error](../../../visual-basic/language-reference/statements/error-statement.md), supportata per la compatibilità con le versioni precedenti.
+> La `Error` parola chiave viene inoltre utilizzata nell' [istruzione Error](../../../visual-basic/language-reference/statements/error-statement.md), supportata per la compatibilità con le versioni precedenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
->  Si consiglia di utilizzare la gestione delle eccezioni strutturata nel codice, quando possibile, anziché utilizzare la gestione delle eccezioni non strutturata e l' `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> Si consiglia di utilizzare la gestione delle eccezioni strutturata nel codice, quando possibile, anziché utilizzare la gestione delle eccezioni non strutturata e l' `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
  Un gestore degli errori "Enabled" è uno attivato da un' `On Error` istruzione. Un gestore degli errori "attivo" è un gestore abilitato che sta gestendo un errore.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Ogni volta che il gestore degli errori passa di nuovo il controllo a una routine chiamante, tale procedura diventa la routine corrente. Quando un errore viene gestito da un gestore degli errori in qualsiasi routine, l'esecuzione riprende nella procedura corrente nel punto indicato dall' `Resume` istruzione.
   
 > [!NOTE]
->  Una routine di gestione degli errori non è `Sub` una procedura o `Function` una procedura. Si tratta di una sezione di codice contrassegnata da un'etichetta di riga o un numero di riga.
+> Una routine di gestione degli errori non è `Sub` una procedura o `Function` una procedura. Si tratta di una sezione di codice contrassegnata da un'etichetta di riga o un numero di riga.
   
 ## <a name="number-property"></a>Proprietà Number
  Le routine di gestione degli errori si basano sul valore `Number` della proprietà `Err` dell'oggetto per determinare la cause dell'errore. La routine deve verificare o salvare i valori delle proprietà rilevanti `Err` nell'oggetto prima che venga generato un altro errore o prima che venga chiamata una procedura che può causare un errore. I valori delle proprietà nell' `Err` oggetto riflettono solo l'errore più recente. Il messaggio di errore associato `Err.Number` a è contenuto `Err.Description`in.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`fa in modo che l'esecuzione continui con l'istruzione che segue l'istruzione che ha causato l'errore di run-time o con l'istruzione immediatamente successiva alla chiamata più recente della routine `On Error Resume Next` che contiene l'istruzione. Questa istruzione consente di continuare l'esecuzione nonostante un errore di run-time. È possibile inserire la routine di gestione degli errori in cui si verifica l'errore anziché trasferire il controllo a un'altra posizione all'interno della procedura. Un' `On Error Resume Next` istruzione diventa inattiva quando viene chiamata un'altra procedura, quindi è consigliabile eseguire `On Error Resume Next` un'istruzione in ogni routine chiamata se si desidera la gestione degli errori inline all'interno di tale routine.
   
 > [!NOTE]
->  Il `On Error Resume Next` costrutto può essere preferibile a `On Error GoTo` quando si gestiscono gli errori generati durante l'accesso ad altri oggetti. Il `Err` controllo dopo ogni interazione con un oggetto comporta la rimozione dell'ambiguità sull'oggetto a cui il codice ha eseguito l'accesso. È possibile essere certi dell'oggetto in cui è stato inserito `Err.Number`il codice di errore, nonché dell'oggetto che ha generato in origine l'errore `Err.Source`(l'oggetto specificato in).
+> Il `On Error Resume Next` costrutto può essere preferibile a `On Error GoTo` quando si gestiscono gli errori generati durante l'accesso ad altri oggetti. Il `Err` controllo dopo ogni interazione con un oggetto comporta la rimozione dell'ambiguità sull'oggetto a cui il codice ha eseguito l'accesso. È possibile essere certi dell'oggetto in cui è stato inserito `Err.Number`il codice di errore, nonché dell'oggetto che ha generato in origine l'errore `Err.Source`(l'oggetto specificato in).
 
 ## <a name="on-error-goto-0"></a>In errore GoTo 0
  `On Error GoTo 0`Disabilita la gestione degli errori nella procedura corrente. Non viene specificata la riga 0 come inizio del codice di gestione degli errori, anche se la procedura contiene una riga con numero 0. Senza un' `On Error GoTo 0` istruzione, un gestore degli errori viene disabilitato automaticamente quando si esce da una routine.

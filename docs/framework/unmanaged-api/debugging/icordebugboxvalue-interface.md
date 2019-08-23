@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912915"
 ---
 # <a name="icordebugboxvalue-interface"></a>Interfaccia ICorDebugBoxValue
 
-Sottoclasse di "ICorDebugHeapValue" che rappresenta un oggetto di classe di valore boxed.  
+Sottoclasse di "ICorDebugHeapValue" che rappresenta un oggetto della classe di valori boxed.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Ottiene un puntatore a interfaccia per l'istanza "ICorDebugObjectValue" sottoposto a conversione boxing.|  
+|[Metodo GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Ottiene un puntatore a interfaccia per l'istanza "ICorDebugObjectValue" boxed.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 684d5e41e1d7cee2775aa0988d33a974315eac4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16d146766786f129d6da38bde1126ce8afe5e70f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963687"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>Metodo IHostMemoryManager::VirtualQuery
-Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione di Win32 di `VirtualQuery` recupera informazioni su un intervallo di pagine nello spazio degli indirizzi virtuali del processo chiamante.  
+Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione Win32 di `VirtualQuery` recupera informazioni su un intervallo di pagine nello spazio degli indirizzi virtuali del processo chiamante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,40 +40,40 @@ HRESULT VirtualQuery (
   
 ## <a name="parameters"></a>Parametri  
  `lpAddress`  
- [in] Un puntatore all'indirizzo nella memoria virtuale per eseguire una query.  
+ in Puntatore all'indirizzo nella memoria virtuale su cui eseguire la query.  
   
  `lpBuffer`  
- [out] Puntatore a una struttura che contiene informazioni sull'area di memoria specificato.  
+ out Puntatore a una struttura che contiene informazioni sull'area di memoria specificata.  
   
  `dwLength`  
- [in] Le dimensioni, in byte, del buffer che `lpBuffer` punta a.  
+ in Dimensione, in byte, del buffer a cui `lpBuffer` punta.  
   
  `pResult`  
- [out] Puntatore al numero di byte restituiti dal buffer delle informazioni.  
+ out Puntatore al numero di byte restituiti dal buffer delle informazioni.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|DESCRIZIONE|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`VirtualQuery`la restituzione è riuscita.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- `VirtualQuery` fornisce informazioni su un intervallo di pagine nello spazio degli indirizzi virtuali del processo chiamante. Questa implementazione imposta il valore della `pResult` parametro per il numero di byte restituiti nel buffer di informazioni e restituisce un valore HRESULT. In Win32 `VirtualQuery` funzione, il valore restituito è la dimensione del buffer. Per altre informazioni, vedere la documentazione della piattaforma Windows.  
+ `VirtualQuery`fornisce informazioni su un intervallo di pagine nello spazio degli indirizzi virtuali del processo chiamante. Questa implementazione imposta il valore del `pResult` parametro sul numero di byte restituiti nel buffer delle informazioni e restituisce un valore HRESULT. Nella funzione Win32 `VirtualQuery` , il valore restituito è la dimensione del buffer. Per ulteriori informazioni, vedere la documentazione della piattaforma Windows.  
   
 > [!IMPORTANT]
->  Implementazione del sistema operativo di `VirtualQuery` non comporta un deadlock ed possibile eseguire fino al completamento con casuale thread sospesi nel codice utente. Usare estrema cautela quando si implementa una versione ospitata di questo metodo.  
+> L'implementazione del sistema operativo di `VirtualQuery` non implica deadlock e può essere eseguita fino al completamento con thread casuali sospesi nel codice utente. Prestare molta attenzione quando si implementa una versione ospitata di questo metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

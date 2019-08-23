@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971814"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963304"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
  In questa panoramica vengono presentati i pattern di controllo per [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . I pattern di controllo rappresentano un metodo di classificazione ed esposizione della funzionalità di un controllo indipendentemente dal tipo o dall'aspetto del controllo stesso.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usa i pattern di controllo per rappresentare i comportamenti comuni dei controlli. Usare il pattern di controllo Invoke per i controlli che possono essere richiamati (ad esempio, i pulsanti) e il pattern di controllo Scroll per i controlli con barre di scorrimento (ad esempio le caselle di riepilogo, le visualizzazioni elenco o le caselle combinate). Poiché ogni pattern di controllo rappresenta una funzionalità distinta, possono essere combinati per descrivere il set completo di funzionalità supportate da un determinato controllo.  
   
 > [!NOTE]
->  I controlli aggregati, compilati con i controlli figlio che forniscono le funzionalità esposte dai controlli padre all' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , devono implementare tutti i pattern di controllo normalmente associati a ogni controllo figlio. Per contro questi stessi modelli di controllo non devono essere implementati dai controlli figlio.  
+> I controlli aggregati, compilati con i controlli figlio che forniscono le funzionalità esposte dai controlli padre all' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , devono implementare tutti i pattern di controllo normalmente associati a ogni controllo figlio. Per contro questi stessi modelli di controllo non devono essere implementati dai controlli figlio.  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>Componenti del pattern di controllo di automazione interfaccia utente  
@@ -51,7 +51,7 @@ ms.locfileid: "68971814"
 ## <a name="control-pattern-classes-and-interfaces"></a>Classi e interfacce dei pattern di controllo  
  Nella tabella seguente vengono descritti i pattern di controllo per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Sono inoltre elencate le classi usate dai client di automazione interfaccia utente per accedere ai pattern di controllo, nonché le interfacce usate dai provider di automazione interfaccia utente per implementarli.  
   
-|Classe del pattern di controllo|Interfaccia del provider|Descrizione|  
+|Classe del pattern di controllo|Interfaccia del provider|DESCRIZIONE|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usata per i controlli che possono essere ancorati in un contenitore di ancoraggio, ad esempio barre degli strumenti o caselle di strumenti.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usata per i controlli che possono essere espansi o compressi, ad esempio voci di menu in un'applicazione, come il menu **File** .|  

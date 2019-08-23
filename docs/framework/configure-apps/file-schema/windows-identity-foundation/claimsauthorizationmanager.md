@@ -3,15 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942897"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
-Registra un gestore di autorizzazione delle attestazioni per le attestazioni in ingresso.  
+Registra un gestore autorizzazioni delle attestazioni per le attestazioni in ingresso.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -34,29 +34,29 @@ Registra un gestore di autorizzazione delle attestazioni per le attestazioni in 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
-|tipo|Un tipo personalizzato che deriva dal <xref:System.Security.Claims.ClaimsAuthorizationManager> classe. Per altre informazioni su come specificare il `type` dell'attributo, vedere [riferimenti a tipi personalizzati](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|type|Tipo personalizzato che deriva dalla <xref:System.Security.Claims.ClaimsAuthorizationManager> classe. Per ulteriori informazioni su come specificare l'attributo `type` , vedere [riferimenti ai tipi personalizzati](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Se è presente alcun `type` attributo, oppure se il `type` i riferimenti dell'attributo le <xref:System.Security.Claims.ClaimsAuthenticationManager> (classe), il `<claimsAuthorizationManager>` elemento non accetta elementi figlio; tuttavia, le classi derivate da <xref:System.Security.Claims.ClaimsAuthorizationManager> possono definire elementi di configurazione figlio.  
+ Se non esiste alcun `type` attributo o se l' `type` attributo fa riferimento alla <xref:System.Security.Claims.ClaimsAuthenticationManager> classe, l' `<claimsAuthorizationManager>` elemento non accetta elementi figlio. Tuttavia, le classi derivate da possono definire elementi di <xref:System.Security.Claims.ClaimsAuthorizationManager> configurazione figlio.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
   
 ## <a name="remarks"></a>Note  
- Il comportamento predefinito fornito tramite il <xref:System.Security.Claims.ClaimsAuthorizationManager> classe autorizza sempre le attestazioni in ingresso. Se nessun `type` attributo è specificato o se il `type` attributo specifica il <xref:System.Security.Claims.ClaimsAuthorizationManager> (classe), il `<claimsAuthorizationManager>` elemento non accetta elementi figlio. È possibile specificare il `type` attributo per registrare un tipo derivato dal <xref:System.Security.Claims.ClaimsAuthorizationManager> classe per implementare il comportamento personalizzato. Le classi derivate possono supportano la configurazione tramite gli elementi figlio del `<claimsAuthorizationManager>` elemento eseguendo l'override di <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> metodo per gestire questi elementi. Lo schema definito per gli elementi figlio dipende dalla finestra di progettazione della classe.  
+ Il comportamento predefinito fornito tramite la <xref:System.Security.Claims.ClaimsAuthorizationManager> classe autorizza sempre le attestazioni in ingresso. Se non `type` è specificato alcun attributo o se `type` l'attributo specifica <xref:System.Security.Claims.ClaimsAuthorizationManager> la classe, `<claimsAuthorizationManager>` l'elemento non accetta gli elementi figlio. È possibile specificare l' `type` attributo per registrare un tipo derivato <xref:System.Security.Claims.ClaimsAuthorizationManager> dalla classe per implementare il comportamento personalizzato. Le classi derivate possono supportare la configurazione tramite `<claimsAuthorizationManager>` elementi figlio dell'elemento eseguendo <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> l'override del metodo per gestire questi elementi. Lo schema definito per gli elementi figlio dipende dalla finestra di progettazione della classe.  
   
 > [!IMPORTANT]
->  Quando si usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o il <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sulle attestazioni nel codice, la configurazione di identità che fa riferimento il `<federationConfiguration>` elemento consente di configurare il gestore di autorizzazione delle attestazioni e i criteri utilizzati per rendere decisioni di autorizzazione. Ciò è vero, anche in scenari non Web gli scenari passivi, ad esempio le applicazioni di Windows Communication Foundation (WCF) o un'applicazione che non è basata sul Web. Se l'applicazione non è un'applicazione Web passiva, il `<claimsAuthorizationManager>` elemento (e gli elementi di criteri figlio, se presente) della configurazione dell'identità cui viene fatto riferimento sono le uniche impostazioni applicate. Tutte le altre impostazioni vengono ignorate. Per altre informazioni, vedere la [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.  
+> Quando si usa <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o la <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo degli accessi in base alle attestazioni nel codice, la configurazione dell'identità a `<federationConfiguration>` cui fa riferimento l'elemento configura il gestore delle autorizzazioni delle attestazioni e i criteri usati per eseguire decisioni di autorizzazione. Questo vale anche per gli scenari che non sono scenari Web passivi, ad esempio applicazioni Windows Communication Foundation (WCF) o un'applicazione che non è basata sul Web. Se l'applicazione non è un'applicazione Web passiva, l' `<claimsAuthorizationManager>` elemento e i relativi elementi figlio, se presenti, della configurazione di identità a cui si fa riferimento sono le uniche impostazioni applicate. Tutte le altre impostazioni vengono ignorate. Per ulteriori informazioni, vedere l' [ \<elemento federationConfiguration >](federationconfiguration.md) .  
   
- Questo elemento viene impostata la <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> proprietà.  
+ Questo elemento imposta la <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> proprietà.  
   
 ## <a name="example"></a>Esempio  
- Il codice XML seguente viene illustrata la configurazione per un'autorizzazione delle attestazioni gestore che implementa criteri composto da coppie risorsa-azione di ognuno dei quali specifica combinazioni booleane le attestazioni che un richiedente deve disporre del privilegio per eseguire l'operazione sulla risorsa. Il codice che implementa il gestore di autorizzazione delle attestazioni in grado di utilizzare questo criterio è reperibile nel `ClaimsBasedAuthorization` esempio.  
+ Nel codice XML seguente viene illustrata la configurazione di un gestore autorizzazioni delle attestazioni che implementa i criteri composte da coppie di azioni di risorse, ognuna delle quali specifica le combinazioni booleane delle attestazioni che un richiedente deve possedere per eseguire l'azione sulla risorsa. Il codice che implementa il gestore autorizzazioni delle attestazioni in grado di utilizzare questo criterio è disponibile `ClaimsBasedAuthorization` nell'esempio.  
   
 ```xml  
 <system.identityModel>  

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964728"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
-Se una query richiede un parametro il cui valore è una stringa XML, gli sviluppatori possono fornire tale valore con un'istanza di **SqlXml** tipo di dati. Non è realmente semplicissima Le colonne XML in SQL Server accettano i valori dei parametri in esattamente come altri tipi di dati.  
+Se una query richiede un parametro il cui valore è una stringa XML, gli sviluppatori possono fornire tale valore utilizzando un'istanza del tipo di dati **SQLXML** . Non ci sono trucchi; Le colonne XML in SQL Server accettano valori di parametro esattamente allo stesso modo degli altri tipi di dati.  
   
 ## <a name="example"></a>Esempio  
- La seguente applicazione console crea una nuova tabella nel **AdventureWorks** database. La nuova tabella include una colonna denominata **SalesID** e una colonna XML denominato **SalesInfo**.  
+ La seguente applicazione console crea una nuova tabella nel database **AdventureWorks** . La nuova tabella include una colonna denominata **SalesId** e una colonna XML denominata **SalesInfo**.  
   
 > [!NOTE]
->  Il **AdventureWorks** database di esempio non è installato per impostazione predefinita quando si installa SQL Server. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
+> Il database di esempio **AdventureWorks** non viene installato per impostazione predefinita quando si installa SQL Server. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
   
- Nell'esempio viene preparato un oggetto <xref:System.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella. Un file salvato fornisce i dati XML necessari per il **SalesInfo** colonna.  
+ Nell'esempio viene preparato un oggetto <xref:System.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella. Un file salvato fornisce i dati XML necessari per la colonna **SalesInfo** .  
   
  Per creare il file necessario per l'esecuzione dell'esempio, creare un nuovo file di testo nella stessa cartella del progetto. Assegnare un nome al file MyTestStoreData.xml. Aprire il file in Blocco note, quindi copiare e incollare il testo seguente:  
   

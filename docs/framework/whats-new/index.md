@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3e16ead437bf3ebec9fcae6131577fa03e1df9
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660686"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987250"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -32,10 +32,10 @@ Questo articolo riepiloga le nuove funzionalità e i principali miglioramenti ap
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Non vengono fornite informazioni complete su ogni nuova funzionalità e l'articolo è soggetto a modifiche. Per informazioni generali su .NET Framework, vedere [Introduzione a .NET Framework](../get-started/index.md). Per informazioni sulle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](~/docs/framework/get-started/system-requirements.md). Per i collegamenti per il download e le istruzioni di installazione, vedere [Guida all'installazione](../install/guide-for-developers.md).
+Non vengono fornite informazioni complete su ogni nuova funzionalità e l'articolo è soggetto a modifiche. Per informazioni generali su .NET Framework, vedere [Introduzione a .NET Framework](../get-started/index.md). Per informazioni sulle piattaforme supportate, vedere [Requisiti di sistema di .NET Framework](../get-started/system-requirements.md). Per i collegamenti per il download e le istruzioni di installazione, vedere [Guida all'installazione](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+> Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](../get-started/the-net-framework-and-out-of-band-releases.md).
 > Vedere un [elenco completo dei pacchetti NuGet](https://www.nuget.org/profiles/dotnetframework) per .NET Framework.
 
 <a name="v48" />
@@ -605,7 +605,7 @@ Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'
 
 **Supporto per .NET Standard 2.0**
 
-[.NET Standard](~/docs/standard/net-standard.md) definisce un set di API che devono essere disponibili in ogni implementazione .NET conforme alla versione dello strumento standard. .NET Framework 4.7.1 supporta completamente .NET Standard 2.0 e aggiunge [circa 200 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt), definite in .NET Standard 2.0 e non incluse in .NET Framework 4.6.1, 4.6.2 e 4.7. Notare che queste versioni di .NET Framework supportano .NET Standard 2.0 solo se vengono distribuiti anche file di supporto aggiuntivi di .NET Standard nel sistema di destinazione. Per altre informazioni, vedere la sezione relativa al supporto di .NET Standard 2.0 nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
+[.NET Standard](../../standard/net-standard.md) definisce un set di API che devono essere disponibili in ogni implementazione .NET conforme alla versione dello strumento standard. .NET Framework 4.7.1 supporta completamente .NET Standard 2.0 e aggiunge [circa 200 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt), definite in .NET Standard 2.0 e non incluse in .NET Framework 4.6.1, 4.6.2 e 4.7. Notare che queste versioni di .NET Framework supportano .NET Standard 2.0 solo se vengono distribuiti anche file di supporto aggiuntivi di .NET Standard nel sistema di destinazione. Per altre informazioni, vedere la sezione relativa al supporto di .NET Standard 2.0 nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
 
 **Supporto per generatori di configurazioni**
 
@@ -623,7 +623,7 @@ A partire da .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameW
 
 **Supporto per riferimenti di sola lettura**
 
-.NET Framework 4.7.1 aggiunge l'oggetto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
+.NET Framework 4.7.1 aggiunge l'oggetto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](../../csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
 
 <a name="clr" />
 

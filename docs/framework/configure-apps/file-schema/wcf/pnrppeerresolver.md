@@ -2,18 +2,18 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 2404f00b2a3ba03e89c1e21fb25e13cabb8feed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e82117304ac133e5e84c0fc36b987560bcef96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933804"
 ---
 # <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
 Specifica l'uso di PNRP (Peer Name Resolution Protocol) come resolver. Questo elemento è facoltativo perché PNRP è il resolver predefinito.  
   
  \<system.serviceModel>  
-\<le associazioni >  
+\<Binding >  
 \<customBinding>  
 \<binding>  
 \<pnrpResolver>  
@@ -34,13 +34,13 @@ Specifica l'uso di PNRP (Peer Name Resolution Protocol) come resolver. Questo el
 |resolverType|Stringa che specifica il resolver da usare. L'attributo è facoltativo. Se non è impostato o se è impostato su una stringa vuota, viene usato PNRP.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuna  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="example"></a>Esempio  
   
@@ -53,8 +53,8 @@ Specifica l'uso di PNRP (Peer Name Resolution Protocol) come resolver. Questo el
 - <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Associazioni](../../../../../docs/framework/wcf/bindings.md)
-- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [Associazioni](../../../wcf/bindings.md)
+- [Estensione delle associazioni](../../../wcf/extending/extending-bindings.md)
+- [Associazioni personalizzate](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Resolver del peer](../../../wcf/feature-details/peer-resolvers.md)

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738067"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963134"
 ---
 # <a name="icordebugterminate-method"></a>Metodo ICorDebug::Terminate
-Termina il `ICorDebug` oggetto.  
+Termina l' `ICorDebug` oggetto.  
   
 > [!NOTE]
->  `Terminate` non deve essere chiamata fino a un [ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback è stato ricevuto per tutti i processi sottoposti a debug.  
+> `Terminate`non deve essere chiamato fino a quando non viene ricevuto un callback [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) per tutti i processi di cui è in corso il debug.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,14 +37,14 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>Note  
- `Terminate` deve essere chiamato quando il `ICorDebug` oggetto non è più necessario.  
+ `Terminate`deve essere chiamato quando l' `ICorDebug` oggetto non è più necessario.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

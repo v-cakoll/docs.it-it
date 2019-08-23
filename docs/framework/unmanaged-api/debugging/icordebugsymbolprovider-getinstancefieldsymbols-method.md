@@ -1,17 +1,17 @@
 ---
-title: 'Metodo icordebugsymbolprovider:: Getinstancefieldsymbols'
+title: 'Metodo metodo icordebugsymbolprovider:: GetInstanceFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ffabfc43861d3d295a0bd2ea09213b06b6868a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771419"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964616"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Metodo icordebugsymbolprovider:: Getinstancefieldsymbols
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Metodo metodo icordebugsymbolprovider:: GetInstanceFieldSymbols
 Ottiene i simboli dei campi di istanza che corrispondono a una firma typespec.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,19 +40,19 @@ HRESULT GetInstanceFieldSymbols(
  [out] Puntatore al numero di simboli recuperati dal metodo.  
   
  `pSymbols`  
- [out] Un puntatore a un [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) matrice che contiene i simboli dei campi di istanza richiesta.  
+ out Puntatore a una matrice [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) che contiene i simboli dei campi di istanza richiesti.  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo metodo è disponibile solo con .NET Native.  
+> Questo metodo è disponibile solo con .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

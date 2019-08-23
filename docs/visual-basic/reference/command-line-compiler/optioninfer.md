@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939195"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
@@ -28,19 +28,19 @@ Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni d
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Specificare `-optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `-optioninfer-` per bloccarla. L'opzione `-optioninfer`, senza alcun valore specificato, equivale a `-optioninfer+`. Il valore predefinito, quando l'opzione `-optioninfer` non è presente, è anche `-optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
+|`+` &#124; `-`|facoltativo. Specificare `-optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `-optioninfer-` per bloccarla. L'opzione `-optioninfer`, senza alcun valore specificato, equivale a `-optioninfer+`. Il valore predefinito, quando l'opzione `-optioninfer` non è presente, è anche `-optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
   
 > [!NOTE]
->  È possibile usare l'opzione `-noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp. Il valore predefinito del compilatore per questa opzione è `-optioninfer-`.  
+> È possibile usare l'opzione `-noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp. Il valore predefinito del compilatore per questa opzione è `-optioninfer-`.  
   
 ## <a name="remarks"></a>Note  
- Se il file di codice sorgente contiene un' [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione esegue l'override di `-optioninfer` impostazione da riga di comando del compilatore.  
+ Se il file di codice sorgente contiene un' [istruzione Option deduce](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione sostituisce `-optioninfer` l'impostazione del compilatore da riga di comando.  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Per impostare - /optioninfer nell'IDE di Visual Studio  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Per impostare-optioninfer (nell'IDE di Visual Studio  
   
 1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2. Nel **Compile** scheda, modificare il valore nella **Option infer** casella.  
+2. Nella scheda **Compila** , modificare il valore nella casella **Option dedurre** .  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `test.vb` con l'inferenza del tipo locale abilitata.  

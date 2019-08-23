@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963865"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Restituire o ignorare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero specificato di elementi in una sequenza e ignorare quindi gli elementi rimanenti.  
@@ -18,9 +18,9 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
  Usare l'operatore <xref:System.Linq.Queryable.Skip%2A> per ignorare un numero specificato di elementi in una sequenza, quindi restituire gli elementi rimanenti.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce <xref:System.Linq.Queryable.Skip%2A> usando una sottoquery con il codice SQL `NOT EXISTS` clausola. Di seguito vengono elencate le limitazioni di questa conversione.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Converte <xref:System.Linq.Queryable.Skip%2A> usando una sottoquery con la clausola SQL `NOT EXISTS` . Di seguito vengono elencate le limitazioni di questa conversione.  
   
 - L'argomento deve essere un set. I tipi multiset non sono supportati, anche se ordinati.  
   
@@ -49,9 +49,9 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
  A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento dell'operatore <xref:System.Linq.Queryable.Take%2A> o <xref:System.Linq.Queryable.Skip%2A> nel risultato dell'operatore.  
   
 > [!NOTE]
->  La conversione è diversa per SQL Server 2000 e SQL Server 2005. Se si prevede di usare <xref:System.Linq.Queryable.Skip%2A> con una query di qualsiasi complessità, usare SQL Server 2005.  
+> La traduzione è diversa per SQL Server 2000 e SQL Server 2005. Se si prevede di usare <xref:System.Linq.Queryable.Skip%2A> con una query di qualsiasi complessità, usare SQL Server 2005.  
   
- Tenere presente quanto segue [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query per SQL Server 2000:  
+ Si consideri la query seguente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

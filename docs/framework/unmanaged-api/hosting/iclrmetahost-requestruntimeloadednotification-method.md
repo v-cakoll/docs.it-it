@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776554"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964998"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Metodo ICLRMetaHost::RequestRuntimeLoadedNotification
-Fornisce una funzione di callback che viene garantita da chiamare quando viene caricata inizialmente una versione di common language runtime (CLR), ma non ancora iniziata. Questo metodo sostituisce le [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (funzione).  
+Fornisce una funzione di callback che è garantita per essere chiamata quando una versione di Common Language Runtime (CLR) viene caricata per la prima volta, ma non ancora avviata. Questo metodo sostituisce la funzione [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>Parametri  
  `pCallbackFunction`  
- [in] La funzione di callback che viene richiamata quando è stato caricato un nuovo runtime.  
+ in Funzione di callback richiamata quando un nuovo runtime è stato caricato.  
   
 ## <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
@@ -47,13 +47,13 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` è null.|  
   
 ## <a name="remarks"></a>Note  
- La richiamata funziona nel modo seguente:  
+ Il callback funziona nel modo seguente:  
   
-- Il callback viene richiamato solo quando viene caricato un runtime per la prima volta.  
+- Il callback viene richiamato solo quando un runtime viene caricato per la prima volta.  
   
-- Non viene richiamato il callback per i caricamenti rientranti dello stesso runtime.  
+- Il callback non viene richiamato per i caricamenti rientranti dello stesso runtime.  
   
-- Per i carichi di runtime non rientrante, le chiamate alla funzione di callback vengono serializzate.  
+- Per i caricamenti del runtime non rientranti, le chiamate alla funzione di callback vengono serializzate.  
   
  La funzione di callback presenta il seguente prototipo:  
   
@@ -78,23 +78,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Se l'host si intende caricare o provocare un altro runtime da caricare in modo rientrante, la `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` parametri che vengono messe a disposizione nel callback di funzione deve essere utilizzata nel modo seguente:  
+ Se l'host intende caricare o causare il caricamento di un altro runtime in modo rientrante, è necessario utilizzare `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` parametri e forniti nella funzione di callback nel modo seguente:  
   
-- `pfnCallbackThreadSet` deve essere chiamato dal thread che potrebbe causare un carico di runtime prima del tentativo di un carico di questo tipo.  
+- `pfnCallbackThreadSet`deve essere chiamato dal thread che potrebbe causare un caricamento in fase di esecuzione prima che venga eseguito un tentativo di caricamento.  
   
-- `pfnCallbackThreadUnset` deve essere chiamato quando il thread non è più comporterà un caricamento di runtime (e prima della restituzione dal callback iniziale).  
+- `pfnCallbackThreadUnset`deve essere chiamato quando il thread non provocherà più un carico di runtime di questo tipo (e prima della restituzione dal callback iniziale).  
   
-- `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` sono entrambi non rientrante.  
+- `pfnCallbackThreadSet`e `pfnCallbackThreadUnset` sono entrambi non rientranti.  
   
 > [!NOTE]
->  Hosting di applicazioni non devono chiamare `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` rientrano nell'ambito del `pCallbackFunction` parametro.  
+> Le applicazioni host non devono `pfnCallbackThreadSet` chiamare `pfnCallbackThreadUnset` né al di `pCallbackFunction` fuori dell'ambito del parametro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MetaHost.h  
+ **Intestazione:** Metahost. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

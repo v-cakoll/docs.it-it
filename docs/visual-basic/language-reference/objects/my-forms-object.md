@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fa5c77dd12c98100e3d17fc473a6802180d1e32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965975"
 ---
 # <a name="myforms-object"></a>Oggetto My.Forms
-Fornisce le proprietà per l'accesso a un'istanza di ogni modulo di Windows dichiarato nel progetto corrente.  
+Fornisce le proprietà per l'accesso a un'istanza di ogni Windows Form dichiarato nel progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- Il `My.Forms` oggetto fornisce un'istanza di ogni forma nel progetto corrente. Il nome della proprietà è identico al nome del form che accede a proprietà.   
+ L' `My.Forms` oggetto fornisce un'istanza di ogni form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà.   
   
- È possibile accedere ai form forniti il `My.Forms` oggetto utilizzando il nome del modulo, senza qualifica. Poiché il nome della proprietà è lo stesso nome di tipo del form, in questo modo è possibile accedere a un modulo come se avesse un'istanza predefinita. Ad esempio, `My.Forms.Form1.Show` equivale a `Form1.Show`.  
+ È possibile accedere ai moduli forniti dall' `My.Forms` oggetto utilizzando il nome del form, senza qualifica. Poiché il nome della proprietà è uguale al nome del tipo del form, questo consente di accedere a un form come se disponesse di un'istanza predefinita. Ad esempio, `My.Forms.Form1.Show` equivale a `Form1.Show`.  
   
- Il `My.Forms` oggetto espone solo le forme associate al progetto corrente. Non fornisce l'accesso ai moduli dichiarati nelle DLL di cui viene fatto riferimento. Per accedere a un modulo che fornisce una DLL, è necessario usare il nome completo del modulo, scritto come *DllName*. *Nomemodulo*.  
+ L' `My.Forms` oggetto espone solo i form associati al progetto corrente. Non fornisce l'accesso ai moduli dichiarati in dll a cui si fa riferimento. Per accedere a un modulo fornito da una DLL, è necessario utilizzare il nome completo del modulo, scritto come *dllname*. *FormName*.  
   
- È possibile usare il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> proprietà da ottenere una raccolta di tutti i form aperti dell'applicazione.  
+ È possibile usare la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> proprietà per ottenere una raccolta di tutti i form aperti dell'applicazione.  
   
- L'oggetto e le relative proprietà sono disponibili solo per le applicazioni di Windows.  
+ L'oggetto e le relative proprietà sono disponibili solo per le applicazioni Windows.  
   
-## <a name="properties"></a>Proprietà  
- Ogni proprietà del `My.Forms` oggetto consente di accedere a un'istanza di un form nel progetto corrente. Il nome della proprietà è identico al nome del form che accede a proprietà e il tipo della proprietà è identico al tipo del form.  
-  
-> [!NOTE]
->  Se si verifica un conflitto di nomi, è il nome della proprietà per accedere a un form *RootNamespace*_*Namespace*\_*nomemodulo*. Ad esempio, considerare due form denominati `Form1.`se uno di questi moduli è nello spazio dei nomi radice `WindowsApplication1` e nello spazio dei nomi `Namespace1`, è necessario accedere al form tramite `My.Forms.WindowsApplication1_Namespace1_Form1`.  
-  
- Il `My.Forms` oggetto consente di accedere all'istanza del form principale dell'applicazione che è stato creato all'avvio. Per tutti gli altri moduli di `My.Forms` oggetto crea una nuova istanza del form quando si accede e archiviarli. I tentativi successivi di accedere a tale proprietà restituiscono quell'istanza del form.  
-  
- È possibile rimuovere un form assegnando `Nothing` alla proprietà per tale modulo. La proprietà setter chiama il <xref:System.Windows.Forms.Form.Close%2A> metodo del form e quindi assegna `Nothing` al valore archiviato. Se si assegna un valore qualsiasi diverso da `Nothing` alla proprietà setter genera un <xref:System.ArgumentException> eccezione.  
-  
- È possibile verificare se una proprietà del `My.Forms` oggetto archivia un'istanza del form usando la `Is` o `IsNot` operatore. È possibile usare tali operatori per verificare se il valore della proprietà è `Nothing`.  
+## <a name="properties"></a>Properties  
+ Ogni proprietà dell' `My.Forms` oggetto fornisce l'accesso a un'istanza di un form nel progetto corrente. Il nome della proprietà è uguale al nome del modulo a cui accede la proprietà e il tipo della proprietà è uguale al tipo del form.  
   
 > [!NOTE]
->  In genere, il `Is` o `IsNot` operatore ha leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà attualmente Archivia `Nothing`, la proprietà crea una nuova istanza della forma e quindi restituisce quell'istanza. Tuttavia, il compilatore Visual Basic considera le proprietà del `My.Forms` dell'oggetto in modo diverso e consente il `Is` o `IsNot` operatore per controllare lo stato della proprietà senza modificarne il valore.  
+> Se si verifica un conflitto di nomi, il nome della proprietà per accedere a un modulo è *RootNamespace*_*spazio dei nomi*\_*FormName*. Si considerino, ad esempio, `Form1.`due moduli denominati se uno di questi moduli `WindowsApplication1` è nello spazio dei `Namespace1`nomi radice e nello spazio dei nomi `My.Forms.WindowsApplication1_Namespace1_Form1`, si accederà a tale modulo tramite.  
+  
+ L' `My.Forms` oggetto consente di accedere all'istanza del modulo principale dell'applicazione creato all'avvio. Per tutti gli altri form, `My.Forms` l'oggetto crea una nuova istanza del form quando vi si accede e la archivia. I tentativi successivi di accesso a tale proprietà restituiscono tale istanza del form.  
+  
+ È possibile eliminare un form assegnando `Nothing` alla proprietà per il form. Il setter della proprietà chiama <xref:System.Windows.Forms.Form.Close%2A> il metodo del form, quindi `Nothing` assegna il valore archiviato. Se si assegna un valore diverso `Nothing` da alla proprietà, il setter genera un' <xref:System.ArgumentException> eccezione.  
+  
+ È possibile verificare se una proprietà dell' `My.Forms` oggetto archivia un'istanza del form utilizzando l' `Is` operatore OR `IsNot` . È possibile utilizzare gli operatori per verificare se il valore della proprietà è `Nothing`.  
+  
+> [!NOTE]
+> In genere, `Is` l' `IsNot` operatore o deve leggere il valore della proprietà per eseguire il confronto. Tuttavia, se la proprietà è attualmente `Nothing`archiviata, la proprietà crea una nuova istanza del form e quindi restituisce tale istanza. Tuttavia, il compilatore Visual Basic considera le proprietà dell' `My.Forms` oggetto in modo diverso e consente all' `IsNot` `Is` operatore OR di controllare lo stato della proprietà senza modificarne il valore.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene modificato il titolo dell'oggetto default `SidebarMenu` form.  
+ In questo esempio viene modificato il titolo del `SidebarMenu` modulo predefinito.  
   
  [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
- Per questo esempio funzioni, il progetto deve avere un modulo denominato `SidebarMenu`.  
+ Per il corretto funzionamento di questo esempio, il progetto deve avere un `SidebarMenu`formato denominato.  
   
- Questo codice funziona solo in un progetto di applicazione di Windows.  
+ Questo codice funzionerà solo in un progetto di applicazione Windows.  
   
 ## <a name="requirements"></a>Requisiti  
   
-### <a name="availability-by-project-type"></a>Disponibilità dal tipo di progetto  
+### <a name="availability-by-project-type"></a>Disponibilità per tipo di progetto  
   
 |Tipo di progetto|Disponibile|  
 |---|---|  

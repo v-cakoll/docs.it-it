@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752023"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967884"
 ---
 # <a name="runtime-directive-policy-settings"></a>Impostazioni dei criteri della direttiva di runtime
 
 > [!NOTE]
->  In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).
+> In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).
 
 Le impostazioni dei criteri della direttiva di runtime per .NET Native determinano la disponibilità di metadati per i tipi e i membri dei tipi al runtime. Senza i metadati necessari, le operazioni che si basano su reflection, serializzazione e deserializzazione o sul marshalling dei tipi .NET Framework a COM o Windows Runtime possono avere esito negativo e generare un'eccezione. Le eccezioni più comuni sono [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) e (nel caso dell'interoperabilità) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).
 
@@ -117,7 +117,7 @@ I file di direttive di runtime riconoscono tre categorie di tipi di criteri: ref
 
 Ciascun tipo di criteri può essere impostato su uno dei valori elencati nella seguente tabella. Gli elementi che rappresentano i membri dei tipi supportano un set di impostazioni dei criteri diverso rispetto a quello degli altri elementi.
 
-|Impostazione dei criteri|Descrizione|Elementi `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementi `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|
+|Impostazione dei criteri|DESCRIZIONE|Elementi `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementi `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|Abilita i criteri per tutti i tipi e i membri non rimossi dalla catena di strumenti del .NET Native.|✓||
 |`Auto`|Specifica di usare i criteri predefiniti per il tipo di criteri di un determinato elemento di programma. Questa impostazione equivale all'omissione dei criteri per un determinato tipo di criteri. `Auto` in genere viene usato per indicare che i criteri sono stati ereditati da un elemento padre.|✓|✓|

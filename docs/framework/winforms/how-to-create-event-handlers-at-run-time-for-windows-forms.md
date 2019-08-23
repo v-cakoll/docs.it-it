@@ -12,24 +12,24 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4d2290622e648030f150d9bb06ce1f3000145759
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964324"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms
 
-Oltre a creare gli eventi usando Progettazione Windows Form in Visual Studio, è anche possibile creare un gestore eventi in fase di esecuzione. Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.
+Oltre a creare eventi usando il Progettazione Windows Form in Visual Studio, è anche possibile creare un gestore eventi in fase di esecuzione. Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.
 
 ## <a name="create-an-event-handler-at-run-time"></a>Creare un gestore eventi in fase di esecuzione
 
-1. Aprire il form che si desidera aggiungere un gestore eventi.
+1. Aprire il modulo a cui si desidera aggiungere un gestore eventi.
 
 2. Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.
 
-     Ad esempio, se si sta gestendo il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> (controllo), creare un metodo simile al seguente:
+     Se, ad esempio, si stava gestendo l' <xref:System.Windows.Forms.Control.Click> evento di un <xref:System.Windows.Forms.Button> controllo, si creerebbe un metodo come il seguente:
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ Oltre a creare gli eventi usando Progettazione Windows Form in Visual Studio, è
 
 4. Stabilire per quale modulo o controllo si desidera creare un gestore eventi.
 
-5. In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Ad esempio, il codice seguente specifica il gestore eventi `button1_Click` gestisce il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> controllo:
+5. In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Ad esempio, il codice seguente specifica che il gestore `button1_Click` eventi gestisce <xref:System.Windows.Forms.Control.Click> l'evento di <xref:System.Windows.Forms.Button> un controllo:
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,10 +71,10 @@ Oltre a creare gli eventi usando Progettazione Windows Form in Visual Studio, è
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     Il <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> metodo illustrato nel codice Visual Basic precedente stabilisce un evento Click del pulsante.
+     Il <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> metodo illustrato nel codice Visual Basic precedente stabilisce un gestore dell'evento click per il pulsante.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
 - [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)
-- [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

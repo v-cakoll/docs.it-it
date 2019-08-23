@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 121c4bca3419ef1e34a03ff7600285948ca4c237
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b81230ee901510b2859b45de76c6dcfa6cb28e58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986999"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968188"
 ---
 # <a name="icordebugtypeenum-interface"></a>Interfaccia ICorDebugTypeEnum
 Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugType".  
@@ -30,19 +30,19 @@ Implementa i metodi "ICorDebugEnum" ed enumera le matrici "ICorDebugType".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Ottiene il numero specificato di `ICorDebugType` istanze dall'enumerazione, iniziando in corrispondenza della posizione corrente.|  
+|[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Ottiene il numero specificato di `ICorDebugType` istanze dall'enumerazione, a partire dalla posizione corrente.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
+> Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

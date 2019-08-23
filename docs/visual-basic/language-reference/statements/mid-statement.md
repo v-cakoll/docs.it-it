@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963542"
 ---
 # <a name="mid-statement"></a>Istruzione Mid
-Sostituisce un numero specificato di caratteri in un `String` variabili con i caratteri da un'altra stringa.  
+Sostituisce un numero specificato di caratteri in una `String` variabile con caratteri di un'altra stringa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,33 +32,33 @@ Mid( _
   
 ## <a name="parts"></a>Parti  
  `Target`  
- Obbligatorio. Nome del `String` variabile da modificare.  
+ Richiesto. Nome della `String` variabile da modificare.  
   
  `Start`  
- Obbligatorio. `Integer` espressione. Posizione del carattere in `Target` dove inizia la sostituzione di testo. `Start` Usa un indice in base uno.  
+ Richiesto. `Integer`espressione. Posizione del carattere `Target` in in cui inizia la sostituzione del testo. `Start`Usa un indice in base uno.  
   
  `Length`  
- Facoltativo. `Integer` espressione. Numero di caratteri da sostituire. Se omesso, tutti `String` viene usato.  
+ facoltativo. `Integer`espressione. Numero di caratteri da sostituire. Se omesso, `String` viene utilizzato tutto.  
   
  `StringExpression`  
- Obbligatorio. `String` espressione che sostituisce parte di `Target`.  
+ Richiesto. `String`espressione che sostituisce parte di `Target`.  
   
 ## <a name="exceptions"></a>Eccezioni  
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 o `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start`< = 0 o `Length` < 0.|  
   
 ## <a name="remarks"></a>Note  
  Il numero di caratteri sostituiti è sempre minore o uguale al numero di caratteri in `Target`.  
   
- Visual Basic ha un <xref:Microsoft.VisualBasic.Strings.Mid%2A> funzione e un `Mid` istruzione. Questi elementi funzionano entrambi in un numero specificato di caratteri in una stringa, ma il `Mid` funzione restituisce i caratteri, mentre il `Mid` istruzione sostituisce i caratteri. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic dispone di <xref:Microsoft.VisualBasic.Strings.Mid%2A> una funzione e `Mid` di un'istruzione. Questi elementi operano entrambi su un numero specificato di caratteri in una stringa, ma `Mid` la funzione restituisce i caratteri mentre `Mid` l'istruzione sostituisce i caratteri. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  Il `MidB` istruzione delle versioni precedenti di Visual Basic sostituisce una sottostringa in byte, anziché in caratteri. Viene utilizzato principalmente per la conversione di stringhe nelle applicazioni di double byte character set (DBCS). Tutte le stringhe di Visual Basic sono in formato Unicode, e `MidB` non è più supportata.  
+> L' `MidB` istruzione di versioni precedenti di Visual Basic sostituisce una sottostringa in byte, anziché caratteri. Viene utilizzato principalmente per la conversione di stringhe in applicazioni DBCS (Double-byte character set). Tutte le stringhe di Visual Basic sono in formato `MidB` Unicode e non sono più supportate.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene usato il `Mid` istruzione per sostituire un numero specificato di caratteri in una variabile di stringa con caratteri da un'altra stringa.  
+ In questo esempio viene `Mid` utilizzata l'istruzione per sostituire un numero specificato di caratteri in una variabile di stringa con caratteri di un'altra stringa.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
@@ -67,7 +67,7 @@ Mid( _
   
  **Modulo:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vedere anche
 

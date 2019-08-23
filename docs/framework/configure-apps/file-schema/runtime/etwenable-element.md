@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920770"
 ---
 # <a name="etwenable-element"></a>\<Elemento > etwEnable
 Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).  
@@ -32,7 +32,7 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |enabled|Attributo obbligatorio.<br /><br /> Specifica se ETW deve essere abilitato.|  
   
@@ -57,7 +57,7 @@ Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common 
  A partire da Windows Vista, ETW è abilitato per impostazione predefinita. Utilizzare questo elemento per disabilitare ETW per un'applicazione. Nelle versioni precedenti di Windows, utilizzare questo elemento per abilitare ETW per un'applicazione.  
   
 > [!NOTE]
->  ETW può essere abilitato o disabilitato a livello globale in un server tramite un'impostazione del registro di sistema. Vedere [controllo .NET Framework registrazione](../../../performance/controlling-logging.md).  
+> ETW può essere abilitato o disabilitato a livello globale in un server tramite un'impostazione del registro di sistema. Vedere [controllo .NET Framework registrazione](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come abilitare la traccia ETW per un'applicazione.  
