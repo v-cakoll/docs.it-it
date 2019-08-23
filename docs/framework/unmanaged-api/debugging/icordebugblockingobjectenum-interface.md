@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a23d21d0ed8c6a6a226d5e58eafb7bde65a4896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11693416d0a3e0afe80c2356ff0a12ecea0d8d15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959305"
 ---
-# <a name="icordebugblockingobjectenum-interface"></a><span data-ttu-id="29978-102">Interfaccia ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="29978-102">ICorDebugBlockingObjectEnum Interface</span></span>
-<span data-ttu-id="29978-103">Fornisce un enumeratore per un elenco degli [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) strutture.</span><span class="sxs-lookup"><span data-stu-id="29978-103">Provides an enumerator for a list of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span> <span data-ttu-id="29978-104">Questa interfaccia è una sottoclasse di interfaccia ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="29978-104">This interface is a subclass of the ICorDebugEnum interface.</span></span>  
+# <a name="icordebugblockingobjectenum-interface"></a><span data-ttu-id="475a6-102">Interfaccia ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="475a6-102">ICorDebugBlockingObjectEnum Interface</span></span>
+<span data-ttu-id="475a6-103">Fornisce un enumeratore per un elenco di strutture [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="475a6-103">Provides an enumerator for a list of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span> <span data-ttu-id="475a6-104">Questa interfaccia è una sottoclasse dell'interfaccia ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="475a6-104">This interface is a subclass of the ICorDebugEnum interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="29978-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="29978-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="475a6-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="475a6-105">Methods</span></span>  
   
-|<span data-ttu-id="29978-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="29978-106">Method</span></span>|<span data-ttu-id="29978-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="29978-107">Description</span></span>|  
+|<span data-ttu-id="475a6-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="475a6-106">Method</span></span>|<span data-ttu-id="475a6-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="475a6-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="29978-108">Metodo Next</span><span class="sxs-lookup"><span data-stu-id="29978-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|<span data-ttu-id="29978-109">Enumera un elenco dei [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) strutture.</span><span class="sxs-lookup"><span data-stu-id="29978-109">Enumerates through a list of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>|  
+|[<span data-ttu-id="475a6-108">Metodo Next</span><span class="sxs-lookup"><span data-stu-id="475a6-108">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|<span data-ttu-id="475a6-109">Enumera un elenco di strutture [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .</span><span class="sxs-lookup"><span data-stu-id="475a6-109">Enumerates through a list of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="29978-110">Note</span><span class="sxs-lookup"><span data-stu-id="29978-110">Remarks</span></span>  
- <span data-ttu-id="29978-111">Ogni struttura `CorDebugBlockingObject` rappresenta un oggetto che blocca un thread.</span><span class="sxs-lookup"><span data-stu-id="29978-111">Each `CorDebugBlockingObject` structure represents an object that is blocking a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="475a6-110">Note</span><span class="sxs-lookup"><span data-stu-id="475a6-110">Remarks</span></span>  
+ <span data-ttu-id="475a6-111">Ogni struttura `CorDebugBlockingObject` rappresenta un oggetto che blocca un thread.</span><span class="sxs-lookup"><span data-stu-id="475a6-111">Each `CorDebugBlockingObject` structure represents an object that is blocking a thread.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="29978-112">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="29978-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="475a6-112">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="475a6-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29978-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="29978-113">Requirements</span></span>  
- <span data-ttu-id="29978-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29978-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="475a6-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="475a6-113">Requirements</span></span>  
+ <span data-ttu-id="475a6-114">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="475a6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="29978-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="29978-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="475a6-115">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="475a6-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="29978-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29978-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="475a6-116">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="475a6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="29978-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29978-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="475a6-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="475a6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29978-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="29978-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="475a6-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="475a6-118">See also</span></span>
 
-- [<span data-ttu-id="29978-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="29978-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="29978-120">Debug</span><span class="sxs-lookup"><span data-stu-id="29978-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="475a6-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="475a6-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="475a6-120">Debug</span><span class="sxs-lookup"><span data-stu-id="475a6-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

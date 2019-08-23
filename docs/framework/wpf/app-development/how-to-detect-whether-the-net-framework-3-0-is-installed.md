@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960249"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="bc395-102">Procedura: Verificare se .NET Framework 3.0 è installato</span><span class="sxs-lookup"><span data-stu-id="bc395-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="bc395-103">Prima che gli amministratori possono distribuire le applicazioni di Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc395-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="bc395-104">In questo argomento fornisce uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se è presente in un sistema di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc395-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="40cdb-102">Procedura: Verificare se .NET Framework 3.0 è installato</span><span class="sxs-lookup"><span data-stu-id="40cdb-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="40cdb-103">Prima che gli amministratori possano distribuire le applicazioni Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework sia presente.</span><span class="sxs-lookup"><span data-stu-id="40cdb-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="40cdb-104">In questo argomento viene fornito uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se il .NET Framework è presente in un sistema.</span><span class="sxs-lookup"><span data-stu-id="40cdb-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bc395-105">Per altre informazioni sull'installazione, distribuzione e il rilevamento di Microsoft .NET Framework, vedere la discussione nella [alla distribuzione di Microsoft .NET Framework versione 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="bc395-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+> <span data-ttu-id="40cdb-105">Per informazioni più dettagliate sull'installazione, la distribuzione e il rilevamento di Microsoft .NET Framework, vedere la sezione relativa alla [distribuzione di Microsoft .NET Framework versione 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).</span><span class="sxs-lookup"><span data-stu-id="40cdb-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="bc395-106">Rilevare la stringa agente utente di ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="bc395-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="bc395-107">Quando viene installato .NET Framework, il file MSI aggiunge ".NET CLR" e il numero di versione per la stringa UserAgent.</span><span class="sxs-lookup"><span data-stu-id="bc395-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="bc395-108">Nell'esempio seguente viene illustrato uno script incorporato in una pagina HTML semplice.</span><span class="sxs-lookup"><span data-stu-id="bc395-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="bc395-109">Lo script cerca nella stringa agente utente per determinare se è installato .NET Framework e viene visualizzato un messaggio di stato sui risultati della ricerca.</span><span class="sxs-lookup"><span data-stu-id="bc395-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="40cdb-106">Rilevare la stringa dell'agente utente ".NET CLR"</span><span class="sxs-lookup"><span data-stu-id="40cdb-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="40cdb-107">Quando .NET Framework viene installato, il file MSI aggiunge ".NET CLR" e il numero di versione alla stringa UserAgent.</span><span class="sxs-lookup"><span data-stu-id="40cdb-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="40cdb-108">Nell'esempio seguente viene illustrato uno script incorporato in una pagina HTML semplice.</span><span class="sxs-lookup"><span data-stu-id="40cdb-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="40cdb-109">Lo script cerca la stringa UserAgent per determinare se .NET Framework è installato e visualizza un messaggio di stato sui risultati della ricerca.</span><span class="sxs-lookup"><span data-stu-id="40cdb-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "61947823"
 </HTML>  
 ```  
   
- <span data-ttu-id="bc395-110">Se la ricerca per la versione ".NET CLR" ha esito positivo, viene visualizzato il tipo di messaggio di stato seguente:</span><span class="sxs-lookup"><span data-stu-id="bc395-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="40cdb-110">Se la ricerca della versione ".NET CLR" ha esito positivo, viene visualizzato il seguente tipo di messaggio di stato:</span><span class="sxs-lookup"><span data-stu-id="40cdb-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="bc395-111">In caso contrario, viene visualizzato il tipo di messaggio di stato seguente:</span><span class="sxs-lookup"><span data-stu-id="bc395-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="40cdb-111">In caso contrario, viene visualizzato il seguente tipo di messaggio di stato:</span><span class="sxs-lookup"><span data-stu-id="40cdb-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   
