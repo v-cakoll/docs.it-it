@@ -8,34 +8,28 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 681ae11052216c610d2f3ac7cf8846153d6a341c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211621"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987025"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: Impostare le opzioni della griglia per tutti i Windows Form
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: Imposta le opzioni della griglia per tutti i Windows Forms
 
-Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.
+Man mano che si utilizza l'ambiente di sviluppo di Visual Studio, è possibile impostare le preferenze per tutti i moduli e i progetti che si utilizzano nel Progettazione Windows Form.
 
-## <a name="set-global-windows-forms-options"></a>Impostare le opzioni di Windows Form globali
+## <a name="set-global-windows-forms-options"></a>Imposta opzioni di Windows Forms globali
 
-1. In Visual Studio dal **degli strumenti** dal menu **opzioni**.
+1. In Visual Studio scegliere **Opzioni**dal menu **strumenti** .
 
-2. Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.
+2. Nel riquadro sinistro della finestra di dialogo **Opzioni** fare clic su **Progettazione Windows Form**.
 
-   Nel riquadro di destra, sotto il **le impostazioni di Layout** intestazione, è possibile impostare il valore predefinito delle impostazioni della griglia per tutti i nuovi form si crea. Queste impostazioni includono le dimensioni della griglia, eventuale blocco dei controlli ad esso e indica se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **guide di allineamento** le modalità di layout. Per altre informazioni sulle guide di allineamento, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+   Nel riquadro destro, sotto l'intestazione **Impostazioni layout** è possibile impostare le impostazioni predefinite della griglia per tutti i nuovi moduli creati. Queste impostazioni includono le dimensioni della griglia, se i controlli vengono bloccati e se sono attivate per impostazione predefinita. Inoltre, è possibile scegliere tra le modalità di layout **SnapToGrid** e guide di **allineamento** . Per ulteriori informazioni sulle guide di allineamento [, vedere Procedura dettagliata: Disposizione di controlli su Windows Forms mediante guide](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)di allineamento.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Controlli Windows Form](index.md)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
-- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
-- [Procedura: Impostare l'ordine di tabulazione in Windows Form](how-to-set-the-tab-order-on-windows-forms.md)
-- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)
-- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
-- [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
+- [Opzioni: Progettazione Windows Form](/visualstudio/ide/reference/options-windows-forms-designer)

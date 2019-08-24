@@ -2,18 +2,18 @@
 title: 'Procedura: Controllo delle versioni dei servizi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654532"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988701"
 ---
 # <a name="how-to-service-versioning"></a>Procedura: Controllo delle versioni dei servizi
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
   
 > [!WARNING]
->  Per indirizzare un messaggio a una specifica versione del servizio, il servizio di routing deve essere in grado di determinare la destinazione del messaggio in base al relativo contenuto. Nel metodo illustrato di seguito il client specifica la versione inserendo informazioni in un'intestazione di messaggio. Esistono metodi di controllo delle versioni del servizio che non richiedono il passaggio di dati aggiuntivi da parte dei client. Un messaggio potrebbe essere ad esempio indirizzato alla versione più recente o più compatibile di un servizio oppure una parte del relativo elemento SOAP Envelope standard potrebbe essere utilizzato dal router.  
+> Per indirizzare un messaggio a una specifica versione del servizio, il servizio di routing deve essere in grado di determinare la destinazione del messaggio in base al relativo contenuto. Nel metodo illustrato di seguito il client specifica la versione inserendo informazioni in un'intestazione di messaggio. Esistono metodi di controllo delle versioni del servizio che non richiedono il passaggio di dati aggiuntivi da parte dei client. Un messaggio potrebbe essere ad esempio indirizzato alla versione più recente o più compatibile di un servizio oppure una parte del relativo elemento SOAP Envelope standard potrebbe essere utilizzato dal router.  
   
  Le operazioni esposte da entrambi servizi sono:  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  In questo esempio viene utilizzato il filtro XPath per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare la versione deve essere indirizzato il messaggio a. Un filtro XPath serve anche per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
+2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Per questo esempio, il filtro XPath viene usato per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare la versione a cui deve essere indirizzato il messaggio. Viene inoltre utilizzato un filtro XPath per rilevare i messaggi che non contengono l'intestazione "CalcVer". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Il prefisso s12 è definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi `http://www.w3.org/2003/05/soap-envelope`.
+    > Il prefisso dello spazio dei nomi S12 è definito per impostazione predefinita nella tabella dello spazio dei `http://www.w3.org/2003/05/soap-envelope`nomi e rappresenta lo spazio dei nomi.
   
-3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con un valore pari a 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
+3. Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "CalcVer" con il valore 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
   
      Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente mostra l'associazione `filterTable1` con gli endpoint del servizio:  
+4. Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing. Nell'esempio seguente viene illustrata `filterTable1` l'associazione con gli endpoint del servizio:  
   
     ```xml  
     <behaviors>  

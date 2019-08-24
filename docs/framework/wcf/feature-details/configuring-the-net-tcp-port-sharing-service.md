@@ -2,12 +2,12 @@
 title: Configurazione del servizio di condivisione delle porte Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949609"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988229"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurazione del servizio di condivisione delle porte Net.TCP
 I servizi indipendenti che usano il trasporto Net.TCP possono controllare diverse impostazioni avanzate, quali esempio `ListenBacklog` e `MaxPendingAccepts`, che regolano il comportamento del socket TCP sottostante usato per la comunicazione di rete. Tuttavia, queste impostazioni per ogni socket si applicano solo al livello di associazione, se l'associazione del trasporto ha disattivato la condivisione delle porte, che è attivata per impostazione predefinita.  
@@ -59,7 +59,7 @@ I servizi indipendenti che usano il trasporto Net.TCP possono controllare divers
 > Nei sistemi [!INCLUDE[wv](../../../../includes/wv-md.md)] con il controllo dell'account utente attivato, gli utenti locali necessitano di autorizzazioni elevate anche se il proprio account è un membro del gruppo Administrators. Per consentire a questi utenti di usare il servizio di condivisione delle porte senza elevazione, il SID dell'utente (o il SID di un gruppo di cui l'utente è membro) deve essere aggiunto in modo esplicito alla \<sezione AllowAccounts > di SMSvcHost. exe. config.  
   
 > [!WARNING]
->  Il file SMSvcHost.exe.config predefinito specifica un elemento `etwProviderId` personalizzato per impedire che la traccia di SMSvcHost.exe interferisca con le tracce del servizio.  
+> Il file SMSvcHost.exe.config predefinito specifica un elemento `etwProviderId` personalizzato per impedire che la traccia di SMSvcHost.exe interferisca con le tracce del servizio.  
   
 ## <a name="see-also"></a>Vedere anche
 

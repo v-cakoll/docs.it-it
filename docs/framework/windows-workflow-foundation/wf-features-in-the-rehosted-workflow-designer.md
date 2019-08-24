@@ -2,12 +2,12 @@
 title: Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913698"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987236"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Supporto per nuovo funzionalità di Workflow Foundation 4.5 nella finestra di progettazione del flusso di lavoro ospitata nuovamente
 In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte molte nuove funzionalità, tra cui diversi miglioramenti apportati all'esperienza di progettazione dei flussi di lavoro. In questo argomento vengono descritte quali funzionalità sono supportate nella finestra di progettazione ospitata nuovamente e quali non sono attualmente supportate.
@@ -22,7 +22,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  Prima di .NET Framework 4,5, tutte le espressioni nei flussi di lavoro potevano essere scritte solo in Visual Basic. In .NET Framework 4,5, le espressioni Visual Basic vengono utilizzate solo per i progetti creati utilizzando Visual Basic. Nei progetti Visual C# viene ora usato C# per le espressioni. Quando si creano flussi di lavoro in Visual Studio 2012, viene fornito C# un editor di espressioni pienamente funzionante con funzionalità quali l'evidenziazione della grammatica e IntelliSense. I progetti di flussi di lavoro C# creati in versioni precedenti che utilizzavano espressioni di Visual Basic continueranno a funzionare.
 
 > [!WARNING]
->  Le espressioni C# non sono supportate nella finestra di progettazione ospitata nuovamente.
+> Le espressioni C# non sono supportate nella finestra di progettazione ospitata nuovamente.
 
 ## <a name="new-designer-capabilities"></a>Nuove funzionalità di progettazione
 
@@ -30,7 +30,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  Le funzionalità di [ricerca veloce](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [ricerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) introdotte con .NET Framework 4,5 non sono supportate nella finestra di progettazione ospitata nuovamente. La ricerca di `Toolbox` è supportata nella finestra di progettazione ospitata nuovamente. Per ulteriori informazioni su queste funzionalità, vedere la pagina relativa alla [ricerca nella finestra di progettazione](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
->  La [ricerca rapida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e la [ricerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) non sono supportate nella finestra di progettazione ospitata nuovamente.
+> La [ricerca rapida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e la [ricerca nei file](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) non sono supportate nella finestra di progettazione ospitata nuovamente.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Eliminare l'elemento del menu di scelta rapida nella finestra di progettazione delle variabili e degli argomenti
  In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili e gli argomenti potevano essere eliminati solo nella finestra di progettazione mediante la tastiera. A partire da .NET Framework 4,5, le variabili e gli argomenti possono essere eliminati usando il menu di scelta rapida. Questa funzionalità è supportata nella finestra di progettazione ospitata nuovamente.
@@ -103,7 +103,7 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gli errori di convalida del flusso di lavoro non venivano contati come errori di compilazione durante l'esecuzione di questa operazione per un progetto di flusso di lavoro. In questo modo, la compilazione di un progetto di flusso di lavoro poteva essere completata correttamente anche in presenza di errori di convalida del flusso di lavoro. In .NET Framework 4,5, gli errori di convalida del flusso di lavoro provocano un errore di compilazione.
 
 > [!WARNING]
->  La convalida in fase di compilazione non è supportata nella finestra di progettazione ospitata nuovamente.  
+> La convalida in fase di compilazione non è supportata nella finestra di progettazione ospitata nuovamente.  
   
 ### <a name="design-time-background-validation"></a>Convalida in background in fase di progettazione  
  In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]i flussi di lavoro sono stati convalidati come processo in primo piano, che potrebbe potenzialmente bloccare l'interfaccia utente durante i processi di convalida complessi o che richiedono molto tempo. La convalida del flusso di lavoro viene ora effettuata in un thread in background, pertanto l'interfaccia utente non viene bloccata.  
@@ -142,4 +142,4 @@ In Windows Workflow Foundation (WF) in .NET Framework 4,5 sono state introdotte 
  Lo strumento di sviluppo del flusso di lavoro contratto-primo consente allo sviluppatore di progettare un contratto in Code First, quindi, con pochi clic in Visual Studio, generare automaticamente un modello di attività nella casella degli strumenti che rappresenta ciascuna operazione. Queste attività vengono quindi usate per creare un flusso di lavoro che implementa le operazioni definite dal contratto. La finestra di progettazione del flusso di lavoro convaliderà il servizio di quest'ultimo per garantire che queste operazioni vengano implementate e che la firma del flusso di lavoro corrisponda a quella del contratto. Lo sviluppatore può inoltre associare un servizio del flusso di lavoro a una raccolta di contratti implementati. Per ulteriori informazioni sullo sviluppo di servizi del flusso di lavoro contract [-First, vedere Procedura: Creazione di un servizio flusso di lavoro che utilizza un contratto](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)di servizio esistente.  
   
 > [!WARNING]
->  Lo sviluppo di flussi di lavoro con priorità al contratto ("contract-first") non è supportato nella finestra di progettazione flussi di lavoro.
+> Lo sviluppo di flussi di lavoro con priorità al contratto ("contract-first") non è supportato nella finestra di progettazione flussi di lavoro.

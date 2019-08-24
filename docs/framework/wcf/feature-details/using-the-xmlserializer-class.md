@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967813"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988606"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilizzo della classe XmlSerializer
 Windows Communication Foundation (WCF) può utilizzare due diverse tecnologie di serializzazione per trasformare i dati nell'applicazione in XML trasmessi tra client e servizi, un processo denominato serializzazione.  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF) può utilizzare due diverse tecnologie di
  I tipi che implementano l'interfaccia `IXmlSerializable` sono completamente supportati da `DataContractSerializer`. L'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> deve essere applicato sempre a questi tipi per controllarne lo schema.  
   
 > [!WARNING]
->  Se si serializzano dei tipi polimorfici è necessario applicare a tali tipi l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> per assicurare che venga serializzato il tipo corretto.  
+> Se si serializzano dei tipi polimorfici è necessario applicare a tali tipi l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> per assicurare che venga serializzato il tipo corretto.  
   
  Esistono tre varietà di tipi che implementano `IXmlSerializable`: i tipi che rappresentano contenuto arbitrario, i tipi che rappresentano un singolo elemento e i tipi <xref:System.Data.DataSet> legacy.  
   

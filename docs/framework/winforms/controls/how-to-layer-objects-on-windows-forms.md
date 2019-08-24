@@ -12,39 +12,43 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 2e4c6a3236b3a2a2afaad73fee21c3cf59b992b8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966535"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987566"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: Disporre oggetti su più livelli in Windows Forms
-Quando si crea un'interfaccia utente complessa o si utilizza un form con interfaccia a documenti multipli (MDI), spesso si desidera eseguire il layer di entrambi i controlli e i form figlio per creare interfacce utente (UI) più complesse. Per spostare e tenere traccia dei controlli e delle finestre all'interno del contesto di un gruppo, è possibile modificare l'ordine z. L' *ordine z* è il livello visivo dei controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono alla finestra nella parte inferiore dello z-order.
+# <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: Oggetti livello su Windows Forms
+
+Quando si crea un'interfaccia utente complessa o si utilizza un form con interfaccia a documenti multipli (MDI), spesso si desidera eseguire il layer di entrambi i controlli e i form figlio per creare interfacce utente (UI) più complesse. Per spostare e tenere traccia dei controlli e delle finestre all'interno del contesto di un gruppo, è possibile modificare l' *ordine z*. L'ordine z è il livello visivo dei controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono alla finestra nella parte inferiore dello z-order.
 
 ## <a name="to-layer-controls-at-design-time"></a>Per eseguire il livello di controlli in fase di progettazione
 
-1. Selezionare un controllo che si desidera applicare al livello.
+1. In Visual Studio selezionare un controllo che si desidera applicare al livello.
 
-2. Scegliere **Ordina**dal menu **formato** , quindi fare clic su **porta in primo piano** o su **Invia a indietro**.
+2. Scegliere **Order**dal menu **Format** , quindi selezionare **Bring to front** o **Send to back**.
 
 ## <a name="to-layer-controls-programmatically"></a>Per livelli di controlli a livello di codice
 
-- Usare i <xref:System.Windows.Forms.Control.BringToFront%2A> metodi <xref:System.Windows.Forms.Control.SendToBack%2A> e per modificare l'ordine z dei controlli.
+Usare i <xref:System.Windows.Forms.Control.BringToFront%2A> metodi <xref:System.Windows.Forms.Control.SendToBack%2A> e per modificare l'ordine z dei controlli.
 
-     Se, ad esempio, <xref:System.Windows.Forms.TextBox> un controllo `txtFirstName`,, è sotto un altro controllo e si desidera utilizzarlo in primo piano, utilizzare il codice seguente:
+Se, ad esempio, <xref:System.Windows.Forms.TextBox> un controllo `txtFirstName`,, è sotto un altro controllo e si desidera utilizzarlo in primo piano, utilizzare il codice seguente:
 
-    ```vb
-    txtFirstName.BringToFront()
-    ```
+```vb
+txtFirstName.BringToFront()
+```
 
-    ```csharp
-    txtFirstName.BringToFront();
-    ```
+```csharp
+txtFirstName.BringToFront();
+```
 
-    ```cpp
-    txtFirstName->BringToFront();
-    ```
+```cpp
+txtFirstName->BringToFront();
+```
 
 > [!NOTE]
 > Windows Forms supporta il contenimento del *controllo*. Il contenimento dei controlli comporta l'inserimento di un numero di controlli all'interno di un controllo contenitore <xref:System.Windows.Forms.RadioButton> , ad esempio <xref:System.Windows.Forms.GroupBox> un numero di controlli all'interno di un controllo. È quindi possibile sovrapporre i controlli all'interno del controllo che lo contiene. Spostando la casella di gruppo si spostano anche i controlli, perché sono contenuti al suo interno.
@@ -52,7 +56,6 @@ Quando si crea un'interfaccia utente complessa o si utilizza un form con interfa
 ## <a name="see-also"></a>Vedere anche
 
 - [Controlli Windows Form](index.md)
-- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

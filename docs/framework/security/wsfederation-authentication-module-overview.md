@@ -3,12 +3,12 @@ title: Panoramica del modulo di autenticazione WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915507"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987703"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Panoramica del modulo di autenticazione WSFederation
 Windows Identity Foundation (WIF) include il supporto per l'autenticazione federata nelle applicazioni ASP.NET tramite il modulo di autenticazione WS-Federated (WS-FAM, WS-Federated Authentication Module). Questo argomento aiuta capire come funziona l'autenticazione federata e come usarla.  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
  Il codice XML seguente mostra una configurazione di un'applicazione relying party ASP.NET. Le sezioni di configurazione <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> e <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> vengono aggiunte nell'elemento `<configSections>`. SAM e WS-FAM vengono aggiunti ai moduli HTTP nell'elemento `<system.webServer>`/`<modules>`. Infine, i componenti WIF vengono configurati negli elementi `<system.identityModel>`/`<identityConfiguration>` e `<system.identityModel.services>`/`<federationConfiguration>`. Questa configurazione specifica il gestore di cookie in blocchi come se fosse il gestore di cookie predefinito e non ci fosse un tipo di gestore di cookie specificato nell'elemento `<cookieHandler>`.  
   
 > [!WARNING]
->  Nell'esempio seguente sia l'attributo `requireHttps` dell'elemento `<wsFederation>` che l'attributo `requireSsl` dell'elemento `<cookieHandler>` sono `false`. Ciò comporta un potenziale rischio per la sicurezza. In un ambiente di produzione entrambi questi valori devono essere impostati su `true`.  
+> Nell'esempio seguente sia l'attributo `requireHttps` dell'elemento `<wsFederation>` che l'attributo `requireSsl` dell'elemento `<cookieHandler>` sono `false`. Ciò comporta un potenziale rischio per la sicurezza. In un ambiente di produzione entrambi questi valori devono essere impostati su `true`.  
   
 ```xml  
 <configuration>  

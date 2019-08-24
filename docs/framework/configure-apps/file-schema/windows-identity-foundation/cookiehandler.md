@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942797"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988348"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 Configura l'oggetto <xref:System.IdentityModel.Services.CookieHandler> usato da <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) per la lettura e la scrittura dei cookie.  
@@ -77,7 +77,7 @@ Configura l'oggetto <xref:System.IdentityModel.Services.CookieHandler> usato da 
  Nel codice XML seguente viene `<cookieHandler>` illustrato un elemento. In questo esempio, poiché l' `mode` attributo non è specificato, il gestore di cookie predefinito verrà usato da Sam. Si tratta di un'istanza della <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. Poiché l' `<chunkedCookieHandler>` elemento figlio non è specificato, verranno usate le dimensioni predefinite del blocco. HTTPS non sarà necessario perché l' `requireSsl` attributo è impostato. `false`  
   
 > [!WARNING]
->  In questo esempio, HTTPS non è necessario per scrivere cookie di sessione. Questo è dovuto al `requireSsl` fatto che `false`l' `<cookieHandler>` attributo dell'elemento è impostato su. Questa impostazione non è consigliata per la maggior parte degli ambienti di produzione perché può presentare un rischio per la sicurezza.  
+> In questo esempio, HTTPS non è necessario per scrivere cookie di sessione. Questo è dovuto al `requireSsl` fatto che `false`l' `<cookieHandler>` attributo dell'elemento è impostato su. Questa impostazione non è consigliata per la maggior parte degli ambienti di produzione perché può presentare un rischio per la sicurezza.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

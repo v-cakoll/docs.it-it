@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 57a1513f6de7f7bd9ea441b6cbc3db6a06d76fc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ace76475b67245a6ac5ef9f5b61db5023ffa0c1f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940268"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988314"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Fornisce la <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> configurazione per (WSFAM).  
@@ -85,7 +85,7 @@ Fornisce la <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
  Nel codice XML seguente viene `<wsFederation>` mostrato un elemento che specifica le impostazioni per WSFAM.  
   
 > [!WARNING]
->  In questo esempio, WSFAM non è necessario per usare HTTPS. Questo è dovuto al `requireHttps` fatto che l' `<wsFederation>` attributo dell'elemento `false`è impostato. Questa impostazione non è consigliata per la maggior parte degli ambienti di produzione perché può presentare un rischio per la sicurezza.  
+> In questo esempio, WSFAM non è necessario per usare HTTPS. Questo è dovuto al `requireHttps` fatto che l' `<wsFederation>` attributo dell'elemento `false`è impostato. Questa impostazione non è consigliata per la maggior parte degli ambienti di produzione perché può presentare un rischio per la sicurezza.  
   
 ```xml
 <wsFederation passiveRedirectEnabled="true"   

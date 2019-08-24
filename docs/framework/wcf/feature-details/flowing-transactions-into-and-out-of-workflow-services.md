@@ -2,18 +2,18 @@
 title: Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963346"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988814"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
 Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Affinché un'operazione del servizio diventi parte di una transazione di ambiente, posizionare un'attività <xref:System.ServiceModel.Activities.Receive> all'interno di un'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Qualsiasi chiamata effettuata da un'attività <xref:System.ServiceModel.Activities.Send> o un'attività <xref:System.ServiceModel.Activities.SendReply> all'interno di <xref:System.ServiceModel.Activities.TransactedReceiveScope> verrà effettuata anche all'interno della transazione di ambiente. Un'applicazione client del flusso di lavoro può creare una transazione di ambiente tramite l'attività <xref:System.Activities.Statements.TransactionScope> e chiamare operazioni del servizio utilizzando la transazione di ambiente. In questo argomento viene illustrato il processo di creazione di un servizio flusso di lavoro e di un client flusso di lavoro che partecipano a transazioni.  
   
 > [!WARNING]
->  Se un'istanza del servizio flusso di lavoro viene caricata all'interno di una <xref:System.Activities.Statements.Persist> transazione e il flusso di lavoro contiene un'attività, l'istanza del flusso di lavoro si bloccherà fino al timeout della transazione.  
+> Se un'istanza del servizio flusso di lavoro viene caricata all'interno di una <xref:System.Activities.Statements.Persist> transazione e il flusso di lavoro contiene un'attività, l'istanza del flusso di lavoro si bloccherà fino al timeout della transazione.  
   
 > [!IMPORTANT]
 > Ogni volta che si utilizza un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope>, è consigliabile posizionare tutte le attività Receive del flusso di lavoro all'interno delle attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>.  
@@ -99,7 +99,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 6. Trascinare e rilasciare un' <xref:System.ServiceModel.Activities.Receive> attività all'interno della sezione **richiesta** dell' <xref:System.ServiceModel.Activities.TransactedReceiveScope> attività. Impostare le proprietà seguenti:  
   
-    |Proprietà|Valore|  
+    |Proprietà|Value|  
     |--------------|-----------|  
     |CanCreateInstance|True (controllare la casella di controllo)|  
     |OperationName|StartSample|  

@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942771"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988325"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite il protocollo WS-Federation. <xref:System.IdentityModel.Services.SessionAuthenticationModule> <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Configura quando si <xref:System.Security.Claims.ClaimsAuthorizationManager> utilizza la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe o per fornire il controllo degli accessi in base alle attestazioni.  
@@ -30,7 +30,7 @@ Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite i
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |name|Nome di questo elemento di configurazione della Federazione. Questo attributo fornisce principalmente un punto di estendibilità per i protocolli futuri. facoltativo.|  
 |identityConfigurationName|Nome della sezione di configurazione dell'identità come specificato in un [ \<> elemento IdentityConfiguration](identityconfiguration.md) da utilizzare. Se questo attributo non viene specificato, viene utilizzata la sezione di configurazione predefinita dell'identità. facoltativo.|  
@@ -74,7 +74,7 @@ Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite i
  Nel codice XML seguente viene `<federationConfiguration>` illustrato un elemento che specifica le impostazioni per WSFAM e specifica che il gestore di cookie predefinito (un' <xref:System.IdentityModel.Services.ChunkedCookieHandler> istanza della classe) verrà utilizzato da Sam.  
   
 > [!WARNING]
->  In questo esempio non sono necessari né il gestore di cookie né WSFAM per usare HTTPS. Questo è dovuto al `requireHttps` fatto `<wsFederation>` `requireSsl` chel'`false`attributo nell'elemento e l'attributo in sono.`<cookieHandlerElement>` Queste impostazioni non sono consigliate per la maggior parte degli ambienti di produzione perché possono presentare un rischio per la sicurezza.  
+> In questo esempio non sono necessari né il gestore di cookie né WSFAM per usare HTTPS. Questo è dovuto al `requireHttps` fatto `<wsFederation>` `requireSsl` chel'`false`attributo nell'elemento e l'attributo in sono.`<cookieHandlerElement>` Queste impostazioni non sono consigliate per la maggior parte degli ambienti di produzione perché possono presentare un rischio per la sicurezza.  
   
 ```xml  
 <system.identityModel.services>  

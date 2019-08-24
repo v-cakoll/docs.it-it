@@ -2,24 +2,24 @@
 title: Opzioni di hosting di flussi di lavoro
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b85f656d6262c850c81833d5c4fe4d1fb5b1ec55
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487371"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988516"
 ---
 # <a name="workflow-hosting-options"></a>Opzioni di hosting di flussi di lavoro
-La maggior parte degli esempi di Windows Workflow Foundation (WF) usa i flussi di lavoro ospitati in un'applicazione console, ma questo non è uno scenario realistico per i flussi di lavoro reali. I flussi di lavoro nelle applicazioni aziendali reali verrà ospitate in processi persistenti entrambi un servizio di Windows creato dallo sviluppatore o un'applicazione server, ad esempio IIS 7.0 o AppFabric. Di seguito sono riportate le differenze tra questi approcci.  
+La maggior parte degli esempi di Windows Workflow Foundation (WF) utilizzano i flussi di lavoro ospitati in un'applicazione console, ma questo non è uno scenario realistico per i flussi di lavoro reali. I flussi di lavoro nelle applicazioni aziendali effettive saranno ospitati in processi permanenti, ovvero un servizio Windows creato dallo sviluppatore o un'applicazione server come IIS 7,0 o AppFabric. Di seguito sono riportate le differenze tra questi approcci.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosting di flussi di lavoro in IIS con Windows AppFabric  
  IIS con AppFabric è l'host preferito per i flussi di lavoro. L'applicazione host per i flussi di lavoro che usano AppFabric è Windows Activation Service che rimuove la dipendenza di HTTP su IIS indipendente.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Hosting di flussi di lavoro in IIS indipendente  
- Usa solo con IIS 7.0 non è consigliata, perché esistono strumenti disponibili con AppFabric che facilitano la manutenzione delle applicazioni in esecuzione di monitoraggio e gestione. I flussi di lavoro deve essere ospitati solo in IIS 7.0 solo se sono presenti problemi di infrastruttura passaggio ad AppFabric.  
+ L'utilizzo di IIS 7,0 da solo non è consigliato, in quanto sono disponibili strumenti di gestione e monitoraggio con AppFabric che facilitano la manutenzione delle applicazioni in esecuzione. I flussi di lavoro devono essere ospitati solo in IIS 7,0 solo se si verificano problemi di infrastruttura con il passaggio a AppFabric.  
   
 > [!WARNING]
->  IIS 7.0 Ricicla periodicamente i pool di applicazioni per vari motivi. Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste. Se un flusso di lavoro continua dopo l'invio di una risposta, IIS 7.0 non verrà informato del lavoro svolto e può riciclare il pool di applicazioni host. Se in questo caso, il flusso di lavoro verrà interrotta e i servizi di rilevamento registrerà un [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) messaggio con un campo motivo vuoto.  
+> IIS 7,0 ricicla periodicamente i pool di applicazioni per vari motivi. Quando un pool di applicazioni viene riciclato, IIS smette di accettare i messaggi del pool precedente e crea un'istanza di un nuovo pool di applicazioni per accettare le nuove richieste. Se un flusso di lavoro continua a funzionare dopo l'invio di una risposta, IIS 7,0 non sarà in grado di riconoscere il lavoro svolto e potrebbe riciclare il pool di applicazioni host. In tal caso, il flusso di lavoro verrà interrotto e i servizi di rilevamento registreranno un messaggio [1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md) con un campo motivo vuoto.  
 >   
 >  Se si usa la persistenza, l'host deve esplicitamente riavviare le istanze arrestate dall'ultimo punto di persistenza.  
 >   

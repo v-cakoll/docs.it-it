@@ -6,29 +6,27 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: a65b3c2b596a2d88ce4236aeadd86993bb268aa6
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039784"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987032"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedura: Riassegnare i controlli esistenti a un elemento padre diverso
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedura: Riassegnare i controlli esistenti a un padre diverso
+
 È possibile assegnare i controlli presenti nel form a un nuovo controllo contenitore.
 
-## <a name="to-reassign-existing-controls-to-a-different-parent"></a>Per riassegnare i controlli esistenti a un padre diverso
+1. In Visual Studio trascinare tre <xref:System.Windows.Forms.Button> controlli dalla **casella degli strumenti** nel form. Posizionarli uno accanto a altro, ma lasciarli non allineati.
 
-1. Trascinare i tre controlli <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.
-
-     Posizionarli uno accanto a altro, ma lasciarli non allineati.
-
-2. Nella **Casella degli strumenti**fare clic sull'icona del controllo <xref:System.Windows.Forms.FlowLayoutPanel> .
-
-     Non trascinare l'icona nel form.
+2. Nella **Casella degli strumenti**fare clic sull'icona del controllo <xref:System.Windows.Forms.FlowLayoutPanel> . Non trascinare l'icona nel form.
 
 3. Spostare il puntatore del mouse accanto ai tre controlli <xref:System.Windows.Forms.Button> .
 
-     Il puntatore assume la forma di un mirino con l'icona del controllo <xref:System.Windows.Forms.FlowLayoutPanel> associata.
+   Il puntatore assume la forma di un mirino con l'icona del controllo <xref:System.Windows.Forms.FlowLayoutPanel> associata.
 
 4. Fare clic e tenere premuto il pulsante del mouse.
 
@@ -38,12 +36,11 @@ ms.locfileid: "69039784"
 
 7. Rilasciare il pulsante del mouse.
 
-     I tre controlli <xref:System.Windows.Forms.Button> sono stati inseriti nel controllo <xref:System.Windows.Forms.FlowLayoutPanel> .
+   I tre controlli <xref:System.Windows.Forms.Button> sono stati inseriti nel controllo <xref:System.Windows.Forms.FlowLayoutPanel> .
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Procedura dettagliata: Disposizione di controlli in Windows Forms tramite TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Procedura dettagliata: Disposizione di controlli in Windows Forms mediante guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

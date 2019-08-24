@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952930"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988535"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operazioni sincrone e asincrone
 In questo argomento vengono illustrate l'implementazione e la chiamata delle operazioni del servizio asincrone.  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  L'operazione SampleMethodTaskAsync restituisce Task\<string>, perché l'operazione logica restituisce una stringa. Per altre informazioni sul modello asincrono basato su attività, vedere [The Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=232504) (Modello asincrono basato su attività).  
   
 > [!WARNING]
->  Quando si usa il modello asincrono basato su attività, è possibile che venga generato un oggetto T: System.AggregateException se si verifica un'eccezione nell'attesa del completamento dell'operazione. Questa eccezione può verificarsi nel client o nei servizi.  
+> Quando si usa il modello asincrono basato su attività, è possibile che venga generato un oggetto T: System.AggregateException se si verifica un'eccezione nell'attesa del completamento dell'operazione. Questa eccezione può verificarsi nel client o nei servizi.  
   
 #### <a name="event-based-asynchronous-pattern"></a>Modello asincrono basato su eventi  
  Un servizio che supporta il modello asincrono basato su eventi disporrà di una o più operazioni denominate MethodNameAsync. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche disporre di un evento MethodNameCompleted e di un metodo MethodNameAsyncCancel (o semplicemente CancelAsync). Un client che desidera chiamare l'operazione definirà un gestore eventi da chiamare al completamento dell'operazione.  

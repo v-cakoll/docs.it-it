@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966130"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988677"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: Usare lo strumento di configurazione del modello di servizi di COM+
 Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strumento della riga di comando per la configurazione del modello di servizi COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione da esporre come servizi Web.  
@@ -29,7 +29,7 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
 > Il ripristino di questa chiave del Registro di sistema è importante. Si tratta di una chiave di compatibilità. Se non si ripristina, questa modifica può causare problemi ad altre applicazioni .NET in esecuzione nel computer.  
   
 > [!WARNING]
->  Quando si usa ComSvcConfig. exe/install in un computer con Windows 8, viene visualizzata una finestra di dialogo che indica che l'app nel PC necessita della funzionalità di Windows seguente: .NET Framework 3,5 (include .NET 2,0 e .NET 3,0 "se .NET Framework 3,5 non è installato. Questa finestra di dialogo può essere ignorata. In alternativa è possibile impostare la chiave del Registro di sistema OnlyUseLatestCLR su un valore DWORD di 0x00000001  
+> Quando si usa ComSvcConfig. exe/install in un computer con Windows 8, viene visualizzata una finestra di dialogo che indica che l'app nel PC necessita della funzionalità di Windows seguente: .NET Framework 3,5 (include .NET 2,0 e .NET 3,0 "se .NET Framework 3,5 non è installato. Questa finestra di dialogo può essere ignorata. In alternativa è possibile impostare la chiave del Registro di sistema OnlyUseLatestCLR su un valore DWORD di 0x00000001  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Per aggiungere un'interfaccia al set di interfacce da esporre come servizi Web mediante la modalità di hosting COM+  
   
