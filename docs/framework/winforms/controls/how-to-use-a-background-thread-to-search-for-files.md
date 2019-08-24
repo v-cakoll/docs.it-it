@@ -10,760 +10,760 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 4a247bdb90780a22d90bf338eef52830c82907fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5dcb990266b94916bec715520a61f6a102c1e6ef
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630668"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015742"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="8fefb-102">Procedura: Usare un thread in background per la ricerca di file</span><span class="sxs-lookup"><span data-stu-id="8fefb-102">How to: Use a Background Thread to Search for Files</span></span>
-<span data-ttu-id="8fefb-103">Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiunge funzionalità per il <xref:System.Threading> dello spazio dei nomi, tuttavia, il <xref:System.Threading> dello spazio dei nomi è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario.</span><span class="sxs-lookup"><span data-stu-id="8fefb-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="8fefb-104">Per altre informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8fefb-104">For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).</span></span>  
-  
- <span data-ttu-id="8fefb-105">Poiché Windows Forms è basato su windows Win32 nativo che sono intrinsecamente-threaded apartment, Windows Form usa il modello di apartment a thread singolo (STA).</span><span class="sxs-lookup"><span data-stu-id="8fefb-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="8fefb-106">Il modello STA implica che una finestra può essere creata in qualsiasi thread, ma non è possibile passare da un thread dopo la creazione e tutte le chiamate di funzione a esso devono verificarsi sul proprio thread di creazione.</span><span class="sxs-lookup"><span data-stu-id="8fefb-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="8fefb-107">All'esterno di Windows Form, le classi in .NET Framework usano il modello di threading free.</span><span class="sxs-lookup"><span data-stu-id="8fefb-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="8fefb-108">Per informazioni sul threading in .NET Framework, vedere [Threading](../../../standard/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="8fefb-108">For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).</span></span>  
-  
- <span data-ttu-id="8fefb-109">Il modello STA richiede che qualsiasi metodo su un controllo che devono essere chiamati dall'esterno thread di creazione del controllo deve essere sottoposto a marshalling (eseguiti nel) thread di creazione del controllo.</span><span class="sxs-lookup"><span data-stu-id="8fefb-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="8fefb-110">La classe di base <xref:System.Windows.Forms.Control> fornisce diversi metodi (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, e <xref:System.Windows.Forms.Control.EndInvoke%2A>) per questo scopo.</span><span class="sxs-lookup"><span data-stu-id="8fefb-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="8fefb-111"><xref:System.Windows.Forms.Control.Invoke%2A> effettua le chiamate di metodo sincrono. <xref:System.Windows.Forms.Control.BeginInvoke%2A> effettua chiamate al metodo asincrona.</span><span class="sxs-lookup"><span data-stu-id="8fefb-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>  
-  
- <span data-ttu-id="8fefb-112">Se si usa il multithreading nel controllo per le attività a elevato utilizzo di risorse, l'interfaccia utente può rimanere attivo mentre un calcolo a elevato utilizzo di risorse viene eseguita su un thread in background.</span><span class="sxs-lookup"><span data-stu-id="8fefb-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>  
-  
- <span data-ttu-id="8fefb-113">L'esempio seguente (`DirectorySearcher`) Mostra un controllo Windows Form multithreading che usa un thread in background per cercare in modo ricorsivo una directory per file che corrispondono a una stringa di ricerca specificato e quindi popola una casella di riepilogo con il risultato della ricerca.</span><span class="sxs-lookup"><span data-stu-id="8fefb-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="8fefb-114">I principali concetti illustrati dall'esempio sono come segue:</span><span class="sxs-lookup"><span data-stu-id="8fefb-114">The key concepts illustrated by the sample are as follows:</span></span>  
-  
-- <span data-ttu-id="8fefb-115">`DirectorySearcher` Avvia un nuovo thread per eseguire la ricerca.</span><span class="sxs-lookup"><span data-stu-id="8fefb-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="8fefb-116">Il thread viene eseguito il `ThreadProcedure` metodo che a sua volta chiama l'helper `RecurseDirectory` metodo per eseguire la ricerca effettiva e popolare la casella di riepilogo.</span><span class="sxs-lookup"><span data-stu-id="8fefb-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="8fefb-117">Tuttavia, popolare la casella di riepilogo richiede una chiamata tra thread, come illustrato nelle due punti seguenti.</span><span class="sxs-lookup"><span data-stu-id="8fefb-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>  
-  
-- <span data-ttu-id="8fefb-118">`DirectorySearcher` Definisce i `AddFiles` per aggiungere i file in una casella di riepilogo; tuttavia `RecurseDirectory` non è possibile richiamare direttamente `AddFiles` perché `AddFiles` può eseguire solo nel thread dell'APARTMENT che ha creato `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="8fefb-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>  
-  
-- <span data-ttu-id="8fefb-119">L'unico modo `RecurseDirectory` può chiamare `AddFiles` avviene tramite una chiamata tra thread, vale a dire, chiamando il metodo <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> per effettuare il marshalling `AddFiles` al thread di creazione di `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="8fefb-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="8fefb-120">`RecurseDirectory` Usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> in modo che la chiamata può essere effettuata in modo asincrono.</span><span class="sxs-lookup"><span data-stu-id="8fefb-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>  
-  
-- <span data-ttu-id="8fefb-121">Marshalling di un metodo richiede l'equivalente di un puntatore a funzione o un callback.</span><span class="sxs-lookup"><span data-stu-id="8fefb-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="8fefb-122">Questa operazione viene eseguita usando i delegati in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8fefb-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="8fefb-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> accetta un delegato come argomento.</span><span class="sxs-lookup"><span data-stu-id="8fefb-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="8fefb-124">`DirectorySearcher` quindi definisce un delegato (`FileListDelegate`), associa `AddFiles` a un'istanza di `FileListDelegate` nel relativo costruttore e passa il delegato dell'istanza per <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span><span class="sxs-lookup"><span data-stu-id="8fefb-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="8fefb-125">`DirectorySearcher` definisce anche un delegato di evento che viene effettuato il marshalling al termine di ricerca.</span><span class="sxs-lookup"><span data-stu-id="8fefb-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>  
-  
-```vb  
-Option Strict  
-Option Explicit  
-  
-Imports System  
-Imports System.IO  
-Imports System.Threading  
-Imports System.Windows.Forms  
-  
-Namespace Microsoft.Samples.DirectorySearcher  
-   ' <summary>  
-   '      This class is a Windows Forms control that implements a simple directory searcher.  
-   '      You provide, through code, a search string and it will search directories on  
-   '      a background thread, populating its list box with matches.  
-   ' </summary>  
-   Public Class DirectorySearcher  
-      Inherits Control  
-      ' Define a special delegate that handles marshaling  
-      ' lists of file names from the background directory search  
-      ' thread to the thread that contains the list box.  
-      Delegate Sub FileListDelegate(files() As String, startIndex As Integer, count As Integer)  
-  
-      Private _listBox As ListBox  
-      Private _searchCriteria As String  
-      Private _searching As Boolean  
-      Private _deferSearch As Boolean  
-      Private _searchThread As Thread  
-      Private _fileListDelegate As FileListDelegate  
-      Private _onSearchComplete As EventHandler  
-  
-      Public Sub New()  
-         _listBox = New ListBox()  
-         _listBox.Dock = DockStyle.Fill  
-  
-         Controls.Add(_listBox)  
-  
-         _fileListDelegate = New FileListDelegate(AddressOf AddFiles)  
-         _onSearchComplete = New EventHandler(AddressOf OnSearchComplete)  
-      End Sub  
-  
-      Public Property SearchCriteria() As String  
-         Get  
-            Return _searchCriteria  
-         End Get  
-         Set  
-            ' If currently searching, abort  
-            ' the search and restart it after  
-            ' setting the new criteria.  
-            '  
-            Dim wasSearching As Boolean = Searching  
-  
-            If wasSearching Then  
-               StopSearch()  
-            End If  
-  
-            _listBox.Items.Clear()  
-            _searchCriteria = value  
-  
-            If wasSearching Then  
-               BeginSearch()  
-            End If  
-         End Set  
-      End Property  
-  
-      Public ReadOnly Property Searching() As Boolean  
-         Get  
-            Return _searching  
-         End Get  
-      End Property  
-  
-      Public Event SearchComplete As EventHandler  
-  
-      ' <summary>  
-      ' This method is called from the background thread.  It is called through  
-      ' a BeginInvoke call so that it is always marshaled to the thread that  
-      ' owns the list box control.  
-      ' </summary>  
-      ' <param name="files"></param>  
-      ' <param name="startIndex"></param>  
-      ' <param name="count"></param>  
-      Private Sub AddFiles(files() As String, startIndex As Integer, count As Integer)  
-         While count > 0  
-            count -= 1  
-            _listBox.Items.Add(files((startIndex + count)))  
-         End While  
-      End Sub  
-  
-      Public Sub BeginSearch()  
-         ' Create the search thread, which   
-         ' will begin the search.  
-         ' If already searching, do nothing.  
-         '  
-         If Searching Then  
-            Return  
-         End If  
-  
-         ' Start the search if the handle has  
-         ' been created. Otherwise, defer it until the  
-         ' handle has been created.  
-         If IsHandleCreated Then  
-            _searchThread = New Thread(New ThreadStart(AddressOf ThreadProcedure))  
-            _searching = True  
-            _searchThread.Start()  
-         Else  
-            _deferSearch = True  
-         End If  
-      End Sub  
-  
-      Protected Overrides Sub OnHandleDestroyed(e As EventArgs)  
-         ' If the handle is being destroyed and you are not  
-         ' recreating it, then abort the search.  
-         If Not RecreatingHandle Then  
-            StopSearch()  
-         End If  
-         MyBase.OnHandleDestroyed(e)  
-      End Sub  
-  
-      Protected Overrides Sub OnHandleCreated(e As EventArgs)  
-         MyBase.OnHandleCreated(e)  
-         If _deferSearch Then  
-            _deferSearch = False  
-            BeginSearch()  
-         End If  
-      End Sub  
-  
-      ' <summary>  
-      ' This method is called by the background thread when it has  
-      ' finished the search.  
-      ' </summary>  
-      ' <param name="sender"></param>  
-      ' <param name="e"></param>  
-      Private Sub OnSearchComplete(sender As Object, e As EventArgs)  
-         RaiseEvent SearchComplete(sender, e)  
-      End Sub  
-  
-      Public Sub StopSearch()  
-         If Not _searching Then  
-            Return  
-         End If  
-  
-         If _searchThread.IsAlive Then  
-            _searchThread.Abort()  
-            _searchThread.Join()  
-         End If  
-  
-         _searchThread = Nothing  
-         _searching = False  
-      End Sub  
-  
-      ' <summary>  
-      ' Recurses the given path, adding all files on that path to   
-      ' the list box. After it finishes with the files, it  
-      ' calls itself once for each directory on the path.  
-      ' </summary>  
-      ' <param name="searchPath"></param>  
-      Private Sub RecurseDirectory(searchPath As String)  
-         ' Split searchPath into a directory and a wildcard specification.  
-         '  
-         Dim directoryPath As String = Path.GetDirectoryName(searchPath)  
-         Dim search As String = Path.GetFileName(searchPath)  
-  
-         ' If a directory or search criteria are not specified, then return.  
-         '  
-         If directoryPath Is Nothing Or search Is Nothing Then  
-            Return  
-         End If  
-  
-         Dim files() As String  
-  
-         ' File systems like NTFS that have  
-         ' access permissions might result in exceptions  
-         ' when looking into directories without permission.  
-         ' Catch those exceptions and return.  
-         Try  
-            files = Directory.GetFiles(directoryPath, search)  
-         Catch e As UnauthorizedAccessException  
-            Return  
-         Catch e As DirectoryNotFoundException  
-            Return  
-         End Try  
-  
-         ' Perform a BeginInvoke call to the list box  
-         ' in order to marshal to the correct thread. It is not  
-         ' very efficient to perform this marshal once for every  
-         ' file, so batch up multiple file calls into one  
-         ' marshal invocation.  
-         Dim startingIndex As Integer = 0  
-         While startingIndex < files.Length  
-            ' Batch up 20 files at once, unless at the  
-            ' end.  
-            '  
-            Dim count As Integer = 20  
-            If count + startingIndex >= files.Length Then  
-               count = files.Length - startingIndex  
-            End If  
-            ' Begin the cross-thread call. Because you are passing  
-            ' immutable objects into this invoke method, you do not have to  
-            ' wait for it to finish. If these were complex objects, you would  
-            ' have to either create new instances of them or   
-            ' wait for the thread to process this invoke before modifying  
-            ' the objects.  
-            Dim r As IAsyncResult = BeginInvoke(_fileListDelegate, New Object() {files, startingIndex, count})  
-            startingIndex += count  
-         End While  
-         ' Now that you have finished the files in this directory, recurse  
-         ' for each subdirectory.  
-         Dim directories As String() = Directory.GetDirectories(directoryPath)  
-         Dim d As String  
-         For Each d In  directories  
-            RecurseDirectory(Path.Combine(d, search))  
-         Next d  
-      End Sub  
-  
-      '/ <summary>  
-      '/ This is the actual thread procedure. This method runs in a background  
-      '/ thread to scan directories. When finished, it simply exits.  
-      '/ </summary>  
-      Private Sub ThreadProcedure()  
-         ' Get the search string. Individual   
-         ' field assigns are atomic in .NET, so you do not  
-         ' need to use any thread synchronization to grab  
-         ' the string value here.  
-         Try  
-            Dim localSearch As String = SearchCriteria  
-  
-            ' Now, search the file system.  
-            '  
-            RecurseDirectory(localSearch)  
-         Finally  
-            ' You are done with the search, so update.  
-            '  
-            _searching = False  
-  
-            ' Raise an event that notifies the user that  
-            ' the search has terminated.    
-            ' You do not have to do this through a marshaled call, but  
-            ' marshaling is recommended for the following reason:  
-            ' Users of this control do not know that it is  
-            ' multithreaded, so they expect its events to   
-            ' come back on the same thread as the control.  
-            BeginInvoke(_onSearchComplete, New Object() {Me, EventArgs.Empty})  
-         End Try  
-      End Sub  
-   End Class  
-End Namespace  
-```  
-  
-```csharp  
-namespace Microsoft.Samples.DirectorySearcher  
-{  
-   using System;  
-   using System.IO;  
-   using System.Threading;  
-   using System.Windows.Forms;  
-  
-   /// <summary>  
-   ///      This class is a Windows Forms control that implements a simple directory searcher.  
-   ///      You provide, through code, a search string and it will search directories on  
-   ///      a background thread, populating its list box with matches.  
-   /// </summary>  
-   public class DirectorySearcher : Control  
-   {  
-      // Define a special delegate that handles marshaling  
-      // lists of file names from the background directory search  
-      // thread to the thread that contains the list box.  
-      private delegate void FileListDelegate(string[] files, int startIndex, int count);  
-  
-      private ListBox listBox;  
-      private string  searchCriteria;  
-      private bool searching;  
-      private bool deferSearch;  
-      private Thread searchThread;  
-      private FileListDelegate fileListDelegate;  
-      private EventHandler onSearchComplete;  
-  
-      public DirectorySearcher()  
-      {  
-         listBox = new ListBox();  
-         listBox.Dock = DockStyle.Fill;  
-  
-         Controls.Add(listBox);  
-  
-         fileListDelegate = new FileListDelegate(AddFiles);  
-         onSearchComplete = new EventHandler(OnSearchComplete);  
-      }  
-  
-      public string SearchCriteria   
-      {  
-         get   
-         {  
-            return searchCriteria;  
-         }  
-         set   
-         {  
-            // If currently searching, abort  
-            // the search and restart it after  
-            // setting the new criteria.  
-            //  
-            bool wasSearching = Searching;  
-  
-            if (wasSearching)  
-            {  
-               StopSearch();  
-            }  
-  
-            listBox.Items.Clear();  
-            searchCriteria = value;  
-  
-            if (wasSearching)  
-            {  
-               BeginSearch();  
-            }  
-         }  
-      }  
-  
-      public bool Searching   
-      {  
-         get   
-         {  
-            return searching;  
-         }  
-      }  
-  
-      public event EventHandler SearchComplete;  
-  
-      /// <summary>  
-      /// This method is called from the background thread. It is called through  
-      /// a BeginInvoke call so that it is always marshaled to the thread that  
-      /// owns the list box control.  
-      /// </summary>  
-      /// <param name="files"></param>  
-      /// <param name="startIndex"></param>  
-      /// <param name="count"></param>  
-      private void AddFiles(string[] files, int startIndex, int count)  
-      {  
-         while(count-- > 0)  
-         {  
-            listBox.Items.Add(files[startIndex + count]);  
-         }  
-      }  
-  
-      public void BeginSearch()   
-      {  
-         // Create the search thread, which   
-         // will begin the search.  
-         // If already searching, do nothing.  
-         //  
-         if (Searching)  
-         {  
-            return;  
-         }  
-  
-         // Start the search if the handle has  
-         // been created. Otherwise, defer it until the  
-         // handle has been created.  
-         if (IsHandleCreated)  
-         {  
-            searchThread = new Thread(new ThreadStart(ThreadProcedure));  
-            searching = true;  
-            searchThread.Start();  
-         }  
-         else  
-         {  
-            deferSearch = true;  
-         }  
-      }  
-  
-      protected override void OnHandleDestroyed(EventArgs e)  
-      {  
-         // If the handle is being destroyed and you are not  
-         // recreating it, then abort the search.  
-         if (!RecreatingHandle)  
-         {  
-            StopSearch();  
-         }  
-         base.OnHandleDestroyed(e);  
-      }  
-  
-      protected override void OnHandleCreated(EventArgs e)   
-      {  
-         base.OnHandleCreated(e);  
-         if (deferSearch)  
-         {  
-            deferSearch = false;  
-            BeginSearch();  
-         }  
-      }  
-  
-      /// <summary>  
-      /// This method is called by the background thread when it has finished  
-      /// the search.  
-      /// </summary>  
-      /// <param name="sender"></param>  
-      /// <param name="e"></param>  
-      private void OnSearchComplete(object sender, EventArgs e)  
-      {  
-         if (SearchComplete != null)  
-         {  
-            SearchComplete(sender, e);  
-         }  
-      }  
-  
-      public void StopSearch()  
-      {  
-         if (!searching)  
-         {  
-            return;  
-         }  
-  
-         if (searchThread.IsAlive)  
-         {  
-            searchThread.Abort();  
-            searchThread.Join();  
-         }  
-  
-         searchThread = null;  
-         searching = false;  
-      }  
-  
-      /// <summary>  
-      /// Recurses the given path, adding all files on that path to   
-      /// the list box. After it finishes with the files, it  
-      /// calls itself once for each directory on the path.  
-      /// </summary>  
-      /// <param name="searchPath"></param>  
-      private void RecurseDirectory(string searchPath)  
-      {  
-         // Split searchPath into a directory and a wildcard specification.  
-         //  
-         string directory = Path.GetDirectoryName(searchPath);  
-         string search = Path.GetFileName(searchPath);  
-  
-         // If a directory or search criteria are not specified, then return.  
-         //  
-         if (directory == null || search == null)  
-         {  
-            return;  
-         }  
-  
-         string[] files;  
-  
-         // File systems like NTFS that have  
-         // access permissions might result in exceptions  
-         // when looking into directories without permission.  
-         // Catch those exceptions and return.  
-         try   
-         {  
-            files = Directory.GetFiles(directory, search);  
-         }  
-         catch(UnauthorizedAccessException)  
-         {  
-            return;  
-         }  
-         catch(DirectoryNotFoundException)  
-         {  
-            return;  
-         }  
-  
-         // Perform a BeginInvoke call to the list box  
-         // in order to marshal to the correct thread. It is not  
-         // very efficient to perform this marshal once for every  
-         // file, so batch up multiple file calls into one  
-         // marshal invocation.  
-         int startingIndex = 0;  
-  
-         while(startingIndex < files.Length)  
-         {  
-            // Batch up 20 files at once, unless at the  
-            // end.  
-            //  
-            int count = 20;  
-            if (count + startingIndex >= files.Length)  
-            {  
-               count = files.Length - startingIndex;  
-            }  
-  
-            // Begin the cross-thread call. Because you are passing  
-            // immutable objects into this invoke method, you do not have to  
-            // wait for it to finish. If these were complex objects, you would  
-            // have to either create new instances of them or   
-            // wait for the thread to process this invoke before modifying  
-            // the objects.  
-            IAsyncResult r = BeginInvoke(fileListDelegate, new object[] {files, startingIndex, count});  
-            startingIndex += count;  
-         }  
-  
-         // Now that you have finished the files in this directory, recurse for  
-         // each subdirectory.  
-         string[] directories = Directory.GetDirectories(directory);  
-         foreach(string d in directories)  
-         {  
-            RecurseDirectory(Path.Combine(d, search));  
-         }  
-      }  
-  
-      /// <summary>  
-      /// This is the actual thread procedure. This method runs in a background  
-      /// thread to scan directories. When finished, it simply exits.  
-      /// </summary>  
-      private void ThreadProcedure()  
-      {  
-         // Get the search string. Individual   
-         // field assigns are atomic in .NET, so you do not  
-         // need to use any thread synchronization to grab  
-         // the string value here.  
-         try   
-         {  
-            string localSearch = SearchCriteria;  
-  
-            // Now, search the file system.  
-            //  
-            RecurseDirectory(localSearch);  
-         }  
-         finally  
-         {  
-            // You are done with the search, so update.  
-            //  
-            searching = false;  
-  
-            // Raise an event that notifies the user that  
-            // the search has terminated.    
-            // You do not have to do this through a marshaled call, but  
-            // marshaling is recommended for the following reason:  
-            // Users of this control do not know that it is  
-            // multithreaded, so they expect its events to   
-            // come back on the same thread as the control.  
-            BeginInvoke(onSearchComplete, new object[] {this, EventArgs.Empty});  
-         }  
-      }  
-   }  
-}  
-```  
-  
-## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="8fefb-126">Utilizzo del controllo a thread multipli in un Form</span><span class="sxs-lookup"><span data-stu-id="8fefb-126">Using the Multithreaded Control on a Form</span></span>  
- <span data-ttu-id="8fefb-127">L'esempio seguente illustra come il multithreading `DirectorySearcher` controllo può essere usato in un form.</span><span class="sxs-lookup"><span data-stu-id="8fefb-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>  
-  
-```vb  
-Option Explicit  
-Option Strict  
-  
-Imports Microsoft.Samples.DirectorySearcher  
-Imports System  
-Imports System.Drawing  
-Imports System.Collections  
-Imports System.ComponentModel  
-Imports System.Windows.Forms  
-Imports System.Data  
-  
-Namespace SampleUsage  
-  
-   ' <summary>  
-   '      Summary description for Form1.  
-   ' </summary>  
-   Public Class Form1  
-      Inherits System.Windows.Forms.Form  
-      Private WithEvents directorySearcher As DirectorySearcher  
-      Private searchText As System.Windows.Forms.TextBox  
-      Private searchLabel As System.Windows.Forms.Label  
-      Private WithEvents searchButton As System.Windows.Forms.Button  
-  
-      Public Sub New()  
-         '  
-         ' Required for Windows Forms designer support.  
-         '  
-         InitializeComponent()  
-         '  
-         ' Add any constructor code after InitializeComponent call here.  
-         '  
-      End Sub  
-  
-      #Region "Windows Form Designer generated code"  
-      ' <summary>  
-      '      Required method for designer support. Do not modify  
-      '      the contents of this method with the code editor.  
-      ' </summary>  
-      Private Sub InitializeComponent()  
-         Me.directorySearcher = New Microsoft.Samples.DirectorySearcher.DirectorySearcher()  
-         Me.searchButton = New System.Windows.Forms.Button()  
-         Me.searchText = New System.Windows.Forms.TextBox()  
-         Me.searchLabel = New System.Windows.Forms.Label()  
-         Me.directorySearcher.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right  
-         Me.directorySearcher.Location = New System.Drawing.Point(8, 72)  
-         Me.directorySearcher.SearchCriteria = Nothing  
-         Me.directorySearcher.Size = New System.Drawing.Size(271, 173)  
-         Me.directorySearcher.TabIndex = 2  
-         Me.searchButton.Location = New System.Drawing.Point(8, 16)  
-         Me.searchButton.Size = New System.Drawing.Size(88, 40)  
-         Me.searchButton.TabIndex = 0  
-         Me.searchButton.Text = "&Search"  
-         Me.searchText.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right  
-         Me.searchText.Location = New System.Drawing.Point(104, 24)  
-         Me.searchText.Size = New System.Drawing.Size(175, 20)  
-         Me.searchText.TabIndex = 1  
-         Me.searchText.Text = "c:\*.cs"  
-         Me.searchLabel.ForeColor = System.Drawing.Color.Red  
-         Me.searchLabel.Location = New System.Drawing.Point(104, 48)  
-         Me.searchLabel.Size = New System.Drawing.Size(176, 16)  
-         Me.searchLabel.TabIndex = 3  
-         Me.ClientSize = New System.Drawing.Size(291, 264)  
-         Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.searchLabel, Me.directorySearcher, Me.searchText, Me.searchButton})  
-         Me.Text = "Search Directories"  
-      End Sub  
-      #End Region  
-  
-      ' <summary>  
-      '    The main entry point for the application.  
-      ' </summary>  
-      <STAThread()> _  
-      Shared Sub Main()  
-         Application.Run(New Form1())  
-      End Sub  
-  
-      Private Sub searchButton_Click(sender As Object, e As System.EventArgs) Handles searchButton.Click  
-         directorySearcher.SearchCriteria = searchText.Text  
-         searchLabel.Text = "Searching..."  
-         directorySearcher.BeginSearch()  
-      End Sub  
-  
-      Private Sub directorySearcher_SearchComplete(sender As Object, e As System.EventArgs) Handles directorySearcher.SearchComplete  
-         searchLabel.Text = String.Empty  
-      End Sub  
-   End Class  
-End Namespace  
-```  
-  
-```csharp  
-namespace SampleUsage  
-{  
-   using Microsoft.Samples.DirectorySearcher;  
-   using System;  
-   using System.Drawing;  
-   using System.Collections;  
-   using System.ComponentModel;  
-   using System.Windows.Forms;  
-   using System.Data;  
-  
-   /// <summary>  
-   ///      Summary description for Form1.  
-   /// </summary>  
-   public class Form1 : System.Windows.Forms.Form  
-   {  
-      private DirectorySearcher directorySearcher;  
-      private System.Windows.Forms.TextBox searchText;  
-      private System.Windows.Forms.Label searchLabel;  
-      private System.Windows.Forms.Button searchButton;  
-  
-      public Form1()  
-      {  
-         //  
-         // Required for Windows Forms designer support.  
-         //  
-         InitializeComponent();  
-  
-         //  
-         // Add any constructor code after InitializeComponent call here.  
-         //  
-      }  
-  
-      #region Windows Form Designer generated code  
-      /// <summary>  
-      ///      Required method for designer support. Do not modify  
-      ///      the contents of this method with the code editor.  
-      /// </summary>  
-      private void InitializeComponent()  
-      {  
-         this.directorySearcher = new Microsoft.Samples.DirectorySearcher.DirectorySearcher();  
-         this.searchButton = new System.Windows.Forms.Button();  
-         this.searchText = new System.Windows.Forms.TextBox();  
-         this.searchLabel = new System.Windows.Forms.Label();  
-         this.directorySearcher.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)   
-            | System.Windows.Forms.AnchorStyles.Left)   
-            | System.Windows.Forms.AnchorStyles.Right);  
-         this.directorySearcher.Location = new System.Drawing.Point(8, 72);  
-         this.directorySearcher.SearchCriteria = null;  
-         this.directorySearcher.Size = new System.Drawing.Size(271, 173);  
-         this.directorySearcher.TabIndex = 2;  
-         this.directorySearcher.SearchComplete += new System.EventHandler(this.directorySearcher_SearchComplete);  
-         this.searchButton.Location = new System.Drawing.Point(8, 16);  
-         this.searchButton.Size = new System.Drawing.Size(88, 40);  
-         this.searchButton.TabIndex = 0;  
-         this.searchButton.Text = "&Search";  
-         this.searchButton.Click += new System.EventHandler(this.searchButton_Click);  
-         this.searchText.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)   
-            | System.Windows.Forms.AnchorStyles.Right);  
-         this.searchText.Location = new System.Drawing.Point(104, 24);  
-         this.searchText.Size = new System.Drawing.Size(175, 20);  
-         this.searchText.TabIndex = 1;  
-         this.searchText.Text = "c:\\*.cs";  
-         this.searchLabel.ForeColor = System.Drawing.Color.Red;  
-         this.searchLabel.Location = new System.Drawing.Point(104, 48);  
-         this.searchLabel.Size = new System.Drawing.Size(176, 16);  
-         this.searchLabel.TabIndex = 3;  
-         this.ClientSize = new System.Drawing.Size(291, 264);  
-         this.Controls.AddRange(new System.Windows.Forms.Control[] {this.searchLabel,  
-                                                        this.directorySearcher,  
-                                                        this.searchText,  
-                                                        this.searchButton});  
-         this.Text = "Search Directories";  
-  
-      }  
-      #endregion  
-  
-      /// <summary>  
-      ///    The main entry point for the application.  
-      /// </summary>  
-      [STAThread]  
-      static void Main()   
-      {  
-         Application.Run(new Form1());  
-      }  
-  
-      private void searchButton_Click(object sender, System.EventArgs e)  
-      {  
-         directorySearcher.SearchCriteria = searchText.Text;  
-         searchLabel.Text = "Searching...";  
-         directorySearcher.BeginSearch();  
-      }  
-  
-      private void directorySearcher_SearchComplete(object sender, System.EventArgs e)  
-      {  
-         searchLabel.Text = string.Empty;  
-      }  
-   }  
-}  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="8fefb-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8fefb-128">See also</span></span>
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="3c27c-102">Procedura: Usare un thread in background per la ricerca di file</span><span class="sxs-lookup"><span data-stu-id="3c27c-102">How to: Use a Background Thread to Search for Files</span></span>
+<span data-ttu-id="3c27c-103">Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiunge funzionalità allo spazio <xref:System.Threading> dei nomi. Tuttavia, <xref:System.Threading> lo spazio dei nomi viene mantenuto sia per la compatibilità con le versioni precedenti che per un uso futuro, se si sceglie.</span><span class="sxs-lookup"><span data-stu-id="3c27c-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="3c27c-104">Per ulteriori informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3c27c-104">For more information, see [BackgroundWorker Component Overview](backgroundworker-component-overview.md).</span></span>
+
+ <span data-ttu-id="3c27c-105">Windows Forms usa il modello STA (Single-Threaded Apartment) perché Windows Forms si basa su finestre Win32 native che sono intrinsecamente sottoposto a threading Apartment.</span><span class="sxs-lookup"><span data-stu-id="3c27c-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="3c27c-106">Il modello STA implica che una finestra può essere creata in qualsiasi thread, ma non può cambiare thread una volta creati e tutte le chiamate di funzione devono essere eseguite nel thread di creazione.</span><span class="sxs-lookup"><span data-stu-id="3c27c-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="3c27c-107">All'esterno di Windows Forms, le classi della .NET Framework utilizzano il modello di threading libero.</span><span class="sxs-lookup"><span data-stu-id="3c27c-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="3c27c-108">Per informazioni sul threading nella .NET Framework, vedere [Threading](../../../standard/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="3c27c-108">For information about threading in the .NET Framework, see [Threading](../../../standard/threading/index.md).</span></span>
+
+ <span data-ttu-id="3c27c-109">Il modello STA richiede che tutti i metodi di un controllo che devono essere chiamati dall'esterno del thread di creazione del controllo debbano essere sottoposti a marshalling in (eseguito su) il thread di creazione del controllo.</span><span class="sxs-lookup"><span data-stu-id="3c27c-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="3c27c-110">La classe <xref:System.Windows.Forms.Control> base fornisce diversi metodi (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>e <xref:System.Windows.Forms.Control.EndInvoke%2A>) a questo scopo.</span><span class="sxs-lookup"><span data-stu-id="3c27c-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="3c27c-111"><xref:System.Windows.Forms.Control.Invoke%2A>esegue chiamate al metodo sincrono; <xref:System.Windows.Forms.Control.BeginInvoke%2A> esegue chiamate asincrone al metodo.</span><span class="sxs-lookup"><span data-stu-id="3c27c-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>
+
+ <span data-ttu-id="3c27c-112">Se si usa il multithreading nel controllo per le attività a elevato utilizzo di risorse, l'interfaccia utente può rimanere attiva mentre un calcolo a elevato utilizzo di risorse viene eseguito in un thread in background.</span><span class="sxs-lookup"><span data-stu-id="3c27c-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>
+
+ <span data-ttu-id="3c27c-113">Nell'esempio seguente (`DirectorySearcher`) viene illustrato un controllo Windows Forms multithreading che utilizza un thread in background per eseguire una ricerca ricorsiva in una directory per individuare i file corrispondenti a una stringa di ricerca specificata e quindi popolare una casella di riepilogo con i risultati della ricerca.</span><span class="sxs-lookup"><span data-stu-id="3c27c-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="3c27c-114">I concetti chiave illustrati nell'esempio sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="3c27c-114">The key concepts illustrated by the sample are as follows:</span></span>
+
+- <span data-ttu-id="3c27c-115">`DirectorySearcher`avvia un nuovo thread per eseguire la ricerca.</span><span class="sxs-lookup"><span data-stu-id="3c27c-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="3c27c-116">Il thread esegue il `ThreadProcedure` metodo che a sua volta chiama il `RecurseDirectory` metodo helper per eseguire la ricerca effettiva e per popolare la casella di riepilogo.</span><span class="sxs-lookup"><span data-stu-id="3c27c-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="3c27c-117">Tuttavia, il popolamento della casella di riepilogo richiede una chiamata cross-thread, come illustrato nei due elementi puntati successivi.</span><span class="sxs-lookup"><span data-stu-id="3c27c-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>
+
+- <span data-ttu-id="3c27c-118">`DirectorySearcher`definisce il `AddFiles` metodo per aggiungere file a una casella di riepilogo. tuttavia `RecurseDirectory` , non può `AddFiles` richiamare `AddFiles` direttamente perché può essere eseguito solo nel thread sta `DirectorySearcher`che ha creato.</span><span class="sxs-lookup"><span data-stu-id="3c27c-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>
+
+- <span data-ttu-id="3c27c-119">L'unico modo `RecurseDirectory` in cui `AddFiles` è possibile chiamare è tramite una chiamata cross-thread, ovvero chiamando <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> per effettuare `AddFiles` il marshalling al thread `DirectorySearcher`di creazione di.</span><span class="sxs-lookup"><span data-stu-id="3c27c-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="3c27c-120">`RecurseDirectory`USA <xref:System.Windows.Forms.Control.BeginInvoke%2A> in modo che la chiamata possa essere eseguita in modo asincrono.</span><span class="sxs-lookup"><span data-stu-id="3c27c-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>
+
+- <span data-ttu-id="3c27c-121">Il marshalling di un metodo richiede l'equivalente di un puntatore a funzione o di un callback.</span><span class="sxs-lookup"><span data-stu-id="3c27c-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="3c27c-122">Questa operazione viene eseguita utilizzando delegati nell'.NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3c27c-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="3c27c-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A>accetta un delegato come argomento.</span><span class="sxs-lookup"><span data-stu-id="3c27c-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="3c27c-124">`DirectorySearcher`definisce pertanto un delegato (`FileListDelegate`), viene `AddFiles` associato a un'istanza di `FileListDelegate` nel relativo costruttore e passa questa istanza del delegato a <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c27c-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="3c27c-125">`DirectorySearcher`definisce anche un delegato dell'evento di cui viene effettuato il marshalling quando la ricerca viene completata.</span><span class="sxs-lookup"><span data-stu-id="3c27c-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>
+
+```vb
+Option Strict
+Option Explicit
+
+Imports System
+Imports System.IO
+Imports System.Threading
+Imports System.Windows.Forms
+
+Namespace Microsoft.Samples.DirectorySearcher
+   ' <summary>
+   '      This class is a Windows Forms control that implements a simple directory searcher.
+   '      You provide, through code, a search string and it will search directories on
+   '      a background thread, populating its list box with matches.
+   ' </summary>
+   Public Class DirectorySearcher
+      Inherits Control
+      ' Define a special delegate that handles marshaling
+      ' lists of file names from the background directory search
+      ' thread to the thread that contains the list box.
+      Delegate Sub FileListDelegate(files() As String, startIndex As Integer, count As Integer)
+
+      Private _listBox As ListBox
+      Private _searchCriteria As String
+      Private _searching As Boolean
+      Private _deferSearch As Boolean
+      Private _searchThread As Thread
+      Private _fileListDelegate As FileListDelegate
+      Private _onSearchComplete As EventHandler
+
+      Public Sub New()
+         _listBox = New ListBox()
+         _listBox.Dock = DockStyle.Fill
+
+         Controls.Add(_listBox)
+
+         _fileListDelegate = New FileListDelegate(AddressOf AddFiles)
+         _onSearchComplete = New EventHandler(AddressOf OnSearchComplete)
+      End Sub
+
+      Public Property SearchCriteria() As String
+         Get
+            Return _searchCriteria
+         End Get
+         Set
+            ' If currently searching, abort
+            ' the search and restart it after
+            ' setting the new criteria.
+            '
+            Dim wasSearching As Boolean = Searching
+
+            If wasSearching Then
+               StopSearch()
+            End If
+
+            _listBox.Items.Clear()
+            _searchCriteria = value
+
+            If wasSearching Then
+               BeginSearch()
+            End If
+         End Set
+      End Property
+
+      Public ReadOnly Property Searching() As Boolean
+         Get
+            Return _searching
+         End Get
+      End Property
+
+      Public Event SearchComplete As EventHandler
+
+      ' <summary>
+      ' This method is called from the background thread.  It is called through
+      ' a BeginInvoke call so that it is always marshaled to the thread that
+      ' owns the list box control.
+      ' </summary>
+      ' <param name="files"></param>
+      ' <param name="startIndex"></param>
+      ' <param name="count"></param>
+      Private Sub AddFiles(files() As String, startIndex As Integer, count As Integer)
+         While count > 0
+            count -= 1
+            _listBox.Items.Add(files((startIndex + count)))
+         End While
+      End Sub
+
+      Public Sub BeginSearch()
+         ' Create the search thread, which
+         ' will begin the search.
+         ' If already searching, do nothing.
+         '
+         If Searching Then
+            Return
+         End If
+
+         ' Start the search if the handle has
+         ' been created. Otherwise, defer it until the
+         ' handle has been created.
+         If IsHandleCreated Then
+            _searchThread = New Thread(New ThreadStart(AddressOf ThreadProcedure))
+            _searching = True
+            _searchThread.Start()
+         Else
+            _deferSearch = True
+         End If
+      End Sub
+
+      Protected Overrides Sub OnHandleDestroyed(e As EventArgs)
+         ' If the handle is being destroyed and you are not
+         ' recreating it, then abort the search.
+         If Not RecreatingHandle Then
+            StopSearch()
+         End If
+         MyBase.OnHandleDestroyed(e)
+      End Sub
+
+      Protected Overrides Sub OnHandleCreated(e As EventArgs)
+         MyBase.OnHandleCreated(e)
+         If _deferSearch Then
+            _deferSearch = False
+            BeginSearch()
+         End If
+      End Sub
+
+      ' <summary>
+      ' This method is called by the background thread when it has
+      ' finished the search.
+      ' </summary>
+      ' <param name="sender"></param>
+      ' <param name="e"></param>
+      Private Sub OnSearchComplete(sender As Object, e As EventArgs)
+         RaiseEvent SearchComplete(sender, e)
+      End Sub
+
+      Public Sub StopSearch()
+         If Not _searching Then
+            Return
+         End If
+
+         If _searchThread.IsAlive Then
+            _searchThread.Abort()
+            _searchThread.Join()
+         End If
+
+         _searchThread = Nothing
+         _searching = False
+      End Sub
+
+      ' <summary>
+      ' Recurses the given path, adding all files on that path to
+      ' the list box. After it finishes with the files, it
+      ' calls itself once for each directory on the path.
+      ' </summary>
+      ' <param name="searchPath"></param>
+      Private Sub RecurseDirectory(searchPath As String)
+         ' Split searchPath into a directory and a wildcard specification.
+         '
+         Dim directoryPath As String = Path.GetDirectoryName(searchPath)
+         Dim search As String = Path.GetFileName(searchPath)
+
+         ' If a directory or search criteria are not specified, then return.
+         '
+         If directoryPath Is Nothing Or search Is Nothing Then
+            Return
+         End If
+
+         Dim files() As String
+
+         ' File systems like NTFS that have
+         ' access permissions might result in exceptions
+         ' when looking into directories without permission.
+         ' Catch those exceptions and return.
+         Try
+            files = Directory.GetFiles(directoryPath, search)
+         Catch e As UnauthorizedAccessException
+            Return
+         Catch e As DirectoryNotFoundException
+            Return
+         End Try
+
+         ' Perform a BeginInvoke call to the list box
+         ' in order to marshal to the correct thread. It is not
+         ' very efficient to perform this marshal once for every
+         ' file, so batch up multiple file calls into one
+         ' marshal invocation.
+         Dim startingIndex As Integer = 0
+         While startingIndex < files.Length
+            ' Batch up 20 files at once, unless at the
+            ' end.
+            '
+            Dim count As Integer = 20
+            If count + startingIndex >= files.Length Then
+               count = files.Length - startingIndex
+            End If
+            ' Begin the cross-thread call. Because you are passing
+            ' immutable objects into this invoke method, you do not have to
+            ' wait for it to finish. If these were complex objects, you would
+            ' have to either create new instances of them or
+            ' wait for the thread to process this invoke before modifying
+            ' the objects.
+            Dim r As IAsyncResult = BeginInvoke(_fileListDelegate, New Object() {files, startingIndex, count})
+            startingIndex += count
+         End While
+         ' Now that you have finished the files in this directory, recurse
+         ' for each subdirectory.
+         Dim directories As String() = Directory.GetDirectories(directoryPath)
+         Dim d As String
+         For Each d In  directories
+            RecurseDirectory(Path.Combine(d, search))
+         Next d
+      End Sub
+
+      '/ <summary>
+      '/ This is the actual thread procedure. This method runs in a background
+      '/ thread to scan directories. When finished, it simply exits.
+      '/ </summary>
+      Private Sub ThreadProcedure()
+         ' Get the search string. Individual
+         ' field assigns are atomic in .NET, so you do not
+         ' need to use any thread synchronization to grab
+         ' the string value here.
+         Try
+            Dim localSearch As String = SearchCriteria
+
+            ' Now, search the file system.
+            '
+            RecurseDirectory(localSearch)
+         Finally
+            ' You are done with the search, so update.
+            '
+            _searching = False
+
+            ' Raise an event that notifies the user that
+            ' the search has terminated.
+            ' You do not have to do this through a marshaled call, but
+            ' marshaling is recommended for the following reason:
+            ' Users of this control do not know that it is
+            ' multithreaded, so they expect its events to
+            ' come back on the same thread as the control.
+            BeginInvoke(_onSearchComplete, New Object() {Me, EventArgs.Empty})
+         End Try
+      End Sub
+   End Class
+End Namespace
+```
+
+```csharp
+namespace Microsoft.Samples.DirectorySearcher
+{
+   using System;
+   using System.IO;
+   using System.Threading;
+   using System.Windows.Forms;
+
+   /// <summary>
+   ///      This class is a Windows Forms control that implements a simple directory searcher.
+   ///      You provide, through code, a search string and it will search directories on
+   ///      a background thread, populating its list box with matches.
+   /// </summary>
+   public class DirectorySearcher : Control
+   {
+      // Define a special delegate that handles marshaling
+      // lists of file names from the background directory search
+      // thread to the thread that contains the list box.
+      private delegate void FileListDelegate(string[] files, int startIndex, int count);
+
+      private ListBox listBox;
+      private string  searchCriteria;
+      private bool searching;
+      private bool deferSearch;
+      private Thread searchThread;
+      private FileListDelegate fileListDelegate;
+      private EventHandler onSearchComplete;
+
+      public DirectorySearcher()
+      {
+         listBox = new ListBox();
+         listBox.Dock = DockStyle.Fill;
+
+         Controls.Add(listBox);
+
+         fileListDelegate = new FileListDelegate(AddFiles);
+         onSearchComplete = new EventHandler(OnSearchComplete);
+      }
+
+      public string SearchCriteria
+      {
+         get
+         {
+            return searchCriteria;
+         }
+         set
+         {
+            // If currently searching, abort
+            // the search and restart it after
+            // setting the new criteria.
+            //
+            bool wasSearching = Searching;
+
+            if (wasSearching)
+            {
+               StopSearch();
+            }
+
+            listBox.Items.Clear();
+            searchCriteria = value;
+
+            if (wasSearching)
+            {
+               BeginSearch();
+            }
+         }
+      }
+
+      public bool Searching
+      {
+         get
+         {
+            return searching;
+         }
+      }
+
+      public event EventHandler SearchComplete;
+
+      /// <summary>
+      /// This method is called from the background thread. It is called through
+      /// a BeginInvoke call so that it is always marshaled to the thread that
+      /// owns the list box control.
+      /// </summary>
+      /// <param name="files"></param>
+      /// <param name="startIndex"></param>
+      /// <param name="count"></param>
+      private void AddFiles(string[] files, int startIndex, int count)
+      {
+         while(count-- > 0)
+         {
+            listBox.Items.Add(files[startIndex + count]);
+         }
+      }
+
+      public void BeginSearch()
+      {
+         // Create the search thread, which
+         // will begin the search.
+         // If already searching, do nothing.
+         //
+         if (Searching)
+         {
+            return;
+         }
+
+         // Start the search if the handle has
+         // been created. Otherwise, defer it until the
+         // handle has been created.
+         if (IsHandleCreated)
+         {
+            searchThread = new Thread(new ThreadStart(ThreadProcedure));
+            searching = true;
+            searchThread.Start();
+         }
+         else
+         {
+            deferSearch = true;
+         }
+      }
+
+      protected override void OnHandleDestroyed(EventArgs e)
+      {
+         // If the handle is being destroyed and you are not
+         // recreating it, then abort the search.
+         if (!RecreatingHandle)
+         {
+            StopSearch();
+         }
+         base.OnHandleDestroyed(e);
+      }
+
+      protected override void OnHandleCreated(EventArgs e)
+      {
+         base.OnHandleCreated(e);
+         if (deferSearch)
+         {
+            deferSearch = false;
+            BeginSearch();
+         }
+      }
+
+      /// <summary>
+      /// This method is called by the background thread when it has finished
+      /// the search.
+      /// </summary>
+      /// <param name="sender"></param>
+      /// <param name="e"></param>
+      private void OnSearchComplete(object sender, EventArgs e)
+      {
+         if (SearchComplete != null)
+         {
+            SearchComplete(sender, e);
+         }
+      }
+
+      public void StopSearch()
+      {
+         if (!searching)
+         {
+            return;
+         }
+
+         if (searchThread.IsAlive)
+         {
+            searchThread.Abort();
+            searchThread.Join();
+         }
+
+         searchThread = null;
+         searching = false;
+      }
+
+      /// <summary>
+      /// Recurses the given path, adding all files on that path to
+      /// the list box. After it finishes with the files, it
+      /// calls itself once for each directory on the path.
+      /// </summary>
+      /// <param name="searchPath"></param>
+      private void RecurseDirectory(string searchPath)
+      {
+         // Split searchPath into a directory and a wildcard specification.
+         //
+         string directory = Path.GetDirectoryName(searchPath);
+         string search = Path.GetFileName(searchPath);
+
+         // If a directory or search criteria are not specified, then return.
+         //
+         if (directory == null || search == null)
+         {
+            return;
+         }
+
+         string[] files;
+
+         // File systems like NTFS that have
+         // access permissions might result in exceptions
+         // when looking into directories without permission.
+         // Catch those exceptions and return.
+         try
+         {
+            files = Directory.GetFiles(directory, search);
+         }
+         catch(UnauthorizedAccessException)
+         {
+            return;
+         }
+         catch(DirectoryNotFoundException)
+         {
+            return;
+         }
+
+         // Perform a BeginInvoke call to the list box
+         // in order to marshal to the correct thread. It is not
+         // very efficient to perform this marshal once for every
+         // file, so batch up multiple file calls into one
+         // marshal invocation.
+         int startingIndex = 0;
+
+         while(startingIndex < files.Length)
+         {
+            // Batch up 20 files at once, unless at the
+            // end.
+            //
+            int count = 20;
+            if (count + startingIndex >= files.Length)
+            {
+               count = files.Length - startingIndex;
+            }
+
+            // Begin the cross-thread call. Because you are passing
+            // immutable objects into this invoke method, you do not have to
+            // wait for it to finish. If these were complex objects, you would
+            // have to either create new instances of them or
+            // wait for the thread to process this invoke before modifying
+            // the objects.
+            IAsyncResult r = BeginInvoke(fileListDelegate, new object[] {files, startingIndex, count});
+            startingIndex += count;
+         }
+
+         // Now that you have finished the files in this directory, recurse for
+         // each subdirectory.
+         string[] directories = Directory.GetDirectories(directory);
+         foreach(string d in directories)
+         {
+            RecurseDirectory(Path.Combine(d, search));
+         }
+      }
+
+      /// <summary>
+      /// This is the actual thread procedure. This method runs in a background
+      /// thread to scan directories. When finished, it simply exits.
+      /// </summary>
+      private void ThreadProcedure()
+      {
+         // Get the search string. Individual
+         // field assigns are atomic in .NET, so you do not
+         // need to use any thread synchronization to grab
+         // the string value here.
+         try
+         {
+            string localSearch = SearchCriteria;
+
+            // Now, search the file system.
+            //
+            RecurseDirectory(localSearch);
+         }
+         finally
+         {
+            // You are done with the search, so update.
+            //
+            searching = false;
+
+            // Raise an event that notifies the user that
+            // the search has terminated.
+            // You do not have to do this through a marshaled call, but
+            // marshaling is recommended for the following reason:
+            // Users of this control do not know that it is
+            // multithreaded, so they expect its events to
+            // come back on the same thread as the control.
+            BeginInvoke(onSearchComplete, new object[] {this, EventArgs.Empty});
+         }
+      }
+   }
+}
+```
+
+## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="3c27c-126">Uso del controllo multithread in un form</span><span class="sxs-lookup"><span data-stu-id="3c27c-126">Using the Multithreaded Control on a Form</span></span>
+ <span data-ttu-id="3c27c-127">Nell'esempio seguente viene illustrato il modo in cui `DirectorySearcher` il controllo multithread può essere utilizzato in un form.</span><span class="sxs-lookup"><span data-stu-id="3c27c-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>
+
+```vb
+Option Explicit
+Option Strict
+
+Imports Microsoft.Samples.DirectorySearcher
+Imports System
+Imports System.Drawing
+Imports System.Collections
+Imports System.ComponentModel
+Imports System.Windows.Forms
+Imports System.Data
+
+Namespace SampleUsage
+
+   ' <summary>
+   '      Summary description for Form1.
+   ' </summary>
+   Public Class Form1
+      Inherits System.Windows.Forms.Form
+      Private WithEvents directorySearcher As DirectorySearcher
+      Private searchText As System.Windows.Forms.TextBox
+      Private searchLabel As System.Windows.Forms.Label
+      Private WithEvents searchButton As System.Windows.Forms.Button
+
+      Public Sub New()
+         '
+         ' Required for Windows Forms designer support.
+         '
+         InitializeComponent()
+         '
+         ' Add any constructor code after InitializeComponent call here.
+         '
+      End Sub
+
+      #Region "Windows Form Designer generated code"
+      ' <summary>
+      '      Required method for designer support. Do not modify
+      '      the contents of this method with the code editor.
+      ' </summary>
+      Private Sub InitializeComponent()
+         Me.directorySearcher = New Microsoft.Samples.DirectorySearcher.DirectorySearcher()
+         Me.searchButton = New System.Windows.Forms.Button()
+         Me.searchText = New System.Windows.Forms.TextBox()
+         Me.searchLabel = New System.Windows.Forms.Label()
+         Me.directorySearcher.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right
+         Me.directorySearcher.Location = New System.Drawing.Point(8, 72)
+         Me.directorySearcher.SearchCriteria = Nothing
+         Me.directorySearcher.Size = New System.Drawing.Size(271, 173)
+         Me.directorySearcher.TabIndex = 2
+         Me.searchButton.Location = New System.Drawing.Point(8, 16)
+         Me.searchButton.Size = New System.Drawing.Size(88, 40)
+         Me.searchButton.TabIndex = 0
+         Me.searchButton.Text = "&Search"
+         Me.searchText.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right
+         Me.searchText.Location = New System.Drawing.Point(104, 24)
+         Me.searchText.Size = New System.Drawing.Size(175, 20)
+         Me.searchText.TabIndex = 1
+         Me.searchText.Text = "c:\*.cs"
+         Me.searchLabel.ForeColor = System.Drawing.Color.Red
+         Me.searchLabel.Location = New System.Drawing.Point(104, 48)
+         Me.searchLabel.Size = New System.Drawing.Size(176, 16)
+         Me.searchLabel.TabIndex = 3
+         Me.ClientSize = New System.Drawing.Size(291, 264)
+         Me.Controls.AddRange(New System.Windows.Forms.Control() {Me.searchLabel, Me.directorySearcher, Me.searchText, Me.searchButton})
+         Me.Text = "Search Directories"
+      End Sub
+      #End Region
+
+      ' <summary>
+      '    The main entry point for the application.
+      ' </summary>
+      <STAThread()> _
+      Shared Sub Main()
+         Application.Run(New Form1())
+      End Sub
+
+      Private Sub searchButton_Click(sender As Object, e As System.EventArgs) Handles searchButton.Click
+         directorySearcher.SearchCriteria = searchText.Text
+         searchLabel.Text = "Searching..."
+         directorySearcher.BeginSearch()
+      End Sub
+
+      Private Sub directorySearcher_SearchComplete(sender As Object, e As System.EventArgs) Handles directorySearcher.SearchComplete
+         searchLabel.Text = String.Empty
+      End Sub
+   End Class
+End Namespace
+```
+
+```csharp
+namespace SampleUsage
+{
+   using Microsoft.Samples.DirectorySearcher;
+   using System;
+   using System.Drawing;
+   using System.Collections;
+   using System.ComponentModel;
+   using System.Windows.Forms;
+   using System.Data;
+
+   /// <summary>
+   ///      Summary description for Form1.
+   /// </summary>
+   public class Form1 : System.Windows.Forms.Form
+   {
+      private DirectorySearcher directorySearcher;
+      private System.Windows.Forms.TextBox searchText;
+      private System.Windows.Forms.Label searchLabel;
+      private System.Windows.Forms.Button searchButton;
+
+      public Form1()
+      {
+         //
+         // Required for Windows Forms designer support.
+         //
+         InitializeComponent();
+
+         //
+         // Add any constructor code after InitializeComponent call here.
+         //
+      }
+
+      #region Windows Form Designer generated code
+      /// <summary>
+      ///      Required method for designer support. Do not modify
+      ///      the contents of this method with the code editor.
+      /// </summary>
+      private void InitializeComponent()
+      {
+         this.directorySearcher = new Microsoft.Samples.DirectorySearcher.DirectorySearcher();
+         this.searchButton = new System.Windows.Forms.Button();
+         this.searchText = new System.Windows.Forms.TextBox();
+         this.searchLabel = new System.Windows.Forms.Label();
+         this.directorySearcher.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right);
+         this.directorySearcher.Location = new System.Drawing.Point(8, 72);
+         this.directorySearcher.SearchCriteria = null;
+         this.directorySearcher.Size = new System.Drawing.Size(271, 173);
+         this.directorySearcher.TabIndex = 2;
+         this.directorySearcher.SearchComplete += new System.EventHandler(this.directorySearcher_SearchComplete);
+         this.searchButton.Location = new System.Drawing.Point(8, 16);
+         this.searchButton.Size = new System.Drawing.Size(88, 40);
+         this.searchButton.TabIndex = 0;
+         this.searchButton.Text = "&Search";
+         this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+         this.searchText.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right);
+         this.searchText.Location = new System.Drawing.Point(104, 24);
+         this.searchText.Size = new System.Drawing.Size(175, 20);
+         this.searchText.TabIndex = 1;
+         this.searchText.Text = "c:\\*.cs";
+         this.searchLabel.ForeColor = System.Drawing.Color.Red;
+         this.searchLabel.Location = new System.Drawing.Point(104, 48);
+         this.searchLabel.Size = new System.Drawing.Size(176, 16);
+         this.searchLabel.TabIndex = 3;
+         this.ClientSize = new System.Drawing.Size(291, 264);
+         this.Controls.AddRange(new System.Windows.Forms.Control[] {this.searchLabel,
+                                                        this.directorySearcher,
+                                                        this.searchText,
+                                                        this.searchButton});
+         this.Text = "Search Directories";
+
+      }
+      #endregion
+
+      /// <summary>
+      ///    The main entry point for the application.
+      /// </summary>
+      [STAThread]
+      static void Main()
+      {
+         Application.Run(new Form1());
+      }
+
+      private void searchButton_Click(object sender, System.EventArgs e)
+      {
+         directorySearcher.SearchCriteria = searchText.Text;
+         searchLabel.Text = "Searching...";
+         directorySearcher.BeginSearch();
+      }
+
+      private void directorySearcher_SearchComplete(object sender, System.EventArgs e)
+      {
+         searchLabel.Text = string.Empty;
+      }
+   }
+}
+```
+
+## <a name="see-also"></a><span data-ttu-id="3c27c-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c27c-128">See also</span></span>
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [<span data-ttu-id="8fefb-129">Sviluppo di controlli Windows Form personalizzati con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8fefb-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="8fefb-130">Panoramica sul modello asincrono basato su eventi</span><span class="sxs-lookup"><span data-stu-id="8fefb-130">Event-based Asynchronous Pattern Overview</span></span>](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [<span data-ttu-id="3c27c-129">Sviluppo di controlli Windows Form personalizzati con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3c27c-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="3c27c-130">Panoramica sul modello asincrono basato su eventi</span><span class="sxs-lookup"><span data-stu-id="3c27c-130">Event-based Asynchronous Pattern Overview</span></span>](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
