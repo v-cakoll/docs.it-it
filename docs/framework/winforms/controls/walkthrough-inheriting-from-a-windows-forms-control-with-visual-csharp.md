@@ -8,44 +8,48 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931027"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015672"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Procedura dettagliata: Eredità da un controllo Windows Forms con Visual C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Procedura dettagliata: Ereditare da un controllo Windows Forms con C\#
+
 Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante erediterà la funzionalità dal controllo Windows Forms <xref:System.Windows.Forms.Button> standard e esporrà una proprietà personalizzata denominata. `ButtonValue`
 
-## <a name="creating-the-project"></a>Creazione del progetto
- Quando si crea un nuovo progetto è necessario specificarne il nome per impostare lo spazio dei nomi radice, il nome dell'assembly e il nome del progetto e assicurarsi che il componente predefinito sia inserito nello spazio dei nomi corretto.
+## <a name="create-the-project"></a>Creare il progetto
+
+Quando si crea un nuovo progetto è necessario specificarne il nome per impostare lo spazio dei nomi radice, il nome dell'assembly e il nome del progetto e assicurarsi che il componente predefinito sia inserito nello spazio dei nomi corretto.
 
 ### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Per creare la libreria di controlli ValueButtonLib e il controllo ValueButton
 
-1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
-
-2. Selezionare il modello di progetto **libreria di controllo Windows Forms** dall'elenco di C# progetti visivi e `ValueButtonLib` digitare nella casella **nome** .
+1. In Visual Studio creare un nuovo progetto di **libreria di controllo Windows Forms** e denominarlo **ValueButtonLib**.
 
      Per impostazione predefinita il nome del progetto, `ValueButtonLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se ad esempio due assembly forniscono componenti denominati `ValueButton`, sarà possibile specificare il componente `ValueButton` utilizzando `ValueButtonLib.ValueButton`. Per altre informazioni, vedere [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md).
 
-3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **UserControl1.cs** e scegliere **Rinomina** dal menu di scelta rapida. Modificare il nome file in `ValueButton.cs`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice '`UserControl1`'.
+2. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **UserControl1.cs** e scegliere **Rinomina** dal menu di scelta rapida. Modificare il nome del file in **ValueButton.cs**. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice '`UserControl1`'.
 
-4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **ValueButton.cs** e scegliere **Visualizza codice**.
+3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **ValueButton.cs** e scegliere **Visualizza codice**.
 
-5. Individuare la `class` riga dell'istruzione `public partial class ValueButton`, e modificare il tipo da cui il controllo eredita da <xref:System.Windows.Forms.UserControl> a <xref:System.Windows.Forms.Button>. Ciò consente al controllo ereditato di ereditare tutte le funzionalità del <xref:System.Windows.Forms.Button> controllo.
+4. Individuare la `class` riga dell'istruzione `public partial class ValueButton`, e modificare il tipo da cui il controllo eredita da <xref:System.Windows.Forms.UserControl> a <xref:System.Windows.Forms.Button>. Ciò consente al controllo ereditato di ereditare tutte le funzionalità del <xref:System.Windows.Forms.Button> controllo.
 
-6. In **Esplora soluzioni** aprire il nodo **ValueButton.cs** per visualizzare il file del codice generato nella finestra di progettazione **ValueButton.Designer.cs**. Aprire il file nell'**editor di codice**.
+5. In **Esplora soluzioni** aprire il nodo **ValueButton.cs** per visualizzare il file del codice generato nella finestra di progettazione **ValueButton.Designer.cs**. Aprire il file nell'**editor di codice**.
 
-7. Individuare il `InitializeComponent` metodo e rimuovere la riga che assegna la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> proprietà. Questa proprietà non esiste nel <xref:System.Windows.Forms.Button> controllo.
+6. Individuare il `InitializeComponent` metodo e rimuovere la riga che assegna la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> proprietà. Questa proprietà non esiste nel <xref:System.Windows.Forms.Button> controllo.
 
-8. Per salvare il progetto, scegliere **Salva tutto** dal menu **File**.
+7. Per salvare il progetto, scegliere **Salva tutto** dal menu **File**.
 
     > [!NOTE]
     > Non è più disponibile alcuna finestra di progettazione. Poiché il <xref:System.Windows.Forms.Button> controllo esegue un disegno personalizzato, non è possibile modificarne l'aspetto nella finestra di progettazione. La relativa rappresentazione visiva sarà esattamente identica a quella della classe da cui eredita (ovvero), <xref:System.Windows.Forms.Button>a meno che non venga modificata nel codice. È comunque possibile aggiungere nell'area di progettazione i componenti che non dispongono di elementi dell'interfaccia utente.
 
-## <a name="adding-a-property-to-your-inherited-control"></a>Aggiunta di una proprietà al controllo ereditato
- Un possibile utilizzo dei controlli Windows Forms ereditati è la creazione di controlli aventi aspetto e funzionalità identici ai controlli standard Windows Forms, ma che espongono proprietà personalizzate. In questa sezione verrà illustrata la modalità di aggiunta della proprietà `ButtonValue` al controllo.
+## <a name="add-a-property-to-your-inherited-control"></a>Aggiungere una proprietà al controllo ereditato
+
+Un possibile utilizzo dei controlli Windows Forms ereditati è la creazione di controlli aventi aspetto e funzionalità identici ai controlli standard Windows Forms, ma che espongono proprietà personalizzate. In questa sezione verrà illustrata la modalità di aggiunta della proprietà `ButtonValue` al controllo.
 
 ### <a name="to-add-the-value-property"></a>Per aggiungere la proprietà Value
 
@@ -77,14 +81,13 @@ Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *e
 
 3. Per salvare il progetto, scegliere **Salva tutto** dal menu **File**.
 
-## <a name="testing-your-control"></a>Test del controllo
- I controlli non sono progetti autonomi e devono pertanto essere inseriti in un contenitore. Per testare il controllo, è necessario creare un progetto di test in cui eseguirlo. È inoltre necessario rendere il controllo accessibile al progetto di test compilandolo. In questa sezione verrà illustrato come compilare un controllo ed eseguirne il test in un Windows Form.
+## <a name="test-the-control"></a>Testare il controllo
+
+I controlli non sono progetti autonomi e devono pertanto essere inseriti in un contenitore. Per testare il controllo, è necessario creare un progetto di test in cui eseguirlo. È inoltre necessario rendere il controllo accessibile al progetto di test compilandolo. In questa sezione verrà illustrato come compilare un controllo ed eseguirne il test in un Windows Form.
 
 ### <a name="to-build-your-control"></a>Per compilare il controllo
 
-1. Scegliere **Compila soluzione** dal menu **Compila**.
-
-     La compilazione dovrebbe essere completata senza errori del compilatore o avvisi.
+Scegliere **Compila soluzione** dal menu **Compila**. La compilazione dovrebbe essere completata senza errori del compilatore o avvisi.
 
 ### <a name="to-create-a-test-project"></a>Per creare un progetto di test
 
@@ -92,11 +95,11 @@ Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *e
 
 2. Selezionare il nodo **Windows** sotto il nodo **Visual C#** e fare clic su **Windows Forms Application**.
 
-3. Nella casella **Nome** digitare `Test`.
+3. Nella casella **nome** immettere **test**.
 
 4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** del progetto di test, quindi scegliere **Aggiungi riferimento** dal menu di scelta rapida per visualizzare la finestra di dialogo **Aggiungi riferimento**.
 
-5. Scegliere la scheda **Progetti**. Il progetto `ValueButtonLib` verrà elencato in **Nome progetto**. Fare doppio clic sul progetto per cui si desidera aggiungere il riferimento al progetto di test.
+5. Scegliere la scheda **Progetti**. Il progetto ValueButtonLib verrà elencato in **nome progetto**. Fare doppio clic sul progetto per cui si desidera aggiungere il riferimento al progetto di test.
 
 6. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Test** e scegliere **Compila**.
 
@@ -104,15 +107,15 @@ Con Visual C#è possibile creare controlli personalizzati avanzati tramite l' *e
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Form1.cs**, quindi scegliere **Visualizza finestra di progettazione** dal menu di scelta rapida.
 
-2. Nella **Casella degli strumenti** fare clic su **Componenti ValueButtonLib**. Fare doppio clic su **ValueButton**.
+2. Nella **casella degli strumenti**selezionare **Componenti ValueButtonLib**. Fare doppio clic su **ValueButton**.
 
      Nel modulo verrà visualizzato un controllo **ValueButton**.
 
 3. Fare clic con il pulsante destro del mouse su **ValueButton**, quindi scegliere **Proprietà** dal menu di scelta rapida.
 
-4. Nella finestra **Proprietà** esaminare le proprietà del controllo. Tali proprietà sono identiche a quelle esposte da un pulsante standard, con la differenza che è disponibile anche la proprietà `ButtonValue`.
+4. Nella finestra **Proprietà** esaminare le proprietà del controllo. Si noti che le proprietà sono identiche a quelle esposte da un pulsante standard, ad eccezione del fatto che è presente una proprietà aggiuntiva, ButtonValue.
 
-5. Impostare la proprietà `ButtonValue` su `5`.
+5. Impostare la proprietà **ButtonValue** su **5**.
 
 6. Nella scheda **tutti Windows Forms** della **casella degli strumenti**fare doppio clic su **etichetta** per aggiungere un <xref:System.Windows.Forms.Label> controllo al form.
 

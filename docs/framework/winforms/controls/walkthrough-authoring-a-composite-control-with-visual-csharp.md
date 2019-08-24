@@ -1,6 +1,8 @@
 ---
 title: 'Procedura dettagliata: Modifica di un controllo composito con Visual C#'
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950060"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015689"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Procedura dettagliata: Creazione di un controllo composito con Visual C\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>Procedura dettagliata: Creare un controllo composito con C\#
 
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.
 
-## <a name="creating-the-project"></a>Creazione del progetto
+## <a name="create-the-project"></a>Creare il progetto
 
 Quando si crea un nuovo progetto è necessario specificarne il nome per impostare lo spazio dei nomi radice, il nome dell'assembly e il nome del progetto e assicurarsi che il componente predefinito sia inserito nello spazio dei nomi corretto.
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Per creare la libreria di controlli ctlClockLib e il controllo ctlClock
 
-1. Scegliere **Nuovo** dal menu **File**, quindi selezionare **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.
-
-2. Dall'elenco dei C# progetti visivi, selezionare il modello di progetto libreria di **controllo Windows Forms** , digitare `ctlClockLib` nella casella **nome** , quindi fare clic su **OK**.
+1. In Visual Studio creare un nuovo progetto di **libreria di controllo Windows Forms** e denominarlo **ctlClockLib**.
 
      Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se ad esempio due assembly forniscono componenti denominati `ctlClock`, sarà possibile specificare il componente `ctlClock` usando`ctlClockLib.ctlClock.`
 
-3. In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.cs`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".
+2. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **UserControl1.cs**e quindi scegliere **Rinomina**. Modificare il nome file in `ctlClock.cs`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".
 
     > [!NOTE]
     > Per impostazione predefinita, un controllo composito eredita <xref:System.Windows.Forms.UserControl> dalla classe fornita dal sistema. La <xref:System.Windows.Forms.UserControl> classe fornisce la funzionalità richiesta da tutti i controlli compositi e implementa i metodi e le proprietà standard.
 
-4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
+3. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Aggiunta di componenti e controlli Windows al controllo composito
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Aggiungere i controlli e i componenti di Windows al controllo composito
 
 L'interfaccia visiva è parte integrante del controllo composito e viene implementata mediante l'aggiunta di uno o più controlli Windows nell'area di progettazione. Nella procedura riportata di seguito i controlli Windows verranno incorporati nel controllo composito e verrà scritto il codice per l'implementazione delle funzionalità.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Per aggiungere al controllo composito un oggetto Label e un oggetto Timer
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClock.cs**, quindi scegliere **Progettazione viste**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlClock.cs**, quindi scegliere **Visualizza finestra di progettazione**.
 
 2. Nella **Casella degli strumenti** espandere il nodo **Controlli comuni** e fare doppio clic su **Etichetta**.
 
@@ -89,13 +92,13 @@ L'interfaccia visiva è parte integrante del controllo composito e viene impleme
 
 9. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
 
-## <a name="adding-properties-to-the-composite-control"></a>Aggiunta di proprietà al controllo composito
+## <a name="add-properties-to-the-composite-control"></a>Aggiungere proprietà al controllo composito
 
 Il controllo Clock incapsula ora un <xref:System.Windows.Forms.Label> controllo e un <xref:System.Windows.Forms.Timer> componente, ognuno con un proprio set di proprietà intrinseche. Benché le singole proprietà di questi controlli non siano accessibili ai futuri utenti del controllo, è possibile creare ed esporre proprietà personalizzate scrivendo i blocchi di codice appropriati. Nella procedura riportata di seguito verrà illustrato come aggiungere al controllo proprietà che consentono all'utente di modificare il colore dello sfondo e del testo.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>Per aggiungere una proprietà al controllo composito
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su c**ctlClock.cs**, quindi scegliere **Visualizza codice**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlClock.cs**, quindi scegliere **Visualizza codice**.
 
      Verrà visualizzato l'**editor del codice** per il controllo.
 
@@ -108,7 +111,7 @@ Il controllo Clock incapsula ora un <xref:System.Windows.Forms.Label> controllo 
 
      Queste istruzioni consentono di creare le variabili private da utilizzare per la memorizzazione dei valori delle proprietà che verranno create.
 
-3. Sotto le dichiarazioni delle variabili del passaggio 2 inserire il seguente codice.
+3. Immettere o incollare il codice seguente sotto le dichiarazioni delle variabili del passaggio 2.
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ Il controllo Clock incapsula ora un <xref:System.Windows.Forms.Label> controllo 
 
 4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
 
-## <a name="testing-the-control"></a>Test del controllo
+## <a name="test-the-control"></a>Testare il controllo
 
 I controlli non sono applicazioni autonome e devono pertanto essere inseriti in un contenitore. Eseguire il test del comportamento del controllo in fase di esecuzione e sperimentare le proprietà con **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
 
 ### <a name="to-test-your-control"></a>Per eseguire il test del controllo
 
-1. Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.
+1. Premere **F5** per compilare il progetto ed eseguire il controllo in **UserControl Test Container**.
 
 2. Nella griglia della proprietà di Test Container, selezionare la proprietà `ClockBackColor`, quindi fare clic sulla freccia a discesa per visualizzare la tavolozza dei colori.
 
 3. Scegliere un colore facendovi clic sopra.
 
-     Il colore di sfondo del controllo cambierà in base al colore selezionato.
+   Il colore di sfondo del controllo cambierà in base al colore selezionato.
 
 4. Usare una sequenza di eventi simile per verificare il corretto funzionamento della proprietà `ClockForeColor`.
 
-     In questa sezione e in quelle precedenti è stato illustrato come combinare componenti e controlli Windows con codici e package per aggiungere funzionalità personalizzate al modulo di un controllo composito. Si è inoltre appreso come esporre le proprietà del controllo composito e come eseguire il test del controllo dopo averlo completato. Nella sezione successiva verranno fornite informazioni sulla modalità di creazione di un controllo composito ereditato utilizzando `ctlClock` come base.
+   In questa sezione e in quelle precedenti è stato illustrato come combinare componenti e controlli Windows con codici e package per aggiungere funzionalità personalizzate al modulo di un controllo composito. Si è inoltre appreso come esporre le proprietà del controllo composito e come eseguire il test del controllo dopo averlo completato. Nella sezione successiva verranno fornite informazioni sulla modalità di creazione di un controllo composito ereditato utilizzando `ctlClock` come base.
 
-## <a name="inheriting-from-a-composite-control"></a>Eredità da un controllo composito
+## <a name="inherit-from-a-composite-control"></a>Ereditare da un controllo composito
 
 Nelle sezioni precedenti si è appreso come combinare controlli, componenti e codice Windows in controlli compositi riutilizzabili. Il controllo composito può ora essere usato come base per la compilazione di altri controlli. Il processo di derivazione di una classe da una classe di base è detto *ereditarietà*. In questa sezione verrà creato un controllo composito denominato `ctlAlarmClock`. Il controllo verrà derivato dal relativo controllo padre, in questo caso `ctlClock`. Verrà spiegato come estendere le funzionalità di `ctlClock` mediante l'override dei metodi padre e l'aggiunta di nuovi metodi e proprietà.
 
@@ -172,7 +175,7 @@ Per creare un controllo ereditato, è innanzitutto necessario derivare il contro
 
 ### <a name="to-create-the-inherited-control"></a>Per creare il controllo ereditato
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, scegliere **Aggiungi**, quindi **Controllo utente**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **CtlClockLib**, scegliere **Aggiungi**, quindi fare clic su **controllo utente**.
 
      Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.
 
@@ -184,18 +187,18 @@ Per creare un controllo ereditato, è innanzitutto necessario derivare il contro
 
 4. In **Nome componente** fare doppio clic su **ctlClock**.
 
-5. In Esplora soluzioni scorrere i progetti correnti.
+5. In **Esplora soluzioni**esplorare i progetti correnti.
 
     > [!NOTE]
     > Nel progetto corrente è stato aggiunto il file denominato **ctlAlarmClock.cs**.
 
-### <a name="adding-the-alarm-properties"></a>Aggiunta delle proprietà per l'allarme
+### <a name="add-the-alarm-properties"></a>Aggiungere le proprietà dell'allarme
 
 Le modalità di aggiunta delle proprietà a un controllo ereditato sono analoghe a quelle utilizzate per i controlli compositi. Mediante la sintassi di dichiarazione delle proprietà si aggiungeranno ora al controllo due proprietà: `AlarmTime`, in cui viene memorizzato il valore della data e dell'ora in cui l'allarme deve essere disattivato, e `AlarmSet`, che indica se l'allarme è impostato o meno.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>Per aggiungere proprietà al controllo composito
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza codice**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza codice**.
 
 2. Individuare l'istruzione `public class`. Si noti che il controllo eredita da `ctlClockLib.ctlClock`. Sotto la parentesi graffa aperta (`{)`, digitare il codice seguente.
 
@@ -228,13 +231,13 @@ Le modalità di aggiunta delle proprietà a un controllo ereditato sono analoghe
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>Aggiunta del controllo all'interfaccia grafica
+### <a name="add-to-the-graphical-interface-of-the-control"></a>Aggiungere all'interfaccia grafica del controllo
 
 Il controllo ereditato presenta un'interfaccia grafica identica a quella del controllo dal quale eredita e possiede gli stessi controlli costitutivi del controllo padre, ma le proprietà dei controlli costitutivi non sono disponibili, a meno che non siano state specificamente esposte. Analogamente a qualsiasi altro controllo composito, è possibile aggiungere elementi all'interfaccia grafica di un controllo composito ereditato, utilizzando la medesima procedura. In questo esempio verrà utilizzato un controllo label per aggiungere un effetto intermittente all'interfaccia grafica del controllo quando l'allarme suona.
 
 #### <a name="to-add-the-label-control"></a>Per aggiungere il controllo label
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza finestra di progettazione**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza finestra di progettazione**.
 
      Nella finestra principale viene aperta la finestra di progettazione per `ctlAlarmClock`.
 
@@ -257,7 +260,7 @@ Il controllo ereditato presenta un'interfaccia grafica identica a quella del con
     |**TextAlign**|`MiddleCenter`|
     |**Visible**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>Aggiunta della funzionalità di allarme
+### <a name="add-the-alarm-functionality"></a>Aggiungere la funzionalità di allarme
 
 Nelle procedure precedenti sono state aggiunte proprietà e un controllo in grado di abilitare la funzionalità di allarme nel controllo composito. In questa procedura verrà aggiunto un codice che consente di confrontare l'ora corrente con l'ora dell'allarme e, se le ore risultano identiche, attivare un allarme lampeggiante. Eseguendo l'override del metodo `timer1_Tick` di `ctlClock` e aggiungendovi ulteriore codice sarà possibile estendere le capacità di `ctlAlarmClock` e conservare allo stesso le funzionalità intrinseche di `ctlClock`.
 
@@ -317,7 +320,7 @@ Nelle procedure precedenti sono state aggiunte proprietà e un controllo in grad
 
 #### <a name="to-implement-the-shutoff-method"></a>Per implementare il metodo di disattivazione
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock.cs**, quindi scegliere **Visualizza finestra di progettazione**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlAlarmClock.cs**, quindi scegliere **Visualizza finestra di progettazione**.
 
      Viene aperta la finestra di progettazione.
 
@@ -346,21 +349,21 @@ Nelle procedure precedenti sono state aggiunte proprietà e un controllo in grad
 
 5. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.
 
-### <a name="using-the-inherited-control-on-a-form"></a>Utilizzo del controllo ereditato in un modulo
+### <a name="use-the-inherited-control-on-a-form"></a>Usare il controllo ereditato in un form
 
-È possibile testare il controllo ereditato nello stesso modo in cui è stato testato il controllo `ctlClock`della classe base: Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+È possibile testare il controllo ereditato nello stesso modo in cui è stato testato il controllo `ctlClock`della classe base: Premere **F5** per compilare il progetto ed eseguire il controllo in **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
 
 Per utilizzare il controllo è necessario inserirlo in un modulo. Come i controlli compositi standard, i controlli compositi ereditati non possono essere autonomi e devono essere inclusi in un modulo o in un altro contenitore. Poiché `ctlAlarmClock` include un maggior numero di funzionalità, per eseguire il test è necessario aggiungere del codice. In questa procedura verrà scritto un semplice programma per la verifica delle funzionalità di `ctlAlarmClock`. Verrà inoltre scritto il codice per impostare e visualizzare la proprietà `AlarmTime` di `ctlAlarmClock` e verrà eseguito il test delle funzionalità intrinseche del controllo.
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>Per compilare e aggiungere il controllo a un modulo di test
 
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, quindi scegliere **Compila**.
+1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **ctlClockLib**e quindi scegliere **Compila**.
 
-2. Aggiungere un nuovo progetto **Applicazione Windows** alla soluzione e denominarlo `Test`.
+2. Aggiungere un nuovo progetto di **applicazione Windows** alla soluzione e denominarlo **test**.
 
-3. In Esplora soluzioni fare clic con il pulsante destro del mouse sul nodo **Riferimenti** per il progetto di test. Fare clic su **Aggiungi riferimento** per visualizzare la finestra di dialogo **Aggiungi riferimento**. Scegliere la scheda **Progetti**. Il progetto `ctlClockLib` verrà elencato in **Nome progetto**. Fare doppio clic sul progetto per cui si desidera aggiungere il riferimento al progetto di test.
+3. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo **riferimenti** per il progetto di test. Fare clic su **Aggiungi riferimento** per visualizzare la finestra di dialogo **Aggiungi riferimento**. Scegliere la scheda **Progetti**. Il progetto `ctlClockLib` verrà elencato in **Nome progetto**. Fare doppio clic sul progetto per cui si desidera aggiungere il riferimento al progetto di test.
 
-4. In Esplora soluzioni fare clic con il pulsante destro del mouse su **Test**, quindi scegliere **Compila**.
+4. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **test**, quindi scegliere **Compila**.
 
 5. Nella **Casella degli strumenti** espandere il nodo **Componenti ctlClockLib**.
 
@@ -395,7 +398,7 @@ Per utilizzare il controllo è necessario inserirlo in un modulo. Come i control
     }
     ```
 
-12. In Esplora soluzioni fare clic con il pulsante destro del mouse su **Test** e scegliere **Imposta come progetto di avvio**.
+12. In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **test**, quindi scegliere **Imposta come progetto di avvio**.
 
 13. Scegliere **Avvia debug** dal menu **Debug**.
 
@@ -409,7 +412,7 @@ Per utilizzare il controllo è necessario inserirlo in un modulo. Come i control
 
 16. Disattivare l'allarme facendo clic su `btnAlarmOff`. A questo punto è possibile reimpostare l'allarme.
 
-     In questa procedura dettagliata sono stati trattati diversi concetti chiave. Si è appreso come creare un controllo composito combinando controlli e componenti in un contenitore controllo composito e come aggiungere proprietà al controllo e scrivere il codice per l'implementazione di funzionalità personalizzate. Nell'ultima sezione sono state illustrate l'estensione delle funzionalità di uno specifico controllo composito mediante ereditarietà e la modifica delle funzionalità dei metodi host mediante override.
+Questo articolo ha trattato diversi concetti chiave. Si è appreso come creare un controllo composito combinando controlli e componenti in un contenitore controllo composito e come aggiungere proprietà al controllo e scrivere il codice per l'implementazione di funzionalità personalizzate. Nell'ultima sezione sono state illustrate l'estensione delle funzionalità di uno specifico controllo composito mediante ereditarietà e la modifica delle funzionalità dei metodi host mediante override.
 
 ## <a name="see-also"></a>Vedere anche
 

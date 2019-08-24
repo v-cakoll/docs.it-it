@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933692"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016133"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
 
@@ -22,7 +22,7 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato dei tipi di carattere OpenType  
- Il formato del tipo di carattere OpenType è un' [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] estensione del formato carattere, con l'aggiunta del supporto per i dati del tipo di carattere PostScript. Il formato del tipo di carattere OpenType è stato [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] sviluppato congiuntamente da e Adobe Corporation. I tipi di carattere OpenType e i servizi del sistema operativo che supportano i tipi di carattere OpenType forniscono agli utenti un modo semplice per installare e [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] usare i tipi di carattere, indipendentemente dal fatto che i tipi di carattere contengano strutture di tipo CFF (PostScript).  
+ Il formato del tipo di carattere OpenType è un' [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] estensione del formato carattere, con l'aggiunta del supporto per i dati del tipo di carattere PostScript. Il formato del tipo di carattere OpenType è stato sviluppato congiuntamente da Microsoft e Adobe Corporation. I tipi di carattere OpenType e i servizi del sistema operativo che supportano i tipi di carattere OpenType forniscono agli utenti un modo semplice per installare e [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] usare i tipi di carattere, indipendentemente dal fatto che i tipi di carattere contengano strutture di tipo CFF (PostScript).  
   
  Il formato del tipo di carattere OpenType soddisfa le seguenti richieste di sviluppo:  
   

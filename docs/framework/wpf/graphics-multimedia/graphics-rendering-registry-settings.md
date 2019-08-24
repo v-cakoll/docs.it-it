@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960237"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016092"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -68,9 +68,9 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
 |Chiave del Registro di sistema|Tipo valore|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Stringa|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
- Nel novembre 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ha rilasciato una nuova versione delle linee guida per il test dei driver; i driver creati dopo questa data sono maggiormente stabili. Per impostazione predefinita, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa la pipeline di accelerazione hardware per questi driver ed esegue il fallback al rendering del software per driver XPDM pubblicati prima di tale data.  
+ Nel novembre 2004 Microsoft ha rilasciato una nuova versione delle linee guida per il test dei driver; i driver scritti dopo questa data offrono una migliore stabilità. Per impostazione predefinita, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa la pipeline di accelerazione hardware per questi driver ed esegue il fallback al rendering del software per driver XPDM pubblicati prima di tale data.  
   
  L'**impostazione Data driver video necessaria** consente di specificare una data alternativa minima per i driver XPDM. È necessario specificare solo una data precedente a novembre 2004 se si è certi che il driver video è sufficientemente stabile per supportare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   

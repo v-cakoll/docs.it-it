@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039501"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015625"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: Creare un controllo con associazione semplice in un Windows Form
 
 Con l' *associazione semplice*, è possibile visualizzare un singolo elemento dati, ad esempio un valore di colonna da una tabella del set di dati, in un controllo. È possibile associare in modo semplice qualsiasi proprietà di un controllo a un valore di dati.
 
-### <a name="to-simple-bind-a-control"></a>Per eseguire l'associazione semplice di un controllo
+## <a name="to-simple-bind-a-control"></a>Per eseguire l'associazione semplice di un controllo
 
 1. Effettuare una connessione a un'origine dati. Per ulteriori informazioni, vedere [connessione a un'origine dati](../data/adonet/connecting-to-a-data-source.md).
 
-2. Nel modulo selezionare il controllo e visualizzare la finestra **Proprietà** .
+2. In Visual Studio selezionare il controllo nel form e visualizzare la finestra **Proprietà** .
 
 3. Espandere la proprietà **(DataBindings)** .
 

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039880"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015923"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: Creare controlli per Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Procedura: Controlli autore per Windows Forms
 
 Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un controllo può fornire o elaborare dati, accettare input dall'utente, rispondere a eventi o eseguire qualsiasi numero di altre funzioni che connettono l'utente e l'applicazione. Poiché un controllo è essenzialmente un componente con un'interfaccia grafica, può essere utilizzato per le stesse funzioni di un componente oltre che per consentire l'interazione dell'utente. I controlli vengono creati per scopi specifici e la creazione di controlli è semplicemente un'altra attività di programmazione. Tenendo conto di questo, i passaggi seguenti rappresentano una panoramica del processo di creazione di un controllo. I collegamenti forniscono altre informazioni sui singoli passaggi.
-
-> [!NOTE]
-> Per creare un controllo personalizzato da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
 ## <a name="to-author-a-control"></a>Per creare un controllo
 
@@ -42,7 +42,7 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
 
 6. Se il controllo eredita da <xref:System.Windows.Forms.UserControl>, è possibile verificarne il comportamento in fase di esecuzione compilando il progetto di controllo ed eseguendolo nel **contenitore di test UserControl**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
 
-7. È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questo processo viene illustrato come parte della [procedura dettagliata: Creazione di un controllo composito con](walkthrough-authoring-a-composite-control-with-visual-basic.md)Visual Basic.
+7. È possibile testare ed eseguire il debug del controllo anche creando un nuovo progetto, ad esempio un'applicazione Windows, e inserendolo in un contenitore. Questo processo viene illustrato come parte della [procedura dettagliata: Creazione di un controllo](walkthrough-authoring-a-composite-control-with-visual-csharp.md)composito.
 
 8. Quando si aggiunge ogni funzionalità, aggiungere le funzionalità al progetto di test per verificarne il funzionamento.
 
@@ -52,8 +52,6 @@ Un controllo rappresenta un collegamento grafico tra l'utente e il programma. Un
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Creazione di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Procedura dettagliata: Eredità da un controllo Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
 - [Procedura: Ereditare da controlli Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)

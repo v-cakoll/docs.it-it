@@ -15,62 +15,49 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882456"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015691"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli Windows Forms personalizzati in fase di progettazione
 
-Quando si crea un controllo personalizzato, è spesso risulterà necessario per eseguire il debug relativo comportamento in fase di progettazione. Ciò è particolarmente vero se si crea una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, vedere [procedura dettagliata: Creazione di un Windows Form di controllo che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md).
+Quando si crea un controllo personalizzato, sarà spesso necessario eseguire il debug del comportamento in fase di progettazione. Questo vale soprattutto se si crea una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, [vedere Procedura dettagliata: Creazione di un controllo Windows Forms che sfrutta le funzionalità](creating-a-wf-control-design-time-features.md)della fase di progettazione di Visual Studio.
 
-È possibile eseguire il debug dei controlli personalizzati utilizzando Visual Studio, esattamente come si potrebbero eseguire il debug di eventuali altre classi di .NET Framework. La differenza è che si eseguirà il debug di un'istanza separata di Visual Studio che codice del controllo personalizzato in esecuzione
-
-Le attività illustrate nella procedura dettagliata sono le seguenti:
-
-- Creazione di un progetto Windows Form per ospitare il controllo personalizzato
-
-- Creazione di un progetto di libreria di controlli
-
-- Aggiunta di una proprietà del controllo personalizzato
-
-- Aggiunta del controllo personalizzato al modulo host
-
-- Impostazione del progetto per il debug in fase di progettazione
-
-- Debug del controllo personalizzato in fase di progettazione
-
-Al termine, si avrà una conoscenza delle attività necessarie per il debug del comportamento in fase di progettazione di un controllo personalizzato.
+È possibile eseguire il debug dei controlli personalizzati con Visual Studio, proprio come per qualsiasi altra classe .NET Framework. La differenza è che si eseguirà il debug di un'istanza separata di Visual Studio che esegue il codice del controllo personalizzato.
 
 ## <a name="create-the-project"></a>Creare il progetto
 
-Il primo passaggio consiste nel creare il progetto di applicazione. Si userà questo progetto per compilare l'applicazione che ospita il controllo personalizzato.
+Il primo passaggio consiste nel creare il progetto dell'applicazione. Questo progetto verrà usato per compilare l'applicazione che ospita il controllo personalizzato.
 
-In Visual Studio, creare un progetto applicazione Windows denominato "DynamicLayout" (**File** > **New** > **progetto**  >  **Visual C#**  oppure **Visual Basic** > **Desktop classico** > **Windows Forms Application**).
+In Visual Studio creare un progetto di applicazione Windows e denominarlo **DebuggingExample**.
 
 ## <a name="create-the-control-library-project"></a>Creare il progetto di libreria di controlli
 
-1. Aggiungere un **libreria di controlli Windows** progetto alla soluzione.
+1. Aggiungere un progetto **libreria di controlli Windows** alla soluzione.
 
-2. Aggiungere un nuovo **UserControl** elemento al progetto DebugControlLibrary. Per informazioni dettagliate, vedere [Procedura: Aggiungere nuovi elementi di progetto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Assegnare al nuovo file di origine di un nome di base di "DebugControl".
+2. Aggiungere un nuovo elemento **UserControl** al progetto DebugControlLibrary. Denominarlo **DebugControl**.
 
-3. Usando il **Esplora soluzioni**, eliminare il controllo del progetto predefinita eliminando il file di codice con il nome di base "`UserControl1`". Per informazioni dettagliate, vedere [Procedura: Rimuovere, eliminare ed escludere elementi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+3. In **Esplora soluzioni**eliminare il controllo predefinito del progetto eliminando il file di codice con un nome di base di UserControl1.
 
 4. Compilare la soluzione.
 
 ## <a name="checkpoint"></a>Checkpoint
 
-A questo punto, sarà in grado di visualizzare il controllo personalizzato nel **casella degli strumenti**.
+A questo punto, sarà possibile visualizzare il controllo personalizzato nella **casella degli strumenti**.
 
-Per controllare lo stato di avanzamento, individuare la nuova scheda denominata **Componenti DebugControlLibrary** e fare clic per selezionarlo. Quando si apre, verrà visualizzato il controllo elencato come **DebugControl** con accanto l'icona predefinita.
+Per controllare lo stato di avanzamento, trovare la nuova scheda denominata **DebugControlLibrary Components** e fare clic per selezionarla. Quando si apre, il controllo verrà visualizzato come **DebugControl** con l'icona predefinita accanto.
 
-## <a name="add-a-property-to-your-custom-control"></a>Aggiungere una proprietà del controllo personalizzato
+## <a name="add-a-property-to-your-custom-control"></a>Aggiungere una proprietà al controllo personalizzato
 
-Per dimostrare che il codice del controllo personalizzato sia in esecuzione in fase di progettazione, si verrà aggiunta una proprietà e impostare un punto di interruzione nel codice che implementa la proprietà.
+Per dimostrare che il codice del controllo personalizzato viene eseguito in fase di progettazione, si aggiungerà una proprietà e si imposterà un punto di interruzione nel codice che implementa la proprietà.
 
-1. Aprire **DebugControl** nel **Editor di codice**. Aggiungere il codice seguente alla definizione della classe:
+1. Aprire **DebugControl** nell' **editor di codice**. Aggiungere il codice seguente alla definizione della classe:
 
     ```vb
     Private demoStringValue As String = Nothing
@@ -106,64 +93,62 @@ Per dimostrare che il codice del controllo personalizzato sia in esecuzione in f
 
 2. Compilare la soluzione.
 
-## <a name="add-your-custom-control-to-the-host-form"></a>Aggiungi controllo personalizzato al modulo host
+## <a name="add-your-custom-control-to-the-host-form"></a>Aggiungere il controllo personalizzato al modulo host
 
-Per eseguire il debug di comportamento in fase di progettazione del controllo personalizzato, si inserirà un'istanza della classe del controllo personalizzato in un form di host.
+Per eseguire il debug del comportamento in fase di progettazione del controllo personalizzato, è necessario inserire un'istanza della classe del controllo personalizzato in un form host.
 
-1. Aprire Form1 nel progetto "DynamicLayout", il **finestra di progettazione Windows Form**.
+1. Nel progetto "DebuggingExample" aprire Form1 nel **Progettazione Windows Form**.
 
-2. Nel **casella degli strumenti**, aprire il **DebugControlLibrary componenti** scheda e trascinare un' **DebugControl** istanza nel form.
+2. Nella **casella degli strumenti**aprire la scheda **componenti di DebugControlLibrary** e trascinare un'istanza di **DebugControl** nel form.
 
-3. Trovare il `DemoString` proprietà personalizzata nel **proprietà** finestra. Si noti che è possibile modificare il relativo valore come si farebbe con qualsiasi altra proprietà. Si noti inoltre che quando la `DemoString` viene selezionata una proprietà, stringa di descrizione della proprietà viene visualizzata nella parte inferiore della **proprietà** finestra.
+3. Trovare la `DemoString` proprietà personalizzata nella finestra **proprietà** . Si noti che è possibile modificare il valore come qualsiasi altra proprietà. Si noti inoltre che, `DemoString` quando la proprietà è selezionata, la stringa di descrizione della proprietà viene visualizzata nella parte inferiore della finestra delle **proprietà** .
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Configurare il progetto per il debug in fase di progettazione
 
-Per eseguire il debug di comportamento in fase di progettazione del controllo personalizzato, si eseguirà il debug di un'istanza separata di Visual Studio che codice del controllo personalizzato in esecuzione.
+Per eseguire il debug del comportamento in fase di progettazione del controllo personalizzato, si eseguirà il debug di un'istanza separata di Visual Studio che esegue il codice del controllo personalizzato.
 
-1. Fare clic sui **DebugControlLibrary** del progetto nel **Esplora soluzioni** e selezionare **proprietà**.
+1. Fare clic con il pulsante destro del mouse sul progetto **DebugControlLibrary** nel **Esplora soluzioni** e scegliere **proprietà**.
 
-2. Nel **DebugControlLibrary** delle proprietà, selezionare la **Debug** scheda.
+2. Nella finestra delle proprietà di **DebugControlLibrary** selezionare la scheda **debug** .
 
-     Nel **azione di avvio** sezione, selezionare **Avvia programma esterno**. Sarà pertanto il debug di un'istanza separata di Visual Studio, fare clic sui puntini di sospensione (![The puntini di sospensione nella finestra proprietà di Visual Studio.](./media/visual-studio-ellipsis-button.png)) per cercare l'IDE di Visual Studio. È il nome del file eseguibile **devenv.exe**, e se è installato nel percorso predefinito, il percorso è %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+     Nella sezione **azione di avvio** selezionare **Avvia programma esterno**. Verrà eseguito il debug di un'istanza separata di Visual Studio, quindi fare clic sui![puntini di sospensione (il pulsante con i puntini di sospensione (](./media/visual-studio-ellipsis-button.png)...) nel pulsante finestra proprietà di Visual Studio) per cercare l'IDE di Visual Studio. Il nome del file eseguibile è **devenv. exe**e, se è stato installato nel percorso predefinito, il percorso è *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
 3. Fare clic su **OK** per chiudere la finestra di dialogo.
 
-4. Fare doppio clic il **DebugControlLibrary** del progetto e selezionare **imposta come progetto di avvio** per abilitare la configurazione di debug.
+4. Fare clic con il pulsante destro del mouse sul progetto **DebugControlLibrary** e selezionare **Imposta come progetto di avvio** per abilitare questa configurazione di debug.
 
 ## <a name="debug-your-custom-control-at-design-time"></a>Eseguire il debug del controllo personalizzato in fase di progettazione
 
-A questo punto si è pronti per eseguire il debug del controllo personalizzato che viene eseguito in modalità progettazione. Quando si avvia la sessione di debug, una nuova istanza di Visual Studio verrà creata e si userà per caricare la soluzione "DynamicLayout". Quando si apre Form1 nel **progettazione form**, verrà creata e verrà avviata l'esecuzione di un'istanza del controllo personalizzato.
+A questo punto si è pronti per eseguire il debug del controllo personalizzato durante l'esecuzione in modalità progettazione. Quando si avvia la sessione di debug, viene creata una nuova istanza di Visual Studio che verrà utilizzata per caricare la soluzione "DebuggingExample". Quando si apre Form1 in **progettazione form**, verrà creata un'istanza del controllo personalizzato che inizierà a essere in esecuzione.
 
-1. Aprire il **DebugControl** file di origine il **Editor di codice** e inserire un punto di interruzione nel `Set` funzione di accesso del `DemoString` proprietà.
+1. Aprire il file di origine **DebugControl** nell' **editor di codice** e inserire un punto di `Set` interruzione nella funzione di accesso della `DemoString` proprietà.
 
-2. Premere F5 per avviare la sessione di debug. Si noti che viene creata una nuova istanza di Visual Studio. È possibile distinguere tra le istanze in due modi:
+2. Premere **F5** per avviare la sessione di debug. Viene creata una nuova istanza di Visual Studio. È possibile distinguere tra le istanze in due modi:
 
-    - L'istanza di debug è presente la parola **in esecuzione** nella barra del titolo
+    - Nell'istanza di debug è presente la parola in **esecuzione** nella relativa barra del titolo.
 
-    - L'istanza di debug ha il **avviare** sul pulsante relativo **Debug** disabilitata sulla barra degli strumenti
+    - L'istanza di debug dispone del pulsante **Avvia** sulla barra degli strumenti di **debug** disabilitata
 
-     Il punto di interruzione viene impostato nell'istanza di debug.
+   Il punto di interruzione viene impostato nell'istanza di debug.
 
-3. Nella nuova istanza di Visual Studio, aprire la soluzione "DynamicLayout". È possibile trovare facilmente la soluzione selezionando **progetti recenti** dalle **File** menu. Il file della soluzione "DebuggingExample" verrà elencato come più i file usati di recente.
+3. Nella nuova istanza di Visual Studio aprire la soluzione "DebuggingExample". È possibile trovare facilmente la soluzione selezionando **progetti recenti** dal menu **file** . Il file di soluzione "DebuggingExample. sln" verrà elencato come file usato più di recente.
 
-4. Aprire Form1 nel **progettazione form** e selezionare il **DebugControl** controllo.
+4. Aprire Form1 in **progettazione form** e selezionare il controllo **DebugControl** .
 
-5. Modificare il valore della proprietà `DemoString` . Si noti che quando si esegue il commit della modifica, l'istanza di debug di Visual Studio acquisisce lo stato attivo e l'esecuzione si arresta in corrispondenza del punto di interruzione. È possibile passo a passo la funzione di accesso di proprietà come il sarebbe qualsiasi altro codice.
+5. Modificare il valore della proprietà `DemoString` . Quando si esegue il commit della modifica, l'istanza di debug di Visual Studio acquisisce lo stato attivo e l'esecuzione si arresta in corrispondenza del punto di interruzione. È possibile eseguire la funzione di accesso alla proprietà solo come qualsiasi altro codice.
 
-6. Dopo averli completati con la sessione di debug, è possibile uscire chiudendo l'istanza host di Visual Studio o facendo clic la **arresta debug** pulsante nell'istanza di debug.
+6. Per arrestare il debug, chiudere l'istanza ospitata di Visual Studio oppure selezionare il pulsante **Interrompi debug** nell'istanza di debug.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che è possibile eseguire il debug di controlli personalizzati in fase di progettazione, esistono diverse possibilità per espandere l'interazione del controllo con l'IDE di Visual Studio.
+Ora che è possibile eseguire il debug dei controlli personalizzati in fase di progettazione, esistono molte possibilità per espandere l'interazione del controllo con l'IDE di Visual Studio.
 
-- È possibile usare la <xref:System.ComponentModel.Component.DesignMode%2A> proprietà del <xref:System.ComponentModel.Component> classe per scrivere codice che verrà eseguito solo in fase di progettazione. Per informazioni dettagliate, vedere <xref:System.ComponentModel.Component.DesignMode%2A>.
+- È possibile utilizzare la <xref:System.ComponentModel.Component.DesignMode%2A> proprietà <xref:System.ComponentModel.Component> della classe per scrivere codice che verrà eseguito solo in fase di progettazione. Per informazioni dettagliate, vedere <xref:System.ComponentModel.Component.DesignMode%2A>.
 
-- Esistono diversi attributi è possibile applicare alle proprietà del controllo per modificare l'interazione del controllo personalizzato con la finestra di progettazione. È possibile trovare questi attributi nel <xref:System.ComponentModel?displayProperty=nameWithType> dello spazio dei nomi.
+- Sono disponibili diversi attributi che è possibile applicare alle proprietà del controllo per modificare l'interazione del controllo personalizzato con la finestra di progettazione. È possibile trovare questi attributi nello <xref:System.ComponentModel?displayProperty=nameWithType> spazio dei nomi.
 
-- È possibile scrivere una finestra di progettazione personalizzata per il controllo personalizzato. Ciò consente il controllo completo della fase di progettazione utilizzando l'infrastruttura della finestra di progettazione extensible esposta da Visual Studio. Per informazioni dettagliate, vedere [procedura dettagliata: Creazione di un Windows Form di controllo che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md).
+- È possibile scrivere una finestra di progettazione personalizzata per il controllo personalizzato. Questo consente di controllare completamente l'esperienza di progettazione usando l'infrastruttura di progettazione estendibile esposta da Visual Studio. Per informazioni dettagliate, [vedere Procedura dettagliata: Creazione di un controllo Windows Forms che sfrutta le funzionalità](creating-a-wf-control-design-time-features.md)della fase di progettazione di Visual Studio.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)
-- [Procedura: Servizi di accesso in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [Procedura: Supporto dell'accesso in fase di progettazione in Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+- [Procedura dettagliata: Creazione di un controllo Windows Forms che sfrutta le funzionalità della fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)

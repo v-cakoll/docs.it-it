@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966593"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015878"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procedura: Ereditare da controlli Windows Forms esistenti
+
 Se si desidera estendere le funzionalità di un controllo esistente, è possibile creare un controllo derivato da un controllo esistente tramite l'ereditarietà. Quando si eredita da un controllo esistente, si ereditano tutte le funzionalità e le proprietà visive di tale controllo. Se, ad esempio, si crea un controllo che eredita da <xref:System.Windows.Forms.Button>, il nuovo controllo avrà un aspetto simile a quello di un <xref:System.Windows.Forms.Button> controllo standard. È quindi possibile estendere o modificare la funzionalità del nuovo controllo tramite l'implementazione di metodi e proprietà personalizzati. In alcuni controlli, è anche possibile modificare l'aspetto visivo del controllo ereditato eseguendo l'override del relativo <xref:System.Windows.Forms.Control.OnPaint%2A> metodo.
 
 ## <a name="to-create-an-inherited-control"></a>Per creare un controllo ereditato
 
-1. Creare un nuovo progetto di **Applicazione Windows Form**.
+1. In Visual Studio creare un nuovo progetto di **applicazione Windows Forms** .
 
 2. Dal menu **Progetto**, scegliere **Aggiungi nuovo elemento**.
 
@@ -30,9 +34,10 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
 
      Un nuovo controllo personalizzato viene aggiunto al progetto.
 
-4. Se si usa Visual Basic, nella parte in alto di **Esplora soluzioni**, fare clic su **Mostra tutti i file**. Espandere CustomControl1.vb e quindi aprire Customcontrol1 nell'Editor di codice.
+4. Se si usa:
 
-5. Se si usa C#, aprire CustomControl1.cs nell'Editor di codice.
+   - Visual Basic, nella parte superiore di **Esplora soluzioni**, fare clic su **Mostra tutti i file**. Espandere CustomControl1.vb e quindi aprire Customcontrol1 nell'Editor di codice.
+   - C#aprire CustomControl1.cs nell'editor di codice.
 
 6. Individuare la dichiarazione della classe, che eredita <xref:System.Windows.Forms.Control>da.
 
@@ -86,6 +91,5 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
 - [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
 - [Procedura: Ereditare dalla classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Procedura: Controlli autore per Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Procedura dettagliata: Eredità da un controllo Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Procedura dettagliata: Eredità da un controllo Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Procedura dettagliata: Eredità da un controllo Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
