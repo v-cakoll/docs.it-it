@@ -5,27 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 2fe07f8e4311417980caccc9c286b4f94c7ea994
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585976"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596874"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedura: Implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C#)
-Questo argomento illustra come implementare metodi di estensione personali per qualsiasi tipo .NET. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../../csharp/language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
+Questo argomento illustra come implementare metodi di estensione personali per qualsiasi tipo .NET. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Per definire e chiamare il metodo di estensione  
   
-1. Definire una [classe](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) statica per contenere il metodo di estensione.  
+1. Definire una [classe](./static-classes-and-static-class-members.md) statica per contenere il metodo di estensione.  
   
-     La classe deve essere visibile al codice client. Per altre informazioni sulle regole di accessibilità, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+     La classe deve essere visibile al codice client. Per altre informazioni sulle regole di accessibilità, vedere [Modificatori di accesso](./access-modifiers.md).  
   
 2. Implementare il metodo di estensione come metodo statico con almeno la stessa visibilità della classe che lo contiene.  
   
-3. Il primo parametro del metodo specifica il tipo su cui il metodo opera e deve essere preceduto dal modificatore [this](../../../csharp/language-reference/keywords/this.md).  
+3. Il primo parametro del metodo specifica il tipo su cui il metodo opera e deve essere preceduto dal modificatore [this](../../language-reference/keywords/this.md).  
   
-4. Nel codice chiamante, aggiungere una direttiva `using` per specificare lo [spazio dei nomi](../../../csharp/language-reference/keywords/namespace.md) che contiene la classe del metodo di estensione.  
+4. Nel codice chiamante, aggiungere una direttiva `using` per specificare lo [spazio dei nomi](../../language-reference/keywords/namespace.md) che contiene la classe del metodo di estensione.  
   
 5. Chiamare i metodi come se fossero metodi di istanza sul tipo.  
   
@@ -41,12 +41,12 @@ Questo argomento illustra come implementare metodi di estensione personali per q
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)
-- [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+- [Guida per programmatori C#](../index.md)
+- [Metodi di estensione](./extension-methods.md)
+- [LINQ (Language-Integrated Query)](../../linq/linq-in-csharp.md)
+- [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md)
+- [protected](../../language-reference/keywords/protected.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [public](../../language-reference/keywords/public.md)
+- [this](../../language-reference/keywords/this.md)
+- [namespace](../../language-reference/keywords/namespace.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: fc3e29ad606cf8a60318a320e8ebc65b0d7f6e48
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965254"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597297"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classi e membri delle classi astratte e sealed (Guida per programmatori C#)
-La parola chiave [abstract](../../../csharp/language-reference/keywords/abstract.md) consente di creare classi e membri di [classe](../../../csharp/language-reference/keywords/class.md), che sono incompleti e devono essere implementati in una classe derivata.  
+La parola chiave [abstract](../../language-reference/keywords/abstract.md) consente di creare classi e membri di [classe](../../language-reference/keywords/class.md), che sono incompleti e devono essere implementati in una classe derivata.  
   
- La parola chiave [sealed](../../../csharp/language-reference/keywords/sealed.md) consente di impedire l'ereditarietà di una classe o di determinati membri di classe contrassegnati in precedenza come [virtuali](../../../csharp/language-reference/keywords/virtual.md).  
+ La parola chiave [sealed](../../language-reference/keywords/sealed.md) consente di impedire l'ereditarietà di una classe o di determinati membri di classe contrassegnati in precedenza come [virtuali](../../language-reference/keywords/virtual.md).  
   
 ## <a name="abstract-classes-and-class-members"></a>Classi e membri di classi astratte  
  Una classe può essere dichiarata astratta inserendo la parola chiave `abstract` prima della definizione della classe. Ad esempio:  
@@ -38,21 +38,21 @@ La parola chiave [abstract](../../../csharp/language-reference/keywords/abstract
  Un metodo `virtual` dichiarato `abstract` rimane virtuale in qualsiasi classe che eredita dalla classe astratta. Una classe che eredita un metodo astratto non può accedere all'implementazione originale del metodo. Nell'esempio precedente, `DoWork` sulla classe F non può chiamare `DoWork` sulla classe D. In questo modo una classe astratta può imporre alle classi derivate di fornire nuove implementazioni per i metodi virtuali.  
   
 ## <a name="sealed-classes-and-class-members"></a>Classi e membri di classi sealed  
- Le classi possono essere dichiarate [sealed](../../../csharp/language-reference/keywords/sealed.md) inserendo la parola chiave `sealed` prima della definizione della classe. Ad esempio:  
+ Le classi possono essere dichiarate [sealed](../../language-reference/keywords/sealed.md) inserendo la parola chiave `sealed` prima della definizione della classe. Ad esempio:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  Una classe sealed non può essere utilizzata come classe base. Per questo motivo non può neppure essere una classe astratta. Le classi sealed impediscono la derivazione. Poiché non possono mai essere utilizzate come classe base, in alcune ottimizzazioni runtime la chiamata ai membri di classi sealed può risultare leggermente più rapida.  
   
- Un metodo, un indicizzatore, una proprietà o un evento di una classe derivata che esegue l'override di un membro virtuale della classe base può dichiarare tale membro come sealed. In questo modo viene negato l'aspetto virtuale del membro per qualsiasi ulteriore classe derivata. A questo scopo è necessario inserire la parola chiave `sealed` prima della parola chiave [override](../../../csharp/language-reference/keywords/override.md) nella dichiarazione del membro di classe. Ad esempio:  
+ Un metodo, un indicizzatore, una proprietà o un evento di una classe derivata che esegue l'override di un membro virtuale della classe base può dichiarare tale membro come sealed. In questo modo viene negato l'aspetto virtuale del membro per qualsiasi ulteriore classe derivata. A questo scopo è necessario inserire la parola chiave `sealed` prima della parola chiave [override](../../language-reference/keywords/override.md) nella dichiarazione del membro di classe. Ad esempio:  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Procedura: Definire proprietà astratte](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+- [Guida per programmatori C#](../index.md)
+- [Classi e struct](./index.md)
+- [Ereditarietà](./inheritance.md)
+- [Metodi](./methods.md)
+- [Campi](./fields.md)
+- [Procedura: Definire proprietà astratte](./how-to-define-abstract-properties.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924101"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: Scrittura di query in C# (LINQ)
 Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizzate per scrivere espressioni di query LINQ.  
@@ -20,7 +20,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
 ## <a name="create-a-c-project"></a>Creare un progetto C#  
   
 > [!NOTE]
->  Le istruzioni seguenti riguardano Visual Studio. Se si usa un ambiente di sviluppo diverso, creare un progetto console con un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=nameWithType>.  
+> Le istruzioni seguenti riguardano Visual Studio. Se si usa un ambiente di sviluppo diverso, creare un progetto console con un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=nameWithType>.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Per creare un progetto in Visual Studio  
   
@@ -47,7 +47,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 - L'elenco stesso viene inizializzato con un inizializzatore di raccolta.  
   
- Questa intera struttura di dati sarà inizializzata e istanziata senza chiamate esplicite ad alcun costruttore o accesso a membri espliciti. Per altre informazioni su queste nuove funzionalità, vedere [Proprietà implementate automaticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) e [Inizializzatori di oggetto e di raccolta](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Questa intera struttura di dati sarà inizializzata e istanziata senza chiamate esplicite ad alcun costruttore o accesso a membri espliciti. Per altre informazioni su queste nuove funzionalità, vedere [Proprietà implementate automaticamente](../../classes-and-structs/auto-implemented-properties.md) e [Inizializzatori di oggetto e di raccolta](../../classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
   
@@ -63,7 +63,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 #### <a name="to-create-a-simple-query"></a>Per creare una query semplice  
   
-- Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../../csharp/language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+- Nel metodo `Main` dell'applicazione creare una query semplice che, quando viene eseguita, genera un elenco di tutti gli studenti il cui punteggio del primo test è maggiore di 90. Si noti che, poiché è selezionato l'intero oggetto `Student`, il tipo di query è `IEnumerable<Student>`. Il codice potrebbe usare anche la tipizzazione implicita mediante la parola chiave [var](../../../language-reference/keywords/var.md), ma si usa la tipizzazione esplicita per illustrare dettagliatamente i risultati. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
      Si noti anche che la variabile di intervallo della query, `student`, funge da riferimento a ogni `Student` nell'origine, fornendo l'accesso di membro per ogni oggetto.  
   
@@ -91,7 +91,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Per altre informazioni, vedere [Clausola where](../../../../csharp/language-reference/keywords/where-clause.md).  
+     Per altre informazioni, vedere [Clausola where](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Modificare la query  
   
@@ -115,7 +115,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Per altre informazioni, vedere [Clausola orderby](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+     Per altre informazioni, vedere [Clausola orderby](../../../language-reference/keywords/orderby-clause.md).  
   
 #### <a name="to-group-the-results"></a>Per raggruppare i risultati  
   
@@ -129,7 +129,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 3. Eseguire l'applicazione e visualizzare i risultati nella finestra **Console**.  
   
-     Per altre informazioni, vedere [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md).  
+     Per altre informazioni, vedere [Clausola group](../../../language-reference/keywords/group-clause.md).  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>Per ottenere che le variabili siano tipizzate in modo implicito  
   
@@ -137,7 +137,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     Per altre informazioni su [var](../../../../csharp/language-reference/keywords/var.md), vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+     Per altre informazioni su [var](../../../language-reference/keywords/var.md), vedere [Variabili locali tipizzate in modo implicito](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>Per ordinare i gruppi in base al valore della chiave  
   
@@ -153,11 +153,11 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     Per altre informazioni, vedere [Clausola let](../../../../csharp/language-reference/keywords/let-clause.md).  
+     Per altre informazioni, vedere [Clausola let](../../../language-reference/keywords/let-clause.md).  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Per usare la sintassi del metodo in un'espressione di query  
   
-1. Come descritto in [Sintassi di query e sintassi di metodi in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), alcune operazioni di query possono essere espresse solo usando la sintassi dei metodi. Il codice seguente calcola il punteggio totale per ogni `Student` nella sequenza di origine e quindi chiama il metodo `Average()` sui risultati della query per calcolare il punteggio medio della classe.
+1. Come descritto in [Sintassi di query e sintassi di metodi in LINQ](./query-syntax-and-method-syntax-in-linq.md), alcune operazioni di query possono essere espresse solo usando la sintassi dei metodi. Il codice seguente calcola il punteggio totale per ogni `Student` nella sequenza di origine e quindi chiama il metodo `Average()` sui risultati della query per calcolare il punteggio medio della classe.
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
 ## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver acquisito familiarità con i fondamenti dell'uso delle query in C#, è possibile leggere la documentazione e vedere gli esempi per il tipo specifico di provider LINQ a cui si è interessati:  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)
+- [Espressioni di query LINQ](../../linq-query-expressions/index.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398550"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597188"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
 
 I tipi anonimi offrono un modo pratico per incapsulare un set di proprietà di sola lettura in un singolo oggetto, senza dover definire prima un tipo in modo esplicito. Il nome del tipo viene generato dal compilatore e non è disponibile a livello di codice sorgente. Il tipo di ogni proprietà è dedotto dal compilatore.  
   
- Per creare tipi anonimi, si usa l'operatore [new](../../../csharp/language-reference/operators/new-operator.md) insieme a un inizializzatore di oggetto. Per altre informazioni sugli inizializzatori di oggetto, vedere [Inizializzatori di oggetto e di raccolte](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Per creare tipi anonimi, si usa l'operatore [new](../../language-reference/operators/new-operator.md) insieme a un inizializzatore di oggetto. Per altre informazioni sugli inizializzatori di oggetto, vedere [Inizializzatori di oggetto e di raccolte](./object-and-collection-initializers.md).  
   
  L'esempio seguente mostra un tipo anonimo inizializzato con due proprietà denominate `Amount` e `Message`.  
   
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- I tipi anonimi vengono in genere usati nella clausola [select](../../../csharp/language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per altre informazioni, vedere le [espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md).  
+ I tipi anonimi vengono in genere usati nella clausola [select](../../language-reference/keywords/select-clause.md) di un'espressione di query per restituire un subset delle proprietà da ogni oggetto della sequenza di origine. Per altre informazioni, vedere le [espressioni di query LINQ](../linq-query-expressions/index.md).  
   
  I tipi anonimi contengono una o più proprietà pubbliche di sola lettura. Non sono validi altri tipi di membri della classe, ad esempio metodi o eventi. L'espressione usata per inizializzare una proprietà non può essere `null`, una funzione anonima o un tipo di puntatore.  
   
@@ -39,7 +39,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- In genere, quando si usa un tipo anonimo per inizializzare una variabile, è necessario dichiarare la variabile come locale tipizzata in modo implicito tramite [var](../../../csharp/language-reference/keywords/var.md). Il nome del tipo non può essere specificato nella dichiarazione di variabile, perché solo il compilatore ha accesso al nome sottostante del tipo anonimo. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ In genere, quando si usa un tipo anonimo per inizializzare una variabile, è necessario dichiarare la variabile come locale tipizzata in modo implicito tramite [var](../../language-reference/keywords/var.md). Il nome del tipo non può essere specificato nella dichiarazione di variabile, perché solo il compilatore ha accesso al nome sottostante del tipo anonimo. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](./implicitly-typed-local-variables.md).  
   
  È possibile creare una matrice di elementi tipizzati in modo anonimo combinando una variabile locale tipizzata in modo implicito e una matrice tipizzata in modo implicito, come illustrato nell'esempio seguente.  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- I tipi anonimi sono tipi [class](../../../csharp/language-reference/keywords/class.md) che derivano da un tipo [object](../../../csharp/language-reference/keywords/object.md) e dei quali non può essere eseguito il cast ad alcun tipo, eccetto al tipo [object](../../../csharp/language-reference/keywords/object.md). Il compilatore fornisce un nome per qualsiasi tipo anonimo, anche se l'applicazione non può accedervi. Dal punto di vista di Common Language Runtime, un tipo anonimo non è diverso da qualsiasi altro tipo di riferimento.  
+ I tipi anonimi sono tipi [class](../../language-reference/keywords/class.md) che derivano da un tipo [object](../../language-reference/keywords/object.md) e dei quali non può essere eseguito il cast ad alcun tipo, eccetto al tipo [object](../../language-reference/keywords/object.md). Il compilatore fornisce un nome per qualsiasi tipo anonimo, anche se l'applicazione non può accedervi. Dal punto di vista di Common Language Runtime, un tipo anonimo non è diverso da qualsiasi altro tipo di riferimento.  
   
  Se due o più inizializzatori di oggetti anonimi in un assembly specificano una sequenza di proprietà nello stesso ordine e con gli stessi nomi e tipi, il compilatore considera gli oggetti come istanze dello stesso tipo. Condividono le stesse informazioni sul tipo generate dal compilatore.  
   
@@ -58,7 +58,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)
+- [Nozioni di base su LINQ in C#](../concepts/linq/getting-started-with-linq.md)
+- [Espressioni di query LINQ](../linq-query-expressions/index.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 922de11567af9409265ee18bfa6a2637951c57c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93d45b58433dc3c7231cea741aa7ea67dfab2d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912031"
 ---
 # <a name="xslt-transformations"></a>Trasformazioni XSLT
 L'Extensible Stylesheet Language Transformation (XSLT) consente di trasformare il contenuto di un documento XML di origine in un altro documento di formato o struttura diversi, ad esempio per trasformare l'XML in HTML per l'uso su un sito Web o per trasformarlo in un documento che contenga solo i campi richiesti da un'applicazione. Questo processo di trasformazione è specificato dalla raccomandazione [W3C XSL Transformations (XSLT) Version 1.0 recommendation](https://www.w3.org/TR/xslt-10/).  
@@ -18,7 +18,7 @@ L'Extensible Stylesheet Language Transformation (XSLT) consente di trasformare i
  La classe <xref:System.Xml.Xsl.XslCompiledTransform> è il processore XSLT in .NET. La classe <xref:System.Xml.Xsl.XslCompiledTransform> supporta la [raccomandazione W3C XSLT 1.0](https://www.w3.org/TR/xslt-10/).  
   
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework versione 2.0. La classe <xref:System.Xml.Xsl.XslCompiledTransform> è una nuova implementazione del motore XSLT, che include prestazioni migliori e nuove funzionalità di sicurezza. Si consiglia di creare le applicazioni XSLT usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
+> La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in .NET Framework versione 2.0. La classe <xref:System.Xml.Xsl.XslCompiledTransform> è una nuova implementazione del motore XSLT, che include prestazioni migliori e nuove funzionalità di sicurezza. Si consiglia di creare le applicazioni XSLT usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  

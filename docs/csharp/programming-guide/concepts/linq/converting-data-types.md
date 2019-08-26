@@ -2,12 +2,12 @@
 title: Conversione di tipi di dati (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 918a9fbfc523e62c7b4a5d915c28c00ea781d3e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597715"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594611"
 ---
 # <a name="converting-data-types-c"></a>Conversione di tipi di dati (C#)
 I metodi di conversione modificano il tipo degli oggetti di input.  
@@ -25,7 +25,7 @@ I metodi di conversione modificano il tipo degli oggetti di input.
   
  I metodi di conversione nella tabella i cui nomi iniziano con "As" modificano il tipo statico della raccolta di origine ma non lo enumerano. I metodi i cui nomi iniziano con "To" enumerano la raccolta di origine e inseriscono gli elementi nel tipo di raccolta corrispondente.  
   
-|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|DESCRIZIONE|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|Restituisce l'input tipizzato come oggetto <xref:System.Collections.Generic.IEnumerable%601>.|Non applicabile.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Converte un oggetto <xref:System.Collections.IEnumerable> (generico) in un oggetto <xref:System.Linq.IQueryable> (generico).|Non applicabile.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -77,7 +77,7 @@ static void Cast()
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Clausola from](../../../../csharp/language-reference/keywords/from-clause.md)
-- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Clausola from](../../../language-reference/keywords/from-clause.md)
+- [Espressioni di query LINQ](../../linq-query-expressions/index.md)
+- [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

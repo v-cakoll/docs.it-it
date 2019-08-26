@@ -2,12 +2,12 @@
 title: Elaborare le attività asincrone quando vengono completate
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 35b4e42d7da5b8bc9069083ffc47d990bcb637a8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600275"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595590"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (C#)
 
@@ -39,9 +39,9 @@ Nell'esempio seguente viene usata una query per creare una Collection di attivit
 
 ## <a name="create-the-program-yourself"></a>Creare il programma autonomamente
 
-Questo esempio è basato sul codice sviluppato in [Annullare le attività asincrone rimanenti dopo che ne è stata completata una (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) e usa la stessa interfaccia utente.
+Questo esempio è basato sul codice sviluppato in [Annullare le attività asincrone rimanenti dopo che ne è stata completata una (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) e usa la stessa interfaccia utente.
 
-Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione [Download dell'esempio](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), ma scegliere **CancelAfterOneTask** come progetto di avvio. Aggiungere le modifiche in questo argomento al metodo `AccessTheWebAsync` in tale progetto. Le modifiche sono contrassegnate con asterischi.
+Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione [Download dell'esempio](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), ma scegliere **CancelAfterOneTask** come progetto di avvio. Aggiungere le modifiche in questo argomento al metodo `AccessTheWebAsync` in tale progetto. Le modifiche sono contrassegnate con asterischi.
 
 Il progetto **CancelAfterOneTask** include già una query che, se eseguita, crea una Collection di attività. Ogni chiamata a `ProcessURLAsync` nel codice seguente restituisce un <xref:System.Threading.Tasks.Task%601>, dove `TResult` è un valore intero:
 
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Ottimizzazione dell'applicazione Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Ottimizzazione dell'applicazione Async (C#)](./fine-tuning-your-async-application.md)
+- [Programmazione asincrona con Async e Await (C#)](./index.md)
 - [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)

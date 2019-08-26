@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868843"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590563"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizzo di delegati (Guida per programmatori C#)
-Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tipo che incapsula in modo sicuro un metodo, simile a un puntatore a funzione in C e C++. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati a oggetti, indipendenti dai tipi e sicuri. Il tipo delegato è definito dal nome del delegato. Nell'esempio seguente viene dichiarato un delegato denominato `Del` che può incapsulare un metodo che accetta una [stringa](../../../csharp/language-reference/keywords/string.md) come argomento e restituisce [void](../../../csharp/language-reference/keywords/void.md):  
+Un [delegato](../../language-reference/keywords/delegate.md) è un tipo che incapsula in modo sicuro un metodo, simile a un puntatore a funzione in C e C++. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati a oggetti, indipendenti dai tipi e sicuri. Il tipo delegato è definito dal nome del delegato. Nell'esempio seguente viene dichiarato un delegato denominato `Del` che può incapsulare un metodo che accetta una [stringa](../../language-reference/keywords/string.md) come argomento e restituisce [void](../../language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Un oggetto delegato viene normalmente creato fornendo il nome del metodo di cui il delegato eseguirà il wrapping o con una [funzione anonima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Una volta che viene creata un'istanza di un delegato, una chiamata al metodo effettuata al delegato verrà passata dal delegato a tale metodo. I parametri passati al delegato dal chiamante vengono passati al metodo e il valore restituito, se presente, dal metodo viene restituito al chiamante dal delegato. Questa operazione è nota come richiamare il delegato. È possibile richiamare un delegato per cui è stata creata un'istanza come se fosse il metodo di wrapping stesso. Ad esempio:  
+ Un oggetto delegato viene normalmente creato fornendo il nome del metodo di cui il delegato eseguirà il wrapping o con una [funzione anonima](../statements-expressions-operators/anonymous-functions.md). Una volta che viene creata un'istanza di un delegato, una chiamata al metodo effettuata al delegato verrà passata dal delegato a tale metodo. I parametri passati al delegato dal chiamante vengono passati al metodo e il valore restituito, se presente, dal metodo viene restituito al chiamante dal delegato. Questa operazione è nota come richiamare il delegato. È possibile richiamare un delegato per cui è stata creata un'istanza come se fosse il metodo di wrapping stesso. Ad esempio:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- Tipi delegati vengono derivati dalla classe <xref:System.Delegate> di.NET Framework. I tipi delegati sono [sealed](../../../csharp/language-reference/keywords/sealed.md), ovvero non possono essere usati per la derivazione, e non è possibile derivare classi personalizzate da <xref:System.Delegate>. Poiché l'istanza del delegato è un oggetto, può essere passata come parametro o assegnata a una proprietà. In questo modo un metodo può accettare un delegato come parametro e chiamare il delegato in un secondo momento. Questa operazione è nota come callback asincrono ed è un metodo comune per notificare un chiamante al termine di un processo lungo. Quando un delegato viene usato in questo modo, per il codice che usa il delegato non è richiesta alcuna conoscenza dell'implementazione del metodo in uso. La funzionalità è simile all'incapsulamento fornito dalle interfacce.  
+ Tipi delegati vengono derivati dalla classe <xref:System.Delegate> di.NET Framework. I tipi delegati sono [sealed](../../language-reference/keywords/sealed.md), ovvero non possono essere usati per la derivazione, e non è possibile derivare classi personalizzate da <xref:System.Delegate>. Poiché l'istanza del delegato è un oggetto, può essere passata come parametro o assegnata a una proprietà. In questo modo un metodo può accettare un delegato come parametro e chiamare il delegato in un secondo momento. Questa operazione è nota come callback asincrono ed è un metodo comune per notificare un chiamante al termine di un processo lungo. Quando un delegato viene usato in questo modo, per il codice che usa il delegato non è richiesta alcuna conoscenza dell'implementazione del metodo in uso. La funzionalità è simile all'incapsulamento fornito dalle interfacce.  
   
  Un altro utilizzo comune dei callback è la definizione di un metodo di confronto personalizzato e il passaggio di tale delegato a un metodo di ordinamento. Consente al codice del chiamante di entrare a far parte dell'algoritmo di ordinamento. Nell'esempio di metodo seguente viene usato il tipo `Del` come parametro:  
   
@@ -59,7 +59,7 @@ Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
  I delegati con più metodi nel relativo elenco chiamate derivano da <xref:System.MulticastDelegate>, cioè una sottoclasse di `System.Delegate`. Il codice sopra riportato funziona in entrambi i casi, perché entrambe le classi supportano `GetInvocationList`.  
   
- I delegati multicast vengono ampiamente usati nella gestione degli eventi. Gli oggetti di origine evento inviano notifiche di eventi agli oggetti destinatario registrati per ricevere l'evento. Per registrarsi a un evento, il destinatario crea un metodo che può gestire l'evento, quindi crea un delegato per il metodo e passa il delegato all'origine evento. L'origine chiama il delegato quando si verifica l'evento. Il delegato chiama quindi il metodo di gestione eventi sul destinatario, recapitando i dati dell'evento. Il tipo delegato per un determinato evento è definito dall'origine evento. Per altre informazioni, vedere [Eventi](../../../csharp/programming-guide/events/index.md).  
+ I delegati multicast vengono ampiamente usati nella gestione degli eventi. Gli oggetti di origine evento inviano notifiche di eventi agli oggetti destinatario registrati per ricevere l'evento. Per registrarsi a un evento, il destinatario crea un metodo che può gestire l'evento, quindi crea un delegato per il metodo e passa il delegato all'origine evento. L'origine chiama il delegato quando si verifica l'evento. Il delegato chiama quindi il metodo di gestione eventi sul destinatario, recapitando i dati dell'evento. Il tipo delegato per un determinato evento è definito dall'origine evento. Per altre informazioni, vedere [Eventi](../events/index.md).  
   
  Se si confrontano delegati di due tipi diversi assegnati in fase di compilazione si avrà un errore di compilazione. Se le istanze dei delegati sono staticamente del tipo `System.Delegate`, il confronto è consentito, ma restituirà false in fase di esecuzione. Ad esempio:  
   
@@ -67,9 +67,9 @@ Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
-- [Uso della varianza nei delegati](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [Varianza nei delegati](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Uso della varianza per i delegati generici Func e Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Eventi](../../../csharp/programming-guide/events/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Delegati](./index.md)
+- [Uso della varianza nei delegati](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Varianza nei delegati](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Uso della varianza per i delegati generici Func e Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Eventi](../events/index.md)

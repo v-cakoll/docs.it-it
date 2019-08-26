@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elenco di elementi figlio (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 0167707557c4d5a6550eeda84981de90b2840c16
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8a2ddc13a0a48fbe30ce629527149bacaaab3fd1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485644"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593666"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Procedura: Trovare un elenco di elementi figlio (XPath-LINQ to XML) (C#)
 Questo argomento confronta l'asse degli elementi figlio XPath con l'asse [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
@@ -17,7 +17,7 @@ Questo argomento confronta l'asse degli elementi figlio XPath con l'asse [!INCLU
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati tutti gli elementi figlio dell'elemento `Address`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

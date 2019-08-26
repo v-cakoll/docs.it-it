@@ -9,15 +9,15 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: 77228def3a6426b6e0383d657c2eaeac37e5e273
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c42ce7b258ca35d4e91e1ef28c71b60fe1f01de
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600145"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596248"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Passaggio di parametri (Guida per programmatori C#)
-In C# è possibile passare gli argomenti ai parametri per valore o per riferimento. Il passaggio per riferimento consente a membri di funzioni, metodi, proprietà, indicizzatori, operatori e costruttori di modificare il valore dei parametri e rendere permanenti le modifiche nell'ambiente chiamante. Per passare un parametro per riferimento con l'intenzione di modificare il valore, usare la parola chiave `ref` o `out`. Per passare per riferimento con l'intenzione di evitare la copia, ma non la modifica del valore, usare il modificatore `in`. Per semplicità, negli esempi riportati in questo argomento verrà utilizzata soltanto la parola chiave `ref`. Per altre informazioni sulla differenza tra `in`, `ref` e `out`, vedere [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) e [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
+In C# è possibile passare gli argomenti ai parametri per valore o per riferimento. Il passaggio per riferimento consente a membri di funzioni, metodi, proprietà, indicizzatori, operatori e costruttori di modificare il valore dei parametri e rendere permanenti le modifiche nell'ambiente chiamante. Per passare un parametro per riferimento con l'intenzione di modificare il valore, usare la parola chiave `ref` o `out`. Per passare per riferimento con l'intenzione di evitare la copia, ma non la modifica del valore, usare il modificatore `in`. Per semplicità, negli esempi riportati in questo argomento verrà utilizzata soltanto la parola chiave `ref`. Per altre informazioni sulla differenza tra `in`, `ref` e `out`, vedere [in](../../language-reference/keywords/in-parameter-modifier.md), [ref](../../language-reference/keywords/ref.md) e [out](../../language-reference/keywords/out-parameter-modifier.md).  
   
  L'esempio seguente illustra la differenza fra parametri di valore e di riferimento.  
   
@@ -25,9 +25,9 @@ In C# è possibile passare gli argomenti ai parametri per valore o per riferimen
   
  Per altre informazioni, vedere i seguenti argomenti:  
   
-- [Passaggio di parametri di tipo di valore](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
+- [Passaggio di parametri di tipo di valore](./passing-value-type-parameters.md)  
   
-- [Passaggio di parametri di tipo di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
+- [Passaggio di parametri di tipo di riferimento](./passing-reference-type-parameters.md)  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
@@ -35,5 +35,5 @@ Per altre informazioni, vedere [Elenchi di argomenti](~/_csharplang/spec/express
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Guida per programmatori C#](../index.md)
+- [Metodi](./methods.md)

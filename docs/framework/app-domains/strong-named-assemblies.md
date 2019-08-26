@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592709"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988370"
 ---
 # <a name="strong-named-assemblies"></a>Assembly con nomi sicuri
 L'assegnazione di un nome sicuro a un assembly permette di creare un'identità univoca e prevenire gli eventuali conflitti con altri assembly.  
@@ -25,7 +25,7 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
  Nel creare un assembly con nome sicuro è necessario includere il nome in formato testo semplice dell'assembly, il numero di versione, le informazioni facoltative relative alle impostazioni cultura, una firma digitale e la chiave pubblica corrispondente alla chiave privata usata per apporre la firma.  
   
 > [!WARNING]
->  Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.  
+> Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.  
   
 ## <a name="why-strong-name-your-assemblies"></a>Perché assegnare nomi sicuri agli assembly?  
  Quando si fa riferimento a un assembly con nome sicuro, ci si aspettano determinate garanzie, quali il controllo delle versioni e la protezione dei nomi. Gli assembly con nome sicuro possono essere installati in Global Assembly Cache, richiesto per abilitare alcuni scenari.  

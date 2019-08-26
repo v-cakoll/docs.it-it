@@ -2,18 +2,18 @@
 title: IDE di Visual Studio e supporto di strumenti per LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: f2d27bfaa6c9199d29c1566e0e157cf08c1ccd3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561049"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590913"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>IDE di Visual Studio e supporto di strumenti per LINQ (C#)
 L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzionalità che supportano lo sviluppo di applicazioni LINQ:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Object Relational Designer è uno strumento di progettazione visiva che può essere usato nelle applicazioni [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) per generare le classi in C# che rappresentano i dati relazionali in un database sottostante. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Object Relational Designer è uno strumento di progettazione visiva che può essere usato nelle applicazioni [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) per generare le classi in C# che rappresentano i dati relazionali in un database sottostante. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Strumenti della riga di comando di SQLMetal  
  SQLMetal è uno strumento della riga di comando che può essere usato nei processi di compilazione per generare classi dai database esistenti per l'uso nelle applicazioni LINQ to SQL. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
@@ -26,4 +26,4 @@ L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)

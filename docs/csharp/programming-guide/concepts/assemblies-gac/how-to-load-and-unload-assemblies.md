@@ -2,12 +2,12 @@
 title: 'Procedura: Caricare e scaricare gli assembly (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: 52f7173efe497ab286c607db681f256983adc077
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f3c244a74e029eeaead77f561cd4c1adfca519a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342041"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595834"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Procedura: Caricare e scaricare gli assembly (C#)
 Gli assembly cui il programma fa riferimento verranno caricati automaticamente in fase di compilazione, ma è anche possibile caricare assembly specifici nel dominio dell'applicazione corrente in fase di esecuzione. Per altre informazioni, vedere [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -26,6 +26,6 @@ Gli assembly cui il programma fa riferimento verranno caricati automaticamente i
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Guida per programmatori C#](../../index.md)
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

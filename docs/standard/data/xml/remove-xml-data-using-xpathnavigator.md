@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909678"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Rimozione di dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per rimuovere nodi e valori da un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
@@ -33,7 +33,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
  Un'operazione di eliminazione non influenza la posizione di un oggetto <xref:System.Xml.XPath.XPathNavigator> collocato sul nodo eliminato. Questi oggetti <xref:System.Xml.XPath.XPathNavigator> sono validi nel senso che è possibile spostarli all'interno del sottoalbero eliminato ma non è possibile spostarli nell'albero principale dei nodi usando i normali metodi di navigazione dei set di nodi della classe <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  È possibile usare il metodo <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> della classe <xref:System.Xml.XPath.XPathNavigator> per riportare questi oggetti <xref:System.Xml.XPath.XPathNavigator> nell'albero principale dei nodi o per spostarli dall'albero principale al sottoalbero eliminato.  
+> È possibile usare il metodo <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> della classe <xref:System.Xml.XPath.XPathNavigator> per riportare questi oggetti <xref:System.Xml.XPath.XPathNavigator> nell'albero principale dei nodi o per spostarli dall'albero principale al sottoalbero eliminato.  
   
  Nell'esempio seguente l'elemento `price` del primo elemento `book` del file `contosoBooks.xml` viene eliminato usando il metodo <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A>. Dopo che l'elemento <xref:System.Xml.XPath.XPathNavigator> è stato eliminato, l'oggetto `price` è posizionato sull'elemento padre `book`.  
   

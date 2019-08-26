@@ -9,32 +9,32 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: f29b656a3db08d35692e375fe2175ff75e510941
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499852"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606445"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opzioni del compilatore C#)
 L'opzione del compilatore **-target** può essere specificata in una delle quattro forme seguenti:  
   
- [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+ [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
  Per creare un file con estensione exe per le applicazioni [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
- [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
+ [/target:exe](./target-exe-compiler-option.md)  
  Per creare un file con estensione exe.  
   
- [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
+ [/target:library](./target-library-compiler-option.md)  
  Per creare una libreria di codice.  
   
- [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
+ [/target:module](./target-module-compiler-option.md)  
  Per creare un modulo.  
   
- [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+ [/target:winexe](./target-winexe-compiler-option.md)  
  Per creare un programma di Windows.  
   
- [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+ [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Per creare un file con estensione winmdobj intermedio.  
   
  Se non si specifica **-target:module**, **-target** provoca l'inserimento di un manifesto dell'assembly di .NET Framework in un file di output. Per altre informazioni, vedere [Assembly in Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) e [Attributi comuni](../../programming-guide/concepts/attributes/common-attributes.md).  
@@ -45,7 +45,7 @@ L'opzione del compilatore **-target** può essere specificata in una delle quatt
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Il compilatore crea solo un manifesto dell'assembly per ogni compilazione. Le informazioni su tutti i file in una compilazione vengono inserite nel manifesto dell'assembly. Tutti i file di output, ad eccezione di quelli creati con **-target:module** possono contenere un manifesto dell'assembly. Quando si generano più file di output nella riga di comando, è possibile creare solo un manifesto e deve essere inseriti nel primo file di output specificato nella riga di comando. Indipendentemente da quale sia il primo file di output (**-target:exe**, **-target:winexe**, **-target:library** o **-target:module**), tutti gli altri file di output generati nella stessa compilazione devono essere moduli (**-target:module**).  
+ Il compilatore crea solo un manifesto dell'assembly per ogni compilazione. Le informazioni su tutti i file in una compilazione vengono inserite nel manifesto dell'assembly. Tutti i file di output, ad eccezione di quelli creati con **-target:module** possono contenere un manifesto dell'assembly. Quando si generano più file di output nella riga di comando, è possibile creare solo un manifesto e deve essere inseriti nel primo file di output specificato nella riga di comando. Indipendentemente da quale sia il primo file di output ( **-target:exe**, **-target:winexe**, **-target:library** o **-target:module**), tutti gli altri file di output generati nella stessa compilazione devono essere moduli ( **-target:module**).  
   
  Se si crea un assembly, è possibile indicare che tutto o parte del codice è conforme a CLS con l'attributo <xref:System.CLSCompliantAttribute>.  
   
@@ -64,6 +64,6 @@ public class TestClass
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
-- [-subsystemversion (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+- [-subsystemversion (opzioni del compilatore C#)](./subsystemversion-compiler-option.md)

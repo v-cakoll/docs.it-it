@@ -2,12 +2,12 @@
 title: 'Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584387"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593061"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come unire dati da origini diverse in una seq
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-Nella clausola [select](../../../../csharp/language-reference/keywords/select-clause.md) viene usato un inizializzatore di oggetto per creare un'istanza di ogni nuovo oggetto `Student` con i dati delle due origini.
+Nella clausola [select](../../../language-reference/keywords/select-clause.md) viene usato un inizializzatore di oggetto per creare un'istanza di ogni nuovo oggetto `Student` con i dati delle due origini.
 
 Se non è necessario archiviare i risultati della query, può essere più utile usare i tipi anonimi rispetto ai tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi al posto dei tipi denominati:
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Inizializzatori di oggetto e di raccolta](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ e stringhe (C#)](./linq-and-strings.md)
+- [Inizializzatori di oggetto e di raccolta](../../classes-and-structs/object-and-collection-initializers.md)
+- [Tipi anonimi](../../classes-and-structs/anonymous-types.md)

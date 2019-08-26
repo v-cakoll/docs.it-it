@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: f09f93f27aa4f50cfb7e09b9d6d4f98f22e1ac9a
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 4f0277ef5883a238cf2579d2d9ea956bc06061e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433560"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589866"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 
@@ -113,7 +113,7 @@ Il metodo può essere usato come illustrato nell'esempio seguente per creare un'
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Introduzione ai generics](../../../csharp/programming-guide/generics/index.md)
-- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)
-- [Vincolo new](../../../csharp/language-reference/keywords/new-constraint.md)
+- [Guida per programmatori C#](../index.md)
+- [Introduzione ai generics](./index.md)
+- [Classi generiche](./generic-classes.md)
+- [Vincolo new](../../language-reference/keywords/new-constraint.md)

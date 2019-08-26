@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937996"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Specifica il percorso in cui eseguire la ricerca degli assembly. Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.<br /><br /> Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).|  
 |**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
@@ -54,13 +54,13 @@ tlbexp assemblyName [options]
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 > [!NOTE]
->  Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
+> Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Osservazioni  
  Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly. Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare Tlbexp.exe per esportare file di metadati Windows (.winmd). L'esportazione di assembly Windows Runtime non è supportata.  
+> Non è possibile utilizzare Tlbexp.exe per esportare file di metadati Windows (.winmd). L'esportazione di assembly Windows Runtime non è supportata.  
   
  L'intero assembly viene convertito in un'unica operazione. Non è possibile utilizzare Tlbexp.exe per generare informazioni sui tipi per un sottoinsieme dei tipi definiti in un assembly.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915582"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Cenni preliminari su Dynamic Language Runtime
 
@@ -95,7 +95,7 @@ DLR usa i binder nei siti di chiamata per comunicare non solo con .NET Framework
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [Common Language Runtime](../../../docs/standard/clr.md)
+- [Common Language Runtime](../../standard/clr.md)
 - [Alberi delle espressioni (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Alberi delle espressioni (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Procedura dettagliata: Creazione e uso di oggetti dinamici](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Procedura dettagliata: Creazione e uso di oggetti dinamici](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

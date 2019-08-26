@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053638"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963595"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generare automaticamente un classificatore binario con l'interfaccia della riga di comando
 
@@ -47,7 +47,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 1. Scaricare il [file ZIP del set di dati Sentiment Labeled Sentences UCI (vedere le citazioni nella nota seguente)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e decomprimerlo in una cartella a scelta.
 
     > [!NOTE]
-    > I set di dati usati in questa esercitazione provengono da 'From Group to Individual Labels using Deep Features', Kotzias et al, KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+    > I set di dati usati in questa esercitazione provengono da 'From Group to Individual Labels using Deep Features', Kotzias et al, KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 2. Copiare il file `yelp_labelled.txt` in qualsiasi cartella creata in precedenza, ad esempio `/cli-test`.
 
@@ -75,7 +75,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
     Ora è possibile iniziare a usare l'interfaccia della riga di comando per questo scenario di 'analisi del sentiment'.
 
     > [!NOTE]
-    > Dopo aver completato questa esercitazione, è anche possibile provare a usare set di dati personalizzati, purché siano pronti per l'uso con qualsiasi attività di ML attualmente supportata dall'anteprima dell'interfaccia della riga di comando ML.NET CLI, ossia *'classificazione binaria', 'classificazione multiclasse' e 'regressione'*.
+    > Dopo aver completato questa esercitazione, è anche possibile provare a usare set di dati personalizzati, purché siano pronti per l'uso con qualsiasi attività di ML attualmente supportata dall'anteprima dell'interfaccia della riga di comando ML.NET CLI, ossia *'classificazione binaria', 'classificazione multiclasse' e 'regressione'* .
 
 ## <a name="run-the-mlnet-auto-train-command"></a>Eseguire il comando 'mlnet auto-train'
 
@@ -85,10 +85,10 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
     > mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    Questo comando esegue il comando **`mlnet auto-train`**:
+    Questo comando esegue il comando **`mlnet auto-train`** :
     - Per qualsiasi **attività di ML** di tipo **`binary-classification`**
     - Usa il **file del set di dati `yelp_labelled.txt`** come set di dati di training e di test (internamente l'interfaccia della riga di comando usa la convalida incrociata oppure lo divide in due set di dati, uno per il training e l'altro per il test)
-    - Dove la **colonna obiettivo/destinazione** da stimare (solitamente definita **'etichetta'**) è la **colonna con indice 1**, ossia la seconda colonna, perché l'indice è a base zero
+    - Dove la **colonna obiettivo/destinazione** da stimare (solitamente definita **'etichetta'** ) è la **colonna con indice 1**, ossia la seconda colonna, perché l'indice è a base zero
     - Non **usa un'intestazione di file** con i nomi di colonna perché questo specifico set di dati non ha un'intestazione
     - Il **tempo di esplorazione obiettivo** per l'esperimento è di **10 secondi**
 
@@ -116,7 +116,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
     Per informazioni su altre metriche e per **ulteriori dettagli sulle metriche** come Accuracy, AUC, AUCPR e F1-score, usate per valutare i diversi modelli, vedere l'articolo sulle [metriche di ML.NET](../resources/metrics.md)
 
     > [!NOTE]
-    >  È possibile provare questo stesso set di dati e specificare alcuni minuti per `--max-exploration-time` (ad esempio, tre minuti in modo da specificare 180 secondi) in modo da trovare un "modello ottimale" migliore con una configurazione della pipeline di training diversa per questo set di dati, che con 1000 righe è piuttosto piccolo. 
+    > È possibile provare questo stesso set di dati e specificare alcuni minuti per `--max-exploration-time` (ad esempio, tre minuti in modo da specificare 180 secondi) in modo da trovare un "modello ottimale" migliore con una configurazione della pipeline di training diversa per questo set di dati, che con 1000 righe è piuttosto piccolo. 
         
     Per trovare un modello di "qualità migliore/buona" pronto per la produzione e destinato a set di dati più grandi, è consigliabile sperimentare con l'interfaccia della riga di comando specificando in genere una quantità molto maggiore di tempo di esplorazione a seconda delle dimensioni del set di dati. Infatti, in molti casi potrebbero essere necessarie diverse ore di tempo di esplorazione, soprattutto se il set di dati contiene molte righe e colonne. 
 

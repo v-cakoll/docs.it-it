@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844885"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595798"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 
@@ -61,7 +61,7 @@ In questa procedura dettagliata, si eseguiranno le operazioni:
 
 4. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**. Fare clic sulla scheda **Generazione**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.
 
-5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo>**. Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
+5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo>** . Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
 
 6. Aprire il file ISampleInterface.cs. Aggiungere il codice seguente al file della classe ISampleInterface per creare l'interfaccia ISampleInterface.
 
@@ -109,7 +109,7 @@ In questa procedura dettagliata, si eseguiranno le operazioni:
 
 4. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Proprietà**. Fare clic sulla scheda **Generazione**. Impostare il percorso di output sullo stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio `C:\TypeEquivalenceSample`.
 
-5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo>**. Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
+5. Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo>** . Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.
 
 6. Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Aggiungi riferimento**. Fare clic sulla scheda **Sfoglia** e passare alla cartella del percorso di output. Selezionare il file TypeEquivalenceInterface.dll e fare clic su **OK**.
 
@@ -235,7 +235,7 @@ In questa procedura dettagliata, si eseguiranno le operazioni:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [/link (opzioni del compilatore C#)](../../../language-reference/compiler-options/link-compiler-option.md)
+- [Guida per programmatori C#](../../index.md)
 - [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assembly in .NET](../../../../standard/assembly/index.md)

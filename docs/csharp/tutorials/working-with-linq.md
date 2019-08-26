@@ -3,12 +3,12 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609313"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587183"
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 Non esiste tuttavia un metodo per mischiare le carte nella libreria standard, quindi è necessario scriverne uno personalizzato. Il metodo che verrà creato illustra diverse tecniche che verranno usate con programmi basati su LINQ, quindi ogni parte di questo processo verrà spiegata in passaggi.
 
-Per aggiungere alcune funzionalità per l'interazione con l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> che verrà restituita dalle query LINQ,è necessario scrivere dei tipi speciali di metodi detti [metodi di estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md). In breve, un metodo di estensione è uno speciale *metodo statico* che aggiunge nuove funzionalità a un tipo già esistente senza bisogno di modificare il tipo originale a cui si vogliono aggiungere funzionalità.
+Per aggiungere alcune funzionalità per l'interazione con l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> che verrà restituita dalle query LINQ,è necessario scrivere dei tipi speciali di metodi detti [metodi di estensione](../programming-guide/classes-and-structs/extension-methods.md). In breve, un metodo di estensione è uno speciale *metodo statico* che aggiunge nuove funzionalità a un tipo già esistente senza bisogno di modificare il tipo originale a cui si vogliono aggiungere funzionalità.
 
 Assegnare ai metodi di estensione una nuova posizione aggiungendo al programma un nuovo file di classe *statica* denominato `Extensions.cs`, quindi iniziare a compilare il primo metodo di estensione:
 

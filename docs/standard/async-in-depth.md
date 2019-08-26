@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844736"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666587"
 ---
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
@@ -30,7 +30,7 @@ Le attività espongono un protocollo di API per il monitoraggio, attendendo il v
 
 L'uso di `await` consente all'applicazione o al servizio di eseguire operazioni utili mentre viene eseguita un'attività, cedendo il controllo al chiamante fino al completamento dell'attività. Non è necessario che il codice si basi su callback o eventi perché continui a essere eseguito dopo il completamento dell'attività. Sono il linguaggio e l'integrazione dell'API dell'attività a occuparsi di questo. Se si usa `Task<T>`, al completamento dell'attività la parola chiave `await` annullerà il wrapping del valore restituito.  I dettagli di questo processo sono illustrati più sotto.
 
-Per altre informazioni sulle attività e i diversi modi per interagire con esse, vedere l'argomento [Task-based Asynchronous Pattern (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività).
+Per altre informazioni sulle attività e i diversi modi per interagire con esse, vedere l'argomento [Task-based Asynchronous Pattern (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Approfondimento sulle attività per un'operazione associata ai I/O
 
@@ -146,7 +146,7 @@ Quando viene rilevato `await`, l'esecuzione di `CalculateResult()` viene ceduta 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona in C#](~/docs/csharp/async.md)
+- [Programmazione asincrona in C#](../csharp/async.md)
 - [Programmazione asincrona con async e await (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [Programmazione asincrona in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Programmazione asincrona con Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona in F#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Programmazione asincrona con Async e Await (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

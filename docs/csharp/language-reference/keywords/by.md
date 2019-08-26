@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241301"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602215"
 ---
 # <a name="by-c-reference"></a>by (Riferimenti per C#)
 
-La parola chiave contestuale `by` viene usata nella clausola `group` in un'espressione di query per specificare la modalità di raggruppamento degli elementi restituiti. Per altre informazioni, vedere [Clausola group](../../../csharp/language-reference/keywords/group-clause.md).
+La parola chiave contestuale `by` viene usata nella clausola `group` in un'espressione di query per specificare la modalità di raggruppamento degli elementi restituiti. Per altre informazioni, vedere [Clausola group](./group-clause.md).
 
 ## <a name="example"></a>Esempio
 
@@ -27,4 +27,4 @@ L'esempio seguente illustra l'uso della parola chiave contestuale `by` in una cl
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Espressioni di query LINQ](../../programming-guide/linq-query-expressions/index.md)

@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend non firmati (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318234"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595917"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procedura: Creare assembly Friend non firmati (C#)
 In questo esempio viene illustrato come usare assembly Friend e assembly non firmati.  
@@ -81,7 +81,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`. Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`. Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
 6. Eseguire il file friend_unsigned_B.exe.  
   
@@ -95,5 +95,5 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Assembly Friend](../../../../standard/assembly/friend-assemblies.md)
-- [Procedura: Creare assembly Friend firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Procedura: Creare assembly Friend firmati (C#)](./how-to-create-signed-friend-assemblies.md)
+- [Guida per programmatori C#](../../index.md)

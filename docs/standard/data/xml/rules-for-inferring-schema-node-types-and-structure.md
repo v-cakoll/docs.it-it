@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939636"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regole per l'inferenza dello schema per tipi di nodo e struttura
 In questo argomento viene descritto in che modo il processo di inferenza converte in una struttura XSD (XML Schema Definition Language) i tipi di nodo di un documento XML.  
@@ -35,7 +35,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 8. Elemento con una sequenza di opzioni di elementi figlio e attributi  
   
 > [!NOTE]
->  Tutte le dichiarazioni `complexType` sono inferite come tipi anonimi. L'unico elemento globale inferito è l'elemento radice, tutti gli altri elementi sono locali.  
+> Tutte le dichiarazioni `complexType` sono inferite come tipi anonimi. L'unico elemento globale inferito è l'elemento radice, tutti gli altri elementi sono locali.  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -79,7 +79,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. Gli elementi in grassetto mostrano lo schema inferito per un elemento con una sequenza di elementi figlio.  
   
 > [!NOTE]
->  Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
+> Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -91,7 +91,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. Gli elementi in grassetto mostrano lo schema inferito per un elemento con una sequenza di elementi figlio e attributi.  
   
 > [!NOTE]
->  Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
+> Anche se un elemento contiene solo un elemento figlio, viene ancora considerato come una sequenza.  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -103,7 +103,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. Gli elementi in grassetto mostrano lo schema inferito per un elemento con una sequenza e opzione di elementi figlio.  
   
 > [!NOTE]
->  L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
+> L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -115,7 +115,7 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
  Nella tabella seguente viene mostrato l'input XML nel metodo <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> e lo schema XML generato. Gli elementi in grassetto mostrano lo schema inferito per un elemento con una sequenza e opzione di elementi figlio e attributi.  
   
 > [!NOTE]
->  L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
+> L'attributo `maxOccurs` dell'elemento `xs:choice` è impostato su `"unbounded"` nello schema inferito.  
   
  Per ulteriori informazioni sul processo di inferenza dello schema, vedere [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

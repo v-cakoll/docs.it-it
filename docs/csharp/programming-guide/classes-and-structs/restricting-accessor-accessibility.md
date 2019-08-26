@@ -10,28 +10,28 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca990693d29f8c8abd2e4ba2488a429a797afaec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582996"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596182"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Limitazione dell'accessibilità delle funzioni di accesso (Guida per programmatori C#)
-Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) di una proprietà o un indicizzatore sono denominate *funzioni di accesso*. Per impostazione predefinita, queste funzioni di accesso hanno la stessa visibilità o livello di accesso della proprietà o dell'indicizzatore a cui appartengono. Per altre informazioni, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md). Tuttavia, talvolta è utile limitare l'accesso a una di queste funzioni di accesso. In genere, ciò comporta la limitazione dell'accessibilità della funzione di accesso `set`, mantenendo la funzione di accesso `get` accessibile pubblicamente. Ad esempio:  
+Le parti [get](../../language-reference/keywords/get.md) e [set](../../language-reference/keywords/set.md) di una proprietà o un indicizzatore sono denominate *funzioni di accesso*. Per impostazione predefinita, queste funzioni di accesso hanno la stessa visibilità o livello di accesso della proprietà o dell'indicizzatore a cui appartengono. Per altre informazioni, vedere [Livelli di accessibilità](../../language-reference/keywords/accessibility-levels.md). Tuttavia, talvolta è utile limitare l'accesso a una di queste funzioni di accesso. In genere, ciò comporta la limitazione dell'accessibilità della funzione di accesso `set`, mantenendo la funzione di accesso `get` accessibile pubblicamente. Ad esempio:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
- In questo esempio, una proprietà denominata `Name` definisce una funzione di accesso `get` e `set`. La funzione di accesso `get` riceve il livello di accessibilità della proprietà stessa, in questo caso `public`, mentre la funzione di accesso `set` è limitata in modo esplicito applicando il modificatore di accesso [protected](../../../csharp/language-reference/keywords/protected.md) alla funzione di accesso stessa.  
+ In questo esempio, una proprietà denominata `Name` definisce una funzione di accesso `get` e `set`. La funzione di accesso `get` riceve il livello di accessibilità della proprietà stessa, in questo caso `public`, mentre la funzione di accesso `set` è limitata in modo esplicito applicando il modificatore di accesso [protected](../../language-reference/keywords/protected.md) alla funzione di accesso stessa.  
   
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Restrizioni dei modificatori di accesso per le funzioni di accesso  
  L'uso dei modificatori delle funzioni di accesso nelle proprietà o negli indicizzatori è soggetto a queste condizioni:  
   
-- È possibile usare i modificatori delle funzioni di accesso su un'interfaccia o su un'implementazione esplicita di un membro [interface](../../../csharp/language-reference/keywords/interface.md).  
+- È possibile usare i modificatori delle funzioni di accesso su un'interfaccia o su un'implementazione esplicita di un membro [interface](../../language-reference/keywords/interface.md).  
   
 - È possibile usare i modificatori delle funzioni di accesso solo se la proprietà o l'indicizzatore ha entrambe le funzioni di accesso `set` e `get`. In questo caso, il modificatore è consentito solo per una delle due funzioni di accesso.  
   
-- Se la proprietà o l'indicizzatore ha un modificatore [override](../../../csharp/language-reference/keywords/override.md), il modificatore della funzione di accesso deve corrispondere alla funzione di accesso della funzione di accesso sottoposta a override, se presente.  
+- Se la proprietà o l'indicizzatore ha un modificatore [override](../../language-reference/keywords/override.md), il modificatore della funzione di accesso deve corrispondere alla funzione di accesso della funzione di accesso sottoposta a override, se presente.  
   
 - Il livello di accessibilità nella funzione di accesso deve essere più restrittivo del livello di accessibilità nella proprietà o nell'indicizzatore stesso.  
   
@@ -46,12 +46,12 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
  [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Dominio di accessibilità della funzione di accesso  
- Se si usa un modificatore di accesso nella funzione di accesso, il [dominio di accessibilità](../../../csharp/language-reference/keywords/accessibility-domain.md) della funzione di accesso è determinato da questo modificatore.  
+ Se si usa un modificatore di accesso nella funzione di accesso, il [dominio di accessibilità](../../language-reference/keywords/accessibility-domain.md) della funzione di accesso è determinato da questo modificatore.  
   
  Se non è stato usato un modificatore di accesso nella funzione di accesso, il dominio di accessibilità della funzione di accesso è determinato dal livello di accessibilità della proprietà o dell'indicizzatore.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente contiene tre classi, `BaseClass`, `DerivedClass` e `MainClass`. Sono disponibili due proprietà per `BaseClass`, `Name` e `Id` in entrambe le classi. L'esempio illustra come la proprietà `Id` in `DerivedClass` può essere nascosta dalla proprietà `Id` in `BaseClass` quando si usa un modificatore di accesso restrittivo, ad esempio [protected](../../../csharp/language-reference/keywords/protected.md) o [private](../../../csharp/language-reference/keywords/private.md). Pertanto, quando si assegnano valori a questa proprietà, viene invece chiamata la proprietà nella classe `BaseClass`. La sostituzione del modificatore di accesso con [public](../../../csharp/language-reference/keywords/public.md) renderà la proprietà accessibile.  
+ L'esempio seguente contiene tre classi, `BaseClass`, `DerivedClass` e `MainClass`. Sono disponibili due proprietà per `BaseClass`, `Name` e `Id` in entrambe le classi. L'esempio illustra come la proprietà `Id` in `DerivedClass` può essere nascosta dalla proprietà `Id` in `BaseClass` quando si usa un modificatore di accesso restrittivo, ad esempio [protected](../../language-reference/keywords/protected.md) o [private](../../language-reference/keywords/private.md). Pertanto, quando si assegnano valori a questa proprietà, viene invece chiamata la proprietà nella classe `BaseClass`. La sostituzione del modificatore di accesso con [public](../../language-reference/keywords/public.md) renderà la proprietà accessibile.  
   
  L'esempio illustra anche che un modificatore di accesso restrittivo, quale `private` o `protected`, nella funzione di accesso `set` della proprietà `Name` in `DerivedClass` impedisce l'accesso alla funzione di accesso e genera un errore quando si esegue l'assegnazione.  
   
@@ -66,7 +66,7 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)
-- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [Guida per programmatori C#](../index.md)
+- [Proprietà](./properties.md)
+- [Indicizzatori](../indexers/index.md)
+- [Modificatori di accesso](./access-modifiers.md)

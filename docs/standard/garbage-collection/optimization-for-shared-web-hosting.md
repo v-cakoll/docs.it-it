@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915908"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Ottimizzazione per l'hosting Web condiviso
 L'amministratore di un server condiviso che ospita più siti Web di piccole dimensioni può ottimizzare le prestazioni e aumentare la capacità del sito aggiungendo l'impostazione `gcTrimCommitOnLowMemory` seguente al nodo `runtime` nel file Aspnet.config nella directory .NET:  
@@ -22,7 +22,7 @@ L'amministratore di un server condiviso che ospita più siti Web di piccole dime
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  Questa impostazione è consigliata solo per scenari di hosting Web condivisi.  
+> Questa impostazione è consigliata solo per scenari di hosting Web condivisi.  
   
  Dato che il Garbage Collector riserva memoria per le allocazioni future, lo spazio di cui viene eseguito il commit può essere maggiore di quello strettamente necessario. È possibile ridurre questo spazio per gestire i momenti in cui è presente un carico pesante sulla memoria di sistema. La riduzione di questo spazio migliora le prestazioni e aumenta la capacità di ospitare più siti.  
   

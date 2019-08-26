@@ -2,12 +2,12 @@
 title: Debug degli alberi delle espressioni in Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195980"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595233"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debug degli alberi delle espressioni in Visual Studio (C#)
 È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una rapida panoramica della struttura dell'albero delle espressioni, è possibile usare la proprietà `DebugView`, che rappresenta gli alberi delle espressioni [usando una sintassi speciale](debugview-syntax.md). Si noti che `DebugView` è disponibile solo in modalità di debug.  
@@ -40,7 +40,7 @@ In alternativa, è possibile installare e usare [un visualizzatore personalizzat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Alberi delle espressioni (C#)](./index.md)
 - [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Creazione di visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data)
 - Sintassi di [`DebugView`](debugview-syntax.md)

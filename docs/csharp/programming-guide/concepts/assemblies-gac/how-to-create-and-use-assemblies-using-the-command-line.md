@@ -2,12 +2,12 @@
 title: 'Procedura: Creare e usare assembly dalla riga di comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586032"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595971"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedura: Creare e usare assembly dalla riga di comando (C#)
 Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione. Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:  
@@ -105,6 +105,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Guida per programmatori C#](../../index.md)
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Creazione di una classe che contenga le funzioni DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

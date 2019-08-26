@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633017"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608462"
 ---
 # <a name="query-keywords-c-reference"></a>Parole chiave di query (Riferimenti per C#)
 
@@ -19,7 +19,7 @@ Questa sezione contiene le parole chiave contestuali usate nelle espressioni di 
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-|Clausola|Description|
+|Clausola|DESCRIZIONE|
 |------------|-----------------|
 |[from](from-clause.md)|Specifica un'origine dati e una variabile di intervallo (simile a una variabile di iterazione).|
 |[where](where-clause.md)|Filtra gli elementi di origine in base a una o più espressioni booleane separate da operatori logici AND e OR (`&&` o <code>&#124;&#124;</code>).|
@@ -40,5 +40,5 @@ Questa sezione contiene le parole chiave contestuali usate nelle espressioni di 
 
 - [Parole chiave di C#](index.md)
 - [LINQ (Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Espressioni di query LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [Nozioni di base su LINQ in C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

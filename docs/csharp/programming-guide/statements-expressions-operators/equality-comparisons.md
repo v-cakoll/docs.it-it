@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661203"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588708"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Confronti di uguaglianza (Guida per programmatori C#)
 
@@ -24,11 +24,11 @@ A volte è necessario confrontare due valori per verificarne l'uguaglianza. In a
   
  In questo codice vengono creati due oggetti, ma dopo l'istruzione di assegnazione, entrambi i riferimenti fanno riferimento allo stesso oggetto. Di conseguenza, esiste un'uguaglianza dei riferimenti. Usare il metodo <xref:System.Object.ReferenceEquals%2A> per determinare se due riferimenti fanno riferimento allo stesso oggetto.  
   
- Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento. Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore. Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria. Se inoltre si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici. Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto. Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
+ Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento. Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore. Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria. Se inoltre si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici. Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto. Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](./how-to-test-for-reference-equality-identity.md).  
 
 ## <a name="value-equality"></a>Uguaglianza di valori
 
- Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) o [bool](../../../csharp/language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-), come indicato nell'esempio seguente.  
+ Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-), come indicato nell'esempio seguente.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -43,21 +43,21 @@ if( b == a)
   
  Per la maggior parte degli altri tipi, il test dell'uguaglianza di valori è più complesso poiché è necessario sapere in che modo viene definito dal tipo. Per le classi e gli struct con più campi o proprietà, l'uguaglianza di valori viene spesso definita in modo che tutti i campi o tutte le proprietà abbiano lo stesso valore. Ad esempio, due oggetti `Point` possono essere definiti equivalenti se pointA.X è uguale a pointB.X e pointA.Y è uguale a pointB.Y.  
   
- Tuttavia, nessun requisito prevede che l'equivalenza sia basata su tutti i campi in un tipo. Può essere basata su un subset. Quando si confrontano i tipi di cui non si è proprietari, è necessario assicurarsi di sapere esattamente in che modo viene definita l'equivalenza per quel tipo. Per altre informazioni su come definire l'uguaglianza di valori nelle classi e negli struct, vedere [Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
+ Tuttavia, nessun requisito prevede che l'equivalenza sia basata su tutti i campi in un tipo. Può essere basata su un subset. Quando si confrontano i tipi di cui non si è proprietari, è necessario assicurarsi di sapere esattamente in che modo viene definita l'equivalenza per quel tipo. Per altre informazioni su come definire l'uguaglianza di valori nelle classi e negli struct, vedere [Procedura: Definire l'uguaglianza di valori per un tipo](./how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Uguaglianza di valori per i valori a virgola mobile
 
- I confronti di uguaglianza dei valori a virgola mobile ([double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) e [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari. Per altre informazioni, vedere le note nell'argomento <xref:System.Double?displayProperty=nameWithType>.  
+ I confronti di uguaglianza dei valori a virgola mobile ([double](../../language-reference/builtin-types/floating-point-numeric-types.md) e [float](../../language-reference/builtin-types/floating-point-numeric-types.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari. Per altre informazioni, vedere le note nell'argomento <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
-|[Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Descrive come determinare se per due variabili esiste l'uguaglianza dei riferimenti.|  
-|[Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Descrive come specificare una definizione personalizzata di uguaglianza dei valori per un tipo.|  
-|[Guida per programmatori C#](../../../csharp/programming-guide/index.md)|Include collegamenti a informazioni dettagliate su funzionalità importanti del linguaggio C# e sulle funzionalità disponibili per C# attraverso .NET Framework.|  
-|[Tipi](../../../csharp/programming-guide/types/index.md)|Informazioni sul sistema di tipi C# e collegamenti a informazioni aggiuntive.|  
+|[Procedura: Testare l'uguaglianza dei riferimenti (identità)](./how-to-test-for-reference-equality-identity.md)|Descrive come determinare se per due variabili esiste l'uguaglianza dei riferimenti.|  
+|[Procedura: Definire l'uguaglianza di valori per un tipo](./how-to-define-value-equality-for-a-type.md)|Descrive come specificare una definizione personalizzata di uguaglianza dei valori per un tipo.|  
+|[Guida per programmatori C#](../index.md)|Include collegamenti a informazioni dettagliate su funzionalità importanti del linguaggio C# e sulle funzionalità disponibili per C# attraverso .NET Framework.|  
+|[Tipi](../types/index.md)|Informazioni sul sistema di tipi C# e collegamenti a informazioni aggiuntive.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Guida per programmatori C#](../index.md)

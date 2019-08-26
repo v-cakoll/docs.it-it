@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912486"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -53,7 +53,7 @@ Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winm
 |**/linenum**|Include riferimenti alle righe di origine.|
 |**/nobar**|Evita la visualizzazione della finestra popup contenente l'indicatore di stato del processo del disassembler.|
 |**/noca**|Evita la generazione dell'output di attributi personalizzati.|
-|**/project**|Mostra i metadati come vengono visualizzati nel codice gestito invece che nel Windows Runtime nativo. Se `PEfilename` non è un file di metadati Windows ( *.winmd*), questa opzione non ha effetto. Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Mostra i metadati come vengono visualizzati nel codice gestito invece che nel Windows Runtime nativo. Se `PEfilename` non è un file di metadati Windows ( *.winmd*), questa opzione non ha effetto. Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembla solo membri e tipi pubblici. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Racchiude tutti i nomi tra virgolette singole.|
 |**/raweh**|Mostra le clausole di gestione delle eccezioni in formato non elaborato.|
@@ -188,5 +188,5 @@ Un tipo annidato deve essere preceduto dalla classe in cui è contenuto, delimit
 
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)
+- [Processo di esecuzione gestita](../../standard/managed-execution-process.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

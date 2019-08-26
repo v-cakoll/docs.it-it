@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433567"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596027"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Costruttori statici (Guida per programmatori C#)
-Un costruttore statico consente di inizializzare gli eventuali dati [static](../../../csharp/language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
+Un costruttore statico consente di inizializzare gli eventuali dati [static](../../language-reference/keywords/static.md) oppure di eseguire un'operazione specifica che deve essere effettuata una sola volta. Viene chiamato automaticamente prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ I costruttori statici hanno le proprietà seguenti:
 
 - L'utente non può controllare in alcun modo il momento in cui il costruttore statico viene eseguito nel programma.
   
-- Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../../csharp/language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico. Un costruttore statico verrà eseguito prima di un costruttore di istanza. Si noti che il costruttore statico di un tipo viene chiamato quando un metodo statico assegnato a un evento o un delegato viene chiamato, e non quando tale metodo viene assegnato. Gli eventuali inizializzatori variabili di campo statico presenti nella classe del costruttore statico verranno eseguiti nell'ordine testuale in cui appaiono nella dichiarazione della classe subito prima dell'esecuzione del costruttore statico.
+- Un costruttore statico viene chiamato automaticamente per inizializzare la [classe](../../language-reference/keywords/class.md) prima che ne venga creata la prima istanza o venga fatto riferimento a qualsiasi membro statico. Un costruttore statico verrà eseguito prima di un costruttore di istanza. Si noti che il costruttore statico di un tipo viene chiamato quando un metodo statico assegnato a un evento o un delegato viene chiamato, e non quando tale metodo viene assegnato. Gli eventuali inizializzatori variabili di campo statico presenti nella classe del costruttore statico verranno eseguiti nell'ordine testuale in cui appaiono nella dichiarazione della classe subito prima dell'esecuzione del costruttore statico.
 
-- Se non si specifica un costruttore statico per inizializzare campi statici, tutti i campi statici vengono inizializzati sul relativo valore predefinito come indicato nella [tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md). 
+- Se non si specifica un costruttore statico per inizializzare campi statici, tutti i campi statici vengono inizializzati sul relativo valore predefinito come indicato nella [tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md). 
   
 - Se un costruttore statico genera un'eccezione, il runtime non lo chiamerà una seconda volta e il tipo rimarrà non inizializzato per la durata del dominio dell'applicazione in cui il programma è in esecuzione. Viene più comunemente generata un'eccezione <xref:System.TypeInitializationException> quando un costruttore statico non è in grado di creare un'istanza di un tipo o per un'eccezione non gestita che si verifica all'interno di un costruttore statico. Per i costruttori statici impliciti che non sono definiti in modo esplicito nel codice sorgente, la risoluzione dei problemi può richiedere l'ispezione del codice IL (Intermediate Language).
 
@@ -61,10 +61,10 @@ Per altre informazioni, vedere la sezione [Costruttori statici](~/_csharplang/sp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Guida per programmatori C#](../index.md)
+- [Classi e struct](./index.md)
+- [Costruttori](./constructors.md)
+- [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md)
+- [Finalizzatori](./destructors.md)
 - [Linee guida per la progettazione di costruttori](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [Avviso di sicurezza - CA2121: I costruttori statici devono essere privati](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

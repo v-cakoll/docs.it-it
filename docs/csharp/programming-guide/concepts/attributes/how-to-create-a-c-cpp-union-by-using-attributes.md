@@ -2,12 +2,12 @@
 title: "Procedura: Creare un'unione C-C++ tramite attributi (C#)"
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599036"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595368"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedura: Creare un'unione C/C++ tramite attributi (C#)
 L'uso degli attributi consente di personalizzare la disposizione degli struct in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.  
@@ -70,9 +70,9 @@ L'uso degli attributi consente di personalizzare la disposizione degli struct in
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
-- [Attributi](../../../../../docs/standard/attributes/index.md)
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+- [Guida per programmatori C#](../../index.md)
+- [Attributi](../../../../standard/attributes/index.md)
+- [Reflection (C#)](../reflection.md)
+- [Attributi (C#)](./index.md)
+- [Creazione di attributi personalizzati (C#)](./creating-custom-attributes.md)
+- [Accessing Attributes by Using Reflection (C#)](./accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))

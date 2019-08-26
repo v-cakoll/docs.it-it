@@ -2,12 +2,12 @@
 title: Prestazioni delle query concatenate (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689990"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591578"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Prestazioni delle query concatenate (LINQ to XML) (C#)
 
@@ -53,6 +53,6 @@ Questa query concatenata offre lo stesso profilo di prestazioni dell'iterazione 
 
 L'iterazione in `query2` è pertanto direttamente proporzionale al numero di elementi nell'origine della prima query, in altre parole un tempo lineare. In un esempio di Visual Basic corrispondente il profilo di prestazioni sarebbe lo stesso.
 
-Per altre informazioni sugli iteratori, vedere [yield](../../../../csharp/language-reference/keywords/yield.md).
+Per altre informazioni sugli iteratori, vedere [yield](../../../language-reference/keywords/yield.md).
 
-Per un'esercitazione più dettagliata sul concatenamento di query, vedere [Esercitazione: Concatenamento di query](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Per un'esercitazione più dettagliata sul concatenamento di query, vedere [Esercitazione: Concatenamento di query](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

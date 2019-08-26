@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423481"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589762"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -24,7 +24,7 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
      Di norma, maggiore è il numero di tipi che è possibile parametrizzare, più flessibile e riutilizzabile sarà il codice. Tuttavia, una generalizzazione eccessiva può creare codice difficile da leggere e comprendere per gli altri sviluppatori.  
   
-- Vincoli, se presenti, da applicare ai parametri di tipo. Vedere [Vincoli sui parametri di tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+- Vincoli, se presenti, da applicare ai parametri di tipo. Vedere [Vincoli sui parametri di tipo](./constraints-on-type-parameters.md).  
   
      Una buona regola consiste nell'applicare il numero massimo di vincoli possibile, ma che permetta di continuare a gestire tutti i tipi necessari. Se, ad esempio, la classe generica è destinata solo all'uso con tipi riferimento, applicare il vincolo di classe. In questo modo, si eviterà l'uso indesiderato della classe con tipi valore e sarà possibile usare l'operatore `as` in `T` e verificare la presenza di valori null.  
   
@@ -36,7 +36,7 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
      Se, ad esempio, si progetta una classe che verrà usata per creare elementi in una raccolta basata su generics, potrebbe essere necessario implementare un'interfaccia come <xref:System.IComparable%601>, dove `T` è il tipo della classe.  
   
- Per un esempio di una classe generica semplice, vedere [Introduzione ai generics](../../../csharp/programming-guide/generics/index.md).  
+ Per un esempio di una classe generica semplice, vedere [Introduzione ai generics](./index.md).  
   
  Le regole per i parametri di tipo e i vincoli hanno diverse implicazioni per il comportamento delle classi generiche, in particolare riguardo a ereditarietà e accessibilità dei membri. Prima di continuare, è utile comprendere alcuni termini. Per una classe generica, il codice client `Node<T>,` può fare riferimento alla classe specificando un argomento tipo, per creare un tipo costruito chiuso (`Node<int>`). In alternativa, può lasciare il parametro di tipo non specificato, ad esempio quando si specifica una classe base generica, per creare un tipo costruito aperto (`Node<T>`). Le classi generiche possono ereditare da classi concrete, classi costruite chiuse o classi base costruite aperte:  
   
@@ -69,7 +69,7 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Generics](../../../csharp/programming-guide/generics/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Generics](./index.md)
 - [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (Salvataggio dello stato degli enumeratori)
 - [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/) (Indovinello sull'ereditarietà - Parte 1)

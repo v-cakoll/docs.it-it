@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595351"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590310"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Creazione e generazione di eccezioni (Guida per programmatori C#)
-Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../../csharp/language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  
+Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  
   
  I programmatori devono generare eccezioni quando una o più delle condizioni seguenti sono true:  
   
@@ -68,7 +68,7 @@ Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) e [
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Eccezioni e gestione delle eccezioni](./index.md)
 - [Gerarchia delle eccezioni](../../../standard/exceptions/index.md)
-- [Gestione delle eccezioni](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Gestione delle eccezioni](./exception-handling.md)

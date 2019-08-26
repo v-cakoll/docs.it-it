@@ -2,12 +2,12 @@
 title: Creazione di attributi personalizzati (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674635"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595414"
 ---
 # <a name="creating-custom-attributes-c"></a>Creazione di attributi personalizzati (C#)
 È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati. Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo. Si potrebbe definire una classe Attribute `Author` personalizzata:  
@@ -66,9 +66,9 @@ class SampleClass
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection>
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Guida per programmatori C#](../../index.md)
 - [Scrittura di attributi personalizzati](../../../../standard/attributes/writing-custom-attributes.md)
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
-- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+- [Reflection (C#)](../reflection.md)
+- [Attributi (C#)](./index.md)
+- [Accessing Attributes by Using Reflection (C#)](./accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+- [AttributeUsage (C#)](./attributeusage.md)

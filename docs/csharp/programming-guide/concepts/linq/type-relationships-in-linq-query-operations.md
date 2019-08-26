@@ -12,19 +12,19 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483406"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591012"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
 Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
   
  Le operazioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sono fortemente tipizzate nell'origine dati, nella query stessa e nell'esecuzione della query. Il tipo delle variabili nella query deve essere compatibile con il tipo degli elementi nell'origine dati e con il tipo della variabile di iterazione nell'istruzione `foreach`. Questa forte tipizzazione garantisce che gli errori di tipo vengono rilevati in fase di compilazione quando possono essere corretti prima di essere riscontrati dagli utenti.  
   
- Per illustrare tali relazioni del tipo, la maggior parte degli esempi che seguono usa la tipizzazione esplicita per tutte le variabili. Nell'ultimo esempio viene illustrato come si applichino gli stessi principi anche quando si usa la tipizzazione implicita tramite [var](../../../../csharp/language-reference/keywords/var.md).  
+ Per illustrare tali relazioni del tipo, la maggior parte degli esempi che seguono usa la tipizzazione esplicita per tutte le variabili. Nell'ultimo esempio viene illustrato come si applichino gli stessi principi anche quando si usa la tipizzazione implicita tramite [var](../../../language-reference/keywords/var.md).  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Query che non trasformano i dati di origine  
  La figura seguente mostra un'operazione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects che non esegue alcuna trasformazione sui dati. L'origine contiene una sequenza di stringhe e anche l'output della query è una sequenza di stringhe.  
@@ -59,8 +59,8 @@ Per scrivere le query in modo efficace, è necessario comprendere in che modo i 
 3. Poiché il tipo della variabile di query è implicito, anche la variabile di iterazione nel ciclo `foreach` deve essere implicita.  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>Deduzione delle informazioni sul tipo tramite il compilatore  
- Sebbene sia necessario comprendere le relazioni di tipo in un'operazione di query, è possibile scegliere di far eseguire al compilatore tutto il lavoro al posto dell'utente. La parola chiave [var](../../../../csharp/language-reference/keywords/var.md) può essere usata per qualsiasi variabile locale in un'operazione di query. La figura seguente è simile all'esempio 2 illustrato in precedenza. Il compilatore fornisce, tuttavia, il tipo forte per ogni variabile nell'operazione di query.  
+ Sebbene sia necessario comprendere le relazioni di tipo in un'operazione di query, è possibile scegliere di far eseguire al compilatore tutto il lavoro al posto dell'utente. La parola chiave [var](../../../language-reference/keywords/var.md) può essere usata per qualsiasi variabile locale in un'operazione di query. La figura seguente è simile all'esempio 2 illustrato in precedenza. Il compilatore fornisce, tuttavia, il tipo forte per ogni variabile nell'operazione di query.  
   
  ![Diagramma che illustra il flusso di tipi con tipizzazione implicita.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
- Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../classes-and-structs/implicitly-typed-local-variables.md).  

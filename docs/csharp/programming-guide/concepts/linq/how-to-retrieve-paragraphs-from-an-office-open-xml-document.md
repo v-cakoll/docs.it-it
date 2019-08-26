@@ -2,12 +2,12 @@
 title: 'Procedura: Recuperare paragrafi da un documento Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 352389467bbe3c2a5e7364b081539bad8efc3f3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486451"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592616"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Procedura: Recuperare paragrafi da un documento Office Open XML (C#)
 In questo argomento viene presentato un esempio in cui viene aperto un documento Office Open XML e viene recuperata una raccolta di tutti i relativi paragrafi.  
@@ -19,7 +19,7 @@ In questo argomento viene presentato un esempio in cui viene aperto un documento
   
  Viene usato un metodo di estensione denominato `StringConcatenate`, specificato nell'esempio.  
   
- Per un'esercitazione dettagliata con una spiegazione del funzionamento dell'esempio, vedere [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md).  
+ Per un'esercitazione dettagliata con una spiegazione del funzionamento dell'esempio, vedere [Trasformazioni funzionali pure di XML (C#)](./introduction-to-pure-functional-transformations.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -163,7 +163,7 @@ class Program
 }  
 ```  
   
- Se eseguito con il documento Open XML descritto in [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), questo esempio produce l'output seguente:  
+ Se eseguito con il documento Open XML descritto in [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md), questo esempio produce l'output seguente:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

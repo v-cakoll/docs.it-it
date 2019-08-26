@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491091"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968541"
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
 <a name="Top"></a> Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "66491091"
  A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariabile e comune a tutte le versioni di .NET Framework precedenti a .NET Framework 4. "c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
   
 > [!NOTE]
->  <xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".  
+> <xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".  
   
  Nell'esempio seguente viene creata un'istanza di due oggetti <xref:System.TimeSpan>, usati per eseguire operazioni aritmetiche e viene visualizzato il risultato. In ogni caso, viene usata la formattazione composita per visualizzare il valore <xref:System.TimeSpan> con l'identificatore di formato "c".  
   

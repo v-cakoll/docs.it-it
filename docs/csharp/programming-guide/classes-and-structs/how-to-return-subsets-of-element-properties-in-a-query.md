@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586074"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596843"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procedura: Restituire sottoinsiemi di proprietà degli elementi in una query (Guida per programmatori C#)
 Usare un tipo anonimo in un'espressione di query quando si verificano entrambe le condizioni seguenti:  
@@ -48,6 +48,6 @@ Per eseguire questo codice, copiare e incollare la classe in un'applicazione con
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Tipi anonimi](./anonymous-types.md)
+- [Espressioni di query LINQ](../linq-query-expressions/index.md)

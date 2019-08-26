@@ -5,20 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 8e3534abf961ba7b8a41eed592455962e5b551e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5003e03b488a16d53e4e3d20a0b0b0e09630b46f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979034"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596712"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query (Guida per programmatori C#)
 È possibile usare le variabili locali tipizzate in modo implicito ogni volta che si vuole che il compilatore determini il tipo di una variabile locale. È necessario usare le variabili locali tipizzate in modo implicito per archiviare i tipi anonimi, che vengono spesso usati nelle espressioni di query. Gli esempi seguenti illustrano tipi d'uso facoltativi e obbligatori delle variabili locali tipizzate in modo implicito nelle query.  
   
- Le variabili locali tipizzate in modo implicito vengono dichiarate usando la parola chiave contestuale [var](../../../csharp/language-reference/keywords/var.md). Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) e [Matrici tipizzate in modo implicito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ Le variabili locali tipizzate in modo implicito vengono dichiarate usando la parola chiave contestuale [var](../../language-reference/keywords/var.md). Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](./implicitly-typed-local-variables.md) e [Matrici tipizzate in modo implicito](../arrays/implicitly-typed-arrays.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente mostra uno scenario comune in cui la parola chiave `var` è obbligatoria: un'espressione di query che produce una sequenza di tipi anonimi. In questo scenario sia la variabile di query che la variabile di iterazione nell'istruzione `foreach` devono essere tipizzate in modo implicito usando `var`, perché non si ha accesso a un nome di tipo per il tipo anonimo. Per altre informazioni sui tipi anonimi, vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ L'esempio seguente mostra uno scenario comune in cui la parola chiave `var` è obbligatoria: un'espressione di query che produce una sequenza di tipi anonimi. In questo scenario sia la variabile di query che la variabile di iterazione nell'istruzione `foreach` devono essere tipizzate in modo implicito usando `var`, perché non si ha accesso a un nome di tipo per il tipo anonimo. Per altre informazioni sui tipi anonimi, vedere [Tipi anonimi](./anonymous-types.md).  
   
  [!code-csharp[csProgGuideLINQ#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#32)]  
   
@@ -29,8 +29,8 @@ ms.locfileid: "56979034"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Metodi di estensione](./extension-methods.md)
+- [LINQ (Language-Integrated Query)](../../linq/index.md)
+- [var](../../language-reference/keywords/var.md)
+- [Espressioni di query LINQ](../linq-query-expressions/index.md)

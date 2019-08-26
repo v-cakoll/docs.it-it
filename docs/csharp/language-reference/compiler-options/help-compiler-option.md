@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693824"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602913"
 ---
 # <a name="-help---c-compiler-options"></a>-help, -? (Opzioni del compilatore C#)
 Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.  
@@ -29,12 +29,12 @@ Questa opzione invia un elenco di opzioni del compilatore e una breve descrizion
 -?  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se questa opzione è inclusa in una compilazione, non verrà creato alcun file di output e non avrà luogo alcuna compilazione.  
   
  Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

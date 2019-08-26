@@ -2,12 +2,12 @@
 title: Gestione della reentrancy nelle app asincrone (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480872"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595647"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
 
@@ -141,7 +141,7 @@ In seguito alle modifiche, il pulsante non risponde mentre `AccessTheWebAsync` s
 
 Anziché disabilitare il pulsante **Start**, è possibile tenere attivo il pulsante ma, se l'utente sceglie di nuovo il pulsante, è necessario annullare l'operazione in esecuzione e consentire la continuazione dell'operazione richiesta più di recente.
 
-Per altre informazioni sull'annullamento, vedere [Ottimizzazione dell'app asincrona (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Per altre informazioni sull'annullamento, vedere [Ottimizzazione dell'app asincrona (C#)](./fine-tuning-your-async-application.md).
 
 Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)). Il nome del progetto è CancelAndRestart.
 
@@ -724,5 +724,5 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Procedura dettagliata: Accesso al Web con Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programmazione asincrona con Async e Await (C#)](./index.md)

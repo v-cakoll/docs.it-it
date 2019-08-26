@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956701"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 
@@ -98,7 +98,7 @@ Ad esempio, si supponga di concedere a un dominio applicazione autorizzazioni In
 
 ## <a name="serialization"></a>Serializzazione
 
-Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> consente di ottenere e impostare membri di tipi serializzabili, indipendentemente dall'accessibilità. Questa autorizzazione consente di individuare e modificare lo stato privato di un'istanza tramite codice. Oltre a disporre delle autorizzazioni appropriate, il tipo deve essere [contrassegnato](../../../docs/standard/attributes/applying-attributes.md) come serializzabile nei metadati.
+Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> consente di ottenere e impostare membri di tipi serializzabili, indipendentemente dall'accessibilità. Questa autorizzazione consente di individuare e modificare lo stato privato di un'istanza tramite codice. Oltre a disporre delle autorizzazioni appropriate, il tipo deve essere [contrassegnato](../../standard/attributes/applying-attributes.md) come serializzabile nei metadati.
 
 ## <a name="parameters-of-type-methodinfo"></a>Parametri di tipo MethodInfo
 
@@ -121,5 +121,5 @@ Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> co
 - [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
 - [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Applicazione di attributi](../../../docs/standard/attributes/applying-attributes.md)
+- [Applicazione di attributi](../../standard/attributes/applying-attributes.md)
 - [Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)

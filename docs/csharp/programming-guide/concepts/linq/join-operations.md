@@ -2,12 +2,12 @@
 title: Operazioni di join (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411460"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592075"
 ---
 # <a name="join-operations-c"></a>Operazioni di join (C#)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
@@ -22,7 +22,7 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|DESCRIZIONE|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -30,15 +30,15 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Tipi anonimi](../../classes-and-structs/anonymous-types.md)
 - [Formulare join e query di prodotto incrociato](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [Clausola join](../../../../csharp/language-reference/keywords/join-clause.md)
-- [Procedura: Creare un join usando chiavi composte](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
-- [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
-- [Procedura: Ordinare i risultati di una clausola join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Procedura: Eseguire operazioni di join personalizzate](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [Procedura: Eseguire join raggruppati](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
-- [Procedura: Eseguire inner join](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
-- [Procedura: Eseguire left outer join](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
-- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Clausola join](../../../language-reference/keywords/join-clause.md)
+- [Procedura: Creare un join usando chiavi composte](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Procedura: Ordinare i risultati di una clausola join](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Procedura: Eseguire operazioni di join personalizzate](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [Procedura: Eseguire join raggruppati](../../linq-query-expressions/how-to-perform-grouped-joins.md)
+- [Procedura: Eseguire inner join](../../linq-query-expressions/how-to-perform-inner-joins.md)
+- [Procedura: Eseguire left outer join](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

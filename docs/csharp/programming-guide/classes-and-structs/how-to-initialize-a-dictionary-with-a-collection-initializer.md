@@ -5,12 +5,12 @@ ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: bab2c4c996f7780cec572d58eb572a90aeea592a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 22f80365b974df66999ac68f7bc2a9ffa7d445a5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267675"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596812"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Come inizializzare un dizionario con un inizializzatore di insieme (Guida per programmatori C#)
 
@@ -26,5 +26,5 @@ Si noti che vi sono due coppie di parentesi graffe in ogni elemento della raccol
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Guida per programmatori C#](../index.md)
+- [Inizializzatori di oggetto e di raccolta](./object-and-collection-initializers.md)

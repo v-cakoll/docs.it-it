@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608743"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590624"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: Dichiarare un delegato, crearne un'istanza e usarlo (Guida per programmatori C#)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
@@ -23,7 +23,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- In C# 2.0 e versioni successive, è anche possibile usare un metodo anonimo per dichiarare e inizializzare un [delegato](../../../csharp/language-reference/keywords/delegate.md), come illustrato nell'esempio seguente.  
+ In C# 2.0 e versioni successive, è anche possibile usare un metodo anonimo per dichiarare e inizializzare un [delegato](../../language-reference/keywords/delegate.md), come illustrato nell'esempio seguente.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   
@@ -31,7 +31,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Per altre informazioni, vedere [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Per altre informazioni, vedere [Espressioni lambda](../statements-expressions-operators/lambda-expressions.md).  
   
  Nell'esempio che segue viene illustrato come dichiarare un delegato, crearne un'istanza e usarlo. La classe `BookDB` incapsula il database di una libreria che gestisce un database di volumi. Espone un metodo, `ProcessPaperbackBooks`, che ricerca tutti i tascabili all'interno del database e chiama un delegato per ognuno di essi. Il tipo `delegate` usato viene denominato `ProcessBookDelegate`. La classe `Test` usa questa classe per stampare i titoli e il prezzo medio dei tascabili.  
   
@@ -56,7 +56,7 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     In questo modo viene creato un nuovo oggetto delegato associato al metodo [statico](../../../csharp/language-reference/keywords/static.md) `Test.PrintTitle`. Analogamente, il metodo non statico `AddBookToTotal` dell'oggetto `totaller` viene passato come illustrato nell'esempio seguente:  
+     In questo modo viene creato un nuovo oggetto delegato associato al metodo [statico](../../language-reference/keywords/static.md) `Test.PrintTitle`. Analogamente, il metodo non statico `AddBookToTotal` dell'oggetto `totaller` viene passato come illustrato nell'esempio seguente:  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -74,6 +74,6 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Eventi](../../../csharp/programming-guide/events/index.md)
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Eventi](../events/index.md)
+- [Delegati](./index.md)

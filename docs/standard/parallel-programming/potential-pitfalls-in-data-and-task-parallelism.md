@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621005"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946337"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemi potenziali nel parallelismo di dati e attività
 In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> possono offrire miglioramenti significativi delle prestazioni nei normali cicli sequenziali. Le operazioni necessarie per parallelizzare il ciclo comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono cicli paralleli.  
@@ -49,7 +49,7 @@ In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
  La maggior parte dei metodi statici in .NET Framework è thread-safe e può essere chiamata simultaneamente da più thread. Tuttavia, anche in questi casi, la sincronizzazione da applicare può comportare un rallentamento significativo della query.  
   
 > [!NOTE]
->  Per verificare ciò basta inserire nelle query alcune chiamate a <xref:System.Console.WriteLine%2A>. Anche se questo metodo viene utilizzato a scopo dimostrativo negli esempi della documentazione, è consigliabile evitare di utilizzarlo nei cicli paralleli, a meno che non sia necessario.  
+> Per verificare ciò basta inserire nelle query alcune chiamate a <xref:System.Console.WriteLine%2A>. Anche se questo metodo viene utilizzato a scopo dimostrativo negli esempi della documentazione, è consigliabile evitare di utilizzarlo nei cicli paralleli, a meno che non sia necessario.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Tenere presente i problemi di affinità di thread  
  Alcune tecnologie, ad esempio l'interoperabilità COM per i componenti apartment a thread singolo (STA, Single-Threaded Apartment), Windows Form e Windows Presentation Foundation (WPF), impongono restrizioni di affinità di thread che richiedono l'esecuzione del codice in un thread specifico. Ad esempio, sia in Windows Form sia in WPF, l'accesso a un controllo può essere eseguito solo nel thread in cui è stato creato. Ciò significa, ad esempio, che non è possibile aggiornare un controllo elenco da un ciclo parallelo, a meno che non si configuri l'utilità di pianificazione del thread in modo che venga pianificato solo il thread UI. Per altre informazioni, vedere [Specifica di un contesto di sincronizzazione](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  

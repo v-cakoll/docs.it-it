@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 9cfbea03a305dd17c07f549901bc91be0e05b792
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 7d97b7b05645b02a31af848c97758c7a1f6423b9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661174"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602075"
 ---
 # <a name="internal-c-reference"></a>internal (Riferimenti per C#)
-La parola chiave `internal` è un [modificatore di accesso](../../../csharp/language-reference/keywords/access-modifiers.md) per tipi e membri dei tipi. 
+La parola chiave `internal` è un [modificatore di accesso](./access-modifiers.md) per tipi e membri dei tipi. 
   
  > Questa pagina illustra l'accesso `internal`. La parola chiave `internal` fa anche parte del modificatore di accesso [`protected internal`](./protected-internal.md).
   
@@ -30,7 +30,7 @@ public class BaseClass
 }  
 ```  
 
- Per un confronto di `internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md) e [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Per un confronto di `internal` con altri modificatori di accesso, vedere [Livelli di accessibilità](./accessibility-levels.md) e [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md).  
   
  Per altre informazioni sugli assembly, vedere [Assembly in .NET](../../../standard/assembly/index.md).  
   
@@ -93,12 +93,12 @@ Per altre informazioni, vedere [Accessibilità dichiarata](~/_csharplang/spec/ba
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](./index.md)
+- [Modificatori di accesso](./access-modifiers.md)
+- [Livelli di accessibilità](./accessibility-levels.md)
+- [Modificatori](./modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b1b05a5548beb7e7c1f0ec8e96b6e02350318ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921410"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Inoltro dei tipi in Common Language Runtime
 L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover ricompilare le applicazioni in cui viene utilizzato l'assembly originale.  
@@ -25,7 +25,7 @@ L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover
  Gli sviluppatori di `Utility.dll` possono evitare questo problema inoltrando le richieste per la classe `Example` mediante l'attributo <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>. Se l'attributo è stato applicato alla nuova versione dell'assembly `Utility.dll`, le richieste della classe `Example` verranno inoltrate all'assembly in cui è ora contenuta la classe e l'applicazione esistente continuerà a funzionare normalmente, senza ricompilazione.  
   
 > [!NOTE]
->  In .NET Framework versione 2.0 non è possibile inoltrare i tipi da assembly scritti in Visual Basic. È tuttavia possibile utilizzare in un'applicazione scritta in Visual Basic tipi inoltrati, ovvero se nell'applicazione viene utilizzato un assembly codificato in C# o C++ e un tipo di questo assembly viene inoltrato a un altro assembly, nell'applicazione Visual Basic sarà possibile utilizzare il tipo inoltrato.  
+> In .NET Framework versione 2.0 non è possibile inoltrare i tipi da assembly scritti in Visual Basic. È tuttavia possibile utilizzare in un'applicazione scritta in Visual Basic tipi inoltrati, ovvero se nell'applicazione viene utilizzato un assembly codificato in C# o C++ e un tipo di questo assembly viene inoltrato a un altro assembly, nell'applicazione Visual Basic sarà possibile utilizzare il tipo inoltrato.  
   
 ## <a name="forwarding-types"></a>Inoltro di tipi  
  La procedura di inoltro dei tipi prevede quattro passaggi:  
@@ -44,7 +44,7 @@ L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover
   
 3. Compilare l'assembly in cui è ora contenuto il tipo.  
   
-4. Ricompilare l'assembly originale del tipo, con un riferimento all'assembly in cui è ora contenuto il tipo. Se ad esempio si compila un file C# dalla riga di comando, utilizzare l'opzione [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) per specificare l'assembly contenente il tipo. In C++ utilizzare la direttiva [#using](/cpp/preprocessor/hash-using-directive-cpp) nel file di origine per specificare l'assembly contenente il tipo.  
+4. Ricompilare l'assembly originale del tipo, con un riferimento all'assembly in cui è ora contenuto il tipo. Se ad esempio si compila un file C# dalla riga di comando, utilizzare l'opzione [/reference (C# Compiler Options)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) per specificare l'assembly contenente il tipo. In C++ utilizzare la direttiva [#using](/cpp/preprocessor/hash-using-directive-cpp) nel file di origine per specificare l'assembly contenente il tipo.  
   
 ## <a name="see-also"></a>Vedere anche
 

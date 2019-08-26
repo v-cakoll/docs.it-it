@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195805"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602837"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opzioni del compilatore C#)
 
@@ -55,7 +55,7 @@ Imposta il compilatore in modo da accettare solo sintassi inclusa nella specific
 
  Inoltre, mentre gli aggiornamenti di versione di C# coincidono in genere con le versioni principali di .NET Framework, la nuova sintassi e le nuove funzionalità non sono necessariamente correlate alla versione specifica del framework. Sebbene le nuove funzionalità richiedano un nuovo aggiornamento del compilatore, anch'esso rilasciato insieme alla revisione di C#, ogni funzionalità specifica presenta requisiti minimi in termini di API .NET o Common Language Runtime che ne consentono l'esecuzione in versioni di Framework di livello inferiore, inclusi pacchetti NuGet o altre librerie.
   
- Indipendentemente dall'impostazione di **-langversion** specificata, per creare il file con estensione exe o dll viene usata la versione corrente di Common Language Runtime. Un'eccezione è costituita dagli assembly Friend e da [-moduleassemblyname (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), che vengono eseguiti con **-langversion:ISO-1**.  
+ Indipendentemente dall'impostazione di **-langversion** specificata, per creare il file con estensione exe o dll viene usata la versione corrente di Common Language Runtime. Un'eccezione è costituita dagli assembly Friend e da [-moduleassemblyname (opzione del compilatore C#)](./moduleassemblyname-compiler-option.md), che vengono eseguiti con **-langversion:ISO-1**.  
 
  Per altri metodi per la specifica della versione del linguaggio C#, vedere l'argomento [Select the C# language version](../configure-language-version.md) (Selezionare la versione del linguaggio C#).
   
@@ -68,7 +68,7 @@ Imposta il compilatore in modo da accettare solo sintassi inclusa nella specific
 
 ### <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-|Versione|Collegamento|Description|
+|Versione|Collegamento|DESCRIZIONE|
 |-------|----|-----------|
 |C# 7.0 e versioni successive||Attualmente non disponibile|
 |C# 6.0|[Collegamento](../language-specification/index.md)|Specifica del linguaggio C# versione 6 - Bozza non ufficiale: .NET Foundation|

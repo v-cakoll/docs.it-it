@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398566"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597307"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrici unidimensionali (Guida per programmatori C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "67398566"
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Questa matrice contiene gli elementi da `array[0]` a `array[4]`. L'operatore [new](../../../csharp/language-reference/operators/new-operator.md) viene usato per creare la matrice e inizializzare gli elementi della matrice ai valori predefiniti. In questo esempio, tutti gli elementi della matrice vengono inizializzati su zero.  
+ Questa matrice contiene gli elementi da `array[0]` a `array[4]`. L'operatore [new](../../language-reference/operators/new-operator.md) viene usato per creare la matrice e inizializzare gli elementi della matrice ai valori predefiniti. In questo esempio, tutti gli elementi della matrice vengono inizializzati su zero.  
   
  È possibile dichiarare una matrice che archivia elementi stringa nello stesso modo. Ad esempio:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67398566"
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
- In C# 3.0 sono state introdotte le matrici tipizzate in modo implicito. Per altre informazioni, vedere [Matrici tipizzate in modo implicito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ In C# 3.0 sono state introdotte le matrici tipizzate in modo implicito. Per altre informazioni, vedere [Matrici tipizzate in modo implicito](./implicitly-typed-arrays.md).  
   
 ## <a name="value-type-and-reference-type-arrays"></a>Matrici di tipo valore e di tipo riferimento
 
@@ -55,12 +55,12 @@ ms.locfileid: "67398566"
   
  Il risultato di questa istruzione dipende dal fatto che `SomeType` sia un tipo valore o un tipo riferimento. Se è un tipo valore, l'istruzione crea una matrice di 10 elementi, ognuno dei quali ha il tipo `SomeType`. Se `SomeType` è un tipo riferimento, l'istruzione crea una matrice di 10 elementi, ognuno dei quali è inizializzato su un riferimento null.  
   
- Per altre informazioni su tipi valore e tipi riferimento, vedere [Tipi](../../../csharp/language-reference/keywords/types.md).  
+ Per altre informazioni su tipi valore e tipi riferimento, vedere [Tipi](../../language-reference/keywords/types.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Array>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Matrici](../../../csharp/programming-guide/arrays/index.md)
-- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [Guida per programmatori C#](../index.md)
+- [Matrici](./index.md)
+- [Matrici multidimensionali](./multidimensional-arrays.md)
+- [Matrici irregolari](./jagged-arrays.md)

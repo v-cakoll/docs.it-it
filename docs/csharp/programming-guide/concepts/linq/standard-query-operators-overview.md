@@ -2,12 +2,12 @@
 title: Cenni preliminari sugli operatori di query standard (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537959"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590971"
 ---
 # <a name="standard-query-operators-overview-c"></a>Cenni preliminari sugli operatori di query standard (C#)
 Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>. Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
- Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per altre informazioni sugli operatori di query standard con parole chiave dedicate e le relative sintassi, vedere [Sintassi di espressione della query per operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per altre informazioni sugli operatori di query standard con parole chiave dedicate e le relative sintassi, vedere [Sintassi di espressione della query per operatori di query standard (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di query standard  
  È possibile estendere il set di operatori di query standard creando metodi specifici del dominio appropriati per la tecnologia o il dominio di destinazione. È possibile anche sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione delle query e l'ottimizzazione. Per un esempio, vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>Sezioni correlate  
  I collegamenti riportati di seguito consentono di passare ad argomenti che forniscono informazioni aggiuntive sui vari operatori di query standard in base alla funzionalità.  
   
- [Ordinamento dei dati (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [Ordinamento dei dati (C#)](./sorting-data.md)  
   
- [Operazioni sui set (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [Operazioni sui set (C#)](./set-operations.md)  
   
- [Filtro di dati (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtro di dati (C#)](./filtering-data.md)  
   
- [Operazioni del quantificatore (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [Operazioni del quantificatore (C#)](./quantifier-operations.md)  
   
- [Operazioni di proiezione (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [Operazioni di proiezione (C#)](./projection-operations.md)  
   
- [Partizionamento dei dati (C#)](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [Partizionamento dei dati (C#)](./partitioning-data.md)  
   
- [Operazioni di join (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [Operazioni di join (C#)](./join-operations.md)  
   
- [Raggruppamento dei dati (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [Raggruppamento dei dati (C#)](./grouping-data.md)  
   
- [Operazioni di generazione (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [Operazioni di generazione (C#)](./generation-operations.md)  
   
- [Operazioni di uguaglianza (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [Operazioni di uguaglianza (C#)](./equality-operations.md)  
   
- [Operazioni sugli elementi (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [Operazioni sugli elementi (C#)](./element-operations.md)  
   
- [Conversione del tipo di dati (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [Conversione del tipo di dati (C#)](./converting-data-types.md)  
   
- [Operazioni di concatenazione (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [Operazioni di concatenazione (C#)](./concatenation-operations.md)  
   
- [Operazioni di aggregazione (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [Operazioni di aggregazione (C#)](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Introduzione alle query LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [Sintassi di espressione di query per operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Introduzione alle query LINQ (C#)](./introduction-to-linq-queries.md)
+- [Sintassi di espressione di query per operatori di query standard (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Metodi di estensione](../../classes-and-structs/extension-methods.md)

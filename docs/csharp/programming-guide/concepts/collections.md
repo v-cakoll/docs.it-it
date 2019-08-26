@@ -2,18 +2,18 @@
 title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481106"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595289"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.
 
-Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per altre informazioni sulle matrici, vedere [Matrici](../../../csharp/programming-guide/arrays/index.md).
+Le matrici sono estremamente utili per la creazione e l'uso di un numero fisso di oggetti fortemente tipizzati. Per altre informazioni sulle matrici, vedere [Matrici](../arrays/index.md).
 
 Le raccolte consentono di lavorare in modo più flessibile con gruppi di oggetti. A differenza delle matrici, il gruppo di oggetti con cui si lavora può aumentare e diminuire in modo dinamico in base alle esigenze dell'applicazione. Per alcune raccolte è possibile assegnare una chiave a qualsiasi oggetto inserito nella raccolta in modo da recuperare rapidamente l'oggetto usando la chiave.
 
@@ -22,7 +22,7 @@ Una raccolta è una classe. Di conseguenza, prima di poter aggiungere elementi a
 Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.
 
 > [!NOTE]
-> Per gli esempi in questo argomento, includere le direttive [using](../../../csharp/language-reference/keywords/using-directive.md) per gli spazi dei nomi `System.Collections.Generic` e `System.Linq`.
+> Per gli esempi in questo argomento, includere le direttive [using](../../language-reference/keywords/using-directive.md) per gli spazi dei nomi `System.Collections.Generic` e `System.Linq`.
 
  **In questo argomento**
 
@@ -52,7 +52,7 @@ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una
 
 Gli esempi in questa sezione usano la classe generica <xref:System.Collections.Generic.List%601>, che consente di usare un elenco di oggetti fortemente tipizzato.
 
-L'esempio seguente crea un elenco di stringhe, quindi esegue l'iterazione nelle stringhe usando un'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md).
+L'esempio seguente crea un elenco di stringhe, quindi esegue l'iterazione nelle stringhe usando un'istruzione [foreach](../../language-reference/keywords/foreach-in.md).
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Se il contenuto di una raccolta è noto in anticipo, si può usare un *inizializzatore di raccolta* per inizializzare la raccolta. Per altre informazioni, vedere [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+Se il contenuto di una raccolta è noto in anticipo, si può usare un *inizializzatore di raccolta* per inizializzare la raccolta. Per altre informazioni, vedere [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md).
 
 L'esempio seguente è identico all'esempio precedente, ma usa un inizializzatore di raccolta per aggiungere elementi alla raccolta.
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-È possibile usare un'istruzione [for](../../../csharp/language-reference/keywords/for.md) anziché un'istruzione `foreach` per eseguire l'iterazione in una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.
+È possibile usare un'istruzione [for](../../language-reference/keywords/for.md) anziché un'istruzione `foreach` per eseguire l'iterazione in una raccolta. Questo è possibile mediante l'accesso agli elementi della raccolta dalla posizione di indice. L'indice degli elementi inizia da 0 e termina in corrispondenza del numero di elementi meno 1.
 
 Nell'esempio seguente l'iterazione negli elementi di una raccolta avviene mediante `for` anziché mediante `foreach`.
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-Nell'esempio seguente vengono rimossi elementi da un elenco generico. Invece di un'istruzione `foreach` viene usata un'istruzione [for](../../../csharp/language-reference/keywords/for.md) che esegue l'iterazione in ordine decrescente. Ciò è necessario perché il metodo <xref:System.Collections.Generic.List%601.RemoveAt%2A> fa sì che gli elementi dopo un elemento rimosso abbiano un valore di indice inferiore.
+Nell'esempio seguente vengono rimossi elementi da un elenco generico. Invece di un'istruzione `foreach` viene usata un'istruzione [for](../../language-reference/keywords/for.md) che esegue l'iterazione in ordine decrescente. Ciò è necessario perché il metodo <xref:System.Collections.Generic.List%601.RemoveAt%2A> fa sì che gli elementi dopo un elemento rimosso abbiano un valore di indice inferiore.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -200,7 +200,7 @@ In questa sezione sono descritte alcune classi di raccolte comuni:
 
 La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Classe|Description|
+|Classe|DESCRIZIONE|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|
 |<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|
@@ -230,7 +230,7 @@ Quando possibile, usare le raccolte generiche degli spazi dei nomi <xref:System.
 
 La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:
 
-|Classe|Description|
+|Classe|DESCRIZIONE|
 |---|---|
 |<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|
 |<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta
 
-È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [Introduzione a LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).
+È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [Introduzione a LINQ in C#](./linq/getting-started-with-linq.md).
 
 Nell'esempio seguente viene eseguita una query LINQ su un oggetto `List` generico. La query LINQ restituisce una raccolta diversa che contiene i risultati.
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Iterators
 
-Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield return](../../../csharp/language-reference/keywords/yield.md) per restituire ogni elemento della raccolta, uno alla volta.
+Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield return](../../language-reference/keywords/yield.md) per restituire ogni elemento della raccolta, uno alla volta.
 
-Per chiamare un iteratore usare un'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Ogni iterazione del ciclo `foreach` chiama l'iteratore. Quando si raggiunge un'istruzione `yield return` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
+Per chiamare un iteratore usare un'istruzione [foreach](../../language-reference/keywords/foreach-in.md). Ogni iterazione del ciclo `foreach` chiama l'iteratore. Quando si raggiunge un'istruzione `yield return` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.
 
-Per altre informazioni, vedere [Iteratori (C#)](../../../csharp/programming-guide/concepts/iterators.md).
+Per altre informazioni, vedere [Iteratori (C#)](./iterators.md).
 
-Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore dispone di un'istruzione `yield return` all'interno di un ciclo [for](../../../csharp/language-reference/keywords/for.md). Nel metodo `ListEvenNumbers` ogni iterazione del corpo dell'istruzione `foreach` crea una chiamata al metodo iteratore, che procede all'istruzione `yield return` successiva.
+Nell'esempio seguente viene usato un metodo iteratore. Il metodo iteratore dispone di un'istruzione `yield return` all'interno di un ciclo [for](../../language-reference/keywords/for.md). Nel metodo `ListEvenNumbers` ogni iterazione del corpo dell'istruzione `foreach` crea una chiamata al metodo iteratore, che procede all'istruzione `yield return` successiva.
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md)
+- [Nozioni di base sulla programmazione (C#)](./index.md)
 - [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Raccolte e strutture di dati](../../../standard/collections/index.md)
 - [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)

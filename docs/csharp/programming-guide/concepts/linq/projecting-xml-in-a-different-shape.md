@@ -2,12 +2,12 @@
 title: Proiezione di XML in una forma diversa (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484042"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591529"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Proiezione di XML in una forma diversa (C#)
 In questo argomento viene illustrato un esempio di proiezione del codice XML in una forma diversa da quella del codice XML di origine.  
@@ -17,7 +17,7 @@ In questo argomento viene illustrato un esempio di proiezione del codice XML in 
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Vengono inoltre identificati lo stile e il testo di ciascun paragrafo. Infine il codice XML viene proiettato con una forma diversa. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova istruzione usata per la proiezione è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo viene eseguita una query per individuare tutto il testo in un documento di Word:  
   
-- [Ricerca di testo nei documenti di Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Ricerca di testo nei documenti di Word (C#)](./finding-text-in-word-documents.md)  
   

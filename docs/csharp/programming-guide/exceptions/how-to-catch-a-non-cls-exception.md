@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 27b36d85b2ece957c8ef3fce70a6fd794bb3d4e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ba212610372a89c2a3b4c6a249c6d8a02fa507
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595662"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590293"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Procedura: Rilevare un'eccezione non CLS
 Alcuni linguaggi .NET, inclusi C++ /CLI, consentono agli oggetti di generare eccezioni che non derivano da <xref:System.Exception>. Tali eccezioni sono chiamate *eccezioni non CLS* o *non eccezioni*. In C# non è possibile generare eccezioni non CLS, ma è possibile rilevarle in due modi:  
@@ -52,4 +52,4 @@ catch (RuntimeWrappedException e)
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
-- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
+- [Eccezioni e gestione delle eccezioni](./index.md)

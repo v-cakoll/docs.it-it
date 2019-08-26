@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend firmati (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582974"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595934"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedura: Creare assembly Friend firmati (C#)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -79,7 +79,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`.  Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`.  Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
 7. Eseguire il file friend_signed_B.exe.  
   
@@ -93,8 +93,8 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Assembly Friend](../../../../standard/assembly/friend-assemblies.md)
-- [Procedura: Creare assembly Friend non firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Procedura: Creare assembly Friend non firmati (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (strumento Nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Creazione e utilizzo degli assembly con nome sicuro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Guida per programmatori C#](../../index.md)

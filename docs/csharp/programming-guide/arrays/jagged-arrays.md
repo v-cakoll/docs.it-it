@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200676"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597333"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrici irregolari (Guida per programmatori C#)
 
@@ -45,7 +45,7 @@ Una matrice di matrici è una matrice i cui elementi sono costituiti da matrici.
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- È possibile combinare matrici di matrici e matrici multidimensionali. Di seguito sono riportate la dichiarazione e l'inizializzazione di una matrice di matrici unidimensionale che contiene tre elementi matrice bidimensionali con dimensioni diverse. Per altre informazioni sulle matrici bidimensionali, vedere [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).  
+ È possibile combinare matrici di matrici e matrici multidimensionali. Di seguito sono riportate la dichiarazione e l'inizializzazione di una matrice di matrici unidimensionale che contiene tre elementi matrice bidimensionali con dimensioni diverse. Per altre informazioni sulle matrici bidimensionali, vedere [Matrici multidimensionali](./multidimensional-arrays.md).  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -68,7 +68,7 @@ Una matrice di matrici è una matrice i cui elementi sono costituiti da matrici.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Array>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Matrici](../../../csharp/programming-guide/arrays/index.md)
-- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [Guida per programmatori C#](../index.md)
+- [Matrici](./index.md)
+- [Matrici unidimensionali](./single-dimensional-arrays.md)
+- [Matrici multidimensionali](./multidimensional-arrays.md)

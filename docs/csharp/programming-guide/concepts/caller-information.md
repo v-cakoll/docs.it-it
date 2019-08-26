@@ -2,12 +2,12 @@
 title: Informazioni sul chiamante (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185274"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595346"
 ---
 # <a name="caller-information-c"></a>Informazioni sul chiamante (C#)
 
@@ -15,7 +15,7 @@ Gli attributi di informazioni sul chiamante consentono di ottenere informazioni 
 
 Per ottenere queste informazioni, utilizzare gli attributi applicati ai parametri facoltativi, a ognuno dei quali è associato un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:
 
-|Attributo|Descrizione|Tipo|
+|Attributo|DESCRIZIONE|Tipo|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. Si tratta del percorso del file al momento della compilazione.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine in cui viene chiamato il metodo.|`Integer`|
@@ -49,7 +49,7 @@ public void TraceMessage(string message,
 //  source line number: 31
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È sempre necessario specificare un valore esplicito per ciascun parametro facoltativo. Non è possibile applicare attributi di informazioni sul chiamante ai parametri non specificati come facoltativi.
 
@@ -81,7 +81,7 @@ Nel grafico seguente vengono mostrati i nomi dei membri restituiti quando si uti
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Attributi (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Attributi comuni (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Attributi (C#)](./attributes/index.md)
+- [Attributi comuni (C#)](./attributes/common-attributes.md)
+- [Argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md)
+- [Nozioni di base sulla programmazione (C#)](./index.md)

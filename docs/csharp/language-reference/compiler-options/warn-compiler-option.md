@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315803"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602401"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opzioni del compilatore C#)
 L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilatore.  
@@ -41,9 +41,9 @@ L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilato
 |4 (impostazione predefinita)|Visualizza tutti gli avvisi di livello 3 oltre ad avvisi informativi.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Per ottenere informazioni su un errore o un avviso, è possibile cercare il codice di errore nell'indice della Guida. Per altri modi per ottenere informazioni su un errore o un avviso, vedere [Errori del compilatore C#](../../../csharp/language-reference/compiler-messages/index.md).  
+ Per ottenere informazioni su un errore o un avviso, è possibile cercare il codice di errore nell'indice della Guida. Per altri modi per ottenere informazioni su un errore o un avviso, vedere [Errori del compilatore C#](../compiler-messages/index.md).  
   
- Usare [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) per considerare tutti gli avvisi come errori. Usare [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) per disabilitare avvisi specifici.  
+ Usare [-warnaserror](./warnaserror-compiler-option.md) per considerare tutti gli avvisi come errori. Usare [-nowarn](./nowarn-compiler-option.md) per disabilitare avvisi specifici.  
   
  **-w** è la versione abbreviata di **-warn**.  
   
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

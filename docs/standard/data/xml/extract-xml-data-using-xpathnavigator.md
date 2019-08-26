@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595630"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967002"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Estrazione di dati XML con XPathNavigator
 Sono disponibili diversi metodi per rappresentare un documento XML in Microsoft .NET Framework, inclusi l'uso di una classe <xref:System.String> o l'uso delle classi <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>. Per facilitare lo spostamento tra queste diverse rappresentazioni di un documento XML, la classe <xref:System.Xml.XPath.XPathNavigator> offre una serie di metodi e proprietà per estrarre i dati XML come oggetto <xref:System.String>, <xref:System.Xml.XmlReader> o come oggetto <xref:System.Xml.XmlWriter>.  
@@ -22,7 +22,7 @@ Sono disponibili diversi metodi per rappresentare un documento XML in Microsoft 
  ‎La proprietà <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> della classe <xref:System.Xml.XPath.XPathNavigator> viene usata per ottenere il markup dell'intero documento XML o di un singolo nodo e dei relativi nodi figlio.  
   
 > [!NOTE]
->  La proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ottiene solo il markup dei nodi figlio di un nodo.  
+> La proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ottiene solo il markup dei nodi figlio di un nodo.  
   
  Nell'esempio di codice seguente viene illustrato come salvare un intero documento XML contenuto in un oggetto <xref:System.Xml.XPath.XPathNavigator> come <xref:System.String>, sotto forma di nodo singolo assieme ai relativi nodi figlio.  
   

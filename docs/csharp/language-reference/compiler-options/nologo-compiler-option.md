@@ -9,12 +9,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 537091bc3865183d193e3728d8d07649e33c6ada
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663992"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606652"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (opzioni del compilatore C#)
 L'opzione **-nologo** disattiva la visualizzazione del messaggio di accesso all'avvio del compilatore e dei messaggi informativi durante la compilazione.  
@@ -25,12 +25,12 @@ L'opzione **-nologo** disattiva la visualizzazione del messaggio di accesso all'
 -nologo  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione non è disponibile all'interno dell'ambiente di sviluppo, ma soltanto durante la compilazione dalla riga di comando.  
   
  Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

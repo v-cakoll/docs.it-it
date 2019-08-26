@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921656"
 ---
 # <a name="assembly-versioning"></a>Controllo delle versioni degli assembly
 Il controllo delle versioni degli assembly che utilizzano Common Language Runtime viene svolto interamente a livello dell'assembly. La specifica versione di un assembly e le versioni degli assembly dipendenti sono memorizzate nel manifesto dell'assembly. I criteri di versione predefiniti del runtime prevedono che l'applicazione venga eseguita solo con le versioni con cui è stata compilata e testata. Per modificare il comportamento predefinito, è possibile esprimere esplicitamente criteri di versione diversi nei file di configurazione (il file di configurazione dell'applicazione, il file dei criteri dell'autore e il file di configurazione dell'amministratore del computer).  
   
 > [!NOTE]
->  Il controllo delle versioni viene svolto solo su assembly con nomi sicuri.  
+> Il controllo delle versioni viene svolto solo su assembly con nomi sicuri.  
   
  Per risolvere una richiesta di associazione di un assembly, il runtime compie diverse operazioni:  
   
@@ -65,7 +65,7 @@ Il controllo delle versioni degli assembly che utilizzano Common Language Runtim
  La versione informativa è una stringa che specifica ulteriori informazioni sulla versione di un assembly a fini esclusivamente informativi. Tali informazioni non vengono utilizzate in fase di esecuzione. La versione informativa espressa in testo semplice riporta informazioni commerciali, informazioni sul pacchetto o il nome del prodotto e non viene utilizzata dal runtime. Una versione informativa può ad esempio essere "Common Language Runtime, versione 1.0" o "NET Control SP 2". Nella scheda Versione della finestra di dialogo delle Proprietà file in Microsoft Windows queste informazioni sono visualizzate alla voce "Versione prodotto".  
   
 > [!NOTE]
->  Sebbene sia possibile specificare qualsiasi testo, se il formato della stringa non è quello utilizzato dal numero di versione dell'assembly o se il formato è corretto ma il testo contiene caratteri jolly, viene visualizzato un messaggio di avviso. L'avviso è puramente informativo.  
+> Sebbene sia possibile specificare qualsiasi testo, se il formato della stringa non è quello utilizzato dal numero di versione dell'assembly o se il formato è corretto ma il testo contiene caratteri jolly, viene visualizzato un messaggio di avviso. L'avviso è puramente informativo.  
   
  La versione informativa viene espressa utilizzando l'attributo personalizzato <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Per altre informazioni sull'attributo usato dalla versione informativa, vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   

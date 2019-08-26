@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: d079441e91ff90bcc974564bbd7069e0548a7d77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575293"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602553"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (opzioni del compilatore C#)
 Utilizzando l'opzione del compilatore `-preferreduilang`, è possibile specificare la lingua in cui tramite il compilatore C# viene visualizzato l'output, ad esempio i messaggi di errore.  
@@ -28,7 +28,7 @@ Utilizzando l'opzione del compilatore `-preferreduilang`, è possibile specifica
  `language`  
  [Nome](/windows/desktop/Intl/language-names) della lingua da usare per l'output del compilatore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare l'opzione del compilatore `-preferreduilang` per specificare la lingua che si desidera venga utilizzata dal compilatore C# per i messaggi di errore e altri output della riga di comando. Se il Language Pack della lingua non è installato, viene utilizzata l'impostazione della lingua del sistema operativo e non viene segnalato alcun errore.  
   
 ```csharp  
@@ -39,4 +39,4 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)

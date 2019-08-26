@@ -6,15 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5013738e74aaa260ab6f5bcd4d73904cfbdcc3c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608556"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590274"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestione delle eccezioni (Guida per programmatori C#)
-I programmatori C# usano un blocco [try](../../../csharp/language-reference/keywords/try-catch.md) per creare partizioni di codice in cui potrebbe essere rilevata un'eccezione. I blocchi [catch](../../../csharp/language-reference/keywords/try-catch.md) associati vengono usati per gestire tutte le eccezioni risultanti. Un blocco [finally](../../../csharp/language-reference/keywords/try-finally.md) contiene il codice eseguito, indipendentemente dal fatto che venga generata o meno un'eccezione nel blocco `try`, ad esempio il codice relativo al rilascio delle risorse allocate nel blocco `try`. Un blocco `try` richiede uno o più blocchi `catch` associati, un blocco `finally` o entrambi.  
+I programmatori C# usano un blocco [try](../../language-reference/keywords/try-catch.md) per creare partizioni di codice in cui potrebbe essere rilevata un'eccezione. I blocchi [catch](../../language-reference/keywords/try-catch.md) associati vengono usati per gestire tutte le eccezioni risultanti. Un blocco [finally](../../language-reference/keywords/try-finally.md) contiene il codice eseguito, indipendentemente dal fatto che venga generata o meno un'eccezione nel blocco `try`, ad esempio il codice relativo al rilascio delle risorse allocate nel blocco `try`. Un blocco `try` richiede uno o più blocchi `catch` associati, un blocco `finally` o entrambi.  
   
  Gli esempi seguenti illustrano un'istruzione `try-catch`, un'istruzione `try-finally` e un'istruzione `try-catch-finally`.  
   
@@ -27,7 +27,7 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
  Un blocco `try` senza un blocco `catch` o `finally` genera un errore del compilatore.  
   
 ## <a name="catch-blocks"></a>Blocchi catch  
- Un blocco `catch` consente di specificare il tipo di eccezione da intercettare. La specifica del tipo è chiamata *filtro eccezioni*. Il tipo di eccezione deve essere derivato da <xref:System.Exception>. In genere, specificare <xref:System.Exception> come filtro eccezioni solo se si sa come gestire tutte le eccezioni che potrebbero essere generate nel blocco `try` o se si è inclusa un'istruzione [throw](../../../csharp/language-reference/keywords/throw.md) alla fine del blocco `catch`.  
+ Un blocco `catch` consente di specificare il tipo di eccezione da intercettare. La specifica del tipo è chiamata *filtro eccezioni*. Il tipo di eccezione deve essere derivato da <xref:System.Exception>. In genere, specificare <xref:System.Exception> come filtro eccezioni solo se si sa come gestire tutte le eccezioni che potrebbero essere generate nel blocco `try` o se si è inclusa un'istruzione [throw](../../language-reference/keywords/throw.md) alla fine del blocco `catch`.  
   
  È possibile concatenare più blocchi `catch` con filtri eccezioni diversi. I blocchi `catch` vengono valutati dall'alto verso il basso nel codice, ma viene eseguito un solo blocco `catch` per ogni eccezione generata, in particolare il primo blocco `catch` che specifica il tipo esatto o una classe di base dell'eccezione generata. Se nessun blocco `catch` specifica un filtro eccezioni corrispondente, viene selezionato un blocco `catch` che non dispone di filtro, se presente nell'istruzione. È importante posizionare per primi i blocchi `catch` con i tipi di eccezione più specifici (ossia i più derivati).  
   
@@ -46,7 +46,7 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
 ## <a name="finally-blocks"></a>Blocchi finally  
  Un blocco `finally` consente la pulizia delle azioni eseguite in un blocco `try`. Se presente, il blocco `finally` viene eseguito per ultimo, dopo il blocco `try` e i blocchi `catch` corrispondenti. Un blocco `finally` viene sempre eseguito, sia che venga o meno generata un'eccezione o che venga o meno individuato un blocco `catch` corrispondente al tipo di eccezione.  
   
- Il blocco `finally` può essere usato per rilasciare risorse quali flussi di file, connessioni di database e handle di elementi grafici, senza attendere che il Garbage Collector del runtime finalizzi gli oggetti. Per altre informazioni, vedere [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md).  
+ Il blocco `finally` può essere usato per rilasciare risorse quali flussi di file, connessioni di database e handle di elementi grafici, senza attendere che il Garbage Collector del runtime finalizzi gli oggetti. Per altre informazioni, vedere [Istruzione using](../../language-reference/keywords/using-statement.md).  
   
  Nell'esempio riportato di seguito viene usato il blocco `finally` per chiudere un file aperto nel blocco `try`. Si noti che prima della chiusura viene controllato lo stato dell'handle del file. Se il blocco `try` non riesce ad aprire il file, l'handle del file ha sempre valore `null` e il blocco `finally` non tenta di chiuderlo. In alternativa, se il file è aperto correttamente nel blocco `try`, il blocco `finally` chiude il file aperto.  
   
@@ -58,10 +58,10 @@ Per altre informazioni, vedere [Eccezioni](~/_csharplang/spec/exceptions.md) e [
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
-- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)
+- [Riferimenti per C#](../../language-reference/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Eccezioni e gestione delle eccezioni](./index.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
+- [Istruzione using](../../language-reference/keywords/using-statement.md)

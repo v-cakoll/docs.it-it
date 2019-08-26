@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 0ec661e5fb0e13eaf8c3c8e4a7b274ab58853f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978085"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590251"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Procedura: Eseguire codice di pulitura mediante finally (Guida per programmatori C#)
 Lo scopo di un'istruzione `finally` consiste nel garantire che la pulizia necessaria di oggetti, in genere oggetti che contengono risorse esterne, venga eseguita immediatamente, anche se viene generata un'eccezione. Un esempio di questo tipo di pulizia è la chiamata di <xref:System.IO.Stream.Close%2A> in un oggetto <xref:System.IO.FileStream> immediatamente dopo l'uso, invece di aspettare che l'oggetto venga sottoposto a Garbage Collection da Common Language Runtime, come illustrato di seguito:  
@@ -30,10 +30,10 @@ Lo scopo di un'istruzione `finally` consiste nel garantire che la pulizia necess
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
-- [Gestione delle eccezioni](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Guida per programmatori C#](../index.md)
+- [Eccezioni e gestione delle eccezioni](./index.md)
+- [Gestione delle eccezioni](./exception-handling.md)
+- [Istruzione using](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

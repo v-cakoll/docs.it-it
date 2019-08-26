@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933660"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
-L'assembler IL genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). Per altre informazioni su IL, vedere [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md). È possibile eseguire il file eseguibile così ottenuto, contenente il codice IL e i metadati necessari, per determinare se il codice IL viene eseguito come previsto.
+L'assembler IL genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). Per altre informazioni su IL, vedere [Processo di esecuzione gestita](../../standard/managed-execution-process.md). È possibile eseguire il file eseguibile così ottenuto, contenente il codice IL e i metadati necessari, per determinare se il codice IL viene eseguito come previsto.
 
 Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -231,5 +231,5 @@ L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di
 
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)
+- [Processo di esecuzione gestita](../../standard/managed-execution-process.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

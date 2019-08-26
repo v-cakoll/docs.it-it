@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70f5ee17209c7ed54462fab6e5cc4d75091c9df2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608022"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588290"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: Creazione e uso di oggetti dinamici (C# e Visual Basic)
 
@@ -22,7 +22,7 @@ Gli oggetti dinamici espongono i membri, ad esempio proprietà e metodi, in fase
   
  Gli oggetti dinamici offrono anche un comodo accesso a linguaggi dinamici come IronPython e IronRuby. È possibile usare un oggetto dinamico per fare riferimento a uno script dinamico che viene interpretato in fase di esecuzione.  
   
- Si fa riferimento a un oggetto dinamico usando l'associazione tardiva. In C# specificare il tipo di un oggetto ad associazione tardiva come `dynamic`. In Visual Basic specificare il tipo di un oggetto ad associazione tardiva come `Object`. Per altre informazioni, vedere [dynamic](../../../csharp/language-reference/keywords/dynamic.md) e [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Si fa riferimento a un oggetto dinamico usando l'associazione tardiva. In C# specificare il tipo di un oggetto ad associazione tardiva come `dynamic`. In Visual Basic specificare il tipo di un oggetto ad associazione tardiva come `Object`. Per altre informazioni, vedere [dynamic](../../language-reference/keywords/dynamic.md) e [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  È possibile creare oggetti dinamici personalizzati usando le classi dello spazio dei nomi <xref:System.Dynamic?displayProperty=nameWithType>. Ad esempio, è possibile creare un oggetto <xref:System.Dynamic.ExpandoObject> e specificare i membri di tale oggetto in fase di esecuzione. È anche possibile creare un proprio tipo che eredita la classe <xref:System.Dynamic.DynamicObject>. È quindi possibile eseguire l'override dei membri della classe <xref:System.Dynamic.DynamicObject> per rendere disponibili funzionalità dinamiche in fase di esecuzione.  
   
@@ -162,7 +162,7 @@ Il progetto successivo di questa procedura dettagliata accede a una libreria scr
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Uso del tipo dinamico](./using-type-dynamic.md)
 - [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
 - [Implementazione delle interfacce dinamiche (PDF scaricabile da Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

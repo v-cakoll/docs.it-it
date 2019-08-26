@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298912"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946449"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Data Sample
 Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali dati in raccolte in memoria di clienti, prodotti, ordini e dettagli di ordini. Per sperimentare ulteriormente PLINQ, è possibile incollare esempi di codice da altri argomenti nel codice riportato in questo argomento e richiamarlo dal metodo `Main`. È anche possibile usare questi dati con query PLINQ personalizzate.  
@@ -23,7 +23,7 @@ Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali
  I dati rappresentano un subset del database Northwind. Sono inclusi cinquanta (50) record clienti, ma non sono inclusi tutti i campi. Per ogni cliente è incluso un subset di righe dei dati Orders e dei corrispondenti dati Order_Detail. Sono inclusi tutti i prodotti.  
   
 > [!NOTE]
->  Il set di dati non è sufficientemente grande per dimostrare che PLINQ è più veloce di LINQ to Objects per quanto riguarda le query che contengono solo clausole `where` e `select` di base. Per riscontrare incrementi di velocità per piccoli set di dati come questo, usare le query che contengono operazioni a uso elevato di calcolo su ogni elemento nel set di dati.  
+> Il set di dati non è sufficientemente grande per dimostrare che PLINQ è più veloce di LINQ to Objects per quanto riguarda le query che contengono solo clausole `where` e `select` di base. Per riscontrare incrementi di velocità per piccoli set di dati come questo, usare le query che contengono operazioni a uso elevato di calcolo su ogni elemento nel set di dati.  
   
 ### <a name="to-set-up-this-sample"></a>Per impostare questo esempio  
   

@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641461"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666515"
 ---
 # <a name="target-frameworks"></a>Framework di destinazione
 
 Quando si specifica come destinazione un framework in un'app o in una libreria, si specifica il set di API da rendere disponibile all'app o alla libreria. Per specificare il framework di destinazione nel file di progetto, usare i moniker framework di destinazione.
 
-Un'app o una libreria può specificare come destinazione una versione di [.NET Standard](~/docs/standard/net-standard.md). Le versioni di .NET Standard rappresentano set standardizzati di API in tutte le implementazioni di .NET. Una libreria, ad esempio, può specificare come destinazione .NET Standard 1.6 e ottenere l'accesso ad API che possono essere usate in .NET Core e .NET Framework tramite la stessa codebase.
+Un'app o una libreria può specificare come destinazione una versione di [.NET Standard](net-standard.md). Le versioni di .NET Standard rappresentano set standardizzati di API in tutte le implementazioni di .NET. Una libreria, ad esempio, può specificare come destinazione .NET Standard 1.6 e ottenere l'accesso ad API che possono essere usate in .NET Core e .NET Framework tramite la stessa codebase.
 
 Un'app o una libreria può anche indicare come destinazione un'implementazione specifica di .NET per ottenere l'accesso ad API specifiche dell'implementazione. Ad esempio, un'app che specifica come destinazione Xamarin.iOS (come `Xamarin.iOS10`) ottiene l'accesso ai wrapper di API iOS forniti da Xamarin per iOS 10 oppure un'app che specifica come destinazione la piattaforma UWP (UWP, `uap10.0`) ottiene l'accesso alle API che consentono la compilazione per dispositivi che eseguono Windows 10.
 
@@ -27,7 +27,7 @@ Per i framework di destinazione basati su pacchetti, ad esempio .NET Standard e 
 
 ## <a name="latest-target-framework-versions"></a>Versioni più recenti dei framework di destinazione
 
-La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](~/docs/standard/net-standard.md) implementate da tali pacchetti. Queste versioni di framework di destinazione sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive. Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET.
+La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](net-standard.md) implementate da tali pacchetti. Queste versioni di framework di destinazione sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive. Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET.
 
 | Framework di destinazione      | Ultima versione <br/> Versione stabile | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementato <br/> Versione standard di .NET |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |

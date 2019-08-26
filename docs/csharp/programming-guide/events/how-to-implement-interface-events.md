@@ -6,15 +6,15 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200273"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590513"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procedura: Implementare gli eventi di interfaccia (Guida per programmatori C#)
-Un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) consente di dichiarare un [evento](../../../csharp/language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  
+Un'[interfaccia](../../language-reference/keywords/interface.md) consente di dichiarare un [evento](../../language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Per implementare eventi di interfaccia in una classe  
   
@@ -60,8 +60,8 @@ Fornendo funzioni di accesso personalizzate, è possibile specificare se i due e
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Eventi](../../../csharp/programming-guide/events/index.md)
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
-- [Implementazione esplicita dell'interfaccia](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
-- [Procedura: Generare eventi di classe base nelle classi derivate](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Guida per programmatori C#](../index.md)
+- [Eventi](./index.md)
+- [Delegati](../delegates/index.md)
+- [Implementazione esplicita dell'interfaccia](../interfaces/explicit-interface-implementation.md)
+- [Procedura: Generare eventi di classe base nelle classi derivate](./how-to-raise-base-class-events-in-derived-classes.md)

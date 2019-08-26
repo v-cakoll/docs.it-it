@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922683"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversione di tipi in .NET Framework
 <a name="top"></a> A ogni valore è associato un tipo che definisce attributi quali la quantità di spazio allocato per il valore, l'intervallo di valori possibili supportati e i membri resi disponibili. Numerosi valori possono essere espressi mediante tipi diversi. Il valore 4, ad esempio, può essere espresso come intero o come valore a virgola mobile. Mediante la conversione di tipi viene creato un valore in un nuovo tipo equivalente al valore del tipo precedente, ma non viene necessariamente mantenuta l'identità, o il valore esatto, dell'oggetto originale.  
@@ -63,7 +63,7 @@ ms.locfileid: "65593515"
  Le conversioni verso un tipo di dati più grande comportano la creazione di un nuovo valore dal valore di un tipo esistente che dispone di un intervallo più restrittivo o di un elenco di membri più limitato rispetto al tipo di destinazione. Le conversioni verso un tipo di dati più grande non possono comportare perdita di dati, ma è possibile che comportino una perdita di precisione. Poiché i dati non possono venire persi, i compilatori possono gestire la conversione in modo implicito o trasparente, senza la necessità di utilizzare un metodo di conversione esplicito o un operatore di cast.  
   
 > [!NOTE]
->  Sebbene il codice che esegue una conversione esplicita sia in grado di chiamare un metodo di conversione o di utilizzare un operatore di cast, l'utilizzo di tali elementi non è richiesto dai compilatori che supportano le conversioni implicite.  
+> Sebbene il codice che esegue una conversione esplicita sia in grado di chiamare un metodo di conversione o di utilizzare un operatore di cast, l'utilizzo di tali elementi non è richiesto dai compilatori che supportano le conversioni implicite.  
   
  Il tipo <xref:System.Decimal> supporta ad esempio le conversioni implicite da valori <xref:System.Byte>, <xref:System.Char>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>. Nell'esempio seguente vengono illustrate alcune conversioni implicite nell'assegnazione di valori a una variabile <xref:System.Decimal>.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65593515"
  Le conversioni verso un tipo di dati più piccolo comportano la creazione di un nuovo valore dal valore di un tipo esistente che dispone di un intervallo più ampio o di un elenco di membri più grande rispetto al tipo di destinazione. Poiché una conversione verso un tipo di dati più piccolo può comportare una perdita di dati, i compilatori spesso richiedono che tale conversione sia resa esplicita tramite una chiamata a un metodo di conversione o a un operatore di cast. È quindi necessario gestire la conversione in modo esplicito nel codice dello sviluppatore.  
   
 > [!NOTE]
->  Lo scopo principale della richiesta di un metodo di conversione o di un operatore di cast per le conversioni verso un tipo di dati più piccolo è quello di rendere lo sviluppatore consapevole della possibilità di perdita dei dati o del verificarsi di un'eccezione <xref:System.OverflowException>, in modo che tale eventualità venga gestita nel codice. In alcuni compilatori tuttavia questo requisito non è sempre rispettato. In Visual Basic, ad esempio, se l'opzione `Option Strict` è disattivata (impostazione predefinita), il compilatore tenta di eseguire le conversioni verso un tipo di dati più piccolo in modo implicito.  
+> Lo scopo principale della richiesta di un metodo di conversione o di un operatore di cast per le conversioni verso un tipo di dati più piccolo è quello di rendere lo sviluppatore consapevole della possibilità di perdita dei dati o del verificarsi di un'eccezione <xref:System.OverflowException>, in modo che tale eventualità venga gestita nel codice. In alcuni compilatori tuttavia questo requisito non è sempre rispettato. In Visual Basic, ad esempio, se l'opzione `Option Strict` è disattivata (impostazione predefinita), il compilatore tenta di eseguire le conversioni verso un tipo di dati più piccolo in modo implicito.  
   
  I tipi di dati <xref:System.UInt32>, <xref:System.Int64> e <xref:System.UInt64> hanno intervalli più ampi del tipo di dati <xref:System.Int32>, come illustrato nella tabella seguente.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65593515"
  La maggior parte dei compilatori consente l'esecuzione di conversioni esplicite in modalità controllata o non controllata. Quando viene eseguita una conversione controllata, viene generato un evento <xref:System.OverflowException> se il valore del tipo da convertire non rientra nell'intervallo del tipo di destinazione. Quando viene eseguita una conversione non controllata nelle stesse condizioni, potrebbe non venire generata un'eccezione, ma il comportamento esatto della conversione risulterà non definito e potrebbe venire restituito un valore non corretto.  
   
 > [!NOTE]
->  In C# è possibile eseguire conversioni controllate utilizzando la parola chiave `checked` con l'operatore di cast o specificando l'opzione del compilatore `/checked+`. Viceversa, le conversioni in modalità non controllata possono essere eseguite utilizzando la parola chiave `unchecked` con l'operatore di cast o specificando l'opzione del compilatore `/checked-`. Per impostazione predefinita, le conversioni esplicite vengono eseguite in modalità non controllata. In Visual Basic è possibile eseguire conversioni in modalità controllata deselezionando la casella di controllo **Rimuovi controllo dell'overflow di Integer** nella finestra di dialogo **Impostazioni del compilatore avanzate** del progetto o specificando l'opzione del compilatore `/removeintchecks-`. Viceversa, le conversioni non controllate possono essere eseguite selezionando la casella di controllo **Rimuovi controllo dell'overflow di Integer** nella finestra di dialogo **Impostazioni del compilatore avanzate** del progetto o specificando l'opzione del compilatore `/removeintchecks+`. Per impostazione predefinita, le conversioni esplicite vengono eseguite in modalità controllata.  
+> In C# è possibile eseguire conversioni controllate utilizzando la parola chiave `checked` con l'operatore di cast o specificando l'opzione del compilatore `/checked+`. Viceversa, le conversioni in modalità non controllata possono essere eseguite utilizzando la parola chiave `unchecked` con l'operatore di cast o specificando l'opzione del compilatore `/checked-`. Per impostazione predefinita, le conversioni esplicite vengono eseguite in modalità non controllata. In Visual Basic è possibile eseguire conversioni in modalità controllata deselezionando la casella di controllo **Rimuovi controllo dell'overflow di Integer** nella finestra di dialogo **Impostazioni del compilatore avanzate** del progetto o specificando l'opzione del compilatore `/removeintchecks-`. Viceversa, le conversioni non controllate possono essere eseguite selezionando la casella di controllo **Rimuovi controllo dell'overflow di Integer** nella finestra di dialogo **Impostazioni del compilatore avanzate** del progetto o specificando l'opzione del compilatore `/removeintchecks+`. Per impostazione predefinita, le conversioni esplicite vengono eseguite in modalità controllata.  
   
  Nell'esempio C# seguente vengono utilizzate le parole chiave `checked` e `unchecked` per illustrare la differenza nel comportamento quando un valore al di fuori dell'intervallo di un tipo <xref:System.Byte> viene convertito in <xref:System.Byte>. La conversione controllata genera un'eccezione, mentre la conversione non controllata assegna <xref:System.Byte.MaxValue?displayProperty=nameWithType> alla variabile <xref:System.Byte>.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65593515"
  Il requisito che il metodo di conversione venga chiamato sull'interfaccia anziché sul tipo di implementazione rende relativamente costose le implementazioni esplicite dell'interfaccia. È invece consigliabile chiamare il membro appropriato della classe <xref:System.Convert> per eseguire la conversione tra tipi di base di Common Language Runtime. Per altre informazioni, vedere la sezione successiva [Classe Convert](#Convert).  
   
 > [!NOTE]
->  Oltre all'interfaccia <xref:System.IConvertible> e alla classe <xref:System.Convert> fornite da .NET Framework, nei singoli linguaggi possono essere disponibili altre modalità per eseguire le conversioni. In C# vengono ad esempio utilizzati gli operatori di cast mentre in Visual Basic vengono utilizzate funzioni di conversione implementate dal compilatore quali `CType`, `CInt` e `DirectCast`.  
+> Oltre all'interfaccia <xref:System.IConvertible> e alla classe <xref:System.Convert> fornite da .NET Framework, nei singoli linguaggi possono essere disponibili altre modalità per eseguire le conversioni. In C# vengono ad esempio utilizzati gli operatori di cast mentre in Visual Basic vengono utilizzate funzioni di conversione implementate dal compilatore quali `CType`, `CInt` e `DirectCast`.  
   
  L'interfaccia <xref:System.IConvertible> è principalmente progettata per supportare la conversione tra tipi di base in .NET Framework. L'interfaccia può tuttavia anche essere implementata da un tipo personalizzato per supportare la conversione di tale tipo in altri tipi personalizzati. Per altre informazioni, vedere la sezione [Conversioni personalizzate con il metodo ChangeType](#ChangeType) più avanti in questo argomento.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "65593515"
  La classe <xref:System.Convert> consente di eseguire conversioni indipendenti dal linguaggio tra tipi di base ed è disponibile in tutti i linguaggi destinati a Common Language Runtime. Questa classe fornisce un set completo di metodi per le conversioni verso un tipo di dati più piccolo e per le conversioni verso un tipo di dati più grande e genera un evento <xref:System.InvalidCastException> per le conversioni non supportate (ad esempio la conversione di un valore <xref:System.DateTime> in un valore intero). Le conversioni verso un tipo di dati più piccolo vengono eseguite in un contesto controllato (checked) e, se la conversione ha esito negativo, viene generato un evento <xref:System.OverflowException>.  
   
 > [!IMPORTANT]
->  Poiché la classe <xref:System.Convert> include metodi per la conversione in e da ogni tipo di base, non occorre chiamare l'implementazione esplicita dell'interfaccia <xref:System.IConvertible> di ogni tipo di base.  
+> Poiché la classe <xref:System.Convert> include metodi per la conversione in e da ogni tipo di base, non occorre chiamare l'implementazione esplicita dell'interfaccia <xref:System.IConvertible> di ogni tipo di base.  
   
  Nell'esempio seguente viene illustrato l'utilizzo della classe <xref:System.Convert?displayProperty=nameWithType> per eseguire diverse conversioni verso un tipo di dati più grande e più piccolo tra tipi di base .NET Framework.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "65593515"
  Oltre a supportare le conversioni in ognuno dei tipi di base, la classe <xref:System.Convert> può essere utilizzata per convertire un tipo personalizzato in uno o più tipi predefiniti. Questa conversione viene eseguita dal metodo <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> che a sua volta esegue il wrapping di una chiamata al metodo <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> del parametro `value`. Questo significa che l'oggetto rappresentato dal parametro `value` deve fornire un'implementazione dell'interfaccia <xref:System.IConvertible>.  
   
 > [!NOTE]
->  Poiché i metodi <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> e di <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> utilizzano un oggetto <xref:System.Type> per specificare il tipo di destinazione in cui `value` viene convertito, possono essere utilizzati per eseguire una conversione dinamica a un oggetto il cui tipo non è noto in fase di compilazione. Tuttavia, si noti che l'implementazione <xref:System.IConvertible> di `value` deve comunque supportare questa conversione.  
+> Poiché i metodi <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> e di <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> utilizzano un oggetto <xref:System.Type> per specificare il tipo di destinazione in cui `value` viene convertito, possono essere utilizzati per eseguire una conversione dinamica a un oggetto il cui tipo non è noto in fase di compilazione. Tuttavia, si noti che l'implementazione <xref:System.IConvertible> di `value` deve comunque supportare questa conversione.  
   
  Nell'esempio seguente viene illustrata una possibile implementazione dell'interfaccia <xref:System.IConvertible> che consente la conversione di un oggetto `TemperatureCelsius` in un oggetto `TemperatureFahrenheit` e viceversa. Nell'esempio viene definita una classe di base, `Temperature`, che implementa l'interfaccia <xref:System.IConvertible> ed esegue l'override del metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Le classi `TemperatureCelsius` e `TemperatureFahrenheit` derivate eseguono ognuna l'override dei metodi `ToType` e `ToString` della classe di base.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "65593515"
  In .NET Framework è anche possibile definire un convertitore di tipi per un tipo personalizzato mediante l'estensione della classe <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> e l'associazione del convertitore di tipi al tipo tramite un attributo <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType>. Nella tabella seguente sono evidenziate le differenze tra questo approccio e l'implementazione dell'interfaccia <xref:System.IConvertible> per un tipo personalizzato.  
   
 > [!NOTE]
->  È possibile fornire supporto per un tipo personalizzato in fase di progettazione solo se per tale tipo è stato definito un convertitore di tipi.  
+> È possibile fornire supporto per un tipo personalizzato in fase di progettazione solo se per tale tipo è stato definito un convertitore di tipi.  
   
 |Conversione mediante TypeConverter|Conversione mediante IConvertible|  
 |------------------------------------|-----------------------------------|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347293"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956690"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 .NET Framework offre tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -32,19 +32,19 @@ ms.locfileid: "67347293"
  Indipendentemente dalla modalità di generazione del codice dinamico, l'esecuzione del codice generato richiede tutte le autorizzazioni necessarie per i tipi e i metodi usati dal codice generato.  
   
 > [!NOTE]
->  Le autorizzazioni necessarie per la reflection sul codice e sul codice di creazione sono state modificate nelle versioni successive di .NET Framework. Vedere [Informazioni sulla versione](#Version_Information) più avanti in questo argomento.  
+> Le autorizzazioni necessarie per la reflection sul codice e sul codice di creazione sono state modificate nelle versioni successive di .NET Framework. Vedere [Informazioni sulla versione](#Version_Information) più avanti in questo argomento.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Assembly dinamici  
  Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
   
 > [!NOTE]
->  Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
+> Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
   
  Il codice in un assembly dinamico può accedere a tipi e membri visibili in altri assembly.  
   
 > [!NOTE]
->  Gli assembly dinamici non usano i flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> che consentono ai metodi dinamici di accedere a tipi e membri non pubblici.  
+> Gli assembly dinamici non usano i flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> e <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> che consentono ai metodi dinamici di accedere a tipi e membri non pubblici.  
   
  Gli assembly dinamici temporanei vengono creati in memoria e non vengono mai salvati su disco, pertanto non richiedono alcuna autorizzazione di accesso ai file. Il salvataggio di un assembly dinamico su disco richiede <xref:System.Security.Permissions.FileIOPermission> con flag appropriati.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67347293"
  Al contrario, quando viene creato un metodo dinamico ospitato anonimamente, viene acquisito lo stack di chiamate. Quando il metodo viene costruito, le richieste di sicurezza vengono effettuate sullo stack di chiamate acquisito.  
   
 > [!NOTE]
->  Concettualmente, le richieste vengono effettuate durante la costruzione del metodo. In altre parole, le richieste potrebbero essere effettuate durante la creazione delle singole istruzioni MSIL. Nell'implementazione corrente tutte le richieste vengono effettuate quando il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> viene chiamato o quando viene richiamato il compilatore Just-In-Time (JIT), se il metodo viene richiamato senza chiamare <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
+> Concettualmente, le richieste vengono effettuate durante la costruzione del metodo. In altre parole, le richieste potrebbero essere effettuate durante la creazione delle singole istruzioni MSIL. Nell'implementazione corrente tutte le richieste vengono effettuate quando il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> viene chiamato o quando viene richiamato il compilatore Just-In-Time (JIT), se il metodo viene richiamato senza chiamare <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
  Se il dominio dell'applicazione lo consente, i metodi dinamici ospitati in modo anonimo possono ignorare i controlli di visibilità JIT, ma solo se viene rispettata la restrizione seguente: i tipi e i membri non pubblici a cui accede un metodo dinamico ospitato in modo anonimo devono trovarsi in assembly i cui set di concessioni sono uguali o sono subset del set di concessioni dello stack di chiamate di creazione. Questa possibilità limitata di ignorare i controlli di visibilità JIT viene abilitata se il dominio applicazione concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67347293"
 - Le autorizzazioni necessarie per tutti i tipi e i membri usati dal metodo dinamico sono incluse nel set di concessioni dell'assembly parzialmente attendibile.  
   
 > [!NOTE]
->  I metodi dinamici non supportano i simboli di debug.  
+> I metodi dinamici non supportano i simboli di debug.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Metodi dinamici associati ad assembly esistenti  
@@ -113,7 +113,7 @@ ms.locfileid: "67347293"
 - Se si associa il metodo dinamico a un tipo o a un modulo in un altro assembly, il costruttore richiede due cose: <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e il set di concessioni dell'assembly che contiene l'altro modulo. Ovvero, lo stack di chiamate deve includere tutte le autorizzazioni nel set di concessioni del modulo di destinazione, oltre a <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  Per la compatibilità con le versioni precedenti, se la richiesta per il set di concessioni di destinazione con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ha esito negativo, il costruttore richiede <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+    > Per la compatibilità con le versioni precedenti, se la richiesta per il set di concessioni di destinazione con <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> ha esito negativo, il costruttore richiede <xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
  Anche se gli elementi nell'elenco vengono descritti in termini di set di concessioni dell'assembly, tenere presente che le richieste vengono effettuate sullo stack di chiamate completo, incluso il limite del dominio applicazione.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67347293"
 ### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>Generazione di metodi dinamici dal codice parzialmente attendibile  
   
 > [!NOTE]
->  Il metodo consigliato per generare metodi dinamici dal codice parzialmente attendibile consiste nell'usare [metodi dinamici ospitati anonimamente](#Anonymously_Hosted_Dynamic_Methods).  
+> Il metodo consigliato per generare metodi dinamici dal codice parzialmente attendibile consiste nell'usare [metodi dinamici ospitati anonimamente](#Anonymously_Hosted_Dynamic_Methods).  
   
  Considerare le condizioni in cui un assembly con autorizzazioni Internet può generare un metodo dinamico ed eseguirlo:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67347293"
 - Il metodo dinamico non ignora i controlli di visibilità JIT.  
   
 > [!NOTE]
->  I metodi dinamici non supportano i simboli di debug.  
+> I metodi dinamici non supportano i simboli di debug.  
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Informazioni sulla versione  
@@ -144,7 +144,7 @@ ms.locfileid: "67347293"
  A partire da .NET Framework 2.0 Service Pack 1, non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di .NET Framework.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> viene incluso per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `LocalIntranet`, ma non nel set di autorizzazioni `Internet`. Pertanto, nelle versioni precedenti di .NET Framework è possibile usare una libreria con autorizzazioni Internet solo se viene eseguito un <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. .NET Framework 2.0 SP1 consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere SecurityTransparent ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, che semplifica l'attività di scrittura di una libreria protetta.  
+> <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> viene incluso per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `LocalIntranet`, ma non nel set di autorizzazioni `Internet`. Pertanto, nelle versioni precedenti di .NET Framework è possibile usare una libreria con autorizzazioni Internet solo se viene eseguito un <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. .NET Framework 2.0 SP1 consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere SecurityTransparent ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, che semplifica l'attività di scrittura di una libreria protetta.  
   
  .NET Framework 2.0 SP1 introduce inoltre il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> per l'accesso a tipi e membri non pubblici da metodi dinamici parzialmente attendibili. Le versioni precedenti di .NET Framework richiedono il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> per i metodi dinamici che accedono a membri e tipi non pubblici; si tratta di un'autorizzazione che non dovrebbe mai essere concessa a codice parzialmente attendibile.  
   

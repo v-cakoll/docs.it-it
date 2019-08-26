@@ -2,12 +2,12 @@
 title: Ordinamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125720"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591044"
 ---
 # <a name="sorting-data-c"></a>Ordinamento dei dati (C#)
 Un'operazione di ordinamento consente di ordinare gli elementi di una sequenza in base a uno o più attributi. Il primo criterio di ordinamento consente di applicare un ordinamento principale agli elementi. Specificando un secondo criterio di ordinamento, è possibile ordinare gli elementi all'interno di ogni gruppo di ordinamento principale.  
@@ -20,7 +20,7 @@ Un'operazione di ordinamento consente di ordinare gli elementi di una sequenza i
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|DESCRIZIONE|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Ordina i valori in ordine crescente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Ordina i valori in ordine decrescente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -129,7 +129,7 @@ foreach (string str in query)
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Linq>
-- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Clausola orderby](../../../../csharp/language-reference/keywords/orderby-clause.md)
-- [Procedura: Ordinare i risultati di una clausola join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Panoramica degli operatori di query standard (C#)](./standard-query-operators-overview.md)
+- [Clausola orderby](../../../language-reference/keywords/orderby-clause.md)
+- [Procedura: Ordinare i risultati di una clausola join](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

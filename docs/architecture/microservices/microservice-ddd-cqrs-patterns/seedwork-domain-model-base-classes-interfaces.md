@@ -2,12 +2,12 @@
 title: Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676308"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660768"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
@@ -23,7 +23,7 @@ Si tratta di un tipo di riutilizzo che può essere copiato e incollato e che mol
 
 ## <a name="the-custom-entity-base-class"></a>Classe di base Entity personalizzata
 
-Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](~/docs/csharp/language-reference/operators/equality-operators.md), da un elenco di eventi di dominio per ogni entità e così via.
+Il codice seguente è un esempio di una classe di base Entity in cui è possibile inserire il codice che può essere usato allo stesso modo da qualsiasi entità di dominio, ad esempio dall'ID entità, dagli [operatori di uguaglianza](../../../csharp/language-reference/operators/equality-operators.md), da un elenco di eventi di dominio per ogni entità e così via.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

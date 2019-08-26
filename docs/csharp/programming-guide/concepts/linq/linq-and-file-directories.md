@@ -2,12 +2,12 @@
 title: Directory di file e LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652371"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591983"
 ---
 # <a name="linq-and-file-directories-c"></a>Directory di file e LINQ (C#)
 Molte operazioni del file system sono essenzialmente query e quindi particolarmente adatte all'approccio LINQ.  
@@ -16,25 +16,25 @@ Molte operazioni del file system sono essenzialmente query e quindi particolarme
   
  Questa sezione contiene i seguenti argomenti:  
   
- [Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  La procedura illustra come cercare file esaminando una o più proprietà del relativo oggetto <xref:System.IO.FileInfo>.  
   
- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Procedura: Raggruppare file per estensione (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)  
  La procedura illustra come restituire gruppi dell'oggetto <xref:System.IO.FileInfo> in base all'estensione del file.  
   
- [Procedura: Eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ [Procedura: Eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  La procedura illustra come restituire il numero totale di byte in tutti i file all'interno di un albero di directory specificato.  
   
- [Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
+ [Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)s  
  La procedura illustra come restituire tutti i file presenti in due cartelle specifiche e tutti i file presenti in una cartella, ma non nell'altra.  
   
- [Procedura: Eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [Procedura: Eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
  La procedura illustra come ripristinare il file più grande, il file più piccolo o un numero specificato di file in un albero di directory.  
   
- [Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  La procedura illustra come raggruppare tutti i nomi file che si verificano in più di una posizione all'interno di un albero di directory specificato. Viene anche illustrato come eseguire confronti più complessi basati su un operatore di confronto personalizzato.  
   
- [Procedura: Eseguire una query sul contenuto dei file in una cartella (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [Procedura: Eseguire una query sul contenuto dei file in una cartella (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)  
  La procedura illustra come eseguire l'iterazione nelle cartelle in un albero, aprire ogni file ed eseguire query sul contenuto del file.  
   
 ## <a name="comments"></a>Commenti  
@@ -42,4 +42,4 @@ Molte operazioni del file system sono essenzialmente query e quindi particolarme
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
