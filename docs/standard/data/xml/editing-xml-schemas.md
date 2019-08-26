@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308718"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948475"
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  
@@ -93,7 +93,7 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
 8. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaObject> nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
   
 > [!NOTE]
->  Dal momento che l'elemento `FirstName` non è un elemento globale nello schema, non è disponibile nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. L'esempio di codice individua l'elemento `FirstName` dopo aver individuato l'elemento `Customer`.  
+> Dal momento che l'elemento `FirstName` non è un elemento globale nello schema, non è disponibile nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. L'esempio di codice individua l'elemento `FirstName` dopo aver individuato l'elemento `Customer`.  
 >   
 >  Nel primo esempio di codice lo schema era stato attraversato usando la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema. In questo esempio, per attraversare lo schema viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema. Mentre entrambe le raccolte forniscono l'accesso agli elementi globali dello schema, lo scorrimento della raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A> richiede più tempo, poiché è necessario scorrere tutti gli elementi globali dello schema e poiché non sono presenti proprietà PSCI. Le raccolte PSCI (le proprietà <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> e così via) forniscono l'accesso diretto agli elementi, agli attributi, ai tipi globali e alle relative proprietà PSCI.  
   

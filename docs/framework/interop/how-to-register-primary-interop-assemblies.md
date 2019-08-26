@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629385"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946669"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedura: Registrare assembly di interoperabilità primari
 
-È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md).
+È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 
  Anche se gli sviluppatori che vogliono usare i tipi COM di un'applicazione .NET Framework possono generare un assembly di interoperabilità, facendolo creano un problema. Ogni volta che uno sviluppatore importa e firma una libreria di tipi COM, crea un set di tipi univoci non compatibili con quelli importati e firmati da un altro sviluppatore. Per risolvere questo problema di incompatibilità dei tipi, ogni sviluppatore deve ottenere l'assembly di interoperabilità primario fornito e firmato dal fornitore.
 

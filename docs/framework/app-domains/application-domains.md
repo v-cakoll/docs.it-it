@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607917"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927990"
 ---
 # <a name="application-domains"></a>Domini applicazione
 
@@ -46,9 +46,9 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 - È possibile arrestare singole applicazioni senza arrestare l'intero processo. L'utilizzo dei domini applicazione consente di scaricare il codice in esecuzione in una specifica applicazione.  
   
     > [!NOTE]
-    >  Non è possibile scaricare singoli assembly o tipi. È possibile scaricare solo un dominio completo.  
+    > Non è possibile scaricare singoli assembly o tipi. È possibile scaricare solo un dominio completo.  
   
-- Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per ulteriori informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo <xref:System.IO.FileNotFoundException>. Per altre informazioni, vedere [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per altre informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 - L'ambito del comportamento del codice viene stabilito dall'applicazione in cui questo è in esecuzione. In altri termini, il dominio applicazione fornisce impostazioni di configurazione quali i criteri di controllo delle versioni dell'applicazione, la posizione degli assembly remoti a cui questa accede e le informazioni sul percorso degli assembly che vengono caricati nel dominio.  
   
@@ -110,7 +110,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  La <xref:System.AppDomain> è l'interfaccia che consente di accedere ai domini applicazione a livello di codice. e include metodi per creare e scaricare domini, per creare istanze di tipi nei domini e per effettuare la registrazione per varie notifiche, come ad esempio quelle per scaricare i domini applicazione. La tabella riportata di seguito elenca i metodi di <xref:System.AppDomain> comunemente usati.  
   
-|Metodo AppDomain|Description|  
+|Metodo AppDomain|DESCRIZIONE|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuovo dominio applicazione. Si consiglia di usare un overload di questo metodo che specifica un oggetto <xref:System.AppDomainSetup>. Si tratta del sistema preferito per impostare le proprietà di un nuovo dominio, quali la base o la directory radice dell'applicazione, il percorso del file di configurazione del dominio e il percorso di ricerca usato da Common Language Runtime per caricare gli assembly nel dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Esegue un assembly nel dominio applicazione. Si tratta di un metodo di istanza, pertanto è possibile utilizzarlo per eseguire codice in un altro dominio applicazione per il quale si dispone di un riferimento.|  
@@ -118,11 +118,11 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 |<xref:System.AppDomain.Unload%2A>|Esegue un arresto ponderato del dominio. Il dominio applicazione non viene scaricato fino a quando tutti i thread del dominio non sono stati interrotti o non sono più presenti nel dominio.|  
   
 > [!NOTE]
->  Poiché Common Language Runtime non supporta la serializzazione di metodi globali, non è possibile usare i delegati per eseguire metodi globali in altri domini applicazione.  
+> Poiché Common Language Runtime non supporta la serializzazione di metodi globali, non è possibile usare i delegati per eseguire metodi globali in altri domini applicazione.  
   
  Anche le interfacce non gestite descritte nelle specifiche delle interfacce di hosting di Common Language Runtime forniscono l'accesso ai domini applicazione. Gli host di runtime possono usare tali interfacce dal codice non gestito per creare i domini applicazione e accedervi nell'ambito di un processo.  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>Variabile di ambiente COMPLUS_LoaderOptimization
+## <a name="the-complus_loaderoptimization-environment-variable"></a>Variabile di ambiente COMPLUS_LoaderOptimization
 
  Variabile di ambiente tramite cui vengono impostati i criteri predefiniti di ottimizzazione del caricatore di un'applicazione eseguibile.  
   

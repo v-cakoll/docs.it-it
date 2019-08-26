@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661538"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608364"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
@@ -45,7 +45,7 @@ Questi operatori supportano tutti i tipi numerici [integrali](../builtin-types/i
 
 ## <a name="increment-operator-"></a>Operatore di incremento ++
 
-L'operatore di incremento unario `++` incrementa il suo operando di 1. L'operando deve essere una variabile, un accesso a una [proprietà](../../programming-guide/classes-and-structs/properties.md) o un accesso a un [indicizzatore](../../../csharp/programming-guide/indexers/index.md).
+L'operatore di incremento unario `++` incrementa il suo operando di 1. L'operando deve essere una variabile, un accesso a una [proprietà](../../programming-guide/classes-and-structs/properties.md) o un accesso a un [indicizzatore](../../programming-guide/indexers/index.md).
 
 L'operatore di incremento è supportato in due forme: l'operatore di incremento suffisso, `x++`, e l'operatore di incremento prefisso, `++x`.
 
@@ -63,7 +63,7 @@ Il risultato di `++x` è il valore di `x` *dopo* l'operazione, come illustrato n
 
 ## <a name="decrement-operator---"></a>Operatore di decremento --
 
-L'operatore di decremento unario `--` decrementa il proprio operando di 1. L'operando deve essere una variabile, un accesso a una [proprietà](../../programming-guide/classes-and-structs/properties.md) o un accesso a un [indicizzatore](../../../csharp/programming-guide/indexers/index.md).
+L'operatore di decremento unario `--` decrementa il proprio operando di 1. L'operando deve essere una variabile, un accesso a una [proprietà](../../programming-guide/classes-and-structs/properties.md) o un accesso a un [indicizzatore](../../programming-guide/indexers/index.md).
 
 L'operatore di decremento è supportato in due forme: l'operatore di decremento suffisso, `x--`, e l'operatore di decremento prefisso, `--x`.
 

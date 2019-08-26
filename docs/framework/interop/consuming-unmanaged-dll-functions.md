@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946838"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie di collegamento dinamico (DLL), ad esempio quelle disponibili nell'API Windows. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.  
@@ -43,7 +43,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
   
      [C#] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo con i modificatori **static** ed **extern**.  
   
-     [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"**.  
+     [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"** .  
   
 4. [Chiamare una funzione DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
@@ -65,7 +65,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
 3. Individua l'indirizzo della funzione in memoria ed effettua il push degli argomenti nello stack, effettuando il marshalling dei dati in base alle necessità.  
   
     > [!NOTE]
-    >  L'individuazione e il caricamento della DLL e l'individuazione dell'indirizzo della funzione in memoria si verificano solo alla prima chiamata alla funzione.  
+    > L'individuazione e il caricamento della DLL e l'individuazione dell'indirizzo della funzione in memoria si verificano solo alla prima chiamata alla funzione.  
   
 4. Trasferisce il controllo alla funzione non gestita.  
   

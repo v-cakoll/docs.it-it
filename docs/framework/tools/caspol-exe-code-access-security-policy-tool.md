@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489685"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959059"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
   
 > [!IMPORTANT]
->  A partire da .NET Framework 4, Caspol.exe influisce sui criteri di sicurezza dall'accesso di codice solo se l'[elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
+> A partire da .NET Framework 4, Caspol.exe influisce sui criteri di sicurezza dall'accesso di codice solo se l'[elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) è impostato su `true`. Eventuali impostazioni indicate o modificate da CasPol.exe interesseranno solo le applicazioni per le quali viene scelto esplicitamente di utilizzare i criteri di sicurezza dall'accesso di codice. Per altre informazioni, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
->  I computer a 64 bit includono sia versioni a 64 che a 32 bit dei criteri di sicurezza. Per assicurarsi che le modifiche ai criteri vengano applicate sia alle applicazioni a 32 bit che a quelle a 64 bit, eseguire entrambe le versioni di Caspol.exe.  
+> I computer a 64 bit includono sia versioni a 64 che a 32 bit dei criteri di sicurezza. Per assicurarsi che le modifiche ai criteri vengano applicate sia alle applicazioni a 32 bit che a quelle a 64 bit, eseguire entrambe le versioni di Caspol.exe.  
   
  Lo strumento Criteri di sicurezza dall'accesso di codice viene installato automaticamente con .NET Framework e con Visual Studio. Caspol.exe è situato in %windir%\Microsoft.NET\Framework\\*versione* nei sistemi a 32 bit o in %windir%\Microsoft.NET\Framework64\\*versione* nei sistemi a 64 bit. Ad esempio, il percorso è %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe per .NET Framework 4 in un sistema a 64 bit. È possibile installare più versioni dello strumento se nel computer sono in esecuzione side-by-side più versioni di .NET Framework. È possibile eseguire lo strumento dalla directory di installazione. È tuttavia consigliabile usare il [prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md), che non richiede di passare alla cartella di installazione.  
   
@@ -45,7 +45,7 @@ caspol [options]
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> oppure<br /><br /> **-af** *assembly_file*|Aggiunge un assembly che implementa un oggetto di sicurezza personalizzato, ad esempio un'autorizzazione o una condizione di appartenenza personalizzata, nell'elenco di assembly completamente attendibili per uno specifico livello di criteri. L'argomento *file_assembly* specifica l'assembly da aggiungere. Il file deve essere firmato con un [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md). A questo scopo è possibile usare lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Ogni volta che un set di autorizzazioni contenente un'autorizzazione personalizzata viene aggiunto ai criteri, è necessario aggiungere l'assembly che implementa l'autorizzazione personalizzata all'elenco completamente attendibile per tale livello di criteri. Gli assembly che implementano oggetti di sicurezza personalizzati, quali condizioni di appartenenza o gruppi di codice personalizzati, utilizzati nei criteri di sicurezza, ad esempio i criteri del computer, devono essere sempre aggiunti all'elenco di assembly completamente attendibili. **Attenzione:**  Se l'assembly che implementa l'oggetto di sicurezza personalizzato fa riferimento ad altri assembly, aggiungere all'elenco di assembly completamente attendibili prima quelli a cui si fa riferimento. Gli oggetti di sicurezza personalizzati creati con Visual Basic, C++ e JScript fanno riferimento rispettivamente a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll o Microsoft.JScript.dll. Per impostazione predefinita, questi assembly non sono contenuti nell'elenco degli assembly totalmente attendibili, per cui è necessario aggiungere l'assembly appropriato all'elenco prima di aggiungere un oggetto di sicurezza personalizzato. Se questa operazione non riesce si verificheranno problemi nel sistema di sicurezza, provocando il mancato caricamento di tutti gli assembly. In questa situazione, l'opzione **-all -reset** di Caspol.exe non è in grado di ripristinare la sicurezza. Per ripristinare la sicurezza, modificare manualmente i file di sicurezza per rimuovere l'oggetto di sicurezza personalizzato.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> oppure<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Aggiunge un nuovo gruppo di codice alla gerarchia dei gruppi di codice. È possibile specificare *parent_label* oppure *parent_name*. L'argomento *parent_label* specifica l'etichetta (ad esempio 1. o 1.1.) del gruppo di codice padre del gruppo di codice aggiunto. L'argomento *parent_name* specifica il nome del gruppo di codice padre del gruppo di codice aggiunto. Dal momento che è possibile usare indifferentemente *parent_label* e *parent_name*, Caspol.exe deve essere in grado di distinguerli. Pertanto *parent_name* non può iniziare con un numero. Inoltre, *parent_name* può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura.<br /><br /> L'argomento *mship* specifica la condizione di appartenenza del nuovo gruppo di codice. Per altre informazioni, vedere la tabella degli argomenti *mship* più avanti in questa sezione.<br /><br /> L'argomento *pset_name* è il nome del set di autorizzazioni che verrà associato al nuovo gruppo di codice. È anche possibile impostare uno o più argomenti *flags* per il nuovo gruppo. Per altre informazioni, vedere la tabella degli argomenti *flags* più avanti in questa sezione.|  
@@ -81,7 +81,7 @@ caspol [options]
   
  L'argomento *mship*, che specifica la condizione di appartenenza di un gruppo di codice, è utilizzabile con le opzioni **-addgroup** e **-chggroup**. Ogni argomento *mship* viene implementato come classe di .NET Framework. Per specificare *mship*, usare uno degli argomenti elencati di seguito.  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |**-allcode**|Specifica tutto il codice. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Specifica la directory dell'applicazione. Se si specifica **-appdir** come condizione di appartenenza, l'evidenza URL del codice verrà confrontata con l'evidenza della directory dell'applicazione di tale codice. Se i valori delle evidenze sono identici, questa condizione di appartenenza è soddisfatta. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
@@ -95,7 +95,7 @@ caspol [options]
   
  L'argomento *flags*, utilizzabile con le opzioni **-addgroup** e **-chggroup**, viene specificato mediante uno degli argomenti elencati di seguito.  
   
-|Argomento|Description|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |**-description** "*description*"|Se viene usato con l'opzione **-addgroup**, specifica la descrizione di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica la descrizione di un gruppo di codice da modificare. L'argomento *description* deve essere racchiuso tra virgolette doppie.|  
 |**-exclusive** {**on**&#124;**off**}|Quando è impostato su **on**, indica che solo il set di autorizzazioni associato al gruppo di codice da aggiungere o da modificare verrà considerato quando del codice soddisferà la condizione di appartenenza del gruppo di codice. Quando questa opzione è impostata su **off**, vengono considerati i set di autorizzazioni di tutti i gruppi di codice corrispondenti nel livello di criteri.|  

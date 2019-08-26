@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607121"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666469"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -26,7 +26,7 @@ Il criterio per eliminare un oggetto, definito [criterio Dispose](../../../docs/
   
 Il modello Dispose precede due variazioni:  
   
-* Viene eseguito il wrapping di ogni risorsa non gestita usata da un tipo in un handle sicuro (ovvero in una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). In questo caso, viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)`. Questa è la variazione consigliata e non richiede l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+* Viene eseguito il wrapping di ogni risorsa non gestita utilizzata da un tipo in un handle sicuro (ovvero in una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). In questo caso, viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)`. Questa è la variazione consigliata e non richiede l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
   > Lo spazio dei nomi <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> fornisce un set di classi derivate da <xref:System.Runtime.InteropServices.SafeHandle>, elencate nella sezione [Uso di handle sicuri](#SafeHandles). Se non è possibile trovare una classe in grado di rilasciare la risorsa non gestita, è possibile implementare una propria sottoclasse di <xref:System.Runtime.InteropServices.SafeHandle>.  
@@ -68,7 +68,7 @@ Il corpo del metodo è costituito da due blocchi di codice:
   
 * Un blocco condizionale che libera le risorse gestite. Il blocco è eseguito se il valore di `disposing` è `true`. Le risorse gestite liberate possono includere:  
   
-  **Oggetti gestiti che implementano <xref:System.IDisposable>.** Il blocco condizionale può essere usato per chiamare la relativa implementazione <xref:System.IDisposable.Dispose%2A>. Se è stato usato un handle sicuro per eseguire il wrapping della risorsa non gestita, l'implementazione <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> dovrebbe essere chiamata in questo punto.  
+  **Oggetti gestiti che implementano <xref:System.IDisposable>.** Il blocco condizionale può essere usato per chiamare la relativa implementazione <xref:System.IDisposable.Dispose%2A>. Se è stato utilizzato un handle sicuro per eseguire il wrapping della risorsa non gestita, l'implementazione <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> dovrebbe essere chiamata in questo punto.  
   
   **Oggetti gestiti che usano grandi quantità di memoria o risorse insufficienti.** La liberazione esplicita di questi oggetti nel metodo `Dispose` ne consente un rilascio più veloce rispetto al recupero non deterministico eseguito dal Garbage Collector.  
   
@@ -101,7 +101,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementazione del modello Dispose per una classe derivata
 
@@ -125,7 +125,7 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> In C# si esegue l'override di <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definendo un [distruttore](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Utilizzo degli handle sicuri

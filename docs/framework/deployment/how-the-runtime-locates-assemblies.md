@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941791"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -24,7 +24,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
  Quando si tenta di individuare un assembly e risolvere un riferimento ad assembly, Common Language Runtime esegue una serie di passaggi. Ogni passaggio è descritto nelle sezioni seguenti. Il termine "individuazione tramite probe" viene usato quando si descrive la modalità di individuazione degli assembly mediante runtime e fa riferimento al set di euristiche usato per individuare l'assembly in base al nome e alle impostazioni cultura.  
   
 > [!NOTE]
->  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in Windows SDK.  
+> Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in Windows SDK.  
   
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione  
  Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
  È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.  
   
 > [!NOTE]
->  Questo tipo di riferimento parziale non deve essere usato con gli assembly condivisi tra diverse applicazioni. Poiché le impostazioni di configurazione vengono applicate per applicazione e non per assembly, per usare questo tipo di riferimento parziale in un assembly condiviso ogni applicazione che usa l'assembly condiviso dovrebbe disporre delle informazioni complete nel file di configurazione.  
+> Questo tipo di riferimento parziale non deve essere usato con gli assembly condivisi tra diverse applicazioni. Poiché le impostazioni di configurazione vengono applicate per applicazione e non per assembly, per usare questo tipo di riferimento parziale in un assembly condiviso ogni applicazione che usa l'assembly condiviso dovrebbe disporre delle informazioni complete nel file di configurazione.  
   
  Il runtime usa la procedura seguente per risolvere un riferimento ad assembly:  
   
@@ -45,7 +45,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
 2. [Controlla se il nome dell'assembly è stato associato in precedenza](#step2) e, in questo caso, usa l'assembly caricato in precedenza. Se una richiesta precedente di caricamento dell'assembly non è riuscita, la richiesta viene interrotta immediatamente senza effettuare alcun tentativo di caricamento dell'assembly.  
   
     > [!NOTE]
-    >  La memorizzazione nella cache di errori relativi all'associazione di assembly è stata introdotta in .NET Framework versione 2.0.  
+    > La memorizzazione nella cache di errori relativi all'associazione di assembly è stata introdotta in .NET Framework versione 2.0.  
   
 3. [Controlla la Global Assembly Cache](#step3). Se viene trovato nella Global Assembly Cache, il runtime usa questo assembly.  
   
@@ -73,7 +73,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
  Questi file seguono la stessa sintassi e forniscono informazioni quali i reindirizzamenti delle associazioni, la posizione del codice e le modalità di associazione per determinati assembly. Ogni file di configurazione può contenere un elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) che reindirizza il processo di associazione. Negli elementi figlio dell'elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) è incluso l'elemento [\<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Negli elementi figlio dell'elemento [\<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) sono inclusi gli elementi [\<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) e [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
 > [!NOTE]
->  Le informazioni di configurazione sono disponibili nei tre file di configurazione; non tutti gli elementi sono validi in tutti i file di configurazione. Ad esempio, le informazioni sulla modalità di associazione e sul percorso privato possono trovarsi solo nel file di configurazione dell'applicazione. Per un elenco completo delle informazioni contenute in ciascun file, vedere [Configurazione delle app con file di configurazione](../../../docs/framework/configure-apps/index.md).  
+> Le informazioni di configurazione sono disponibili nei tre file di configurazione; non tutti gli elementi sono validi in tutti i file di configurazione. Ad esempio, le informazioni sulla modalità di associazione e sul percorso privato possono trovarsi solo nel file di configurazione dell'applicazione. Per un elenco completo delle informazioni contenute in ciascun file, vedere [Configurazione delle app con file di configurazione](../../../docs/framework/configure-apps/index.md).  
   
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione  
  Common Language Runtime controlla innanzitutto il file di configurazione dell'applicazione per le informazioni che eseguono l'override delle informazioni sulla versione memorizzate nel manifesto dell'assembly chiamante. Il file di configurazione dell'applicazione può essere distribuito con un'applicazione, ma non è necessario per la sua esecuzione. In genere il recupero di questo file è quasi istantaneo, ma in situazioni in cui la base dell'applicazione si trova in un computer remoto, ad esempio in uno scenario basato su Web di Internet Explorer, il file di configurazione deve essere scaricato.  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat` è un file di chiave con nome sicuro. Questo comando crea un assembly con nome sicuro che è possibile inserire nella Global Assembly Cache.  
   
 > [!NOTE]
->  I criteri dell'editore hanno effetto su tutte le applicazioni che usano un componente condiviso.  
+> I criteri dell'editore hanno effetto su tutte le applicazioni che usano un componente condiviso.  
   
  Il file di configurazione dei criteri editore esegue l'override delle informazioni sulla versione provenienti dall'applicazione (ovvero, dal manifesto dell'assembly o dal file di configurazione dell'applicazione). Se non è presente alcuna istruzione nel file di configurazione dell'applicazione per reindirizzare la versione specificata nel manifesto dell'assembly, il file dei criteri editore esegue l'override della versione specificata nel manifesto dell'assembly. Tuttavia, se esiste un'istruzione di reindirizzamento nel file di configurazione dell'applicazione, i criteri editore eseguono l'override di questa versione e non di quella specificata nel manifesto.  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Se una richiesta precedente per l'assembly non è riuscita, le richieste successive verranno interrotte immediatamente senza effettuare alcun tentativo di caricamento dell'assembly. A partire da .NET Framework versione 2.0, gli errori relativi all'associazione di assembly vengono memorizzati nella cache e le informazioni memorizzate nella cache vengono usate per determinare se tentare di caricare l'assembly.  
   
 > [!NOTE]
->  Per ripristinare il comportamento di .NET Framework versioni 1.0 e 1.1, che non memorizza nella cache gli errori di associazione, includere l'elemento [\<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) nel file di configurazione.  
+> Per ripristinare il comportamento di .NET Framework versioni 1.0 e 1.1, che non memorizza nella cache gli errori di associazione, includere l'elemento [\<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) nel file di configurazione.  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>Passaggio 3: Controllo della Global Assembly Cache  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. Il runtime esegue quindi l'individuazione tramite probe per l'assembly di riferimento usando le regole specificate più avanti in questa sezione.  
   
 > [!NOTE]
->  Se sono presenti più versioni di un assembly in una directory e si vuole fare riferimento a una versione specifica, è necessario usare l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) invece dell'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Se si usa l'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), il runtime arresta l'individuazione tramite probe non appena viene trovato un assembly che corrisponde al nome semplice dell'assembly a cui viene fatto riferimento, indipendentemente dalla correttezza della corrispondenza. Se la corrispondenza è corretta, viene usato questo assembly. Se la corrispondenza non è corretta, l'individuazione tramite probe si arresta e l'associazione non riesce.  
+> Se sono presenti più versioni di un assembly in una directory e si vuole fare riferimento a una versione specifica, è necessario usare l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) invece dell'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Se si usa l'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), il runtime arresta l'individuazione tramite probe non appena viene trovato un assembly che corrisponde al nome semplice dell'assembly a cui viene fatto riferimento, indipendentemente dalla correttezza della corrispondenza. Se la corrispondenza è corretta, viene usato questo assembly. Se la corrispondenza non è corretta, l'individuazione tramite probe si arresta e l'associazione non riesce.  
   
 ### <a name="locating-the-assembly-through-codebases"></a>Individuazione dell'assembly mediante codebase  
  È possibile specificare le informazioni relative alla codebase usando un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) in un file di configurazione. Questa codebase viene sempre controllata prima che il runtime tenti l'individuazione tramite probe per l'assembly di riferimento. Se in un file dei criteri dell'editore contenente le informazioni per il reindirizzamento a una versione finale è incluso anche un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), verrà usato l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md). Ad esempio, se il file di configurazione dell'applicazione specifica un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) e anche un file dei criteri dell'editore tramite cui viene eseguito l'override delle informazioni dell'applicazione specifica un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), verrà usato l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) presente nel file dei criteri dell'editore.  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Se nel percorso specificato dall'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) non viene individuato alcun assembly, la richiesta di associazione non viene completata e non vengono eseguite altre operazioni. Se il runtime determina che un assembly soddisfa i criteri dell'assembly chiamante, viene usato questo assembly. Quando viene caricato il file indicato dall'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) specificato, tramite il runtime viene controllato che il nome, la versione, le impostazioni cultura e la chiave pubblica corrispondano al riferimento dell'assembly chiamante.  
   
 > [!NOTE]
->  Gli assembly a cui viene fatto riferimento che sono esterni alla directory radice dell'applicazione devono avere nomi sicuri e devono essere installati nella Global Assembly Cache o specificati mediante l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
+> Gli assembly a cui viene fatto riferimento che sono esterni alla directory radice dell'applicazione devono avere nomi sicuri e devono essere installati nella Global Assembly Cache o specificati mediante l'elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
 ### <a name="locating-the-assembly-through-probing"></a>Individuazione dell'assembly mediante l'individuazione tramite probe  
  Se nel file di configurazione dell'applicazione non è stato specificato alcun elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), il runtime esegue la ricerca dell'assembly usando quattro criteri:  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953184"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -71,7 +71,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Viene convertito in una struttura con un layout a memoria fissa.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
   
- I tipi di classe e oggetto sono supportati solo dall'interoperabilità COM. Per i tipi corrispondenti in Visual Basic, C#, e C++, vedere [Panoramica della libreria di classi](../../../docs/standard/class-library-overview.md).  
+ I tipi di classe e oggetto sono supportati solo dall'interoperabilità COM. Per i tipi corrispondenti in Visual Basic, C#, e C++, vedere [Panoramica della libreria di classi](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 8500cf508b77a0fa7e348ce0fe6b1f16fd2bab25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fd4496e0f84953204ad8c3f40db699e911c3f477
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977171"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597357"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Matrici come oggetti (Guida per programmatori C#)
 
@@ -28,8 +28,8 @@ In C# le matrici sono in effetti oggetti e non semplicemente aree indirizzabili 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Matrici](../../../csharp/programming-guide/arrays/index.md)
-- [Matrici unidimensionali](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Matrici multidimensionali](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [Matrici irregolari](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [Guida per programmatori C#](../index.md)
+- [Matrici](./index.md)
+- [Matrici unidimensionali](./single-dimensional-arrays.md)
+- [Matrici multidimensionali](./multidimensional-arrays.md)
+- [Matrici irregolari](./jagged-arrays.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190399"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956653"
 ---
 # <a name="viewing-type-information"></a>Visualizzazione delle informazioni sul tipo
 La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la reflection. Quando la reflection lo richiede, Common Language Runtime crea l'oggetto **Type** relativo a un tipo caricato. Per ottenere informazioni sul tipo, è possibile usare metodi, campi, proprietà e classi nidificate dell'oggetto **Type**.  
@@ -26,7 +26,7 @@ La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la
  Usare <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> per ottenere oggetti **Type** da assembly che non sono stati caricati, passando il nome del tipo o dei tipi desiderati. Usare <xref:System.Type.GetType%2A?displayProperty=nameWithType> per ottenere oggetti **Type** da un assembly già caricato. Usare <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> e <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> per ottenere gli oggetti **Type** dei moduli.  
   
 > [!NOTE]
->  Se si vuole esaminare e modificare tipi e metodi generici, vedere le altre informazioni disponibili in [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) e [Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+> Se si vuole esaminare e modificare tipi e metodi generici, vedere le altre informazioni disponibili in [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) e [Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  L'esempio seguente illustra la sintassi necessaria per ottenere il modulo e l'oggetto <xref:System.Reflection.Assembly> per un assembly.  
   

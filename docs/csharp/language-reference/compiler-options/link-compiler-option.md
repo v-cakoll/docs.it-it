@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924754"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opzioni del compilatore C#)
 Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  
@@ -41,7 +41,7 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
  L'opzione `-link` incorpora solo interfacce, strutture e delegati. L'incorporamento di classi COM non è supportato.  
   
 > [!NOTE]
->  Quando si crea un'istanza di un tipo COM incorporato nel codice, è necessario creare l'istanza usando l'interfaccia appropriata. Il tentativo di creare un'istanza di un tipo COM incorporato usando la coclasse genera un errore.  
+> Quando si crea un'istanza di un tipo COM incorporato nel codice, è necessario creare l'istanza usando l'interfaccia appropriata. Il tentativo di creare un'istanza di un tipo COM incorporato usando la coclasse genera un errore.  
   
  Per impostare l'opzione `-link` in Visual Studio, aggiungere un riferimento all'assembly e impostare la proprietà `Embed Interop Types` su **true**. Il valore predefinito della proprietà `Embed Interop Types` è **false**.  
   
@@ -51,7 +51,7 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
   
 - Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Come l'opzione del compilatore [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), l'opzione del compilatore `-link` usa il file di risposta csc.rsp, che fa riferimento agli assembly .NET Framework di uso più frequente. Usare l'opzione del compilatore [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se non si vuole che il compilatore usi il file csc.rsp.  
+ Come l'opzione del compilatore [-reference](./reference-compiler-option.md), l'opzione del compilatore `-link` usa il file di risposta csc.rsp, che fa riferimento agli assembly .NET Framework di uso più frequente. Usare l'opzione del compilatore [-noconfig](./noconfig-compiler-option.md) se non si vuole che il compilatore usi il file csc.rsp.  
   
  La forma breve di `-link` è `-l`.  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [-reference (opzioni del compilatore C#)](./reference-compiler-option.md)
+- [-noconfig (opzioni del compilatore C#)](./noconfig-compiler-option.md)
+- [Compilazione dalla riga di comando con csc.exe](./command-line-building-with-csc-exe.md)
+- [Cenni preliminari sull'interoperabilità](../../programming-guide/interop/interoperability-overview.md)

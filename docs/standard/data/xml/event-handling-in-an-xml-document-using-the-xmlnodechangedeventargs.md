@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965884"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nell'oggetto **XmlDocument** per gestire gli eventi. Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
@@ -28,7 +28,7 @@ ms.locfileid: "44204890"
 |<xref:System.Xml.XmlDocument.NodeChanged>|Quando il valore di un nodo è stato modificato.|  
   
 > [!NOTE]
->  Se l'uso della memoria di **XmlDataDocument** è completamente ottimizzato per usare la risorsa di archiviazione **DataSet**, è possibile che nessuno degli eventi precedenti venga generato da **XmlDataDocument** quando vengono apportate modifiche al **DataSet** sottostante. Se tali eventi sono indispensabili, è necessario scorrere l'intero documento **XmlDocument** una volta per rendere l'uso della memoria non completamente ottimizzato.  
+> Se l'uso della memoria di **XmlDataDocument** è completamente ottimizzato per usare la risorsa di archiviazione **DataSet**, è possibile che nessuno degli eventi precedenti venga generato da **XmlDataDocument** quando vengono apportate modifiche al **DataSet** sottostante. Se tali eventi sono indispensabili, è necessario scorrere l'intero documento **XmlDocument** una volta per rendere l'uso della memoria non completamente ottimizzato.  
   
  Nell'esempio di codice seguente viene illustrato come definire un gestore eventi e come aggiungerlo a un evento.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296654"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937926"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|Description|
+|Argomento|DESCRIZIONE|
 |--------------|-----------------|
 |`resourceFile`|File di risorse da localizzare. Deve essere un form di Windows Form con estensione .resx o .resources generato dalla finestra di progettazione di Visual Studio. Winres.exe non è in grado di aprire file .resx o .resources generici.|
 
-|Opzione|Description|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
@@ -146,4 +146,4 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 - <xref:System.Resources.ResourceWriter>
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
+- [Globalizzazione e localizzazione](../../standard/globalization-localization/index.md)

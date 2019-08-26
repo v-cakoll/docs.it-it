@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392577"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957433"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Strumento di analisi composizione (Mefx)
 Lo strumento di analisi composizione (Mefx) è un'applicazione della riga di comando che analizza i file di libreria (DLL) e di applicazione (EXE) che contengono le parti MEF (Managed Extensibility Framework). Lo scopo principale di Mefx è fornire agli sviluppatori un modo per diagnosticare gli errori di composizione nelle relative applicazioni MEF senza la necessità di aggiungere codice di analisi complesso all'applicazione stessa. Può essere utile anche per comprendere le parti di una libreria fornita da terze parti. Questo argomento descrive come usare Mefx e fornisce un riferimento per la relativa sintassi.  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  Ogni file dll o exe deve essere caricato solo una volta. Se un file viene caricato più volte, lo strumento può restituire informazioni non corrette.  
+> Ogni file dll o exe deve essere caricato solo una volta. Se un file viene caricato più volte, lo strumento può restituire informazioni non corrette.  
   
  Dopo l'elenco dei file e delle directory è necessario specificare un comando e tutte le opzioni per il comando.  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  Se si usa l'azione `/causes` dell'esempio precedente, vengono elencate solo le informazioni relative a `ChainOne`, la cui importazione non soddisfatta rappresenta la causa radice del rifiuto di `AddIn`. L'azione `/causes` può essere usata sia con l'opzione normale che con l'opzione `/verbose` .  
   
 > [!NOTE]
->  Nella maggior parte dei casi, Mefx sarà in grado di diagnosticare la causa radice di un errore a cascata. Tuttavia, nei casi in cui le parti vengono aggiunte a un contenitore a livello di codice, nei casi che riguardano contenitori gerarchici o nei casi che riguardano implementazioni personalizzate di `ExportProvider` , Mefx non sarà in grado di diagnosticare la causa. In generale, i casi descritti precedentemente devono essere evitati laddove possibile, poiché la diagnosi degli errori è generalmente complessa.  
+> Nella maggior parte dei casi, Mefx sarà in grado di diagnosticare la causa radice di un errore a cascata. Tuttavia, nei casi in cui le parti vengono aggiunte a un contenitore a livello di codice, nei casi che riguardano contenitori gerarchici o nei casi che riguardano implementazioni personalizzate di `ExportProvider` , Mefx non sarà in grado di diagnosticare la causa. In generale, i casi descritti precedentemente devono essere evitati laddove possibile, poiché la diagnosi degli errori è generalmente complessa.  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>Elenchi degli elementi consentiti  

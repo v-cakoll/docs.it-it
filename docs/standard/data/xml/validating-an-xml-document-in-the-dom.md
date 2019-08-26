@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589854"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939402"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML nel DOM (Document Object Model) in base a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition) per impostazione predefinita. Viene solo verificata la correttezza del formato XML.  
@@ -76,7 +76,7 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
  Gli errori di convalida sono gestiti dal tipo <xref:System.Xml.Schema.ValidationEventHandler>. Se un tipo <xref:System.Xml.Schema.ValidationEventHandler> è stato assegnato all'istanza di <xref:System.Xml.XmlReaderSettings> o passato al metodo<xref:System.Xml.XmlDocument.Validate%2A> della classe <xref:System.Xml.XmlDocument>, il <xref:System.Xml.Schema.ValidationEventHandler> gestirà gli errori di convalida degli schemi. In caso contrario, viene generata un'eccezione <xref:System.Xml.Schema.XmlSchemaValidationException> quando viene rilevato un errore di convalida.  
   
 > [!NOTE]
->  I dati XML vengono caricati nel DOM indipendentemente dagli errori di convalida dello schema, a meno che il tipo <xref:System.Xml.Schema.ValidationEventHandler> non generi un'eccezione che interrompe il processo.  
+> I dati XML vengono caricati nel DOM indipendentemente dagli errori di convalida dello schema, a meno che il tipo <xref:System.Xml.Schema.ValidationEventHandler> non generi un'eccezione che interrompe il processo.  
 >   
 >  Non vengono segnalati avvisi di convalida dello schema, a meno che non sia stato specificato il flag <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> nell'oggetto <xref:System.Xml.XmlReaderSettings>.  
   

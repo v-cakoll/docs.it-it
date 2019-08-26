@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963947"
 ---
 # <a name="managing-connections"></a>Gestione di connessioni
 Le applicazioni che usano HTTP per connettersi alle risorse di dati possono usare le classi <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> di .NET Framework per gestire le connessioni a Internet e ottenere prestazioni e scalabilità ottimali.  
@@ -36,7 +36,7 @@ Le applicazioni che usano HTTP per connettersi alle risorse di dati possono usar
  Il numero di connessioni tra un client e un server può avere un impatto significativo sulla velocità effettiva dell'applicazione. Per impostazione predefinita, un'applicazione che usa la classe <xref:System.Net.HttpWebRequest> usa al massimo due connessioni permanenti a un determinato server, ma è possibile impostare il numero massimo di connessioni per ogni singola applicazione.  
   
 > [!NOTE]
->  La specifica HTTP/1.1 limita il numero di connessioni da un'applicazione a due connessioni per server.  
+> La specifica HTTP/1.1 limita il numero di connessioni da un'applicazione a due connessioni per server.  
   
  Il numero ottimale di connessioni dipende dalle condizioni effettive di esecuzione dell'applicazione. L'aumento del numero di connessioni disponibili per l'applicazione potrebbe non influire sulle prestazioni dell'applicazione. Per determinare l'impatto dell'aggiunta di altre connessioni, eseguire più test delle prestazioni variando il numero di connessioni. È possibile modificare il numero di connessioni usate da un'applicazione modificando la proprietà <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> statica nella classe **ServicePointManager** durante l'inizializzazione dell'applicazione, come illustrato nell'esempio di codice seguente.  
   

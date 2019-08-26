@@ -5,20 +5,20 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: a85e7728512922be38658c07314229c26b2461fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ba5bc3d03dcaf5c8be94936a453a439670e8dc1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924479"
 ---
 # <a name="how-to-define-constants-in-c"></a>Procedura: Definire costanti in C\#
 Le costanti sono campi i cui valori vengono impostati in fase di compilazione e non possono mai essere modificati. Usare le costanti per specificare nomi significativi invece di valori letterali numerici ("numeri chiave") per valori particolari.  
   
 > [!NOTE]
->  In C# la direttiva per il preprocessore [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) non può essere usata per definire le costanti nel modo adottato in genere in C e C++.  
+> In C# la direttiva per il preprocessore [#define](../../language-reference/preprocessor-directives/preprocessor-define.md) non può essere usata per definire le costanti nel modo adottato in genere in C e C++.  
   
- Per definire valori costanti di tipi integrali (`int`, `byte` e così via) usare un tipo enumerato. Per altre informazioni, vedere [enum](../../../csharp/language-reference/keywords/enum.md).  
+ Per definire valori costanti di tipi integrali (`int`, `byte` e così via) usare un tipo enumerato. Per altre informazioni, vedere [enum](../../language-reference/keywords/enum.md).  
   
  Per definire costanti non integrali, è possibile raggrupparle in una singola classe statica denominata `Constants`. A questo scopo sarà necessario che tutti i riferimenti alle costanti siano preceduti dal nome della classe, come illustrato nell'esempio seguente.  
   
@@ -29,4 +29,4 @@ Le costanti sono campi i cui valori vengono impostati in fase di compilazione e 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Classi e struct](./index.md)

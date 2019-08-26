@@ -2,17 +2,17 @@
 title: Uso della varianza per i delegati generici Func e Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540598"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659914"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Uso della varianza per i delegati generici Func e Action (C#)
 In questi esempi viene illustrato come usare la covarianza e la controvarianza nei delegati generici `Func` e `Action` per consentire il riutilizzo dei metodi e offrire maggiore flessibilità nel codice.  
   
- Per altre informazioni sulla covarianza e la controvarianza, vedere [Varianza nei delegati (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Per altre informazioni sulla covarianza e la controvarianza, vedere [Varianza nei delegati (C#)](./variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Uso dei delegati con parametri di tipo covariante  
  L'esempio seguente illustra i vantaggi del supporto di covarianza nei delegati generici `Func`. Il metodo `FindByTitle` accetta un parametro di tipo `String` e restituisce un oggetto di tipo `Employee`. Tuttavia, è possibile assegnare questo metodo al delegato `Func<String, Person>` perché `Employee` eredita `Person`.  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Covarianza e controvarianza (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [Generics](~/docs/standard/generics/index.md)
+- [Covarianza e controvarianza (C#)](./index.md)
+- [Generics](../../../../standard/generics/index.md)

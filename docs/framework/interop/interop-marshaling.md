@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469708"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946710"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -91,7 +91,7 @@ ms.locfileid: "65469708"
 - Modificare il thread principale impostando il thread del client su STA o MTA. Se il client C# chiama ad esempio molti componenti COM STA, è possibile evitare il marshalling su diversi apartment impostando il thread principale su STA.  
   
     > [!NOTE]
-    >  Dopo avere impostato il thread di un client C# su STA, occorre effettuare il marshalling su diversi apartment per le chiamate ai componenti COM MTA.  
+    > Dopo avere impostato il thread di un client C# su STA, occorre effettuare il marshalling su diversi apartment per le chiamate ai componenti COM MTA.  
   
  Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Threading gestito e non gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469708"
 - Un client gestito recupera un riferimento a un oggetto gestito da un oggetto COM che lo recupera da un host remoto. Il meccanismo dei servizi remoti è DCOM.  
   
     > [!NOTE]
-    >  La libreria dei tipi esportata del server gestito deve essere registrata.  
+    > La libreria dei tipi esportata del server gestito deve essere registrata.  
   
  Il numero di limiti di processo tra chiamante e chiamato non è rilevante. La creazione di riferimenti diretti è identica per le chiamate in-process e per quelle out-of-process.  
   
@@ -138,7 +138,7 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Comportamento di marshalling predefinito](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|  
 |[Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|  

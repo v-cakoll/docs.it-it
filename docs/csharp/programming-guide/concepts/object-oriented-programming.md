@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398073"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659874"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 Per altre informazioni, vedere:
 
-- [class](../../../csharp/language-reference/keywords/class.md)
+- [class](../../language-reference/keywords/class.md)
 
-- [struct](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> Membri di classi
 
@@ -133,9 +133,9 @@ La maggior parte delle proprietà dispone di metodi o di routine per impostare e
 
 Per altre informazioni, vedere:
 
-- [get](../../../csharp/language-reference/keywords/get.md)
+- [get](../../language-reference/keywords/get.md)
 
-- [set](../../../csharp/language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> Metodi
 
@@ -166,9 +166,9 @@ Nella maggior parte dei casi si dichiara un metodo all'interno di una definizion
 
 Per altre informazioni, vedere:
 
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Metodi](../classes-and-structs/methods.md)
 
-- [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Metodi di estensione](../classes-and-structs/extension-methods.md)
 
 #### <a name="Constructors"></a> Costruttori
 
@@ -188,7 +188,7 @@ public class SampleClass
 
 Per altre informazioni, vedere:
 
-[Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md).
+[Costruttori](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> Finalizzatori
 
@@ -200,7 +200,7 @@ Per altre informazioni sui finalizzatori e sull'operazione di Garbage Collection
 
 Tramite gli eventi una classe o un oggetto sono in grado di segnalare ad altre classi o oggetti una situazione di interesse. La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*. Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).
 
-- Per dichiarare un evento in una classe, usare la parola chiave [event](../../../csharp/language-reference/keywords/event.md).
+- Per dichiarare un evento in una classe, usare la parola chiave [event](../../language-reference/keywords/event.md).
 
 - Per generare un evento, richiamare il delegato dell'evento.
 
@@ -234,14 +234,14 @@ Sono disponibili i seguenti modificatori di accesso:
 
 |Modificatore di C#|Definizione|
 |------------------|----------------|
-|[public](../../../csharp/language-reference/keywords/public.md)|Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento.|
-|[private](../../../csharp/language-reference/keywords/private.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe.|
-|[protected](../../../csharp/language-reference/keywords/protected.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata.|
-|[internal](../../../csharp/language-reference/keywords/internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly.|
-|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly.|
-|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base.|
+|[public](../../language-reference/keywords/public.md)|Il tipo o il membro è accessibile da altro codice nello stesso assembly o in un altro assembly che vi fa riferimento.|
+|[private](../../language-reference/keywords/private.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe.|
+|[protected](../../language-reference/keywords/protected.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata.|
+|[internal](../../language-reference/keywords/internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly.|
+|[protected internal](../../language-reference/keywords/protected-internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly.|
+|[private protected](../../language-reference/keywords/private-protected.md)|Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base.|
 
-Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
+Per altre informazioni, vedere [Access Modifiers](../classes-and-structs/access-modifiers.md) (Modificatori di accesso).
 
 ### <a name="InstantiatingClasses"></a> Creazione di istanze di classi
 
@@ -270,9 +270,9 @@ SampleClass sampleObject = new SampleClass
 
 Per altre informazioni, vedere:
 
-- [Operatore new](../../../csharp/language-reference/operators/new-operator.md)
+- [Operatore new](../../language-reference/operators/new-operator.md)
 
-- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inizializzatori di oggetto e di raccolta](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="Static"></a> Classi e membri statici
 
@@ -295,7 +295,7 @@ Console.WriteLine(SampleClass.SampleString);
 
 Le classi statiche in C# hanno solo membri statici e non è possibile crearne un'istanza. I membri statici, inoltre, non possono accedere a proprietà, campi o metodi non statici.
 
-Per altre informazioni, vedere [static](../../../csharp/language-reference/keywords/static.md).
+Per altre informazioni, vedere [static](../../language-reference/keywords/static.md).
 
 ### <a name="AnonymousTypes"></a> Tipi anonimi
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Per altre informazioni, vedere: [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+Per altre informazioni, vedere: [Tipi anonimi](../classes-and-structs/anonymous-types.md).
 
 ## <a name="Inheritance"></a> Ereditarietà
 
@@ -340,9 +340,9 @@ public abstract class B { }
 
 Per altre informazioni, vedere:
 
-- [sealed](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../language-reference/keywords/sealed.md)
 
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="Overriding"></a> Override di membri
 
@@ -352,10 +352,10 @@ I seguenti modificatori consentono di controllare le modalità di override di pr
 
 |Modificatore di C#|Definizione|
 |------------------|----------------|
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Consente a un membro della classe di essere sottoposto a override in una classe derivata.|
-|[override](../../../csharp/language-reference/keywords/override.md)|Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base.|
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Richiede che un membro della classe venga sottoposto a override nella classe derivata.|
-|[Modificatore new](../../../csharp/language-reference/keywords/new-modifier.md)|Nasconde un membro ereditato da una classe base.|
+|[virtual](../../language-reference/keywords/virtual.md)|Consente a un membro della classe di essere sottoposto a override in una classe derivata.|
+|[override](../../language-reference/keywords/override.md)|Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base.|
+|[abstract](../../language-reference/keywords/abstract.md)|Richiede che un membro della classe venga sottoposto a override nella classe derivata.|
+|[Modificatore new](../../language-reference/keywords/new-modifier.md)|Nasconde un membro ereditato da una classe base.|
 
 ## <a name="Interfaces"></a> Interfacce
 
@@ -384,9 +384,9 @@ class SampleClass : ISampleInterface
 
 Per altre informazioni, vedere:
 
-[Interfacce](../../../csharp/programming-guide/interfaces/index.md)
+[Interfacce](../interfaces/index.md)
 
-[interface](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> Generics
 
@@ -410,9 +410,9 @@ sampleObject.Field = "Sample string";
 
 Per altre informazioni, vedere:
 
-- [Generics](~/docs/standard/generics/index.md)
+- [Generics](../../../standard/generics/index.md)
 
-- [Generics](../../../csharp/programming-guide/generics/index.md)
+- [Generics](../generics/index.md)
 
 ## <a name="Delegates"></a> Delegati
 
@@ -448,10 +448,10 @@ class SampleClass
 
 Per altre informazioni, vedere:
 
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [Delegati](../delegates/index.md)
 
-- [delegate](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Guida per programmatori C#](../index.md)

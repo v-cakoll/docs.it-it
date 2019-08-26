@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6a20a2e678c10157fed7da6f5de9f3ffee0c9ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f427e2260fb26be7db0a29c47f38a3cb32dd34e9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921425"
 ---
 # <a name="programming-with-assemblies"></a>Programmazione con gli assembly
 Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base per la distribuzione, il controllo della versione, il riutilizzo, la definizione dell'ambito di attivazione e le autorizzazioni di sicurezza. Un assembly offre a Common Language Runtime le informazioni necessarie per il riconoscimento delle implementazioni di tipi. È una raccolta di tipi e risorse creati per essere usati insieme e per formare un'unità logica di funzionalità. Per il runtime, un tipo non esiste all'esterno del contesto di un assembly.  
@@ -20,7 +20,7 @@ Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base
  Questa sezione descrive come creare moduli, come creare assembly da moduli, come creare una coppia di chiavi e firmare un assembly con un nome sicuro e infine come installare un assembly nella Global Assembly Cache. Questa sezione descrive anche come usare [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) per visualizzare informazioni sul manifesto dell'assembly.  
   
 > [!NOTE]
->  A partire da .NET Framework versione 2.0 il runtime non caricherà un assembly compilato con una versione di .NET Framework con numero di versione superiore a quello del runtime attualmente caricato. Questo vale per la combinazione dei componenti numero principale e numero secondario del numero di versione.  
+> A partire da .NET Framework versione 2.0 il runtime non caricherà un assembly compilato con una versione di .NET Framework con numero di versione superiore a quello del runtime attualmente caricato. Questo vale per la combinazione dei componenti numero principale e numero secondario del numero di versione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
@@ -59,7 +59,7 @@ Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base
  [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  Descrive come e perché aggiungere assembly alla Global Assembly Cache e include argomenti relativi a procedure.  
   
- [Procedura: Visualizzare il contenuto dell'assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Procedura: Visualizzare il contenuto degli assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Descrive come usare MSIL Disassembler (Ildasm.exe) per visualizzare il contenuto dell'assembly.  
   
  [Inoltro dei tipi in Common Language Runtime](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  

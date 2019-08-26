@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950686"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
 Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo dell'ingegneria del software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
@@ -115,7 +115,7 @@ public class AsyncExample
  Se si usano gli overload a più richiami, il codice deve tenere traccia degli oggetti `userState` (o ID attività) relativi alle attività in sospeso. Per ogni chiamata al metodo `Method1Async(string param, object userState)`, di solito viene generato un nuovo oggetto `userState` univoco che viene aggiunto a una raccolta. Quando l'attività corrispondente a tale oggetto `userState` genera l'evento di completamento, l'implementazione del metodo di completamento esamina <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> e la rimuove dalla raccolta. Se usato in questo modo, il parametro `userState` funge da ID attività.  
   
 > [!NOTE]
->  È necessario specificare un valore univoco per il parametro `userState` nelle chiamate a overload a più richiami. La specifica di ID attività non univoci determina la generazione di una <xref:System.ArgumentException> da parte della classe asincrona.  
+> È necessario specificare un valore univoco per il parametro `userState` nelle chiamate a overload a più richiami. La specifica di ID attività non univoci determina la generazione di una <xref:System.ArgumentException> da parte della classe asincrona.  
   
 ### <a name="canceling-pending-operations"></a>Annullamento delle operazioni in sospeso  
  È importante che sia possibile annullare le operazioni asincrone in qualsiasi momento prima che vengano completate. Le classi che implementano il modello asincrono basato su eventi avranno un metodo `CancelAsync` (se è presente un solo metodo asincrono) o un metodo _NomeMetodo_**AsyncCancel** (se sono presenti più metodi asincroni).  

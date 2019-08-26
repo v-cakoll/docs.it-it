@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347384"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927907"
 ---
 # <a name="shadow-copying-assemblies"></a>Creazione di copie replicate di assembly
 La creazione di copie shadow consente di aggiornare gli assembly usati in un dominio applicazione senza scaricare quest'ultimo. Ciò è particolarmente utile per le applicazioni che devono essere disponibili in modo continuo, ad esempio siti ASP.NET.  
   
 > [!IMPORTANT]
->  La copia shadow non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+> La copia shadow non è supportata nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  Common Language Runtime blocca un file di assembly quando l'assembly è caricato, in modo che non sia possibile aggiornare il file finché l'assembly non sarà stato scaricato. L'unico modo per scaricare un assembly da un dominio applicazione consiste nello scaricare il dominio applicazione; pertanto, in circostanze normali, non è possibile aggiornare un assembly su disco fino a quando tutti i domini applicazione che lo usano non saranno stati scaricati.  
   
  Quando un dominio applicazione è configurato per la copia shadow di file, gli assembly dal percorso dell'applicazione vengono copiati in un'altra posizione e caricati da tale posizione. La copia è bloccata, ma il file di assembly originale è sbloccato e può essere aggiornato.  
   
 > [!IMPORTANT]
->  Gli unici assembly che possono essere replicati mediante copia shadow sono quelli memorizzati nella directory dell'applicazione o nelle relative sottodirectory, specificato dalle proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A> quando viene configurato il dominio applicazione. Gli assembly memorizzati nella Global Assembly Cache non vengono replicati mediante copia shadow.  
+> Gli unici assembly che possono essere replicati mediante copia shadow sono quelli memorizzati nella directory dell'applicazione o nelle relative sottodirectory, specificato dalle proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A> quando viene configurato il dominio applicazione. Gli assembly memorizzati nella Global Assembly Cache non vengono replicati mediante copia shadow.  
   
  In questo articolo sono contenute le sezioni seguenti:  
   
@@ -49,7 +49,7 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
      Il percorso di base della posizione è costituito dalla concatenazione della proprietà <xref:System.AppDomainSetup.ApplicationName%2A> alla proprietà <xref:System.AppDomainSetup.CachePath%2A> come sottodirectory. Gli assembly vengono replicati nelle sottodirectory di questo percorso, non nel percorso di base.  
   
     > [!NOTE]
-    >  Se la proprietà <xref:System.AppDomainSetup.ApplicationName%2A> non è impostata, la proprietà <xref:System.AppDomainSetup.CachePath%2A> viene ignorata e viene usata la Download Cache. Non viene generata alcuna eccezione.  
+    > Se la proprietà <xref:System.AppDomainSetup.ApplicationName%2A> non è impostata, la proprietà <xref:System.AppDomainSetup.CachePath%2A> viene ignorata e viene usata la Download Cache. Non viene generata alcuna eccezione.  
   
      Se si specifica un percorso personalizzato, si è responsabili della pulizia delle directory e dei file copiati quando non sono più necessari, perché non vengono eliminati automaticamente.  
   
@@ -60,7 +60,7 @@ La creazione di copie shadow consente di aggiornare gli assembly usati in un dom
      Quando si abilita la creazione di copie shadow per un dominio applicazione, l'impostazione predefinita consiste nel copiare tutti gli assembly nel percorso dell'applicazione, ovvero nelle directory specificate dalle proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A>. È possibile limitare la copia alle directory selezionate creando una stringa che contiene solo le directory per cui si vogliono creare copie shadow e assegnando la stringa alla proprietà <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>. Separare le directory con punti e virgola. Gli unici assembly che vengono replicati sono quelli nelle directory selezionate.  
   
     > [!NOTE]
-    >  Se non si assegna una stringa alla proprietà <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>  o se si imposta questa proprietà su `null`, tutti gli assembly nelle directory specificate dalle proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A> vengono replicati come copie shadow.  
+    > Se non si assegna una stringa alla proprietà <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>  o se si imposta questa proprietà su `null`, tutti gli assembly nelle directory specificate dalle proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A> vengono replicati come copie shadow.  
   
     > [!IMPORTANT]
     >  I percorsi delle directory non devono contenere punti e virgola, perché il punto e virgola è il carattere delimitatore. Non esiste alcun carattere di escape per i punti e virgola.  

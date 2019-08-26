@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913238"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
 
@@ -27,7 +27,7 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
  Nel threading gestito, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> rappresenta l'identificazione del thread gestito stabile. Per la durata del thread, questo non entrerà in conflitto con il valore di altri thread, indipendentemente dal dominio dell'applicazione da cui si è ottenuto il valore.  
   
 > [!NOTE]
->  L'oggetto **ThreadId** di un sistema operativo non ha una relazione fissa con un thread gestito, perché un host non gestito può controllare la relazione tra thread gestiti e non gestiti. Nello specifico, un host sofisticato può usare l'API Fiber per pianificare molti thread gestiti sullo stesso thread del sistema operativo o spostare un thread gestito tra thread diversi del sistema operativo.  
+> L'oggetto **ThreadId** di un sistema operativo non ha una relazione fissa con un thread gestito, perché un host non gestito può controllare la relazione tra thread gestiti e non gestiti. Nello specifico, un host sofisticato può usare l'API Fiber per pianificare molti thread gestiti sullo stesso thread del sistema operativo o spostare un thread gestito tra thread diversi del sistema operativo.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapping dal threading di Win32 al threading gestito
 
@@ -57,7 +57,7 @@ Un thread gestito può essere contrassegnato per indicare che ospita un apartmen
  Se lo stato dell'apartment non è impostato prima dell'avvio del thread, il thread viene inizializzato come un apartment a thread multipli. Il thread finalizzatore e tutti i thread controllati da <xref:System.Threading.ThreadPool> sono apartment a thread multipli.  
   
 > [!IMPORTANT]
->  Per il codice di avvio dell'applicazione, l'unico modo per controllare lo stato dell'apartment consiste nell'applicare <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> alla routine del punto di ingresso. In .NET Framework 1.0 e 1.1 la proprietà <xref:System.Threading.Thread.ApartmentState%2A> può essere impostata come la prima riga di codice. In .NET Framework 2.0 questo non è consentito.  
+> Per il codice di avvio dell'applicazione, l'unico modo per controllare lo stato dell'apartment consiste nell'applicare <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> alla routine del punto di ingresso. In .NET Framework 1.0 e 1.1 la proprietà <xref:System.Threading.Thread.ApartmentState%2A> può essere impostata come la prima riga di codice. In .NET Framework 2.0 questo non è consentito.  
   
  Gli oggetti gestiti esposti a COM si comportano come se avessero aggregato il gestore del marshalling a thread libero. In altre parole, possono essere chiamati da qualsiasi apartment COM con modello a thread libero. Gli unici oggetti gestiti che non esibiscono questo comportamento a thread libero sono gli oggetti che derivano da <xref:System.EnterpriseServices.ServicedComponent> o <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   

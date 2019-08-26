@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948776"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegati generici per la modifica di matrici ed elenchi
 Questo argomento offre una panoramica dei delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o di una raccolta.  
@@ -28,7 +28,7 @@ Questo argomento offre una panoramica dei delegati generici per conversioni, pre
  La classe generica <xref:System.Collections.Generic.List%601> fornisce inoltre un metodo <xref:System.Collections.Generic.List%601.ForEach%2A> che usa il delegato <xref:System.Action%601>. Questo metodo non è generico.  
   
 > [!NOTE]
->  Quanto indicato sopra fornisce uno spunto interessante riguardo ai metodi e ai tipi generici. Il metodo <xref:System.Array.ForEach%2A?displayProperty=nameWithType> deve essere statico (`Shared` in Visual Basic) e generico perché <xref:System.Array> non è un tipo generico. L'unico motivo per cui è possibile specificare un tipo su cui <xref:System.Array.ForEach%2A?displayProperty=nameWithType> possa agire è che il metodo dispone di un elenco specifico di parametri di tipo. Al contrario, il metodo non generico <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> appartiene alla classe generica <xref:System.Collections.Generic.List%601> e pertanto usa semplicemente il parametro di tipo della rispettiva classe. La classe è fortemente tipizzata, quindi il metodo può essere un metodo di istanza.  
+> Quanto indicato sopra fornisce uno spunto interessante riguardo ai metodi e ai tipi generici. Il metodo <xref:System.Array.ForEach%2A?displayProperty=nameWithType> deve essere statico (`Shared` in Visual Basic) e generico perché <xref:System.Array> non è un tipo generico. L'unico motivo per cui è possibile specificare un tipo su cui <xref:System.Array.ForEach%2A?displayProperty=nameWithType> possa agire è che il metodo dispone di un elenco specifico di parametri di tipo. Al contrario, il metodo non generico <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> appartiene alla classe generica <xref:System.Collections.Generic.List%601> e pertanto usa semplicemente il parametro di tipo della rispettiva classe. La classe è fortemente tipizzata, quindi il metodo può essere un metodo di istanza.  
   
  Il delegato generico <xref:System.Predicate%601> rappresenta un metodo che determina se un determinato elemento soddisfa i criteri specificati. È possibile usarlo con i metodi generici statici di <xref:System.Array> seguenti per cercare un elemento o un set di elementi: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A> e <xref:System.Array.TrueForAll%2A>.  
   

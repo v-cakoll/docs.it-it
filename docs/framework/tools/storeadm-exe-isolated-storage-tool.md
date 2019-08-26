@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929898"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (strumento per lo spazio di memorizzazione isolato)
 Lo strumento per lo spazio di memorizzazione isolato elenca o rimuove tutti gli archivi esistenti dell'utente attualmente connesso.  
@@ -32,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/list**|Visualizza tutti gli archivi esistenti dell'utente attualmente connesso, inclusi gli archivi di tutte le applicazioni e di tutti gli assembly eseguiti da tale utente.|  
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - L'archivio computer è comune a tutti gli utenti di un computer e quindi si trova in una directory comune del computer.  
   
     > [!NOTE]
-    >  L'archivio computer è stato introdotto con .NET Framework versione 2.0.  
+    > L'archivio computer è stato introdotto con .NET Framework versione 2.0.  
   
  L'eventuale abilitazione del roaming per l'utente non ha alcun effetto sull'amministrazione di Storeadm.exe. Se lo strumento viene eseguito senza opzioni, tutte le operazioni verranno applicate all'archivio locale. Se lo strumento viene eseguito con l'opzione **/roaming**, tutte le operazioni verranno applicate all'archivio abilitato al roaming. Se lo strumento viene eseguito con l'opzione **/machine**, tutte le operazioni verranno applicate all'archivio computer.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](../../../docs/framework/tools/index.md)
-- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
+- [Spazio di memorizzazione isolato](../../standard/io/isolated-storage.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

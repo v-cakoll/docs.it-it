@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591657"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935514"
 ---
 # <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
@@ -28,14 +28,14 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
  Per scrivere in un registro eventi diverso dal registro applicazioni, è necessario impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su `false`, creare il proprio registro eventi personalizzato nel codice dei servizi e registrare il servizio come origine valida delle voci di tale log. È quindi necessario scrivere il codice per registrare le voci nel log quando si verifica un'azione a cui si è interessati.  
   
 > [!NOTE]
->  Se si usa un registro eventi personalizzato e si configura l'applicazione di servizio perché vi possa scrivere, è necessario non tentare di accedere al registro eventi prima di impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> del servizio nel codice. Il registro eventi ha bisogno del valore di questa proprietà per registrare il servizio come origine valida degli eventi.  
+> Se si usa un registro eventi personalizzato e si configura l'applicazione di servizio perché vi possa scrivere, è necessario non tentare di accedere al registro eventi prima di impostare la proprietà <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> del servizio nel codice. Il registro eventi ha bisogno del valore di questa proprietà per registrare il servizio come origine valida degli eventi.  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>Per abilitare la registrazione predefinita degli eventi per il servizio  
   
 - Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente su `true`.  
   
     > [!NOTE]
-    >  Per impostazione predefinita, questa proprietà è impostata su `true`. Non è necessario impostarla esplicitamente a meno che non si debba eseguire un'elaborazione più complessa, ad esempio la valutazione di una condizione seguita dall'impostazione della proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> in base al risultato di tale condizione.  
+    > Per impostazione predefinita, questa proprietà è impostata su `true`. Non è necessario impostarla esplicitamente a meno che non si debba eseguire un'elaborazione più complessa, ad esempio la valutazione di una condizione seguita dall'impostazione della proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> in base al risultato di tale condizione.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Per disabilitare la registrazione degli eventi per il servizio  
   
@@ -49,7 +49,7 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
 1. Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su `false`.  
   
     > [!NOTE]
-    >  È necessario impostare <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su false per usare un log personalizzato.  
+    > È necessario impostare <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su false per usare un log personalizzato.  
   
 2. Configurare un'istanza di un componente <xref:System.Diagnostics.EventLog> nell'applicazione di servizio di Windows.  
   
@@ -62,7 +62,7 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
      Il codice seguente illustra come configurare la registrazione in un log personalizzato.  
   
     > [!NOTE]
-    >  In questo esempio di codice un'istanza di un componente <xref:System.Diagnostics.EventLog> è denominata `eventLog1` (`EventLog1` in Visual Basic). Se si è creata un'istanza con un altro nome nel passaggio 2, modificare il codice di conseguenza.  
+    > In questo esempio di codice un'istanza di un componente <xref:System.Diagnostics.EventLog> è denominata `eventLog1` (`EventLog1` in Visual Basic). Se si è creata un'istanza con un altro nome nel passaggio 2, modificare il codice di conseguenza.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

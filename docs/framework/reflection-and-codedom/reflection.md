@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940027"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
 Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](../../standard/base-types/common-type-system.md#classes), [interfacce](../../standard/base-types/common-type-system.md#interfaces) e [tipi di valori](../../csharp/language-reference/keywords/value-types.md). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.
   
- Il caricatore di [Common Language Runtime](../../../docs/standard/clr.md) gestisce i [domini applicazioni](../../../docs/framework/app-domains/application-domains.md), che costituiscono limiti definiti intorno a oggetti con lo stesso ambito di applicazione. La gestione include il caricamento di ciascun assembly nel dominio applicazione appropriato e il controllo della disposizione in memoria della gerarchia dei tipi di ciascun assembly.  
+ Il caricatore di [Common Language Runtime](../../standard/clr.md) gestisce i [domini applicazioni](../../../docs/framework/app-domains/application-domains.md), che costituiscono limiti definiti intorno a oggetti con lo stesso ambito di applicazione. La gestione include il caricamento di ciascun assembly nel dominio applicazione appropriato e il controllo della disposizione in memoria della gerarchia dei tipi di ciascun assembly.  
   
  Gli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) contengono moduli, i quali contengono tipi, che a loro volta contengono membri. La reflection fornisce oggetti che incapsulano assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente od ottenere il tipo da un oggetto esistente. È quindi possibile richiamare i metodi del tipo o accedere ai relativi campi e proprietà. Gli impieghi tipici della reflection includono:  
   
@@ -71,7 +71,7 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Viene illustrata la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|  
 |[Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Vengono illustrate le modalità con cui la reflection gestisce i parametri e gli argomenti tipo di metodi e tipi generici.|  

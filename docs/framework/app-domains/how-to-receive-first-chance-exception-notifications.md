@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921524"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procedura: Ricevere notifiche di eccezioni first-chance
 L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.AppDomain> consente di ricevere una notifica in cui si informa che è stata generata un'eccezione, prima che Common Language Runtime inizi a cercare gestori di eccezioni .
@@ -91,7 +91,7 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
  Ogni volta che il metodo `Thrower` genera un'eccezione in `AD1`, viene generato l'evento <xref:System.AppDomain.FirstChanceException> in `AD1` e il gestore dell'evento visualizza un messaggio. Il runtime cerca quindi un gestore di eccezioni. Nel primo caso il gestore di eccezioni viene trovato in `AD1`. Nel secondo caso anziché essere gestita in `AD1`, l'eccezione viene rilevata nel dominio dell'applicazione predefinito.
 
 > [!NOTE]
->  Il nome del dominio dell'applicazione predefinito è uguale al nome dell'eseguibile.
+> Il nome del dominio dell'applicazione predefinito è uguale al nome dell'eseguibile.
 
  Se si aggiunge un gestore per l'evento <xref:System.AppDomain.FirstChanceException> al dominio dell'applicazione predefinito, l'evento viene generato e gestito prima che il dominio dell'applicazione predefinito gestisca l'eccezione. Per verificarlo, aggiungere il codice C# `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (in Visual Basic, `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) all'inizio di `Main()`.
 

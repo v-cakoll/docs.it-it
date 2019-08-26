@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648972"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987202"
 ---
 # <a name="changing-case-in-net"></a>Modifica della combinazione di maiuscole e minuscole in .NET
 Quando si scrive un'applicazione che accetta input dall'utente non si può conoscere la combinazione di maiuscole e minuscole che verrà usata durante l'immissione dei dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  
@@ -34,7 +34,7 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Converte una stringa nella combinazione con tutte le iniziali maiuscole.|  
   
 > [!WARNING]
->  Si noti che i metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> non vanno usati per convertire le stringhe a scopo di confronto o verifica dell'uguaglianza. Per altre informazioni, vedere la sezione [Confronto di stringhe con una combinazione mista di maiuscole e minuscole](#Comparing).  
+> Si noti che i metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> non vanno usati per convertire le stringhe a scopo di confronto o verifica dell'uguaglianza. Per altre informazioni, vedere la sezione [Confronto di stringhe con una combinazione mista di maiuscole e minuscole](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Confronto di stringhe con una combinazione mista di maiuscole e minuscole  

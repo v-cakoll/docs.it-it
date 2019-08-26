@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934932"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
 <a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
@@ -87,7 +87,7 @@ ms.locfileid: "66250813"
 ## <a name="specifying-string-comparisons-explicitly"></a>Specifica esplicita per il confronto tra stringhe  
  Molti dei metodi di modifica delle stringhe in .NET sono di tipo overload. In genere, uno o più overload accettano le impostazioni predefinite, mentre altri accettano le impostazioni non predefinite, specificando invece una determinata procedura di confronto o modifica delle stringhe. La maggior parte dei metodi che non si basano sulle impostazioni predefinite include un parametro di tipo <xref:System.StringComparison>, che corrisponde a un'enumerazione che specifica in modo esplicito le regole per il confronto tra stringhe in base alle impostazioni cultura e alle maiuscole e minuscole. La tabella seguente descrive i membri dell'enumerazione <xref:System.StringComparison> .  
   
-|Membro StringComparison|Description|  
+|Membro StringComparison|DESCRIZIONE|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Esegue un confronto con distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Esegue un confronto senza distinzione tra maiuscole e minuscole usando le impostazioni cultura correnti.|  
@@ -185,7 +185,7 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
  Le stringhe in .NET possono contenere caratteri null incorporati. Una delle differenze più evidenti tra il confronto ordinale e quello con distinzione delle impostazioni cultura (inclusi i confronti che usano la lingua inglese) riguarda la gestione dei caratteri null incorporati in una stringa. Questi caratteri vengono ignorati quando si usano i metodi <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.Equals%2A?displayProperty=nameWithType> per eseguire confronti con distinzione delle impostazioni cultura (inclusi i confronti che usano la lingua inglese). Di conseguenza, nei confronti con distinzione delle impostazioni cultura, le stringhe che contengono caratteri null incorporati e quelle che non li contengono possono essere considerate uguali.  
   
 > [!IMPORTANT]
->  Anche se i metodi di confronto tra stringhe ignorano i caratteri null incorporati, i metodi di ricerca di stringhe come <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> li prendono in considerazione.  
+> Anche se i metodi di confronto tra stringhe ignorano i caratteri null incorporati, i metodi di ricerca di stringhe come <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> li prendono in considerazione.  
   
  L'esempio successivo esegue un confronto con distinzione delle impostazioni cultura della stringa "Aa" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e mostra in che modo le due stringhe vengono considerate uguali.  
   
@@ -210,7 +210,7 @@ I confronti di stringhe tramite versioni diverse di .NET oppure tramite .NET in 
  Questi confronti sono comunque molto rapidi.  
   
 > [!NOTE]
->  Il comportamento delle stringhe del file system, delle chiavi e dei valori del Registro di sistema e delle variabili di ambiente viene rappresentato in modo efficace da <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.  
+> Il comportamento delle stringhe del file system, delle chiavi e dei valori del Registro di sistema e delle variabili di ambiente viene rappresentato in modo efficace da <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> e <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> usano direttamente i valori binari e sono i più adatti per la corrispondenza. Se non si è sicuri delle impostazioni di confronto, usare uno di questi due valori. Tuttavia, poiché eseguono un confronto byte per byte, l'ordinamento non viene eseguito linguisticamente (come in un dizionario inglese), ma in modo binario. Se visualizzati dagli utenti, i risultati possono sembrare strani in molti contesti.  
   

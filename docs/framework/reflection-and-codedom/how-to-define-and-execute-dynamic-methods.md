@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928248"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: Definire ed eseguire metodi dinamici
 Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -38,7 +38,7 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
 3. Creare un oggetto <xref:System.Reflection.Emit.DynamicMethod>. In questo esempio il metodo è denominato `SquareIt`.  
   
     > [!NOTE]
-    >  Non è necessario assegnare un nome ai metodi dinamici poiché non possono essere richiamati per nome. Più metodi dinamici possono avere lo stesso nome. Il nome viene tuttavia visualizzato negli stack delle chiamate e può risultare utile per il debug.  
+    > Non è necessario assegnare un nome ai metodi dinamici poiché non possono essere richiamati per nome. Più metodi dinamici possono avere lo stesso nome. Il nome viene tuttavia visualizzato negli stack delle chiamate e può risultare utile per il debug.  
   
      Il tipo del valore restituito è specificato come `long`. Il metodo è associato al modulo contenente la classe `Example` in cui è incluso il codice di esempio. È possibile specificare qualsiasi modulo caricato. Il metodo dinamico agisce come un metodo `static` a livello di modulo (`Shared` in Visual Basic).  
   
@@ -91,7 +91,7 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
 5. Creare un'istanza del delegato dichiarato nel primo passaggio che rappresenta il metodo dinamico chiamando l'overload del metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. La creazione del delegato rende il metodo completo e qualsiasi successivo tentativo di modifica, ad esempio l'aggiunta di codice MSIL, verrà ignorato.  
   
     > [!NOTE]
-    >  È possibile chiamare il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> più volte per creare delegati associati ad altre istanze del tipo di destinazione.  
+    > È possibile chiamare il metodo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> più volte per creare delegati associati ad altre istanze del tipo di destinazione.  
   
      Il codice seguente associa il metodo a una nuova istanza della classe `Example` il cui campo di test privato è impostato su 42. In altri termini, ogni volta che viene richiamato il delegato, l'istanza di `Example` viene passata al primo parametro del metodo.  
   

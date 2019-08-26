@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469671"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915469"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection offre l'infrastruttura usata dai compilatori di linguaggi per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. Visual Basic consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>Associazione personalizzata  
  Ai fini dell'associazione tardiva, oltre a essere usata in modo implicito dai compilatori, la reflection può essere usata in modo esplicito nel codice.  
   
- [Common Language Runtime](../../../docs/standard/clr.md) supporta più linguaggi di programmazione che seguono regole di associazione diverse. In caso di associazione anticipata, i generatori di codice possono controllare completamente questa associazione. Nell'associazione tardiva mediante reflection l'associazione deve essere invece controllata dall'associazione personalizzata. La classe <xref:System.Reflection.Binder> fornisce il controllo personalizzato sulla selezione e la chiamata dei membri.  
+ [Common Language Runtime](../../standard/clr.md) supporta più linguaggi di programmazione che seguono regole di associazione diverse. In caso di associazione anticipata, i generatori di codice possono controllare completamente questa associazione. Nell'associazione tardiva mediante reflection l'associazione deve essere invece controllata dall'associazione personalizzata. La classe <xref:System.Reflection.Binder> fornisce il controllo personalizzato sulla selezione e la chiamata dei membri.  
   
  Usando l'associazione personalizzata, è possibile caricare un assembly in fase di esecuzione, ottenere informazioni sui tipi in esso contenuti, specificare il tipo desiderato e quindi richiamarne i metodi o usarne i campi o le proprietà. Questa tecnica è utile se non si conosce il tipo di un oggetto in fase di compilazione, come avviene ad esempio quando il tipo di oggetto dipende dall'input dell'utente.  
   
@@ -67,7 +67,7 @@ End Module
   
  **BindToMethod** restituisce <xref:System.Reflection.MethodBase> da richiamare o un riferimento Null (**Nothing** in Visual Basic) se non è possibile effettuare la chiamata. **MethodBase** restituisce valori non necessariamente compresi tra quelli contenuti nel parametro *match*, sebbene questo sia il caso più frequente.  
   
- Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per ulteriori informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Quando sono presenti argomenti ByRef, è possibile che debbano essere restituiti al chiamante. Di conseguenza, **Binder** consentirà al client di eseguire il mapping della matrice di argomenti riportandola alla forma originale se **BindToMethod** ha modificato la matrice di argomenti. A questo scopo, è necessario garantire al chiamante che l'ordine degli argomenti resti inalterato. Quando gli argomenti vengono passati in base al nome, **Binder** riordina la matrice di argomenti, che rappresenta quanto viene visualizzato al chiamante. Per altre informazioni, vedere <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  Il set di membri disponibili è costituito dai membri definiti nel tipo o in qualsiasi tipo di base. Se si specifica <xref:System.Reflection.BindingFlags>, il set restituito comprenderà membri di qualsiasi accessibilità. Se **BindingFlags.NonPublic** non viene specificato, il binder dovrà applicare le regole di accessibilità. Quando si specifica il flag di associazione **Public** o **NonPublic** è necessario specificare anche il flag di associazione **Instance** o **Static**. In caso contrario non verrà restituito alcun membro.  
   
@@ -79,7 +79,7 @@ End Module
   
  Nel caso 3 dell'esempio di codice un argomento effettivo di tipo **String** con valore "5.5" viene passato a un metodo con un argomento formale di tipo **Double**. Affinché la chiamata abbia esito positivo, il valore di stringa "5.5" deve essere convertito in un valore Double. La conversione viene eseguita da **ChangeType**.  
   
- **ChangeType** esegue solo [coercizioni verso tipi più grandi](../../../docs/standard/base-types/type-conversion.md) o senza perdita di dati, come illustrato nella tabella seguente.  
+ **ChangeType** esegue solo [coercizioni verso tipi più grandi](../../standard/base-types/type-conversion.md) o senza perdita di dati, come illustrato nella tabella seguente.  
   
 |Tipo di origine|Tipo di destinazione|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Conversione di tipi in .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+- [Conversione di tipi in .NET Framework](../../standard/base-types/type-conversion.md)

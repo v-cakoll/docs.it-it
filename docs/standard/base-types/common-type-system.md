@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782638"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934768"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -82,7 +82,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 |exported o not exported|Indica se una classe è visibile all'esterno dell'assembly in cui è definita. Questa caratteristica è applicabile unicamente alle classi di primo livello e non alle classi annidate.|  
   
 > [!NOTE]
->  Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per altre informazioni, vedere [Tipi annidati](#NestedTypes).  
+> Una classe può anche essere annidata in una struttura o una classe padre. Anche le classi annidate possiedono le caratteristiche dei membri. Per altre informazioni, vedere [Tipi annidati](#NestedTypes).  
   
  I membri di classe privi di implementazione sono membri astratti. Una classe con uno o più membri astratti è essa stessa astratta e non è possibile crearne nuove istanze. Con alcuni linguaggi destinati al runtime è possibile contrassegnare una classe come astratta anche se nessuno dei relativi membri è astratto. È possibile utilizzare una classe astratta quando si desidera incapsulare un set di base di funzionalità che le classi derivate possono ereditare oppure sottoporre a override nelle circostanze appropriate. Alle classi che non sono astratte viene fatto riferimento come a classi concrete.  
   
@@ -115,7 +115,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 - Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri dei tipi propri.  
   
     > [!NOTE]
-    >  I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipo. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
+    > I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipo. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
  L'attributo <xref:System.FlagsAttribute> denota un tipo speciale di enumerazione definito campo di bit. Nel runtime non viene fatta distinzione tra enumerazioni tradizionali e campi di bit, ma è possibile che tale distinzione esista nel linguaggio utilizzato. Quando tale distinzione viene effettuata, gli operatori bit per bit possono essere utilizzati sui campi di bit, ma non sulle enumerazioni, per generare valori non denominati. Le enumerazioni sono in genere utilizzate per elenchi di elementi univoci, come giorni della settimana o nomi di paesi o province. I campi di bit sono normalmente utilizzati per elenchi di qualità o quantità che possono ricorrere in combinazioni, come `Red And Big And Fast`.  
   
@@ -157,14 +157,14 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  Dal momento che i delegati ereditano da <xref:System.MulticastDelegate>, un delegato presenta un elenco chiamate, ovvero un elenco di metodi rappresentati dal delegato che vengono eseguiti quando il delegato viene chiamato. Tutti i metodi dell'elenco ricevono gli argomenti forniti quando viene chiamato il delegato.  
   
 > [!NOTE]
->  Il valore restituito non è definito per un delegato il cui elenco chiamate contiene più metodi, anche se il delegato dispone di un tipo restituito.  
+> Il valore restituito non è definito per un delegato il cui elenco chiamate contiene più metodi, anche se il delegato dispone di un tipo restituito.  
   
  In molti casi, ad esempio con i metodi di callback, un delegato rappresenta un solo metodo e le uniche azioni che è necessario eseguire sono la creazione e il richiamo del delegato.  
   
  Per i delegati che rappresentano più metodi, .NET fornisce metodi delle classi di delegati <xref:System.Delegate> e <xref:System.MulticastDelegate> per supportare operazioni quali l'aggiunta di un metodo a un elenco chiamate di un delegato (il metodo <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), la rimozione di un metodo (il metodo <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) e il recupero dell'elenco chiamate (il metodo <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
->  Non è necessario utilizzare questi metodi per i delegati dei gestori di eventi nei linguaggi C#, C++ e Visual Basic perché questi linguaggi forniscono la sintassi per l'aggiunta e la rimozione dei gestori di eventi.  
+> Non è necessario utilizzare questi metodi per i delegati dei gestori di eventi nei linguaggi C#, C++ e Visual Basic perché questi linguaggi forniscono la sintassi per l'aggiunta e la rimozione dei gestori di eventi.  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definizioni dei tipi  
@@ -307,7 +307,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  Ciascun membro di tipo dispone di una firma univoca. La firma di un metodo è costituita dal nome del metodo e da un elenco di parametri, ovvero l'ordine e i tipi degli argomenti del metodo. All'interno di un tipo è possibile definire più metodi con lo stesso nome, purché la relativa firma sia diversa. Quando vengono definiti due o più metodi con lo stesso nome si dice che il metodo è stato sottoposto a overload. In <xref:System.Char?displayProperty=nameWithType>, ad esempio, il metodo <xref:System.Char.IsDigit%2A> è sottoposto a overload. Un metodo accetta un oggetto <xref:System.Char>. L'altro metodo accetta un oggetto <xref:System.String> e un oggetto <xref:System.Int32>.  
   
 > [!NOTE]
->  Il tipo restituito non viene considerato parte della firma del metodo. Ciò significa che i metodi non possono essere sottoposti a overload se differiscono unicamente per il tipo restituito.  
+> Il tipo restituito non viene considerato parte della firma del metodo. Ciò significa che i metodi non possono essere sottoposti a overload se differiscono unicamente per il tipo restituito.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>Eredità, override e membri nascosti  
  Un tipo derivato eredita tutti i membri del relativo tipo di base, ovvero tali membri vengono definiti e resi disponibili nel tipo derivato. Il comportamento o le qualità dei membri ereditati possono essere modificati in due modi:  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633332"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988799"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analisi di stringhe numeriche in .NET
 Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`, che è possibile usare per convertire la rappresentazione di stringa di un numero in un tipo numerico. Tali metodi consentono di analizzare le stringhe generate usando le stringhe di formato documentate in [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md). Per impostazione predefinita, i metodi `Parse` e `TryParse` consentono di convertire correttamente le stringhe contenenti cifre decimali integrali solo in valori integer. Consentono di convertire correttamente le stringhe che contengono cifre decimali integrali e frazionarie, separatori di gruppi e un separatore decimale in valori a virgola mobile. Il metodo `Parse` genera un'eccezione se l'operazione ha esito negativo, mentre il metodo `TryParse` restituisce `false`.  
@@ -46,7 +46,7 @@ Tutti i tipi numerici hanno due metodi di analisi statici, `Parse` e `TryParse`,
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
->  L'operazione di analisi usa sempre le convenzioni di formattazione di determinate impostazioni cultura. Se non si specificano le impostazioni cultura passando un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, vengono usate le impostazioni cultura associate al thread corrente.  
+> L'operazione di analisi usa sempre le convenzioni di formattazione di determinate impostazioni cultura. Se non si specificano le impostazioni cultura passando un oggetto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, vengono usate le impostazioni cultura associate al thread corrente.  
   
  Nella tabella seguente sono elencati i membri dell'enumerazione <xref:System.Globalization.NumberStyles> e viene descritto l'effetto degli stessi sull'operazione di analisi.  
   

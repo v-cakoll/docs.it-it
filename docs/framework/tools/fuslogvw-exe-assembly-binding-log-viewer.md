@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a04c56391b70ddc887b0ff2f7bcd6a169887d2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591518"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933669"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly. Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione. Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura. L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.  
   
 > [!IMPORTANT]
->  È necessario eseguire fuslogvw.exe con privilegi di amministratore.  
+> È necessario eseguire fuslogvw.exe con privilegi di amministratore.  
   
  Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7 con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -41,7 +41,7 @@ fuslogvw
 2. Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata. È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**. Tale directory deve essere pulita e contenere solo file generati dal runtime. Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile. Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.  
   
     > [!NOTE]
-    >  È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente. Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.  
+    > È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente. Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Per visualizzare i dettagli relativi a un errore specifico  
   
@@ -206,7 +206,7 @@ Discarding native image.
      Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
   
 > [!IMPORTANT]
->  Quando un assembly viene caricato come indipendente dal dominio, ad esempio impostando la proprietà <xref:System.AppDomainSetup.LoaderOptimization%2A> su <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> o <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, l'abilitazione della registrazione può determinare una perdita di memoria in alcuni casi. Ciò può verificarsi se si crea una voce di log quando in un dominio applicazione viene caricato un modulo indipendente dal dominio e successivamente il dominio applicazione viene scaricato. È possibile che la voce di log non venga rilasciata fino alla fine del processo. Alcuni debugger prevedono l'abilitazione automatica della registrazione.  
+> Quando un assembly viene caricato come indipendente dal dominio, ad esempio impostando la proprietà <xref:System.AppDomainSetup.LoaderOptimization%2A> su <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> o <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, l'abilitazione della registrazione può determinare una perdita di memoria in alcuni casi. Ciò può verificarsi se si crea una voce di log quando in un dominio applicazione viene caricato un modulo indipendente dal dominio e successivamente il dominio applicazione viene scaricato. È possibile che la voce di log non venga rilasciata fino alla fine del processo. Alcuni debugger prevedono l'abilitazione automatica della registrazione.  
   
 #### <a name="to-enable-a-custom-log-path"></a>Per impostare un percorso di log personalizzato  
   
@@ -215,7 +215,7 @@ Discarding native image.
 2. Immettere il percorso nella casella di testo **Percorso personalizzato log**.  
   
 > [!NOTE]
->  Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.  
+> Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.  
 >   
 >  Se l'applicazione non gestita ospita Common Language Runtime mediante l'implementazione delle interfacce `IHostAssemblyManager` e `IHostAssemblyStore`, le voci di logo non possono essere archiviate nella cache wininet.  Per visualizzare le voci di log di host personalizzati che implementano tali interfacce, è necessario specificare un percorso alternativo per il log.  
   
@@ -226,7 +226,7 @@ Discarding native image.
 2. Selezionare la casella di controllo **Abilita registrazione immersiva**.  
   
     > [!NOTE]
-    >  Questa casella è abilitata solo in Windows 8 o versioni successive.  
+    > Questa casella è abilitata solo in Windows 8 o versioni successive.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42aa63c20e1643bc3f5377fa0ad66b63c1d4433a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422597"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946566"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -32,7 +32,7 @@ Questo argomento descrive come accedere alle funzioni non gestite e introduce di
  Per accedere a una funzione DLL non gestita dal codice gestito, è necessario conoscere il nome della funzione e il nome della DLL che la esporta. Con queste informazioni, è possibile iniziare a scrivere la definizione gestita per una funzione non gestita implementata in una DLL. È anche possibile modificare il modo in cui platform invoke crea la funzione ed effettua il marshalling dei dati da e verso la funzione.  
   
 > [!NOTE]
->  Le funzioni API Windows che allocano una stringa consentono di liberare la stringa usando un metodo come `LocalFree`. Platform invoke gestisce tali parametri in modo diverso. Per le chiamate di platform invoke, il parametro deve essere di tipo `IntPtr` anziché di tipo `String`. Usare i metodi forniti dalla classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> per convertire manualmente il tipo in una stringa e liberarlo manualmente.  
+> Le funzioni API Windows che allocano una stringa consentono di liberare la stringa usando un metodo come `LocalFree`. Platform invoke gestisce tali parametri in modo diverso. Per le chiamate di platform invoke, il parametro deve essere di tipo `IntPtr` anziché di tipo `String`. Usare i metodi forniti dalla classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> per convertire manualmente il tipo in una stringa e liberarlo manualmente.  
   
 ## <a name="declaration-basics"></a>Nozioni di base sulle dichiarazioni  
  Le definizioni gestite di funzioni non gestite sono dipendenti dal linguaggio, come è possibile vedere negli esempi seguenti. Per esempi di codice più completi, vedere [Esempi di platform invoke](platform-invoke-examples.md).  

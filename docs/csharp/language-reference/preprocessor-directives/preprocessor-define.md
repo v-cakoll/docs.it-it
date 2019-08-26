@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 3b543181e3d836226759e77f0d56ed3c3e57e7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924595"
 ---
 # <a name="define-c-reference"></a>#define (Riferimenti per C#)
-Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressione passata alla direttiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), l'espressione restituisce `true`, come illustrato nell'esempio seguente:  
+Si usa `#define` per definire un simbolo. Quando si usa il simbolo come espressione passata alla direttiva [#if](./preprocessor-if.md), l'espressione restituisce `true`, come illustrato nell'esempio seguente:  
  
  ```csharp
  #define DEBUG
  ```
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
->  Non è possibile usare la direttiva `#define` per dichiarare valori costanti come in C e in C++. Le costanti in C# possono essere definite come membri statici di una classe o di uno struct. Se sono presenti più costanti di questo tipo, per usarle può essere utile creare una classe di costanti separata.  
+> Non è possibile usare la direttiva `#define` per dichiarare valori costanti come in C e in C++. Le costanti in C# possono essere definite come membri statici di una classe o di uno struct. Se sono presenti più costanti di questo tipo, per usarle può essere utile creare una classe di costanti separata.  
   
- Per specificare le condizioni per la compilazione è possibile usare simboli. È possibile eseguire il test del simbolo tramite [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) o [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). È anche possibile usare <xref:System.Diagnostics.ConditionalAttribute> per eseguire una compilazione condizionale.  
+ Per specificare le condizioni per la compilazione è possibile usare simboli. È possibile eseguire il test del simbolo tramite [#if](./preprocessor-if.md) o [#elif](./preprocessor-elif.md). È anche possibile usare <xref:System.Diagnostics.ConditionalAttribute> per eseguire una compilazione condizionale.  
   
  È possibile definire un simbolo ma non è possibile assegnare a questo un valore. La direttiva `#define` deve essere inserita in un file prima di usare istruzioni che non siano anche direttive del preprocessore.  
   
- Un simbolo può anche essere definito tramite l'opzione del compilatore [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Un simbolo può anche essere definito tramite l'opzione del compilatore [-define](../compiler-options/define-compiler-option.md). Per rimuovere la definizione di un simbolo, è possibile usare [#undef](./preprocessor-undef.md).  
   
  Un simbolo definito tramite `-define` o `#define` non provoca conflitti con una variabile avente lo stesso nome. Il nome di una variabile, infatti, non può essere passato a una direttiva del preprocessore e un simbolo può essere valutato solo da una direttiva del preprocessore.  
   
@@ -62,14 +62,14 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- Per un esempio su come annullare la definizione di un simbolo, vedere [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Per un esempio su come annullare la definizione di un simbolo, vedere [#undef](./preprocessor-undef.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [const](../../../csharp/language-reference/keywords/const.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Direttive per il preprocessore C#](./index.md)
+- [const](../keywords/const.md)
 - [Procedura: Compilare in modo condizionale con traccia e debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
-- [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+- [#undef](./preprocessor-undef.md)
+- [#if](./preprocessor-if.md)

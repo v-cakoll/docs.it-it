@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968420"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 
@@ -51,17 +51,17 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
  Sia Visual Basic che C# supportano il contrassegno delle aree di codice con una parola chiave del linguaggio specifico, l'istruzione `lock` in C# o l'istruzione `SyncLock` in Visual Basic. Quando il codice viene eseguito da un thread, viene effettuato un tentativo di acquisire il blocco. Se il blocco è già stato acquisito da un altro thread, il thread si blocca finché il blocco non diventa disponibile. Quando il thread esce dall'area di codice sincronizzata, il blocco viene rilasciato, indipendentemente dal modo in cui il thread esce dall'area.  
   
 > [!NOTE]
->  Le istruzioni `lock` e `SyncLock` vengono implementate usando <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Pertanto gli altri metodi di <xref:System.Threading.Monitor> possono essere usati in combinazione all'interno dell'area sincronizzata.  
+> Le istruzioni `lock` e `SyncLock` vengono implementate usando <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Pertanto gli altri metodi di <xref:System.Threading.Monitor> possono essere usati in combinazione all'interno dell'area sincronizzata.  
   
  È anche possibile decorare un metodo con <xref:System.Runtime.CompilerServices.MethodImplAttribute> con un valore <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, ottenendo lo stesso effetto dell'uso di <xref:System.Threading.Monitor> o di una delle parole chiave del compilatore per bloccare l'intero corpo del metodo.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> può essere usato per interrompere le operazioni di blocco di un thread, ad esempio in attesa dell'accesso a un'area di codice sincronizzata di un thread. **Thread.Interrupt** viene usato anche per interrompere l'esecuzione dei thread, ad esempio <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Non bloccare il tipo, ovvero `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic o `MyType::typeid` in C++, per proteggere i metodi `static` (metodi `Shared` in Visual Basic). Usare invece un oggetto statico privato. Analogamente, non usare `this` in C# (`Me` in Visual Basic) per bloccare i metodi di istanza. Usare invece un oggetto privato. Una classe o istanza può essere bloccata da un codice diverso dal proprio, causando potenzialmente deadlock o problemi di prestazioni.  
+> Non bloccare il tipo, ovvero `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic o `MyType::typeid` in C++, per proteggere i metodi `static` (metodi `Shared` in Visual Basic). Usare invece un oggetto statico privato. Analogamente, non usare `this` in C# (`Me` in Visual Basic) per bloccare i metodi di istanza. Usare invece un oggetto privato. Una classe o istanza può essere bloccata da un codice diverso dal proprio, causando potenzialmente deadlock o problemi di prestazioni.  
   
 ### <a name="compiler-support"></a>Supporto del compilatore  
- Visual Basic e C# supportano una parola chiave del linguaggio che usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> per bloccare l'oggetto. Visual Basic supporta l'istruzione [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md), C# supporta l'istruzione [lock](~/docs/csharp/language-reference/keywords/lock-statement.md).  
+ Visual Basic e C# supportano una parola chiave del linguaggio che usa <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> per bloccare l'oggetto. Visual Basic supporta l'istruzione [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md), C# supporta l'istruzione [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
  In entrambi i casi, se viene generata un'eccezione nell'area di codice, il blocco acquisito da **lock** o **SyncLock** viene rilasciato automaticamente. I compilatori C# e Visual Basic creano un blocco **try**/**finally** con **Monitor.Enter** all'inizio del blocco try e **Monitor.Exit** nel blocco **finally**. Se viene generata un'eccezione all'interno del blocco **lock** o **SyncLock**, viene eseguito il gestore **finally** per consentire l'esecuzione di operazioni di pulizia.  
   
@@ -74,5 +74,5 @@ Solo nelle applicazioni .NET Framework e Xamarin è possibile usare <xref:System
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
 - [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [Istruzione SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [Istruzione lock](../../csharp/language-reference/keywords/lock-statement.md)

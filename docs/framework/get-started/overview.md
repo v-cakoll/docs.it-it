@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917964"
 ---
 # <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 
@@ -75,7 +75,7 @@ Ad esempio le classi di raccolte .NET Framework implementano un set di interfacc
 
 Come ci si aspetta da una libreria di classi orientata agli oggetti, i tipi .NET Framework consentono di effettuare una gamma di attività comuni di programmazione, incluse operazioni quali la gestione di stringhe, la raccolta di dati, la connettività al database e l'accesso a file. Oltre a queste attività comuni, la libreria di classi include tipi che supportano vari scenari di sviluppo specializzati. Usare .NET Framework per sviluppare i seguenti tipi di app e servizi:
 
-- App console. Vedere [Compilazione di applicazioni console](../../../docs/standard/building-console-apps.md).
+- App console. Vedere [Compilazione di applicazioni console](../../standard/building-console-apps.md).
 
 - App GUI Windows (Windows Forms). Vedere [Windows Form](../../../docs/framework/winforms/index.md).
 

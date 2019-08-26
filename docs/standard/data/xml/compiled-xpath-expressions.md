@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916666"
 ---
 # <a name="compiled-xpath-expressions"></a>Espressioni XPath compilate
 Un oggetto <xref:System.Xml.XPath.XPathExpression> rappresenta una query XPath compilata che viene restituita dal metodo statico <xref:System.Xml.XPath.XPathExpression.Compile%2A> della classe <xref:System.Xml.XPath.XPathExpression> oppure dal metodo <xref:System.Xml.XPath.XPathNavigator.Compile%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -37,7 +37,7 @@ Un oggetto <xref:System.Xml.XPath.XPathExpression> rappresenta una query XPath c
   
  Nella tabella seguente vengono descritti ciascun tipo W3C XPath restituito, il tipo equivalente di Microsoft .NET Frameworks e i metodi che possono essere usati dall'oggetto <xref:System.Xml.XPath.XPathExpression> in base al relativo tipo restituito.  
   
-|Tipo W3C XPath restituito|Tipo equivalente di .NET Framework|Description|Metodi|  
+|Tipo W3C XPath restituito|Tipo equivalente di .NET Framework|DESCRIZIONE|Metodi|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Raccolta non ordinata di nodi senza duplicati creati in ordine di documento.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> o <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Valore `true` o `false`.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> oppure<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -45,7 +45,7 @@ Un oggetto <xref:System.Xml.XPath.XPathExpression> rappresenta una query XPath c
 |`String`|<xref:System.String>|Sequenza di caratteri UCS.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  Il metodo <xref:System.Xml.XPath.XPathNavigator.Matches%2A> accetta come parametro un'espressione XPath. Il metodo <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> restituisce un oggetto <xref:System.Xml.XPath.XPathNavigator> e non uno dei tipi W3C XPath restituiti.  
+> Il metodo <xref:System.Xml.XPath.XPathNavigator.Matches%2A> accetta come parametro un'espressione XPath. Il metodo <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> restituisce un oggetto <xref:System.Xml.XPath.XPathNavigator> e non uno dei tipi W3C XPath restituiti.  
   
 ### <a name="the-returntype-property"></a>Proprietà ReturnType  
  Una volta compilata una query XPath in un oggetto <xref:System.Xml.XPath.XPathExpression>, è possibile usare la proprietà <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> dell'oggetto <xref:System.Xml.XPath.XPathExpression> per determinare ciò che restituisce la query XPath.  

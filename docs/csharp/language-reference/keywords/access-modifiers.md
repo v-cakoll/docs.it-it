@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 587f1b03292db643d721e599ea93c39ba188117d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5568d79c4a13b7b0db5a46bb4ebb2168ea66a2c9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593004"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606090"
 ---
 # <a name="access-modifiers-c-reference"></a>Modificatori di accesso (Riferimenti per C#)
 I modificatori di accesso sono parole chiave usate per specificare l'accessibilità dichiarata di un membro o di un tipo. In questa sezione vengono presentati i quattro modificatori di accesso:  
@@ -36,17 +36,17 @@ I modificatori di accesso sono parole chiave usate per specificare l'accessibili
   
  In questa sezione vengono presentati anche gli argomenti seguenti:  
   
-- [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md): uso dei quattro modificatori di accesso per dichiarare sei livelli di accessibilità.  
+- [Livelli di accessibilità](./accessibility-levels.md): uso dei quattro modificatori di accesso per dichiarare sei livelli di accessibilità.  
   
-- [Dominio di accessibilità](../../../csharp/language-reference/keywords/accessibility-domain.md): specifica in quali sezioni del programma è possibile fare riferimento a un membro.  
+- [Dominio di accessibilità](./accessibility-domain.md): specifica in quali sezioni del programma è possibile fare riferimento a un membro.  
   
-- [Restrizioni relative all'uso dei livelli di accessibilità](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): riepilogo delle restrizioni per l'uso dei livelli di accessibilità dichiarati.  
+- [Restrizioni relative all'uso dei livelli di accessibilità](./restrictions-on-using-accessibility-levels.md): riepilogo delle restrizioni per l'uso dei livelli di accessibilità dichiarati.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [Parole chiave per l'accesso](../../../csharp/language-reference/keywords/access-keywords.md)
-- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](./index.md)
+- [Modificatori di accesso](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [Parole chiave per l'accesso](./access-keywords.md)
+- [Modificatori](./modifiers.md)

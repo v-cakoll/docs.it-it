@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921699"
 ---
 # <a name="assembly-contents"></a>Contenuto degli assembly
 Per grandi linee, un assembly statico è costituito da quattro elementi:  
@@ -40,7 +40,7 @@ Per grandi linee, un assembly statico è costituito da quattro elementi:
  ![Diagramma che illustra un assembly con più file.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  I file che compongono un assembly su più file non vengono inclusi nel collegamento fisico operato dal file system. Essi vengono invece collegati tramite il manifesto dell'assembly e Common Language Runtime li gestisce come un unico componente.  
+> I file che compongono un assembly su più file non vengono inclusi nel collegamento fisico operato dal file system. Essi vengono invece collegati tramite il manifesto dell'assembly e Common Language Runtime li gestisce come un unico componente.  
   
  Nella figura riportata di seguito tutti e tre i file appartengono a un assembly, come descritto nel manifesto dell'assembly contenuto in MyAssembly.dll. Tali file vengono gestiti dal file system come tre file distinti. Si noti che il file Util.netmodule è stato compilato come modulo perché in esso non sono contenute informazioni sull'assembly. Quando è stato creato l'assembly, il relativo manifesto è stato aggiunto a MyAssembly.dll, indicandone la relazione con Util.netmodule e Graphic.bmp.  
   

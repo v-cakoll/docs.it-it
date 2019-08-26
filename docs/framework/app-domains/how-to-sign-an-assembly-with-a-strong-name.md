@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927927"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
@@ -41,16 +41,16 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 3. Selezionare la casella **Firma assembly** .  
   
-4. Nella casella **Scegli un file chiave con nome sicuro** scegliere **\<Sfoglia>**, quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **\<Nuovo>** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro**.  
+4. Nella casella **Scegli un file chiave con nome sicuro** scegliere **\<Sfoglia>** , quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **\<Nuovo>** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro**.  
   
 > [!NOTE]
->  Per [ritardare la firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md), scegliere un file di chiave pubblica.  
+> Per [ritardare la firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md), scegliere un file di chiave pubblica.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Per creare e firmare un assembly con un nome sicuro utilizzando Assembly Linker  
   
 - Al [prompt dei comandi per gli sviluppatori per Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digitare il comando seguente:  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      dove:  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. Compilare normalmente il file del codice sorgente.  
   
 > [!NOTE]
->  Nei compilatori C# e Visual Basic vengono pubblicati avvisi del compilatore (rispettivamente CS1699 e BC41008) quando viene rilevato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente. È possibile ignorare gli avvisi.  
+> Nei compilatori C# e Visual Basic vengono pubblicati avvisi del compilatore (rispettivamente CS1699 e BC41008) quando viene rilevato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> nel codice sorgente. È possibile ignorare gli avvisi.  
   
  Nell'esempio di codice riportato di seguito viene utilizzato l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> con un file di chiave denominato `keyfile.snk`, che si trova nella directory in cui viene compilato l'assembly.  
   

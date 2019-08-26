@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592357"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949399"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Questi file consentono a un'applicazione di visualizzare stringhe, immagini e altri dati nella lingua dell'utente e con le impostazioni cultura di questo, fornendo anche dati alternativi per i casi in cui non siano disponibili risorse per la lingua o le impostazioni cultura dell'utente. Per individuare e recuperare risorse localizzate, .NET Framework usa un modello hub e spoke. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, usate quando non sono disponibili risorse localizzate. Per designare le impostazioni cultura predefinite dell'applicazione, si usa l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>. Ogni spoke si connette a un assembly satellite contenente le risorse relative a impostazioni cultura specifiche, ma non contiene codice. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile aggiornare o sostituire facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
   
 > [!NOTE]
->  Le risorse delle impostazioni cultura predefinite di un'applicazione possono anche essere archiviate in un assembly satellite. A tale scopo, si assegna all'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valore di <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
+> Le risorse delle impostazioni cultura predefinite di un'applicazione possono anche essere archiviate in un assembly satellite. A tale scopo, si assegna all'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valore di <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Posizione e nome dell'assembly satellite  
  Requisito del modello hub e spoke è che le risorse vengano inserite in posizioni specifiche perché possano essere individuate e usate con facilità. Se le risorse non vengono compilate e denominate come previsto oppure se non vengono inserite nelle posizioni corrette, Common Language Runtime non è in grado di individuarle e usa le impostazioni cultura predefinite. Lo strumento Gestione risorse di .NET Framework, rappresentato da un oggetto <xref:System.Resources.ResourceManager>, viene usato per accedere automaticamente alle risorse localizzate. Gestione risorse richiede quanto segue:  
@@ -46,7 +46,7 @@ I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Que
 - Nella directory dell'applicazione deve esistere una sottodirectory separata per ognuna delle impostazioni cultura localizzate. In tali sottodirectory devono essere archiviate le risorse delle rispettive impostazioni cultura. Il nome della sottodirectory deve essere lo stesso delle impostazioni cultura. In alternativa, è possibile archiviare gli assembly satellite nella Global Assembly Cache. In questo caso, il componente delle informazioni delle impostazioni cultura del nome sicuro dell'assembly deve indicare le impostazioni cultura corrispondenti. Vedere la sezione [Installazione di assembly satellite nella Global Assembly Cache](#SN) più avanti in questo argomento.  
   
     > [!NOTE]
-    >  Se l'applicazione include risorse per impostazioni cultura secondarie, inserire le impostazioni cultura secondarie in una sottodirectory separata all'interno della directory dell'applicazione. Non inserire impostazioni cultura secondarie all'interno di sottodirectory della directory delle impostazioni cultura principali.  
+    > Se l'applicazione include risorse per impostazioni cultura secondarie, inserire le impostazioni cultura secondarie in una sottodirectory separata all'interno della directory dell'applicazione. Non inserire impostazioni cultura secondarie all'interno di sottodirectory della directory delle impostazioni cultura principali.  
   
 - L'assembly satellite deve avere lo stesso nome dell'applicazione e deve usare l'estensione di file ".resources.dll". Se ad esempio un'applicazione è denominata Example.exe, il nome di ogni assembly satellite deve essere Example.resources.dll. Si noti che il nome dell'assembly satellite non indica le impostazioni cultura dei file di risorse corrispondenti. L'assembly satellite, tuttavia, viene visualizzato in una directory che specifica le impostazioni cultura.  
   
@@ -75,7 +75,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Nella tabella seguente vengono descritte in modo più dettagliato le opzioni di Al.exe usate in questi comandi.  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**-target:** lib|Specifica che l'assembly satellite deve essere compilato in un file di libreria con estensione dll. Poiché un assembly satellite non contiene codice eseguibile e non rappresenta l'assembly principale dell'applicazione, è necessario salvare gli assembly satellite come DLL.|  
 |**-embed:** strings.de.resources|Specifica il nome del file di risorse da incorporare quando Al.exe compila l'assembly. È possibile incorporare più file con estensione resources in un assembly satellite. Se si segue il modello hub e spoke, però, è necessario compilare un assembly satellite per ognuna delle impostazioni cultura. È tuttavia possibile creare file con estensione resources separati per le stringhe e gli oggetti.|  

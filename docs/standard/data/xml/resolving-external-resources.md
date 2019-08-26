@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664488"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918200"
 ---
 # <a name="resolving-external-resources"></a>Risoluzione di risorse esterne
 La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlDocument** per individuare le risorse non inline nei dati XML, quali DTD, entità e schemi esterni. Questi elementi possono trovarsi in una rete o in un'unità locale ed essere identificati tramite un URI (Uniform Resource Identifier) . Questo consente a **XmlDocument** di risolvere i nodi **EntityReference** presenti nel documento e convalidare il documento in base allo schema o alla DTD esterna.  
@@ -48,7 +48,7 @@ La proprietà **XmlResolver** di **XmlDocument** viene usata dalla classe **XmlD
  Impostando XmlResolver in modo che contenga le credenziali corrette sarà possibile accedere alle risorse esterne.  
   
 > [!NOTE]
->  Non vi è modo di recuperare la proprietà **XmlResolver**. In questo modo è possibile impedire all'utente di riutilizzare un **XmlResolver** sul quale sono state impostate le credenziali. Inoltre, se viene usato **XmlTextReader** o un tipo <xref:System.Xml.XmlReader> di convalida per caricare **XmlDocument** e **XmlDocument**quest'ultimo ha un sistema di risoluzione impostato, i sistemi di risoluzione di questi lettori non vengono memorizzati nella cache da **XmlDocument** dopo la fase **Load**, in quanto anche tale operazione presenta un rischio per la sicurezza.  
+> Non vi è modo di recuperare la proprietà **XmlResolver**. In questo modo è possibile impedire all'utente di riutilizzare un **XmlResolver** sul quale sono state impostate le credenziali. Inoltre, se viene usato **XmlTextReader** o un tipo <xref:System.Xml.XmlReader> di convalida per caricare **XmlDocument** e **XmlDocument**quest'ultimo ha un sistema di risoluzione impostato, i sistemi di risoluzione di questi lettori non vengono memorizzati nella cache da **XmlDocument** dopo la fase **Load**, in quanto anche tale operazione presenta un rischio per la sicurezza.  
   
  Per altre informazioni, vedere la sezione Note della pagina di riferimento <xref:System.Xml.XmlResolver>.  
   

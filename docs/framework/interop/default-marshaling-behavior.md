@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946562"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -24,7 +24,7 @@ Il marshalling di interoperabilità opera sulle regole che stabiliscono il compo
  Questa sezione identifica le caratteristiche predefinite del comportamento del servizio di marshalling di interoperabilità. Vengono fornite informazioni dettagliate sul marshalling di matrici, tipi booleani, tipi char, delegati, classi, oggetti, stringhe e strutture.  
   
 > [!NOTE]
->  Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gestione della memoria con il marshalling di interoperabilità  
  Il gestore di marshalling di interoperabilità tenta sempre di liberare la memoria allocata dal codice gestito. Questo comportamento è conforme alle regole di gestione della memoria COM, ma differisce dalle regole che governano il codice C++ nativo.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 In questo esempio, quando i due delegati sono sottoposti a marshalling come <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, il risultato è un `int` e un puntatore a un `int`. Dal momento che i tipi delegati sono sottoposti a marshalling, `int` in questo caso rappresenta un puntatore a un void (`void*`), ovvero l'indirizzo del delegato in memoria. In altre parole, questo risultato è specifico per i sistemi Windows a 32 bit, poiché `int` in questo caso rappresenta la dimensione del puntatore a funzione.
 
 > [!NOTE]
->  Un riferimento al puntatore a funzione a un delegato gestito tramite codice non gestito non impedisce a Common Language Runtime di eseguire un'operazione di Garbage Collection nell'oggetto gestito.  
+> Un riferimento al puntatore a funzione a un delegato gestito tramite codice non gestito non impedisce a Common Language Runtime di eseguire un'operazione di Garbage Collection nell'oggetto gestito.  
   
  Il codice seguente, ad esempio, non è corretto perché il riferimento all'oggetto `cb`, passato al metodo  `SetChangeHandler` non mantiene attivo `cb` oltre la durata del metodo `Test`. Dopo che l'oggetto `cb` è stato sottoposto a Garbage Collection, il puntatore a funzione passato a `SetChangeHandler` non è più valido.  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  Il tipo di valore `Rect` deve essere passato mediante riferimento in quanto l'API non gestita richiede che alla funzione venga passato un puntatore a un oggetto `RECT`. Il tipo di valore `Point` viene passato mediante valore in quanto l'API non gestita richiede che nello stack venga passato un oggetto `POINT`. Questa sottile differenza è molto importante. I riferimenti vengono passati al codice non gestito come puntatori. I valori vengono passati al codice non gestito nello stack.  
   
 > [!NOTE]
->  Quando viene effettuato il marshalling di un tipo formattato come struttura, solo i campi all'interno del tipo sono accessibili. Se il tipo dispone di metodi, proprietà o eventi, non è possibile accedervi dal codice non gestito.  
+> Quando viene effettuato il marshalling di un tipo formattato come struttura, solo i campi all'interno del tipo sono accessibili. Se il tipo dispone di metodi, proprietà o eventi, non è possibile accedervi dal codice non gestito.  
   
  È anche possibile effettuare il marshalling delle classi nel codice non gestito come strutture di tipo C, a condizione che il layout dei membri sia fisso. Le informazioni sul layout dei membri per una classe vengono fornite anche tramite l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La differenza principale tra i tipi di valore con layout fisso e le classi con layout fisso riguarda il modo in cui viene effettuato il marshalling nel codice non gestito. I tipi di valore vengono passati mediante valore (nello stack) e, di conseguenza, le eventuali modifiche apportate ai membri del tipo dall'oggetto chiamato non sono visibili al chiamante. I tipi di riferimento vengono passati mediante riferimento (un riferimento al tipo viene passato nello stack) e, di conseguenza, tutte le modifiche apportate ai membri di un tipo copiabile da BLT dall'oggetto chiamato sono visibili al chiamante.  
   
 > [!NOTE]
->  Se un tipo di riferimento dispone di membri di tipi non copiabili da BLT, è necessario eseguire la conversione due volte: la prima volta quando un argomento viene passato al lato non gestito e la seconda volta quando viene restituito dalla chiamata. A causa di questo sovraccarico aggiuntivo, è necessario applicare in modo esplicito i parametri in/out a un argomento se il chiamante desidera visualizzare le modifiche apportate dall'oggetto chiamato.  
+> Se un tipo di riferimento dispone di membri di tipi non copiabili da BLT, è necessario eseguire la conversione due volte: la prima volta quando un argomento viene passato al lato non gestito e la seconda volta quando viene restituito dalla chiamata. A causa di questo sovraccarico aggiuntivo, è necessario applicare in modo esplicito i parametri in/out a un argomento se il chiamante desidera visualizzare le modifiche apportate dall'oggetto chiamato.  
   
  Nell'esempio seguente la classe `SystemTime` ha un layout dei membri sequenziale e può essere passata alla funzione **GetSystemTime** dell'API Windows.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  Le stesse regole usate per il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il gestore marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**Point**\*\*) in entrambe le direzioni.  
   
 > [!NOTE]
->  Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  
+> Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  
   
 ### <a name="system-value-types"></a>Tipi di valore di sistema  
  Lo spazio dei nomi <xref:System> include diversi tipi di valore che rappresentano il formato sottoposto a conversione boxing dei tipi primitivi di runtime. Ad esempio, la struttura <xref:System.Int32?displayProperty=nameWithType> del tipo valore rappresenta il formato sottoposto a conversione boxing di **ELEMENT_TYPE_I4**. Anziché effettuare il marshalling di questi tipi come strutture, come nel caso di altri tipi formattati, si effettua il marshalling nello stesso modo dei tipi primitivi di cui viene eseguita la conversione boxing. Per **System.Int32** viene quindi effettuato il marshalling come **ELEMENT_TYPE_I4** invece che come struttura contenente un singolo membro di tipo **long**. La tabella seguente contiene un elenco dei tipi valore nello spazio dei nomi **System** che costituiscono rappresentazioni sottoposte a conversione boxing di tipi primitivi.  

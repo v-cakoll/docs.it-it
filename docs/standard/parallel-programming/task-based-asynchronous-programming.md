@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300627"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666314"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 
@@ -97,7 +97,7 @@ Ogni attività riceve un ID di tipo Integer con cui viene identificata in modo u
 
 La maggior parte delle API che creano attività genera overload che accettano un parametro <xref:System.Threading.Tasks.TaskCreationOptions>. Quando si specifica una di queste opzioni si indica all'utilità di pianificazione il modo in cui pianificare l'attività nel pool di thread. Nella tabella seguente sono elencate le varie opzioni di creazione delle attività.
 
-|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|Description|
+|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|DESCRIZIONE|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Valore predefinito quando non si specificano opzioni. L'utilità di pianificazione usa le proprie regole euristiche predefinite per pianificare l'attività.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Specifica che l'attività deve essere pianificata in modo che le attività create prima abbiano più possibilità di essere eseguite prima delle attività create in un secondo momento.|
@@ -256,11 +256,11 @@ L'oggetto <xref:System.Threading.Tasks.TaskFactory> predefinito è accessibile c
 
 ## <a name="tasks-without-delegates"></a>Attività senza delegati
 
-In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+In alcuni casi è necessario usare un oggetto <xref:System.Threading.Tasks.Task> per incapsulare un'operazione asincrona eseguita da un componente esterno anziché dal delegato dell'utente. Se l'operazione si basa sul modello Begin/End del modello di programmazione asincrona, è possibile usare i metodi <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. In caso contrario, è possibile usare l'oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601> per eseguire il wrapping dell'operazione in un'attività e in questo modo ottenere alcuni dei vantaggi della programmabilità di <xref:System.Threading.Tasks.Task>, ad esempio il supporto per la propagazione delle eccezioni e le continuazioni. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
 ## <a name="custom-schedulers"></a>Utilità di pianificazione personalizzate
 
-Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per ulteriori informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.
+Per la maggior parte degli sviluppatori di applicazioni o librerie non occorre determinare il processore in cui è in esecuzione l'attività né come quest'ultima sincronizza il proprio lavoro con le altre attività o come viene pianificata in <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Tali sviluppatori richiedono soltanto che l'attività venga eseguita con la maggiore efficienza possibile nel computer host. Se si richiede un controllo più accurato sui dettagli di pianificazione, la libreria Task Parallel Library (TPL) consente di configurare alcune impostazioni nell'utilità di pianificazione delle attività predefinita. Inoltre, tale libreria consente persino di fornire un'utilità di pianificazione personalizzata. Per altre informazioni, vedere <xref:System.Threading.Tasks.TaskScheduler>.
 
 ## <a name="related-data-structures"></a>Strutture di dati correlate
 
@@ -268,13 +268,13 @@ La libreria TPL presenta vari nuovi tipi pubblici che risultano utili sia negli 
 
 ## <a name="custom-task-types"></a>Tipi di attività personalizzati
 
-È consigliabile non ereditare da <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. È invece consigliabile usare la proprietà <xref:System.Threading.Tasks.Task.AsyncState%2A> per associare i dati o lo stato aggiuntivi a un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. È anche possibile usare i metodi di estensione per estendere la funzionalità delle classi <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Per altre informazioni sui metodi di estensione, vedere [Metodi di estensione](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) e [Metodi di estensione](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+È consigliabile non ereditare da <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. È invece consigliabile usare la proprietà <xref:System.Threading.Tasks.Task.AsyncState%2A> per associare i dati o lo stato aggiuntivi a un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. È anche possibile usare i metodi di estensione per estendere la funzionalità delle classi <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Per altre informazioni sui metodi di estensione, vedere [Metodi di estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md) e [Metodi di estensione](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
 Se è necessario ereditare da <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, non è possibile usare <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A> o le classi <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> o <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> per creare istanze del tipo di attività personalizzato, poiché questi meccanismi creano solo oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Non è inoltre possibile utilizzare i meccanismi di continuazione dell'attività forniti da <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601><xref:System.Threading.Tasks.TaskFactory> e <xref:System.Threading.Tasks.TaskFactory%601> per creare istanze del tipo di attività personalizzato poiché anche questi meccanismi creano solo oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Description|
+|Titolo|DESCRIZIONE|
 |-|-|
 |[Concatenamento di attività tramite attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Viene descritto il funzionamento delle continuazioni.|
 |[Attività figlio connesse e disconnesse](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Viene descritta la differenza tra attività figlio collegate e scollegate.|

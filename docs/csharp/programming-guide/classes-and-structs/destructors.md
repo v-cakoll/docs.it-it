@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584380"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924492"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizzatori (Guida per programmatori C#)
 I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazioni di pulizia finale eventualmente necessarie quando un'istanza di classe viene raccolta da Garbage Collector.  
@@ -56,7 +56,7 @@ protected override void Finalize()
  In questo modo, il metodo `Finalize` viene chiamato in modo ricorsivo per tutte le istanze nella catena di ereditarietà, dalla più derivata alla meno derivata.  
   
 > [!NOTE]
->  I finalizzatori vuoti non devono essere usati. Quando una classe contiene un finalizzatore, viene creata una voce nella coda `Finalize`. Quando si chiama il finalizzatore, viene richiamato Garbage Collector per elaborare la coda. Se il finalizzatore è vuoto, si verifica semplicemente un calo di prestazioni.  
+> I finalizzatori vuoti non devono essere usati. Quando una classe contiene un finalizzatore, viene creata una voce nella coda `Finalize`. Quando si chiama il finalizzatore, viene richiamato Garbage Collector per elaborare la coda. Se il finalizzatore è vuoto, si verifica semplicemente un calo di prestazioni.  
   
  Il programmatore non ha alcun controllo sul momento in cui viene chiamato il finalizzatore, poiché il momento è determinato dal Garbage Collector. Il Garbage Collector controlla gli oggetti che non vengono più usati dall'applicazione e, se considera un oggetto idoneo per la finalizzazione, chiama il finalizzatore (se presente) e recupera la memoria usata per archiviare l'oggetto. 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [Implementazione di un metodo Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Istruzione using](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea tre classi che costituiscono una catena di ereditarietà. La classe `First` è la classe base, `Second` è derivata da `First` e `Third` è derivata da `Second`. Tutte e tre hanno finalizzatori. In `Main` viene creata un'istanza della classe più derivata. Durante l'esecuzione del programma, si noti che i finalizzatori delle tre classi vengono chiamati automaticamente e in ordine, dalla classe più derivata alla meno derivata.  
@@ -90,6 +90,6 @@ Per altre informazioni, vedere la sezione [Distruttori](~/_csharplang/spec/class
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.IDisposable>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Guida per programmatori C#](../index.md)
+- [Costruttori](./constructors.md)
 - [Garbage Collection](../../../standard/garbage-collection/index.md)

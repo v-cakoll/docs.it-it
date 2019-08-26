@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969023"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet per la compilazione di schemi
 Viene descritto <xref:System.Xml.Schema.XmlSchemaSet>, ovvero una cache in cui è possibile archiviare e convalidare gli schemi XSD (XML Schema Definition Language).  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  Gli schemi di un tipo <xref:System.Xml.Schema.XmlSchemaSet> vengono compilati in un singolo schema logico dal metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
   
 > [!NOTE]
->  A differenza della classe obsoleta <xref:System.Xml.Schema.XmlSchemaCollection>, gli schemi non vengono compilati quando si chiama il metodo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>.  
+> A differenza della classe obsoleta <xref:System.Xml.Schema.XmlSchemaCollection>, gli schemi non vengono compilati quando si chiama il metodo <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>.  
   
  Se il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> viene eseguito correttamente, la proprietà <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet> viene impostata su `true`.  
   
 > [!NOTE]
->  La proprietà <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> non viene influenzata se si apportano modifiche agli schemi contenuti nel tipo <xref:System.Xml.Schema.XmlSchemaSet>. Non viene tenuta traccia degli aggiornamenti dei singoli schemi del tipo <xref:System.Xml.Schema.XmlSchemaSet>. Di conseguenza, la proprietà <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> può essere `true` anche se viene modificato uno degli schemi contenuti nel tipo <xref:System.Xml.Schema.XmlSchemaSet>, a condizione che non venga aggiunto o rimosso alcuno schema dal tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
+> La proprietà <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> non viene influenzata se si apportano modifiche agli schemi contenuti nel tipo <xref:System.Xml.Schema.XmlSchemaSet>. Non viene tenuta traccia degli aggiornamenti dei singoli schemi del tipo <xref:System.Xml.Schema.XmlSchemaSet>. Di conseguenza, la proprietà <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> può essere `true` anche se viene modificato uno degli schemi contenuti nel tipo <xref:System.Xml.Schema.XmlSchemaSet>, a condizione che non venga aggiunto o rimosso alcuno schema dal tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Nell'esempio seguente viene aggiunto il file `books.xsd` al tipo <xref:System.Xml.Schema.XmlSchemaSet>, quindi viene chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>.  
   

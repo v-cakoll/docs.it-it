@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968557"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
   
 > [!NOTE]
->  In generale, un motore NFA (Nondeterministic Finite Automaton) come il motore delle espressioni regolari .NET affida la responsabilità della creazione di espressioni regolari efficienti e veloci allo sviluppatore.  
+> In generale, un motore NFA (Nondeterministic Finite Automaton) come il motore delle espressioni regolari .NET affida la responsabilità della creazione di espressioni regolari efficienti e veloci allo sviluppatore.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378162"
  A partire da .NET Framework 4.5, è possibile impostare un valore di timeout che rappresenta l'intervallo più lungo durante il quale il motore delle espressioni regolari cercherà una singola corrispondenza prima di abbandonare il tentativo e generare un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Specificare l'intervallo di timeout fornendo un valore <xref:System.TimeSpan> al costruttore <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> per instanziare espressioni regolari. Inoltre, ogni metodo statico di criteri di ricerca ha un overload con un parametro <xref:System.TimeSpan> che consente di specificare un valore di timeout. Per impostazione predefinita, l'intervallo di timeout viene impostato su <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> e il motore delle espressioni regolari non ha timeout.  
   
 > [!IMPORTANT]
->  È consigliabile impostare sempre un intervallo di timeout se l'espressione regolare si basa sul backtracking.  
+> È consigliabile impostare sempre un intervallo di timeout se l'espressione regolare si basa sul backtracking.  
   
  Un'eccezione <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indica che il motore delle espressioni regolari non è in grado di trovare una corrispondenza nell'intervallo di timeout specificato, ma non indica perché è stata generata l'eccezione. Il motivo può essere l'utilizzo eccessivo del backtracking, ma è anche possibile che l'intervallo di timeout sia stato impostato troppo basso dato il carico di sistema al momento in cui l'eccezione è stata generata. Quando si gestisce l'eccezione, è possibile scegliere di ignorare ulteriori corrispondenze con la stringa di input o aumentare l'intervallo di timeout e ritentare l'operazione corrispondente.  
   

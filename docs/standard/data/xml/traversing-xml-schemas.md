@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939454"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Object Model) consente di accedere a elementi, attributi e tipi archiviati nel modello SOM. Tale attraversamento rappresenta inoltre il primo passaggio per la modifica di uno schema XML tramite l'API del modello SOM.  
@@ -35,7 +35,7 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (fornisce l'accesso agli attributi che non appartengono allo spazio dei nomi dello schema).|  
   
 > [!NOTE]
->  Tutte le proprietà elencate nella precedente tabella, a eccezione della proprietà <xref:System.Xml.Schema.XmlSchema.Items%2A>, sono proprietà PSCI (Post-Schema-Compilation-Infoset) che non sono disponibili fino a quando lo schema non è stato compilato. La proprietà <xref:System.Xml.Schema.XmlSchema.Items%2A> è una proprietà precedente alla compilazione dello schema che può essere usata prima che lo schema venga compilato per accedere e apportare modifiche a elementi, attributi e tipi a livello globale.  
+> Tutte le proprietà elencate nella precedente tabella, a eccezione della proprietà <xref:System.Xml.Schema.XmlSchema.Items%2A>, sono proprietà PSCI (Post-Schema-Compilation-Infoset) che non sono disponibili fino a quando lo schema non è stato compilato. La proprietà <xref:System.Xml.Schema.XmlSchema.Items%2A> è una proprietà precedente alla compilazione dello schema che può essere usata prima che lo schema venga compilato per accedere e apportare modifiche a elementi, attributi e tipi a livello globale.  
 >   
 >  La proprietà <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> fornisce l'accesso agli attributi che non appartengono allo spazio dei nomi dello schema. Tali attributi non vengono elaborati dal processore dello schema.  
   

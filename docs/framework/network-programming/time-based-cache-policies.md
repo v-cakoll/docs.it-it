@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613840"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942366"
 ---
 # <a name="time-based-cache-policies"></a>criteri di cache basati sull'ora
 I criteri di cache basati sul tempo definiscono il livello di aggiornamento delle voci memorizzate nella cache usando l'ora di recupero della risorsa, le intestazioni restituite con la risorsa e l'ora corrente. Durante l'impostazione di criteri di cache basati sul tempo, è possibile usare il criterio basato sul tempo <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oppure creare criteri personalizzati. Quando si usano i criteri basati sul tempo predefiniti per le risorse ottenute mediante HTTP (Hypertext Transfer Protocol), il comportamento esatto della cache è determinato dalle intestazioni incluse nella risposta memorizzata nella cache e dai comportamenti specificati nelle sezioni 13 e 14 del documento RFC 2616, disponibile nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Per un esempio di codice che illustra l'impostazione di criteri basati sul tempo predefiniti per le risorse HTTP, vedere [Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Per esempi di codice che illustrano la creazione e l'uso dei criteri di cache, vedere [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -39,7 +39,7 @@ I criteri di cache basati sul tempo definiscono il livello di aggiornamento dell
 - Data di sincronizzazione della cache  
   
 > [!NOTE]
->  L'uso dei criteri di cache basati sul tempo predefiniti non è da confondersi con l'impostazione di criteri di cache predefiniti per l'applicazione. I criteri basati sul tempo predefiniti sono criteri specifici che possono essere usati a livello di richiesta o di applicazione. I criteri di cache predefiniti per l'applicazione sono criteri (basati sulla posizione o sul tempo) applicati quando non è impostato alcun criterio per una richiesta. Per informazioni dettagliate sull'impostazione di criteri di cache predefiniti per l'applicazione, vedere <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
+> L'uso dei criteri di cache basati sul tempo predefiniti non è da confondersi con l'impostazione di criteri di cache predefiniti per l'applicazione. I criteri basati sul tempo predefiniti sono criteri specifici che possono essere usati a livello di richiesta o di applicazione. I criteri di cache predefiniti per l'applicazione sono criteri (basati sulla posizione o sul tempo) applicati quando non è impostato alcun criterio per una richiesta. Per informazioni dettagliate sull'impostazione di criteri di cache predefiniti per l'applicazione, vedere <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
 ### <a name="maximum-age"></a>Durata massima  
  L'impostazione di durata massima per i criteri specifica per quanto tempo è possibile usare una copia memorizzata nella cache di una risorsa. Se la copia memorizzata nella cache della risorsa è precedente al periodo di tempo specificato, la risorsa deve essere riconvalidata controllandola in base al contenuto nel server. Se la durata massima consente di usare la risorsa dopo la scadenza, questo requisito non viene applicato a meno che non venga specificato anche un valore di obsolescenza massima.  

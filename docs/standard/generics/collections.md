@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948918"
 ---
 # <a name="generic-collections-in-net"></a>Raccolte generiche in .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "65592275"
  La struttura generica <xref:System.Nullable%601> consente di usare tipi di valore come se potessero essere impostati su `null`. Può risultare utile quando si usano query di database, dove possono mancare campi che contengono tipi di valore. Il parametro di un tipo generico può essere qualsiasi tipo di valore.  
   
 > [!NOTE]
->  In C# e Visual Basic non è necessario usare <xref:System.Nullable%601> in modo esplicito perché questo linguaggio dispone della sintassi per i tipi nullable. Vedere [Tipi nullable (Guida per programmatori C#)](../../csharp/programming-guide/nullable-types/index.md) e [Tipi di valori nullable (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> In C# e Visual Basic non è necessario usare <xref:System.Nullable%601> in modo esplicito perché questo linguaggio dispone della sintassi per i tipi nullable. Vedere [Tipi nullable (Guida per programmatori C#)](../../csharp/programming-guide/nullable-types/index.md) e [Tipi di valori nullable (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  La struttura generica <xref:System.ArraySegment%601> consente di delimitare un intervallo di elementi in una matrice unidimensionale in base zero di qualsiasi tipo. Il parametro di tipo generico è il tipo degli elementi della matrice.  
   

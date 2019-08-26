@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268223"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963405"
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe in formato numerico personalizzato
 
@@ -175,7 +175,7 @@ ms.locfileid: "67268223"
  Per includere una barra rovesciata in una stringa dei risultati, è necessario aggiungere un carattere di escape facendolo quindi precedere da un'altra barra rovesciata (`\\`).  
   
 > [!NOTE]
->  Alcuni compilatori, ad esempio i compilatori C++ e C#, possono anche interpretare un singolo carattere barra rovesciata come carattere di escape. Per assicurarsi che una stringa venga interpretata correttamente quando viene eseguita la formattazione, è possibile usare il carattere del valore letterale stringa letterale (carattere @) prima della stringa in C# o aggiungere un altro carattere barra rovesciata prima di ogni barra rovesciata in C# e C++. Nell'esempio C# seguente vengono illustrati entrambi gli approcci.  
+> Alcuni compilatori, ad esempio i compilatori C++ e C#, possono anche interpretare un singolo carattere barra rovesciata come carattere di escape. Per assicurarsi che una stringa venga interpretata correttamente quando viene eseguita la formattazione, è possibile usare il carattere del valore letterale stringa letterale (carattere @) prima della stringa in C# o aggiungere un altro carattere barra rovesciata prima di ogni barra rovesciata in C# e C++. Nell'esempio C# seguente vengono illustrati entrambi gli approcci.  
   
  Nell'esempio seguente viene usato il carattere di escape per evitare che durante l'operazione di formattazione i caratteri "#", "0" e "\\" vengano interpretati come caratteri di escape o identificatori di formato. Negli esempi C# viene usata una barra rovesciata aggiuntiva per garantire che la barra rovesciata venga interpretata come carattere letterale.  
   

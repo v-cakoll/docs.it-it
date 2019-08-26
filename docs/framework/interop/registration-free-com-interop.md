@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957464"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilità COM senza registrazione
 L'interoperabilità COM senza registrazione consente di attivare un componente senza usare il Registro di sistema di Windows per memorizzare informazioni sugli assembly. Anziché registrare un componente su un computer durante la distribuzione, vengono creati file manifesto di tipo Win32 contenenti informazioni sull'associazione e sull'attivazione in fase di progettazione. L'attivazione di un oggetto è controllata da tali file manifesto, anziché da chiavi del Registro di sistema.  
@@ -52,7 +52,7 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
      L'attivazione senza registrazione è facoltativa per i componenti COM installati in Windows XP. Per istruzioni dettagliate sull'aggiunta di un assembly side-by-side a un'applicazione, vedere [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Uso di assembly side-by-side) in MSDN Library.  
   
     > [!NOTE]
-    >  L'esecuzione side-by-side è una funzionalità di .NET Framework che consente di eseguire contemporaneamente sullo stesso computer più versioni del runtime e più versioni delle applicazioni e dei componenti che usano una versione del runtime. L'esecuzione side-by-side e gli assembly side-by-side sono meccanismi diversi per fornire la funzionalità side-by-side.  
+    > L'esecuzione side-by-side è una funzionalità di .NET Framework che consente di eseguire contemporaneamente sullo stesso computer più versioni del runtime e più versioni delle applicazioni e dei componenti che usano una versione del runtime. L'esecuzione side-by-side e gli assembly side-by-side sono meccanismi diversi per fornire la funzionalità side-by-side.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968589"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
   
 > [!IMPORTANT]
->  Questo argomento descrive come recuperare gli attributi personalizzati per il codice caricato nel contesto di esecuzione. Per recuperare gli attributi per il codice caricato nel contesto di sola reflection, è necessario usare la classe <xref:System.Reflection.CustomAttributeData>, come illustrato in [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> Questo argomento descrive come recuperare gli attributi personalizzati per il codice caricato nel contesto di esecuzione. Per recuperare gli attributi per il codice caricato nel contesto di sola reflection, è necessario usare la classe <xref:System.Reflection.CustomAttributeData>, come illustrato in [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Questa sezione descrive i modi seguenti per recuperare gli attributi:  
   

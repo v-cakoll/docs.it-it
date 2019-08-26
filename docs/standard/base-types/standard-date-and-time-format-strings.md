@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267923"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949604"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -79,7 +79,7 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  Per informazioni sulla personalizzazione delle stringhe o dei modelli usati nella formattazione di data e ora, vedere l'argomento relativo alla classe <xref:System.Globalization.NumberFormatInfo>.  
+> Per informazioni sulla personalizzazione delle stringhe o dei modelli usati nella formattazione di data e ora, vedere l'argomento relativo alla classe <xref:System.Globalization.NumberFormatInfo>.  
   
  In alcuni casi la stringa di formato standard serve come una pratica abbreviazione per una stringa di formato personalizzata più lunga, che è invariante. In questa categoria rientrano quattro stringhe di formato standard: "O" (o "o"), "R" (o "r"), "s" e "u". Queste stringhe corrispondono a stringhe di formato personalizzate definite dalle impostazioni cultura invarianti. Producono rappresentazioni di stringa di valori di data e ora che dovranno essere identiche nelle diverse impostazioni cultura. Nella tabella seguente vengono fornite informazioni su queste quattro stringhe di formato di data e ora standard.  
   

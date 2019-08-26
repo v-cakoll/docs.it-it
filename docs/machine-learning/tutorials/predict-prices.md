@@ -1,17 +1,15 @@
 ---
 title: 'Esercitazione: Stimare i prezzi usando la regressione'
 description: Questa esercitazione illustra come compilare un modello di regressione usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
-author: jralexander
-ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377783"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666617"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: Stimare i prezzi usando la regressione con ML.NET
 

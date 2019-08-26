@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661462"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605958"
 ---
 # <a name="char-c-reference"></a>char (Riferimenti per C#)
 
@@ -44,12 +44,12 @@ Per altre informazioni, vedere [Tipi integrali](~/_csharplang/spec/types.md#inte
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Char>
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Tipi integrali](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)
-- [Stringhe](../../../csharp/programming-guide/strings/index.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](./index.md)
+- [Tipi integrali](../builtin-types/integral-numeric-types.md)
+- [Tabella dei tipi incorporati](./built-in-types-table.md)
+- [Tabella delle conversioni numeriche implicite](./implicit-numeric-conversions-table.md)
+- [Tabella delle conversioni numeriche esplicite](./explicit-numeric-conversions-table.md)
+- [Tipi nullable](../../programming-guide/nullable-types/index.md)
+- [Stringhe](../../programming-guide/strings/index.md)

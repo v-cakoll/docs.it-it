@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956631"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
   
 > [!NOTE]
->  Prima di .NET Framework 3.5, la creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. .NET Framework 3.5 consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
+> Prima di .NET Framework 3.5, la creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. .NET Framework 3.5 consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
   
  Questa procedura dettagliata illustra le attività seguenti:  
   
@@ -85,7 +85,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
  Ad esempio, un host può concedere alle applicazioni Internet autorizzazioni Internet più RMA, in modo tale che un'applicazione Internet sia in grado di generare codice che accede ai dati privati nei propri assembly. Poiché l'accesso è limitato agli assembly con attendibilità uguale o minore, un'applicazione Internet non può accedere a membri di assembly completamente attendibili, ad esempio gli assembly .NET Framework.  
   
 > [!NOTE]
->  Per evitare l'elevazione dei privilegi, le informazioni sullo stack per l'assembly di creazione vengono incluse quando si creano metodi dinamici ospitati in modo anonimo. Quando il metodo viene richiamato, vengono controllate le informazioni sullo stack. Di conseguenza, un metodo dinamico ospitato in modo anonimo richiamato da codice completamente attendibile è comunque limitato al livello di attendibilità dell'assembly di creazione.  
+> Per evitare l'elevazione dei privilegi, le informazioni sullo stack per l'assembly di creazione vengono incluse quando si creano metodi dinamici ospitati in modo anonimo. Quando il metodo viene richiamato, vengono controllate le informazioni sullo stack. Di conseguenza, un metodo dinamico ospitato in modo anonimo richiamato da codice completamente attendibile è comunque limitato al livello di attendibilità dell'assembly di creazione.  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Per creare un dominio dell'applicazione con attendibilità parziale più RMA  
   
@@ -97,7 +97,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      Il metodo <xref:System.Security.PermissionSet.AddPermission%2A> aggiunge l'autorizzazione al set di concessioni, se non è già inclusa. Se l'autorizzazione è già inclusa nel set di concessioni, i flag specificati vengono aggiunti all'autorizzazione esistente.  
   
     > [!NOTE]
-    >  RMA è una funzionalità dei metodi dinamici ospitati in modo anonimo. Quando i metodi dinamici comuni ignorano i controlli di visibilità JIT, il codice generato richiede l'attendibilità totale.  
+    > RMA è una funzionalità dei metodi dinamici ospitati in modo anonimo. Quando i metodi dinamici comuni ignorano i controlli di visibilità JIT, il codice generato richiede l'attendibilità totale.  
   
 2. Creare il dominio dell'applicazione, specificando le informazioni di configurazione del dominio dell'applicazione e il set di concessioni.  
   
@@ -135,7 +135,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      Il metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> crea l'oggetto nel dominio dell'applicazione di destinazione e restituisce un proxy che può essere usato per chiamare le proprietà e metodi dell'oggetto.  
   
     > [!NOTE]
-    >  Se questo codice viene utilizzato in Visual Studio, è necessario modificare il nome della classe per includere lo spazio dei nomi. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
+    > Se questo codice viene utilizzato in Visual Studio, è necessario modificare il nome della classe per includere lo spazio dei nomi. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
 6. Aggiungere il codice per chiamare il metodo `SimpleEmitDemo` . La chiamata viene sottoposta a marshalling entro i limiti del dominio dell'applicazione e il codice viene eseguito nel dominio dell'applicazione sandbox.  
   
@@ -147,7 +147,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
  I metodi dinamici ospitati in modo anonimo sono associati a un assembly trasparente messo a disposizione dal sistema. Di conseguenza, il codice che contengono è trasparente. I metodi dinamici comuni, d'altra parte, devono essere associati a un modulo esistente, specificato direttamente o derivato da un tipo associato, e ricevono il livello di sicurezza da tale modulo.  
   
 > [!NOTE]
->  L'unico modo di associare un metodo dinamico all'assembly che offre l'hosting anonimo è usare i costruttori descritti nella procedura seguente. Non è possibile specificare in modo esplicito un modulo nell'assembly di hosting anonimo.  
+> L'unico modo di associare un metodo dinamico all'assembly che offre l'hosting anonimo è usare i costruttori descritti nella procedura seguente. Non è possibile specificare in modo esplicito un modulo nell'assembly di hosting anonimo.  
   
  I metodi dinamici comuni hanno accesso ai membri interni del modulo a cui sono associati o ai membri privati del tipo a cui sono associati. Poiché i metodi dinamici ospitati in modo anonimo sono isolati dall'altro codice, non hanno accesso ai dati privati. Usano tuttavia una possibilità limitata per ignorare i controlli di visibilità JIT in modo da ottenere l'accesso ai dati privati. Tale possibilità è limitata agli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly che genera il codice.  
   
@@ -174,12 +174,12 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      I metodi dinamici ospitati in modo anonimo possono usare questa possibilità limitata di ignorare i controlli di visibilità JIT solo se l'applicazione host concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La richiesta di questa autorizzazione viene effettuata quando viene richiamato il metodo.  
   
     > [!NOTE]
-    >  Le informazioni sullo stack di chiamate per l'assembly di creazione vengono incluse quando viene costruito il metodo dinamico. Di conseguenza, la richiesta viene effettuata facendo riferimento alle autorizzazioni dell'assembly di creazione anziché a quelle dell'assembly che richiama il metodo. Ciò impedisce che il codice generato venga eseguito con autorizzazioni elevate.  
+    > Le informazioni sullo stack di chiamate per l'assembly di creazione vengono incluse quando viene costruito il metodo dinamico. Di conseguenza, la richiesta viene effettuata facendo riferimento alle autorizzazioni dell'assembly di creazione anziché a quelle dell'assembly che richiama il metodo. Ciò impedisce che il codice generato venga eseguito con autorizzazioni elevate.  
   
      L'[esempio di codice completo](#Example) alla fine di questa procedura dettagliata illustra l'uso e le limitazioni dell'accesso limitato al membro. La relativa classe `Worker` include un metodo in grado di creare metodi dinamici ospitati in modo anonimo con o senza la possibilità limitata di ignorare i controlli di visibilità e l'esempio illustra il risultato dell'esecuzione di questo metodo nei domini dell'applicazione con diversi livelli di attendibilità.  
   
     > [!NOTE]
-    >  La possibilità limitata di ignorare i controlli di visibilità è una funzionalità di metodi dinamici ospitati in modo anonimo. Quando i metodi dinamici comuni ignorano i controlli di visibilità JIT, deve essere concessa l'attendibilità totale.  
+    > La possibilità limitata di ignorare i controlli di visibilità è una funzionalità di metodi dinamici ospitati in modo anonimo. Quando i metodi dinamici comuni ignorano i controlli di visibilità JIT, deve essere concessa l'attendibilità totale.  
   
 <a name="Example"></a>   
 ## <a name="example"></a>Esempio  

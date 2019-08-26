@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912523"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
   
 > [!IMPORTANT]
->  Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. La maggior parte dei metodi appartenenti a tipi generici non sono generici, come nell'esempio seguente. Per un esempio di creazione di un metodo generico, vedere [Procedura: Definire un metodo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. La maggior parte dei metodi appartenenti a tipi generici non sono generici, come nell'esempio seguente. Per un esempio di creazione di un metodo generico, vedere [Procedura: Definire un metodo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Per definire un tipo generico  
   
@@ -84,7 +84,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      Il costruttore usato per questo esempio di codice accetta `IEnumerable<T>`. Si noti tuttavia che, non trattandosi della definizione di tipo generico dell'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>, è necessario sostituire il parametro di tipo `T` di `List<T>` per il parametro di tipo `T` di `IEnumerable<T>`. Per evitare che la presenza di parametri di tipo denominati `T` in entrambi i tipi generi confusione, in questo esempio di codice vengono usati i nomi `TFirst` e `TSecond`. Per ottenere il tipo dell'argomento del costruttore, creare innanzitutto la definizione di tipo generico `IEnumerable<T>` e chiamare il metodo <xref:System.Type.MakeGenericType%2A> con il primo parametro di tipo generico di `List<T>`. L'elenco di argomenti del costruttore deve essere passato come matrice che, in questo caso, contiene un unico argomento.  
   
     > [!NOTE]
-    >  La definizione di tipo generico è espressa come `IEnumerable<>` quando viene usato l'operatore `typeof` in C# oppure come `IEnumerable(Of )` quando viene usato l'operatore `GetType` in Visual Basic.  
+    > La definizione di tipo generico è espressa come `IEnumerable<>` quando viene usato l'operatore `typeof` in C# oppure come `IEnumerable(Of )` quando viene usato l'operatore `GetType` in Visual Basic.  
   
      A questo punto è possibile ottenere il costruttore di `List<T>` chiamando <xref:System.Type.GetConstructor%2A> nella definizione di tipo generico. Per convertire questo costruttore nel costruttore corrispondente di `List<TFirst>`, passare `List<TFirst>` e il costruttore da `List<T>` al metodo statico <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType>.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946345"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
@@ -82,7 +82,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La versione C# del metodo `CreateCompositeBitmap` usa puntatori per abilitare l'elaborazione efficiente degli oggetti <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Pertanto, è necessario abilitare l'opzione **Consenti codice di tipo unsafe** nel progetto per utilizzare la parola chiave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Per altre informazioni su come abilitare il codice unsafe in un progetto Visual C#, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > La versione C# del metodo `CreateCompositeBitmap` usa puntatori per abilitare l'elaborazione efficiente degli oggetti <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Pertanto, è necessario abilitare l'opzione **Consenti codice di tipo unsafe** nel progetto per utilizzare la parola chiave [unsafe](../../csharp/language-reference/keywords/unsafe.md). Per altre informazioni su come abilitare il codice unsafe in un progetto Visual C#, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Nella tabella seguente vengono descritti i membri della rete.  
   

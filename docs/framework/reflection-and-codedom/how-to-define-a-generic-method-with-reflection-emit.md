@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928286"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: Definire un metodo generico tramite reflection emit
 La prima procedura illustra come creare un metodo generico semplice con due parametri di tipo e come applicare a questi ultimi vincoli speciali, di interfaccia e di classe.  
@@ -26,7 +26,7 @@ La prima procedura illustra come creare un metodo generico semplice con due para
  La terza procedura illustra come richiamare il metodo generico.  
   
 > [!IMPORTANT]
->  Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. Un metodo generico può appartenere a un tipo non generico, come nell'esempio seguente. Per un esempio di metodo non generico incluso in un tipo generico, vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. Un metodo generico può appartenere a un tipo non generico, come nell'esempio seguente. Per un esempio di metodo non generico incluso in un tipo generico, vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-method"></a>Per definire un metodo generico  
   
@@ -155,7 +155,7 @@ La prima procedura illustra come creare un metodo generico semplice con due para
  Quando il codice viene eseguito, l'assembly dinamico viene salvato come DemoGenericMethod1.dll e può essere esaminato mediante lo strumento [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   
 > [!NOTE]
->  Per acquisire familiarità con le procedure per la creazione di codice, si consiglia di scrivere un programma Visual Basic, C# o Visual C++ che esegua l'attività che si tenta di creare e usare il disassembler per esaminare il codice MSIL prodotto dal compilatore.  
+> Per acquisire familiarità con le procedure per la creazione di codice, si consiglia di scrivere un programma Visual Basic, C# o Visual C++ che esegua l'attività che si tenta di creare e usare il disassembler per esaminare il codice MSIL prodotto dal compilatore.  
   
  L'esempio di codice include il codice sorgente equivalente al metodo creato. Il metodo creato viene richiamato con associazione tardiva e anche tramite un delegato generico dichiarato nell'esempio di codice.  
   

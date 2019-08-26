@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362901"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666408"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Linee guida per l'utilizzo di Memory\<T> e Span\<T>
 
@@ -78,7 +78,7 @@ Per gestire in modo esplicito la proprietà di un buffer si usa l'interfaccia <x
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-È anche possibile scrivere questo esempio con [`using`](~/docs/csharp/language-reference/keywords/using-statement.md):
+È anche possibile scrivere questo esempio con [`using`](../../csharp/language-reference/keywords/using-statement.md):
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ In effetti, se si combinano questa regola e la regola 1, è possibile migliorare
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Il metodo `DisplayBufferToConsole` ora funziona praticamente con qualsiasi tipo di buffer immaginabile: `T[]`, archiviazione allocata con [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) e così via. È anche possibile passare direttamente una <xref:System.String>.
+Il metodo `DisplayBufferToConsole` ora funziona praticamente con qualsiasi tipo di buffer immaginabile: `T[]`, archiviazione allocata con [stackalloc](../../csharp/language-reference/operators/stackalloc.md) e così via. È anche possibile passare direttamente una <xref:System.String>.
 
 **Regola 3: Se il metodo accetta Memory\<T> e restituisce `void`, non è necessario usare l'istanza di Memory\<T> dopo il completamento del metodo.**
 
@@ -246,7 +246,7 @@ Qualsiasi componente che trasferisce la proprietà dell'istanza di <xref:System.
 
 **Regola 9: Se si esegue il wrapping di un metodo P/Invoke sincrono, l'API deve accettare Span\<T> come parametro.**
 
-In base alla regola 1, <xref:System.Span%601> è in genere il tipo corretto da usare per le API sincrone. È possibile bloccare le istanze di <xref:System.Span%601> tramite la parola chiave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), come nell'esempio seguente.
+In base alla regola 1, <xref:System.Span%601> è in genere il tipo corretto da usare per le API sincrone. È possibile bloccare le istanze di <xref:System.Span%601> tramite la parola chiave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md), come nell'esempio seguente.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Regola 10: Se si esegue il wrapping di un metodo P/Invoke sincrono, l'API deve accettare Memory\<T> come parametro.**
 
-Poiché non è possibile usare la parola chiave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) su operazioni asincrone, usare il metodo <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> per bloccare le istanze di <xref:System.Memory%601>, indipendentemente dal tipo di memoria contigua che rappresenta l'istanza. Nell'esempio seguente viene illustrato come usare questa API per eseguire una chiamata P/Invoke asincrona.
+Poiché non è possibile usare la parola chiave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) su operazioni asincrone, usare il metodo <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> per bloccare le istanze di <xref:System.Memory%601>, indipendentemente dal tipo di memoria contigua che rappresenta l'istanza. Nell'esempio seguente viene illustrato come usare questa API per eseguire una chiamata P/Invoke asincrona.
 
 ```csharp
 using System.Runtime.InteropServices;

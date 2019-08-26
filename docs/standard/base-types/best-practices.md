@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634711"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988824"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634711"
  L'ultimo tipo di testo è particolarmente problematico per un'espressione regolare scritta per gestire l'input vincolato. Se tale espressione regolare si basa anche sul [backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) esteso, il motore delle espressioni regolari può richiedere una quantità eccessiva di tempo, in alcuni casi molte ore o giorni, per l'elaborazione di un testo apparentemente irrilevante.  
   
 > [!WARNING]
->  Nell'esempio seguente viene utilizzata un'espressione regolare soggetta a un backtracking eccessivo e che con tutta probabilità rifiuta indirizzi di posta elettronica validi. Non utilizzarla in una routine di convalida di posta elettronica. Per un'espressione regolare che convalida gli indirizzi di posta elettronica, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+> Nell'esempio seguente viene utilizzata un'espressione regolare soggetta a un backtracking eccessivo e che con tutta probabilità rifiuta indirizzi di posta elettronica validi. Non utilizzarla in una routine di convalida di posta elettronica. Per un'espressione regolare che convalida gli indirizzi di posta elettronica, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Si consideri, ad esempio, un'espressione regolare comunemente utilizzata ma estremamente problematica per la convalida dell'alias di un indirizzo di posta elettronica. L'espressione regolare `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` viene scritta per elaborare gli indirizzi di posta elettronica ritenuti validi, composti da un carattere alfanumerico seguito da zero o più caratteri che possono essere alfanumerici, punti o trattini. L'espressione regolare deve terminare con un carattere alfanumerico. Tuttavia, come illustrato nell'esempio seguente, sebbene questa espressione regolare gestisca facilmente l'input valido, le prestazioni risulteranno molto inefficienti quando viene elaborato un input quasi valido.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634711"
  Il modello a oggetti delle espressioni regolari di .NET è basato sulla classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, che rappresenta il motore delle espressioni regolari. Il fattore principale che spesso influisce sulle prestazioni delle espressioni regolari è il modo in cui viene utilizzato il motore <xref:System.Text.RegularExpressions.Regex>. Per definire un'espressione regolare è necessario associare il motore delle espressioni regolari a un modello di espressione regolare. Tale processo di associazione, indipendentemente dal fatto che comporti la creazione di un'istanza di un oggetto <xref:System.Text.RegularExpressions.Regex> passando al relativo costruttore un modello di espressione regolare o la chiamata a un metodo statico passando il modello di espressione regolare con una stringa da analizzare, è necessariamente dispendioso.  
   
 > [!NOTE]
->  Per una discussione più dettagliata sulle implicazioni, in termini di prestazioni, dell'uso di espressioni regolari interpretate e compilate, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.  
+> Per una discussione più dettagliata sulle implicazioni, in termini di prestazioni, dell'uso di espressioni regolari interpretate e compilate, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.  
   
  È possibile associare il motore delle espressioni regolari a un modello di espressione regolare specifico e quindi usare il motore per trovare una corrispondenza con il testo in diversi modi:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634711"
  La modalità utilizzata per chiamare i metodi di corrispondenza delle espressioni regolari può avere un impatto notevole sull'applicazione. Nelle sezioni seguenti viene illustrato quando utilizzare le chiamate al metodo statico, le espressioni regolari interpretate e le espressioni regolari compilate per migliorare le prestazioni dell'applicazione.  
   
 > [!IMPORTANT]
->  Il formato della chiamata al metodo (statico, interpretato, compilato) influisce sulle prestazioni se la stessa espressione regolare viene utilizzata più volte nelle chiamate al metodo oppure se in un'applicazione vengono utilizzati spesso gli oggetti di espressione regolare.  
+> Il formato della chiamata al metodo (statico, interpretato, compilato) influisce sulle prestazioni se la stessa espressione regolare viene utilizzata più volte nelle chiamate al metodo oppure se in un'applicazione vengono utilizzati spesso gli oggetti di espressione regolare.  
   
 ### <a name="static-regular-expressions"></a>Espressioni regolari statiche  
  I metodi con espressioni regolari statiche sono consigliati come alternativa alla creazione ripetuta di un'istanza di un oggetto di espressione regolare con la stessa espressione regolare. A differenza dei modelli di espressione regolare usati dagli oggetti di espressione regolare, i codici operativi o il linguaggio MSIL (Microsoft Intermediate Language) compilato dei modelli usati nelle chiamate al metodo di istanza vengono memorizzati nella cache interna dal motore delle espressioni regolari.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634711"
  In genere, il motore delle espressioni regolari usa la progressione lineare per spostarsi in una stringa di input e confrontarla con un modello di espressione regolare. Tuttavia, quando in un modello di espressione regolare vengono usati quantificatori indeterminati come `*`, `+` e `?`, il motore delle espressioni regolari può tralasciare una parte delle corrispondenze parziali corrette e tornare a uno stato salvato in precedenza per cercare una corrispondenza corretta per l'intero modello. Questo processo è noto come backtracking.  
   
 > [!NOTE]
->  Per altre informazioni sul backtracking, vedere [Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Per una discussione dettagliata sul backtracking, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.  
+> Per altre informazioni sul backtracking, vedere [Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Per una discussione dettagliata sul backtracking, vedere [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Ottimizzazione delle prestazioni delle espressioni regolari, Parte II: Controllo del backtracking) nel blog del team BCL.  
   
  Il supporto del backtracking fornisce alle espressioni regolari potenza e flessibilità. Inoltre la responsabilità del controllo del funzionamento del motore delle espressioni regolari viene affidata agli sviluppatori delle espressioni regolari. Poiché spesso gli sviluppatori non sono consapevoli di questa responsabilità, un utilizzo improprio del backtracking o un utilizzo eccessivo del backtracking rappresenta spesso la causa principale della riduzione delle prestazioni delle espressioni regolari. Nello scenario peggiore, il tempo di esecuzione può raddoppiarsi per ogni carattere aggiuntivo nella stringa di input. Utilizzando infatti il backtracking in modo eccessivo, è facile creare l'equivalente a livello di codice di un ciclo infinito se l'input corrisponde quasi al modello di espressione regolare. Il motore delle espressioni regolari può richiedere ore o persino giorni per l'elaborazione di una stringa di input relativamente breve.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634711"
  In molti casi, il backtracking è essenziale per la corrispondenza di un modello di espressione regolare con il testo di input. Tuttavia, un utilizzo eccessivo del backtracking può ridurre notevolmente le prestazioni e dare l'impressione che un'applicazione non risponda. In particolare, tale situazione si verifica quando vengono annidati i quantificatori e il testo che corrisponde alla sottoespressione esterna è un subset del testo che corrisponde alla sottoespressione interna.  
   
 > [!WARNING]
->  Oltre a evitare un eccessivo utilizzo del backtracking, è necessario utilizzare la funzionalità di timeout per assicurarsi che l'eccessivo backtracking non comprometta troppo le prestazioni dell'espressione regolare. Per altre informazioni, vedere la sezione [Usare valori di timeout](#Timeouts).  
+> Oltre a evitare un eccessivo utilizzo del backtracking, è necessario utilizzare la funzionalità di timeout per assicurarsi che l'eccessivo backtracking non comprometta troppo le prestazioni dell'espressione regolare. Per altre informazioni, vedere la sezione [Usare valori di timeout](#Timeouts).  
   
  Ad esempio, il criterio di espressione regolare `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` viene usato per trovare la corrispondenza con un numero parte costituito da almeno un carattere alfanumerico. Tutti i caratteri aggiuntivi possono essere costituiti da un carattere alfanumerico, un trattino, un carattere di sottolineatura o un punto, sebbene l'ultimo carattere debba essere alfanumerico. Il numero parte termina con il simbolo del dollaro. In alcuni casi, il criterio di espressione regolare può presentare prestazioni estremamente insufficienti perché vengono annidati i quantificatori e perché la sottoespressione `[0-9A-Z]` è un subset della sottoespressione `[-.\w]*`.  
   

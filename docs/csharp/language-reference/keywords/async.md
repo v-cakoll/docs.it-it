@@ -9,16 +9,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3bf71bbe0e3f4e14f140f5a1b98a662ceaaea419
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363003"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922437"
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 
-Usare il modificatore `async` per specificare che un metodo, un'[espressione lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o un [metodo anonimo](../../../csharp/language-reference/operators/delegate-operator.md) sia asincrono. Se si usa questo modificatore in un metodo o in un'espressione, viene indicato come *metodo asincrono*. L'esempio seguente definisce un metodo asincrono denominato `ExampleMethodAsync`:
+Usare il modificatore `async` per specificare che un metodo, un'[espressione lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) o un [metodo anonimo](../operators/delegate-operator.md) sia asincrono. Se si usa questo modificatore in un metodo o in un'espressione, viene indicato come *metodo asincrono*. L'esempio seguente definisce un metodo asincrono denominato `ExampleMethodAsync`:
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -27,7 +27,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Se non si ha esperienza di programmazione asincrona o non si sa in che modo un metodo asincrono usa la parola chiave `await` per eseguire attività potenzialmente prolungate senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>: 
+Se non si ha esperienza di programmazione asincrona o non si sa in che modo un metodo asincrono usa la parola chiave `await` per eseguire attività potenzialmente prolungate senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>: 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -35,7 +35,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
   
 Un metodo asincrono viene eseguito in modo sincrono finché non raggiunge la prima espressione `await`. A quel punto, il metodo viene sospeso fino al completamento dell'attività attesa. Nel frattempo il controllo torna al chiamante del metodo, come illustrato nell'esempio della sezione successiva.  
   
-Il metodo modificato dalla parola chiave `async` viene eseguito in modo sincrono se non contiene un'espressione o un'istruzione `await`. Un avviso del compilatore segnala eventuali metodi asincroni che non contengono istruzioni `await`, perché questa situazione potrebbe indicare un errore. Vedere [Avviso del compilatore (livello 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
+Il metodo modificato dalla parola chiave `async` viene eseguito in modo sincrono se non contiene un'espressione o un'istruzione `await`. Un avviso del compilatore segnala eventuali metodi asincroni che non contengono istruzioni `await`, perché questa situazione potrebbe indicare un errore. Vedere [Avviso del compilatore (livello 1) CS4014](../compiler-messages/cs4014.md).  
   
  La parola chiave `async` è contestuale, in quanto è una parola chiave solo quando modifica un metodo, un'espressione lambda o un metodo anonimo. In tutti gli altri contesti, viene interpretato come identificatore.  
   
@@ -64,29 +64,29 @@ Per eseguire il codice come app di Windows Store:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Per altre informazioni sulle attività e sul codice eseguito in attesa di un'attività, vedere [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md). Per un esempio completo di WPF in cui sono usati elementi simili, vedere [Procedura dettagliata: Accesso al Web con Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+> Per altre informazioni sulle attività e sul codice eseguito in attesa di un'attività, vedere [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md). Per un esempio completo di WPF in cui sono usati elementi simili, vedere [Procedura dettagliata: Accesso al Web con Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
 Un metodo asincrono può avere i tipi restituiti seguenti:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
+- [void](./void.md). I metodi `async void` sono in genere sconsigliati per il codice diverso dai gestori eventi perché i chiamanti non possono usare `await` per questi metodi e devono implementare un meccanismo diverso per segnalare il completamento corretto o condizioni di errore.
 - A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. Il tipo `System.Threading.Tasks.ValueTask<TResult>` è una di queste implementazioni ed è disponibile aggiungendo il pacchetto NuGet `System.Threading.Tasks.Extensions`. 
 
-Un metodo asincrono non può dichiarare parametri [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) e nemmeno avere un [valore di riferimento restituito ](../../programming-guide/classes-and-structs/ref-returns.md), ma può chiamare metodi con tali parametri.  
+Un metodo asincrono non può dichiarare parametri [in](./in-parameter-modifier.md), [ref](./ref.md) o [out](./out-parameter-modifier.md) e nemmeno avere un [valore di riferimento restituito ](../../programming-guide/classes-and-structs/ref-returns.md), ma può chiamare metodi con tali parametri.  
   
-Specificare `Task<TResult>` come tipo restituito di un metodo asincrono se l'istruzione [return](../../../csharp/language-reference/keywords/return.md) del metodo specifica un operando di tipo `TResult`. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. Ciò significa che una chiamata al metodo restituisce `Task`, ma al completamento di `Task`, qualsiasi espressione `await` in attesa di `Task` restituisce `void`.  
+Specificare `Task<TResult>` come tipo restituito di un metodo asincrono se l'istruzione [return](./return.md) del metodo specifica un operando di tipo `TResult`. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. Ciò significa che una chiamata al metodo restituisce `Task`, ma al completamento di `Task`, qualsiasi espressione `await` in attesa di `Task` restituisce `void`.  
   
 Utilizzare il tipo restituito `void` principalmente per definire gestori eventi, che richiedono tale tipo restituito. Il chiamante di un metodo asincrono che restituisce `void` non può attendere il metodo e non può acquisire eccezioni generate dal metodo.  
 
 A partire da C# 7.0, viene restituito un altro tipo, in genere un tipo valore, che ha un metodo `GetAwaiter` per ridurre al minimo le allocazioni di memoria nelle sezioni di codice critiche per le prestazioni. 
 
-Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [await](../../../csharp/language-reference/keywords/await.md)
-- [Procedura dettagliata: Accesso al Web con Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md)
+- [await](./await.md)
+- [Procedura dettagliata: Accesso al Web con Async e Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programmazione asincrona con async e await](../../programming-guide/concepts/async/index.md)

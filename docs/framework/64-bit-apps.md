@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815940"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988401"
 ---
 # <a name="64-bit-applications"></a>Applicazioni a 64 bit
 Quando si compila un'applicazione, è possibile specificare che deve essere eseguita in un sistema operativo Windows a 64 bit come applicazione nativa o in WOW64 (Windows a 32 bit in Windows a 64 bit). WOW64 è un ambiente di compatibilità che consente di eseguire in un sistema a 64 bit un'applicazione a 32 bit. WOW64 è incluso in tutte le versioni a 64 bit del sistema operativo Windows.  
@@ -24,7 +24,7 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
  Visual Studio installa la versione a 32 bit di CLR in un computer x86 e sia la versione a 32 bit che la versione a 64 bit appropriata di CLR in un computer Windows a 64 bit. Poiché Visual Studio è un'applicazione a 32 bit, quando viene installato in un sistema a 64 bit, viene eseguito in WOW64.  
   
 > [!NOTE]
->  Data la progettazione dell'emulazione x86 e del sottosistema WOW64 per la famiglia di processori Itanium, l'esecuzione delle applicazioni è limitata a un solo processore. Questi fattori riducono le prestazioni e la scalabilità delle applicazioni .NET Framework a 32 bit eseguite in sistemi basati su Itanium. Si consiglia di usare .NET Framework 4, che include il supporto a 64 bit nativo per sistemi basati su Itanium, per migliorare le prestazioni e la scalabilità.  
+> Data la progettazione dell'emulazione x86 e del sottosistema WOW64 per la famiglia di processori Itanium, l'esecuzione delle applicazioni è limitata a un solo processore. Questi fattori riducono le prestazioni e la scalabilità delle applicazioni .NET Framework a 32 bit eseguite in sistemi basati su Itanium. Si consiglia di usare .NET Framework 4, che include il supporto a 64 bit nativo per sistemi basati su Itanium, per migliorare le prestazioni e la scalabilità.  
   
  Per impostazione predefinita, quando si esegue un'applicazione gestita a 64 bit in un sistema operativo Windows a 64 bit, non è possibile creare oggetti di più di 2 gigabyte (GB). Tuttavia, in .NET Framework 4.5 è possibile aumentare questo limite.  Per altre informazioni, vedere l'[elemento \<gcAllowVeryLargeObjects>](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
@@ -56,8 +56,8 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
   
 |Compilatore|Opzione del compilatore|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (opzioni del compilatore C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|È possibile creare applicazioni Microsoft Intermediate Language (MSIL) indipendenti dalla piattaforma usando **/clr:safe**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ include un compilatore separato per ogni sistema operativo a 64 bit. Per altre informazioni sull'uso di Visual C++ per creare applicazioni native eseguibili in un sistema operativo Windows a 64 bit, vedere [Programmazione a 64 bit con Visual C++](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinazione dello stato di un file EXE o di un file DLL  

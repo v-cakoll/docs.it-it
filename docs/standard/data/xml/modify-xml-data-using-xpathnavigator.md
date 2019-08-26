@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967349"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modifica dei dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per modificare nodi e valori in un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
@@ -39,7 +39,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|Non supportato.|  
   
 > [!NOTE]
->  La modifica dei nodi <xref:System.Xml.XPath.XPathNodeType.Namespace> o del nodo <xref:System.Xml.XPath.XPathNodeType.Root> non è supportata.  
+> La modifica dei nodi <xref:System.Xml.XPath.XPathNodeType.Namespace> o del nodo <xref:System.Xml.XPath.XPathNodeType.Root> non è supportata.  
   
  La classe <xref:System.Xml.XPath.XPathNavigator> fornisce inoltre un set di metodi usati per inserire e rimuovere nodi. Per altre informazioni sull'inserimento e la rimozione di nodi da un documento XML, vedere gli argomenti [Inserire dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) e [Rimuovere dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  La classe <xref:System.Xml.XPath.XPathNavigator> usa W3C XML Schema come base per la descrizione del codice XML tipizzato in modo sicuro. Gli elementi e gli attributi possono essere annotati con informazioni sul tipo basate sulla convalida rispetto a un documento W3C XML Schema. Gli elementi che possono contenere altri elementi o attributi sono denominati tipi complessi, mentre gli elementi che possono contenere solo contenuto testuale sono denominati tipi semplici.  
   
 > [!NOTE]
->  Gli attributi possono disporre solo di tipi semplici.  
+> Gli attributi possono disporre solo di tipi semplici.  
   
  Un elemento o attributo può essere considerato valido per lo schema se è conforme a tutte le regole specifiche della relativa definizione del tipo. Affinché sia valido per lo schema, un elemento di tipo semplice `xs:int` deve contenere un valore numerico compreso tra -2147483648 e 2147483647. Per i tipi complessi, la validità di schema dell'elemento dipende dalla validità di schema dei relativi elementi e attributi figlio. Pertanto, se un elemento è valido in base alla relativa definizione di tipo complesso, tutti gli elementi e gli attributi figlio sono validi in base alle proprie definizioni dei tipi. In modo analogo, se anche un solo elemento o attributo figlio di un elemento non è valido in base alla definizione del tipo, o se la validità è sconosciuta, l'elemento sarà non valido o di validità sconosciuta.  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  Se un oggetto <xref:System.Xml.XPath.XPathNavigator> viene usato per aggiungere contenuto a un elemento valido con un attributo `xsi:nil` e con un valore `true`, il valore dell'attributo `xsi:nil` viene impostato su `false`.  
   
 > [!NOTE]
->  Se il contenuto di un elemento con un attributo `xsi:nil` impostato su `false` viene eliminato, il valore dell'attributo non verrà modificato in `true`.  
+> Se il contenuto di un elemento con un attributo `xsi:nil` impostato su `false` viene eliminato, il valore dell'attributo non verrà modificato in `true`.  
   
 ## <a name="saving-an-xml-document"></a>Salvataggio di un documento XML  
  Il salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument> come risultato dei metodi di modifica descritti in questo argomento viene eseguito usando i metodi della classe <xref:System.Xml.XmlDocument>. Per altre informazioni sul salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument>, vedere [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  

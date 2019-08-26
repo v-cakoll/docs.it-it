@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922206"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -47,7 +47,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _iniziando con C# 7.2_ , vengono usati nella posizione corretta. Nell'esempio seguente il parametro `orderNum` è nella posizione corretta, ma non è denominato in modo esplicito.
+- _iniziando con C# 7.2_, vengono usati nella posizione corretta. Nell'esempio seguente il parametro `orderNum` è nella posizione corretta, ma non è denominato in modo esplicito.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
@@ -70,9 +70,9 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
 - un'espressione costante;  
   
-- un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../../csharp/language-reference/keywords/enum.md) o [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+- un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../language-reference/keywords/enum.md) o [struct](./structs.md);  
   
-- un'espressione del form [default(ValType)](../../../csharp/language-reference/operators/default.md), dove `ValType` è un tipo di valore.  
+- un'espressione del form [default(ValType)](../../language-reference/operators/default.md), dove `ValType` è un tipo di valore.  
   
  I parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo eventuali parametri obbligatori. Se il chiamante specifica un argomento per un parametro di una successione di parametri facoltativi, deve specificare gli argomenti per tutti i parametri facoltativi precedenti. I gap delimitati da virgole nell'elenco di argomenti non sono supportati. Nel codice seguente, ad esempio, il metodo di istanza `ExampleMethod` viene definito con un parametro obbligatorio e due parametri facoltativi.  
   
@@ -91,7 +91,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
  ![Screenshot con le informazioni rapide di IntelliSense per il metodo ExampleMethod.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  È possibile anche dichiarare parametri facoltativi usando la classe .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. I parametri `OptionalAttribute` non richiedono un valore predefinito.  
+> È possibile anche dichiarare parametri facoltativi usando la classe .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. I parametri `OptionalAttribute` non richiedono un valore predefinito.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente il costruttore per `ExampleClass` ha un solo parametro facoltativo. Il metodo di istanza `ExampleMethod` ha un solo parametro obbligatorio, `required`, e due parametri facoltativi, `optionalstr` e `optionalint`. Il codice in `Main` illustra i diversi modi in cui è possibile richiamare il costruttore e il metodo.  
@@ -113,7 +113,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Per altre informazioni ed esempi, vedere [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Per altre informazioni ed esempi, vedere [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  L'uso di argomenti denominati e facoltativi influisce sulla risoluzione dell'overload nei modi seguenti:  
@@ -129,7 +129,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Uso del tipo dinamico](../types/using-type-dynamic.md)
+- [Uso dei costruttori](./using-constructors.md)
+- [Uso degli indicizzatori](../indexers/using-indexers.md)

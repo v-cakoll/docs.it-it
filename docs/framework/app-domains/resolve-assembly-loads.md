@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3844f3f1f4135167ac5575dafb4ba63a19b8b55e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927910"
 ---
 # <a name="resolving-assembly-loads"></a>risoluzione caricamenti assembly
 .NET Framework offre l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per le applicazioni che richiedono un maggiore controllo sul caricamento di assembly. Con questo evento, l'applicazione può caricare un assembly nel contesto di caricamento dall'esterno di percorsi di sondaggio normale, selezionare la versione di assembly da caricare, creare e restituire un assembly dinamico e così via. Questo argomento illustra il materiale sussidiario per la gestione dell'evento <xref:System.AppDomain.AssemblyResolve>.  
   
 > [!NOTE]
->  Per la risoluzione di caricamenti di assembly nel solo contesto di reflection, usare invece l'evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
+> Per la risoluzione di caricamenti di assembly nel solo contesto di reflection, usare invece l'evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Funzionamento dell'evento AssemblyResolve  
  Quando si registra un gestore per l'evento <xref:System.AppDomain.AssemblyResolve>, il gestore viene richiamato ogni volta che il runtime non riesce ad associarlo a un assembly in base al nome. Ad esempio, la chiamata dei metodi seguenti dal codice utente può causare l'evento <xref:System.AppDomain.AssemblyResolve>:  
@@ -50,7 +50,7 @@ ms.locfileid: "66486979"
 - Il gestore può generare e restituire un assembly dinamico.  
   
 > [!NOTE]
->  Il gestore deve caricare l'assembly nel contesto di caricamento di provenienza, nel contesto di caricamento o in nessun contesto. Se il gestore carica l'assembly nel contesto di reflection solo usando il metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, il tentativo di caricamento che ha generato l'evento <xref:System.AppDomain.AssemblyResolve> ha esito negativo.  
+> Il gestore deve caricare l'assembly nel contesto di caricamento di provenienza, nel contesto di caricamento o in nessun contesto. Se il gestore carica l'assembly nel contesto di reflection solo usando il metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, il tentativo di caricamento che ha generato l'evento <xref:System.AppDomain.AssemblyResolve> ha esito negativo.  
   
  È compito del gestore eventi restituire un assembly appropriato. Il gestore può analizzare il nome visualizzato dell'assembly richiesto passando il valore della proprietà <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> al costruttore <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partire da .NET Framework 4, il gestore può usare la proprietà <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> per determinare se la richiesta corrente è una dipendenza di un altro assembly. Questa informazione può aiutare a identificare un assembly che soddisferà la dipendenza.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66486979"
  La regola principale nella gestione di eventi <xref:System.AppDomain.AssemblyResolve> è che non si deve provare a restituire un assembly non riconosciuta. Quando si scrive il gestore, è necessario conoscere gli assembly che potrebbero causare la generazione dell'evento. Il gestore deve restituire Null per gli altri assembly.  
   
 > [!IMPORTANT]
->  A partire da .NET Framework 4, l'evento <xref:System.AppDomain.AssemblyResolve> viene generato per gli assembly satellite. Questa modifica interessa un gestore eventi scritto per una versione precedente di .NET Framework, se il gestore proverà a risolvere tutte le richieste di caricamento di assembly. I gestori eventi che ignorano gli assembly che non riconoscono non sono interessati da questa modifica: restituiscono Null e seguono i normali meccanismi di fallback.  
+> A partire da .NET Framework 4, l'evento <xref:System.AppDomain.AssemblyResolve> viene generato per gli assembly satellite. Questa modifica interessa un gestore eventi scritto per una versione precedente di .NET Framework, se il gestore proverà a risolvere tutte le richieste di caricamento di assembly. I gestori eventi che ignorano gli assembly che non riconoscono non sono interessati da questa modifica: restituiscono Null e seguono i normali meccanismi di fallback.  
   
  Quando si carica un assembly, il gestore eventi non deve usare nessun overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> che può causare la generazione dell'evento <xref:System.AppDomain.AssemblyResolve> in modo ricorsivo, poiché questo può causare un overflow dello stack. Vedere l'elenco illustrato in precedenza in questo argomento. Ciò avviene anche se si specifica una gestione di eccezioni per la richiesta di caricamento, perché non viene generata alcuna eccezione fino a quando non sono restituiti tutti i gestori eventi. Di conseguenza, il codice seguente causa un overflow dello stack se `MyAssembly` non viene trovato:  
   

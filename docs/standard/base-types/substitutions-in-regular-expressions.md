@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301509"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968536"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 <a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
   
  .NET Framework definisce gli elementi di sostituzione elencati nella tabella riportata di seguito.  
   
-|Sostituzione|Description|  
+|Sostituzione|DESCRIZIONE|  
 |------------------|-----------------|  
 |$  *numero*|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo di acquisizione identificato da *numero*dove *numero* è un valore decimale. Per ulteriori informazioni, vedere [Sostituzione di un gruppo numerato](#Numbered).|  
 |${ *nome* }|Include nella stringa di sostituzione l'ultima sottostringa corrispondente al gruppo denominato definito da `(?<`*nome*`> )` . Per ulteriori informazioni, vedere [Sostituzione di un gruppo denominato](#Named).|  
@@ -44,7 +44,7 @@ ms.locfileid: "66301509"
  L'unico carattere che può essere utilizzato in un modello di espressione regolare o in una sostituzione è il carattere `$` , anche se presenta un significato diverso in ogni contesto. In un modello di espressione regolare `$` è un ancoraggio che corrisponde al termine della stringa. In un criterio di sostituzione, `$` indica l'inizio di una sostituzione.  
   
 > [!NOTE]
->  Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Per una funzionalità simile a un criterio di sostituzione all'interno di un'espressione regolare, utilizzare un backreference. Per ulteriori informazioni sui backreference, vedere [Costrutti di backreference](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>Sostituzione di un gruppo numerato  
@@ -63,7 +63,7 @@ ms.locfileid: "66301509"
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -89,7 +89,7 @@ ms.locfileid: "66301509"
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66301509"
   
  Il criterio di ricerca di espressioni regolari `\b(\d+)(\.(\d+))?` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza all'inizio di un confine di parola.|  
 |`(\d+)`|Trova la corrispondenza con una o più cifre decimali. Equivale al primo gruppo di acquisizione.|  
@@ -130,7 +130,7 @@ ms.locfileid: "66301509"
   
  Il criterio di ricerca di espressioni regolari `^(\w+\s?)+$` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(\w+\s?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri alfanumerici seguiti da zero o da uno spazio vuoto.|  
@@ -193,7 +193,7 @@ ms.locfileid: "66301509"
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\s\1\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  

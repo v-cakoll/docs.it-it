@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398419"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596381"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  
   
 > [!NOTE]
-> I tipi statici si comportano in modo diverso da quanto descritto qui. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+> I tipi statici si comportano in modo diverso da quanto descritto qui. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](./static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Differenze tra istanze di strutture e Istanze di classe  
  Poiché le classi sono tipi di riferimento, una variabile di un oggetto classe contiene un riferimento all'indirizzo dell'oggetto sull'heap gestito. Se al primo oggetto viene assegnato un secondo oggetto dello stesso tipo, entrambe le variabili fanno riferimento all'oggetto in quell'indirizzo. Questo punto viene illustrato più dettagliatamente di seguito in questo argomento.  
   
- Le istanze delle classi vengono create usando l'[operatore new](../../../csharp/language-reference/operators/new-operator.md). Nell'esempio seguente `Person` è il tipo e `person1` e `person 2` sono le istanze o gli oggetti di tale tipo.  
+ Le istanze delle classi vengono create usando l'[operatore new](../../language-reference/operators/new-operator.md). Nell'esempio seguente `Person` è il tipo e `person1` e `person 2` sono le istanze o gli oggetti di tale tipo.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -46,27 +46,27 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
  L'implementazione <xref:System.ValueType?displayProperty=nameWithType> di `Equals` usa la reflection perché deve essere in grado di determinare i campi presenti in tutti gli struct. Quando si creano struct, eseguire l'override del metodo `Equals` per specificare un algoritmo di uguaglianza efficiente specifico del tipo.  
   
-- Per determinare se i valori dei campi in due istanze di classe sono uguali, è possibile usare il metodo <xref:System.Object.Equals%2A> o l'operatore [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Tuttavia, usarli solo se la classe ha eseguito il loro override o overload per offrire una definizione personalizzata di cosa significa "uguaglianza" per gli oggetti di quel tipo. La classe può anche implementare l'interfaccia <xref:System.IEquatable%601> o <xref:System.Collections.Generic.IEqualityComparer%601>. Entrambe le interfacce offrono metodi che possono essere usati per verificare l'uguaglianza dei valori. Durante la progettazione di classi che eseguono l'override di `Equals`, assicurarsi di seguire le linee guida definite in [Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Per determinare se i valori dei campi in due istanze di classe sono uguali, è possibile usare il metodo <xref:System.Object.Equals%2A> o l'operatore [==](../../language-reference/operators/equality-operators.md#equality-operator-). Tuttavia, usarli solo se la classe ha eseguito il loro override o overload per offrire una definizione personalizzata di cosa significa "uguaglianza" per gli oggetti di quel tipo. La classe può anche implementare l'interfaccia <xref:System.IEquatable%601> o <xref:System.Collections.Generic.IEqualityComparer%601>. Entrambe le interfacce offrono metodi che possono essere usati per verificare l'uguaglianza dei valori. Durante la progettazione di classi che eseguono l'override di `Equals`, assicurarsi di seguire le linee guida definite in [Procedura: Definire l'uguaglianza di valori per un tipo](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) e <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
   
-- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Classi](./classes.md)  
   
-- [Struct](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Struct](./structs.md)  
   
-- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Costruttori](./constructors.md)  
   
-- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizzatori](./destructors.md)  
   
-- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- [Eventi](../events/index.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Operatore new](../../../csharp/language-reference/operators/new-operator.md)
+- [Guida per programmatori C#](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [Ereditarietà](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Operatore new](../../language-reference/operators/new-operator.md)
 - [Common Type System](../../../standard/base-types/common-type-system.md)

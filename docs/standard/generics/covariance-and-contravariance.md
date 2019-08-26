@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948792"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -41,7 +41,7 @@ ms.locfileid: "66490750"
   
      Non è possibile assegnare un'istanza di `List<Base>` (`List(Of Base)` in Visual Basic) a una variabile di tipo `List<Derived>` o viceversa.  
   
- I parametri di tipo covariante consentono di effettuare assegnazioni simili al [polimorfismo](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md) ordinario., come illustrato nel codice seguente.  
+ I parametri di tipo covariante consentono di effettuare assegnazioni simili al [polimorfismo](../../csharp/programming-guide/classes-and-structs/polymorphism.md) ordinario., come illustrato nel codice seguente.  
   
  [!code-csharp[CoContraSimpleIEnum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleienum/cs/example.cs#1)]
  [!code-vb[CoContraSimpleIEnum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleienum/vb/example.vb#1)]  
@@ -110,7 +110,7 @@ ms.locfileid: "66490750"
  In .NET Framework 4 i delegati generici `Func`, ad esempio <xref:System.Func%602>, presentano tipi restituiti covarianti e tipi di parametro controvarianti. I delegati generici `Action` , ad esempio <xref:System.Action%602>, presentano tipi di parametro controvarianti. Ciò significa che i delegati possono essere assegnati a variabili che presentano tipi di parametro più derivati e (nel caso dei delegati generici `Func`) tipi restituiti meno derivati.  
   
 > [!NOTE]
->  L'ultimo parametro di tipo generico dei delegati generici `Func` specifica il tipo del valore restituito nella firma del delegato. È covariante (parola chiave`out` ), mentre gli altri parametri di tipo generico sono controvarianti (parola chiave`in` ).  
+> L'ultimo parametro di tipo generico dei delegati generici `Func` specifica il tipo del valore restituito nella firma del delegato. È covariante (parola chiave`out` ), mentre gli altri parametri di tipo generico sono controvarianti (parola chiave`in` ).  
   
  Questa condizione è illustrata nel codice che segue. Nella prima parte di codice vengono definite una classe denominata `Base`, una classe denominata `Derived` che eredita da `Base`e un'altra classe con un metodo `static` (`Shared` in Visual Basic) denominata `MyMethod`. Il metodo accetta un'istanza di `Base` e restituisce un'istanza di `Derived`. Se l'argomento è un'istanza di `Derived`, `MyMethod` la restituisce. Se l'argomento è un'istanza di `Base`, `MyMethod` restituisce una nuova istanza di `Derived`. In `Main()`, nell'esempio viene creata un'istanza di `Func<Base, Derived>` (`Func(Of Base, Derived)` in Visual Basic) che rappresenta `MyMethod`, quindi l'istanza viene archiviata nella variabile `f1`.  
   
@@ -149,12 +149,12 @@ ms.locfileid: "66490750"
  A partire da .NET Framework 4, Visual Basic e C# presentano parole chiave che consentono di contrassegnare i parametri di tipo generico di interfacce e delegati come covarianti o controvarianti.  
   
 > [!NOTE]
->  A partire dalla versione 2.0 di .NET Framework, Common Language Runtime supporta le annotazioni di variante nei parametri di tipo generico. Nelle versioni precedenti a .NET Framework 4, l'unico modo per definire una classe generica con queste annotazioni consiste nell'usare Microsoft Intermediate Language (MSIL), compilando la classe con [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) oppure creandola in un assembly dinamico.  
+> A partire dalla versione 2.0 di .NET Framework, Common Language Runtime supporta le annotazioni di variante nei parametri di tipo generico. Nelle versioni precedenti a .NET Framework 4, l'unico modo per definire una classe generica con queste annotazioni consiste nell'usare Microsoft Intermediate Language (MSIL), compilando la classe con [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) oppure creandola in un assembly dinamico.  
   
  Un parametro di tipo covariante è contrassegnato con la parola chiave `out` (parola chiave`Out` in Visual Basic, `+` per l' [assembler MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). È possibile usare un parametro di tipo covariante come valore restituito di un metodo che appartiene a un'interfaccia o come tipo restituito di un delegato. Non è possibile usare un parametro di tipo covariante come vincolo di tipo generico per i metodi di interfaccia.  
   
 > [!NOTE]
->  Se un metodo di un'interfaccia presenta un parametro che è un tipo delegato generico, per specificare un parametro di tipo controvariante del tipo delegato è possibile usare un parametro di tipo covariante del tipo di interfaccia.  
+> Se un metodo di un'interfaccia presenta un parametro che è un tipo delegato generico, per specificare un parametro di tipo controvariante del tipo delegato è possibile usare un parametro di tipo covariante del tipo di interfaccia.  
   
  Un parametro di tipo controvariante è contrassegnato con la parola chiave `in` (parola chiave`In` in Visual Basic, `-` per l' [assembler MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)). È possibile usare un parametro di tipo controvariante come tipo di un parametro di un metodo che appartiene a un'interfaccia o come tipo di un parametro di un delegato. È possibile usare un parametro di tipo controvariante come vincolo di tipo generico per un metodo di interfaccia.  
   

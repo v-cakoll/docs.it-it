@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 53b33bdc70f00d5c824d502043a69f4ee05acc71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927970"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 <a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
@@ -40,7 +40,7 @@ ms.locfileid: "67423401"
 - Non prevedere una richiesta per le autorizzazioni eventualmente necessarie, ma limitarsi a predisporre la gestione delle eccezioni di sicurezza che si verificheranno in mancanza di tali autorizzazioni.  
   
     > [!NOTE]
-    >  Quello della sicurezza è un tema complesso in cui è possibile scegliere tra molte possibili opzioni. Per altre informazioni, vedere [Concetti principali sulla sicurezza](../../../docs/standard/security/key-security-concepts.md).  
+    > Quello della sicurezza è un tema complesso in cui è possibile scegliere tra molte possibili opzioni. Per altre informazioni, vedere [Concetti principali sulla sicurezza](../../standard/security/key-security-concepts.md).  
   
  In fase di caricamento, l'evidenza dell'assembly viene utilizzata come input per i criteri di sicurezza. I criteri di sicurezza vengono stabiliti dall'azienda e dall'amministratore dei computer, così come dalle impostazioni adottate dallo stesso utente, e determinano l'insieme di autorizzazioni concesse a tutto il codice gestito che viene eseguito sul computer. È possibile stabilire criteri di sicurezza basati sull'autore dell'assembly (se questo dispone di una firma generata da uno strumento firma digitale), sul sito Web e la zona (come è definita in Internet Explorer) da cui è stato effettuato il download dell'assembly o sul nome sicuro dell'assembly. L'amministratore di un computer può ad esempio stabilire criteri di sicurezza che consentono a tutto il codice scaricato da un sito Web e firmato da una determinata azienda di software di accedere al database presente su un computer, ma non di scrivere sul disco rigido.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67423401"
  È possibile associare a un assembly il solo nome sicuro, la sola firma digitale creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o entrambi. Con i due strumenti firma digitale è possibile firmare un solo file alla volta. Nel caso di assembly su più file, si firmerà solo il file che contiene il manifesto dell'assembly. Il nome sicuro viene memorizzato nel file che contiene il manifesto dell'assembly, mentre la firma creata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) viene memorizzata in un'area riservata del file eseguibile portabile (PE, Portable Executable) che contiene il manifesto dell'assembly. La firma di un assembly realizzata tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) può essere adottata (con o senza un nome sicuro) quando si ha già una gerarchia attendibile basata su firme generate tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) o quando i propri criteri si avvalgono solo della chiave e non controllano la catena di attendibilità.  
   
 > [!NOTE]
->  Quando a un assembly si assegna sia un nome sicuro che una firma digitale, il nome sicuro deve essere assegnato per primo.  
+> Quando a un assembly si assegna sia un nome sicuro che una firma digitale, il nome sicuro deve essere assegnato per primo.  
   
  Common Language Runtime esegue anche una verifica hash. Il manifesto dell'assembly contiene infatti un elenco di tutti i file che compongono l'assembly, comprensivo dell'hash generato per ciascun file al momento della compilazione del manifesto. Quando si carica un file, viene calcolato il codice hash del relativo contenuto e viene eseguito un confronto con il valore hash archiviato nel manifesto. Se i due hash non corrispondono, l'assembly non viene caricato.  
   

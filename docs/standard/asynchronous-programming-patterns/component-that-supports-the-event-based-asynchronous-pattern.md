@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773660"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950784"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: Implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
  Il metodo `CalculateWorker` viene sottoposto a wrapping in un delegato e richiamato in modo asincrono con una chiamata a `BeginInvoke`.  
   
 > [!NOTE]
->  Il report dello stato viene implementato nel metodo `BuildPrimeNumberList`. Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione. Il thread del client, in cui questi eventi vengono generati, deve poter gestire questa situazione. Il codice dell'interfaccia utente potrebbe non riuscire a stare al passo perché sommerso di messaggi e di conseguenza bloccarsi. Per un esempio di interfaccia utente che gestisce questa situazione, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+> Il report dello stato viene implementato nel metodo `BuildPrimeNumberList`. Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione. Il thread del client, in cui questi eventi vengono generati, deve poter gestire questa situazione. Il codice dell'interfaccia utente potrebbe non riuscire a stare al passo perché sommerso di messaggi e di conseguenza bloccarsi. Per un esempio di interfaccia utente che gestisce questa situazione, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Per eseguire in modo asincrono il calcolo dei numeri primi:  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615305"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910482"
 ---
 # <a name="xslt-security-considerations"></a>Considerazioni sulla sicurezza XSLT
 Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevoli prestazioni e flessibilità. Sono incluse numerose funzionalità utili che possono essere usate anche da origini esterne. Per usare XSLT senza problemi, è necessario comprendere i tipi di problemi di sicurezza che si possono verificare durante l'uso di XSLT e le strategie di base che è possibile applicare per limitare tali rischi.  
@@ -39,7 +39,7 @@ Il linguaggio XSLT dispone di un'ampia gamma di funzionalità che offrono notevo
 - Quando si esegue la trasformazione, viene usato il tipo <xref:System.Xml.XmlResolver> per risolvere la funzione `document()`.  
   
     > [!NOTE]
-    >  Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>. È possibile abilitare la funzione impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+    > Per impostazione predefinita, la funzione `document()` è disabilitata nella classe <xref:System.Xml.Xsl.XslCompiledTransform>. È possibile abilitare la funzione impostando la proprietà <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> su `true` e passando l'oggetto <xref:System.Xml.Xsl.XsltSettings> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
  I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono ciascuno overload che accettano un tipo <xref:System.Xml.XmlResolver> come argomento. Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
   

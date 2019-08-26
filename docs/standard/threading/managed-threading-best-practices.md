@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8319424c82327fd9743c573846663bdd76ed1b9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb262f5a02343aeb91c28eb21c939edef8a70f61
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644619"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666290"
 ---
 # <a name="managed-threading-best-practices"></a>Suggerimenti per l'uso del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  
@@ -96,7 +96,7 @@ Usare la proprietà <xref:System.Environment.ProcessorCount?displayProperty=name
   
 - Procedere con cautela in caso di blocco sulle istanze, ad esempio `lock(this)` in C# o `SyncLock(Me)` in Visual Basic. Se altro codice dell'applicazione, esterno al tipo, acquisisce un blocco sull'oggetto, potrebbero verificarsi situazioni di deadlock.  
   
-- Assicurarsi che un thread entrato in un monitor lasci sempre il monitor, anche se si verifica un'eccezione mentre il thread si trova nel monitor. L'istruzione [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) di C# e l'istruzione [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) di Visual Basic generano automaticamente questo comportamento, impiegando un blocco **finally** per garantire che venga chiamato <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Se non è possibile garantire che **Exit** verrà chiamato, modificare la progettazione in modo da usare **Mutex**. Un mutex viene rilasciato automaticamente quando il thread che ne è attualmente proprietario termina.  
+- Assicurarsi che un thread entrato in un monitor lasci sempre il monitor, anche se si verifica un'eccezione mentre il thread si trova nel monitor. L'istruzione [lock](../../csharp/language-reference/keywords/lock-statement.md) di C# e l'istruzione [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) di Visual Basic generano automaticamente questo comportamento, impiegando un blocco **finally** per garantire che venga chiamato <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Se non è possibile garantire che **Exit** verrà chiamato, modificare la progettazione in modo da usare **Mutex**. Un mutex viene rilasciato automaticamente quando il thread che ne è attualmente proprietario termina.  
   
 - Usare più thread per le attività che richiedono risorse diverse ed evitare di assegnare più thread a una sola risorsa. Alcune attività, ad esempio, che hanno un proprio thread, usufruiscono dei vantaggi di I/O, poiché il thread si bloccherà durante le operazioni di I/O consentendo l'esecuzione di altri thread. Anche l'input utente è una risorsa che trae vantaggio da un thread dedicato. In un computer a processore unico, un'attività che comporta un calcolo a elevato utilizzo di risorse coesiste con l'input utente e con attività che coinvolgono I/O, ma più attività con un elevato utilizzo di risorse competono fra loro.  
   

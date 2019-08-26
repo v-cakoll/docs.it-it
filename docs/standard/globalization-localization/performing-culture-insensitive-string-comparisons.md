@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915872"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura
 Per impostazione predefinita, il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> consente di eseguire confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Questo metodo include anche molti overload che forniscono il parametro `culture` che consente di specificare le impostazioni cultura da usare e il parametro `comparisonType` che consente di specificare le regole di confronto da usare. La chiamata di questi metodi invece dell'overload predefinito rimuove qualsiasi ambiguità sulle regole usate in una particolare chiamata al metodo e chiarisce se un particolare confronto dipende o meno dalle impostazioni cultura.  
   
 > [!NOTE]
->  Entrambi gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Non è possibile usare questo metodo per eseguire confronti indipendenti dalle impostazioni cultura. Per motivi di chiarezza, in alternativa, si consiglia di usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
+> Entrambi gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Non è possibile usare questo metodo per eseguire confronti indipendenti dalle impostazioni cultura. Per motivi di chiarezza, in alternativa, si consiglia di usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
   
  Per le operazioni dipendenti dalle impostazioni cultura, specificare il valore di enumerazione <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> come parametro `comparisonType`. Se si desidera eseguire un confronto dipendente dalle impostazioni cultura usando impostazioni cultura definite diverse da quelle correnti, specificare l'oggetto <xref:System.Globalization.CultureInfo> che rappresenta quelle impostazioni cultura come parametro `culture`.  
   

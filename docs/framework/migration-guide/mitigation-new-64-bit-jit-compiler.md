@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968515"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigazione: Nuovo compilatore JIT a 64 bit
 A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 64 bit per la compilazione JIT. Questa modifica non riguarda il compilatore JIT a 32 bit.  
@@ -22,7 +22,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
  In alcuni casi, la compilazione con il nuovo compilatore JIT a 64 bit comporta un'eccezione di runtime o un comportamento che non viene osservato durante l'esecuzione di codice compilato dal compilatore JIT a 64 bit precedente. Le differenze note includono quanto segue:  
   
 > [!IMPORTANT]
->  Tutti questi problemi noti sono stati risolti nel nuovo compilatore a 64 bit rilasciato con .NET Framework 4.6.2. La maggior parte dei problemi è stata inoltre risolta nelle service release di .NET Framework 4.6 e 4.6.1 incluse con Windows Update. È possibile evitare questi problemi assicurandosi che la versione di Windows sia aggiornata o eseguendo l'aggiornamento a .NET Framework 4.6.2.  
+> Tutti questi problemi noti sono stati risolti nel nuovo compilatore a 64 bit rilasciato con .NET Framework 4.6.2. La maggior parte dei problemi è stata inoltre risolta nelle service release di .NET Framework 4.6 e 4.6.1 incluse con Windows Update. È possibile evitare questi problemi assicurandosi che la versione di Windows sia aggiornata o eseguendo l'aggiornamento a .NET Framework 4.6.2.  
   
 - In determinate condizioni, un'operazione di conversione unboxing può generare <xref:System.NullReferenceException> nelle build di rilascio con l'ottimizzazione attivata.  
   

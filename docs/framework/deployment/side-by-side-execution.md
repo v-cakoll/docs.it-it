@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911002"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
@@ -75,17 +75,17 @@ L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione 
   
  Se è presente un file di configurazione dell'applicazione, il runtime determina la versione runtime appropriata per eseguire il caricamento in base ai risultati del processo riportato di seguito:  
   
-1. Il runtime esamina l'[\<elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nel file di configurazione dell'applicazione. Se sono presenti una o più versioni runtime supportate specificate nell'elemento **\<supportedRuntime>**, il runtime carica la versione runtime specificata dal primo elemento **\<supportedRuntime>**. Se questa versione non è disponibile, il runtime esamina l'elemento **\<supportedRuntime>** successivo e prova a caricare la versione runtime specificata. Se tale versione runtime non è disponibile, vengono esaminati gli elementi **\<supportedRuntime>** successivi. Se non è disponibile alcuna versione runtime supportata, il runtime non riesce a caricare una versione runtime e viene visualizzato un messaggio per l'utente (vedere il passaggio 3).  
+1. Il runtime esamina l'[\<elemento supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) nel file di configurazione dell'applicazione. Se sono presenti una o più versioni runtime supportate specificate nell'elemento **\<supportedRuntime>** , il runtime carica la versione runtime specificata dal primo elemento **\<supportedRuntime>** . Se questa versione non è disponibile, il runtime esamina l'elemento **\<supportedRuntime>** successivo e prova a caricare la versione runtime specificata. Se tale versione runtime non è disponibile, vengono esaminati gli elementi **\<supportedRuntime>** successivi. Se non è disponibile alcuna versione runtime supportata, il runtime non riesce a caricare una versione runtime e viene visualizzato un messaggio per l'utente (vedere il passaggio 3).  
   
 2. Il runtime legge l'intestazione del file PE del file eseguibile dell'applicazione. Se la versione runtime specificata dall'intestazione del file PE è disponibile, il runtime carica tale versione. Se la versione runtime specificata non è disponibile, il runtime cerca una versione runtime indicata da Microsoft come compatibile con la versione runtime nell'intestazione del file PE. Se tale versione non viene trovata, il processo procede al passaggio 3.  
   
 3. Il runtime visualizza un messaggio che informa che non è disponibile la versione runtime supportata dall'applicazione. Il runtime non viene caricato.  
   
     > [!NOTE]
-    >  È possibile evitare la visualizzazione del messaggio usando il valore NoGuiFromShim nella chiave del Registro di sistema HKLM\Software\Microsoft\\.NETFramework o nella variabile di ambiente COMPLUS_NoGuiFromShim. Ad esempio, è possibile eliminare il messaggio per le applicazioni che in genere non interagiscono con l'utente, ad esempio le installazioni automatiche o i servizi di Windows. Quando si sceglie di non visualizzare il messaggio, il runtime scrive un messaggio nel log eventi.  Impostare il valore del Registro di sistema NoGuiFromShim su 1 per impedire la visualizzazione di questo messaggio in tutte le applicazioni di un computer. In alternativa, impostare la variabile di ambiente COMPLUS_NoGuiFromShim su 1 per eliminare il messaggio nelle applicazioni in esecuzione in uno specifico contesto utente.  
+    > È possibile evitare la visualizzazione del messaggio usando il valore NoGuiFromShim nella chiave del Registro di sistema HKLM\Software\Microsoft\\.NETFramework o nella variabile di ambiente COMPLUS_NoGuiFromShim. Ad esempio, è possibile eliminare il messaggio per le applicazioni che in genere non interagiscono con l'utente, ad esempio le installazioni automatiche o i servizi di Windows. Quando si sceglie di non visualizzare il messaggio, il runtime scrive un messaggio nel log eventi.  Impostare il valore del Registro di sistema NoGuiFromShim su 1 per impedire la visualizzazione di questo messaggio in tutte le applicazioni di un computer. In alternativa, impostare la variabile di ambiente COMPLUS_NoGuiFromShim su 1 per eliminare il messaggio nelle applicazioni in esecuzione in uno specifico contesto utente.  
   
 > [!NOTE]
->  Dopo aver caricato una versione runtime, i reindirizzamenti dell'associazione di assembly possono richiedere il caricamento di una versione diversa di un singolo assembly di .NET Framework. Questi reindirizzamenti dell'associazione hanno effetto solo sull'assembly reindirizzato.  
+> Dopo aver caricato una versione runtime, i reindirizzamenti dell'associazione di assembly possono richiedere il caricamento di una versione diversa di un singolo assembly di .NET Framework. Questi reindirizzamenti dell'associazione hanno effetto solo sull'assembly reindirizzato.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Nomi parziali di assembly ed esecuzione side-by-side di più versioni  
  I riferimenti ad assembly parziali possono essere usati solo per l'associazione ad assembly contenuti in una directory dell'applicazione perché possono causare problemi nell'esecuzione side-by-side. Evitare riferimenti ad assembly parziali nel codice.  
@@ -107,11 +107,11 @@ publicKeyToken=...,
  Se un'istruzione di caricamento dell'assembly fa riferimento a `myAssembly`, queste impostazioni del file di configurazione attivano la conversione automatica da parte del runtime del riferimento `myAssembly` parziale in riferimento completo. Ad esempio, Assembly.Load("myAssembly") diventa Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").  
   
 > [!NOTE]
->  È possibile usare il metodo **LoadWithPartialName** per ignorare la restrizione di Common Language Runtime che impedisce il caricamento degli assembly con riferimento parziale dalla Global Assembly Cache. Questo metodo deve essere usato solo in scenari remoti perché può causare problemi nell'esecuzione side-by-side.  
+> È possibile usare il metodo **LoadWithPartialName** per ignorare la restrizione di Common Language Runtime che impedisce il caricamento degli assembly con riferimento parziale dalla Global Assembly Cache. Questo metodo deve essere usato solo in scenari remoti perché può causare problemi nell'esecuzione side-by-side.  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Viene descritto come associare un'applicazione a una versione specifica di un assembly.|  
 |[Configuring Assembly Binding Redirection](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md) (Configurazione del reindirizzamento di associazione di assembly)|Viene illustrato come reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly di .NET Framework.|  

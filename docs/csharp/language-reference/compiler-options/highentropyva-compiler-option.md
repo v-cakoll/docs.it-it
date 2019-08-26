@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -highentropyva compiler option [C#]
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
-ms.openlocfilehash: 2ff63ddc48a4f5c4287fe1badb092a1db93f68dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216678"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606854"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva (opzioni del compilatore C#)
 L'opzione del compilatore **-highentropyva** indica al kernel di Windows se un particolare eseguibile supporta la funzionalità ASLR (Address Space Layout Randomization) a entropia elevata.  
@@ -26,9 +26,9 @@ L'opzione del compilatore **-highentropyva** indica al kernel di Windows se un p
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Questa opzione consente di specificare che un eseguibile a 64 bit o un eseguibile contrassegnato dall'opzione del compilatore [-platform:anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) supporta uno spazio indirizzi virtuali a entropia elevata. L'opzione è disabilitata per impostazione predefinita. Per abilitarla, usare **-highentropyva+** o **-highentropyva**.  
+ Questa opzione consente di specificare che un eseguibile a 64 bit o un eseguibile contrassegnato dall'opzione del compilatore [-platform:anycpu](./platform-compiler-option.md) supporta uno spazio indirizzi virtuali a entropia elevata. L'opzione è disabilitata per impostazione predefinita. Per abilitarla, usare **-highentropyva+** o **-highentropyva**.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Con l'opzione **-highentropyva**, nelle versioni compatibili del kernel di Windows è possibile usare livelli di entropia più elevati per la scelta casuale del layout dello spazio degli indirizzi di un processo in quanto parte di ASLR. L'utilizzo di livelli più elevati di entropia indica la possibilità di allocare un numero maggiore di indirizzi ad aree della memoria quali stack e heap. Di conseguenza, è più difficile indovinare la posizione di una determinata area di memoria.  
   
  Quando l'opzione del compilatore **-highentropyva** è specificata, l'eseguibile di destinazione e tutti i moduli da cui dipende devono essere in grado di gestire valori di puntatore maggiori di 4 gigabyte (GB), quando sono in esecuzione come processi a 64 bit.

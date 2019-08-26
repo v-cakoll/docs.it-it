@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960136"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annullamento in thread gestiti
 A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'annullamento cooperativo di operazioni asincrone o di operazioni sincrone a esecuzione prolungata. Questo modello è basato su un oggetto leggero chiamato token di annullamento. L'oggetto che richiama una o più operazioni annullabili, ad esempio tramite la creazione di nuovi thread o attività, passa il token a ogni operazione. Singole operazioni possono a loro volta passare copie del token ad altre operazioni. In un secondo momento, l'oggetto che ha creato il token può usarlo per richiedere che le operazioni arrestino le rispettive attività. Solo l'oggetto richiedente può inviare la richiesta di annullamento e ogni listener è responsabile del rilevamento della richiesta e della relativa risposta in modo appropriato e tempestivo.  
@@ -31,7 +31,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
 - Chiamare il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per fornire la notifica di annullamento.  
   
 > [!IMPORTANT]
->  La classe <xref:System.Threading.CancellationTokenSource> implementa l'interfaccia <xref:System.IDisposable>. Assicurarsi di chiamare il metodo <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> dopo aver usato l'origine del token di annullamento per liberare qualsiasi risorsa gestita che contiene.  
+> La classe <xref:System.Threading.CancellationTokenSource> implementa l'interfaccia <xref:System.IDisposable>. Assicurarsi di chiamare il metodo <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> dopo aver usato l'origine del token di annullamento per liberare qualsiasi risorsa gestita che contiene.  
   
  L'immagine seguente mostra la relazione tra l'origine di un token e tutte le copie del token.  
   
@@ -54,7 +54,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
 ## <a name="cancellation-types"></a>Tipi di annullamento  
  Il framework di annullamento viene implementato come set di tipi correlati, elencati nella tabella seguente.  
   
-|Nome del tipo|Description|  
+|Nome del tipo|DESCRIZIONE|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Oggetto che crea un token di annullamento e che invia inoltre la richiesta di annullamento per tutte le copie del token.|  
 |<xref:System.Threading.CancellationToken>|Tipo di valore leggero passato a uno o più listener, in genere come parametro di un metodo. I listener monitorano il valore della proprietà `IsCancellationRequested` del token tramite polling, callback o handle di attesa.|  
@@ -66,7 +66,7 @@ A partire da .NET Framework 4, .NET Framework usa un modello unificato per l'ann
  Nell'esempio seguente l'oggetto richiedente crea un oggetto <xref:System.Threading.CancellationTokenSource> e quindi ne passa la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A> all'operazione annullabile. L'operazione che riceve la richiesta monitora il valore della proprietà <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token tramite polling. Quando il valore diventa `true`, il listener può essere terminato nel modo più appropriato. In questo esempio avviene semplicemente l'uscita del metodo, che nella maggior parte dei casi è tutto ciò che serve.  
   
 > [!NOTE]
->  L'esempio usa il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> per dimostrare che il nuovo framework di annullamento è compatibile con le API legacy. Per un esempio d'uso del nuovo tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> preferito, vedere [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> L'esempio usa il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> per dimostrare che il nuovo framework di annullamento è compatibile con le API legacy. Per un esempio d'uso del nuovo tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> preferito, vedere [Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

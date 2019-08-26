@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915885"
 ---
 # <a name="generic-interfaces"></a>Interfacce generiche
 Questo argomento fornisce una panoramica delle interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.  
@@ -24,7 +24,7 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
  Le interfacce generiche forniscono controparti indipendenti dai tipi a interfacce non generiche per confronti di uguaglianza e ordinamento e per le funzionalità condivise da tipi di raccolta generici.  
   
 > [!NOTE]
->  A partire da .NET Framework 4, i parametri di tipo di diverse interfacce generiche vengono contrassegnati come covariante o controvariante, fornendo più flessibilità nell'assegnazione e nell'uso di tipi che implementano queste interfacce. Vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> A partire da .NET Framework 4, i parametri di tipo di diverse interfacce generiche vengono contrassegnati come covariante o controvariante, fornendo più flessibilità nell'assegnazione e nell'uso di tipi che implementano queste interfacce. Vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Confronti di uguaglianza e ordinamento  
  Nello spazio dei nomi <xref:System> le interfacce generiche <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, analogamente alle relative controparti non generiche, definiscono rispettivamente i metodi per i confronti di ordinamento e quelli per i confronti di uguaglianza. I tipi implementano queste interfacce per consentire l'esecuzione di questi confronti.  

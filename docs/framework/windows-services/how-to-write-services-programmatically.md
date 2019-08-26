@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952413"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedura: Scrivere servizi a livello di codice
 Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile scrivere servizi personalizzati impostando manualmente l'ereditarietà e altri elementi di infrastruttura. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi che altrimenti vengono gestiti automaticamente dal modello:  
@@ -64,7 +64,7 @@ Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile
 8. Compilare il progetto scegliendo **Compila soluzione** dal menu **Compila**.  
   
     > [!NOTE]
-    >  Non è possibile eseguire un progetto di servizio premendo F5.  
+    > Non è possibile eseguire un progetto di servizio premendo F5.  
   
 9. Creare un progetto per il programma di installazione e le azioni personalizzate per installare il servizio. Per un esempio, vedere [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   

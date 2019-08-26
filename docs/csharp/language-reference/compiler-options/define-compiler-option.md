@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924791"
 ---
 # <a name="-define-c-compiler-options"></a>-define (opzioni del compilatore C#)
 L'opzione **-define** definisce `name` come simbolo in tutti i file del codice sorgente nel programma.  
@@ -32,9 +32,9 @@ L'opzione **-define** definisce `name` come simbolo in tutti i file del codice s
  Nome di uno o più simboli che si vuole definire.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'opzione **-define** ha lo stesso effetto dell'uso di una direttiva [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) per il preprocessore, ad eccezione del fatto che l'opzione del compilatore è valida per tutti i file nel progetto. Un simbolo resta definito in un file del codice sorgente finché una direttiva [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) nel file non rimuove la definizione. Quando si usa l'opzione -define, una direttiva `#undef` in un file non ha effetto in altri file del codice sorgente nel progetto.  
+ L'opzione **-define** ha lo stesso effetto dell'uso di una direttiva [#define](../preprocessor-directives/preprocessor-define.md) per il preprocessore, ad eccezione del fatto che l'opzione del compilatore è valida per tutti i file nel progetto. Un simbolo resta definito in un file del codice sorgente finché una direttiva [#undef](../preprocessor-directives/preprocessor-undef.md) nel file non rimuove la definizione. Quando si usa l'opzione -define, una direttiva `#undef` in un file non ha effetto in altri file del codice sorgente nel progetto.  
   
- È possibile usare i simboli creati da questa opzione con [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) e [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) per la compilazione condizionale dei file del codice sorgente.  
+ È possibile usare i simboli creati da questa opzione con [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md) e [#endif](../preprocessor-directives/preprocessor-endif.md) per la compilazione condizionale dei file del codice sorgente.  
   
  **-d** è la versione abbreviata di **-define**.  
   
@@ -47,7 +47,7 @@ L'opzione **-define** definisce `name` come simbolo in tutti i file del codice s
  Il compilatore C# stesso non definisce alcun simbolo o macro che è possibile usare nel codice sorgente. Tutte le definizioni dei simboli devono essere definite dall'utente.  
   
 > [!NOTE]
->  `#define` in C# non consente di assegnare un valore a un simbolo, diversamente dai linguaggi come C++. Ad esempio, non è possibile usare `#define` per creare una macro o per definire una costante. Se è necessario definire una costante, usare una variabile `enum`. Se si vuole creare una macro in stile C++, prendere in considerazione altre alternative, ad esempio i generics. Poiché le macro sono notoriamente soggette a errori, C# non ne consente l'uso, ma offre alternative più sicure.  
+> `#define` in C# non consente di assegnare un valore a un simbolo, diversamente dai linguaggi come C++. Ad esempio, non è possibile usare `#define` per creare una macro o per definire una costante. Se è necessario definire una costante, usare una variabile `enum`. Se si vuole creare una macro in stile C++, prendere in considerazione altre alternative, ad esempio i generics. Poiché le macro sono notoriamente soggette a errori, C# non ne consente l'uso, ma offre alternative più sicure.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
@@ -80,5 +80,5 @@ public class Test
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

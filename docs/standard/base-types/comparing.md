@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053597"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963413"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  
@@ -51,7 +51,7 @@ ms.locfileid: "66053597"
 |Intero positivo<br /><br /> -oppure-<br /><br /> 1|La prima stringa segue la seconda stringa nella sequenza di ordinamento.<br /><br /> -oppure-<br /><br /> La seconda stringa è `null`.|  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  L'esempio seguente usa il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per determinare i valori relativi di due stringhe.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053597"
  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> confronta due oggetti stringa senza considerare le impostazioni cultura locali. I valori restituiti da questo metodo sono identici a quelli restituiti dal metodo **Compare** nella tabella precedente.  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  L'esempio seguente usa il metodo **CompareOrdinal** per confrontare i valori di due stringhe.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053597"
  Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> confronta la stringa incapsulata dall'oggetto stringa corrente con un altro oggetto o stringa. I valori restituiti da questo metodo sono identici a quelli restituiti dal metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> nella tabella precedente.  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  L'esempio seguente usa il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per confrontare l'oggetto `string1` con l'oggetto `string2` .  
   

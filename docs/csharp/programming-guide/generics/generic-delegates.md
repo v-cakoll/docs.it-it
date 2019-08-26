@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423500"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659842"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegati generici (Guida per programmatori C#)
-Un [delegato](../../../csharp/language-reference/keywords/delegate.md) può definire i propri parametri di tipo. Il codice che fa riferimento al delegato generico può specificare l'argomento tipo per creare un tipo costruito chiuso, proprio come per la creazione di un'istanza di una classe generica o la chiamata di un metodo generico, come mostrato nell'esempio seguente:  
+Un [delegato](../../language-reference/keywords/delegate.md) può definire i propri parametri di tipo. Il codice che fa riferimento al delegato generico può specificare l'argomento tipo per creare un tipo costruito chiuso, proprio come per la creazione di un'istanza di una classe generica o la chiamata di un metodo generico, come mostrato nell'esempio seguente:  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
   
@@ -37,10 +37,10 @@ Un [delegato](../../../csharp/language-reference/keywords/delegate.md) può defi
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Collections.Generic>
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Introduzione ai generics](../../../csharp/programming-guide/generics/index.md)
-- [Metodi generici](../../../csharp/programming-guide/generics/generic-methods.md)
-- [Classi generiche](../../../csharp/programming-guide/generics/generic-classes.md)
-- [Interfacce generiche](../../../csharp/programming-guide/generics/generic-interfaces.md)
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
-- [Generics](~/docs/standard/generics/index.md)
+- [Guida per programmatori C#](../index.md)
+- [Introduzione ai generics](./index.md)
+- [Metodi generici](./generic-methods.md)
+- [Classi generiche](./generic-classes.md)
+- [Interfacce generiche](./generic-interfaces.md)
+- [Delegati](../delegates/index.md)
+- [Generics](../../../standard/generics/index.md)

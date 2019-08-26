@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922321"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrizioni relative all'uso dei livelli di accessibilità (Riferimenti per C#)
 
@@ -34,7 +34,7 @@ Nella tabella seguente sono riepilogate le restrizioni relative ai livelli di ac
 |[Proprietà](../../programming-guide/classes-and-structs/properties.md)|Il tipo di una proprietà deve essere accessibile almeno quanto la proprietà.|
 |[Eventi](../../programming-guide/events/index.md)|Il tipo di un evento deve essere accessibile almeno quanto l'evento.|
 |[Indicizzatori](../../programming-guide/indexers/index.md)|Il tipo e i tipi di parametro di un indicizzatore devono essere accessibili almeno quanto l'indicizzatore.|
-|[Operatori](../../programming-guide/statements-expressions-operators/operators.md)|Il tipo restituito e i tipi di parametro di un operatore devono essere accessibili almeno quanto l'operatore.|
+|[Operatori](../operators/index.md)|Il tipo restituito e i tipi di parametro di un operatore devono essere accessibili almeno quanto l'operatore.|
 |[Costruttori](../../programming-guide/classes-and-structs/constructors.md)|I tipi di parametro di un costruttore devono essere accessibili almeno quanto il costruttore.|
 
 ## <a name="example"></a>Esempio

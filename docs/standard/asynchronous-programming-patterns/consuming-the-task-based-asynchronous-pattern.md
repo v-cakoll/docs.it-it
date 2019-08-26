@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490841"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666550"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 
 Quando si usa il modello asincrono basato su attività (TAP, Task-based Asynchronous Pattern) per lavorare con operazioni asincrone, è possibile usare i callback per ottenere un'attesa non bloccante.  Per le attività, è possibile ottenere questo risultato tramite metodi come <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Il supporto asincrono basato sul linguaggio nasconde i callback consentendo alle operazioni asincrone di essere in attesa all'interno di un normale flusso di controllo e il codice generato dal compilatore fornisce lo stesso livello di supporto delle API.
 
 ## <a name="suspending-execution-with-await"></a>Sospendere l'esecuzione con Await
- A partire da .NET Framework 4.5 è possibile usare la parola chiave [await](~/docs/csharp/language-reference/keywords/await.md) in C# e l'[operatore Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic per attendere in modo asincrono gli oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Quando si è in attesa di <xref:System.Threading.Tasks.Task>, l'espressione `await` è di tipo `void`. Quando si è in attesa di <xref:System.Threading.Tasks.Task%601>, l'espressione `await` è di tipo `TResult`. Un'espressione `await` deve essere presente nel corpo di un metodo asincrono. Per altre informazioni sul supporto dei linguaggi C# e Visual Basic in .NET Framework 4.5, vedere le specifiche dei linguaggi C# e Visual Basic.
+ A partire da .NET Framework 4.5 è possibile usare la parola chiave [await](../../csharp/language-reference/keywords/await.md) in C# e l'[operatore Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic per attendere in modo asincrono gli oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Quando si è in attesa di <xref:System.Threading.Tasks.Task>, l'espressione `await` è di tipo `void`. Quando si è in attesa di <xref:System.Threading.Tasks.Task%601>, l'espressione `await` è di tipo `TResult`. Un'espressione `await` deve essere presente nel corpo di un metodo asincrono. Per altre informazioni sul supporto dei linguaggi C# e Visual Basic in .NET Framework 4.5, vedere le specifiche dei linguaggi C# e Visual Basic.
 
  Dietro le quinte, la funzionalità await installa un callback per l'attività tramite una continuazione.  Questo callback riprende il metodo asincrono in corrispondenza del punto di sospensione. Quando il metodo asincrono viene ripreso, se l'operazione attesa è stata completata correttamente ed era <xref:System.Threading.Tasks.Task%601>, viene restituito il corrispondente elemento `TResult`.  Se l'elemento <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> atteso è terminato con lo stato <xref:System.Threading.Tasks.TaskStatus.Canceled>, viene generata un'eccezione <xref:System.OperationCanceledException>.  Se l'elemento <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> atteso è terminato con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted>, viene generata l'eccezione che ha causato l'errore. Un `Task` può fallire a causa di più eccezioni, ma solo una di queste eccezioni viene propagata. La proprietà <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> restituisce tuttavia un'eccezione <xref:System.AggregateException> contenente tutti gli errori.
 

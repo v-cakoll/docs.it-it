@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622699"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988869"
 ---
 # <a name="garbage-collection-notifications"></a>Notifiche di Garbage Collection
 In alcune situazioni un'operazione completa di Garbage Collection (cioè di generazione 2) eseguita da Common Language Runtime può influire negativamente sulle prestazioni. Può essere un problema soprattutto con i server che elaborano grandi volumi di richieste. In questo caso, una lunga procedura di Garbage Collection può provocare un timeout delle richieste. Per evitare che venga eseguita una raccolta completa durante un periodo critico, è possibile essere informati che sta per iniziare una Garbage Collection completa e quindi intraprendere un'azione per reindirizzare il carico di lavoro a un'altra istanza del server. È anche possibile indurre manualmente una raccolta, a condizione che l'istanza del server corrente non sia necessaria per elaborare le richieste.  
@@ -24,7 +24,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> registra la generazione di una notifica quando il runtime rileva che sta per essere eseguita una Garbage Collection completa. Esistono due parti per questa notifica: quando sta per essere eseguita la Garbage Collection completa e quando la Garbage Collection completa è terminata.  
   
 > [!WARNING]
->  Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando l'elemento di configurazione [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitato, le operazioni di Garbage Collection in background non genereranno notifiche.  
+> Le notifiche vengono generate solo in caso di blocco delle operazioni di Garbage Collection. Quando l'elemento di configurazione [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) è abilitato, le operazioni di Garbage Collection in background non genereranno notifiche.  
   
  Per determinare quando è stata generata una notifica, usare i metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Questi metodi vengono in genere usati in un ciclo `while` per ottenere continuamente un'enumerazione <xref:System.GCNotificationStatus> che indica lo stato della notifica. Se tale valore è <xref:System.GCNotificationStatus.Succeeded>, è possibile procedere nel modo seguente:  
   
@@ -54,7 +54,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
 ## <a name="notification-threshold-parameters"></a>Parametri delle soglie di notifica  
  Il metodo <xref:System.GC.RegisterForFullGCNotification%2A> presenta due parametri per specificare i valori di soglia degli oggetti di generazione 2 e dell'heap degli oggetti grandi. Quando tali valori sono soddisfatti, verrà generata una notifica di Garbage Collection. Nella tabella seguente vengono descritti i parametri.  
   
-|Parametro|Description|  
+|Parametro|DESCRIZIONE|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Numero compreso tra 1 e 99 che specifica se la notifica deve essere generata in base agli oggetti promossi alla generazione 2.|  
 |`largeObjectHeapThreshold`|Numero compreso tra 1 e 99 che specifica quando generare la notifica in base agli oggetti allocati nell'heap degli oggetti grandi.|  
@@ -65,7 +65,7 @@ In alcune situazioni un'operazione completa di Garbage Collection (cioè di gene
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>DESCRIZIONE  
  Nell'esempio seguente un gruppo di server gestisce le richieste Web in ingresso. Per simulare il carico di lavoro dell'elaborazione delle richieste, vengono aggiunte matrici di byte a una raccolta <xref:System.Collections.Generic.List%601>. Ogni server registra una notifica di Garbage Collection e quindi avvia un thread nel metodo utente `WaitForFullGCProc` per monitorare costantemente l'enumerazione <xref:System.GCNotificationStatus> restituita dai metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  I metodi <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chiamano i rispettivi metodi utente di gestione eventi quando viene generata una notifica:  

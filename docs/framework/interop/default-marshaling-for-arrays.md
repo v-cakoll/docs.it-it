@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946698"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  Quando si effettua il marshalling delle matrici dal codice non gestito al codice gestito, il gestore di marshalling controlla **MarshalAsAttribute** associato al parametro per determinare la dimensione della matrice. Se la dimensione della matrice non viene specificata, viene effettuato il marshalling di un solo elemento.  
   
 > [!NOTE]
->  **MarshalAsAttribute** non ha effetto sul marshalling delle matrici gestite al codice non gestito. In tal senso, la dimensione della matrice viene determinata con un'analisi. Non è possibile effettuare il marshalling di un subset di una matrice gestita.  
+> **MarshalAsAttribute** non ha effetto sul marshalling delle matrici gestite al codice non gestito. In tal senso, la dimensione della matrice viene determinata con un'analisi. Non è possibile effettuare il marshalling di un subset di una matrice gestita.  
   
  Il gestore di marshalling di interoperabilità usa i metodi **CoTaskMemAlloc** e **CoTaskMemFree** per allocare e recuperare la memoria. Anche l'allocazione della memoria eseguita dal codice non gestito deve usare questi metodi.  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |Tipo di matrice gestita|Esportato come|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
   
  Nell'automazione OLE esiste una limitazione relativa alle matrici di strutture contenenti LPSTR o LPWSTR.  È quindi necessario effettuare il marshalling dei campi **String** come **UnmanagedType.BSTR**. In caso contrario, verrà generata un'eccezione.  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  Quando un metodo contenente un parametro **ELEMENT_TYPE_SZARRAY** (matrice unidimensionale) viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. Le stesse regole di conversione si applicano ai tipi di elementi della matrice. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
   
  Anche se gestore di marshalling ha le informazioni sulla lunghezza necessarie per effettuare il marshalling della matrice, la lunghezza della matrice viene in genere passata come argomento separato per comunicare la lunghezza al computer chiamato.  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  Quando un metodo contenente un parametro **ELEMENT_TYPE_ARRAY** viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un elemento **SAFEARRAY** di un determinato tipo. I contenuti della matrice gestita vengono automaticamente copiati dalla memoria gestita in **SAFEARRAY**. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
@@ -311,7 +311,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  

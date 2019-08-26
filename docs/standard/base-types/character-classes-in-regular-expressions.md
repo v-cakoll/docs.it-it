@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963437"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -51,7 +51,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
  .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da .NET Framework 4 a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da .NET Framework 4.6.2, le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da .NET Framework 4 a .NET Framework 4.6.1, si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Gruppo di caratteri positivi: [ ]  
@@ -78,7 +78,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 
 Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`[aeiou]`|Corrisponde a tutte le vocali.|  
 |`[\p{P}\d]`|Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.|  
@@ -91,7 +91,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`gr`|Corrisponde ai caratteri letterali "gr".|  
 |`[ae]`|Corrisponde a una "a" o una "e".|  
@@ -106,7 +106,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`[A-Z]`|Corrisponde a qualsiasi carattere maiuscolo da A a Z.|  
@@ -141,11 +141,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  L'accento circonflesso iniziale (`^`) in un gruppo di caratteri negativi è obbligatorio e indica che tale gruppo è un gruppo di caratteri negativi anziché un gruppo di caratteri positivi.  
   
 > [!IMPORTANT]
->  Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero. Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.  
+> Un gruppo di caratteri negativi in un criterio di ricerca di espressioni regolari più grande non è un'asserzione di larghezza zero. Ovvero, dopo avere valutato il gruppo di caratteri negativi, il motore delle espressioni regolari avanza di un carattere nella stringa di input.  
   
  Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corrisponde a tutti i caratteri eccetto le vocali.|  
 |`[^\p{P}\d]`|Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.|  
@@ -157,7 +157,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`th`|Corrisponde ai caratteri letterali "th".|  
@@ -177,7 +177,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` (il carattere di ritorno a capo, \u000D).  
+> Poiché corrisponde a qualsiasi carattere eccetto `\n`, la classe di caratteri `.` corrisponde anche a `\r` (il carattere di ritorno a capo, \u000D).  
   
 - In un gruppo di caratteri positivi o negativi un punto viene interpretato come carattere punto letterale e non come classe di caratteri. Per altre informazioni, vedere [Gruppo di caratteri positivi](#PositiveGroup) e [Gruppo di caratteri negativi](#NegativeGroup) descritti in precedenza in questo argomento. Nell'esempio seguente viene fornita un'illustrazione mediante la definizione di un'espressione regolare che include il carattere punto (`.`) sia come classe di caratteri che come membro di un gruppo di caratteri positivi. L'espressione regolare `\b.*[.?!;:](\s|\z)` inizia in corrispondenza di un confine di parola, corrisponde a qualsiasi carattere fino a quando non incontra uno dei cinque segni di punteggiatura, incluso un punto, quindi individua la corrispondenza con uno spazio vuoto o con la fine della stringa.  
   
@@ -185,7 +185,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Poiché corrisponde a qualsiasi carattere, l'elemento di linguaggio `.` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Categoria Unicode o blocco Unicode: \p{}  
@@ -204,7 +204,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.  
   
-|Modello|Description|  
+|Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\p{IsGreek}+`|Corrisponde a uno o più caratteri greci.|  
@@ -237,7 +237,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="word-character-w"></a>Carattere alfanumerico: \w  
  `\w` trova la corrispondenza con qualsiasi carattere alfanumerico. Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
   
-|Category|Description|  
+|Category|DESCRIZIONE|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -251,11 +251,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  Se viene specificato il comportamento conforme a ECMAScript, `\w` equivale a `[a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Poiché corrisponde a qualsiasi carattere alfanumerico, l'elemento di linguaggio `\w` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere alfanumerico, seguito da un carattere alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Nell'esempio seguente viene usato l'elemento di linguaggio `\w` per individuare una corrispondenza con i caratteri duplicati in una parola. L'esempio definisce un criterio di ricerca di espressioni regolari, `(\w)\1`, che può essere interpretato nel modo seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |(\w)|Corrisponde a un carattere alfanumerico. Equivale al primo gruppo di acquisizione.|  
 |\1|Corrisponde al valore della prima acquisizione.|  
@@ -273,7 +273,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  In altre parole, trova corrispondenza con tutti i caratteri, ad eccezione di quelli nelle categorie Unicode elencati nella tabella seguente.  
   
-|Category|Description|  
+|Category|DESCRIZIONE|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -287,11 +287,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
  Se viene specificato il comportamento conforme a ECMAScript, `\W` equivale a `[^a-zA-Z_0-9]`. Per informazioni sulle espressioni regolari ECMAScript, vedere la sezione "Comportamento di corrispondenza ECMAScript" in [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+> Poiché corrisponde a qualsiasi carattere non alfanumerico, l'elemento di linguaggio `\W` viene spesso usato con un quantificatore lazy se un criterio di ricerca di espressioni regolari tenta di ottenere più volte una corrispondenza con ogni carattere non alfanumerico, seguito da un carattere non alfanumerico specifico. Per altre informazioni, vedere [Quantificatori ](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  L'esempio seguente illustra la classe di caratteri `\W`.  Definisce un criterio di ricerca di espressioni regolari, `\b(\w+)(\W){1,2}`, che corrisponde a una parola seguita da uno o due caratteri non alfanumerici, ad esempio uno spazio vuoto o un segno di punteggiatura. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |\b|Inizia la corrispondenza sul confine di parola.|  
 |(\w+)|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -306,7 +306,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="whitespace-character-s"></a>Carattere spazio vuoto: \s  
  `\s` corrisponde a qualsiasi carattere spazio vuoto. È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
   
-|Category|Description|  
+|Category|DESCRIZIONE|  
 |--------------|-----------------|  
 |`\f`|Carattere di avanzamento modulo, \u000C.|  
 |`\n`|Carattere di nuova riga, \u000A.|  
@@ -320,7 +320,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra la classe di caratteri `\s`. Definisce un criterio di ricerca di espressioni regolari, `\b\w+(e)?s(\s|$)`, che corrisponde a una parola che termina in "s" o "es" seguita da uno spazio vuoto o dalla fine della stringa di input. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |\b|Inizia la corrispondenza sul confine di parola.|  
 |\w+|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -339,7 +339,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra l'elemento di linguaggio `\S`. Il criterio di espressione regolare `\b(\S+)\s?` corrisponde a stringhe delimitate da spazi vuoti. Il secondo elemento nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> della corrispondenza contiene la stringa corrispondente. L'espressione regolare può essere interpretata come indicato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\S+)`|Trova la corrispondenza con uno o più caratteri diversi dallo spazio vuoto. Equivale al primo gruppo di acquisizione.|  
@@ -356,7 +356,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`\(?`|Corrisponde a zero o a un carattere letterale "(".|  
@@ -378,7 +378,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`\D`|Corrisponde a un carattere non numerico.|  
@@ -393,7 +393,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
  In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
-|Category|Description|  
+|Category|DESCRIZIONE|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase|  
 |`Ll`|Letter, Lowercase|  
@@ -552,7 +552,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
 |FFF0 - FFFF|`IsSpecials`|  
   
 <a name="CharacterClassSubtraction"></a>   
-## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Sottrazione di classi di caratteri: [base_group - excluded_group] []  
+## <a name="character-class-subtraction-base_group---excluded_group"></a>Sottrazione di classi di caratteri: [base_group - excluded_group] []  
  Una classe di caratteri definisce un set di caratteri. La sottrazione di classi di caratteri produce un set di caratteri che è il risultato dell'esclusione dei caratteri di una classe di caratteri da un'altra classe di caratteri.  
   
  Un'espressione di sottrazione di classi di caratteri ha il formato seguente:  
@@ -571,7 +571,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
   
  Nell'esempio seguente viene definita un'espressione regolare, `^[0-9-[2468]]+$`, che corrisponde a zero e a cifre dispari in una stringa di input.  L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|Description|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |^|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`[0-9-[2468]]+`|Corrisponde a una o più occorrenze di qualsiasi carattere da 0 a 9 ad eccezione di 2, 4, 6 e 8. In altre parole, corrisponde a una o più occorrenze di zero o di una cifra dispari.|  

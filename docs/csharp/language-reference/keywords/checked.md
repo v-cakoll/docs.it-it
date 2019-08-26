@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533131"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605908"
 ---
 # <a name="checked-c-reference"></a>checked (Riferimenti per C#)
 
@@ -29,7 +29,7 @@ Il controllo dell'overflow può essere abilitato tramite le opzioni del compilat
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-La parola chiave [unchecked](../../../csharp/language-reference/keywords/unchecked.md) può essere usata per impedire il controllo dell'overflow.
+La parola chiave [unchecked](./unchecked.md) può essere usata per impedire il controllo dell'overflow.
 
 ## <a name="example"></a>Esempio
 
@@ -43,8 +43,8 @@ Questo esempio illustra come usare `checked` per abilitare il controllo dell'ove
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-- [Checked e Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](./index.md)
+- [Checked e Unchecked](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

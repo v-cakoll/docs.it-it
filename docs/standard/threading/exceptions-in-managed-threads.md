@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960066"
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
   
 > [!NOTE]
->  Si tratta di una cambiamento significativo rispetto alle versioni 1.0 e 1.1 di .NET Framework, che forniscono una barriera per numerose eccezioni non gestite, ad esempio, eccezioni non gestite nel pool di thread. Vedere [Cambiamenti rispetto alle versioni precedenti](#ChangeFromPreviousVersions) più avanti in questo argomento.  
+> Si tratta di una cambiamento significativo rispetto alle versioni 1.0 e 1.1 di .NET Framework, che forniscono una barriera per numerose eccezioni non gestite, ad esempio, eccezioni non gestite nel pool di thread. Vedere [Cambiamenti rispetto alle versioni precedenti](#ChangeFromPreviousVersions) più avanti in questo argomento.  
   
  Common Language Runtime fornisce una barriera per determinate eccezioni non gestite usate per controllare il flusso del programma:  
   
@@ -36,7 +36,7 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
  Se queste eccezioni vengono gestite nel thread principale o in thread immessi nel runtime dal codice non gestito, esse proseguono normalmente con una conseguente chiusura dell'applicazione.  
   
 > [!NOTE]
->  È possibile che il runtime generi un'eccezione non gestita prima che qualsiasi codice gestito abbia avuto la possibilità di installare un gestore di eccezioni. Anche se il codice gestito non può gestire tale eccezione, all'eccezione è consentito proseguire normalmente.  
+> È possibile che il runtime generi un'eccezione non gestita prima che qualsiasi codice gestito abbia avuto la possibilità di installare un gestore di eccezioni. Anche se il codice gestito non può gestire tale eccezione, all'eccezione è consentito proseguire normalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Esposizione di problemi di threading durante lo sviluppo  
  Quando nei thread si verifica un errore in modo silenzioso ma l'applicazione non viene terminata, è possibile che vengano rilevati gravi problemi di programmazione. Si tratta di un problema specifico dei servizi e delle altre applicazioni eseguite per periodi prolungati. In caso di errore dei thread, il programma viene gradualmente danneggiato. L'errore può influire negativamente sulle prestazioni dell'applicazione o l'applicazione potrebbe bloccarsi.  
