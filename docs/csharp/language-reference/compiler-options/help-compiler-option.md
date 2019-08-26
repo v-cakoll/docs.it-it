@@ -12,29 +12,29 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: d6759ec878f34ebd5031fb3465901412f8cbda05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693824"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602913"
 ---
-# <a name="-help---c-compiler-options"></a><span data-ttu-id="1ef14-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="1ef14-103">-help, -?</span></span> <span data-ttu-id="1ef14-104">(Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="1ef14-104">(C# Compiler Options)</span></span>
-<span data-ttu-id="1ef14-105">Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.</span><span class="sxs-lookup"><span data-stu-id="1ef14-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  
+# <a name="-help---c-compiler-options"></a><span data-ttu-id="644b6-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="644b6-103">-help, -?</span></span> <span data-ttu-id="644b6-104">(Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="644b6-104">(C# Compiler Options)</span></span>
+<span data-ttu-id="644b6-105">Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.</span><span class="sxs-lookup"><span data-stu-id="644b6-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ef14-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1ef14-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="644b6-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="644b6-106">Syntax</span></span>  
   
 ```console  
 -help  
 -?  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1ef14-107">Note</span><span class="sxs-lookup"><span data-stu-id="1ef14-107">Remarks</span></span>  
- <span data-ttu-id="1ef14-108">Se questa opzione è inclusa in una compilazione, non verrà creato alcun file di output e non avrà luogo alcuna compilazione.</span><span class="sxs-lookup"><span data-stu-id="1ef14-108">If this option is included in a compilation, no output file will be created and no compilation will take place.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="644b6-107">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="644b6-107">Remarks</span></span>  
+ <span data-ttu-id="644b6-108">Se questa opzione è inclusa in una compilazione, non verrà creato alcun file di output e non avrà luogo alcuna compilazione.</span><span class="sxs-lookup"><span data-stu-id="644b6-108">If this option is included in a compilation, no output file will be created and no compilation will take place.</span></span>  
   
- <span data-ttu-id="1ef14-109">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="1ef14-109">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="644b6-109">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="644b6-109">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ef14-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1ef14-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="644b6-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="644b6-110">See also</span></span>
 
-- [<span data-ttu-id="1ef14-111">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="1ef14-111">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="1ef14-112">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="1ef14-112">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="644b6-111">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="644b6-111">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="644b6-112">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="644b6-112">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

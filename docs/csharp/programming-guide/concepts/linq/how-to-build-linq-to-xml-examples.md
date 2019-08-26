@@ -2,18 +2,18 @@
 title: 'Procedura: Compilare esempi in LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 116f708eb18d642cbe914cea1ea44bd1833f2af6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9bbd04731854d67b9276f339a15f2c7f2193f9b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486071"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594125"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a><span data-ttu-id="f99fc-102">Procedura: Compilare esempi in LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f99fc-102">How to: Build LINQ to XML Examples (C#)</span></span>
-<span data-ttu-id="f99fc-103">Nei vari frammenti ed esempi di questa documentazione vengono usati classi e tipi di un'ampia varietà di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f99fc-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="f99fc-104">Quando si compila codice C#, è necessario fornire direttive `using` appropriate.</span><span class="sxs-lookup"><span data-stu-id="f99fc-104">When compiling C# code, you need to supply appropriate `using` directives.</span></span>  
+# <a name="how-to-build-linq-to-xml-examples-c"></a><span data-ttu-id="24cd9-102">Procedura: Compilare esempi in LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="24cd9-102">How to: Build LINQ to XML Examples (C#)</span></span>
+<span data-ttu-id="24cd9-103">Nei vari frammenti ed esempi di questa documentazione vengono usati classi e tipi di un'ampia varietà di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="24cd9-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="24cd9-104">Quando si compila codice C#, è necessario fornire direttive `using` appropriate.</span><span class="sxs-lookup"><span data-stu-id="24cd9-104">When compiling C# code, you need to supply appropriate `using` directives.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f99fc-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="f99fc-105">Example</span></span>  
- <span data-ttu-id="f99fc-106">Nel codice seguente sono contenute le direttive `using` richieste per la compilazione e l'esecuzione degli esempi in C#.</span><span class="sxs-lookup"><span data-stu-id="f99fc-106">The following code contains the `using` directives that the C# examples require to build and run.</span></span> <span data-ttu-id="f99fc-107">Non tutte le direttive `using` sono necessarie per ogni esempio.</span><span class="sxs-lookup"><span data-stu-id="f99fc-107">Not all `using` directives are required for every example.</span></span>  
+## <a name="example"></a><span data-ttu-id="24cd9-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="24cd9-105">Example</span></span>  
+ <span data-ttu-id="24cd9-106">Nel codice seguente sono contenute le direttive `using` richieste per la compilazione e l'esecuzione degli esempi in C#.</span><span class="sxs-lookup"><span data-stu-id="24cd9-106">The following code contains the `using` directives that the C# examples require to build and run.</span></span> <span data-ttu-id="24cd9-107">Non tutte le direttive `using` sono necessarie per ogni esempio.</span><span class="sxs-lookup"><span data-stu-id="24cd9-107">Not all `using` directives are required for every example.</span></span>  
   
 ```csharp  
 using System;  
@@ -34,6 +34,6 @@ using System.Reflection;
 using System.IO.Packaging;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f99fc-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f99fc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24cd9-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="24cd9-108">See also</span></span>
 
-- [<span data-ttu-id="f99fc-109">Panoramica della programmazione con LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f99fc-109">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [<span data-ttu-id="24cd9-109">Panoramica della programmazione con LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="24cd9-109">LINQ to XML Programming Overview (C#)</span></span>](./linq-to-xml-overview.md)
