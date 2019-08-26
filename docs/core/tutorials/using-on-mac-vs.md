@@ -4,12 +4,12 @@ description: In questo argomento viene descritto il processo di creazione di una
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 7dd8d5e8828c5337a52e9d1ea207aa5ef568556e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870523"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660495"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac
 
@@ -22,7 +22,7 @@ Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sv
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Vedere l'argomento [Prerequisiti per .NET Core in Mac](../../core/macos-prerequisites.md).
+Vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
 
 Vedere la guida al [supporto di .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) per assicurarsi di usare una versione supportata di .NET Core.
 

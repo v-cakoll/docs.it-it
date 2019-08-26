@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963397"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 Il motore delle espressioni regolari di .NET Framework è un selettore di espressioni regolari di backtracking che incorpora un motore NFA (Nondeterministic Finite Automaton) tradizionale come quello usato da Perl, Python, Emacs e Tcl. Ciò lo distingue dai motori delle espressioni regolari puri DFA (Deterministic Finite Automaton), più veloci ma più limitati, come quelli usati in awk, egrep o lex. Lo distingue anche dai motori NFA POSIX, standardizzati ma più lenti. Nella sezione seguente vengono descritti i tre tipi di motori delle espressioni regolari e viene spiegato perché le espressioni regolari in .NET Framework vengono implementate usando un motore NFA tradizionale.  
@@ -31,7 +31,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
  I motori NFA tradizionali sono i preferiti dei programmatori perché offrono un maggiore controllo sulla corrispondenza delle stringhe rispetto ai motori DFA o NFA POSIX. Benché nel peggiore dei casi possano essere lenti, è possibile impostarli in modo che trovino le corrispondenze in tempo lineare o polinomiale usando criteri che riducono le ambiguità e limitano il backtracking. In altre parole, anche se la potenza e la flessibilità dei motori NFA possono influire negativamente sulle prestazioni, nella maggior parte dei casi questi motori offrono prestazioni da buone ad accettabili se un'espressione regolare è ben scritta e si evitano situazioni in cui il backtracking peggiora notevolmente le prestazioni.  
   
 > [!NOTE]
->  Per informazioni sui problemi di prestazioni causati dall'uso eccessivo del backtracking e su come elaborare un'espressione regolare per risolverli, vedere [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Per informazioni sui problemi di prestazioni causati dall'uso eccessivo del backtracking e su come elaborare un'espressione regolare per risolverli, vedere [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="net-framework-engine-capabilities"></a>Funzionalità del motore di .NET Framework  
  Per usufruire dei vantaggi offerti da un motore NFA tradizionale, il motore delle espressioni regolari di .NET Framework include un set completo di costrutti per consentire ai programmatori di controllare il motore di backtracking. Tali costrutti possono essere usati per trovare più rapidamente le corrispondenze o per favorire espansioni specifiche rispetto ad altre.  

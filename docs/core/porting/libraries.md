@@ -4,12 +4,12 @@ description: Informazioni su come convertire progetti di libreria da .NET Framew
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745560"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660705"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
@@ -29,16 +29,16 @@ In questo articolo si presuppone che:
 [.NET Standard](../../standard/net-standard.md)\
 Questo argomento descrive la specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET.
 
-[Pacchetti, metapacchetti e framework](~/docs/core/packages.md)   
+[Pacchetti, metapacchetti e framework](../packages.md)   
 Questo articolo descrive le modalità di definizione e uso dei pacchetti in .NET Core e come i pacchetti supportano l'esecuzione del codice in più implementazioni di .NET.
 
-[Sviluppo di librerie con strumenti multipiattaforma](~/docs/core/tutorials/libraries.md)   
+[Sviluppo di librerie con strumenti multipiattaforma](../tutorials/libraries.md)   
 Questo argomento spiega come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma.
 
-[Aggiunte al formato *csproj* per .NET Core](~/docs/core/tools/csproj.md)   
+[Aggiunte al formato *csproj* per .NET Core](../tools/csproj.md)   
 Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito del passaggio a *csproj* e a MSBuild.
 
-[Portabilità in .NET Core - Analisi delle dipendenze di terze parti](~/docs/core/porting/third-party-deps.md)   
+[Portabilità in .NET Core - Analisi delle dipendenze di terze parti](third-party-deps.md)   
 Questo argomento illustra la portabilità delle dipendenze di terze parti e le operazioni da eseguire quando una dipendenza per un pacchetto NuGet non può essere eseguita su .NET Core.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Ridestinazione del codice .NET Framework a .NET Framework 4.7.2

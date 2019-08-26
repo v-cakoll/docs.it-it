@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362392"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660573"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Usare una libreria .NET Standard in Visual Studio 2017
 
@@ -30,7 +30,7 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Aprire la soluzione `ClassLibraryProjects` creata in [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md). In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sulla soluzione **ClassLibraryProjects** e scegliere **Aggiungi** > **Nuovo progetto** dal menu di scelta rapida.
 
-1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual C#** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)**. Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
+1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual C#** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)** . Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
 
    ![Finestra di dialogo di Visual Studio Aggiungi nuovo progetto - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
@@ -60,7 +60,7 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Aprire la soluzione `ClassLibraryProjects` creata in [Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md). In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sulla soluzione **ClassLibraryProjects** e scegliere **Aggiungi** > **Nuovo progetto** dal menu di scelta rapida.
 
-1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual Basic** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)**. Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
+1. Nella finestra di dialogo **Aggiungi nuovo progetto**, espandere il nodo selezionare il nodo **Visual Basic** e selezionare **.NET Core** seguito dal modello di progetto **Console App (.NET Core)** . Nella casella di testo **Nome**, digitare "ShowCase", quindi selezionare il pulsante **OK**.
 
    ![Finestra di dialogo di Visual Studio Aggiungi nuovo progetto - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
@@ -93,7 +93,7 @@ Dopo aver creato una libreria di classi .NET Standard seguendo i passaggi riport
 
 ## <a name="distributing-the-library-in-a-nuget-package"></a>Distribuzione della libreria in un pacchetto NuGet
 
-Per rendere la libreria di classi disponibile sul Web, è possibile pubblicarla come pacchetto NuGet. Visual Studio non supporta la creazione di pacchetti NuGet. Per creare un pacchetto, usare l'[utilità della riga di comando `dotnet`](../../core/tools/dotnet.md):
+Per rendere la libreria di classi disponibile sul Web, è possibile pubblicarla come pacchetto NuGet. Visual Studio non supporta la creazione di pacchetti NuGet. Per creare un pacchetto, usare l'[utilità della riga di comando `dotnet`](../tools/dotnet.md):
 
 1. Aprire una finestra della console. Ad esempio, nella casella di testo **Chiedimi qualcosa** della barra delle applicazioni di Windows immettere `Command Prompt`, o `cmd` per maggiore brevità, e aprire una finestra della console selezionando l'app desktop **Prompt dei comandi** o premendo INVIO se è selezionata nei risultati della ricerca.
 
@@ -104,4 +104,4 @@ Per rendere la libreria di classi disponibile sul Web, è possibile pubblicarla 
    > [!TIP]
    > Se la directory che contiene *dotnet.exe* non si trova nel percorso indicato, è possibile individuarne il percorso immettendo `where dotnet.exe` nella finestra della console.
 
-Per altre informazioni sulla creazione di pacchetti NuGet, vedere [Come creare un pacchetto NuGet con strumenti multipiattaforma](../../core/deploying/creating-nuget-packages.md).
+Per altre informazioni sulla creazione di pacchetti NuGet, vedere [Come creare un pacchetto NuGet con strumenti multipiattaforma](../deploying/creating-nuget-packages.md).

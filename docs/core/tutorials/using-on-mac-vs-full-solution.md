@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 454f67b39b3558b3f34519bdc018118738b99f6b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300150"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660689"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -28,7 +28,7 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 - [.NET Core SDK 1.1 o versione successiva](https://www.microsoft.com/net/core#macos)
 - [Visual Studio 2017 per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../../core/macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Creazione di una libreria
 

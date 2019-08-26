@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7787121afcfae4978141d36d25ddfa0a4f54df56
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959276"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660426"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilare un'applicazione Hello World usando Visual Basic con .NET Core SDK in Visual Studio 2017
 
@@ -22,13 +22,13 @@ Questo argomento offre un'introduzione dettagliata per la compilazione, il debug
 
 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato. È possibile sviluppare l'app con .NET Core 2.0.
 
-Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](../../core/windows-prerequisites.md).
+Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](../windows-prerequisites.md).
 
 ## <a name="a-simple-hello-world-application"></a>Semplice applicazione Hello World
 
 Di seguito viene descritta la creazione di una semplice applicazione console "Hello World". Attenersi ai passaggi riportati di seguito.
 
-1. Avviare Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo *Nuovo progetto** selezionare il nodo **Visual Basic** aggiungendo il nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)**. Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
+1. Avviare Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo *Nuovo progetto** selezionare il nodo **Visual Basic** aggiungendo il nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)** . Nella casella di testo **Nome** digitare "HelloWorld". Selezionare il pulsante **OK** .
 
    ![Finestra di dialogo Nuovo progetto con App console selezionata](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
