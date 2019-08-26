@@ -1,33 +1,28 @@
-- name: Controlli per Windows Form
+- name: Controlli Windows Forms
   href: index.md
   items:
-    - name: Disposizione di controlli in Windows Form
-      href: arranging-controls-on-windows-forms.md
+    - name: Disporre i controlli in Windows Forms
       items:
-        - name: 'Procedura: Allineare più controlli in Windows Forms'
+        - name: 'Procedura: Allineare più controlli'
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: 'Procedura: Agganciare i controlli in Windows Forms'
+        - name: 'Procedura: Ancorare i controlli (Anchor)'
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: 'Procedura: Copiare i controlli tra Windows Form'
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: 'Procedura: Ancorare i controlli in Windows Forms'
+        - name: 'Procedura: Ancorare i controlli (Dock)'
           href: how-to-dock-controls-on-windows-forms.md
-        - name: 'Procedura: Disporre oggetti su più livelli in Windows Forms'
+        - name: 'Procedura: Disporre gli oggetti su più livelli'
           href: how-to-layer-objects-on-windows-forms.md
-        - name: 'Procedura: Bloccare i controlli di Windows Forms'
+        - name: 'Procedura: Bloccare i controlli'
           href: how-to-lock-controls-to-windows-forms.md
-        - name: 'Procedura: Posizionare i controlli in Windows Forms'
+        - name: 'Procedura: Posizionare i controlli'
           href: how-to-position-controls-on-windows-forms.md
-        - name: 'Procedura: Ridimensionare i controlli in Windows Forms'
+        - name: 'Procedura: Ridimensionare i controlli'
           href: how-to-resize-controls-on-windows-forms.md
         - name: 'Procedura: Impostare le opzioni della griglia per tutti i Windows Form'
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: 'Procedura: Impostare l''ordine di tabulazione in Windows Forms'
+        - name: 'Procedura: Impostare l''ordine di tabulazione'
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 'Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento'
+        - name: 'Procedura dettagliata: Disporre i controlli usando le guide di allineamento'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: 'Procedura: Disporre i controlli con le guide di allineamento e la griglia in Windows Forms'
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: 'Procedura: Riassegnare i controlli esistenti a un elemento padre diverso'
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 'Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize'
@@ -35,15 +30,15 @@
     - name: Inserimento di controlli in Windows Form
       href: putting-controls-on-windows-forms.md
       items:
-        - name: 'Procedura: Aggiungere controlli a Windows Forms'
+        - name: 'Procedura: Aggiungere controlli'
           href: how-to-add-controls-to-windows-forms.md
-        - name: 'Procedura: Aggiungere i controlli senza un''interfaccia utente a Windows Forms'
+        - name: 'Procedura: Aggiungere controlli senza interfaccia utente'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: 'Procedura: Aggiungere o rimuovere controlli da una raccolta in fase di esecuzione'
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 'Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: 'Procedura: Aggiungere i controlli ActiveX a Windows Forms'
+        - name: 'Procedura: Aggiungere controlli ActiveX'
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Considerazioni sull'inserimento di controlli ActiveX in Windows Form
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: 'Procedura: Designare un pulsante Windows Forms come pulsante di annullamento usando la finestra di progettazione'
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: 'Procedura: Rispondere alla selezione dei pulsanti Windows Forms'
+            - name: 'Procedura: Rispondere ai clic sui controlli Button'
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Modalità di selezione di un controllo Button Windows Form
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: Panoramica del controllo CheckBox
               href: checkbox-control-overview-windows-forms.md
-            - name: 'Procedura: Rispondere alla selezione dei controlli CheckBox di Windows Forms'
+            - name: 'Procedura: Rispondere ai clic sui controlli CheckBox'
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: 'Procedura: Impostare opzioni con i controlli CheckBox di Windows Forms'
+            - name: 'Procedura: Impostare le opzioni con i controlli CheckBox'
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: Controllo CheckedListBox
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 'Procedura: Aggiungere una colonna non associata a un controllo DataGridView di Windows Forms associato ai dati'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: 'Procedura: Associare oggetti ai controlli DataGridView di Windows Forms'
+                - name: 'Procedura: Associare oggetti ai controlli DataGridView'
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: 'Procedura: Accedere a oggetti associati a righe DataGridView di Windows Forms'
+                - name: 'Procedura: Accedere a oggetti associati a righe DataGridView'
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: 'Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell di Windows Forms'
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: Panoramica del controllo DomainUpDown
               href: domainupdown-control-overview-windows-forms.md
-            - name: 'Procedura: Aggiungere elementi ai controlli DomainUpDown di Windows Forms a livello di codice'
+            - name: 'Procedura: Aggiungere elementi ai controlli DomainUpDown a livello di codice'
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: 'Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Forms'
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
