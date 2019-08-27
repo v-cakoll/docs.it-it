@@ -17,67 +17,72 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965129"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041435"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Metodo ICLRDebuggingLibraryProvider::ProvideLibrary
-Ottiene un'interfaccia di callback del provider di librerie che consente di trovare e caricare su richiesta Common Language Runtime librerie di debug specifiche della versione di CLR.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-HRESULT ProvideLibrary(  
-     [in] const WCHAR* pwszFileName,  
-     [in] DWORD dwTimestamp,  
-     [in] DWORD dwSizeOfImage,  
-     [out] HMODULE* hModule);  
-```  
-  
-## <a name="parameters"></a>Parametri  
- `pwszFilename`  
- in Nome del modulo richiesto.  
-  
- `dwTimestamp`  
- in Indicatore di data e ora archiviato nell'intestazione del file COFF dei file PE.  
-  
- `pLibraryProvider`  
- in `SizeOfImage` Campo archiviato nell'intestazione file facoltativa COFF dei file PE.  
-  
- `hModule`  
- out Handle per il modulo richiesto.  
-  
-## <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.  
-  
-|HRESULT|Descrizione|  
-|-------------|-----------------|  
-|S_OK|Metodo completato correttamente.|  
-  
-## <a name="exceptions"></a>Eccezioni  
-  
-## <a name="remarks"></a>Note  
- `ProvideLibrary`consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.  
-  
- Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procurare il modulo di debug.  
-  
+
+Ottiene un'interfaccia di callback del provider di librerie che consente di trovare e caricare su richiesta Common Language Runtime librerie di debug specifiche della versione di CLR.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+HRESULT ProvideLibrary(
+     [in] const WCHAR* pwszFileName,
+     [in] DWORD dwTimestamp,
+     [in] DWORD dwSizeOfImage,
+     [out] HMODULE* hModule);
+```
+
+## <a name="parameters"></a>Parametri
+
+`pwszFilename` \
+in Nome del modulo richiesto.
+
+`dwTimestamp` \
+in Indicatore di data e ora archiviato nell'intestazione del file COFF dei file PE.
+
+`pLibraryProvider` \
+in `SizeOfImage` Campo archiviato nell'intestazione file facoltativa COFF dei file PE.
+
+`hModule` \
+out Handle per il modulo richiesto.
+
+## <a name="return-value"></a>Valore restituito
+
+Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.
+
+|HRESULT|DESCRIZIONE|
+|-------------|-----------------|
+|S_OK|Metodo completato correttamente.|
+
+## <a name="exceptions"></a>Eccezioni
+
+## <a name="remarks"></a>Note
+
+`ProvideLibrary`consente al debugger di fornire i moduli necessari per il debug di file CLR specifici, ad esempio mscordbi. dll e mscordacwks. dll. Gli handle del modulo devono rimanere validi fino a quando una chiamata al metodo [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) non indica che possono essere liberati, a quel punto è responsabilità del chiamante liberare gli handle.
+
+Il debugger può utilizzare qualsiasi mezzo disponibile per individuare o procurare il modulo di debug.
+
 > [!IMPORTANT]
-> Questa funzionalità consente al chiamante dell'API di fornire moduli che contengono codice eseguibile e possibilmente dannoso. Per motivi di sicurezza, il chiamante non deve usare `ProvideLibrary` per distribuire il codice che non è disposto a eseguire se stesso.  
->   
->  Se viene individuato un problema di sicurezza grave in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks. dll, è possibile applicare una patch allo shim per riconoscere le versioni non valide dei file. Lo shim può quindi inviare richieste per le versioni con patch dei file e rifiutare le versioni non valide se vengono fornite in risposta a una richiesta. Questa situazione può verificarsi solo se l'utente ha eseguito la correzione a una nuova versione dello shim. Le versioni senza patch rimarranno vulnerabili.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** CorDebug. idl, CorDebug. h  
-  
- **Libreria** CorGuids.lib  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
-  
+> Questa funzionalità consente al chiamante dell'API di fornire moduli che contengono codice eseguibile e possibilmente dannoso. Per motivi di sicurezza, il chiamante non deve usare `ProvideLibrary` per distribuire il codice che non è disposto a eseguire se stesso.
+>
+> Se viene individuato un problema di sicurezza grave in una libreria già rilasciata, ad esempio mscordbi. dll o mscordacwks. dll, è possibile applicare una patch allo shim per riconoscere le versioni non valide dei file. Lo shim può quindi inviare richieste per le versioni con patch dei file e rifiutare le versioni non valide se vengono fornite in risposta a una richiesta. Questa situazione può verificarsi solo se l'utente ha eseguito la correzione a una nuova versione dello shim. Le versioni senza patch rimarranno vulnerabili.
+
+## <a name="requirements"></a>Requisiti
+
+**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Intestazione:** CorDebug. idl, CorDebug. h
+
+**Libreria** CorGuids.lib
+
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

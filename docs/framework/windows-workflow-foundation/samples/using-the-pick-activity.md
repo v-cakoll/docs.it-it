@@ -2,12 +2,12 @@
 title: Utilizzo dell'attività Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637782"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037873"
 ---
 # <a name="using-the-pick-activity"></a>Utilizzo dell'attività Pick
 In questo esempio viene illustrato come usare l'attività <xref:System.Activities.Statements.Pick>.
@@ -22,33 +22,33 @@ In questo esempio viene illustrato come usare l'attività <xref:System.Activitie
 ## <a name="discussion"></a>Discussione
  Nell'esempio è incluso un flusso di lavoro della finestra di progettazione e un flusso di lavoro codificato.
 
- Versione del flusso di lavoro di progettazione della finestra di progettazione dell'esempio viene illustrato come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
+ Workflow Designer la versione della finestra di progettazione dell'esempio illustra come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
-- Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: Include la `Main` funzione che esegue il flusso di lavoro di esempio.
 
-- ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
+- ReadString.cs: Attività personalizzata che legge un input dalla console.
 
-- Sequence1.XAML: Un flusso di lavoro creato usando la finestra di progettazione usata da Pick.
+- Sequence1. XAML: Flusso di lavoro creato utilizzando la finestra di progettazione che utilizza pick.
 
- Flusso di lavoro codificato nella versione codificata dell'esempio viene illustrato come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
+ Flusso di lavoro codificato la versione codificata dell'esempio illustra come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
-- Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: Include la `Main` funzione che esegue il flusso di lavoro di esempio.
 
-- ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
+- ReadString.cs: Attività personalizzata che legge un input dalla console.
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Con Visual Studio 2010, aprire il file della soluzione Pick.
+1. Con Visual Studio 2010 aprire il file della soluzione pick. sln.
 
 2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
 3. Per eseguire la soluzione, premere F5.
 
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
