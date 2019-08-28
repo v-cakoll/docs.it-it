@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479783"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666282"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Panoramica delle primitive di sincronizzazione
 
 .NET offre una gamma di tipi che è possibile usare per sincronizzare l'accesso a una risorsa condivisa o coordinare l'interazione tra thread.
 
 > [!IMPORTANT]
-> Usare la stessa istanza di primitiva di sincronizzazione per proteggere ogni accesso a una risorsa condivisa. Più thread possono accedere a una risorsa simultaneamente se si usano istanze di primitive di sincronizzazione diverse per proteggere l'accesso a una risorsa o se alcune parti del codice accedono direttamente a una risorsa.
+> Usare la stessa istanza di primitiva di sincronizzazione per proteggere l'accesso a una risorsa condivisa. Se si usano istanze di primitive di sincronizzazione diverse per proteggere la stessa risorsa, sarà possibile aggirare la protezione fornita da una primitiva di sincronizzazione.
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>Classe WaitHandle e tipi di sincronizzazione leggeri
 

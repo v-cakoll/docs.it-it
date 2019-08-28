@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 06d21843c6e2d7aeb1858c3ce72426d080f73595
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97cbf540527d0449387b71bb1d97df95b6a4aba4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410212"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602512"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (opzioni del compilatore C#)
 
-L'opzione **-refout** specifica un percorso file in cui l'assembly di riferimento deve essere restituito come output. Ciò si converte in `metadataPeStream` nell'API Emit.
+L'opzione **-refout** specifica un percorso file in cui l'assembly di riferimento deve essere restituito come output. Ciò si converte in `metadataPeStream` nell'API Emit. Questa opzione corrisponde alla proprietà del progetto [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) di MSBuild.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,5 +46,5 @@ Le opzioni `-refout` e [`-refonly`](refonly-compiler-option.md) si escludono rec
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135690"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963376"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -59,7 +59,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Le acquisizioni che usano parentesi sono numerate automaticamente da sinistra verso destra in base all'ordine delle parentesi di apertura nell'espressione regolare, a partire da uno. L'acquisizione che viene numerata zero è il testo corrispondente all'intero criterio dell'espressione regolare.  
   
 > [!NOTE]
->  Per impostazione predefinita, l'elemento di linguaggio `(`*sottoespressione*`)` acquisisce la sottoespressione corrispondente. Tuttavia, se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), la sottoespressione corrispondente non viene acquisita.  
+> Per impostazione predefinita, l'elemento di linguaggio `(`*sottoespressione*`)` acquisisce la sottoespressione corrispondente. Tuttavia, se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), la sottoespressione corrispondente non viene acquisita.  
   
  È possibile accedere a questi gruppi acquisiti in quattro modi diversi:  
   
@@ -108,7 +108,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  dove *nome* è un nome di gruppo valido e *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari valido. *nome* non deve contenere alcun simbolo di punteggiatura e non può iniziare con un numero.  
   
 > [!NOTE]
->  Se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), l'unico modo per acquisire una sottoespressione è assegnare esplicitamente un nome ai gruppi di acquisizione.  
+> Se il parametro <xref:System.Text.RegularExpressions.RegexOptions> di un metodo dei criteri di ricerca di espressioni regolari include il flag <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o se l'opzione `n` viene applicata a questa sottoespressione (vedere [Opzioni di gruppo](#group_options) più avanti in questo argomento), l'unico modo per acquisire una sottoespressione è assegnare esplicitamente un nome ai gruppi di acquisizione.  
   
  È possibile accedere ai gruppi acquisiti denominati nei modi seguenti:  
   
@@ -190,7 +190,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  La definizione del gruppo di bilanciamento usa *nome2* come uno stack. Il carattere iniziale di ogni costrutto annidato viene posizionato nel gruppo e nella relativa raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Quando viene trovata la corrispondenza con il carattere di chiusura, il carattere di apertura associato viene rimosso dal gruppo e la raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> viene ridotta di uno. Dopo che la corrispondenza dei caratteri di apertura e chiusura di tutti i costrutti annidati è stata trovata, *nome2* è vuoto.  
   
 > [!NOTE]
->  Dopo avere modificato l'espressione regolare dell'esempio seguente affinché usi il carattere di apertura e chiusura appropriato di un costrutto annidato, è possibile usarla per gestire più costrutti annidati, come ad esempio espressioni matematiche o righe di codice del programma che includono più chiamate al metodo annidate.  
+> Dopo avere modificato l'espressione regolare dell'esempio seguente affinché usi il carattere di apertura e chiusura appropriato di un costrutto annidato, è possibile usarla per gestire più costrutti annidati, come ad esempio espressioni matematiche o righe di codice del programma che includono più chiamate al metodo annidate.  
   
  Nell'esempio seguente viene usata una definizione di gruppo di bilanciamento per trovare una corrispondenza di parentesi uncinate aperte e chiuse (<>) in una stringa di input. Nell'esempio vengono definiti due gruppi denominati, `Open` e `Close`, usati come uno stack per rilevare coppie corrispondenti di parentesi uncinate. Ogni parentesi uncinata aperta acquisita viene inserita nella raccolta di acquisizioni del gruppo `Open` e ogni parentesi uncinata chiusa acquisita viene inserita nella raccolta di acquisizioni del gruppo `Close` . La definizione di gruppo di bilanciamento si assicura che sia presente una parentesi uncinata chiusa corrispondente per ogni parentesi uncinata aperta. In caso contrario, il criterio secondario `(?(Open)(?!))`finale viene valutato solo se il gruppo `Open` non è vuoto e, pertanto, se tutti i costrutti annidati non sono stati chiusi. Se il criterio secondario finale viene valutato, non viene trovata la corrispondenza perché il criterio secondario `(?!)` è un'asserzione lookahead negativa di larghezza zero che ha sempre esito negativo.  
   
@@ -211,7 +211,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`[^<>]*`|Trova la corrispondenza di zero o più caratteri diversi da parentesi uncinate aperte o chiuse.|  
 |`(?'Open'<)`|Trova la corrispondenza di una parentesi uncinata aperta e la assegna a un gruppo denominato `Open`.|  
 |`[^<>]*`|Trova la corrispondenza di zero o più caratteri diversi da parentesi uncinate aperte o chiuse.|  
-|`((?'Open'<)[^<>]*) +`|Trova la corrispondenza di una o più occorrenze di una parentesi uncinata aperta seguita da zero o più caratteri diversi da parentesi uncinate aperte o chiuse. Equivale al secondo gruppo di acquisizione.|  
+|`((?'Open'<)[^<>]*)+`|Trova la corrispondenza di una o più occorrenze di una parentesi uncinata aperta seguita da zero o più caratteri diversi da parentesi uncinate aperte o chiuse. Equivale al secondo gruppo di acquisizione.|  
 |`(?'Close-Open'>)`|Trova la corrispondenza di una parentesi uncinata chiusa, assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` ed elimina la definizione del gruppo `Open` .|  
 |`[^<>]*`|Trova la corrispondenza di zero o più occorrenze di qualsiasi carattere diverso da parentesi uncinate aperte o chiuse.|  
 |`((?'Close-Open'>)[^<>]*)+`|Trova la corrispondenza di una o più occorrenze di una parentesi uncinata chiusa seguita da zero o più occorrenze di caratteri diversi da parentesi uncinate aperte o chiuse. In caso di corrispondenza di una parentesi uncinata chiusa, assegna la sottostringa tra il gruppo `Open` e il gruppo corrente al gruppo `Close` ed elimina la definizione del gruppo `Open` . Equivale al terzo gruppo di acquisizione.|  
@@ -234,13 +234,13 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |7|`[^<>]*`|Cerca parentesi non uncinate dopo la parentesi uncinata chiusa; non trova corrispondenze.|  
 |8|`)+`|Il valore del terzo gruppo acquisito è ">".<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata chiusa, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `((?'Close-Open'>)[^<>]*)` .|  
 |9|`)*`|Il valore del primo gruppo acquisito è "\<abc>".<br /><br /> Il carattere successivo nella stringa di input è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari esegue il loopback al criterio secondario `(((?'Open'<)` .|  
-|10|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<mno>" e la assegna al gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> è ora presente un solo valore, "<".|  
+|10|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<mno" e la assegna al gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> è ora presente un solo valore, "<".|  
 |11|`[^<>]*`|Trova la corrispondenza con "mno".|  
 |12|`)+`|"<mno" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)` .|  
-|13|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<xyz>" e la assegna al gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> del gruppo `Open` sono ora incluse due acquisizioni: la parentesi uncinata aperta di "\<mno>" e la parentesi uncinata aperta di "\<xyz>".|  
+|13|`(((?'Open'<)`|Trova la corrispondenza della parentesi uncinata aperta in "\<xyz>" e la assegna al gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> del gruppo `Open` sono ora incluse due acquisizioni: la parentesi uncinata aperta di "\<mno" e la parentesi uncinata aperta di "\<xyz>".|  
 |14|`[^<>]*`|Trova la corrispondenza con "xyz".|  
 |15|`)+`|"<xyz" è il valore del secondo gruppo acquisito.<br /><br /> Il carattere successivo nella stringa di input non è una parentesi uncinata aperta, pertanto il motore delle espressioni regolari non esegue il loopback al criterio secondario `(?'Open'<)[^<>]*)` .|  
-|16|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa in "\<xyz>". "xyz", assegna la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa al gruppo `Close` ed elimina il valore corrente dal gruppo `Open` . Il valore dell'acquisizione precedente (la parentesi uncinata aperta in "\<mno>") diventa il valore corrente del gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> del gruppo `Open` è ora inclusa una sola acquisizione, ovvero la parentesi uncinata aperta di "\<xyz>".|  
+|16|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa in "\<xyz>". "xyz", assegna la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa al gruppo `Close` ed elimina il valore corrente dal gruppo `Open` . Il valore dell'acquisizione precedente (la parentesi uncinata aperta in "\<mno") diventa il valore corrente del gruppo `Open`. Nella raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> del gruppo `Open` è ora inclusa una sola acquisizione, ovvero la parentesi uncinata aperta di "\<xyz>".|  
 |17|`[^<>]*`|Cerca parentesi non uncinate; non trova corrispondenze.|  
 |18|`)+`|Il valore del terzo gruppo acquisito è ">".<br /><br /> Il carattere successivo nella stringa di input è una parentesi uncinata chiusa, pertanto il motore delle espressioni regolari esegue il loopback al criterio secondario `((?'Close-Open'>)[^<>]*)` .|  
 |19|`((?'Close-Open'>)`|Trova la corrispondenza della parentesi uncinata chiusa finale in "xyz>>", assegna "mno\<xyz>" (la sottostringa tra il gruppo `Open` e la parentesi uncinata chiusa) al gruppo `Close` ed elimina il valore corrente del gruppo `Open`. Il gruppo `Open` è ora vuoto.|  
@@ -261,7 +261,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Il costrutto del gruppo non di acquisizione viene generalmente usato quando un quantificatore è applicato a un gruppo, ma le sottostringhe acquisite dal gruppo non sono di alcun interesse.  
   
 > [!NOTE]
->  Se un'espressione regolare include costrutti di raggruppamento annidati, un costrutto del gruppo di non acquisizione esterno non si applica ai costrutti del gruppo annidati interni.  
+> Se un'espressione regolare include costrutti di raggruppamento annidati, un costrutto del gruppo di non acquisizione esterno non si applica ai costrutti del gruppo annidati interni.  
   
  Nell'esempio seguente viene illustrata un'espressione regolare che include gruppi di non acquisizione. Si noti che nell'output non sono inclusi gruppi acquisiti.  
   
@@ -287,7 +287,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Ad esempio, `(?i-s:)` disattiva la differenziazione tra maiuscole e minuscole e disabilita la modalità riga singola. Per altre informazioni sulle opzioni inline che è possibile specificare, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  È possibile specificare opzioni che si applicano a un'espressione regolare intera anziché a una sottoespressione usando un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un metodo statico. È possibile specificare anche opzioni inline che si applicano dopo un punto specifico in un'espressione regolare usando il costrutto di linguaggio `(?imnsx-imnsx)` .  
+> È possibile specificare opzioni che si applicano a un'espressione regolare intera anziché a una sottoespressione usando un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un metodo statico. È possibile specificare anche opzioni inline che si applicano dopo un punto specifico in un'espressione regolare usando il costrutto di linguaggio `(?imnsx-imnsx)` .  
   
  Il costrutto delle opzioni di gruppo non è un gruppo di acquisizione. Ovvero, sebbene qualsiasi parte di una stringa acquisita dalla *sottoespressione* sia inclusa nella corrispondenza, non viene inclusa in un gruppo acquisito né usata per popolare l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> .  
   
@@ -396,7 +396,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  dove *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari. Per trovare una corrispondenza, la *sottoespressione* non deve trovarsi nella stringa di input a sinistra della posizione corrente. Tuttavia, qualsiasi sottostringa che non corrisponde a `subexpression` non viene inclusa nel risultato della corrispondenza.  
   
- Le asserzioni lookbehind negative di larghezza zero vengono usate in genere all'inizio delle espressioni regolari. Il criterio definito preclude una corrispondenza nella stringa che segue. Queste asserzioni vengono usate anche per limitare il backtracking quando l'ultimo carattere o gli ultimi caratteri in un gruppo acquisito non devono essere costituiti da uno o più caratteri corrispondenti al criterio di ricerca di espressioni regolari di tale gruppo. Se, ad esempio, un gruppo acquisisce tutti i caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookbehind di larghezza zero per richiedere che l'ultimo carattere non sia un carattere di sottolineatura (_).  
+ Le asserzioni lookbehind negative di larghezza zero vengono usate in genere all'inizio delle espressioni regolari. Il criterio definito preclude una corrispondenza nella stringa che segue. Queste asserzioni vengono usate anche per limitare il backtracking quando l'ultimo carattere o gli ultimi caratteri in un gruppo acquisito non devono essere costituiti da uno o più caratteri corrispondenti al criterio di ricerca di espressioni regolari di tale gruppo. Ad esempio, se un gruppo acquisisce tutti i caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookbehind di larghezza zero per richiedere che l'ultimo carattere non sia un carattere di sottolineatura (\_).  
   
  Nell'esempio seguente viene cercata la corrispondenza della data per qualsiasi giorno della settimana diverso da un fine settimana (ovvero, che non è né sabato né domenica).  
   
@@ -459,16 +459,16 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- Il criterio di ricerca di espressioni regolari `\b(\w+)\W+)+` estrae singole parole da una stringa e viene definito come illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `(\b(\w+)\W+)+` estrae singole parole da una stringa e viene definito come illustrato nella tabella seguente.  
   
 |Modello|DESCRIZIONE|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Insieme, questi caratteri formano una parola. Equivale al secondo gruppo di acquisizione.|  
 |`\W+`|Trova la corrispondenza di uno o più caratteri non alfanumerici.|  
-|`(\w+)\W+)+`|Trova la corrispondenza con il criterio di uno o più caratteri alfanumerici seguiti da uno o più caratteri non alfanumerici, una o più volte. Equivale al primo gruppo di acquisizione.|  
+|`(\b(\w+)\W+)`|Trova la corrispondenza con il criterio di uno o più caratteri alfanumerici seguiti da uno o più caratteri non alfanumerici, una o più volte. Equivale al primo gruppo di acquisizione.|  
   
- Il primo gruppo di acquisizione trova la corrispondenza per ogni parola della frase. Il secondo gruppo di acquisizione trova la corrispondenza per ogni parola insieme alla punteggiatura e allo spazio vuoto che seguono la parola. L'oggetto <xref:System.Text.RegularExpressions.Group> il cui indice è 2 fornisce informazioni sul testo corrispondente in base al secondo gruppo di acquisizione. Il set completo di parole acquisite dal gruppo di acquisizione è disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
+ Il secondo gruppo di acquisizione trova la corrispondenza per ogni parola della frase. Il primo gruppo di acquisizione trova la corrispondenza per ogni parola insieme alla punteggiatura e allo spazio vuoto che seguono la parola. L'oggetto <xref:System.Text.RegularExpressions.Group> il cui indice è 2 fornisce informazioni sul testo corrispondente in base al secondo gruppo di acquisizione. Il set completo di parole acquisite dal gruppo di acquisizione è disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Vedere anche
 

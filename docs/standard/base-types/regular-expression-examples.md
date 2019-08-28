@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172503"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930886"
 ---
 # <a name="regular-expression-examples"></a>Esempi di espressioni regolari
 Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni regolari nelle applicazioni comuni.  
   
 > [!NOTE]
->  Lo spazio dei nomi <xref:System.Web.RegularExpressions> contiene un numero di oggetti di espressione regolare che implementano i modelli di espressione regolare predefiniti per l'analisi di stringhe da documenti HTML, XML e ASP.NET. Ad esempio, la classe <xref:System.Web.RegularExpressions.TagRegex> identifica i tag di inizio in una stringa e la classe <xref:System.Web.RegularExpressions.CommentRegex> identifica i commenti ASP.NET in una stringa.  
+> Lo spazio dei nomi <xref:System.Web.RegularExpressions> contiene un numero di oggetti di espressione regolare che implementano i modelli di espressione regolare predefiniti per l'analisi di stringhe da documenti HTML, XML e ASP.NET. Ad esempio, la classe <xref:System.Web.RegularExpressions.TagRegex> identifica i tag di inizio in una stringa e la classe <xref:System.Web.RegularExpressions.CommentRegex> identifica i commenti ASP.NET in una stringa.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Esempio: Ricerca di HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
+ [Esempio: ricerca di HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  Esempio in cui viene cercata una stringa di input e vengono stampati tutti i valori href="…" con le relative posizioni nella stringa.  
   
  [Esempio: Modifica dei formati di data](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
@@ -35,7 +35,7 @@ Questa sezione contiene esempi di codice che illustrano l'uso delle espressioni 
  [Procedura: Rimuovere caratteri non validi da una stringa](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Esempio che consente di rimuovere i caratteri non alfanumerici non validi da una stringa.  
   
- [Procedura: Verificare che le stringhe siano in formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  Esempio che consente di verificare se una stringa presenta il formato di posta elettronica valido.  
   
 ## <a name="reference"></a>Riferimenti  

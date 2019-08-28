@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671226"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666628"
 ---
 # <a name="net-assembly-file-format"></a>Formato dei file di assembly .NET
 
@@ -35,4 +35,4 @@ Intestazioni di assembly da ECMA 335 II.25.1, struttura del formato di file di r
 
 ## <a name="processing-the-assemblies"></a>Elaborazione degli assembly
 
-È possibile scrivere strumenti o API per elaborare gli assembly. Le informazioni sugli assembly consentono di prendere decisioni a livello di codice in fase di runtime, riscrivere gli assembly, inserire IntelliSense di API in un editor e generare documentazione. <xref:System.Reflection?displayProperty=nameWithType> e [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sono due esempi di strumenti usati di frequente per questo scopo.
+È possibile scrivere strumenti o API per elaborare gli assembly. Le informazioni sugli assembly consentono di prendere decisioni a livello di codice in fase di runtime, riscrivere gli assembly, inserire IntelliSense di API in un editor e generare documentazione. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> e [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sono esempi validi di strumenti usati di frequente per questo scopo.
