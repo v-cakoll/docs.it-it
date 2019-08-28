@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8512dbddc5d27e75d98d281c0bdccf142a113d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961731"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039821"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). L'esempio supporta sia la [specifica di individuazione 2005](https://go.microsoft.com/fwlink/?LinkId=177912) che la [versione 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -67,10 +67,10 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 3. Dopo aver completato l'esempio, eseguire lo script Cleanup.bat per rimuovere i certificati creati per questo esempio.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

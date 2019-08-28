@@ -2,12 +2,12 @@
 title: ForEach non generica
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620848"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038068"
 ---
 # <a name="non-generic-foreach"></a>ForEach non generica
 Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] è disponibile un set di attività del flusso di controllo, inclusa <xref:System.Activities.Statements.ForEach%601> che consente di scorrere le raccolte <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|Condizione|Messaggio|Gravità|Tipo di eccezione|  
+|Condizione|Messaggio|severity|Tipo di eccezione|  
 |---------------|-------------|--------------|--------------------|  
-|I valori sono `null`|Valore non specificato per un argomento di attività 'Values' obbligatorio.|Error|<xref:System.InvalidOperationException>|  
+|I valori sono `null`|Valore non specificato per un argomento di attività 'Values' obbligatorio.|Errore|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Finestra di progettazione ForEach  
- L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nel **Samples**, **attività Non generiche** categoria. La finestra di progettazione viene denominata **ForEachWithBodyFactory** nella casella degli strumenti, poiché l'attività espone un <xref:System.Activities.Presentation.IActivityTemplateFactory> nella casella degli strumenti, che crea l'attività con un correttamente configurato <xref:System.Activities.ActivityAction>.  
+ L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nella categoria **esempi**, **attività non generiche** . La finestra di progettazione è denominata **ForEachWithBodyFactory** nella casella degli strumenti, poiché l' <xref:System.Activities.Presentation.IActivityTemplateFactory> attività espone un oggetto nella casella degli strumenti che crea l'attività <xref:System.Activities.ActivityAction>con un oggetto configurato correttamente.  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,17 +97,17 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Impostare il progetto scelto come progetto di avvio della soluzione:  
   
-    1. **CodeTestClient** viene illustrato come usare l'attività usando il codice.  
+    1. **CodeTestClient** illustra come usare l'attività usando il codice.  
   
-    2. **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.  
+    2. **DesignerTestClient** Mostra come usare l'attività all'interno della finestra di progettazione.  
   
 2. Compilare ed eseguire il progetto.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876800"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044919"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-In questo esempio viene illustrato come compilare un canale di protocollo personalizzato per utilizzare cookie HTTP per la gestione della sessione. Questo canale consente la comunicazione tra servizi Windows Communication Foundation (WCF) e i client ASMX o tra i client WCF e servizi ASMX.  
+In questo esempio viene illustrato come compilare un canale di protocollo personalizzato per utilizzare cookie HTTP per la gestione della sessione. Questo canale consente la comunicazione tra i servizi Windows Communication Foundation (WCF) e i client ASMX o tra i client WCF e i servizi ASMX.  
   
- Quando un client chiama un metodo Web in un servizio Web ASMX che è basato sulla sessione, il motore ASP.NET esegue le operazioni seguenti:  
+ Quando un client chiama un metodo Web in un servizio Web ASMX basato sulla sessione, il motore ASP.NET esegue le operazioni seguenti:  
   
 - Genera un ID univoco (ID sessione).  
   
@@ -25,13 +25,13 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
  Il client include questo ID di sessione nelle richieste successive al server. Il server utilizza l'ID di sessione dal client per caricare l'oggetto sessione appropriato per il contesto HTTP corrente.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Modello di scambio messaggi sul canale HttpCookieSession  
  In questo esempio vengono abilitate sessioni per gli scenari simili ad ASMX. Nella parte inferiore dello stack dei canali, è presente il trasporto HTTP che supporta <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. È il processo del canale a fornire le sessioni ai livelli più elevati dello stack dei canali. L'esempio implementa due canali (<xref:System.ServiceModel.Channels.IRequestSessionChannel> e <xref:System.ServiceModel.Channels.IReplySessionChannel>) che supportano le sessioni.  
@@ -69,13 +69,13 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- Il `HttpCookieReplySessionChannel` classe implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. I livelli più elevati dello stack dei canali chiamano il metodo <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> per leggere le richieste per la sessione. Ogni canale della sessione ha una coda di messaggi privata in cui vengono inseriti messaggi dal canale del servizio.  
+ La `HttpCookieReplySessionChannel` classe implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. I livelli più elevati dello stack dei canali chiamano il metodo <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> per leggere le richieste per la sessione. Ogni canale della sessione ha una coda di messaggi privata in cui vengono inseriti messaggi dal canale del servizio.  
   
 ```  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Se qualcuno chiama il metodo <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> e non sono presenti messaggi nella coda di messaggi, il canale attende per un determinato periodo di tempo prima di spegnersi. Questo metodo pulisce i canali della sessione creati per i client non WCF.  
+ Se qualcuno chiama il metodo <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> e non sono presenti messaggi nella coda di messaggi, il canale attende per un determinato periodo di tempo prima di spegnersi. Questa operazione consente di pulire i canali della sessione creati per i client non WCF.  
   
  Si utilizza `channelMapping` per tenere traccia di `ReplySessionChannels` e non si chiude il `innerChannel` sottostante fino a quando tutti i canali accettati non sono stati chiusi. In questo modo `HttpCookieReplySessionChannel` può essere attivo oltre la durata di `HttpCookieReplySessionChannelListener`. Non è inoltre necessario preoccuparsi che il listener venga sottoposto a procedure di garbage collection perché i canali accettati conservano un riferimento al listener tramite il callback di `OnClosed`.  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  Il canale del client corrispondente è incluso nella classe `HttpCookieSessionChannelFactory`. Durante la creazione del canale, la channel factory esegue il wrapping del canale della richiesta interno con una classe `HttpCookieRequestSessionChannel`. La classe `HttpCookieRequestSessionChannel` inoltra le chiamate al canale della richiesta sottostante. Quando il client chiude il proxy, `HttpCookieRequestSessionChannel` invia un messaggio al servizio nel quale viene indicato che il canale sta per essere chiuso. In questo modo, lo stack dei canali del servizio può arrestare normalmente il canale della sessione in uso.  
   
 ## <a name="binding-and-binding-element"></a>Associazioni ed elementi di associazione  
- Dopo aver creato i canali client e servizio, il passaggio successivo è integrarle in runtime di WCF. I canali vengono esposti a WCF tramite associazioni ed elementi di associazione. Un'associazione è costituita da uno o più elementi di associazione. WCF offre diverse associazioni definite dal sistema; ad esempio, BasicHttpBinding o WSHttpBinding. La classe `HttpCookieSessionBindingElement` contiene l'implementazione per l'elemento di associazione. Esegue l'override del listener del canale e dei metodi di creazione della channel factory per creare le istanze del listener del canale o della channel factory necessarie.  
+ Dopo aver creato i canali del servizio e del client, il passaggio successivo consiste nell'integrarli nel runtime WCF. I canali vengono esposti a WCF tramite associazioni ed elementi di associazione. Un'associazione è costituita da uno o più elementi di associazione. WCF offre diverse associazioni definite dal sistema. ad esempio, BasicHttpBinding o WSHttpBinding. La classe `HttpCookieSessionBindingElement` contiene l'implementazione per l'elemento di associazione. Esegue l'override del listener del canale e dei metodi di creazione della channel factory per creare le istanze del listener del canale o della channel factory necessarie.  
   
  Nell'esempio vengono utilizzate asserzioni di criteri per la descrizione del servizio. In questo modo, nell'esempio i requisiti del canale possono essere pubblicati negli altri client che possono utilizzare il servizio. Ad esempio, questo elemento di associazione pubblica le asserzioni di criteri per segnalare ai client potenziali che supporta le sessioni. Poiché nell'esempio viene abilitata la proprietà `ExchangeTerminateMessage` nella configurazione dell'elemento di associazione, vengono aggiunte le asserzioni necessarie per mostrare che il servizio supporta un'azione di scambio messaggi aggiuntiva per terminare la conversazione della sessione. I client possono quindi utilizzare questa azione. Nel codice WSDL seguente vengono mostrate le asserzioni di criteri create da `HttpCookieSessionBindingElement`.  
   
@@ -133,7 +133,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Codice di test  
- Il codice di test per l'utilizzo di questo trasporto di esempio è disponibile nelle directory Client e Service. È costituito da due test, uno utilizza un'associazione con `allowCookies` impostato su `true` sul client. mentre il secondo test abilita l'arresto esplicito (mediante l'arresto dello scambio di messaggi) sull'associazione.  
+ Il codice di test per l'utilizzo di questo trasporto di esempio è disponibile nelle directory Client e Service. È costituito da due test: un test usa un'associazione `allowCookies` con `true` impostato su nel client. mentre il secondo test abilita l'arresto esplicito (mediante l'arresto dello scambio di messaggi) sull'associazione.  
   
  Quando si esegue l'esempio, verrà visualizzato l'output seguente:  
   
@@ -158,14 +158,14 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Installare ASP.NET 4.0 usando il comando seguente.  
+1. Installare ASP.NET 4,0 usando il comando seguente.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  

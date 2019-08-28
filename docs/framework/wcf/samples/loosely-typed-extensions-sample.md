@@ -2,12 +2,12 @@
 title: Esempio di estensioni non fortemente tipizzate
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 4d92f45382361c61fe9e7ac85ff5d604a2c87b27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21690aebca250880a8eb51aee0821220a00bc0c0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592206"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039473"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Esempio di estensioni non fortemente tipizzate
 Il modello a oggetti di diffusione fornisce supporto dettagliato per lavorare con dati dell'estensione: informazioni presenti nella rappresentazione XML di un feed ma non esposte in modo esplicito da classi quali <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem>. Questo esempio illustra le tecniche di base per lavorare con i dati dell'estensione.  
@@ -56,13 +56,13 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 - Attributo `myAttribute` dell'elemento `<feed>`.  
   
-- `<simpleString>` elemento.  
+- `<simpleString>`elemento.  
   
-- `<DataContractExtension>` elemento.  
+- `<DataContractExtension>`elemento.  
   
-- `<XmlSerializerExtension>` elemento.  
+- `<XmlSerializerExtension>`elemento.  
   
-- `<xElementExtension>` elemento.  
+- `<xElementExtension>`elemento.  
   
 ## <a name="writing-extension-data"></a>Scrittura dati dell'estensione  
  Le estensioni dell'attributo vengono create aggiungendo voci alla raccolta <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> come mostra il codice di esempio seguente.  
@@ -81,7 +81,7 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- Lo spazio dei nomi XML per questo elemento è lo spazio dei nomi vuoto ("") e il valore è un nodo di testo che contiene la stringa "hello, world!".  
+ Lo spazio dei nomi XML per questo elemento è lo spazio dei nomi vuoto ("") e il relativo valore è un nodo di testo che contiene la stringa "Hello, World!".  
   
  Un modo per creare estensioni dell'elemento complesse costituite da molti elementi annidati, consiste nell'utilizzare le API .NET Framework per la serializzazione (sia <xref:System.Runtime.Serialization.DataContractSerializer> sia <xref:System.Xml.Serialization.XmlSerializer> sono supportate), come illustrato negli esempi seguenti.  
   
@@ -140,20 +140,20 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>Vedere anche
 

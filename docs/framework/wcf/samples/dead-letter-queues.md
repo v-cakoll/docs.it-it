@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962620"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045622"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transazionale. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -347,16 +347,16 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 2. Assicurarsi di modificare la configurazione in DeadLetterService, sul server e sul client prima che di eseguire l'esempio.
 
     > [!NOTE]
-    >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.
+    > L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.
 
 ## <a name="comments"></a>Commenti
  Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Il certificato di Accodamento messaggi interno dell'utente non esiste".
 
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

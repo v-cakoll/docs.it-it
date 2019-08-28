@@ -2,12 +2,12 @@
 title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948543"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039443"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
 Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come un servizio può utilizzare i provider di appartenenze e ruoli di ASP.NET per autenticare e autorizzare i client.  
@@ -123,10 +123,10 @@ Nell'esempio relativo a appartenenza e provider di ruoli viene illustrato come u
 2. Assicurarsi di aver configurato il [Database servizi per le applicazioni di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato durante la configurazione del database di Servizi per le applicazioni ASP.NET e nella stringa di connessione di Web. config.  
+    > Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato durante la configurazione del database di Servizi per le applicazioni ASP.NET e nella stringa di connessione di Web. config.  
   
     > [!NOTE]
-    >  L'account del processo di lavoro di ASP.NET deve disporre delle autorizzazioni per il database creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
+    > L'account del processo di lavoro di ASP.NET deve disporre delle autorizzazioni per il database creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
   
 3. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
   

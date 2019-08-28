@@ -2,12 +2,12 @@
 title: Utilizzo dei contatori delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966773"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044536"
 ---
 # <a name="using-performance-counters"></a>Utilizzo dei contatori delle prestazioni
 In questo esempio viene illustrato come accedere ai contatori delle prestazioni Windows Communication Foundation (WCF) e come creare contatori delle prestazioni definiti dall'utente. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -44,14 +44,14 @@ In questo esempio viene illustrato come accedere ai contatori delle prestazioni 
 1. Avviare lo strumento Performance Monitor facendo clic sul pulsante **Start**, scegliere **Esegui...** , immettere `perfmon` e fare clic su **OK** oppure nel pannello di controllo selezionare **strumenti di amministrazione** e fare doppio clic su **prestazioni**.  
   
     > [!NOTE]
-    >  Non è possibile aggiungere contatori mentre il codice di esempio è in esecuzione.  
+    > Non è possibile aggiungere contatori mentre il codice di esempio è in esecuzione.  
   
 2. Rimuovere i contatori delle prestazioni elencati selezionandoli e premendo CANC.  
   
 3. Per aggiungere i contatori WCF, fare clic con il pulsante destro del mouse sul riquadro grafico e scegliere **Aggiungi contatori**. Nella finestra di dialogo **Aggiungi contatori** selezionare **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** nella casella di riepilogo a discesa oggetto prestazione. Selezionare i contatori che si desidera visualizzare nell'elenco.  
   
     > [!NOTE]
-    >  Non sono disponibili contatori delle prestazioni WCF per un servizio se non sono in esecuzione servizi WCF nel computer.  
+    > Non sono disponibili contatori delle prestazioni WCF per un servizio se non sono in esecuzione servizi WCF nel computer.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Per utilizzare l'editor di configurazione per abilitare i contatori  
   
@@ -68,13 +68,13 @@ In questo esempio viene illustrato come accedere ai contatori delle prestazioni 
 6. Salvare il file di configurazione e uscire dall'editor.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Vedere anche
 

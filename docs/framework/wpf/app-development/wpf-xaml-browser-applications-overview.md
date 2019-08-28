@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 230a25ad16c91f7812e5d92203ba204ca0abc099
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956041"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037754"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.locfileid: "69956041"
 ## <a name="deploying-an-xbap"></a>Distribuzione di un'applicazione XBAP  
  Quando si compila un'applicazione XBAP, nell'output sono inclusi i tre file seguenti:  
   
-|File|DESCRIZIONE|  
+|File|Descrizione|  
 |----------|-----------------|  
 |Eseguibile (con estensione exe)|Contiene il codice compilato e ha un'estensione exe.|  
 |Manifesto dell'applicazione (con estensione manifest)|Contiene i metadati associati all'applicazione e ha un'estensione manifest.|  
@@ -123,7 +123,7 @@ ms.locfileid: "69956041"
      Le modifiche avranno effetto dopo il riavvio di Internet Explorer.  
   
 > [!CAUTION]
->  L'abilitazione di contenuto attivo in Internet Explorer può esporre il computer a rischi. Se non si desidera modificare le impostazioni di sicurezza di Internet Explorer, è possibile avviare la pagina HTML da un server e il debugger di Visual Studio viene collegato al processo.  
+> L'abilitazione di contenuto attivo in Internet Explorer può esporre il computer a rischi. Se non si desidera modificare le impostazioni di sicurezza di Internet Explorer, è possibile avviare la pagina HTML da un server e il debugger di Visual Studio viene collegato al processo.  
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>Considerazioni sulla sicurezza delle applicazioni XBAP  

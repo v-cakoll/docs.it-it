@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 13ad6c85bbde57cd6ad19848de71dabc23ed8f49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953914"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044085"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "69953914"
 - Usare uno strumento come [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] per segnalare l'oggetto <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
   
 > [!CAUTION]
->  In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
+> In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
   
  [!code-csharp[UIAAutomationID_snip#100](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#100)]
  [!code-vb[UIAAutomationID_snip#100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#100)]  

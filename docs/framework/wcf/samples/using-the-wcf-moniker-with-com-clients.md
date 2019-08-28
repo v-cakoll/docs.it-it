@@ -2,12 +2,12 @@
 title: Utilizzo del moniker WCF con i client COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 38b5a1e4328d403671454e78a9b968ae74b34dff
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966792"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038723"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Utilizzo del moniker WCF con i client COM
 In questo esempio viene illustrato come utilizzare il moniker del servizio Windows Communication Foundation (WCF) per integrare servizi Web in ambienti di sviluppo basati su COM, ad esempio Microsoft Office Visual Basic, Applications Edition (Office VBA) o Visual Basic 6,0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
@@ -16,13 +16,13 @@ In questo esempio viene illustrato come utilizzare il moniker del servizio Windo
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
  Il servizio implementa un contratto `ICalculator` definito nel modo illustrato nel codice di esempio seguente.  
   
@@ -136,7 +136,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 - Il nome e lo spazio dei nomi del contratto. Questa identificazione è richiesta perché il WSDL potrebbe contenere più di un contratto.  
   
     > [!NOTE]
-    >  Per impostazione predefinita, i servizi WCF generano file WSDL distinti per ogni spazio dei nomi utilizzato da. Questi vengono collegati usando il costrutto di importazione di WSDL. Poiché il moniker si aspetta una sola definizione WSDL, il servizio deve usare un solo spazio dei nomi, come illustrato in questo esempio, o i file separati devono essere uniti manualmente.  
+    > Per impostazione predefinita, i servizi WCF generano file WSDL distinti per ogni spazio dei nomi utilizzato da. Questi vengono collegati usando il costrutto di importazione di WSDL. Poiché il moniker si aspetta una sola definizione WSDL, il servizio deve usare un solo spazio dei nomi, come illustrato in questo esempio, o i file separati devono essere uniti manualmente.  
   
  Una volta costruita l'istanza del proxy con il moniker del servizio, l'applicazione client può chiamare i metodi sul proxy e l'infrastruttura del moniker del servizio può chiamare le operazioni del servizio corrispondenti:  
   
@@ -191,7 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Da un Prompt dei comandi per gli sviluppatori per Visual Studio, aprire la cartella \client\bin\ nella cartella specifica del linguaggio.  
   
     > [!NOTE]
-    >  Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, verificare di eseguire il prompt dei comandi con privilegi di amministratore.  
+    > Se si usa [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2, verificare di eseguire il prompt dei comandi con privilegi di amministratore.  
   
 4. `tlbexp.exe client.dll /out:CalcProxy.tlb` Digitare per esportare la dll in un file tlb. È previsto un "Avviso dell'utilità di esportazione della libreria dei tipi", ma ciò non rappresenta un problema, perché il tipo generico non è obbligatorio.  
   

@@ -2,15 +2,15 @@
 title: Autenticatore token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: fecb9197409f2e486288d40b80ce1abbbbb78fe2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593489"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045451"
 ---
 # <a name="token-authenticator"></a>Autenticatore token
-In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token in Windows Communication Foundation (WCF) viene usato per la convalida del token utilizzato con il messaggio di verifica che è coerente e l'autenticazione dell'identità associata al token.
+In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore di token in Windows Communication Foundation (WCF) viene utilizzato per convalidare il token utilizzato con il messaggio, verificarne la coerenza e autenticare l'identità associata al token.
 
  Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:
 
@@ -24,11 +24,11 @@ In questo esempio viene illustrato come implementare un autenticatore di token p
 
 - Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.
 
-- Modo in cui è strettamente il codice del servizio WCF con l'autenticatore del token personalizzato.
+- Il modo in cui il codice del servizio WCF si collega con l'autenticatore del token personalizzato.
 
 - Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.
 
- Questo esempio viene inoltre illustrato come l'identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.
+ Questo esempio mostra anche come l'identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.
 
  Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`. In questo esempio viene impostata la classe `wsHttpBinding` standard per usare l'autenticazione del nome utente del client. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `securityCredentials` consente di specificare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.
 
@@ -320,26 +320,26 @@ static void DisplayIdentityInformation()
     ```
 
     > [!NOTE]
-    >  Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDK. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.
+    > Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDK. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare la soluzione, seguire le istruzioni riportate in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperto con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
-    >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.  
+    > Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di Visual Studio 2012. La variabile di ambiente PATH impostata nel prompt dei comandi di Visual Studio 2012 punta alla directory che contiene i file eseguibili richiesti dallo script Setup. bat.  
   
 2. Avviare service.exe da service\bin.  
   
 3. Avviare client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. Copiare i file di programma del servizio nella directory del servizio sul computer relativo. Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
   
-3. È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file service.App.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile crearne uno utilizzando Setup.bat se si imposta la variabile `%SERVER_NAME%` sul nome host completo del computer sul quale il servizio sarà eseguito. Si noti che il file Setup. bat deve essere eseguito da un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore.  
+3. È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file service.App.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile crearne uno utilizzando Setup.bat se si imposta la variabile `%SERVER_NAME%` sul nome host completo del computer sul quale il servizio sarà eseguito. Si noti che il file Setup. bat deve essere eseguito da un Prompt dei comandi per gli sviluppatori per Visual Studio aperto con privilegi di amministratore.  
   
 4. Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client. Questo passaggio è necessario solo quando il certificato server è emesso da un'autorità emittente client attendibile.  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Sul computer client avviare Client.exe da un prompt dei comandi.  
   
-10. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

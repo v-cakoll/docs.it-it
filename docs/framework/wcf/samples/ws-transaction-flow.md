@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: e6fd84d9cc1f7df397e26e41c55f51d45406228d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 955522630af7eab458545e3b4e9631e6fbea31eb
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942158"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038456"
 ---
 # <a name="ws-transaction-flow"></a>Flusso delle transazioni WS
 Questo esempio dimostra l'uso di una transazione coordinata dal client e le opzioni client e server per il flusso delle transazioni mediante il protocollo WS-Atomic Transaction o OleTransactions. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice, ma le operazioni sono attribuite per illustrare `TransactionFlowAttribute` l'uso di con l'enumerazione **TransactionFlowOption** per determinare il grado il flusso delle transazioni è abilitato. All'interno dell'ambito della transazione propagata, viene scritto un log delle operazioni richieste in un database che persiste fino a che la transazione coordinata dal client non è stata completata; se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti appropriati al database.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Nella configurazione con più computer abilitare Distributed Transaction Coordinator usando le istruzioni seguenti e usare lo strumento WsatConfig.exe di Windows SDK per abilitare il supporto di rete delle transazioni WCF. Per informazioni sulla configurazione di WsatConfig. exe, vedere Configurazione del supporto per le [transazioni WS-Atomic](https://go.microsoft.com/fwlink/?LinkId=190370) .  
+    > Nella configurazione con più computer abilitare Distributed Transaction Coordinator usando le istruzioni seguenti e usare lo strumento WsatConfig.exe di Windows SDK per abilitare il supporto di rete delle transazioni WCF. Per informazioni sulla configurazione di WsatConfig. exe, vedere Configurazione del supporto per le [transazioni WS-Atomic](https://go.microsoft.com/fwlink/?LinkId=190370) .  
   
  Sia che si esegua l'esempio nello stesso computer o in computer diversi, è necessario configurare Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e utilizzare lo strumento WsatConfig. exe per abilitare il supporto di rete delle transazioni WCF.  
   
@@ -281,10 +281,10 @@ Press <ENTER> to terminate the service.
     6. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

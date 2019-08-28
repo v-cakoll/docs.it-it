@@ -8,129 +8,129 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: ef48ff1bbf79be981b8b8d4148f818fe40b72353
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d134b8c8ef202a91b35ad8645bf63622b5e8030
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632178"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040836"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipi anonimi (Visual Basic)
-Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scrivere una definizione di classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe non ha alcun nome utilizzabile, eredita direttamente da <xref:System.Object>e contiene le proprietà specificate nella dichiarazione dell'oggetto. Poiché il nome del tipo di dati non è specificato, viene considerato un *tipo anonimo*.  
+Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scrivere una definizione di classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe non ha un nome utilizzabile, eredita <xref:System.Object>direttamente da e contiene le proprietà specificate nella dichiarazione dell'oggetto. Poiché il nome del tipo di dati non è specificato, viene definito *tipo anonimo*.  
   
- Nell'esempio seguente viene dichiarata e crea variabile `product` come un'istanza di un tipo anonimo che ha due proprietà, `Name` e `Price`.  
+ Nell'esempio seguente viene dichiarata e `product` creata una variabile come istanza di un tipo anonimo con due proprietà `Name` , `Price`e.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
- Oggetto *espressione di query* Usa i tipi anonimi per combinare le colonne di dati selezionate da una query. È possibile definire il tipo del risultato in anticipo, poiché non è possibile prevedere le colonne che potrebbe selezionare una determinata query. I tipi anonimi consentono di scrivere una query che seleziona un numero qualsiasi di colonne, in qualsiasi ordine. Il compilatore crea un tipo di dati che corrisponde alla proprietà specificate e l'ordine specificato.  
+ In un' *espressione di query* vengono utilizzati tipi anonimi per combinare colonne di dati selezionati da una query. Non è possibile definire il tipo di risultato in anticipo, perché non è possibile prevedere le colonne che una determinata query potrebbe selezionare. I tipi anonimi consentono di scrivere una query che seleziona un numero qualsiasi di colonne, in qualsiasi ordine. Il compilatore crea un tipo di dati che corrisponde alle proprietà specificate e all'ordine specificato.  
   
- Negli esempi seguenti, `products` è un elenco di oggetti product, ognuno dei quali ha diverse proprietà. Variabile `namePriceQuery` contiene la definizione di una query che, quando eseguita, restituisce una raccolta di istanze di un tipo anonimo con due proprietà, `Name` e `Price`.  
+ Negli esempi `products` seguenti è riportato un elenco di oggetti Product, ognuno dei quali dispone di molte proprietà. La `namePriceQuery` variabile contiene la definizione di una query che, quando eseguita, restituisce una raccolta di istanze di un tipo anonimo che dispone di due proprietà, `Name` e `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
- Variabile `nameQuantityQuery` contiene la definizione di una query che, quando eseguita, restituisce una raccolta di istanze di un tipo anonimo con due proprietà, `Name` e `OnHand`.  
+ La `nameQuantityQuery` variabile contiene la definizione di una query che, quando eseguita, restituisce una raccolta di istanze di un tipo anonimo che dispone di due proprietà, `Name` e `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- Per altre informazioni sul codice creato dal compilatore per un tipo anonimo, vedere [definizione di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ Per altre informazioni sul codice creato dal compilatore per un tipo anonimo, vedere Definizione di [tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 > [!CAUTION]
->  Il nome del tipo anonimo è generato dal compilatore e può variare da compilazione a compilazione. Il codice deve usare o si basa sul nome di un tipo anonimo perché il nome potrebbe cambiare quando viene ricompilato un progetto.  
+> Il nome del tipo anonimo è generato dal compilatore e può variare dalla compilazione alla compilazione. Il codice non deve usare o basarsi sul nome di un tipo anonimo perché il nome potrebbe cambiare quando un progetto viene ricompilato.  
   
-## <a name="declaring-an-anonymous-type"></a>La dichiarazione di un tipo anonimo  
- La dichiarazione di un'istanza di un tipo anonimo Usa un elenco di inizializzatori per specificare le proprietà del tipo. È possibile specificare solo proprietà quando si dichiara un tipo anonimo, non altri elementi della classe, ad esempio metodi o eventi. Nell'esempio riportato di seguito `product1` è un'istanza di un tipo anonimo che ha due proprietà: `Name` e `Price`.  
+## <a name="declaring-an-anonymous-type"></a>Dichiarazione di un tipo anonimo  
+ La dichiarazione di un'istanza di un tipo anonimo utilizza un elenco di inizializzatori per specificare le proprietà del tipo. È possibile specificare solo le proprietà quando si dichiara un tipo anonimo, non altri elementi della classe, ad esempio metodi o eventi. Nell'esempio `product1` seguente è un'istanza di un tipo anonimo con due proprietà: `Name` e `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
- Se si definiscono le proprietà come proprietà chiave, è possibile usare per confrontare due istanze di tipo anonimo per verificarne l'uguaglianza. Tuttavia, i valori delle proprietà chiave non possono essere modificati. Vedere la sezione delle proprietà di chiave più avanti in questo argomento per altre informazioni.  
+ Se si definiscono le proprietà come proprietà chiave, è possibile utilizzarle per confrontare due istanze di tipo anonimo per verificarne l'uguaglianza. Tuttavia, non è possibile modificare i valori delle proprietà chiave. Per ulteriori informazioni, vedere la sezione proprietà chiave più avanti in questo argomento.  
   
- Si noti che la dichiarazione di un'istanza di un tipo anonimo è come la dichiarazione di un'istanza di un tipo denominato con un inizializzatore di oggetto:  
+ Si noti che la dichiarazione di un'istanza di un tipo anonimo equivale a dichiarare un'istanza di un tipo denominato usando un inizializzatore di oggetto:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
- Per altre informazioni su altri modi per specificare le proprietà di tipo anonimo, vedere [come: In grado di dedurre i nomi delle proprietà e i tipi nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Per ulteriori informazioni su altri modi per specificare le proprietà di tipo anonimo [, vedere Procedura: Deduce i tipi e i nomi di proprietà nelle dichiarazioni](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)di tipo anonimo.  
   
 ## <a name="key-properties"></a>Proprietà chiave  
- Le proprietà di chiave sono diversi dalle proprietà non chiave in diversi modi fondamentali:  
+ Le proprietà chiave sono diverse dalle proprietà non chiave in diversi modi fondamentali:  
   
-- Solo i valori delle proprietà chiave vengono confrontati per determinare se due istanze sono uguali.  
+- Per determinare se due istanze sono uguali, vengono confrontati solo i valori delle proprietà chiave.  
   
 - I valori delle proprietà chiave sono di sola lettura e non possono essere modificati.  
   
-- Solo i valori delle proprietà di chiave sono inclusi nell'algoritmo di codice hash generato dal compilatore per un tipo anonimo.  
+- Solo i valori delle proprietà chiave sono inclusi nell'algoritmo del codice hash generato dal compilatore per un tipo anonimo.  
   
 ### <a name="equality"></a>Uguaglianza  
- Istanze di tipi anonimi possono essere uguali solo se sono istanze dello stesso tipo anonimo. Il compilatore considera due istanze come istanze dello stesso tipo se soddisfano le condizioni seguenti:  
+ Le istanze di tipi anonimi possono essere uguali solo se sono istanze dello stesso tipo anonimo. Il compilatore considera due istanze come istanze dello stesso tipo se soddisfano le condizioni seguenti:  
   
-- Vengono dichiarati nello stesso assembly.  
+- Sono dichiarati nello stesso assembly.  
   
-- Le relative proprietà hanno lo stesso nome, gli stessi tipi derivati e vengono dichiarate nello stesso ordine. I confronti tra nomi non sono tra maiuscole e minuscole.  
+- Le proprietà hanno gli stessi nomi, gli stessi tipi derivati e vengono dichiarati nello stesso ordine. I confronti tra nomi non fanno distinzione tra maiuscole e minuscole.  
   
-- Le stesse proprietà in ogni sono contrassegnate come proprietà chiave.  
+- Le stesse proprietà in ogni oggetto sono contrassegnate come proprietà chiave.  
   
 - Almeno una proprietà in ogni dichiarazione è una proprietà chiave.  
   
- Un'istanza di tipi anonimi che non ha proprietà chiave è uguale solo a se stesso.  
+ Un'istanza di tipi anonimi privi di proprietà chiave è uguale solo a se stessa.  
   
  [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
- Due istanze dello stesso tipo anonimo sono uguali se i valori delle relative proprietà chiave sono uguali. Gli esempi seguenti illustrano come viene verificata l'uguaglianza.  
+ Due istanze dello stesso tipo anonimo sono uguali se i valori delle relative proprietà chiave sono uguali. Negli esempi seguenti viene illustrato come verificare l'uguaglianza.  
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>Valori di sola lettura  
- I valori delle proprietà chiave non possono essere modificati. Ad esempio, nella `prod8` nell'esempio precedente, il `Name` e `Price` campi sono `read-only`, ma `OnHand` può essere modificato.  
+ Non è possibile modificare i valori delle proprietà chiave. Nell' `prod8` esempio precedente, ad esempio, i `Name` campi e `Price` sono `read-only`, ma `OnHand` possono essere modificati.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
-## <a name="anonymous-types-from-query-expressions"></a>Tipi anonimi da espressioni di Query  
- Le espressioni di query non richiedono sempre la creazione di tipi anonimi. Quando possibile, usano un tipo esistente per contenere i dati della colonna. Ciò si verifica quando la query restituisce l'intero record dall'origine dei dati, o un solo campo di ogni record. Negli esempi di codice seguente, `customers` è una raccolta di oggetti di un `Customer` classe. La classe dispone di molte proprietà e si può includere uno o più di esse nel risultato della query, in qualsiasi ordine. Nei primi due esempi, non i tipi anonimi sono necessari perché la query Seleziona gli elementi di tipi denominati:  
+## <a name="anonymous-types-from-query-expressions"></a>Tipi anonimi dalle espressioni di query  
+ Le espressioni di query non richiedono sempre la creazione di tipi anonimi. Quando possibile, usano un tipo esistente per conservare i dati della colonna. Questo errore si verifica quando la query restituisce interi record dall'origine dati oppure solo un campo di ogni record. Negli esempi di codice seguenti, `customers` è una raccolta di oggetti di una `Customer` classe. La classe dispone di molte proprietà ed è possibile includerne una o più nel risultato della query, in qualsiasi ordine. Nei primi due esempi, non sono richiesti tipi anonimi perché le query selezionano elementi di tipi denominati:  
   
-- `custs1` contiene una raccolta di stringhe, in quanto `cust.Name` è una stringa.  
+- `custs1`contiene una raccolta di stringhe, perché `cust.Name` è una stringa.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2` contiene una raccolta di `Customer` oggetti, perché ogni elemento della `customers` è un `Customer` oggetto e l'intero elemento è selezionato dalla query.  
+- `custs2`contiene una raccolta di `Customer` oggetti, perché ogni elemento di `customers` è un `Customer` oggetto e l'intero elemento viene selezionato dalla query.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
- Tuttavia, i tipi denominati appropriati non sono sempre disponibili. È possibile selezionare i nomi dei clienti e indirizzi per uno degli scopi, i numeri di ID cliente e percorsi per un altro e i nomi dei clienti, gli indirizzi e le cronologie di ordine per un terzo. I tipi anonimi consentono di selezionare qualsiasi combinazione delle proprietà, in qualsiasi ordine, senza prima dichiarare un nuovo tipo denominato per contenere il risultato. Al contrario, il compilatore crea un tipo anonimo per ogni compilazione delle proprietà. La query seguente consente di selezionare solo il nome del cliente e il numero ID da ognuna `Customer` dell'oggetto `customers`. Pertanto, il compilatore crea un tipo anonimo che contiene solo queste due proprietà.  
+ Tuttavia, i tipi denominati appropriati non sono sempre disponibili. Potrebbe essere necessario selezionare i nomi dei clienti e gli indirizzi per uno scopo, i numeri di ID e le località di un altro, nonché i nomi dei clienti, gli indirizzi e le cronologie degli ordini per un terzo. I tipi anonimi consentono di selezionare qualsiasi combinazione di proprietà, in qualsiasi ordine, senza prima dichiarare un nuovo tipo denominato per conservare il risultato. Il compilatore crea invece un tipo anonimo per ogni compilazione di proprietà. La query seguente consente di selezionare solo il nome e il numero ID del `Customer` cliente da `customers`ogni oggetto in. Il compilatore crea pertanto un tipo anonimo che contiene solo le due proprietà.  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
- I nomi e i tipi di dati delle proprietà nel tipo anonimo provengono dagli argomenti per `Select`, `cust.Name` e `cust.ID`. Le proprietà in un tipo anonimo che viene creato da una query sono sempre le proprietà di chiave. Quando `custs3` viene eseguita nell'esempio seguente `For Each` ciclo, il risultato è una raccolta di istanze di un tipo anonimo con due proprietà chiave, `Name` e `ID`.  
+ Sia i nomi che i tipi di dati delle proprietà nel tipo anonimo vengono ricavati dagli argomenti in `Select`, `cust.Name` e `cust.ID`. Le proprietà in un tipo anonimo creato da una query sono sempre proprietà chiave. Quando `custs3` viene eseguito nel ciclo seguente `For Each` , il risultato è una raccolta di istanze di un tipo anonimo con due proprietà chiave, `Name` e `ID`.  
   
  [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
- Gli elementi della raccolta rappresentata da `custs3` sono fortemente tipizzate, ed è possibile usare IntelliSense per spostarsi tra le proprietà disponibili e verificare i relativi tipi.  
+ Gli elementi nella raccolta rappresentata da `custs3` sono fortemente tipizzati ed è possibile utilizzare IntelliSense per spostarsi tra le proprietà disponibili e per verificarne i tipi.  
   
- Per altre informazioni, vedere [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Per ulteriori informazioni, vedere [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>Decidere se usare i tipi anonimi  
- Prima di creare un oggetto come un'istanza di una classe anonima, valutare se sia l'opzione migliore. Ad esempio, se si desidera creare un oggetto temporaneo per contenere i dati correlati e non è necessario per gli altri campi e metodi che può contenere una classe completa, un tipo anonimo è un'ottima soluzione. I tipi anonimi sono anche utili se si vuole un'opzione diversa delle proprietà per ogni dichiarazione, o se si desidera modificare l'ordine delle proprietà. Tuttavia, se il progetto include molti oggetti che hanno le stesse proprietà, in un ordine fisso, è possibile dichiararle in più facilmente utilizzando un tipo denominato con un costruttore di classe. Ad esempio, con un costruttore appropriato e risulta più semplice dichiarare più istanze di un `Product` classe anziché dichiarare più istanze di un tipo anonimo.  
+ Prima di creare un oggetto come istanza di una classe anonima, valutare se questa è l'opzione migliore. Se, ad esempio, si desidera creare un oggetto temporaneo per contenere dati correlati e non è necessario disporre di altri campi e metodi che possono essere contenuti in una classe completa, un tipo anonimo è una soluzione efficace. I tipi anonimi sono utili anche se si desidera una selezione diversa delle proprietà per ogni dichiarazione o se si desidera modificare l'ordine delle proprietà. Tuttavia, se il progetto include diversi oggetti con le stesse proprietà, in un ordine fisso, è possibile dichiararli più facilmente usando un tipo denominato con un costruttore di classe. Con un costruttore appropriato, ad esempio, è più semplice dichiarare più istanze di una `Product` classe piuttosto che dichiarare più istanze di un tipo anonimo.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
- Un altro vantaggio di tipi denominati è che il compilatore può intercettare un accidentale errata digitazione del nome di una proprietà. Negli esempi precedenti `firstProd2`, `secondProd2`, e `thirdProd2` dovranno essere istanze dello stesso tipo anonimo. Tuttavia, se si dovesse inavvertitamente dichiarare `thirdProd2` in uno dei modi seguenti, è diverso da quello del relativo tipo `firstProd2` e `secondProd2`.  
+ Un altro vantaggio dei tipi denominati è che il compilatore può intercettare un errore di digitazione accidentale di un nome di proprietà. Negli esempi precedenti, `firstProd2` `secondProd2`, e `thirdProd2` sono destinati a essere istanze dello stesso tipo anonimo. Tuttavia, se si desidera dichiarare `thirdProd2` accidentalmente in uno dei modi seguenti, il tipo sarà diverso da quello di `firstProd2` e `secondProd2`.  
   
  [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
- Ancora più importante, esistono limitazioni sull'utilizzo di tipi anonimi che non si applicano alle istanze di tipi denominati. `firstProd2`, `secondProd2`, e `thirdProd2` sono istanze dello stesso tipo anonimo. Tuttavia, il nome per il tipo anonimo condiviso non è disponibile e non può essere specificata in cui è previsto un nome di tipo nel codice. Ad esempio, un tipo anonimo non è utilizzabile per definire una firma del metodo, per dichiarare un'altra variabile o un campo o in qualsiasi dichiarazione di tipo. Di conseguenza, i tipi anonimi non sono appropriati quando si desidera condividere informazioni tra i metodi.  
+ Ancora più importante, esistono limitazioni sull'uso di tipi anonimi che non si applicano a istanze di tipi denominati. `firstProd2`, `secondProd2` e`thirdProd2` sono istanze dello stesso tipo anonimo. Tuttavia, il nome per il tipo anonimo condiviso non è disponibile e non può essere visualizzato nel punto in cui è previsto il nome di un tipo nel codice. Ad esempio, un tipo anonimo non può essere usato per definire una firma del metodo, per dichiarare un'altra variabile o campo o in qualsiasi dichiarazione di tipo. Di conseguenza, i tipi anonimi non sono appropriati quando è necessario condividere informazioni tra i metodi.  
   
-## <a name="an-anonymous-type-definition"></a>Una definizione di tipo anonimo  
+## <a name="an-anonymous-type-definition"></a>Definizione di tipo anonimo  
  In risposta alla dichiarazione di un'istanza di un tipo anonimo, il compilatore crea una nuova definizione di classe che contiene le proprietà specificate.  
   
- Se il tipo anonimo contiene almeno una proprietà chiave, la definizione esegue l'override di tre membri ereditati da <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, e <xref:System.Object.ToString%2A>. Il codice generato per verificare l'uguaglianza e che determina che il valore del codice hash vengono considerate solo le proprietà della chiave. Se il tipo anonimo non contiene proprietà chiave, solo <xref:System.Object.ToString%2A> viene sottoposto a override. Proprietà denominate in modo esplicito di un tipo anonimo non è in conflitto con questi metodi generati. Vale a dire, non è possibile usare `.Equals`, `.GetHashCode`, o `.ToString` per assegnare un nome di una proprietà.  
+ Se il tipo anonimo contiene almeno una proprietà chiave, la definizione esegue l'override di tre membri <xref:System.Object>ereditati <xref:System.Object.GetHashCode%2A>da: <xref:System.Object.ToString%2A> <xref:System.Object.Equals%2A>, e. Il codice prodotto per verificare l'uguaglianza e determinare il valore del codice hash considera solo le proprietà chiave. Se il tipo anonimo non contiene proprietà chiave, <xref:System.Object.ToString%2A> viene eseguito l'override di. Le proprietà denominate in modo esplicito di un tipo anonimo non possono essere in conflitto con questi metodi generati. Ovvero, non è possibile utilizzare `.Equals`, `.GetHashCode`o `.ToString` per assegnare un nome a una proprietà.  
   
- Le definizioni di tipo anonimo che hanno almeno una proprietà chiave implementano anche il <xref:System.IEquatable%601?displayProperty=nameWithType> interfaccia, in cui `T` è il tipo del tipo anonimo.  
+ Anche le definizioni di tipo anonimo che hanno almeno una proprietà chiave implementano l' <xref:System.IEquatable%601?displayProperty=nameWithType> interfaccia, dove `T` è il tipo del tipo anonimo.  
   
- Per altre informazioni sul codice creato dal compilatore e le funzionalità dei metodi sottoposti a override, vedere [definizione di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ Per altre informazioni sul codice creato dal compilatore e sulle funzionalità dei metodi sottoposti a override, vedere [definizione di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Procedura: Dedurre i nomi delle proprietà e i tipi nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Procedura: Deduce i tipi e i nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Definizione di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)

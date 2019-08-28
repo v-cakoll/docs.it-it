@@ -2,12 +2,12 @@
 title: Schema di database di persistenza
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962887"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038327"
 ---
 # <a name="persistence-database-schema"></a>Schema di database di persistenza
 In questo argomento vengono descritte le visualizzazioni pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL.  
@@ -44,7 +44,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |Revision|BigInt|Numero di revisione della versione del flusso di lavoro.|  
   
 > [!CAUTION]
->  La visualizzazione Instances contiene anche un trigger DELETE. Gli utenti con autorizzazioni appropriate possono eseguire istruzioni di eliminazione a fronte di questa visualizzazione per la rimozione forzata delle istanze del flusso di lavoro dal database. Si consiglia di procedere all'eliminazione diretta dalla visualizzazione solo come ultima risorsa, perché l'eliminazione di un'istanza dall'esecuzione del flusso di lavoro potrebbe comportare conseguenze impreviste. Usare invece l'endpoint di gestione dell'istanza del flusso di lavoro affinché l'istanza venga terminata dall'esecuzione del flusso di lavoro. Se si desidera eliminare un numero elevato di istanze dalla visualizzazione, assicurarsi che non siano presenti esecuzioni attive che potrebbe essere in corso su queste istanze.  
+> La visualizzazione Instances contiene anche un trigger DELETE. Gli utenti con autorizzazioni appropriate possono eseguire istruzioni di eliminazione a fronte di questa visualizzazione per la rimozione forzata delle istanze del flusso di lavoro dal database. Si consiglia di procedere all'eliminazione diretta dalla visualizzazione solo come ultima risorsa, perché l'eliminazione di un'istanza dall'esecuzione del flusso di lavoro potrebbe comportare conseguenze impreviste. Usare invece l'endpoint di gestione dell'istanza del flusso di lavoro affinché l'istanza venga terminata dall'esecuzione del flusso di lavoro. Se si desidera eliminare un numero elevato di istanze dalla visualizzazione, assicurarsi che non siano presenti esecuzioni attive che potrebbe essere in corso su queste istanze.  
   
 ## <a name="servicedeployments-view"></a>Visualizzazione ServiceDeployments  
  La vista **ServiceDeployments** contiene informazioni sulla distribuzione per tutti i servizi del flusso di lavoro Web (IIS/was) ospitati. Ogni istanza del flusso di lavoro ospitata sul Web conterrà un **ServiceDeploymentId** che fa riferimento a una riga in questa visualizzazione.  
@@ -67,7 +67,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 ## <a name="instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
  La visualizzazione **InstancePromotedProperties** contiene informazioni per tutte le proprietà innalzate di grado specificate dall'utente. Una proprietà promossa funziona come una proprietà di prima classe che può essere usata da un utente nelle query per recuperare istanze.  Ad esempio, un utente potrebbe aggiungere una promozione PurchaseOrder che archivia sempre il costo di un ordine nella colonna **value1** . Ciò consentirebbe a un utente di eseguire una query per tutti gli ordini di acquisto il cui costo supera un determinato valore.  
   
-|Tipo di colonna|Tipo di colonna|Descrizione|  
+|Tipo di colonna|Tipo di colonna|DESCRIZIONE|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|ID dell'istanza del flusso di lavoro.|  
 |EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà binarie promosse.<br /><br /> -0: nessuna codifica<br />-1 – GZipStream|  

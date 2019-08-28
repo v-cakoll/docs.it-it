@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945265"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040188"
 ---
 # <a name="data-contract-known-types"></a>Tipi conosciuti di contratto dati
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di specificare, in anticipo, i tipi che devono essere presi in considerazione durante la deserializzazione. Per un esempio pratico, vedere l'esempio [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -77,7 +77,7 @@ La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di spe
  Nell'esempio seguente, un contratto dati memorizza un numero e un'operazione da eseguire sul numero. Il membro dati `Numbers` può essere un numero Integer, una matrice di numeri Integer o un oggetto <xref:System.Collections.Generic.List%601> che contiene numeri Integer.  
   
 > [!CAUTION]
->  Questo funzionerà sul lato client solo se SVCUTIL.EXE è utilizzato per generare un proxy WCF. SVCUTIL.EXE recupera metadati dal servizio inclusi tutti i tipi noti. Senza queste informazioni un client non sarà in grado di deserializzare i tipi.  
+> Questo funzionerà sul lato client solo se SVCUTIL.EXE è utilizzato per generare un proxy WCF. SVCUTIL.EXE recupera metadati dal servizio inclusi tutti i tipi noti. Senza queste informazioni un client non sarà in grado di deserializzare i tipi.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

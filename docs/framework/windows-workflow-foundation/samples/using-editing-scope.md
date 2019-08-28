@@ -2,12 +2,12 @@
 title: Utilizzo dell'ambito di modifica
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: d1e251abf2dd4d3f7ca15d66a4f5ea96e273a351
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623819"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037791"
 ---
 # <a name="using-editing-scope"></a>Utilizzo dell'ambito di modifica
 In questo esempio viene illustrato come raggruppare un set di modifiche in modo che possano essere annullate in un'unica unità atomica. Per impostazione predefinita, le azioni intraprese da un autore dell'ActivityDesigner vengono integrate automaticamente nel sistema di annullamento/ripristino.  
@@ -26,19 +26,19 @@ In questo esempio viene illustrato come raggruppare un set di modifiche in modo 
   
 1. Compilare ed eseguire l'esempio, quindi usare i pulsanti a sinistra per modificare il flusso di lavoro.  
   
-2. Fare clic su **aprire l'ambito di modifica**.  
+2. Fare clic su **Apri ambito di modifica**.  
   
     1. Questo comando consente di chiamare <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> che crea un ambito di modifica e lo inserisce nello stack di modifica.  
   
     2. Vengono quindi aggiunte tre attività all'oggetto <xref:System.Activities.Presentation.Model.ModelItem> selezionato. Notare che se l'ambito di modifica non è stato aperto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, le tre nuove attività vengono visualizzate nell'area di disegno della finestra di progettazione. Poiché questa operazione è ancora in sospeso all'interno di <xref:System.Activities.Presentation.Model.EditingScope>, la finestra di progettazione non viene ancora aggiornata.  
   
-3. Premere **ambito di modifica Chiudi** per eseguire il commit all'ambito di modifica. Nella finestra di progettazione vengono visualizzate tre attività.  
+3. Premere **Chiudi ambito di modifica** per eseguire il commit dell'ambito di modifica. Nella finestra di progettazione vengono visualizzate tre attività.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

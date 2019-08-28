@@ -2,12 +2,12 @@
 title: Esempio di configurazione
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b91ae890a5664b69661c76ffe86154f90ac5e5f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969048"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040101"
 ---
 # <a name="configuration-sample"></a>Esempio di configurazione
 Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.  
@@ -16,13 +16,13 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
 > L'esempio implementa l'individuazione nella configurazione. Per un esempio che implementa l'individuazione nel codice, vedere [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Configurazione del servizio  
  Il file di configurazione in questo esempio illustra due funzionalità:  

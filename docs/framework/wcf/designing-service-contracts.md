@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965621"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040623"
 ---
 # <a name="designing-service-contracts"></a>Progettazione dei contratti di servizio
 In questo argomento vengono descritti i contratti di servizio, la relativa modalità di definizione, le operazioni disponibili (e le implicazioni per gli scambi di messaggi sottostanti), i tipi di dati utilizzati e altri temi che consentono di progettare operazioni in linea con i requisiti del proprio scenario.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  Per un esempio di creazione di un servizio e di un client che accede a tale servizio, [vedere Procedura: Creazione di un contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) duplex [e procedura: Accedere ai servizi con un contratto](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)duplex. Per un esempio funzionante, vedere [duplex](../../../docs/framework/wcf/samples/duplex.md). Per ulteriori informazioni sui problemi relativi all'utilizzo di contratti duplex, vedere [servizi duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Quando un servizio riceve un messaggio duplex, analizza l'elemento `ReplyTo` contenuto nel messaggio in arrivo per stabilire dove inviare la replica. Se il canale utilizzato per ricevere il messaggio non è protetto, un client non attendibile potrebbe inviare un messaggio dannoso con un `ReplyTo` di un computer di destinazione, sfociando in un Denial of Service (DoS) del computer di destinazione.  
+> Quando un servizio riceve un messaggio duplex, analizza l'elemento `ReplyTo` contenuto nel messaggio in arrivo per stabilire dove inviare la replica. Se il canale utilizzato per ricevere il messaggio non è protetto, un client non attendibile potrebbe inviare un messaggio dannoso con un `ReplyTo` di un computer di destinazione, sfociando in un Denial of Service (DoS) del computer di destinazione.  
   
 ##### <a name="out-and-ref-parameters"></a>Parametri Out e Ref  
  Nella maggior parte dei casi, è `in` possibile usare`ByVal` i parametri (in `out` Visual Basic `ref` ) e`ByRef` i parametri e (in Visual Basic). Poiché i parametri `out` e `ref` indicano entrambi che un'operazione restituisce dati, una firma dell'operazione come la seguente specifica che un'operazione Request/Reply è necessaria anche se la firma dell'operazione restituisce `void`.  

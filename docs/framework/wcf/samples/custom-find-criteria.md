@@ -2,12 +2,12 @@
 title: Criteri di ricerca personalizzati
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 7409539c823243a783cacd4e04d6fab225b606cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 236cce194d89409ab19732c239459418cddd251b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650193"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039938"
 ---
 # <a name="custom-find-criteria"></a>Criteri di ricerca personalizzati
 In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato. I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery. Lo scenario analizzato in questo esempio è il seguente:  
@@ -25,7 +25,7 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
 - Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.  
   
 ## <a name="discussion"></a>Discussione  
- Il client esegue la ricerca per il tipo "OR" criteri di corrispondenza. Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client. In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  
+ Il client sta cercando i criteri di corrispondenza dei tipi "OR". Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client. In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +39,13 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
   
  Aprire il progetto del servizio. Per implementare il servizio di individuazione personalizzato vengono utilizzati i tre file seguenti:  
   
-1. **AsyncResult.cs**: Si tratta dell'implementazione del `AsyncResult` richiesta dai metodi di individuazione.  
+1. **AsyncResult.cs**: Si tratta dell'implementazione di necessaria `AsyncResult` per i metodi di individuazione.  
   
-2. **CustomDiscoveryService.cs**: Questo file implementa il servizio di individuazione personalizzato. L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari. Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client. Si tratta dello stesso URI personalizzato specificato dal client in precedenza. Se la regola personalizzata viene specificata, verrà seguito il percorso del codice che implementa la logica di corrispondenza "OR".  
+2. **CustomDiscoveryService.cs**: Questo file implementa il servizio di individuazione personalizzato. L'implementazione estende la classe <xref:System.ServiceModel.Discovery.DiscoveryService> ed esegue l'override dei metodi necessari. Si noti l'implementazione del metodo <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. Il metodo esegue un controllo per determinare se la corrispondenza degli ambiti personalizzata definita da una regola è stata specificata dal client. Si tratta dello stesso URI personalizzato specificato dal client in precedenza. Se viene specificata la regola personalizzata, viene seguito il percorso del codice che implementa la logica di corrispondenza "OR".  
   
      Questa logica personalizzata passa attraverso tutti gli ambiti in ognuno degli endpoint di cui dispone il servizio. Se uno degli ambiti dell'endpoint corrisponde a uno qualsiasi degli ambiti forniti dal client, il servizio di individuazione aggiungerà tale endpoint alla risposta restituita al client.  
   
-3. **CustomDiscoveryExtension.cs**: L'ultimo passaggio nell'implementazione del servizio di individuazione consiste nel connettere questa implementazione personalizzato Individuazione servizio all'host del servizio. La classe di supporto utilizzata in questo caso è `CustomDiscoveryExtension`. Questa classe estende la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. È necessario che l'utente esegua l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. In questo caso, il metodo restituisce un'istanza del servizio di individuazione personalizzato creato in precedenza. `PublishedEndpoints` è un oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> che contiene tutti gli endpoint dell'applicazione che vengono aggiunti a <xref:System.ServiceModel.ServiceHost>. Il servizio di individuazione personalizzato utilizza questo oggetto per popolare l'elenco interno. Un utente ha la possibilità di aggiungere altri metadati dell'endpoint.  
+3. **CustomDiscoveryExtension.cs**: L'ultimo passaggio dell'implementazione del servizio di individuazione consiste nel connettere questa implementazione del servizio di individuazione personalizzato all'host del servizio. La classe di supporto utilizzata in questo caso è `CustomDiscoveryExtension`. Questa classe estende la classe <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. È necessario che l'utente esegua l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. In questo caso, il metodo restituisce un'istanza del servizio di individuazione personalizzato creato in precedenza. `PublishedEndpoints` è un oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> che contiene tutti gli endpoint dell'applicazione che vengono aggiunti a <xref:System.ServiceModel.ServiceHost>. Il servizio di individuazione personalizzato utilizza questo oggetto per popolare l'elenco interno. Un utente ha la possibilità di aggiungere altri metadati dell'endpoint.  
   
  Aprire infine Program.cs. Si noti che <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` vengono entrambi aggiunti all'host. Dopo avere eseguito questa operazione e aver fatto in modo che l'host disponga di un endpoint sul quale ricevere messaggi di individuazione, l'applicazione potrà utilizzare il servizio di individuazione personalizzato.  
   
@@ -62,10 +62,10 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
 4. Eseguire l'applicazione client.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

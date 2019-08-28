@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962293"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044345"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedura: Eseguire un flusso di lavoro
 Questo argomento è una continuazione dell'esercitazione Windows Workflow Foundation introduzione e illustra come creare un host del flusso di lavoro ed eseguire il flusso di lavoro [definito nella procedura precedente: Creare un argomento](how-to-create-a-workflow.md) del flusso di lavoro.
@@ -28,7 +28,7 @@ Questo argomento è una continuazione dell'esercitazione Windows Workflow Founda
 2. Fare clic con il pulsante destro del mouse sulla soluzione **WF45GettingStartedTutorial** in **Esplora soluzioni** e scegliere **Aggiungi**, **Nuovo progetto**.  
   
     > [!TIP]
-    >  Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza** .
+    > Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza** .
 
 3. Nel nodo **Modelli installati** selezionare **Visual C#** , **Flusso di lavoro** (oppure **Visual Basic**, **Flusso di lavoro**).
 
@@ -46,7 +46,7 @@ Questo argomento è una continuazione dell'esercitazione Windows Workflow Founda
 1. Fare doppio clic su **Program.cs** o **Module1.vb** in **Esplora soluzioni** per visualizzare il codice.
 
     > [!TIP]
-    >  Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza** .
+    > Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza** .
 
      Poiché questo progetto viene creato usando il modello **Applicazione console flusso di lavoro** , **Program.cs** o **Module1.vb** contiene il seguente codice host del flusso di lavoro di base.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940872"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046400"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -166,7 +166,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
  L'evento <xref:System.Windows.DragDrop.QueryContinueDrag> viene generato continuamente mentre l'origine di trascinamento viene trascinata. È possibile gestire questo evento per determinare quale azione termina l'operazione di trascinamento e rilascio in base allo stato dei tasti ESC, MAIUSC, CTRL e ALT, oltre che allo stato dei pulsanti del mouse. Il gestore predefinito per questo evento annulla l'operazione di trascinamento della selezione se viene premuto ESC e rilascia i dati se il pulsante del mouse viene rilasciato.  
   
 > [!CAUTION]
->  Questi eventi vengono generati continuamente durante l'operazione di trascinamento della selezione. È quindi consigliabile evitare attività a elevato utilizzo di risorse nei gestori eventi.  Ad esempio, usare un cursore nella cache invece di creare un nuovo cursore ogni volta che viene generato l'evento <xref:System.Windows.DragDrop.GiveFeedback>.  
+> Questi eventi vengono generati continuamente durante l'operazione di trascinamento della selezione. È quindi consigliabile evitare attività a elevato utilizzo di risorse nei gestori eventi.  Ad esempio, usare un cursore nella cache invece di creare un nuovo cursore ogni volta che viene generato l'evento <xref:System.Windows.DragDrop.GiveFeedback>.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Impostazione di un elemento come obiettivo di rilascio  
  Un oggetto che è un obiettivo di rilascio è responsabile di:  

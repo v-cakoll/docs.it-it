@@ -2,12 +2,12 @@
 title: Rilevamento personalizzato
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622557"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044294"
 ---
 # <a name="custom-tracking"></a>Rilevamento personalizzato
 Nell'esempio viene illustrato come creare un partecipante di rilevamento personalizzato e scrivere il contenuto dei dati di rilevamento nella console. Nell'esempio viene inoltre illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> popolati con dati definiti dall'utente. Il partecipante di rilevamento basato su console filtra gli oggetti <xref:System.Activities.Tracking.TrackingRecord> generati dal flusso di lavoro usando un oggetto profilo di rilevamento creato nel codice.
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - Gli oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> vengono creati e popolati con dati definiti dall'utente che si desidera vengano generati con il record.
 
-- Il <xref:System.Activities.Tracking.CustomTrackingRecord> viene generato chiamando il metodo di rilevamento del <xref:System.Activities.ActivityContext>.
+- Viene emesso chiamando il metodo Track dell'oggetto <xref:System.Activities.ActivityContext>. <xref:System.Activities.Tracking.CustomTrackingRecord>
 
  Nell'esempio seguente viene illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> all'interno di un'attività personalizzata.
 
@@ -133,20 +133,20 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1. Con Visual Studio 2010, aprire il file della soluzione Customtrackingsample.
+1. Con Visual Studio 2010 aprire il file della soluzione CustomTrackingSample. sln.
 
 2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
 3. Per eseguire la soluzione, premere CTRL+F5.
 
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Vedere anche
 

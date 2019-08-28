@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936260"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041273"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Specifica le funzionalità di debug e di informazioni della Guida per un servizio Windows Communication Foundation (WCF).  
@@ -37,7 +37,7 @@ Specifica le funzionalità di debug e di informazioni della Guida per un servizi
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |httpHelpPageBinding|Valore stringa che specifica il tipo di associazione da usare quando HTTP viene usato per accedere alla pagina della Guida del servizio.<br /><br /> Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>. La proprietà <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.|  
 |httpHelpPageBindingConfiguration|Stringa che specifica il nome dell'associazione specificata nell'attributo `httpHelpPageBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione. Lo stesso nome deve essere definito nella sezione `<bindings>`.|  
@@ -62,7 +62,7 @@ Specifica le funzionalità di debug e di informazioni della Guida per un servizi
  L' `includeExceptionDetailInFaults` impostazione `true` di su consente al servizio di restituire qualsiasi eccezione generata dal codice dell'applicazione anche se l'eccezione non <xref:System.ServiceModel.FaultContractAttribute>viene dichiarata utilizzando. Questa impostazione è utile in caso dell'esecuzione il debug di casi dove il server sta generando un'eccezione imprevista. L'utilizzo di questo attributo consente la restituzione di un modulo serializzato dell'eccezione sconosciuta e offre all'utente la possibilità di esaminare l'eccezione in dettaglio.  
   
 > [!CAUTION]
->  La restituzione ai client delle informazioni sulle eccezioni gestite può rappresentare un rischio per la sicurezza, poiché i dettagli delle eccezioni espongono informazioni sull'implementazione del servizio interno che potrebbero essere usate da client non autorizzati. A causa dei problemi di sicurezza associati, è consigliabile procedere in tal modo solo negli scenari di debug controllati. Durante la distribuzione dell'applicazione, è necessario impostare `includeExceptionDetailInFaults` su `false`.  
+> La restituzione ai client delle informazioni sulle eccezioni gestite può rappresentare un rischio per la sicurezza, poiché i dettagli delle eccezioni espongono informazioni sull'implementazione del servizio interno che potrebbero essere usate da client non autorizzati. A causa dei problemi di sicurezza associati, è consigliabile procedere in tal modo solo negli scenari di debug controllati. Durante la distribuzione dell'applicazione, è necessario impostare `includeExceptionDetailInFaults` su `false`.  
   
  Per informazioni dettagliate sui problemi di sicurezza relativi all'eccezione gestita, vedere [specifica e gestione di errori in contratti e servizi](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Per un esempio di codice, vedere [comportamento di debug del servizio](../../../wcf/samples/service-debug-behavior.md).  
   
