@@ -2,148 +2,150 @@
 title: Processo di approvazione dei documenti
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: dfc2e0a12d053733823427ac50066b1e4a0f97aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005123"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038231"
 ---
-# <a name="document-approval-process"></a><span data-ttu-id="e5a88-102">Processo di approvazione dei documenti</span><span class="sxs-lookup"><span data-stu-id="e5a88-102">Document Approval Process</span></span>
-<span data-ttu-id="e5a88-103">In questo esempio illustra l'uso di molte funzionalità di Windows Workflow Foundation (WF) e Windows Communication Foundation (WCF) tra loro.</span><span class="sxs-lookup"><span data-stu-id="e5a88-103">This sample demonstrates the use of many Windows Workflow Foundation (WF) and Windows Communication Foundation (WCF) features together.</span></span> <span data-ttu-id="e5a88-104">Insieme implementano uno scenario del processo di approvazione dei documenti.</span><span class="sxs-lookup"><span data-stu-id="e5a88-104">Together they implement a document approval process scenario.</span></span> <span data-ttu-id="e5a88-105">Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti.</span><span class="sxs-lookup"><span data-stu-id="e5a88-105">A client application can submit documents for approval and approve documents.</span></span> <span data-ttu-id="e5a88-106">Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione</span><span class="sxs-lookup"><span data-stu-id="e5a88-106">An approval manager application exists to facilitate communications between clients and to enforce the rules of the approval process.</span></span> <span data-ttu-id="e5a88-107">che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-107">The approval process is a workflow that can execute several types of approval.</span></span> <span data-ttu-id="e5a88-108">Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.</span><span class="sxs-lookup"><span data-stu-id="e5a88-108">Activities exist to get a single approval, a quorum approval (a percentage of set of approvers), and a complex approval process that consists of a quorum and single approval in a sequence.</span></span>
+# <a name="document-approval-process"></a><span data-ttu-id="9c087-102">Processo di approvazione dei documenti</span><span class="sxs-lookup"><span data-stu-id="9c087-102">Document Approval Process</span></span>
+
+<span data-ttu-id="9c087-103">In questo esempio viene illustrato l'utilizzo di molte funzionalità di Windows Workflow Foundation (WF) e di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9c087-103">This sample demonstrates the use of many Windows Workflow Foundation (WF) and Windows Communication Foundation (WCF) features together.</span></span> <span data-ttu-id="9c087-104">Insieme implementano uno scenario del processo di approvazione dei documenti.</span><span class="sxs-lookup"><span data-stu-id="9c087-104">Together they implement a document approval process scenario.</span></span> <span data-ttu-id="9c087-105">Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti.</span><span class="sxs-lookup"><span data-stu-id="9c087-105">A client application can submit documents for approval and approve documents.</span></span> <span data-ttu-id="9c087-106">Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione</span><span class="sxs-lookup"><span data-stu-id="9c087-106">An approval manager application exists to facilitate communications between clients and to enforce the rules of the approval process.</span></span> <span data-ttu-id="9c087-107">che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-107">The approval process is a workflow that can execute several types of approval.</span></span> <span data-ttu-id="9c087-108">Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.</span><span class="sxs-lookup"><span data-stu-id="9c087-108">Activities exist to get a single approval, a quorum approval (a percentage of set of approvers), and a complex approval process that consists of a quorum and single approval in a sequence.</span></span>
 
 > [!IMPORTANT]
->  <span data-ttu-id="e5a88-109">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="e5a88-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e5a88-110">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="e5a88-110">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="e5a88-111">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="e5a88-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e5a88-112">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="e5a88-112">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
-  
-## <a name="sample-details"></a><span data-ttu-id="e5a88-113">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="e5a88-113">Sample Details</span></span>  
- <span data-ttu-id="e5a88-114">Il grafico seguente illustra il flusso di lavoro documenti processo approvazione:</span><span class="sxs-lookup"><span data-stu-id="e5a88-114">The following graphic demonstrates the document approval process workflow:</span></span>  
-  
- ![Flusso di lavoro del processo di approvazione di un documento](./media/document-approval-process/document-approval-process.jpg)  
-  
- <span data-ttu-id="e5a88-116">Dalla prospettiva del client, il processo di approvazione funziona nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="e5a88-116">From the client's perspective, the approval process functions as follows:</span></span>  
-  
-1. <span data-ttu-id="e5a88-117">Un client esegue una sottoscrizione per essere un utente del sistema del processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-117">A client subscribes to be a user in the approval process system.</span></span>  
-  
-2. <span data-ttu-id="e5a88-118">Un client WCF invia a un servizio WCF ospitato dall'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="e5a88-118">A WCF client sends to a WCF service hosted by the approval manager application.</span></span>  
-  
-3. <span data-ttu-id="e5a88-119">Al client viene restituito un ID utente univoco.</span><span class="sxs-lookup"><span data-stu-id="e5a88-119">A unique user ID is returned to the client.</span></span> <span data-ttu-id="e5a88-120">Il client può ora partecipare ai processi di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-120">The client can now participate in approval processes.</span></span>  
-  
-4. <span data-ttu-id="e5a88-121">Una volta inserito, un client può inviare un documento per l'approvazione usando un processo di approvazione singolo, a quorum o complesso.</span><span class="sxs-lookup"><span data-stu-id="e5a88-121">Once joined, a client can send a document for approval using single, quorum or complex approval processes.</span></span>  
-  
-5. <span data-ttu-id="e5a88-122">La selezione di un pulsante nell'interfaccia del client avvia un'istanza del flusso di lavoro in un host dei servizi flusso di lavoro del client.</span><span class="sxs-lookup"><span data-stu-id="e5a88-122">A button in the client’s interface is clicked, starting a workflow instance in a client Workflow Service Host.</span></span>  
-  
-6. <span data-ttu-id="e5a88-123">Il flusso di lavoro invia una richiesta di approvazione all'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="e5a88-123">The workflow sends an approval request to the approval manager application.</span></span>  
-  
-7. <span data-ttu-id="e5a88-124">Il proprietario del flusso di lavoro avvia un flusso di lavoro per rappresentare un processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-124">The workflow manager starts a workflow on its own side to represent an approval process.</span></span>  
-  
-8. <span data-ttu-id="e5a88-125">Una volta che il proprietario ha eseguito il flusso di lavoro di approvazione, i risultati vengono restituiti al client.</span><span class="sxs-lookup"><span data-stu-id="e5a88-125">Once the manager approval workflow executes, the results are sent back to the client.</span></span>  
-  
-9. <span data-ttu-id="e5a88-126">Il client visualizza i risultati.</span><span class="sxs-lookup"><span data-stu-id="e5a88-126">The client displays the results.</span></span>  
-  
-10. <span data-ttu-id="e5a88-127">Un client può ricevere una richiesta di approvazione e rispondere alla richiesta in qualsiasi momento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-127">A client may receive an approval request and respond to the request at any point in time.</span></span>  
-  
-11. <span data-ttu-id="e5a88-128">Un servizio WCF ospitato nel client può ricevere una richiesta di approvazione dall'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="e5a88-128">A WCF service hosted on the client can receive an approval request from the approval manager application.</span></span>  
-  
-12. <span data-ttu-id="e5a88-129">Le informazioni sul documento vengono presentate nel client per la revisione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-129">The document information is presented on the client for review.</span></span>  
-  
-13. <span data-ttu-id="e5a88-130">L'utente può approvare o rifiutare il documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-130">The user can approve or reject the document.</span></span>  
-  
-14. <span data-ttu-id="e5a88-131">Un client WCF viene usato per inviare una risposta di approvazione all'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="e5a88-131">A WCF client is used to send an approval response back to the approval manager application.</span></span>  
-  
- <span data-ttu-id="e5a88-132">Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo di approvazione funziona nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="e5a88-132">From the approval manager application’s point of view, the approval process functions as follows:</span></span>  
-  
-1. <span data-ttu-id="e5a88-133">Un client richiede la partecipazione al sistema del processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-133">A client requests to participate to the approval process system.</span></span>  
-  
-2. <span data-ttu-id="e5a88-134">Un servizio WCF in responsabile dell'approvazione riceve una richiesta a far parte del sistema del processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-134">A WCF service on the approval manager receives a request to be part of the approval process system.</span></span>  
-  
-3. <span data-ttu-id="e5a88-135">Viene generato un ID univoco per il client.</span><span class="sxs-lookup"><span data-stu-id="e5a88-135">A unique ID is generated for the client.</span></span> <span data-ttu-id="e5a88-136">Le informazioni utente vengono archiviate in un database.</span><span class="sxs-lookup"><span data-stu-id="e5a88-136">The user information is stored in a database.</span></span>  
-  
-4. <span data-ttu-id="e5a88-137">L'ID univoco viene restituito all'utente.</span><span class="sxs-lookup"><span data-stu-id="e5a88-137">The unique ID is sent back to the user.</span></span>  
-  
-5. <span data-ttu-id="e5a88-138">Viene ricevuta una richiesta di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-138">An approval request is receive.</span></span> <span data-ttu-id="e5a88-139">Il responsabile dell'approvazione esegue un processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-139">The approval manager executes an approval process.</span></span>  
-  
-6. <span data-ttu-id="e5a88-140">Il responsabile dell'approvazione riceve una richiesta di approvazione che avvia un nuovo flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="e5a88-140">An approval request is received by the approval manager, starting a new workflow.</span></span>  
-  
-7. <span data-ttu-id="e5a88-141">A seconda del tipo di richiesta (semplice, a quorum o complessa), viene eseguita un'attività diversa.</span><span class="sxs-lookup"><span data-stu-id="e5a88-141">Depending on the type of request (simple, quorum, or complex) a different activity is executed.</span></span>  
-  
-8. <span data-ttu-id="e5a88-142">Le attività di invio e ricezione con correlazione vengono usate per inviare la richiesta di approvazione al client per la revisione e per ricevere la risposta.</span><span class="sxs-lookup"><span data-stu-id="e5a88-142">Send and Receive activities with correlation are used to send the approval request to the client for review and receive the response.</span></span>  
-  
-9. <span data-ttu-id="e5a88-143">Il risultato del flusso di lavoro del processo di approvazione viene inviato al client.</span><span class="sxs-lookup"><span data-stu-id="e5a88-143">The result of the approval process workflow is sent to the client.</span></span>  
-  
-## <a name="using-the-sample"></a><span data-ttu-id="e5a88-144">Utilizzo dell'esempio</span><span class="sxs-lookup"><span data-stu-id="e5a88-144">Using the Sample</span></span>  
-  
-##### <a name="to-set-up-the-database"></a><span data-ttu-id="e5a88-145">Per impostare il database</span><span class="sxs-lookup"><span data-stu-id="e5a88-145">To set up the database</span></span>  
-  
-1. <span data-ttu-id="e5a88-146">Da un prompt dei comandi di Visual Studio 2010 aperto con privilegi di amministratore, passare alla cartella DocumentApprovalProcess ed eseguire Setup. cmd.</span><span class="sxs-lookup"><span data-stu-id="e5a88-146">From a Visual Studio 2010 command prompt opened with Administrator privileges, navigate to this DocumentApprovalProcess folder and run Setup.cmd.</span></span>  
-  
-##### <a name="to-set-up-the-application"></a><span data-ttu-id="e5a88-147">Per impostare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="e5a88-147">To set up the application</span></span>  
-  
-1. <span data-ttu-id="e5a88-148">Con Visual Studio 2010, aprire il file della soluzione Documentapprovalprocess.</span><span class="sxs-lookup"><span data-stu-id="e5a88-148">Using Visual Studio 2010, open the DocumentApprovalProcess.sln solution file.</span></span>  
-  
-2. <span data-ttu-id="e5a88-149">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="e5a88-149">To build the solution, press CTRL+SHIFT+B.</span></span>  
-  
-3. <span data-ttu-id="e5a88-150">Per eseguire la soluzione, avviare l'applicazione di approvazione Manager facendo clic con il progetto ApprovalManager nel **Esplora soluzioni** e facendo clic su **Debug**->**Start**  nuova istanza di dal menu di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="e5a88-150">To run the solution, launch the Approval Manager Application by right-clicking the ApprovalManager project in the **Solution Explorer** and clicking **Debug**->**Start** new instance from the right-click menu.</span></span>  
-  
-     <span data-ttu-id="e5a88-151">Attendere l'output del responsabile per sapere che è pronta.</span><span class="sxs-lookup"><span data-stu-id="e5a88-151">Wait for the manager’s output to let you know that it is ready.</span></span>  
-  
-##### <a name="to-run-the-single-approval-scenario"></a><span data-ttu-id="e5a88-152">Per eseguire lo scenario di approvazione singola</span><span class="sxs-lookup"><span data-stu-id="e5a88-152">To run the single approval scenario</span></span>  
-  
-1. <span data-ttu-id="e5a88-153">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="e5a88-153">Open a command prompt with administrator permission.</span></span>  
-  
-2. <span data-ttu-id="e5a88-154">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-154">Navigate to the directory that contains the solution.</span></span>  
-  
-3. <span data-ttu-id="e5a88-155">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire due istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="e5a88-155">Navigate to the ApprovalClient\Bin\Debug folder and execute two instances of ApprovalClient.exe.</span></span>  
-  
-4. <span data-ttu-id="e5a88-156">Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.</span><span class="sxs-lookup"><span data-stu-id="e5a88-156">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
-  
-5. <span data-ttu-id="e5a88-157">Digitare un nome utente e fare clic su **sottoscrivere**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-157">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="e5a88-158">Per un client usare `UserType1` e per l'altro il tipo `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-158">For one client, use `UserType1` and the other type `UserType2`.</span></span>  
-  
-6. <span data-ttu-id="e5a88-159">Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-159">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="e5a88-160">Fare clic su **Richiedi l'approvazione**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-160">Click **Request Approval**.</span></span>  
-  
-7. <span data-ttu-id="e5a88-161">Nel client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-161">In the `UserType2` client, a document awaiting approval appears.</span></span> <span data-ttu-id="e5a88-162">Selezionarlo e premere **approvare** oppure **rifiutare**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-162">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="e5a88-163">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-163">The results should show in the `UserType1` client.</span></span>  
-  
-##### <a name="to-run-the-quorum-approval-scenario"></a><span data-ttu-id="e5a88-164">Per eseguire lo scenario di approvazione a quorum</span><span class="sxs-lookup"><span data-stu-id="e5a88-164">To run the quorum approval scenario</span></span>  
-  
-1. <span data-ttu-id="e5a88-165">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="e5a88-165">Open a command prompt with administrator permission.</span></span>  
-  
-2. <span data-ttu-id="e5a88-166">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-166">Navigate to the directory that contains the solution.</span></span>  
-  
-3. <span data-ttu-id="e5a88-167">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire tre istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="e5a88-167">Navigate to the ApprovalClient\Bin\Debug folder and execute three instances of ApprovalClient.exe.</span></span>  
-  
-4. <span data-ttu-id="e5a88-168">Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.</span><span class="sxs-lookup"><span data-stu-id="e5a88-168">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
-  
-5. <span data-ttu-id="e5a88-169">Digitare un nome utente e fare clic su **sottoscrivere**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-169">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="e5a88-170">Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-170">For one client use `UserType1` and the other two type `UserType2`.</span></span>  
-  
-6. <span data-ttu-id="e5a88-171">Nel client `UserType1` selezionare il tipo di approvazione a quorum dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-171">In the `UserType1` client, select the quorum approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="e5a88-172">Fare clic su **Richiedi l'approvazione**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-172">Click **Request Approval**.</span></span> <span data-ttu-id="e5a88-173">In questo modo viene richiesto che i due client `UserType2` approvino o rifiutino il documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-173">This requests that the two `UserType2` clients approve or reject the document.</span></span> <span data-ttu-id="e5a88-174">Mentre entrambi i client `UserType2` devono rispondere, solo un client deve approvare il documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-174">While both `UserType2` clients must respond, only one client must approve the document for it to be approved.</span></span>  
-  
-7. <span data-ttu-id="e5a88-175">Nei client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-175">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="e5a88-176">Selezionarlo e premere **approvare** oppure **rifiutare**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-176">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="e5a88-177">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-177">The results should show in the `UserType1` client.</span></span>  
-  
-##### <a name="to-run-the-complex-approval-scenario"></a><span data-ttu-id="e5a88-178">Per eseguire lo scenario di approvazione complesso</span><span class="sxs-lookup"><span data-stu-id="e5a88-178">To run the complex approval scenario</span></span>  
-  
-1. <span data-ttu-id="e5a88-179">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="e5a88-179">Open a command prompt with administrator permission.</span></span>  
-  
-2. <span data-ttu-id="e5a88-180">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-180">Navigate to the directory that contains the solution.</span></span>  
-  
-3. <span data-ttu-id="e5a88-181">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire quattro istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="e5a88-181">Navigate to the ApprovalClient\Bin\Debug folder and execute four instances of ApprovalClient.exe.</span></span>  
-  
-4. <span data-ttu-id="e5a88-182">Fare clic su **individua**, attendere finché il **sottoscrivere** pulsante è abilitato.</span><span class="sxs-lookup"><span data-stu-id="e5a88-182">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
-  
-5. <span data-ttu-id="e5a88-183">Digitare un nome utente e fare clic su **sottoscrivere**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-183">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="e5a88-184">Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-184">For one client use `UserType1`, in two uses type `UserType2`, and in the last use `UserType3`.</span></span>  
-  
-6. <span data-ttu-id="e5a88-185">Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="e5a88-185">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="e5a88-186">Fare clic su **Richiedi l'approvazione**.</span><span class="sxs-lookup"><span data-stu-id="e5a88-186">Click **Request Approval**.</span></span>  
-  
-7. <span data-ttu-id="e5a88-187">Nei client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="e5a88-187">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="e5a88-188">Selezionarlo e premere **approvare**, il documento viene passato per il `UserType3` client.</span><span class="sxs-lookup"><span data-stu-id="e5a88-188">Select it and press **approve**, the document is passed to the `UserType3` client.</span></span>  
-  
-     <span data-ttu-id="e5a88-189">Se il documento viene approvato dal primo quorum `UserType2`, il documento viene passato al client `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-189">If the document is approved by the first `UserType2` quorum, the document is passed to the `UserType3` client.</span></span>  
-  
-8. <span data-ttu-id="e5a88-190">Approvare o rifiutare il documento dal client `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-190">Approve or reject the document from the `UserType3` client.</span></span> <span data-ttu-id="e5a88-191">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="e5a88-191">The results should show in the `UserType1` client.</span></span>  
-  
-##### <a name="to-clean-up"></a><span data-ttu-id="e5a88-192">Per eseguire la pulizia</span><span class="sxs-lookup"><span data-stu-id="e5a88-192">To clean up</span></span>  
-  
-1. <span data-ttu-id="e5a88-193">Da un prompt dei comandi di Visual Studio 2010, passare alla cartella DocumentApprovalProcess ed eseguire Cleanup.</span><span class="sxs-lookup"><span data-stu-id="e5a88-193">From a Visual Studio 2010 command prompt, navigate to the DocumentApprovalProcess folder and run Cleanup.cmd.</span></span>
+> <span data-ttu-id="9c087-109">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="9c087-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9c087-110">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="9c087-110">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="9c087-111">Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi.</span><span class="sxs-lookup"><span data-stu-id="9c087-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9c087-112">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="9c087-112">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
+
+## <a name="sample-details"></a><span data-ttu-id="9c087-113">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="9c087-113">Sample Details</span></span>
+
+<span data-ttu-id="9c087-114">Il grafico seguente illustra il flusso di lavoro del processo di approvazione dei documenti:</span><span class="sxs-lookup"><span data-stu-id="9c087-114">The following graphic demonstrates the document approval process workflow:</span></span>
+
+![Flusso di lavoro del processo di approvazione di un documento](./media/document-approval-process/document-approval-process.jpg)
+
+<span data-ttu-id="9c087-116">Dalla prospettiva del client, il processo di approvazione funziona nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="9c087-116">From the client's perspective, the approval process functions as follows:</span></span>
+
+1. <span data-ttu-id="9c087-117">Un client esegue una sottoscrizione per essere un utente del sistema del processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-117">A client subscribes to be a user in the approval process system.</span></span>
+
+2. <span data-ttu-id="9c087-118">Un client WCF invia a un servizio WCF ospitato dall'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="9c087-118">A WCF client sends to a WCF service hosted by the approval manager application.</span></span>
+
+3. <span data-ttu-id="9c087-119">Al client viene restituito un ID utente univoco.</span><span class="sxs-lookup"><span data-stu-id="9c087-119">A unique user ID is returned to the client.</span></span> <span data-ttu-id="9c087-120">Il client può ora partecipare ai processi di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-120">The client can now participate in approval processes.</span></span>
+
+4. <span data-ttu-id="9c087-121">Una volta inserito, un client può inviare un documento per l'approvazione usando un processo di approvazione singolo, a quorum o complesso.</span><span class="sxs-lookup"><span data-stu-id="9c087-121">Once joined, a client can send a document for approval using single, quorum or complex approval processes.</span></span>
+
+5. <span data-ttu-id="9c087-122">La selezione di un pulsante nell'interfaccia del client avvia un'istanza del flusso di lavoro in un host dei servizi flusso di lavoro del client.</span><span class="sxs-lookup"><span data-stu-id="9c087-122">A button in the client’s interface is clicked, starting a workflow instance in a client Workflow Service Host.</span></span>
+
+6. <span data-ttu-id="9c087-123">Il flusso di lavoro invia una richiesta di approvazione all'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="9c087-123">The workflow sends an approval request to the approval manager application.</span></span>
+
+7. <span data-ttu-id="9c087-124">Il proprietario del flusso di lavoro avvia un flusso di lavoro per rappresentare un processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-124">The workflow manager starts a workflow on its own side to represent an approval process.</span></span>
+
+8. <span data-ttu-id="9c087-125">Una volta che il proprietario ha eseguito il flusso di lavoro di approvazione, i risultati vengono restituiti al client.</span><span class="sxs-lookup"><span data-stu-id="9c087-125">Once the manager approval workflow executes, the results are sent back to the client.</span></span>
+
+9. <span data-ttu-id="9c087-126">Il client visualizza i risultati.</span><span class="sxs-lookup"><span data-stu-id="9c087-126">The client displays the results.</span></span>
+
+10. <span data-ttu-id="9c087-127">Un client può ricevere una richiesta di approvazione e rispondere alla richiesta in qualsiasi momento.</span><span class="sxs-lookup"><span data-stu-id="9c087-127">A client may receive an approval request and respond to the request at any point in time.</span></span>
+
+11. <span data-ttu-id="9c087-128">Un servizio WCF ospitato sul client può ricevere una richiesta di approvazione dall'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="9c087-128">A WCF service hosted on the client can receive an approval request from the approval manager application.</span></span>
+
+12. <span data-ttu-id="9c087-129">Le informazioni sul documento vengono presentate nel client per la revisione.</span><span class="sxs-lookup"><span data-stu-id="9c087-129">The document information is presented on the client for review.</span></span>
+
+13. <span data-ttu-id="9c087-130">L'utente può approvare o rifiutare il documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-130">The user can approve or reject the document.</span></span>
+
+14. <span data-ttu-id="9c087-131">Un client WCF viene usato per restituire una risposta di approvazione all'applicazione di gestione delle approvazioni.</span><span class="sxs-lookup"><span data-stu-id="9c087-131">A WCF client is used to send an approval response back to the approval manager application.</span></span>
+
+<span data-ttu-id="9c087-132">Dal punto di vista dell'applicazione di gestione delle approvazioni, il processo di approvazione funziona nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="9c087-132">From the approval manager application’s point of view, the approval process functions as follows:</span></span>
+
+1. <span data-ttu-id="9c087-133">Un client richiede la partecipazione al sistema del processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-133">A client requests to participate to the approval process system.</span></span>
+
+2. <span data-ttu-id="9c087-134">Un servizio WCF nel responsabile dell'approvazione riceve una richiesta che fa parte del sistema di elaborazione dell'approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-134">A WCF service on the approval manager receives a request to be part of the approval process system.</span></span>
+
+3. <span data-ttu-id="9c087-135">Viene generato un ID univoco per il client.</span><span class="sxs-lookup"><span data-stu-id="9c087-135">A unique ID is generated for the client.</span></span> <span data-ttu-id="9c087-136">Le informazioni utente vengono archiviate in un database.</span><span class="sxs-lookup"><span data-stu-id="9c087-136">The user information is stored in a database.</span></span>
+
+4. <span data-ttu-id="9c087-137">L'ID univoco viene restituito all'utente.</span><span class="sxs-lookup"><span data-stu-id="9c087-137">The unique ID is sent back to the user.</span></span>
+
+5. <span data-ttu-id="9c087-138">Viene ricevuta una richiesta di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-138">An approval request is receive.</span></span> <span data-ttu-id="9c087-139">Il responsabile dell'approvazione esegue un processo di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-139">The approval manager executes an approval process.</span></span>
+
+6. <span data-ttu-id="9c087-140">Il responsabile dell'approvazione riceve una richiesta di approvazione che avvia un nuovo flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="9c087-140">An approval request is received by the approval manager, starting a new workflow.</span></span>
+
+7. <span data-ttu-id="9c087-141">A seconda del tipo di richiesta (semplice, a quorum o complessa), viene eseguita un'attività diversa.</span><span class="sxs-lookup"><span data-stu-id="9c087-141">Depending on the type of request (simple, quorum, or complex) a different activity is executed.</span></span>
+
+8. <span data-ttu-id="9c087-142">Le attività di invio e ricezione con correlazione vengono usate per inviare la richiesta di approvazione al client per la revisione e per ricevere la risposta.</span><span class="sxs-lookup"><span data-stu-id="9c087-142">Send and Receive activities with correlation are used to send the approval request to the client for review and receive the response.</span></span>
+
+9. <span data-ttu-id="9c087-143">Il risultato del flusso di lavoro del processo di approvazione viene inviato al client.</span><span class="sxs-lookup"><span data-stu-id="9c087-143">The result of the approval process workflow is sent to the client.</span></span>
+
+## <a name="using-the-sample"></a><span data-ttu-id="9c087-144">Utilizzo dell'esempio</span><span class="sxs-lookup"><span data-stu-id="9c087-144">Using the Sample</span></span>
+
+##### <a name="to-set-up-the-database"></a><span data-ttu-id="9c087-145">Per impostare il database</span><span class="sxs-lookup"><span data-stu-id="9c087-145">To set up the database</span></span>
+
+1. <span data-ttu-id="9c087-146">Da un prompt dei comandi di Visual Studio 2010 aperto con privilegi di amministratore, passare alla cartella DocumentApprovalProcess ed eseguire Setup. cmd.</span><span class="sxs-lookup"><span data-stu-id="9c087-146">From a Visual Studio 2010 command prompt opened with Administrator privileges, navigate to this DocumentApprovalProcess folder and run Setup.cmd.</span></span>
+
+##### <a name="to-set-up-the-application"></a><span data-ttu-id="9c087-147">Per impostare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="9c087-147">To set up the application</span></span>
+
+1. <span data-ttu-id="9c087-148">Con Visual Studio 2010 aprire il file della soluzione DocumentApprovalProcess. sln.</span><span class="sxs-lookup"><span data-stu-id="9c087-148">Using Visual Studio 2010, open the DocumentApprovalProcess.sln solution file.</span></span>
+
+2. <span data-ttu-id="9c087-149">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="9c087-149">To build the solution, press CTRL+SHIFT+B.</span></span>
+
+3. <span data-ttu-id="9c087-150">Per eseguire la soluzione, avviare l'applicazione di gestione delle approvazioni facendo clic con il pulsante destro del mouse sul progetto ApprovalManager nel **Esplora soluzioni** e scegliendo **debug**->**Avvia** nuova istanza dal menu di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="9c087-150">To run the solution, launch the Approval Manager Application by right-clicking the ApprovalManager project in the **Solution Explorer** and clicking **Debug**->**Start** new instance from the right-click menu.</span></span>
+
+    <span data-ttu-id="9c087-151">Attendere l'output del responsabile per sapere che è pronta.</span><span class="sxs-lookup"><span data-stu-id="9c087-151">Wait for the manager’s output to let you know that it is ready.</span></span>
+
+##### <a name="to-run-the-single-approval-scenario"></a><span data-ttu-id="9c087-152">Per eseguire lo scenario di approvazione singola</span><span class="sxs-lookup"><span data-stu-id="9c087-152">To run the single approval scenario</span></span>
+
+1. <span data-ttu-id="9c087-153">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="9c087-153">Open a command prompt with administrator permission.</span></span>
+
+2. <span data-ttu-id="9c087-154">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="9c087-154">Navigate to the directory that contains the solution.</span></span>
+
+3. <span data-ttu-id="9c087-155">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire due istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="9c087-155">Navigate to the ApprovalClient\Bin\Debug folder and execute two instances of ApprovalClient.exe.</span></span>
+
+4. <span data-ttu-id="9c087-156">Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-156">Click **discover**, wait until the **subscribe** button is enabled.</span></span>
+
+5. <span data-ttu-id="9c087-157">Digitare un nome utente e fareclic su Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-157">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="9c087-158">Per un client usare `UserType1` e per l'altro il tipo `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="9c087-158">For one client, use `UserType1` and the other type `UserType2`.</span></span>
+
+6. <span data-ttu-id="9c087-159">Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-159">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="9c087-160">Fare clic su **Richiedi approvazione**.</span><span class="sxs-lookup"><span data-stu-id="9c087-160">Click **Request Approval**.</span></span>
+
+7. <span data-ttu-id="9c087-161">Nel client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-161">In the `UserType2` client, a document awaiting approval appears.</span></span> <span data-ttu-id="9c087-162">Selezionarlo e fare clic su **approva** o **rifiuta**.</span><span class="sxs-lookup"><span data-stu-id="9c087-162">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="9c087-163">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="9c087-163">The results should show in the `UserType1` client.</span></span>
+
+##### <a name="to-run-the-quorum-approval-scenario"></a><span data-ttu-id="9c087-164">Per eseguire lo scenario di approvazione a quorum</span><span class="sxs-lookup"><span data-stu-id="9c087-164">To run the quorum approval scenario</span></span>
+
+1. <span data-ttu-id="9c087-165">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="9c087-165">Open a command prompt with administrator permission.</span></span>
+
+2. <span data-ttu-id="9c087-166">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="9c087-166">Navigate to the directory that contains the solution.</span></span>
+
+3. <span data-ttu-id="9c087-167">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire tre istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="9c087-167">Navigate to the ApprovalClient\Bin\Debug folder and execute three instances of ApprovalClient.exe.</span></span>
+
+4. <span data-ttu-id="9c087-168">Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-168">Click **discover**, wait until the **subscribe** button is enabled.</span></span>
+
+5. <span data-ttu-id="9c087-169">Digitare un nome utente e fareclic su Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-169">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="9c087-170">Per un client usare `UserType1` e per gli altri due usare il tipo `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="9c087-170">For one client use `UserType1` and the other two type `UserType2`.</span></span>
+
+6. <span data-ttu-id="9c087-171">Nel client `UserType1` selezionare il tipo di approvazione a quorum dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-171">In the `UserType1` client, select the quorum approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="9c087-172">Fare clic su **Richiedi approvazione**.</span><span class="sxs-lookup"><span data-stu-id="9c087-172">Click **Request Approval**.</span></span> <span data-ttu-id="9c087-173">In questo modo viene richiesto che i due client `UserType2` approvino o rifiutino il documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-173">This requests that the two `UserType2` clients approve or reject the document.</span></span> <span data-ttu-id="9c087-174">Mentre entrambi i client `UserType2` devono rispondere, solo un client deve approvare il documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-174">While both `UserType2` clients must respond, only one client must approve the document for it to be approved.</span></span>
+
+7. <span data-ttu-id="9c087-175">Nei client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-175">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="9c087-176">Selezionarlo e fare clic su **approva** o **rifiuta**.</span><span class="sxs-lookup"><span data-stu-id="9c087-176">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="9c087-177">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="9c087-177">The results should show in the `UserType1` client.</span></span>
+
+##### <a name="to-run-the-complex-approval-scenario"></a><span data-ttu-id="9c087-178">Per eseguire lo scenario di approvazione complesso</span><span class="sxs-lookup"><span data-stu-id="9c087-178">To run the complex approval scenario</span></span>
+
+1. <span data-ttu-id="9c087-179">Aprire un prompt dei comandi con l'autorizzazione di amministratore.</span><span class="sxs-lookup"><span data-stu-id="9c087-179">Open a command prompt with administrator permission.</span></span>
+
+2. <span data-ttu-id="9c087-180">Passare alla directory contenente la soluzione.</span><span class="sxs-lookup"><span data-stu-id="9c087-180">Navigate to the directory that contains the solution.</span></span>
+
+3. <span data-ttu-id="9c087-181">Passare alla cartella ApprovalClient\Bin\Debug ed eseguire quattro istanze di ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="9c087-181">Navigate to the ApprovalClient\Bin\Debug folder and execute four instances of ApprovalClient.exe.</span></span>
+
+4. <span data-ttu-id="9c087-182">Fare clic su **individua**, attendere fino a quando non viene abilitato il pulsante Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-182">Click **discover**, wait until the **subscribe** button is enabled.</span></span>
+
+5. <span data-ttu-id="9c087-183">Digitare un nome utente e fareclic su Sottoscrivi.</span><span class="sxs-lookup"><span data-stu-id="9c087-183">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="9c087-184">Per un client usare `UserType1`, per il secondo usare il tipo `UserType2` e per l'ultimo usare `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="9c087-184">For one client use `UserType1`, in two uses type `UserType2`, and in the last use `UserType3`.</span></span>
+
+6. <span data-ttu-id="9c087-185">Nel client `UserType1` selezionare il tipo di approvazione singola dal menu a discesa e digitare un nome e il contenuto del documento.</span><span class="sxs-lookup"><span data-stu-id="9c087-185">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="9c087-186">Fare clic su **Richiedi approvazione**.</span><span class="sxs-lookup"><span data-stu-id="9c087-186">Click **Request Approval**.</span></span>
+
+7. <span data-ttu-id="9c087-187">Nei client `UserType2` viene visualizzato un documento in attesa di approvazione.</span><span class="sxs-lookup"><span data-stu-id="9c087-187">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="9c087-188">Selezionarlo e premere **approva**, il documento viene passato al `UserType3` client.</span><span class="sxs-lookup"><span data-stu-id="9c087-188">Select it and press **approve**, the document is passed to the `UserType3` client.</span></span>
+
+    <span data-ttu-id="9c087-189">Se il documento viene approvato dal primo quorum `UserType2`, il documento viene passato al client `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="9c087-189">If the document is approved by the first `UserType2` quorum, the document is passed to the `UserType3` client.</span></span>
+
+8. <span data-ttu-id="9c087-190">Approvare o rifiutare il documento dal client `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="9c087-190">Approve or reject the document from the `UserType3` client.</span></span> <span data-ttu-id="9c087-191">I risultati devono essere visualizzati nel client `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="9c087-191">The results should show in the `UserType1` client.</span></span>
+
+##### <a name="to-clean-up"></a><span data-ttu-id="9c087-192">Per eseguire la pulizia</span><span class="sxs-lookup"><span data-stu-id="9c087-192">To clean up</span></span>
+
+1. <span data-ttu-id="9c087-193">Da un prompt dei comandi di Visual Studio 2010 passare alla cartella DocumentApprovalProcess ed eseguire Cleanup. cmd.</span><span class="sxs-lookup"><span data-stu-id="9c087-193">From a Visual Studio 2010 command prompt, navigate to the DocumentApprovalProcess folder and run Cleanup.cmd.</span></span>
