@@ -522,7 +522,7 @@ In questo esempio, quando viene chiamato il middleware di autorizzazione, Ocelot
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Utilizzo dell'oggetto Ingress di Kubernetes insieme ai gateway API Ocelot
 
-Quando si usa Kubernetes (come in un cluster del servizio Kubernetes di Azure), in genere si uniscono tutte le richieste HTTP attraverso il [livello di oggetto Ingress di Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) basato su *Nginx*.
+Quando si usa Kubernetes (come in un cluster del servizio Azure Kubernetes), in genere si uniscono tutte le richieste HTTP attraverso il [livello di oggetto Ingress di Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) basato su *Nginx*.
 
 In Kubernetes, se non si usa un alcun approccio con oggetto Ingress, i servizi e i pod hanno indirizzi IP instradabili solo dalla rete di cluster.
 
