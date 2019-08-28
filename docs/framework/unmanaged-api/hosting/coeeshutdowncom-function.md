@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 164384f043a1722ace6e5c4098cb31c4327cba1e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779127"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044068"
 ---
 # <a name="coeeshutdowncom-function"></a>Funzione CoEEShutDownCOM
-Forza common language runtime (CLR) per rilasciare tutti i puntatori di interfaccia che vengono mantenuti all'interno di runtime callable wrapper (RCW). Questo ha l'effetto di rilascio di tutte le cache RCW. Questa funzione globale è obsoleta in .NET Framework 4. Usare invece il punto di ingresso per un runtime specifico.  
+Forza la Common Language Runtime (CLR) a rilasciare tutti i puntatori di interfaccia contenuti in Runtime Callable Wrapper (RCW). Questo ha l'effetto di rilasciare tutte le cache RCW. Questa funzione globale è deprecata nel .NET Framework 4. Usare invece il punto di ingresso per un runtime specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `CoEEShutDownCOM` funzione prima di tutto rilascia tutti i RCW in tutti i contesti e in tutte le cache e quindi rimuove qualsiasi notifica di chiusura esistente nel programma di installazione. Non lo scaricamento di DLL si verifica.  
+ La `CoEEShutDownCOM` funzione rilascia innanzitutto tutti i RCW in tutti i contesti e in tutte le cache, quindi rimuove eventuali notifiche di chiusura presenti nel programma di installazione. Non viene eseguito lo scaricamento della DLL.  
   
 > [!CAUTION]
->  Questa funzione influisce su tutti i runtime caricati nel processo.  
+> Questa funzione ha effetto su tutti i runtime caricati nel processo.  
   
- A partire da .NET Framework 4, chiamare il punto di ingresso per questa funzione runtime specifico che si vuole modificare. Per ottenere il punto di ingresso, chiamare il [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) (metodo) e specificare "CoEEShutDownCOM".  
+ A partire da .NET Framework 4, chiamare il punto di ingresso per questa funzione sul runtime specifico che si vuole modificare. Per ottenere il punto di ingresso, chiamare il metodo [ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) e specificare "CoEEShutDownCOM".  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

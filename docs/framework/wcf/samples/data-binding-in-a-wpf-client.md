@@ -2,12 +2,12 @@
 title: Associazione dati in un client Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: a5e3e06afbe790af7c791449a2fe1bfc1bde372e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953551"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045107"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associazione dati in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un'associazione dati in un client Windows Presentation Foundation (WPF). Nell'esempio viene utilizzato un servizio Windows Communication Foundation (WCF) che genera in modo casuale una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio vengono associate automaticamente all'interfaccia utente (UI) fornita dal client Windows Presentation Foundation (WPF).  
@@ -74,10 +74,10 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 3. Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  

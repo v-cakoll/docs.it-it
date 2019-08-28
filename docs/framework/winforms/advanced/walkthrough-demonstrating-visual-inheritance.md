@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040317"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046143"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: Dimostrazione dell'ereditarietà visiva
 
@@ -35,19 +35,19 @@ Infine, questa procedura dettagliata illustrerà la differenza tra controlli pri
 > [!CAUTION]
 > Non tutti i controlli supportano l'ereditarietà visiva da un form di base. I controlli seguenti non supportano lo scenario descritto in questa procedura dettagliata:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Questi controlli nel form ereditato sono sempre di sola lettura, indipendentemente dai modificatori usati (`private`, `protected` o `public`).
+> Questi controlli nel form ereditato sono sempre di sola lettura, indipendentemente dai modificatori usati (`private`, `protected` o `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Creare un progetto di libreria di classi contenente un form di base
 
@@ -61,7 +61,7 @@ Infine, questa procedura dettagliata illustrerà la differenza tra controlli pri
 
 5. Scegliere **Salva tutto** dal menu **file** per salvare il progetto e i file nel percorso predefinito.
 
- Le due procedure seguenti consentono di aggiungere pulsanti al form di base. Per dimostrare l'ereditarietà visiva, si assegneranno ai pulsanti livelli di accesso diversi impostando le relative proprietà `Modifiers`.
+Le due procedure seguenti consentono di aggiungere pulsanti al form di base. Per dimostrare l'ereditarietà visiva, si assegneranno ai pulsanti livelli di accesso diversi impostando le relative proprietà `Modifiers`.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Aggiungere un pulsante che gli eredi del form di base possono modificare
 
@@ -135,7 +135,7 @@ Infine, questa procedura dettagliata illustrerà la differenza tra controlli pri
 
 5. Aprire il form ereditato (**Form2**) nella finestra di progettazione facendo doppio clic su di esso, se non è già aperto.
 
-     Nella finestra di progettazione i pulsanti ereditati hanno un simbolo (![Screenshot del simbolo di ereditarietà del Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) nell'angolo superiore, a indicare che vengono ereditate.
+    Nella finestra di progettazione i pulsanti ereditati hanno un simbolo (![Screenshot del simbolo di ereditarietà del Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) nell'angolo superiore, a indicare che vengono ereditate.
 
 6. Selezionare il pulsante **Say Hello** e osservare i quadratini di ridimensionamento. Poiché questo pulsante è protetto, gli eredi possono spostarlo, ridimensionarlo, modificarne la didascalia e apportare altre modifiche.
 

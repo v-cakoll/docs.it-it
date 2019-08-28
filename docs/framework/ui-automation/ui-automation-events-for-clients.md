@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911677"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044102"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventi di automazione interfaccia utente per i client
 > [!NOTE]
@@ -44,11 +44,11 @@ ms.locfileid: "69911677"
 > Per elaborare eventi di chiusura di finestra, eseguire il cast del tipo di argomento passato al gestore eventi come <xref:System.Windows.Automation.WindowClosedEventArgs>. Poiché l'elemento di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per la finestra non è più valido, non è possibile usare il parametro `sender` per recuperare le informazioni. Usare invece <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>.  
   
 > [!CAUTION]
->  Se l'applicazione può ricevere eventi dalla propria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], non usare il thread dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dell'applicazione per sottoscrivere gli eventi o per annullare una sottoscrizione, perché potrebbe verificarsi un comportamento imprevisto. Per altre informazioni, vedere [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Se l'applicazione può ricevere eventi dalla propria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], non usare il thread dell'[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dell'applicazione per sottoscrivere gli eventi o per annullare una sottoscrizione, perché potrebbe verificarsi un comportamento imprevisto. Per altre informazioni, vedere [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  All'arresto o quando gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] non interessano più l'applicazione, i client di automazione interfaccia utente devono chiamare uno dei metodi seguenti.  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Annulla la registrazione di un gestore eventi che era stato registrato usando <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  

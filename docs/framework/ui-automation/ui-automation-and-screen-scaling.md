@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959174"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044190"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
@@ -71,7 +71,7 @@ ms.locfileid: "69959174"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  Non usare la proprietà <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Il comportamento di questa proprietà al di fuori delle finestre client in un ambiente non ridimensionato non è definito.  
+> Non usare la proprietà <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. Il comportamento di questa proprietà al di fuori delle finestre client in un ambiente non ridimensionato non è definito.  
   
  Se l'applicazione esegue la comunicazione tra processi diretta con applicazioni non compatibili con dpi, è possibile che sia presente una conversione tra coordinate logiche e fisiche usando [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] le `PhysicalToLogicalPoint` funzioni `LogicalToPhysicalPoint`e.  
   

@@ -10,43 +10,43 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e1f461cc98fb104f78a6c83a207cff7f4eda9227
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783243"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046459"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inizializzatori di oggetti: Tipi denominati e anonimi (Visual Basic)
-Gli inizializzatori di oggetto consentono di specificare le proprietà per un oggetto complesso usando un'unica espressione. Possono essere utilizzati per creare istanze di tipi denominati e tipi anonimi.  
+Gli inizializzatori di oggetto consentono di specificare le proprietà per un oggetto complesso utilizzando una singola espressione. Possono essere usati per creare istanze di tipi denominati e di tipi anonimi.  
   
 ## <a name="declarations"></a>Dichiarazioni  
- Le dichiarazioni delle istanze di tipi denominati e anonimi possono sembrano quasi identiche, ma i relativi effetti non sono uguali. Ogni categoria dispone di funzionalità e restrizioni di propri. Nell'esempio seguente viene illustrato un modo pratico per dichiarare e inizializzare un'istanza di una classe denominata, `Customer`, usando un elenco di inizializzatori di oggetto. Si noti che dopo la parola chiave viene specificato il nome della classe `New`.  
+ Le dichiarazioni di istanze di tipi denominati e anonimi possono apparire quasi identiche, ma gli effetti non sono uguali. Ogni categoria presenta le funzionalità e le restrizioni. Nell'esempio seguente viene illustrato un modo pratico per dichiarare e inizializzare un'istanza di una classe `Customer`denominata,, utilizzando un elenco di inizializzatori di oggetto. Si noti che il nome della classe viene specificato dopo la parola `New`chiave.  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
   
- Un tipo anonimo non hanno nome utilizzabile. Creazione di un'istanza di un tipo anonimo non può pertanto includere un nome di classe.  
+ Un tipo anonimo non ha un nome utilizzabile. Pertanto, una creazione di un'istanza di un tipo anonimo non può includere un nome di classe.  
   
  [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
- I requisiti e i risultati delle due dichiarazioni non corrispondono. Per la `namedCust`, una `Customer` classe avente un `Name` proprietà deve esistere già e la dichiarazione crea un'istanza di tale classe. Per la `anonymousCust`, il compilatore definisce una nuova classe che ha una proprietà, una stringa denominata `Name`e crea una nuova istanza della classe.  
+ I requisiti e i risultati delle due dichiarazioni non sono uguali. Per `namedCust`, una `Customer` classe che dispone di `Name` una proprietà deve esistere già e la dichiarazione crea un'istanza di tale classe. Per `anonymousCust`, il compilatore definisce una nuova classe con una proprietà, una stringa denominata `Name`e crea una nuova istanza di tale classe.  
   
 ## <a name="named-types"></a>Tipi denominati  
- Gli inizializzatori di oggetto forniscono un modo semplice per chiamare il costruttore di un tipo e quindi impostare i valori di alcune o tutte le proprietà in una singola istruzione. Il compilatore richiama il costruttore appropriato per l'istruzione: il costruttore senza parametri se nessun argomento viene presentato o un costruttore con parametri, se uno o più argomenti vengono inviati. Successivamente, le proprietà specificate vengono inizializzate nell'ordine in cui sono presentate nell'elenco di inizializzatori.  
+ Gli inizializzatori di oggetto forniscono un modo semplice per chiamare il costruttore di un tipo e quindi impostare i valori di alcune o tutte le proprietà in una singola istruzione. Il compilatore richiama il costruttore appropriato per l'istruzione: il costruttore senza parametri se non vengono presentati argomenti o un costruttore con parametri se vengono inviati uno o più argomenti. Successivamente, le proprietà specificate vengono inizializzate nell'ordine in cui sono visualizzate nell'elenco di inizializzatori.  
   
- Ogni inizializzazione nell'elenco di inizializzatori è costituito dall'assegnazione di un valore iniziale a un membro della classe. I nomi e tipi di dati dei membri vengono determinati quando la classe è definita. Negli esempi seguenti, il `Customer` classe deve esistere e devono avere membri denominati `Name` e `City` che può accettare i valori di stringa.  
+ Ogni inizializzazione nell'elenco di inizializzatori è costituita dall'assegnazione di un valore iniziale a un membro della classe. I nomi e i tipi di dati dei membri vengono determinati quando la classe è definita. Negli esempi seguenti, la `Customer` classe deve esistere e deve avere membri denominati `Name` e `City` che può accettare valori di stringa.  
   
  [!code-vb[VbVbalrObjectInit#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#3)]  
   
- In alternativa, è possibile ottenere lo stesso risultato utilizzando il codice seguente:  
+ In alternativa, è possibile ottenere lo stesso risultato usando il codice seguente:  
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Ognuna di queste dichiarazioni è equivalente all'esempio seguente, che consente di creare un `Customer` dell'oggetto usando il costruttore senza parametri e quindi definisce i valori iniziali per il `Name` e `City` delle proprietà utilizzando un `With` affermazione.  
+ Ognuna di queste dichiarazioni equivale all'esempio seguente, `Customer` che crea un oggetto usando il costruttore senza parametri, quindi specifica i valori iniziali per le `Name` proprietà e `City` usando un `With` istruzione.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
- Se il `Customer` classe contiene un costruttore con parametri che è possibile inviare un valore per `Name`, ad esempio, è possibile anche dichiarare e inizializzare un `Customer` oggetto nei modi seguenti:  
+ Se la `Customer` classe contiene un costruttore con parametri che consente di inviare un valore per `Name`, ad esempio, è anche possibile dichiarare e inizializzare un `Customer` oggetto nei modi seguenti:  
   
  [!code-vb[VbVbalrObjectInit#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#6)]  
   
@@ -56,36 +56,36 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
   
  Tuttavia, l'elenco di inizializzazione non può essere vuoto. Le proprietà non inizializzate mantengono i valori predefiniti.  
   
-### <a name="type-inference-with-named-types"></a>Inferenza del tipo con tipi denominati  
- È possibile ridurre il codice per la dichiarazione di `cust1` combinando gli inizializzatori di oggetto e l'inferenza del tipo locale. In questo modo è possibile omettere il `As` clausola nella dichiarazione di variabile. Il tipo di dati della variabile viene dedotto dal tipo dell'oggetto che viene creato dall'assegnazione. Nell'esempio seguente, il tipo della `cust6` è `Customer`.  
+### <a name="type-inference-with-named-types"></a>Inferenza del tipo con i tipi denominati  
+ È possibile abbreviare il codice per la `cust1` dichiarazione di combinando gli inizializzatori di oggetto e l'inferenza del tipo locale. In questo modo è possibile omettere la `As` clausola nella dichiarazione di variabile. Il tipo di dati della variabile viene dedotto dal tipo dell'oggetto creato dall'assegnazione. Nell'esempio seguente, il tipo di `cust6` è. `Customer`  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
   
-### <a name="remarks-about-named-types"></a>Note sui tipi denominati  
+### <a name="remarks-about-named-types"></a>Osservazioni sui tipi denominati  
   
-- Impossibile inizializzare un membro di classe più di una volta nell'elenco di inizializzatori di oggetto. La dichiarazione di `cust7` provoca un errore.  
+- Un membro di classe non può essere inizializzato più di una volta nell'elenco di inizializzatori di oggetto. La dichiarazione di `cust7` genera un errore.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
-- Un membro è utilizzabile per inizializzare se stesso o un altro campo. Se un membro viene eseguito prima che sia stato inizializzato, come illustrato nella seguente dichiarazione per `cust8`, verrà utilizzato il valore predefinito. Tenere presente che, quando viene elaborata una dichiarazione che usa un inizializzatore di oggetto, la prima cosa che accade è che viene richiamato il costruttore appropriato. Successivamente, vengono inizializzati i singoli campi nell'elenco di inizializzatori. Negli esempi seguenti, il valore predefinito per `Name` viene assegnato per `cust8`, e viene assegnato un valore inizializzato `cust9`.  
+- Un membro può essere utilizzato per inizializzare se stesso o un altro campo. Se si accede a un membro prima che sia stato inizializzato, come nella dichiarazione seguente `cust8`per, verrà utilizzato il valore predefinito. Tenere presente che quando viene elaborata una dichiarazione che usa un inizializzatore di oggetto, la prima cosa che accade è che viene richiamato il costruttore appropriato. Successivamente, i singoli campi nell'elenco di inizializzatori vengono inizializzati. Negli esempi seguenti viene `Name` `cust8`assegnato il valore predefinito per e viene assegnato un valore inizializzato in `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
-     L'esempio seguente usa il costruttore con parametri dalla `cust3` e `cust4` dichiarare e inizializzare `cust10` e `cust11`.  
+     Nell'esempio seguente viene usato il costruttore con `cust3` parametri `cust4` da e per dichiarare `cust10` e `cust11`inizializzare e.  
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
-- Gli inizializzatori di oggetto possono essere annidati. Nell'esempio riportato di seguito `AddressClass` è una classe che ha due proprietà, `City` e `State`e il `Customer` classe dispone di un `Address` proprietà che è un'istanza di `AddressClass`.  
+- Gli inizializzatori di oggetto possono essere annidati. Nell'esempio `AddressClass` seguente è una classe che dispone di due proprietà, `City` e `State`e la `Customer` classe dispone di una `Address` proprietà che è un'istanza di `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
-- Elenco di inizializzazione non può essere vuoto.  
+- L'elenco di inizializzazione non può essere vuoto.  
   
-- L'istanza in fase di inizializzazione non può essere di tipo Object.  
+- L'istanza da inizializzare non può essere di tipo Object.  
   
-- I membri di classe in fase di inizializzazione non possono essere membri condivisi, i membri di sola lettura, costanti o chiamate al metodo.  
+- I membri della classe inizializzati non possono essere membri condivisi, membri di sola lettura, costanti o chiamate al metodo.  
   
-- I membri della classe in fase di inizializzazione non può essere indicizzato o completo. Negli esempi seguenti generano errori del compilatore:  
+- I membri della classe inizializzati non possono essere indicizzati o qualificati. Gli esempi seguenti generano errori del compilatore:  
   
      `'' Not valid.`  
   
@@ -94,44 +94,44 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Tipi anonimi  
- I tipi anonimi di usare gli inizializzatori di oggetto per creare istanze dei nuovi tipi che non si definisce in modo esplicito e il nome. Al contrario, il compilatore genera un tipo in base alle proprietà che te nell'elenco di inizializzatori di oggetto. Poiché il nome del tipo non è specificato, viene considerato un *tipo anonimo*. Ad esempio, confrontare la seguente dichiarazione di quella precedente per `cust6`.  
+ I tipi anonimi usano gli inizializzatori di oggetto per creare istanze di nuovi tipi che non vengono definiti e denominati in modo esplicito. Al contrario, il compilatore genera un tipo in base alle proprietà designate nell'elenco di inizializzatori di oggetto. Poiché il nome del tipo non è specificato, viene definito come *tipo anonimo*. Ad esempio, confrontare la seguente dichiarazione con quella precedente per `cust6`.  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
- L'unica differenza è sintatticamente che viene specificato alcun nome dopo `New` per il tipo di dati. Tuttavia, ciò che accade è piuttosto diverso. Il compilatore definisce un tipo anonimo nuovo che ha due proprietà, `Name` e `City`e ne crea un'istanza con i valori specificati. L'inferenza del tipo determina i tipi di `Name` e `City` nell'esempio per essere stringhe.  
+ L'unica differenza sintatticamente è che non viene specificato alcun `New` nome dopo per il tipo di dati. Tuttavia, ciò che accade è piuttosto diverso. Il compilatore definisce un nuovo tipo anonimo che dispone di due proprietà `Name` , `City`e, e ne crea un'istanza con i valori specificati. L'inferenza del tipo determina `Name` i `City` tipi di e nell'esempio in modo che siano stringhe.  
   
 > [!CAUTION]
->  Il nome del tipo anonimo viene generato dal compilatore e può variare da compilazione a compilazione. Il codice deve usare o si basano sul nome di un tipo anonimo.  
+> Il nome del tipo anonimo viene generato dal compilatore e può variare dalla compilazione alla compilazione. Il codice non deve usare o basarsi sul nome di un tipo anonimo.  
   
- Poiché il nome del tipo non è disponibile, è possibile utilizzare un `As` clausola dichiarare `cust13`. Il tipo deve essere dedotto. Non si usa l'associazione tardiva, questo riduce l'utilizzo di tipi anonimi a variabili locali.  
+ Poiché il nome del tipo non è disponibile, non è possibile usare una `As` clausola per dichiarare `cust13`. Il tipo deve essere dedotto. Senza usare l'associazione tardiva, questo limita l'uso di tipi anonimi alle variabili locali.  
   
- I tipi anonimi forniscono il supporto fondamentale per [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sull'utilizzo di tipi anonimi nelle query, vedere [i tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ I tipi anonimi forniscono supporto [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] critico per le query. Per ulteriori informazioni sull'utilizzo di tipi anonimi nelle query, vedere [tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-### <a name="remarks-about-anonymous-types"></a>Note sui tipi anonimi  
+### <a name="remarks-about-anonymous-types"></a>Osservazioni sui tipi anonimi  
   
-- Sarà in genere tutti o la maggior parte delle proprietà in una dichiarazione di tipo anonimo alle proprietà chiave indicati digitando la parola chiave `Key` davanti al nome di proprietà.  
+- In genere, tutte o la maggior parte delle proprietà in una dichiarazione di tipo anonimo saranno proprietà chiave, indicate digitando la `Key` parola chiave davanti al nome della proprietà.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     Per altre informazioni sulle proprietà di chiave, vedere [chiave](../../../../visual-basic/language-reference/modifiers/key.md).  
+     Per ulteriori informazioni sulle proprietà chiave, vedere [Key](../../../../visual-basic/language-reference/modifiers/key.md).  
   
-- Come i tipi denominati, gli elenchi di inizializzatori per le definizioni di tipo anonimo devono dichiarare almeno una proprietà.  
+- Come i tipi denominati, gli elenchi di inizializzatori per le definizioni di tipi anonimi devono dichiarare almeno una proprietà.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
-- Quando viene dichiarata un'istanza di un tipo anonimo, il compilatore genera una definizione di tipo anonimo corrispondente. I nomi e tipi di dati delle proprietà vengono eseguiti dalla dichiarazione dell'istanza e sono inclusi dal compilatore nella definizione. Le proprietà non sono denominate e definite in anticipo, come avviene per un tipo denominato. I tipi vengono dedotti. È possibile specificare i tipi di dati delle proprietà usando un `As` clausola.  
+- Quando viene dichiarata un'istanza di un tipo anonimo, il compilatore genera una definizione di tipo anonimo corrispondente. I nomi e i tipi di dati delle proprietà vengono ricavati dalla dichiarazione dell'istanza e sono inclusi dal compilatore nella definizione. Le proprietà non sono denominate e definite in anticipo, come per un tipo denominato. I tipi vengono dedotti. Non è possibile specificare i tipi di dati delle proprietà utilizzando una `As` clausola.  
   
-- I tipi anonimi possono anche definire i nomi e valori delle relative proprietà in diversi altri modi. Ad esempio, una proprietà di tipo anonimo può richiedere il nome e il valore di una variabile o il nome e il valore di una proprietà di un altro oggetto.  
+- I tipi anonimi possono anche definire i nomi e i valori delle rispettive proprietà in diversi altri modi. Ad esempio, una proprietà di tipo anonimo può assumere sia il nome che il valore di una variabile oppure il nome e il valore di una proprietà di un altro oggetto.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   
-     Per altre informazioni sulle opzioni per la definizione delle proprietà in tipi anonimi, vedere [come: In grado di dedurre i nomi delle proprietà e i tipi nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+     Per ulteriori informazioni sulle opzioni per la definizione delle proprietà nei tipi anonimi [, vedere Procedura: Deduce i tipi e i nomi di proprietà nelle dichiarazioni](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)di tipo anonimo.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Procedura: Dedurre i nomi delle proprietà e i tipi nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Procedura: Deduce i tipi e i nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
-- [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [Procedura: Dichiarare un oggetto utilizzando un inizializzatore di oggetto](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

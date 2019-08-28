@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933604"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044260"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -91,7 +91,7 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
  L'amministratore del computer e il distributore di applicazioni devono prestare molta attenzione durante l'utilizzo di queste due opzioni. Se la registrazione di informazioni personali è abilitata, vengono registrate chiavi di sicurezza e informazioni personali. Se è disabilitata, i dati riservati e le informazioni specifiche dell'applicazione vengono comunque registrati nell'intestazione e nel corpo dei messaggi. Per una discussione più approfondita sulla privacy e sulla protezione delle informazioni personali da esporre, vedere [privacy degli utenti](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  Le PII non sono nascoste nei messaggi in formato non valido. Tali messaggi vengono registrati così come sono, senza alcuna modifica. Gli attributi menzionati prima non hanno alcun effetto su questa situazione.  
+> Le PII non sono nascoste nei messaggi in formato non valido. Tali messaggi vengono registrati così come sono, senza alcuna modifica. Gli attributi menzionati prima non hanno alcun effetto su questa situazione.  
   
 ### <a name="custom-trace-listener"></a>Listener di traccia personalizzato  
  L'aggiunta di un listener di traccia personalizzato sull'origine della traccia di registrazione messaggi è un privilegio che deve essere limitato all'amministratore. Tale limitazione è dovuta al fatto che i listener personalizzati dannosi possono essere configurati per inviare messaggi in modalità remota, con la conseguente divulgazione di informazioni riservate. Se, inoltre, si configura un listener personalizzato affinché invii messaggi in rete, ad esempio a un database remoto, è necessario applicare un controllo di accesso appropriato sui registri dei messaggi nel computer remoto.  

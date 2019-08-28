@@ -2,12 +2,12 @@
 title: Istruzioni del firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961398"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044944"
 ---
 # <a name="firewall-instructions"></a>Istruzioni del firewall
 È necessario abilitare più porte o programmi nel firewall in modo che gli esempi di Windows Communication Foundation (WCF) possano funzionare. In molti degli esempi la comunicano avviene tramite le porte comprese nell'intervallo 8000-8003 e la porta 9000. Il firewall viene attivato per impostazione predefinita e impedisce l'accesso a queste porte. Per abilitare il firewall per gli esempi, completare una delle procedure descritte di seguito, a seconda dei requisiti e dell’ambiente di sicurezza:  
@@ -21,7 +21,7 @@ ms.locfileid: "69961398"
  In caso di dubbi su quale procedura utilizzare, scegliere la prima opzione. Se si sta eseguendo un firewall di un altro fornitore, potrebbe essere necessario apportare modifiche simili.  
   
 > [!IMPORTANT]
->  La modifica della configurazione del firewall influisce sulla sicurezza. È consigliabile registrare le modifiche apportate e rimuoverle una volta completate le operazioni con gli esempi.  
+> La modifica della configurazione del firewall influisce sulla sicurezza. È consigliabile registrare le modifiche apportate e rimuoverle una volta completate le operazioni con gli esempi.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>Abilitazione dei programmi di esempio in anticipo.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "69961398"
 2. Fare clic sul pulsante **Start**, scegliere **Esegui**, quindi digitare `firewall.cpl`. Verrà visualizzata l'applet del **Pannello di controllo Windows Firewall** .  
   
     > [!NOTE]
-    >  Per modificare le impostazioni del firewall ed eseguire gli esempi che richiedono la possibilità di comunicare con Windows Firewall, è necessario disporre delle autorizzazioni necessarie. Se alcune impostazioni del firewall non sono disponibili e il computer è connesso a un dominio, è possibile che queste impostazioni vengano controllate dall'amministratore di sistema tramite Criteri di gruppo.  
+    > Per modificare le impostazioni del firewall ed eseguire gli esempi che richiedono la possibilità di comunicare con Windows Firewall, è necessario disporre delle autorizzazioni necessarie. Se alcune impostazioni del firewall non sono disponibili e il computer è connesso a un dominio, è possibile che queste impostazioni vengano controllate dall'amministratore di sistema tramite Criteri di gruppo.  
   
 3. Completare uno dei passaggi operativi specifici seguente per consentire a un programma l'accesso con Windows Firewall:  
   

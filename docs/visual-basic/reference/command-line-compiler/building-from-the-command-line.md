@@ -13,38 +13,41 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719ca45403ea56a655f06dbfea7c0fb7e32b34f7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839384"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046433"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilazione dalla riga di comando (Visual Basic)
-Un progetto Visual Basic è costituito da uno o più file di origine separato. Durante il processo è noto come la compilazione, questi file vengono riuniti in un pacchetto, ovvero un singolo file eseguibile che può essere eseguito come un'applicazione.  
-  
- Visual Basic fornisce un compilatore da riga di comando come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio. Il compilatore della riga di comando è progettato per le situazioni in cui non richiedono il set completo di funzionalità nell'IDE, ad esempio, quando utilizzano o scrittura per i computer con spazio di archiviazione o memoria limitate sul sistema.  
-  
-  Per compilare i file di origine nell'IDE di Visual Studio, scegliere il **compilare** dalle **compilazione** menu.  
-  
+
+Un progetto Visual Basic è costituito da uno o più file di origine separati. Durante il processo noto come compilazione, questi file vengono raggruppati in un unico pacchetto, ovvero un singolo file eseguibile che può essere eseguito come applicazione.
+
+Visual Basic fornisce un compilatore da riga di comando come alternativa alla compilazione di programmi dall'interno di Visual Studio Integrated Development Environment (IDE). Il compilatore da riga di comando è progettato per le situazioni in cui non è necessario il set completo di funzionalità nell'IDE, ad esempio quando si usa o si scrive per computer con memoria di sistema limitata o spazio di archiviazione.
+
+Per compilare i file di origine dall'IDE di Visual Studio, scegliere il comando **Compila** dal menu **Compila** .
+
 > [!TIP]
->  Quando si compila i file di progetto usando l'IDE di Visual Studio, è possibile visualizzare informazioni sull'oggetto associato **vbc** comando e le opzioni nella finestra di output. Per visualizzare queste informazioni, aprire il [finestra di dialogo Opzioni, progetti e soluzioni, compila ed Esegui](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), quindi impostare il **livello di dettaglio output di compilazione progetto MSBuild** al **normale** o un livello di dettaglio maggiore. Per altre informazioni, vedere [Procedura: Visualizzare, salvare e configurare file di Log di compilazione](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).  
-  
- È possibile compilare i file di progetto (con estensione vbproj) in un prompt dei comandi usando MSBuild. Per altre informazioni, vedere [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) e [procedura dettagliata: Uso di MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Richiamare il compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
- Viene descritto come richiamare il compilatore della riga di comando al prompt di MS-DOS o da una sottodirectory specifica.  
-  
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- Fornisce un elenco di righe di comando di esempio che è possibile modificare per uso personale.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- Fornisce elenchi di opzioni del compilatore, organizzati in ordine alfabetico o per utilizzo generico.  
-  
- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Viene descritto come compilare determinate sezioni di codice.  
-  
- [Building and Cleaning Projects and Solutions in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Compilazione e pulizia di progetti e soluzioni in Visual Studio)  
- Viene descritto come organizzare ciò che verrà incluso nella build diverse, scegliere le proprietà del progetto e assicurarsi che i progetti di compilazione nell'ordine corretto.
+> Quando si compilano i file di progetto usando l'IDE di Visual Studio, è possibile visualizzare informazioni sul comando **vbc** associato e sulle relative opzioni nella finestra output. Per visualizzare queste informazioni, aprire la finestra di [dialogo Opzioni, progetti e soluzioni, compila ed Esegui](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), quindi impostare il livello di **dettaglio dell'output di compilazione del progetto MSBuild** su **normale** o su un livello di dettaglio superiore. Per altre informazioni, vedere [Procedura: Visualizzare, salvare e configurare i file](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)di log di compilazione.
+
+È possibile compilare file di progetto (con estensione vbproj) da un prompt dei comandi utilizzando MSBuild. Per ulteriori informazioni, vedere Guida di riferimento alla riga [di [comando](/visualstudio/msbuild/msbuild-command-line-reference) e procedura dettagliata: Uso di MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Procedura: Richiama il compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+Viene descritto come richiamare il compilatore da riga di comando al prompt di MS-DOS o da una sottodirectory specifica.
+
+[Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+Fornisce un elenco di righe di comando di esempio che è possibile modificare per uso personale.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) \ (Compilatore da riga di comando di Visual Basic)
+Fornisce elenchi di opzioni del compilatore, organizzate in ordine alfabetico o per scopo.
+
+[Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+Viene descritto come compilare sezioni di codice specifiche.
+
+[Compilazione e pulizia di progetti e soluzioni in Visual Studio](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
+Viene descritto come organizzare gli elementi che verranno inclusi in compilazioni diverse, scegliere le proprietà del progetto e assicurarsi che i progetti vengano compilati in base all'ordine corretto.

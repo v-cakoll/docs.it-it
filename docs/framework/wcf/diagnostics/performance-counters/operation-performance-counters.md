@@ -2,12 +2,12 @@
 title: Contatori delle prestazioni per l'operazione
 ms.date: 03/30/2017
 ms.assetid: 333a51e0-f56e-4e1a-b359-5c91ff390568
-ms.openlocfilehash: d4f5755129fecb62e6a4da98a2bf642c5e20f9c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a9b35346333f7b910802ff2a1b1769d177f3952
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916201"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040323"
 ---
 # <a name="operation-performance-counters"></a>Contatori delle prestazioni per l'operazione
 I contatori delle prestazioni per l'operazione si trovano nell'oggetto prestazione `ServiceModelOperation 4.0.0.0` in caso di visualizzazione con Performance Monitor (Perfmon.exe). Ogni operazione ha un'istanza singola. Ovvero, se un determinato contratto ha 10 operazioni, ad esso sono associate 10 istanze di contatore per l'operazione. Le istanze di oggetti vengono denominate usando il modello seguente:  
@@ -19,7 +19,7 @@ I contatori delle prestazioni per l'operazione si trovano nell'oggetto prestazio
  Questo contatore consente di misurare come viene usata la chiamata e le prestazioni dell'operazione.  
   
 > [!CAUTION]
->  Esiste un limite di lunghezza per il nome dell'istanza di un contatore delle prestazioni. Quando un nome di istanza dei contatori Windows Communication Foundation (WCF) supera la lunghezza massima, WCF sostituisce una parte del nome dell'istanza con un valore hash.  
+> Esiste un limite di lunghezza per il nome dell'istanza di un contatore delle prestazioni. Quando il nome di un'istanza del contatore Windows Communication Foundation (WCF) supera la lunghezza massima, WCF sostituisce una parte del nome dell'istanza con un valore hash.  
   
 ## <a name="see-also"></a>Vedere anche
 

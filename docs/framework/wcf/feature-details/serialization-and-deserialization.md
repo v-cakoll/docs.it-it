@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988657"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045843"
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
 Windows Communication Foundation (WCF) include un nuovo motore di serializzazione <xref:System.Runtime.Serialization.DataContractSerializer>, ovvero. Il <xref:System.Runtime.Serialization.DataContractSerializer> viene convertito tra .NET Framework oggetti e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) include un nuovo motore di serializzazion
 - Questa funzionalità può rallentare il processo di serializzazione e di deserializzazione. Anche se i dati non devono essere replicati, i confronti degli oggetti aggiuntivi devono essere eseguiti in questa modalità.  
   
 > [!CAUTION]
->  Quando la modalità `preserveObjectReferences` è attivata, è particolarmente importante impostare il valore `maxItemsInObjectGraph` sulla quota corretta. A causa del modo in cui le matrici sono gestite in questa modalità, è facile per l'autore di un attacco costruire un piccolo messaggio dannoso che comporta un grande consumo di memoria limitato solo dalla quota `maxItemsInObjectGraph` .  
+> Quando la modalità `preserveObjectReferences` è attivata, è particolarmente importante impostare il valore `maxItemsInObjectGraph` sulla quota corretta. A causa del modo in cui le matrici sono gestite in questa modalità, è facile per l'autore di un attacco costruire un piccolo messaggio dannoso che comporta un grande consumo di memoria limitato solo dalla quota `maxItemsInObjectGraph` .  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Specifica di un surrogato del contratto dati  
  Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `dataContractSurrogate` che può essere impostato su `null`. In caso contrario, è possibile utilizzarlo per specificare un *surrogato del contratto dati*che è un tipo che implementa l'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> . È quindi possibile utilizzare l'interfaccia per personalizzare il processo di serializzazione e di deserializzazione. Per ulteriori informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6d67629503d5acfeff7e14e1889a047444a8d399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962376"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044405"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procedura: Creare un flusso di lavoro del diagramma di flusso
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad <xref:System.Activities.Statements.Flowchart> esempio l'attività, che le attività personalizzate della [procedura precedente: Creare un argomento](how-to-create-an-activity.md) di attività. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -52,7 +52,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 9. Fare clic su **Crea variabile**.  
   
     > [!TIP]
-    >  Se non viene visualizzata la casella **Crea variabile** , fare <xref:System.Activities.Statements.Flowchart> clic sull'attività nell'area di progettazione del flusso di lavoro per selezionarla.  
+    > Se non viene visualizzata la casella **Crea variabile** , fare <xref:System.Activities.Statements.Flowchart> clic sull'attività nell'area di progettazione del flusso di lavoro per selezionarla.  
   
 10. Digitare `Guess` nella casella **nome** , selezionare **Int32** dall'elenco a discesa **tipo di variabile** , quindi premere INVIO per salvare la variabile.  
   
@@ -80,7 +80,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la finestra **casella degli strumenti** non è visualizzata, scegliere **casella degli strumenti** dal menu **Visualizza** .  
+    > Se la finestra **casella degli strumenti** non è visualizzata, scegliere **casella degli strumenti** dal menu **Visualizza** .  
   
 3. Trascinare un'attività **prompt** dalla sezione **NumberGuessWorkflowActivities** della **casella degli strumenti**, rilasciarla sotto l'attività **assign** del passaggio precedente e connettere l'attività **prompt** all'attività **assign** . Esistono tre modi per connettere le due attività. Il primo consiste nel connetterli quando si rilascia l'attività **prompt** sul flusso di lavoro. Quando si trascina l'attività **prompt** sul flusso di lavoro, passare il mouse sull'attività **assign** e rilasciarla su uno dei quattro triangoli visualizzati quando l'attività **prompt** è sull'attività **assign** . Il secondo modo consiste nell'eliminare l'attività **prompt** sul flusso di lavoro nella posizione desiderata. Posizionare quindi il puntatore del mouse sull'attività **assign** e trascinare uno dei rettangoli visualizzati fino all'attività **prompt** . Trascinare il mouse in modo che la linea di connessione dall'attività **assign** si connetta a uno dei rettangoli dell'attività **prompt** , quindi rilasciare il pulsante del mouse. Il terzo modo è molto simile al primo, ad eccezione del fatto che anziché trascinare l'attività **prompt** dalla **casella degli strumenti**, trascinarla dalla relativa posizione nell'area di progettazione del flusso di lavoro, posizionarla sull'attività **assign** e rilasciarla su uno dei triangoli visualizzati.  
   
@@ -95,7 +95,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la **finestra Proprietà** non è visualizzata, scegliere **finestra Proprietà** dal menu **Visualizza** .  
+    > Se la **finestra Proprietà** non è visualizzata, scegliere **finestra Proprietà** dal menu **Visualizza** .  
   
 5. Trascinare un'attività **assign** dalla sezione **primitive** della **casella degli strumenti** e connetterla usando uno dei metodi descritti nel passaggio precedente, in modo che si trovi sotto l'attività **prompt** .  
   
@@ -114,7 +114,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 8. Trascinare un'altra attività **FlowDecision** dalla **casella degli strumenti** e rilasciarla sotto la prima. Connettere le due attività trascinando dal rettangolo con etichetta **false** nella parte superiore dell'attività **FlowDecision** al rettangolo nella parte superiore della seconda attività **FlowDecision** .  
   
     > [!TIP]
-    >  Se non vengono visualizzate le etichette **true** e **false** in **FlowDecision**, passare il puntatore del mouse sul **FlowDecision**.  
+    > Se non vengono visualizzate le etichette **true** e **false** in **FlowDecision**, passare il puntatore del mouse sul **FlowDecision**.  
   
 9. Fare clic sulla seconda attività **FlowDecision** per selezionarla. Nella **finestra Proprietà**Digitare l'espressione seguente nella casella valore proprietà **condizione** .  
   

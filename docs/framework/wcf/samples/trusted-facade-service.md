@@ -2,15 +2,15 @@
 title: Servizio facciata attendibile
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665983"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045425"
 ---
 # <a name="trusted-facade-service"></a>Servizio facciata attendibile
-In questo esempio di scenario viene illustrato come propagare le informazioni di identità del chiamante da un servizio a un altro servizio mediante Windows Communication Foundation (WCF) dell'infrastruttura di sicurezza.  
+In questo scenario di esempio viene illustrato come eseguire il flusso delle informazioni di identità del chiamante da un servizio a un altro utilizzando l'infrastruttura di sicurezza Windows Communication Foundation (WCF).  
   
  Si tratta di un modello di progettazione comune per esporre la funzionalità fornita da un servizio alla rete pubblica usando un servizio di facciata. Il servizio di facciata risiede in genere nella rete perimetrale e comunica con un servizio back-end che implementa la regola business e ha accesso ai dati interni. Il canale di comunicazione tra il servizio di facciata e il servizio back-end passa attraverso un firewall e in genere è limitato a un solo obiettivo.  
   
@@ -22,10 +22,10 @@ In questo esempio di scenario viene illustrato come propagare le informazioni di
   
 - Servizio back-end calcolatrice  
   
- Il servizio di facciata ha la responsabilità di convalidare la richiesta e autenticare il chiamante. Una volta completate correttamente l'autenticazione e la convalida, inoltra la richiesta al servizio back-end usando il canale di comunicazione controllato dalla rete perimetrale alla rete interna. I servizio di facciata include come parte della richiesta inoltrata informazioni sull'identità del chiamante, in modo che il servizio back-end possa usare queste informazioni nell'elaborazione. L'identità del chiamante viene trasmessa usando un token di sicurezza `Username` all'interno dell'intestazione di `Security` del messaggio. L'esempio Usa l'infrastruttura di sicurezza WCF per trasmettere ed estrarre informazioni dal `Security` intestazione.  
+ Il servizio di facciata ha la responsabilità di convalidare la richiesta e autenticare il chiamante. Una volta completate correttamente l'autenticazione e la convalida, inoltra la richiesta al servizio back-end usando il canale di comunicazione controllato dalla rete perimetrale alla rete interna. I servizio di facciata include come parte della richiesta inoltrata informazioni sull'identità del chiamante, in modo che il servizio back-end possa usare queste informazioni nell'elaborazione. L'identità del chiamante viene trasmessa usando un token di sicurezza `Username` all'interno dell'intestazione di `Security` del messaggio. Nell'esempio viene utilizzata l'infrastruttura di sicurezza WCF per trasmettere ed estrarre queste informazioni `Security` dall'intestazione.  
   
 > [!IMPORTANT]
->  Il servizio back-end considera attendibile il servizio di facciata per autenticare il chiamante. Di conseguenza il servizio back-end non autentica nuovamente il chiamante, ma usa le informazioni di identità fornite dal servizio di facciata nella richiesta inoltrata. A causa di questa relazione di trust, il servizio back-end deve autenticare il servizio di facciata in modo da assicurare che il messaggio inoltrato provenga da una fonte attendibile, in questo caso, dal servizio di facciata.  
+> Il servizio back-end considera attendibile il servizio di facciata per autenticare il chiamante. Di conseguenza il servizio back-end non autentica nuovamente il chiamante, ma usa le informazioni di identità fornite dal servizio di facciata nella richiesta inoltrata. A causa di questa relazione di trust, il servizio back-end deve autenticare il servizio di facciata in modo da assicurare che il messaggio inoltrato provenga da una fonte attendibile, in questo caso, dal servizio di facciata.  
   
 ## <a name="implementation"></a>Implementazione  
  In questo esempio vengono riportati due percorsi di comunicazione. Il primo è tra il client e il servizio di facciata, il secondo è tra il servizio di facciata e il servizio back-end.  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- Il [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento di associazione si occupa di trasmissione il nome utente e l'estrazione del chiamante iniziale. Il [ \<windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) e [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) occupano di autenticare i servizi back-end e di facciata e protezione dei messaggi.  
+ L'elemento di associazione [> sicurezza si occupa della trasmissione e dell'estrazione del nome utente del chiamante iniziale. \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) WindowsStreamSecurity > e [ TcpTransport>sioccupanodell'autenticazionedeiservizidifacciataeback-endedellaprotezionedeimessaggi\<](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
   
- Per inoltrare la richiesta, l'implementazione del servizio di facciata deve fornire nome utente del chiamante iniziale, in modo che infrastruttura di sicurezza WCF possa posizionarlo nel messaggio inoltrato. Il nome utente del chiamante iniziale viene fornito nell'implementazione del servizio di facciata impostandolo nella proprietà `ClientCredentials` sull'istanza del proxy client che il servizio di facciata usa per comunicare con il servizio back-end.  
+ Per inviare la richiesta, l'implementazione del servizio di facciata deve fornire il nome utente del chiamante iniziale, in modo che l'infrastruttura di sicurezza di WCF possa inserire questo oggetto nel messaggio trasmesso. Il nome utente del chiamante iniziale viene fornito nell'implementazione del servizio di facciata impostandolo nella proprietà `ClientCredentials` sull'istanza del proxy client che il servizio di facciata usa per comunicare con il servizio back-end.  
   
  Nel codice seguente viene illustrata l'implementazione del metodo `GetCallerIdentity` nel servizio di facciata. Gli altri metodi usano lo stesso modello.  
   
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Come illustrato nel codice precedente, la password non viene impostata nella proprietà `ClientCredentials` . Viene impostato solo il nome utente. Infrastruttura di sicurezza WCF crea un token di sicurezza nome utente senza password in questo caso, che è esattamente quello che richiede questo scenario.  
+ Come illustrato nel codice precedente, la password non viene impostata nella proprietà `ClientCredentials` . Viene impostato solo il nome utente. L'infrastruttura di sicurezza di WCF crea un token di sicurezza del nome utente senza una password in questo caso, che è esattamente ciò che è necessario in questo scenario.  
   
- Nel servizio back-end, le informazioni contenute nel token di sicurezza del nome utente devono essere autenticate. Per impostazione predefinita, sicurezza WCF tenta di eseguire il mapping all'utente a un account di Windows con la password fornita. In questo caso non è stata fornita una password e non è necessario che il servizio back-end autentichi il nome utente, visto che l'autenticazione è già stata eseguita dal servizio di facciata. Per implementare questa funzionalità in WCF, un oggetto personalizzato `UserNamePasswordValidator` viene specificato che impone solo che un nome utente viene specificato nel token e non esegue altre autenticazioni.  
+ Nel servizio back-end, le informazioni contenute nel token di sicurezza del nome utente devono essere autenticate. Per impostazione predefinita, la sicurezza WCF tenta di eseguire il mapping dell'utente a un account di Windows usando la password fornita. In questo caso non è stata fornita una password e non è necessario che il servizio back-end autentichi il nome utente, visto che l'autenticazione è già stata eseguita dal servizio di facciata. Per implementare questa funzionalità in WCF, viene fornito `UserNamePasswordValidator` un personalizzato che impone solo che venga specificato un nome utente nel token e non esegua alcuna autenticazione aggiuntiva.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -260,7 +260,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -276,17 +276,17 @@ Press <ENTER> to terminate client.
   
 5. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-6. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Se il client e il servizio non sono in grado di comunicare, vedere [Suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
 1. Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

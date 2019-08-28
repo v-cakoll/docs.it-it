@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d30384ea8b9ff4eee41abd43ae39486f770039e7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736193"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041431"
 ---
 # <a name="getcorsystemdirectory-function"></a>Funzione GetCORSystemDirectory
-Restituisce la directory di installazione di common language runtime (CLR) che viene caricato nel processo. La directory di installazione è completo, ad esempio, "c:\windows\microsoft.net\framework\v1.0.3705".  
+Restituisce la directory di installazione del Common Language Runtime (CLR) che viene caricata nel processo. La directory di installazione è completamente qualificata, ad esempio "c:\Windows\Microsoft.net\framework\v1.0.3705".  
   
- Questa funzione è deprecata. Viene sostituito dal [GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) metodo fornito in .NET Framework 4.  
+ Questa funzione è deprecata. Viene sostituito dal metodo [ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) fornito nella .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,25 +41,25 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametri  
  `pbuffer`  
- [out] Un buffer in cui il runtime restituisce una stringa che contiene il nome completo della directory di installazione per il runtime che viene caricato nel processo. Se il runtime non è ancora stato caricato nel processo, la funzione restituisce le informazioni di directory appropriato per la versione più recente del runtime installata nel computer.  
+ out Buffer in cui il runtime restituisce una stringa che contiene il nome completo della directory di installazione per il runtime caricato nel processo. Se il runtime non è ancora stato caricato nel processo, la funzione restituisce le informazioni di directory appropriate per la versione più recente del runtime installato nel computer.  
   
  `cchBuffer`  
- [in] Le dimensioni, in byte, di `pbuffer`.  
+ in Dimensione, in byte, di `pbuffer`.  
   
  `dwLength`  
- [out] Il numero di caratteri restituiti nella `pbuffer`.  
+ out Numero di caratteri restituiti in `pbuffer`.  
   
 ## <a name="remarks"></a>Note  
   
 > [!CAUTION]
->  Non usare questa funzione nei processi che eseguono la versione 4 di CLR. Se nel computer è installata una versione precedente di Common Language Runtime, questa funzione restituisce la directory di installazione per la versione.  
+> Non utilizzare questa funzione nei processi che eseguono la versione 4 di CLR. Se nel computer è installata una versione precedente di CLR, questa funzione restituisce la directory di installazione per tale versione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria** MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

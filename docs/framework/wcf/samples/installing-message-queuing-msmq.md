@@ -2,12 +2,12 @@
 title: Installazione accodamento messaggi (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935986"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039616"
 ---
 # <a name="installing-message-queuing-msmq"></a>Installazione accodamento messaggi (MSMQ)
 Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accodamento messaggi 3.0.  
@@ -54,7 +54,7 @@ Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accoda
 3. Selezionare Accodamento messaggi e fare clic su **Dettagli**.  
   
     > [!NOTE]
-    >  Se è in esecuzione [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], selezionare Server applicazioni per accedere a Accodamento messaggi.  
+    > Se è in esecuzione [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], selezionare Server applicazioni per accedere a Accodamento messaggi.  
   
 4. Assicurarsi che l'opzione Supporto HTTP MSMQ sia selezionata nella pagina dei dettagli.  
   

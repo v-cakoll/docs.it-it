@@ -2,115 +2,117 @@
 title: Channel factory e memorizzazione nella cache
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 94b3cb22c76a215944d044db0f4392005e49f2ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98b77071204e2c2f98609e6c5bb1ca84a896dd58
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645413"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040206"
 ---
 # <a name="channel-factory-and-caching"></a>Channel factory e memorizzazione nella cache
-Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.ChannelFactory%601> per creare un canale di comunicazione con un servizio WCF.  La creazione di istanze dell'oggetto <xref:System.ServiceModel.ChannelFactory%601> comporta un sovraccarico perché include le seguenti operazioni:  
-  
-- Costruzione dell'albero <xref:System.ServiceModel.Description.ContractDescription>  
-  
-- Reflection di tutti i tipi CLR obbligatori  
-  
-- Costruzione dello stack dei canali  
-  
-- Eliminazione di risorse  
-  
- Per ridurre il sovraccarico, WCF può memorizzare le channel factory nella cache quando si utilizza un proxy client WCF.  
-  
+
+Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.ChannelFactory%601> per creare un canale di comunicazione con un servizio WCF.  La creazione di istanze dell'oggetto <xref:System.ServiceModel.ChannelFactory%601> comporta un sovraccarico perché include le seguenti operazioni:
+
+- Costruzione dell'albero <xref:System.ServiceModel.Description.ContractDescription>
+
+- Reflection di tutti i tipi CLR obbligatori
+
+- Costruzione dello stack dei canali
+
+- Eliminazione di risorse
+
+Per ridurre il sovraccarico, WCF può memorizzare le channel factory nella cache quando si utilizza un proxy client WCF.
+
 > [!TIP]
->  Si dispone di un controllo diretto sulla creazione della channel factory quando si utilizza direttamente la classe <xref:System.ServiceModel.ChannelFactory%601>.  
-  
- Proxy client WCF generati con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derivano dalla <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definisce una proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> statica che definisce il comportamento di memorizzazione nella cache della channel factory. Le impostazioni della cache vengono effettuate per un tipo specifico. Ad esempio, impostando `ClientBase<ITest>.CacheSettings` a uno dei valori definiti di seguito influirà solo quei proxy a/ClientBase di tipo `ITest`. L'impostazione della cache per un oggetto <xref:System.ServiceModel.ClientBase%601> particolare non è più modificabile non appena viene creata la prima istanza di proxy/ClientBase.  
-  
-## <a name="specifying-caching-behavior"></a>Specifica del comportamento di memorizzazione nella cache  
- Il comportamento di memorizzazione nella cache viene specificato impostando la proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting> su uno dei seguenti valori.  
-  
-|Valore di impostazione della cache|Descrizione|  
-|-------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Tutte le istanze di <xref:System.ServiceModel.ClientBase%601> nel dominio applicazione possono partecipare alla memorizzazione nella cache. Lo sviluppatore ha stabilito che non esistono implicazioni negative sulla sicurezza relativamente alla memorizzazione nella cache. La memorizzazione nella cache verrà non attivata off anche se "protezione" le proprietà <xref:System.ServiceModel.ClientBase%601> sono accessibili. La proprietà "sensibili alla sicurezza" del <xref:System.ServiceModel.ClientBase%601> vengono <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> e <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Solo le istanze di <xref:System.ServiceModel.ClientBase%601> create da endpoint definiti nei file di configurazione partecipano alla memorizzazione nella cache nel dominio applicazione. Tutte le istanze di <xref:System.ServiceModel.ClientBase%601> create a livello di codice all'interno del dominio applicazione non prenderanno parte alla memorizzazione nella cache. Inoltre, la memorizzazione nella cache verrà disabilitata per un'istanza di <xref:System.ServiceModel.ClientBase%601> una volta che si accede a nessuna delle sue proprietà "sensibili alla sicurezza".|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|La memorizzazione nella cache è disabilitata per tutte le istanze di <xref:System.ServiceModel.ClientBase%601> di un tipo specifico all'interno del dominio applicazione in questione.|  
-  
- Nei frammenti di codice riportati di seguito viene illustrato come utilizzare la proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))   
-         {   
-            // ...  
-            proxy.Test(msg);   
-            // ...  
-         }   
-      }   
-   }   
-}  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest { }  
-```  
-  
- Nel codice precedente, tutte le istanze di `TestClient` utilizzeranno la stessa channel factory.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.Default;   
-      int i = 1;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            if (i == 4)   
-            {   
-               ServiceEndpoint endpoint = proxy.Endpoint;   
-               ... // use endpoint in some way   
-            }   
-            proxy.Test(msg);   
-         }   
-         i++;   
-   }   
-}   
-  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano la stessa channel factory, eccetto l'istanza numero 4. L'istanza numero 4 utilizza una channel factory creata in modo specifico per il relativo utilizzo. Questa impostazione viene utilizzata per scenari in cui un endpoint particolare necessita di impostazioni di sicurezza diverse dagli altri endpoint dello stesso tipo di channel factory, in questo caso `ITest`.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.AlwaysOff;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            proxy.Test(msg);   
-         }           
-      }   
-   }  
-}  
-  
-// Generated by SvcUtil.exe   
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano channel factory diverse. Ciò è utile quando ogni endpoint presenta requisiti di sicurezza diversi e la memorizzazione nella cache non è appropriata.  
-  
+> Si dispone di un controllo diretto sulla creazione della channel factory quando si utilizza direttamente la classe <xref:System.ServiceModel.ChannelFactory%601>.
+
+I proxy client WCF generati con [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sono <xref:System.ServiceModel.ClientBase%601>derivati da. <xref:System.ServiceModel.ClientBase%601> definisce una proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> statica che definisce il comportamento di memorizzazione nella cache della channel factory. Le impostazioni della cache vengono effettuate per un tipo specifico. Ad esempio, l' `ClientBase<ITest>.CacheSettings` impostazione di su uno dei valori definiti di seguito influirà solo su proxy/ClientBase di `ITest`tipo. L'impostazione della cache per un oggetto <xref:System.ServiceModel.ClientBase%601> particolare non è più modificabile non appena viene creata la prima istanza di proxy/ClientBase.
+
+## <a name="specifying-caching-behavior"></a>Specifica del comportamento di memorizzazione nella cache
+
+Il comportamento di memorizzazione nella cache viene specificato impostando la proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting> su uno dei seguenti valori.
+
+|Valore di impostazione della cache|Descrizione|
+|-------------------------|-----------------|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Tutte le istanze di <xref:System.ServiceModel.ClientBase%601> nel dominio applicazione possono partecipare alla memorizzazione nella cache. Lo sviluppatore ha stabilito che non esistono implicazioni negative sulla sicurezza relativamente alla memorizzazione nella cache. La memorizzazione nella cache non verrà disattivata anche se si accede a proprietà con <xref:System.ServiceModel.ClientBase%601> distinzione di sicurezza. Le proprietà "sensibili per la sicurezza" <xref:System.ServiceModel.ClientBase%601> di <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>sono <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> , <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>e.|
+|<xref:System.ServiceModel.CacheSetting.Default>|Solo le istanze di <xref:System.ServiceModel.ClientBase%601> create da endpoint definiti nei file di configurazione partecipano alla memorizzazione nella cache nel dominio applicazione. Tutte le istanze di <xref:System.ServiceModel.ClientBase%601> create a livello di codice all'interno del dominio applicazione non prenderanno parte alla memorizzazione nella cache. Inoltre, la memorizzazione nella cache verrà disabilitata per un' <xref:System.ServiceModel.ClientBase%601> istanza di una volta che viene eseguito l'accesso a una qualsiasi delle proprietà "sensibili per la sicurezza".|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|La memorizzazione nella cache è disabilitata per tutte le istanze di <xref:System.ServiceModel.ClientBase%601> di un tipo specifico all'interno del dominio applicazione in questione.|
+
+Nei frammenti di codice riportati di seguito viene illustrato come utilizzare la proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))
+         {
+            // ...
+            proxy.Test(msg);
+            // ...
+         }
+      }
+   }
+}
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest { }
+```
+
+Nel codice precedente, tutte le istanze di `TestClient` utilizzeranno la stessa channel factory.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.Default;
+      int i = 1;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            if (i == 4)
+            {
+               ServiceEndpoint endpoint = proxy.Endpoint;
+               ... // use endpoint in some way
+            }
+            proxy.Test(msg);
+         }
+         i++;
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano la stessa channel factory, eccetto l'istanza numero 4. L'istanza numero 4 utilizza una channel factory creata in modo specifico per il relativo utilizzo. Questa impostazione viene utilizzata per scenari in cui un endpoint particolare necessita di impostazioni di sicurezza diverse dagli altri endpoint dello stesso tipo di channel factory, in questo caso `ITest`.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.AlwaysOff;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            proxy.Test(msg);
+         }
+      }
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano channel factory diverse. Ciò è utile quando ogni endpoint presenta requisiti di sicurezza diversi e la memorizzazione nella cache non è appropriata.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.ClientBase%601>

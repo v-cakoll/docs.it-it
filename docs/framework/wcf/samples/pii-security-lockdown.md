@@ -2,12 +2,12 @@
 title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f82d3f19a3bf6fc6a5ac038034880dafc03fcce1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964600"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044795"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) tramite:  
@@ -19,13 +19,13 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 - Controllando la registrazione delle informazioni personali (PII) nei log di traccia e dei messaggi.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discussione  
  Queste funzionalità possono essere usate separatamente o tutte insieme per controllare gli aspetti della sicurezza di un servizio. Non si tratta di una guida definitiva per la protezione di un servizio WCF.  
@@ -120,7 +120,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 > System.Diagnostics ignora tutti gli attributi di tutte le origini tranne la prima elencata nel file di configurazione. Aggiungendo l'attributo `logKnownPii` alla seconda origine nel file di configurazione non ha alcun effetto.  
   
 > [!IMPORTANT]
->  Per eseguire questo esempio è necessario modificare manualmente Machine.config. È necessario fare attenzione nel modificare Machine.config, visto che valori o sintassi errati possono impedire l'esecuzione di tutte le applicazioni .NET Framework.  
+> Per eseguire questo esempio è necessario modificare manualmente Machine.config. È necessario fare attenzione nel modificare Machine.config, visto che valori o sintassi errati possono impedire l'esecuzione di tutte le applicazioni .NET Framework.  
   
  È inoltre possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962354"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044393"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedura: Creare un flusso di lavoro della macchina a stati
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad <xref:System.Activities.Statements.StateMachine> esempio l'attività, che le attività personalizzate della [procedura precedente: Creare un argomento](how-to-create-an-activity.md) di attività. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -52,7 +52,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 9. Fare clic su **Crea variabile**.  
   
     > [!TIP]
-    >  Se non viene visualizzata la casella **Crea variabile** , fare <xref:System.Activities.Statements.StateMachine> clic sull'attività nell'area di progettazione del flusso di lavoro per selezionarla.  
+    > Se non viene visualizzata la casella **Crea variabile** , fare <xref:System.Activities.Statements.StateMachine> clic sull'attività nell'area di progettazione del flusso di lavoro per selezionarla.  
   
 10. Digitare `Guess` nella casella **nome** , selezionare **Int32** dall'elenco a discesa **tipo di variabile** , quindi premere INVIO per salvare la variabile.  
   
@@ -67,7 +67,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 1. Fare clic su **state1** per selezionarlo. Nella **finestra Proprietà**modificare `Initialize Target` **DisplayName** in.  
   
     > [!TIP]
-    >  Se la **finestra Proprietà** non è visualizzata, scegliere **finestra Proprietà** dal menu **Visualizza** .  
+    > Se la **finestra Proprietà** non è visualizzata, scegliere **finestra Proprietà** dal menu **Visualizza** .  
   
 2. Fare doppio clic sullo stato **Initialize Target** appena rinominato nella finestra di progettazione del flusso di lavoro per espanderlo.  
   
@@ -82,7 +82,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la finestra **casella degli strumenti** non è visualizzata, scegliere **casella degli strumenti** dal menu **Visualizza** .  
+    > Se la finestra **casella degli strumenti** non è visualizzata, scegliere **casella degli strumenti** dal menu **Visualizza** .  
   
 4. Tornare alla visualizzazione complessiva della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella parte superiore della finestra di progettazione del flusso di lavoro.  
   

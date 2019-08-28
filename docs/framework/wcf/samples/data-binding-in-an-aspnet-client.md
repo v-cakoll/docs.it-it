@@ -2,12 +2,12 @@
 title: Data binding in un client ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 7b466c8282544f00ae314aa54845644e7215f8d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5faeb99fa8fb153f1ab74f5f00786355af50016
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953508"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045087"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Data binding in un client ASP.NET
 In questo esempio viene illustrato come associare i dati restituiti da un tipico servizio Windows Communication Foundation (WCF) in un'applicazione Web Form.  
@@ -30,10 +30,10 @@ In questo esempio viene illustrato come associare i dati restituiti da un tipico
 3. Il client di questo esempio è un sito Web che è in esecuzione sotto un server Web di sviluppo. Per avviare il server Web di sviluppo, digitare quanto segue al prompt dei comandi `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`:. Quindi passare a `http://localhost:8000/client`. Per eseguire questo esempio tra più computer, sostituire tutti i riferimenti a `localhost` nel file Web.config del client con il nome del computer che ospita il server.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
+> Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`
