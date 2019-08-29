@@ -3,12 +3,12 @@ title: Migrazione di .NET Core da project.json
 description: Informazioni su come eseguire la migrazione di un progetto .NET Core meno recente usando project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663344"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105301"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrazione di progetti .NET Core da project.json
 
@@ -78,13 +78,13 @@ Se si sta ancora usando DNX per lo sviluppo di .NET Core, il processo di migrazi
 
 Il formato di file csproj di .NET Core è stato modificato e si è evoluto ad ogni versione provvisoria degli strumenti. Non esiste alcuno strumento che possa eseguire la migrazione del file di progetto da versioni precedenti del formato csproj alla versione più recente, pertanto è necessario modificare manualmente il file di progetto. I passaggi effettivi dipendono dalla versione del file di progetto di cui si esegue la migrazione. Di seguito vengono riportate alcune indicazioni da considerare in base alle modifiche avvenute tra le versioni:
 
-* Rimuovere la proprietà della versione dall'elemento `<Project>`, se presente.
-* Rimuovere lo spazio dei nomi XML (`xmlns`) dall'elemento `<Project>`.
-* Se non è presente, aggiungere l'attributo `Sdk` all'elemento `<Project>` e impostarlo su `Microsoft.NET.Sdk` o su `Microsoft.NET.Sdk.Web`. Questo attributo specifica che il progetto usa l'SDK corretto. `Microsoft.NET.Sdk.Web` viene usato per le applicazioni web.
-* Rimuovere le istruzioni `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` nella parte superiore e inferiore del progetto. Queste istruzioni di importazione sono previste dall'SDK, pertanto non sono necessarie nel progetto.
-* Se sono presenti gli elementi `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` nel progetto, è necessario rimuoverli. Questi riferimenti al pacchetto sono [impliciti nell'SDK](https://aka.ms/sdkimplicitrefs).
-* Rimuovere l'elemento `Microsoft.NET.Sdk` `<PackageReference>`, se presente. Il riferimento all'SDK viene specificato tramite l'attributo `Sdk` dell'elemento `<Project>`.
-* Rimuovere i [GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) che sono [impliciti nell'SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Se i glob vengono lasciati nel progetto, verrà visualizzato un errore in fase di compilazione poiché gli elementi di compilazione verranno duplicati.
+- Rimuovere la proprietà della versione dall'elemento `<Project>`, se presente.
+- Rimuovere lo spazio dei nomi XML (`xmlns`) dall'elemento `<Project>`.
+- Se non è presente, aggiungere l'attributo `Sdk` all'elemento `<Project>` e impostarlo su `Microsoft.NET.Sdk` o su `Microsoft.NET.Sdk.Web`. Questo attributo specifica che il progetto usa l'SDK corretto. `Microsoft.NET.Sdk.Web` viene usato per le applicazioni web.
+- Rimuovere le istruzioni `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` nella parte superiore e inferiore del progetto. Queste istruzioni di importazione sono previste dall'SDK, pertanto non sono necessarie nel progetto.
+- Se sono presenti gli elementi `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` nel progetto, è necessario rimuoverli. Questi riferimenti al pacchetto sono [impliciti nell'SDK](https://aka.ms/sdkimplicitrefs).
+- Rimuovere l'elemento `Microsoft.NET.Sdk` `<PackageReference>`, se presente. Il riferimento all'SDK viene specificato tramite l'attributo `Sdk` dell'elemento `<Project>`.
+- Rimuovere i [GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) che sono [impliciti nell'SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Se i glob vengono lasciati nel progetto, verrà visualizzato un errore in fase di compilazione poiché gli elementi di compilazione verranno duplicati.
 
 Dopo questi passaggi, il progetto sarà completamente compatibile con la versione RTM del formato di file csproj.
 
