@@ -3,12 +3,12 @@ title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706533"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105659"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
 
@@ -51,28 +51,28 @@ L'output del programma viene prodotto dal metodo `WriteLine` della classe `Conso
 
 Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#.  Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche offrono informazioni di base su tutti gli elementi del linguaggio C# e forniscono le informazioni necessarie per approfondire le caratteristiche di questi ultimi:
 
-* [Struttura del programma](program-structure.md)
+- [Struttura del programma](program-structure.md)
   - Vengono descritti i concetti organizzativi chiave di C#: ***programmi***, ***spazi dei nomi***, ***tipi***, ***membri*** e ***assembly***.
-* [Tipi e variabili](types-and-variables.md)
+- [Tipi e variabili](types-and-variables.md)
   - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
-* [Espressioni](expressions.md)
+- [Espressioni](expressions.md)
   - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori*** e producono un valore.
-* [Istruzioni](statements.md)
+- [Istruzioni](statements.md)
   - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
-* [Classi e oggetti](classes-and-objects.md)
+- [Classi e oggetti](classes-and-objects.md)
   - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
-* [Struct](structs.md)
+- [Struct](structs.md)
   - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
-* [Matrici](arrays.md)
+- [Matrici](arrays.md)
   - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
-* [Interfacce](interfaces.md)
+- [Interfacce](interfaces.md)
   - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
-* [Enumerazioni](enums.md)
+- [Enumerazioni](enums.md)
   - Un ***tipo enum*** è un tipo valore distinto con un set di costanti denominate.
-* [Delegati](delegates.md)
+- [Delegati](delegates.md)
   - Un ***tipo delegato*** rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
-* [Attributi](attributes.md)
-  * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
+- [Attributi](attributes.md)
+  - Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
 
 > [!div class="step-by-step"]
 > [avanti](program-structure.md)

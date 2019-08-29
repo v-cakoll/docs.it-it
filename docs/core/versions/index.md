@@ -4,12 +4,12 @@ description: Questo articolo illustra come viene specificata la versione di .NET
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646865"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104962"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
@@ -36,8 +36,8 @@ La terza posizione del numero di versione del SDK comunica la versione secondari
 
 NOTE:
 
-* Se il SDK registra 10 aggiornamenti delle funzionalità prima che sia disponibile un aggiornamento delle funzionalità del runtime, i numeri di versione vengono moltiplicati per 1000 e ad esempio la versione con funzionalità 2.2.900 viene seguita dalla versione 2.2.1000. Non è previsto che si verifichi questa situazione.
-* È molto improbabile che vengano rilasciate 99 patch senza il rilascio di una versione con funzionalità. Quando una versione si avvicina a questo numero, forza il rilascio di una versione con funzionalità.
+- Se il SDK registra 10 aggiornamenti delle funzionalità prima che sia disponibile un aggiornamento delle funzionalità del runtime, i numeri di versione vengono moltiplicati per 1000 e ad esempio la versione con funzionalità 2.2.900 viene seguita dalla versione 2.2.1000. Non è previsto che si verifichi questa situazione.
+- È molto improbabile che vengano rilasciate 99 patch senza il rilascio di una versione con funzionalità. Quando una versione si avvicina a questo numero, forza il rilascio di una versione con funzionalità.
 
 Altri dettagli sono disponibili nella proposta iniziale, nel repository [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
@@ -55,24 +55,24 @@ Le parti facoltative `PRERELEASE` e `BUILDNUMBER` non fanno mai parte delle vers
 
 `MAJOR` viene incrementato quando:
 
-* Si apportano modifiche significative al prodotto o lo sviluppo dello stesso prende una nuova direzione.
-* Vengono effettuate modifiche importanti. L'accettazione di modifiche importanti è soggetta a una valutazione approfondita.
-* Una versione precedente non è più supportata.
-* Viene adottata una versione `MAJOR` più recente di una dipendenza esistente.
+- Si apportano modifiche significative al prodotto o lo sviluppo dello stesso prende una nuova direzione.
+- Vengono effettuate modifiche importanti. L'accettazione di modifiche importanti è soggetta a una valutazione approfondita.
+- Una versione precedente non è più supportata.
+- Viene adottata una versione `MAJOR` più recente di una dipendenza esistente.
 
 `MINOR` viene incrementato quando:
 
-* Viene aggiunta la superficie di attacco dell'API pubblica.
-* Viene aggiunto un nuovo comportamento.
-* Viene adottata una versione `MINOR` più recente di una dipendenza esistente.
-* Viene introdotta una nuova dipendenza.
+- Viene aggiunta la superficie di attacco dell'API pubblica.
+- Viene aggiunto un nuovo comportamento.
+- Viene adottata una versione `MINOR` più recente di una dipendenza esistente.
+- Viene introdotta una nuova dipendenza.
 
 `PATCH` viene incrementato quando:
 
-* Vengono eseguite correzioni di bug.
-* Viene aggiunto il supporto per una piattaforma più recente.
-* Viene adottata una versione `PATCH` più recente di una dipendenza esistente.
-* Qualsiasi altra modifica non corrisponde a uno dei casi precedenti.
+- Vengono eseguite correzioni di bug.
+- Viene aggiunto il supporto per una piattaforma più recente.
+- Viene adottata una versione `PATCH` più recente di una dipendenza esistente.
+- Qualsiasi altra modifica non corrisponde a uno dei casi precedenti.
 
 Quando sono presenti più modifiche, viene incrementato l'elemento maggiore interessato da singole modifiche e quelli che seguono vengono reimpostati a zero. Ad esempio, quando `MAJOR` viene incrementato, `MINOR` e `PATCH` vengono reimpostati su zero. Quando `MINOR` viene incrementato, `PATCH` viene reimpostato su zero mentre `MAJOR` viene lasciato invariato.
 
