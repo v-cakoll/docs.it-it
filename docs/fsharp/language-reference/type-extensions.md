@@ -2,20 +2,20 @@
 title: Estensioni di tipo
 description: Informazioni su F# come le estensioni di tipo consentono di aggiungere nuovi membri a un tipo di oggetto definito in precedenza.
 ms.date: 02/08/2019
-ms.openlocfilehash: 502b8636052139b39c800447870c6076a8cd2643
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d31d87095d3381e66dc32da4b6d7bb746886406
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630195"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106849"
 ---
 # <a name="type-extensions"></a>Estensioni di tipo
 
 Le estensioni di tipo (dette anche potenziamenti) sono una famiglia di funzionalità che consentono di aggiungere nuovi membri a un tipo di oggetto definito in precedenza. Le tre funzionalità sono:
 
-* Estensioni di tipo intrinseco
-* Estensioni di tipo facoltative
-* Metodi di estensione
+- Estensioni di tipo intrinseco
+- Estensioni di tipo facoltative
+- Metodi di estensione
 
 Ognuno di essi può essere usato in scenari diversi e presenta compromessi diversi.
 
@@ -66,9 +66,9 @@ type Variant with
 
 L'utilizzo di un'estensione di tipo consente di separare ognuno dei seguenti elementi:
 
-* Dichiarazione di un `Variant` tipo
-* Funzionalità per stampare la `Variant` classe in base alla relativa forma
-* Un modo per accedere alla funzionalità di stampa con la notazione `.`in stile oggetto
+- Dichiarazione di un `Variant` tipo
+- Funzionalità per stampare la `Variant` classe in base alla relativa forma
+- Un modo per accedere alla funzionalità di stampa con la notazione `.`in stile oggetto
 
 Si tratta di un'alternativa alla definizione di tutti gli elementi `Variant`come membro di. Sebbene non si tratta di un approccio intrinsecamente migliore, può trattarsi di una rappresentazione più pulita delle funzionalità in alcune situazioni.
 
@@ -121,9 +121,9 @@ type IEnumerable<'T> with
 
 Non è possibile fare in modo che questo codice funzioni con un'estensione di tipo facoltativa:
 
-* Così come è, `Sum` il membro ha un vincolo diverso `'T` in`static member get_Zero` ( `static member (+)`e) rispetto a quello definito dall'estensione del tipo.
-* La modifica dell'estensione di tipo in modo che abbia `Sum` lo stesso vincolo di non corrisponderà più `IEnumerable<'T>`al vincolo definito in.
-* Se `member this.Sum` si `member inline this.Sum` modifica in, viene fornito un errore che non corrisponde ai vincoli di tipo.
+- Così come è, `Sum` il membro ha un vincolo diverso `'T` in`static member get_Zero` ( `static member (+)`e) rispetto a quello definito dall'estensione del tipo.
+- La modifica dell'estensione di tipo in modo che abbia `Sum` lo stesso vincolo di non corrisponderà più `IEnumerable<'T>`al vincolo definito in.
+- Se `member this.Sum` si `member inline this.Sum` modifica in, viene fornito un errore che non corrisponde ai vincoli di tipo.
 
 Gli elementi desiderati sono metodi statici che "fluttuano nello spazio" e possono essere presentati come se estendono un tipo. Questa è la posizione in cui i metodi di estensione diventano necessari.
 
@@ -150,22 +150,22 @@ Se usato, questo codice lo farà apparire come se `Sum` fosse definito in <xref:
 
 Le estensioni del tipo hanno anche gli attributi seguenti:
 
-* Tutti i tipi a cui è possibile accedere possono essere estesi.
-* Le estensioni di tipo intrinseco e facoltativo possono definire _qualsiasi_ tipo di membro, non solo metodi. È possibile, ad esempio, anche le proprietà di estensione.
-* Il `self-identifier` token nella [sintassi](type-extensions.md#syntax) rappresenta l'istanza del tipo richiamato, esattamente come i membri normali.
-* I membri estesi possono essere membri statici o di istanza.
-* Le variabili di tipo in un'estensione del tipo devono corrispondere ai vincoli del tipo dichiarato.
+- Tutti i tipi a cui è possibile accedere possono essere estesi.
+- Le estensioni di tipo intrinseco e facoltativo possono definire _qualsiasi_ tipo di membro, non solo metodi. È possibile, ad esempio, anche le proprietà di estensione.
+- Il `self-identifier` token nella [sintassi](type-extensions.md#syntax) rappresenta l'istanza del tipo richiamato, esattamente come i membri normali.
+- I membri estesi possono essere membri statici o di istanza.
+- Le variabili di tipo in un'estensione del tipo devono corrispondere ai vincoli del tipo dichiarato.
 
 Per le estensioni di tipo esistono anche le limitazioni seguenti:
 
-* Le estensioni di tipo non supportano metodi virtuali o astratti.
-* Le estensioni di tipo non supportano i metodi di override come aumenti.
-* Le estensioni di tipo non supportano i [parametri di tipo risolti staticamente](./generics/statically-resolved-type-parameters.md).
-* Le estensioni di tipo facoltative non supportano i costruttori come aumenti.
-* Non è possibile definire le estensioni di tipo per le abbreviazioni di [tipo](type-abbreviations.md).
-* Le estensioni di tipo non sono `byref<'T>` valide per (anche se possono essere dichiarate).
-* Le estensioni di tipo non sono valide per gli attributi (anche se possono essere dichiarate).
-* È possibile definire estensioni che sovraccaricano altri metodi con lo stesso nome, ma F# il compilatore fornisce la preferenza a metodi non di estensione se è presente una chiamata ambigua.
+- Le estensioni di tipo non supportano metodi virtuali o astratti.
+- Le estensioni di tipo non supportano i metodi di override come aumenti.
+- Le estensioni di tipo non supportano i [parametri di tipo risolti staticamente](./generics/statically-resolved-type-parameters.md).
+- Le estensioni di tipo facoltative non supportano i costruttori come aumenti.
+- Non è possibile definire le estensioni di tipo per le abbreviazioni di [tipo](type-abbreviations.md).
+- Le estensioni di tipo non sono `byref<'T>` valide per (anche se possono essere dichiarate).
+- Le estensioni di tipo non sono valide per gli attributi (anche se possono essere dichiarate).
+- È possibile definire estensioni che sovraccaricano altri metodi con lo stesso nome, ma F# il compilatore fornisce la preferenza a metodi non di estensione se è presente una chiamata ambigua.
 
 Infine, se esistono più estensioni di tipo intrinseco per un tipo, tutti i membri devono essere univoci. Per le estensioni di tipo facoltative, i membri di diverse estensioni di tipo dello stesso tipo possono avere gli stessi nomi. Gli errori di ambiguità si verificano solo se il codice client apre due ambiti diversi che definiscono gli stessi nomi dei membri.
 

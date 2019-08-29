@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 417d8f00c9323f096a2d6228e853a55b1573f48c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588536"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106721"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: Usare fusi orari nell'aritmetica di data e ora
 
-In genere, quando si esegue Data e ora utilizzando aritmetica <xref:System.DateTime> o <xref:System.DateTimeOffset> valori, il risultato non riflette eventuali regole di rettifica del fuso orario. Questo vale anche quando il fuso orario del valore di data e ora è chiaramente identificabile (ad esempio, quando la <xref:System.DateTime.Kind%2A> è impostata su <xref:System.DateTimeKind.Local>). In questo argomento viene illustrato come eseguire operazioni aritmetiche su valori di data e ora appartenenti a un determinato fuso orario. I risultati delle operazioni aritmetiche rifletteranno le regole di rettifica del fuso orario.
+In genere, quando si eseguono operazioni aritmetiche di data <xref:System.DateTime> e <xref:System.DateTimeOffset> ora usando i valori o, il risultato non riflette alcuna regola di regolazione del fuso orario. Questo vale anche quando il fuso orario del valore di data e ora è chiaramente identificabile (ad esempio, quando la <xref:System.DateTime.Kind%2A> proprietà è impostata su <xref:System.DateTimeKind.Local>). In questo argomento viene illustrato come eseguire operazioni aritmetiche su valori di data e ora appartenenti a un determinato fuso orario. I risultati delle operazioni aritmetiche rifletteranno le regole di rettifica del fuso orario.
 
 ### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>Per applicare regole di rettifica ai calcoli aritmetici di data e ora
 
-1. Implementare un metodo per vincolare un valore di data e ora al fuso orario al quale appartiene. Ad esempio, dichiarare una struttura che include sia il valore di data e ora sia il fuso orario al quale appartiene. L'esempio seguente usa questo approccio per collegare un <xref:System.DateTime> valore al proprio fuso orario.
+1. Implementare un metodo per vincolare un valore di data e ora al fuso orario al quale appartiene. Ad esempio, dichiarare una struttura che include sia il valore di data e ora sia il fuso orario al quale appartiene. Nell'esempio seguente viene usato questo approccio per collegare <xref:System.DateTime> un valore al relativo fuso orario.
 
    [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
    [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-2. Convertire un'ora per ora Coordinated Universal Time (UTC) chiamando il <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> metodo o il <xref:System.TimeZoneInfo.ConvertTime%2A> (metodo).
+2. Convertire un'ora in formato UTC (Coordinated Universal Time) chiamando il <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> metodo <xref:System.TimeZoneInfo.ConvertTime%2A> o.
 
 3. Eseguire l'operazione aritmetica sull'ora UTC.
 
-4. Convertire l'ora da UTC al fuso orario associato all'ora originale chiamando il <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> (metodo).
+4. Converte l'ora da UTC al fuso orario associato all'ora originale chiamando il <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> metodo.
 
 ## <a name="example"></a>Esempio
 
@@ -43,24 +43,24 @@ L'esempio seguente aggiunge due ore e trenta minuti al 9 marzo 2008, alle 1.30 o
 [!code-csharp[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual8.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual8.vb#8)]
 
-Entrambe <xref:System.DateTime> e <xref:System.DateTimeOffset> valori sono dissociati da qualsiasi fuso orario al quale appartengono. Per eseguire operazioni aritmetiche di data ora con una modalità che applica automaticamente le regole di rettifica del fuso orario, il fuso orario di appartenenza di qualsiasi valore di data e ora deve essere immediatamente identificabile. Ciò significa che una data e ora e il fuso orario associato devono essere strettamente collegati. Esistono diversi modi per ottenere questo risultato, tra cui i seguenti:
+Entrambi <xref:System.DateTime> i <xref:System.DateTimeOffset> valori e sono dissociati da qualsiasi fuso orario a cui possono appartenere. Per eseguire operazioni aritmetiche di data ora con una modalità che applica automaticamente le regole di rettifica del fuso orario, il fuso orario di appartenenza di qualsiasi valore di data e ora deve essere immediatamente identificabile. Ciò significa che una data e ora e il fuso orario associato devono essere strettamente collegati. Esistono diversi modi per ottenere questo risultato, tra cui i seguenti:
 
-* Presupporre che tutti gli orari usati in un'applicazione appartengano a un determinato fuso orario. Pur essendo appropriato in alcuni casi, questo approccio offre una flessibilità limitata e potenzialmente anche una portabilità limitata.
+- Presupporre che tutti gli orari usati in un'applicazione appartengano a un determinato fuso orario. Pur essendo appropriato in alcuni casi, questo approccio offre una flessibilità limitata e potenzialmente anche una portabilità limitata.
 
-* Definire un tipo che vincoli in modo stretto una data e ora con il fuso orario associato, includendo entrambi come campi del tipo. Questo approccio viene usato nell'esempio di codice, che definisce una struttura per l'archiviazione della data e ora e del fuso orario in due campi membro.
+- Definire un tipo che vincoli in modo stretto una data e ora con il fuso orario associato, includendo entrambi come campi del tipo. Questo approccio viene usato nell'esempio di codice, che definisce una struttura per l'archiviazione della data e ora e del fuso orario in due campi membro.
 
-Nell'esempio viene illustrato come eseguire operazioni aritmetiche su <xref:System.DateTime> valori in modo che le regole di regolazione fuso orario vengono applicate al risultato. Tuttavia, <xref:System.DateTimeOffset> valori possono essere usati con la stessa semplicità. Nell'esempio seguente viene illustrato come il codice nell'esempio originale potrebbe essere adattato per l'utilizzo <xref:System.DateTimeOffset> invece di <xref:System.DateTime> valori.
+Nell'esempio viene illustrato come eseguire operazioni aritmetiche sui <xref:System.DateTime> valori in modo da applicare le regole di rettifica del fuso orario al risultato. Tuttavia, <xref:System.DateTimeOffset> i valori possono essere usati altrettanto facilmente. Nell'esempio seguente viene illustrato il modo in cui il codice nell'esempio originale può essere adattato per <xref:System.DateTime> l'utilizzo <xref:System.DateTimeOffset> di anziché dei valori.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
 
-Si noti che se questa aggiunta viene eseguita semplicemente il <xref:System.DateTimeOffset> valore senza prima convertirlo a UTC, il risultato riflette il momento esatto in tempo ma l'offset non riflette quello del fuso orario designato per quell'ora.
+Si noti che se questa aggiunta viene eseguita semplicemente sul <xref:System.DateTimeOffset> valore senza prima convertirlo in ora UTC, il risultato riflette il punto nel tempo corretto, ma il relativo offset non riflette quello del fuso orario designato per quell'ora.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
 
-* Che il <xref:System> dello spazio dei nomi importati con il `using` istruzione (obbligatorio nel codice c#).
+- Che lo <xref:System> spazio dei nomi venga importato con l' C# `using` istruzione (obbligatoria nel codice).
 
 ## <a name="see-also"></a>Vedere anche
 

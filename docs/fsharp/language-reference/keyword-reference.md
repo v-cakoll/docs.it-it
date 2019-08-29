@@ -2,12 +2,12 @@
 title: Riferimento per parole chiave
 description: Trovare collegamenti a informazioni su tutte le F# parole chiave del linguaggio.
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733487"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107035"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -17,7 +17,7 @@ Questo argomento contiene collegamenti a informazioni su tutte F# le parole chia
 
 Nella tabella seguente vengono illustrate tutte le F# parole chiave in ordine alfabetico, insieme a brevi descrizioni e collegamenti ad argomenti rilevanti che contengono ulteriori informazioni.
 
-|Parola chiave|Collegamento|Descrizione|
+|Parola chiave|Collegamento|DESCRIZIONE|
 |-------|----|-----------|
 |`abstract`|[Membri](./members/index.md)<br /><br />[Classi astratte](abstract-classes.md)|Indica un metodo che non ha alcuna implementazione nel tipo in cui è dichiarato o che è virtuale e ha un'implementazione predefinita.|
 |`and`|[`let`Associazioni](./functions/let-bindings.md)<br /><br />[Record](records.md)<br /><br />[Membri](./members/index.md)<br /><br />[Vincoli](./generics/constraints.md)|Utilizzato in binding e record ricorsivi reciprocamente, nelle dichiarazioni di proprietà e con più vincoli sui parametri generici.|
@@ -92,44 +92,44 @@ Nella tabella seguente vengono illustrate tutte le F# parole chiave in ordine al
 
 I token seguenti sono riservati in F# perché sono parole chiave nel linguaggio OCaml:
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 Se si usa l' `--mlcompatibility` opzione del compilatore, le parole chiave precedenti sono disponibili per l'uso come identificatori.
 
 I token seguenti sono riservati come parole chiave per l' F# espansione futura del linguaggio:
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>Vedere anche
 

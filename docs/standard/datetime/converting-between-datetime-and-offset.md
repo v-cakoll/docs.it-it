@@ -18,116 +18,116 @@ helpviewer_keywords:
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb91ed8edd0c5cd3cb1d051157596f311718195d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901927"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107069"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Conversione tra DateTime e DateTimeOffset
 
-Anche se il <xref:System.DateTimeOffset> struttura fornisce un livello di compatibilità del fuso orario rispetto a maggiore il <xref:System.DateTime> struttura, <xref:System.DateTime> parametri vengono utilizzati più comunemente nelle chiamate al metodo. Per questo motivo, la capacità di convertire <xref:System.DateTimeOffset> valori <xref:System.DateTime> valori e viceversa è particolarmente importante. Questo argomento illustra come eseguire queste conversioni in modo tale da mantenere quante più informazioni possibili fuso orario.
+Sebbene la <xref:System.DateTimeOffset> struttura fornisca un maggiore grado di riconoscimento del fuso orario rispetto <xref:System.DateTime> alla struttura <xref:System.DateTime> , i parametri vengono usati più comunemente nelle chiamate al metodo. Per questo motivo la possibilità di convertire <xref:System.DateTimeOffset> i valori in <xref:System.DateTime> valori e viceversa è particolarmente importante. In questo argomento viene illustrato come eseguire queste conversioni in modo da mantenere il maggior quantità possibile di informazioni sul fuso orario.
 
 > [!NOTE]
-> Sia la <xref:System.DateTime> e il <xref:System.DateTimeOffset> tipi presentano alcune limitazioni in caso di rappresentazione delle ore nei fusi orari. Con relativo <xref:System.DateTime.Kind%2A> proprietà, <xref:System.DateTime> è in grado di riflettere solo Coordinated Universal Time (UTC) e fuso orario locale del sistema. <xref:System.DateTimeOffset> riflette l'offset di un'ora rispetto all'ora UTC, ma non riflette il fuso orario effettivo a cui tale offset appartiene. Per informazioni dettagliate sui valori di ora e il supporto per i fusi orari, vedere [scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> Entrambi i <xref:System.DateTime> <xref:System.DateTimeOffset> tipi e presentano alcune limitazioni quando rappresentano le ore nei fusi orari. Con la <xref:System.DateTime.Kind%2A> relativa proprietà <xref:System.DateTime> , è in grado di riflettere solo l'ora UTC (Coordinated Universal Time) e il fuso orario locale del sistema. <xref:System.DateTimeOffset>riflette l'offset dell'ora rispetto all'ora UTC, ma non riflette il fuso orario effettivo a cui appartiene l'offset. Per informazioni dettagliate sui valori temporali e il supporto per i fusi orari, vedere [scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Conversioni da DateTime a DateTimeOffset
 
-Il <xref:System.DateTimeOffset> struttura fornisce due modalità equivalenti per eseguire <xref:System.DateTime> a <xref:System.DateTimeOffset> conversione adatti per la maggior parte delle conversioni:
+La <xref:System.DateTimeOffset> struttura fornisce due modi equivalenti per <xref:System.DateTime> <xref:System.DateTimeOffset> eseguire la conversione, adatti per la maggior parte delle conversioni:
 
-* Il <xref:System.DateTimeOffset.%23ctor%2A> costruttore che crea una nuova <xref:System.DateTimeOffset> oggetto in base un <xref:System.DateTime> valore.
+- Il <xref:System.DateTimeOffset.%23ctor%2A> costruttore, che crea un nuovo <xref:System.DateTimeOffset> oggetto in base a <xref:System.DateTime> un valore.
 
-* L'operatore di conversione implicita, che consente di assegnare un <xref:System.DateTime> valore per un <xref:System.DateTimeOffset> oggetto.
+- Operatore di conversione implicito, che consente di assegnare un <xref:System.DateTime> valore a un <xref:System.DateTimeOffset> oggetto.
 
-Per ora UTC e locali <xref:System.DateTime> valori, il <xref:System.DateTimeOffset.Offset%2A> proprietà dell'oggetto risultante <xref:System.DateTimeOffset> valore rifletta accuratamente la differenza di fuso orario locale o UTC. Ad esempio, il codice seguente converte un'ora UTC equivalente <xref:System.DateTimeOffset> valore.
+Per i valori UTC <xref:System.DateTime> e locali, <xref:System.DateTimeOffset.Offset%2A> la proprietà del valore <xref:System.DateTimeOffset> risultante riflette accuratamente l'offset dell'ora UTC o del fuso orario locale. Il codice seguente, ad esempio, converte un'ora UTC nel valore <xref:System.DateTimeOffset> equivalente.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#1)]
 
-In questo caso, l'offset della variabile `utcTime2` è 00:00. Analogamente, il codice seguente converte un'ora locale equivalente <xref:System.DateTimeOffset> valore.
+In questo caso, l'offset della variabile `utcTime2` è 00:00. Analogamente, il codice seguente converte un'ora locale nel valore <xref:System.DateTimeOffset> equivalente.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#2)]
 
-Tuttavia, affinché <xref:System.DateTime> valori la cui proprietà <xref:System.DateTime.Kind%2A> proprietà è <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, questi due metodi di conversione producono un <xref:System.DateTimeOffset> valore il cui offset è quello del fuso orario locale. Ciò viene illustrato nell'esempio seguente che viene eseguito nel fuso orario Ora solare del Pacifico (Stati Uniti).
+Tuttavia, per <xref:System.DateTime> i valori <xref:System.DateTime.Kind%2A> la cui <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>proprietà è, questi due metodi di <xref:System.DateTimeOffset> conversione producono un valore il cui offset è quello del fuso orario locale. Ciò viene illustrato nell'esempio seguente che viene eseguito nel fuso orario Ora solare del Pacifico (Stati Uniti).
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#3)]
 
-Se il <xref:System.DateTime> valore riflette la data e ora in modo diverso dal fuso orario locale o UTC, è possibile convertirlo in un <xref:System.DateTimeOffset> valore e mantenere le informazioni sul fuso orario chiamando il metodo di overload <xref:System.DateTimeOffset.%23ctor%2A> costruttore. Ad esempio, nell'esempio seguente crea un <xref:System.DateTimeOffset> oggetto che riflette l'ora solare fuso centrale.
+Se il <xref:System.DateTime> valore riflette la data e l'ora in un elemento diverso dal fuso orario locale o dall'ora UTC, è possibile convertirlo in un <xref:System.DateTimeOffset> valore e mantenere le informazioni sul fuso orario <xref:System.DateTimeOffset.%23ctor%2A> chiamando il costruttore di overload. Nell'esempio seguente viene creata un'istanza di un <xref:System.DateTimeOffset> oggetto che riflette l'ora solare fuso centrale.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#4)]
 
-Il secondo parametro per questo overload del costruttore, un <xref:System.TimeSpan> oggetto che rappresenta l'offset dell'ora rispetto all'ora UTC, deve essere recuperato chiamando il <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> metodo del fuso orario corrispondente dell'ora. L'unico parametro del metodo è il <xref:System.DateTime> valore che rappresenta la data e ora da convertire. Se il fuso orario supporta l'ora legale, questo parametro consente al metodo di determinare l'offset adatto per la data e l'ora specifici.
+Il secondo parametro per questo overload del costruttore, <xref:System.TimeSpan> un oggetto che rappresenta l'offset dell'ora rispetto all'ora UTC, deve essere recuperato <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> chiamando il metodo del fuso orario corrispondente all'ora. L'unico parametro del metodo è il <xref:System.DateTime> valore che rappresenta la data e l'ora da convertire. Se il fuso orario supporta l'ora legale, questo parametro consente al metodo di determinare l'offset adatto per la data e l'ora specifici.
 
 ## <a name="conversions-from-datetimeoffset-to-datetime"></a>Conversioni da DateTimeOffset a DateTime
 
-Il <xref:System.DateTimeOffset.DateTime%2A> proprietà viene in genere usata per eseguire <xref:System.DateTimeOffset> a <xref:System.DateTime> conversione. Tuttavia, viene restituito un <xref:System.DateTime> valore la cui proprietà <xref:System.DateTime.Kind%2A> è di proprietà <xref:System.DateTimeKind.Unspecified>, come illustrato nell'esempio seguente.
+La <xref:System.DateTimeOffset.DateTime%2A> proprietà è più comunemente utilizzata per <xref:System.DateTime> eseguire <xref:System.DateTimeOffset> la conversione. Tuttavia, restituisce un <xref:System.DateTime> valore la cui <xref:System.DateTime.Kind%2A> proprietà è <xref:System.DateTimeKind.Unspecified>, come illustrato nell'esempio seguente.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#5)]
 
-Ciò significa che tutte le informazioni sul <xref:System.DateTimeOffset> relazione tra il valore in formato UTC viene persa durante la conversione quando il <xref:System.DateTimeOffset.DateTime%2A> proprietà viene utilizzata. Questa impostazione influisce sulle <xref:System.DateTimeOffset> i valori che corrispondono all'ora UTC o all'ora locale del sistema perché la <xref:System.DateTimeOffset.DateTime%2A> struttura riflette solo questi due fusi orari in relativo <xref:System.DateTime.Kind%2A> proprietà.
+Ciò significa che tutte le informazioni sulla <xref:System.DateTimeOffset> relazione del valore con l'ora UTC vengono perse dalla conversione <xref:System.DateTimeOffset.DateTime%2A> quando si utilizza la proprietà. Ciò influiscono <xref:System.DateTimeOffset> sui valori che corrispondono all'ora UTC o all'ora locale del sistema perché <xref:System.DateTimeOffset.DateTime%2A> la struttura riflette solo i <xref:System.DateTime.Kind%2A> due fusi orari nella proprietà.
 
-Per mantenere quante più informazioni possibili fuso orario durante la conversione di un <xref:System.DateTimeOffset> per un <xref:System.DateTime> valore, è possibile utilizzare il <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà.
+Per conservare il maggior quantità possibile di informazioni sul fuso orario quando <xref:System.DateTimeOffset> si converte <xref:System.DateTime> un oggetto in un valore, <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> è <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> possibile usare le proprietà e.
 
 ### <a name="converting-a-utc-time"></a>Conversione di un'ora UTC
 
-Per indicare che un oggetto convertito <xref:System.DateTimeOffset.DateTime%2A> valore è l'ora UTC, è possibile recuperare il valore della <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> proprietà. Si differenzia dal <xref:System.DateTimeOffset.DateTime%2A> proprietà in due modi:
+Per indicare che un valore <xref:System.DateTimeOffset.DateTime%2A> convertito è l'ora UTC, è possibile recuperare il valore <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> della proprietà. Si differenzia dalla <xref:System.DateTimeOffset.DateTime%2A> proprietà in due modi:
 
-* Restituisce un <xref:System.DateTime> valore la cui proprietà <xref:System.DateTime.Kind%2A> è di proprietà <xref:System.DateTimeKind.Utc>.
+- Restituisce un valore <xref:System.DateTime> la cui <xref:System.DateTime.Kind%2A> proprietà è <xref:System.DateTimeKind.Utc>.
 
-* Se il <xref:System.DateTimeOffset.Offset%2A> valore della proprietà non è uguale <xref:System.TimeSpan.Zero?displayProperty=nameWithType>, converte l'ora in formato UTC.
+- Se il <xref:System.DateTimeOffset.Offset%2A> valore della proprietà non è <xref:System.TimeSpan.Zero?displayProperty=nameWithType>uguale, l'ora viene convertita in ora UTC.
 
 > [!NOTE]
-> Se l'applicazione richiede che convertito <xref:System.DateTime> valori identificano in modo non ambiguo un singolo punto nel tempo, è consigliabile usare il <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> proprietà gestire tutto <xref:System.DateTimeOffset> a <xref:System.DateTime> conversioni.
+> Se l'applicazione richiede che i <xref:System.DateTime> valori convertiti identifichino senza ambiguità un singolo momento, è consigliabile usare la <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> <xref:System.DateTime> proprietà per gestire tutte <xref:System.DateTimeOffset> le conversioni.
 
-Il codice seguente usa il <xref:System.DateTimeOffset.UtcDateTime%2A> proprietà per convertire un <xref:System.DateTimeOffset> valore il cui offset equivale <xref:System.TimeSpan.Zero?displayProperty=nameWithType> a un <xref:System.DateTime> valore.
+Il codice seguente usa la <xref:System.DateTimeOffset.UtcDateTime%2A> proprietà per convertire un <xref:System.DateTimeOffset> <xref:System.TimeSpan.Zero?displayProperty=nameWithType> valore il cui offset è uguale a <xref:System.DateTime> un valore.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#6)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#6)]
 
-Il codice seguente usa il <xref:System.DateTimeOffset.UtcDateTime%2A> proprietà per eseguire una conversione del fuso orario e una conversione del tipo in un <xref:System.DateTimeOffset> valore.
+Il codice seguente usa la <xref:System.DateTimeOffset.UtcDateTime%2A> proprietà per eseguire una conversione del fuso orario e una conversione di tipi su <xref:System.DateTimeOffset> un valore.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#12)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#12)]
 
-### <a name="converting-a-local-time"></a>Conversione dell'ora locale
+### <a name="converting-a-local-time"></a>Conversione di un'ora locale
 
-Per indicare che un <xref:System.DateTimeOffset> valore rappresenta l'ora locale, è possibile passare il <xref:System.DateTime> valore restituito dal <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> proprietà per il `static` (`Shared` in Visual Basic) <xref:System.DateTime.SpecifyKind%2A> (metodo). Il metodo restituisce la data e ora passate come primo parametro, ma imposta il <xref:System.DateTime.Kind%2A> proprietà sul valore specificato dal secondo parametro. Il codice seguente usa il <xref:System.DateTime.SpecifyKind%2A> metodo quando si converte un <xref:System.DateTimeOffset> valore il cui offset corrisponde a quello del fuso orario locale.
+Per indicare che un <xref:System.DateTimeOffset> valore rappresenta l'ora locale, è possibile passare il <xref:System.DateTime> valore restituito `static` dalla <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> proprietà al metodo (`Shared` in Visual Basic) <xref:System.DateTime.SpecifyKind%2A> . Il metodo restituisce la data e l'ora passate come primo parametro, ma imposta la <xref:System.DateTime.Kind%2A> proprietà sul valore specificato dal secondo parametro. Il codice seguente usa il <xref:System.DateTime.SpecifyKind%2A> metodo durante la conversione <xref:System.DateTimeOffset> di un valore il cui offset corrisponde a quello del fuso orario locale.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-È anche possibile usare la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per convertire un <xref:System.DateTimeOffset> valore a una variabile locale <xref:System.DateTime> valore. Il <xref:System.DateTime.Kind%2A> proprietà dell'oggetto restituito <xref:System.DateTime> valore <xref:System.DateTimeKind.Local>. Il codice seguente usa il <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà durante la conversione di un <xref:System.DateTimeOffset> valore il cui offset corrisponde a quello del fuso orario locale. 
+È anche possibile usare la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per convertire un <xref:System.DateTimeOffset> valore in un valore <xref:System.DateTime> locale. La <xref:System.DateTime.Kind%2A> proprietà del valore restituito <xref:System.DateTime> è <xref:System.DateTimeKind.Local>. Nel codice seguente viene utilizzata <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> la proprietà quando si <xref:System.DateTimeOffset> converte un valore il cui offset corrisponde a quello del fuso orario locale. 
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-Quando si recupera un <xref:System.DateTime> valore usando la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà, la proprietà `get` della funzione di accesso vengono innanzitutto convertiti il <xref:System.DateTimeOffset> valore in formato UTC, quindi lo converte in ora locale chiamando il <xref:System.DateTimeOffset.ToLocalTime%2A> (metodo). Ciò significa che è possibile recuperare un valore compreso il <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per eseguire una conversione del fuso orario allo stesso tempo eseguire una conversione del tipo. Nell'esecuzione della conversione vengono anche applicate le regole di rettifica del fuso orario. Il codice seguente illustra l'uso del <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per eseguire una conversione del fuso orario e un tipo.
+Quando si recupera un <xref:System.DateTime> valore utilizzando la <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà, la funzione di `get` accesso della proprietà converte <xref:System.DateTimeOffset> innanzitutto il valore in formato UTC, quindi lo converte nell'ora locale <xref:System.DateTimeOffset.ToLocalTime%2A> chiamando il metodo. Ciò significa che è possibile recuperare un valore dalla <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per eseguire una conversione del fuso orario nello stesso momento in cui si esegue una conversione di tipi. Nell'esecuzione della conversione vengono anche applicate le regole di rettifica del fuso orario. Il codice seguente illustra l'uso della <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> proprietà per eseguire sia un tipo sia una conversione del fuso orario.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]
 
-### <a name="a-general-purpose-conversion-method"></a>Un metodo di conversione per utilizzo generico
+### <a name="a-general-purpose-conversion-method"></a>Metodo di conversione per utilizzo generico
 
-L'esempio seguente definisce un metodo denominato `ConvertFromDateTimeOffset` che converte <xref:System.DateTimeOffset> valori <xref:System.DateTime> valori. In base all'offset, determina se il <xref:System.DateTimeOffset> valore è un'ora UTC, un'ora locale o un'altra occasione e definisce la data restituita e del valore di ora <xref:System.DateTime.Kind%2A> proprietà conseguenza.
+Nell'esempio seguente viene definito un metodo `ConvertFromDateTimeOffset` denominato che <xref:System.DateTimeOffset> converte i <xref:System.DateTime> valori in valori. In base all'offset, determina se il <xref:System.DateTimeOffset> valore è un'ora UTC, un'ora locale o un'altra ora e definisce di conseguenza la proprietà del valore di <xref:System.DateTime.Kind%2A> data e ora restituito.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#8)]
 
-Nell'esempio seguente viene chiamato il `ConvertFromDateTimeOffset` metodo per convertire <xref:System.DateTimeOffset> valori che rappresentano un'ora UTC, un'ora locale e un'ora negli Stati Uniti un'ora solare fuso centrale degli Stati Uniti.
+Nell'esempio seguente viene chiamato `ConvertFromDateTimeOffset` il metodo per <xref:System.DateTimeOffset> convertire i valori che rappresentano un'ora UTC, un'ora locale e un'ora negli Stati Uniti un'ora solare fuso centrale degli Stati Uniti.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#9)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#9)]
 
 Questo codice si basa su due presupposti che, a seconda dell'applicazione e dell'origine dei valori di data e ora, potrebbero non essere sempre validi:
 
-* Si presuppone che una data e ora valore il cui offset è <xref:System.TimeSpan.Zero?displayProperty=nameWithType> rappresenta l'ora UTC. Infatti UTC non rappresenta un'ora in un particolare fuso orario, ma l'ora in relazione alla quale vengono normalizzati i fusi orari di tutto il mondo. Fusi orari possono presentare anche un offset di <xref:System.TimeSpan.Zero>.
+- Si presuppone che un valore di data e ora il cui <xref:System.TimeSpan.Zero?displayProperty=nameWithType> offset sia rappresentato dall'ora UTC. Infatti UTC non rappresenta un'ora in un particolare fuso orario, ma l'ora in relazione alla quale vengono normalizzati i fusi orari di tutto il mondo. I fusi orari possono anche avere un offset <xref:System.TimeSpan.Zero>di.
 
-* Il presupposto è che valori di data e ora il cui offset è uguale a quelli del fuso orario locale rappresentino il fuso orario locale. Poiché l'associazione dei valori di data e ora al fuso orario originale è annullata, potrebbe non essere questo il caso; la data e l'ora potrebbero essere state originate in un altro fuso orario con lo stesso offset.
+- Il presupposto è che valori di data e ora il cui offset è uguale a quelli del fuso orario locale rappresentino il fuso orario locale. Poiché l'associazione dei valori di data e ora al fuso orario originale è annullata, potrebbe non essere questo il caso; la data e l'ora potrebbero essere state originate in un altro fuso orario con lo stesso offset.
 
 ## <a name="see-also"></a>Vedere anche
 

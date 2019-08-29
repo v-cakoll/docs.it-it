@@ -1,42 +1,42 @@
 ---
 title: Espressioni di calcolo
-description: Informazioni su come creare una sintassi efficiente per la scrittura di calcoli F# che può essere in sequenza e combinati tramite controllo costrutti del flusso e le associazioni.
+description: Informazioni su come creare una sintassi pratica per la scrittura di F# calcoli in che possono essere sequenziati e combinati mediante costrutti e associazioni del flusso di controllo.
 ms.date: 03/15/2019
-ms.openlocfilehash: b352c5541bc31b5c583904b99651de9180c8afb3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152035"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106576"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
-Le espressioni di calcolo in F# forniscono una sintassi efficiente per la scrittura di calcoli che possono essere sequenziati e combinati tramite costrutti del flusso di controllo e associazioni. A seconda del tipo dell'espressione di calcolo, è possibile pensare come un modo per esprimere monads, monoids, trasformatori monad e funtori applicative. Tuttavia, a differenza di altri linguaggi (ad esempio *in notazione* in Haskell), non sono associate a una singola astrazione e non fare affidamento su macro o altre forme di metaprogrammazione per eseguire una sintassi pratica e sensibile al contesto.
+Le espressioni di F# calcolo in forniscono una sintassi pratica per la scrittura di calcoli che possono essere sequenziati e combinati mediante costrutti e associazioni del flusso di controllo. A seconda del tipo di espressione di calcolo, possono essere considerati come un modo per esprimere monadi, monoids, i trasformatori Monad e funtori applicativi. Tuttavia, a differenza di altri linguaggi (ad esempio *do-Notation* in Haskell), non sono collegati a un'unica astrazione e non si basano su macro o altre forme di metaprogrammazione per realizzare una sintassi pratica e sensibile al contesto.
 
 ## <a name="overview"></a>Panoramica
 
-I calcoli possono assumere molte forme. La forma più comune di calcolo è l'esecuzione a thread singolo, che è facile da comprendere e modificare. Tuttavia, non tutte le forme di calcolo sono semplice come l'esecuzione a thread singolo. Di seguito sono riportati alcuni esempi:
+I calcoli possono assumere molte forme. Il tipo di calcolo più comune è l'esecuzione a thread singolo, che è facile da comprendere e modificare. Tuttavia, non tutte le forme di calcolo sono semplici come l'esecuzione a thread singolo. Di seguito sono riportati alcuni esempi:
 
-* Calcoli non deterministiche
-* Calcoli asincroni
-* Calcoli effectful
-* Calcoli propria
+- Calcoli non deterministici
+- Calcoli asincroni
+- Calcoli effettivi
+- Calcoli generativi
 
-Più in generale, esistono *sensibile al contesto* i calcoli che è necessario eseguire in determinate parti di un'applicazione. Scrittura di codice sensibile al contesto può essere problematico, in quanto è facile per i calcoli "perdite" di fuori di un determinato contesto senza astrazioni per impedire questa operazione. Queste astrazioni sono spesso difficili da scrivere da soli, motivo per cui F# ha un metodo generalizzato cosiddette **espressioni di calcolo**.
+Più in generale, esistono calcoli *sensibili al contesto* che è necessario eseguire in determinate parti di un'applicazione. La scrittura di codice sensibile al contesto può essere complessa, in quanto è facile "perdere" i calcoli all'esterno di un determinato contesto senza astrazioni per impedire l'esecuzione di questa operazione. Queste astrazioni sono spesso difficili da scrivere autonomamente, motivo F# per cui ha un metodo generalizzato per eseguire queste operazioni, denominate espressioni di **calcolo**.
 
-Le espressioni di calcolo offrono un modello di sintassi e astrazione uniforme per la codifica dei calcoli sensibile al contesto.
+Le espressioni di calcolo offrono una sintassi uniforme e un modello di astrazione per la codifica di calcoli sensibili al contesto.
 
-Ogni espressione di calcolo è supportata da un *generatore* tipo. Il tipo di generatore definisce le operazioni disponibili per l'espressione di calcolo. Visualizzare [creando un nuovo tipo di espressione di calcolo](computation-expressions.md#creating-a-new-type-of-computation-expression), che mostra come creare un'espressione di calcolo personalizzato.
+Ogni espressione di calcolo è supportata da un tipo di *Generatore* . Il tipo di generatore definisce le operazioni disponibili per l'espressione di calcolo. Vedere [creazione di un nuovo tipo di espressione di calcolo](computation-expressions.md#creating-a-new-type-of-computation-expression), che Mostra come creare un'espressione di calcolo personalizzata.
 
-### <a name="syntax-overview"></a>Panoramica della sintassi
+### <a name="syntax-overview"></a>Cenni preliminari sulla sintassi
 
-Tutte le espressioni di calcolo disponibili nel formato seguente:
+Tutte le espressioni di calcolo hanno il formato seguente:
 
 ```
 builder-expr { cexper }
 ```
 
-in cui `builder-expr` è il nome di un tipo di generatore che definisce l'espressione di calcolo e `cexper` corrisponde al corpo di espressione dell'espressione di calcolo. Ad esempio, `async` codice di espressione di calcolo simile al seguente:
+dove `builder-expr` è il nome di un tipo di generatore che definisce l'espressione di calcolo `cexper` e è il corpo dell'espressione dell'espressione di calcolo. Il codice dell' `async` espressione di calcolo, ad esempio, può essere simile al seguente:
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-È una sintassi speciale, aggiuntiva disponibile all'interno di un'espressione di calcolo, come illustrato nell'esempio precedente. Le forme di espressioni seguenti sono possibili con le espressioni di calcolo:
+All'interno di un'espressione di calcolo è disponibile una speciale sintassi aggiuntiva, come illustrato nell'esempio precedente. Con le espressioni di calcolo sono possibili i form di espressione seguenti:
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Ognuna di queste parole chiave e altri standard F# parole chiave sono disponibili solo in un'espressione di calcolo se sono stati definiti nel tipo di generatore di backup. È l'unica eccezione a questa `match!`, che è a sua volta zucchero sintattico per l'uso di `let!` seguita da un criterio di ricerca sul risultato.
+Ognuna di queste parole chiave e altre parole F# chiave standard sono disponibili in un'espressione di calcolo solo se sono state definite nel tipo di generatore di backup. L'unica eccezione è rappresentata `match!`dallo zucchero sintattico per l'utilizzo di `let!` seguito da una corrispondenza di criteri nel risultato.
 
-Il tipo di generatore è un oggetto che definisce i metodi speciali che controllano il modo in cui che vengono combinati i frammenti dell'espressione di calcolo; vale a dire i relativi metodi controllano il comportamento di espressione di calcolo. Un altro modo per descrivere una classe generatore viene dire che permette di personalizzare il funzionamento di molti F# costrutti, ad esempio cicli e associazioni.
+Il tipo di generatore è un oggetto che definisce metodi speciali che governano il modo in cui vengono combinati i frammenti dell'espressione di calcolo. ovvero, i metodi controllano il comportamento dell'espressione di calcolo. Un altro modo per descrivere una classe del generatore consiste nel dire che consente di personalizzare l'operazione di molti F# costrutti, ad esempio cicli e associazioni.
 
 ### `let!`
 
-Il `let!` parola chiave associa il risultato di una chiamata a un'altra espressione di calcolo a un nome:
+La `let!` parola chiave associa il risultato di una chiamata a un'altra espressione di calcolo a un nome:
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-Se si associa la chiamata a un'espressione di calcolo con `let`, non sarà possibile ottenere il risultato dell'espressione di calcolo. Al contrario, verrà associato il valore della *non realizzati* le chiamate a quell ' espressione di calcolo. Usare `let!` da associare al risultato.
+Se si associa la chiamata a un'espressione di calcolo `let`con, non sarà possibile ottenere il risultato dell'espressione di calcolo. Al contrario, sarà necessario associare il valore della chiamata non *realizzata* a tale espressione di calcolo. Utilizzare `let!` per eseguire l'associazione al risultato.
 
-`let!` è definito dal `Bind(x, f)` membro del tipo di generatore.
+`let!`viene definito dal `Bind(x, f)` membro nel tipo di generatore.
 
 ### `do!`
 
-Il `do!` è la parola chiave per la chiamata di un'espressione di calcolo che restituisce un `unit`-come tipo (definito dal `Zero` membro sul generatore):
+La `do!` parola chiave è per chiamare un'espressione di calcolo che `unit`restituisce un `Zero` tipo like (definito dal membro nel generatore):
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-Per il [flusso di lavoro asincroni](asynchronous-workflows.md), questo tipo è `Async<unit>`. Per altre espressioni di calcolo, il tipo è probabilmente `CExpType<unit>`.
+Per il [flusso di lavoro asincrono](asynchronous-workflows.md), questo `Async<unit>`tipo è. Per altre espressioni di calcolo, è probabile che il tipo `CExpType<unit>`sia.
 
-`do!` è definito dal `Bind(x, f)` membro del tipo di generatore, dove `f` produce un `unit`.
+`do!`viene definito dal `Bind(x, f)` membro sul tipo di generatore, dove `f` produce un oggetto `unit`.
 
 ### `yield`
 
-Il `yield` parola chiave sia per la restituzione di un valore dall'espressione di calcolo in modo che possa essere utilizzato come un <xref:System.Collections.Generic.IEnumerable%601>:
+La `yield` parola chiave è per restituire un valore dall'espressione di calcolo in modo che possa essere utilizzata <xref:System.Collections.Generic.IEnumerable%601>come:
 
 ```fsharp
 let squares =
@@ -112,13 +112,13 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Come con le [yield (parola chiave) in c#](../../csharp/language-reference/keywords/yield.md), ogni elemento nell'espressione di calcolo viene restituito perché viene scorsa.
+Come per la [parola chiave yield C#in ](../../csharp/language-reference/keywords/yield.md), ogni elemento nell'espressione di calcolo viene restituito mentre viene iterato.
 
-`yield` è definito dal `Yield(x)` membro del tipo di generatore, in cui `x` è l'elemento per produrre nuovamente.
+`yield`viene definito dal `Yield(x)` membro sul tipo di generatore, dove `x` è l'elemento da restituire.
 
 ### `yield!`
 
-Il `yield!` la parola chiave è per rendere flat una raccolta di valori da un'espressione di calcolo:
+La `yield!` parola chiave è per rendere flat una raccolta di valori da un'espressione di calcolo:
 
 ```fsharp
 let squares =
@@ -140,13 +140,13 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-Durante la valutazione, l'espressione di calcolo denominato `yield!` verranno dispone i relativi elementi restituiti indietro uno alla volta, rendere flat il risultato.
+Quando viene valutato, l'espressione di calcolo `yield!` chiamata da avrà gli elementi restituiti uno alla volta, rendendo flat il risultato.
 
-`yield!` è definito dal `YieldFrom(x)` membro del tipo di generatore, in cui `x` è una raccolta di valori.
+`yield!`viene definito dal `YieldFrom(x)` membro sul tipo di generatore, dove `x` è una raccolta di valori.
 
 ### `return`
 
-Il `return` (parola chiave) esegue il wrapping di un valore di tipo corrispondente all'espressione di calcolo. A parte le espressioni di calcolo usando `yield`, viene utilizzato su "completa" di un'espressione di calcolo:
+La `return` parola chiave esegue il wrapping di un valore nel tipo corrispondente all'espressione di calcolo. A parte le espressioni di `yield`calcolo che usano, viene usato per "completare" un'espressione di calcolo:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +159,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` è definito per il `Return(x)` membro del tipo di generatore, in cui `x` è l'elemento di cui eseguire il wrapping.
+`return`viene definito dal `Return(x)` membro sul tipo di generatore, dove `x` è l'elemento di cui eseguire il wrapping.
 
 ### `return!`
 
-Il `return!` (parola chiave) il valore di un'espressione di calcolo di realizzazione ed esegue il wrapping di tale risultato nel tipo corrispondente all'espressione di calcolo:
+La `return!` parola chiave rende conto del valore di un'espressione di calcolo e include il risultato nel tipo corrispondente all'espressione di calcolo:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +175,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` è definito per il `ReturnFrom(x)` membro del tipo di generatore, in cui `x` è un'altra espressione di calcolo.
+`return!`viene definito dal `ReturnFrom(x)` membro sul tipo di generatore, dove `x` è un'altra espressione di calcolo.
 
 ### `match!`
 
-A partire da F# 4.5, la `match!` parola chiave consente di rendere inline una chiamata a un altro calcolo corrispondenza di espressione e modello per il risultato:
+A partire F# da 4,5, `match!` la parola chiave consente di inline una chiamata a un'altra espressione di calcolo e il criterio di ricerca corrisponde al risultato:
 
 ```fsharp
 let doThingsAsync url =
@@ -190,45 +190,45 @@ let doThingsAsync url =
     }
 ```
 
-Quando si chiama un'espressione di calcolo con `match!`, potrà trarre il risultato della chiamata, ad esempio `let!`. Viene spesso utilizzata quando si chiama un'espressione di calcolo in cui il risultato è un' [facoltativi](options.md).
+Quando si chiama un'espressione di `match!`calcolo con, realizzerà il risultato della chiamata, `let!`ad esempio. Questa operazione viene spesso utilizzata quando si chiama un'espressione di calcolo in cui il risultato è [facoltativo](options.md).
 
-## <a name="built-in-computation-expressions"></a>Espressioni di calcolo incorporato
+## <a name="built-in-computation-expressions"></a>Espressioni di calcolo predefinite
 
-Il F# libreria di base definisce tre espressioni di calcolo incorporato: [Le espressioni di sequenza](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di Query](query-expressions.md).
+La F# libreria principale definisce tre espressioni di calcolo predefinite: [Espressioni di sequenza](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md)ed [espressioni di query](query-expressions.md).
 
-## <a name="creating-a-new-type-of-computation-expression"></a>Creare un nuovo tipo di espressione di calcolo
+## <a name="creating-a-new-type-of-computation-expression"></a>Creazione di un nuovo tipo di espressione di calcolo
 
-È possibile definire le caratteristiche delle proprie espressioni di calcolo tramite la creazione di una classe del generatore e la definizione di determinati metodi speciali sulla classe. La classe del generatore possibile definire i metodi elencati nella tabella seguente.
+È possibile definire le caratteristiche delle proprie espressioni di calcolo creando una classe del generatore e definendo determinati metodi speciali sulla classe. La classe Builder può facoltativamente definire i metodi elencati nella tabella seguente.
 
-Nella tabella seguente vengono descritti i metodi che possono essere usati in una classe del generatore del flusso di lavoro.
+Nella tabella seguente vengono descritti i metodi che possono essere utilizzati in una classe del generatore di flussi di lavoro.
 
-|**Metodo**|**Firma tipica**|**Descrizione**|
+|**Metodo**|**Firme tipiche**|**Descrizione**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Chiamato per `let!` e `do!` nelle espressioni di calcolo.|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|Esegue il wrapping di un'espressione di calcolo come una funzione.|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|Esegue il wrapping di un'espressione di calcolo come funzione.|
 |`Return`|`'T -> M<'T>`|Chiamato per `return` nelle espressioni di calcolo.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Chiamato per `return!` nelle espressioni di calcolo.|
 |`Run`|`M<'T> -> M<'T>` oppure<br /><br />`M<'T> -> 'T`|Esegue un'espressione di calcolo.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` oppure<br /><br />`M<unit> * M<'T> -> M<'T>`|Chiamato per la sequenziazione in espressioni di calcolo.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` oppure<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Chiamato per `for...do` espressioni nelle espressioni di calcolo.|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Chiamato per `try...finally` espressioni nelle espressioni di calcolo.|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Chiamato per `try...with` espressioni nelle espressioni di calcolo.|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Chiamato per `use` associazioni nelle espressioni di calcolo.|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Chiamato per `while...do` espressioni nelle espressioni di calcolo.|
-|`Yield`|`'T -> M<'T>`|Chiamato per `yield` espressioni nelle espressioni di calcolo.|
-|`YieldFrom`|`M<'T> -> M<'T>`|Chiamato per `yield!` espressioni nelle espressioni di calcolo.|
-|`Zero`|`unit -> M<'T>`|Chiamato per vuoto `else` rami di `if...then` espressioni nelle espressioni di calcolo.|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica che l'espressione di calcolo viene passato per il `Run` membro come quotation. Converte tutte le istanze di calcolo in una quotation.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` oppure<br /><br />`M<unit> * M<'T> -> M<'T>`|Chiamato per la sequenziazione nelle espressioni di calcolo.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` oppure<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Chiamato per `for...do` le espressioni nelle espressioni di calcolo.|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Chiamato per `try...finally` le espressioni nelle espressioni di calcolo.|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Chiamato per `try...with` le espressioni nelle espressioni di calcolo.|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Chiamato per `use` le associazioni nelle espressioni di calcolo.|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Chiamato per `while...do` le espressioni nelle espressioni di calcolo.|
+|`Yield`|`'T -> M<'T>`|Chiamato per `yield` le espressioni nelle espressioni di calcolo.|
+|`YieldFrom`|`M<'T> -> M<'T>`|Chiamato per `yield!` le espressioni nelle espressioni di calcolo.|
+|`Zero`|`unit -> M<'T>`|Chiamata eseguita per `else` i rami `if...then` vuoti delle espressioni nelle espressioni di calcolo.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica che l'espressione di calcolo viene passata al `Run` membro come virgoletta. Converte tutte le istanze di un calcolo in una virgoletta.|
 
-Molti dei metodi in una classe generatore usano e restituiscono un `M<'T>` construct che è in genere un tipo definito separatamente che caratterizza il tipo di calcoli combinate, ad esempio, `Async<'T>` per i flussi di lavoro asincroni e `Seq<'T>` per i flussi di lavoro di sequenza. Le firme di questi metodi consentono loro di essere combinate e annidate tra loro, in modo che sia possibile passare l'oggetto del flusso di lavoro restituito da un costrutto a quella successiva. Il compilatore, quando analizza un'espressione di calcolo, converte l'espressione in una serie di chiamate di funzione annidata usando i metodi nella tabella precedente e il codice nell'espressione di calcolo.
+Molti dei metodi di una classe Builder usano e restituiscono un `M<'T>` costrutto, che in genere è un tipo definito separatamente che caratterizza il tipo di calcoli combinati, ad `Async<'T>` esempio per i flussi di lavoro asincroni `Seq<'T>` e per i flussi di lavoro di sequenza. Le firme di questi metodi consentono di combinarle e nidificarle tra loro, in modo che l'oggetto flusso di lavoro restituito da un costrutto possa essere passato a quello successivo. Il compilatore, durante l'analisi di un'espressione di calcolo, converte l'espressione in una serie di chiamate di funzione annidate utilizzando i metodi della tabella precedente e il codice dell'espressione di calcolo.
 
-L'espressione annidata è nel formato seguente:
+Il formato dell'espressione annidata è il seguente:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono definiti nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, di seguito è indicato come `{| cexpr |}`, viene convertita in chiamate che riguardano i metodi della classe del generatore per le conversioni descritte nella tabella seguente. L'espressione di calcolo `{| cexpr |}` viene definito in modo ricorsivo in base a queste conversioni in cui `expr` sia un F# espressione e `cexpr` è un'espressione di calcolo.
+Nel codice precedente, le chiamate a `Run` e `Delay` vengono omesse se non sono definite nella classe del generatore di espressioni di calcolo. Il corpo dell'espressione di calcolo, qui indicato come `{| cexpr |}`, viene convertito in chiamate che coinvolgono i metodi della classe Builder dalle traduzioni descritte nella tabella seguente. L'espressione `{| cexpr |}` di calcolo è definita in modo ricorsivo in base a queste traduzioni, `cexpr` dove `expr` è un' F# espressione ed è un'espressione di calcolo.
 
 |Espressione|Conversione|
 |----------|-----------|
@@ -253,9 +253,9 @@ Nel codice precedente, le chiamate a `Run` e `Delay` vengono omessi se non sono 
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-Nella tabella precedente, `other-expr` descrive un'espressione che non è elencata nella tabella. Una classe generatore non è necessario implementare tutti i metodi e supportano tutte le conversioni elencate nella tabella precedente. Tali costrutti che non sono implementati non sono disponibili nelle espressioni di calcolo di quel tipo. Ad esempio, se non si desidera supportare le `use` parola chiave nelle espressioni di calcolo, è possibile omettere la definizione di `Use` nella classe del generatore.
+Nella tabella `other-expr` precedente viene descritta un'espressione che non è elencata diversamente nella tabella. Una classe Builder non deve implementare tutti i metodi e supportare tutte le traduzioni elencate nella tabella precedente. Questi costrutti non implementati non sono disponibili nelle espressioni di calcolo di quel tipo. Se, ad esempio, non si desidera supportare la `use` parola chiave nelle espressioni di calcolo, è possibile omettere la definizione di nella classe del `Use` generatore.
 
-Esempio di codice seguente illustra un'espressione di calcolo che incapsula un calcolo in una serie di passaggi che può essere valutato una sola operazione alla volta. Oggetto discriminate tipo unione, `OkOrException`, consente di codificare lo stato di errore dell'espressione valutato fino a questo momento. Questo codice illustra alcuni modelli tipici che è possibile usare nelle espressioni di calcolo, ad esempio le implementazioni di boilerplate di alcuni dei metodi del generatore.
+Nell'esempio di codice seguente viene illustrata un'espressione di calcolo che incapsula un calcolo come una serie di passaggi che possono essere valutati un passaggio alla volta. Un tipo di unione discriminata `OkOrException`,, codifica lo stato di errore dell'espressione come valutato finora. Questo codice illustra diversi modelli tipici che è possibile usare nelle espressioni di calcolo, ad esempio le implementazioni standard di alcuni metodi del generatore.
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,17 +378,17 @@ comp |> step |> step
 comp |> step |> step |> step |> step 
 ```
 
-Un'espressione di calcolo ha un tipo sottostante, che restituisce l'espressione. Il tipo sottostante può rappresentare un risultato calcolato o un calcolo ritardato che può essere eseguito o può fornire un modo per eseguire l'iterazione attraverso un certo tipo di raccolta. Nell'esempio precedente, il tipo sottostante è stata **alla fine**. Per un'espressione di sequenza, il tipo sottostante è <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Per un'espressione di query, il tipo sottostante è <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Per un flusso di lavoro asincrono, il tipo sottostante è [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Il `Async` oggetto rappresenta il lavoro da eseguire per calcolare il risultato. Ad esempio, si chiama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) per eseguire un calcolo e restituire il risultato.
+Un'espressione di calcolo ha un tipo sottostante, restituito dall'espressione. Il tipo sottostante può rappresentare un risultato calcolato o un calcolo ritardato che può essere eseguito oppure può fornire un modo per scorrere un tipo di raccolta. Nell'esempio precedente, il tipo sottostante era **alla fine**. Per un'espressione di sequenza, il tipo sottostante <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>è. Per un'espressione di query, il tipo sottostante <xref:System.Linq.IQueryable?displayProperty=nameWithType>è. Per un flusso di lavoro asincrono, il tipo [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)sottostante è. L' `Async` oggetto rappresenta il lavoro da eseguire per calcolare il risultato. Ad esempio, si chiama [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) per eseguire un calcolo e restituire il risultato.
 
 ## <a name="custom-operations"></a>Operazioni personalizzate
 
-È possibile definire un'operazione personalizzata su un'espressione di calcolo e usare un'operazione personalizzata come operatore in un'espressione di calcolo. Ad esempio, è possibile includere un operatore di query in un'espressione di query. Quando si definisce un'operazione personalizzata, è necessario definire il risultato e per i metodi dell'espressione di calcolo. Per definire un'operazione personalizzata, inserirlo in una classe del generatore per l'espressione di calcolo e quindi applicare il [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Questo attributo accetta una stringa come argomento, ovvero il nome da usare in un'operazione personalizzata. Questo nome entra nell'ambito all'inizio della parentesi graffa di apertura dell'espressione di calcolo. Pertanto, non è consigliabile utilizzare gli identificatori che hanno lo stesso nome di un'operazione personalizzata in questo blocco. Ad esempio, evitare l'utilizzo di identificatori, ad esempio `all` o `last` nelle espressioni di query.
+È possibile definire un'operazione personalizzata su un'espressione di calcolo e utilizzare un'operazione personalizzata come operatore in un'espressione di calcolo. È ad esempio possibile includere un operatore di query in un'espressione di query. Quando si definisce un'operazione personalizzata, è necessario definire i metodi yield e for nell'espressione di calcolo. Per definire un'operazione personalizzata, inserirla in una classe di generatore per l'espressione di calcolo, quindi [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)applicare l'oggetto. Questo attributo accetta una stringa come argomento, che è il nome da usare in un'operazione personalizzata. Questo nome entra nell'ambito all'inizio della parentesi graffa di apertura dell'espressione di calcolo. Pertanto, non è consigliabile utilizzare identificatori con lo stesso nome di un'operazione personalizzata in questo blocco. Ad esempio, evitare l'utilizzo di identificatori come `all` o `last` nelle espressioni di query.
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a>Estensione generatori esistenti con nuove operazioni personalizzato
+### <a name="extending-existing-builders-with-new-custom-operations"></a>Estensione di generatori esistenti con nuove operazioni personalizzate
 
-Se si dispone già di una classe del generatore, delle operazioni personalizzate possono essere estesi all'esterno di questa classe del generatore. Le estensioni devono essere dichiarate nei moduli. Gli spazi dei nomi non possono contenere membri di estensione, ad eccezione dello stesso file e lo stesso gruppo di dichiarazione dello spazio dei nomi in cui è definito il tipo.
+Se si dispone già di una classe Builder, le operazioni personalizzate possono essere estese dall'esterno di questa classe del generatore. Le estensioni devono essere dichiarate nei moduli. Gli spazi dei nomi non possono contenere membri di estensione eccetto nello stesso file e nello stesso gruppo di dichiarazioni dello spazio dei nomi in cui è definito il tipo.
 
-L'esempio seguente illustra l'estensione dell'oggetto esistente `Microsoft.FSharp.Linq.QueryBuilder` classe.
+Nell'esempio seguente viene illustrata l'estensione della `Microsoft.FSharp.Linq.QueryBuilder` classe esistente.
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with

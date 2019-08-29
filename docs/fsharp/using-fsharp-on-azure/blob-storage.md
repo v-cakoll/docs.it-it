@@ -3,12 +3,12 @@ title: Introduzione all'archiviazione BLOB di Azure con F#
 description: Archivia i dati non strutturati nel cloud con l'archiviazione BLOB di Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630505"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107115"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione BLOB di Azure con F\#
 
@@ -186,9 +186,9 @@ Per altre informazioni sulle differenze tra i tre tipi di BLOB, vedere informazi
 
 Per supportare l'accesso simultaneo a un BLOB da più client o da più istanze di processo, è possibile usare **ETag** o **lease**.
 
-* **ETag** : fornisce un modo per rilevare che il BLOB o il contenitore è stato modificato da un altro processo
+- **ETag** : fornisce un modo per rilevare che il BLOB o il contenitore è stato modificato da un altro processo
 
-* **Lease** : fornisce un modo per ottenere l'accesso esclusivo, rinnovabile, in scrittura o eliminazione a un BLOB per un certo periodo di tempo
+- **Lease** : fornisce un modo per ottenere l'accesso esclusivo, rinnovabile, in scrittura o eliminazione a un BLOB per un certo periodo di tempo
 
 Per ulteriori informazioni, vedere [gestione della concorrenza in archiviazione di Microsoft Azure](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 

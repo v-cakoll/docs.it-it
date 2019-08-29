@@ -12,73 +12,73 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ca39d989cc7bc16ec2678ba5fa53710899f3ac4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912704"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107149"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedura: Salvare fusi orari in una risorsa incorporata
 
-Una fuso orario dell'applicazione spesso richiede la presenza di un determinato fuso orario. Tuttavia, poiché la disponibilità dei singoli <xref:System.TimeZoneInfo> oggetti dipende dalle informazioni archiviate nel Registro di sistema locale, anche fusi orari generalmente disponibili può essere assente. Inoltre, viene creata un'istanza di informazioni sui fusi orari personalizzati usando il <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo) non è archiviato con altre informazioni sul fuso orario nel Registro di sistema. Per garantire che i fusi orari disponibili quando sono necessari, è possibile salvarli serializzando li e ripristinarli in un secondo momento per la deserializzazione.
+Un'applicazione in grado di riconoscere il fuso orario richiede spesso la presenza di un determinato fuso orario. Tuttavia, poiché la disponibilità di singoli <xref:System.TimeZoneInfo> oggetti dipende dalle informazioni archiviate nel registro di sistema del sistema locale, anche i fusi orari disponibili abitualmente potrebbero essere assenti. Inoltre, le informazioni sui fusi orari personalizzati di cui è stata creata <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> un'istanza tramite il metodo non vengono archiviate con altre informazioni sul fuso orario nel registro di sistema. Per assicurarsi che questi fusi orari siano disponibili quando sono necessari, è possibile salvarli mediante la serializzazione e successivamente ripristinarli mediante la deserializzazione.
 
-In genere, la serializzazione un <xref:System.TimeZoneInfo> oggetto presente a parte l'applicazione abilitata per il fuso orario. A seconda l'archivio dati usato per contenere serializzato <xref:System.TimeZoneInfo> oggetti, dati del fuso orario possono essere serializzati come parte di una routine di installazione o configurazione (ad esempio, quando i dati vengono archiviati in una chiave applicazione del Registro di sistema) o come parte di una routine di utilità che esegue prima che venga compilata l'applicazione finale (ad esempio, quando i dati serializzati vengono archiviati in un file di risorse (resx) XML di .NET).
+In genere, la serializzazione di un <xref:System.TimeZoneInfo> oggetto viene eseguita a parte l'applicazione in grado di riconoscere il fuso orario. A seconda dell'archivio dati utilizzato per contenere <xref:System.TimeZoneInfo> oggetti serializzati, i dati del fuso orario possono essere serializzati come parte di una routine di installazione o installazione, ad esempio quando i dati vengono archiviati in una chiave dell'applicazione del registro di sistema, o come parte di una routine di utilità che esegue prima che l'applicazione finale venga compilata, ad esempio quando i dati serializzati vengono archiviati in un file di risorse XML (con estensione resx) .NET.
 
-Oltre a un file di risorse che viene compilato con l'applicazione, diversi altri archivi dati è utilizzabile per informazioni sul fuso orario. tra cui:
+Oltre a un file di risorse compilato con l'applicazione, è possibile usare diversi altri archivi dati per le informazioni sul fuso orario. tra cui:
 
-* Il Registro di sistema. Si noti che un'applicazione deve utilizzare le sottochiavi della chiave dell'applicazione per archiviare i dati di fuso orario personalizzato anziché utilizzare le sottochiavi della HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
+- Registro di sistema. Si noti che un'applicazione deve usare le sottochiavi della propria chiave applicativa per archiviare i dati del fuso orario personalizzati anziché usare le sottochiavi di HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Nt\currentversion\time Zones zone.
 
-* File di configurazione.
+- File di configurazione.
 
-* Altri file di sistema.
+- Altri file di sistema.
 
-### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Per salvare un fuso orario per serializzarlo in un file resx
+### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Per salvare un fuso orario eseguendo la serializzazione in un file con estensione resx
 
 1. Recuperare un fuso orario esistente o creare un nuovo fuso orario.
 
-   Per recuperare un fuso orario esistente, vedere [come: Accedere ora UTC e l'ora locale zona agli oggetti predefiniti](../../../docs/standard/datetime/access-utc-and-local.md) e [come: Creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Per recuperare un fuso orario esistente, vedere [procedura: Accedere agli oggetti](../../../docs/standard/datetime/access-utc-and-local.md) predefiniti dell'ora UTC e del fuso orario [locale e procedura: Creare un'istanza di un](../../../docs/standard/datetime/instantiate-time-zone-info.md)oggetto TimeZoneInfo.
 
-   Per creare un nuovo fuso orario, chiamare uno degli overload del <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> (metodo). Per altre informazioni, vedere [Procedura: Creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [come: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Per creare un nuovo fuso orario, chiamare uno degli overload del <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo. Per altre informazioni, vedere [Procedura: Creare fusi orari senza regole](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) di regolazione e [procedura: Creare fusi orari con regole](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)di rettifica.
 
 2. Chiamare il <xref:System.TimeZoneInfo.ToSerializedString%2A> metodo per creare una stringa che contiene i dati del fuso orario.
 
-3. Creare un'istanza di un <xref:System.IO.StreamWriter> oggetto fornendo il nome e, facoltativamente, il percorso del file con estensione resx di <xref:System.IO.StreamWriter> costruttore della classe.
+3. Creare un'istanza <xref:System.IO.StreamWriter> di un oggetto fornendo il nome e, facoltativamente, il percorso del file con estensione <xref:System.IO.StreamWriter> resx al costruttore della classe.
 
-4. Creare un'istanza di un <xref:System.Resources.ResXResourceWriter> passando il <xref:System.IO.StreamWriter> dell'oggetto per il <xref:System.Resources.ResXResourceWriter> costruttore della classe.
+4. Creare un'istanza <xref:System.Resources.ResXResourceWriter> di un oggetto passando <xref:System.IO.StreamWriter> l'oggetto al <xref:System.Resources.ResXResourceWriter> costruttore della classe.
 
-5. Passare il fuso orario stringa serializzata al <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> (metodo).
+5. Passare la stringa serializzata del fuso orario al <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metodo.
 
 6. Chiamare il metodo <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>.
 
 7. Chiamare il metodo <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType>.
 
-8. Chiudi il <xref:System.IO.StreamWriter> chiamando il <xref:System.IO.StreamWriter.Close%2A> (metodo).
+8. Chiudere l' <xref:System.IO.StreamWriter> oggetto chiamando il relativo <xref:System.IO.StreamWriter.Close%2A> metodo.
 
-9. Aggiungere il file con estensione resx generati al progetto di Visual Studio dell'applicazione.
+9. Aggiungere il file resx generato al progetto di Visual Studio dell'applicazione.
 
-10. Usando il **proprietà** finestra in Visual Studio, assicurarsi che il file con estensione resx **azione di compilazione** viene impostata su **risorsa incorporata**.
+10. Utilizzando la finestra **Proprietà** in Visual Studio, assicurarsi che la proprietà **azione di compilazione** del file. resx sia impostata su **risorsa incorporata**.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente serializza un <xref:System.TimeZoneInfo> oggetto che rappresenta l'ora solare fuso centrale e un <xref:System.TimeZoneInfo> oggetto che rappresenta il Palmer Station, Antartide a un file di risorse .NET XML denominato SerializedTimeZones. Ora solare fuso centrale viene in genere definita nel Registro di sistema. Palmer Station, Antartide è un fuso orario personalizzato.
+Nell'esempio seguente viene serializzato <xref:System.TimeZoneInfo> un oggetto che rappresenta l'ora solare centrale <xref:System.TimeZoneInfo> e un oggetto che rappresenta la stazione di Palmer, l'ora antartica in un file di risorse XML .NET denominato SerializedTimeZones. resx. L'ora solare centrale è in genere definita nel registro di sistema; Palmer Station, Antartide è un fuso orario personalizzato.
 
 [!code-csharp[TimeZone2.Serialization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#1)]
 [!code-vb[TimeZone2.Serialization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#1)]
 
-In questo esempio serializza <xref:System.TimeZoneInfo> gli oggetti in modo che siano disponibili in un file di risorse in fase di compilazione.
+Questo esempio serializza <xref:System.TimeZoneInfo> gli oggetti in modo che siano disponibili in un file di risorse in fase di compilazione.
 
-Poiché il <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> metodo aggiunge informazioni di intestazione completa in un file di risorsa XML .NET, non può essere usato per aggiungere risorse a un file esistente. Nell'esempio viene gestita tramite il controllo dei file SerializedTimeZones e, se presente, l'archiviazione di tutte le relative risorse diverso da due fusi orari serializzati generico <xref:System.Collections.Generic.Dictionary%602> oggetto. Il file esistente viene eliminato e le risorse esistenti vengono aggiunti a un nuovo file SerializedTimeZones. I dati serializzati fuso orario viene inoltre aggiunto a questo file.
+Poiché il <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> metodo aggiunge informazioni di intestazione complete a un file di risorse XML .NET, non può essere utilizzato per aggiungere risorse a un file esistente. L'esempio gestisce questa operazione controllando la presenza del file SerializedTimeZones. resx e, se esiste, archiviando tutte le relative risorse diverse dai due fusi orari serializzati in un <xref:System.Collections.Generic.Dictionary%602> oggetto generico. Il file esistente viene quindi eliminato e le risorse esistenti vengono aggiunte a un nuovo file SerializedTimeZones. resx. Anche i dati serializzati del fuso orario vengono aggiunti a questo file.
 
-La chiave (o **nome**) i campi delle risorse non devono contenere spazi incorporati. Il <xref:System.String.Replace%28System.String%2CSystem.String%29> metodo viene chiamato per rimuovere tutti gli spazi incorporati negli identificatori del fuso orario, prima che vengano assegnati al file di risorse.
+I campi chiave (o **nome**) delle risorse non devono contenere spazi incorporati. Il <xref:System.String.Replace%28System.String%2CSystem.String%29> metodo viene chiamato per rimuovere tutti gli spazi incorporati negli identificatori del fuso orario prima che vengano assegnati al file di risorse.
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
 L'esempio presenta i requisiti seguenti:
 
-* Aggiungere un riferimento alla DLL e Forms al progetto.
+- Che un riferimento a System. Windows. Forms. dll e System. Core. dll venga aggiunto al progetto.
 
-* Che siano importati spazi dei nomi seguenti:
+- Che vengano importati gli spazi dei nomi seguenti:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

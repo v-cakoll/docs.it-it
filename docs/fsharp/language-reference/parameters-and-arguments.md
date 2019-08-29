@@ -2,12 +2,12 @@
 title: Parametri e argomenti
 description: Informazioni sul F# supporto delle lingue per la definizione dei parametri e il passaggio di argomenti a funzioni, metodi e proprietà.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627311"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106600"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
@@ -163,9 +163,9 @@ In questo caso, il compilatore genera un avviso e ignorerà il totale di entramb
 
 Il passaggio F# di un valore per riferimento comporta [ByRef](byrefs.md), che sono tipi di puntatore gestiti. Di seguito sono riportate le linee guida per il tipo da usare:
 
-* Usare `inref<'T>` se è sufficiente leggere il puntatore.
-* Usare `outref<'T>` se è necessario scrivere solo sull'indicatore di misura.
-* Usare `byref<'T>` se è necessario leggere e scrivere sull'indicatore di misura.
+- Usare `inref<'T>` se è sufficiente leggere il puntatore.
+- Usare `outref<'T>` se è necessario scrivere solo sull'indicatore di misura.
+- Usare `byref<'T>` se è necessario leggere e scrivere sull'indicatore di misura.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

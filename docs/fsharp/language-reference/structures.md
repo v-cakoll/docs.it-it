@@ -2,12 +2,12 @@
 title: Strutture
 description: Informazioni sulla F# struttura, un tipo di oggetto compatto spesso più efficiente rispetto a una classe per i tipi con una piccola quantità di dati e un comportamento semplice.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630768"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106819"
 ---
 # <a name="structures"></a>Strutture
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 Uno struct`byref`"-like" in F# è un tipo di valore associato allo stack. Non viene mai allocato nell'heap gestito. Uno `byref`struct simile è utile per la programmazione a prestazioni elevate, in quanto viene applicato con un set di controlli sicuri sulla durata e non sull'acquisizione. Le regole sono:
 
-* Possono essere usati come parametri di funzione, parametri di metodo, variabili locali, restituzione di metodi.
-* Non possono essere membri statici o di istanza di una classe o di uno struct normale.
-* Non possono essere acquisiti da alcun costrutto di`async` chiusura (metodi o espressioni lambda).
-* Non possono essere usati come parametro generico.
+- Possono essere usati come parametri di funzione, parametri di metodo, variabili locali, restituzione di metodi.
+- Non possono essere membri statici o di istanza di una classe o di uno struct normale.
+- Non possono essere acquisiti da alcun costrutto di`async` chiusura (metodi o espressioni lambda).
+- Non possono essere usati come parametro generico.
 
 Sebbene queste regole limitino molto fortemente l'utilizzo, lo fanno per soddisfare la promessa di un calcolo ad alte prestazioni in modo sicuro.
 

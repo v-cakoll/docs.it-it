@@ -1,29 +1,29 @@
 ---
 title: Informazioni sul chiamante
-description: Viene descritto come utilizzare attributi di argomenti informativi sul chiamante per ottenere informazioni sul chiamante da un metodo.
+description: Viene descritto come usare gli attributi degli argomenti delle informazioni sul chiamante per ottenere informazioni sul chiamante da un metodo.
 ms.date: 04/25/2017
-ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703166"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106590"
 ---
 # <a name="caller-information"></a>Informazioni sul chiamante
 
 Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante. Queste informazioni sono utili per la tracciatura, il debug e la creazione di strumenti diagnostici.
 
-Per ottenere queste informazioni, utilizzare gli attributi applicati ai parametri facoltativi, a ognuno dei quali è associato un valore predefinito. Nella tabella seguente elenca gli attributi di informazioni sul chiamante definiti nel [CompilerServices](/dotnet/api/system.runtime.compilerservices) dello spazio dei nomi:
+Per ottenere queste informazioni, utilizzare gli attributi applicati ai parametri facoltativi, a ognuno dei quali è associato un valore predefinito. La tabella seguente elenca gli attributi delle informazioni sul chiamante definiti nello spazio dei nomi [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
-|Attributo|Descrizione|Tipo|
+|Attributo|Descrizione|Type|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Percorso completo del file di origine contenente il chiamante. Si tratta del percorso del file al momento della compilazione.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Numero di riga nel file di origine in cui viene chiamato il metodo.|`Integer`|
-|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Nome di una proprietà o di un metodo del chiamante. Vedere la sezione di nomi di membri più avanti in questo argomento.|`String`|
+|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Nome di una proprietà o di un metodo del chiamante. Vedere la sezione nomi dei membri più avanti in questo argomento.|`String`|
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come è possibile usare questi attributi per tracciare un chiamante.
+Nell'esempio seguente viene illustrato come è possibile utilizzare questi attributi per tracciare un chiamante.
 
 ```fsharp
 open System.Diagnostics
@@ -43,20 +43,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>Note
 
-Attributi informativi sul chiamante possono essere applicati solo a parametri facoltativi. Gli attributi di informazioni sul chiamante che il compilatore scrivere il valore appropriato per ciascun parametro facoltativo dotato di un attributo di informazioni sul chiamante.
+Gli attributi delle informazioni sul chiamante possono essere applicati solo ai parametri facoltativi. Gli attributi delle informazioni sul chiamante fanno sì che il compilatore scriva il valore appropriato per ogni parametro facoltativo decorato con un attributo info del chiamante.
 
-I valori delle informazioni sul chiamante vengono generati come valori letterali in Intermediate Language (IL) in fase di compilazione. A differenza dei risultati del [StackTrace](/dotnet/api/system.diagnostics.stacktrace) proprietà per le eccezioni, i risultati non sono interessati da offuscamento.
+I valori delle informazioni sul chiamante vengono generati come valori letterali in Intermediate Language (IL) in fase di compilazione. A differenza dei risultati della proprietà [StackTrace](/dotnet/api/system.diagnostics.stacktrace) per le eccezioni, i risultati non sono interessati dall'offuscamento.
 
 È possibile fornire esplicitamente gli argomenti facoltativi per esaminare o nascondere le informazioni sul chiamante.
 
 ## <a name="member-names"></a>Nomi dei membri
 
-È possibile usare la [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) attributo per evitare di specificare il nome del membro come un `String` argomento al metodo chiamato. Utilizzando questa tecnica, si evita il problema che Refactoring di ridenominazione non cambia il `String` valori. Questo vantaggio è particolarmente utile per le attività seguenti:
+È possibile utilizzare l' [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) attributo per evitare di specificare il nome del membro `String` come argomento del metodo chiamato. Utilizzando questa tecnica, si evita il problema che il refactoring di ridenominazione non `String` modifica i valori. Questo vantaggio è particolarmente utile per le attività seguenti:
 
-* Utilizzo della tracciatura e delle routine di diagnostica.
-* Implementa il [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) interfaccia durante l'associazione dati. Questa interfaccia consente alla proprietà di un oggetto di notificare a un controllo associato la modifica della proprietà stessa in modo che il controllo possa visualizzare le informazioni aggiornate. Senza il [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) attributo, è necessario specificare il nome della proprietà come valore letterale.
+- Utilizzo della tracciatura e delle routine di diagnostica.
+- Implementazione dell'interfaccia [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) durante l'associazione dei dati. Questa interfaccia consente alla proprietà di un oggetto di notificare a un controllo associato la modifica della proprietà stessa in modo che il controllo possa visualizzare le informazioni aggiornate. Senza l' [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) attributo, è necessario specificare il nome della proprietà come valore letterale.
 
-Il grafico seguente mostra il membro nomi che vengono restituiti quando si usa l'attributo CallerMemberName.
+Nel grafico seguente vengono illustrati i nomi dei membri restituiti quando si utilizza l'attributo CallerMemberName.
 
 |Elemento in cui si verificano le chiamate|Nome del membro restituito|
 |-------------------|------------------|

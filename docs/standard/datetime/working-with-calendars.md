@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630543"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106705"
 ---
 # <a name="working-with-calendars"></a>Utilizzo di calendari
 
@@ -30,39 +30,39 @@ Sebbene un valore di data e ora rappresenti un momento, la relativa rappresentaz
 
 Tutti i calendari in .NET derivano <xref:System.Globalization.Calendar?displayProperty=nameWithType> dalla classe, che fornisce l'implementazione del calendario di base. Una delle classi che eredita dalla classe <xref:System.Globalization.Calendar> è la classe <xref:System.Globalization.EastAsianLunisolarCalendar>, che è la classe di base per tutti i calendari lunisolari. .NET include le implementazioni di calendario seguenti:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>, che rappresenta il calendario lunisolare cinese.
+- <xref:System.Globalization.ChineseLunisolarCalendar>, che rappresenta il calendario lunisolare cinese.
 
-* <xref:System.Globalization.GregorianCalendar>, che rappresenta il calendario gregoriano. Questo calendario viene ulteriormente suddiviso in sottotipi, ad esempio la versione araba e francese mediorientale, definiti dall'enumerazione <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. La proprietà <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> specifica il sottotipo del calendario gregoriano.
+- <xref:System.Globalization.GregorianCalendar>, che rappresenta il calendario gregoriano. Questo calendario viene ulteriormente suddiviso in sottotipi, ad esempio la versione araba e francese mediorientale, definiti dall'enumerazione <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. La proprietà <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> specifica il sottotipo del calendario gregoriano.
 
-* <xref:System.Globalization.HebrewCalendar>, che rappresenta il calendario ebraico.
+- <xref:System.Globalization.HebrewCalendar>, che rappresenta il calendario ebraico.
 
-* <xref:System.Globalization.HijriCalendar>, che rappresenta il calendario Hijri.
+- <xref:System.Globalization.HijriCalendar>, che rappresenta il calendario Hijri.
 
-* <xref:System.Globalization.JapaneseCalendar>, che rappresenta il calendario giapponese.
+- <xref:System.Globalization.JapaneseCalendar>, che rappresenta il calendario giapponese.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>, che rappresenta il calendario lunisolare giapponese.
+- <xref:System.Globalization.JapaneseLunisolarCalendar>, che rappresenta il calendario lunisolare giapponese.
 
-* <xref:System.Globalization.JulianCalendar>, che rappresenta il calendario giuliano.
+- <xref:System.Globalization.JulianCalendar>, che rappresenta il calendario giuliano.
 
-* <xref:System.Globalization.KoreanCalendar>, che rappresenta il calendario coreano.
+- <xref:System.Globalization.KoreanCalendar>, che rappresenta il calendario coreano.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>, che rappresenta il calendario lunisolare coreano.
+- <xref:System.Globalization.KoreanLunisolarCalendar>, che rappresenta il calendario lunisolare coreano.
 
-* <xref:System.Globalization.PersianCalendar>, che rappresenta il calendario persiano.
+- <xref:System.Globalization.PersianCalendar>, che rappresenta il calendario persiano.
 
-* <xref:System.Globalization.TaiwanCalendar>, che rappresenta il calendario taiwanese.
+- <xref:System.Globalization.TaiwanCalendar>, che rappresenta il calendario taiwanese.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>, che rappresenta il calendario lunisolare taiwanese.
+- <xref:System.Globalization.TaiwanLunisolarCalendar>, che rappresenta il calendario lunisolare taiwanese.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, che rappresenta il calendario buddista thailandese.
+- <xref:System.Globalization.ThaiBuddhistCalendar>, che rappresenta il calendario buddista thailandese.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, che rappresenta il calendario Um Al Qura.
+- <xref:System.Globalization.UmAlQuraCalendar>, che rappresenta il calendario Um Al Qura.
 
 Un calendario può essere utilizzato in uno dei due modi seguenti:
 
-* Come calendario utilizzato da impostazioni cultura specifiche. Ogni oggetto <xref:System.Globalization.CultureInfo> dispone di un calendario corrente, che rappresenta il calendario utilizzato attualmente dall'oggetto. Le rappresentazioni di stringa di tutti i valori di data e ora riflettono automaticamente le impostazioni cultura correnti e il relativo calendario corrente. In genere, il calendario corrente è il calendario predefinito delle impostazioni cultura. <xref:System.Globalization.CultureInfo>gli oggetti hanno anche calendari facoltativi, che includono calendari aggiuntivi che le impostazioni cultura possono usare.
+- Come calendario utilizzato da impostazioni cultura specifiche. Ogni oggetto <xref:System.Globalization.CultureInfo> dispone di un calendario corrente, che rappresenta il calendario utilizzato attualmente dall'oggetto. Le rappresentazioni di stringa di tutti i valori di data e ora riflettono automaticamente le impostazioni cultura correnti e il relativo calendario corrente. In genere, il calendario corrente è il calendario predefinito delle impostazioni cultura. <xref:System.Globalization.CultureInfo>gli oggetti hanno anche calendari facoltativi, che includono calendari aggiuntivi che le impostazioni cultura possono usare.
 
-* Come calendario autonomo indipendente da impostazioni cultura specifiche. In questo caso, vengono utilizzati i metodi <xref:System.Globalization.Calendar> per esprimere le date come valori che riflettono il calendario.
+- Come calendario autonomo indipendente da impostazioni cultura specifiche. In questo caso, vengono utilizzati i metodi <xref:System.Globalization.Calendar> per esprimere le date come valori che riflettono il calendario.
 
 Si noti che come calendari autonomi è possibile utilizzare solo sei classi di calendario, ovvero <xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, <xref:System.Globalization.JulianCalendar>, <xref:System.Globalization.KoreanLunisolarCalendar>, <xref:System.Globalization.PersianCalendar> e <xref:System.Globalization.TaiwanLunisolarCalendar>. Esse non vengono utilizzate dalle impostazioni cultura né come calendari predefiniti né come calendari facoltativi.
 
@@ -243,7 +243,7 @@ Se i controlli di intervallo rilassato sono indesiderati, è possibile ripristin
    |  |  |
    |--|--|
    |Chiave | NETFramework\AppContext\.HKEY_LOCAL_MACHINE\Software\Microsoft |
-   |NOME | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   |Name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
    |Type | REG_SZ |
    |Value | true |
 
@@ -358,7 +358,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |Chiave | NETFramework\AppContext\.HKEY_LOCAL_MACHINE\Software\Microsoft |
    |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |Type | REG_SZ |
-   |Valore | true | 
+   |Value | true | 
 
 ## <a name="see-also"></a>Vedere anche
 
