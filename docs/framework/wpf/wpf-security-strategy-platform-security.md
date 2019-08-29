@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817879"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133755"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi di sicurezza, sfrutta anche le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, CLR e Internet Explorer. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -33,7 +33,7 @@ Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Sicurezza del sistema operativo  
- Il livello minimo di sistema operativo richiesto da [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] è [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Il nucleo di [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre diverse funzionalità di sicurezza che costituiscono la base di sicurezza per tutte le applicazioni Windows, incluse [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]quelle compilate con. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] incorpora, ed estende, le funzionalità di sicurezza di [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento mostra quali di queste funzionalità di sicurezza sono importanti per [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] e descrive come si integrano in [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] per formare un solido sistema di difesa in profondità.  
+Il nucleo di Windows offre diverse funzionalità di sicurezza che costituiscono la base di sicurezza per tutte le applicazioni Windows, incluse quelle compilate con WPF. In questo argomento viene illustrata la vasta gamma di queste funzionalità di sicurezza importanti per WPF, nonché il modo in cui WPF si integra con loro per offrire un'ulteriore difesa in profondità.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -41,7 +41,7 @@ Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi
   
 - Compilazione /GS  
   
-- [https://login.microsoftonline.com/consumers/]([!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]).  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>Compilazione /GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]fornisce la protezione ricompilando molte librerie di sistema principali, incluse tutte le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dipendenze, ad esempio CLR, per mitigare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
@@ -57,21 +57,21 @@ Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- Gli utenti [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] in [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] trarranno numerosi vantaggi dai miglioramenti apportati alla sicurezza del sistema operativo, inclusi l'accesso utente con privilegi minimi, i controlli di integrità del codice e l'isolamento dei privilegi.  
+Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi della sicurezza del sistema operativo, inclusi l'accesso utente con privilegi minimi, i controlli di integrità del codice e l'isolamento dei privilegi.  
   
 #### <a name="user-account-control-uac"></a>Controllo dell'account utente  
  Attualmente, gli utenti di Windows tendono a essere eseguiti con privilegi di amministratore perché molte applicazioni le richiedono per l'installazione o l'esecuzione o per entrambe. La scrittura delle impostazioni predefinite di un'applicazione nel Registro di sistema ne è un esempio.  
   
  Usare i privilegi di amministratore per eseguire un'applicazione significa che l'applicazione viene eseguita da processi a cui sono stati concessi i privilegi di amministratore. In termini di sicurezza, ciò significa che eventuale codice dannoso che assume il controllo di un processo eseguito con privilegi di amministratore erediterà automaticamente quei privilegi, incluso l'accesso a risorse di sistema critiche.  
   
- Un modo per proteggersi da una tale minaccia per la sicurezza consiste nell'eseguire le applicazioni con la quantità minima necessaria di privilegi. Questo concetto è noto come il principio dei privilegi minimi ed è una funzionalità principale del sistema operativo [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]. Tale funzionalità è nota come Controllo dell'account utente (UAC, User Account Control) e viene usata da [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] in due modi principali:  
+ Un modo per proteggersi da una tale minaccia per la sicurezza consiste nell'eseguire le applicazioni con la quantità minima necessaria di privilegi. Questo è noto come principio dei privilegi minimi ed è una funzionalità di base del sistema operativo Windows. Questa funzionalità è denominata controllo dell'account utente (UAC) e viene utilizzata da Windows UAC in due modi principali:  
   
 - Per eseguire la maggior parte delle applicazioni con privilegi UAC per impostazione predefinita, anche se l'utente è un amministratore. Solo le applicazioni che richiedono i privilegi di amministratore verranno eseguite con i privilegi di amministratore. Per essere eseguite con i privilegi di amministratore, le applicazioni devono essere contrassegnate in modo esplicito nel manifesto dell'applicazione o come voce nei criteri di sicurezza.  
   
 - Per fornire soluzioni di compatibilità come la virtualizzazione. Molte applicazioni, ad esempio, provano a scrivere in percorsi limitati, come C:\Programmi. Per le applicazioni eseguite in ambito UAC, esiste un percorso alternativo specifico di ogni utente in cui è possibile scrivere senza disporre dei privilegi di amministratore. Per le applicazioni eseguite in ambito UAC, il percorso C:\Programmi viene virtualizzato affinché le applicazioni scrivano direttamente nel percorso alternativo specifico di ogni utente. Questa soluzione di compatibilità consente di eseguire molte applicazioni che in passato non sarebbe stato possibile eseguire in base al principio UAC.  
   
 #### <a name="code-integrity-checks"></a>Controlli di integrità del codice  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] incorpora controlli di integrità del codice più accurati per impedire che venga introdotto codice dannoso nei file di sistema o nel kernel in fase di esecuzione/caricamento. Questo va oltre la protezione dei file di sistema.  
+ Windows Vista incorpora controlli di integrità del codice più approfonditi per impedire l'inserimento di codice dannoso nei file di sistema o nel kernel in fase di caricamento/esecuzione. Questo va oltre la protezione dei file di sistema.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processo con diritti limitati per le applicazioni ospitate nei browser  

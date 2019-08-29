@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914595"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133794"
 ---
 # <a name="ui-automation-overview"></a>Cenni preliminari su automazione interfaccia utente
 > [!NOTE]
@@ -26,15 +26,15 @@ ms.locfileid: "69914595"
   
  Le applicazioni client di automazione interfaccia utente possono essere scritte con la certezza che funzioneranno su più framework. Le funzionalità di base di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mascherano le eventuali differenze nei framework sottostanti le varie parti dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Ad esempio, la proprietà `Content` di un pulsante di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , la proprietà `Caption` di un pulsante di [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e la proprietà `ALT` di un'immagine HTML sono tutte mappate a un'unica proprietà, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, nella visualizzazione di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce tutte le funzionalità in [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]e [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
+Automazione interfaccia utente offre funzionalità complete nei sistemi operativi Windows supportati che eseguono il .NET Framework (vedere [.NET Framework requisiti di sistema](../get-started/system-requirements.md) o versioni di .NET Core a partire da .net core 3,0.  
   
- I provider di automazione interfaccia utente offrono supporto per le applicazioni client Microsoft Active Accessibility, tramite un servizio di bridging incorporato.  
+ I provider di automazione interfaccia utente offrono supporto per le applicazioni client Microsoft Active Accessibility tramite un servizio di bridging incorporato.  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>Provider e client  
  In[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono presenti quattro componenti principali, come illustrato nella tabella riportata di seguito.  
   
-|Componente|DESCRIZIONE|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
 |API provider (UIAutomationProvider. dll e UIAutomationTypes. dll)|Un insieme di definizioni dell'interfaccia implementate dai provider di automazione interfaccia utente, oggetti che forniscono informazioni sugli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e rispondono a input a livello di codice.|  
 |API client (UIAutomationClient.dll e UIAutomationTypes.dll)|Un insieme di tipi per il codice gestito che consente alle applicazioni client di automazione interfaccia utente di ottenere informazioni sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e inviare input ai controlli.|  

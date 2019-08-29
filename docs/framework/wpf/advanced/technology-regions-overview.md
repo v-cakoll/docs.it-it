@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671828"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133807"
 ---
 # <a name="technology-regions-overview"></a>Cenni preliminari sulle aree di tecnologia
 Se in un'applicazione si usano più tecnologie di presentazione, ad esempio WPF, Win32 o DirectX, queste devono condividere le aree di rendering all'interno di una finestra comune di primo livello. Questo argomento descrive i problemi che potrebbero influire sulla presentazione e l'input per l'applicazione di interoperatività WPF.  
@@ -54,11 +54,9 @@ Se in un'applicazione si usano più tecnologie di presentazione, ad esempio WPF,
   
  Le finestre sovrapposte di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hanno funzionalità diverse in sistemi operativi diversi. Questo perché [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa DirectX per eseguire il rendering e le finestre sovrapposte sono state progettate principalmente per il rendering GDI, non per il rendering DirectX.  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta le finestre sovrapposte con accelerazione hardware in [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] e versioni successive. Le finestre sovrapposte con accelerazione hardware [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] in richiedono supporto da Microsoft DirectX, quindi le funzionalità dipendono dalla versione di Microsoft DirectX nel computer.  
+- WPF supporta le finestre sovrapposte con accelerazione hardware.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supporta chiavi di colore trasparenza in quanto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non può garantire di eseguire il rendering del colore esatto richiesto, in particolare quando il rendering usa l'accelerazione hardware.  
-  
-- Se l'applicazione è in esecuzione [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]in, le finestre sovrapposte sulla superficie DirectX si sfarfallano quando viene eseguito il rendering dell'applicazione DirectX.  La sequenza di rendering effettiva è che Microsoft Windows Graphics Device Interface (GDI) nasconde la finestra sovrapposta, quindi disegna DirectX, quindi Microsoft Windows Graphics Device Interface (GDI) inserisce la finestra sovrapposta.  Anche le finestre sovrapposte non [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono soggette a questa limitazione.  
   
 ## <a name="see-also"></a>Vedere anche
 
