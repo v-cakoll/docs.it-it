@@ -99,7 +99,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  Anche il controllo delle versioni dei contratti di servizio implica operazioni di aggiunta, modifica e rimozione, in modo analogo a quello dei contratti dati.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Specifica di nome, spazio dei nomi e azione  
- Per impostazione predefinita, il nome di un contratto di servizio è il nome dell'interfaccia. Lo spazio dei nomi predefinito http://tempuri.org è "" e l'azione di ogni operazione http://tempuri.org/contractname/methodname è "". È consigliabile specificare in modo esplicito un nome e uno spazio dei nomi per il contratto di servizio e un'azione per ogni operazione per evitare http://tempuri.org di utilizzare "" e per impedire che i nomi di interfaccia e di metodo vengano esposti nel contratto del servizio.  
+ Per impostazione predefinita, il nome di un contratto di servizio è il nome dell'interfaccia. Lo spazio dei nomi predefinito http://tempuri.org è "" e l'azione di ogni operazione http://tempuri.org/contractname/methodname è "". È consigliabile specificare in modo esplicito un nome e uno spazio dei nomi per il contratto di servizio e un'azione per ogni operazione per evitare "http://tempuri.org " di utilizzare e per impedire che i nomi di interfaccia e di metodo vengano esposti nel contratto del servizio.  
   
 ### <a name="adding-parameters-and-operations"></a>Aggiunta di parametri e operazioni  
  L'aggiunta di operazioni del servizio esposte dal servizio è una modifica che non provoca interruzioni perché non è necessario che i client esistenti si occupino delle nuove operazioni.  

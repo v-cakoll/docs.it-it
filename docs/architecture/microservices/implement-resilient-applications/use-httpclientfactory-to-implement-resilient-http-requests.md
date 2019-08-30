@@ -155,7 +155,7 @@ Il codice visualizzato fino a questo punto esegue solo normali richieste HTTP. L
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Using HttpClientFactory in .NET Core**\ (Uso di HttpClientFactory in .NET Core)
+- **Uso di HttpClientFactory in .NET Core**\
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Repository di GitHub su HttpClientFactory**\

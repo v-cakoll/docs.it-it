@@ -35,10 +35,10 @@ Per illustrare SOLID in dettaglio, servirebbe un'altra guida. Questa guida presu
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **SOLID: Fundamental OOP Principles** \ (SOLID: principi OOP fondamentali)
+- **SOLID: SOLID: principi OOP fondamentali** \
   <https://deviq.com/solid/>
 
-- **Inversion of Control Containers and the Dependency Injection Pattern (Contenitori di inversione del controllo e schema di inserimento delle dipendenze)**  \
+- **Contenitori di inversione del controllo e schema di inserimento delle dipendenze** \
   <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. New is Glue** \

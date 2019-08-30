@@ -235,10 +235,10 @@ Si noti che l'uso della durata del singleton per il repository potrebbe causare 
 - **Implementazione dei modelli con repository e unità di lavoro in un'applicazione MVC ASP.NET** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain** \ (Strategie di implementazione per il modello di repository con Entity Framework, Dapper e Chain)
+- **Jonathan Allen. Strategie di implementazione per il modello di repository con Entity Framework, Dapper e Chain** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes** \ (Confronto tra la durata del servizio contenitore IoC di ASP.NET Core con gli ambiti delle istanze di contenitore IoC di Autofac)
+- **Cesar de la Torre. Confronto tra la durata del servizio contenitore IoC di ASP.NET Core con gli ambiti delle istanze di contenitore IoC di Autofac** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapping di tabella
@@ -452,19 +452,19 @@ Anche se non è consigliabile restituire espressioni IQueryable da un repository
 - **Mapping di tabella** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Use HiLo to generate keys with Entity Framework Core** \ (Usare HiLo per generare chiavi con Entity Framework Core)
+- **Usare HiLo per generare chiavi con Entity Framework Core** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **Campi sottostanti** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Encapsulated Collections in Entity Framework Core** \ (Raccolte incapsulate in Entity Framework Core)
+- **Steve Smith. Raccolte incapsulate in Entity Framework Core** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Proprietà shadow** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **The Specification pattern.**  \ (Schema Specification)
+- **Schema Specification** \
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
