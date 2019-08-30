@@ -85,6 +85,7 @@
           href: keywords/abstract.md
         - name: async
           href: keywords/async.md
+          displayName: await
         - name: const
           href: keywords/const.md
         - name: event
@@ -201,10 +202,6 @@
           href: keywords/new-constraint.md
         - name: dove
           href: keywords/where-generic-type-constraint.md
-    - name: Parole chiave per gli operatori
-      items:
-        - name: await
-          href: keywords/await.md
     - name: Parole chiave per l'accesso
       items:
         - name: base
@@ -327,6 +324,9 @@
     - name: 'Operatore ::'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
+    - name: Operatore await
+      href: operators/await.md
+      displayName: async
     - name: operatore predefinito
       href: operators/default.md
       displayName: 'default value, default literal, type default'
