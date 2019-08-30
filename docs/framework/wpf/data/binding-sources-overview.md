@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944690"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169099"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
@@ -42,7 +42,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 ### <a name="other-characteristics"></a>Altre caratteristiche  
  L'elenco seguente indica altri punti importanti.  
   
-- Se si desidera creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve avere un costruttore senza parametri. In alcuni [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguaggi, ad esempio C#, il costruttore senza parametri potrebbe essere creato automaticamente.  
+- Se si desidera creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve avere un costruttore senza parametri. In alcuni linguaggi .NET, ad esempio C#, il costruttore senza parametri potrebbe essere creato automaticamente.  
   
 - Le proprietà usate come proprietà di origine del binding per un binding devono essere proprietà pubbliche della classe. Non è possibile accedere alle proprietà dell'interfaccia definite in modo esplicito a scopo di associazione né alle proprietà protette, private, interne o virtuali prive di un'implementazione di base.  
   
@@ -75,7 +75,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 |Tipo di proprietà<br /><br /> (tutti i modificatori di accesso)|Proprietà dell'oggetto dinamico|Proprietà dell'oggetto dinamico|Proprietà CLR|Proprietà CLR|Proprietà di dipendenza|Proprietà di dipendenza|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Livello di attendibilità**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|  
-|Classe pubblica|Yes|Sì|Sì|Sì|Sì|Yes|  
+|Classe pubblica|Yes|Sì|Sì|Sì|Sì|Sì|  
 |Classe non pubblica|Sì|No|Sì|No|Yes|Yes|  
   
  Questa tabella descrive punti importanti relativi ai requisiti di autorizzazione per il data binding.  

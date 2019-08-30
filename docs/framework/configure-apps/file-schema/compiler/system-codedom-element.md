@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927700"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168910"
 ---
 # <a name="systemcodedom-element"></a>\<Elemento > System. CodeDom
 Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.  
   
- \<Configuration >-elemento  
-\<Elemento > System. CodeDom  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<> System. CodeDom**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ Specifica le impostazioni di configurazione del compilatore per i provider di li
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<compilers>](compilers-element.md)|Contenitore per gli elementi di configurazione del compilatore. Contiene zero o più [elementi \<compiler>](compiler-element.md).|  
   

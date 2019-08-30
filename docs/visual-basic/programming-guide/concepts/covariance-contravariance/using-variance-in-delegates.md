@@ -2,12 +2,12 @@
 title: Uso della varianza nei delegati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787257"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169075"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Uso della varianza nei delegati (Visual Basic)
 
@@ -15,7 +15,7 @@ Quando si assegna un metodo a un delegato, *covarianza* e *controvarianza* offro
 
 ## <a name="example-1-covariance"></a>Esempio 1: Covarianza
 
-### <a name="description"></a>Descrizione
+### <a name="description"></a>DESCRIZIONE
 
 In questo esempio viene illustrato in che modo si possono usare i delegati con i metodi che hanno tipi restituiti derivati dal tipo restituito nella firma del delegato. Il tipo di dati restituito da `DogsHandler` è di tipo `Dogs`, che deriva dal tipo `Mammals` definito nel delegato.
 
@@ -48,7 +48,21 @@ End Class
 
 ### <a name="description"></a>Descrizione
 
-In questo esempio viene illustrato in che modo si possono usare i delegati con i metodi che hanno parametri di un tipo che rappresentano tipi di base del tipo di parametro della firma del delegato. Con la controvarianza è possibile usare un solo gestore eventi anziché gestori separati. Ad esempio, è possibile creare un gestore eventi che accetta un parametro di input `EventArgs` e usarlo con un evento `Button.MouseClick` che invia un tipo `MouseEventArgs` come parametro e anche con un evento `TextBox.KeyDown` che invia un parametro `KeyEventArgs`.
+Questo esempio illustra come usare i delegati con i metodi che hanno parametri i cui tipi sono tipi di base del tipo di parametro della firma del delegato. Con la controvarianza è possibile usare un solo gestore eventi anziché gestori separati. Nell'esempio seguente vengono usati due delegati:
+
+- Delegato che definisce la firma dell'evento [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler> La firma è:
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- Delegato che definisce la firma dell'evento [Button. Click](xref:System.Windows.Forms.Control.MouseDown) -through. <xref:System.Windows.Forms.MouseEventHandler> La firma è:
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+Nell'esempio viene definito un gestore eventi con <xref:System.EventArgs> un parametro e viene utilizzato per gestire `Button.KeyDown` gli eventi `Button.MouseClick` e. Questa operazione può essere eseguita <xref:System.EventArgs> perché è un tipo di base <xref:System.Windows.Forms.KeyEventArgs> sia <xref:System.Windows.Forms.MouseEventArgs>di che di.
 
 ### <a name="code"></a>Codice
 

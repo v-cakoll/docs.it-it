@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937439"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169079"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procedura: Implementare un oggetto PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Works specificando un elenco di associazioni. L'elenco delle associazioni viene ordinato dalla priorità più alta alla priorità più bassa. Se l'associazione con la priorità più alta restituisce un valore correttamente quando viene elaborato, non è mai necessario elaborare le altre associazioni nell'elenco. Il caso in cui il binding con priorità più elevata impiega molto tempo per la valutazione, la successiva priorità più alta che restituisce un valore verrà utilizzata correttamente finché un'associazione di una priorità più alta non restituirà correttamente un valore.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937439"
  La funzione di accesso `SlowestDP` Get di attende 5 secondi prima di restituire il valore `_slowestDP` del membro dati.  
   
 > [!NOTE]
-> L'esempio ha solo scopo dimostrativo. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] linee guida consigliano di non definire proprietà di ordine di grandezza più lente rispetto a un set di campi. Per ulteriori informazioni, vedere [scelta tra proprietà e metodi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
+> L'esempio ha solo scopo dimostrativo. Le linee guida di .NET sconsigliano di definire proprietà che sono più lente rispetto a un set di campi. Per ulteriori informazioni, vedere [scelta tra proprietà e metodi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
