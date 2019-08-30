@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044190"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133771"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
 > Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]consente agli utenti di modificare l'impostazione dpi (punti per pollice) in modo [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] che la maggior parte degli elementi sullo schermo risulti più grande. Benché questa funzionalità fosse già disponibile da tempo in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nelle versioni precedenti era necessario che il ridimensionamento fosse implementato dalle applicazioni. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], con Gestione finestre desktop viene applicato il ridimensionamento predefinito per tutte le applicazioni che non gestiscono direttamente tale funzionalità. Per le applicazioni client di automazione interfaccia utente è necessario tenere conto di questa funzionalità.  
+A partire da Windows Vista, Windows consente agli utenti di modificare l'impostazione dpi (punti per pollice) in modo che la maggior parte degli elementi dell'interfaccia utente sullo schermo risulti più grande. Sebbene questa funzionalità sia stata a lungo disponibile in Windows, nelle versioni precedenti il ridimensionamento doveva essere implementato dalle applicazioni. A partire da Windows Vista, il Gestione finestre desktop esegue il ridimensionamento predefinito per tutte le applicazioni che non gestiscono la scalabilità. Per le applicazioni client di automazione interfaccia utente è necessario tenere conto di questa funzionalità.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Ridimensionamento in Windows Vista  
