@@ -170,7 +170,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Pattern: API Gateway/Backend for Front-End** \ (Schema: API Gateway/Back-end per front-end)
+- **Chris Richardson. Pattern: Schema: API Gateway/Back-end per front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Schema API Gateway** \
