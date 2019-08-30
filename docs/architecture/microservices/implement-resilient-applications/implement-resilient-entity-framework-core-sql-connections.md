@@ -146,10 +146,10 @@ public class ResilientTransaction
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application** \ (Resilienza della connessione e intercettazione dei comandi con EF in un'applicazione MVC ASP.NET)
+- **Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application (Resilienza della connessione e intercettazione dei comandi con EF in un'applicazione MVC ASP.NET)**  \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- **Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions** \ (Uso di connessioni e transazioni SQL resilienti di Entity Framework Core)
+- **Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions (Uso di connessioni e transazioni SQL resilienti di Entity Framework Core)**  \
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]

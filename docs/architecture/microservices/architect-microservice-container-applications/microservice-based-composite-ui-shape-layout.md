@@ -51,7 +51,7 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 - **Viktor Farcic. Including Front-End Web Components Into Microservices (Inserimento di componenti Web front-end nei microservizi)**  \
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture** \ (Gestione del front-end nell'architettura di microservizi)
+- **Managing Frontend in the Microservices Architecture (Gestione del front-end nell'architettura di microservizi)**  \
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

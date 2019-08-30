@@ -2,12 +2,12 @@
 title: Concetti di programmazione (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594989"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168349"
 ---
 # <a name="programming-concepts-c"></a>Concetti di programmazione (C#)
 Questa sezione illustra i concetti della programmazione in linguaggio C#.  
@@ -17,7 +17,7 @@ Questa sezione illustra i concetti della programmazione in linguaggio C#.
 |Titolo|DESCRIZIONE|  
 |-----------|-----------------|  
 |[Assembly in .NET](../../../standard/assembly/index.md)|Viene descritto come creare e usare gli assembly.|  
-|[Programmazione asincrona con Async e Await (C#)](./async/index.md)|Viene illustrato come creare una soluzione asincrona usando le parole chiave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/keywords/await.md) in C#. È inclusa una procedura dettagliata.|  
+|[Programmazione asincrona con Async e Await (C#)](./async/index.md)|Viene illustrato come creare una soluzione asincrona usando le parole chiave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) in C#. È inclusa una procedura dettagliata.|  
 |[Attributi (C#)](./attributes/index.md)|Viene spiegato come offrire informazioni aggiuntive su elementi di programmazione quali tipi, campi, metodi e proprietà usando gli attributi.|  
 |[Informazioni sul chiamante (C#)](./caller-information.md)|Viene descritto come ottenere informazioni relative al chiamante di un metodo. Queste informazioni includono il percorso del file e il numero di righe del codice sorgente, nonché il nome del chiamante.|  
 |[Raccolte (C#)](./collections.md)|Vengono descritti alcuni dei tipi di raccolte disponibili in .NET Framework. Viene mostrato come usare raccolte semplici e raccolte di coppie chiave/valore.|  

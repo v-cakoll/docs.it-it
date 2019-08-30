@@ -394,7 +394,7 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented** \ (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)
+- **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)**  \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandi ed eventi** \
@@ -403,10 +403,10 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 - **What does a command handler do?** (Qual è la funzione di un gestore comandi?) \
   <http://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard. Domain Command Patterns - Handlers** \ (Modelli di comando di dominio - Gestori)
+- **Jimmy Bogard. Domain Command Patterns - Handlers (Modelli di comando di dominio - Gestori)**  \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard. Domain Command Patterns - Validation** \ (Modelli di comando di dominio - Convalida)
+- **Jimmy Bogard. Domain Command Patterns - Validation (Modelli di comando di dominio - Convalida)**  \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Pipeline di elaborazione del comando: come attivare un gestore comando
@@ -807,25 +807,25 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **MediatR.** Repository GitHub. \
   <https://github.com/jbogard/MediatR>
 
-- **CQRS with MediatR and AutoMapper** \ (CQRS con MediatR e AutoMapper)
+- **CQRS with MediatR and AutoMapper (CQRS con MediatR e AutoMapper)**  \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Put your controllers on a diet: POSTs and commands.** (Mettere a dieta i controller: POST e comandi) \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Tackling cross-cutting concerns with a mediator pipeline** \ (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)
+- **Tackling cross-cutting concerns with a mediator pipeline (Affrontare i problemi di montaggio incrociato con una pipeline MediatR)**  \
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
-- **CQRS and REST: the perfect match** \ (CQRS e REST: la coppia perfetta)
+- **CQRS and REST: the perfect match (CQRS e REST: la coppia perfetta)**  \
   <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
-- **MediatR Pipeline Examples** \ (Esempi di pipeline MediatR)
+- **MediatR Pipeline Examples (Esempi di pipeline MediatR)**  \
   <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
-- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core** \ (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)
+- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)**  \
   <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
-- **MediatR Extensions for Microsoft Dependency Injection Released** \ (Rilascio delle estensioni MediatR per l'inserimento di dipendenze Microsoft)
+- **MediatR Extensions for Microsoft Dependency Injection Released (Rilascio delle estensioni MediatR per l'inserimento di dipendenze Microsoft)**  \
   <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Convalida Fuent
