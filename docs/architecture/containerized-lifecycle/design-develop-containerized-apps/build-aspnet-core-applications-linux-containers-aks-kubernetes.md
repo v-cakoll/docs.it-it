@@ -1,5 +1,5 @@
 ---
-title: Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nell'agente nei cluster AKS/Kubernetes
+title: Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nell'agente nei cluster del servizio Azure Kubernetes
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 ms.date: 02/25/2019
 ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
@@ -9,11 +9,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68672578"
 ---
-# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un agente di orchestrazione AKS/Kubernetes
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un agente di orchestrazione del servizio Azure Kubernetes
 
 Servizio Azure Kubernetes (AKS) include i servizi di orchestrazione Kubernetes gestiti di Azure che semplificano la gestione e la distribuzione dei contenitori.
 
-Le funzionalità principali di AKS sono:
+Le funzionalità principali del servizio Azure Kubernetes sono:
 
 - Un piano di controllo ospitato in Azure
 - Aggiornamenti automatici
@@ -21,7 +21,7 @@ Le funzionalità principali di AKS sono:
 - Ridimensionamento configurabile dall'utente
 - Un'esperienza utente più semplice sia per gli sviluppatori che per gli operatori di cluster.
 
-Negli esempi seguenti viene illustrata la creazione di un'applicazione ASP.NET Core 2.2 che viene eseguita in Linux e distribuita in un cluster AKS in Azure, mentre lo sviluppo avviene con Visual Studio 2017.
+Negli esempi seguenti viene illustrata la creazione di un'applicazione ASP.NET Core 2.2 che viene eseguita in Linux e distribuita in un cluster del servizio Azure Kubernetes in Azure, mentre lo sviluppo avviene con Visual Studio 2017.
 
 ## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Creazione del progetto ASP.NET Core 2.2 con Visual Studio 2017
 
@@ -51,7 +51,7 @@ Se si ha una versione precedente di .NET Core, è possibile scaricare e installa
 
 **Figura 4-38**. Aggiunta del supporto per Docker a un progetto esistente
 
-Per completare l'aggiunta del supporto per Docker, è possibile scegliere Windows o Linux. In questo caso, selezionare **Linux**, in quanto AKS non supporta i contenitori di Windows (a partire da fine 2018).
+Per completare l'aggiunta del supporto per Docker, è possibile scegliere Windows o Linux. In questo caso, selezionare **Linux**, in quanto il servizio Azure Kubernetes non supporta i contenitori Windows (a partire da fine 2018).
 
 ![Finestra di dialogo delle opzioni per selezionare il sistema operativo di destinazione per Dockerfile.](media/select-linux-docker-support.png)
 
@@ -75,7 +75,7 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Registrare la soluzione nel Registro Azure Container
 
-Caricare l'immagine in un registro Docker, ad esempio [Registro Azure Container](https://azure.microsoft.com/services/container-registry/) o in Docker Hub, in modo che le immagini possano essere distribuite nel cluster AKS dal registro. In questo caso l'immagine viene caricata nel Registro Azure Container.
+Caricare l'immagine in un registro Docker, ad esempio [Registro Azure Container](https://azure.microsoft.com/services/container-registry/) o in Docker Hub, in modo che le immagini possano essere distribuite nel cluster del servizio Azure Kubernetes dal registro. In questo caso l'immagine viene caricata nel Registro Azure Container.
 
 ### <a name="create-the-image-in-release-mode"></a>Creare l'immagine in modalità Rilascio
 
@@ -147,7 +147,7 @@ Questo comando richiede un po' di tempo per caricare le immagini, ma offre feedb
 
 **Figura 4-46**. Visualizzazione dei nodi
 
-Il passaggio successivo consiste nel distribuire il contenitore nel cluster AKS Kubernetes. A tale scopo, è necessario un file (**file di distribuzione con estensione yml**) che contiene gli elementi seguenti:
+Il passaggio successivo consiste nel distribuire il contenitore nel cluster del servizio Azure Kubernetes. A tale scopo, è necessario un file (**file di distribuzione con estensione yml**) che contiene gli elementi seguenti:
 
 ```yml
 apiVersion: apps/v1beta1
@@ -184,7 +184,7 @@ spec:
 > [!NOTE]
 > Per altre informazioni sulla distribuzione con Kubernetes, vedere: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
-A questo punto si è quasi pronti per eseguire la distribuzione usando **Kubectl**, ma prima di tutto è necessario ottenere le credenziali per il cluster AKS con il comando seguente:
+A questo punto si è quasi pronti per eseguire la distribuzione usando **Kubectl**, ma prima di tutto è necessario ottenere le credenziali per il cluster del servizio Azure Kubernetes con il comando seguente:
 
 ```console
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
@@ -216,7 +216,7 @@ In seguito, accedere all'URL `http://127.0.0.1:8001`.
 
 **Figura 4-49**. Visualizzazione delle informazioni del cluster Kubernetes
 
-L'applicazione è stata distribuita in Azure usando un contenitore Linux e un cluster AKS Kubernetes. È possibile accedere all'app passando all'indirizzo IP pubblico del servizio, che può essere ottenuto dal portale di Azure.
+L'applicazione è stata distribuita in Azure usando un contenitore Linux e un cluster del servizio Azure Kubernetes. È possibile accedere all'app passando all'indirizzo IP pubblico del servizio, che può essere ottenuto dal portale di Azure.
 
 > [!NOTE]
 > Per informazioni su come creare il cluster AKS per questo esempio, vedere la sezione [**Distribuire in servizio Azure Kubernetes**](deploy-azure-kubernetes-service.md) in questa Guida.

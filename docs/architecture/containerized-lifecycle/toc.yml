@@ -41,7 +41,7 @@
           href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
         - name: Usare i comandi di Windows PowerShell in un oggetto DockerFile per configurare contenitori di Windows (basati sullo standard Docker)
           href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-        - name: Compilare applicazioni ASP.NET Core 2.0 distribuite come contenitori Linux nell'agente di orchestrazione nel servizio AKS/Kubernetes
+        - name: Compilare applicazioni ASP.NET Core 2.0 distribuite come contenitori Linux nell'agente di orchestrazione nel servizio Azure Kubernetes
           href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
     - name: Flusso di lavoro DevOps per le applicazioni Docker con strumenti Microsoft
       href: docker-devops-workflow/index.md
