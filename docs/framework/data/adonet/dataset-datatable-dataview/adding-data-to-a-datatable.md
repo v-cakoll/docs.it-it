@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034523"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205482"
 ---
 # <a name="adding-data-to-a-datatable"></a>Aggiunta di dati a un oggetto DataTable
-Una volta creata una <xref:System.Data.DataTable> e definita la relativa struttura tramite colonne e vincoli, è possibile aggiungere nuove righe di dati alla tabella. Per aggiungere una nuova riga, dichiarare una nuova variabile come tipo <xref:System.Data.DataRow>. Una nuova **DataRow** oggetto viene restituito quando si chiama il <xref:System.Data.DataTable.NewRow%2A> (metodo). Il **DataTable** crea quindi il **DataRow** oggetto basati sulla struttura della tabella, come definito dal <xref:System.Data.DataColumnCollection>.  
+Una volta creata una <xref:System.Data.DataTable> e definita la relativa struttura tramite colonne e vincoli, è possibile aggiungere nuove righe di dati alla tabella. Per aggiungere una nuova riga, dichiarare una nuova variabile come tipo <xref:System.Data.DataRow>. Quando si chiama il <xref:System.Data.DataTable.NewRow%2A> metodo, viene restituito un nuovo oggetto DataRow. Il **DataTable** crea quindi l'oggetto **DataRow** in base alla struttura della tabella, come <xref:System.Data.DataColumnCollection>definito da.  
   
- Nell'esempio seguente viene illustrato come creare una nuova riga chiamando la **NewRow** (metodo).  
+ Nell'esempio seguente viene illustrato come creare una nuova riga chiamando il metodo **NewRow** .  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Dopo che i dati vengono inseriti nella nuova riga, il **Add** metodo viene utilizzato per aggiungere la riga per il <xref:System.Data.DataRowCollection>, come illustrato nel codice seguente.  
+ Dopo l'inserimento dei dati nella nuova riga, il metodo **Add** viene utilizzato per aggiungere la riga a <xref:System.Data.DataRowCollection>, illustrato nel codice seguente.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- È inoltre possibile chiamare il **Add** per aggiungere una nuova riga passando una matrice di valori, tipizzata come <xref:System.Object>, come illustrato nell'esempio seguente.  
+ È anche possibile chiamare il metodo **Add** per aggiungere una nuova riga passando una matrice di valori, tipizzata come <xref:System.Object>, come illustrato nell'esempio seguente.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Passando una matrice di valori, tipizzata come **oggetti**, per il **Add** metodo crea una nuova riga all'interno della tabella e imposta i valori di colonna ai valori nella matrice di oggetti. Notare che i valori contenuti nella matrice vengono associati in modo sequenziale alle colonne, in base all'ordine in cui sono presenti nella tabella.  
+ Il passaggio di una matrice di valori, tipizzato come **oggetto**, al metodo **Add** crea una nuova riga all'interno della tabella e imposta i relativi valori di colonna sui valori nella matrice di oggetti. Notare che i valori contenuti nella matrice vengono associati in modo sequenziale alle colonne, in base all'ordine in cui sono presenti nella tabella.  
   
- L'esempio seguente aggiunge 10 righe all'oggetto appena creato **clienti** tabella.  
+ Nell'esempio seguente vengono aggiunte 10 righe alla tabella **Customers** appena creata.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

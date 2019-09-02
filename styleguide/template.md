@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616351"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106906"
 ---
 # <a name="metadata-and-markdown-template"></a>Modello Markdown e metadati
 
@@ -61,12 +61,12 @@ Markdown usa caratteri speciali, ad esempio \*, \` e \#, per la formattazione. S
 
 Per i nomi di file vengono usate le regole seguenti:
 
-* Devono contenere solo lettere minuscole, numeri e trattini.
-* Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
-* Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Evitare i sostantivi.
-* Non includere parole brevi, come un, e, il, in, o e così via.
-* Usare il formato Markdown e l'estensione di file md.
-* Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
+- Devono contenere solo lettere minuscole, numeri e trattini.
+- Non possono contenere spazi o caratteri di punteggiatura. Usare i trattini per separare le parole e i numeri nel nome del file.
+- Usare verbi di azione specifici, ad esempio sviluppare, acquistare, compilare, risolvere i problemi. Evitare i sostantivi.
+- Non includere parole brevi, come un, e, il, in, o e così via.
+- Usare il formato Markdown e l'estensione di file md.
+- Mantenere i nomi di file relativamente brevi. Fanno parte dell'URL degli articoli.
 
 ## <a name="headings"></a>Intestazioni
 
@@ -244,22 +244,22 @@ Il modo migliore per includere codice consiste nell'includere frammenti di codic
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` (*facoltativo* ma *consigliato*)
-  * Linguaggio del frammento di codice al quale si fa riferimento. Per un elenco completo dei valori supportati, vedere [Linguaggi supportate](#supported-languages).
+- `-<language>` (*facoltativo* ma *consigliato*)
+  - Linguaggio del frammento di codice al quale si fa riferimento. Per un elenco completo dei valori supportati, vedere [Linguaggi supportate](#supported-languages).
 
-* `<name>` (*facoltativo*)
-  * Nome del frammento di codice. Non deve avere alcun impatto sul file HTML di output ma può essere usato per rendere più leggibile l'origine del Markdown.
+- `<name>` (*facoltativo*)
+  - Nome del frammento di codice. Non deve avere alcun impatto sul file HTML di output ma può essere usato per rendere più leggibile l'origine del Markdown.
 
-* `<pathToFile>` (*obbligatorio*)
-  * Percorso relativo nel file system che indica il file del frammento di codice a cui fare riferimento.
+- `<pathToFile>` (*obbligatorio*)
+  - Percorso relativo nel file system che indica il file del frammento di codice a cui fare riferimento.
 
-* `<queryoption>` e `<queryoptionvalue>` (*facoltativi*)
-  * Da usare insieme per specificare come deve essere recuperato il codice dal file:
-    * `#`:  `#L{startlinenumber}-L{endlinenumber}` (intervallo di righe) *o* `#{tagname}` (nome del tag).
+- `<queryoption>` e `<queryoptionvalue>` (*facoltativi*)
+  - Da usare insieme per specificare come deve essere recuperato il codice dal file:
+    - `#`:  `#L{startlinenumber}-L{endlinenumber}` (intervallo di righe) *o* `#{tagname}` (nome del tag).
     L'uso dei numeri di riga è sconsigliato in quanto non sufficientemente affidabile. Il nome del tag è il metodo preferibile per il riferimento ai frammenti di codice.
-    * `range`: `?range=1,3-5` Intervallo di righe. Questo esempio include le righe 1, 3, 4 e 5.
-    * `dedent`: `?dedent=8` Riduce il rientro delle righe di un numero di spazi, in questo caso 8. Questo valore può essere combinato con `range` e altre opzioni di query che consentono di selezionare un subset di righe di un file.
-    * `outdent`: `?outdent=8` Inverte il rientro delle righe di un numero di spazi, in questo caso 8. Questo valore può essere combinato con `range` e altre opzioni di query che consentono di selezionare un subset di righe di un file.
+    - `range`: `?range=1,3-5` Intervallo di righe. Questo esempio include le righe 1, 3, 4 e 5.
+    - `dedent`: `?dedent=8` Riduce il rientro delle righe di un numero di spazi, in questo caso 8. Questo valore può essere combinato con `range` e altre opzioni di query che consentono di selezionare un subset di righe di un file.
+    - `outdent`: `?outdent=8` Inverte il rientro delle righe di un numero di spazi, in questo caso 8. Questo valore può essere combinato con `range` e altre opzioni di query che consentono di selezionare un subset di righe di un file.
 
 Se possibile, è sempre consigliabile usare l'opzione del nome del tag. Il nome del tag è il nome di un'area o di un commento di codice nel formato `Snippettagname` presente nel codice di origine. L'esempio seguente illustra come creare un riferimento al nome di tag `1`:
 
@@ -448,11 +448,11 @@ Il rendering sarà simile al seguente: ![Stili di avviso](../images/alerts.png)
 Per gli elenchi è disponibile uno stile personalizzato. È possibile eseguire il rendering degli elenchi con segni di spunta verdi.
 
 > [!div class="checklist"]
-> * Come creare un'app .NET Core
-> * Come aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator
-> * Come modificare il file MyApp.cspro per aggiungere dipendenze
-> * Come aggiungere una classe e un oggetto XmlSerializer
-> * Come compilare ed eseguire l'applicazione
+> - Come creare un'app .NET Core
+> - Come aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator
+> - Come modificare il file MyApp.cspro per aggiungere dipendenze
+> - Come aggiungere una classe e un oggetto XmlSerializer
+> - Come compilare ed eseguire l'applicazione
 
 È possibile vedere un esempio di elenchi selezionati in azione nella [documentazione di .NET Core](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator).
 

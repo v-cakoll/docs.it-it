@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cdd910f7ef481d7c61f941b5c50bed9585c96d4a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210230"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106530"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemi di migrazione di .NET Framework 4
 
@@ -20,17 +20,17 @@ Questo argomento descrive i problemi di migrazione tra .NET Framework 3.5 Servic
 
 In questo argomento vengono descritte le modifiche significative nelle aree riportate di seguito.
 
-* [ASP.NET e Web](#aspnet-and-web)
+- [ASP.NET e Web](#aspnet-and-web)
 
-* [Base](#core)
+- [Base](#core)
 
-* [Dati](#data)
+- [Dati](#data)
 
-* [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
+- [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
 
-* [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 
-* [XML](#xml)
+- [XML](#xml)
 
 Per una panoramica generale dei problemi trattati in questo argomento, vedere la [Guida di migrazione a .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29).
 
@@ -119,7 +119,7 @@ Spazio dei nomi: <xref:System.Reflection>. Assembly: mscorlib (in mscorlib.dll)
 | **Caricamento di assembly** | Per evitare il caricamento ridondante di assembly e per risparmiare spazio degli indirizzi virtuali, CLR ora carica gli assembly usando solo la funzione `MapViewOfFile` Win32. La funzione `LoadLibrary` non viene più chiamata.<br><br>Questa modifica influisce sulle applicazioni di diagnostica nei modi seguenti:<br><br>* Una classe <xref:System.Diagnostics.ProcessModuleCollection> non contiene più moduli di una libreria di classi (file con estensione dll) ottenuti da una chiamata a `Process.GetCurrentProcess().Modules`.<br>* Le applicazioni Win32 che usano la funzione `EnumProcessModules` non visualizzano tutti i moduli gestiti elencati. | Nessuno. |
 | **Tipo dichiarante** | La proprietà <xref:System.Type.DeclaringType> ora restituisce correttamente null quando il tipo non dispone di un tipo dichiarante. | Nessuno. |
 | **Delegati** | Un delegato ora genera un'eccezione <xref:System.ArgumentNullException> anziché un'eccezione <xref:System.NullReferenceException> quando viene passato un valore null al costruttore del delegato. | Verificare che la gestione delle eccezioni rilevi <xref:System.ArgumentNullException>. |
-| **Modifica del percorso della Global Assembly Cache** | Per gli assembly di .NET Framework 4, la Global Assembly Cache è stata spostata dalla directory di Windows (%WINDIR%) alla sottodirectory di Microsoft.Net (*%WINDIR%\\Microsoft.Net*). Gli assembly delle versioni precedenti rimangono nella directory precedente.<br><br>L'enumerazione [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) non gestita contiene il nuovo flag `ASM_CACHE_ROOT_EX`. Il flag ottiene il percorso della cache per gli assembly di .NET Framework 4, che può essere ottenuto con la funzione [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md). | Nessuno a condizione che le applicazioni non usino percorsi espliciti per gli assembly, una procedura sconsigliata. |
+| **Modifica del percorso della Global Assembly Cache** | Per gli assembly di .NET Framework 4, la Global Assembly Cache è stata spostata dalla directory di Windows (%WINDIR%) alla sottodirectory di Microsoft.Net ( *%WINDIR%\\Microsoft.Net*). Gli assembly delle versioni precedenti rimangono nella directory precedente.<br><br>L'enumerazione [ASM_CACHE_FLAGS](../unmanaged-api/fusion/asm-cache-flags-enumeration.md) non gestita contiene il nuovo flag `ASM_CACHE_ROOT_EX`. Il flag ottiene il percorso della cache per gli assembly di .NET Framework 4, che può essere ottenuto con la funzione [GetCachePath](../unmanaged-api/fusion/getcachepath-function.md). | Nessuno a condizione che le applicazioni non usino percorsi espliciti per gli assembly, una procedura sconsigliata. |
 | **Strumento Global Assembly Cache** | Lo strumento Global Assembly Cache ([Gacutil.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ex0ss12c%28v=vs.100%29)) non supporta più il visualizzatore plug-in della shell. | Nessuno. |
 
 ### <a name="interoperability"></a>Interoperabilità

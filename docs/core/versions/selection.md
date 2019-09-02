@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539308"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104940"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selezionare la versione di .NET Core da usare
 
@@ -32,8 +32,8 @@ Il resto di questo documento esamina questi quattro scenari.
 
 I comandi dell'SDK includono `dotnet new` e `dotnet run`. L'interfaccia della riga di comando di .NET Core deve scegliere una versione dell'SDK per ogni comando `dotnet`. Per impostazione predefinita, l'interfaccia della riga di comando usa l'SDK più recente installato nel computer, anche se:
 
-* Il progetto è destinato a una versione precedente del runtime di .NET Core.
-* La versione più recente di .NET Core SDK è una versione di anteprima.
+- Il progetto è destinato a una versione precedente del runtime di .NET Core.
+- La versione più recente di .NET Core SDK è una versione di anteprima.
 
 È possibile usufruire delle funzionalità e dei miglioramenti più recenti dell'SDK anche se si punta a versioni meno recenti di .NET Core Runtime. È possibile assegnare più versioni di runtime di .NET Core a progetti diversi, usando gli stessi strumenti dell'SDK per tutti i progetti.
 

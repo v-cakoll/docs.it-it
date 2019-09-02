@@ -2,12 +2,12 @@
 title: Modello di programmazione asincrona dell'attività con async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595607"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167905"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modello di programmazione asincrona attività
 
@@ -38,7 +38,7 @@ L'approccio basato su modalità asincrona aggiunge l'equivalente di una trasmiss
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> I metodi asincroni sono più semplici da scrivere
 
-Le parole chiave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/keywords/await.md) in C# sono il punto centrale della programmazione asincrona. Tramite queste due parole chiave, è possibile usare le risorse di .NET Framework, .NET Core o Windows Runtime per creare un metodo asincrono con la stessa facilità con cui è possibile creare un metodo sincrono. I metodi asincroni definiti con la parola chiave `async` sono denominati *metodi asincroni*.
+Le parole chiave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/operators/await.md) in C# sono il punto centrale della programmazione asincrona. Tramite queste due parole chiave, è possibile usare le risorse di .NET Framework, .NET Core o Windows Runtime per creare un metodo asincrono con la stessa facilità con cui è possibile creare un metodo sincrono. I metodi asincroni definiti con la parola chiave `async` sono denominati *metodi asincroni*.
 
 Nell'esempio seguente viene illustrato un metodo asincrono. Quasi tutti gli elementi del codice dovrebbe essere completamente noti all'utente.
 
@@ -156,7 +156,7 @@ L'approccio alla programmazione asincrona basato su async è quasi sempre prefer
 
 Se si specifica che un metodo è asincrono usando il modificatore [async](../../../language-reference/keywords/async.md), vengono attivate le due funzionalità seguenti.
 
-- Il metodo asincrono contrassegnato può usare [await](../../../language-reference/keywords/await.md) per definire i punti di sospensione. L'operatore `await` indica al compilatore che il metodo asincrono non può continuare oltre un dato punto prima del completamento del processo asincrono in attesa. Nel frattempo il controllo viene restituito al chiamante del metodo asincrono.
+- Il metodo asincrono contrassegnato può usare [await](../../../language-reference/operators/await.md) per definire i punti di sospensione. L'operatore `await` indica al compilatore che il metodo asincrono non può continuare oltre un dato punto prima del completamento del processo asincrono in attesa. Nel frattempo il controllo viene restituito al chiamante del metodo asincrono.
 
      La sospensione di un metodo asincrono in corrispondenza di un'espressione `await` non costituisce l'uscita dal metodo e i blocchi `finally` non vengono eseguiti.
 
@@ -168,7 +168,7 @@ Un metodo asincrono contiene in genere una o più occorrenze di un operatore `aw
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Tipi restituiti e parametri
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>Vedere anche
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programmazione asincrona](../../../async.md)
 - [Panoramica della programmazione asincrona](../../../../standard/async.md)
+ 

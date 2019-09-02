@@ -4,12 +4,12 @@ description: Procedure consigliate per esplorare le modifiche di rilievo durante
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564224"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104655"
 ---
 # <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
@@ -19,11 +19,11 @@ Per una libreria .NET è importante trovare un equilibrio tra la stabilità per 
 
 A seconda di come una libreria viene usata dalla community .NET, cambia l'effetto delle modifiche di rilievo sullo sviluppo per utenti finali.
 
-* Le **librerie di basso e medio livello**, ad esempio un serializzatore, il parser HTML, un Object-Relational Mapper (ORM) di database o un framework Web, sono gli elementi che più risentono delle modifiche di rilievo.
+- Le **librerie di basso e medio livello**, ad esempio un serializzatore, il parser HTML, un Object-Relational Mapper (ORM) di database o un framework Web, sono gli elementi che più risentono delle modifiche di rilievo.
 
   I pacchetti di blocchi predefiniti sono usati dagli sviluppatori per utenti finali per compilare le applicazioni, e da altre librerie come dipendenze NuGet. Ad esempio, un'applicazione viene compilata usando un client open source per chiamare un servizio Web. Un aggiornamento di rilievo a una dipendenza usata dal client non è un'operazione possibile. È il client open source che deve essere modificato, sul quale non si ha controllo. È necessario trovare versioni compatibili di librerie o inviare una correzione alla libreria client e attendere una nuova versione. Il caso peggiore è quando si vogliono usare due librerie che dipendono reciprocamente da versioni incompatibili di una terza libreria.
 
-* Le **librerie di alto livello**, ad esempio una suite di controlli dell'interfaccia utente, sono meno sensibili alle modifiche di rilievo.
+- Le **librerie di alto livello**, ad esempio una suite di controlli dell'interfaccia utente, sono meno sensibili alle modifiche di rilievo.
 
   Le librerie di alto livello hanno un riferimento diretto all'interno di un'applicazione per utenti finali. In caso di modifiche di rilievo, lo sviluppatore può scegliere di eseguire l'aggiornamento alla versione più recente oppure può modificare l'applicazione per accettare le modifiche di rilievo.
 

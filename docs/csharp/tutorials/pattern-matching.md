@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397839"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105560"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -17,9 +17,9 @@ In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. T
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
-> * Riconoscere le situazioni in cui usare i criteri di ricerca.
-> * Usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
-> * Combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
+> - Riconoscere le situazioni in cui usare i criteri di ricerca.
+> - Usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
+> - Combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

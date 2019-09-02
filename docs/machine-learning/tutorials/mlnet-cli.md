@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963595"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107267"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generare automaticamente un classificatore binario con l'interfaccia della riga di comando
 
@@ -19,11 +19,11 @@ Di seguito sono riportate informazioni su come usare l'interfaccia della riga di
 
 In questa esercitazione verranno eseguite le operazioni seguenti:
 > [!div class="checklist"]
-> * Preparare i dati per l'attività di Machine Learning selezionata
-> * Eseguire il comando 'mlnet auto-train' dall'interfaccia della riga di comando
-> * Rivedere i risultati delle metriche di qualità
-> * Comprendere il codice C# generato per usare il modello nell'applicazione
-> * Esplorare il codice C# generato usato per il training del modello
+> - Preparare i dati per l'attività di Machine Learning selezionata
+> - Eseguire il comando 'mlnet auto-train' dall'interfaccia della riga di comando
+> - Rivedere i risultati delle metriche di qualità
+> - Comprendere il codice C# generato per usare il modello nell'applicazione
+> - Esplorare il codice C# generato usato per il training del modello
 
 > [!NOTE]
 > Questo argomento si riferisce all'interfaccia della riga di comando ML.NET, attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -259,11 +259,11 @@ Soprattutto, per questo specifico scenario (modello di analisi del sentiment) è
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
-> * Preparare i dati per l'attività di ML selezionata (problema da risolvere)
-> * Eseguire il comando 'mlnet auto-train' dall'interfaccia della riga di comando
-> * Rivedere i risultati delle metriche di qualità
-> * Comprendere il codice C# generato per l'esecuzione del modello (codice da usare nell'app per utenti finali)
-> * Esplorare il codice C# generato usato per il training del modello di "qualità ottimale" (a scopo di formazione)
+> - Preparare i dati per l'attività di ML selezionata (problema da risolvere)
+> - Eseguire il comando 'mlnet auto-train' dall'interfaccia della riga di comando
+> - Rivedere i risultati delle metriche di qualità
+> - Comprendere il codice C# generato per l'esecuzione del modello (codice da usare nell'app per utenti finali)
+> - Esplorare il codice C# generato usato per il training del modello di "qualità ottimale" (a scopo di formazione)
 
 > [!div class="nextstepaction"]
 > [Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET](../automate-training-with-cli.md)

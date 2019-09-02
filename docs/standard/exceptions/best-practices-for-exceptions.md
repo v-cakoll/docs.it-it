@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860155"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107200"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 
@@ -82,11 +82,11 @@ Quando è necessaria un'eccezione personalizzata, assegnare un nome appropriato 
 
 Usare almeno i tre costruttori comuni quando si creano classi di eccezione personalizzate: il costruttore senza parametri, un costruttore che accetta un messaggio stringa e un costruttore che accetta un messaggio stringa e un'eccezione interna.
 
-* <xref:System.Exception.%23ctor>, che usa valori predefiniti.
+- <xref:System.Exception.%23ctor>, che usa valori predefiniti.
 
-* <xref:System.Exception.%23ctor%28System.String%29>, che accetta un messaggio stringa.
+- <xref:System.Exception.%23ctor%28System.String%29>, che accetta un messaggio stringa.
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, che accetta un messaggio stringa e un'eccezione interna.
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, che accetta un messaggio stringa e un'eccezione interna.
 
 Per un esempio, vedere [Procedura: Creare eccezioni definite dall'utente](how-to-create-user-defined-exceptions.md).
 

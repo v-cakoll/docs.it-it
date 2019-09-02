@@ -2,27 +2,27 @@
 title: Mapping di relazioni implicite tra elementi di schemi annidati
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586810"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203476"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapping di relazioni implicite tra elementi di schemi annidati
 È possibile che in uno schema XSD (XML Schema Definition Language) siano presenti tipi complessi annidati uno all'interno dell'altro. In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:  
   
 - Una tabella per ogni tipo complesso (padre e figlio).  
   
-- Se è presente alcun vincolo univoco dell'elemento padre, una primaria chiave colonna aggiuntiva per ogni definizione di tabella denominata *NomeTabella*ID dove *NomeTabella* è il nome della tabella padre.  
+- Se nell'elemento padre non è presente alcun vincolo UNIQUE, una colonna chiave primaria aggiuntiva per ogni definizione di tabella denominata *TableName*_Id dove *TableName* è il nome della tabella padre.  
   
-- Un vincolo di chiave primaria nella tabella padre che identifica la colonna aggiuntiva come chiave primaria (impostando il **IsPrimaryKey** proprietà **True**). Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via. Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
+- Un vincolo PRIMARY KEY nella tabella padre che identifica la colonna aggiuntiva come chiave primaria, impostando la proprietà **IsPrimaryKey** su **true**. Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via. Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
   
-- Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre. Il vincolo viene denominato *ParentTable_ChildTable* in cui *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.  
+- Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre. Il vincolo è denominato *ParentTable_ChildTable* , dove *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.  
   
 - Una relazione di dati tra le tabelle padre e figlio.  
   
- L'esempio seguente mostra uno schema in cui **OrderDetail** è un elemento figlio del **ordine**.  
+ Nell'esempio seguente viene illustrato uno schema in cui **OrderDetail** è un elemento figlio di **Order**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "64586810"
 </xs:schema>  
 ```  
   
- Il processo di mapping di XML Schema consente di creare il codice seguente nel **set di dati**:  
+ Il processo di mapping di XML Schema crea quanto segue nel **set di dati**:  
   
-- Un' **ordine** e un **OrderDetail** tabella.  
+- Un **ordine** e una tabella **OrderDetail** .  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Un vincolo unique per la **ordine** tabella. Si noti che il **IsPrimaryKey** è impostata su **True**.  
+- Vincolo UNIQUE nella tabella **Order** . Si noti che la proprietà **IsPrimaryKey** è impostata su **true**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "64586810"
     IsPrimaryKey: True  
     ```  
   
-- Un vincolo di chiave esterna nella **OrderDetail** tabella.  
+- Vincolo FOREIGN KEY nella tabella **OrderDetail** .  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "64586810"
     RelatedColumns: Order_Id   
     ```  
   
-- Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** per questa relazione è impostata su **True** perché i **Order** e **OrderDetail** elementi sono annidati nello schema .  
+- Relazione tra le tabelle **Order** e **OrderDetail** . La proprietà Nested per questa relazione è impostata su **true** perché gli elementi **Order** e **OrderDetail** sono annidati nello schema.  
   
     ```  
     ParentTable: Order  
@@ -99,6 +99,6 @@ ms.locfileid: "64586810"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

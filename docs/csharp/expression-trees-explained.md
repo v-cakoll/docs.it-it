@@ -3,12 +3,12 @@ title: Nozioni di base sugli alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni e sulla loro utilità nella conversione degli algoritmi per l'esecuzione esterna e nell'analisi del codice prima dell'esecuzione.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613421"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104803"
 ---
 # <a name="expression-trees-explained"></a>Nozioni di base sugli alberi delle espressioni
 
@@ -33,11 +33,11 @@ L'espressione è `1 + 2`. Si tratta di un'espressione binaria. Nello specifico, 
 A livello visivo, l'intera istruzione è una struttura ad albero: è possibile iniziare dal nodo radice e passare a ogni nodo nell'albero per visualizzare il codice che costituisce l'istruzione:
 
 - Istruzione di dichiarazione di variabili con assegnazione (`var sum = 1 + 2;`)
-  * Dichiarazione di variabili implicite (`var sum`)
+  - Dichiarazione di variabili implicite (`var sum`)
     - Parola chiave di variabile implicita (`var`)
     - Dichiarazione del nome di variabile (`sum`)
-  * Operatore di assegnazione (`=`)
-  * Espressione di addizione binaria (`1 + 2`)
+  - Operatore di assegnazione (`=`)
+  - Espressione di addizione binaria (`1 + 2`)
     - Operando sinistro (`1`)
     - Operatore di addizione (`+`)
     - Operando destro (`2`)

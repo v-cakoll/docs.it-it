@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611452"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107137"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Stimare i prezzi usando la regressione con il generatore di modelli
 
@@ -21,12 +21,12 @@ Il modello di stima dei prezzi del generatore di modelli può essere usato in qu
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
-> * Preparare e identificare i dati
-> * Scegliere uno scenario
-> * Caricare i dati
-> * Eseguire il training del modello
-> * Valutare il modello
-> * Usare il modello per le stime
+> - Preparare e identificare i dati
+> - Scegliere uno scenario
+> - Caricare i dati
+> - Eseguire il training del modello
+> - Valutare il modello
+> - Usare il modello per le stime
 
 > [!NOTE]
 > Il generatore di modelli è attualmente in anteprima.
@@ -59,13 +59,13 @@ Ogni riga del set di dati `taxi-fare-train.csv` contiene i dettagli delle corse 
 
     Il set di dati fornito contiene le colonne seguenti:
 
-    * **vendor_id:** l'ID della società di taxi è una funzionalità.
-    * **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
-    * **passenger_count:** il numero di passeggeri è una funzionalità.
-    * **trip_time_in_secs:** il tempo impiegato per il viaggio.
-    * **trip_distance:** la distanza del viaggio è una funzionalità.
-    * **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
-    * **fare_amount:** la tariffa totale corrisposta per il viaggio in taxi è l'etichetta.
+    - **vendor_id:** l'ID della società di taxi è una funzionalità.
+    - **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
+    - **passenger_count:** il numero di passeggeri è una funzionalità.
+    - **trip_time_in_secs:** il tempo impiegato per il viaggio.
+    - **trip_distance:** la distanza del viaggio è una funzionalità.
+    - **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
+    - **fare_amount:** la tariffa totale corrisposta per il viaggio in taxi è l'etichetta.
 
 `label` è la colonna sulla quale eseguire le stime. Quando si esegue un'attività di regressione, l'obiettivo è stimare un valore numerico. In questo scenario di stima dei prezzi viene stimato il costo di una corsa in taxi. Pertanto, l'etichetta è **fare_amount**. Gli elementi identificati `features` sono gli input che vengono dati al modello per stimare l'oggetto `label`. In questo caso le colonne rimanenti vengono usate come input o funzionalità per stimare l'importo della tariffa.
 
@@ -190,12 +190,12 @@ Se in un secondo momento è necessario fare riferimento ai progetti generati all
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
-> * Preparare e identificare i dati
-> * Scegliere uno scenario
-> * Caricare i dati
-> * Eseguire il training del modello
-> * Valutare il modello
-> * Usare il modello per le stime
+> - Preparare e identificare i dati
+> - Scegliere uno scenario
+> - Caricare i dati
+> - Eseguire il training del modello
+> - Valutare il modello
+> - Usare il modello per le stime
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 

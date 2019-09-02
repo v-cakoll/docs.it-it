@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1052ab7d7c6fd948f59c5956b918fbfd01899a1a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608672"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168611"
 ---
 # <a name="contextual-keywords-c-reference"></a>Parole chiave contestuali (Riferimenti per C#)
 
@@ -20,7 +20,7 @@ Una parola chiave contestuale viene usata per conferire un significato particola
 |-------------|-----------------|  
 |[add](./add.md)|Definisce una funzione di accesso eventi personalizzata che viene chiamata quando il codice client esegue la sottoscrizione all'evento.|  
 |[async](./async.md)|Indica che il metodo specificato, l'espressione lambda o il metodo anonimo è asincrono.|  
-|[await](./await.md)|Sospende un metodo asincrono finché non viene completata un'attività attesa.|  
+|[await](../operators/await.md)|Sospende un metodo asincrono finché non viene completata un'attività attesa.|  
 |[dynamic](./dynamic.md)|Definisce un tipo di riferimento che abilita operazioni in cui il tipo appare per ignorare il controllo del tipo in fase di compilazione.|  
 |[get](./get.md)|Definisce un metodo di accesso per una proprietà o un indicizzatore.|  
 |[global](../operators/namespace-alias-qualifier.md)|Alias dello spazio dei nomi globale, che altrimenti non è provvisto di nome.|  

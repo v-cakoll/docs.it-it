@@ -2,12 +2,12 @@
 title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347418"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105750"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -20,15 +20,15 @@ C# 7.2 usa l'elemento di configurazione per la [selezione della versione del lin
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-* [Tecniche per la scrittura di codice efficiente e sicuro](#safe-efficient-code-enhancements)
+- [Tecniche per la scrittura di codice efficiente e sicuro](#safe-efficient-code-enhancements)
   - Una combinazione di miglioramenti della sintassi che consentono l'utilizzo dei tipi valore tramite la semantica di riferimento.
-* [Argomenti denominati non finali](#non-trailing-named-arguments)
+- [Argomenti denominati non finali](#non-trailing-named-arguments)
   - Gli argomenti denominati possono essere seguiti da argomenti posizionali.
-* [Caratteri di sottolineatura iniziali nei valori letterali numerici](#leading-underscores-in-numeric-literals)
+- [Caratteri di sottolineatura iniziali nei valori letterali numerici](#leading-underscores-in-numeric-literals)
   - I valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima di qualsiasi cifra stampata.
-* [Modificatore di accesso `private protected`](#private-protected-access-modifier)
+- [Modificatore di accesso `private protected`](#private-protected-access-modifier)
   - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
-* [Espressioni condizionali `ref`](#conditional-ref-expressions)
+- [Espressioni condizionali `ref`](#conditional-ref-expressions)
   - Il risultato di un'espressione condizionale (`?:`) può ora essere un riferimento.
 
 La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
@@ -63,7 +63,7 @@ Ad esempio:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>Modificatore di accesso _private protected_
+## <a name="_private-protected_-access-modifier"></a>Modificatore di accesso _private protected_
 
 Il nuovo modificatore di accesso composto `private protected` indica che un membro è accessibile dalla classe che lo contiene o dalle classi derivate dichiarate nello stesso assembly. Anche se `protected internal` consente l'accesso da classi derivate o classi nello stesso assembly, `private protected` limita l'accesso ai tipi derivati dichiarati nello stesso assembly.
 

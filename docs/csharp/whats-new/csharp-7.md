@@ -3,35 +3,35 @@ title: Novità di C# 7.0 - Guida a C#
 description: Panoramica delle nuove funzionalità nella versione 7.0 del linguaggio C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347451"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105720"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
 C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
-* [Variabili `out`](#out-variables)
+- [Variabili `out`](#out-variables)
   - È possibile dichiarare valori `out` inline come argomenti per il metodo in cui vengono usati.
-* [Tuple](#tuples)
+- [Tuple](#tuples)
   - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
-* [Variabili discard](#discards)
+- [Variabili discard](#discards)
   - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
-* [Criteri di ricerca](#pattern-matching)
+- [Criteri di ricerca](#pattern-matching)
   - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
-* [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
+- [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
   - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
-* [Funzioni locali](#local-functions)
+- [Funzioni locali](#local-functions)
   - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
-* [Più membri con corpo di espressione](#more-expression-bodied-members)
+- [Più membri con corpo di espressione](#more-expression-bodied-members)
   - L'elenco dei membri che possono essere creati con le espressioni è cresciuto.
-* [Espressioni `throw`](#throw-expressions)
+- [Espressioni `throw`](#throw-expressions)
   - È possibile generare eccezioni in costrutti di codice che in precedenza non erano consentiti, perché `throw` era un'istruzione.
-* [Tipi restituiti asincroni generalizzati](#generalized-async-return-types)
+- [Tipi restituiti asincroni generalizzati](#generalized-async-return-types)
   - I metodi dichiarati con il modificatore `async` possono restituire altri tipi oltre a `Task` e `Task<T>`.
-* [Miglioramenti della sintassi dei valori letterali numerici](#numeric-literal-syntax-improvements)
+- [Miglioramenti della sintassi dei valori letterali numerici](#numeric-literal-syntax-improvements)
   - Nuovi token migliorano la leggibilità delle costanti numeriche.
 
 La parte restante di questo articolo illustra una panoramica di ogni funzionalità. Per ogni funzionalità verranno illustrati i concetti di base e si apprenderà la sintassi. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
@@ -51,9 +51,9 @@ Si consiglia di specificare il tipo della variabile `out` per maggiore chiarezza
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Il codice è più facile da leggere.
+- Il codice è più facile da leggere.
   - Si dichiara la variabile out nel punto in cui viene usata, non in una riga precedente.
-* Non è necessario assegnare un valore iniziale.
+- Non è necessario assegnare un valore iniziale.
   - Se si dichiara la variabile `out` nel punto in cui viene usata in una chiamata al metodo, non è possibile usarla accidentalmente prima che venga assegnata.
 
 ## <a name="tuples"></a>Tuple
@@ -95,10 +95,10 @@ Spesso durante lo decostruzione di una tupla o la chiamata di un metodo con para
 
 Le variabili discard sono supportate negli scenari seguenti:
 
-* Per la decostruzione di tuple o tipi definiti dall'utente.
-* Per la chiamata di metodi con parametri [out](../language-reference/keywords/out-parameter-modifier.md).
-* In operazioni con criteri di ricerca con le istruzioni [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
-* Come identificatore autonomo quando si vuole identificare in modo esplicito il valore di un'assegnazione come variabile discard.
+- Per la decostruzione di tuple o tipi definiti dall'utente.
+- Per la chiamata di metodi con parametri [out](../language-reference/keywords/out-parameter-modifier.md).
+- In operazioni con criteri di ricerca con le istruzioni [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
+- Come identificatore autonomo quando si vuole identificare in modo esplicito il valore di un'assegnazione come variabile discard.
 
 L'esempio seguente definisce un metodo `QueryCityDataForYears` che restituisce una tupla con 6 elementi che contiene i dati di una città per due anni diversi. La chiamata del metodo nell'esempio è interessata solo ai due valori di popolazione restituiti dal metodo e quindi gestisce i valori rimanenti nella tupla come variabili discard quando decostruisce la tupla.
 
@@ -180,15 +180,15 @@ Questa funzionalità abilita algoritmi che usano e restituiscono riferimenti a v
 
 Il linguaggio C# usa diverse regole per evitare l'uso improprio delle variabili locali `ref` e dei valori restituiti:
 
-* È necessario aggiungere la parola chiave `ref` alla firma del metodo e a tutte le istruzioni `return` in un metodo.
+- È necessario aggiungere la parola chiave `ref` alla firma del metodo e a tutte le istruzioni `return` in un metodo.
   - In questo modo appare chiaro che le restituzioni avvengono in base al riferimento nell'intero metodo.
-* Un elemento `ref return` può essere assegnato a una variabile value o a una variabile `ref`.
+- Un elemento `ref return` può essere assegnato a una variabile value o a una variabile `ref`.
   - Il chiamante determina se il valore restituito viene copiato oppure no. L'omissione del modificatore `ref` quando si assegna il valore restituito indica che il chiamante desidera una copia del valore e non un riferimento alla risorsa di archiviazione.
-* Non è possibile assegnare un valore restituito del metodo standard a una variabile locale `ref`.
+- Non è possibile assegnare un valore restituito del metodo standard a una variabile locale `ref`.
   - Questo non consente istruzioni come `ref int i = sequence.Count();`
-* Non è possibile restituire un elemento `ref` a una variabile la cui durata è limitata alla durata di esecuzione del metodo.
+- Non è possibile restituire un elemento `ref` a una variabile la cui durata è limitata alla durata di esecuzione del metodo.
   - Ciò significa che non è possibile restituire un riferimento a una variabile locale o a una variabile con ambito simile.
-* Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
+- Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
   - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
 
 L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876942"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104638"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -15,10 +15,10 @@ Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione
 
 Il documento illustra il processo per offrire il proprio contributo per gli articoli e gli esempi di codice ospitati nel [sito della documentazione di .NET](https://docs.microsoft.com/dotnet). I contributi possono essere semplici come le correzioni di errori di ortografia o complessi, ad esempio nuovi articoli.
 
-* [Processo per fornire il contributo](#process-for-contributing)
-* [Esperienza interattiva in C#](#the-c-interactive-experience)
-* [Cosa fare e cosa non fare](#dos-and-donts)
-* [Contratto di licenza con il collaboratore](#contributor-license-agreement)
+- [Processo per fornire il contributo](#process-for-contributing)
+- [Esperienza interattiva in C#](#the-c-interactive-experience)
+- [Cosa fare e cosa non fare](#dos-and-donts)
+- [Contratto di licenza con il collaboratore](#contributor-license-agreement)
 
 Questo repository contiene la documentazione concettuale per .NET. Il sito della documentazione di .NET è costituito da più repository oltre a questo:
 
@@ -103,7 +103,7 @@ Viene fatta la distinzione seguente per il codice esistente nel repository:
 Tutti i codici si trovano nel repository [dotnet/samples](https://github.com/dotnet/samples). Microsoft sta lavorando a un modello in cui la struttura della cartella samples corrisponda alla struttura della cartella docs. Gli standard seguiti sono:
 
 - La cartella *snippets* di primo livello contiene i frammenti per i piccoli esempi specifici.
-- Gli esempi di riferimento API sono stati inseriti in una cartella che segue questo modello: *snippets/\<linguaggio>/api/\<spazio dei nomi>/\<nomeapi>*.
+- Gli esempi di riferimento API sono stati inseriti in una cartella che segue questo modello: *snippets/\<linguaggio>/api/\<spazio dei nomi>/\<nomeapi>* .
 - Le altre cartelle di primo livello corrispondono alle cartelle di primo livello nel repository *docs*. Il repository docs include, ad esempio, una cartella *machine-learning/tutorials* e gli esempi per le esercitazioni su Machine Learning si trovano nella cartella *samples/machine-learning/tutorials*.
 
 Inoltre, tutti gli esempi nelle cartelle *core* e *standard* devono essere compilati ed eseguiti in tutte le piattaforme supportate da .NET Core. Il sistema di compilazione CI imporrà questo requisito. La cartella *framework* di primo livello contiene esempi che vengono eseguiti e convalidati solo in Windows.

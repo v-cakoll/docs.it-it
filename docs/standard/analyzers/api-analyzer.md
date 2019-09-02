@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063342"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107378"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -23,7 +23,7 @@ L'analizzatore di API è disponibile come pacchetto NuGet [Microsoft.DotNet.Anal
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Visual Studio 2017 e versioni successive o Visual Studio per Mac (tutte le versioni).
+- Visual Studio 2017 e versioni successive o Visual Studio per Mac (tutte le versioni).
 
 ## <a name="discovering-deprecated-apis"></a>Individuazione di API deprecate
 
@@ -48,18 +48,18 @@ La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API dep
 
 Facendo clic sull'ID si passa a una pagina Web con informazioni dettagliate sul motivo per cui l'API è stata deprecata e suggerimenti per le API alternative utilizzabili.
 
-Tutti gli avvisi possono essere eliminati facendo clic con il pulsante destro del mouse sul membro evidenziato e scegliendo **Elimina \<ID diagnostica>**. Esistono due modi per eliminare gli avvisi: 
+Tutti gli avvisi possono essere eliminati facendo clic con il pulsante destro del mouse sul membro evidenziato e scegliendo **Elimina \<ID diagnostica>** . Esistono due modi per eliminare gli avvisi: 
 
-* [in locale (nell'origine)](#suppressing-warnings-locally)
-* [a livello globale (in un file di eliminazione)](#suppressing-warnings-globally) - scelta consigliata
+- [in locale (nell'origine)](#suppressing-warnings-locally)
+- [a livello globale (in un file di eliminazione)](#suppressing-warnings-globally) - scelta consigliata
 
 ### <a name="suppressing-warnings-locally"></a>Eliminazione di avvisi in locale
 
-Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
+Per eliminare gli avvisi in locale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>**  > **nell'origine**. La direttiva del preprocessore [#pragma warning](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) viene aggiunta al codice sorgente nell'ambito definito: !["Screenshot di codice evidenziato con #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Eliminazione di avvisi a livello globale
 
-Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>** > **nel file di eliminazione**.
+Per eliminare gli avvisi a livello globale, fare clic con il pulsante destro del mouse sul membro per cui si vogliono eliminare gli avvisi e quindi scegliere **Azioni rapide e refactoring** > **Elimina *ID diagnostica*\<ID diagnostica>**  > **nel file di eliminazione**.
 
 !["Screenshot dell'API WebClient API con sottolineatura ondulata verde e lampadina a sinistra"](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -95,11 +95,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 Attualmente, l'analizzatore gestisce i casi seguenti:
 
-* Utilizzo di un'API .NET Standard che genera <xref:System.PlatformNotSupportedException> (PC001).
-* Utilizzo di un'API .NET Standard non disponibile in .NET Framework 4.6.1 (PC002).
-* Utilizzo di un'API nativa che non esiste nella piattaforma UWP (PC003).
-* Uso delle API Delegate.BeginInvoke e EndInvoke (PC004).
-* Utilizzo di un'API che è contrassegnata come deprecata (DEXXXX).
+- Utilizzo di un'API .NET Standard che genera <xref:System.PlatformNotSupportedException> (PC001).
+- Utilizzo di un'API .NET Standard non disponibile in .NET Framework 4.6.1 (PC002).
+- Utilizzo di un'API nativa che non esiste nella piattaforma UWP (PC003).
+- Uso delle API Delegate.BeginInvoke e EndInvoke (PC004).
+- Utilizzo di un'API che è contrassegnata come deprecata (DEXXXX).
 
 ## <a name="ci-machine"></a>Server CI
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135663"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105919"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -141,7 +141,7 @@ Il probe ottimizzato per gli assembly satellite è una funzionalità che richied
 Il processo di fallback per le risorse di .NET Core include i passaggi seguenti:
 
 1. Il runtime prova a caricare un assembly satellite per le impostazioni cultura richieste.
-     * Cerca quindi nella directory dell'assembly in esecuzione una sottodirectory corrispondente alle impostazioni cultura richieste. Se trova la sottodirectory, cerca nella sottodirectory un assembly satellite valido per le impostazioni cultura richieste e lo carica.
+     - Cerca quindi nella directory dell'assembly in esecuzione una sottodirectory corrispondente alle impostazioni cultura richieste. Se trova la sottodirectory, cerca nella sottodirectory un assembly satellite valido per le impostazioni cultura richieste e lo carica.
 
        > [!NOTE]
        > Nei sistemi operativi con file system che fanno distinzione tra maiuscole e minuscole, ovvero Linux e macOS, la ricerca di sottodirectory con il nome delle impostazioni cultura fa distinzione tra maiuscole e minuscole. L'uso di maiuscole e minuscole nel nome della sottodirectory deve corrispondere esattamente a quello di <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>, ad esempio `es` o `es-MX`.
@@ -149,8 +149,8 @@ Il processo di fallback per le risorse di .NET Core include i passaggi seguenti:
        > [!NOTE]
        > Se il programmatore ha derivato un contesto di caricamento dell'assembly personalizzato da <xref:System.Runtime.Loader.AssemblyLoadContext>, la situazione è più complicata. Se l'assembly in esecuzione è stato caricato nel contesto personalizzato, il runtime carica l'assembly satellite nel contesto personalizzato. I dettagli esulano dall'ambito di questo documento. Vedere <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-     * Se non viene trovato un assembly satellite, <xref:System.Runtime.Loader.AssemblyLoadContext> genera l'evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
-     * Se l'assembly satellite non viene ancora trovato, AssemblyLoadContext determina l'attivazione di un evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> da parte di AppDomain per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
+     - Se non viene trovato un assembly satellite, <xref:System.Runtime.Loader.AssemblyLoadContext> genera l'evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
+     - Se l'assembly satellite non viene ancora trovato, AssemblyLoadContext determina l'attivazione di un evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> da parte di AppDomain per indicare che non riesce a trovare l'assembly. Se si sceglie di gestire l'evento, il gestore eventi può caricare e restituire un riferimento all'assembly satellite.
 
 2. Se non viene trovato un assembly satellite, il runtime cerca la risorsa richiesta. Se trova la risorsa nell'assembly la usa direttamente. In caso contrario la ricerca continua.
 

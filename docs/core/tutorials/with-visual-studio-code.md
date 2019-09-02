@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401846"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105098"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -27,22 +27,22 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
 
 1. Aprire un progetto:
 
-    * Aprire Visual Studio Code.
-    * Fare clic sull'icona Esplora nel menu a sinistra e quindi fare clic su **Apri cartella**.
-    * Selezionare **File** > **Apri cartella** dal menu principale per aprire la cartella in cui inserire il programma C# e fare clic su **Seleziona cartella**. Ai fini di questo esempio, viene creata una cartella per il progetto denominato *HelloWorld*.
+    - Aprire Visual Studio Code.
+    - Fare clic sull'icona Esplora nel menu a sinistra e quindi fare clic su **Apri cartella**.
+    - Selezionare **File** > **Apri cartella** dal menu principale per aprire la cartella in cui inserire il programma C# e fare clic su **Seleziona cartella**. Ai fini di questo esempio, viene creata una cartella per il progetto denominato *HelloWorld*.
 
       ![Cartella aperta di Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Inizializzare un progetto C#:
-    * Aprire il terminale integrato da Visual Studio Code scegliendo **Visualizza** > **Terminale integrato** dal menu principale.
-    * Nella finestra del terminale digitare `dotnet new console`.
-    * Questo comando crea un file `Program.cs` nella cartella con un semplice programma "Hello World" già scritto, oltre a un file di progetto C# denominato `HelloWorld.csproj`.
+    - Aprire il terminale integrato da Visual Studio Code scegliendo **Visualizza** > **Terminale integrato** dal menu principale.
+    - Nella finestra del terminale digitare `dotnet new console`.
+    - Questo comando crea un file `Program.cs` nella cartella con un semplice programma "Hello World" già scritto, oltre a un file di progetto C# denominato `HelloWorld.csproj`.
 
       ![Comando new di dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Risolvere le risorse di compilazione:
 
-    * Per **.NET Core 1.x** digitare `dotnet restore`. L'esecuzione di `dotnet restore` consente di accedere ai pacchetti .NET Core necessari per la compilazione del progetto.
+    - Per **.NET Core 1.x** digitare `dotnet restore`. L'esecuzione di `dotnet restore` consente di accedere ai pacchetti .NET Core necessari per la compilazione del progetto.
 
       ![Comando restore di dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -50,7 +50,7 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
 
 4. Eseguire il programma "Hello World":
 
-    * Digitare `dotnet run`.
+    - Digitare `dotnet run`.
 
       ![Comando run di dotnet](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -79,7 +79,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
     ![Impostazione di un punto di interruzione](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Per avviare il debug, premere <kbd>F5</kbd> o fare clic sulla freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
-    * Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro. In alternativa, usare la console di debug.
+    - Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro. In alternativa, usare la console di debug.
 
 7. Selezionare la freccia blu in alto per continuare il debug oppure fare clic sul quadrato rosso per arrestarlo.
 

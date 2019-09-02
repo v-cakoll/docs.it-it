@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363890"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105507"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -16,10 +16,10 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Membri di sola lettura](#readonly-members)
 - [Membri di interfaccia predefiniti](#default-interface-members)
 - [Miglioramenti dei criteri di ricerca](#more-patterns-in-more-places):
-  * [Espressioni switch](#switch-expressions)
-  * [Criteri per le proprietà](#property-patterns)
-  * [Criteri per le tuple](#tuple-patterns)
-  * [Criteri per la posizione](#positional-patterns)
+  - [Espressioni switch](#switch-expressions)
+  - [Criteri per le proprietà](#property-patterns)
+  - [Criteri per le tuple](#tuple-patterns)
+  - [Criteri per la posizione](#positional-patterns)
 - [Dichiarazioni using](#using-declarations)
 - [Funzioni locali statiche](#static-local-functions)
 - [Struct ref Disposable](#disposable-ref-structs)

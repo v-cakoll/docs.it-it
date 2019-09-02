@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025102"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168507"
 ---
 # <a name="methods"></a>Metodi
 
@@ -257,7 +257,7 @@ Per altre informazioni, vedere [Metodi di estensione](programming-guide/classes-
 
 Tramite la funzionalità async, è possibile richiamare i metodi asincroni senza usare callback espliciti o suddividere manualmente il codice in più metodi o espressioni lambda.
 
-Se si contrassegna un metodo con il modificatore [async](language-reference/keywords/async.md), è possibile usare l'operatore [await](language-reference/keywords/await.md) nel metodo. Quando il controllo raggiunge un'espressione `await` nel metodo asincrono, il controllo torna al chiamante se l'attività attesa non è stata completata e l'avanzamento nel metodo con la parola chiave `await` viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
+Se si contrassegna un metodo con il modificatore [async](language-reference/keywords/async.md), è possibile usare l'operatore [await](language-reference/operators/await.md) nel metodo. Quando il controllo raggiunge un'espressione `await` nel metodo asincrono, il controllo torna al chiamante se l'attività attesa non è stata completata e l'avanzamento nel metodo con la parola chiave `await` viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere.
 
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.

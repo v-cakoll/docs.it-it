@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630859"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107281"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -17,18 +17,18 @@ Per la creazione di applicazioni lato server con .NET sono supportate due implem
 
 Usare .NET Core per l'applicazione server nei casi seguenti:
 
-* Si hanno esigenze multipiattaforma.
-* Si scelgono microservizi.
-* Si usano contenitori Docker.
-* Si hanno esigenze di elevate prestazioni e scalabilità.
-* È necessaria l'installazione side-by-side delle versioni di .NET in base all'applicazione.
+- Si hanno esigenze multipiattaforma.
+- Si scelgono microservizi.
+- Si usano contenitori Docker.
+- Si hanno esigenze di elevate prestazioni e scalabilità.
+- È necessaria l'installazione side-by-side delle versioni di .NET in base all'applicazione.
 
 Usare .NET Framework per l'applicazione server nei casi seguenti:
 
-* L'app usa attualmente .NET Framework (si consiglia di optare per l'estensione anziché per la migrazione).
-* L'app usa pacchetti NuGet o librerie .NET di terze parti non disponibili per .NET Core.
-* L'app usa tecnologie .NET non disponibili per .NET Core.
-* L'app usa una piattaforma che non supporta .NET Core.
+- L'app usa attualmente .NET Framework (si consiglia di optare per l'estensione anziché per la migrazione).
+- L'app usa pacchetti NuGet o librerie .NET di terze parti non disponibili per .NET Core.
+- L'app usa tecnologie .NET non disponibili per .NET Core.
+- L'app usa una piattaforma che non supporta .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Quando scegliere .NET Core
 
@@ -85,15 +85,15 @@ In questo modo, è necessario ricorrere a .NET Framework solo nei casi in cui le
 
 Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potrebbero essere incluse in versioni successive di .NET Core, mentre altre non si applicano ai nuovi modelli di applicazione basati su .NET Core ed è possibile che non vengano mai rese disponibili. Di seguito sono elencate le tecnologie più comuni non disponibili in .NET Core:
 
-* Applicazioni Web Form ASP.NET: Web Form ASP.NET è disponibile solo in .NET Framework, di conseguenza non è possibile usare ASP.NET Core per Web Form ASP.NET. Non è inoltre previsto il trasferimento di Web Form ASP.NET in .NET Core.
+- Applicazioni Web Form ASP.NET: Web Form ASP.NET è disponibile solo in .NET Framework, di conseguenza non è possibile usare ASP.NET Core per Web Form ASP.NET. Non è inoltre previsto il trasferimento di Web Form ASP.NET in .NET Core.
 
-* Applicazioni Pagine Web ASP.NET: Pagine Web ASP.NET non è incluso in ASP.NET Core. 
+- Applicazioni Pagine Web ASP.NET: Pagine Web ASP.NET non è incluso in ASP.NET Core. 
 
-* Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
+- Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 
-* Servizi correlati ai flussi di lavoro: Windows Workflow Foundation (WF), Servizi flussi di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework.  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
+- Servizi correlati ai flussi di lavoro: Windows Workflow Foundation (WF), Servizi flussi di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework.  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
 
-* Supporto per i linguaggi: Visual Basic e F# sono attualmente supportati in .NET Core, ma non per tutti i tipi di progetto. Per un elenco dei modelli di progetto supportati, vedere le [opzioni del modello per dotnet new](../core/tools/dotnet-new.md#arguments).
+- Supporto per i linguaggi: Visual Basic e F# sono attualmente supportati in .NET Core, ma non per tutti i tipi di progetto. Per un elenco dei modelli di progetto supportati, vedere le [opzioni del modello per dotnet new](../core/tools/dotnet-new.md#arguments).
 
 In aggiunta a quanto indicato nella roadmap ufficiale, sono presenti altri framework da trasferire in .NET Core. Per un elenco completo, vedere i problemi di CoreFX contrassegnati come [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Questo elenco non indica che Microsoft trasferirà necessariamente i componenti specificati in .NET Core, ma rappresenta solo il desiderio della community di procedere in tal senso. Se si è interessati a uno dei componenti contrassegnati come `port-to-core`, è consigliabile partecipare alle discussioni su GitHub. Se inoltre si ritiene di dover aggiungere alcune osservazioni, è possibile inserire un nuovo problema nel [repository CoreFX](https://github.com/dotnet/corefx/issues/new).
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927990"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040742"
 ---
 # <a name="application-domains"></a>Domini applicazione
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  Se impostato su 1, tramite il flag di ambiente COMPLUS_LoaderOptimization viene forzato il caricamento di tutti gli assembly nella modalità non indipendente dal dominio nota come SingleDomain da parte dell'host di runtime. Con SingleDomain non viene caricato alcun assembly come indipendente dal dominio, a eccezione di Mscorlib, che viene sempre caricato come indipendente dal dominio. Questa impostazione viene denominata a dominio singolo perché viene usata in genere quando sull'host è in esecuzione una sola applicazione nel processo.  
   
 > [!CAUTION]
->  Il flag di ambiente COMPLUS_LoaderOptimization è stato progettato per essere usato negli scenari di test e di diagnostica. L'abilitazione del flag può provocare notevoli rallentamenti e aumentare l'utilizzo della memoria.  
+> Il flag di ambiente COMPLUS_LoaderOptimization è stato progettato per essere usato negli scenari di test e di diagnostica. L'abilitazione del flag può provocare notevoli rallentamenti e aumentare l'utilizzo della memoria.  
   
 ### <a name="code-example"></a>Esempio di codice
 

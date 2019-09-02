@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401513"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167875"
 ---
 # <a name="for-c-reference"></a>for (Riferimenti per C#)
 
@@ -53,7 +53,7 @@ Le istruzioni nella sezione *inizializzatore* vengono eseguite una sola volta, p
 
   - Creazione di un oggetto con l'operatore [new](../operators/new-operator.md)
 
-  - Espressione [await](await.md)
+  - Espressione [await](../operators/await.md)
 
 La sezione *inizializzatore* dell'esempio precedente dichiara e inizializza la variabile di ciclo locale `i`:
 
@@ -85,7 +85,7 @@ La sezione *iteratore* definisce cosa accade dopo ogni iterazione del corpo del 
 
 - Creazione di un oggetto con l'operatore [new](../operators/new-operator.md)
 
-- Espressione [await](await.md)
+- Espressione [await](../operators/await.md)
 
 La sezione *iteratore* dell'esempio precedente incrementa la variabile di ciclo locale:
 

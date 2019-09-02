@@ -4,12 +4,12 @@ description: In questa esercitazione viene illustrato come creare un'applicazion
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238367"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107171"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Esercitazione: Analizzare le valutazioni dei commenti di un sito web con la classificazione binaria in ML.NET
 
@@ -17,21 +17,21 @@ In questa esercitazione viene illustrato come creare un'applicazione console .NE
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
-> * Creare un'applicazione console
-> * Preparare i dati
-> * Caricare i dati
-> * Compilare ed eseguire il training del modello
-> * Valutare il modello
-> * Usare il modello per eseguire una stima
-> * Visualizzare i risultati
+> - Creare un'applicazione console
+> - Preparare i dati
+> - Caricare i dati
+> - Compilare ed eseguire il training del modello
+> - Valutare il modello
+> - Usare il modello per eseguire una stima
+> - Visualizzare i risultati
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato
+- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato
 
-* [Set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (file con estensione zip)
+- [Set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (file con estensione zip)
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
@@ -62,8 +62,8 @@ In questa esercitazione si imparerà a:
 
 2. Creare due campi globali per contenere il percorso del file del set di dati scaricato di recente e il percorso del file del modello salvato:
 
-    * `_dataPath` contiene il percorso del set di dati usato per il training del modello.
-    * `_modelPath` contiene il percorso in cui è salvato il modello sottoposto a training.
+    - `_dataPath` contiene il percorso del set di dati usato per il training del modello.
+    - `_modelPath` contiene il percorso in cui è salvato il modello sottoposto a training.
 
 3. Aggiungere il codice seguente nella riga immediatamente sopra il metodo `Main` per specificare i percorsi:
 
@@ -125,9 +125,9 @@ Preparare l'app, quindi caricare i dati:
 
     Il metodo `LoadData()` esegue le attività seguenti:
 
-    * Carica i dati.
-    * Suddivide il set di dati caricati in set di dati di training e di test.
-    * Restituisce i set di dati di training e di test divisi.
+    - Carica i dati.
+    - Suddivide il set di dati caricati in set di dati di training e di test.
+    - Restituisce i set di dati di training e di test divisi.
 
 4. Aggiungere il codice seguente come prima riga del metodo `LoadData()`:
 
@@ -157,10 +157,10 @@ Quando si prepara un modello, usare parte del set di dati per il training e part
 
     Il metodo `BuildAndTrainModel()` esegue le attività seguenti:
 
-    * Estrae e trasforma i dati.
-    * Esegue il training del modello.
-    * Esegue la stima del sentiment in base ai dati di test.
-    * Restituisce il modello.
+    - Estrae e trasforma i dati.
+    - Esegue il training del modello.
+    - Esegue la stima del sentiment in base ai dati di test.
+    - Restituisce il modello.
 
 2. Creare il metodo `BuildAndTrainModel()` subito dopo il metodo `Main()`, usando il codice seguente:
 
@@ -225,10 +225,10 @@ Dopo che viene eseguito il training del modello, usare i dati di test per conval
 
     Il metodo `Evaluate()` esegue le attività seguenti:
 
-    * Carica il set di dati di test.
-    * Crea l'analizzatore BinaryClassification.
-    * Valuta il modello e crea le metriche.
-    * Visualizza le metriche.
+    - Carica il set di dati di test.
+    - Crea l'analizzatore BinaryClassification.
+    - Valuta il modello e crea le metriche.
+    - Visualizza le metriche.
 
 2. Aggiungere una chiamata al nuovo metodo dal metodo `Main()`, subito sotto la chiamata al metodo `BuildAndTrainModel()`, usando il codice seguente:
 
@@ -252,11 +252,11 @@ Usare il codice seguente per visualizzare le metriche:
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* La metrica `Accuracy` ottiene l'accuratezza di un modello, che è la percentuale di stime corrette nel set di test.
+- La metrica `Accuracy` ottiene l'accuratezza di un modello, che è la percentuale di stime corrette nel set di test.
 
-* La metrica `AreaUnderRocCurve` indica con quale affidabilità il modello classifica correttamente le classi positive e negative. `AreaUnderRocCurve` deve avvicinarsi il più possibile a 1.
+- La metrica `AreaUnderRocCurve` indica con quale affidabilità il modello classifica correttamente le classi positive e negative. `AreaUnderRocCurve` deve avvicinarsi il più possibile a 1.
 
-* La metrica `F1Score` produce il punteggio F1 del modello, che è una misura di equilibrio tra [precisione](../resources/glossary.md#precision) e [richiamo](../resources/glossary.md#recall).  `F1Score` deve avvicinarsi il più possibile a 1.
+- La metrica `F1Score` produce il punteggio F1 del modello, che è una misura di equilibrio tra [precisione](../resources/glossary.md#precision) e [richiamo](../resources/glossary.md#recall).  `F1Score` deve avvicinarsi il più possibile a 1.
 
 ### <a name="predict-the-test-data-outcome"></a>Stimare i risultati dei dati di test
 
@@ -271,10 +271,10 @@ Usare il codice seguente per visualizzare le metriche:
 
     Il metodo `UseModelWithSingleItem()` esegue le attività seguenti:
 
-    * Crea un singolo commento di dati di test.
-    * Esegue la stima del sentiment in base ai dati di test.
-    * Combina i dati di test e le stime per i report.
-    * Visualizza i risultati stimati.
+    - Crea un singolo commento di dati di test.
+    - Esegue la stima del sentiment in base ai dati di test.
+    - Combina i dati di test e le stime per i report.
+    - Visualizza i risultati stimati.
 
 2. Aggiungere una chiamata al nuovo metodo dal metodo `Main()`, subito sotto la chiamata al metodo `Evaluate()`, usando il codice seguente:
 
@@ -315,10 +315,10 @@ Usare il codice seguente per visualizzare le metriche:
 
     Il metodo `UseModelWithBatchItems()` esegue le attività seguenti:
 
-    * Crea i dati di test in batch.
-    * Esegue la stima del sentiment in base ai dati di test.
-    * Combina i dati di test e le stime per i report.
-    * Visualizza i risultati stimati.
+    - Crea i dati di test in batch.
+    - Esegue la stima del sentiment in base ai dati di test.
+    - Combina i dati di test e le stime per i report.
+    - Visualizza i risultati stimati.
 
 2. Aggiungere una chiamata al nuovo metodo dal metodo `Main`, subito sotto la chiamata al metodo `UseModelWithSingleItem()`, usando il codice seguente:
 
@@ -383,13 +383,13 @@ La creazione di modelli efficaci è un processo iterativo. Questo modello ha ini
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
-> * Creare un'applicazione console
-> * Preparare i dati
-> * Caricare i dati
-> * Compilare ed eseguire il training del modello
-> * Valutare il modello
-> * Usare il modello per eseguire una stima
-> * Visualizzare i risultati
+> - Creare un'applicazione console
+> - Preparare i dati
+> - Caricare i dati
+> - Compilare ed eseguire il training del modello
+> - Valutare il modello
+> - Usare il modello per eseguire una stima
+> - Visualizzare i risultati
 
 Passare all'esercitazione successiva per altre informazioni
 > [!div class="nextstepaction"]

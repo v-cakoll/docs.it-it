@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623784"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106477"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilità delle applicazioni in .NET Framework
 
@@ -22,9 +22,9 @@ La compatibilità è un obiettivo molto importante di ogni versione di .NET, per
 
 Ogni app è destinata a una versione specifica di .NET Framework, che può essere indicata tramite le azioni seguenti:
 
-* Definizione di un framework di destinazione in Visual Studio.
-* Indicazione del framework di destinazione in un file di progetto.
-* Applicazione di un <xref:System.Runtime.Versioning.TargetFrameworkAttribute> al codice sorgente.
+- Definizione di un framework di destinazione in Visual Studio.
+- Indicazione del framework di destinazione in un file di progetto.
+- Applicazione di un <xref:System.Runtime.Versioning.TargetFrameworkAttribute> al codice sorgente.
 
 Durante l'esecuzione in una versione più recente di quella di destinazione, .NET Framework simula la versione di destinazione precedente adottando un comportamento anomalo. In altre parole, l'app viene eseguita nella versione più recente di .NET Framework, ma si comporta come se fosse in esecuzione nella versione precedente. Questo modello di comportamento consente di attenuare molti problemi di compatibilità tra versioni diverse di .NET Framework. La versione di .NET Framework a cui un'applicazione è destinata è determinata dalla versione di destinazione dell'assembly di ingresso per il dominio dell'applicazione in cui viene eseguito il codice. Tutti gli assembly aggiuntivi caricati in quel dominio dell'applicazione sono destinati a tale versione di .NET Framework. Nel caso di un file eseguibile, ad esempio, la versione di .NET Framework a cui l'eseguibile è destinato corrisponde alla modalità di compatibilità in cui vengono eseguiti tutti gli assembly in quel dominio dell'applicazione.
 
@@ -71,8 +71,8 @@ Per ogni problema sono incluse le informazioni seguenti:
 ## <a name="usage"></a>Utilizzo
 Per iniziare, selezionare il tipo di modifica della compatibilità di seguito:
 
-* [Modifiche di reindirizzamento](./retargeting/index.md)
-* [Modifiche al runtime](./runtime/index.md)
+- [Modifiche di reindirizzamento](./retargeting/index.md)
+- [Modifiche al runtime](./runtime/index.md)
 
 ## <a name="see-also"></a>Vedere anche
 
