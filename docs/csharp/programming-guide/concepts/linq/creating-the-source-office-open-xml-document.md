@@ -2,12 +2,12 @@
 title: Creazione del documento Office Open XML di origine (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 024b6c80cdedf38fd2dcee77562c0105df7bd033
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d6c4d8866bba58e86735099a62041894a9faa9b1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690099"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204162"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Creazione del documento Office Open XML di origine (C#)
 
@@ -25,7 +25,7 @@ Per creare il documento usato in questa esercitazione, è necessario che nel com
 
 2. Incollare il testo seguente nel nuovo documento:
 
-    ```
+    ```text
     Parsing WordprocessingML with LINQ to XML
 
     The following example prints to the console.

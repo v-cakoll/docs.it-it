@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607930"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203370"
 ---
 # <a name="merging-dataset-contents"></a>Unione di contenuti di dataset
 
@@ -35,7 +35,7 @@ Se necessario, agli oggetti <xref:System.Data.DataTable> è possibile assegnare 
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Quando si passa una matrice `DataSet`, `DataTable` o `DataRow` al metodo `Merge`, è possibile includere parametri facoltativi che consentano di specificare se mantenere o meno le modifiche nel `DataSet` esistente e come gestire i nuovi elementi dello schema individuati nei dati in arrivo. Il primo di tali parametri successivi ai dati in arrivo è un flag booleano, <xref:System.Data.LoadOption.PreserveChanges>, che consente di specificare se conservare o meno le modifiche nel `DataSet` esistente. Se il flag `PreserveChanges` è impostato su `true`, i valori esistenti nella versione di riga `Current` della riga esistente non verranno sovrascritti dai valori in arrivo. Se il flag `PreserveChanges` è impostato su `false`, i valori esistenti nella versione di riga `Current` della riga esistente verranno sovrascritti dai valori in arrivo. Se non è specificato, il flag `PreserveChanges` viene impostato su `false` per impostazione predefinita. Per altre informazioni sulle versioni delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Quando si passa una matrice `DataSet`, `DataTable` o `DataRow` al metodo `Merge`, è possibile includere parametri facoltativi che consentano di specificare se mantenere o meno le modifiche nel `DataSet` esistente e come gestire i nuovi elementi dello schema individuati nei dati in arrivo. Il primo di tali parametri successivi ai dati in arrivo è un flag booleano, <xref:System.Data.LoadOption.PreserveChanges>, che consente di specificare se conservare o meno le modifiche nel `DataSet` esistente. Se il flag `PreserveChanges` è impostato su `true`, i valori esistenti nella versione di riga `Current` della riga esistente non verranno sovrascritti dai valori in arrivo. Se il flag `PreserveChanges` è impostato su `false`, i valori esistenti nella versione di riga `Current` della riga esistente verranno sovrascritti dai valori in arrivo. Se non è specificato, il flag `PreserveChanges` viene impostato su `false` per impostazione predefinita. Per ulteriori informazioni sulle versioni di riga, vedere [Stati di riga e versioni di riga](row-states-and-row-versions.md).
 
 Se `PreserveChanges` è `true`, i dati della riga esistente verranno mantenuti nella versione di riga <xref:System.Data.DataRowVersion.Current> della riga esistente, mentre i dati della versione di riga <xref:System.Data.DataRowVersion.Original> della riga esistente verranno sovrascritti dai dati della versione di riga `Original` della riga in arrivo. La proprietà <xref:System.Data.DataRow.RowState%2A> della riga esistente è impostata su <xref:System.Data.DataRowState.Modified>. Vengono applicate le seguenti eccezioni:
 
@@ -69,9 +69,9 @@ Se si usa il metodo `Merge`, la verifica dei vincoli viene eseguita solo quando 
 Si consideri il caso in cui una riga esistente di un `DataSet` è una riga `Unchanged` con un valore di chiave primaria di 1. Durante un'operazione di unione con una riga in arrivo `Modified` in cui il valore di chiave primaria `Original` è 2 il valore di chiave primaria `Current` è 1, la riga esistente e la riga in arrivo non vengono considerate corrispondenti perché i valori della chiave primaria di `Original` sono diversi. Tuttavia, una volta completata l'unione e verificati i vincoli, verrà generata un'eccezione, poiché i valori di chiave primaria `Current` violano il vincolo univoco per la colonna di chiave primaria.
 
 > [!NOTE]
-> Quando si inseriscono righe in una tabella di database contenente una colonna a incremento automatico ad esempio una colonna Identity, è possibile che il valore della colonna Identity restituito dall'inserimento non corrisponda al valore di `DataSet`, pertanto le righe restituite verranno aggiunte anziché unite. Per altre informazioni, vedere [Retrieving Identity or Autonumber Values](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Quando si inseriscono righe in una tabella di database contenente una colonna a incremento automatico ad esempio una colonna Identity, è possibile che il valore della colonna Identity restituito dall'inserimento non corrisponda al valore di `DataSet`, pertanto le righe restituite verranno aggiunte anziché unite. Per altre informazioni, vedere [recupero di valori Identity o Autonumber](../retrieving-identity-or-autonumber-values.md).
 
-Esempio di codice seguente unisce due `DataSet` gli oggetti con schemi diversi in un unico `DataSet` con la combinazione degli schemi dei due in ingresso `DataSet` oggetti.
+Nell'esempio di codice seguente vengono uniti `DataSet` due oggetti con schemi diversi in uno `DataSet` con gli schemi combinati dei due oggetti in arrivo `DataSet` .
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ Nell'esempio di codice seguente viene selezionato un `DataSet` esistente con agg
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Stati e versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapter e DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Recupero di identità o di valori numerati automaticamente](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Oggetti DataSet, DataTable e DataView](index.md)
+- [Stati e versioni delle righe](row-states-and-row-versions.md)
+- [DataAdapter e DataReader](../dataadapters-and-datareaders.md)
+- [Recupero e modifica di dati in ADO.NET](../retrieving-and-modifying-data.md)
+- [Recupero di identità o di valori numerati automaticamente](../retrieving-identity-or-autonumber-values.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

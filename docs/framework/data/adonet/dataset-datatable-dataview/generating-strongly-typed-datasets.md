@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504101"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203699"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generazione di dataset fortemente tipizzati
-Dato un XML Schema che è conforme allo XML Schema definition language (XSD) standard, è possibile generare una classe fortemente tipizzata <xref:System.Data.DataSet> utilizzando lo strumento XSD.exe fornito con Windows Software Development Kit (SDK).  
+Dato un XML schema conforme allo standard XSD (XML Schema Definition Language), è possibile generare un oggetto fortemente tipizzato <xref:System.Data.DataSet> utilizzando lo strumento XSD. exe fornito con Windows Software Development Kit (SDK).  
   
- (Per creare uno schema xsd dalle tabelle di database, vedere <xref:System.Data.DataSet.WriteXmlSchema%2A> oppure [utilizzo di dataset in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
+ Per creare un XSD dalle tabelle di database, vedere <xref:System.Data.DataSet.WriteXmlSchema%2A> o [uso dei set di dati in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
- Il codice seguente illustra la sintassi per la generazione di un **set di dati** usando questo strumento.  
+ Nel codice seguente viene illustrata la sintassi per la generazione di un **set di dati** utilizzando questo strumento.  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- In questa sintassi, il `/d` direttiva richiede lo strumento per generare un **set di dati**e il `/l:` indica allo strumento del linguaggio da usare (ad esempio, c# o Visual Basic .NET). L'opzione facoltativa `/eld` direttiva specifica che è possibile usare LINQ to DataSet per eseguire query sul generato **set di dati.** Questa opzione viene usata quando si specifica anche l'opzione `/d`. Per altre informazioni, vedere [Querying Typed DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). L'opzione facoltativa `/n:` direttiva richiede lo strumento per generare anche uno spazio dei nomi per il **set di dati** chiamato **XSDSchema**. L'output del comando è costituito dal file XSDSchemaFileName.dll, che può essere compilato e usato in un'applicazione ADO.NET. È possibile compilare il codice generato come libreria o modulo.  
+ In questa sintassi, la `/d` direttiva indica allo strumento di generare un **set di dati**e `/l:` indica allo strumento quale lingua usare, ad esempio C# o Visual Basic .NET. La direttiva `/eld` facoltativa specifica che è possibile utilizzare LINQ to DataSet per eseguire query sul **set di dati generato.** Questa opzione viene usata quando si specifica anche l'opzione `/d`. Per ulteriori informazioni, vedere [esecuzione di query su DataSet tipizzati](../querying-typed-datasets.md). La direttiva `/n:` facoltativa indica allo strumento di generare anche uno spazio dei nomi per il **set di dati** denominato **XSDSchema. Namespace**. L'output del comando è costituito dal file XSDSchemaFileName.dll, che può essere compilato e usato in un'applicazione ADO.NET. È possibile compilare il codice generato come libreria o modulo.  
   
  Nel codice seguente viene mostrata la sintassi per la compilazione del codice generato come libreria usando il compilatore C# (csc.exe).  
   
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- Esempio di codice seguente usa un oggetto tipizzato **set di dati** denominata **CustomerDataSet** per caricare un elenco di clienti il **Northwind** database. Una volta caricati i dati usando il **riempire** metodo, l'esempio scorre in ciclo ogni cliente nella **clienti** tabella usando l'oggetto tipizzato **CustomersRow** ( **DataRow**) oggetti. Ciò fornisce accesso diretto al **CustomerID** colonna, anziché tramite il **DataColumnCollection**.  
+ Nell'esempio di codice seguente viene utilizzato un **set di dati** tipizzato denominato **CustomerDataSet** per caricare un elenco di clienti dal database **Northwind** . Una volta caricati i dati usando il metodo **Fill** , l'esempio scorre in ciclo ogni cliente nella tabella **Customers** usando l'oggetto tipizzato **CustomersRow** (**DataRow**). Questo consente di accedere direttamente alla colonna **CustomerID** , anziché tramite DataColumnCollection.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Set di dati tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Set di dati tipizzati](typed-datasets.md)
+- [Oggetti DataSet, DataTable e DataView](index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

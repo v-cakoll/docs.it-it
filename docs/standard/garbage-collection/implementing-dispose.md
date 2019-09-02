@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666469"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106882"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -26,12 +26,12 @@ Il criterio per eliminare un oggetto, definito [criterio Dispose](../../../docs/
   
 Il modello Dispose precede due variazioni:  
   
-* Viene eseguito il wrapping di ogni risorsa non gestita utilizzata da un tipo in un handle sicuro (ovvero in una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). In questo caso, viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)`. Questa è la variazione consigliata e non richiede l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+- Viene eseguito il wrapping di ogni risorsa non gestita utilizzata da un tipo in un handle sicuro (ovvero in una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). In questo caso, viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)`. Questa è la variazione consigliata e non richiede l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
   > Lo spazio dei nomi <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> fornisce un set di classi derivate da <xref:System.Runtime.InteropServices.SafeHandle>, elencate nella sezione [Uso di handle sicuri](#SafeHandles). Se non è possibile trovare una classe in grado di rilasciare la risorsa non gestita, è possibile implementare una propria sottoclasse di <xref:System.Runtime.InteropServices.SafeHandle>.  
   
-* Viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)` e viene inoltre eseguito l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. È necessario eseguire l'override di <xref:System.Object.Finalize%2A> per assicurarsi che le risorse non gestite vengano eliminate quando l'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> non viene chiamata da un consumer del tipo. Se si usa la tecnica consigliata discussa nel precedente punto, questa operazione viene eseguita automaticamente dalla classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.  
+- Viene implementata l'interfaccia <xref:System.IDisposable> e un ulteriore metodo `Dispose(Boolean)` e viene inoltre eseguito l'override del metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. È necessario eseguire l'override di <xref:System.Object.Finalize%2A> per assicurarsi che le risorse non gestite vengano eliminate quando l'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> non viene chiamata da un consumer del tipo. Se si usa la tecnica consigliata discussa nel precedente punto, questa operazione viene eseguita automaticamente dalla classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.  
   
 Al fine di garantire la corretta pulitura delle risorse in ogni occasione, deve essere possibile chiamare il metodo <xref:System.IDisposable.Dispose%2A> più volte senza che venga generata un'eccezione.  
   
@@ -42,9 +42,9 @@ L'esempio di codice fornito per il metodo <xref:System.GC.KeepAlive%2A?displayPr
 
 L'interfaccia <xref:System.IDisposable> richiede l'implementazione di un singolo metodo senza parametri, <xref:System.IDisposable.Dispose%2A>. Tuttavia, il modello Dispose richiede due metodi `Dispose` per essere implementato:  
   
-* Un'implementazione `NonInheritable` pubblica non virtuale (<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> in Visual Basic) senza parametri.  
+- Un'implementazione `NonInheritable` pubblica non virtuale (<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> in Visual Basic) senza parametri.  
   
-* Un metodo `Overridable` protetto virtuale (`Dispose` in Visual Basic) la cui firma è indicata di seguito:  
+- Un metodo `Overridable` protetto virtuale (`Dispose` in Visual Basic) la cui firma è indicata di seguito:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ Nel secondo overload il parametro *disposing* è un oggetto <xref:System.Boolean
   
 Il corpo del metodo è costituito da due blocchi di codice:  
   
-* Un blocco che libera le risorse non gestite. Questo blocco viene eseguito indipendentemente dal valore del parametro `disposing`.  
+- Un blocco che libera le risorse non gestite. Questo blocco viene eseguito indipendentemente dal valore del parametro `disposing`.  
   
-* Un blocco condizionale che libera le risorse gestite. Il blocco è eseguito se il valore di `disposing` è `true`. Le risorse gestite liberate possono includere:  
+- Un blocco condizionale che libera le risorse gestite. Il blocco è eseguito se il valore di `disposing` è `true`. Le risorse gestite liberate possono includere:  
   
   **Oggetti gestiti che implementano <xref:System.IDisposable>.** Il blocco condizionale può essere usato per chiamare la relativa implementazione <xref:System.IDisposable.Dispose%2A>. Se è stato utilizzato un handle sicuro per eseguire il wrapping della risorsa non gestita, l'implementazione <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> dovrebbe essere chiamata in questo punto.  
   
@@ -81,11 +81,11 @@ Per implementare il modello Dispose per una classe di base, è necessario predis
 > [!IMPORTANT]
 > È consigliabile implementare questo modello per tutte le classi di base che implementano <xref:System.IDisposable.Dispose> e non sono `sealed` (`NotInheritable` in Visual Basic).  
   
-* Un'implementazione <xref:System.IDisposable.Dispose%2A> che chiami il metodo `Dispose(Boolean)`.  
+- Un'implementazione <xref:System.IDisposable.Dispose%2A> che chiami il metodo `Dispose(Boolean)`.  
   
-* Un metodo `Dispose(Boolean)` che esegua l'effettiva operazione di rilascio delle risorse.  
+- Un metodo `Dispose(Boolean)` che esegua l'effettiva operazione di rilascio delle risorse.  
   
-* Una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> che esegua il wrapping della risorsa non gestita (consigliato) o un override al metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fornisce un finalizzatore, evitando la necessità di codificarne uno.  
+- Una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> che esegua il wrapping della risorsa non gestita (consigliato) o un override al metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fornisce un finalizzatore, evitando la necessità di codificarne uno.  
   
 Di seguito è illustrato il modello generale per implementare il modello Dispose per una classe di base che usa un handle sicuro.  
   
@@ -107,9 +107,9 @@ Di seguito è illustrato il modello generale per implementare il modello Dispose
 
 Una classe derivata da una classe che implementa l'interfaccia <xref:System.IDisposable> non deve implementare <xref:System.IDisposable>, poiché l'implementazione della classe di base di <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> viene ereditata dalle classi derivate. Al contrario, per implementare il modello Dispose per una classe derivata, è necessario predisporre quanto segue:  
   
-* Un metodo `protected Dispose(Boolean)` che esegua l'override del metodo della classe di base ed esegua l'effettiva operazione di rilascio delle risorse della classe derivata. Questo metodo deve anche chiamare il metodo `Dispose(Boolean)` della classe di base e passarne lo stato di eliminazione per l'argomento.  
+- Un metodo `protected Dispose(Boolean)` che esegua l'override del metodo della classe di base ed esegua l'effettiva operazione di rilascio delle risorse della classe derivata. Questo metodo deve anche chiamare il metodo `Dispose(Boolean)` della classe di base e passarne lo stato di eliminazione per l'argomento.  
   
-* Una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> che esegua il wrapping della risorsa non gestita (consigliato) o un override al metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fornisce un finalizzatore, evitando la necessità di codificarne uno. Se si specifica un finalizzatore, questo deve chiamare l'overload di `Dispose(Boolean)` con un argomento *disposing* di `false`.  
+- Una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> che esegua il wrapping della risorsa non gestita (consigliato) o un override al metodo <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fornisce un finalizzatore, evitando la necessità di codificarne uno. Se si specifica un finalizzatore, questo deve chiamare l'overload di `Dispose(Boolean)` con un argomento *disposing* di `false`.  
   
 Di seguito è illustrato il modello generale per implementare il modello Dispose per una classe derivata che usa un handle sicuro:  
   
@@ -134,15 +134,15 @@ La scrittura di codice per il finalizzatore di un oggetto è un'attività comple
   
 Le classi derivate dalla classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> semplificano i problemi di durata degli oggetti assegnando e rilasciando handle senza interruzione. Contengono un finalizzatore critico la cui esecuzione è garantita durante lo scaricamento di un dominio dell'applicazione. Per altre informazioni sui vantaggi dell'utilizzo di un handle sicuro, vedere <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Le seguenti classi derivate nello spazio dei nomi <xref:Microsoft.Win32.SafeHandles> forniscono handle sicuri:  
   
-* Le classi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> e <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> per file, file mappati alla memoria e pipe.  
+- Le classi <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> e <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> per file, file mappati alla memoria e pipe.  
   
-* La classe <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> per visualizzazioni di memoria.  
+- La classe <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> per visualizzazioni di memoria.  
   
-* Le classi <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> e <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> per i costrutti di crittografia.  
+- Le classi <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> e <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> per i costrutti di crittografia.  
   
-* La classe <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> per le chiavi del Registro di sistema.  
+- La classe <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> per le chiavi del Registro di sistema.  
   
-* La classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> per gli handle di attesa.  
+- La classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> per gli handle di attesa.  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Uso di un handle sicuro per implementare il modello Dispose per una classe di base

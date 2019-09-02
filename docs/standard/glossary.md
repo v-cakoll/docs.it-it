@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674510"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106915"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -85,9 +85,9 @@ Il termine "ecosistema .NET" è diverso da termini simili, quali "stack .NET", q
 In termini generali, una raccolta completa di API che consente di semplificare lo sviluppo e la distribuzione di applicazioni basate su una particolare tecnologia. In tal senso, ASP.NET Core e Windows Form sono esempi di framework applicazione. Vedere anche [libreria](#library).
 
 La parola "framework" presenta un significato tecnico più specifico nei termini seguenti:
-* [.NET Framework](#net-framework)
-* [framework di destinazione](#target-framework)
-* [TFM (moniker framework di destinazione)](#tfm)
+- [.NET Framework](#net-framework)
+- [framework di destinazione](#target-framework)
+- [TFM (moniker framework di destinazione)](#tfm)
 
 Nella documentazione esistente il termine "framework" si riferisce talvolta a un'[implementazione di .NET](#implementation-of-net). In un articolo, ad esempio, è possibile che .NET Core venga considerato un framework. È intenzione di Microsoft chiarire il significato di questo termine nella documentazione.
 

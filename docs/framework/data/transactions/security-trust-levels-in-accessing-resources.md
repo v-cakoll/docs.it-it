@@ -2,12 +2,12 @@
 title: Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948712"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205878"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza
 Questo argomento descrive le restrizioni di accesso ai tipi di risorse esposti dallo spazio dei nomi <xref:System.Transactions>.  
@@ -38,7 +38,7 @@ Questo argomento descrive le restrizioni di accesso ai tipi di risorse esposti d
   
  Per consentire il ripristino, questo tipo di applicazione è in grado di utilizzare le risorse di sistema in modo definitivo. Ciò è dovuto al fatto che il gestore delle transazioni recuperabili deve ricordare le transazioni di cui è stato eseguito il commit finché non è in grado di confermare che tutti i gestori di risorse durevoli integrati nella transazione siano stati informati in merito al risultato. Pertanto, questo tipo di applicazione richiede attendibilità totale e deve essere eseguito solo se dispone del livello di attendibilità FullTrust.  
   
- Per ulteriori informazioni sulle integrazioni durevoli e sul ripristino, vedere la pagina relativa all' [integrazione delle risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) e l' [esecuzione del ripristino](../../../../docs/framework/data/transactions/performing-recovery.md) .  
+ Per ulteriori informazioni sulle integrazioni durevoli e sul ripristino, vedere la pagina relativa all' [integrazione delle risorse come partecipanti in una transazione](enlisting-resources-as-participants-in-a-transaction.md) e l' [esecuzione del ripristino](performing-recovery.md) .  
   
  L'autorizzazione FullTrust deve essere concessa anche alle applicazioni che eseguono operazioni di interoperabilità legacy con COM+.  
   

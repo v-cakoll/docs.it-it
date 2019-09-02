@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487842"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206050"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 
@@ -23,13 +23,13 @@ ms.locfileid: "66487842"
 La sicurezza implica tre meccanismi che interagiscono tra loro: il sandboxing, le autorizzazioni e l'imposizione. Per sandboxing si intende la pratica basata sulla creazione di domini isolati in cui parte del codice viene trattata come codice completamente attendibile, mentre altro codice viene limitato con le autorizzazioni della concessione per il sandbox. Il codice dell'applicazione che viene eseguito all'interno della concessione del sandbox è considerato Transparent, ovvero non può eseguire operazioni che possono influire sulla sicurezza. La concessione impostata per il sandbox è determinata da un'evidenza (classe <xref:System.Security.Policy.Evidence>). L'evidenza identifica le autorizzazioni specifiche richieste dai sandbox e quali tipi di sandbox è possibile creare. L'imposizione consiste nel consentire l'esecuzione di codice Transparent solo all'interno della relativa concessione.
 
 > [!IMPORTANT]
-> I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire da .NET Framework 4, i criteri di sicurezza sono obsoleto. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> I criteri di sicurezza erano un elemento fondamentale nelle versioni precedenti di .NET Framework. A partire da .NET Framework 4, i criteri di sicurezza sono obsoleti. L'eliminazione dei criteri di sicurezza non corrisponde alla trasparenza della sicurezza. Per informazioni sugli effetti di questa modifica, vedere [compatibilità e migrazione dei criteri di sicurezza dall'accesso di codice](code-access-security-policy-compatibility-and-migration.md).
 
 In questo argomento viene descritto il modello di trasparenza in maggiore dettaglio. Include le sezioni seguenti:
 
 - [Scopo del modello di trasparenza](#purpose)
 
-- [Specifica il livello di trasparenza](#level)
+- [Specifica del livello di trasparenza](#level)
 
 - [Imposizione della trasparenza](#enforcement)
 
@@ -59,18 +59,18 @@ L'attributo <xref:System.Security.SecurityRulesAttribute> a livello di assembly 
 
 I livelli sono elencati di seguito.
 
-- Livello 2 (<xref:System.Security.SecurityRuleSet.Level2>): le regole di trasparenza di .NET Framework 4.
+- Livello 2 (<xref:System.Security.SecurityRuleSet.Level2>): regole di trasparenza .NET Framework 4.
 
 - Livello 1 (<xref:System.Security.SecurityRuleSet.Level1>): regole di trasparenza di .NET Framework 2.0.
 
 La differenza principale tra i due livelli di trasparenza è che il livello 1 non applica regole di trasparenza per le chiamate provenienti dall'esterno dell'assembly ed è disponibile solo per garantire la compatibilità.
 
 > [!IMPORTANT]
-> È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per .NET Framework 4, usare sempre la trasparenza di livello 2.
+> È necessario specificare la trasparenza di livello 1 solo per ragioni di compatibilità, ovvero specificare il livello 1 solo per codice sviluppato con .NET Framework 3.5 o versioni precedenti che usa l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o non usa il modello di trasparenza. Usare ad esempio la trasparenza di livello 1 per assembly .NET Framework 2.0 che consentono l'uso di chiamate da chiamanti parzialmente attendibili (APTCA). Per il codice sviluppato per il .NET Framework 4, usare sempre la trasparenza di livello 2.
 
 ### <a name="level-2-transparency"></a>Trasparenza di livello 2
 
-Trasparenza di livello 2 è stato introdotto in .NET Framework 4. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
+La trasparenza di livello 2 è stata introdotta nel .NET Framework 4. I tre concetti principali di questo modello sono il codice Transparent, il codice SecuritySafeCritical e il codice SecurityCritical.
 
 - Il codice Transparent, indipendentemente dalla autorizzazioni di cui dispone e anche nel caso dell'attendibilità totale, può chiamare solo altro codice Transparent o codice SecuritySafeCritical. Se il codice è parzialmente attendibile, può eseguire solo azioni consentite dal set di autorizzazioni del dominio. Il codice Transparent non può eseguire le operazioni seguenti:
 
@@ -114,9 +114,9 @@ Il modello di trasparenza di livello 1 presenta le limitazioni seguenti:
 
 ## <a name="transparency-enforcement"></a>Imposizione della trasparenza
 
-Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. In .NET Framework 4, il calcolo della trasparenza a livello di assembly si verifica prima di quanto avvenga in .NET Framework 2.0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.
+Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. Nel .NET Framework 4, il calcolo della trasparenza a livello di assembly si verifica prima di quanto accade nel .NET Framework 2,0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Codice SecurityTransparent, livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Codice SecurityTransparent, livello 1](security-transparent-code-level-1.md)
+- [Codice SecurityTransparent, livello 2](security-transparent-code-level-2.md)

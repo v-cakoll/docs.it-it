@@ -2,17 +2,17 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934486"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204886"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram è un formato XML che consente di identificare le versioni correnti e originali degli elementi di dati. Il formato DiffGram viene usato dal tipo <xref:System.Data.DataSet> per caricare e conservare il contenuto e per serializzare tale contenuto in modo da consentirne il trasporto tramite una connessione di rete. Quando un <xref:System.Data.DataSet> oggetto viene scritto come DiffGram, popola il DiffGram con tutte le informazioni necessarie per ricreare accuratamente il contenuto, ma non lo schema, <xref:System.Data.DataSet>di, inclusi i valori di colonna sia dall'oggetto **originale** che **da** Versioni di riga correnti, informazioni sugli errori delle righe e ordine delle righe.  
   
- Quando si invia e si recupera un tipo <xref:System.Data.DataSet> da un servizio Web XML, il formato DiffGram viene usato implicitamente. Inoltre, quando si carica il contenuto di <xref:System.Data.DataSet> un oggetto da XML utilizzando il metodo **ReadXml** o quando si scrive il contenuto <xref:System.Data.DataSet> di un oggetto in XML utilizzando il metodo **WriteXml** , è possibile specificare che il contenuto venga letto o scritto come DiffGram. Per ulteriori informazioni, vedere [caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [scrittura del contenuto del set di dati come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Quando si invia e si recupera un tipo <xref:System.Data.DataSet> da un servizio Web XML, il formato DiffGram viene usato implicitamente. Inoltre, quando si carica il contenuto di <xref:System.Data.DataSet> un oggetto da XML utilizzando il metodo **ReadXml** o quando si scrive il contenuto <xref:System.Data.DataSet> di un oggetto in XML utilizzando il metodo **WriteXml** , è possibile specificare che il contenuto venga letto o scritto come DiffGram. Per ulteriori informazioni, vedere [caricamento di un DataSet da XML](loading-a-dataset-from-xml.md) e [scrittura del contenuto del set di dati come dati XML](writing-dataset-contents-as-xml-data.md).  
   
  Benché il formato DiffGram venga usato principalmente da .NET Framework come formato di serializzazione per il contenuto di un tipo <xref:System.Data.DataSet>, è possibile usare i DiffGram per modificare i dati delle tabelle di un database Microsoft SQL Server.  
   
@@ -91,7 +91,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
   
  Quando legge o scrive il proprio contenuto come DiffGram, il tipo <xref:System.Data.DataSet> include ulteriori annotazioni. Nella tabella seguente vengono descritte le annotazioni aggiuntive definite nello spazio dei nomi **urn: schemas-microsoft-com: xml-msdata**.  
   
-|Annotazione|Descrizione|  
+|Annotazione|DESCRIZIONE|  
 |----------------|-----------------|  
 |**RowOrder**|Conserva l'ordine di riga dei dati originali e identifica l'indice di una riga in un particolare tipo <xref:System.Data.DataTable>.|  
 |**Nascosto**|Identifica una colonna con la proprietà **ColumnMapping** impostata su **MappingType. Hidden**. L'attributo viene scritto nel formato **msdata: Hidden** *[ColumnName]* = "*value*". Ad esempio: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Notare che le colonne nascoste vengono scritte come attributo DiffGram solo se in tali colonne sono presenti dati. In caso contrario, vengono ignorate.|  
@@ -133,8 +133,8 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
+- [Caricamento di un oggetto DataSet da XML](loading-a-dataset-from-xml.md)
+- [Scrittura del contenuto di DataSet come dati XML](writing-dataset-contents-as-xml-data.md)
+- [Oggetti DataSet, DataTable e DataView](index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

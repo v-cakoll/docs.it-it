@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251004"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202965"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolazione di stringhe (Riferimenti per C#)
 
@@ -34,13 +34,13 @@ Per identificare un valore letterale stringa come stringa interpolata, anteporre
 
 La struttura di un elemento con un'espressione di interpolazione è la seguente:
 
-```
+```csharp
 {<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Gli elementi tra parentesi quadre sono facoltativi. La tabella seguente descrive i singoli elementi:
 
-|Elemento|Description|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |`interpolationExpression`|Espressione che produce un risultato da formattare. La rappresentazione stringa del risultato `null` è <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Espressione costante il cui valore definisce il numero minimo di caratteri della rappresentazione stringa del risultato dell'espressione di interpolazione. Se è positivo, la rappresentazione stringa è allineata a destra; se è negativo la rappresentazione stringa è allineata a sinistra. Per altre informazioni, vedere [Componente di allineamento](../../../standard/base-types/composite-formatting.md#alignment-component).|

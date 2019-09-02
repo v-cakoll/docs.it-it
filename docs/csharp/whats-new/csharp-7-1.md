@@ -2,12 +2,12 @@
 title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796603"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105555"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -17,13 +17,13 @@ C# 7.1 aggiunge l'elemento di configurazione per la [selezione della versione de
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-* Metodo [`async` `Main` ](#async-main)
+- Metodo [`async` `Main` ](#async-main)
   - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
-* Espressioni letterali [`default` ](#default-literal-expressions)
+- Espressioni letterali [`default` ](#default-literal-expressions)
   - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
-* [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
+- [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
   - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.
-* [Criteri di ricerca su parametri di tipo generico](#pattern-matching-on-generic-type-parameters)
+- [Criteri di ricerca su parametri di tipo generico](#pattern-matching-on-generic-type-parameters)
   - È possibile usare espressioni di criteri di ricerca sulle variabili in cui il tipo è un parametro di tipo generico.
 
 Infine, il compilatore offre due opzioni `-refout` e `-refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).

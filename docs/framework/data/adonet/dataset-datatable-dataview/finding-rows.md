@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880061"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203712"
 ---
 # <a name="finding-rows"></a>Ricerca di righe
-È possibile eseguire ricerche di righe in base ai relativi valori della chiave di ordinamento usando i metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> del tipo <xref:System.Data.DataView>. La distinzione maiuscole/minuscole di ricerca di valori nel **trovare** e **FindRows** metodi è determinato dal **CaseSensitive** proprietà dell'oggetto sottostante <xref:System.Data.DataTable>. Per restituire un risultato, è necessario che i valori di ricerca corrispondano interamente ai valori della chiave di ordinamento esistenti.  
+È possibile eseguire ricerche di righe in base ai relativi valori della chiave di ordinamento usando i metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> del tipo <xref:System.Data.DataView>. La distinzione tra maiuscole e minuscole dei valori di ricerca nei metodi **Find** e **FindRows** è determinata dalla proprietà <xref:System.Data.DataTable> **CaseSensitive** dell'oggetto sottostante. Per restituire un risultato, è necessario che i valori di ricerca corrispondano interamente ai valori della chiave di ordinamento esistenti.  
   
- Il **trovare** metodo restituisce un intero con l'indice del <xref:System.Data.DataRowView> che corrisponde ai criteri di ricerca. Se più di una riga corrisponde ai criteri di ricerca, solo l'indice del primo corrispondente **DataRowView** viene restituito. Se viene trovata alcuna corrispondenza, **trovare** restituisce -1.  
+ Il metodo **Find** restituisce un integer con l'indice di corrispondente <xref:System.Data.DataRowView> ai criteri di ricerca. Se più di una riga corrisponde ai criteri di ricerca, viene restituito solo l'indice del primo **DataRowView** corrispondente. Se non vengono trovate corrispondenze, **Find** restituisce-1.  
   
- Per restituire i risultati di ricerca corrispondenti a più righe, usare il **FindRows** (metodo). **FindRows** funziona come il **trovare** metodo, ad eccezione del fatto che restituisca una **DataRowView** matrice che fa riferimento a tutte le righe corrispondenti nel **DataView**. Se viene trovata alcuna corrispondenza, il **DataRowView** matrice sarà vuota.  
+ Per restituire i risultati della ricerca che corrispondono a più righe, usare il metodo **FindRows** . **FindRows** funziona esattamente come il metodo **Find** , ad eccezione del fatto che restituisce una matrice **DataRowView** che fa riferimento a tutte le righe corrispondenti nell'oggetto **DataView**. Se non viene trovata alcuna corrispondenza, la matrice **DataRowView** sarà vuota.  
   
- Usare il **trovare** o **FindRows** metodi è necessario specificare un ordinamento ordinare, impostare **ApplyDefaultSort** al **true** o tramite il **Ordinamento** proprietà. Se non viene specificato alcun ordinamento, verrà generata un'eccezione.  
+ Per usare i metodi **Find** o **FindRows** , è necessario specificare un ordinamento impostando **ApplyDefaultSort** su **true** o usando la proprietà **Sort** . Se non viene specificato alcun ordinamento, verrà generata un'eccezione.  
   
- Il **trovare** e **FindRows** metodi accettano una matrice di valori come input la cui lunghezza corrisponde al numero di colonne nell'ordinamento. In caso di ordinamento di una singola colonna, è possibile passare un unico valore. In caso di ordinamenti contenenti più colonne, viene passata una matrice di oggetti. Si noti che per un ordinamento su più colonne, i valori nella matrice di oggetti devono corrispondere all'ordine delle colonne specificate nel **ordinamento** proprietà delle **DataView**.  
+ I metodi **Find** e **FindRows** accettano una matrice di valori come input la cui lunghezza corrisponde al numero di colonne nell'ordinamento. In caso di ordinamento di una singola colonna, è possibile passare un unico valore. In caso di ordinamenti contenenti più colonne, viene passata una matrice di oggetti. Si noti che per un ordinamento in base a più colonne, i valori nella matrice di oggetti devono corrispondere all'ordine delle colonne specificato nella proprietà **Sort** di **DataView**.  
   
- Nell'esempio di codice riportato di seguito viene illustrato il **trovare** chiamata del metodo per un **DataView** con un ordinamento colonna singola.  
+ Nell'esempio di codice seguente viene illustrato il metodo **Find** chiamato su un **DataView** con un ordinamento a colonna singola.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Se il **ordinamento** proprietà specificate più colonne, è necessario passare una matrice di oggetti con i valori di ricerca per ogni colonna nell'ordine specificato dalle **ordinamento** proprietà, come nell'esempio di codice seguente.  
+ Se la proprietà **Sort** specifica più colonne, è necessario passare una matrice di oggetti con i valori di ricerca per ogni colonna nell'ordine specificato dalla proprietà **Sort** , come nell'esempio di codice seguente.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,5 +97,5 @@ else
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](dataviews.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Definizione dello schema di DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952352"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204985"
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
 Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli. Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
@@ -20,22 +20,22 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
 > La <xref:System.Data.DataTable.CaseSensitive%2A> proprietà di **DataTable** non influisce su questo comportamento. La proprietà **CaseSensitive** si applica ai dati di una tabella e influiscono sull'ordinamento, la ricerca, l'applicazione di filtri, l'applicazione di vincoli e così via, ma non i riferimenti a colonne, relazioni e vincoli.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Aggiunta di colonne a un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Aggiunta di colonne a un oggetto DataTable](adding-columns-to-a-datatable.md)  
  Viene descritto come definire le colonne di una tabella utilizzando oggetti **DataColumn** .  
   
- [Creazione di colonne espressioni](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Creazione di colonne espressioni](creating-expression-columns.md)  
  Viene illustrato come utilizzare la proprietà **Expression** di una colonna per calcolare i valori in base ai valori di altre colonne della riga.  
   
- [Creazione di colonne AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Creazione di colonne AutoIncrement](creating-autoincrement-columns.md)  
  Viene descritto come impostare una colonna in modo che incrementi automaticamente i valori numerici, per garantire un valore di colonna univoco per ogni riga.  
   
- [Definizione di chiavi primarie](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Definizione di chiavi primarie](defining-primary-keys.md)  
  Viene descritto come specificare la chiave primaria di una tabella da uno o più oggetti **DataColumn** .  
   
- [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Vincoli di DataTable](datatable-constraints.md)  
  Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](datatables.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

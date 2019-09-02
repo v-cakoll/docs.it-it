@@ -4,12 +4,12 @@ description: Informazioni su come convertire progetti di libreria da .NET Framew
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660705"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105295"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
@@ -113,11 +113,11 @@ Il piano può comportare la necessità di modifiche significative della codebase
 Il modo migliore per verificare un codice trasferito consiste nell'eseguirne il test durante il trasferimento in .NET Core. A tale scopo è necessario usare un framework di test che supporta la compilazione e l'esecuzione dei test per .NET Core. Attualmente sono disponibili le tre opzioni seguenti:
 
 - [xUnit](https://xunit.github.io/)
-  * [Introduzione](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [Strumento per trasferire un progetto MSTest in xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Introduzione](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [Strumento per trasferire un progetto MSTest in xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [Introduzione](https://github.com/nunit/docs/wiki/Installation)
-  * [Post di blog sulla migrazione da MSTest a NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [Introduzione](https://github.com/nunit/docs/wiki/Installation)
+  - [Post di blog sulla migrazione da MSTest a NUnit](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Approccio consigliato per la conversione

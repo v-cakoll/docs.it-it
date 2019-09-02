@@ -7,19 +7,19 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602487"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202905"
 ---
 # <a name="-c-compiler-options"></a>@ (opzioni del compilatore C#)
 L'opzione @ consente di specificare un file che contiene le opzioni del compilatore e i file di codice sorgente da compilare.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 @response_file  
 ```  
   
@@ -32,7 +32,7 @@ L'opzione @ consente di specificare un file che contiene le opzioni del compilat
   
  Per specificare più di un file di risposta in una compilazione, specificare più opzioni di file di risposta. Ad esempio:  
   
-```  
+```console  
 @file1.rsp @file2.rsp  
 ```  
   

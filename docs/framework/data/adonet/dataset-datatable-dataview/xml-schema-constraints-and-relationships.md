@@ -2,22 +2,22 @@
 title: Vincoli e relazioni di XML Schema
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606983"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202985"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Vincoli e relazioni di XML Schema
-In uno schema di XML Schema definition language (XSD), è possibile specificare vincoli (univoci, vincoli key e keyref) e le relazioni (mediante la **msdata: Relationship** annotazione). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
+In uno schema XSD (XML Schema Definition Language) è possibile specificare vincoli, ovvero vincoli UNIQUE, Key e keyref, e relazioni (tramite l'annotazione **msdata: Relationship** ). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
   
- In generale, in uno Schema XML, specificare il **msdata: Relationship** annotazione, se si desidera generare solo le relazioni nel **DataSet**. Per altre informazioni, vedere [generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Specifica dei vincoli (univoci, key e keyref) se si desidera generare vincoli nel **set di dati**. Notare che i vincoli key e keyref vengono usati anche per generare relazioni, come spiegato successivamente in questo argomento.  
+ In generale, in uno schema XML è possibile specificare l'annotazione **msdata: Relationship** se si desidera generare solo relazioni nel **set di dati**. Per ulteriori informazioni, vedere [generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Si specificano i vincoli (Unique, Key e keyref) se si desidera generare vincoli nel **set di dati**. Notare che i vincoli key e keyref vengono usati anche per generare relazioni, come spiegato successivamente in questo argomento.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Generazione di una relazione dai vincoli key e keyref  
- Anziché specificare il **msdata: Relationship** annotazione, è possibile specificare i vincoli key e keyref, usati durante il processo di mapping di XML Schema per generare non solo i vincoli, ma anche la relazione nel  **Set di dati**. Tuttavia, se si specifica `msdata:ConstraintOnly="true"` nella **keyref** elemento, il **set di dati** includerà solo i vincoli e non includerà la relazione.  
+ Anziché specificare l'annotazione **msdata: Relationship** , è possibile specificare i vincoli key e keyref, che vengono utilizzati durante il processo di mapping di XML Schema per generare non solo i vincoli ma anche la relazione nel **set di dati**. Tuttavia, se si specifica `msdata:ConstraintOnly="true"` nell'elemento **keyref** , nel **set di dati** vengono inclusi solo i vincoli e non sarà inclusa la relazione.  
   
- Nell'esempio seguente viene illustrato un XML Schema che include **ordine** e **OrderDetail** elementi, che non sono annidati. Nello schema vengono specificati anche i vincoli key e keyref.  
+ Nell'esempio seguente viene illustrato uno schema XML che include elementi **Order** e **OrderDetail** , che non sono annidati. Nello schema vengono specificati anche i vincoli key e keyref.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -59,7 +59,7 @@ In uno schema di XML Schema definition language (XSD), è possibile specificare 
 </xs:schema>  
 ```  
   
- Il **set di dati** che viene generato durante il processo di mapping include di XML Schema il **ordine** e **OrderDetail** tabelle. Inoltre, il **set di dati** include vincoli e relazioni. Nell'esempio seguente vengono illustrati tali vincoli e relazioni. Si noti che lo schema non specifica la **msdata: Relationship** annotazione; al contrario, i vincoli key e keyref vengono usati per generare la relazione.  
+ Il **set di dati** generato durante il processo di mapping di XML Schema include le tabelle **Order** e **OrderDetail** . Il **set di dati** include inoltre relazioni e vincoli. Nell'esempio seguente vengono illustrati tali vincoli e relazioni. Si noti che lo schema non specifica l'annotazione **msdata: Relationship** ; al contrario, i vincoli key e keyref vengono usati per generare la relazione.  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +85,7 @@ In uno schema di XML Schema definition language (XSD), è possibile specificare 
 ..Nested: False  
 ```  
   
- Nell'esempio di schema precedente, il **ordine** e **OrderDetail** elementi non annidati. Nell'esempio di schema seguente tali elementi sono annidati. Tuttavia, nessun **msdata: Relationship** annotazione viene specificata, di conseguenza, si presuppone una relazione implicita. Per altre informazioni, vedere [implicita delle relazioni tra annidati dello Schema gli elementi della mappa](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). Nello schema vengono specificati anche i vincoli key e keyref.  
+ Nell'esempio di schema precedente gli elementi **Order** e **OrderDetail** non sono annidati. Nell'esempio di schema seguente tali elementi sono annidati. Tuttavia, non è specificata alcuna annotazione **msdata: Relationship** ; viene pertanto presupposta una relazione implicita. Per altre informazioni, vedere [eseguire il mapping di relazioni implicite tra gli elementi dello schema annidato](map-implicit-relations-between-nested-schema-elements.md). Nello schema vengono specificati anche i vincoli key e keyref.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -136,7 +136,7 @@ Order(OrderNumber, EmpNumber, Order_Id)
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- Il **set di dati** include anche le due relazioni (uno basato sulle **msdata: Relationship** annotazione e l'altro in base ai vincoli key e keyref) e diversi vincoli. Nell'esempio seguente vengono illustrati i vincoli e le relazioni.  
+ Il **set di dati** include anche le due relazioni, una basata sull'annotazione **msdata: Relationship** e l'altra in base ai vincoli key e keyref, e vari vincoli. Nell'esempio seguente vengono illustrati i vincoli e le relazioni.  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -184,9 +184,9 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Se un vincolo keyref che fa riferimento a una tabella nidificata contiene il **msdata: IsNested = "true"** annotazione, il **set di dati** creerà un'unica relazione annidata basata sul vincolo keyref e vincolo univoco/key correlato.  
+ Se un vincolo keyref che fa riferimento a una tabella nidificata contiene l'annotazione **msdata: nidificata = "true"** , il **set di dati** creerà una singola relazione annidata basata sul vincolo keyref e sul vincolo unique/key correlato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,12 +3,12 @@ title: Accesso con privilegi elevati per comandi dotnet
 description: Informazioni sulle procedure consigliate per comandi dotnet che richiedono l'accesso con privilegi elevati.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410629"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105082"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
 
@@ -33,9 +33,9 @@ Le istruzioni seguenti illustrano il modo consigliato per installare, eseguire e
 
 Se la cartella `%ProgramFiles%\dotnet-tools` è già esistente, eseguire le operazioni seguenti per verificare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare tale directory:
 
-* Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**. 
-* Selezionare la scheda **Sicurezza**. In **Utenti e gruppi** controllare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare la directory. 
-* Se il gruppo "Utenti" è autorizzato alla scrittura o alla modifica della directory, usare un nome di directory diverso quando si installano gli strumenti anziché usare *dotnet-tools*.
+- Fare clic con il pulsante destro del mouse sulla cartella `%ProgramFiles%\dotnet-tools` e selezionare **Proprietà**. Verrà visualizzata la finestra di dialogo **Proprietà comuni**. 
+- Selezionare la scheda **Sicurezza**. In **Utenti e gruppi** controllare se il gruppo "Utenti" dispone dell'autorizzazione per scrivere o modificare la directory. 
+- Se il gruppo "Utenti" è autorizzato alla scrittura o alla modifica della directory, usare un nome di directory diverso quando si installano gli strumenti anziché usare *dotnet-tools*.
 
 Per installare gli strumenti, eseguire il comando seguente al prompt con privilegi elevati. Verrà creata la cartella *dotnet-tools* durante l'installazione.
 
@@ -105,4 +105,4 @@ Durante lo sviluppo potrebbe essere necessario l'accesso con privilegi elevati p
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Panoramica degli strumenti globali .NET Core](global-tools.md)
+- [Panoramica degli strumenti globali .NET Core](global-tools.md)

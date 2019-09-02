@@ -2,28 +2,28 @@
 title: Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034229"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203473"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset
-In uno schema, è possibile specificare un vincolo di chiave su un elemento o attributo mediante la **chiave** elemento. È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.  
+In uno schema è possibile specificare un vincolo di chiave per un elemento o un attributo usando l'elemento **Key** . È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.  
   
  Il vincolo key è simile al vincolo univoco, ma nella colonna per cui viene specificato un vincolo key non sono consentiti valori null.  
   
- La tabella seguente descrive la **msdata** attributi che è possibile specificare nel **chiave** elemento.  
+ Nella tabella seguente vengono descritti gli attributi **msdata** che è possibile specificare nell'elemento **Key** .  
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, il **nome** attributo fornisce il valore del nome del vincolo.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente, il **IsPrimaryKey** vincolo viene impostata su **true**, rendendo così una chiave primaria. Il **AllowDBNull** colonna viene impostata su **false**, perché le chiavi primarie non sono consentiti valori null.|  
+|**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** fornisce il valore del nome del vincolo.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente, la proprietà del vincolo **IsPrimaryKey** è impostata su **true**, rendendola pertanto una chiave primaria. La proprietà della colonna **AllowDBNull** è impostata su **false**, in quanto le chiavi primarie non possono contenere valori null.|  
   
- Durante la conversione dello schema in cui viene specificato un vincolo di chiave, il processo di mapping consente di creare un vincolo unique nella tabella con il **AllowDBNull** proprietà column impostata sulla **false** per ogni colonna di vincolo. Il **IsPrimaryKey** del vincolo univoco viene inoltre impostata su **false** a meno che non è stato specificato `msdata:PrimaryKey="true"` sulla **chiave** elemento. Queste impostazioni sono identiche a quelle di un vincolo univoco nello schema in cui `PrimaryKey="true"`.  
+ Nella conversione dello schema in cui viene specificato un vincolo di chiave, il processo di mapping crea un vincolo UNIQUE nella tabella con la proprietà della colonna **AllowDBNull** impostata su **false** per ogni colonna nel vincolo. Anche la proprietà **IsPrimaryKey** del vincolo UNIQUE è impostata su **false** , a meno che non sia `msdata:PrimaryKey="true"` stato specificato sull'elemento **Key** . Queste impostazioni sono identiche a quelle di un vincolo univoco nello schema in cui `PrimaryKey="true"`.  
   
- Nell'esempio di schema seguente, il **key** elemento specifica il vincolo di chiave per il **CustomerID** elemento.  
+ Nell'esempio di schema seguente l'elemento **Key** specifica il vincolo key nell'elemento **CustomerID** .  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ In uno schema, è possibile specificare un vincolo di chiave su un elemento o at
 </xs:schema>   
 ```  
   
- Il **chiave** elemento specifica che i valori del **CustomerID** elemento figlio dell'elemento il **clienti** elemento deve contenere valori univoci e non sono consentiti valori null. Durante la conversione dello schema XSD (XML Schema Definition Language), la seguente tabella viene creata dal processo di mapping:  
+ L'elemento **Key** specifica che i valori dell'elemento figlio **CustomerID** dell'elemento **Customers** devono contenere valori univoci e non possono avere valori null. Durante la conversione dello schema XSD (XML Schema Definition Language), la seguente tabella viene creata dal processo di mapping:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Il mapping di XML Schema crea anche un **UniqueConstraint** nel **CustomerID** colonna, come illustrato di seguito <xref:System.Data.DataSet>. Per semplicità vengono mostrate solo le proprietà rilevanti.  
+ Il mapping di XML Schema crea anche un oggetto **UniqueConstraint** sulla colonna **CustomerID** , come illustrato di seguito <xref:System.Data.DataSet>. Per semplicità vengono mostrate solo le proprietà rilevanti.  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,12 +74,12 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- Nel **set di dati** che viene generato, il **IsPrimaryKey** proprietà del **UniqueConstraint** è impostata su **true** perché lo schema specifica `msdata:PrimaryKey="true"` nella **chiave** elemento.  
+ Nel **set di dati** generato la proprietà **IsPrimaryKey** di **UniqueConstraint** è impostata su **true** perché lo schema specifica `msdata:PrimaryKey="true"` nell'elemento **Key** .  
   
- Il valore del **ConstraintName** proprietà delle **UniqueConstraint** nel **set di dati** è il valore della **msdata: ConstraintName** attributo specificato nella **chiave** elemento nello schema.  
+ Il valore della proprietà **ConstraintName** di **UniqueConstraint** nel **DataSet** corrisponde al valore dell'attributo **msdata: ConstraintName** specificato nell'elemento **Key** nello schema.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

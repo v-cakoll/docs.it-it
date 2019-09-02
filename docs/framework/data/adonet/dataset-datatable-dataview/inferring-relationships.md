@@ -2,15 +2,15 @@
 title: Deduzione di relazioni
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879671"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204765"
 ---
 # <a name="inferring-relationships"></a>Deduzione di relazioni
-Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>. Una nuova colonna con il nome **ParentTableName_Id** verranno aggiunti alla tabella creata per l'elemento padre sia la tabella creata per l'elemento figlio. Il **ColumnMapping** della colonna identity verrà impostata su **MappingType**. La colonna sarà una chiave primaria con incremento automatico per la tabella padre e verrà usata per il **DataRelation** tra le due tabelle. Il tipo di dati della colonna identity aggiunta sarà **System.Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, ovvero **System. String**. Oggetto <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** verrà inoltre creato usando la nuova colonna nelle tabelle padre e figlio.  
+Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>. Una nuova colonna con nome **ParentTableName_Id** verrà aggiunta sia alla tabella creata per l'elemento padre che alla tabella creata per l'elemento figlio. La proprietà **ColumnMapping** della colonna Identity verrà impostata su **MappingType. Hidden**. La colonna sarà una chiave primaria a incremento automatico per la tabella padre e verrà utilizzata per la DataRelation tra le due tabelle. Il tipo di dati della colonna Identity aggiunta sarà **System. Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, ovvero **System. String**. Verrà <xref:System.Data.ForeignKeyConstraint> creato anche un oggetto con **DeleteRule** = **Cascade** usando la nuova colonna in entrambe le tabelle padre e figlio.  
   
  Ad esempio, si consideri il seguente codice XML:  
   
@@ -25,13 +25,13 @@ Se a un elemento inferito come tabella è associato un elemento figlio a sua vol
   
  Dal processo di inferenza verranno prodotte due tabelle: **Element1** e **ChildElement1**.  
   
- Il **Element1** tabella sarà presenti due colonne: **Element1_Id** e **ChildElement2**. Il **ColumnMapping** proprietà delle **Element1_Id** colonna verrà impostata su **MappingType**. Il **ColumnMapping** proprietà delle **ChildElement2** colonna verrà impostata su **MappingType**. Il **Element1_Id** verrà impostata come chiave primaria della colonna la **Element1** tabella.  
+ La tabella **Element1** includerà due colonne: **Element1_Id** e **ChildElement2**. La proprietà **ColumnMapping** della colonna **Element1_Id** verrà impostata su **MappingType. Hidden**. La proprietà **ColumnMapping** della colonna **ChildElement2** verrà impostata su **MappingType. Element**. La colonna **Element1_Id** verrà impostata come chiave primaria della tabella **Element1** .  
   
- Il **ChildElement1** tabella sarà presenti tre colonne: **attr1**, **attr2** e **Element1_Id**. Il **ColumnMapping** proprietà per il **attr1** e **attr2** colonne verranno impostate su **MappingType**. Il **ColumnMapping** proprietà delle **Element1_Id** colonna verrà impostata su **MappingType**.  
+ La tabella **ChildElement1** includerà tre colonne: **attr1**, **attr2** e **Element1_Id**. La proprietà **ColumnMapping** per le colonne **attr1** e **attr2** verrà impostata su **MappingType. Attribute**. La proprietà **ColumnMapping** della colonna **Element1_Id** verrà impostata su **MappingType. Hidden**.  
   
- Oggetto **DataRelation** e **ForeignKeyConstraint** verrà creato utilizzando il **Element1_Id** colonne di entrambe le tabelle.  
+ Verranno creati un oggetto DataRelation e **ForeignKeyConstraint** usando le colonne **Element1_Id** di entrambe le tabelle.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
  **tavolo:** Element1  
   
@@ -45,36 +45,36 @@ Se a un elemento inferito come tabella è associato un elemento figlio a sua vol
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation:** Element1_ChildElement1  
+ **DataRelation** Element1_ChildElement1  
   
- **ParentTable:** Element1  
+ **ParentTable** Element1  
   
- **ParentColumn:** Element1_Id  
+ **ParentColumn** Element1_Id  
   
- **ChildTable:** ChildElement1  
+ **ChildTable** ChildElement1  
   
  **ChildColumn:** Element1_Id  
   
- **Annidati:** True  
+ **Annidati** True  
   
- **ForeignKeyConstraint:** Element1_ChildElement1  
+ **ForeignKeyConstraint** Element1_ChildElement1  
   
- **Colonna:** Element1_Id  
+ **Colonna** Element1_Id  
   
- **ParentTable:** Element1  
+ **ParentTable** Element1  
   
- **ChildTable:** ChildElement1  
+ **ChildTable** ChildElement1  
   
  **DeleteRule:** Cascade  
   
- **AcceptRejectRule:** nessuno  
+ **AcceptRejectRule:** Nessuna  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Deduzione della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Annidamento di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Deduzione della struttura relazionale di DataSet da XML](inferring-dataset-relational-structure-from-xml.md)
+- [Caricamento di un oggetto DataSet da XML](loading-a-dataset-from-xml.md)
+- [Caricamento delle informazioni dello schema DataSet da XML](loading-dataset-schema-information-from-xml.md)
+- [Annidamento di oggetti DataRelation](nesting-datarelations.md)
+- [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
+- [Oggetti DataSet, DataTable e DataView](index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

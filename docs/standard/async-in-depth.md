@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666587"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169112"
 ---
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
@@ -21,8 +21,8 @@ La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semp
 
 Le attività sono costrutti usati per implementare il cosiddetto [Modello di concorrenza basato su promise](https://en.wikipedia.org/wiki/Futures_and_promises).  In poche parole offrono la "promessa" che il lavoro verrà completato in un secondo memento, consentendo all'utente di coordinare la promessa con un'API nuova.
 
-* `Task` rappresenta una singola operazione che non restituisce alcun valore.
-* `Task<T>` rappresenta una singola operazione che restituisce un valore di tipo `T`.
+- `Task` rappresenta una singola operazione che non restituisce alcun valore.
+- `Task<T>` rappresenta una singola operazione che restituisce un valore di tipo `T`.
 
 È importante considerare le attività come astrazioni del lavoro che si svolge in modo asincrono e *non* un'astrazione sul threading. Per impostazione predefinita, le attività vengono eseguite sul thread corrente e delegano il lavoro al sistema operativo, in base alle necessità. Facoltativamente, le attività possono essere esplicitamente richieste per l'esecuzione in un thread separato tramite l'API `Task.Run`.
 
@@ -90,9 +90,9 @@ Tutto ciò può sembrare una mole di lavoro davvero imponente ma, se misurato in
 
 0-1————————————————————————————————————————————————–2-3
 
-* Il tempo impiegato dai punti `0` a `1` è tutto quanto accade fino a quando un metodo asincrono cede il controllo al chiamante.
-* Il tempo impiegato dai punti `1` a `2` è il tempo dedicato alle chiamate I/O senza alcun costo della CPU.
-* Infine, il tempo impiegato dai punti `2` a `3` è il passaggio del controllo, e potenzialmente di un valore, nuovamente al metodo asincrono, che a quel punto è ancora in esecuzione.
+- Il tempo impiegato dai punti `0` a `1` è tutto quanto accade fino a quando un metodo asincrono cede il controllo al chiamante.
+- Il tempo impiegato dai punti `1` a `2` è il tempo dedicato alle chiamate I/O senza alcun costo della CPU.
+- Infine, il tempo impiegato dai punti `2` a `3` è il passaggio del controllo, e potenzialmente di un valore, nuovamente al metodo asincrono, che a quel punto è ancora in esecuzione.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Che cosa significa questo in uno scenario server?
 

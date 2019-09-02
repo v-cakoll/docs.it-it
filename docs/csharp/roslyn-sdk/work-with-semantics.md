@@ -3,12 +3,12 @@ title: Utilizzare il modello semantico di .NET Compiler Platform SDK
 description: Questa panoramica consente di conoscere i tipi usati per comprendere e modificare il modello semantico del codice.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357488"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105660"
 ---
 # <a name="work-with-semantics"></a>Utilizzare la semantica
 
@@ -51,8 +51,8 @@ I simboli sono concettualmente simili al sistema di tipi CLR, come rappresentato
 
 Un modello semantico rappresenta tutte le informazioni semantiche per un singolo file di origine. È possibile usarlo per individuare quanto segue: 
 
-* I simboli a cui si fa riferimento in una posizione specifica nell'origine.
-* Il tipo risultante di qualsiasi espressione.
-* Tutti i dati diagnostici, ovvero errori e avvisi.
-* Il flusso delle variabili in ingresso e in uscita dalle aree di origine.
-* Risposte a domande più speculative.
+- I simboli a cui si fa riferimento in una posizione specifica nell'origine.
+- Il tipo risultante di qualsiasi espressione.
+- Tutti i dati diagnostici, ovvero errori e avvisi.
+- Il flusso delle variabili in ingresso e in uscita dalle aree di origine.
+- Risposte a domande più speculative.

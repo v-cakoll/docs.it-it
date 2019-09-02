@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910976"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205628"
 ---
 # <a name="code-access-security-basics"></a>Nozioni fondamentali sulla sicurezza per l’accesso al codice
 
@@ -32,13 +32,13 @@ L'host predefinito per le applicazioni desktop consente l'esecuzione del codice 
 
 - **Librerie di classi sicure**: Una libreria di classi protetta utilizza le richieste di sicurezza per garantire che i chiamanti della libreria dispongano delle autorizzazioni per accedere alle risorse esposte dalla libreria. Una libreria di classi protetta potrebbe ad esempio usare un metodo per la creazione di file mediante il quale si impone che i chiamanti dispongano di specifiche autorizzazioni per creare file. In .NET Framework sono disponibili librerie di classi protette. È necessario conoscere esattamente le autorizzazioni necessarie per l'accesso a ognuna delle librerie usate dal codice. Per ulteriori informazioni, vedere la sezione [utilizzo delle librerie di classi protette](#secure_library) più avanti in questo argomento.
 
-- **Codice trasparente**: A partire da .NET Framework 4, oltre a identificare autorizzazioni specifiche, è necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](../../../docs/framework/misc/security-transparent-code.md).
+- **Codice trasparente**: A partire da .NET Framework 4, oltre a identificare autorizzazioni specifiche, è necessario determinare se il codice deve essere eseguito come SecurityTransparent. Il codice SecurityTransparent non può chiamare tipi o membri identificati come SecurityCritical. Questa regola si applica sia alle applicazioni completamente attendibili che a quelle parzialmente attendibili. Per altre informazioni, vedere [codice SecurityTransparent](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>Scrittura di codice indipendente dai tipi verificabile
 
-Durante la compilazione JIT viene eseguito un processo di verifica, in base al quale il codice viene esaminato, per provare a determinare se è indipendente dai tipi. Il codice verificato durante la verifica come indipendente dai tipi viene definito *codice indipendente dai tipi verificabile*. Esiste, infatti, codice che pur essendo indipendente dai tipi non è indipendente dai tipi verificabile, a causa delle limitazioni del processo di verifica o del compilatore. Non tutti i linguaggi sono indipendenti dai tipi e alcuni compilatori di linguaggio, quali Microsoft Visual C++, non sono in grado di generare codice gestito indipendente dai tipi verificabile. Per stabilire se il compilatore di linguaggio usato è in grado di generare codice indipendente dai tipi verificabile, consultare la documentazione del compilatore. Se si usa un compilatore di linguaggio che genera codice indipendente dai tipi verificabile solo quando si evitano determinati costrutti di linguaggio, potrebbe essere necessario usare lo [strumento PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md) per determinare se il codice è indipendente dai tipi verificabile.
+Durante la compilazione JIT viene eseguito un processo di verifica, in base al quale il codice viene esaminato, per provare a determinare se è indipendente dai tipi. Il codice verificato durante la verifica come indipendente dai tipi viene definito *codice indipendente dai tipi verificabile*. Esiste, infatti, codice che pur essendo indipendente dai tipi non è indipendente dai tipi verificabile, a causa delle limitazioni del processo di verifica o del compilatore. Non tutti i linguaggi sono indipendenti dai tipi e alcuni compilatori di linguaggio, quali Microsoft Visual C++, non sono in grado di generare codice gestito indipendente dai tipi verificabile. Per stabilire se il compilatore di linguaggio usato è in grado di generare codice indipendente dai tipi verificabile, consultare la documentazione del compilatore. Se si usa un compilatore di linguaggio che genera codice indipendente dai tipi verificabile solo quando si evitano determinati costrutti di linguaggio, potrebbe essere necessario usare lo [strumento PEVerify](../tools/peverify-exe-peverify-tool.md) per determinare se il codice è indipendente dai tipi verificabile.
 
 È tuttavia possibile tentare l'esecuzione di codice non indipendente dai tipi verificabile, se i criteri di sicurezza consentono al codice di evitare la verifica. Poiché l'indipendenza dai tipi è tuttavia una componente essenziale del meccanismo di isolamento degli assembly nell'ambiente di esecuzione, non è possibile applicare la sicurezza in maniera affidabile se il codice viola le regole dell'indipendenza dai tipi. In base all'impostazione predefinita, l'esecuzione del codice non indipendente dai tipi è consentita solo se il codice ha origine nel computer locale. È quindi necessario che il codice mobile sia indipendente dai tipi.
 
@@ -55,7 +55,7 @@ La sicurezza per l'accesso al codice non elimina la possibilità di errori umani
 La sintassi di sicurezza dichiarativa utilizza [gli attributi](../../standard/attributes/index.md) per inserire le informazioni di sicurezza nei [metadati](../../standard/metadata-and-self-describing-components.md) del codice. Gli attributi possono essere inseriti a livello di assembly, classe o membro, per indicare il tipo di richiesta, la domanda o l'override che si vuole usare. Le richieste vengono usate in applicazioni destinate a Common Language Runtime per informare il sistema di sicurezza runtime sulle autorizzazioni necessarie o non necessarie per l'applicazione. Le richieste e gli override vengono usati nelle librerie per proteggere le risorse dai chiamanti o per eseguire l'override del comportamento di sicurezza predefinito.
 
 > [!NOTE]
-> Nel .NET Framework 4 sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [modifiche di sicurezza](../../../docs/framework/security/security-changes.md).
+> Nel .NET Framework 4 sono state apportate importanti modifiche al modello di sicurezza e alla terminologia di .NET Framework. Per ulteriori informazioni su queste modifiche, vedere [modifiche di sicurezza](../security/security-changes.md).
 
 Per usare le chiamate di sicurezza dichiarativa, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Ciascuna autorizzazione incorporata dispone di un attributo a cui viene passata un'enumerazione <xref:System.Security.Permissions.SecurityAction> per descrivere il tipo di operazione di protezione che si vuole eseguire. Tuttavia, le autorizzazioni accettano anche i propri parametri esclusivi.
 
@@ -105,7 +105,7 @@ La sintassi di sicurezza imperativa invia una chiamata di sicurezza mediante la 
 
 Prima di eseguire la chiamata di sicurezza, è necessario inizializzare i dati dello stato dell'oggetto di autorizzazione in modo che rappresenti la forma specifica di autorizzazione necessaria. Ad esempio, quando si crea <xref:System.Security.Permissions.FileIOPermission> un oggetto, è possibile usare il costruttore per inizializzare l'oggetto **FileIOPermission** in modo che rappresenti l'accesso illimitato a tutti i file o nessun accesso ai file. In alternativa, è possibile utilizzare un oggetto **FileIOPermission** diverso, passando i parametri che indicano il tipo di accesso che si desidera venga rappresentato dall'oggetto (ovvero lettura, Accodamento o scrittura) e i file che si desidera proteggere dall'oggetto.
 
-Oltre a usare la sintassi di sicurezza imperativa per richiamare un singolo oggetto di sicurezza, è possibile usarla per inizializzare un gruppo di autorizzazioni in un set di autorizzazioni. Questa tecnica è ad esempio l'unico modo per eseguire in modo affidabile chiamate [Assert](../../../docs/framework/misc/using-the-assert-method.md) su più autorizzazioni in un unico metodo. Usare le classi <xref:System.Security.PermissionSet> e <xref:System.Security.NamedPermissionSet> per creare un gruppo di autorizzazioni e quindi chiamare il metodo appropriato per richiamare la chiamata di sicurezza desiderato.
+Oltre a usare la sintassi di sicurezza imperativa per richiamare un singolo oggetto di sicurezza, è possibile usarla per inizializzare un gruppo di autorizzazioni in un set di autorizzazioni. Questa tecnica è ad esempio l'unico modo per eseguire in modo affidabile chiamate [Assert](using-the-assert-method.md) su più autorizzazioni in un unico metodo. Usare le classi <xref:System.Security.PermissionSet> e <xref:System.Security.NamedPermissionSet> per creare un gruppo di autorizzazioni e quindi chiamare il metodo appropriato per richiamare la chiamata di sicurezza desiderato.
 
 È possibile usare la sintassi imperativa per eseguire domande e override, ma non richieste. Potrebbe usare la sintassi imperativa per richieste e override anziché la sintassi dichiarativa quando le informazioni necessarie per inizializzare lo stato di autorizzazione diventano note solo in fase di esecuzione. Ad esempio, se si vuole garantire che i chiamanti abbiano l'autorizzazione di lettura di un determinato file, ma non si conosce il nome del file fino al runtime, usare una richiesta imperativa. È anche possibile usare controlli imperativi invece di controlli dichiarativi quando è necessario determinare in fase di esecuzione se contiene una condizione e, in base al risultato del test, eseguire o no una richiesta di sicurezza.
 
@@ -164,8 +164,8 @@ Se si vuole che l'applicazione esegua un'operazione che richiede l'accesso a cod
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
-- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [Sicurezza dall'accesso di codice](code-access-security.md)
+- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](code-access-security-basics.md)
 - [Attributi](../../standard/attributes/index.md)
 - [Metadati e componenti auto-descrittivi](../../standard/metadata-and-self-describing-components.md)

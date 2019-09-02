@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: acf5af755d6322f75a616005cc904d464564bc81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915823"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203954"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Utilizzo di un dataset da un servizio Web XML
-Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet. Il **set di dati** è "serializzabile" in quanto può essere specificato come input o output dai servizi Web XML senza che sia necessario scrivere codice aggiuntivo per trasmettere il contenuto del **set di dati** da un servizio Web XML a un client e viceversa. Il **set di dati** viene convertito in modo implicito in un flusso XML utilizzando il formato DiffGram, inviato in rete e quindi ricostruito dal flusso XML come **set di dati** all'estremità ricevente. Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML. Per ulteriori informazioni sul formato DiffGram, vedere [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
+Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet. Il **set di dati** è "serializzabile" in quanto può essere specificato come input o output dai servizi Web XML senza che sia necessario scrivere codice aggiuntivo per trasmettere il contenuto del **set di dati** da un servizio Web XML a un client e viceversa. Il **set di dati** viene convertito in modo implicito in un flusso XML utilizzando il formato DiffGram, inviato in rete e quindi ricostruito dal flusso XML come **set di dati** all'estremità ricevente. Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML. Per ulteriori informazioni sul formato DiffGram, vedere [DiffGram](diffgrams.md).  
   
  Nell'esempio seguente viene illustrato come creare un servizio Web XML e un client che utilizzano il **set** di dati per trasportare dati relazionali (compresi i dati modificati) e risolvere eventuali aggiornamenti nell'origine dati originale.  
   
@@ -157,7 +157,7 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
     }  
     ```  
   
-     In uno scenario tipico, il metodo **UpdateCustomers** viene scritto per intercettare le violazioni della concorrenza ottimistica. Per semplicità, questa opzione non è stata inclusa nell'esempio. Per ulteriori informazioni sulla concorrenza ottimistica, vedere [concorrenza ottimistica](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
+     In uno scenario tipico, il metodo **UpdateCustomers** viene scritto per intercettare le violazioni della concorrenza ottimistica. Per semplicità, questa opzione non è stata inclusa nell'esempio. Per ulteriori informazioni sulla concorrenza ottimistica, vedere [concorrenza ottimistica](../optimistic-concurrency.md).  
   
 2. Creare un proxy del servizio Web XML.  
   
@@ -261,11 +261,11 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
   
 ## <a name="see-also"></a>Vedere anche
 
-- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Popolamento di un set di dati da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Aggiornamento di origini dati con DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Parametri DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET](../index.md)
+- [Oggetti DataSet, DataTable e DataView](index.md)
+- [DataTable](datatables.md)
+- [Popolamento di un set di dati da un oggetto DataAdapter](../populating-a-dataset-from-a-dataadapter.md)
+- [Aggiornamento di origini dati con DataAdapter](../updating-data-sources-with-dataadapters.md)
+- [Parametri DataAdapter](../dataadapter-parameters.md)
 - [Strumento Web Services Description Language (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

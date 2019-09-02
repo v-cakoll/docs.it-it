@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675578"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105480"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -101,8 +101,8 @@ Come minimo, ogni singola applicazione web deve puntare ad essere il proprio con
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-* [Schemi progettuali JAVA: principi](https://java-design-patterns.com/principles/)
-* [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
+- [Schemi progettuali JAVA: principi](https://java-design-patterns.com/principles/)
+- [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Precedente](choose-between-traditional-web-and-single-page-apps.md)

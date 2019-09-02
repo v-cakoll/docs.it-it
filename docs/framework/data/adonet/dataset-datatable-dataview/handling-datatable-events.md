@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988299"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203678"
 ---
 # <a name="handling-datatable-events"></a>Gestione di eventi DataTable
 Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che possono essere elaborati da un'applicazione. Nella tabella seguente vengono descritti gli eventi di `DataTable`.  
   
-|event|Descrizione|  
+|event|DESCRIZIONE|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Viene generato dopo la chiamata al metodo <xref:System.Data.DataTable.EndInit%2A> di `DataTable`. Questo evento è progettato principalmente per supportare gli scenari in fase di progettazione.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Viene generato dopo la modifica di un valore in <xref:System.Data.DataColumn>.|  
@@ -81,7 +81,7 @@ Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che po
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Gestione di eventi DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Gestione di eventi di set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
+- [Gestione di eventi DataAdapter](../handling-dataadapter-events.md)
+- [Gestione di eventi di set di dati](handling-dataset-events.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

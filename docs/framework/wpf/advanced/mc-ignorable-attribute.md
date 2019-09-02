@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: e99ca09d51f3ba6c01b9e400bfba00749faf62b3
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567443"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206185"
 ---
 # <a name="mcignorable-attribute"></a>Attributo mc:Ignorable
 Specifica quali [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefissi di spazio dei nomi rilevati in un file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup possono essere ignorati da un processore. L' `mc:Ignorable` attributo supporta la compatibilità del markup sia per il mapping dello [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] spazio dei nomi personalizzato che per il controllo delle versioni.  
@@ -51,7 +51,7 @@ Specifica quali [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
 |*ThisElementCanBeIgnored*|Elemento che può essere ignorato dalle [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] implementazioni del processore, se il tipo sottostante non può essere risolto.|  
   
 ## <a name="remarks"></a>Note  
- Il `mc` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]prefisso dello spazio dei nomi è la convenzione di prefisso consigliata da usare per il mapping dello spazio dei nomi Compatibility. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
+ Il `mc` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `http://schemas.openxmlformats.org/markup-compatibility/2006`prefisso dello spazio dei nomi è la convenzione di prefisso consigliata da usare per il mapping dello spazio dei nomi Compatibility. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
   
  Gli elementi o gli attributi in `mc:Ignorable` cui viene identificata la parte prefisso del nome dell'elemento non generano errori quando vengono elaborati da un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore. Se tale attributo non può essere risolto in un tipo o un costrutto di programmazione sottostante, l'elemento viene ignorato. Si noti tuttavia che gli elementi ignorati possono comunque generare errori di analisi aggiuntivi per ulteriori requisiti degli elementi che sono effetti collaterali dell'elemento non elaborato. Ad esempio, un modello di contenuto dell'elemento specifico potrebbe richiedere esattamente un elemento figlio, ma se l'elemento figlio specificato si `mc:Ignorable` trovava in un prefisso e non è stato possibile risolvere l'elemento figlio specificato in un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tipo, il processore potrebbe genera un errore.  
   
@@ -63,7 +63,7 @@ Specifica quali [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
   
  È possibile specificare più prefissi nell'attributo, usando uno o più caratteri di spazio vuoto come separatore, ad esempio: `mc:Ignorable="ignore1 ignore2"`.  
 
- Lo [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] spazio dei nomi definisce altri elementi e attributi non documentati in questa area dell'SDK. Per ulteriori informazioni, vedere [XML Markup Compatibility Specification](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
+ Lo `http://schemas.openxmlformats.org/markup-compatibility/2006` spazio dei nomi definisce altri elementi e attributi non documentati in questa area dell'SDK. Per ulteriori informazioni, vedere [XML Markup Compatibility Specification](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
   
 ## <a name="see-also"></a>Vedere anche
 

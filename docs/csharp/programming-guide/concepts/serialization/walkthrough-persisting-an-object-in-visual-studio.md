@@ -1,12 +1,12 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto tramite C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975823"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105929"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C\#
 
@@ -22,14 +22,14 @@ In questa procedura verrà creato un oggetto `Loan` di base i cui dati verranno 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* Per consentire la compilazione e l'esecuzione, installare [.NET Core SDK](https://www.microsoft.com/net/core).
+- Per consentire la compilazione e l'esecuzione, installare [.NET Core SDK](https://www.microsoft.com/net/core).
 
-* Installare l'editor del codice preferito, se non è già disponibile.
+- Installare l'editor del codice preferito, se non è già disponibile.
 
 > [!TIP]
 > È necessario installare un editor del codice? Provare [Visual Studio](https://visualstudio.com/downloads).
 
-* L'esempio richiede C# 7.3. Vedere [Selezionare la versione del linguaggio C#](../../../language-reference/configure-language-version.md) 
+- L'esempio richiede C# 7.3. Vedere [Selezionare la versione del linguaggio C#](../../../language-reference/configure-language-version.md) 
 
 È possibile esaminare il codice di esempio online [nel repository GitHub degli esempi .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

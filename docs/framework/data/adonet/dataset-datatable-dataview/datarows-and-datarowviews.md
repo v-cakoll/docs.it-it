@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a98dc44eda9ebda09235193c58bd831fc52d04d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879827"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205099"
 ---
 # <a name="datarows-and-datarowviews"></a>Oggetti DataRow e DataRowView
-In un <xref:System.Data.DataView> viene esposto una raccolta enumerabile di oggetti <xref:System.Data.DataRowView>. Il **DataRowView** oggetti espongono i valori come matrici di oggetti che vengono indicizzate per nome o il riferimento ordinale della colonna nella tabella sottostante. È possibile accedere la <xref:System.Data.DataRow> esposto dal **DataRowView** utilizzando la <xref:System.Data.DataRowView.Row%2A> proprietà del **DataRowView**.  
+In un <xref:System.Data.DataView> viene esposto una raccolta enumerabile di oggetti <xref:System.Data.DataRowView>. Gli oggetti **DataRowView** espongono i valori come matrici di oggetti indicizzati in base al nome o al riferimento ordinale della colonna nella tabella sottostante. È possibile accedere all' <xref:System.Data.DataRow> oggetto esposto dall'oggetto **DataRowView** utilizzando la <xref:System.Data.DataRowView.Row%2A> proprietà dell'oggetto **DataRowView**.  
   
- Quando si visualizzano i valori usando un **DataRowView**, il <xref:System.Data.DataView.RowStateFilter%2A> proprietà della **DataView** determina quale versione di riga dell'oggetto sottostante **DataRow** viene esposto. Per informazioni sull'accesso a diverse versioni di riga utilizzando un **DataRow**, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Quando si visualizzano i valori utilizzandoun oggetto DataRowView <xref:System.Data.DataView.RowStateFilter%2A> , la proprietà di **DataView** determina quale versione di riga del **DataRow** sottostante è esposta. Per informazioni sull'accesso a versioni di riga diverse utilizzando un **DataRow**, vedere [Stati di riga e versioni di riga](row-states-and-row-versions.md).  
   
  Nell'esempio di codice seguente vengono visualizzati tutti i valori correnti e originali in una tabella.  
   
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](dataviews.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

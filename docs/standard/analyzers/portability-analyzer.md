@@ -4,12 +4,12 @@ description: Informazioni su come usare lo strumento .NET Portability Analyzer p
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433944"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107508"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433944"
 
 ## <a name="common-targets"></a>Destinazioni comuni
 
-* [.NET Core](../../core/index.md): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni. Se l'obiettivo è di convertire l'app in una versione di .NET Core che supporta architetture multipiattaforma, questa è la destinazione consigliata. 
-* .[NET Standard](../../standard/net-standard.md): include le API .NET Standard disponibili in tutte le implementazioni .NET. Se l'obiettivo è poter eseguire la libreria in tutte le piattaforme supportate da .NET, questa è la destinazione consigliata.  
-* [ASP.NET Core](/aspnet/core): un framework Web moderno basato su .NET Core. Se l'obiettivo è di convertire l'app Web in .NET Core per supportare più piattaforme, questa è la destinazione consigliata.
-* .NET Core + [Platform Extensions](../../core/porting/windows-compat-pack.md) (.NET Core + estensioni di piattaforma): include le API .NET Core, oltre a Windows Compatibility Pack, che offre molte delle tecnologie disponibili in .NET Framework. Questa è una destinazione consigliata per la conversione dell'app da .NET Framework a .NET Core in Windows.
-* .NET Standard + [Platform Extensions](../../core/porting/windows-compat-pack.md) (.NET Standard + estensioni di piattaforma): include le API .NET Standard, oltre a Windows Compatibility Pack, che offre molte delle tecnologie disponibili in .NET Framework. Questa è una destinazione consigliata per la conversione della libreria da .NET Framework a .NET Core in Windows.
+- [.NET Core](../../core/index.md): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni. Se l'obiettivo è di convertire l'app in una versione di .NET Core che supporta architetture multipiattaforma, questa è la destinazione consigliata. 
+- .[NET Standard](../../standard/net-standard.md): include le API .NET Standard disponibili in tutte le implementazioni .NET. Se l'obiettivo è poter eseguire la libreria in tutte le piattaforme supportate da .NET, questa è la destinazione consigliata.  
+- [ASP.NET Core](/aspnet/core): un framework Web moderno basato su .NET Core. Se l'obiettivo è di convertire l'app Web in .NET Core per supportare più piattaforme, questa è la destinazione consigliata.
+- .NET Core + [Platform Extensions](../../core/porting/windows-compat-pack.md) (.NET Core + estensioni di piattaforma): include le API .NET Core, oltre a Windows Compatibility Pack, che offre molte delle tecnologie disponibili in .NET Framework. Questa è una destinazione consigliata per la conversione dell'app da .NET Framework a .NET Core in Windows.
+- .NET Standard + [Platform Extensions](../../core/porting/windows-compat-pack.md) (.NET Standard + estensioni di piattaforma): include le API .NET Standard, oltre a Windows Compatibility Pack, che offre molte delle tecnologie disponibili in .NET Framework. Questa è una destinazione consigliata per la conversione della libreria da .NET Framework a .NET Core in Windows.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Come usare .NET Portability Analyzer
 
@@ -38,9 +38,9 @@ Per analizzare l'intero progetto in Visual Studio, fare clic con il pulsante des
 
 È anche possibile usare l'[app console ApiPort](https://aka.ms/apiportdownload). 
 
-* Digitare il comando seguente per analizzare la directory corrente: `ApiPort.exe analyze -f .`
-* Per analizzare un elenco specifico di file con estensione dll, digitare il comando seguente: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* Per altre informazioni, eseguire il comando `ApiPort.exe -?`
+- Digitare il comando seguente per analizzare la directory corrente: `ApiPort.exe analyze -f .`
+- Per analizzare un elenco specifico di file con estensione dll, digitare il comando seguente: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Per altre informazioni, eseguire il comando `ApiPort.exe -?`
 
 È consigliabile includere tutti i file con estensione exe e dll correlati disponibili che si vogliono convertire, escludendo i file da cui l'app dipende, ma di cui non si ha la proprietà e che non si è in grado di convertire. Questa operazione consentirà di ottenere il report di portabilità più pertinente possibile.  
 

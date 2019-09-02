@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916287"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206130"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono dati nell'applicazione, è consigliabile verificare che i dati siano validi prima che l'applicazione lo usi. Potrebbe essere necessario che determinati campi di testo non siano di lunghezza zero, che un campo venga formattato come numero di telefono o altro tipo di dati ben formati o che una stringa non contenga caratteri non sicuri che potrebbero essere usati per compromettere la sicurezza di un database. Windows Forms offre diversi modi per convalidare l'input nell'applicazione.  
@@ -85,7 +85,7 @@ Quando gli utenti immettono dati nell'applicazione, è consigliabile verificare 
   
 - Chiamando il <xref:System.Windows.Forms.Form.Close%2A> metodo a livello di codice.  
   
- In alcuni casi, tuttavia, potrebbe essere necessario lasciare che l'utente chiuda il form indipendentemente dal fatto che i valori nei controlli siano validi. È possibile eseguire l'override della convalida e chiudere un modulo che contiene ancora dati non validi creando un gestore per <xref:System.Windows.Forms.Form.Closing> l'evento del modulo. Nell'evento, impostare la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà su. `false` Questa operazione impone la chiusura del form. Per altre informazioni e un esempio, vedere <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ In alcuni casi, tuttavia, potrebbe essere necessario lasciare che l'utente chiuda il form indipendentemente dal fatto che i valori nei controlli siano validi. È possibile eseguire l'override della convalida e chiudere un modulo che contiene ancora dati non validi creando un gestore per <xref:System.Windows.Forms.Form.FormClosing> l'evento del modulo. Nell'evento, impostare la <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà su. `false` Questa operazione impone la chiusura del form. Per altre informazioni e un esempio, vedere <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > Se si impone la chiusura del form in questo modo, tutti i dati nei controlli del form che non sono già stati salvati andranno persi. Inoltre, i form modali non convalidano il contenuto dei controlli quando vengono chiusi. È comunque possibile usare la convalida dei controlli per bloccare lo stato attivo su un controllo, ma non è necessario preoccuparsi del comportamento associato alla chiusura del modulo.  
@@ -93,7 +93,7 @@ Quando gli utenti immettono dati nell'applicazione, è consigliabile verificare 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [Controllo MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md)
 - [Esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md)

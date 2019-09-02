@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910698"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206088"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerazioni sulla sicurezza e sui servizi remoti
 I servizi remoti consentono di impostare chiamate trasparenti tra domini applicazione, processi o computer. Lo stack di sicurezza per l'accesso di codice, tuttavia, non può superare i limiti del processo o del computer (viene applicato tra domini applicazione dello stesso processo).  
   
  Tutte le classi utilizzabili in remoto (derivate da una classe <xref:System.MarshalByRefObject>) devono assumersi la responsabilità della sicurezza. Il codice deve essere usato solo in ambienti chiusi in cui il codice chiamante può essere considerato attendibile in modo implicito oppure le chiamate remote devono essere progettate in modo da non esporre il codice protetto a immissioni esterne che potrebbero essere usate da utenti malintenzionati.  
   
- In genere, è consigliabile non esporre mai metodi, proprietà o eventi protetti da [LinkDemand](../../../docs/framework/misc/link-demands.md) dichiarativo <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> e controlli di sicurezza. Con i servizi remoti, questi controlli non vengono applicati. Altri controlli di sicurezza, ad <xref:System.Security.Permissions.SecurityAction.Demand>esempio, [Assert](../../../docs/framework/misc/using-the-assert-method.md)e così via, funzionano tra i domini dell'applicazione all'interno di un processo, ma non funzionano negli scenari tra processi o tra computer.  
+ In genere, è consigliabile non esporre mai metodi, proprietà o eventi protetti da [LinkDemand](link-demands.md) dichiarativo <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> e controlli di sicurezza. Con i servizi remoti, questi controlli non vengono applicati. Altri controlli di sicurezza, ad <xref:System.Security.Permissions.SecurityAction.Demand>esempio, [Assert](using-the-assert-method.md)e così via, funzionano tra i domini dell'applicazione all'interno di un processo, ma non funzionano negli scenari tra processi o tra computer.  
   
 ## <a name="protected-objects"></a>Oggetti protetti  
  Alcuni oggetti includono internamente lo stato di sicurezza. Questi oggetti non devono essere passati a codice non attendibile, che potrebbe acquisire autorizzazioni di sicurezza più elevate delle proprie.  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbfd8a8b207c0da9403ac1f8ab36557c4abe383b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607311"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204916"
 ---
 # <a name="defining-primary-keys"></a>Definizione di chiavi primarie
 In genere, in una tabella di database è presente una colonna o un gruppo di colonne che consente l'identificazione univoca di ogni riga della tabella. Tale colonna o gruppo di colonne di identificazione è definito chiave primaria.  
   
- Quando si identifica una singola <xref:System.Data.DataColumn> come il <xref:System.Data.DataTable.PrimaryKey%2A> per una <xref:System.Data.DataTable>, imposta automaticamente la tabella di <xref:System.Data.DataColumn.AllowDBNull%2A> proprietà della colonna da **false** e il <xref:System.Data.DataColumn.Unique%2A> proprietà  **true**. Per più colonne chiavi primarie, solo il **AllowDBNull** viene automaticamente impostata su **false**.  
+ Quando si identifica un singolo <xref:System.Data.DataColumn> <xref:System.Data.DataTable.PrimaryKey%2A> come per un oggetto <xref:System.Data.DataTable>, la tabella imposta automaticamente la <xref:System.Data.DataColumn.AllowDBNull%2A> proprietà della colonna su **false** e la <xref:System.Data.DataColumn.Unique%2A> proprietà su **true**. Per le chiavi primarie a più colonne, solo la proprietà **AllowDBNull** viene impostata automaticamente su **false**.  
   
- Il **PrimaryKey** proprietà di un <xref:System.Data.DataTable> riceve come valore di una matrice di uno o più **DataColumn** oggetti, come illustrato negli esempi seguenti. Il primo esempio consente di definire una singola colonna come chiave primaria.  
+ La proprietà **PrimaryKey** di un <xref:System.Data.DataTable> oggetto riceve come valore una matrice di uno o più oggetti **DataColumn** , come illustrato negli esempi seguenti. Il primo esempio consente di definire una singola colonna come chiave primaria.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -68,6 +68,6 @@ workTable.PrimaryKey = keyColumn;
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Data.DataTable>
-- [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Definizione dello schema DataTable](datatable-schema-definition.md)
+- [DataTable](datatables.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

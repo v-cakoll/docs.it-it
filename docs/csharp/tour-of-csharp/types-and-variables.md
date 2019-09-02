@@ -3,12 +3,12 @@ title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67661074"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105585"
 ---
 # <a name="types-and-variables"></a>Tipi e variabili
 
@@ -18,31 +18,31 @@ I tipi valore di C# sono ulteriormente suddivisi in *tipi semplici*, *tipi enum*
 
 Di seguito viene offerta una panoramica del sistema di tipi di C#.
 
-* [Tipi valore][ValueTypes]
+- [Tipi valore][ValueTypes]
   - [Tipi semplici][SimpleTypes]
-    * Signed Integer: `sbyte`, `short`, `int`,`long`
-    * Unsigned Integer: `byte`, `ushort`, `uint`,`ulong`
-    * Caratteri Unicode: `char`
-    * File binario IEEE a virgola mobile: `float`, `double`
-    * Decimale ad alta precisione a virgola mobile: `decimal`
-    * Booleano: `bool`
+    - Signed Integer: `sbyte`, `short`, `int`,`long`
+    - Unsigned Integer: `byte`, `ushort`, `uint`,`ulong`
+    - Caratteri Unicode: `char`
+    - File binario IEEE a virgola mobile: `float`, `double`
+    - Decimale ad alta precisione a virgola mobile: `decimal`
+    - Booleano: `bool`
   - [Tipi enum][EnumTypes]
-    * Tipi definiti dall'utente nel formato `enum E {...}`
+    - Tipi definiti dall'utente nel formato `enum E {...}`
   - [Tipi struct][StructTypes]
-    * Tipi definiti dall'utente nel formato `struct S {...}`
+    - Tipi definiti dall'utente nel formato `struct S {...}`
   - [Tipi valore nullable][NullableTypes]
-    * Estensioni di tutti gli altri tipi valore con un valore `null`
-* [Tipi riferimento][ReferenceTypes]
+    - Estensioni di tutti gli altri tipi valore con un valore `null`
+- [Tipi riferimento][ReferenceTypes]
   - [Tipi classe][ClassTypes]
-    * Classe di base principale di tutti gli altri tipi: `object`
-    * Stringhe Unicode: `string`
-    * Tipi definiti dall'utente nel formato `class C {...}`
+    - Classe di base principale di tutti gli altri tipi: `object`
+    - Stringhe Unicode: `string`
+    - Tipi definiti dall'utente nel formato `class C {...}`
   - [Tipi interfaccia][InterfaceTypes]
-    * Tipi definiti dall'utente nel formato `interface I {...}`
+    - Tipi definiti dall'utente nel formato `interface I {...}`
   - [Tipi di matrice][ArrayTypes]
-    * Unidimensionale e multidimensionale, ad esempio `int[]` e `int[,]`
+    - Unidimensionale e multidimensionale, ad esempio `int[]` e `int[,]`
   - [Tipi delegato][DelegateTypes]
-    * Tipi definiti dall'utente nel formato `delegate int D(...)`
+    - Tipi definiti dall'utente nel formato `delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
@@ -89,19 +89,19 @@ Con il sistema di tipi unificato di C#, i tipi valore possono diventare oggetti 
 
 In C# sono disponibili diversi tipi di *variabili*, inclusi campi, elementi matrice, variabili locali e parametri. Le variabili rappresentano posizioni di archiviazione e ogni variabile dispone di un tipo che determina quali valori possono essere archiviati nella variabile stessa, come illustrato di seguito.
 
-* Tipo valore non-nullable
+- Tipo valore non-nullable
   - Valore esattamente del tipo indicato
-* Tipo valore nullable
+- Tipo valore nullable
   - Valore `null` o valore esattamente del tipo indicato
-* object
+- object
   - Riferimento `null`, riferimento a un oggetto di qualsiasi tipo riferimento oppure riferimento a un valore boxed di qualsiasi tipo valore
-* Tipo classe
+- Tipo classe
   - Riferimento `null`, riferimento a un'istanza del tipo classe oppure riferimento a un'istanza di una classe derivata dal tipo classe
-* Tipo interfaccia
+- Tipo interfaccia
   - Riferimento `null`, riferimento a un'istanza di un tipo classe che implementa il tipo interfaccia oppure riferimento a un valore boxed di un tipo valore che implementa il tipo interfaccia
-* Tipo matrice
+- Tipo matrice
   - Riferimento `null`, riferimento a un'istanza del tipo matrice oppure riferimento a un'istanza di un tipo matrice compatibile
-* Tipo delegato
+- Tipo delegato
   - Riferimento `null` oppure riferimento a un'istanza di un tipo delegato compatibile
 
 > [!div class="step-by-step"]

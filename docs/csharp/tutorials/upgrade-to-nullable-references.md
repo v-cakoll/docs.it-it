@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195839"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105766"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: Migrazione di codice esistente con tipi riferimento nullable
 
@@ -17,10 +17,10 @@ In C# 8 sono ora disponibili i **tipi riferimento nullable**, che completano i t
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
-> * Abilitare i controlli dei riferimenti Null mentre si lavora con il codice.
-> * Diagnosticare e correggere i diversi avvisi correlati ai valori Null.
-> * Gestire l'interfaccia tra contesti abilitati per nullable e contesti disabilitati per nullable.
-> * Controllare i contesti delle annotazioni nullable.
+> - Abilitare i controlli dei riferimenti Null mentre si lavora con il codice.
+> - Diagnosticare e correggere i diversi avvisi correlati ai valori Null.
+> - Gestire l'interfaccia tra contesti abilitati per nullable e contesti disabilitati per nullable.
+> - Controllare i contesti delle annotazioni nullable.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

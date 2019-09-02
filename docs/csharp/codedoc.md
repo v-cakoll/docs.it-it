@@ -3,12 +3,12 @@ title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633730"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104778"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -212,12 +212,12 @@ Gli strumenti di creazione della documentazione interna o personalizzata possono
 
 La documentazione del codice è consigliabile per vari motivi. Di seguito vengono illustrate alcune procedure consigliate, scenari di uso generale e altre operazioni che è necessario conoscere quando si usano i tag in formato documentazione XML nel codice C#.
 
-* Per mantenere una certa coerenza, tutti i tipi visibili pubblicamente e i loro membri devono essere documentati. Se necessario, è consigliabile eseguire un'operazione completa.
-* I membri private possono anche essere documentati con commenti XML. Ciò espone tuttavia il funzionamento interno della libreria che potrebbe essere riservato.
-* Il minimo necessario è che i tipi e i loro membri abbiano i tag `<summary>` perché il loro contenuto è necessario per IntelliSense.
-* Il testo della documentazione deve essere scritto usando frasi complete che terminano con un punto.
-* Le classi parziali sono completamente supportate e le informazioni sulla documentazione verranno concatenate in una singola voce per tale tipo.
-* Il compilatore verifica la sintassi dei tag `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
+- Per mantenere una certa coerenza, tutti i tipi visibili pubblicamente e i loro membri devono essere documentati. Se necessario, è consigliabile eseguire un'operazione completa.
+- I membri private possono anche essere documentati con commenti XML. Ciò espone tuttavia il funzionamento interno della libreria che potrebbe essere riservato.
+- Il minimo necessario è che i tipi e i loro membri abbiano i tag `<summary>` perché il loro contenuto è necessario per IntelliSense.
+- Il testo della documentazione deve essere scritto usando frasi complete che terminano con un punto.
+- Le classi parziali sono completamente supportate e le informazioni sulla documentazione verranno concatenate in una singola voce per tale tipo.
+- Il compilatore verifica la sintassi dei tag `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
 - Il compilatore convalida i parametri che contengono i percorsi dei file e i riferimenti ad altre parti del codice.
 
 ## <a name="see-also"></a>Vedere anche
