@@ -5,40 +5,40 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 68b2f75681bef6c43b7eb2072d6e9266408ca102
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0907aa2a66e1bf51fefc7bed8ea2612cc0c830fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607186"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203224"
 ---
 # <a name="sorting-and-filtering-data"></a>Ordinamento e applicazione di filtri ai dati
 In <xref:System.Data.DataView> sono disponibili diversi metodi di ordinamento e applicazione di filtri ai dati in una <xref:System.Data.DataTable>:  
   
 - La proprietà <xref:System.Data.DataView.Sort%2A> viene usata per specificare criteri di ordinamento basati su una o più colonne e includere i parametri ASC (ascendente) e DESC (discendente).  
   
-- La proprietà <xref:System.Data.DataView.ApplyDefaultSort%2A> consente di creare automaticamente un criterio di ordinamento ascendente, basato sulla colonna o sulle colonne di chiave primaria della tabella. <xref:System.Data.DataView.ApplyDefaultSort%2A> si applica solo quando la **ordinamento** proprietà è un riferimento null o stringhe vuote, e quando la tabella è definita una chiave primaria.  
+- La proprietà <xref:System.Data.DataView.ApplyDefaultSort%2A> consente di creare automaticamente un criterio di ordinamento ascendente, basato sulla colonna o sulle colonne di chiave primaria della tabella. <xref:System.Data.DataView.ApplyDefaultSort%2A>si applica solo quando la proprietà **Sort** è un riferimento null o una stringa vuota e quando la tabella contiene una chiave primaria definita.  
   
-- La proprietà <xref:System.Data.DataView.RowFilter%2A> consente di specificare subset di righe sulla base dei relativi valori di colonna. Per informazioni dettagliate sulle espressioni valide per i **RowFilter** proprietà, vedere le informazioni di riferimento per il <xref:System.Data.DataColumn.Expression%2A> proprietà del <xref:System.Data.DataColumn> classe.  
+- La proprietà <xref:System.Data.DataView.RowFilter%2A> consente di specificare subset di righe sulla base dei relativi valori di colonna. Per informazioni dettagliate sulle espressioni valide per la proprietà **RowFilter** , vedere le informazioni di riferimento <xref:System.Data.DataColumn.Expression%2A> per la proprietà <xref:System.Data.DataColumn> della classe.  
   
-     Se si desidera restituire i risultati di una particolare query sui dati anziché fornire una visualizzazione dinamica di un subset dei dati, usano il <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A> metodi delle **DataView** per ottenere prestazioni ottimali anziché impostando il **RowFilter** proprietà. Impostando il **RowFilter** proprietà ricompila l'indice per i dati, aggiungendo un sovraccarico all'applicazione e riducendo le prestazioni. Il **RowFilter** proprietà è particolarmente utile in un'applicazione con associazione a dati in cui un controllo associato vengono visualizzati i risultati filtrati. Il **trovare** e **FindRows** metodi si avvalgono dell'indice corrente senza richiedere l'indice da ricompilare. Per altre informazioni sul **trovare** e **FindRows** metodi, vedere [ricerca righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+     Se si desidera restituire i risultati di una particolare query sui dati, anziché fornire una visualizzazione dinamica di un subset di dati, utilizzare i <xref:System.Data.DataView.Find%2A> metodi o <xref:System.Data.DataView.FindRows%2A> del **DataView** per ottenere prestazioni ottimali anziché impostare  **Proprietà RowFilter** . Impostando la proprietà **RowFilter** , viene ricompilato l'indice per i dati, aggiungendo un sovraccarico all'applicazione e diminuendo le prestazioni. È consigliabile usare la proprietà **RowFilter** in un'applicazione con associazione a dati in cui un controllo associato Visualizza i risultati filtrati. I metodi **Find** e **FindRows** sfruttano l'indice corrente senza richiedere la ricompilazione dell'indice. Per ulteriori informazioni sui metodi **Find** e **FindRows** , vedere [ricerca di righe](finding-rows.md).  
   
-- La proprietà <xref:System.Data.DataView.RowStateFilter%2A> consente di specificare le versioni di riga da visualizzare. Il **DataView** gestisce in modo implicito la versione di riga per l'esposizione a seconda di **RowState** della riga sottostante. Ad esempio, se il **RowStateFilter** è impostata su **DataViewRowState. Deleted**, il **DataView** espone il **originale** versione della riga di tutti i **Deleted** righe in quanto non esiste alcun **corrente** versione di riga. È possibile determinare quale versione di riga di una riga è esposto tramite il **RowVersion** proprietà delle **DataRowView**.  
+- La proprietà <xref:System.Data.DataView.RowStateFilter%2A> consente di specificare le versioni di riga da visualizzare. Il **DataView** gestisce in modo implicito la versione di riga da esporre a seconda del tipo di **RowState** della riga sottostante. Se, ad esempio, **RowStateFilter** è impostato su **DataViewRowState. Deleted**, il **DataView** espone la versione di riga **originale** di tutte le righe **eliminate** perché non è disponibile una versione di riga **corrente** . È possibile determinare la versione di riga di una riga esposta tramite la proprietà **rowversion** dell'oggetto **DataRowView**.  
   
-     La tabella seguente illustra le opzioni per la **DataViewRowState**.  
+     Nella tabella seguente vengono illustrate le opzioni per **DataViewRowState**.  
   
     |Opzioni di DataViewRowState|Descrizione|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|Il **correnti** versione di riga di tutte le **Unchanged**, **Added**, e **Modified** righe. Questa è l'impostazione predefinita.|  
-    |**Aggiunto**|Il **correnti** versione di riga di tutte le **Added** righe.|  
-    |**Eliminato**|Il **originale** versione di riga del tutto **Deleted** righe.|  
-    |**ModifiedCurrent**|Il **corrente** versione di riga del tutto **Modified** righe.|  
-    |**ModifiedOriginal**|Il **originale** versione di riga del tutto **Modified** righe.|  
+    |**CurrentRows**|La versione di riga **corrente** di tutte le righe non **modificate**, **aggiunte**e **modificate** . Questa è l'impostazione predefinita.|  
+    |**Aggiunto**|Versione di riga **corrente** di tutte le righe **aggiunte** .|  
+    |**Eliminato**|Versione di riga **originale** di tutte le righe eliminate.|  
+    |**ModifiedCurrent**|Versione di riga **corrente** di tutte le righe **modificate** .|  
+    |**ModifiedOriginal**|Versione di riga **originale** di tutte le righe **modificate** .|  
     |**None**|Nessuna riga.|  
-    |**OriginalRows**|Il **originali** versione di riga di tutte le **Unchanged**, **Modified**, e **Deleted** righe.|  
-    |**Unchanged**|Il **correnti** versione di riga del tutto **Unchanged** righe.|  
+    |**OriginalRows**|Versione di riga **originale** di tutte le righe non **modificate**, **modificate**ed **eliminate** .|  
+    |**Invariato**|Versione di riga **corrente** di tutte le righe non **modificate** .|  
   
- Per altre informazioni sulla riga stati e le versioni di riga, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Per altre informazioni sugli Stati delle righe e sulle versioni delle righe, vedere Stati di riga [e versioni](row-states-and-row-versions.md)di riga.  
   
  Nell'esempio di codice seguente viene creata una visualizzazione in cui vengono mostrati tutti i prodotti il cui numero di unità disponibili in magazzino è inferiore o uguale al livello di riordinamento. I prodotti vengono ordinati prima in base all'identificatore del fornitore, quindi in base al nome del prodotto.  
   
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](dataviews.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

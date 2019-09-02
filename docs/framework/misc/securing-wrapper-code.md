@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910744"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206112"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910744"
 ## <a name="link-demands-and-wrappers"></a>Richieste di collegamento e wrapper  
  Un particolare caso di protezione con richieste di collegamento è stato rafforzato nell'infrastruttura di sicurezza, ma è ancora una possibile fonte di vulnerabilità nel codice.  
   
- Se il codice completamente attendibile chiama una proprietà, un evento o un metodo protetto da un [LinkDemand](../../../docs/framework/misc/link-demands.md), la chiamata ha esito positivo se viene soddisfatta la verifica delle autorizzazioni **LinkDemand** per il chiamante. Inoltre, se il codice completamente attendibile espone una classe che accetta il nome di una proprietà e chiama la relativa funzione di accesso **Get** usando la reflection, la chiamata alla funzione di accesso **Get** riesce anche se il codice utente non ha il diritto di accedere a questa proprietà. Questo è dovuto al fatto che **LinkDemand** controlla solo il chiamante immediato, che è il codice completamente attendibile. In pratica, il codice completamente attendibile effettua una chiamata con privilegi per conto del codice utente senza verificare che il codice utente disponga del diritto per eseguire la chiamata.  
+ Se il codice completamente attendibile chiama una proprietà, un evento o un metodo protetto da un [LinkDemand](link-demands.md), la chiamata ha esito positivo se viene soddisfatta la verifica delle autorizzazioni **LinkDemand** per il chiamante. Inoltre, se il codice completamente attendibile espone una classe che accetta il nome di una proprietà e chiama la relativa funzione di accesso **Get** usando la reflection, la chiamata alla funzione di accesso **Get** riesce anche se il codice utente non ha il diritto di accedere a questa proprietà. Questo è dovuto al fatto che **LinkDemand** controlla solo il chiamante immediato, che è il codice completamente attendibile. In pratica, il codice completamente attendibile effettua una chiamata con privilegi per conto del codice utente senza verificare che il codice utente disponga del diritto per eseguire la chiamata.  
   
  Per evitare tali problemi di sicurezza, il Common Language Runtime estende il controllo in una richiesta di analisi dello stack completa su qualsiasi chiamata indiretta a un metodo, a un costruttore, a una proprietà o a un evento protetto da un **LinkDemand**. Questa protezione comporta costi in termini di prestazioni e richiede modifiche alla semantica del controllo di sicurezza. La richiesta di percorso stack completo potrebbe non riuscire se viene superato il più rapido controllo di un solo livello.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910744"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. La **richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. La **richiesta** è una protezione efficace contro gli attacchi da attirare; verrà rilevato codice non autorizzato che tenta di ottenerlo.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) si verifica al momento della compilazione JIT (just-in-Time) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può potenzialmente interrompere la sicurezza, consentendo al codice dannoso di chiamare utilizzando il codice autorizzato. Pertanto, non utilizzare **LinkDemand** a meno che non sia possibile evitare tutte le debolezze possibili.  
+- [LinkDemand](link-demands.md) si verifica al momento della compilazione JIT (just-in-Time) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può potenzialmente interrompere la sicurezza, consentendo al codice dannoso di chiamare utilizzando il codice autorizzato. Pertanto, non utilizzare **LinkDemand** a meno che non sia possibile evitare tutte le debolezze possibili.  
   
     > [!NOTE]
-    > In .NET Framework 4, le <xref:System.Security.SecurityCriticalAttribute> richieste di collegamento sono state sostituite dall'attributo negli <xref:System.Security.SecurityRuleSet.Level2> assembly. È <xref:System.Security.SecurityCriticalAttribute> equivalente a una richiesta di collegamento per l'attendibilità totale; tuttavia, influiscono anche sulle regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > In .NET Framework 4, le <xref:System.Security.SecurityCriticalAttribute> richieste di collegamento sono state sostituite dall'attributo negli <xref:System.Security.SecurityRuleSet.Level2> assembly. È <xref:System.Security.SecurityCriticalAttribute> equivalente a una richiesta di collegamento per l'attendibilità totale; tuttavia, influiscono anche sulle regole di ereditarietà. Per altre informazioni su questa modifica, vedere [codice SecurityTransparent, livello 2](security-transparent-code-level-2.md).  
   
  Le precauzioni aggiuntive necessarie quando si utilizza **LinkDemand** devono essere programmate singolarmente; il sistema di sicurezza può essere utile per l'applicazione. Ogni errore crea un punto di debolezza per la sicurezza. Tutto il codice autorizzato che usa il codice dell'utente deve essere responsabile dell'implementazione di altre misure di sicurezza tramite l'esecuzione delle operazioni seguenti:  
   

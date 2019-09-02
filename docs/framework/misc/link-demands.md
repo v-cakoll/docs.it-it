@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910912"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206016"
 ---
 # <a name="link-demands"></a>Richieste di collegamento
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910912"
   
  I modificatori di percorso chiamate nello stack <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> e <xref:System.Security.CodeAccessPermission.PermitOnly%2A> non influiscono sulla valutazione delle richieste di collegamento.  poiché queste non eseguono una verifica del percorso chiamate nello stack.  
   
- Se si accede a un metodo protetto da una richiesta di collegamento tramite [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), una richiesta di collegamento controlla il chiamante immediato del codice a cui si accede tramite reflection. Tale comportamento si verifica sia per l'individuazione che per la chiamata di metodi realizzate mediante reflection. Si supponga, ad esempio, che il codice usi <xref:System.Reflection.MethodInfo> la reflection per restituire un oggetto che rappresenta un metodo protetto da una richiesta di collegamento e quindi passa tale oggetto **MethodInfo** a un altro codice che usa l'oggetto per richiamare il metodo originale. In questo caso il controllo della richiesta di collegamento si verifica due volte: una volta per il codice che restituisce l'oggetto **MethodInfo** e una volta per il codice che lo richiama.  
+ Se si accede a un metodo protetto da una richiesta di collegamento tramite [Reflection](../reflection-and-codedom/reflection.md), una richiesta di collegamento controlla il chiamante immediato del codice a cui si accede tramite reflection. Tale comportamento si verifica sia per l'individuazione che per la chiamata di metodi realizzate mediante reflection. Si supponga, ad esempio, che il codice usi <xref:System.Reflection.MethodInfo> la reflection per restituire un oggetto che rappresenta un metodo protetto da una richiesta di collegamento e quindi passa tale oggetto **MethodInfo** a un altro codice che usa l'oggetto per richiamare il metodo originale. In questo caso il controllo della richiesta di collegamento si verifica due volte: una volta per il codice che restituisce l'oggetto **MethodInfo** e una volta per il codice che lo richiama.  
   
 > [!NOTE]
 > Una richiesta di collegamento effettuata su un costruttore di classe statico non consente di proteggere il costruttore, poiché i costruttori statici vengono chiamati dal sistema, all'esterno del percorso di esecuzione del codice dell'applicazione. Quando una richiesta di collegamento viene applicata a un'intera classe, tale richiesta non consente quindi di proteggere l'accesso a un costruttore statico, anche se consente di proteggere il resto della classe.  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>Vedere anche
 
 - [Attributi](../../standard/attributes/index.md)
-- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
+- [Sicurezza dall'accesso di codice](code-access-security.md)
