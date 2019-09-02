@@ -47,7 +47,7 @@ Esiste una sola architettura dell'applicazione: l'architettura del sistema o del
 - **Greg Young. Documenti CQRS** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan. Clarified CQRS** \ (Definizione di CQRS)
+- **Udi Dahan. Definizione di CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]

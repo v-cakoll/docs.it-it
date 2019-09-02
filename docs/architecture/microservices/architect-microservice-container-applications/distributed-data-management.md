@@ -89,16 +89,16 @@ Per altre informazioni sull'uso della comunicazione asincrona, vedere le sezioni
 - **Coerenza finale** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Data Consistency Primer** \ (Introduzione alla coerenza dei dati)
+- **Introduzione alla coerenza dei dati** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**  \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Materialized View** \ (Vista materializzata)
+- **Vista materializzata** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (ACID e BASE: il pH mutevole dell'elaborazione delle transazioni del database)
+- **Charles Row. ACID vs. BASE: ACID e BASE: il pH mutevole dell'elaborazione delle transazioni del database** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Transazione di compensazione** \

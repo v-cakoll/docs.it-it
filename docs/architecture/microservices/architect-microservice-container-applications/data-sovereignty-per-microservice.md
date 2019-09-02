@@ -47,7 +47,7 @@ I microservizi risultano vantaggiosi per DDD perché forniscono limiti reali sot
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Pattern: Database per service** \ (Criterio: database per servizio)
+- **Chris Richardson. Criterio:  database per servizio** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \

@@ -325,58 +325,58 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Fork di eShopOnContainers tramite NServiceBus (Particular Software)**  \
     <https://go.particular.net/eShopOnContainers>
 
-- **Event Driven Messaging** \ (Messaggistica basata su eventi)
+- **Messaggistica basata su eventi** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)**  \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Publish-Subscribe channel** \ (Canale di pubblicazione-sottoscrizione)
+- **Canale di pubblicazione-sottoscrizione** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Communicating Between Bounded Contexts** \ (Comunicazione tra contesti delimitati)
+- **Comunicazione tra contesti delimitati** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** \ (Coerenza finale)
+- **Coerenza finale** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown. Strategies for Integrating Bounded Contexts** \ (Strategie per l'integrazione di contesti delimitati)
+- **Philip Brown. Strategie per l'integrazione di contesti delimitati** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** \ (Sviluppo di microservizi transazionali usando aggregazioni, Event Sourcing e CQRS - Parte 2)
+- **Chris Richardson. Sviluppo di microservizi transazionali usando aggregazioni, Event Sourcing e CQRS - Parte 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Event Sourcing pattern** \ (Schema Event Sourcing)
+- **Chris Richardson. Schema Event Sourcing** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Introducing Event Sourcing** \ (Introduzione a Event Sourcing)
+- **Introduzione a Event Sourcing** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Database di Event Store**. Sito ufficiale. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Event-Driven Data Management for Microservices** \ (Gestione di dati basati su eventi per microservizi)
+- **Patrick Nommensen. Gestione di dati basati su eventi per microservizi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Il teorema CAP** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **What is CAP Theorem?** (Che cos'è il teorema CAP) \
+- **Che cos'è il teorema CAP** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **Data Consistency Primer** \ (Introduzione alla coerenza dei dati)
+- **Introduzione alla coerenza dei dati** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet** \ (Il teorema CAP: perché "tutto è diverso" con il cloud e Internet)
+- **Rick Saling. Il teorema CAP: perché "tutto è diverso" con il cloud e Internet** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** \ (CAP dodici anni dopo: come sono cambiate le "regole")
+- **Eric Brewer. CAP dodici anni dopo: come sono cambiate le "regole"**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
+- **Guida all'affidabilità**documentazione RabbitMQ \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 > [!div class="step-by-step"]
