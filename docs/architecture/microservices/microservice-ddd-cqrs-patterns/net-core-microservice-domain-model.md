@@ -169,10 +169,10 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 - **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Data Points - Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
+- **Julie Lerman. Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
+- **Udi Dahan. Come creare modelli di dominio completamente incapsulati** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]

@@ -53,7 +53,7 @@ Questo metodo funziona sia per i metodi dinamici che per quelli non dinamici. Si
 
 **Libreria** CorGuids.lib
 
-**Versioni .NET Framework:** [! INCLUDi[net_current_v472plus](../../../../includes/net-current-v472plus.md)
+**Versioni .NET Framework:** [!INCLUDI][net_current_v472plus](../../../../includes/net-current-v472plus.md)
 
 ## <a name="see-also"></a>Vedere anche
 
