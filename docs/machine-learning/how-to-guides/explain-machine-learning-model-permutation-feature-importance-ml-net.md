@@ -1,16 +1,16 @@
 ---
 title: Descrivere le previsioni del modello con Permutation Feature Importance
 description: Comprendere l'importanza delle caratteristiche dei modelli con Permutation Feature Importance in ML.NET
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307375"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167649"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Descrivere le previsioni del modello con Permutation Feature Importance
 
@@ -50,7 +50,7 @@ Di seguito è riportato un esempio del set di dati:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-I dati in questo esempio possono essere modellati in base a una classe come `HousingPriceData`:
+I dati in questo esempio possono essere modellati in base a una classe come `HousingPriceData` e caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-Caricare i dati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 

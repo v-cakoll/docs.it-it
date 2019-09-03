@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422596"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168724"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
 
 L'istruzione try-catch è costituita da un blocco `try` seguito da una o più clausole `catch`, che specificano i gestori per eccezioni diverse.
-
-## <a name="remarks"></a>Note
 
 Quando viene generata un'eccezione, Common Language Runtime(CLR) cerca l'istruzione `catch` che gestisce questa eccezione. Se il metodo attualmente in esecuzione non contiene tale blocco `catch`, CLR analizza il metodo che ha chiamato il metodo corrente e così via fino allo stack di chiamate. Se non viene trovato alcun blocco `catch`, CLR visualizza un messaggio di eccezione non gestita per l'utente e interrompe l'esecuzione del programma.
 
@@ -131,15 +129,16 @@ static void Main()
 Per altre informazioni su catch, vedere [try-catch-finally](try-catch-finally.md).
 
 ## <a name="exceptions-in-async-methods"></a>Eccezioni nei metodi asincroni
-Un metodo asincrono viene contrassegnato da un modificatore [async](async.md) e in genere contiene una o più espressioni o istruzioni await. Un'espressione await applica l'operatore [await](await.md) a un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
+
+Un metodo asincrono viene contrassegnato da un modificatore [async](async.md) e in genere contiene una o più espressioni o istruzioni await. Un'espressione await applica l'operatore [await](../operators/await.md) a un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
 
 Quando il controllo raggiunge un oggetto `await` nel metodo asincrono, l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere. Per altre informazioni, vedere [Programmazione asincrona con Async e Await](../../programming-guide/concepts/async/index.md) e [Flusso di controllo in programmi asincroni](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
 
 L'attività completata a cui viene applicato `await` può essere in uno stato di errore a causa di un'eccezione non gestita nel metodo che restituisce l'attività. L'attesa dell'attività genera un'eccezione. Un'attività può inoltre terminare con uno stato di annullamento se viene annullato il processo asincrono che la restituisce. L'attesa di un'attività annullata genera un'eccezione `OperationCanceledException`. Per altre informazioni su come annullare un processo asincrono, vedere [Ottimizzazione dell'applicazione Async](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Per intercettare l'eccezione, attendere l'attività in un blocco `try` e intercettare l'eccezione nel blocco `catch` associato. Per un esempio, vedere la sezione "Esempio".
+Per intercettare l'eccezione, attendere l'attività in un blocco `try` e intercettare l'eccezione nel blocco `catch` associato. Per un esempio, vedere la sezione [Esempio di metodo asincrono](#async-method-example).
 
-Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività può essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione "Esempio".
+Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività può essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione [Esempio di Task.WhenAll](#taskwhenall-example).
 
 ## <a name="example"></a>Esempio
 
@@ -147,7 +146,7 @@ Nel seguente esempio, il blocco `try` contiene una chiamata al metodo `ProcessSt
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>Esempio
+## <a name="two-catch-blocks-example"></a>Esempio di due blocchi catch
 
 Nell'esempio seguente, vengono usati due blocchi catch e viene intercettata l'eccezione più specifica, che è la prima.
 
@@ -157,7 +156,7 @@ Se nell'esempio si inserisce per primo il blocco catch meno specifico, viene vis
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>Esempio
+## <a name="async-method-example"></a>Esempio di metodo asincrono
 
 L'esempio seguente illustra la gestione delle eccezioni per i metodi asincroni. Per intercettare un'eccezione generata da un'attività asincrona, inserire l'espressione `await` in un blocco `try` e intercettare l'eccezione in un blocco `catch`.
 
@@ -167,7 +166,7 @@ Rimuovere il commento dalla riga `throw new OperationCanceledException` per illu
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>Esempio
+## <a name="taskwhenall-example"></a>Esempio di Task.WhenAll
 
 Il seguente esempio illustra la gestione delle eccezioni dove più attività possono restituire più eccezioni. Il blocco `try` attende l'attività restituita da una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. L'attività viene completata quando vengono completate le tre attività a cui si applica WhenAll.
 
@@ -177,7 +176,7 @@ Ognuna delle tre attività genera un'eccezione. Il blocco `catch` scorre le ecce
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Per altre informazioni, vedere la sezione [Istruzione try](~/_csharplang/spec/statements.md#the-try-statement) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 

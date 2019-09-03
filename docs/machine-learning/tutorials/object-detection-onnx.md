@@ -3,15 +3,15 @@ title: 'Esercitazione: Rilevare oggetti tramite Deep Learning con ONNX e ML.NET'
 description: Questa esercitazione illustra come usare un modello di Deep Learning ONNX già sottoposto a training in ML.NET per rilevare gli oggetti nelle immagini.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868717"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106855"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: Rilevare oggetti usando ONNX in ML.NET
 
@@ -21,11 +21,11 @@ Il training di un modello di rilevamento degli oggetti da zero richiede l'impost
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
-> * Informazioni sul problema
-> * Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
-> * Acquisire familiarità con il modello
-> * Riutilizzare il modello già sottoposto a training
-> * Rilevare oggetti con un modello caricato
+> - Informazioni sul problema
+> - Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
+> - Acquisire familiarità con il modello
+> - Riutilizzare il modello già sottoposto a training
+> - Rilevare oggetti con un modello caricato
 
 ## <a name="pre-requisites"></a>Prerequisiti
 
@@ -117,7 +117,7 @@ Ora che sono state apprese le nozioni generali su ONNX e sul funzionamento di Ti
 
 Aprire il file *Program.cs* e aggiungere le istruzioni `using` aggiuntive seguenti all'inizio del file:
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 Definire quindi i percorsi dei diversi asset. 
 
@@ -125,7 +125,7 @@ Definire quindi i percorsi dei diversi asset.
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. Quindi, all'interno del metodo `Main` creare i campi per archiviare il percorso degli asset:
+1. Quindi, all'interno del metodo `Main` creare i campi per archiviare il percorso degli asset.
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ Inizializzare la variabile `mlContext` con una nuova istanza di `MLContext` aggi
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>Aggiungere metodi helper
-
-Dopo che il modello ha eseguito una stima, nota in genere come assegnazione dei punteggi, e gli output sono stati elaborati, è necessario disegnare i rettangoli di selezione sull'immagine. A tale scopo, aggiungere un metodo denominato`DrawBoundingBox` sotto il metodo `GetAbsolutePath` all'interno di *Program.cs*.
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-Caricare prima di tutto l'immagine e ottenere le dimensioni di altezza e larghezza nel metodo `DrawBoundingBox`.
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-Creare quindi un ciclo for-each per eseguire l'iterazione di ogni rettangolo di selezione rilevato dal modello.
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-All'interno del ciclo for-each, ottenere le dimensioni del rettangolo di selezione.
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-Poiché le dimensioni del rettangolo di selezione corrispondono all'input del modello di `416 x 416`, ridimensionare il rettangolo di selezione in modo che le sue dimensioni corrispondano a quelle effettive dell'immagine.
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-Definire quindi un modello per il testo che verrà visualizzato sopra ogni rettangolo di selezione. Il testo conterrà la classe dell'oggetto all'interno del rispettivo rettangolo di selezione e la confidenza.
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-Per disegnare sull'immagine, convertirla in un oggetto [`Graphics`](xref:System.Drawing.Graphics).
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-All'interno del blocco di codice `using` ottimizzare le impostazioni dell'oggetto [`Graphics`](xref:System.Drawing.Graphics) del grafico.
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-Al di sotto, impostare le opzioni relative al tipo di carattere e al colore per il testo e il rettangolo di selezione.
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-Creare e riempire un rettangolo sopra il rettangolo di selezione per contenere il testo usando il metodo [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*). Ciò consentirà di creare un contrasto per il testo e migliorare la leggibilità.
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-Disegnare quindi il testo e il rettangolo di selezione nell'immagine usando i metodi [`DrawString`](xref:System.Drawing.Graphics.DrawString*) e [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-Al di fuori del ciclo for-each aggiungere il codice per salvare le immagini in `outputDirectory`.
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-Per ottenere feedback aggiuntivo relativo al fatto che l'applicazione sta eseguendo le stime come previsto in fase di runtime, aggiungere un metodo denominato `LogDetectedObjects` sotto il metodo `DrawBoundingBox` nel file *Program.cs* per restituire gli oggetti rilevati nella console.
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-Entrambi questi metodi saranno utili quando il modello ha prodotto gli output e questi sono stati elaborati. Per prima cosa, tuttavia, creare la funzionalità per elaborare gli output del modello.
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>Creare un parser per la post-elaborazione degli output del modello
 
@@ -344,7 +274,7 @@ Dopo aver creato le classi per le dimensioni e i rettangoli di selezione, è pos
     - `CELL_HEIGHT`: altezza di una cella nella griglia dell'immagine.
     - `channelStride`: posizione iniziale della cella corrente nella griglia.
 
-    Quando il modello assegna un punteggio a un'immagine, divide l'input `416px x 416px` in una griglia di celle con dimensioni `13 x 13`. Ogni cella contenuta è `32px x 32px`. All'interno di ogni cella sono presenti 5 rettangoli di selezione, ognuno contenente 5 funzionalità (x, y, larghezza, altezza, confidenza). Inoltre, ogni rettangolo di selezione contiene la probabilità di ognuna delle classi, che in questo caso è 20. Di conseguenza, ogni cella contiene 125 informazioni (5 funzionalità + 20 probabilità delle classi). 
+    Quando il modello esegue una stima, operazione nota anche come assegnazione di punteggi, divide l'immagine di input `416px x 416px` in una griglia di celle delle dimensioni di `13 x 13`. Ogni cella contenuta è `32px x 32px`. All'interno di ogni cella sono presenti 5 rettangoli di selezione, ognuno contenente 5 funzionalità (x, y, larghezza, altezza, confidenza). Inoltre, ogni rettangolo di selezione contiene la probabilità di ognuna delle classi, che in questo caso è 20. Di conseguenza, ogni cella contiene 125 informazioni (5 funzionalità + 20 probabilità delle classi). 
 
 Creare un elenco di ancoraggi sotto `channelStride` per tutti i 5 rettangoli di selezione:
 
@@ -560,7 +490,7 @@ Analogamente alla post-elaborazione, la fase di assegnazione dei punteggi preved
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    Le pipeline ML.NET in genere presuppongono la presenza di dati su cui agire quando viene chiamato il metodo [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*). In questo caso, verrà usato un processo simile al training. Tuttavia, poiché di fatto non viene eseguito alcun training, è accettabile usare un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) vuota. Creare una nuova interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) per la pipeline da un elenco vuoto.
+    Le pipeline ML.NET devono conoscere lo schema dei dati su cui agire quando viene chiamato il metodo [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*). In questo caso, verrà usato un processo simile al training. Tuttavia, poiché di fatto non viene eseguito alcun training, è accettabile usare un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) vuota. Creare una nuova interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) per la pipeline da un elenco vuoto.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ La configurazione è stata completata. È ora possibile usarla per lo scopo di q
 
 ## <a name="detect-objects"></a>Rilevare oggetti
 
-Dopo aver completato la configurazione, è possibile iniziare a rilevare alcuni oggetti. All'interno del metodo `Main` della classe *Program.cs* aggiungere un'istruzione try-catch.
+Dopo aver completato la configurazione, è possibile iniziare a rilevare alcuni oggetti. Per iniziare, aggiungere i riferimenti al marcatore e al parser nella classe *Program.cs*.
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>Assegnare punteggi agli output del modello e analizzarli
+
+All'interno del metodo `Main` della classe *Program.cs* aggiungere un'istruzione try-catch.
 
 ```csharp
 try
@@ -633,7 +569,78 @@ Creare quindi un'istanza di `OnnxModelScorer` e usarla per assegnare punteggi ai
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-Dopo aver elaborato l'output del modello, è possibile tracciare i rettangoli di selezione sulle immagini. Creare un ciclo for per eseguire l'iterazione su ognuna delle immagini con punteggio.
+Dopo aver elaborato l'output del modello, è possibile tracciare i rettangoli di selezione sulle immagini. 
+
+### <a name="visualize-predictions"></a>Visualizzare stime
+
+Dopo che il modello ha assegnato un punteggio alle immagini e gli output sono stati elaborati, è necessario disegnare i rettangoli di selezione sull'immagine. A tale scopo, aggiungere un metodo denominato `DrawBoundingBox` sotto il metodo `GetAbsolutePath` all'interno di *Program.cs*.
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+Caricare prima di tutto l'immagine e ottenere le dimensioni di altezza e larghezza nel metodo `DrawBoundingBox`.
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+Creare quindi un ciclo for-each per eseguire l'iterazione di ogni rettangolo di selezione rilevato dal modello.
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+All'interno del ciclo for-each, ottenere le dimensioni del rettangolo di selezione.
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+Poiché le dimensioni del rettangolo di selezione corrispondono all'input del modello di `416 x 416`, ridimensionare il rettangolo di selezione in modo che le sue dimensioni corrispondano a quelle effettive dell'immagine.
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+Definire quindi un modello per il testo che verrà visualizzato sopra ogni rettangolo di selezione. Il testo conterrà la classe dell'oggetto all'interno del rispettivo rettangolo di selezione e la confidenza.
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+Per disegnare sull'immagine, convertirla in un oggetto [`Graphics`](xref:System.Drawing.Graphics).
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+All'interno del blocco di codice `using` ottimizzare le impostazioni dell'oggetto [`Graphics`](xref:System.Drawing.Graphics) del grafico.
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+Al di sotto, impostare le opzioni relative al tipo di carattere e al colore per il testo e il rettangolo di selezione.
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+Creare e riempire un rettangolo sopra il rettangolo di selezione per contenere il testo usando il metodo [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*). Ciò consentirà di creare un contrasto per il testo e migliorare la leggibilità.
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+Disegnare quindi il testo e il rettangolo di selezione nell'immagine usando i metodi [`DrawString`](xref:System.Drawing.Graphics.DrawString*) e [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+Al di fuori del ciclo for-each aggiungere il codice per salvare le immagini in `outputDirectory`.
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+Per ottenere un ulteriore riscontro che l'applicazione stia eseguendo le stime come previsto in fase di runtime, aggiungere un metodo denominato `LogDetectedObjects` sotto il metodo `DrawBoundingBox` nel file *Program.cs* per restituire gli oggetti rilevati nella console.
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+Ora che sono disponibili metodi helper per creare un riscontro visivo dalle stime, aggiungere un ciclo for per scorrere ognuna delle immagini con punteggio.
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ Sotto questo codice usare il metodo `DrawBoundingBox` per tracciare i rettangoli
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-Infine, aggiungere la logica di registrazione con il metodo `LogDetectedObjects`.
+Infine, usare il metodo `LogDetectedObjects` per restituire le stime alla console.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ La procedura è stata completata. È stato creato un modello di Machine Learning
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
-> * Informazioni sul problema
-> * Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
-> * Acquisire familiarità con il modello
-> * Riutilizzare il modello già sottoposto a training
-> * Rilevare oggetti con un modello caricato
+> - Informazioni sul problema
+> - Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
+> - Acquisire familiarità con il modello
+> - Riutilizzare il modello già sottoposto a training
+> - Rilevare oggetti con un modello caricato
 
 Consultare il repository GitHub degli esempi di Machine Learning per esaminare un esempio di rilevamento di oggetti esteso.
 > [!div class="nextstepaction"]

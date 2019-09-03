@@ -2,15 +2,15 @@
 title: 'Esercitazione: Creare un sistema di raccomandazione di film - fattorizzazione di matrice'
 description: In questa esercitazione viene illustrato come creare un sistema di raccomandazione di film con ML.NET in un'applicazione console .NET Core. I passaggi usano C# e Visual Studio 2019.
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666690"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107261"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Esercitazione: Creare un sistema di raccomandazione di film usando la fattorizzazione di matrice con ML.NET
 
@@ -160,7 +160,7 @@ I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.M
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) definisce lo schema dei dati e legge il contenuto del file. Acquisisce le variabili di percorso dei dati e restituisce un oggetto `IDataView`. In questo caso viene specificato il percorso dei file `Test` e `Train` e vengono indicati sia l'intestazione del file di testo, in modo che il metodo possa usare correttamente i nomi di colonna, sia la virgola come separatore dei dati di tipo carattere (il separatore predefinito è una tabulazione).
 
-Aggiungere queste due righe di codice come righe successive nel metodo `Main()` per chiamare il metodo `LoadData()` e restituire i dati `Train` e `Test`:
+Aggiungere il codice seguente nel metodo `Main()` per chiamare il metodo `LoadData()` e restituire i dati `Train` e `Test`:
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 

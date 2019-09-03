@@ -1,16 +1,16 @@
 ---
 title: Eseguire il training di un modello e valutarlo
 description: Informazioni su come creare modelli di Machine Learning, raccogliere metriche e misurare le prestazioni con ML.NET. Un modello di Machine Learning identifica i modelli nei dati di training per eseguire stime usando nuovi dati.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397633"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169043"
 ---
 # <a name="train-and-evaluate-a-model"></a>Eseguire il training di un modello e valutarlo
 
@@ -20,7 +20,7 @@ Informazioni su come creare modelli di Machine Learning, raccogliere metriche e 
 
 L'obiettivo di un modello di Machine Learning è di identificare motivi all'interno dei dati di training. Questi motivi vengono usati per eseguire stime con nuovi dati.
 
-Dato il modello di dati seguente:
+I dati possono essere modellati in base a una classe come `HousingData`.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Caricare i dati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView):
+Usando i dati seguenti che vengono caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 HousingData[] housingData = new HousingData[]

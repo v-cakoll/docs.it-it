@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327165"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105221"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop Windows Forms in .NET Core
 
@@ -18,7 +18,7 @@ Questo articolo descrive come convertire un'app desktop basata su Windows Forms 
 
 In questo articolo vengono usati vari nomi per identificare i tipi di file usati per la migrazione. Durante la migrazione del progetto personale i file verranno denominati in modo diverso, pertanto abbinarli mentalmente a quelli elencati di seguito:
 
-| File | Description |
+| File | DESCRIZIONE |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyForms.csproj** | Nome del progetto Windows Forms di .NET Framework da convertire. |
@@ -189,7 +189,7 @@ Se è necessario convertire un progetto di libreria di controlli di Windows Form
 
 Riprendendo l'esempio del passaggio precedente, è possibile procedere espandendo i progetti e i file usati.
 
-| File | Description |
+| File | DESCRIZIONE |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyControls.csproj** | Nome del progetto per controlli Windows Forms di .NET Framework da convertire. |
@@ -300,7 +300,7 @@ Quando Visual Studio 2019 supporterà la finestra di progettazione per Windows F
  
 ## <a name="next-steps"></a>Passaggi successivi
 
-* Vedere altre informazioni su [Windows Compatibility Pack][compat-pack].
-* Guardare un [video sulla conversione](https://www.youtube.com/watch?v=upVQEUc_KwU) del progetto Windows Forms di .NET Framework in .NET Core.
+- Vedere altre informazioni su [Windows Compatibility Pack][compat-pack].
+- Guardare un [video sulla conversione](https://www.youtube.com/watch?v=upVQEUc_KwU) del progetto Windows Forms di .NET Framework in .NET Core.
 
 [compat-pack]: windows-compat-pack.md

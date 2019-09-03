@@ -1,16 +1,16 @@
 ---
 title: Eseguire il training di un modello di Machine Learning tramite convalida incrociata
 description: Di seguito viene descritto come usare la convalida incrociata per creare modelli di Machine Learning più affidabili in ML.NET. La convalida incrociata è una tecnica di training e valutazione del modello che suddivide i dati in più partizioni ed esegue il training di più algoritmi nelle partizioni.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397653"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169063"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>Eseguire il training di un modello di Machine Learning tramite convalida incrociata
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-I dati possono essere modellati in base a una classe come `HousingData`:
+I dati possono essere modellati da una classe come `HousingData` e caricati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 public class HousingData
@@ -47,8 +47,6 @@ public class HousingData
     public float CurrentPrice { get; set; }
 }
 ```
-
-Caricare i dati in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ## <a name="prepare-the-data"></a>Preparare i dati
 
