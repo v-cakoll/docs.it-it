@@ -1,17 +1,17 @@
 ---
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.date: 09/02/2019
+ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105507"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252895"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
-Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibile provare. 
+Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibile provare.
 
 - [Membri di sola lettura](#readonly-members)
 - [Membri di interfaccia predefiniti](#default-interface-members)
@@ -26,6 +26,7 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Tipi riferimento nullable](#nullable-reference-types)
 - [Flussi asincroni](#asynchronous-streams)
 - [Indici e intervalli](#indices-and-ranges)
+- [Miglioramento delle stringhe verbatim interpolate](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Questo articolo è stato aggiornato per l'ultima volta per l'anteprima 5 di C# 8.0.
@@ -376,7 +377,8 @@ await foreach (var number in GenerateSequence())
 
 Gli intervalli e gli indici offrono una sintassi concisa per la specifica di intervalli secondari in una matrice, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>.
 
-Questo supporto del linguaggio si basa su due nuovi tipi e due nuovi operatori.
+Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operatori:
+
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
 - L'operatore `^`, che specifica che un indice è relativo alla fine della sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
@@ -444,3 +446,7 @@ var text = words[phrase];
 ```
 
 È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
+
+L' `$` ordine dei token `@` e nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere any: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti il `$` token deve essere visualizzato prima del `@` token.

@@ -1,13 +1,13 @@
 ---
-title: '* (Moltiplicazione) (Entity SQL)'
+title: '* Moltiplicare (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: 308df758d59a7e12a8b5a19ae72fcbee2f168490
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19fb73d327f91303de938a5f49866339413b9698
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760467"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250057"
 ---
 # <a name="-multiply-entity-sql"></a>* (moltiplicazione) (Entity SQL)
 Moltiplica due espressioni.  
@@ -23,12 +23,12 @@ expression * expression
  Qualsiasi espressione valida con qualsiasi tipo di dati numerici.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- Tipo di dati ottenuto della promozione implicita del tipo dei due argomenti. Per altre informazioni sulla promozione implicita del tipo, vedere [sistema di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
+ Tipo di dati ottenuto della promozione implicita del tipo dei due argomenti. Per ulteriori informazioni sull'innalzamento di tipo implicito, vedere [System Type](type-system-entity-sql.md).  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore aritmetico * per moltiplicare due numeri. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
@@ -36,4 +36,4 @@ expression * expression
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Riferimento a Entity SQL](entity-sql-reference.md)

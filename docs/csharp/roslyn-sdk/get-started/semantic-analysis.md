@@ -3,12 +3,12 @@ title: Introduzione all'analisi semantica
 description: Questa esercitazione offre una panoramica dell'utilizzo dell'analisi semantica con .NET Compiler SDK.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611744"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252941"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introduzione all'analisi semantica
 
@@ -40,7 +40,7 @@ In questa esercitazione, viene esaminato ancora una volta il programma "Hello Wo
 Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo):
 
 * In Visual Studio scegliere **File** > **Nuovo** > **Progetto** per visualizzare la finestra di dialogo Nuovo progetto.
-* In **Visual C#** > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo).
+* In **Visual C#**  > **Estendibilità** scegliere **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo).
 * Denominare il progetto "**SemanticQuickStart**" e fare clic su OK.
 
 Verrà analizzato il semplice programma "Hello World!" mostrato in precedenza.
@@ -78,7 +78,7 @@ Dall'oggetto <xref:Microsoft.CodeAnalysis.SymbolInfo> è possibile ottenere <xre
 
 Eseguire il programma. L'output dovrebbe essere il seguente:
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -135,7 +135,7 @@ Selezionare solo la proprietà del nome e solo i nomi distinti rimuovendo qualsi
 
 Compilare ed eseguire il programma. È necessario visualizzare il seguente output:
 
-```
+```output
 Join
 Substring
 Trim

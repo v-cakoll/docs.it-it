@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: ee63b6df4f99415e5d36f0717ff325d9fbabd9e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fcf0d3eed95d36f7764ca048da62b589779d8d47
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641605"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249553"
 ---
 # <a name="query-execution"></a>Esecuzione di query
 Dopo essere stata creata da un utente, una query LINQ viene convertita in un albero dei comandi. Un albero dei comandi è una rappresentazione di una query compatibile con Entity Framework. L'albero dei comandi viene quindi eseguito sull'origine dati. In fase di runtime della query, tutte le espressioni di query, ovvero tutti i componenti della query, vengono valutate, incluse le espressioni usate nella materializzazione del risultato.  
   
- Il momento di esecuzione delle espressioni di query può variare. Le query LINQ vengono sempre eseguite quando la variabile di query viene scorsa e non quando viene creata. Questa operazione viene definita *un'esecuzione posticipata*. È inoltre possibile forzare l'esecuzione immediata di una query. Questa operazione è utile per memorizzare nella cache i risultati della query e verrà descritta di seguito in questo argomento.  
+ Il momento di esecuzione delle espressioni di query può variare. Le query LINQ vengono sempre eseguite quando la variabile di query viene scorsa e non quando viene creata. Questa operazione è denominata *esecuzione posticipata*. È inoltre possibile forzare l'esecuzione immediata di una query. Questa operazione è utile per memorizzare nella cache i risultati della query e verrà descritta di seguito in questo argomento.  
   
  Quando viene eseguita una query LINQ to Entities, è possibile che alcune espressioni nella query vengano eseguite nel server e che alcune parti vengano eseguite localmente nel client. La valutazione sul lato client di un'espressione viene effettuata prima dell'esecuzione della query nel server. Se un'espressione viene valutata nel client, il risultato della valutazione sostituisce l'espressione nella query e la query viene quindi eseguita nel server. Poiché le query vengono eseguite sull'origine dati, la configurazione dell'origine dati prevale sul comportamento specificato nel client. La gestione dei valori Null e la precisione numerica dipendono ad esempio dalle impostazioni del server. Tutte le eccezioni generate durante l'esecuzione della query nel server vengono passate direttamente al client.  
  
 > [!TIP]
-> Per un pratico riepilogo degli operatori di query in formato tabella, che consente di identificare rapidamente il comportamento di esecuzione di un operatore, consultare [classificazione di operatori di Query Standard dalla modalità di esecuzione (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Per un riepilogo pratico degli operatori di query in formato tabella, che consente di identificare rapidamente il comportamento di esecuzione di un operatore, vedere [classificazione degli operatori di query standard inC#base alla modalità di esecuzione ()](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Esecuzione di query posticipata  
- In una query che restituisce una sequenza di valori, la variabile di query stessa non contiene mai i risultati della query ma viene usata solo per l'archiviazione dei comandi della query. L'esecuzione della query viene posticipata finché non viene eseguita un'iterazione della variabile di query in un ciclo `foreach` o `For Each`. Questo è noto come *un'esecuzione posticipata*; vale a dire query viene eseguita qualche tempo dopo la query viene costruita. È quindi possibile eseguire una query il numero di volte desiderato. Tale caratteristica è utile, ad esempio, quando si dispone di un database che viene aggiornato da altre applicazioni. Nell'applicazione è possibile creare una query per recuperare le informazioni più recenti ed eseguire ripetutamente la query che restituisce ogni volta le informazioni aggiornate.  
+ In una query che restituisce una sequenza di valori, la variabile di query stessa non contiene mai i risultati della query ma viene usata solo per l'archiviazione dei comandi della query. L'esecuzione della query viene posticipata finché non viene eseguita un'iterazione della variabile di query in un ciclo `foreach` o `For Each`. Questa operazione è nota come *esecuzione posticipata*; in altre termini, l'esecuzione della query viene eseguita un po' di tempo dopo la costruzione della query. È quindi possibile eseguire una query il numero di volte desiderato. Tale caratteristica è utile, ad esempio, quando si dispone di un database che viene aggiornato da altre applicazioni. Nell'applicazione è possibile creare una query per recuperare le informazioni più recenti ed eseguire ripetutamente la query che restituisce ogni volta le informazioni aggiornate.  
   
  L'esecuzione posticipata consente di combinare più query o di estendere una query. Una query estesa viene modificata in modo da includere nuove operazioni. Le modifiche verranno quindi riflesse nell'eventuale esecuzione. Nell'esempio seguente la prima query restituisce tutti i prodotti. La seconda query estende la prima usando `Where` per restituire tutti i prodotti di taglia "L":  
   
@@ -47,7 +47,7 @@ Dopo essere stata creata da un utente, una query LINQ viene convertita in un alb
   
  Determinate operazioni vengono eseguite sempre nel client, ad esempio l'associazione di valori, le sottoespressioni, le sottoquery e la materializzazione di oggetti nei risultati della query. Di conseguenza questi elementi, ad esempio i valori dei parametri, non possono essere aggiornati durante l'esecuzione. I tipi anonimi possono essere costruiti inline nell'origine dati, ma questo comportamento non deve essere presupposto. Anche i raggruppamenti inline possono essere costruiti nell'origine dati, ma questo comportamento non deve essere presupposto in ogni istanza. In generale, è consigliabile non fare presupposizioni relativamente agli elementi che verranno costruiti nel server.  
   
- Contenuto della sezione vengono descritti scenari in cui il codice viene eseguito localmente nel client. Per altre informazioni su quali tipi di espressioni vengono eseguiti in locale, vedere [espressioni nelle query LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
+ Contenuto della sezione vengono descritti scenari in cui il codice viene eseguito localmente nel client. Per ulteriori informazioni sui tipi di espressioni eseguiti localmente, vedere [espressioni in LINQ to Entities query](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Valori letterali e parametri  
  Le variabili locali, ad esempio la variabile `orderID` nell'esempio seguente, vengono valutate nel client.  

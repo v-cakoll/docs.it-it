@@ -2,18 +2,18 @@
 title: Tipi di dati di base
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964070"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248031"
 ---
 # <a name="basic-data-types"></a>Tipi di dati di base
 Poiché le query LINQ to SQL vengono convertite in Transact-SQL prima di essere eseguite in Microsoft SQL Server, in LINQ to SQL è supportata buona parte delle funzionalità predefinite di SQL Server  per i tipi di dati di base.  
   
 ## <a name="casting"></a>Cast  
- I cast impliciti o espliciti vengono abilitati da un tipo CLR di origine in un tipo CLR di destinazione se è disponibile una conversione valida simile all'interno di SQL Server. Per ulteriori informazioni sul cast CLR, vedere la [funzione CType](../../../../../visual-basic/language-reference/functions/ctype-function.md) (Visual Basic) e [gli operatori di cast e](../../../../../csharp/language-reference/operators/type-testing-and-cast.md)di testing dei tipi. Dopo la conversione i cast modificano il comportamento delle operazioni eseguite su un'espressione CLR, in modo che corrisponda a quello di altre espressioni CLR di cui viene eseguito naturalmente il mapping al tipo di destinazione. I cast sono inoltre convertibili nel contesto del mapping di ereditarietà. È possibile eseguire il cast degli oggetti in sottotipi dell'entità più specifici, in modo che sia possibile accedere ai dati specifici del sottotipo.  
+ I cast impliciti o espliciti vengono abilitati da un tipo CLR di origine in un tipo CLR di destinazione se è disponibile una conversione valida simile all'interno di SQL Server. Per ulteriori informazioni sul cast CLR, vedere la [funzione CType](../../../../../visual-basic/language-reference/functions/ctype-function.md) (Visual Basic) e [gli operatori di cast e di testing dei tipi](../../../../../csharp/language-reference/operators/type-testing-and-cast.md). Dopo la conversione i cast modificano il comportamento delle operazioni eseguite su un'espressione CLR, in modo che corrisponda a quello di altre espressioni CLR di cui viene eseguito naturalmente il mapping al tipo di destinazione. I cast sono inoltre convertibili nel contesto del mapping di ereditarietà. È possibile eseguire il cast degli oggetti in sottotipi dell'entità più specifici, in modo che sia possibile accedere ai dati specifici del sottotipo.  
   
 ## <a name="equality-operators"></a>Operatori di uguaglianza  
  LINQ to SQL all'interno di query LINQ to SQL supporta i seguenti operatori di uguaglianza sui tipi di dati di base:  
@@ -24,5 +24,5 @@ Poiché le query LINQ to SQL vengono convertite in Transact-SQL prima di essere 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Mapping del tipo SQL-CLR](sql-clr-type-mapping.md)
+- [Tipi di dati e funzioni](data-types-and-functions.md)

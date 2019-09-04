@@ -2,13 +2,13 @@
 title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252932"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
 
@@ -26,7 +26,7 @@ Per identificare un valore letterale stringa come stringa interpolata, anteporre
 
 Come illustrato nell'esempio, per includere un'espressione in una stringa interpolata è necessario racchiuderla tra parentesi graffe:
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ Le stringhe interpolate supportano tutte le caratteristiche della funzionalità 
 
 Per specificare una stringa di formato supportata dal tipo del risultato dell'espressione, far seguire all'espressione di interpolazione i due punti (":") e la stringa di formato da usare:
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ Per altre informazioni, vedere la sezione [Componente della stringa di formato](
 
 È possibile specificare la larghezza minima del campo e l'allineamento del risultato dell'espressione formattata facendo seguire l'espressione di interpolazione da una virgola (",") e dall'espressione costante:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ Se il valore *alignment* è positivo, il risultato dell'espressione formattata �
 
 Se è necessario specificare sia l'allineamento che una stringa di formato, iniziare con l'allineamento:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ Per altre informazioni, vedere la sezione [Componente di allineamento](../../sta
 
 Le stringhe interpolate supportano tutte le sequenze di escape che è possibile usare all'interno di valori letterali stringa normali. Per altre informazioni, vedere [Sequenze di escape delle stringhe](../programming-guide/strings/index.md#string-escape-sequences).
 
-Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa interpolata verbatim inizia con il carattere `$` seguito dal carattere `@`.
+Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa Verbatim interpolata inizia con `$` il carattere seguito `@` dal carattere. A partire C# da 8,0, è possibile usare `$` i `@` token e in qualsiasi ordine: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide.
 
 Per includere una parentesi graffa, "{" o "}", in una stringa di risultato, usare due parentesi graffe, "{{" o "}}". Per altre informazioni, vedere la sezione [Sequenze di escape delle parentesi graffe](../../standard/base-types/composite-formatting.md#escaping-braces) dell'argomento [Formattazione composita](../../standard/base-types/composite-formatting.md).
 

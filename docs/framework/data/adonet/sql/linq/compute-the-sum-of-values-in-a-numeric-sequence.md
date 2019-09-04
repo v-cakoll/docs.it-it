@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
-ms.openlocfilehash: 978b02e9363a89c5bd007afc1960bd2a2d0ca0d2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3a404068c2d89610aa9b01b392bca40f82e17707
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592553"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247920"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>Calcolare la somma dei valori in una sequenza numerica
 Per calcolare la somma di valori numerici in una sequenza, usare l'operatore <xref:System.Linq.Enumerable.Sum%2A>.  
@@ -19,7 +19,7 @@ Per calcolare la somma di valori numerici in una sequenza, usare l'operatore <xr
   
 - L'operatore di aggregazione `Sum` dell'operatore di query standard restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la semantica di SQL rimane invariata. Per questo motivo `Sum` restituisce null anziché zero per una sequenza vuota o per una sequenza che contiene solo valori null.  
   
-- Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Somma della quantità di integer a 32 bit non viene calcolata usando risultati a 64 bit e overflow può verificarsi per i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduzione di `Sum`. Questa possibilità esiste anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.  
+- Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La somma delle quantità Integer a 32 bit non viene calcolata usando risultati a 64 bit e l'overflow può verificarsi per la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conversione di `Sum`. Questa possibilità esiste anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercato il costo di trasporto complessivo di tutti gli ordini contenuti nella tabella `Order`.  
@@ -41,5 +41,5 @@ Per calcolare la somma di valori numerici in una sequenza, usare l'operatore <xr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Query di aggregazione](aggregate-queries.md)
+- [Download di database di esempio](downloading-sample-databases.md)

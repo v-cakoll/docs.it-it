@@ -3,19 +3,20 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942746"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251988"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
 Specifica le impostazioni di identità a livello di servizio.
 
- \<system.identityModel>\
-\<identityConfiguration>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> identityConfiguration**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +36,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|Descrizione|
+|Attributo|DESCRIZIONE|
 |---------------|-----------------|
 |name|Nome della sezione di configurazione dell'identità. È possibile utilizzare questo nome per fare riferimento a una sezione di configurazione specifica. Se non `name` si specifica alcun attributo, la sezione definisce la configurazione predefinita. La configurazione predefinita viene sempre utilizzata per gli scenari di federazione passiva. Per ulteriori informazioni, vedere l' [ \<elemento federationConfiguration >](federationconfiguration.md) .|
 |saveBootstrapContext|Specifica se i token di bootstrap devono essere inclusi nel token di sessione. Il valore può essere impostato anche in una raccolta di gestori di token impostando l' `saveBootstrapContext` attributo [ \<sull'elemento > securityTokenHandlerConfiguration](securitytokenhandlerconfiguration.md) . Un valore impostato nella raccolta di gestori di token sostituisce il valore impostato per il servizio.|
@@ -43,7 +44,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<caches>](caches.md)|Registra le cache utilizzate per i token di sessione e il rilevamento della riproduzione dei token. Può essere specificato a livello di servizio o su una raccolta di gestori di token di sicurezza. facoltativo.|
 |[\<certificateValidation>](certificatevalidation.md)|Controlla le impostazioni utilizzate dai gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o su una raccolta di gestori di token di sicurezza. facoltativo.|

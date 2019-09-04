@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972198"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254062"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Compilare una prima applicazione desktop WPF
 
@@ -55,7 +55,7 @@ Il primo passaggio consiste nel creare l'infrastruttura dell'applicazione, che i
 
 1. Creare un nuovo progetto di applicazione WPF in Visual Basic o C# oggetto **`ExpenseIt`** visivo denominato:
 
-   1. Aprire Visual Studio e selezionare **Crea un nuovo progetto** nel menu inizia.
+   1. Aprire Visual Studio e selezionare **Crea un nuovo progetto** **nel menu inizia** .
 
       Verrà visualizzata la finestra **di dialogo Crea un nuovo progetto** .
 
@@ -143,7 +143,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
 1. Impostare su "`ExpenseIt - Home`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Impostare i `DesignHeight` valori `DesignWidth` degli elementi e su 300 pixel.
+1. Impostare su 350 pixel `DesignWidth` e su 500 pixel. `DesignHeight`
 
     Il codice XAML ora viene visualizzato come segue per Visual Basic:
 
@@ -184,7 +184,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
 1. Impostare su "`ExpenseIt - View Expense`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Impostare i `DesignHeight` valori `DesignWidth` degli elementi e su 300 pixel.
+1. Impostare su 350 pixel `DesignWidth` e su 500 pixel. `DesignHeight` 
 
     *ExpenseReportPage. XAML* ha ora un aspetto simile al seguente in Visual Basic:
 
@@ -251,7 +251,7 @@ In questa sezione viene creata una tabella a colonna singola con tre righe e un 
    ```
 
    > [!TIP]
-   > È inoltre possibile impostare i valori dei margini nella finestra **Proprietà** , sotto la categoria **layout** :
+   > È inoltre possibile impostare i valori dei **margini** nella finestra **Proprietà** , sotto la categoria **layout** :
    >
    > ![Valori dei margini in Finestra Proprietà](./media/properties-margin.png)
 

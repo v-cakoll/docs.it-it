@@ -2,12 +2,12 @@
 title: Refactoring con una funzione pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591318"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253086"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring con una funzione pura (C#)
 Nell'esempio seguente viene eseguito il refactoring dell'esempio precedente, [Refactoring con un metodo di estensione (C#)](./refactoring-using-an-extension-method.md), per usare una funzione pure. In questo esempio il codice per individuare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  
@@ -156,7 +156,7 @@ class Program
   
  L'output ottenuto con questo esempio è uguale a quello ottenuto prima del refactoring:  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -174,7 +174,7 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>Passaggi successivi  
+### <a name="next-steps"></a>Fasi successive  
  Nell'esempio seguente viene illustrato come proiettare il codice XML in una forma diversa:  
   
 - [Proiezione di XML in una forma diversa (C#)](./projecting-xml-in-a-different-shape.md)  

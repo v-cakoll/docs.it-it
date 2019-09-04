@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912277"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250506"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina se un oggetto `String` di caratteri specifico corrisponde a un criterio specificato.  
@@ -39,7 +39,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  Nella tabella seguente viene descritta la sintassi del modello `string`.  
   
-|Carattere jolly|Descrizione|Esempio|  
+|Carattere jolly|DESCRIZIONE|Esempio|  
 |------------------------|-----------------|-------------|  
 |%|Qualsiasi `string` di zero o più caratteri.|`title like '%computer%'`Trova tutti i titoli con la `"computer"` parola in qualsiasi punto del titolo.|  
 |_ (carattere di sottolineatura)|Qualsiasi carattere singolo.|`firstname like '_ean'`Trova tutti i nomi di quattro lettere che terminano `"ean`con ", ad esempio Dean o Sean.|  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Esempio  
  Nelle due [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query seguenti vengono usati gli operatori like e Escape per determinare se una stringa di caratteri specifica corrisponde a un modello specificato. La prima query cerca l'oggetto `Name` che inizia con i caratteri `Down_`. In questa query viene usata l'opzione ESCAPE perché la sottolineatura (`_`) è un carattere jolly. Senza l'opzione ESCAPE, tramite la query verrebbe eseguita una ricerca di qualsiasi valore `Name` che inizia con la parola `Down` seguita da qualsiasi carattere singolo diverso dal carattere di sottolineatura. Le query sono basate sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
+1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Riferimento a Entity SQL](entity-sql-reference.md)

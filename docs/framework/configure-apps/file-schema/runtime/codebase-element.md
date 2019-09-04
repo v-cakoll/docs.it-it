@@ -9,18 +9,22 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663859"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252750"
 ---
 # <a name="codebase-element"></a>\<Elemento codeBase >
 
 Specifica la posizione in cui il Common Language Runtime può trovare un assembly.
 
-\<Configuration > \<Runtime > \<assembly > \<dependentAssembly > \<codebase >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<codeBase>**
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,11 +43,11 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |Attributo|Descrizione|
 |---------------|-----------------|
 |`href`|Attributo obbligatorio.<br /><br /> Specifica l'URL in cui il runtime è in grado di trovare la versione specificata dell'assembly.|
-|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly a cui si applica la codebase. Il formato di un numero di versione dell'assembly è *Major. minor. Build.* Revision.|
+|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly a cui si applica la codebase. Il formato di un numero di versione dell'assembly è *Major. minor. Build. Revision*.|
 
 ## <a name="version-attribute"></a>Attributo Version
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.|Non applicabile.|
 
@@ -53,7 +57,7 @@ Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |`buildproviders`|Definisce una raccolta di provider di compilazione utilizzati per compilare file di risorse personalizzati. Possono essere presenti più provider di compilazione.|
 |`compilation`|Configura tutte le impostazioni di compilazione utilizzate da ASP.NET.|

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: b9e8cf238d35ec9a6fc9c6d013c4d92b00dced78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249512"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Esempi di sintassi delle espressioni di query: Filtro
-Negli esempi di questo argomento viene illustrato come utilizzare i `Where` metodi `Where…Contains` e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Nota, dove...`Contains` non può essere utilizzato come parte di una [query](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)compilata.  
+Negli esempi di questo argomento viene illustrato come utilizzare i `Where` metodi `Where…Contains` e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Nota, dove...`Contains` non può essere utilizzato come parte di una [query compilata](compiled-queries-linq-to-entities.md).  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
@@ -67,4 +67,4 @@ Negli esempi di questo argomento viene illustrato come utilizzare i `Where` meto
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Query in LINQ to Entities](queries-in-linq-to-entities.md)

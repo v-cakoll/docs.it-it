@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9fac4e1a98f67c6d5d946ade1b7f2115ce0d5f8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92a72bdc99471e14f607e674104e7faa3e796975
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964868"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254140"
 ---
 # <a name="documents-in-wpf"></a>Documenti in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]offre un'ampia gamma di funzionalità dei documenti che consentono la creazione di contenuto ad alta fedeltà progettato per essere più facilmente accessibile e leggibile rispetto alle generazioni precedenti di Windows. Oltre a caratteristiche avanzate in termini di funzionalità e qualità, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assicura servizi integrati per la visualizzazione, la creazione di pacchetti e la sicurezza dei documenti. Questo argomento costituisce un'introduzione ai tipi di documenti e alla creazione di pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -63,13 +63,13 @@ ms.locfileid: "69964868"
   
  L'architettura dei pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] costituisce la base per numerose tecnologie chiave:  
   
-- Documenti [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] conformi a [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+- Documenti XPS conformi a XPS (XML Paper Specification).  
   
 - Documenti in formato XML aperto di Microsoft Office "12" (con estensione docx).  
   
 - Formati di archiviazione personalizzati per la progettazione delle applicazioni.  
   
- In base alle API per la creazione <xref:System.Windows.Xps.Packaging.XpsDocument> di pacchetti, un è [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettato appositamente per l'archiviazione di documenti di contenuto fisso. Un <xref:System.Windows.Xps.Packaging.XpsDocument> è un documento autonomo che può essere aperto in un visualizzatore, visualizzato in un <xref:System.Windows.Controls.DocumentViewer> controllo, instradato a uno spool di stampa o restituito direttamente a una [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]stampante compatibile con.  
+ In base alle API per la creazione <xref:System.Windows.Xps.Packaging.XpsDocument> di pacchetti, un è [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettato appositamente per l'archiviazione di documenti di contenuto fisso. Un <xref:System.Windows.Xps.Packaging.XpsDocument> è un documento autonomo che può essere aperto in un visualizzatore, visualizzato in un <xref:System.Windows.Controls.DocumentViewer> controllo, instradato a uno spool di stampa o restituito direttamente a una stampante compatibile con XPS.  
   
  Nelle sezioni seguenti vengono fornite informazioni aggiuntive sulle <xref:System.IO.Packaging.Package> API <xref:System.Windows.Xps.Packaging.XpsDocument> e fornite con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -125,15 +125,15 @@ ms.locfileid: "69964868"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>Documenti XPS  
- Un documento [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] è un pacchetto contenente uno o più documenti statici insieme a tutte le risorse e le informazioni necessarie per il rendering.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] è anche il formato di file nativo dello spool di stampa di [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Un <xref:System.Windows.Xps.Packaging.XpsDocument> oggetto viene archiviato nel set di dati zip standard e può includere una combinazione di componenti XML e binari, ad esempio file di immagine e di tipi di carattere. Gli oggetti [PackageRelationship](#PackageRelationships) vengono usati per definire le dipendenze tra il contenuto e le risorse necessarie per eseguire il rendering completo del documento.  La <xref:System.Windows.Xps.Packaging.XpsDocument> progettazione fornisce una singola soluzione di documento ad alta fedeltà che supporta più utilizzi:  
+ Il documento XPS (XML Paper Specification) è un pacchetto che contiene uno o più documenti fissi insieme a tutte le risorse e le informazioni necessarie per il rendering.  XPS è anche il formato [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] di file dello spooler di stampa nativo.  Un <xref:System.Windows.Xps.Packaging.XpsDocument> oggetto viene archiviato nel set di dati zip standard e può includere una combinazione di componenti XML e binari, ad esempio file di immagine e di tipi di carattere. Gli oggetti [PackageRelationship](#PackageRelationships) vengono usati per definire le dipendenze tra il contenuto e le risorse necessarie per eseguire il rendering completo del documento.  La <xref:System.Windows.Xps.Packaging.XpsDocument> progettazione fornisce una singola soluzione di documento ad alta fedeltà che supporta più utilizzi:  
   
 - Lettura, scrittura e archiviazione del contenuto di documenti statici e risorse come un file singolo, portabile e facile da distribuire.  
   
-- Visualizzazione di documenti con l'applicazione [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Viewer.  
+- Visualizzazione di documenti con l'applicazione XPS Viewer.  
   
 - Produzione di documenti nel formato di output nativo dello spool di stampa di [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  
   
-- Routing diretto dei documenti a una stampante compatibile con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+- Routing di documenti direttamente a una stampante compatibile con XPS.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
-ms.openlocfilehash: 08ae5722267ef781ed6bee59c7895269f63a75e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49e0a6b44af0729959fabf6278cc6d8ecf37a16b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606190"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251503"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>Procedura: Eseguire una query polimorfica
 
-In questo argomento viene illustrato come eseguire un polimorfico [!INCLUDE[esql](../../../../../includes/esql-md.md)] eseguire query usando il [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operatore.
+In questo argomento viene illustrato come eseguire una [!INCLUDE[esql](../../../../../includes/esql-md.md)] query polimorfica utilizzando l'operatore [OfType](./language-reference/oftype-entity-sql.md) .
 
 ### <a name="to-run-the-code-in-this-example"></a>Per eseguire il codice in questo esempio
 
-1. Aggiungere il [modello School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) al progetto e configurare il progetto per l'utilizzo di Entity Framework. Per altre informazioni, vedere [Procedura: Usare la procedura guidata Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
+1. Aggiungere il [modello School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) al progetto e configurare il progetto per l'uso del Entity Framework. Per altre informazioni, vedere [Procedura: Utilizzare la procedura guidata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.
 
 2. Nella tabella codici per l'applicazione aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
 
     [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
     [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]
 
-3. Modificare il modello concettuale per creare un'ereditarietà tabella per gerarchia seguendo i passaggi descritti in [procedura dettagliata: Il mapping dell'ereditarietà: tabella per gerarchia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
+3. Modificare il modello concettuale in modo che abbia un'ereditarietà tabella per gerarchia attenendosi alla procedura [descritta in procedura dettagliata: Mapping di ereditarietà-tabella per gerarchia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
 
 ## <a name="example"></a>Esempio
 
@@ -36,5 +36,5 @@ Nell'esempio seguente viene usato un operatore OFTYPE per ottenere e visualizzar
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider EntityClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
-- [Linguaggio Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Provider EntityClient per Entity Framework](entityclient-provider-for-the-entity-framework.md)
+- [Linguaggio Entity SQL](./language-reference/entity-sql-language.md)

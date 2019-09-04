@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere una query per trovare elementi in base al contesto (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: f6fd0a9dc0f2579185f2f72997f1d406a885c636
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710031"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253209"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Procedura: Scrivere una query per trovare elementi in base al contesto (C#)
 A volte può essere necessario scrivere una query per selezionare gli elementi in base al contesto. In questo caso è anche possibile scegliere un filtro basato sugli elementi di pari livello precedenti o successivi oppure sugli elementi figlio o sui predecessori.  
@@ -49,7 +49,7 @@ foreach (XElement e in items)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  

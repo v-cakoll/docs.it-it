@@ -3,19 +3,20 @@ title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 8185153eb02c5794b0f6ac02a6837806f2073c07
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c2d1a5d36cb5616ef06eedc093dd70a68a164a81
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941913"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252128"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
 Controlla le impostazioni utilizzate dai gestori di token per convalidare i certificati. Queste impostazioni vengono sostituite se un gestore specifico è configurato con il proprio validator.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<certificateValidation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> certificateValidation**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ Controlla le impostazioni utilizzate dai gestori di token per convalidare i cert
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Valore che specifica la modalità di convalida da utilizzare per il certificato X. 509. Il valore predefinito è "PeerOrChainTrust". Per specificare un validator personalizzato, impostare questo attributo su "Custom" e specificare il validator usando l' [ \<elemento CertificateValidator >](certificatevalidator.md) . facoltativo.|  
 |revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Valore che specifica la modalità di revoca da utilizzare per il certificato X. 509. Il valore predefinito è "online". facoltativo.|  
@@ -50,7 +51,7 @@ Controlla le impostazioni utilizzate dai gestori di token per convalidare i cert
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<identityConfiguration>](identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di gestori di token di sicurezza.|  

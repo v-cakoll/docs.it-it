@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936006"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250763"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedura: Chiamare funzioni definite dal modello come metodi di oggetto
-In questo argomento viene descritto come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> oppure come metodo statico di una classe personalizzata. Una *funzione definita dal modello* è una funzione definita nel modello concettuale. Le procedure descritte in questo argomento mostrano come chiamare queste funzioni direttamente anziché chiamarle da query LINQ to Entities. Per informazioni sulla chiamata di funzioni definite dal modello in LINQ to Entities query, [vedere How to: Chiamare funzioni definite dal modello nelle query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+In questo argomento viene descritto come chiamare una funzione definita dal modello come metodo in un oggetto <xref:System.Data.Objects.ObjectContext> oppure come metodo statico di una classe personalizzata. Una *funzione definita dal modello* è una funzione definita nel modello concettuale. Le procedure descritte in questo argomento mostrano come chiamare queste funzioni direttamente anziché chiamarle da query LINQ to Entities. Per informazioni sulla chiamata di funzioni definite dal modello in LINQ to Entities query, [vedere How to: Chiamare funzioni definite dal modello nelle query](how-to-call-model-defined-functions-in-queries.md).  
   
  Sia che si chiami una funzione definita dal modello come metodo <xref:System.Data.Objects.ObjectContext> o come metodo statico in una classe personalizzata, è necessario innanzitutto eseguire il mapping del metodo alla funzione definita dal modello con un oggetto <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Tuttavia, quando si definisce un metodo nella classe <xref:System.Data.Objects.ObjectContext>, è necessario usare la proprietà <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> per esporre il provider LINQ, mentre quando si definisce un metodo statico in una classe personalizzata, è necessario usare la proprietà <xref:System.Linq.IQueryable.Provider%2A> per esporre il provider LINQ. Per altre informazioni, vedere gli esempi che seguono le procedure.  
   
@@ -108,5 +108,5 @@ In questo argomento viene descritto come chiamare una funzione definita dal mode
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Chiamata di funzioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Query in LINQ to Entities](queries-in-linq-to-entities.md)
+- [Chiamata di funzioni in query di LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)

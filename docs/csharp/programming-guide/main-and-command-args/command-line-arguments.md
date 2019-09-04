@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923891"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252986"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 È possibile inviare argomenti al metodo `Main` definendo il metodo in uno dei modi seguenti:  
@@ -28,19 +28,19 @@ ms.locfileid: "69923891"
   
  È anche possibile convertire gli argomenti stringa in tipi numerici con la classe <xref:System.Convert> o il metodo `Parse`. Ad esempio, l'istruzione seguente converte `string` in un numero `long` con il metodo <xref:System.Int64.Parse%2A>:  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  È anche possibile usare il tipo C# `long`, che fa da alias per `Int64`:  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  Nella classe `Convert` il metodo `ToInt64` consente di eseguire la stessa operazione:  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   

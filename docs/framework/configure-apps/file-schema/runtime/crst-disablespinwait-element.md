@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663833"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252719"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Elemento > Crst_DisableSpinWait
 
 Specifica se disabilitare lo spin-waiting per una sezione critica in caso di conflitto.  
   
- \<configuration>  
-\<runtime>  
-\<> Crst_DisableSpinWait  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Crst_DisableSpinWait**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |1|Disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica.|  
 |0|Non disabilitare la rotazione in attesa quando non è possibile acquisire una sezione critica. Rappresenta il valore predefinito.|  

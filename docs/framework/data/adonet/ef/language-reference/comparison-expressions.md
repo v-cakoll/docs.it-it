@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 4b0d7e668526fd71943513db2fc3c076c8bd3bad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539922"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251177"
 ---
 # <a name="comparison-expressions"></a>Espressioni di confronto
 Un'espressione di confronto consente di verificare se un valore costante, un valore di un proprietà o un risultato di un metodo è uguale a, non uguale a, maggiore di o minore di un altro valore. Se un particolare confronto non è valido per LINQ to Entities, verrà generata un'eccezione. Tutti i confronti, sia impliciti che espliciti, richiedono che tutti i componenti possano essere confrontati nell'origine dati. Le espressioni di confronto vengono spesso usate nelle clausole `Where` per limitare i risultati delle query.  
@@ -55,4 +55,4 @@ Un'espressione di confronto consente di verificare se un valore costante, un val
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [Espressioni in query di LINQ to Entities](expressions-in-linq-to-entities-queries.md)

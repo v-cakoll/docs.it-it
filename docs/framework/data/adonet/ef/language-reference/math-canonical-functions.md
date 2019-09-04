@@ -2,12 +2,12 @@
 title: Funzioni matematiche canoniche
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760636"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250313"
 ---
 # <a name="math-canonical-functions"></a>Funzioni matematiche canoniche
 
@@ -19,7 +19,7 @@ Restituisce il valore assoluto di `value`.
 
 **Argomenti**
 
-Un' `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, e `Decimal`.
+`Int16` ,`Int32` ,,`Single`,, E.`Double` `Byte` `Int64` `Decimal`
 
 **Valore restituito**
 
@@ -35,7 +35,7 @@ Restituisce il valore integer più piccolo non minore di `value`.
 
 **Argomenti**
 
-Oggetto `Single`, `Double`, e `Decimal`.
+`Single` ,`Double`E .`Decimal`
 
 **Valore restituito**
 
@@ -52,7 +52,7 @@ Restituisce il valore integer più grande non maggiore di `value`.
 
 **Argomenti**
 
-Oggetto `Single`, `Double`, e `Decimal`.
+`Single` ,`Double`E .`Decimal`
 
 **Valore restituito**
 
@@ -71,8 +71,8 @@ Restituisce il risultato dell'oggetto `value` specificato all'oggetto `exponent`
 
 |  |  |
 |--|--|
-|`value` | Un' `Int32, Int64, Double`, o `Decimal`. |
-|`exponent` | Un' `Int64`, `Double`, o `Decimal`. |
+|`value` | Oggetto `Int32, Int64, Double`o .`Decimal` |
+|`exponent` | Oggetto `Int64`, `Double`o .`Decimal` |
 
 **Valore restituito**
 
@@ -88,7 +88,7 @@ Restituisce la parte intera di `value` arrotondata al valore integer più vicino
 
 **Argomenti**
 
-Oggetto `Single`, `Double`, e `Decimal`.
+`Single` ,`Double`E .`Decimal`
 
 **Valore restituito**
 
@@ -138,8 +138,8 @@ Tipo di `value`.
   
  Queste funzioni restituiscono `null` se l'input è `null`.  
   
- Una funzionalità equivalente è disponibile nel provider gestito del client Microsoft SQL. Per altre informazioni, vedere [SqlClient per funzioni Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Una funzionalità equivalente è disponibile nel provider gestito del client Microsoft SQL. Per ulteriori informazioni, vedere [SqlClient per le funzioni Entity Framework](../sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Funzioni canoniche](canonical-functions.md)

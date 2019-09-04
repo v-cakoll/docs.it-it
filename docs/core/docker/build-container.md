@@ -4,12 +4,12 @@ description: In questa esercitazione si apprenderà come distribuire un'applicaz
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331050"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253955"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: Distribuire un'app .NET Core in un contenitore
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 La struttura di cartelle sarà simile all'esempio seguente:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ Il comando `FROM` indica a Docker di scaricare l'immagine con tag **2.2** dal re
 
 Salvare il file *Dockerfile*. La struttura directory della cartella di lavoro deve avere un aspetto simile al seguente. Alcuni file e directory nei livelli più profondi sono stati tagliati per risparmiare spazio nell'articolo:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker fornisce il comando `docker run` per creare ed eseguire il contenitore con un unico comando. Questo comando elimina la necessità di eseguire `docker create` e quindi `docker start`. È anche possibile impostare il comando in modo che elimini automaticamente il contenitore quando viene arrestato. Ad esempio, usare `docker run -it --rm` per eseguire due operazioni, ossia usare automaticamente il terminale corrente per connettersi al contenitore e quindi, al termine dell'esecuzione, rimuovere il contenitore:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 Con `docker run -it`, il comando <kbd>CTRL + C</kbd> arresta il processo in esecuzione nel contenitore, cosa che a sua volta arresta il contenitore. Poiché è stato specificato il parametro `--rm`, il contenitore viene eliminato automaticamente quando viene arrestato il processo. Verificare che non esista:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```
@@ -368,7 +368,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Il comando `docker run` consente anche di modificare il comando `ENTRYPOINT` dal *Dockerfile* e di eseguire qualcosa di diverso, ma solo per il contenitore in questione. Ad esempio, usare il comando seguente per eseguire `bash` o `cmd.exe`. Modificare il comando in base alle esigenze.
 
-#### <a name="windows"></a>WINDOWS
+#### <a name="windows"></a>Windows
 In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. Si preme quindi <kbd>CTRL + C</kbd> per terminare il processo e arrestare il contenitore.
 
 ```console

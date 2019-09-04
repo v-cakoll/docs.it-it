@@ -2,12 +2,12 @@
 title: Costruttore di tipo denominato (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760454"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250015"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Costruttore di tipo denominato (Entity SQL)
 Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esempio i tipi di entità o i tipi complessi.  
@@ -20,7 +20,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
   
 ## <a name="arguments"></a>Argomenti  
  `identifier`  
- Valore che rappresenta un identificatore semplice o delimitato. Per altre informazioni, vedere [identificatori](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ Valore che rappresenta un identificatore semplice o delimitato. Per ulteriori informazioni, vedere [identificatori](identifiers-entity-sql.md)  
   
  `expression`  
  Attributi del tipo che si presuppone essere nello stesso ordine in cui appaiono nella dichiarazione del tipo.  
@@ -52,7 +52,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato il costruttore di tipi denominati per creare un'istanza di un tipo di modello concettuale. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
@@ -60,5 +60,5 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Costruzione di tipi](constructing-types-entity-sql.md)
+- [Riferimento a Entity SQL](entity-sql-reference.md)

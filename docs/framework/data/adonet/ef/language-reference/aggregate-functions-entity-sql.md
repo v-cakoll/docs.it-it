@@ -2,23 +2,23 @@
 title: Funzioni di aggregazione (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c79071e73763b56c0dde906499f3eef1d296ce0c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489972"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251342"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funzioni di aggregazione (Entity SQL)
 Un'aggregazione è un construct di linguaggio che condensa una raccolta in un scalare come parte di un'operazione di gruppo. Le aggregazioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili in due formati:  
   
-- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funzioni di raccolta possono essere usate ovunque in un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]funzioni di raccolta che possono essere utilizzate in qualsiasi punto di un'espressione. È incluso l'utilizzo di funzioni di aggregazione nelle proiezioni e di predicati che agiscono sulle raccolte. Le funzioni di raccolta sono la modalità preferibile di specificare aggregazioni in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-- Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in Transact-SQL, le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori all'input di aggregazione.  
+- Aggregazioni di gruppo in espressioni di query che dispongono di una clausola GROUP BY. Come in Transact-SQL, le aggregazioni di gruppo accettano DISTINCT e ALL come modificatori nell'input di aggregazione.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di interpretare un'espressione come funzione di raccolta e se l'espressione è nel contesto di un'espressione SELECT, interpreta come aggregazione di gruppo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]tenta innanzitutto di interpretare un'espressione come una funzione di raccolta e se l'espressione si trova nel contesto di un'espressione SELECT, interpretata come aggregazione di gruppo.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definisce un operatore di aggregazione speciale denominato [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Questo operatore consente di ottenere un riferimento al set di input raggruppato. Questo consente di ottenere query di raggruppamento più avanzate, dove i risultati della clausola GROUP BY possono essere usati in posizioni diverse dalle funzioni di raccolta o di aggregazione di gruppo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]definisce uno speciale operatore di aggregazione denominato [GROUPPARTITION](grouppartition-entity-sql.md). Questo operatore consente di ottenere un riferimento al set di input raggruppato. Questo consente di ottenere query di raggruppamento più avanzate, dove i risultati della clausola GROUP BY possono essere usati in posizioni diverse dalle funzioni di raccolta o di aggregazione di gruppo.  
   
 ## <a name="collection-functions"></a>Funzioni di raccolta  
  Le funzioni della Collection operano su raccolte e restituiscono un valore scalare. Ad esempio, se `orders` è una raccolta di tutti gli oggetti `orders`, è possibile calcolare la prima data di spedizione usando l'espressione seguente:  
@@ -44,4 +44,4 @@ Un'aggregazione è un construct di linguaggio che condensa una raccolta in un sc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+- [Funzioni](functions-entity-sql.md)

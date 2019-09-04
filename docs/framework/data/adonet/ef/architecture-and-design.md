@@ -2,24 +2,24 @@
 title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c15bbeb22918b20010fddf373d1e80b7ff27f97c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422778"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251714"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 
-Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.
+Il modulo di generazione SQL nel [provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come visitatore nell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.
 
-I nodi dell'albero vengono elaborati dal basso verso l'alto. In primo luogo, viene prodotta una struttura intermedia: Oggetto SqlSelectStatement o SqlBuilder, entrambe implementano ISqlFragment. Successivamente da tale struttura viene prodotta l'istruzione SQL della stringa. Esistono due motivi per cui viene prodotta la struttura intermedia:
+I nodi dell'albero vengono elaborati dal basso verso l'alto. Viene innanzitutto prodotta una struttura intermedia: SqlSelectStatement o SqlBuilder, entrambi implementano ISqlFragment. Successivamente da tale struttura viene prodotta l'istruzione SQL della stringa. Esistono due motivi per cui viene prodotta la struttura intermedia:
 
 - Un'istruzione SQL SELECT viene popolata in modo non corretto da un punto di vista logico. I nodi che partecipano alla clausola FROM vengono visitati prima di quelli che partecipano alla clausola WHERE, GROUP BY e ORDER BY.
 
 - Per evitare conflitti durante la ridenominazione degli alias, è necessario identificare tutti gli alias usati. È possibile rinviare le scelte di ridenominazione in SqlBuilder, usando gli oggetti Symbol per rappresentare le colonne candidate per la ridenominazione.
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![Diagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 Nella prima fase, durante la visita dell'albero delle espressioni, le espressioni vengono raggruppate in oggetti SqlSelectStatements e i join e gli alias di join vengono resi bidimensionali. Durante questo passaggio, gli oggetti Symbol rappresentano colonne o alias di input che possono essere rinominati.
 
@@ -27,7 +27,7 @@ Nella seconda fase, durante la produzione della stringa effettiva, gli alias ven
 
 ## <a name="data-structures"></a>Strutture di dati
 
-In questa sezione illustra i tipi usati nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) consente di compilare un'istruzione SQL.
+In questa sezione vengono illustrati i tipi utilizzati nel [provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) che è possibile utilizzare per compilare un'istruzione SQL.
 
 ### <a name="isqlfragment"></a>ISqlFragment
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-SqlSelectStatement rappresenta un'istruzione SQL SELECT canonica della forma "SELECT... FROM  .. POSIZIONE IN CUI... RAGGRUPPA PER... ORDER BY".
+SqlSelectStatement rappresenta un'istruzione SQL SELECT canonica della forma "SELECT... DA.. DOVE... RAGGRUPPA PER... ORDER BY ".
 
 Ognuna delle clausole SQL viene rappresentata da un oggetto StringBuilder e inoltre rileva se è stato specificato Distinct e se l'istruzione è al livello più alto. Se l'istruzione non è al livello più alto, la clausola ORDER BY viene omessa, a meno che nell'istruzione non sia inclusa anche una clausola TOP.
 
@@ -86,7 +86,7 @@ internal sealed class SqlSelectStatement : ISqlFragment {
 
 #### <a name="topclause"></a>TopClause
 
-TopClause rappresenta l'espressione TOP in un oggetto SqlSelectStatement. La proprietà TopCount indica il numero di righe TOP che devono essere selezionate.  Se WithTies è true, TopClause è stato creato da un DbLimitExpression.
+TopClause rappresenta l'espressione TOP in un oggetto SqlSelectStatement. La proprietà TopCount indica il numero di righe TOP che devono essere selezionate.  Quando WithTies è true, la clausola OverClause è stata compilata da un DbLimitExpression.
 
 ```csharp
 class TopClause : ISqlFragment {
@@ -227,15 +227,15 @@ La proprietà IsParentAJoin consente di stabilire se è possibile rendere bidime
 
 È possibile ottenere il reindirizzamento degli alias di input usando la tabella dei simboli.
 
-Per illustrare il reindirizzamento di alias di input, fare riferimento al primo esempio nella [generazione di SQL dagli alberi dei comandi - procedure consigliate](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  In questo esempio "a" deve essere reindirizzato in "b" nella proiezione.
+Per spiegare il reindirizzamento degli alias di input, vedere il primo esempio in [generazione di SQL da alberi dei comandi-procedure consigliate](generating-sql-from-command-trees-best-practices.md).  In questo esempio "a" deve essere reindirizzato in "b" nella proiezione.
 
-Quando viene creato un oggetto SqlSelectStatement, l'extent che costituisce l'input per il nodo viene inserito nella proprietà From dell'oggetto SqlSelectStatement. Un simbolo (\<symbol_b >) viene creato in base al nome dell'associazione di input ("b") per rappresentare tale extent e "AS" + \<symbol_b > viene aggiunto alla clausola From.  Il simbolo viene inoltre aggiunto alla proprietà FromExtents.
+Quando viene creato un oggetto SqlSelectStatement, l'extent che costituisce l'input per il nodo viene inserito nella proprietà From dell'oggetto SqlSelectStatement. Viene creato un\<simbolo (symbol_b >) in base al nome dell'associazione di input ("b") per rappresentare tale extent e viene aggiunto \<"As" + symbol_b > alla clausola from.  Il simbolo viene inoltre aggiunto alla proprietà FromExtents.
 
 Il simbolo viene aggiunto anche alla tabella dei simboli per collegare il nome dell'associazione di input ("b", \<symbol_b >).
 
-Se un nodo successivo riusa lo stesso oggetto SqlSelectStatement, viene aggiunta una voce alla tabella dei simboli per collegare il rispettivo nome dell'associazione di input al simbolo. In questo esempio, DbProjectExpression con il nome dell'associazione di input di "a" riutilizzerebbe SqlSelectStatement e aggiungere ("a", \< symbol_b >) alla tabella.
+Se un nodo successivo riusa lo stesso oggetto SqlSelectStatement, viene aggiunta una voce alla tabella dei simboli per collegare il rispettivo nome dell'associazione di input al simbolo. In questo esempio, DbProjectExpression con il nome dell'associazione di input "a" riutilizzerà SqlSelectStatement e aggiungerà ("a" \< , symbol_b >) alla tabella.
 
-Quando le espressioni fanno riferimento al nome dell'associazione di input del nodo che sta riusando l'oggetto SqlSelectStatement, tale riferimento viene risolto usando la tabella dei simboli nel simbolo reindirizzato corretto. Quando "a" da "a. x" deve viene risolto durante la visita dell'oggetto DbVariableReferenceExpression che rappresenta "a" it verrà risolto nell'oggetto Symbol \<symbol_b >.
+Quando le espressioni fanno riferimento al nome dell'associazione di input del nodo che sta riusando l'oggetto SqlSelectStatement, tale riferimento viene risolto usando la tabella dei simboli nel simbolo reindirizzato corretto. Quando la "a" di "a. x" viene risolta durante la visita di oggetto DbVariableReferenceExpression che rappresenta "a", verrà \<risolta nel simbolo symbol_b >.
 
 ### <a name="join-alias-flattening"></a>Bidimensionalità degli alias di join
 
@@ -243,7 +243,7 @@ Il bidimensionalità degli alias di join viene realizzata durante la visita di u
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Ridenominazione dei nomi di colonna e degli alias degli extent
 
-Il problema del nome di colonna e ridenominazione degli alias extent viene risolto usando i simboli che vengono semplicemente sostituiti con gli alias nella seconda fase della generazione, descritta nella sezione intitolata seconda fase della generazione di comandi SQL: Generazione della stringa di comando.
+Il problema della ridenominazione dei nomi di colonna e degli alias degli extent viene risolto usando i simboli che vengono sostituiti solo con gli alias nella seconda fase della generazione descritta nella sezione intitolata seconda fase della generazione SQL: Generazione del comando stringa.
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Prima fase della generazione SQL: Visita dell'albero delle espressioni
 
@@ -345,7 +345,7 @@ Le operazioni di impostazione DbUnionAllExpression, DbExceptExpression e DbInter
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-In cui \<leftSqlSelectStatement > e \<rightSqlSelectStatement > sono oggetti SqlSelectStatements ottenuti mediante la visita di ognuno degli input, e \<setOp > è l'operazione corrispondente (ad esempio UNION ALL).
+Dove \<leftSqlSelectStatement > e \<rightSqlSelectStatement > sono oggetti SqlSelectStatements ottenuti visitando ognuno degli input e \<setOp > è l'operazione corrispondente (Union All, ad esempio).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -401,7 +401,7 @@ Le funzioni canoniche e quelle predefinite vengono elaborate allo stesso modo: s
 
 Vengono usati i dizionari per tenere traccia delle funzioni per cui è necessaria una gestione speciale e dei rispettivi gestori appropriati.
 
-Funzioni definite dall'utente vengono convertite in NamespaceName.functionname(Arg1 (functionname(arg1, arg2,..., argn).
+Le funzioni definite dall'utente vengono convertite in NamespaceName. FunctionName (arg1, arg2,..., argN).
 
 ### <a name="dbelementexpression"></a>DbElementExpression
 
@@ -435,7 +435,7 @@ DbIsEmptyExpression viene convertito come:
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: Generazione della stringa di comando
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Seconda fase della generazione SQL: Generazione del comando stringa
 
 In caso di generazione di una stringa di comando SQL, SqlSelectStatement produce alias effettivi per i simboli che risolvono il problema della ridenominazione dei nomi di colonna e degli alias degli extent.
 
@@ -443,8 +443,8 @@ La ridenominazione degli alias degli extent si verifica durante la scrittura del
 
 La ridenominazione delle colonne si verifica durante la scrittura di un oggetto Symbol in una stringa. AddDefaultColumns nella prima fase ha determinato se è necessario rinominare un simbolo specifico di una colonna. Nella seconda fase viene eseguita solo la ridenominazione con la verifica che il nome prodotto non crei conflitti con uno dei nomi usati in AllColumnNames
 
-Per produrre nomi univoci sia per gli alias degli extent che per le colonne, usare \<existing_name > n dove n è l'alias più piccolo che non è stato ancora usato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.
+Per produrre nomi univoci per gli alias di extent e per le colonne \<, utilizzare existing_name > _N dove n è l'alias più piccolo che non è ancora stato utilizzato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+- [Generazione di comandi SQL nel provider di esempio](sql-generation-in-the-sample-provider.md)

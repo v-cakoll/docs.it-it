@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879606"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250942"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Definisce una funzione nell'ambito di un comando di query Entity SQL.  
@@ -44,14 +44,14 @@ FUNCTION function-name
  RACCOLTA (< type_definition`>` )  
  Espressione che restituisce una raccolta di tipi supportati, righe o riferimenti.  
   
- REF **(**`data_type`**)**  
+ REF **(** `data_type` **)**  
  Espressione che restituisce un riferimento a un tipo di entità.  
   
- ROW **(**`row_expression`**)**  
- Espressione che restituisce record anonimi strutturalmente tipizzati da uno o più valori. Per altre informazioni, vedere [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ ROW **(** `row_expression` **)**  
+ Espressione che restituisce record anonimi strutturalmente tipizzati da uno o più valori. Per altre informazioni, vedere [ROW](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Note  
- Più funzioni con lo stesso nome possono essere dichiarate inline, purché le firme delle funzioni siano differenti. Per altre informazioni, vedere [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
+ Più funzioni con lo stesso nome possono essere dichiarate inline, purché le firme delle funzioni siano differenti. Per altre informazioni, vedere [Function Overload Resolution](function-overload-resolution-entity-sql.md).  
   
  È possibile chiamare una funzione inline in un comando Entity SQL solo dopo che è stata definita in quel comando. Tuttavia, una funzione inline può essere chiamata in un'altra funzione inline prima o dopo che la funzione chiamata è stata definita. Nell'esempio seguente la funzione A chiama la funzione B prima che la funzione B sia definita:  
   
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- Per altre informazioni, vedere [Procedura: Chiamare una funzione definita dall'utente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Per altre informazioni, vedere [Procedura: Chiamare una funzione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))definita dall'utente.  
   
- Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per altre informazioni, vedere [funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
+ Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per ulteriori informazioni, vedere [funzioni definite dall'utente](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Esempio  
  Nel comando Entity SQL seguente viene definita una funzione `Products` che usa un valore Integer per filtrare i prodotti restituiti.  
@@ -77,5 +77,5 @@ FUNCTION function-name
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Linguaggio Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Riferimento a Entity SQL](entity-sql-reference.md)
+- [Linguaggio Entity SQL](entity-sql-language.md)

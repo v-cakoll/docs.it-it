@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663417"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252280"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Elemento > Thread_UseAllCpuGroups
 
 Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.
 
-\<> di configurazione \
-\<> runtime \
-\<Thread_UseAllCpuGroups>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Thread_UseAllCpuGroups**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +38,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Valore|DESCRIZIONE|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`false`|Il runtime non distribuisce i thread gestiti tra più gruppi di CPU. Questa è l'impostazione predefinita.|
 |`true`|Il runtime distribuisce i thread gestiti tra più gruppi di CPU, se il computer dispone di più gruppi di CPU e l' [ \<elemento > GCCpuGroup](gccpugroup-element.md) è abilitato.|

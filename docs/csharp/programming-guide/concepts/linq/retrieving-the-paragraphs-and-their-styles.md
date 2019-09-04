@@ -2,12 +2,12 @@
 title: Recupero dei paragrafi e dei relativi stili (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 4accbf3325ad4db95c028249c7071cb9fedd19cd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591203"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253066"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recupero dei paragrafi e dei relativi stili (C#)
 In questo esempio viene scritta una query che recupera i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo.  
@@ -111,7 +111,7 @@ foreach (var p in paragraphs)
   
  Questo esempio consente di ottenere il seguente output quando viene applicato al documento descritto in [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md).  
   
-```  
+```output  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  
@@ -129,7 +129,7 @@ StyleName:Normal
 StyleName:Code  
 ```  
   
-## <a name="next-steps"></a>Passaggi successivi  
+## <a name="next-steps"></a>Fasi successive  
  Nell'argomento successivo, [Recupero del testo dei paragrafi (C#)](./retrieving-the-text-of-the-paragraphs.md), verrà creata una query per recuperare il testo dei paragrafi.  
   
 ## <a name="see-also"></a>Vedere anche

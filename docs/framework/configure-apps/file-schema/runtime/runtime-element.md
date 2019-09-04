@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3cf99a4dcf64b82846729d8663e398385b7a1086
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663458"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252334"
 ---
 # <a name="runtime-element"></a>\<Elemento runtime >
 
 Fornisce le informazioni utilizzate dal Common Language Runtime per configurare le applicazioni.
 
-\<> di configurazione \
-\<runtime>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<runtime>**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ Nessuno.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|Specifica che l'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione.|
 |[\<AppContextSwitchOverrides>](appcontextswitchoverrides-element.md)|Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.|

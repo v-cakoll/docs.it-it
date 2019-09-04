@@ -2,12 +2,12 @@
 title: 'Procedura: Modificare un documento Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: cb80a450de104760f64c84e11829f6609d8ee177
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593129"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253531"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Procedura: Modificare un documento Office Open XML (C#)
 In questo argomento viene presentato un esempio in cui viene aperto, modificato e salvato un documento Office Open XML.  
@@ -143,7 +143,6 @@ class Program
   
  Se eseguito con il documento Open XML descritto in [Creazione del documento Office Open XML di origine (C#)](./creating-the-source-office-open-xml-document.md), questo esempio produce l'output seguente:  
   
-```  
+```output  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
-  

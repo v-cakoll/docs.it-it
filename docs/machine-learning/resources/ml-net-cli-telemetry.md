@@ -2,14 +2,14 @@
 title: Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 description: Informazioni sulle funzionalità di telemetria dell'interfaccia della riga di comando di ML.NET che raccolgono dati di utilizzo per l'analisi, su come disabilitare le funzionalità e sui dati raccolti. Sono inoltre disponibili collegamenti al contratto di licenza di .NET e informazioni sulla conformità a GDPR di Microsoft.
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567487"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254002"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Raccolta di dati di telemetria dall'interfaccia della riga di comando di ML.NET
 
@@ -36,14 +36,14 @@ La funzionalità di telemetria *è abilitata* quando si esegue un [comando dell'
 
 La funzionalità di telemetria dell'interfaccia della riga di comando di ML.NET è abilitata per impostazione predefinita.
 
-Rifiutare esplicitamente la funzionalità di telemetria impostando la variabile di ambiente `MLDOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`. Questa variabile di ambiente viene applicata a livello globale allo strumento dell'interfaccia della riga di comando di .NET.
+Rifiutare esplicitamente la funzionalità di telemetria impostando la variabile di ambiente `MLDOTNET_CLI_TELEMETRY_OPTOUT` su `1` o `true`. Questa variabile di ambiente si applica a livello globale allo strumento dell'interfaccia della riga di comando ML.NET.
 
 ## <a name="data-points-collected"></a>Punti dati raccolti
 
 La funzionalità raccoglie i dati seguenti:
 
 - Il comando che è stato richiamato, ad esempio `auto-train`
-- I nomi dei parametri della riga di comando usati (ad esempio "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
+- Nomi dei parametri della riga di comando usati (ovvero "DataSet-Name, label-Column-Name, ml-Task, output-path, Max-Exploration-Time, livello di dettaglio")
 - Indirizzo MAC con hash: ID univoco e anonimo dal punto di vista crittografico (SHA256) per un computer
 - Il timestamp di una chiamata
 - Indirizzo IP a tre ottetti (non l'indirizzo IP completo) usato solo per determinare la posizione geografica
@@ -52,7 +52,7 @@ La funzionalità raccoglie i dati seguenti:
 - Bucket delle dimensioni di file del set di dati
 - Sistema operativo e versione
 - Valore del parametro --task: Valori di categorie, ad esempio `regression`, `binary-classification` e `multiclass-classification`
-- Versione dell'interfaccia della rigaa di comando ML.NET (vale a dire 0.3.27703.4)
+- Versione dell'interfaccia della riga di comando ML.NET (0.3.27703.4)
 
 I dati vengono inviati ai server Microsoft in modalità protetta grazie alla tecnologia [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), conservati con accesso limitato e usati in base a severi controlli di sicurezza da parte di sistemi di [archiviazione di Azure](https://azure.microsoft.com/services/storage/).
 

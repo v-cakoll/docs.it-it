@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988419"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252983"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -107,7 +107,7 @@ Per altre informazioni sulla formattazione dei tipi .NET, vedere [Formattazione 
 ## <a name="null-strings-and-empty-strings"></a>Stringhe null e stringhe vuote  
  Una stringa vuota è un'istanza di un oggetto <xref:System.String?displayProperty=nameWithType> che contiene zero caratteri. Le stringhe vuote sono utilizzate di frequente in diversi scenari di programmazione per rappresentare un campo di testo vuoto. È possibile chiamare metodi su stringhe vuote, perché sono oggetti <xref:System.String?displayProperty=nameWithType> validi. Le stringhe vuote vengono inizializzate come indicato di seguito:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   

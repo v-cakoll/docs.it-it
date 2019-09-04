@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b82be30c18cde361aa412ee1b631c8368c8de1b3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663935"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252819"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<Elemento > appDomainResourceMonitoring
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  
   
- \<configuration>  
-\<runtime>  
-\<appDomainResourceMonitoring>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |`true`|Vengono raccolte le statistiche per il monitoraggio delle risorse del dominio applicazione.|  
 |`false`|Le statistiche per il monitoraggio delle risorse del dominio applicazione non vengono raccolte.|  

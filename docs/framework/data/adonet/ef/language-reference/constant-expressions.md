@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
-ms.openlocfilehash: cc3a214a2faa06c79ee0794b0158381bff0c4b0b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b31cd881f1307ec734c026d3c873d7a650e19a20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539892"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251138"
 ---
 # <a name="constant-expressions"></a>Espressioni costanti
 Un'espressione costante è costituita da un valore costante. I valori costanti vengono convertiti direttamente in espressioni costanti dell'albero dei comandi, senza conversione nel client. Questo vale anche per le espressioni che hanno come risultato un valore costante. È pertanto possibile prevedere il comportamento dell'origine dati per tutte le espressioni che contengono costanti. Il comportamento risultante può essere diverso da quello in CLR.  
@@ -24,4 +24,4 @@ Un'espressione costante è costituita da un valore costante. I valori costanti v
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [Espressioni in query di LINQ to Entities](expressions-in-linq-to-entities-queries.md)

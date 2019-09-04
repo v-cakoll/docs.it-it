@@ -2,12 +2,12 @@
 title: THEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: 8d2d7f9a3a1d6ff9f25db3f19bf8f39781469f9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c64e440e8cd8f86706db69d923ba7085d0cb3b3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797644"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248983"
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 Risultato di una clausola WHEN quando restituisce `true`.  
@@ -28,12 +28,12 @@ WHEN when_expression THEN then_expression
 ## <a name="remarks"></a>Note  
  Se `when_expression` restituisce il valore `true`, il risultato è l'oggetto `then-expression`corrispondente. Se nessuna delle condizioni WHEN è soddisfatta, viene restituito `else-expression` . Se, tuttavia, non sono presenti `else-expression`, il risultato è null.  
   
- Per un esempio, vedere [caso](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md).  
+ Per un esempio, vedere [case](case-entity-sql.md).  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usata l'espressione CASE per valutare un set di espressioni `Boolean` . La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
@@ -41,5 +41,5 @@ WHEN when_expression THEN then_expression
   
 ## <a name="see-also"></a>Vedere anche
 
-- [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)
-- [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [CASE](case-entity-sql.md)
+- [Riferimento a Entity SQL](entity-sql-reference.md)

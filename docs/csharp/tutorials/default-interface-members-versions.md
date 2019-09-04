@@ -3,12 +3,12 @@ title: Aggiornare le interfacce in modo sicuro con i membri dell'interfaccia pre
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971429"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252909"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i membri di interfaccia predefiniti in C# 8.0
 
@@ -37,7 +37,7 @@ Viene definita una seconda interfaccia che rappresenta un ordine:
 
 Da queste interfacce il team potrebbe realizzare una raccolta per consentire agli utenti di creare un'esperienza migliore per i clienti. L'obiettivo è consolidare le relazioni con i clienti esistenti e migliorare quelle con i nuovi clienti.
 
-Ora è il momento di aggiornare la raccolta per la versione successiva. Una delle funzionalità richieste è la definizione di uno sconto fedeltà per i clienti con molti ordini. Questo nuovo sconto fedeltà viene applicato ogni volta che un cliente effettua un ordine. Lo sconto specifico è una proprietà di ogni singolo cliente. Ogni implementazione di ICustomer può impostare ruoli diversi per lo sconto fedeltà. 
+Ora è il momento di aggiornare la raccolta per la versione successiva. Una delle funzionalità richieste è la definizione di uno sconto fedeltà per i clienti con molti ordini. Questo nuovo sconto fedeltà viene applicato ogni volta che un cliente effettua un ordine. Lo sconto specifico è una proprietà di ogni singolo cliente. Ogni implementazione di `ICustomer` può impostare regole diverse per lo sconto fedeltà. 
 
 Il modo più naturale per aggiungere questa funzionalità consiste nell'ottimizzare l'interfaccia `ICustomer` con un metodo per applicare qualsiasi sconto fedeltà. Questo suggerimento di progettazione genera preoccupazione tra gli sviluppatori esperti perché si ritiene che, una volta rilasciate, le interfacce non siano più modificabili a meno di generare errori. In C# 8.0 sono state aggiunte *implementazioni di interfaccia predefinite* per l'aggiornamento delle interfacce. Gli autori della raccolta possono aggiungere nuovi membri all'interfaccia a cui applicare un'implementazione predefinita.
 
@@ -47,7 +47,7 @@ Le implementazioni di interfaccia predefinite consentono agli sviluppatori di ag
 
 Il team concorda sull'implementazione predefinita più probabile: uno sconto fedeltà per i clienti.
 
-L'aggiornamento dovrà fornire la funzionalità per impostare due proprietà: il numero di ordini necessario per avere diritto allo sconto e la percentuale dello sconto. Questo scenario è perfetto per i membri di interfaccia predefiniti. È possibile aggiungere un metodo all'interfaccia ICustomer e fornire l'implementazione più probabile. Tutte le implementazioni esistenti e quelle nuove possono usare l'implementazione predefinita o una personalizzata.
+L'aggiornamento dovrà fornire la funzionalità per impostare due proprietà: il numero di ordini necessario per avere diritto allo sconto e la percentuale dello sconto. Questo scenario è perfetto per i membri di interfaccia predefiniti. È possibile aggiungere un metodo all' `ICustomer` interfaccia e fornire l'implementazione più probabile. Tutte le implementazioni esistenti e quelle nuove possono usare l'implementazione predefinita o una personalizzata.
 
 Prima di tutto aggiungere il nuovo metodo all'implementazione:
 
@@ -69,7 +69,7 @@ Anche se si tratta di un buon inizio, l'implementazione predefinita è troppo re
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-In questo piccolo frammento di codice sono visibili molte nuove funzionalità del linguaggio. Le interfacce possono ora includere membri statici, tra cui campi e metodi. Sono inoltre abilitati diversi modificatori di accesso. I campi aggiuntivi sono privati, mentre il nuovo metodo è pubblico. Per i membri dell'interfaccia è consentito qualsiasi modificatore.
+Sono disponibili molte nuove funzionalità del linguaggio in questo piccolo frammento di codice. Le interfacce possono ora includere membri statici, tra cui campi e metodi. Sono inoltre abilitati diversi modificatori di accesso. I campi aggiuntivi sono privati, mentre il nuovo metodo è pubblico. Per i membri dell'interfaccia è consentito qualsiasi modificatore.
 
 Per le applicazioni in cui si usa la formula generale per calcolare lo sconto fedeltà, ma con parametri diversi, non è necessario fornire un'implementazione personalizzata perché è possibile impostare gli argomenti tramite un metodo statico. Il codice seguente imposta ad esempio un "apprezzamento del cliente" che premia qualsiasi cliente che si sia iscritto da più di un mese:
 

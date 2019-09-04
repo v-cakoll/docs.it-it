@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927251"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252298"
 ---
 # <a name="supportportability-element"></a>\<Elemento > supportPortability
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
   
- \<Configuration >-elemento  
-\<Elemento runtime >  
-\<assembly > elemento  
-\<Elemento > supportPortability  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> supportPortability**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,7 +29,8 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -46,7 +47,8 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |False|Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. Ciò consente all'applicazione di avere riferimenti a più implementazioni dell'assembly specificato.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+
+Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -57,15 +59,17 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
   
 ## <a name="remarks"></a>Note  
- A partire da .NET Framework 4, il supporto viene fornito automaticamente per le applicazioni che possono usare una delle due implementazioni del .NET Framework, ad esempio l'implementazione di .NET Framework o la .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari questa funzionalità di portabilità dell'applicazione causa problemi. In questi scenari, l' `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
+
+A partire da .NET Framework 4, il supporto viene fornito automaticamente per le applicazioni che possono usare una delle due implementazioni del .NET Framework, ad esempio l'implementazione di .NET Framework o la .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari questa funzionalità di portabilità dell'applicazione causa problemi. In questi scenari, l' `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
   
- Uno di questi scenari è costituito da un assembly che deve fare riferimento sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe dover fare riferimento sia all'implementazione desktop WPF, per l'interfaccia utente della finestra di progettazione, sia al subset di WPF incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento Disabilita il comportamento predefinito e consente la compilazione in modo che abbia esito positivo.  
+Uno di questi scenari è costituito da un assembly che deve fare riferimento sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe dover fare riferimento sia all'implementazione desktop WPF, per l'interfaccia utente della finestra di progettazione, sia al subset di WPF incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento Disabilita il comportamento predefinito e consente la compilazione in modo che abbia esito positivo.  
   
 > [!IMPORTANT]
 > Affinché il compilatore passi le informazioni alla logica di associazione degli assembly del Common Language Runtime, è necessario usare l' `/appconfig` opzione del compilatore per specificare il percorso del file app. config che contiene questo elemento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene abilitata un'applicazione per avere riferimenti sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di qualsiasi assembly .NET Framework esistente in entrambe le implementazioni. Per `/appconfig` specificare il percorso del file app. config, è necessario usare l'opzione del compilatore.  
+
+Nell'esempio seguente viene abilitata un'applicazione per avere riferimenti sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di qualsiasi assembly .NET Framework esistente in entrambe le implementazioni. Per `/appconfig` specificare il percorso del file app. config, è necessario usare l'opzione del compilatore.  
   
 ```xml  
 <configuration>  

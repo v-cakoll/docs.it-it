@@ -3,19 +3,20 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: 85f3954514fa8b532311b1fbfc34f32ebefa4099
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c40c5e4b4a24a3c1bbd6e096f12b7b044331c88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942820"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252055"
 ---
 # <a name="claimtyperequired"></a>\<claimTypeRequired>
 Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> claimTypeRequired**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<claimType>](claimtype.md)|Specifica una singola attestazione facoltativa o obbligatoria per i token di sicurezza in ingresso.|  
   

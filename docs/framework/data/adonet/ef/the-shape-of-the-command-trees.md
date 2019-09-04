@@ -2,12 +2,12 @@
 title: Forma degli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763984"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248228"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma degli alberi dei comandi
 
@@ -25,7 +25,7 @@ Gli alberi dei comandi di query supportano una semantica più completa rispetto 
 
 La proprietà DBQueryCommandTree.Query è la radice dell'albero delle espressioni che descrive la logica della query. La proprietà DBQueryCommandTree.Parameters contiene un elenco di parametri usati nella query. L'albero delle espressioni è costituito da oggetti DbExpression.
 
-Un oggetto DbExpression rappresenta un'attività di calcolo. In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sono disponibili diversi tipi di espressione per la creazione di espressioni di query, incluse costanti, variabili, funzioni, costruttori e operatori relazionali standard come gli operatori di filtro e join. Ogni oggetto DbExpression include una proprietà ResultType che rappresenta il tipo del risultato prodotto dall'espressione. Questo tipo viene espresso come TypeUsage.
+Un oggetto DbExpression rappresenta un'attività di calcolo. In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sono disponibili diversi tipi di espressione per la creazione di espressioni di query, incluse costanti, variabili, funzioni, costruttori e operatori relazionali standard come gli operatori di filtro e join. Ogni oggetto DbExpression dispone di una proprietà ResultType che rappresenta il tipo del risultato prodotto da tale espressione. Questo tipo viene espresso come TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Forme dell'albero dei comandi di query di output
 
@@ -75,9 +75,9 @@ Molte espressioni possono essere usate solo in modo limitato negli alberi dei co
 
 - Funzioni definite dall'utente.
 
-Funzioni canoniche (vedere [funzioni canoniche](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) per altre informazioni) vengono specificati come parte di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], e i provider devono fornire implementazioni per le funzioni canoniche basate su tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.
+Le funzioni canoniche (vedere [funzioni canoniche](./language-reference/canonical-functions.md) per ulteriori informazioni) vengono specificate come [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]parte di e i provider devono fornire implementazioni per le funzioni canoniche basate su tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.
 
-Inoltre, le funzioni che includono l'attributo NiladicFunction non dispongono di argomenti e devono essere convertite senza la parentesi finale,  Vale a dire, alla  *\<functionName >* anziché  *\<functionName > ()*.
+Inoltre, le funzioni che includono l'attributo NiladicFunction non dispongono di argomenti e devono essere convertite senza la parentesi finale,  Ovvero, per  *\<FunctionName*  *\<> anziché FunctionName > ()* .
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ DbNewInstanceExpression può essere specificato solo nei due casi seguenti:
 
   - Il risultato deve essere un tipo di riga.
 
-  - I relativi argomenti devono essere espressioni che producono un risultato con un tipo primitivo. In genere, ogni argomento è un'espressione scalare, ad esempio un oggetto PropertyExpression su un oggetto DbVariableReferenceExpression, una chiamata a una funzione o un calcolo aritmetico di DbPropertyExpression su un oggetto DbVariableReferenceExpression o una chiamata a una funzione. È tuttavia possibile specificare un'espressione che rappresenta una subquery scalare anche nell'elenco di argomenti di un oggetto DbNewInstanceExpression. Un'espressione che rappresenta una subquery scalare è un albero delle espressioni che rappresenta una subquery che restituisce esattamente una riga e una colonna di tipo primitivo con una radice dell'oggetto DbElementExpression
+  - I relativi argomenti devono essere espressioni che producono un risultato con un tipo primitivo. In genere, ogni argomento è un'espressione scalare, ad esempio un oggetto PropertyExpression su un oggetto DbVariableReferenceExpression, una chiamata a una funzione o un calcolo aritmetico di DbPropertyExpression su un oggetto DbVariableReferenceExpression o una chiamata a una funzione. È tuttavia possibile specificare un'espressione che rappresenta una subquery scalare anche nell'elenco di argomenti di un oggetto DbNewInstanceExpression. Un'espressione che rappresenta una sottoquery scalare è un albero delle espressioni che rappresenta una sottoquery che restituisce esattamente una riga e una colonna di un tipo primitivo con una radice dell'oggetto DbElementExpression
 
 - Con un tipo restituito di raccolta, nel qual caso definisce una nuova raccolta delle espressioni specificate come argomenti.
 
@@ -105,11 +105,11 @@ La proprietà Limit può essere solo un oggetto DbConstantExpression o DbParamet
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-Se usato in alberi dei comandi di output, DbScanExpression rappresenta in modo efficiente un'analisi su una tabella, una vista o una query dell'archivio, rappresentata da EntitySetBase::Target.
+Quando viene usato negli alberi dei comandi di output, DbScanExpression rappresenta efficacemente un'analisi su una tabella, una vista o una query di archiviazione, rappresentata da EntitySetBase:: target.
 
-Se la proprietà dei metadati "Definizione di Query" della destinazione è diverso da null, rappresenta una query, il testo della query per il quale viene fornito nella proprietà dei metadati nel linguaggio specifico del provider (o il sottolinguaggio) come specificato nella definizione dello schema di archivio.
+Se la proprietà dei metadati "Defineing query" della destinazione è diversa da null, rappresenta una query, il testo della query per il quale viene fornito nella proprietà dei metadati nel linguaggio o nel dialetto specifico del provider, come specificato nella definizione dello schema dell'archivio.
 
-In caso contrario, la destinazione rappresenta una tabella o una visualizzazione. È il prefisso dello schema nelle proprietà dei metadati "Schema", se non null, in caso contrario è il nome del contenitore di entità.  Il nome di tabella o vista è sia le proprietà dei metadati "Table", se non è null, in caso contrario, la proprietà Name dell'entità di base del set.
+In caso contrario, la destinazione rappresenta una tabella o una visualizzazione. Il prefisso dello schema si trova nella proprietà dei metadati "schema", se non è null; in caso contrario, è il nome del contenitore di entità.  Il nome della tabella o della vista è la proprietà dei metadati "Table", se non è null; in caso contrario, la proprietà Name della base del set di entità.
 
 Tutte queste proprietà hanno origine dalla definizione dell'EntitySet corrispondente nel file SSDL (Store Schema Definition Language).
 
@@ -119,4 +119,4 @@ Quando si fa riferimento ai tipi primitivi negli alberi dei comandi di output, i
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [Generazione SQL](sql-generation.md)

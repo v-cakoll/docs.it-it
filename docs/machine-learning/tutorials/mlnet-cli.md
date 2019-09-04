@@ -1,19 +1,19 @@
 ---
-title: Generare automaticamente un classificatore binario con l'interfaccia della riga di comando ML.NET
+title: Analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET
 description: Generare automaticamente un modello di ML e il codice C# correlato per un set di dati di esempio
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254165"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generare automaticamente un classificatore binario con l'interfaccia della riga di comando
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET
 
 Di seguito sono riportate informazioni su come usare l'interfaccia della riga di comando ML.NET per generare automaticamente un modello ML.NET e il codice C# sottostante. Dopo aver specificato il set di dati e l'attività di Machine Learning da implementare, tramite l'interfaccia della riga di comando viene usato il motore AutoML per creare il codice sorgente di generazione e distribuzione del modello, oltre al modello binario.
 

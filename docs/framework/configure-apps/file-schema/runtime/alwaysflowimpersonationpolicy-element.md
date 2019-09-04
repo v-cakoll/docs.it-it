@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b42c141362d99090db922d3a6b429f05592130cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 164492eb1abc7329481f158963118b47d2c4aebc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659021"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252855"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<Elemento > alwaysFlowImpersonationPolicy
 Specifica che l'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione.  
   
- \<configuration>  
-\<runtime>  
-\<alwaysFlowImpersonationPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy>** \  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ Specifica che l'identità di Windows passa sempre attraverso punti asincroni, in
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|L'identità Windows non viene propagata tra punti asincroni, a meno che la rappresentazione non venga eseguita tramite metodi gestiti <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>, ad esempio. Questa è l'impostazione predefinita.|  
 |`true`|L'identità Windows scorre sempre tra punti asincroni, indipendentemente dal modo in cui è stata eseguita la rappresentazione.|  

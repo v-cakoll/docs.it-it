@@ -2,17 +2,17 @@
 title: Chiamata di funzioni in query di LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 267bb393d9e75c66eb18139e8897da34bd86e159
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605782"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251257"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Chiamata di funzioni in query di LINQ to Entities
 Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nelle LINQ to Entities.  
   
- Le classi <xref:System.Data.Objects.EntityFunctions> e <xref:System.Data.Objects.SqlClient.SqlFunctions> forniscono l'accesso alle funzioni canoniche e di database come parte di Entity Framework. Per altre informazioni, vedere [Procedura: Chiamare funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) e [come: Chiamare funzioni di Database](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).  
+ Le classi <xref:System.Data.Objects.EntityFunctions> e <xref:System.Data.Objects.SqlClient.SqlFunctions> forniscono l'accesso alle funzioni canoniche e di database come parte di Entity Framework. Per altre informazioni, vedere [Procedura: Chiamare funzioni](how-to-call-canonical-functions.md) canoniche [e procedura: Chiamare le funzioni](how-to-call-database-functions.md)di database.  
   
  Il processo per la chiamata di una funzione personalizzata richiede tre passaggi di base:  
   
@@ -25,19 +25,19 @@ Negli argomenti di questa sezione viene illustrato come chiamare le funzioni nel
  Per altre informazioni, vedere gli argomenti in questa sezione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Chiamare funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
+ [Procedura: Chiama funzioni canoniche](how-to-call-canonical-functions.md)  
   
- [Procedura: Chiamare funzioni di Database](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
+ [Procedura: Funzioni di database di chiamata](how-to-call-database-functions.md)  
   
- [Procedura: Chiamare le funzioni di Database personalizzata](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
+ [Procedura: Chiamare funzioni di database personalizzate](how-to-call-custom-database-functions.md)  
   
- [Procedura: Chiamare funzioni definite dal modello in query](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
+ [Procedura: Chiamare funzioni definite dal modello nelle query](how-to-call-model-defined-functions-in-queries.md)  
   
- [Procedura: Chiamare funzioni definite dal modello come metodi di oggetto](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
+ [Procedura: Chiamare funzioni definite dal modello come metodi di oggetto](how-to-call-model-defined-functions-as-object-methods.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
-- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Query in LINQ to Entities](queries-in-linq-to-entities.md)
+- [Funzioni canoniche](canonical-functions.md)
+- [Panoramica del file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Procedura: Definire funzioni personalizzate nel modello concettuale](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

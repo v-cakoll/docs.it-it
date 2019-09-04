@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: 82dc1e36ae5a0eede7099c8e13ac9a2393bbb904
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026039"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253973"
 ---
 # <a name="formatting-types-in-net"></a>Formattazione di tipi in .NET
 
@@ -141,7 +141,7 @@ La visualizzazione del nome di un tipo ha spesso un uso limitato e non consente 
 
 In .NET è stato eseguito l'override del metodo `ToString` di ogni tipo di valore primitivo per visualizzare il valore dell'oggetto invece del nome. Nella tabella seguente viene illustrato l'override per ogni tipo primitivo. Si noti che la maggior parte dei metodi sottoposti a override chiama un altro overload del metodo `ToString` e passa a esso l'identificatore di formato "G", che definisce il formato generale per il tipo, e un oggetto <xref:System.IFormatProvider> , che rappresenta le impostazioni cultura correnti.
 
-|Tipo|Override di ToString|
+|Type|Override di ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Restituisce <xref:System.Boolean.TrueString?displayProperty=nameWithType> o <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chiama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` per formattare il valore <xref:System.Byte> per le impostazioni cultura correnti.|

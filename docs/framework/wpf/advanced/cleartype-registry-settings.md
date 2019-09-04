@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015601"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254167"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
 In questo argomento viene fornita una panoramica delle impostazioni del registro di sistema di Microsoft ClearType utilizzate dalle applicazioni WPF.  
@@ -19,7 +19,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni che eseguono il rendering del testo in un dispositivo di visualizzazione utilizzano le funzionalità ClearType per offrire un'esperienza di lettura migliorata. ClearType è una tecnologia software sviluppata da Microsoft che consente di migliorare la leggibilità del testo sugli schermi LCD (Liquid Crystal Display), ad esempio schermi portatili, schermate Pocket PC e monitor Flat Panel. ClearType funziona tramite l'accesso ai singoli elementi stripe dei colori verticali in ogni pixel di uno schermo LCD. Per ulteriori informazioni su ClearType, vedere [Cenni preliminari su ClearType](cleartype-overview.md).  
   
- Il testo di cui è stato eseguito il rendering con ClearType può apparire significativamente diverso quando viene visualizzato in diversi dispositivi di visualizzazione. Ad esempio, un numero ridotto di monitoraggi implementa gli elementi stripe dei colori in ordine blu, verde, rosso anziché l'ordine rosso, verde, blu ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) più comune.  
+ Il testo di cui è stato eseguito il rendering con ClearType può apparire significativamente diverso quando viene visualizzato in diversi dispositivi di visualizzazione. Ad esempio, un numero ridotto di monitoraggi implementa gli elementi stripe dei colori in ordine blu, verde, rosso anziché l'ordine rosso, verde, blu (RGB) più comune.  
   
  Il testo di cui è stato eseguito il rendering con ClearType può anche essere significativamente diverso quando viene visualizzato da utenti con diversi livelli di sensibilità del colore. Alcune persone rilevano leggere differenze di colore meglio di altre.  
   

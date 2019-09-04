@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988325"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252005"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite il protocollo WS-Federation. <xref:System.IdentityModel.Services.SessionAuthenticationModule> <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Configura quando si <xref:System.Security.Claims.ClaimsAuthorizationManager> utilizza la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe o per fornire il controllo degli accessi in base alle attestazioni.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel. Services >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> federationConfiguration**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,7 +31,7 @@ Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite i
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Nome di questo elemento di configurazione della Federazione. Questo attributo fornisce principalmente un punto di estendibilità per i protocolli futuri. facoltativo.|  
 |identityConfigurationName|Nome della sezione di configurazione dell'identità come specificato in un [ \<> elemento IdentityConfiguration](identityconfiguration.md) da utilizzare. Se questo attributo non viene specificato, viene utilizzata la sezione di configurazione predefinita dell'identità. facoltativo.|  
@@ -45,7 +46,7 @@ Configura (WSFAM) e (Sam) quando si utilizza l'autenticazione federata tramite i
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federation.|  
   

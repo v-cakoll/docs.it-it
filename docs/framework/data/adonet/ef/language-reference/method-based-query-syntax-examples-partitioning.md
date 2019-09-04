@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: eaf98dc21499817446efca2f10edf7faea15761c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c562e7665a53053f125c17d073eb437574939f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760519"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250125"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Esempi di sintassi delle query basate su metodo: Partizionamento
-Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.Skip%2A>, e <xref:System.Linq.Enumerable.Take%2A> metodi per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Negli esempi di questo argomento viene illustrato come utilizzare i <xref:System.Linq.Enumerable.Skip%2A>metodi, <xref:System.Linq.Enumerable.Take%2A> e per eseguire una query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
- Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
+ Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -50,4 +50,4 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Query in LINQ to Entities](queries-in-linq-to-entities.md)

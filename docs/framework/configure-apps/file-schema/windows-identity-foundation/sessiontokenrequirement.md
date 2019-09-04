@@ -3,21 +3,22 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943669"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251822"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
 Fornisce la configurazione per <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> la classe o le classi derivate.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
-\<sessionTokenRequirement>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Aggiungi >** ](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> sessionTokenRequirement**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +40,7 @@ Fornisce la configurazione per <xref:System.IdentityModel.Tokens.SessionSecurity
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |durata|Specifica la durata dei token di sessione.|  
   
@@ -48,7 +49,7 @@ Fornisce la configurazione per <xref:System.IdentityModel.Tokens.SessionSecurity
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<add>](add.md)|Aggiunge il gestore del token di sicurezza specificato alla raccolta di gestori di token.|  
   

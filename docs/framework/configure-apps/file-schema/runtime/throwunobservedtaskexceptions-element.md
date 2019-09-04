@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 876452a0a56d10f169526138cdbbbd153572f457
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658841"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252259"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<Elemento > ThrowUnobservedTaskExceptions
 Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.  
   
- \<configuration>  
-\<runtime>  
-\<ThrowUnobservedTaskExceptions>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ Specifica se le eccezioni di attività non gestite devono comportare l'arresto d
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non termina il processo in esecuzione per un'eccezione di attività non gestita. Questa è l'impostazione predefinita.|  
 |`true`|Termina il processo in esecuzione per un'eccezione di attività non gestita.|  

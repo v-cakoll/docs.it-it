@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab76d93-6898-4e75-b76f-290a66ecead8
-ms.openlocfilehash: 2c83a744e26fabb6f3e6ddd0a31c7cdd0c7139a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43960d100cde7f746a56c023d305795e13bc04e7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247874"
 ---
 # <a name="convert-a-sequence-to-a-generic-list"></a>Convertire una sequenza un tipo in un elenco generico
 Usare <xref:System.Linq.Enumerable.ToList%2A> per creare un elenco generico da una sequenza.  
@@ -23,4 +23,4 @@ Usare <xref:System.Linq.Enumerable.ToList%2A> per creare un elenco generico da u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Esempi di query](query-examples.md)

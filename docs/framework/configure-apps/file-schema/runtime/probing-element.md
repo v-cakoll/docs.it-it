@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663528"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252394"
 ---
 # <a name="probing-element"></a>\<Elemento > Probe
 Specifica le sottodirectory di base dell'applicazione per la ricerca del Common Language Runtime durante il caricamento degli assembly.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<sondaggio >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,8 @@ Specifica le sottodirectory di base dell'applicazione per la ricerca del Common 
 |`privatePath`|Attributo obbligatorio.<br /><br /> Specifica le sottodirectory della directory di base dell'applicazione che potrebbero contenere assembly. Delimita ogni sottodirectory con un punto e virgola.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+
+Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

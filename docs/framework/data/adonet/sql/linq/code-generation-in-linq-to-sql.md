@@ -2,12 +2,12 @@
 title: Generazione di codice in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939168"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247964"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generazione di codice in LINQ to SQL
 È possibile generare codice per rappresentare un database usando il Object Relational Designer o lo strumento da riga di comando SqlMetal. In entrambi i casi, si verifica la generazione di codice end-to-end in tre fasi:  
@@ -18,7 +18,7 @@ ms.locfileid: "69939168"
   
 3. Se non sono presenti errori di convalida, il file viene passato al generatore di codice.  
   
- Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Gli sviluppatori che usano Visual Studio possono anche usare la Object Relational Designer per generare il codice. Vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Gli sviluppatori che usano Visual Studio possono anche usare la Object Relational Designer per generare il codice. Vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Estrattore DBML  
  L'estrattore DBML è [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un componente che accetta i metadati del database come input e produce un file DBML come output.  
@@ -29,10 +29,10 @@ ms.locfileid: "69939168"
 ## <a name="xml-schema-definition-file"></a>File di definizione di XML Schema  
  Il file di mapping DBML deve essere convalidato in base alla seguente definizione dello schema come file XSD.  
   
- È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file di mapping esterno. Per ulteriori informazioni, vedere [mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ È necessario distinguere questo file di definizione dello schema dal file di definizione dello schema usato per convalidare un file di mapping esterno. Per ulteriori informazioni, vedere [mapping esterno](external-mapping.md).  
   
 > [!NOTE]
-> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "DbmlSchema. xsd". Per usare correttamente il file XSD per la convalida di un file dbml [, vedere Procedura: Convalidare file](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
+> Gli utenti di Visual Studio troveranno inoltre questo file XSD nella finestra di dialogo XML Schema come "DbmlSchema. xsd". Per usare correttamente il file XSD per la convalida di un file dbml [, vedere Procedura: Convalidare file](how-to-validate-dbml-and-external-mapping-files.md)di mapping esterni e dbml.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>File DBML di esempio  
- Il codice seguente è un estratto dal file DBML creato dal database di esempio Northwind. È possibile generare l'intero file usando SQLMetal con l'opzione **/XML** . Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Il codice seguente è un estratto dal file DBML creato dal database di esempio Northwind. È possibile generare l'intero file usando SQLMetal con l'opzione **/XML** . Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -271,8 +271,8 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
-- [Procedura: Generare il modello a oggetti come file esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Informazioni di base](background-information.md)
+- [External Mapping](external-mapping.md) (Mapping esterno)
+- [Procedura: Generare il modello a oggetti come file esterno](how-to-generate-the-object-model-as-an-external-file.md)
+- [Download di database di esempio](downloading-sample-databases.md)
+- [Riferimento](reference.md)

@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422723"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248581"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -23,9 +23,9 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Il manifesto del provider deve essere caricabile dagli strumenti in fase di progettazione senza che sia necessario aprire una connessione all'archivio dati.  
   
- Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] avviene sensibili, ma potrebbe non essere nell'archivio dati sottostante. Quando nel manifesto vengono definiti e usati gli elementi di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Viene fatta distinzione tra maiuscole e minuscole, ma l'archivio dati sottostante potrebbe non essere. Quando nel manifesto vengono definiti e usati gli elementi di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede un manifesto del provider per tutti i provider di dati. Se si prova a usare un provider che non dispone di un provider del manifesto con il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], si otterrà un errore.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede un manifesto del provider per tutti i provider di dati. Se si tenta di utilizzare un provider che non dispone di un manifesto del [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]provider con, verrà ricevuto un errore.  
   
  Nella tabella seguente vengono descritti i tipi di eccezioni che verrebbero generati da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] quando l'interazione del provider genera eccezioni:  
   
@@ -39,7 +39,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
  Un provider deve supportare gli scenari seguenti:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Scrittura di un provider con mapping dei tipi simmetrico  
- È possibile scrivere un provider per il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] in cui ogni tipo di archivio esegue il mapping a un solo tipo EDM, indipendentemente dalla direzione del mapping. Per un tipo di provider che presenta un mapping molto semplice che corrisponde a un tipo EDM, è possibile usare una soluzione simmetrica, in quanto il sistema dei tipi è semplice o corrisponde ai tipi EDM.  
+ È possibile scrivere un provider per l' [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] oggetto in cui ogni tipo di archivio esegue il mapping a un singolo tipo EDM, indipendentemente dalla direzione del mapping. Per un tipo di provider che presenta un mapping molto semplice che corrisponde a un tipo EDM, è possibile usare una soluzione simmetrica, in quanto il sistema dei tipi è semplice o corrisponde ai tipi EDM.  
   
  È possibile usare la semplicità del dominio e produrre un manifesto del provider dichiarativo statico.  
   
@@ -54,14 +54,14 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Scrivere un file XML con due sezioni:  
   
-- Un elenco di tipi di provider espresso in termini EDM e definire il mapping per entrambe le direzioni: EDM a provider e i provider a EDM.  
+- Elenco di tipi di provider espressi in termini EDM e definizione del mapping per entrambe le direzioni: Da EDM a provider e da provider a EDM.  
   
 - Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Individuabilità del manifesto del provider  
  Il manifesto viene usato indirettamente da diversi tipi di componenti nei servizi di entità, ad esempio strumenti o query, ma più direttamente viene usato dai metadati tramite l'uso del caricatore di metadati dell'archivio dati.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  È tuttavia possibile che un provider specificato supporti archivi diversi o versioni diverse dello stesso archivio. È necessario pertanto che per ogni archivio dati supportato dal provider sia indicato un manifesto diverso.  
   
@@ -77,13 +77,13 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
 ## <a name="provider-manifest-programming-model"></a>Modello di programmazione del manifesto del provider  
  I provider derivano da <xref:System.Data.Common.DbXmlEnabledProviderManifest>, che consente loro di specificare in modo dichiarativo i propri manifesti. Nell'illustrazione seguente viene mostrata la gerarchia di classi di un provider:  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API di individuabilità  
  Il manifesto del provider viene caricato dal caricatore dei metadati dell'archivio (StoreItemCollection) tramite una connessione all'archivio dati o un token del manifesto del provider.  
   
 #### <a name="using-a-data-store-connection"></a>Uso di una connessione all'archivio dati  
- Quando la connessione all'archivio dati è disponibile, chiamare <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> per restituire il token che viene passato per il <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> metodo, che restituisce <xref:System.Data.Common.DbProviderManifest>. Questo metodo delega per l'implementazione del provider di `GetDbProviderManifestToken`.  
+ Quando è disponibile la connessione all'archivio dati, <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> chiamare per restituire il token passato <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> al metodo, che restituisce <xref:System.Data.Common.DbProviderManifest>. Questo metodo delega all'implementazione del provider di `GetDbProviderManifestToken`.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Uso di un token del manifesto del provider  
- Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. SSDL consente di specificare un oggetto ProviderManifestToken (vedere [elemento Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) per altre informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
+ Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. Il linguaggio SSDL consente di specificare un ProviderManifestToken (vedere [elemento schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) per ulteriori informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -248,37 +248,37 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Per esprimere queste informazioni sui tipi nel manifesto del provider, è necessario che ogni dichiarazione TypeInformation definisca diverse descrizioni di facet per ogni oggetto Type:  
   
-|Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
+|Nome attributo|Tipo di dati|Obbligatoria|Default Value|DESCRIZIONE|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Stringa|Yes|N/D|Nome del tipo di dati specifico del provider|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Yes|N/D|Nome del tipo EDM|  
+|Name|String|Sì|n/d|Nome del tipo di dati specifico del provider|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nome del tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Ogni oggetto Function definisce una sola funzione disponibile tramite il provider.  
   
-|Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
+|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Stringa|Yes|N/D|Nome/identificatore della funzione|  
-|ReturnType|Stringa|No|Void|Il tipo restituito EDM della funzione|  
-|Aggregate|Booleano|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
-|BuiltIn|Booleano|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
-|StoreFunctionName|Stringa|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
-|NiladicFunction|Booleano|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
-|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversione|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|Name|String|Yes|n/d|Nome/identificatore della funzione|  
+|ReturnType|String|No|Void|Il tipo restituito EDM della funzione|  
+|Aggregate|Boolean|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
+|BuiltIn|Boolean|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
+|StoreFunctionName|String|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
+|NiladicFunction|Boolean|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
+|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversione|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
  **Nodo parametri**  
   
  Ogni funzione presenta una raccolta di uno o più nodi Parameter.  
   
-|Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
+|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|Stringa|Yes|N/D|Nome/identificatore del parametro.|  
-|Tipo|Stringa|Yes|N/D|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direzione|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
+|Name|String|Sì|n/d|Nome/identificatore del parametro.|  
+|Type|String|Yes|n/d|Tipo EDM del parametro.|  
+|Modalità|Parametro<br /><br /> Direction|Sì|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Scrittura di un provider di dati Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Scrittura di un provider di dati Entity Framework](writing-an-ef-data-provider.md)

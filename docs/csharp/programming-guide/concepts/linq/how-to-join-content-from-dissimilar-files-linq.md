@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593165"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253556"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)
 
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
   
 1. Copiare le righe seguenti in un file denominato *scores.csv* e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
   
 2. Copiare le righe seguenti in un file denominato *names.csv* e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

@@ -2,12 +2,12 @@
 title: Valori letterali (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953294"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250342"
 ---
 # <a name="literals-entity-sql"></a>Valori letterali (Entity SQL)
 In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per i valori letterali.  
@@ -15,9 +15,9 @@ In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../.
 ## <a name="null"></a>Null  
  Il valore letterale Null viene usato per rappresentare il valore Null per qualsiasi tipo. Un valore letterale Null è compatibile con qualsiasi tipo.  
   
- I valori Null tipizzati possono essere creati tramite cast su un valore letterale Null. Per ulteriori informazioni, vedere [cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ I valori Null tipizzati possono essere creati tramite cast su un valore letterale Null. Per ulteriori informazioni, vedere [cast](cast-entity-sql.md).  
   
- Per le regole in cui è possibile usare valori letterali null a virgola mobile, vedere [valori letterali null e inferenza del tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Per le regole in cui è possibile usare valori letterali null a virgola mobile, vedere [valori letterali null e inferenza del tipo](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolean  
  I valori letterali Boolean sono rappresentati dalle parole chiave `true` e `false`.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](entity-sql-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589437"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253010"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indicizzatori nelle interfacce (Guida per programmatori C#)
 Gli indicizzatori possono essere dichiarati su una [interfaccia](../../language-reference/keywords/interface.md). Le funzioni di accesso degli indicizzatori di interfaccia differiscono dalle funzioni di accesso degli indicizzatori di [classe](../../language-reference/keywords/class.md) per gli aspetti seguenti:  
@@ -35,7 +35,7 @@ Gli indicizzatori possono essere dichiarati su una [interfaccia](../../language-
   
  Nell'esempio precedente era possibile adottare l'implementazione esplicita del membro dell'interfaccia usando il nome completo del membro dell'interfaccia. Ad esempio:  
   
-```  
+```csharp  
 string ISomeInterface.this[int index]   
 {   
 }   
@@ -43,7 +43,7 @@ string ISomeInterface.this[int index]
   
  Il nome completo, tuttavia, è necessario soltanto per evitare l'ambiguità quando la classe implementa più di un'interfaccia con la stessa firma di indicizzatore. Se una classe `Employee` implementa, ad esempio, due interfacce, `ICitizen` e `IEmployee`, ed entrambe le interfacce hanno la stessa firma di indicizzatore, sarà necessaria l'implementazione esplicita del membro dell'interfaccia. In altre parole, la dichiarazione di indicizzatore seguente:  
   
-```  
+```csharp  
 string IEmployee.this[int index]   
 {   
 }   
@@ -51,7 +51,7 @@ string IEmployee.this[int index]
   
  implementa l'indicizzatore nell'interfaccia `IEmployee`, mentre la dichiarazione seguente:  
   
-```  
+```csharp  
 string ICitizen.this[int index]
 {   
 }   
