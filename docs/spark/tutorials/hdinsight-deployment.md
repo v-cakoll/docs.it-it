@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4769c194520790ce217d46d1d3197b20742d4f1a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "69576948"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243942"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
 
@@ -79,12 +79,12 @@ Questo passaggio è necessario solo una volta per il cluster.
 
 Eseguire `install-worker.sh` nel cluster usando [azioni script di HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------|-----|
-|Tipo di script|Custom (Personalizzati)|
-|nome|Installare Microsoft.Spark.Worker|
+|Tipo di script|Personalizzato|
+|NOME|Installare Microsoft.Spark.Worker|
 |URI script Bash|URI in cui è stato caricato `install-worker.sh`. Ad esempio, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`.|
-|Tipo/i di nodo|Worker|
+|Tipi di nodo|Lavoro|
 |Parametri|Parametri per `install-worker.sh`. Ad esempio, se `install-worker.sh` viene caricato in Azure Data Lake Gen2, sarà `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.|
 
 ![Immagine dell'azione script](./media/hdinsight-deployment/deployment-hdi-action-script.png)
@@ -99,12 +99,12 @@ Eseguire `install-worker.sh` nel cluster usando [azioni script di HDInsight](htt
  
 1. `ssh` in uno dei nodi head del cluster.
 
-1. Eseguire `spark-submit`:
+1. Esegui `spark-submit`:
 
    ```bash
    spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
    abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
@@ -124,7 +124,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -d @- << EOF
 {
     "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.DotnetRunner",
+    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
 }
