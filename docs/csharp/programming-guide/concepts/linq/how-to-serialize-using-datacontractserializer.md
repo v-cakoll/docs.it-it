@@ -2,18 +2,18 @@
 title: 'Procedura: Serializzare tramite DataContractSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 7175b5051d318e7f214b4c2f7d96d44acf7a0a48
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 2b4800e2c6d210d62ab3093b673898a147c1f92d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484928"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253347"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="120ad-102">Procedura: Serializzare tramite DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="120ad-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
-<span data-ttu-id="120ad-103">In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire la serializzazione e la deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="120ad-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="df85d-102">Procedura: Serializzare tramite DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="df85d-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="df85d-103">In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire la serializzazione e la deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="df85d-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="120ad-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="120ad-104">Example</span></span>  
- <span data-ttu-id="120ad-105">Nell'esempio seguente vengono creati diversi oggetti contenenti oggetti <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="120ad-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="120ad-106">Tali oggetti vengono quindi serializzati in file di testo e successivamente deserializzati dagli stessi file di testo.</span><span class="sxs-lookup"><span data-stu-id="120ad-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="df85d-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="df85d-104">Example</span></span>  
+ <span data-ttu-id="df85d-105">Nell'esempio seguente vengono creati diversi oggetti contenenti oggetti <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="df85d-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="df85d-106">Tali oggetti vengono quindi serializzati in file di testo e successivamente deserializzati dagli stessi file di testo.</span><span class="sxs-lookup"><span data-stu-id="df85d-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -80,9 +80,9 @@ public class XElementNullContainer
 }  
 ```  
   
- <span data-ttu-id="120ad-107">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="120ad-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="df85d-107">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="df85d-107">This example produces the following output:</span></span>  
   
-```  
+```output  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -90,4 +90,3 @@ Testing for type: XElementContainer
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 ```  
-  

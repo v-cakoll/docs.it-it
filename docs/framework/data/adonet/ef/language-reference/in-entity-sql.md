@@ -2,44 +2,44 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a07ee79d5452da4341d391fae7c997c33b603a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750696"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250665"
 ---
-# <a name="in-entity-sql"></a><span data-ttu-id="cb8ed-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="cb8ed-102">IN (Entity SQL)</span></span>
-<span data-ttu-id="cb8ed-103">Determina se un valore corrisponde a qualsiasi valore in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-103">Determines whether a value matches any value in a collection.</span></span>  
+# <a name="in-entity-sql"></a><span data-ttu-id="aa075-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="aa075-102">IN (Entity SQL)</span></span>
+<span data-ttu-id="aa075-103">Determina se un valore corrisponde a qualsiasi valore in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="aa075-103">Determines whether a value matches any value in a collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb8ed-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cb8ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa075-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="aa075-104">Syntax</span></span>  
   
 ```  
 value [ NOT ] IN expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="cb8ed-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="cb8ed-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="aa075-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="aa075-105">Arguments</span></span>  
  `value`  
- <span data-ttu-id="cb8ed-106">Qualsiasi espressione valida che restituisce il valore di cui trovare la corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-106">Any valid expression that returns the value to match.</span></span>  
+ <span data-ttu-id="aa075-106">Qualsiasi espressione valida che restituisce il valore di cui trovare la corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="aa075-106">Any valid expression that returns the value to match.</span></span>  
   
- <span data-ttu-id="cb8ed-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="cb8ed-107">[ NOT ]</span></span>  
- <span data-ttu-id="cb8ed-108">Specifica la negazione del risultato `Boolean` di IN.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
+ <span data-ttu-id="aa075-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="aa075-107">[ NOT ]</span></span>  
+ <span data-ttu-id="aa075-108">Specifica la negazione del risultato `Boolean` di IN.</span><span class="sxs-lookup"><span data-stu-id="aa075-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
   
  `expression`  
- <span data-ttu-id="cb8ed-109">Qualsiasi espressione valida che restituisce la raccolta da testare per trovare una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="cb8ed-110">Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `value`.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
+ <span data-ttu-id="aa075-109">Qualsiasi espressione valida che restituisce la raccolta da testare per trovare una corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="aa075-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="aa075-110">Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `value`.</span><span class="sxs-lookup"><span data-stu-id="aa075-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cb8ed-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cb8ed-111">Return Value</span></span>  
- <span data-ttu-id="cb8ed-112">`true` se il valore viene trovato nella raccolta; null se il valore è null o se la raccolta è null; in caso contrario `false`.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-112">`true` if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="cb8ed-113">L'utilizzo di NOT IN consente di negare i risultati di IN.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-113">Using NOT IN negates the results of IN.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aa075-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="aa075-111">Return Value</span></span>  
+ <span data-ttu-id="aa075-112">`true` se il valore viene trovato nella raccolta; null se il valore è null o se la raccolta è null; in caso contrario `false`.</span><span class="sxs-lookup"><span data-stu-id="aa075-112">`true` if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="aa075-113">L'utilizzo di NOT IN consente di negare i risultati di IN.</span><span class="sxs-lookup"><span data-stu-id="aa075-113">Using NOT IN negates the results of IN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb8ed-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="cb8ed-114">Example</span></span>  
- <span data-ttu-id="cb8ed-115">Nella query Entity SQL seguente viene usato l'operatore IN per determinare se un valore corrisponde a qualsiasi valore in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="cb8ed-116">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="cb8ed-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="cb8ed-117">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="cb8ed-117">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="aa075-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="aa075-114">Example</span></span>  
+ <span data-ttu-id="aa075-115">Nella query Entity SQL seguente viene usato l'operatore IN per determinare se un valore corrisponde a qualsiasi valore in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="aa075-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="aa075-116">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="aa075-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="aa075-117">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="aa075-117">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="cb8ed-118">Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="cb8ed-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="aa075-118">Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.</span><span class="sxs-lookup"><span data-stu-id="aa075-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="cb8ed-119">Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="cb8ed-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="aa075-119">Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="aa075-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
-## <a name="see-also"></a><span data-ttu-id="cb8ed-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cb8ed-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa075-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa075-120">See also</span></span>
 
-- [<span data-ttu-id="cb8ed-121">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="cb8ed-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="aa075-121">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="aa075-121">Entity SQL Reference</span></span>](entity-sql-reference.md)
