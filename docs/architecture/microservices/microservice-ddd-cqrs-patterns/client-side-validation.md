@@ -27,10 +27,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Convalida nelle app per dispositivi mobili in Xamarin
 
-- **Validate Text Input and Show Errors** \ (Convalidare l'input di testo e visualizzare gli errori)
+- **Convalidare l'input di testo e visualizzare gli errori** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Validation Callback** \ (Callback di convalida)
+- **Callback di convalida** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>Convalida nelle app ASP.NET Core
@@ -40,10 +40,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida nelle app Web a pagina singola (Angular 2, TypeScript, JavaScript)
 
-- **Ado Kukic. Angular 2 Form Validation** \ (Convalida del modulo Angular 2)
+- **Ado Kukic. Convalida del modulo Angular 2** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Form Validation** \ (Convalida del modulo)
+- **Convalida del modulo** \
   <https://angular.io/guide/form-validation>
 
 - **Convalida.** Documentazione per Breeze. \
