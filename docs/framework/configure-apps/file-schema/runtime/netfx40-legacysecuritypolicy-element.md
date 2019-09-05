@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663566"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252450"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<Elemento > NetFx40_LegacySecurityPolicy
 
 Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legacy.
 
-\<> di configurazione \
-\<> runtime \
-\<NetFx40_LegacySecurityPolicy>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NetFx40_LegacySecurityPolicy**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,7 +41,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Valore|Descrizione|
+|Valore|DESCRIZIONE|
 |-----------|-----------------|
 |`false`|Il runtime non usa i criteri CAS legacy. Questa è l'impostazione predefinita.|
 |`true`|Il runtime usa i criteri CAS legacy.|

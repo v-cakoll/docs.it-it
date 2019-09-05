@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un discendente singolo con il metodo Descendants (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 726c89b8fdd3df774de2d7ac9a824f2b3769d404
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709959"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253803"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedura: Trovare un discendente singolo con il metodo Descendants (C#)
 È possibile usare il metodo <xref:System.Xml.Linq.XContainer.Descendants%2A> dell'asse per scrivere rapidamente codice per trovare un singolo elemento con un nome univoco. Questa tecnica è particolarmente utile quando si desidera trovare un particolare discendente con un nome specifico. È possibile scrivere il codice per spostarsi fino all'elemento desiderato, ma risulta in genere più veloce e semplice scrivere il codice usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -38,7 +38,7 @@ Console.WriteLine(grandChild3);
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 GC3 Value  
 ```  
   
@@ -69,6 +69,6 @@ Console.WriteLine(grandChild3);
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 GC3 Value  
 ```  

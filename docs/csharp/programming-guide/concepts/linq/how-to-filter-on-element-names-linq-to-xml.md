@@ -2,12 +2,12 @@
 title: 'Procedura: Filtrare in base a nomi di elementi (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 9febe3b834261326bab3e82d87c476f99d4e6b1f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a4eccac3bc24005af0efee0785393de00039228
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593814"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253815"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Procedura: Filtrare in base a nomi di elementi (LINQ to XML) (C#)
 Quando si chiama uno dei metodi che restituisce l'oggetto <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, è possibile filtrare in base al nome dell'elemento.  
@@ -28,7 +28,7 @@ foreach(XElement prdName in items)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
@@ -66,7 +66,7 @@ foreach (XElement prdName in items)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  

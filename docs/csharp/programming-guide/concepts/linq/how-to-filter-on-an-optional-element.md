@@ -2,12 +2,12 @@
 title: 'Procedura: Filtrare in base a un elemento facoltativo (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593792"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253825"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Procedura: Filtrare in base a un elemento facoltativo (C#)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  L'output del codice è il seguente:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

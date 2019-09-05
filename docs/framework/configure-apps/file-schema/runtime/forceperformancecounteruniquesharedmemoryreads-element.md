@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29fbe951b955c97e39ebaf80885729a45c1a3fd7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 54bccd134a2f77925e80bfc681770b28c05f77a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927401"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252595"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<Elemento > forcePerformanceCounterUniqueSharedMemoryReads
 Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.  
   
- \<configuration>  
-\<runtime>  
-\<forcePerformanceCounterUniqueSharedMemoryReads>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |`false`|PerfCounter. dll non usa l'impostazione predefinita del registro di sistema CategoryOptions.|  
 |`true`|PerfCounter. dll usa l'impostazione del registro di sistema CategoryOptions.|  

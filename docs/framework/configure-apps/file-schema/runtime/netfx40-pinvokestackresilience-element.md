@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663547"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252435"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<Elemento > NetFx40_PInvokeStackResilience
 
 Specifica se il runtime corregge automaticamente le dichiarazioni platform invoke non corrette in fase di esecuzione, al costo di transizioni più lente tra codice gestito e quello non gestito.
 
-\<> di configurazione \
-\<> runtime \
-\<NetFx40_PInvokeStackResilience>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NetFx40_PInvokeStackResilience**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,7 +40,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="enabled-attribute"></a>Attributo enabled
 
-|Valore|DESCRIZIONE|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`0`|Il runtime usa l'architettura di marshalling di interoperabilità più veloce introdotta in .NET Framework 4, che non rileva e corregge platform invoke dichiarazioni non corrette. Questa è l'impostazione predefinita.|
 |`1`|Il runtime utilizza transizioni più lente che rilevano e correggono dichiarazioni di platform invoke non corrette.|

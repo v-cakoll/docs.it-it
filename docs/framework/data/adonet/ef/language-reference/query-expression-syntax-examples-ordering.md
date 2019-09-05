@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: ea9e7cb61facb880a050fbfae3aa9b07c03361fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbcb6ffe27234beb120e71ebc71c782abd4be24a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614171"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249460"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Esempi di sintassi delle espressioni di query: Ordering
-Gli esempi in questo argomento illustrano come usare il `OrderBy` e `OrderByDescending` metodi per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Negli esempi di questo argomento viene illustrato come utilizzare i `OrderBy` metodi `OrderByDescending` e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
- Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
+ Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -60,4 +60,4 @@ Gli esempi in questo argomento illustrano come usare il `OrderBy` e `OrderByDesc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Query in LINQ to Entities](queries-in-linq-to-entities.md)

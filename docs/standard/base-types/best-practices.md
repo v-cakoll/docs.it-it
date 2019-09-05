@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988824"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254221"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988824"
 > Il formato della chiamata al metodo (statico, interpretato, compilato) influisce sulle prestazioni se la stessa espressione regolare viene utilizzata più volte nelle chiamate al metodo oppure se in un'applicazione vengono utilizzati spesso gli oggetti di espressione regolare.  
   
 ### <a name="static-regular-expressions"></a>Espressioni regolari statiche  
- I metodi con espressioni regolari statiche sono consigliati come alternativa alla creazione ripetuta di un'istanza di un oggetto di espressione regolare con la stessa espressione regolare. A differenza dei modelli di espressione regolare usati dagli oggetti di espressione regolare, i codici operativi o il linguaggio MSIL (Microsoft Intermediate Language) compilato dei modelli usati nelle chiamate al metodo di istanza vengono memorizzati nella cache interna dal motore delle espressioni regolari.  
+ I metodi con espressioni regolari statiche sono consigliati come alternativa alla creazione ripetuta di un'istanza di un oggetto di espressione regolare con la stessa espressione regolare. A differenza dei modelli di espressione regolare usati dagli oggetti di espressione regolare, i codici operativi o il linguaggio MSIL (Microsoft Intermediate Language) compilato dei modelli usati nelle chiamate al metodo statico vengono memorizzati nella cache interna dal motore delle espressioni regolari.  
   
  Ad esempio, un gestore eventi chiama frequentemente un altro metodo per convalidare l'input dell'utente. Tale situazione viene riportata nel codice seguente, in cui l'evento <xref:System.Windows.Forms.Button> di un controllo <xref:System.Windows.Forms.Control.Click> viene utilizzato per chiamare un metodo denominato `IsValidCurrency`, che controlla se l'utente ha immesso un simbolo di valuta seguito da almeno una cifra decimale.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "69988824"
   
  L'utilizzo del backtracking comporta spesso una riduzione delle prestazioni delle applicazioni sebbene il backtracking non sia essenziale per una corrispondenza. Ad esempio, l'espressione regolare `\b\p{Lu}\w*\b` cerca una corrispondenza di tutte le parole che iniziano con un carattere maiuscolo, come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Modello|Descrizione|  
 |-|-|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\p{Lu}`|Trova la corrispondenza di un carattere maiuscolo.|  
@@ -206,7 +206,7 @@ ms.locfileid: "69988824"
   
  In questi casi, è possibile ottimizzare le prestazioni dell'espressione regolare rimuovendo i quantificatori annidati e sostituendo la sottoespressione esterna con un'asserzione lookahead o lookbehind di larghezza zero. Le asserzioni lookahead e lookbehind sono ancoraggi; non spostano il puntatore nella stringa di input, ma eseguono il lookahead e lookbehind per verificare se è stata soddisfatta una condizione specificata. Ad esempio, l'espressione regolare del numero parte può essere riscritta come `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Tale modello di espressione regolare viene definito come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Il numero parte deve essere costituito da almeno uno di questi caratteri.|  
@@ -222,7 +222,7 @@ ms.locfileid: "69988824"
   
  Il linguaggio delle espressioni regolari in .NET include i seguenti elementi che è possibile usare per eliminare i quantificatori annidati. Per altre informazioni, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento di linguaggio|DESCRIZIONE|  
+|Elemento di linguaggio|Descrizione|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Asserzione lookahead positiva di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` corrisponde alla stringa di input.|  
 |`(?!` `subexpression` `)`|Asserzione lookahead negativa di larghezza zero. Lookahead della posizione corrente per determinare se `subexpression` non corrisponde alla stringa di input.|  
@@ -294,7 +294,7 @@ ms.locfileid: "69988824"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Viene esaminata l'implementazione del motore delle espressioni regolari in .NET. L'argomento è incentrato sulla flessibilità delle espressioni regolari e sulla responsabilità dello sviluppatore al fine di garantire un funzionamento efficace e affidabile del motore delle espressioni regolari.|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Viene illustrato il backtracking e il modo in cui influisce sulle prestazioni delle espressioni regolari e vengono esaminati gli elementi del linguaggio che forniscono le alternative al backtracking.|  
