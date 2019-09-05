@@ -1,74 +1,49 @@
-- name: Guida a ML.NET
+- name: ML.NET
   href: index.yml
 - name: Panoramica
   expanded: true
   items:
-    - name: Che cos'è ML.NET e come funziona?
-      href: how-does-mldotnet-work.md
+    - name: API
+      items:
+        - name: API ML.NET
+          href: how-does-mldotnet-work.md
+    - name: Strumenti
+      items:
+        - name: Strumento Model Builder ML.NET
+          href: automate-training-with-model-builder.md
+        - name: Interfaccia della riga di comando ML.NET
+          href: automate-training-with-cli.md
 - name: Esercitazioni
   items:
-    - name: Panoramica
-      href: tutorials/index.md
-    - name: Analizzare il sentiment (classificazione binaria)
-      href: tutorials/sentiment-analysis.md
-    - name: Categorizzare i problemi di supporto (classificazione multiclasse)
-      href: tutorials/github-issue-classification.md
-    - name: Eseguire una stima dei prezzi (regressione)
-      href: tutorials/predict-prices.md
-    - name: Categorizzare i fiori di iris (clustering k-means)
-      href: tutorials/iris-clustering.md
-    - name: Raccomandare film (fattorizzazione di matrice)
-      href: tutorials/movie-recommendation.md
-    - name: Classificazione delle immagini (trasferimento induttivo)
-      href: tutorials/image-classification.md
-    - name: Analisi delle vendite di prodotti (rilevamento anomalie)
-      href: tutorials/sales-anomaly-detection.md
-    - name: Rilevare gli oggetti in immagini (rilevamento oggetti)
-      href: tutorials/object-detection-onnx.md
-- name: Guide pratiche
-  items:
-    - name: Caricare i dati
-      href: how-to-guides/load-data-ml-net.md
-    - name: Preparare i dati
-      href: how-to-guides/prepare-data-ml-net.md
-    - name: 'Eseguire il training del modello, valutarlo e spiegarlo'
+    - name: API
       items:
-        - name: Eseguire il training di un modello e valutarlo
-          href: how-to-guides/train-machine-learning-model-ml-net.md
-        - name: Eseguire il training di un modello usando la convalida incrociata
-          href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
-        - name: Esaminare i valori dei dati intermedi di una pipeline
-          href: how-to-guides/inspect-intermediate-data-ml-net.md
-        - name: Determinare l'importanza delle funzionalità dei modelli con PFI
-          href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
-    - name: Usare il modello con training
+        - name: Panoramica
+          href: tutorials/index.md
+        - name: Analizzare il sentiment (classificazione binaria)
+          href: tutorials/sentiment-analysis.md
+        - name: Categorizzare i problemi di supporto (classificazione multiclasse)
+          href: tutorials/github-issue-classification.md
+        - name: Eseguire una stima dei prezzi (regressione)
+          href: tutorials/predict-prices.md
+        - name: Categorizzare i fiori di iris (clustering k-means)
+          href: tutorials/iris-clustering.md
+        - name: Raccomandare film (fattorizzazione di matrice)
+          href: tutorials/movie-recommendation.md
+        - name: Classificazione delle immagini (trasferimento induttivo)
+          href: tutorials/image-classification.md
+        - name: Analisi delle vendite di prodotti (rilevamento anomalie)
+          href: tutorials/sales-anomaly-detection.md
+        - name: Rilevare gli oggetti in immagini (rilevamento oggetti)
+          href: tutorials/object-detection-onnx.md
+    - name: Strumenti
       items:
-        - name: Salvare e caricare un modello
-          href: how-to-guides/save-load-machine-learning-models-ml-net.md
-        - name: Usare un modello per eseguire stime
-          href: how-to-guides/machine-learning-model-predictions-ml-net.md
-        - name: Ripetere il training di un modello
-          href: how-to-guides/retrain-model-ml-net.md
-        - name: Distribuire un modello in Funzioni di Azure
-          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
-        - name: Distribuire un modello a un'API Web
-          href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Infer.NET
-      items:
-        - name: Programmazione probabilistica con Infer.NET
-          href: how-to-guides/matchup-app-infer-net.md
-- name: Riferimenti
+        - name: Stimare i prezzi con Model Builder
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
+          href: tutorials/mlnet-cli.md
+- name: Concetti
   items:
-    - name: Riferimento API
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-    - name: Riferimento API (anteprima)
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-- name: Risorse
-  href: resources/index.md
-  items:
-    - name: Glossario
-      href: resources/glossary.md
-    - name: Attività
+    - name: Attività ML.NET (tipi di modello)
       href: resources/tasks.md
     - name: Algoritmi
       href: how-to-choose-an-ml-net-algorithm.md
@@ -78,33 +53,65 @@
       href: resources/metrics.md
     - name: Migliorare l'accuratezza del modello
       href: resources/improve-machine-learning-model-ml-net.md
-- name: Anteprima di Machine Learning automatizzata
+- name: Guide pratiche
   items:
-    - name: Panoramica
-      href: automl-overview.md
-    - name: Model Builder
+    - name: API
       items:
-        - name: Che cos'è Model Builder?
-          href: automate-training-with-model-builder.md
+        - name: Caricare i dati
+          href: how-to-guides/load-data-ml-net.md
+        - name: Preparare i dati
+          href: how-to-guides/prepare-data-ml-net.md
+        - name: 'Eseguire il training del modello, valutarlo e spiegarlo'
+          items:
+            - name: Eseguire il training di un modello e valutarlo
+              href: how-to-guides/train-machine-learning-model-ml-net.md
+            - name: Eseguire il training di un modello usando la convalida incrociata
+              href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
+            - name: Esaminare i valori dei dati intermedi di una pipeline
+              href: how-to-guides/inspect-intermediate-data-ml-net.md
+            - name: Determinare l'importanza delle funzionalità dei modelli con PFI
+              href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
+        - name: Usare il modello con training
+          items:
+            - name: Salvare e caricare un modello
+              href: how-to-guides/save-load-machine-learning-models-ml-net.md
+            - name: Usare un modello per eseguire stime
+              href: how-to-guides/machine-learning-model-predictions-ml-net.md
+            - name: Ripetere il training di un modello
+              href: how-to-guides/retrain-model-ml-net.md
+            - name: Distribuire un modello in Funzioni di Azure
+              href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+            - name: Distribuire un modello a un'API Web
+              href: how-to-guides/serve-model-web-api-ml-net.md
+    - name: Strumenti
+      items:
         - name: Installare Model Builder
           href: how-to-guides/install-model-builder.md
-        - name: Stimare i prezzi con Model Builder
-          href: tutorials/predict-prices-with-model-builder.md
-    - name: Interfaccia della riga di comando ML.NET
-      items:
         - name: Installare l'interfaccia della riga di comando
           href: how-to-guides/install-ml-net-cli.md
-        - name: Machine Learning automatico
-          href: automate-training-with-cli.md
-        - name: Generare automaticamente un classificatore binario
-          href: tutorials/mlnet-cli.md
-        - name: Riferimento interfaccia della riga di comando
-          href: reference/ml-net-cli-reference.md
-        - name: Dati di telemetria dell'interfaccia della riga di comando
-          href: resources/ml-net-cli-telemetry.md
-    - name: API ML automatizzata
-      items:
         - name: Usare l'API ML automatizzata
           href: how-to-guides/how-to-use-the-automl-api.md
-        - name: API (riferimento)
+    - name: Infer.NET
+      items:
+        - name: Programmazione probabilistica con Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
+- name: Riferimenti
+  items:
+    - name: API
+      items:
+        - name: Informazioni di riferimento sulle API ML.NET
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+        - name: Riferimento sulle API ML.NET (anteprima)
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: Strumenti
+      items:
+        - name: Riferimento interfaccia della riga di comando
+          href: reference/ml-net-cli-reference.md
+        - name: Informazioni di riferimento sulle API ML.NET AutoML
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+- name: Risorse
+  items:
+    - name: Glossario
+      href: resources/glossary.md
+    - name: Dati di telemetria dell'interfaccia della riga di comando
+      href: resources/ml-net-cli-telemetry.md
