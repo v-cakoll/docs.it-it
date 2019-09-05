@@ -4,7 +4,7 @@ description: I microservizi sono progettati per resistere a errori temporanei di
 ms.date: 09/20/2018
 ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68675058"
@@ -56,7 +56,7 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **The Twelve-Factor App. XI. Logs: Treat logs as event streams** \ (Log: considerare i log come flussi di eventi)
+- **The Twelve-Factor App. XI. Log: considerare i log come flussi di eventi** \
   <https://12factor.net/logs>
 
 - Repository GitHub **Libreria di flussi eventi di diagnostica Microsoft**. \
@@ -68,13 +68,13 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 - **Connettere computer Windows al servizio Monitoraggio di Azure** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrazione mirata: uso del blocco applicazione di registrazione semantica)
+- **Registrazione mirata: uso del blocco applicazione di registrazione semantica** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Sito ufficiale di **Splunk**. \
   <https://www.splunk.com/>
 
-- **Classe EventSource Class**: API per traccia eventi per Windows (ETW)
+- **Classe EventSource Class**: API per traccia eventi per Windows (ETW) \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]

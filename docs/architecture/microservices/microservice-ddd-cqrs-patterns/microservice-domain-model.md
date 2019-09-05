@@ -4,7 +4,7 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 ms.date: 10/08/2018
 ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68676448"
@@ -61,7 +61,7 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 - **Martin Fowler. Modello di dominio** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler. The Anemic Domain Model** \ (Il modello di dominio anemico)
+- **Martin Fowler. Il modello di dominio anemico** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Schema Value Object
@@ -142,10 +142,10 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
 - **Vaughn Vernon. Effective Aggregate Design - Part III: (Progettazione efficace delle aggregazioni - Parte III) Gaining Insight Through Discovery** (Ottenere informazioni dettagliate attraverso l'individuazione) (da <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. DDD Tactical Design Patterns** \ (Schemi progettuali tattici DDD)
+- **Sergey Grybniak. Schemi progettuali tattici DDD** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates** \ (Sviluppo di microservizi transazionali usando aggregazioni)
+- **Chris Richardson. Sviluppo di microservizi transazionali usando aggregazioni** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ. Schema Aggregate** \
