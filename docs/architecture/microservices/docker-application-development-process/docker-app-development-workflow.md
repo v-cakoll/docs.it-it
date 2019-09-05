@@ -4,7 +4,7 @@ description: Informazioni dettagliate sul flusso di lavoro richiesto per lo svil
 ms.date: 01/07/2019
 ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674818"
@@ -122,10 +122,10 @@ Nel Dockerfile è possibile specificare altre impostazioni di configurazione in 
 - **Creare un'immagine**. Nella documentazione ufficiale di Docker.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
 
-- **Staying up-to-date with .NET Container Images** \ (Rimanere aggiornati con le immagini del contenitore .NET)
+- **Rimanere aggiornati con le immagini del contenitore .NET** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
-- **Using .NET and Docker Together - DockerCon 2018 Update** \ (Uso combinato di .NET e Docker - Aggiornamento DockerCon 2018)
+- **Uso combinato di .NET e Docker - Aggiornamento DockerCon 2018** \
   <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>Uso di repository di immagini multi-arch
@@ -539,7 +539,7 @@ Inoltre è sufficiente eseguire una sola volta il passaggio 2, ovvero l'aggiunta
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Steve Lasker. .NET Docker Development with Visual Studio 2017** \ (Sviluppo di Docker .NET con Visual Studio 2017)
+- **Sviluppo di Docker .NET con Visual Studio 2017** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso dei comandi di PowerShell in un Dockerfile per configurare contenitori Windows
