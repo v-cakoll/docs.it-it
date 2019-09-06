@@ -2,18 +2,18 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 06/04/2018
-ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202505"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373743"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet`: uno strumento per la gestione dei file binari e del codice sorgente di .NET.
 
@@ -43,7 +43,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 `dotnet` è uno strumento per la gestione dei file binari e del codice sorgente di .NET. Espone i comandi che eseguono attività specifiche, come ad esempio [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md). Ogni comando definisce i propri argomenti. Digitare `--help` dopo ogni comando per accedere a una breve documentazione della Guida.
 
@@ -94,9 +94,9 @@ Visualizza i .NET Core SDK installati.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Definisce il comportamento quando il framework condiviso richiesto non è disponibile. `N` può essere:
-* `0` - Disabilitare anche il roll forward per la versione secondaria.
-* `1` - Eseguire il roll forward per la versione secondaria, ma non la versione principale. Comportamento predefinito.
-* `2` - Eseguire il roll forward per le versioni principali e secondarie.
+- `0` - Disabilitare anche il roll forward per la versione secondaria.
+- `1` - Eseguire il roll forward per la versione secondaria, ma non la versione principale. Comportamento predefinito.
+- `2` - Eseguire il roll forward per le versioni principali e secondarie.
 
  Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 

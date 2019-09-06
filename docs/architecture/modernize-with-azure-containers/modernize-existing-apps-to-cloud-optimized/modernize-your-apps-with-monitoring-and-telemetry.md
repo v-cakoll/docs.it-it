@@ -2,12 +2,12 @@
 title: Modernizzare le app con monitoraggio e telemetria
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Modernizza le tue app con monitoraggio e telemetria
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578174"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373962"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizzare le app con monitoraggio e telemetria
 
@@ -21,7 +21,7 @@ La figura 4-10 illustra un esempio di come Application Insights monitora l'appli
 
 ![Dashboard di monitoraggio Application Insights](./media/image10.png)
 
-> **Figura 4-10.** Dashboard di monitoraggio Application Insights
+**Figura 4-10.** Dashboard di monitoraggio Application Insights
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Monitorare l'infrastruttura Docker con Log Analytics e la soluzione di monitoraggio dei contenitori
 
@@ -45,7 +45,7 @@ La figura 4-11 Mostra le relazioni tra vari host e agenti del contenitore e OMS.
 
 ![Soluzione di monitoraggio del contenitore Log Analytics](./media/image11.png)
 
-> **Figura 4-11.** Soluzione di monitoraggio del contenitore Log Analytics
+**Figura 4-11.** Soluzione di monitoraggio del contenitore Log Analytics
 
 È possibile usare la soluzione di monitoraggio dei contenitori Log Analytics per:
 

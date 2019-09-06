@@ -2,18 +2,18 @@
 title: Lift-and-Shift delle app .NET esistenti in Azure IaaS (pronto per l'infrastruttura cloud)
 description: Modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660745"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373977"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift-and-Shift delle app .NET esistenti in Azure IaaS (pronto per l'infrastruttura cloud)
 
 > Obiettivo: Come primo passaggio, per ridurre l'investimento locale e il costo totale dell'hardware e della manutenzione della rete, è sufficiente riospitare le applicazioni esistenti nel cloud.
 
-Prima di iniziare a eseguire la migrazione delle applicazioni esistenti alla piattaforma di infrastruttura distribuita come servizio (IaaS) di Azure, è importante analizzare i motivi per cui si vuole eseguire la migrazione diretta a IaaS in Azure. Lo scenario a questo livello di maturità della modernizzazione è essenzialmente quello di iniziare a usare le macchine virtuali nel cloud, anziché continuare a usare l'infrastruttura locale corrente.
+Prima di iniziare *a eseguire* la migrazione delle applicazioni esistenti alla piattaforma di infrastruttura distribuita come servizio (IaaS) di Azure, è importante analizzare i motivi per *cui si vuole* eseguire la migrazione diretta a IaaS in Azure. Lo scenario a questo livello di maturità della modernizzazione è essenzialmente quello di iniziare a usare le macchine virtuali nel cloud, anziché continuare a usare l'infrastruttura locale corrente.
 
 Un altro punto da analizzare è il *motivo* per cui potrebbe essere necessario eseguire la migrazione al Cloud IaaS pure anziché aggiungere semplicemente servizi gestiti avanzati in Azure. Determinare i casi in cui potrebbe essere necessario IaaS in primo luogo.
 
@@ -21,7 +21,7 @@ Figura 2-1 posizioni delle applicazioni predisposte per l'infrastruttura cloud n
 
 ![Posizionamento di applicazioni predisposte per l'infrastruttura cloud](./media/image2-1.png)
 
-> **Figura 2-1.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
+**Figura 2-1.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Perché eseguire la migrazione di applicazioni Web .NET esistenti ad Azure IaaS
 
@@ -65,7 +65,7 @@ La figura 2-2 illustra il mapping predefinito delle dipendenze per tutte le conn
 
 ![Posizionamento di applicazioni predisposte per l'infrastruttura cloud](./media/image2-2.png)
 
-> **Figura 2-2.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
+**Figura 2-2.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Usare Azure Site Recovery per eseguire la migrazione delle macchine virtuali esistenti in macchine virtuali di Azure
 
@@ -77,7 +77,7 @@ La figura 2-3 illustra l'esecuzione di più migrazioni di macchine virtuali usan
 
 ![Posizionamento di applicazioni predisposte per l'infrastruttura cloud](./media/image2-3.png)
 
-> **Figura 2-3.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
+**Figura 2-3.** Posizionamento di applicazioni predisposte per l'infrastruttura cloud
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 

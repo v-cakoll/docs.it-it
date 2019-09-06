@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Prin
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105480"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373759"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -36,13 +36,13 @@ L'incapsulamento delle classi avviene limitando l'accesso esterno allo stato int
 
 La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni vengono scritte in modo che le dipendenze in fase di compilazione scorrano nella direzione della fase di esecuzione. Ciò produce un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che a sua volta chiama una funzione nel modulo C, in fase di compilazione A dipenderà da B che dipenderà da C, come illustrato nella figura 4-1.
 
-![](./media/image4-1.png)
+![Grafico dipendenze dirette](./media/image4-1.png)
 
 **Figura 4-1.** Grafico delle dipendenze dirette.
 
 L'applicazione del principio di inversione delle dipendenze consente ad A di chiamare metodi su un'astrazione implementata da B, consentendo ad A di chiamare B in fase di esecuzione, ma a B di dipendere da un'interfaccia controllata da A in fase di compilazione pertanto *invertendo* le dipendenze tipiche della fase di compilazione. In fase di esecuzione, il flusso di esecuzione del programma rimane invariato, ma l'introduzione di interfacce significa che sarà possibile collegare facilmente diverse implementazioni di tali interfacce.
 
-![](./media/image4-2.png)
+![Grafico dipendenze invertite](./media/image4-2.png)
 
 **Figura 4-2**. Grafico delle dipendenze inverse.
 

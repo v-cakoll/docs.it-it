@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105468"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373769"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -176,9 +176,9 @@ Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la strutt
 
 A tale scopo, ASP.NET Core MVC supporta le aree. Usando le aree è possibile creare set separati di cartelle di controller e visualizzazioni, inclusi i modelli associati, in ogni cartella Area. La figure 7-1 illustra un esempio di struttura di cartelle con aree.
 
-![](./media/image7-1.png)
+![Organizzazione dell'area di esempio](./media/image7-1.png)
 
-Figura 7-1 Organizzazione di aree di esempio
+**Figura 7-1**. Organizzazione dell'area di esempio
 
 Quando si usano le aree, è necessario usare gli attributi per decorare i controller con il nome dell'area a cui appartengono:
 
@@ -245,7 +245,7 @@ Con l'aumento delle dimensioni delle applicazioni, diventa sempre più important
 
 ![La richiesta passa attraverso i filtri autorizzazione, i filtri risorse, l'associazione di modelli, i filtri azione, l'esecuzione dell'azione e la conversione del risultato dell'azione, i filtri eccezioni, i filtri risultato e l'esecuzione del risultato. All'uscita della pipeline, la richiesta viene elaborata solo dai filtri risultato e dai filtri risorse prima di diventare una risposta inviata al client.](./media/image7-2.png)
 
-Figura 7-2 Esecuzione della richiesta attraverso i filtri e pipeline della richiesta.
+**Figura 7-2**. Esecuzione della richiesta tramite filtri e pipeline di richieste.
 
 I filtri vengono in genere implementati come attributi, quindi è possibile applicarli a controller o azioni (o persino a livello globale). Quando vengono aggiunti in questo modo, i filtri specificati a livello di azione sostituiscono o sono basati sui filtri specificati a livello di controller che a loro volta sostituiscono i filtri globali. È possibile ad esempio usare l'attributo \[Route\] per creare route tra i controller e le azioni. Analogamente, l'autorizzazione può essere configurata a livello di controller e quindi sostituita da singole azioni, come illustrato nell'esempio seguente:
 
@@ -324,19 +324,19 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
 La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. A un livello di base, per garantire la sicurezza è necessario conoscere l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Autenticazione
+### <a name="authentication"></a>Authentication
 
 ASP.NET Core Identity è un sistema di appartenenza che è possibile usare per supportare la funzionalità di accesso per l'applicazione. Include il supporto degli account utente locali e il supporto dei provider di accesso esterni come l'account Microsoft, Twitter, Facebook, Google e altri ancora. Oltre a ASP.NET Core Identity, l'applicazione può usare l'autenticazione di Windows o un provider di identità di terze parti come [Identity Server](https://github.com/IdentityServer/IdentityServer4).
 
 ASP.NET Core Identity è incluso nei nuovi modelli di progetto se l'opzione Account utente individuali è selezionata. Questo modello include il supporto per la registrazione, l'accesso, gli accessi esterni, le password dimenticate e funzionalità aggiuntive.
 
-![](./media/image7-3.png)
+![Selezionare gli account utente singoli per avere l'identità preconfigurata](./media/image7-3.png)
 
-Figura 7-3 Selezionare Account utente individuali per preconfigurare Identity.
+**Figura 7-3**. Selezionare account utente singoli per avere l'identità preconfigurata.
 
 Il supporto di Identity è configurato in Startup, sia in ConfigureServices che in Configure:
 
@@ -369,7 +369,7 @@ public void Configure(IApplicationBuilder app)
 
 Per altre informazioni sulla [configurazione dell'autenticazione a due fattori](/aspnet/core/security/authentication/2fa) e l'[abilitazione di provider di accesso esterni](/aspnet/core/security/authentication/social/), vedere la documentazione ufficiale di ASP.NET Core.
 
-### <a name="authorization"></a>Autorizzazione
+### <a name="authorization"></a>Authorization
 
 La forma di autorizzazione più semplice prevede la limitazione dell'accesso per gli utenti anonimi. La limitazione può essere ottenuta semplicemente applicando l'attributo \[Authorize\] a determinati controller o azioni. Se vengono usati i ruoli, è possibile estendere ulteriormente l'attributo per limitare l'accesso agli utenti che appartengono a determinati ruoli, come illustrato di seguito:
 
@@ -563,13 +563,13 @@ Oltre a un'utilità di gestione dei processi, le applicazioni ASP.NET Core ospit
 
 ![Kestrel in Internet](./media/image7-5.png)
 
-Figura 7-5 ASP.NET ospitato in Kestrel con server proxy inverso
+**Figura 7-5.** ASP.NET ospitato in gheppio dietro un server proxy inverso
 
 Un proxy inverso può risultare utile anche in uno scenario in cui è necessario proteggere più applicazioni con SSL e HTTPS. In questo caso è necessario configurare SSL solo per il proxy inverso. La comunicazione tra il server proxy inverso e Kestrel può avvenire su HTTP, come illustrato nella figura 7-6.
 
-![](./media/image7-6.png)
+![ASP.NET ospitato dietro un server proxy inverso HTTPS protetto](./media/image7-6.png)
 
-Figura 7-6 ASP.NET ospitato in un server proxy inverso con protezione HTTPS
+**Figura 7-6**. ASP.NET ospitato dietro un server proxy inverso HTTPS protetto
 
 Un approccio sempre più diffuso consiste nell'ospitare l'applicazione ASP.NET Core in un contenitore Docker che può essere ospitato in locale o distribuito in Azure per l'hosting basato su cloud. Il contenitore Docker può contenere il codice dell'applicazione in esecuzione su Kestrel e può essere distribuito in un server proxy inverso, come illustrato in precedenza.
 

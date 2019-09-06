@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105457"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373989"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -76,9 +76,9 @@ Dopo aver installato EF Core, aver creato un tipo figlio DbContext e averlo conf
 
 È possibile visualizzare le query eseguite da EF Core configurando un logger e verificando che il livello sia impostato almeno su Information, come illustrato nella Figura 8-1.
 
-![](./media/image8-1.png)
+![Registrazione di EF Core query nella console](./media/image8-1.png)
 
-Figura 8-1: registrazione delle query di EF Core nella console
+**Figura 8-1**. Registrazione di EF Core query nella console
 
 ### <a name="fetching-and-storing-data"></a>Recupero e archiviazione dei dati
 

@@ -2,12 +2,12 @@
 title: Modernizzare il ciclo di vita dell'app con le pipeline di integrazione continua/distribuzione continua e gli strumenti DevOps nel cloud
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Modernizza il ciclo di vita dell'app con pipeline CI/CD e strumenti DevOps nel cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 62b6c541780ed3bf82c55e576fa485f811b55b17
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578164"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374133"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizzare il ciclo di vita dell'app con le pipeline di integrazione continua/distribuzione continua e gli strumenti DevOps nel cloud
 
@@ -29,7 +29,7 @@ La figura 4-12 Mostra una pipeline di distribuzione continua che distribuisce in
 
 ![Azure DevOps Services pipeline di distribuzione continua, distribuzione in un cluster Kubernetes](./media/image12.png)
 
-> **Figura 4-12.** Azure DevOps Services pipeline di distribuzione continua, distribuzione in un cluster Kubernetes
+**Figura 4-12.** Azure DevOps Services pipeline di distribuzione continua, distribuzione in un cluster Kubernetes
 
 >[!div class="step-by-step"]
 >[Precedente](modernize-your-apps-with-monitoring-and-telemetry.md)

@@ -1,25 +1,33 @@
 ---
 title: Tipi non gestiti - Riferimenti per C#
-ms.date: 07/23/2019
+ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 2b675be5dbc61006725549f4b69284326650401d
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 25aa42ba8c8f0023b4f818feb2edbb325f805fb6
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512067"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374108"
 ---
 # <a name="unmanaged-types-c-reference"></a>Tipi non gestiti (Riferimenti per C#)
 
-Un **tipo non gestito** è un tipo che non è un tipo riferimento o un tipo costruito (un tipo che include almeno un argomento di tipo) e che non contiene campi di tipo riferimento o di tipo costruito a qualsiasi livello di annidamento. In altre parole, un tipo non gestito è uno dei seguenti:
+Un tipo è un **tipo non gestito** se è uno dei tipi seguenti:
 
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` o `bool`
 - Qualsiasi tipo [enum](../keywords/enum.md)
 - Qualsiasi tipo [puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- Qualsiasi tipo [struct](../keywords/struct.md) definito dall'utente che non sia un tipo costruito e che contenga campi solo di tipi non gestiti
+- Qualsiasi tipo [struct](../keywords/struct.md) definito dall'utente che contiene campi solo di tipi non gestiti e, in C# 7,3 e versioni precedenti, non è un tipo costruito (un tipo che include almeno un argomento di tipo)
 
 A partire da C# 7.3, è possibile usare il [vincolo `unmanaged`](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) per specificare che il parametro di tipo deve essere un tipo non gestito non puntatore.
+
+A partire C# da 8,0, viene anche gestito un tipo struct *costruito* che contiene campi di tipi non gestiti, come illustrato nell'esempio seguente:
+
+[!code-csharp[unmanaged constructed types](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#ProgramExample)]
+
+Uno struct generico può essere l'origine dei tipi costruiti non gestiti e non gestiti. Nell'esempio precedente viene definito uno struct `Coords<T>` generico e vengono presentati gli esempi di tipi costruiti non gestiti. L'esempio di non è un tipo non gestito è `Coords<object>`. Non è gestita perché contiene i campi del `object` tipo, che non è gestito. Se si desidera che *tutti i* tipi costruiti siano tipi non gestiti, utilizzare il `unmanaged` vincolo nella definizione di uno struct generico:
+
+[!code-csharp[unmanaged constraint in type definition](~/samples/csharp/language-reference/builtin-types/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

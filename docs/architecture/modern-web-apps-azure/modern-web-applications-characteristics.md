@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Cara
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672908"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374083"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caratteristiche delle applicazioni Web moderne
 
@@ -24,9 +24,9 @@ ASP.NET Core è ottimizzato per le applicazioni Web moderne e gli scenari di hos
 
 Questa guida include un'applicazione di riferimento, _eShopOnWeb_, che dimostra alcune idee e suggerimenti. L'applicazione è un semplice negozio online, nel quale gli utenti possono consultare un catalogo di T-shirt, tazze da caffè e altri articoli di marketing. L'applicazione di riferimento è volutamente semplice, perché sia facile comprenderne il funzionamento.
 
-**Figura 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**Figura 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>Applicazione di riferimento
 >

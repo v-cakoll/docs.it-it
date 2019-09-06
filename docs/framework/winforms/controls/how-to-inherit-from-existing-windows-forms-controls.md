@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015878"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373243"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procedura: Ereditare da controlli Windows Forms esistenti
 
@@ -26,22 +26,22 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
 
 1. In Visual Studio creare un nuovo progetto di **applicazione Windows Forms** .
 
-2. Dal menu **Progetto**, scegliere **Aggiungi nuovo elemento**.
+1. Dal menu **Progetto**, scegliere **Aggiungi nuovo elemento**.
 
-     Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
+    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 
-3. Nella finestra di dialogo **Aggiungi nuovo elemento**, fare doppio clic su **Controllo personalizzato**.
+1. Nella finestra di dialogo **Aggiungi nuovo elemento**, fare doppio clic su **Controllo personalizzato**.
 
-     Un nuovo controllo personalizzato viene aggiunto al progetto.
+    Un nuovo controllo personalizzato viene aggiunto al progetto.
 
-4. Se si usa:
+1. Se si usa:
 
-   - Visual Basic, nella parte superiore di **Esplora soluzioni**, fare clic su **Mostra tutti i file**. Espandere CustomControl1.vb e quindi aprire Customcontrol1 nell'Editor di codice.
-   - C#aprire CustomControl1.cs nell'editor di codice.
+    - Visual Basic, nella parte superiore di **Esplora soluzioni**, fare clic su **Mostra tutti i file**. Espandere CustomControl1.vb e quindi aprire Customcontrol1 nell'Editor di codice.
+    - C#aprire CustomControl1.cs nell'editor di codice.
 
-6. Individuare la dichiarazione della classe, che eredita <xref:System.Windows.Forms.Control>da.
+1. Individuare la dichiarazione della classe, che eredita <xref:System.Windows.Forms.Control>da.
 
-7. Modificare la classe di base per il controllo da cui si desidera ereditare.
+1. Modificare la classe di base per il controllo da cui si desidera ereditare.
 
      Se ad esempio si vuole ereditare da <xref:System.Windows.Forms.Button>, modificare la dichiarazione della classe nel modo seguente:
 
@@ -54,11 +54,11 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Se si usa Visual Basic, salvare e chiudere CustomControl1.Designer.vb. Aprire Customcontrol1.vb nell'Editor di codice.
+1. Se si usa Visual Basic, salvare e chiudere CustomControl1.Designer.vb. Aprire Customcontrol1.vb nell'Editor di codice.
 
-9. Implementare eventuali metodi o proprietà personalizzati da incorporare nel controllo.
+1. Implementare eventuali metodi o proprietà personalizzati da incorporare nel controllo.
 
-10. Se si desidera modificare l'aspetto grafico del controllo, eseguire l'override del <xref:System.Windows.Forms.Control.OnPaint%2A> metodo.
+1. Se si desidera modificare l'aspetto grafico del controllo, eseguire l'override del <xref:System.Windows.Forms.Control.OnPaint%2A> metodo.
 
     > [!NOTE]
     > L'override <xref:System.Windows.Forms.Control.OnPaint%2A> di non consentirà di modificare l'aspetto di tutti i controlli. I controlli che dispongono di tutti i relativi disegni eseguiti da Windows, ad esempio <xref:System.Windows.Forms.TextBox>, non <xref:System.Windows.Forms.Control.OnPaint%2A> chiamano mai il metodo e pertanto non utilizzeranno mai il codice personalizzato. Per verificare se il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo è disponibile, fare riferimento alla documentazione della Guida relativa al particolare controllo che si desidera modificare. Per un elenco di tutti i controlli Windows Forms vedere [Controlli da usare in Windows Forms](controls-to-use-on-windows-forms.md). Se un controllo non <xref:System.Windows.Forms.Control.OnPaint%2A> è elencato come metodo membro, non è possibile modificarne l'aspetto eseguendo l'override di questo metodo. Per altre informazioni sul disegno personalizzato, vedere [Disegno e rendering di controlli personalizzati](custom-control-painting-and-rendering.md).
@@ -83,7 +83,7 @@ Se si desidera estendere le funzionalità di un controllo esistente, è possibil
     }
     ```
 
-11. Salvare ed eseguire il test del controllo.
+1. Salvare ed eseguire il test del controllo.
 
 ## <a name="see-also"></a>Vedere anche
 

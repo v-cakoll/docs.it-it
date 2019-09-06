@@ -1,13 +1,13 @@
 ---
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
-ms.date: 09/02/2019
-ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252895"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374003"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -26,6 +26,7 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Tipi riferimento nullable](#nullable-reference-types)
 - [Flussi asincroni](#asynchronous-streams)
 - [Indici e intervalli](#indices-and-ranges)
+- [Tipi costruiti non gestiti](#unmanaged-constructed-types)
 - [Miglioramento delle stringhe verbatim interpolate](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -446,6 +447,33 @@ var text = words[phrase];
 ```
 
 È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).
+
+## <a name="unmanaged-constructed-types"></a>Tipi costruiti non gestiti
+
+In C# 7,3 e versioni precedenti, un tipo costruito (un tipo che include almeno un argomento di tipo) non può essere un [tipo non gestito](../language-reference/builtin-types/unmanaged-types.md). A partire C# da 8,0, un tipo di valore costruito non è gestito se contiene campi solo di tipi non gestiti.
+
+Ad esempio, data la seguente definizione del tipo generico `Coords<T>` :
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+il `Coords<int>` tipo è un tipo non gestito in C# 8,0 e versioni successive. Come per qualsiasi tipo non gestito, è possibile creare un puntatore a una variabile di questo tipo o [allocare un blocco di memoria nello stack per le](../language-reference/operators/stackalloc.md) istanze di questo tipo:
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Per ulteriori informazioni, vedere [tipi non gestiti](../language-reference/builtin-types/unmanaged-types.md).
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
 

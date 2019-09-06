@@ -2,12 +2,12 @@
 title: Informazioni sulle app cloud native
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Cosa accade per le applicazioni native del cloud?
 ms.date: 04/28/2018
-ms.openlocfilehash: 26adb87c426442ebf0e88165e521819e3a49d175
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578014"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373914"
 ---
 # <a name="what-about-cloud-native-applications"></a>Informazioni sulle app cloud native
 
@@ -17,7 +17,7 @@ Figura 4-3 posizioni delle app native del cloud nei livelli di maturità della m
 
 ![Posizionamento di applicazioni native del cloud](./media/image3.png)
 
-> **Figura 4-3.** Posizionamento di applicazioni native del cloud
+**Figura 4-3.** Posizionamento di applicazioni native del cloud
 
 Il livello di maturità della modernizzazione nativa del cloud richiede in genere nuovi investimenti di sviluppo. Il passaggio al livello nativo del cloud è in genere determinato dalla necessità aziendale di modernizzare le applicazioni il più possibile per migliorare drasticamente la scalabilità in applicazioni di grandi dimensioni creando sottosistemi autonomi (microservizi) che possono essere distribuiti e ridimensionati in modo indipendente da altre aree dell'applicazione, riducendo i costi a lungo termine e aumentando l'agilità dell'evoluzione delle parti dell'app autonoma che offrono vantaggi significativi in termini di concorrenza.
 
@@ -25,9 +25,9 @@ I principali pilastri delle applicazioni native del cloud sono basati su approcc
 
 La figura 4-4 illustra le caratteristiche principali del modello nativo del cloud.
 
-> ![Le caratteristiche native del cloud sono microservizi, contenitori, resilienti per il cloud, agenti di orchestrazione e senza server](./media/image4.png)
->
-> **Figura 4-4.** Caratteristiche native del cloud
+![Le caratteristiche native del cloud sono microservizi, contenitori, resilienti per il cloud, agenti di orchestrazione e senza server](./media/image4.png)
+
+**Figura 4-4.** Caratteristiche native del cloud
 
 Inoltre, è possibile estendere app Web moderne e app native del cloud aggiungendo altri servizi, ad esempio intelligenza artificiale, Machine Learning (ML) e molto altro. È possibile usare uno di questi servizi per estendere i possibili approcci ottimizzati per il cloud.
 

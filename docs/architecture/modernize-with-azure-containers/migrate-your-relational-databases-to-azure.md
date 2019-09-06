@@ -2,12 +2,12 @@
 title: Eseguire la migrazione dei database relazionali in Azure
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | eseguire la migrazione dei database relazionali in Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660737"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374101"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Eseguire la migrazione dei database relazionali in Azure
 
@@ -17,7 +17,7 @@ In Azure è possibile eseguire la migrazione dei server di database direttamente
 
 ![Percorsi di migrazione del database in Azure](./media/image3-1.png)
 
-> **Figura 3-1.** Percorsi di migrazione del database in Azure
+**Figura 3-1.** Percorsi di migrazione del database in Azure
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quando eseguire la migrazione a Istanza gestita di database SQL di Azure
 

@@ -4,12 +4,12 @@ description: Questo documento specifica i passaggi e il flusso di lavoro da segu
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: e79f5dd90124d2a1902194af2edbde0f5df107c7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633983"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373793"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
@@ -26,7 +26,7 @@ Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di que
 
 Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e premendo <kbd>F1</kbd> per aprire la tavolozza di Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="get-started"></a>Introduzione
+## <a name="get-started"></a>Attività iniziali
 
 In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo argomento nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -56,7 +56,7 @@ Il file *library.csproj* contiene le informazioni seguenti:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -72,7 +72,7 @@ Questa operazione aggiunge `Newtonsoft.Json` e le relative dipendenze al progett
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+  <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
 </ItemGroup>
 ```
 

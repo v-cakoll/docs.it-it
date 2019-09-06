@@ -2,12 +2,12 @@
 title: Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578124"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373925"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 
@@ -25,7 +25,7 @@ I miglioramenti apportati al cloud si concentrano principalmente sulla riunione 
 
 L'applicazione è ottimizzata per il cloud se è possibile: sviluppare un'app in modo autonomo da altre app locali e quindi rilasciare, distribuire, ridimensionare automaticamente, monitorare e risolvere i problemi dell'app nel cloud.
 
-La chiave èl'agilità. Non è possibile fornire flessibilità, a meno che non si riducano a un minimo assoluto eventuali problemi di distribuzione e di produzione e di ambiente di sviluppo/test. I contenitori (in particolare, Docker, come lo standard de facto) e i servizi gestiti sono stati progettati appositamente per questo scopo.
+La chiave è l' *agilità*. Non è possibile fornire flessibilità, a meno che non si riducano a un minimo assoluto eventuali problemi di distribuzione e di produzione e di ambiente di sviluppo/test. I contenitori (in particolare, Docker, come lo standard de facto) e i servizi gestiti sono stati progettati appositamente per questo scopo.
 
 Per ottenere agilità, sono necessari anche processi DevOps automatizzati basati su pipeline di integrazione continua/recapito continuo che si rilasciano a piattaforme scalabili nel cloud. Le piattaforme CI/CD, ad esempio Azure DevOps Services o Jenkins, che vengono distribuite in una piattaforma cloud scalabile e resiliente (ad esempio app Azure servizio o Azure Kubernetes) sono tecnologie chiave per ottenere agilità nel cloud.
 
@@ -41,9 +41,9 @@ L'elenco seguente descrive i principi o le procedure principali per le applicazi
 
 La figura 4-2 illustra i principali pilastri facoltativi di un'applicazione ottimizzata per il cloud. Maggiore è il numero di pilastri implementati, il più idoneo per soddisfare le aspettative dei clienti.
 
-> ![Principali pilastri di un'applicazione ottimizzata per il cloud](./media/image2.png)
->
-> **Figura 4-2**. Principali pilastri di un'applicazione ottimizzata per il cloud
+![Principali pilastri di un'applicazione ottimizzata per il cloud](./media/image2.png)
+
+**Figura 4-2**. Principali pilastri di un'applicazione ottimizzata per il cloud
 
 Per riepilogare, un'applicazione ottimizzata per il cloud è un approccio alla creazione e alla gestione di applicazioni che sfruttano i vantaggi del modello di cloud computing, usando una combinazione di contenitori, infrastruttura cloud gestita, tecniche applicative resilienti, monitoraggio, recapito continuo e DevOps, tutto senza la necessità di riprogettare e ricodificare le applicazioni esistenti.
 

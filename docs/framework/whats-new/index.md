@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987250"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374456"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -158,7 +158,7 @@ Esempi e parametri di query:
 
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
-  Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. In questo esempio:
+  Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. Esempio:
 
   - Se la percentuale è maggiore di 95, viene restituito un codice di risposta HTTP 500.
 
@@ -174,7 +174,7 @@ Lo stato di integrità del servizio può essere visualizzato in HTML, specifican
 
 **Miglioramenti a valori DPI alti**
 
-In .NET Framework 4.8 WPF aggiunge supporto per la sensibilità ai valori DPI per monitor V2 e per il ridimensionamento DPI in modalità mista. Vedere la pagina [High DPI Desktop Application Development on Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows) per altre informazioni sullo sviluppo con valori DPI alti.
+In .NET Framework 4.8 WPF aggiunge supporto per la sensibilità ai valori DPI per monitor V2 e per il ridimensionamento DPI in modalità mista. Vedere la pagina [High DPI Desktop Application Development on Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows) per altre informazioni sullo sviluppo con valori DPI alti.
 
 .NET Framework 4.8 migliora il supporto per le finestre HWND ospitate e l'interoperatività di Windows Form nelle applicazioni WPF con valori DPI alti in piattaforme che supportano il ridimensionamento DPI in modalità mista, a partire dall'Aggiornamento di Windows 10 (aprile 2018). Quando le finestre HWND ospitate o i controlli Windows Form vengono creati come finestre con ridimensionamento DPI in modalità mista chiamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), possono essere ospitati in un'applicazione WPF per monitor V2 e vengono ridimensionati in modo appropriato. Il rendering di questi contenuti ospitati non viene eseguito in base ai valori DPI nativi. Il sistema operativo ridimensiona infatti i contenuti ospitati in modo appropriato. Il supporto per la sensibilità ai valori DPI per monitor V2 consente anche l'hosting dei controlli WPF, ad esempio con associazione con elemento padre, in una finestra nativa in un'applicazione con valori DPI alti.
 
@@ -439,7 +439,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472" />
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 **Implementazione di proprietà HttpClientHandler**
 
@@ -635,7 +635,7 @@ Le modifiche apportate a Garbage Collection in .NET Framework 4.7.1 migliorano l
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 **Supporto di SHA-2 per Message.HashAlgorithm**
 
@@ -704,7 +704,7 @@ In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSe
 
 <a name="net47" />
 
-#### <a name="networking"></a>Servizi di rete
+#### <a name="networking"></a>Rete
 
 .NET Framework 4.7 aggiunge la funzionalità seguente relativa alla rete:
 
@@ -846,7 +846,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| nome                                 | Value                                     |
+| Name                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -960,7 +960,7 @@ End Function
 
 Per gestire questo aspetto in .NET Framework 4.6.2 sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo chiaro le routine di funzione di derivazione chiave e i rispettivi input:
 
-|Metodo ECDiffieHellman|DESCRIZIONE|
+|Metodo ECDiffieHellman|Descrizione|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|

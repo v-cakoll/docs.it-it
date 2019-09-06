@@ -2,12 +2,12 @@
 title: Crea servizi resilienti pronti per il cloud. Gestire gli errori temporanei nel cloud
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Crea servizi resilienti pronti per il cloud. Gestire gli errori temporanei nel cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578354"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373964"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creare servizi resilienti pronti per il cloud: Gestire gli errori temporanei nel cloud
 
@@ -29,7 +29,7 @@ Un'applicazione resiliente come quella illustrata nella figura 4-9 dovrebbe impl
 
 ![Errori parziali gestiti da tentativi con backoff esponenziale](./media/image9.png)
 
-> **Figura 4-9.** Errori parziali gestiti da tentativi con backoff esponenziale
+**Figura 4-9.** Errori parziali gestiti da tentativi con backoff esponenziale
 
 È possibile utilizzare queste tecniche sia nelle risorse HTTP che nelle risorse del database. Nella figura 4-9, l'applicazione è basata su un'architettura a 3 livelli, quindi sono necessarie queste tecniche a livello di servizi (HTTP) e a livello di livello dati (TCP). In un'applicazione monolitica che usa un solo livello app, oltre al database (senza servizi o microservizi aggiuntivi), la gestione degli errori temporanei a livello di connessione al database potrebbe essere sufficiente. In questo scenario è necessaria solo una particolare configurazione della connessione al database.
 

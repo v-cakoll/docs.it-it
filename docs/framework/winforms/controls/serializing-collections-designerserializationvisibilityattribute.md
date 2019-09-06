@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015741"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373679"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Procedura dettagliata: Serializzare raccolte di tipi standard
 
@@ -37,7 +37,7 @@ Il primo passaggio consiste nel creare un controllo con una raccolta serializzab
 
 1. In Visual Studio creare un progetto libreria di controlli Windows e denominarlo **SerializationDemoControlLib**.
 
-2. Rinominare `UserControl1` in `SerializationDemoControl`. Per altre informazioni, vedere [rinominare un simbolo di codice](/visualstudio/ide/reference/rename)refactoring.
+2. Rinominare `UserControl1` in `SerializationDemoControl`. Per altre informazioni, vedere [rinominare un simbolo di codice refactoring](/visualstudio/ide/reference/rename).
 
 3. Nella finestra **Proprietà** impostare il valore della <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> proprietà su **10**.
 
@@ -69,7 +69,7 @@ Il primo passaggio consiste nel creare un controllo con una raccolta serializzab
 
 8. Premere **F5** per compilare il progetto ed eseguire il controllo in **UserControl Test Container**.
 
-9. Trovare la proprietà Strings in <xref:System.Windows.Forms.PropertyGrid> del **contenitore di test UserControl**. Selezionare la proprietà Strings, quindi fare clic sui![puntini di sospensione (il pulsante con i puntini di sospensione (](./media/visual-studio-ellipsis-button.png)...) nel pulsante finestra proprietà di Visual Studio) per aprire l' **Editor della raccolta di stringhe**.
+9. Trovare la proprietà **Strings** in <xref:System.Windows.Forms.PropertyGrid> del **contenitore di test UserControl**. Selezionare la proprietà **Strings** , quindi fare clic sui![puntini di sospensione (il pulsante con i puntini di sospensione (](./media/visual-studio-ellipsis-button.png)...) nel pulsante finestra proprietà di Visual Studio) per aprire l' **Editor della raccolta di stringhe**.
 
 10. Immettere diverse stringhe nell' **Editor della raccolta di stringhe**. Separarli premendo il tasto **invio** alla fine di ogni stringa. Al termine dell'immissione delle stringhe, fare clic su **OK** .
 
@@ -90,8 +90,8 @@ Per testare il comportamento di serializzazione del controllo, è necessario ins
 
 5. Digitare diverse stringhe nell' **Editor della raccolta di stringhe**. Separarli premendo **invio** alla fine di ogni stringa. Al termine dell'immissione delle stringhe, fare clic su **OK** .
 
-> [!NOTE]
-> Le stringhe digitate vengono visualizzate <xref:System.Windows.Forms.TextBox> nella `SerializationDemoControl`di.
+    > [!NOTE]
+    > Le stringhe digitate vengono visualizzate <xref:System.Windows.Forms.TextBox> nella `SerializationDemoControl`di.
 
 6. In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.
 

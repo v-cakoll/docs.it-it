@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401540"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374530"
 ---
 # <a name="control-authoring-overview"></a>Panoramica della creazione di controlli
 
@@ -197,7 +197,7 @@ Assicurarsi di implementare CLR `get` e `set` funzioni di accesso come descritto
 
 Per implementare le proprietà associate nei controlli personalizzati, attenersi alle linee guida seguenti:
 
-- Avere un `public` oggetto `static` `readonly`  nel formatoPropertyName`Property` che stava creando usando il<xref:System.Windows.DependencyProperty.RegisterAttached%2A>metodo. <xref:System.Windows.DependencyProperty> Il nome della proprietà passato a deve <xref:System.Windows.DependencyProperty.RegisterAttached%2A> corrispondere a *PropertyName*.
+- Avere un `public` oggetto `static` `readonly` nel formatoPropertyName`Property` che stava creando usando il<xref:System.Windows.DependencyProperty.RegisterAttached%2A>metodo. <xref:System.Windows.DependencyProperty> Il nome della proprietà passato a deve <xref:System.Windows.DependencyProperty.RegisterAttached%2A> corrispondere a *PropertyName*.
 
 - Implementare una coppia di metodi CLR`public` `static` denominati `Set`*NomeProprietà* e `Get`*NomeProprietà*. Entrambi i metodi devono accettare una classe derivata <xref:System.Windows.DependencyProperty> da come primo argomento. Il metodo `Set`*NomeProprietà* accetta anche un argomento il cui tipo corrisponde al tipo di dati registrato per la proprietà. Il metodo `Get`*NomeProprietà* deve restituire un valore dello stesso tipo. In assenza del metodo `Set`*NomeProprietà*, la proprietà viene contrassegnata come di sola lettura.
 
@@ -264,7 +264,7 @@ Le risorse specifiche di un tema vengono inserite in un dizionario risorse con u
 
 Non è necessario definire una risorsa per ogni tema. Se una risorsa non è definita per un tema specifico, il controllo la cerca in `Classic.xaml`. Se la risorsa non è definita nel file che corrisponde al tema corrente o in `Classic.xaml`, il controllo usa la risorsa generica, che si trova in un file del dizionario risorse denominato `generic.xaml`.  Il file `generic.xaml` si trova nella stessa cartella dei file del dizionario risorse specifico del tema. Anche se `generic.xaml` non corrisponde a un tema di Windows specifico, è comunque un dizionario a livello di tema.
 
-L'[esempio di controllo personalizzato NumericUpDown con supporto per temi e automazione dell'interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=160025) contiene due dizionari risorse per li controllo `NumericUpDown`: uno in generic.xaml e uno in Luna.NormalColor.xaml.  È possibile eseguire l'applicazione e passare tra il tema argento in Windows XP e un altro tema per vedere la differenza tra i due modelli del controllo. Se si usa Windows Vista, è possibile rinominare Luna.NormalColor.xaml in Aero.NormalColor.xaml e passare tra due temi, ad esempio tra il tema Windows Classico e il tema predefinito per Windows Vista.
+Il [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) o il [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) controllo personalizzato NumericUpDown con il tema e l'esempio di supporto di automazione interfaccia utente `NumericUpDown` contiene due dizionari risorse per il controllo: uno si trova in Generic. XAML e l'altro è in luna. NormalColor. XAML. 
 
 Quando si inserisce un <xref:System.Windows.Controls.ControlTemplate> oggetto in uno qualsiasi dei file del dizionario risorse specifici del tema, è necessario creare un costruttore statico per il controllo e <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> chiamare il metodo <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>su, come illustrato nell'esempio seguente.
 

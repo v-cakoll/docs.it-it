@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Tecn
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675438"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373899"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie Web lato client comuni
 
@@ -28,9 +28,9 @@ HTML (HyperText Markup Language) è il linguaggio di markup standard usato per c
 
 La tecnologia CSS (Cascading Style Sheets) viene usata per controllare l'aspetto e il layout degli elementi HTML. Gli stili CSS possono essere applicati direttamente a un elemento HTML, definiti separatamente nella stessa pagina oppure definiti in un file separato a cui la pagina fa riferimento. Gli stili si propagano in base a come vengono usati per selezionare un determinato elemento HTML. Ad esempio, è possibile che uno stile si applichi a un intero documento, ma che sia sostituito da uno stile applicato a un particolare elemento. Allo stesso modo, lo stile specifico di un elemento viene sostituito da uno stile applicato a una classe CSS che è stata applicata all'elemento, la quale viene a sua volta sostituita da uno stile destinato a un'istanza specifica dell'elemento (tramite il relativo ID). Figura 6-1
 
-**Figura 6-1.** Regole di specificità CSS, in ordine.
+![Regole di specificità CSS](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**Figura 6-1.** Regole di specificità CSS, in ordine.
 
 È consigliabile mantenere gli stili nei rispettivi file dei fogli di stile separati e usare la sovrapposizione basata sulla selezione per implementare stili coerenti e riutilizzabili all'interno dell'applicazione. L'inserimento di regole di stile all'interno del codice HTML va evitato e l'applicazione di stili a singoli elementi specifici (piuttosto che a intere classi di elementi o a elementi ai quali è stata applicata una particolare classe CSS) deve essere l'eccezione, non la regola.
 

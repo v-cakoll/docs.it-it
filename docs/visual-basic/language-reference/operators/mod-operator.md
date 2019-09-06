@@ -12,14 +12,15 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: c801facd95d93652414409549bb5ff2fa633748b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611532"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374486"
 ---
 # <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
+
 Divide due numeri e restituisce solo il resto.
 
 ## <a name="syntax"></a>Sintassi
@@ -27,16 +28,21 @@ Divide due numeri e restituisce solo il resto.
 ```vb
 result = number1 Mod number2
 ```
-  
-## <a name="parts"></a>Parti  
- `result` Obbligatorio. Qualsiasi variabile o proprietà numerica.
 
- `number1` Obbligatorio. Qualsiasi espressione numerica.
+## <a name="parts"></a>Parti
 
- `number2` Obbligatorio. Qualsiasi espressione numerica.
+`result` \
+Richiesto. Qualsiasi variabile o proprietà numerica.
+
+`number1` \
+Richiesto. Qualsiasi espressione numerica.
+
+`number2` \
+Richiesto. Qualsiasi espressione numerica.
 
 ## <a name="supported-types"></a>Tipi supportati
- tutti i tipi numerici. Sono inclusi i tipi a virgola mobile e non firmati `Decimal`e.
+
+tutti i tipi numerici. Sono inclusi i tipi a virgola mobile e non firmati `Decimal`e.
 
 ## <a name="result"></a>Risultato
 
@@ -64,43 +70,50 @@ End Module
 ```
 
 ## <a name="remarks"></a>Note
- `number1` Se o `number2` è un valore a virgola mobile, viene restituito il resto a virgola mobile della divisione. Il tipo di dati del risultato è il tipo di dati più piccolo che può conservare tutti i valori possibili risultanti dalla divisione con i tipi `number1` di `number2`dati di e.
 
- Se `number1` o`number2` restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), viene considerato come zero.
+`number1` Se o `number2` è un valore a virgola mobile, viene restituito il resto a virgola mobile della divisione. Il tipo di dati del risultato è il tipo di dati più piccolo che può conservare tutti i valori possibili risultanti dalla divisione con i tipi `number1` di `number2`dati di e.
 
- Gli operatori correlati includono quanto segue:
+Se `number1` o`number2` restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), viene considerato come zero.
+
+Gli operatori correlati includono quanto segue:
 
 - L' [operatore \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) restituisce il quoziente integer di una divisione. Ad esempio, l'espressione `14 \ 4` restituisce 3.
 
 - L' [operatore/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, come numero a virgola mobile. Ad esempio, l'espressione `14 / 4` restituisce 3,5.
 
 ## <a name="attempted-division-by-zero"></a>Tentativo di divisione per zero
- Se `number2` restituisce zero, il comportamento `Mod` dell'operatore dipende dal tipo di dati degli operandi:
- - Una divisione integrale genera un' <xref:System.DivideByZeroException> eccezione se `number2` non può essere determinata in fase di compilazione e genera un errore `BC30542    Division by zero occurred while evaluating this expression` in fase di `number2` compilazione se viene valutato a zero in fase di compilazione.
- - Viene restituita <xref:System.Double.NaN?displayProperty=nameWithType>una divisione a virgola mobile.
+
+Se `number2` restituisce zero, il comportamento `Mod` dell'operatore dipende dal tipo di dati degli operandi:
+- Una divisione integrale genera un' <xref:System.DivideByZeroException> eccezione se `number2` non può essere determinata in fase di compilazione e genera un errore `BC30542 Division by zero occurred while evaluating this expression` in fase di `number2` compilazione se viene valutato a zero in fase di compilazione.
+- Viene restituita <xref:System.Double.NaN?displayProperty=nameWithType>una divisione a virgola mobile.
 
 ## <a name="equivalent-formula"></a>Formula equivalente
- L'espressione `a Mod b` è equivalente a una delle formule seguenti:
 
- `a - (b * (a \ b))`
+L'espressione `a Mod b` è equivalente a una delle formule seguenti:
 
- `a - (b * Fix(a / b))`
+`a - (b * (a \ b))`
+
+`a - (b * Fix(a / b))`
 
 ## <a name="floating-point-imprecision"></a>Imprecisione a virgola mobile
- Quando si utilizzano numeri a virgola mobile, tenere presente che in memoria non è sempre presente una rappresentazione decimale precisa. Questo può causare risultati imprevisti di determinate operazioni, ad esempio il confronto dei valori `Mod` e l'operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)relativi ai tipi di dati.
+
+Quando si utilizzano numeri a virgola mobile, tenere presente che in memoria non è sempre presente una rappresentazione decimale precisa. Questo può causare risultati imprevisti di determinate operazioni, ad esempio il confronto dei valori `Mod` e l'operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)relativi ai tipi di dati.
 
 ## <a name="overloading"></a>Overload
- È `Mod` possibile eseguire l' *Overload*dell'operatore, il che significa che una classe o una struttura può ridefinire il comportamento. Se il codice si `Mod` applica a un'istanza di una classe o una struttura che include tale overload, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+
+È `Mod` possibile eseguire l' *Overload*dell'operatore, il che significa che una classe o una struttura può ridefinire il comportamento. Se il codice si `Mod` applica a un'istanza di una classe o una struttura che include tale overload, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Esempio
- Nell'esempio seguente viene usato `Mod` l'operatore per dividere due numeri e restituire solo il resto. Se uno dei due numeri è un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.
 
- [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
+Nell'esempio seguente viene usato `Mod` l'operatore per dividere due numeri e restituire solo il resto. Se uno dei due numeri è un numero a virgola mobile, il risultato è un numero a virgola mobile che rappresenta il resto.
+
+[!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]
 
 ## <a name="example"></a>Esempio
- Nell'esempio seguente viene illustrata la potenziale imprecisione degli operandi a virgola mobile. Nella prima istruzione gli operandi sono `Double`e 0,2 è una frazione binaria ripetuta in modo infinito con un valore archiviato di 0.20000000000000001. Nella seconda istruzione, il carattere `D` di tipo letterale impone entrambi gli operandi a `Decimal`e 0,2 presenta una rappresentazione precisa.
 
- [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
+Nell'esempio seguente viene illustrata la potenziale imprecisione degli operandi a virgola mobile. Nella prima istruzione gli operandi sono `Double`e 0,2 è una frazione binaria ripetuta in modo infinito con un valore archiviato di 0.20000000000000001. Nella seconda istruzione, il carattere `D` di tipo letterale impone entrambi gli operandi a `Decimal`e 0,2 presenta una rappresentazione precisa.
+
+[!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
 ## <a name="see-also"></a>Vedere anche
 

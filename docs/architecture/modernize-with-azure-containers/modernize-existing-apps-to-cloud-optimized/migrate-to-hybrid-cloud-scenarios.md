@@ -2,12 +2,12 @@
 title: Eseguire la migrazione a scenari di cloud ibrido
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Eseguire la migrazione a scenari basati su cloud ibrido
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578214"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373937"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Eseguire la migrazione a scenari di cloud ibrido
 
@@ -15,7 +15,7 @@ Alcune organizzazioni e aziende non possono eseguire la migrazione di alcune app
 
 Microsoft offre la migliore soluzione cloud ibrida, una in cui è possibile ottimizzare le risorse esistenti in locale e nel cloud pubblico, garantendo la coerenza in un cloud ibrido di Azure. Puoi ottimizzare le competenze esistenti e ottenere un approccio flessibile e unificato per la creazione di app che possono essere eseguite nel cloud o in locale, grazie alla Azure Stack (locale) e ad Azure (cloud pubblico).
 
-Per quanto riguarda la sicurezza, è possibile centralizzare la gestione e la sicurezza nel cloud ibrido. Puoi ottenere il controllo su tutti gli asset, dal tuo Data Center al cloud, fornendo l'accesso Single Sign-on alle app locali e cloud. A tale scopo, estendere Active Directory a un cloud ibrido e usare la gestione delle identità.
+Per quanto riguarda la sicurezza, è possibile centralizzare la gestione e la sicurezza nel cloud ibrido. Puoi ottenere il controllo su tutti gli asset, dal tuo Data Center al cloud, fornendo Single Sign-On alle app locali e cloud. A tale scopo, estendere Active Directory a un cloud ibrido e usare la gestione delle identità.
 
 Infine, è possibile distribuire e analizzare facilmente i dati, usare gli stessi linguaggi di query per le risorse cloud e locali e applicare analisi e apprendimento avanzato in Azure per arricchire i dati, indipendentemente dalla relativa origine.
 
@@ -27,7 +27,7 @@ La figura 4-13 Mostra una panoramica della vera e propria piattaforma cloud ibri
 
 ![Piattaforma cloud ibrida Microsoft con Azure Stack e Azure](./media/image13.jpg)
 
-> **Figura 4-13.** Piattaforma cloud ibrida Microsoft con Azure Stack e Azure
+**Figura 4-13.** Piattaforma cloud ibrida Microsoft con Azure Stack e Azure
 
 Azure Stack è disponibile in due opzioni di distribuzione, per soddisfare le proprie esigenze:
 

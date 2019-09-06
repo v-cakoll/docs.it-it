@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Le applicazioni di produzione reale devono essere distribuite e gestite con agenti di orchestrazione che gestiscono l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672418"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373698"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -179,7 +179,7 @@ Per altre informazioni sul supporto di contenitori in Azure Service Fabric, vede
 
 Come accennato in precedenza, ogni microservizio (Bounded Context logico) deve essere proprietario di un modello di dominio (dati e logica). Nel caso dei microservizi senza stato, i database sono esterni e si avvalgono di opzioni relazionali (SQL Server) o di opzioni NoSQL (Azure Cosmos DB o MongoDB).
 
-Ma anche i servizi stessi possono essere senza stato in Service Fabric, e ciò significa che i dati risiedono all'interno del microservizio. I dati potrebbero esistere non solo nello stesso server, ma all'interno del processo del microservizio, in memoria e persistenti sulle unità disco rigido e replicate in altri nodi. La figura 4-30 mostra i diversi approcci.
+Ma anche i servizi stessi possono essere senza stato in Service Fabric, e ciò significa che i dati risiedono all'interno del microservizio. I dati potrebbero esistere non solo nello stesso server, ma all'interno del processo del microservizio, in memoria e persistenti sulle unità disco rigido e replicate in altri nodi. La figura 4-14 illustra i diversi approcci.
 
 ![Nei servizi senza stato, lo stato (persistenza, database) viene mantenuto all'esterno del microservizio. Nei servizi con stato, lo stato viene mantenuto all'interno del microservizio.](./media/stateless-vs-stateful-microservices.png)
 
@@ -189,7 +189,7 @@ Un approccio senza stato è perfettamente valido ed è più facile da implementa
 
 Al contrario, i [microservizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) possono rappresentare un'ottima soluzione in scenari avanzati, perché non prevedono alcuna latenza tra la logica di dominio e i dati. L'elaborazione di grandi quantità di dati, i back-end per i giochi, i database come servizio e altri scenari a bassa latenza traggono tutti vantaggio dai servizi con stato, che abilitano lo stato locale per un accesso più rapido.
 
-I servizi con e senza stato sono complementari. Come si può vedere nel diagramma a destra della figura 4-31, ad esempio, un servizio con stato può essere suddiviso in più partizioni. Per accedere a tali partizioni, potrebbe essere necessario un servizio senza stato che agisca come servizio gateway che sappia come risolvere ogni partizione in base alle chiavi di partizione.
+I servizi con e senza stato sono complementari. Ad esempio, come si può vedere nel diagramma a destra della figura 4-14, un servizio con stato può essere suddiviso in più partizioni. Per accedere a tali partizioni, potrebbe essere necessario un servizio senza stato che agisca come servizio gateway che sappia come risolvere ogni partizione in base alle chiavi di partizione.
 
 I servizi con stato presentano comunque degli svantaggi, perché l'aumento delle istanze comporta un elevato livello di complessità. La funzionalità che verrebbe di solito implementata dai sistemi di database esterni deve essere indirizzata alle attività quali la replica di dati tra microservizi con stato e partizionamento dei dati. Tuttavia, si tratta di una delle aree in cui un agente di orchestrazione come [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture), con i suoi [servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis), può essere di grande aiuto, in particolare semplificando i microservizi con stato con l'[API Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 

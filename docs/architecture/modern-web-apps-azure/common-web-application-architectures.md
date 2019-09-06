@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675378"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373803"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -28,7 +28,7 @@ Il minor numero possibile di progetti per l'architettura di un'applicazione è u
 
 Un nuovo progetto ASP.NET Core, creato in Visual Studio o dalla riga di comando, inizia come un semplice monolito "all-in-one". Contiene tutti i comportamenti dell'applicazione, incluse la presentazione, la logica di business e quella di accesso ai dati. La figura 5-1 illustra la struttura di file di un'app con un unico progetto.
 
-![](./media/image5-1.png)
+![App ASP.NET Core con un unico progetto](./media/image5-1.png)
 
 **Figura 5-1.** App ASP.NET Core con un unico progetto.
 
@@ -59,7 +59,7 @@ I livelli logici sono una tecnica comune per migliorare l'organizzazione del cod
 
 L'organizzazione più comune della logica dell'applicazione in livelli è illustrata nella figura 5-2.
 
-![](./media/image5-2.png)
+![Livelli di applicazione tipici](./media/image5-2.png)
 
 **Figura 5-2.** Livelli di un'applicazione tipica.
 
@@ -69,19 +69,19 @@ Uno svantaggio di questo approccio tradizionale a livelli è l'esecuzione delle 
 
 La figura 5-3 illustra una soluzione di esempio in cui l'applicazione viene suddivisa in tre progetti in base alla responsabilità (o al livello).
 
-![](./media/image5-3.png)
+![Semplice applicazione monolitica con tre progetti](./media/image5-3.png)
 
 **Figura 5-3.** Semplice applicazione monolitica con tre progetti.
 
 Anche se questa applicazione usa diversi progetti ai fini organizzativi, viene comunque distribuita come singola unità e i client interagiranno con essa come singola app Web. Ciò consente un processo di distribuzione molto semplice. La figura 5-4 illustra come è possibile ospitare questa app usando Microsoft Azure.
 
-![](./media/image5-4.png)
+![Semplice distribuzione dell'app Web di Azure](./media/image5-4.png)
 
 **Figura 5-4.** Semplice distribuzione dell'app Web di Azure
 
 L'aumento dei requisiti dell'applicazione può determinare la necessità di soluzioni di distribuzione più solide e complesse. La figura 5-5 illustra un esempio di un piano di distribuzione più complesso che supporta funzionalità aggiuntive.
 
-![](./media/image5-5.png)
+![Distribuzione di un'app Web in un servizio app di Azure](./media/image5-5.png)
 
 **Figura 5-5.** Distribuzione di un'app Web in un servizio app di Azure
 
@@ -91,7 +91,7 @@ Per trarre vantaggio dalla scalabilità su richiesta basata sul cloud è possibi
 
 L'approccio più semplice alla scalabilità di un'applicazione Web in Azure consiste nel configurare la scalabilità manualmente nel piano di servizio app dell'applicazione. La figura 5-6 illustra la schermata appropriata del dashboard di Azure in cui configurare il numero di istanze in uso per un'app.
 
-![](./media/image5-6.png)
+![Ridimensionamento del piano di servizio app in Azure](./media/image5-6.png)
 
 **Figura 5-6.** Scalabilità nel piano di servizio app in Azure.
 
@@ -104,7 +104,7 @@ Le applicazioni che osservano il principio DIP (Dependency Inversion Principle, 
 
 Nell'Architettura pulita la logica di business e il modello applicativo sono posti al centro dell'applicazione. La logica di business non dipende dall'accesso ai dati o da altre competenze dell'infrastruttura. Questa dipendenza viene invece invertita: i dettagli relativi all'infrastruttura e all'implementazione dipendono dal nucleo applicativo. Ciò si ottiene definendo le astrazioni, o interfacce, nel nucleo applicativo. Queste vengono quindi implementate dai tipi definiti nel livello infrastruttura. Un modo comune per visualizzare questa architettura è l'uso di una serie di cerchi concentrici, simile a una struttura ad anelli. La figura 5-7 illustra un esempio di questo stile di rappresentazione dell'architettura.
 
-![](./media/image5-7.png)
+![Architettura pulita, visualizzazione ad anelli](./media/image5-7.png)
 
 **Figura 5-7.** Architettura pulita, visualizzazione ad anelli
 
@@ -112,7 +112,7 @@ In questo diagramma le dipendenze fluiscono verso il cerchio più interno. Il nu
 
 La figura 5-8 illustra un diagramma più tradizionale con livelli orizzontali che riflette meglio la dipendenza tra il livello UI e gli altri livelli.
 
-![](./media/image5-8.png)
+![Architettura pulita, visualizzazione con livelli orizzontali](./media/image5-8.png)
 
 **Figura 5-8.** Architettura pulita, visualizzazione con livelli orizzontali
 
@@ -120,7 +120,7 @@ Si noti che le frecce continue rappresentano le dipendenze in fase di compilazio
 
 La figura 5-9 illustra una visualizzazione più dettagliata dell'architettura di un'applicazione ASP.NET Core quando viene compilata seguendo queste indicazioni.
 
-![Architettura ASP.NET Core](./media/image5-9.png)
+![Diagramma dell'architettura ASP.NET Core dopo l'architettura pulita](./media/image5-9.png)
 
 **Figura 5-9.** Diagramma dell'architettura ASP.NET Core in base all'Architettura pulita.
 
@@ -262,7 +262,7 @@ networks:
 
 Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Dockerfile` di `Web`:
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

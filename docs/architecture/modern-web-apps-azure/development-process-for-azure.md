@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675148"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374042"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -28,7 +28,7 @@ Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti n
 
 **Visual Studio 2017.** Se si usa *Visual Studio 2017* è possibile compilare le applicazioni ASP.NET Core solo se è stato installato il carico di lavoro di *sviluppo multipiattaforma .NET Core*. La figura 10-1 illustra il carico di lavoro richiesto nella finestra di dialogo di installazione di Visual Studio 2017.
 
-![](./media/image10-1.png)
+![Installazione del carico di lavoro .NET Core in Visual Studio 2017](./media/image10-1.png)
 
 **Figure 10-1.** Installazione del carico di lavoro .NET Core in Visual Studio 2017.
 
