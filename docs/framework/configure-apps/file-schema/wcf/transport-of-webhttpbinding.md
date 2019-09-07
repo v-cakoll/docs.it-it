@@ -2,22 +2,23 @@
 title: <transport> di <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98cdaa86441f91552c7133d8e5694f88019a6dbf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923204"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399273"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<> di trasporto \<di WebHttpBinding >
 Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint del servizio configurato per ricevere richieste HTTP.  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<webHttpBinding>  
-\<binding>  
-\<security>  
-\<> di trasporto  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WebHttpBinding**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di trasporto**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +48,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`clientCredentialType`|Specifica la credenziale usata per autenticare il client presso il servizio. L'attributo è di tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Specifica la credenziale usata per autenticare il client presso un proxy di dominio. L'attributo è di tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -56,7 +57,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Basic`|Usa l'autenticazione di base.|  
@@ -67,7 +68,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Value|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Basic`|Usa l'autenticazione di base.|  

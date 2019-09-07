@@ -2,21 +2,22 @@
 title: <routing> di <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0998f4fc61de7099879ba6e122eed1e64588baec
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934191"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397738"
 ---
 # <a name="routing-of-servicebehavior"></a>\<> di routing \<di ServiceBehavior >
 Fornisce l'accesso in fase di esecuzione al servizio di routing per consentire la modifica dinamica della configurazione di routing.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<serviceBehaviors>  
-\<comportamento >  
-\<routing>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di routing**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +38,7 @@ Fornisce l'accesso in fase di esecuzione al servizio di routing per consentire l
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |filterTable|Stringa che specifica il nome della tabella di routing contenente i filtri per la valutazione da parte del servizio di routing. Questo valore deve corrispondere all' `name` attributo di un [ \<elemento > FilterTable](filtertable.md) nella [ \<sezione filterTables >](filtertables.md) .|  
 |routeOnHeaderOnly|Valore booleano che specifica se il filtro esaminerà il corpo del messaggio e l'intestazione oppure solo l'intestazione. Il valore predefinito è `true`.|  

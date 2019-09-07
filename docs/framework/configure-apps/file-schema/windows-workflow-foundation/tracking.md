@@ -3,20 +3,21 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 79230c65d8eb8c15cef5dce73698448ca7b1e003
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 28d73bb74c4a49052589040adc26194b1300668c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397597"
 ---
 # <a name="tracking"></a>\<rilevamento >
 Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.  
   
  Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-\<system.serviceModel>  
-\<rilevamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<rilevamento >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -91,7 +92,7 @@ Rappresenta una sezione di configurazione per la definizione delle impostazioni 
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |system.ServiceModel|Elemento radice di tutti gli elementi di configurazione del flusso di lavoro.|  
   

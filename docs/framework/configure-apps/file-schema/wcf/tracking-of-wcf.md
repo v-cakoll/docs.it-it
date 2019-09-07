@@ -2,20 +2,21 @@
 title: <tracking>di WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: ad4f85139ff0a0f587bc47f63334fe97e25440b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932380"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399427"
 ---
 # <a name="tracking-of-wcf"></a>\<rilevamento > di WCF
 Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.  
   
  Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
- \<system.serviceModel>  
-\<rilevamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<rilevamento >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,7 +91,7 @@ Rappresenta una sezione di configurazione per la definizione delle impostazioni 
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |system.ServiceModel|Elemento radice di tutti gli elementi di configurazione del flusso di lavoro.|  
   

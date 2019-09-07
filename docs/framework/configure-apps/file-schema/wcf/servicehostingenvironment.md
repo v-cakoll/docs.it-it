@@ -2,18 +2,19 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: b81c9f3c4260f415f057cd74b6f113d88f635978
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 165dbed1b78d00f8d4dd3e482b9fee8a23db60da
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399620"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto. Se questo elemento è vuoto, viene usato il tipo predefinito. Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.  
   
- \<system.ServiceModel>  
-\<ServiceHostingEnvironment>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceHostingEnvironment**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +49,7 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Raccolta di elementi di configurazione che specificano i filtri di prefisso degli indirizzi di base usati dall'host del servizio.|  
 |[\<serviceActivations>](serviceactivations.md)|Sezione di configurazione in cui vengono descritte le impostazioni di attivazione.|  
@@ -56,7 +57,7 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |serviceModel|L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).|  
   

@@ -2,18 +2,19 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925868"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398048"
 ---
 # <a name="diagnostics"></a>\<> di diagnostica
 L'elemento `diagnostics` definisce le impostazioni che possono essere usate da un amministratore per il controllo e l'ispezione in fase di esecuzione.  
   
- \<system.ServiceModel>  
-\<> di diagnostica  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> di diagnostica**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +45,7 @@ L'elemento `diagnostics` definisce le impostazioni che possono essere usate da u
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |etwProviderId|Stringa che specifica l'identificatore per il provider Event-Tracing che determina la scrittura di eventi nelle sessioni ETW.|  
 |performanceCounters|Specifica se sono abilitati i contatori delle prestazioni per l'assembly. I valori validi sono:<br /><br /> Off I contatori delle prestazioni sono disattivati.<br />ServiceOnly Sono attivati solo i contatori delle prestazioni attinenti a questo servizio.<br />Tutti I contatori delle prestazioni possono essere visualizzati in fase di esecuzione.<br />Predefinita Viene creata una sola istanza del contatore delle prestazioni _WCF_Admin. L'istanza viene usata per attivare la raccolta di dati SQM che devono essere usati dall'infrastruttura. Nessuno dei valori di contatore per questa istanza è aggiornato e pertanto rimarrà a zero. Questo è il valore predefinito se per WCF non è presente alcuna configurazione.|  

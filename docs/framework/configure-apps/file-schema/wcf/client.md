@@ -5,18 +5,19 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc8b80edb3206bb2ef3a8a1ffa34ab40af77612
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919535"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398144"
 ---
 # <a name="client"></a>\<client>
 L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.  
   
- \<system.ServiceModel>  
-\<client>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> client**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +47,7 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).|  
   

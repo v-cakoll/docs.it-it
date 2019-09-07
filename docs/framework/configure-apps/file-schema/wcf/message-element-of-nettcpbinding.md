@@ -2,22 +2,23 @@
 title: <message>elemento di<netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: cbbacee00533b72d9e06ee3a79d1e9c0414b337c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cf4f66df43070cc90443e3a640915df46a5cccd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931640"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400298"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<message > elemento di \<NetTcpBinding >
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con [ \<NetTcpBinding >](nettcpbinding.md).  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<netTcpBinding>  
-\<binding>  
-\<security>  
-\<> messaggi  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messaggi**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +39,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -59,7 +60,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
 |Windows|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
@@ -72,7 +73,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Definisce le funzionalità di sicurezza dell'<xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   

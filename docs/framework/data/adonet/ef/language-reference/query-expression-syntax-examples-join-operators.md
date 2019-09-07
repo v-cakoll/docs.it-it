@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: e80c50daeb0de7f4a8477786f28441d1495033ea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b1a85dda5d860445174a46d1bc4738962d588369
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249480"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398442"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>Esempi di sintassi delle espressioni di query: Operatori di join
 La creazione di un join è un'operazione importante in query destinate a origini dati che non presentano relazioni esplorabili tra loro, ad esempio le tabelle di database relazionali. Per join di due origini dati si intende l'associazione degli oggetti di un'origine dati con oggetti che condividono un attributo comune nell'altra origine dati. Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di query standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
- Negli esempi di questo argomento viene illustrato come utilizzare i <xref:System.Linq.Enumerable.GroupJoin%2A> metodi <xref:System.Linq.Enumerable.Join%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+ Negli esempi di questo argomento viene illustrato come utilizzare i <xref:System.Linq.Enumerable.GroupJoin%2A> metodi <xref:System.Linq.Enumerable.Join%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   

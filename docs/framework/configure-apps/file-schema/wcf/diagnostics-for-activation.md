@@ -2,18 +2,19 @@
 title: <diagnostics>per l'attivazione
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b2cd4c5ae1b4076892a61aa7e2b927efa1ddc1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919216"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400416"
 ---
 # <a name="diagnostics-for-activation"></a>\<> di diagnostica per l'attivazione
 Configura le funzionalità di diagnostica del listener Windows Communication Foundation (WCF).  
   
- \<system.serviceModel.activation>  
-\<> di diagnostica  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel. Activation >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> di diagnostica**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,7 +34,7 @@ Configura le funzionalità di diagnostica del listener Windows Communication Fou
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`performanceCountersEnabled`|Valore booleano che indica se sono i contatori delle prestazioni stati attivati a fini diagnostici.|  
   

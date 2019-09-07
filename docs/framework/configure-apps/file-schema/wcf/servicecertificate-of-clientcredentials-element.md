@@ -2,22 +2,23 @@
 title: <serviceCertificate>dell' <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: a3013d0f7efd3014892cf6400447d708809c5fcd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4c7489a171bdd5cb4b747ca99f1b7ff6dd65517b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936345"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399677"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<ServiceCertificate > dell' \<elemento ClientCredentials >
 Specifica un certificato da usare per l'autenticazione di un servizio presso il client.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
-\<clientCredentials>  
-\<serviceCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceCertificate**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +42,7 @@ Specifica un certificato da usare per l'autenticazione di un servizio presso il 
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso un servizio.|  
   

@@ -2,21 +2,22 @@
 title: <security> di <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 04e7e94f47be37dc9c4cbf404a269b9784281d7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 971b1ea979877f631766e438cc41bc0bdabfd346
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936616"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399793"
 ---
 # <a name="security-of-nettcpbinding"></a>\<> di sicurezza \<di NetTcpBinding >
 Definisce le impostazioni di sicurezza per un'associazione.  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<netTcpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di sicurezza**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +35,7 @@ Definisce le impostazioni di sicurezza per un'associazione.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |modalità|facoltativo. Specifica il tipo di sicurezza applicata. I valori validi sono riportati di seguito. Il valore predefinito è `Transport`.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
   
@@ -56,7 +57,7 @@ Definisce le impostazioni di sicurezza per un'associazione.
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |binding|Elemento di associazione della [ \<> NetTcpBinding](nettcpbinding.md).|  
   

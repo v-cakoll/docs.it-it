@@ -2,21 +2,22 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919043"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398012"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.  
   
-\<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
-\<endpointDiscovery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endpointDiscovery**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +41,13 @@ Specifica le varie impostazioni di individuazione per un endpoint, quali l'indiv
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |enabled|Valore booleano che specifica se è abilitata l'individuabilità sull'endpoint. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<ambiti >](scopes.md)|Raccolta di URI di ambito per l'endpoint. A un singolo endpoint è possibile associare più URI di ambito.|  
 |estensioni > [of \<endpointDiscovery >] [ \<](extensions.md)|Raccolta di elementi XML che consente di specificare metadati personalizzati da pubblicare per un endpoint.|  
@@ -54,7 +55,7 @@ Specifica le varie impostazioni di individuazione per un endpoint, quali l'indiv
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
 |||  

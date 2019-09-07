@@ -2,22 +2,23 @@
 title: <message> di <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 796c6bf5df541e525624a609fcfba255eda673cd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00bb7514c90b38d353d1bd86be83773a77357ca0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931472"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400212"
 ---
 # <a name="message-of-wsdualhttpbinding"></a>\<> messaggi di \<WSDualHttpBinding >
 Definisce la sicurezza a livello di messaggio per la [ \<> WSDualHttpBinding](wsdualhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<wsDualHttpBinding>  
-\<binding>  
-\<security>  
-\<> messaggi  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsDualHttpBinding**](wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messaggi**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +45,7 @@ Definisce la sicurezza a livello di messaggio per la [ \<> WSDualHttpBinding](ws
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -65,7 +66,7 @@ Definisce la sicurezza a livello di messaggio per la [ \<> WSDualHttpBinding](ws
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|None: consente al servizio di interagire con i client anonimi. Sul lato del servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
 |Windows|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows. Se l'attributo `negotiateServiceCredential` è impostato su `true`, esegue una negoziazione SSPI o Kerberos (un standard interoperabile).|  
@@ -78,7 +79,7 @@ Definisce la sicurezza a livello di messaggio per la [ \<> WSDualHttpBinding](ws
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](security-of-wsdualhttpbinding.md)|Definisce le funzionalità di sicurezza del [ \<> WSDualHttpBinding](wsdualhttpbinding.md).|  
   

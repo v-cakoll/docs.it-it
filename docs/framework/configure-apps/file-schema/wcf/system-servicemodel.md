@@ -8,15 +8,18 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 4fa6916437bb569029efe270ba8296703d89c539
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938914"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399448"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 Questa sezione di configurazione contiene tutti gli elementi di configurazione ServiceModel di Windows Communication Foundation (WCF).  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> System. serviceModel**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +80,7 @@ Questa sezione di configurazione contiene tutti gli elementi di configurazione S
 
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |\<configuration>|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|  
   

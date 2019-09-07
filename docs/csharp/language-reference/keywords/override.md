@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: cedce26373c49d33ee17602b621f71ef6732d145
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394241"
 ---
 # <a name="override-c-reference"></a>override (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ Il modificatore `override` è necessario per estendere o modificare l'implementa
 
 ## <a name="example"></a>Esempio
 
-In questo esempio la classe `Square` deve specificare un'implementazione sottoposta a override di `Area` poiché `Area` viene ereditato da `ShapesClass` astratto:
+In questo esempio, la `Square` classe deve fornire un'implementazione sottoposta `GetArea` a `GetArea` override di perché viene ereditato `Shape` dalla classe astratta:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 

@@ -2,21 +2,22 @@
 title: <security> di <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 89fb1f766906c02a5e3ef9a9cdd1aef94ede80fa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 165d1f2b9b770fd7c3f05143c1d85955c6008463
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936718"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399883"
 ---
 # <a name="security-of-custombinding"></a>\<> di sicurezza \<di CustomBinding >
 Specifica le opzioni di sicurezza di un'associazione personalizzata.  
   
- \<system.serviceModel>  
-\<Binding >  
-\<customBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di sicurezza**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +46,7 @@ Specifica le opzioni di sicurezza di un'associazione personalizzata.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |allowSerializedSigningTokenOnReply|facoltativo. Valore booleano che specifica se è possibile usare un token serializzato nella risposta. Il valore predefinito è `false`. Se si usa un'associazione duplice, l'impostazione assume `true` come valore predefinito e qualsiasi impostazione effettuata sarà ignorata.|  
 |authenticationMode|facoltativo. Specifica la modalità di autenticazione usata tra l'iniziatore e il risponditore. Di seguito sono riportati tutti i valori.<br /><br /> Il valore predefinito è `sspiNegotiated`.|  
@@ -67,7 +68,7 @@ Specifica le opzioni di sicurezza di un'associazione personalizzata.
   
 ## <a name="defaultalgorithm-attribute"></a>Attributo defaultAlgorithm  
   
-|Value|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  

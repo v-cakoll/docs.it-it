@@ -2,21 +2,22 @@
 title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: b1e1ca1e22c0044f5a9454ab397b6c3052dc42fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0948df37a97f51076747485d0b6074f14b3f9d58
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928790"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397933"
 ---
 # <a name="msmqtransport"></a>\<msmqTransport>
 Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando viene incluso in un'associazione personalizzata.  
   
- \<system.serviceModel>  
-\<Binding >  
-\<customBinding>  
-\<binding>  
-\<msmqIntegration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> msmqTransport**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +50,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |customDeadLetterQueue|URI che indica il percorso della coda dei messaggi non recapitabili per applicazione. In tale coda vengono collocati i messaggi scaduti o non recapitabili all'applicazione.<br /><br /> Per i messaggi che richiedono la garanzia ExactlyOnce, ovvero l'impostazione dell'attributo `exactlyOnce` su `true`, questo attributo viene impostato come valore predefinito sulla coda transazionale dei messaggi non recapitabili a livello di sistema di MSMQ.<br /><br /> Per i messaggi che non richiedono alcuna garanzia, ovvero per i messaggi il cui attributo `exactlyOnce` è impostato su `false`, l'impostazione predefinita dell'attributo è `null`.<br /><br /> Il valore deve usare lo schema net.msmq. Il valore predefinito è `null`.<br /><br /> Se `deadLetterQueue` è impostato su `None` o su `System`, questo attributo deve essere impostato su `null`. Se questo attributo non viene impostato su `null`, `deadLetterQueue` deve essere impostato su `Custom`.|  
 |deadLetterQueue|Specifica il tipo di coda dei messaggi non recapitabili da usare.<br /><br /> I valori validi includono<br /><br /> Personalizzato Coda DeadLetter personalizzata.<br />Nessuno Non è necessario utilizzare la coda DeadLetter.<br />Sistema Utilizzare la coda DeadLetter di sistema.<br /><br /> L'attributo è di tipo DeadLetterQueue.|  
@@ -77,7 +78,7 @@ Impone a un canale di trasferire i messaggi tramite il trasporto MSMQ quando vie
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<binding>](../../../misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   

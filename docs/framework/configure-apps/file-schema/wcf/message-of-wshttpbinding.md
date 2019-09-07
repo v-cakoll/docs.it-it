@@ -2,22 +2,23 @@
 title: <message> di <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 30507e44997a2e0fcc43494332e87edb2cc37aa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8cb8879d866eca3b1dafbd139de39373874dad14
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931450"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397799"
 ---
 # <a name="message-of-wshttpbinding"></a>\<> messaggio di \<WSHttpBinding >
 Definisce le impostazioni per la [ \<](wshttpbinding.md)sicurezza a livello di messaggio di WSHttpBinding >.  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<wsHttpBinding>  
-\<binding>  
-\<security>  
-\<> messaggi  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WSHttpBinding**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messaggi**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +67,7 @@ Definisce le impostazioni per la [ \<](wshttpbinding.md)sicurezza a livello di m
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|None: consente al servizio di interagire con i client anonimi. Sul lato del servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato. Se viene usata la modalità di sicurezza del messaggio e l'attributo `negotiateServiceCredential` è impostato su `false`, è necessario eseguire il provisioning del client tramite il certificato del servizio.|  
@@ -79,7 +80,7 @@ Definisce le impostazioni per la [ \<](wshttpbinding.md)sicurezza a livello di m
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<security>](security-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza per un [ \<> WSHttpBinding](wshttpbinding.md).|  
   

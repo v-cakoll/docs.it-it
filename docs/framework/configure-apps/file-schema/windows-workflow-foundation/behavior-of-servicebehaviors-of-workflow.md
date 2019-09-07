@@ -3,20 +3,21 @@ title: <behavior>del <serviceBehaviors> flusso di lavoro
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 91883c42aa7bc0aa8fa0c63c3c45184ba69225d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65bde45ffdd4af166d5b44308162c23257659802
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946071"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398884"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<comportamento > di \<serviceBehaviors > del flusso di lavoro
 L'elemento **Behavior** contiene una raccolta di impostazioni per il comportamento di un servizio. Ogni comportamento è indicizzato in base al **nome**. I servizi possono collegarsi a ogni comportamento tramite questo nome usando l'attributo **behaviorConfiguration** dell'elemento [ \<> dell'endpoint](../wcf/endpoint-element.md) . In questo modo gli endpoint possono condividere configurazioni del comportamento comuni senza ridefinire le impostazioni.  
   
-\<system.ServiceModel>  
-\<comportamenti >  
-\<serviceBehaviors>  
-\<comportamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comportamento >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,13 +56,13 @@ L'elemento **Behavior** contiene una raccolta di impostazioni per il comportamen
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |name|Stringa univoca che contiene il nome di configurazione del comportamento. Questo valore è una stringa definita dall'utente che deve essere univoca in quanto funge da stringa di identificazione dell'elemento.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<bufferReceive>](bufferreceive.md)|Comportamento del servizio che consente a un servizio di utilizzare l'elaborazione di ricezione memorizzata nel buffer per far sì che un servizio flusso di lavoro elabori messaggi non ordinati.|  
 |[\<routing>](../wcf/routing-of-servicebehavior.md)|Comportamento del servizio che consente a un servizio di utilizzare il rilevamento ETW utilizzando <xref:System.Activities.Tracking.EtwTrackingParticipant>un oggetto.|  

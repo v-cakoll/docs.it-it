@@ -2,25 +2,26 @@
 title: Elemento <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 1e63b6fa93e1abfa87c83da4b5d46f492c59b9bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bab0e50d7feba3ea55d505be07cfa41427a5cbbc
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931369"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397780"
 ---
 # <a name="messagesenderauthentication-element"></a>\<elemento > messageSenderAuthentication
 Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.  
   
  Per ulteriori informazioni sulla programmazione peer-to-peer, vedere la pagina relativa [alla rete peer-to-peer](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
-\<clientCredentials>  
-\<> peer  
-\<messageSenderAuthentication>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> peer**](peer-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messageSenderAuthentication**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|Un tipo e un assembly usati per convalidare un tipo personalizzato. Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.|  
 |`certificateValidationMode`|Specifica una delle tre modalità usate per convalidare credenziali. Se impostato su `Custom`, è necessario fornire anche un `customCertificateValidator`.|  
@@ -45,7 +46,7 @@ Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Attributo customCertificateValidatorType  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |String|facoltativo. Specifica il nome e l'assembly del tipo e altri dati usati per trovare il tipo. Come minimo, sono necessari uno spazio dei nomi e un nome del tipo. Le informazioni facoltative comprendono il nome dell'assembly, il numero di versione, impostazioni cultura e token della chiave pubblica.|  
   
@@ -57,13 +58,13 @@ Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.
   
 ## <a name="revocationmode-attribute"></a>Attributo revocationMode  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Enumerazione|Uno dei valori seguenti: `NoCheck`, `Online`, `Offline`. Il valore predefinito è `Online`.<br /><br /> Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Attributo trustedStoreLocation  
   
-|Valore|Descrizione|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |Enumerazione|Uno dei valori seguenti: `LocalMachine` o `CurrentUser`. Il valore predefinito è `CurrentUser`. Se l'applicazione client viene eseguita con un account di sistema, il certificato è generalmente situato in `LocalMachine`. Se l'applicazione client viene eseguita con un account utente, il certificato è generalmente situato in `CurrentUser`. Il valore predefinito è `CurrentUser`.|  
   

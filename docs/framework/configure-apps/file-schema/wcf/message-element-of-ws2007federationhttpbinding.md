@@ -2,22 +2,23 @@
 title: <message>elemento di<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 4340727026cb151f2efe813dfa005c1c5a1908be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1128bda6068a1fe3d8f5bb5ac29cc349f023b5b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397854"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<messaggio > elemento di \<WS2007FederationHttpBinding >
 Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<elemento > WS2007FederationHttpBinding](ws2007federationhttpbinding.md) .  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<ws2007FederationHttpBinding>  
-\<binding>  
-\<security>  
-\<> messaggi  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ws2007FederationHttpBinding**](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-element-of-ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messaggi**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,7 +94,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ele
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Value|DESCRIZIONE|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -123,7 +124,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ele
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](security-element-of-ws2007federationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   

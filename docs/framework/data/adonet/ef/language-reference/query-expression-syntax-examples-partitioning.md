@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: 034cca65f92f1fd8bd64d540de0cf1470a16c9e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b845564c02b55b8729efc893d7eecc48bd60f710
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249348"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398555"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>Esempi di sintassi delle espressioni di query: Partizionamento
-Negli esempi di questo argomento viene illustrato come utilizzare i <xref:System.Linq.Enumerable.Skip%2A> metodi <xref:System.Linq.Enumerable.Take%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Negli esempi di questo argomento viene illustrato come utilizzare i <xref:System.Linq.Enumerable.Skip%2A> metodi <xref:System.Linq.Enumerable.Take%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   

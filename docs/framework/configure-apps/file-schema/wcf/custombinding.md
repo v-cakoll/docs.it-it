@@ -2,20 +2,21 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1fd0a12b62c416ce71946e59e7868abc7638a274
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919383"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398116"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
 Fornisce il controllo completo dello stack di messaggistica per l'utente.
 
-\<system.serviceModel>\
-\<Binding > \
-\<customBinding>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<CustomBinding >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -178,7 +179,7 @@ Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi 
 
 ### <a name="attributes"></a>Attributi
 
-|Attributo|DESCRIZIONE|
+|Attributo|Descrizione|
 |---------------|-----------------|
 |closeTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|
 |name|Stringa che contiene il nome della configurazione dell'associazione. Questo valore è una stringa definita dall'utente che deve essere univoca in quanto funge da stringa di identificazione dell'associazione personalizzata. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
@@ -200,7 +201,7 @@ Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi 
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |associazioni|Contiene tutte le associazioni per le applicazioni Windows Communication Foundation (WCF).|
 
@@ -286,7 +287,7 @@ Nella tabella seguente viene fornito un riepilogo delle opzioni per ogni livello
 |Cambio di forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
 |Aggiornamenti del trasporto|Flusso SSL, flusso di Windows, resolver Peer|No|
 |Codifica|Testo, binario, MTOM, personalizzata|Sì|
-|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Sì|
+|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Yes|
 
 È inoltre possibile definire elementi di associazione personalizzati e inserirli tra i livelli appena elencati.
 

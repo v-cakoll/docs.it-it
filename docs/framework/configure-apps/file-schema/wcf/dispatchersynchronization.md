@@ -2,21 +2,23 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925848"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398008"
 ---
 # <a name="dispatchersynchronization"></a>\<> dispatcherSynchronization
   
 Specifica un comportamento dell'endpoint che consente a un servizio di inviare risposte in modo asincrono.  
   
-\<system.serviceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dispatcherSynchronization**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +37,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ### <a name="attributes"></a>Attributi
 
-| Attributo               | DESCRIZIONE       |
+| Attributo               | Descrizione       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | Valore booleano che specifica se il comportamento di invio asincrono è abilitato. |
 | `maxPendingReceives`    | Integer che specifica il numero di ricezioni simultanee che è possibile inviare sul canale.<br /><br /> Questo valore deve essere configurato solo dopo aver configurato correttamente il comportamento di limitazione del servizio. |
@@ -46,7 +48,7 @@ Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-| Elemento | DESCRIZIONE |  
+| Elemento | Descrizione |  
 | ------- | ----------- |  
 | [\<behavior>](behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint. |
 

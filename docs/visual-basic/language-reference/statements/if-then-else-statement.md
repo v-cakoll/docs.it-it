@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106522"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400703"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Istruzione If...Then...Else (Visual Basic) |
 
@@ -34,7 +34,7 @@ Esegue un gruppo di istruzioni in base a determinate condizioni, a seconda del v
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ Questo articolo include diversi esempi che illustrano gli `If`usi del... `Then`.
 `condition` \
 Richiesto. Espressione. Deve restituire `True` o `False`oppure a un tipo di dati convertibile in modo implicito in `Boolean`.
 
-Se l'espressione è una variabile [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` che restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), la condizione viene considerata come se l'espressione è `False` e il `Else` blocco viene eseguito.
+Se l'espressione è una variabile [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` che restituisce [Nothing](../../../visual-basic/language-reference/nothing.md), la condizione viene considerata come se l'espressione è `False`e i `ElseIf` blocchi vengono valutati se esistono oppure il `Else` blocco è viene eseguito se esistente.
 
 `Then` \
 Obbligatorio nella sintassi a riga singola; facoltativo nella sintassi su più righe.

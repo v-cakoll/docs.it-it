@@ -2,19 +2,20 @@
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: 78ec5b63682f58c8caf305242d7b60baf4af9ec7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b32355dc1a787390f40ba1572f8dd3590463ce6
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941481"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399000"
 ---
 # <a name="wshttpcontextbinding"></a>\<wsHttpContextBinding>
 Fornisce un contesto per l'associazione <xref:System.ServiceModel.WSHttpBinding> che richiede che il livello di protezione sia Sign.  
   
-\<system.serviceModel>  
-\<Binding >  
-\<wsHttpContextBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> wsHttpContextBinding**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,7 +95,7 @@ Fornisce un contesto per l'associazione <xref:System.ServiceModel.WSHttpBinding>
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   

@@ -2,21 +2,22 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f4a9422f4385e37a61ec85d680fcf7743a57bc0c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f12969d8b752e54916b45c3d0e64f114971b8944
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397658"
 ---
 # <a name="oneway"></a>\<oneWay>
 Abilita il routing dei pacchetti e l'uso di metodi unidirezionali per un'associazione personalizzata.  
   
- \<system.serviceModel>  
-\<Binding >  
-\<customBinding>  
-\<binding>  
-\<oneWay>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<CustomBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> oneWay**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,14 +34,14 @@ Abilita il routing dei pacchetti e l'uso di metodi unidirezionali per un'associa
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`packetRoutable`|Valore booleano che specifica se è attivato il routing dei pacchetti. Il valore predefinito è `false`.|  
 |`MaxAcceptedChannels`|Numero intero che specifica il numero massimo di canali che possono essere accettati.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<channelPoolSettings>](channelpoolsettings.md)|Oggetto <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> che contiene le proprietà del pool di canali per il canale corrente.|  
   

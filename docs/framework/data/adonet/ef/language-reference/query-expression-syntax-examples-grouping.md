@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: bbb41918e4d3637ff1e04275ad6151510dfa036b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9876c72a03f7827ec4b28d78f06ed372460caff
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249496"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398459"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>Esempi di sintassi delle espressioni di query: Raggruppamento
-Negli esempi di questo argomento viene illustrato come utilizzare il `GroupBy` metodo per eseguire una query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Negli esempi di questo argomento viene illustrato come utilizzare il `GroupBy` metodo per eseguire una query sul [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) utilizzando la sintassi delle espressioni di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   

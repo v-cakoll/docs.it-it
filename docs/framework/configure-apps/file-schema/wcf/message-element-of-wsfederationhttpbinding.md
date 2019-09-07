@@ -2,22 +2,23 @@
 title: <message>elemento di<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931584"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400276"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<elemento > del messaggio \<di WSFederationHttpBinding >
 Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<associazione WSFederationHttpBinding >](wsfederationhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<wsFederatedBinding>  
-\<binding>  
-\<security>  
-\<> messaggi  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsFederationHttpBinding**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messaggi**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,7 +85,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ass
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |algorithmSuite|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. Vedere la tabella "Attributo algorithmSuite" per i valori validi di questo attributo. Il valore predefinito è `Basic256`.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).|  
 |issuedKeyType|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -Dipero<br />-PublicKey<br /><br /> Il valore predefinito è `SymmetricKey`. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
@@ -93,7 +94,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ass
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Basic128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Basic192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -114,7 +115,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ass
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Specifica un endpoint che emette un token di sicurezza. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
@@ -123,7 +124,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per l' [ \<ass
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](security-of-wsfederationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   

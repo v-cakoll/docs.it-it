@@ -2,21 +2,22 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 7952e6cc4d2fe7eaa77e297a650f7ffbd7aec785
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e6524c18780c062c3b5b7dfc2509449cb208e270
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040935"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400439"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 Contiene dati di configurazione per <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
-\<dataContractSerializer>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dataContractSerializer**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,7 +31,7 @@ Contiene dati di configurazione per <xref:System.Runtime.Serialization.DataContr
   
 ### <a name="attributes"></a>Attributi  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |IgnoreExtensionDataObject|Valore booleano che specifica se ignorare i dati forniti dall'endpoint quando serializzato o deserializzato.|  
 |maxItemsInObjectGraph|Numero intero che specifica il numero massimo di elementi da serializzare o deserializzare.|  

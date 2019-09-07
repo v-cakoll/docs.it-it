@@ -2,19 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399138"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 Elemento di configurazione usato per specificare le impostazioni relative a Web Socket.  
   
-\<system.ServiceModel>  
-\<Binding >  
-\<netHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netHttpBinding**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> webSocketSettings**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +65,7 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |\<netHttpBinding>|Specifica NetHttpBinding|  
   

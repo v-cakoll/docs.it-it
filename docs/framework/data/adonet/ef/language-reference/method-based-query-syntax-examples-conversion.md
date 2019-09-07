@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a78588cb4bd09f8a8a8ce8ed4a60dd45fce1d386
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250239"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397488"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Esempi di sintassi delle query basate su metodo: Conversione
-Negli esempi di questo argomento viene illustrato come usare i <xref:System.Linq.Enumerable.ToArray%2A>metodi <xref:System.Linq.Enumerable.ToDictionary%2A> , <xref:System.Linq.Enumerable.ToList%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi delle query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Negli esempi di questo argomento viene illustrato come usare i <xref:System.Linq.Enumerable.ToArray%2A>metodi <xref:System.Linq.Enumerable.ToDictionary%2A> , <xref:System.Linq.Enumerable.ToList%2A> e per eseguire query sul [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) usando la sintassi delle query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   

@@ -2,21 +2,22 @@
 title: Elemento <serviceAuthorization>
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: b73e2049afb460bf9be8b76ee272ba0547b61453
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b636b7006900ecff1be553cf32105df7cea7e800
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936385"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399699"
 ---
 # <a name="serviceauthorization-element"></a>\<elemento > serviceAuthorization
 Specifica impostazioni che autorizzano accesso alle operazioni del servizio  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<serviceBehaviors>  
-\<comportamento >  
-\<serviceAuthorization>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceAuthorization**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|Valore booleano che specifica se tutte le operazioni nel servizio rappresentano il chiamante. Il valore predefinito è `false`.<br /><br /> Quando un'operazione del servizio specifica rappresenta il chiamante, il contesto del thread viene commutato nel contesto del chiamante prima dell'esecuzione del servizio specificato.|  
 |principalPermissionMode|Imposta l'entità di sicurezza usata per eseguire operazioni nel server. Sono inclusi i valori seguenti:<br /><br /> -Nessuno<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Personalizzato<br /><br /> Il valore predefinito è UseWindowsGroups. Il valore è di tipo <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Per ulteriori informazioni sull'utilizzo di questo attributo, [vedere Procedura: Limitare l'accesso con la classe](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)PrincipalPermissionAttribute.|  
@@ -45,13 +46,13 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |authorizationPolicies|Contiene una raccolta di tipi di criteri di autorizzazione che possono essere aggiunti mediante la parola chiave `add`. Ciascun criterio di autorizzazione contiene un solo attributo `policyType` obbligatorio che è una stringa. L'attributo specifica un criterio di autorizzazione che consente la trasformazione di un set di attestazioni di input in un altro set di attestazioni. Su questa base può essere concesso o negato il controllo di accesso. Per altre informazioni, vedere <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Contiene una raccolta di impostazioni per il comportamento di un servizio.|  
   

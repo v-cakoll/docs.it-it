@@ -2,22 +2,23 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925374"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397969"
 ---
 # <a name="issuedtoken"></a>\<issuedToken>
 Specifica un token personalizzato usato per autenticare un client presso un servizio.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-sezione endpointBehaviors  
-\<comportamento >  
-\<clientCredentials>  
-\<issuedToken>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuedToken**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ sezione endpointBehaviors
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`cacheIssuedTokens`|Attributo booleano facoltativo che specifica se i token vengono memorizzati nella cache. Il valore predefinito è `true`.|  
 |`defaultKeyEntropyMode`|Attributo stringa facoltativo che specifica quali valori casuali (entropie) sono usati per le operazioni di handshake. I valori comprendono `ClientEntropy`, `ServerEntropy` e `CombinedEntropy`. Il valore predefinito `CombinedEntropy`. L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
@@ -47,7 +48,7 @@ sezione endpointBehaviors
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<localIssuer>](localissuer.md)|Specifica l'indirizzo dell'emittente locale del token e l'associazione usata per comunicare con l'endpoint.|  
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|Specifica i comportamenti di endpoint da usare quando si contatta un'emittente locale.|  

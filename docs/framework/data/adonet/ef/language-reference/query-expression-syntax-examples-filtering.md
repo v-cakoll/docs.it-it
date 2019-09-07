@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ce4e28df3a09ddf718b000725afb0c9125bdd77
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397108"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Esempi di sintassi delle espressioni di query: Filtro
-Negli esempi di questo argomento viene illustrato come utilizzare i `Where` metodi `Where…Contains` e per eseguire query sul [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) utilizzando la sintassi delle espressioni di query. Nota, dove...`Contains` non può essere utilizzato come parte di una [query compilata](compiled-queries-linq-to-entities.md).  
+Negli esempi di questo argomento viene illustrato come utilizzare i `Where` metodi `Where…Contains` e per eseguire query sul [modello Sales di AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) utilizzando la sintassi delle espressioni di query. Nota, dove...`Contains` non può essere utilizzato come parte di una [query compilata](compiled-queries-linq-to-entities.md).  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   

@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037840"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394290"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>Novità di .NET Core 3.0 (Preview 8)
+# <a name="whats-new-in-net-core-30-preview-9"></a>Novità di .NET Core 3,0 (anteprima 9)
 
-Questo articolo descrive le novità di .NET Core 3.0 (Preview 8). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+Questo articolo descrive le novità di .NET Core 3,0 (tramite l'anteprima 9). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare la [versione più recente di Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) o Visual Studio Code con l'estensione OmniSharp.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio per Mac 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
 
-[Scaricare e iniziare subito a usare .NET Core 3.0 Preview 8](https://aka.ms/netcore3download) in Windows, macOS o Linux.
+[Scarica e inizia subito a usare .NET Core 3,0 Preview 9](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
 
 Per altre informazioni su ogni versione di anteprima, vedere gli annunci seguenti:
 
+- [Annuncio di .NET Core 3,0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Annuncio di .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Annuncio di .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Annuncio di .NET Core 3.0 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,9 +36,9 @@ Per altre informazioni su ogni versione di anteprima, vedere gli annunci seguent
 
 ## <a name="production-supported-preview"></a>Anteprima di produzione supportata
 
-.NET Core Preview 8 è considerato pronto per la produzione da Microsoft ed è completamente supportato. A partire dalla versione Preview 7, le nuove versioni si incentreranno sul perfezionamento di .NET Core 3.0 invece di aggiungere nuove funzionalità. Per altre informazioni sulle novità della versione Preview 8, vedere l'[annuncio della Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+.NET Core Preview 9 è considerato pronto per la produzione da Microsoft ed è completamente supportato. A partire dalla versione Preview 7, le nuove versioni si incentreranno sul perfezionamento di .NET Core 3.0 invece di aggiungere nuove funzionalità. Per ulteriori informazioni sulle modifiche apportate nella versione Preview 9, vedere l' [annuncio dell'anteprima 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
 
-Se si usa una versione di anteprima precedente, è necessario passare alla versione Preview 8 per usufruire del supporto continuo "Go Live".
+Se si usa una versione di anteprima precedente, è necessario passare all'anteprima 9 per il supporto continuo "Go Live".
 
 ## <a name="net-core-sdk-windows-installer"></a>Programma di installazione .NET Core SDK per Windows
 
@@ -428,7 +429,7 @@ Di seguito è riportato un esempio di deserializzazione di una stringa JSON in u
 
 .NET core 3.0 migliora l'interoperabilità di API native.
 
-### <a name="type-nativelibrary"></a>Tipo: NativeLibrary
+### <a name="type-nativelibrary"></a>Digitare:  NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> offre un incapsulamento per il caricamento di una libreria nativa (usando la stessa logica di caricamento di .NET Core P/Invoke) e offre le funzioni di supporto pertinenti, ad esempio `getSymbol`. Per un esempio di codice, vedere la [demo DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo).
 

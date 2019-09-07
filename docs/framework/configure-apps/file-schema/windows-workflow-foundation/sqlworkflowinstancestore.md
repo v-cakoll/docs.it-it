@@ -3,21 +3,22 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 7a6f9fb5b2b98d2951343b5a529507b3fcd88dc8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 581da860a490c95d5d621194c7f6643fc15118fe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947514"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398675"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 Comportamento del servizio che consente di configurare la funzionalità <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , che supporta la permanenza delle informazioni sullo stato per le istanze del servizio flusso di lavoro in un database SQL Server 2005 o SQL Server 2008. Per ulteriori informazioni su questa funzionalità, vedere l' [Archivio di istanze del flusso di lavoro SQL](../../../windows-workflow-foundation/sql-workflow-instance-store.md).  
   
-\<system.ServiceModel>  
-\<comportamenti >  
-\<serviceBehaviors>  
-\<comportamento >  
-\<sqlWorkflowInstanceStore>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> sqlWorkflowInstanceStore**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +42,7 @@ Comportamento del servizio che consente di configurare la funzionalità <xref:Sy
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |connectionString|Stringa contenente una stringa di connessione utilizzata per connettersi a un database di persistenza sottostante.|  
 |connectionStringName|Stringa contenente una stringa di connessione denominata al server di database. Un esempio di stringa di connessione denominata è "DefaultConnectionString".|  

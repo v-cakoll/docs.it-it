@@ -2,21 +2,22 @@
 title: <security> di <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 806cf8524ed1a1439ca85a4b918e8e486e5dc94b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399756"
 ---
 # <a name="security-of-webhttpbinding"></a>\<> di sicurezza \<di WebHttpBinding >
 Specifica i requisiti di sicurezza per un endpoint configurato con un [ \<> WebHttpBinding](webhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<webHttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WebHttpBinding**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di sicurezza**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,13 +42,13 @@ Specifica i requisiti di sicurezza per un endpoint configurato con un [ \<> WebH
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |modalità|Consente di specificare se un endpoint usa la sicurezza a livello di trasporto o se non usa alcuna sicurezza. Il valore predefinito è `None`. L'attributo è di tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Value|DESCRIZIONE|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|La sicurezza è disabilitata.|  
 |Trasporto|La sicurezza è fornita mediante HTTPS. Può essere necessario che il servizio sia configurato con certificati SSL. Il messaggio è interamente protetto usando HTTPS e il servizio viene autenticato dal client usando il certificato SSL del servizio. L'autenticazione client viene controllata tramite l' `ClientCredentialType` attributo [ \<del > di trasporto](transport-of-webhttpbinding.md).|  
@@ -61,7 +62,7 @@ Specifica i requisiti di sicurezza per un endpoint configurato con un [ \<> WebH
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<webHttpBinding>](webhttpbinding.md)|Elemento di associazione utilizzato per configurare endpoint per i servizi Web di Windows Communication Foundation (WCF) che rispondono a richieste HTTP anziché a messaggi SOAP.|  
   

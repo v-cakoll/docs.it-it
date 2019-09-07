@@ -2,12 +2,12 @@
 title: <behavior> di <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 8c847368934cc4cd8ccaab017ede00b7b8963897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17fac5c519f41588ef90383f024e645b809b49b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926411"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400601"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<comportamento > di \<serviceBehaviors >
 L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento di un servizio. Ogni comportamento è indicizzato in base al relativo `name`. I servizi possono collegarsi a ogni comportamento tramite questo nome `behaviorConfiguration` usando l'attributo [ \<](endpoint-element.md) dell'elemento > dell'endpoint. In questo modo gli endpoint possono condividere configurazioni del comportamento comuni senza ridefinire le impostazioni. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -15,10 +15,11 @@ L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento
 > [!NOTE]
 > Gli elementi di comportamento specifici delle attività del flusso di lavoro di Windows, ad esempio l' [ \<elemento > sendMessageChannelCache](../windows-workflow-foundation/sendmessagechannelcache.md) , sono documentati nella pagina relativa al [ \<comportamento > della pagina > di \<serviceBehaviors](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) .  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<serviceBehaviors>  
-\<comportamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceBehaviors**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comportamento >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,13 +38,13 @@ L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Stringa univoca che contiene il nome di configurazione del comportamento. Questo valore è una stringa definita dall'utente che deve essere univoca in quanto funge da stringa di identificazione dell'elemento. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<dataContractSerializer>](datacontractserializer-element.md)|Contiene i dati di configurazione per DataContractSerializer.|  
 |[\<persistenceProvider>](persistenceprovider.md)|Specifica il tipo di implementazione del provider di persistenza da usare, nonché il timeout da usare per le operazioni di persistenza.|  
@@ -62,6 +63,6 @@ L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<serviceBehaviors>](servicebehaviors.md)|Raccolta di elementi di comportamento del servizio.|

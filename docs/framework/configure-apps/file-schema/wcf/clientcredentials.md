@@ -2,21 +2,22 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: c3e756f49b7054d6553eb6c3f1850f0fbce14943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926126"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400506"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 Specifica le credenziali usate per autenticare il client presso un servizio.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
-\<clientCredentials>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientCredentials**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,14 +44,14 @@ Specifica le credenziali usate per autenticare il client presso un servizio.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`supportInteractive`|Valore booleano che specifica se un utente interattivo può essere coinvolto nella selezione di una credenziale client in fase di esecuzione. Il valore predefinito è `true`.|  
 |`type`|Stringa che specifica il tipo di questo elemento di configurazione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|Specifica il certificato usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
 |[\<> httpDigest](httpdigest-element.md)|Specifica un digest usato per autenticare il client presso il servizio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  

@@ -2,24 +2,25 @@
 title: <add>dell' <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920050"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398337"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<Aggiungi > dell' \<elemento > scopedCertificates
 Aggiunge un certificato X.509 alla raccolta di certificati con ambito.  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-sezione endpointBehaviors  
-\<comportamento >  
-\<clientCredentials>  
-\<serviceCertificate>  
-\<> scopedCertificates  
-\<aggiungere > elemento per \<scopedCertificates >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceCertificate**](servicecertificate-of-clientcredentials-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> scopedCertificates**](scopedcertificates-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,13 +59,13 @@ sezione endpointBehaviors
   
 ## <a name="storelocation-attribute"></a>Attributo storeLocation  
   
-|Value|DESCRIZIONE|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |Enumerazione|CurrentUser o LocalMachine.|  
   
 ## <a name="storename-attribute"></a>Attributo storeName  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Enumerazione|I valori includono: AddressBook, AuthRoot, CertificateAuthority, non consentito, My, root, TrustedPeople e TrustedPublisher.|  
   

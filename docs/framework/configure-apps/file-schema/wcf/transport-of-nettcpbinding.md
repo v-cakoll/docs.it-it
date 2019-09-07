@@ -2,22 +2,23 @@
 title: <transport> di <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 41f11be9b4ae8f7a7535c9766965de8575cff784
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915555"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399302"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> di \<netTcpBinding>
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con [ \<NetTcpBinding >](nettcpbinding.md).  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<netTcpBinding>  
-\<binding>  
-\<security>  
-\<> di trasporto  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetTcpBinding >** ](nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-nettcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di trasporto**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +45,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |clientCredentialType|facoltativo. Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza del trasporto.<br /><br /> -Il valore predefinito è `Windows`.<br />: Questo attributo è di tipo <xref:System.ServiceModel.TcpClientCredentialType>.|  
 |protectionLevel|facoltativo. Definisce il livello di sicurezza del trasporto TCP. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto.<br /><br /> Il valore predefinito è `EncryptAndSign`.|  
@@ -53,7 +54,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|Il client è anonimo. Richiede un certificato per il servizio.|  
 |Windows|Specifica l'autenticazione Windows del client mediante la negoziazione SP (negoziazione Kerberos).|  
@@ -61,7 +62,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="protectionlevel-attribute"></a>Attributo protectionLevel  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |Nessuna|Nessuna protezione.|  
 |Sign|I messaggi vengono firmati.|  
@@ -72,7 +73,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Specifica le funzionalità di sicurezza del [ \<> NetTcpBinding](nettcpbinding.md).|  
   

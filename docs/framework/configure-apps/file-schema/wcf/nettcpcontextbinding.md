@@ -2,19 +2,20 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 40bc674587523a4da1f0ac894702de61d96cfc7d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7b1fa58d562b1b4c191a84a12cd264f5a93dd9f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932974"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400124"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Specifica un contesto per l'associazione <xref:System.ServiceModel.NetTcpBinding> che richiede che il livello di protezione sia Sign. Il meccanismo contextExchangeMechanism dell'associazione NetTcpContextBinding è SOAPHeader.  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<netTcpContextBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> netTcpContextBinding**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +66,7 @@ Specifica un contesto per l'associazione <xref:System.ServiceModel.NetTcpBinding
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |closeTimeout|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |contextProtectionLevel|Valore valido dell'elemento <xref:System.Net.Security.ProtectionLevel> che specifica il livello di protezione desiderato dell'intestazione SOAP usata per propagare le informazioni sul contesto.  Il valore predefinito è <xref:System.Net.Security.ProtectionLevel.Sign>.|  
@@ -94,7 +95,7 @@ Specifica un contesto per l'associazione <xref:System.ServiceModel.NetTcpBinding
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   

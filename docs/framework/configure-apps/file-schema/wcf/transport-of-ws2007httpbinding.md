@@ -2,22 +2,23 @@
 title: <transport> di <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911979"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399261"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<> di trasporto \<di WS2007HttpBinding >
 Definisce le impostazioni di autenticazione per il trasporto HTTP.  
   
- \<system.serviceModel>  
-\<Binding >  
-\<ws2007HttpBinding>  
-\<binding>  
-\<security>  
-\<> di trasporto  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ws2007HttpBinding**](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di trasporto**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +36,7 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |`clientCredentialType`|Specifica la credenziale usata per autenticare il client presso il servizio. L'attributo è di tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Specifica la credenziale usata per autenticare il client presso un proxy di dominio. L'attributo è di tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -43,7 +44,7 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|La sicurezza è disabilitata.|  
 |Basic|Usa l'autenticazione di base.|  
@@ -54,7 +55,7 @@ Definisce le impostazioni di autenticazione per il trasporto HTTP.
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|La sicurezza è disabilitata.|  
 |Basic|Usa l'autenticazione di base.|  

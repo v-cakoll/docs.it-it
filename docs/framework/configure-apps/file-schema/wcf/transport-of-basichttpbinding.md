@@ -2,22 +2,23 @@
 title: <transport> di <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: af5852c3c7850f91686d50294c8846f85574e909
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2cf69c48a51ce2c687ebcfe9f87f7c22f5f86084
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399380"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<> di trasporto \<di BasicHttpBinding >
 Definisce proprietà che controllano i parametri di autenticazione per il trasporto HTTP.  
   
- \<system.ServiceModel>  
-\<Binding >  
-\<basicHttpBinding>  
-\<binding>  
-\<security>  
-\<> di trasporto  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Binding >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding >** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di sicurezza**](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di trasporto**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +45,7 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |clientCredentialType|-Specifica il tipo di credenziale da usare quando si esegue l'autenticazione client usando l'autenticazione HTTP.  Il valore predefinito è `None`. L'attributo è di tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |proxyCredentialType|-Specifica il tipo di credenziale da usare quando si esegue l'autenticazione client dall'interno di un dominio usando un proxy su HTTP. Questo attributo è applicabile solo quando l'attributo `mode` dell'elemento `security` padre è `Transport` o `TransportCredentialsOnly`. L'attributo è di tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -54,7 +55,7 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Value|DESCRIZIONE|  
+|Valore|DESCRIZIONE|  
 |-----------|-----------------|  
 |Nessuna|I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base.|  
@@ -64,7 +65,7 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuna|-I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base come definito da RFC 2617 – HTTP Authentication: Autenticazione di base e del digest.|  
