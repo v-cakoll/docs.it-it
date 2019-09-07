@@ -3,17 +3,20 @@ title: < System. serviceModel > del flusso di lavoro
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947359"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398606"
 ---
-# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="0952b-102">\<System. serviceModel > del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="0952b-102">\<system.serviceModel> of workflow</span></span>
-<span data-ttu-id="0952b-103">Contenuto della sezione di configurazione sono contenuti tutti gli elementi di configurazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0952b-103">This configuration section contains all the workflow configuration elements.</span></span>  
+# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="f5830-102">\<System. serviceModel > del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="f5830-102">\<system.serviceModel> of workflow</span></span>
+<span data-ttu-id="f5830-103">Contenuto della sezione di configurazione sono contenuti tutti gli elementi di configurazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="f5830-103">This configuration section contains all the workflow configuration elements.</span></span>  
+
+<span data-ttu-id="f5830-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="f5830-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="f5830-105">&nbsp;&nbsp; **\<sistema. > ServiceModel**</span><span class="sxs-lookup"><span data-stu-id="f5830-105">&nbsp;&nbsp;**\<system.ServiceModel>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0952b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0952b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5830-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f5830-106">Syntax</span></span>  
   
 ```xml  
 <system.ServiceModel>  
@@ -91,21 +94,21 @@ ms.locfileid: "69947359"
 </system.ServiceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0952b-105">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0952b-105">Attributes and Elements</span></span>  
- <span data-ttu-id="0952b-106">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0952b-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f5830-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="f5830-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="f5830-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="f5830-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0952b-107">Attributi</span><span class="sxs-lookup"><span data-stu-id="0952b-107">Attributes</span></span>  
- <span data-ttu-id="0952b-108">Nessuna</span><span class="sxs-lookup"><span data-stu-id="0952b-108">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f5830-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="f5830-109">Attributes</span></span>  
+ <span data-ttu-id="f5830-110">Nessuna</span><span class="sxs-lookup"><span data-stu-id="f5830-110">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="0952b-109">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0952b-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f5830-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="f5830-111">Child Elements</span></span>  
   
-|<span data-ttu-id="0952b-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="0952b-110">Element</span></span>|<span data-ttu-id="0952b-111">DESCRIZIONE</span><span class="sxs-lookup"><span data-stu-id="0952b-111">Description</span></span>|  
+|<span data-ttu-id="f5830-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="f5830-112">Element</span></span>|<span data-ttu-id="f5830-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f5830-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0952b-112">\<comportamenti ></span><span class="sxs-lookup"><span data-stu-id="0952b-112">\<behaviors></span></span>](behaviors-of-workflow.md)|<span data-ttu-id="0952b-113">Questa sezione definisce la raccolta **serviceBehaviors** .</span><span class="sxs-lookup"><span data-stu-id="0952b-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="0952b-114">Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi.</span><span class="sxs-lookup"><span data-stu-id="0952b-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="0952b-115">Ogni elemento di comportamento è identificato dall'attributo del **nome** univoco.</span><span class="sxs-lookup"><span data-stu-id="0952b-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
-|[<span data-ttu-id="0952b-116">\<rilevamento ></span><span class="sxs-lookup"><span data-stu-id="0952b-116">\<tracking></span></span>](tracking.md)|<span data-ttu-id="0952b-117">Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0952b-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="0952b-118">Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="0952b-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
+|[<span data-ttu-id="f5830-114">\<comportamenti ></span><span class="sxs-lookup"><span data-stu-id="f5830-114">\<behaviors></span></span>](behaviors-of-workflow.md)|<span data-ttu-id="f5830-115">Questa sezione definisce la raccolta **serviceBehaviors** .</span><span class="sxs-lookup"><span data-stu-id="f5830-115">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="f5830-116">Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi.</span><span class="sxs-lookup"><span data-stu-id="f5830-116">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="f5830-117">Ogni elemento di comportamento è identificato dall'attributo del **nome** univoco.</span><span class="sxs-lookup"><span data-stu-id="f5830-117">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="f5830-118">\<rilevamento ></span><span class="sxs-lookup"><span data-stu-id="f5830-118">\<tracking></span></span>](tracking.md)|<span data-ttu-id="f5830-119">Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="f5830-119">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="f5830-120">Per ulteriori informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [rilevamento e traccia del flusso di lavoro](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="f5830-120">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0952b-119">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0952b-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f5830-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="f5830-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="0952b-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="0952b-120">Element</span></span>|<span data-ttu-id="0952b-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0952b-121">Description</span></span>|  
+|<span data-ttu-id="f5830-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="f5830-122">Element</span></span>|<span data-ttu-id="f5830-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f5830-123">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0952b-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0952b-122">\<configuration></span></span>|<span data-ttu-id="0952b-123">Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.</span><span class="sxs-lookup"><span data-stu-id="0952b-123">The root element for all configuration elements in a .NET configuration file.</span></span>|
+|[<span data-ttu-id="f5830-124">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f5830-124">\<configuration></span></span>](../configuration-element.md)|<span data-ttu-id="f5830-125">Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.</span><span class="sxs-lookup"><span data-stu-id="f5830-125">The root element for all configuration elements in a .NET configuration file.</span></span>|
