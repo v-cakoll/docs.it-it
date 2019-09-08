@@ -2,15 +2,15 @@
 title: entità finale del set di associazioni
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: ea750e9f381de92233f4c9389ec6676847b56d01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 48ba84d46e380462405551cc2d826d84368b351a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786939"
 ---
 # <a name="association-set-end"></a>entità finale del set di associazioni
-Un *fine del set di associazioni* identifica le [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e il [set di entità](../../../../docs/framework/data/adonet/entity-set.md) alla fine di un [set di associazioni](../../../../docs/framework/data/adonet/association-set.md). Le entità finali del set di associazioni sono definite come parte di un set di associazioni. Un set di associazioni deve disporre esattamente di due entità finali.  
+Un'entità *finale del set di associazioni* identifica il tipo di [entità](entity-type.md) e il [set di entità](entity-set.md) alla fine di un set di [associazioni](association-set.md). Le entità finali del set di associazioni sono definite come parte di un set di associazioni. Un set di associazioni deve disporre esattamente di due entità finali.  
   
  Una definizione di entità finale del set di associazioni contiene le informazioni seguenti:  
   
@@ -23,15 +23,15 @@ Un *fine del set di associazioni* identifica le [tipo di entità](../../../../do
   
  ![Modello di esempio con tre tipi di entità](./media/association-set-end/example-model-three-entity-types.gif)  
   
- Nel diagramma seguente vengono illustrati un set di associazioni (`PublishedBy`) e due set di entità (`Books` e `Publishers`) basati sul modello concettuale illustrato in precedenza. Le fini del set di associazioni sono i set di entità `Books` e `Publishers`. Business Intelligence nel `Books` set di entità rappresenta un'istanza del `Book` tipo di entità in fase di esecuzione. Analogamente, Pj rappresenta un `Publisher` dell'istanza nel `Publishers` set di entità. BiPj rappresenta un'istanza del `PublishedBy` association nel `PublishedBy` set di associazioni.  
+ Nel diagramma seguente vengono illustrati un set di associazioni (`PublishedBy`) e due set di entità (`Books` e `Publishers`) basati sul modello concettuale illustrato in precedenza. Le fini del set di associazioni sono i set di entità `Books` e `Publishers`. Bi nel set `Books` di entità rappresenta un'istanza `Book` del tipo di entità in fase di esecuzione. Analogamente, PJ rappresenta `Publisher` un'istanza `Publishers` nel set di entità. BiPj rappresenta un'istanza dell' `PublishedBy` associazione `PublishedBy` nel set di associazioni.  
   
  ![Screenshot che mostra un esempio di set.](./media/association-set-end/sets-example-association.gif)  
   
- Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio DSL denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce un contenitore di entità con un set di associazioni per ogni associazione nel diagramma precedente. Si noti che le entità finali del set di associazioni sono definite come parte di ogni definizione di set di associazioni.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio DSL denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce un contenitore di entità con un set di associazioni per ogni associazione nel diagramma precedente. Si noti che le entità finali del set di associazioni sono definite come parte di ogni definizione di set di associazioni.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

@@ -2,12 +2,12 @@
 title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938477"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791607"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene illustrato il supporto di SqlClient (aggiunto in .NET Framework 4,5) per il ripristino di emergenza a disponibilità elevata, Gruppi di disponibilità AlwaysOn.  Aggiunta Gruppi di disponibilità AlwaysOn funzionalità al SQL Server 2012. Per ulteriori informazioni su Gruppi di disponibilità AlwaysOn, vedere documentazione online di SQL Server.  
@@ -98,5 +98,5 @@ In questo argomento viene illustrato il supporto di SqlClient (aggiunto in .NET 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Funzionalità di SQL Server e ADO.NET](sql-server-features-and-adonet.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

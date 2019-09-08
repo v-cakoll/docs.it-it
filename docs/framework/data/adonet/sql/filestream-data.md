@@ -2,12 +2,12 @@
 title: Dati FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490071"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794090"
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 
@@ -20,11 +20,11 @@ Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in SQL Ser
 
 ## <a name="sqlclient-support-for-filestream"></a>Supporto di SqlClient per FILESTREAM
 
-Il Provider di dati .NET Framework per SQL Server, <xref:System.Data.SqlClient>, supporta la lettura e scrittura di dati FILESTREAM utilizzando la <xref:System.Data.SqlTypes.SqlFileStream> definito nella classe di <xref:System.Data.SqlTypes> dello spazio dei nomi. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.
+Il .NET Framework provider di dati per SQL Server, <xref:System.Data.SqlClient>, supporta la lettura e la scrittura nei dati FILESTREAM <xref:System.Data.SqlTypes.SqlFileStream> utilizzando la classe definita <xref:System.Data.SqlTypes> nello spazio dei nomi. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.
 
 ### <a name="creating-the-sql-server-table"></a>Creazione di una tabella SQL Server
 
-Le istruzioni Transact-SQL seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse nella documentazione Online di SQL Server si trovano alla fine di questo argomento.
+Le istruzioni Transact-SQL seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse in documentazione online di SQL Server si trovano alla fine di questo argomento.
 
 ```sql
 CREATE TABLE employees
@@ -171,22 +171,22 @@ namespace FileStreamTest
 }
 ```
 
-Per un altro esempio, vedere [come archiviare e recuperare dati binari in una colonna di flusso di file](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
+Per un altro esempio, vedere [come archiviare e recuperare dati binari in una colonna del flusso di file](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
 
 ## <a name="resources-in-sql-server-books-online"></a>Risorse nella documentazione online di SQL Server
 
-La documentazione completa per FILESTREAM è disponibile nelle sezioni seguenti nella documentazione Online di SQL Server.
+La documentazione completa per FILESTREAM è disponibile nelle sezioni seguenti della documentazione online di SQL Server.
 
 |Argomento|Descrizione|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Viene descritto quando usare l'archiviazione FILESTREAM e come questa consente l'integrazione del Motore di database di SQL Server con un file system NTFS.|
-|[Creazione di applicazioni Client per i dati FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Descrive le funzioni API Windows per l'utilizzo di dati FILESTREAM.|
+|[Creazione di applicazioni client per dati FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Vengono descritte le funzioni dell'API Windows per l'utilizzo di dati FILESTREAM.|
 |[FILESTREAM e altre funzionalità di SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Vengono illustrate considerazioni, linee guida e limitazioni per l'uso di dati FILESTREAM con le altre funzionalità di SQL Server.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Sicurezza dell'accesso di codice e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Panoramica di ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Tipi di dati SQL Server e ADO.NET](sql-server-data-types.md)
+- [Recupero e modifica di dati in ADO.NET](../retrieving-and-modifying-data.md)
+- [Sicurezza dell'accesso di codice e ADO.NET](../code-access-security.md)
+- [Dati binari e con valori elevati SQL Server](sql-server-binary-and-large-value-data.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

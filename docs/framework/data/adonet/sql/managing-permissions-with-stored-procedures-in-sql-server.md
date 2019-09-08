@@ -2,12 +2,12 @@
 title: Gestione delle autorizzazioni con stored procedure in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623418"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780948"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
@@ -58,11 +58,11 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modifica di dati con stored procedure](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Scrittura dinamica sicura in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Firma di stored procedure in SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Modifica di dati con stored procedure](../modifying-data-with-stored-procedures.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

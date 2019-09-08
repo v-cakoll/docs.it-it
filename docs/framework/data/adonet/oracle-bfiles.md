@@ -2,36 +2,36 @@
 title: Oggetti BFILE Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 2d7db741cea5421b2391588c0479f44e2b478ca3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 214140bb8fcf43154b014ea3db609d355a27af7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626417"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794624"
 ---
 # <a name="oracle-bfiles"></a>Oggetti BFILE Oracle
 Il provider di dati .NET Framework per Oracle include la classe <xref:System.Data.OracleClient.OracleBFile>, usata per i tipi di dati <xref:System.Data.OracleClient.OracleType.BFile> Oracle.  
   
- Oracle **BFILE** è di tipo di dati Oracle **LOB** tipo di dati che contiene un riferimento a dati binari con dimensioni massime di 4 GB. Oracle **BFILE** differisce da altri Oracle **LOB** i tipi di dati in quanto i relativi dati vengono archiviati in un file fisico nel sistema operativo anziché sul server. Si noti che il **BFILE** tipo di dati fornisce l'accesso di sola lettura ai dati.  
+ Il tipo di dati Oracle **BFILE** è un tipo di dati **LOB** Oracle che contiene un riferimento a dati binari con una dimensione massima di 4 gigabyte. Un **BFILE** Oracle è diverso dagli altri tipi di dati **LOB** Oracle in quanto i dati vengono archiviati in un file fisico nel sistema operativo invece che nel server. Si noti che il tipo di dati **BFILE** fornisce l'accesso in sola lettura ai dati.  
   
- Altre caratteristiche di un **BFILE** tipo di dati che distingue da un **LOB** tipo di dati di seguito sono:  
+ Le altre caratteristiche di un tipo di dati **BFILE** che lo distinguono da un tipo di dati **LOB** sono le seguenti:  
   
 - Contiene dati non strutturati.  
   
 - Supporta il chunking sul lato server.  
   
-- Usa la semantica di copia di riferimenti. Ad esempio, se si esegue un'operazione di copia in una **BFILE**, solo le **BFILE** localizzatore, ovvero un riferimento al file, viene copiato. I dati nel file non vengono copiati.  
+- Usa la semantica di copia di riferimenti. Se, ad esempio, si esegue un'operazione di copia su un **BFILE**, viene copiato solo il localizzatore **BFILE** , ovvero un riferimento al file. I dati nel file non vengono copiati.  
   
- Il **BFILE** tipo di dati deve essere utilizzato per fare riferimento a LOB di grandi dimensioni e di conseguenza, non è pratico archiviare nel database. Più client, server e comunicazioni sovraccarico quando si usa una **BFILE** confrontato con tipo di dati di **LOB** tipo di dati. È più efficiente per accedere a un **BFILE** se è necessario solo ottenere una piccola quantità di dati. Se è necessario ottenere l'intero oggetto, è opportuno accedere a LOB residenti nel database.  
+ Il tipo di dati **BFILE** deve essere utilizzato per fare riferimento a LOB di grandi dimensioni e pertanto non è pratico archiviarlo nel database. Quando si utilizza un tipo di dati **BFILE** confrontato con il tipo di dati **LOB** , è necessario più sovraccarico di client, server e comunicazioni. È più efficiente accedere a un **BFILE** se è necessario solo ottenere una piccola quantità di dati. Se è necessario ottenere l'intero oggetto, è opportuno accedere a LOB residenti nel database.  
   
- Ogni diverso da NULL **OracleBFile** oggetto è associato a due entità che definiscono il percorso del file fisico sottostante:  
+ Ogni oggetto **OracleBFile** non null è associato a due entità che definiscono il percorso del file fisico sottostante:  
   
 1. Un oggetto DIRECTORY Oracle, che è un alias del database per una directory nel file system e  
   
 2. Il nome del file fisico sottostante, che si trova nella directory associata all'oggetto DIRECTORY.  
   
 ## <a name="example"></a>Esempio  
- L'esempio c# seguente illustra come creare un **BFILE** in una tabella Oracle e quindi come recuperarlo sotto forma di un **OracleBFile** oggetto. Nell'esempio viene illustrato come utilizzare il <xref:System.Data.OracleClient.OracleDataReader> oggetto e il **OracleBFile** **Seek** e **lettura** metodi. Si noti che per usare questo esempio, è necessario innanzitutto creare una directory denominata "c:\\\bfiles" e il file denominato "MyFile. jpg" sul server Oracle.  
+ Nell'esempio C# seguente viene illustrato come creare un **BFILE** in una tabella Oracle e quindi recuperarlo sotto forma di oggetto **OracleBFile** . Nell'esempio viene illustrato l' <xref:System.Data.OracleClient.OracleDataReader> utilizzo dell'oggetto e dei metodi **Seek** e **Read** di **OracleBFile** . Si noti che per utilizzare questo esempio, è necessario innanzitutto creare una directory denominata "c:\\\bfiles" e un file denominato "MyFile. jpg" nel server Oracle.  
   
 ```csharp  
 using System;  
@@ -88,5 +88,5 @@ public class Sample
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle e ADO.NET](oracle-and-adonet.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

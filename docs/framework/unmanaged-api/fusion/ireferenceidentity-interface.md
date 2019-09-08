@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796363"
 ---
 # <a name="ireferenceidentity-interface"></a>Interfaccia IReferenceIdentity
-Rappresenta un riferimento a una firma univoca di un oggetto di codice.  
+Rappresenta un riferimento alla firma univoca di un oggetto di codice.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Ottiene un puntatore a interfaccia a una nuova `IReferenceIdentity` identica a questa istanza `IReferenceIdentity`, fatta eccezione per le modifiche di attributo specificato.|  
-|`IReferenceIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a un `IEnumIDENTITY_ATTRIBUTE` istanza che contiene gli attributi associati a questo `IReferenceIdentity`.|  
+|`IReferenceIdentity::Clone`|Ottiene un puntatore a interfaccia a una `IReferenceIdentity` nuova istanza identica a questa `IReferenceIdentity`, ad eccezione delle modifiche di attributo specificate.|  
+|`IReferenceIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a `IEnumIDENTITY_ATTRIBUTE` un'istanza di che contiene gli attributi associati `IReferenceIdentity`a questo oggetto.|  
 |`IReferenceIdentity::GetAttribute`|Ottiene il valore dell'attributo nello spazio dei nomi specificato, con il nome specificato.|  
-|`IReferenceIdentity::SetAttribute`|Imposta l'attributo con lo spazio dei nomi specificato e il nome specificato al valore specificato.|  
+|`IReferenceIdentity::SetAttribute`|Imposta l'attributo con lo spazio dei nomi specificato e il nome specificato sul valore specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -44,5 +44,5 @@ Rappresenta un riferimento a una firma univoca di un oggetto di codice.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Interfaccia IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)

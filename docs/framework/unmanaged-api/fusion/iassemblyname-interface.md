@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aee9b986c1e26c1b2e34dac7151a00172451bbad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697927"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796556"
 ---
 # <a name="iassemblyname-interface"></a>Interfaccia IAssemblyName
-Fornisce metodi per la descrizione e l'utilizzo di identità univoca di un assembly.  
+Fornisce metodi per la descrizione e l'utilizzo dell'identità univoca di un assembly.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Crea una copia superficiale dell'oggetto `IAssemblyName` oggetto.|  
-|[Metodo Finalize](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Consente questo `IAssemblyName` oggetto rilasciare risorse ed eseguire altre operazioni di pulizia prima che venga chiamato il relativo distruttore.|  
-|[Metodo GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Ottiene il nome leggibile dell'assembly a cui fa riferimento `IAssemblyName` oggetto.|  
-|[Metodo GetName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Ottiene il nome semplice e non crittografato dell'assembly a cui fa riferimento `IAssemblyName` oggetto.|  
-|[Metodo GetProperty](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Ottiene un puntatore per la proprietà fa riferimento l'oggetto specificato `PropertyId`.|  
-|[Metodo GetVersion](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Ottiene le informazioni sulla versione per l'assembly fa riferimento questo `IAssemblyName` oggetto.|  
-|[Metodo IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Determina se un oggetto specificato `IAssemblyName` è uguale all'oggetto `IAssemblyName`, in base al flag di confronto specificati.|  
-|[Metodo SetProperty](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Imposta il valore della proprietà specificato fa riferimento `PropertyId`.|  
+|[Metodo Clone](iassemblyname-clone-method.md)|Crea una copia superficiale dell' `IAssemblyName` oggetto.|  
+|[Metodo Finalize](iassemblyname-finalize-method.md)|Consente a `IAssemblyName` questo oggetto di rilasciare risorse ed eseguire altre operazioni di pulizia prima che venga chiamato il relativo distruttore.|  
+|[Metodo GetDisplayName](iassemblyname-getdisplayname-method.md)|Ottiene il nome leggibile dell'assembly a cui fa riferimento questo `IAssemblyName` oggetto.|  
+|[Metodo GetName](iassemblyname-getname-method.md)|Ottiene il nome semplice e non crittografato dell'assembly a cui fa riferimento `IAssemblyName` questo oggetto.|  
+|[Metodo GetProperty](iassemblyname-getproperty-method.md)|Ottiene un puntatore alla proprietà a cui fa riferimento l'oggetto `PropertyId`specificato.|  
+|[Metodo GetVersion](iassemblyname-getversion-method.md)|Ottiene le informazioni sulla versione per l'assembly a cui fa `IAssemblyName` riferimento questo oggetto.|  
+|[Metodo IsEqual](iassemblyname-isequal-method.md)|Determina se un oggetto `IAssemblyName` specificato è uguale `IAssemblyName`all'oggetto, in base ai flag di confronto specificati.|  
+|[Metodo SetProperty](iassemblyname-setproperty-method.md)|Imposta il valore della proprietà a cui fa riferimento l'oggetto `PropertyId`specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -48,5 +48,5 @@ Fornisce metodi per la descrizione e l'utilizzo di identità univoca di un assem
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interfaccia IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Interfaccia IAssemblyEnum](iassemblyenum-interface.md)

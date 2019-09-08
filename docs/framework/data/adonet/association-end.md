@@ -2,15 +2,15 @@
 title: entità finale dell'associazione
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 575157cd1d125d3315e1859aad72cc8b08d8b4cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33cc2e10d9b72ef7f5f024905938c41fcc4a9755
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932208"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785054"
 ---
 # <a name="association-end"></a>entità finale dell'associazione
-Un'entità *finale dell'associazione* identifica il tipo di entità in un' [entità](../../../../docs/framework/data/adonet/entity-type.md) finale di un' [associazione](../../../../docs/framework/data/adonet/association-type.md) e il numero di istanze del tipo di entità che possono esistere a tale estremità di un'associazione. Le entità finali dell'associazione sono definite come parte di un'associazione; un'associazione deve disporre esattamente di due entità finali. Le [proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) consentono l'esplorazione da un'entità finale dell'associazione all'altra.  
+Un'entità *finale dell'associazione* identifica il tipo di entità in un' [entità](entity-type.md) finale di un' [associazione](association-type.md) e il numero di istanze del tipo di entità che possono esistere a tale estremità di un'associazione. Le entità finali dell'associazione sono definite come parte di un'associazione; un'associazione deve disporre esattamente di due entità finali. Le [proprietà di navigazione](navigation-property.md) consentono l'esplorazione da un'entità finale dell'associazione all'altra.  
   
  Una definizione di entità finale dell'associazione contiene le informazioni seguenti:  
   
@@ -19,7 +19,7 @@ Un'entità *finale dell'associazione* identifica il tipo di entità in un' [enti
     > [!NOTE]
     > Per una determinata associazione, il tipo di entità specificato per ogni entità finale dell'associazione può essere lo stesso. In questo modo viene creata un'associazione interna.  
   
-- Molteplicità di entità [finale dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md) che indica il numero di istanze del tipo di entità che possono trovarsi in un'entità finale dell'associazione. Una molteplicità di entità finale dell'associazione può avere un valore pari a uno (1), zero o uno (0.. 1)\*o molti ().  
+- [Molteplicità](association-end-multiplicity.md) di entità finale dell'associazione che indica il numero di istanze del tipo di entità che possono trovarsi in un'entità finale dell'associazione. Una molteplicità di entità finale dell'associazione può avere un valore pari a uno (1), zero o uno (0.. 1)\*o molti ().  
   
 - Nome per l'entità finale dell'associazione. (facoltativo)  
   
@@ -30,11 +30,11 @@ Un'entità *finale dell'associazione* identifica il tipo di entità in un' [enti
   
  ![Modello di esempio con tre tipi di entità](./media/association-end/example-model-three-entity-types.gif)  
   
- Il Entity Framework ADO.NET utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce l'associazione `PublishedBy` illustrata nel diagramma precedente. Si noti che il tipo, il nome e la molteplicità di ogni entità finale dell'associazione vengono specificati dagli attributi XML (rispettivamente, gli attributi `Type`, `Role` e `Multiplicity`). Le informazioni facoltative sulle operazioni eseguite su un'entità finale vengono specificate in un elemento XML (l'elemento `OnDelete`). In questo caso, se viene eliminato un editore, vengono eliminati anche tutti i libri associati.  
+ Il Entity Framework ADO.NET utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce l'associazione `PublishedBy` illustrata nel diagramma precedente. Si noti che il tipo, il nome e la molteplicità di ogni entità finale dell'associazione vengono specificati dagli attributi XML (rispettivamente, gli attributi `Type`, `Role` e `Multiplicity`). Le informazioni facoltative sulle operazioni eseguite su un'entità finale vengono specificate in un elemento XML (l'elemento `OnDelete`). In questo caso, se viene eliminato un editore, vengono eliminati anche tutti i libri associati.  
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

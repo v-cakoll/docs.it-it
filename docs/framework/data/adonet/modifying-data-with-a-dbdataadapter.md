@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd1f5faa0efe141dc064f0150b94807b90e7e2b8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934450"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794829"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modifica di dati con un oggetto DbDataAdapter
 Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un oggetto <xref:System.Data.Common.DbProviderFactory> fornisce un oggetto <xref:System.Data.Common.DbDataAdapter> fortemente tipizzato al provider sottostante specificato durante la creazione della factory. È quindi possibile usare un oggetto <xref:System.Data.Common.DbCommandBuilder> per creare i comandi che consentono di inserire, aggiornare ed eliminare dati da un <xref:System.Data.DataSet> a un'origine dati.  
@@ -44,7 +44,7 @@ Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Recupero di una classe DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Recupero di una classe DbProviderFactory](obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand e DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

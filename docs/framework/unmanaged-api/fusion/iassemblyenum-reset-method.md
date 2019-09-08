@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 633ff0f787b33d45a247f7a3f890a58973c87479
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754089"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796635"
 ---
 # <a name="iassemblyenumreset-method"></a>Metodo IAssemblyEnum::Reset
-Reimposta ciò [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) oggetti sulla propria posizione inizia.  
+Reimposta l'oggetto [IAssemblyEnum](iassemblyenum-interface.md) sulla posizione iniziale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ HRESULT Reset (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -44,4 +44,4 @@ HRESULT Reset (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Interfaccia IAssemblyEnum](iassemblyenum-interface.md)

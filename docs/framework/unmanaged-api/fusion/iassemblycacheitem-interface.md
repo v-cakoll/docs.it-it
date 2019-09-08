@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697979"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796713"
 ---
 # <a name="iassemblycacheitem-interface"></a>Interfaccia IAssemblyCacheItem
-Rappresenta un singolo assembly in global assembly cache.  
+Rappresenta un singolo assembly nel Global Assembly Cache.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo AbortItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Consente di eseguire operazioni di pulizia prima che venga rilasciato assembly nella global assembly cache.|  
-|[Metodo Commit](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Esegue il commit il riferimento all'assembly memorizzati nella cache in memoria.|  
-|[Metodo CreateStream](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crea un flusso con il nome specificato e il formato.|  
+|[Metodo AbortItem](iassemblycacheitem-abortitem-method.md)|Consente all'assembly nel Global Assembly Cache di eseguire operazioni di pulizia prima del rilascio.|  
+|[Metodo Commit](iassemblycacheitem-commit-method.md)|Consente di eseguire il commit del riferimento all'assembly memorizzato nella cache nella memoria.|  
+|[Metodo CreateStream](iassemblycacheitem-createstream-method.md)|Crea un flusso con il nome e il formato specificati.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -43,6 +43,6 @@ Rappresenta un singolo assembly in global assembly cache.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Global Assembly Cache](../../app-domains/gac.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1169def4e0180b1d14103d4a968ff3ed56f63d0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620026"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781753"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>Procedura: Rappresentare tabelle come classi
-Usare la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attributo per definire una classe come classe di entità associata a una tabella di database.  
+Utilizzare l' [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> attributo per definire una classe come classe di entità associata a una tabella di database.  
   
 ### <a name="to-map-a-class-to-a-database-table"></a>Per eseguire il mapping di una classe a una tabella di database  
   
@@ -29,5 +29,5 @@ Usare la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Modello a oggetti LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Procedura: Personalizzare le classi di entità tramite l'editor di codice](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fb752822cd406585f7f4a257ea4c51dab7b1f16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778502"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795456"
 ---
 # <a name="cleardownloadcache-function"></a>Funzione ClearDownloadCache
-Cancella la cache assembly globali degli assembly scaricato.  
+Cancella il Global Assembly Cache degli assembly scaricati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT ClearDownloadCache ();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria:** Fusion. dll e mscorwks. dll. Usare Fusion. dll invece di Mscorwks. dll per verificare che da usare come destinazione la versione corretta di .NET Framework.  
+ **Libreria** Fusion. dll e mscorwks. dll. Usare Fusion. dll invece di mscorwks. dll per assicurarsi di avere come destinazione la versione corretta del .NET Framework.  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [Funzioni statiche globali Fusion](fusion-global-static-functions.md)
+- [Global Assembly Cache](../../app-domains/gac.md)

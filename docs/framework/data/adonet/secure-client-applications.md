@@ -2,12 +2,12 @@
 title: Applicazioni client sicure
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963163"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794380"
 ---
 # <a name="secure-client-applications"></a>Applicazioni client sicure
 Le applicazioni sono costituite in genere da molte parti che è necessario proteggere da vulnerabilità che potrebbero causare la perdita di dati o compromettere in altro modo il sistema. La creazione di interfacce utente protette consente di impedire molti problemi bloccando gli utenti non autorizzati prima che accedano ai dati o alle risorse del sistema.  
@@ -24,7 +24,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
  [Convalida dell'input utente in Pagine Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Viene fornita una panoramica della convalida dell'input dell'utente tramite gli appositi controlli di ASP.NET.  
   
- [Input dell'utente in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Input dell'utente in Windows Forms](../../winforms/user-input-in-windows-forms.md)  
  Vengono forniti collegamenti e informazioni per la convalida dell'input da mouse e tastiera in un'applicazione Windows Forms.  
   
  [Espressioni regolari di .NET Framework](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
 ## <a name="windows-applications"></a>Applicazioni Windows  
  In passato, le applicazioni Windows venivano in genere eseguite con autorizzazioni complete. Con .NET Framework viene fornita l'infrastruttura necessaria per limitare l'esecuzione di codice in un'applicazione Windows tramite la sicurezza dall'accesso di codice. Questa funzionalità non è tuttavia sufficiente, da sola, a proteggere l'applicazione.  
   
- [Sicurezza di Windows Form](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Sicurezza di Windows Form](../../winforms/windows-forms-security.md)  
  Viene illustrato come proteggere le applicazioni Windows Forms e vengono forniti collegamenti ad argomenti correlati.  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Viene descritto come interagire con applicazioni non gestite in un'applicazione Windows Forms.  
   
  [Distribuzione ClickOnce per Windows Form](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -59,16 +59,16 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
 ## <a name="remoting"></a>Servizi remoti  
  Con .NET Remoting è possibile compilare facilmente applicazioni ampiamente distribuite, sia che i componenti dell'applicazione si trovino tutti nello stesso computer o dislocati in varie parti del mondo. È possibile compilare applicazioni client che usano oggetti di altri processi nello stesso computer o in qualsiasi altro computer disponibile sulla rete. È anche possibile usare .NET Remoting per comunicare con altri domini applicazione nello stesso processo.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Configurazione di applicazioni remote](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Viene descritto come configurare le applicazioni remote per evitare problemi comuni.|  
 |[Sicurezza in remoto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Vengono descritte l'autenticazione e la crittografia e sono riportati altri argomenti sulla sicurezza relativi ai servizi remoti.|  
-|[Considerazioni sulla sicurezza e la comunicazione remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Vengono descritti i problemi di sicurezza con gli oggetti protetti e l'uso di più domini di applicazioni.|  
+|[Considerazioni sulla sicurezza e la comunicazione remota](../../misc/security-and-remoting-considerations.md)|Vengono descritti i problemi di sicurezza con gli oggetti protetti e l'uso di più domini di applicazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Protezione delle applicazioni ADO.NET](securing-ado-net-applications.md)
 - [Suggerimenti per le strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protezione delle applicazioni](/visualstudio/ide/securing-applications)
-- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle informazioni di connessione](protecting-connection-information.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

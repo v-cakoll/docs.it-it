@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778646"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796864"
 ---
 # <a name="getidentityauthority-function"></a>Funzione GetIdentityAuthority
-Ottiene un puntatore a un [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) istanza che gestisce le chiavi per gli oggetti di codice.  
+Ottiene un puntatore a un'istanza di [IIdentityAuthority](iidentityauthority-interface.md) che gestisce le chiavi per gli oggetti di codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>Parametri  
  `ppIIdentityAuthority`  
- [out] L'oggetto restituito `IIdentityAuthority` puntatore.  
+ out Puntatore restituito `IIdentityAuthority` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -48,5 +48,5 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Interfaccia IIdentityAuthority](iidentityauthority-interface.md)
+- [Funzioni statiche globali Fusion](fusion-global-static-functions.md)

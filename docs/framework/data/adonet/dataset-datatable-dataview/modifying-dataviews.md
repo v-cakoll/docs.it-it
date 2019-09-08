@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 0b2bfd1b0490572e78c8ce365491a8d48db87684
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e811410ea9fdd4be0cbd84b895483f69f58b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204567"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786048"
 ---
 # <a name="modifying-dataviews"></a>Modifica di oggetti DataView
 È possibile usare il <xref:System.Data.DataView> per aggiungere, eliminare o modificare righe di dati nella tabella sottostante. La possibilità di utilizzare **DataView** per modificare i dati nella tabella sottostante viene controllata impostando una delle tre proprietà booleane di **DataView**. Tali proprietà sono <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> e <xref:System.Data.DataView.AllowDelete%2A>. Sono impostate su **true** per impostazione predefinita.  
@@ -57,4 +57,4 @@ newDRV.EndEdit();
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataView](dataviews.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

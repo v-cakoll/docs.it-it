@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 7196d172b7bec051b5407f1c8e27ec642d230fc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64581390"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794135"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Caricamento posticipato e immediato
-Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto. Il *correlati* oggetti non vengono recuperati contemporaneamente. (Per altre informazioni, vedere [eseguire query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.  
+Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto. Gli oggetti *correlati* non vengono recuperati automaticamente nello stesso momento. Per ulteriori informazioni, vedere [esecuzione di query tra relazioni](querying-across-relationships.md). Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.  
   
- Ad esempio, è possibile eseguire una query per un particolare set di ordini e quindi inviare saltuariamente una notifica tramite posta elettronica a clienti particolari. Inizialmente potrebbe non essere necessario recuperare tutti i dati del cliente con ogni ordine. In questo caso è possibile usare il caricamento posticipato per rinviare il recupero di informazioni aggiuntive finché non sarà assolutamente necessario. Si consideri l'esempio seguente:  
+ Ad esempio, potrebbe essere necessario eseguire una query per un determinato set di ordini e quindi solo occasionalmente inviare una notifica tramite posta elettronica a determinati clienti. Inizialmente potrebbe non essere necessario recuperare tutti i dati del cliente con ogni ordine. In questo caso è possibile usare il caricamento posticipato per rinviare il recupero di informazioni aggiuntive finché non sarà assolutamente necessario. Si consideri l'esempio seguente:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
@@ -25,9 +25,9 @@ Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  
   
- È inoltre possibile creare un join tra clienti e ordini in una query definendo il prodotto incrociato e recuperando tutti i relativi bit di dati come un'unica grande proiezione. Tali risultati non sono tuttavia entità. (Per altre informazioni, vedere [LINQ al modello a oggetti SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)). Le entità sono oggetti con un'identità che è possibile modificare, mentre i risultati in questione sono proiezioni che non possono essere modificate né salvate in modo permanente. È inoltre possibile che vengano recuperati molti dati ridondanti, in quanto ogni cliente viene ripetuto per ogni ordine nell'output del join bidimensionale.  
+ È inoltre possibile creare un join tra clienti e ordini in una query definendo il prodotto incrociato e recuperando tutti i relativi bit di dati come un'unica grande proiezione. Tali risultati non sono tuttavia entità. Per ulteriori informazioni, vedere [il modello a oggetti LINQ to SQL](the-linq-to-sql-object-model.md). Le entità sono oggetti con un'identità che è possibile modificare, mentre i risultati in questione sono proiezioni che non possono essere modificate né salvate in modo permanente. È inoltre possibile che vengano recuperati molti dati ridondanti, in quanto ogni cliente viene ripetuto per ogni ordine nell'output del join bidimensionale.  
   
- È invece utile disporre di un modo per recuperare contemporaneamente un set di oggetti correlati. Il set è una sezione delineata di un grafico che consente di recuperare sempre solo la quantità di dati necessaria per l'uso desiderato. A tale scopo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce <xref:System.Data.Linq.DataLoadOptions> il caricamento immediato di un'area del modello a oggetti. I metodi comprendono:  
+ È invece utile disporre di un modo per recuperare contemporaneamente un set di oggetti correlati. Il set è una sezione delineata di un grafico che consente di recuperare sempre solo la quantità di dati necessaria per l'uso desiderato. A tale scopo, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce <xref:System.Data.Linq.DataLoadOptions> il caricamento immediato di un'area del modello a oggetti. I metodi comprendono:  
   
 - Il metodo <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> per caricare immediatamente dati relativi alla destinazione principale.  
   
@@ -35,4 +35,4 @@ Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relativi alle query](query-concepts.md)

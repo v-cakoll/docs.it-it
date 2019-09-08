@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741876"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777222"
 ---
 # <a name="getpublickeytoken-method"></a>Metodo GetPublicKeyToken
-Recupera il token di chiave pubblica per un file di chiave specificata o un contenitore di chiavi.  
+Recupera il token di chiave pubblica per un file di chiave o un contenitore di chiavi specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,25 +39,25 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parametri  
  `pszKeyFile`  
- Nome file della chiave.  
+ Nome del file della chiave.  
   
  `pszKeyContainer`  
  Nome del contenitore di chiavi.  
   
  `pvPublicKeyToken`  
- Indirizzo in cui viene archiviato il token di chiave.  
+ Indirizzo in cui deve essere archiviato il token di chiave.  
   
  `pcbPublicKeyToken`  
- Specifica la dimensione, in byte, del buffer indicato da `pvPublicKeyToken`. Dopo la restituzione, contiene il numero effettivo di byte utilizzati.  
+ Specifica la dimensione, in byte, del buffer indicato da `pvPublicKeyToken`. Al momento della restituzione, contiene il numero effettivo di byte utilizzati.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Alink (API)](index.md)

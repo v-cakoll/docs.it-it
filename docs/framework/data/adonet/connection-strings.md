@@ -2,12 +2,12 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363752"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784899"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -57,23 +57,23 @@ Tutte le stringhe di connessione condividono la stessa sintassi di base descritt
 
 La digitazione degli errori può causare errori. Ad esempio, `Integrated Security=true` è valido, ma `IntegratedSecurity=true` genera un errore.
 
-Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi di stringa Injection e compromettono la sicurezza nell'origine dati. Per risolvere questi problemi, in *ADO.NET* 2,0 sono stati introdotti i generatori di [stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md) per ogni provider di dati *.NET Framework* . Questi generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e rendono possibile la convalida della stringa di connessione prima che venga inviata all'origine dati.
+Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi di stringa Injection e compromettono la sicurezza nell'origine dati. Per risolvere questi problemi, in *ADO.NET* 2,0 sono stati introdotti i [generatori di stringhe di connessione](connection-string-builders.md) per ogni provider di dati *.NET Framework* . Questi generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e rendono possibile la convalida della stringa di connessione prima che venga inviata all'origine dati.
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Generatori di stringhe di connessione](connection-string-builders.md)\
 Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.
 
-[Stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Stringhe di connessione e file di configurazione](connection-strings-and-configuration-files.md)\
 Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.
 
-[Sintassi delle stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Sintassi delle stringhe di connessione](connection-string-syntax.md)\
 Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.
 
-[Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Protezione delle informazioni di connessione](protecting-connection-information.md)\
 Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Connessione a un'origine dati](/cpp/data/odbc/connecting-to-a-data-source)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

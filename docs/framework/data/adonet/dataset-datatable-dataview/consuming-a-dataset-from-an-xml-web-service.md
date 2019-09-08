@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203954"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784779"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Utilizzo di un dataset da un servizio Web XML
 Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa, in parte per facilitare il trasporto di dati su Internet. Il **set di dati** è "serializzabile" in quanto può essere specificato come input o output dai servizi Web XML senza che sia necessario scrivere codice aggiuntivo per trasmettere il contenuto del **set di dati** da un servizio Web XML a un client e viceversa. Il **set di dati** viene convertito in modo implicito in un flusso XML utilizzando il formato DiffGram, inviato in rete e quindi ricostruito dal flusso XML come **set di dati** all'estremità ricevente. Si tratta quindi di un metodo molto semplice e flessibile per la trasmissione e la restituzione di dati relazionali tramite i servizi Web XML. Per ulteriori informazioni sul formato DiffGram, vedere [DiffGram](diffgrams.md).  
@@ -26,7 +26,7 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
   
      Nell'esempio viene creato un servizio Web XML che restituisce i dati, in questo caso un elenco di clienti dal database **Northwind** e riceve un **set** di dati con aggiornamenti ai dati, che il servizio Web XML risolve nell'origine dati originale.  
   
-     Due metodi vengono esposti dal servizio Web XML:GetCustomers, per restituire l'elenco dei clienti e **UpdateCustomers**, per risolvere gli aggiornamenti nell'origine dati. Il servizio Web XML viene archiviato in un file sul server Web denominato DataSetSample.asmx. Nel codice seguente viene descritto il contenuto del file DataSetSample.asmx.  
+     Due metodi vengono esposti dal servizio Web XML: **GetCustomers**, per restituire l'elenco dei clienti e **UpdateCustomers**, per risolvere gli aggiornamenti nell'origine dati. Il servizio Web XML viene archiviato in un file sul server Web denominato DataSetSample.asmx. Nel codice seguente viene descritto il contenuto del file DataSetSample.asmx.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -189,9 +189,9 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
   
 3. Creare un client del servizio Web XML.  
   
-     Se si desidera che in Visual Studio venga generata automaticamente la classe proxy del servizio Web, è sufficiente creare il progetto client e, nella finestra di Esplora soluzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi riferimento Web**e selezionare il servizio Web dall'elenco di Web disponibile Servizi (potrebbe essere necessario specificare l'indirizzo dell'endpoint del servizio Web, se il servizio Web non è disponibile all'interno della soluzione corrente o nel computer corrente). Se si crea autonomamente il proxy del servizio Web XML, come descritto nel passaggio precedente, è possibile importarlo nel codice del client e usare i metodi del servizio Web XML. Il codice di esempio seguente importa la libreria proxy, chiama GetCustomers per ottenere un elenco di clienti, aggiunge un nuovo cliente e quindi restituisce un **set di dati** con gli aggiornamenti di **UpdateCustomers**.  
+     Se si desidera che in Visual Studio venga generata automaticamente la classe proxy del servizio Web, è sufficiente creare il progetto client e, nella finestra di Esplora soluzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi riferimento Web**e selezionare il servizio Web dall'elenco di Web disponibile Servizi (potrebbe essere necessario specificare l'indirizzo dell'endpoint del servizio Web, se il servizio Web non è disponibile all'interno della soluzione corrente o nel computer corrente). Se si crea autonomamente il proxy del servizio Web XML, come descritto nel passaggio precedente, è possibile importarlo nel codice del client e usare i metodi del servizio Web XML. Il codice di esempio seguente importa la libreria proxy, chiama **GetCustomers** per ottenere un elenco di clienti, aggiunge un nuovo cliente e quindi restituisce un **set di dati** con gli aggiornamenti di **UpdateCustomers**.  
   
-     Si noti che l'esempio passa **il set di dati** restituito da **DataSet.** GetChanges a **UpdateCustomers** , perché solo le righe modificate devono essere passate a **UpdateCustomers**. **UpdateCustomers** restituisce il **set di dati**risolto, che è quindi possibile **unire** al **set di dati** esistente per incorporare le modifiche risolte e le informazioni sugli errori delle righe dall'aggiornamento. Il codice seguente presuppone che sia stato usato Visual Studio per creare il riferimento Web e che il riferimento Web sia stato rinominato in DsSample nella finestra di dialogo **Aggiungi riferimento Web** .  
+     Si noti che l'esempio passa il **set di dati** restituito da **DataSet. GetChanges** a **UpdateCustomers** , perché solo le righe modificate devono essere passate a **UpdateCustomers**. **UpdateCustomers** restituisce il **set di dati**risolto, che è quindi possibile **unire** al **set di dati** esistente per incorporare le modifiche risolte e le informazioni sugli errori delle righe dall'aggiornamento. Il codice seguente presuppone che sia stato usato Visual Studio per creare il riferimento Web e che il riferimento Web sia stato rinominato in DsSample nella finestra di dialogo **Aggiungi riferimento Web** .  
   
     ```vb  
     Imports System  
@@ -268,4 +268,4 @@ Il <xref:System.Data.DataSet> è stato progettato con una struttura disconnessa,
 - [Aggiornamento di origini dati con DataAdapter](../updating-data-sources-with-dataadapters.md)
 - [Parametri DataAdapter](../dataadapter-parameters.md)
 - [Strumento Web Services Description Language (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

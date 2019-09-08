@@ -2,12 +2,12 @@
 title: Operazioni asincrone
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c104176d92667d7c8e2dc83c33bf3eb566437d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 55cb9472c23f09b3f0f248a795dbad62af8ff37f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918120"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782607"
 ---
 # <a name="asynchronous-operations"></a>Operazioni asincrone
 Il completamento di alcune operazioni di database, ad esempio l'esecuzione di comandi, può richiedere parecchio tempo. In questi casi, le applicazioni a thread singolo devono bloccare altre operazioni e attendere il comando per il completamento prima di continuare le rispettive operazioni. Al contrario, la possibilità di assegnare l'operazione a esecuzione prolungata a un thread in background consente al thread in primo piano di restare attivo per l'intera durata dell'operazione. In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione.  
@@ -20,17 +20,17 @@ Il completamento di alcune operazioni di database, ad esempio l'esecuzione di co
  Benché l'uso di tecniche asincrone con le funzionalità ADO.NET non comporti ulteriori considerazioni, è probabile che gli sviluppatori utilizzeranno le funzionalità asincrone più in ADO.NET che in altre aree di .NET Framework. Quando si creano applicazioni multithreading è importante essere a conoscenza sia dei vantaggi che dei potenziali problemi. Negli esempi seguenti vengono illustrate diverse problematiche importanti di cui gli sviluppatori dovranno tenere conto quando compilano applicazioni che incorporano funzionalità multithreading.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Applicazioni Windows tramite callback](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ [Applicazioni Windows tramite callback](windows-applications-using-callbacks.md)  
  Viene fornito un esempio che illustra come eseguire un comando asincrono in modo sicuro, gestendo in modo corretto l'interazione con un form e il relativo contenuto in un thread separato.  
   
- [Applicazioni ASP.NET tramite handle di attesa](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
+ [Applicazioni ASP.NET tramite handle di attesa](aspnet-apps-using-wait-handles.md)  
  Viene fornito un esempio che illustra come eseguire più comandi simultanei da una pagina ASP.NET, usando handle di attesa per gestire l'operazione al completamento di tutti i comandi.  
   
- [Polling in applicazioni console](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Polling in applicazioni console](polling-in-console-applications.md)  
  Viene fornito un esempio che illustra l'uso del polling per attendere il completamento dell'esecuzione di un comando asincrono da un'applicazione console. Questa tecnica è valida anche in una libreria di classi o in altre applicazioni senza interfaccia utente.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server e ADO.NET](index.md)
 - [Chiamata sincrona dei metodi asincroni](../../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

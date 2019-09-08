@@ -2,64 +2,64 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783818"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET è un set di classi che espongono servizi di accesso ai dati per i programmatori .NET Framework. ADO.NET fornisce un set completo per la creazione di applicazioni distribuite e abilitate alla condivisione dei dati. ADO.NET è parte integrante di .NET Framework e consente l'accesso ai dati relazionali, ai dati XML e ai dati dell'applicazione. Supporta numerose esigenze di sviluppo, inclusa la creazione di client di database front-end e di oggetti business di livello intermedio, usati da applicazioni, strumenti, linguaggi o browser Internet.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Novità in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [Novità in ADO.NET](whats-new.md)  
  Vengono descritte le nuove funzionalità di ADO.NET.  
   
- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Panoramica di ADO.NET](ado-net-overview.md)  
  Viene fornita un'introduzione alle caratteristiche e ai componenti di ADO.NET.  
   
  [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
  Viene descritto come creare applicazioni usando Entity Framework.  
   
- [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [Protezione delle applicazioni ADO.NET](securing-ado-net-applications.md)  
  Vengono descritte le tecniche che consentono di scrivere codice sicuro quando si usa ADO.NET.  
   
- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Mapping dei tipi di dati in ADO.NET](data-type-mappings-in-ado-net.md)  
  Vengono descritti i mapping tra i tipi di dati .NET Framework e i provider di dati .NET Framework.  
   
- [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Oggetti DataSet, DataTable e DataView](./dataset-datatable-dataview/index.md)  
  Viene descritto come creare e usare `DataSets`, `DataSets` tipizzati, `DataTables` e `DataViews`.  
   
- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](linq-to-dataset.md)  
  Fornisce informazioni su LINQ to DataSet, inclusi esempi di programmazione.  
   
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)  
  Viene descritto come connettersi a un'origine dati e come recuperare e modificare i dati tramite `Commands`, `DataReaders` e `DataAdapters`.  
   
- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
+ [SQL Server e ADO.NET](./sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di SQL Server.  
   
- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [Oracle e ADO.NET](oracle-and-adonet.md)  
  Vengono descritte le funzionalità e i comportamenti specifici del provider di dati .NET Framework per Oracle.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [LINQ (Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Vengono forniti collegamenti ad argomenti in LINQ ed esempi usando C#.  
+ Vengono forniti collegamenti ad argomenti e esempi di C#LINQ utilizzando.  
   
  [LINQ (Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Vengono forniti collegamenti ad argomenti di LINQ e gli esempi di utilizzo di Visual Basic.  
+ Vengono forniti collegamenti ad argomenti e esempi di LINQ utilizzando Visual Basic.  
   
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
+ [WCF Data Services 4.5](../wcf/index.md)  
  Viene descritto come usare [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per distribuire servizi dati nel Web o in una rete Intranet che implementano il protocollo Open Data Protocol (OData).  
   
  [Guida di sviluppo per .NET Framework](../../development-guide.md)  
  Vengono forniti collegamenti ad attività di sviluppo standard in .NET Framework.  
   
  [Esempi ed esercitazioni](../../../samples-and-tutorials/index.md)  
- Fornisce un elenco di esercitazioni ed esempi di .NET.
+ Fornisce un elenco di esempi ed esercitazioni .NET.
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

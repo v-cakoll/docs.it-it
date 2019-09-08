@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 48aa6044f39be93f144b6c4af5137b131dda0b30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 481c0ed7e39b8f958ccdae01e4589d54b3ff2446
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772138"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783584"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Esempi di sintassi delle query basate su metodo: Operatori sui set (LINQ to DataSet)
-Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, e <xref:System.Linq.Enumerable.Union%2A> operatori per eseguire operazioni di confronto basate su valore su set di righe di dati.[ Il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) visualizzare [confronto di DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) per altre informazioni su <xref:System.Data.DataRowComparer>.  
+Negli esempi di questo argomento viene illustrato come utilizzare gli <xref:System.Linq.Enumerable.Distinct%2A>operatori <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, e <xref:System.Linq.Enumerable.Union%2A> per eseguire operazioni di confronto basate su valore su set di righe di dati.[ Caricamento di dati in un set di dati](loading-data-into-a-dataset.md) vedere confronto di oggetti [DataRows](comparing-datarows-linq-to-dataset.md) per ulteriori informazioni su <xref:System.Data.DataRowComparer>.  
   
- Il `FillDataSet` metodo usato in questi esempi è specificato nel [caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ Il `FillDataSet` metodo utilizzato in questi esempi viene specificato nel [caricamento di dati in un DataSet](loading-data-into-a-dataset.md).  
   
  Negli esempi di questo argomento vengono usate le tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
- Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
+ Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Per altre informazioni, vedere [Procedura: Creare un progetto LINQ to DataSet In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Per altre informazioni, vedere [Procedura: Creare un progetto LINQ to DataSet in Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="distinct"></a>Distinct  
   
@@ -60,7 +60,7 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Caricamento di dati in un oggetto DataSet](loading-data-into-a-dataset.md)
+- [Esempi di LINQ to DataSet](linq-to-dataset-examples.md)
 - [Panoramica degli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Panoramica degli operatori query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

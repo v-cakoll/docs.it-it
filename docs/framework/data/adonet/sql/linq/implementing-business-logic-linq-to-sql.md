@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5261aab1ef6641651f856b8ebb024f64ad32ee59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938659"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781437"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementazione della logica di business (LINQ to SQL)
 Il termine "regola business" in questo argomento si riferisce a qualsiasi regola personalizzata o test di convalida applicato ai dati prima che vengano inseriti, aggiornati o eliminati dal database. La regola business viene talvolta definita anche "regola dominio". Nelle applicazioni a più livelli viene in genere progettata come livello logico in modo da essere modificata indipendentemente dal livello di presentazione o dal livello di accesso ai dati. La logica di business può essere richiamata dal livello di accesso ai dati prima o dopo l'aggiornamento, l'inserimento o l'eliminazione dei dati dal database.  
@@ -188,4 +188,4 @@ partial class Customer
 - [Classi e metodi parziali](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Metodi parziali](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md)

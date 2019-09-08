@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938701"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793097"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: Usare stored procedure mappate per più forme di risultati
 Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sia in grado di generare tutti i possibili tipi di proiezione, non è in grado di stabilire l'ordine in cui verranno restituiti.  
   
- Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per forme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)di risultati sequenziali.  
+ Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per forme](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)di risultati sequenziali.  
   
  L'attributo <xref:System.Data.Linq.Mapping.ResultTypeAttribute> viene applicato a stored procedure che restituiscono più tipi di risultati per specificare il set di tipi che la stored procedure può restituire.  
   
@@ -45,4 +45,4 @@ else if(@shape = 2)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [stored procedure](stored-procedures.md)

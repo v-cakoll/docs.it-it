@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 772763b5927ca845d6c2ccba50382652e410ae4f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83fc3101b0eb428def6cbc446e634e9bb45de350
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951236"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785605"
 ---
 # <a name="dataadapter-parameters"></a>Parametri DataAdapter
 <xref:System.Data.Common.DbDataAdapter> dispone di quattro proprietà che consentono di recuperare e aggiornare i dati dell'origine dati. La proprietà <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> restituisce i dati dall'origine dati, mentre le proprietà <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> e <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> vengono usate per gestire le modifiche nell'origine dati. La proprietà `SelectCommand` deve essere impostata prima di chiamare il metodo `Fill` di `DataAdapter`. È necessario impostare la proprietà `InsertCommand`, `UpdateCommand` o `DeleteCommand` prima di chiamare il metodo `Update` di `DataAdapter` a seconda delle modifiche apportate ai dati in <xref:System.Data.DataTable>, Se ad esempio sono state aggiunte righe, è necessario impostare la proprietà `InsertCommand` prima di chiamare `Update`. Quando `Update` elabora una riga inserita, aggiornata o eliminata, `DataAdapter` usa la rispettiva proprietà `Command` per l'operazione. Le informazioni correnti sulla riga modificata vengono passate all'oggetto `Command` mediante la raccolta `Parameters`.  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  Il metodo `Add` della raccolta `Parameters` accetta il nome del parametro, il tipo di dati, le dimensioni (se applicabili al tipo) e il nome dell'oggetto <xref:System.Data.Common.DbParameter.SourceColumn%2A> da `DataTable`. Notare che la proprietà <xref:System.Data.Common.DbParameter.SourceVersion%2A> del parametro `@CustomerID` è impostata su `Original`. Questo valore assicura che l'aggiornamento della riga esistente nell'origine dati venga eseguito se il valore della colonna o delle colonne identificative è stato cambiato nell'oggetto <xref:System.Data.DataRow> modificato. In questo caso il valore `Original` della riga corrisponde al valore corrente nell'origine dati e il valore `Current` della riga contiene il valore aggiornato. `SourceVersion` non è impostato per il parametro `@CompanyName`, pertanto verrà usato il valore di riga `Current` predefinito.  
   
 > [!NOTE]
-> Per entrambe le `Fill` operazioni `DataAdapter` `Get` di`DataReader`e i metodi di, il tipo di .NET Framework viene dedotto dal tipo restituito dal provider di dati .NET Framework. I tipi di .NET Framework dedotti e i metodi delle funzioni di accesso per i tipi di dati Microsoft SQL Server, OLE DB e ODBC sono descritti in [mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+> Per entrambe le `Fill` operazioni `DataAdapter` `Get` di`DataReader`e i metodi di, il tipo di .NET Framework viene dedotto dal tipo restituito dal provider di dati .NET Framework. I tipi di .NET Framework dedotti e i metodi delle funzioni di accesso per i tipi di dati Microsoft SQL Server, OLE DB e ODBC sono descritti in [mapping dei tipi di dati in ADO.NET](data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn e Parameter.SourceVersion  
  È possibile passare `SourceColumn` e `SourceVersion` come argomenti del costruttore `Parameter` o impostarli come proprietà di un oggetto `Parameter` esistente. `SourceColumn` è il nome dell'oggetto <xref:System.Data.DataColumn> derivato da <xref:System.Data.DataRow> in cui viene recuperato il valore di `Parameter`. `SourceVersion` specifica la versione di `DataRow` usata da `DataAdapter` per recuperare il valore.  
@@ -166,9 +166,9 @@ adapter.Fill(customers, "Customers");
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [Comandi e parametri](commands-and-parameters.md)
+- [Aggiornamento di origini dati con DataAdapter](updating-data-sources-with-dataadapters.md)
+- [Modifica di dati con stored procedure](modifying-data-with-stored-procedures.md)
+- [Mapping dei tipi di dati in ADO.NET](data-type-mappings-in-ado-net.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Deduzione del testo dell'elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784545"
 ---
 # <a name="inferring-element-text"></a>Deduzione del testo dell'elemento
 Se un elemento contiene testo e non ha elementi figlio da inferire come tabelle, ad esempio elementi con attributi o elementi ripetuti, viene aggiunta una nuova colonna con il nome **TableName_Text** alla tabella dedotta per l'elemento. Il testo contenuto nell'elemento viene aggiunto a una riga della tabella e archiviato nella nuova colonna. La proprietà **ColumnMapping** della nuova colonna verrà impostata su **MappingType. simpleContent**.  
@@ -57,4 +57,4 @@ Se un elemento contiene testo e non ha elementi figlio da inferire come tabelle,
 - [Caricamento delle informazioni dello schema DataSet da XML](loading-dataset-schema-information-from-xml.md)
 - [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

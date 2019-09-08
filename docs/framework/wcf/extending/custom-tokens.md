@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], custom tokens
 ms.assetid: 8b2dbe29-dec2-4652-8e34-fb21bc1437b5
-ms.openlocfilehash: 5a5cfe939e1f8448e7ed256bc64403dbb841bc46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb2bc01c0b19ca72131a6a1d9090dff0db44939e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858000"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795778"
 ---
 # <a name="custom-tokens"></a>Token personalizzati
-Anche se Windows Communication Foundation (WCF) supporta in modo nativo certificati X.509, token del contesto di sicurezza, i ticket Kerberos e token del nome utente come credenziali, è sufficientemente flessibile da consentire di utilizzare credenziali personalizzate.  
+Sebbene Windows Communication Foundation (WCF) supporti in modo nativo i certificati X. 509, i token del contesto di sicurezza, i ticket Kerberos e i token del nome utente come credenziali, è sufficientemente flessibile da consentire l'uso di credenziali personalizzate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ [Procedura: Creazione di un token personalizzato](how-to-create-a-custom-token.md)  
  Viene descritto come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e autenticatore di token di sicurezza personalizzati.

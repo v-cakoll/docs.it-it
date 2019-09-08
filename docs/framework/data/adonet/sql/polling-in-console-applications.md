@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 31239033c56303af33899ac88f1745e90f052377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b21b2bdf3447e3a61c8fff0a311b4144ecaecb2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645955"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791924"
 ---
 # <a name="polling-in-console-applications"></a>Polling in applicazioni console
 Le operazioni asincrone in ADO.NET consentono di avviare operazioni di database che potrebbero richiedere molto tempo su un singolo thread e di eseguire altre attività su un thread diverso. Tuttavia, nella maggior parte degli scenari si raggiungerà un punto in cui l'applicazione non continuerà finché l'operazione di database non è completata. In questi casi, risulta utile effettuare il polling dell'operazione asincrona per determinare se l'operazione è stata completata.  
@@ -18,7 +18,7 @@ Le operazioni asincrone in ADO.NET consentono di avviare operazioni di database 
  È possibile usare la proprietà <xref:System.IAsyncResult.IsCompleted%2A> per verificare se l'operazione è stata completata.  
   
 ## <a name="example"></a>Esempio  
- La seguente applicazione console Aggiorna dati all'interno di **AdventureWorks** database di esempio, in modo asincrono. Per emulare un processo a esecuzione prolungata, in questo esempio viene inserita un'istruzione WAITFOR nel testo del comando. In genere, non si consiglia di rallentare l'esecuzione dei comandi, ma in questo caso ciò consente di illustrare in modo semplice il comportamento asincrono.  
+ La seguente applicazione console aggiorna i dati all'interno del database di esempio **AdventureWorks** , eseguendo il proprio lavoro in modo asincrono. Per emulare un processo a esecuzione prolungata, in questo esempio viene inserita un'istruzione WAITFOR nel testo del comando. In genere, non si consiglia di rallentare l'esecuzione dei comandi, ma in questo caso ciò consente di illustrare in modo semplice il comportamento asincrono.  
   
 ```vb  
 Imports System  
@@ -192,5 +192,5 @@ class Class1
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operazioni asincrone](asynchronous-operations.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

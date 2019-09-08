@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915045"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782188"
 ---
 # <a name="group-elements-in-a-sequence"></a>Raggruppare elementi in una sequenza
 L'operatore <xref:System.Linq.Enumerable.GroupBy%2A> consente di raggruppare gli elementi di una sequenza. Negli esempi riportati di seguito viene usato il database Northwind.  
   
 > [!NOTE]
-> I valori di colonna null nelle query <xref:System.Linq.Enumerable.GroupBy%2A> possono a volte generare una <xref:System.InvalidOperationException>. Per ulteriori informazioni, vedere la sezione relativa alla [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)in "InvalidOperationException di GroupBy".  
+> I valori di colonna null nelle query <xref:System.Linq.Enumerable.GroupBy%2A> possono a volte generare una <xref:System.InvalidOperationException>. Per ulteriori informazioni, vedere la sezione relativa alla [risoluzione dei problemi](troubleshooting.md)in "InvalidOperationException di GroupBy".  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito `Products` viene partizionato per `CategoryID`.  
@@ -74,5 +74,5 @@ L'operatore <xref:System.Linq.Enumerable.GroupBy%2A> consente di raggruppare gli
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Esempi di query](query-examples.md)
+- [Download di database di esempio](downloading-sample-databases.md)

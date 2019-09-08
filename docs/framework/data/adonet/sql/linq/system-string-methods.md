@@ -2,12 +2,12 @@
 title: Metodi System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792500"
 ---
 # <a name="systemstring-methods"></a>Metodi System.String
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono supportati i metodi <xref:System.String> riportati di seguito.  
@@ -15,7 +15,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono 
 ## <a name="unsupported-systemstring-methods-in-general"></a>Metodi System.String non supportati in generale  
  Metodi <xref:System.String> non supportati in generale:  
   
-- Overload con il supporto delle impostazioni cultura (metodi che accettano un `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Overload in grado di riconoscere le impostazioni cultura (metodi che `CultureInfo`accettano un  /   /  `StringComparison` `IFormatProvider`).  
   
 - Metodi che accettano o producono una matrice `char`.  
   
@@ -49,7 +49,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono 
   
 - Nelle query non vengono considerate le regole di confronto di SQL Server eventualmente attive sul server pertanto, per impostazione predefinita, verranno restituite regole di confronto dipendenti dalle impostazioni cultura e senza distinzione fra maiuscole e minuscole. Questo comportamento differisce dalla semantica predefinita con distinzione tra maiuscole e minuscole di .NET Framework.  
   
-- Quando `LastIndexOf` restituisce 0, significa che la stringa è `NULL` o la posizione trovata è 0.  
+- Quando `LastIndexOf` restituisce 0, la stringa è `NULL` o la posizione trovata è 0.  
   
 - È possibile che vengano restituiti risultati imprevisti dalla concatenazione o da altre operazioni sulle stringhe a lunghezza fissa (`CHAR`, `NCHAR`), poiché a questi tipi viene applicata automaticamente la spaziatura interna nel database.  
   
@@ -57,4 +57,4 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Tipi di dati e funzioni](data-types-and-functions.md)

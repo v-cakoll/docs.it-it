@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Modifica dei dati (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8941ac30a67406346e5448ca5af4af8512d168a8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946979"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781008"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: Modifica dei dati (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
@@ -23,7 +23,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 - Il database di esempio Northwind.  
   
-     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest6.  
+     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest6.  
   
 - Un file di codice C# generato dal database Northwind.  
   
@@ -31,7 +31,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
-     Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
@@ -163,4 +163,4 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Apprendimento tramite procedure dettagliate](learning-by-walkthroughs.md)

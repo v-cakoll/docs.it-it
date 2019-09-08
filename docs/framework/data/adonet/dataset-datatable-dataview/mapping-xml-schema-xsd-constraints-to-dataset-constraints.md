@@ -2,12 +2,12 @@
 title: Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: b0082b534b8df10ac5277cf2f5aa5b2d2e40c11b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b44c3193e1b9e2e52e086111eab0ab0b0cae5c97
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204629"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786070"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli sugli elementi e sugli attributi in esso definiti. Quando si esegue il mapping di un XML Schema a uno <xref:System.Data.DataSet>schema relazionale in un, i vincoli XML schema vengono mappati ai vincoli relazionali appropriati sulle tabelle e sulle colonne all'interno del **set di dati**.  
@@ -45,4 +45,4 @@ Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli s
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

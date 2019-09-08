@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741540"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776996"
 ---
 # <a name="setassemblyfile-method"></a>Metodo SetAssemblyFile
-Assegna il nome dell'assembly da compilare. Non per essere utilizzato durante la creazione di moduli non associati.  
+Assegna il nome dell'assembly da compilare. Non da usare quando si producono moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,10 +42,10 @@ HRESULT SetAssemblyFile(
  Nome completo del file manifesto.  
   
  `pEmitter`  
- Puntatore alla [IMetaDataEmit (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfaccia.  
+ Puntatore all'interfaccia dell' [interfaccia IMetaDataEmit](../metadata/imetadataemit-interface.md) .  
   
  `afFlags`  
- Contrassegna come definito in [enumerazione AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Flag come definito nell' [Enumerazione AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
  Puntatore all'ID dell'assembly risultante.  
@@ -54,10 +54,10 @@ HRESULT SetAssemblyFile(
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

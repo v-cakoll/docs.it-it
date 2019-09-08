@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778717"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796782"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Metodo IAssemblyCache::QueryAssemblyInfo
 Ottiene i dati richiesti sull'assembly specificato.  
@@ -39,20 +39,20 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
+ in Flag definiti in Fusion. idl. Sono supportati i valori seguenti:  
   
 - QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
 - QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] Il nome dell'assembly per cui verranno recuperati i dati.  
+ in Nome dell'assembly per cui verranno recuperati i dati.  
   
  `pAsmInfo`  
- [in, out] Un' [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) struttura che contiene i dati relativi all'assembly.  
+ [in, out] Struttura [ASSEMBLY_INFO](assembly-info-structure.md) che contiene i dati relativi all'assembly.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -60,4 +60,4 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)

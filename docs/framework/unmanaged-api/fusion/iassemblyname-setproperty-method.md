@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761840"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796535"
 ---
 # <a name="iassemblynamesetproperty-method"></a>Metodo IAssemblyName::SetProperty
-Imposta il valore della proprietà fa riferimento l'identificatore della proprietà specificata.  
+Imposta il valore della proprietà a cui fa riferimento l'identificatore di proprietà specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>Parametri  
  `PropertyId`  
- [in] Identificatore univoco della proprietà il cui valore verrà impostato.  
+ in Identificatore univoco della proprietà il cui valore verrà impostato.  
   
  `pvProperty`  
- [in] Il valore su cui impostare la proprietà fa `PropertyId`.  
+ in Valore a cui impostare la proprietà a cui fa riferimento `PropertyId`.  
   
  `cbProperty`  
- [in] Le dimensioni, in byte, di `pvProperty`.  
+ in Dimensione, in byte, di `pvProperty`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -56,4 +56,4 @@ HRESULT SetProperty (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)

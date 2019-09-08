@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949557"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785742"
 ---
 # <a name="connection-events"></a>Eventi di connessione
 Tutti i provider di dati .NET Framework dispongono di oggetti **connessione** con due eventi che è possibile utilizzare per recuperare messaggi informativi da un'origine dati o per determinare se lo stato di una **connessione** è stato modificato. Nella tabella seguente vengono descritti gli eventi dell'oggetto **Connection** .  
@@ -23,7 +23,7 @@ Tutti i provider di dati .NET Framework dispongono di oggetti **connessione** co
 ## <a name="working-with-the-infomessage-event"></a>Utilizzo dell'evento InfoMessage  
  È possibile recuperare avvisi e messaggi informativi da un'origine dati SQL Server usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. Gli errori restituiti da un'origine dati con un livello di gravità compreso tra 11 e 16 generano un'eccezione. Tuttavia, l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage> consente di ottenere dall'origine dati i messaggi che non sono associati a un errore. Nel caso di Microsoft SQL Server i messaggi di errore con una gravità uguale o minore di 10 sono considerati informativi e vengono acquisiti usando l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>. Per ulteriori informazioni, vedere l'articolo relativo al [motore di database di gravità degli errori](/sql/relational-databases/errors-events/database-engine-error-severities) .
   
- L' <xref:System.Data.SqlClient.SqlConnection.InfoMessage> evento<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> riceve un oggetto che contiene, nella proprietà Errors, una raccolta dei messaggi dall'origine dati. È possibile eseguire una query sugli oggetti **Error** della raccolta per il numero di errore e il testo del messaggio, nonché l'origine dell'errore. Il provider di dati .NET Framework per SQL Server include inoltre i dettagli sul database, sulla stored procedure e sul numero di riga da cui proviene il messaggio.  
+ L' <xref:System.Data.SqlClient.SqlConnection.InfoMessage> evento<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> riceve un oggetto che contiene, nella proprietà **Errors** , una raccolta dei messaggi dall'origine dati. È possibile eseguire una query sugli oggetti **Error** della raccolta per il numero di errore e il testo del messaggio, nonché l'origine dell'errore. Il provider di dati .NET Framework per SQL Server include inoltre i dettagli sul database, sulla stored procedure e sul numero di riga da cui proviene il messaggio.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrato come aggiungere un gestore eventi per l'evento <xref:System.Data.SqlClient.SqlConnection.InfoMessage>.  
@@ -107,5 +107,5 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Connessione a un'origine dati](connecting-to-a-data-source.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

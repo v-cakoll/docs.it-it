@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204514"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784338"
 ---
 # <a name="row-states-and-row-versions"></a>Stati e versioni delle righe
 In ADO.NET le righe delle tabelle vengono gestite tramite gli stati e le versioni delle righe. Lo stato di una riga indica lo stato corrente di una particolare riga. Le versioni delle righe consentono di mantenere i valori archiviati in una riga durante le modifiche. Vengono conservati anche i valori correnti, originali e predefiniti. Ad esempio, dopo aver apportato una modifica in una colonna di una riga, lo stato della riga sarà impostato su `Modified` e saranno disponibili due versioni, ovvero `Current`, che contiene i valori correnti della riga, e `Original`, che contiene i valori della riga prima della modifica della colonna.  
   
  A ogni oggetto <xref:System.Data.DataRow> è assegnata una proprietà <xref:System.Data.DataRow.RowState%2A>, che è possibile esaminare per determinare lo stato corrente della riga. Nella tabella seguente viene fornita una breve descrizione di ogni valore dell'enumerazione `RowState`.  
   
-|Valore di RowState|DESCRIZIONE|  
+|Valore di RowState|Descrizione|  
 |--------------------|-----------------|  
 |<xref:System.Data.DataRowState.Unchanged>|Non è stata apportata alcuna modifica rispetto all'ultima chiamata a `AcceptChanges` o alla creazione della riga da parte di `DataAdapter.Fill`.|  
 |<xref:System.Data.DataRowState.Added>|La riga è stata aggiunta alla tabella, ma `AcceptChanges` non è stato chiamato.|  
@@ -41,7 +41,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Nella tabella seguente viene fornita una breve descrizione di ogni valore dell'enumerazione `DataRowVersion`.  
   
-|Valore di DataRowVersion|DESCRIZIONE|  
+|Valore di DataRowVersion|Descrizione|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Valori correnti della riga. Questa versione di riga non è disponibile per le righe in cui il valore di `RowState` è `Deleted`.|  
 |<xref:System.Data.DataRowVersion.Default>|Versione di riga predefinita per una particolare riga. La versione predefinita per una riga `Added`, `Modified` o `Deleted` è `Current`. La versione predefinita per una riga `Detached` è `Proposed`.|  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
 - [DataAdapter e DataReader](../dataadapters-and-datareaders.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

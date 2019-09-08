@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778733"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799159"
 ---
 # <a name="strongnamecompareassemblies-function"></a>Funzione StrongNameCompareAssemblies
 Determina se due assembly differiscono solo per le firme con nome sicuro.  
   
- Questa funzione è stata deprecata. Usare la [StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Parametri  
  `wszAssembly1`  
- [in] Il percorso dell'assembly prima.  
+ in Percorso del primo assembly.  
   
  `wszAssembly2`  
- [in] Il percorso dell'assembly di secondo.  
+ in Percorso del secondo assembly.  
   
  `pdwResult`  
- [out] Uno dei valori seguenti:  
+ out Uno dei valori seguenti:  
   
-- `SN_CMP_DIFFERENT` (0): Specifica che gli assembly contengono dati diversi.  
+- `SN_CMP_DIFFERENT`(0): specifica che gli assembly contengono dati diversi.  
   
-- `SN_CMP_IDENTICAL` (1): Specifica che gli assembly sono esattamente uguali, comprese le firme e checksum.  
+- `SN_CMP_IDENTICAL`(1): specifica che gli assembly sono esattamente uguali, incluse le relative firme e checksum.  
   
-- `SN_CMP_SIGONLY` (2): Specifica che gli assembly si differenziano solo per la firma e checksum.  
+- `SN_CMP_SIGONLY`(2): specifica che gli assembly differiscono solo per firma e checksum.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` al termine dell'esecuzione; in caso contrario, `false`.  
+ `true`al completamento; in caso `false`contrario,.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Note  
- La firma con nome sicuro di un assembly è costituito da testo Nome, versione, impostazioni cultura e token di chiave pubblica dell'assembly.  
+ La firma con nome sicuro di un assembly è costituita dal nome del testo, dalla versione, dalle impostazioni cultura e dal token di chiave pubblica dell'assembly.  
   
- Se il `StrongNameCompareAssemblies` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funzione per recuperare l'ultimo errore generato.  
+ Se la `StrongNameCompareAssemblies` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Metodo StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [Interfaccia ICLRStrongName](../hosting/iclrstrongname-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-ms.openlocfilehash: dd53c2fd16a82ce0f69a33e0b7d7ffef7815b91b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48cdb47bec35b5315e03629d3a01657136bf7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877149"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781679"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>Procedura: Recuperare più oggetti contemporaneamente
 È possibile recuperare molti oggetti in una sola query usando <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
@@ -23,4 +23,4 @@ ms.locfileid: "61877149"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relativi alle query](query-concepts.md)

@@ -2,12 +2,12 @@
 title: Limitazioni all'inferenza
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 4e0f63776162b60c9333ba47be58ea78a9b6805d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204828"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784586"
 ---
 # <a name="inference-limitations"></a>Limitazioni all'inferenza
 Il processo di inferenza di uno schema di un tipo <xref:System.Data.DataSet> da un documento XML può fornire come risultato diversi schemi a seconda degli elementi XML presenti in ogni documento. Si considerino ad esempio i seguenti documenti XML:  
@@ -52,7 +52,7 @@ Il processo di inferenza di uno schema di un tipo <xref:System.Data.DataSet> da 
   
  È possibile che lo scopo di tali documenti XML fosse la creazione dello stesso schema, ma il processo di inferenza consente di produrre risultati molto diversi in base agli elementi contenuti in ogni documento.  
   
- Per evitare le discrepanze che possono verificarsi durante la generazione dello schema da un documento XML, è consigliabile specificare in modo esplicito uno schema utilizzando il linguaggio XSD (XML Schema Definition Language) o XDR (XML-Data Reduced) durante il caricamento di un **DataSet** da XML. Per ulteriori informazioni su come specificare in modo esplicito uno schema del **set di dati** con XML Schema, vedere derivazione [della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Per evitare le discrepanze che possono verificarsi durante la generazione dello schema da un documento XML, è consigliabile specificare in modo esplicito uno schema utilizzando il linguaggio XSD (XML Schema Definition Language) o XDR (XML-Data Reduced) durante il caricamento di un **DataSet** da XML. Per ulteriori informazioni su come specificare in modo esplicito uno schema del **set di dati** con XML Schema, vedere [derivazione della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -61,4 +61,4 @@ Il processo di inferenza di uno schema di un tipo <xref:System.Data.DataSet> da 
 - [Caricamento delle informazioni dello schema DataSet da XML](loading-dataset-schema-information-from-xml.md)
 - [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

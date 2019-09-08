@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774589"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799170"
 ---
 # <a name="publickeyblob-structure"></a>Struttura PublicKeyBlob
 Rappresenta, in formato binario, la chiave pubblica di una coppia di chiavi pubblica/privata.  
@@ -37,28 +37,28 @@ typedef struct {
 } PublicKeyBlob;   
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
-|`SigAlgId`|L'identificatore per l'algoritmo di firma (di tipo `ALG_ID`, come definito in WinCrypt. H) della chiave pubblica.|  
-|`HashAlgId`|L'identificatore per l'algoritmo hash (di tipo `ALG_ID`, come definito in WinCrypt. H) della chiave pubblica.|  
-|`cbPublicKey`|La lunghezza della chiave in byte.|  
+|`SigAlgId`|Identificatore per l'algoritmo di firma, di tipo `ALG_ID`, come definito in WinCrypt. h, della chiave pubblica.|  
+|`HashAlgId`|Identificatore dell'algoritmo hash, di tipo `ALG_ID`, come definito in WinCrypt. h, della chiave pubblica.|  
+|`cbPublicKey`|Lunghezza in byte della chiave.|  
 |`PublicKey`|Matrice di byte a lunghezza variabile che contiene il valore della chiave nel formato restituito da CryptoAPI.|  
   
 ## <a name="remarks"></a>Note  
- Il `PublicKeyBlob` struttura viene utilizzata dai [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)e altre funzioni di nome sicuro per rappresentare la chiave pubblica di una coppia di chiavi pubblica/privata.  
+ La `PublicKeyBlob` struttura viene utilizzata da [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)e altre funzioni con nome sicuro per rappresentare la chiave pubblica di una coppia di chiavi pubblica/privata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzione StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [Funzione StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [Funzione StrongNameGetPublicKey](strongnamegetpublickey-function.md)
+- [Funzione StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)

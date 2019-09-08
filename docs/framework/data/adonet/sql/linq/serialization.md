@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf303f9a79fbcab85d33fcb3ebb132d1d3e2041d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742898"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781107"
 ---
 # <a name="serialization"></a>Serializzazione
-Questo argomento viene descritto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le funzionalità di serializzazione. Nei paragrafi che seguono sono disponibili informazioni sull'aggiunta di serializzazione durante la generazione di codice in fase di progettazione e il comportamento di serializzazione delle classi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in fase di esecuzione.  
+In questo argomento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritte le funzionalità di serializzazione. Nei paragrafi che seguono sono disponibili informazioni sull'aggiunta di serializzazione durante la generazione di codice in fase di progettazione e il comportamento di serializzazione delle classi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in fase di esecuzione.  
   
  È possibile aggiungere codice di serializzazione in fase di progettazione usando uno dei metodi seguenti:  
   
-- In Progettazione relazionale oggetti, modificare il **modalità di serializzazione** proprietà **Unidirectional**.  
+- Nella Object Relational Designer modificare la proprietà **modalità di serializzazione** in **unidirezionale**.  
   
-- Nella riga di comando SQLMetal aggiungere il **/serialization** opzione. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- Nella riga di comando SQLMetal aggiungere l'opzione **/Serialization** . Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Panoramica  
  Il codice generato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce funzionalità di caricamento posticipato per impostazione predefinita. Il caricamento posticipato è molto pratico al livello intermedio per il caricamento trasparente dei dati su richiesta, tuttavia risulta problematico per la serializzazione, in quanto il serializzatore attiva comunque il caricamento posticipato a prescindere che questo sia o meno il comportamento designato. In effetti, quando un oggetto è serializzato, viene serializzata la relativa chiusura transitiva in tutti i riferimenti in uscita con caricamento posticipato.  
   
- Il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funzionalità di serializzazione risolve questo problema, principalmente tramite due meccanismi:  
+ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funzionalità di serializzazione risolve questo problema, principalmente tramite due meccanismi:  
   
 - Una modalità <xref:System.Data.Linq.DataContext> per la disattivazione del caricamento posticipato (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Per altre informazioni, vedere <xref:System.Data.Linq.DataContext>.  
   
@@ -32,9 +32,9 @@ Questo argomento viene descritto [!INCLUDE[vbtecdlinq](../../../../../../include
   
 ### <a name="definitions"></a>Definizioni  
   
-- *Serializzatore DataContract*: Il serializzatore predefinito utilizzato dal componente di Windows Communication Framework (WCF) di .NET Framework 3.0 o versioni successive.  
+- *Serializzatore DataContract*: Serializzatore predefinito utilizzato dal componente Windows Communication Framework (WCF) del .NET Framework 3,0 o versioni successive.  
   
-- *Serializzazione unidirezionale*: La versione serializzata di una classe che contiene solo una proprietà di associazione unidirezionale (per evitare un ciclo). Per convenzione, la proprietà sul lato padre di una relazione di chiave primaria-esterna è contrassegnata per la serializzazione. L'altro lato in un'associazione bidirezionale non è serializzato.  
+- *Serializzazione unidirezionale*: Versione serializzata di una classe che contiene solo una proprietà di associazione unidirezionale (per evitare un ciclo). Per convenzione, la proprietà sul lato padre di una relazione di chiave primaria-esterna è contrassegnata per la serializzazione. L'altro lato in un'associazione bidirezionale non è serializzato.  
   
      La serializzazione unidirezionale è il solo tipo di serializzazione supportato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
@@ -67,13 +67,13 @@ Questo argomento viene descritto [!INCLUDE[vbtecdlinq](../../../../../../include
 ### <a name="self-recursive-relationships"></a>Relazioni autoricorsive  
  Le relazioni autoricorsive seguono lo stesso modello. La proprietà di associazione che corrisponde alla chiave esterna non dispone di un attributo <xref:System.Runtime.Serialization.DataMemberAttribute>, che invece è disponibile nella proprietà padre.  
   
- Si consideri la classe seguente che presenta due relazioni autoricorsive: Employee e Mentor/Mentees.  
+ Si consideri la classe seguente che presenta due relazioni autoricorsive: Employee. Manager/Reports e Employee. Mentor/Mentos.  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Procedura: Rendere serializzabili le entità](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [Informazioni di base](background-information.md)
+- [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md)
+- [Procedura: Rendere serializzabili le entità](how-to-make-entities-serializable.md)

@@ -2,19 +2,19 @@
 title: Mapping tra vincoli XML Schema (XSD) univoci e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203410"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784417"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) univoci e vincoli di dataset
 In uno schema XSD (XML Schema Definition Language), l'elemento **Unique** specifica il vincolo di univocità per un elemento o un attributo. Durante il processo di conversione di un XML Schema in uno schema relazionale, viene eseguito il mapping del vincolo univoco specificato su un elemento o un attributo dell'XML Schema a un vincolo univoco del tipo <xref:System.Data.DataTable> nel tipo <xref:System.Data.DataSet> corrispondente generato.  
   
  Nella tabella seguente vengono descritti gli attributi **msdata** che è possibile specificare nell'elemento **Unique** .  
   
-|Nome attributo|DESCRIZIONE|  
+|Nome attributo|Descrizione|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** fornisce il valore del nome del vincolo.|  
 |**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente nell'elemento **Unique** , viene creato un vincolo unique con la proprietà **IsPrimaryKey** impostata su **true**.|  
@@ -97,4 +97,4 @@ ConstraintName: SomeName
 
 - [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

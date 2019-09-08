@@ -2,17 +2,17 @@
 title: Creazione di esempi di copia di massa
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 2a7c0ddef42ff56306a42288c6960987ce7f714a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794426"
 ---
 # <a name="bulk-copy-example-setup"></a>Creazione di esempi di copia di massa
 La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Negli esempi di codice illustrati in questo argomento viene utilizzato il database di esempio SQL Server, **AdventureWorks**. Per evitare di modificare gli esempi di codice delle tabelle esistenti, è necessario creare tabelle in cui scrivere i dati.  
   
- Le tabelle **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulla tabella **Production. Products** di **AdventureWorks** . Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dalla tabella **Production. Products** a una di queste tabelle di esempio. La tabella **BulkCopyDemoDifferentColumns** viene utilizzata quando nell'esempio viene illustrato come eseguire il mapping delle colonne dei dati di origine alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usato per la maggior parte degli altri esempi.  
+ Le tabelle **BulkCopyDemoMatchingColumns** e **BulkCopyDemoDifferentColumns** sono entrambe basate sulla tabella **Production. Products** di AdventureWorks. Negli esempi di codice che usano queste tabelle, i dati vengono aggiunti dalla tabella **Production. Products** a una di queste tabelle di esempio. La tabella **BulkCopyDemoDifferentColumns** viene utilizzata quando nell'esempio viene illustrato come eseguire il mapping delle colonne dei dati di origine alla tabella di destinazione. **BulkCopyDemoMatchingColumns** viene usato per la maggior parte degli altri esempi.  
   
  Alcuni degli esempi di codice illustrano come usare una classe <xref:System.Data.SqlClient.SqlBulkCopy> per scrivere più tabelle. Per questi esempi, le tabelle **BulkCopyDemoOrderHeader** e **BulkCopyDemoOrderDetail** vengono utilizzate come tabelle di destinazione. Queste tabelle sono basate sulle tabelle **Sales. SalesOrderHeader** e **Sales. SalesOrderDetail** di **AdventureWorks**.  
   
@@ -83,5 +83,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di copia di massa in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Operazioni di copia di massa in SQL Server](bulk-copy-operations-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

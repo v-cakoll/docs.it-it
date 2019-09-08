@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930853"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799317"
 ---
 # <a name="string-functions-visual-basic"></a>Funzioni stringa (Visual Basic)
-Nella tabella seguente sono elencate le funzioni fornite da Visual Basic per la ricerca e la modifica delle stringhe.  
+
+Nella tabella seguente sono elencate le funzioni fornite da Visual Basic nella <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> classe per la ricerca e la modifica delle stringhe. Possono essere considerati come Visual Basic funzioni intrinseche; ovvero non è necessario chiamarli come membri espliciti di una classe, come illustrato negli esempi. Nella <xref:System.String?displayProperty=nameWithType> classe sono disponibili metodi aggiuntivi e, in alcuni casi, metodi complementari. 
   
-|Metodo .NET Framework|DESCRIZIONE|  
+|Metodo .NET Framework|Descrizione|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Restituisce un `Integer` valore che rappresenta il codice carattere corrispondente a un carattere.|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Restituisce il carattere associato al codice carattere specificato.|  
@@ -48,33 +49,38 @@ Nella tabella seguente sono elencate le funzioni fornite da Visual Basic per la 
   
  È possibile utilizzare l'istruzione [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) per impostare se le stringhe vengono confrontate utilizzando un ordinamento del testo senza distinzione tra maiuscole e minuscole determinato`Text`dalle impostazioni locali del sistema () o dalle rappresentazioni`Binary`binarie interne dei caratteri (). Il metodo di confronto del testo predefinito è `Binary`.  
   
-## <a name="example"></a>Esempio  
- In questo esempio viene `UCase` usata la funzione per restituire una versione in maiuscolo di una stringa.  
+## <a name="example-ucase"></a>Esempio: UCase
+
+In questo esempio viene `UCase` usata la funzione per restituire una versione in maiuscolo di una stringa.  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>Esempio: LTrim
+
+Questo esempio usa la `LTrim` funzione per rimuovere gli spazi iniziali e `RTrim` la funzione per rimuovere gli spazi finali da una variabile di stringa. Usa la funzione `Trim` per rimuovere entrambi i tipi di spazi.  
   
-## <a name="example"></a>Esempio  
- Questo esempio usa la `LTrim` funzione per rimuovere gli spazi iniziali e `RTrim` la funzione per rimuovere gli spazi finali da una variabile di stringa. Usa la funzione `Trim` per rimuovere entrambi i tipi di spazi.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>Esempio: Metà
+
+In questo esempio viene `Mid` utilizzata la funzione per restituire un numero specificato di caratteri da una stringa.  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>Esempio: Len
+
+In questo esempio `Len` viene usato per restituire il numero di caratteri in una stringa.  
   
-## <a name="example"></a>Esempio  
- In questo esempio viene `Mid` utilizzata la funzione per restituire un numero specificato di caratteri da una stringa.  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>Esempio: InStr
+
+In questo esempio viene `InStr` utilizzata la funzione per restituire la posizione della prima occorrenza di una stringa all'interno di un'altra.  
   
-## <a name="example"></a>Esempio  
- In questo esempio `Len` viene usato per restituire il numero di caratteri in una stringa.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>Esempio  
- In questo esempio viene `InStr` utilizzata la funzione per restituire la posizione della prima occorrenza di una stringa all'interno di un'altra.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>Esempio  
- Questo esempio mostra diversi usi della `Format` funzione per formattare i valori `String` usando formati e formati definiti dall'utente. Per il separatore della`/`data (), il`:`separatore dell'ora () e gli indicatori`t` am `tt`/PM (e), l'output formattato effettivo visualizzato dal sistema dipende dalle impostazioni locali utilizzate dal codice. Quando le ore e le date vengono visualizzate nell'ambiente di sviluppo, vengono utilizzati il formato di ora breve e il formato di data breve delle impostazioni locali del codice.  
+## <a name="example-format"></a>Esempio: Formato
+
+Questo esempio mostra diversi usi della `Format` funzione per formattare i valori `String` usando formati e formati definiti dall'utente. Per il separatore della`/`data (), il`:`separatore dell'ora () e gli indicatori`t` am `tt`/PM (e), l'output formattato effettivo visualizzato dal sistema dipende dalle impostazioni locali utilizzate dal codice. Quando le ore e le date vengono visualizzate nell'ambiente di sviluppo, vengono utilizzati il formato di ora breve e il formato di data breve delle impostazioni locali del codice.  
   
 > [!NOTE]
 > Per le impostazioni locali che utilizzano un formato a 24 ore, gli indicatori AM/PM`t` ( `tt`e) non visualizzano nulla.  
@@ -86,3 +92,4 @@ Nella tabella seguente sono elencate le funzioni fornite da Visual Basic per la 
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Riepilogo della modifica delle stringhe](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [Metodi della classe System. String]<xref:System.String#methods?displayProperty=nameWithType>

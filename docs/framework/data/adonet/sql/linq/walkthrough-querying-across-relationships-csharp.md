@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946950"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780997"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Esecuzione di query tra relazioni (C#)
 In questa procedura dettagliata viene illustrato [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'utilizzo delle *associazioni* per rappresentare relazioni di chiave esterna nel database.  
@@ -17,7 +17,7 @@ In questa procedura dettagliata viene illustrato [!INCLUDE[vbtecdlinq](../../../
  Questa procedura è stata scritta usando Impostazioni di sviluppo di Visual C#.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- È necessario avere completato [la procedura dettagliata: Modello a oggetti e query sempliciC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest5.  
+ È necessario avere completato [la procedura dettagliata: Modello a oggetti e query sempliciC#(](walkthrough-simple-object-model-and-query-csharp.md)). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest5.  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
@@ -86,8 +86,8 @@ In questa procedura dettagliata viene illustrato [!INCLUDE[vbtecdlinq](../../../
 4. Premere INVIO nella finestra della console per terminare il debug.  
   
 ## <a name="next-steps"></a>Fasi successive  
- Procedura dettagliata successiva ([procedura dettagliata: La manipolazione dei datiC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) illustra come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
+ Procedura dettagliata successiva ([procedura dettagliata: La manipolazione dei datiC#(](walkthrough-manipulating-data-csharp.md))) illustra come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Apprendimento tramite procedure dettagliate](learning-by-walkthroughs.md)

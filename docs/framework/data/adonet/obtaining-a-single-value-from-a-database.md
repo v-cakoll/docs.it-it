@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb43d21546a0e98e87aab23db9213309b62320b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772073"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794741"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Recupero di un valore singolo da un database
-Può essere necessario restituire informazioni del database costituite semplicemente da un singolo valore anziché da una tabella o da un flusso di dati. Ad esempio, è possibile restituire il risultato di una funzione di aggregazione, ad esempio COUNT (\*), SUM (price) o AVG (Quantity). Il **comandi** oggetto offre la possibilità di restituire singoli valori usando la **ExecuteScalar** (metodo). Il **ExecuteScalar** restituisce come un valore scalare, il valore della prima colonna della prima riga del set di risultati.  
+Può essere necessario restituire informazioni del database costituite semplicemente da un singolo valore anziché da una tabella o da un flusso di dati. È ad esempio possibile che si desideri restituire il risultato di una funzione di aggregazione, ad\*esempio Count (), Sum (price) o AVG (Quantity). L'oggetto **Command** fornisce la possibilità di restituire valori singoli usando il metodo **ExecuteScalar** . Il metodo **ExecuteScalar** restituisce, come valore scalare, il valore della prima colonna della prima riga del set di risultati.  
   
  Nell'esempio di codice seguente viene inserito un nuovo valore nel database usando un <xref:System.Data.SqlClient.SqlCommand>. Per restituire il valore della colonna Identity per il record inserito, viene usato il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A>.  
   
@@ -22,7 +22,7 @@ Può essere necessario restituire informazioni del database costituite semplicem
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Comandi e parametri](commands-and-parameters.md)
+- [Esecuzione di un comando](executing-a-command.md)
+- [DbConnection, DbCommand e DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

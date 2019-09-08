@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636856"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799226"
 ---
 # <a name="gethashfromblob-function"></a>Funzione GetHashFromBlob
 
 Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.
 
-Questa funzione è stata deprecata. Usare la [GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metodo invece.
+Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,30 +45,30 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>Parametri
 
 `pbBlob`\
-[in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.
+in Puntatore all'indirizzo del blocco di memoria di cui eseguire l'hashing.
 
 `cchBlob`\
-[in] La lunghezza, espressa in byte, del blocco di memoria.
+in Lunghezza, in byte, del blocco di memoria.
 
 `piHashAlg`\
-[in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.
+[in, out] Costante che specifica l'algoritmo hash. Usare zero per l'algoritmo predefinito.
 
 `pbHash`\
-[out] Il buffer di hash restituito.
+out Buffer hash restituito.
 
 `cchHash`\
-[in] La dimensione massima richiesta del `pbHash`.
+in Dimensione massima richiesta di `pbHash`.
 
 `pchHash`\
-[out] Le dimensioni, in byte, del valore restituito `pbHash`.
+out Dimensione, in byte, dell'oggetto restituito `pbHash`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** StrongName.h
+**Intestazione:** StrongName. h
 
-**Libreria:** Inclusa come risorsa in Mscoree. dll
+**Libreria** Incluso come risorsa in MsCorEE. dll
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

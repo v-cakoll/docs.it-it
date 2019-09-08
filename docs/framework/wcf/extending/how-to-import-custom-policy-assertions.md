@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363850"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795614"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Procedura: Importare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio.  Le applicazioni client possono utilizzare asserzioni di criteri nei metadati del servizio per configurare l'associazione del client o per personalizzare il contratto di servizio per un endpoint del servizio.  
@@ -25,7 +25,7 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 3. Utilizzando un file di configurazione. Vedere le procedure seguenti.  
   
-4. Utilizzo di un file di configurazione con [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Vedere le procedure seguenti.  
+4. Utilizzo di un file di configurazione con [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Vedere le procedure seguenti.  
   
 5. Inserendo a livello di programmazione l'unità di importazione dei criteri. Vedere le procedure seguenti.  
   
@@ -44,7 +44,7 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati utilizzando un file di configurazione  
   
-1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione client.  
+1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione client.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati utilizzando Svcutil.exe  
   
-1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione Svcutil. exe. config. È anche possibile puntare a Svcutil.exe per caricare tipi di unità di importazione di criteri registrati in un file di configurazione diverso, utilizzando l'opzione `/svcutilConfig`.  
+1. Aggiungere il tipo di utilità di importazione all' `<extensions>` elemento all'interno dell' [ \<elemento > policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) nel file di configurazione Svcutil. exe. config. È anche possibile puntare a Svcutil.exe per caricare tipi di unità di importazione di criteri registrati in un file di configurazione diverso, utilizzando l'opzione `/svcutilConfig`.  
   
-2. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per importare i metadati e l'utilità di importazione viene richiamata automaticamente.  
+2. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) per importare i metadati e l'utilità di importazione viene richiamata automaticamente.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Per inserire l'unità di importazione di criteri personalizzata nel sistema di metadati a livello di programmazione  
   
@@ -68,4 +68,4 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Estensione del sistema di metadati](extending-the-metadata-system.md)

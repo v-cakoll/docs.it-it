@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949498"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785691"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
 Nelle versioni precedenti di ADO.NET, il controllo in fase di compilazione delle stringhe di connessione con valori di stringa concatenati non è stato eseguito, in modo che, in <xref:System.ArgumentException>fase di esecuzione, una parola chiave non corretta abbia generato un oggetto. Ogni provider di dati .NET Framework supportava una sintassi diversa per le parole chiave della stringa di connessione, rendendo difficoltosa la costruzione di stringhe di connessione valide se effettuate manualmente. Per risolvere questo problema, in ADO.NET 2,0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati .NET Framework e le classi del generatore di stringhe di connessione associate.  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Uno dei costruttori di overload per un generatore di stringhe di connessione accetta <xref:System.String> come argomento, consentendo di specificare una stringa di connessione parziale che può essere quindi completata dall'input dell'utente. La stringa di connessione parziale può essere archiviata in un file di configurazione e recuperata in fase di esecuzione.  
   
 > [!NOTE]
-> Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per ulteriori informazioni sull'utilizzo delle stringhe di connessione e dei file di configurazione, vedere [stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+> Lo spazio dei nomi <xref:System.Configuration> consente l'accesso a livello di codice ai file di configurazione che usano <xref:System.Web.Configuration.WebConfigurationManager> per le applicazioni Web e <xref:System.Configuration.ConfigurationManager> per le applicazioni Windows. Per ulteriori informazioni sull'utilizzo delle stringhe di connessione e dei file di configurazione, vedere [stringhe di connessione e file di configurazione](connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Esempio  
  In questo esempio vengono illustrati il recupero di una stringa di connessione da un file di configurazione e il relativo completamento tramite l'impostazione delle proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> di <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Il file di configurazione viene definito come segue.  
@@ -81,6 +81,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Privacy e sicurezza dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Stringhe di connessione](connection-strings.md)
+- [Privacy e sicurezza dei dati](privacy-and-data-security.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

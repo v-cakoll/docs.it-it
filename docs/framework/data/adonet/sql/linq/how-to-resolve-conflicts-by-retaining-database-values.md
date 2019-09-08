@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: 828f0a21ca1ea4155f31dfbc87b01dc8c4b81e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928728"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793340"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procedura: Risolvere conflitti mantenendo i valori di database
-Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> per conservare i valori trovati nel database. I valori correnti nel modello a oggetti vengono quindi sovrascritti. Per ulteriori informazioni, vedere [concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> per conservare i valori trovati nel database. I valori correnti nel modello a oggetti vengono quindi sovrascritti. Per ulteriori informazioni, vedere [concorrenza ottimistica: Panoramica](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > In tutti i casi, viene innanzitutto aggiornato il record sul client recuperando i dati aggiornati dal database. Questa azione assicura che il successivo tentativo di aggiornamento non avrà esito negativo durante gli stessi controlli di concorrenza.  
@@ -42,4 +42,4 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Gestione dei conflitti di modifica](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)

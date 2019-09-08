@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938461"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780714"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency in un'applicazione ASP.NET
 Nell'esempio riportato in questa sezione viene illustrato l'uso di <xref:System.Data.SqlClient.SqlDependency> in modo indiretto sfruttando l'oggetto <xref:System.Web.Caching.SqlCacheDependency> di ASP.NET. L'oggetto <xref:System.Web.Caching.SqlCacheDependency> usa un oggetto <xref:System.Data.SqlClient.SqlDependency> per ascoltare le notifiche e aggiornare correttamente la cache.  
   
 > [!NOTE]
-> Il codice di esempio presuppone che siano state abilitate le notifiche delle query eseguendo gli script in Abilitazione delle [notifiche delle query](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+> Il codice di esempio presuppone che siano state abilitate le notifiche delle query eseguendo gli script in [Abilitazione delle notifiche delle query](enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Informazioni sull'applicazione di esempio  
  Nell'applicazione di esempio viene utilizzata una singola pagina Web ASP.NET per visualizzare le informazioni sul prodotto dal database AdventureWorks <xref:System.Web.UI.WebControls.GridView> SQL Server in un controllo. Durante il caricamento della pagina, il codice scrive l'ora corrente in un controllo <xref:System.Web.UI.WebControls.Label>. Viene quindi definito un oggetto <xref:System.Web.Caching.SqlCacheDependency> e vengono impostate le proprietà nell'oggetto <xref:System.Web.Caching.Cache> per archiviare i dati della cache per un massimo di tre minuti. Viene quindi eseguita la connessione al database e vengono recuperati i dati. Quando viene caricata la pagina e l'applicazione è in esecuzione, ASP.NET recupererà i dati dalla cache, come è possibile verificare osservando che l'ora della pagina rimane invariata. Se i dati da monitorare cambiano, ASP.NET invalida la cache e ripopola il controllo `GridView` con nuovi dati, aggiornando l'ora visualizzata nel controllo `Label`.  
@@ -59,5 +59,5 @@ Nell'esempio riportato in questa sezione viene illustrato l'uso di <xref:System.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Notifiche di query in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Notifiche di query in SQL Server](query-notifications-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

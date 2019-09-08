@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
-ms.openlocfilehash: b5837d647b72f8dd17c4a6d3664faf8976243d36
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5008f8397b7d396b14fdfe8e24f1e59785c4319d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204553"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785261"
 ---
 # <a name="navigating-datatables"></a>Esplorazione di oggetti DataTable
 Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di uno o più oggetti <xref:System.Data.DataTable> sotto forma di uno o più set di risultati forward-only di sola lettura.  
@@ -26,4 +26,4 @@ Il tipo <xref:System.Data.DataTableReader> presenta il contenuto di uno o più o
 ## <a name="see-also"></a>Vedere anche
 
 - [DataTableReader](datatablereaders.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

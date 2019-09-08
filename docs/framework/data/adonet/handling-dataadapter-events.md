@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a63e65289a51a7647270a978cec11ef6bc201e45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962751"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783803"
 ---
 # <a name="handling-dataadapter-events"></a>Gestione di eventi DataAdapter
 <xref:System.Data.Common.DataAdapter> di ADO.NET espone tre eventi che è possibile usare per rispondere alle modifiche apportate ai dati nell'origine dati. Nella tabella seguente vengono descritti gli eventi di `DataAdapter`.  
@@ -28,7 +28,7 @@ ms.locfileid: "69962751"
   
  È possibile usare la proprietà `Status` per determinare se si è verificato un errore durante l'operazione ed eventualmente per controllare le operazioni relative alle righe correnti e risultanti. Quando si verifica l'evento, la proprietà `Status` sarà uguale a `Continue` o `ErrorsOccurred`. Nella tabella seguente sono indicati i valori su cui è possibile impostare la proprietà `Status` per controllare le operazioni successive durante l'aggiornamento.  
   
-|Stato|DESCRIZIONE|  
+|Stato|Descrizione|  
 |------------|-----------------|  
 |`Continue`|Continua l'operazione di aggiornamento.|  
 |`ErrorsOccurred`|Interrompe l'operazione di aggiornamento e genera un'eccezione.|  
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Gestione di eventi di set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [Gestione di eventi DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [Gestione di eventi di set di dati](./dataset-datatable-dataview/handling-dataset-events.md)
+- [Gestione di eventi DataTable](./dataset-datatable-dataview/handling-datatable-events.md)
 - [Eventi](../../../standard/events/index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

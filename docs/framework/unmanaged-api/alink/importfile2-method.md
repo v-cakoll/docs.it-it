@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1193af7b7375dfd3367c12fdb0067c9c30c614f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776934"
 ---
 # <a name="importfile2-method"></a>Metodo ImportFile2
-Importa moduli non associati e assembly. Questo metodo è simile [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ma funziona anche se il file da importare non esiste sul disco.  
+Importa assembly e moduli non associati. Questo metodo è simile al [metodo ImportFile](importfile-method.md), ma funziona anche se il file importato non esiste sul disco.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,31 +45,31 @@ HRESULT ImportFile2(
  Nome del file da importare.  
   
  `pszTargetName`  
- Nome di file di output facoltativo che può essere utilizzato per rinominare il file perché è collegato nell'assembly.  
+ Nome del file di output facoltativo che può essere usato per rinominare il file mentre è collegato nell'assembly.  
   
  `pAssemblyScopeIn`  
- Ambito facoltativo [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia.  
+ Interfaccia facoltativa dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito.  
   
  `fSmartImport`  
- Se TRUE, viene usato ImportTypes, in caso contrario, l'importazione deve essere eseguita manualmente.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `pImportToken`  
  Riceve l'ID per il file o l'assembly.  
   
  `ppAssemblyScope`  
- Riceve la [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia. NULL se il file non è un assembly.  
+ Riceve l'interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Riceve il conteggio dei file e/o ambiti importati.  
+ Riceve l'oggetto trovato dei file e/o degli ambiti importati.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

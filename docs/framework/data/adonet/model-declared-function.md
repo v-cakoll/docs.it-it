@@ -2,15 +2,15 @@
 title: funzione dichiarata dal modello
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943919"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794793"
 ---
 # <a name="model-declared-function"></a>funzione dichiarata dal modello
-Una *funzione* dichiarata dal modello è una funzione dichiarata in un modello concettuale, ma non è definita nel modello concettuale. La funzione può essere definita nell'ambiente host o di archiviazione. È possibile, ad esempio, eseguire il mapping di una funzione dichiarata dal modello a una funzione definita in un database, esponendo in tal modo la funzionalità lato server nel modello concettuale.  
+Una *funzione dichiarata dal modello* è una funzione dichiarata in un modello concettuale, ma non è definita nel modello concettuale. La funzione può essere definita nell'ambiente host o di archiviazione. È possibile, ad esempio, eseguire il mapping di una funzione dichiarata dal modello a una funzione definita in un database, esponendo in tal modo la funzionalità lato server nel modello concettuale.  
   
  La dichiarazione di una funzione dichiarata dal modello contiene le informazioni seguenti:  
   
@@ -30,5 +30,5 @@ Una *funzione* dichiarata dal modello è una funzione dichiarata in un modello c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

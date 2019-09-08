@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205166"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786523"
 ---
 # <a name="copying-dataset-contents"></a>Copia di contenuti di dataset
 È possibile creare una copia di un <xref:System.Data.DataSet> oggetto in modo che sia possibile utilizzare i dati senza influire sui dati originali oppure utilizzare un subset dei dati di un **set**di dati. Quando si copia un **set di dati**, è possibile:  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Per creare una copia di un **set** di dati che includa lo schema e solo i dati che rappresentano le righe **aggiunte**, **modificate**o **eliminate** , utilizzare il <xref:System.Data.DataSet.GetChanges%2A> metodo del **set**di dati. È inoltre possibile utilizzare GetChanges per restituire solo le righe con uno stato di riga specificato passando un valore **DataRowState** durante la chiamata a GetChanges. Nell'esempio di codice seguente viene illustrato come passare un **DataRowState** durante la chiamata a GetChanges.  
+ Per creare una copia di un **set** di dati che includa lo schema e solo idati che rappresentano le righe **aggiunte**, modificate <xref:System.Data.DataSet.GetChanges%2A> o **eliminate** , utilizzare il metodo del **set**di dati. È inoltre possibile utilizzare **GetChanges** per restituire solo le righe con uno stato di riga specificato passando un valore **DataRowState** durante la chiamata a **GetChanges**. Nell'esempio di codice seguente viene illustrato come passare un **DataRowState** durante la chiamata a **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -50,7 +50,7 @@ DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);
   
  Per creare una copia di un **set di dati** che includa solo lo <xref:System.Data.DataSet.Clone%2A> schema, usare il metodo del **set di dati**. È anche possibile aggiungere righe esistenti al **set di dati** clonato usando il metodo **ImportRow** della **DataTable**. **ImportRow** aggiunge i dati, lo stato della riga e le informazioni sulla versione della riga alla tabella specificata. I valori di colonna vengono aggiunti solo nel caso in cui i nomi di colonna corrispondano e il tipo di dati sia compatibile.  
   
- L'esempio di codice seguente crea un clone di un **set di dati** e quindi aggiunge le righe dal set di **dati** originale alla tabella **Customers** nel clone del set di **dati** per i clienti in cui la colonna **CountryRegion** ha il valore "Germania". ".  
+ L'esempio di codice seguente crea un clone di **un set di dati** e quindi aggiunge le righe dal set di **dati** originale alla tabella **Customers** nel clone del **set di dati** per i clienti in cui la colonna **CountryRegion** ha il valore "Germania". ".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

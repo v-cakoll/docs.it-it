@@ -2,18 +2,18 @@
 title: Supporto SqlClient per LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645834"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780786"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Supporto SqlClient per LocalDB
-A partire da SQL Server nome in codice Denali, una versione leggera di SQL Server, chiamata LocalDB, sarà disponibile. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
+A partire da SQL Server nome in codice Denali, sarà disponibile una versione semplificata di SQL Server, denominata local DB. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni su LocalDB, incluse le procedure per installarlo e configurare l'istanza di Local DB, vedere la documentazione Online di SQL Server.  
+ Per ulteriori informazioni sul database locale, inclusa la modalità di installazione del database locale e la configurazione dell'istanza del database locale, vedere documentazione online di SQL Server.  
   
  Per riepilogare le operazioni che è possibile eseguire con LocalDB:  
   
@@ -31,7 +31,7 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
   
  `User Instance=True` non è consentito quando ci si connette a un database di LocalDB.  
   
- È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se si utilizzerà sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da SQL Server 2012, è anche possibile ottenere dal Feature Pack di SQL Server 2012.  
+ È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se si utilizza sqlcmd. exe per modificare i dati nell'istanza del database locale, è necessario disporre di sqlcmd da SQL Server 2012, che è possibile ottenere anche dal Feature Pack SQL Server 2012.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Creare un'istanza denominata a livello di codice  
  Un'applicazione può creare un'istanza denominata e specificare un database come segue:  
@@ -60,5 +60,5 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Funzionalità di SQL Server e ADO.NET](sql-server-features-and-adonet.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

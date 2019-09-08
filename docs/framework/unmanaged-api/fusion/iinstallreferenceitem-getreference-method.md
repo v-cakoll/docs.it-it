@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773953"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796403"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>Metodo IInstallReferenceItem::GetReference
-Ottiene un puntatore per il [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) rappresentato da questa struttura [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) oggetto.  
+Ottiene un puntatore alla struttura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) rappresentata da questo oggetto [IInstallReferenceItem](iinstallreferenceitem-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>Parametri  
  `ppRefData`  
- [out] L'oggetto restituito `FUSION_INSTALL_REFERENCE` puntatore.  
+ out Puntatore restituito `FUSION_INSTALL_REFERENCE` .  
   
  `dwFlags`  
- [in] Riservato per un'estendibilità futura. `dwFlags` deve essere 0 (zero).  
+ in Riservato per l'estendibilità futura. `dwFlags`deve essere 0 (zero).  
   
  `pvReserved`  
- [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -56,5 +56,5 @@ HRESULT GetReference (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [Struttura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [Interfaccia IInstallReferenceItem](iinstallreferenceitem-interface.md)
+- [Struttura FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)

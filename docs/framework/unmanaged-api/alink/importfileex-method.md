@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741716"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777122"
 ---
 # <a name="importfileex-method"></a>Metodo ImportFileEx
-Importazioni indicato assembly o un modulo non associato.  
+Importa l'assembly indicato o il modulo non associato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,34 +42,34 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametri  
  `pszFilename`  
- Nome completo del file da cui importare.  
+ Nome completo del file da cui eseguire l'importazione.  
   
  `pszTargetName`  
  Nome facoltativo del file di destinazione.  
   
  `fSmartImport`  
- Se TRUE, viene usato ImportTypes, in caso contrario, l'importazione deve essere eseguita manualmente.  
+ Se TRUE, viene usato ImportTypes. in caso contrario, l'importazione deve essere eseguita manualmente.  
   
  `dwOpenFlags`  
- Flag da passare insieme alla [metodo OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Flag da passare al [Metodo OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Riceve l'ID del file da importare.  
+ Riceve l'ID del file importato.  
   
  `ppAssemblyScope`  
- Ambito di importazione dell'assembly riceve [interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaccia. È impostato su NULL se il file non è un assembly.  
+ Riceve l'interfaccia dell' [Interfaccia IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) dell'ambito di importazione assembly. È impostato su NULL se il file non è un assembly.  
   
  `pdwCountOfScopes`  
- Riceve il numero di file importati e/o gli ambiti.  
+ Riceve il numero di file e/o ambiti importati.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Alink (API)](index.md)

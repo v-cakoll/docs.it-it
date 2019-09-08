@@ -2,12 +2,12 @@
 title: Generazione di relazioni tra dataset da XML Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fd32d024acca393dcc8241f047a305e763682866
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d00f07ee3338941b7de1bb890f71cd3c2d120246
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784640"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generazione di relazioni tra dataset da XML Schema (XSD)
 In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre-figlio. Esistono tre modi per rappresentare una relazione del **set di dati** all'interno di uno schema XSD (XML Schema Definition Language):  
@@ -99,4 +99,4 @@ msdata:childkey="" />
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

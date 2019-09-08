@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Personalizzare i feed con il Provider di Reflection (WCF Data Services)'
+title: 'Procedura: Personalizzare i feed con il provider di Reflection (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: f09c9827498dfd6b85a8476e824d06bfb481d1f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43f46729ba84356bcb6507779bef9e4fd35bc315
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876551"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790682"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Procedura: Personalizzare i feed con il Provider di Reflection (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di personalizzare la serializzazione Atom in una risposta del servizio dati in modo che venga eseguito il mapping delle proprietà di un'entità agli elementi inutilizzati definiti nel protocollo AtomPub. In questo argomento viene illustrato come definire attributi di mapping per i tipi di entità in un modello di dati definito tramite il provider di reflection. Per altre informazioni, vedere [personalizzazione di Feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Procedura: Personalizzare i feed con il provider di Reflection (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di personalizzare la serializzazione Atom in una risposta del servizio dati in modo che venga eseguito il mapping delle proprietà di un'entità agli elementi inutilizzati definiti nel protocollo AtomPub. In questo argomento viene illustrato come definire attributi di mapping per i tipi di entità in un modello di dati definito tramite il provider di reflection. Per altre informazioni, vedere [personalizzazione del feed](feed-customization-wcf-data-services.md).  
   
- Il modello di dati per questo esempio viene definito nell'argomento [come: Creare un servizio dati tramite il Provider di Reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ Il modello di dati per questo esempio è definito nell'argomento [procedura: Creazione di un servizio dati tramite il provider di Reflection](create-a-data-service-using-rp-wcf-data-services.md)  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene eseguito il mapping di entrambe le proprietà del tipo di `Order` agli elementi Atom esistenti. Viene eseguito il mapping della proprietà `Product` del tipo di `Item` a un attributo di feed personalizzato in uno spazio dei nomi separato.  
@@ -33,4 +33,4 @@ ms.locfileid: "61876551"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider di reflection](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Provider di reflection](reflection-provider-wcf-data-services.md)

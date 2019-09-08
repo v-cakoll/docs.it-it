@@ -2,12 +2,12 @@
 title: Vincoli e relazioni di XML Schema
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784195"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Vincoli e relazioni di XML Schema
 In uno schema XSD (XML Schema Definition Language) è possibile specificare vincoli, ovvero vincoli UNIQUE, Key e keyref, e relazioni (tramite l'annotazione **msdata: Relationship** ). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>Vedere anche
 
 - [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

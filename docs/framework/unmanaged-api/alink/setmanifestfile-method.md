@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741478"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787204"
 ---
 # <a name="setmanifestfile-method"></a>Metodo SetManifestFile
-Consente di specificare o ripristinare il file manifesto che il linker Usa durante la creazione dell'assembly.  
+Consente di specificare o reimpostare il file manifesto utilizzato dal linker durante la creazione dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parametri  
  `pszFile`  
   
- Il nome del file manifesto viene inserito il cui contenuto nell'oggetto blob di risorse Win32.  
+ Nome del file manifesto il cui contenuto viene inserito nel BLOB di risorse Win32.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="remarks"></a>Note  
- Chiamare questo metodo prima di richiedere il Win32ResBlob. Il valore della `pszFile` parametro è il nome del file manifesto il cui contenuto viene letto e inserire nelle risorse Win32 con l'ID di RT_MANIFEST. Quando viene chiamato con un parametro null, viene cancellata manifesto letta in precedenza. Ciò consente di reimpostare lo stato del linker al momento dell'inizializzazione.  
+ Chiamare questo oggetto prima di richiedere l'Win32ResBlob. Il valore del `pszFile` parametro è il nome del file manifesto il cui contenuto viene letto e inserito nelle risorse Win32 con ID RT_MANIFEST. Quando viene chiamato usando un parametro NULL, qualsiasi manifesto precedentemente letto viene cancellato. In questo modo, è possibile reimpostare lo stato del linker su quello del tempo di inizializzazione.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede aLink.h  
+ Richiede aLink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Interfaccia IALink3](ialink3-interface.md)
+- [Alink (API)](index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

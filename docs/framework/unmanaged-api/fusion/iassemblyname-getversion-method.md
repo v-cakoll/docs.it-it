@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b5f7ce6a4ce8f542b3c49fe4749bfde23ecf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58919936bdc62d52437f429146f04c66d49294b2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744496"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796574"
 ---
 # <a name="iassemblynamegetversion-method"></a>Metodo IAssemblyName::GetVersion
-Ottiene le informazioni sulla versione per l'assembly a cui fa riferimento [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) oggetto.  
+Ottiene le informazioni sulla versione per l'assembly a cui fa riferimento questo oggetto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,13 +38,13 @@ HRESULT GetVersion (
   
 ## <a name="parameters"></a>Parametri  
  `pdwVersionHi`  
- [out] 32 bit alti della versione.  
+ out Bit 32 alti della versione.  
   
  `pdwVersionLow`  
- [out] 32 bit bassi della versione.  
+ out Bit 32 bassi della versione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -52,4 +52,4 @@ HRESULT GetVersion (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)

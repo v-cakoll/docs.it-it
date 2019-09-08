@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a21d5bbffdb1a78d3062929a1ca384a750af59a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619672"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781163"
 ---
 # <a name="remote-vs-local-execution"></a>Esecuzione remota e locale
 È possibile scegliere di eseguire le query in modalità remota, dove il motore di database esegue la query sul database, oppure localmente, dove [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue la query sulla cache locale.  
@@ -42,11 +42,11 @@ ms.locfileid: "64619672"
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
 ## <a name="comparison"></a>Confronto  
- Queste due funzionalità consentono di ottenere una potente combinazione di opzioni: l'esecuzione remota per le raccolte di grandi dimensioni e l'esecuzione locale per le piccole raccolte o dove è necessario disporre della raccolta completa. L'esecuzione remota viene implementata tramite <xref:System.Linq.IQueryable>, mentre l'esecuzione locale viene implementata su una raccolta <xref:System.Collections.Generic.IEnumerable%601> in memoria. Per forzare l'esecuzione locale (vale a dire <xref:System.Collections.Generic.IEnumerable%601>), vedere [convertire un tipo in un IEnumerable generico](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
+ Queste due funzionalità consentono di ottenere una potente combinazione di opzioni: l'esecuzione remota per le raccolte di grandi dimensioni e l'esecuzione locale per le piccole raccolte o dove è necessario disporre della raccolta completa. L'esecuzione remota viene implementata tramite <xref:System.Linq.IQueryable>, mentre l'esecuzione locale viene implementata su una raccolta <xref:System.Collections.Generic.IEnumerable%601> in memoria. Per forzare l'esecuzione locale, ovvero <xref:System.Collections.Generic.IEnumerable%601>, vedere [convertire un tipo in un IEnumerable generico](convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Query su set non ordinati  
- Notare l'importante differenza tra una raccolta locale che implementa <xref:System.Collections.Generic.List%601> e una raccolta che fornisce query remote eseguite *insiemi non ordinati* in un database relazionale. I metodi <xref:System.Collections.Generic.List%601>, ad esempio quelli che usano valori di indice, richiedono la semantica di elenco che in genere non può essere ottenuta tramite una query remota su un set non ordinato. Per questo motivo, tali metodi caricano in modo implicito <xref:System.Data.Linq.EntitySet%601> per consentire l'esecuzione locale.  
+ Si noti la differenza importante tra una raccolta locale che <xref:System.Collections.Generic.List%601> implementa e una raccolta che fornisce query remote eseguite su *set non ordinati* in un database relazionale. I metodi <xref:System.Collections.Generic.List%601>, ad esempio quelli che usano valori di indice, richiedono la semantica di elenco che in genere non può essere ottenuta tramite una query remota su un set non ordinato. Per questo motivo, tali metodi caricano in modo implicito <xref:System.Data.Linq.EntitySet%601> per consentire l'esecuzione locale.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relativi alle query](query-concepts.md)

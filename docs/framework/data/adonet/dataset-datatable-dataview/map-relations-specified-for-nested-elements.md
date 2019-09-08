@@ -2,12 +2,12 @@
 title: Mapping di relazioni specificate per elementi annidati
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786094"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapping di relazioni specificate per elementi annidati
 Uno schema può includere un'annotazione **msdata: Relationship** per specificare in modo esplicito il mapping tra due elementi qualsiasi nello schema. I due elementi specificati in **msdata: Relationship** possono essere annidati nello schema, ma non devono essere. Il processo di mapping utilizza **msdata: Relationship** nello schema per generare la relazione di chiave primaria/chiave esterna tra le due colonne.  
@@ -61,7 +61,7 @@ Uno schema può includere un'annotazione **msdata: Relationship** per specificar
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- Relazione tra le tabelle **Order** e **OrderDetail** . La proprietà Nested per questa relazione è impostata su **true** perché gli elementi **Order** e **OrderDetail** sono annidati nello schema.  
+- Relazione tra le tabelle **Order** e **OrderDetail** . La proprietà **Nested** per questa relazione è impostata su **true** perché gli elementi **Order** e **OrderDetail** sono annidati nello schema.  
   
     ```  
     ParentTable: Order  
@@ -78,4 +78,4 @@ Uno schema può includere un'annotazione **msdata: Relationship** per specificar
 
 - [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

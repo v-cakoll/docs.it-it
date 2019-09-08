@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
-ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f28351a29915bebd698e00113bb05647d8412b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903227"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781991"
 ---
 # <a name="how-to-directly-execute-sql-commands"></a>Procedura: Eseguire direttamente comandi SQL
 Presupponendo una connessione <xref:System.Data.Linq.DataContext>, è possibile usare <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> per eseguire comandi SQL che non restituiscono oggetti.  
@@ -23,5 +23,5 @@ Presupponendo una connessione <xref:System.Data.Linq.DataContext>, è possibile 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire direttamente query SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
-- [Comunicazione con il database](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Procedura: Eseguire direttamente query SQL](how-to-directly-execute-sql-queries.md)
+- [Comunicazione con il database](communicating-with-the-database.md)

@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36f9475a978ddf7253833e6c3372049d24502f95
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789672"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigazione: Convalida di XML Schema
 In .NET Framework 4.6 la convalida dello schema XSD rileva la violazione di vincoli univoci se viene usata una chiave composta e una chiave è vuota.  
@@ -39,4 +39,4 @@ In .NET Framework 4.6 la convalida dello schema XSD rileva la violazione di vinc
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Modifiche di reindirizzamento](retargeting-changes-in-the-net-framework-4-6.md)

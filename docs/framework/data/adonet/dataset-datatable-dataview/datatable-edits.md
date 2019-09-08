@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205009"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785381"
 ---
 # <a name="datatable-edits"></a>Modifiche agli oggetti DataTable
 Quando si apportano modifiche ai valori di colonna in <xref:System.Data.DataRow>, le modifiche vengono inserite direttamente nello stato attuale della riga. <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A>Viene quindi impostato su Modified e le modifiche vengono accettate o rifiutate utilizzando i metodi o del DataRow. <xref:System.Data.DataRowState> Il **DataRow** fornisce anche tre metodi che è possibile usare per sospendere lo stato della riga durante la modifica. Questi metodi sono <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
 - [Gestione di eventi DataTable](handling-datatable-events.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6016fc43700fda36c6d94408019d25f89bb36b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044205"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779216"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigazione: Controllo delle versioni del prodotto
 
@@ -31,7 +31,7 @@ Di seguito sono illustrate in modo dettagliato le modifiche:
 
 In generale, le applicazioni dovrebbero dipendere dalle tecniche consigliate per il rilevamento di elementi come la versione di runtime di .NET Framework e la directory di installazione:
 
-- Per rilevare la versione runtime di .NET Framework, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+- Per rilevare la versione runtime di .NET Framework, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).
 
 - Per determinare il percorso di installazione di .NET Framework, usare il valore della voce `InstallPath` nella chiave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
 
@@ -44,4 +44,4 @@ In generale, le applicazioni dovrebbero dipendere dalle tecniche consigliate per
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Modifiche al runtime](runtime-changes-in-the-net-framework-4-6.md)

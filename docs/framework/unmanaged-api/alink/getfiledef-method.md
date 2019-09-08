@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741885"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787458"
 ---
 # <a name="getfiledef-method"></a>Metodo GetFileDef
-Recupera il token FileDef effettivo utilizzato nei metadati (anziché i token assegnati da ALink).  
+Recupera il token FileDef effettivo usato nei metadati (in contrapposizione al token assegnato da ALink).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT GetFileDef(
  ID dell'assembly.  
   
  `TargetFile`  
- Token del file aggiunto come recuperati dal metodo AddFile o AddImport (metodo).  
+ Token del file aggiunto recuperato dal metodo AddFile o dal Metodo AddImport.  
   
  `pScope`  
  Riceve il token FileDef.  
@@ -50,10 +50,10 @@ HRESULT GetFileDef(
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Alink (API)](index.md)

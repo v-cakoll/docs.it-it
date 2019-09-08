@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918648"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780293"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generazione della libreria dati del servizio dati (WCF Data Services)
 Un servizio dati che implementa l' [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] oggetto può restituire un documento [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] di metadati del servizio che descrive il modello di dati esposto dal feed. Per ulteriori informazioni, vedere [OData: Documento](https://go.microsoft.com/fwlink/?LinkId=186070)di metadati del servizio. È possibile usare la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio per aggiungere un riferimento [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]a un servizio basato su. Quando si utilizza questo strumento per aggiungere un riferimento ai metadati restituiti da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in un progetto client, vengono eseguite le azioni seguenti:  
@@ -27,9 +27,9 @@ Un servizio dati che implementa l' [!INCLUDE[ssODataFull](../../../../includes/s
   
 - Aggiunta di un riferimento all'assembly `System.Data.Services.Client` per il progetto.  
   
- Per altre informazioni, vedere [Procedura: Aggiungere un riferimento](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)al servizio dati.  
+ Per altre informazioni, vedere [Procedura: Aggiungere un riferimento](how-to-add-a-data-service-reference-wcf-data-services.md)al servizio dati.  
   
- Le classi del servizio dati client possono inoltre essere generate tramite lo strumento [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) al prompt dei comandi. Per altre informazioni, vedere [Procedura: Generare manualmente classi](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)del servizio dati client.  
+ Le classi del servizio dati client possono inoltre essere generate tramite lo strumento [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) al prompt dei comandi. Per altre informazioni, vedere [Procedura: Generare manualmente classi](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)del servizio dati client.  
   
 ## <a name="client-data-type-mapping"></a>Mapping dei tipi di dati client  
  Quando si utilizza la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio `DataSvcUtil.exe` o lo strumento per generare classi di dati client basate su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un feed, i tipi di dati .NET Framework vengono mappati ai tipi primitivi del modello di dati nel modo seguente:  
@@ -54,5 +54,5 @@ Un servizio dati che implementa l' [!INCLUDE[ssODataFull](../../../../includes/s
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Libreria client WCF Data Services](wcf-data-services-client-library.md)
+- [Guida rapida](quickstart-wcf-data-services.md)

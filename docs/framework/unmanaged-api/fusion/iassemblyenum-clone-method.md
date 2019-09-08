@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d288f4ccf91567224546df1a3309a411590a5a12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 141e6e303933c46a85adf08339856f8964b21f4e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779037"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796701"
 ---
 # <a name="iassemblyenumclone-method"></a>Metodo IAssemblyEnum::Clone
-Crea una copia superficiale di questo [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) oggetto.  
+Crea una copia superficiale di questo oggetto [IAssemblyEnum](iassemblyenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parametri  
  `ppEnum`  
- [out] Puntatore alla copia.  
+ out Puntatore alla copia.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -48,4 +48,4 @@ HRESULT Clone (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Interfaccia IAssemblyEnum](iassemblyenum-interface.md)

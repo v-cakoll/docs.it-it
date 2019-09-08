@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205065"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785419"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronizzazione di DataSet e XmlDataDocument
 Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione relazionale dei dati. Per un accesso gerarchico ai dati, è possibile usare le classi XML disponibili in .NET Framework. Questi due tipi di rappresentazione dei dati sono sempre stati usati separatamente. Tuttavia, il .NET Framework consente l'accesso sincrono in tempo reale alle rappresentazioni relazionali e gerarchiche dei dati tramite l'oggetto **DataSet** e l' <xref:System.Xml.XmlDataDocument> oggetto, rispettivamente.  
@@ -87,7 +87,7 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
   
  Un altro vantaggio della sincronizzazione di un oggetto **XmlDataDocument** con un **DataSet** è che la fedeltà di un documento XML viene mantenuta. Se il **set** di dati viene popolato da un documento XML utilizzando **ReadXml**, quando i dati vengono riscritti come documento XML utilizzando **WriteXml** , può variare notevolmente dal documento XML originale. Questo perché il **set di dati** non mantiene la formattazione, ad esempio spazi vuoti, o informazioni gerarchiche, ad esempio l'ordine degli elementi, dal documento XML. Il **set di dati** non contiene inoltre elementi del documento XML che sono stati ignorati perché non corrispondono allo schema del **set di dati**. La sincronizzazione di un **XmlDataDocument** con un **set** di dati consente di mantenere la formattazione e la struttura gerarchica degli elementi del documento XML originale in **XmlDataDocument**, mentre il **set** di dati contiene solo dati e informazioni dello schema appropriate per il **set di dati**.  
   
- Quando si sincronizza un **set di dati** con un oggetto **XmlDataDocument**, i risultati possono variare a seconda che <xref:System.Data.DataRelation> gli oggetti siano nidificati o meno. Per ulteriori informazioni, vedere [nidificazione](nesting-datarelations.md)di oggetti DataRelation.  
+ Quando si sincronizza un **set di dati** con un oggetto **XmlDataDocument**, i risultati possono variare a seconda che <xref:System.Data.DataRelation> gli oggetti siano nidificati o meno. Per ulteriori informazioni, vedere [nidificazione di oggetti DataRelation](nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Sincronizzazione di un oggetto DataSet con un oggetto XmlDataDocument](synchronizing-a-dataset-with-an-xmldatadocument.md)  
@@ -104,7 +104,7 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
  Viene descritto il modo in cui il **DataSet** interagisce con XML come origine dati, incluso il caricamento e il salvataggio permanente del contenuto di un **DataSet** come dati XML.  
   
  [Annidamento di oggetti DataRelation](nesting-datarelations.md)  
- Viene illustrata l'importanza degli oggetti DataRelation annidati quando si rappresenta il contenuto di un **DataSet** come dati XML e viene descritto come creare tali relazioni.  
+ Viene illustrata l'importanza degli oggetti **DataRelation** annidati quando si rappresenta il contenuto di un **DataSet** come dati XML e viene descritto come creare tali relazioni.  
   
  [Oggetti DataSet, DataTable e DataView](index.md)  
  Viene descritto il **set** di dati e viene illustrato come utilizzarlo per gestire i dati dell'applicazione e interagire con le origini dati, inclusi i database relazionali e XML.  
@@ -114,4 +114,4 @@ Il tipo <xref:System.Data.DataSet> di ADO.NET fornisce una rappresentazione rela
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

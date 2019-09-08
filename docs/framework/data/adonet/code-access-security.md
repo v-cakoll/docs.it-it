@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948257"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786866"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -47,15 +47,15 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  CLR usa le autorizzazioni per implementare il proprio meccanismo di applicazione delle restrizioni sul codice gestito. Le autorizzazioni di sicurezza basate sui ruoli offrono un meccanismo per individuare se un utente (o l'agente che opera per conto dell'utente) dispone di una specifica identità o è membro di un ruolo specificato. Per ulteriori informazioni, vedere [autorizzazioni di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- A seconda del tipo di applicazione che si intende compilare, è opportuno considerare l'implementazione di autorizzazioni basate sui ruoli anche nel database. Per ulteriori informazioni sulla sicurezza basata sui ruoli in SQL Server, vedere [SQL Server sicurezza](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ A seconda del tipo di applicazione che si intende compilare, è opportuno considerare l'implementazione di autorizzazioni basate sui ruoli anche nel database. Per ulteriori informazioni sulla sicurezza basata sui ruoli in SQL Server, vedere [SQL Server sicurezza](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assembly  
- Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo della versione, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione .NET Framework. Un assembly fornisce infatti una raccolta di tipi e risorse che interagiscono tra loro e costituiscono un'unità logica della funzionalità. Per CLR un tipo non esiste al di fuori del contesto di un assembly. Per altre informazioni sulla creazione e la distribuzione di assembly, vedere [programmazione con gli assembly](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
+ Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo della versione, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione .NET Framework. Un assembly fornisce infatti una raccolta di tipi e risorse che interagiscono tra loro e costituiscono un'unità logica della funzionalità. Per CLR un tipo non esiste al di fuori del contesto di un assembly. Per altre informazioni sulla creazione e la distribuzione di assembly, vedere [programmazione con gli assembly](../../app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assegnazione di nomi sicuri agli assembly  
  Un nome sicuro, o firma digitale, è costituito dall'identità dell'assembly, che include il nome in testo semplice, il numero di versione e informazioni sulle impostazioni cultura (se fornite), nonché una chiave pubblica e una firma digitale. La firma digitale viene generata da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, contenente i nomi e gli hash di tutti i file che costituiscono l'assembly.  
   
- L'assegnazione di nomi sicuri consente a un'applicazione o a un componente di disporre di un'identità univoca utilizzabile da altri software per riferirsi esplicitamente a tale applicazione o componente. Consente inoltre di proteggere gli assembly dallo spoofing da parte di un assembly contenente codice dannoso e garantisce la compatibilità tra diverse versioni di un componente. Agli assembly che verranno distribuiti nella Global Assembly Cache (GAC) deve essere assegnato un nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ L'assegnazione di nomi sicuri consente a un'applicazione o a un componente di disporre di un'identità univoca utilizzabile da altri software per riferirsi esplicitamente a tale applicazione o componente. Consente inoltre di proteggere gli assembly dallo spoofing da parte di un assembly contenente codice dannoso e garantisce la compatibilità tra diverse versioni di un componente. Agli assembly che verranno distribuiti nella Global Assembly Cache (GAC) deve essere assegnato un nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Attendibilità parziale in ADO.NET 2.0  
  Con ADO.NET 2.0 i provider di dati .NET Framework per SQL Server, per OLE DB, per ODBC e per Oracle possono essere eseguiti in ambienti ad attendibilità parziale. Nelle versioni precedenti di .NET Framework le applicazioni non totalmente attendibili supportavano solo <xref:System.Data.SqlClient>.  
@@ -67,7 +67,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  Nella tabella seguente vengono elencate le proprietà disponibili per la classe <xref:System.Data.SqlClient.SqlClientPermissionAttribute> e le relative descrizioni:  
   
-|Proprietà dell'attributo di autorizzazione|Descrizione|  
+|Proprietà dell'attributo di autorizzazione|DESCRIZIONE|  
 |-----------------------------------|-----------------|  
 |`Action`|Ottiene o imposta un'azione di sicurezza. La proprietà viene ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Viene usata per consentire o meno l'immissione di una password vuota in una stringa di connessione. Valori validi sono `true`, per consentire l'uso di password vuote, e `false`, per impedire l'uso di password vuote. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
@@ -78,7 +78,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
 |`Unrestricted`|Indica che esiste una dichiarazione di accesso senza limitazioni alla risorsa. La proprietà viene ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Sintassi di ConnectionString  
- Nell'esempio seguente viene illustrato come usare l'elemento `connectionStrings` di un file di configurazione per consentire l'uso solo di una stringa di connessione specifica. Per ulteriori informazioni sull'archiviazione e il recupero delle stringhe di connessione dai file di configurazione, vedere [stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md) .  
+ Nell'esempio seguente viene illustrato come usare l'elemento `connectionStrings` di un file di configurazione per consentire l'uso solo di una stringa di connessione specifica. Per ulteriori informazioni sull'archiviazione e il recupero delle stringhe di connessione dai file di configurazione, vedere [stringhe di connessione](connection-strings.md) .  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Abilitazione dell'attendibilità parziale con un set di autorizzazioni personalizzato  
- Per usare le autorizzazioni <xref:System.Data.SqlClient> per un'area particolare, è necessario che un amministratore di sistema crei un set di autorizzazioni personalizzato e lo imposti come set di autorizzazioni per tale area. I set di autorizzazioni predefiniti, ad esempio `LocalIntranet`, non possono essere modificati. Per includere <xref:System.Data.SqlClient> , ad esempio, le autorizzazioni per il codice <xref:System.Security.Policy.Zone> che `LocalIntranet`dispone di, un amministratore di sistema può copiare il `LocalIntranet`set di autorizzazioni per, rinominarlo in " <xref:System.Data.SqlClient> CustomLocalIntranet", aggiungere le autorizzazioni, Import il set di autorizzazioni CustomLocalIntranet usando [Caspol. exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)e impostare `LocalIntranet_Zone` il set di autorizzazioni di su CustomLocalIntranet.  
+ Per usare le autorizzazioni <xref:System.Data.SqlClient> per un'area particolare, è necessario che un amministratore di sistema crei un set di autorizzazioni personalizzato e lo imposti come set di autorizzazioni per tale area. I set di autorizzazioni predefiniti, ad esempio `LocalIntranet`, non possono essere modificati. Per includere <xref:System.Data.SqlClient> , ad esempio, le autorizzazioni per il codice <xref:System.Security.Policy.Zone> che `LocalIntranet`dispone di, un amministratore di sistema può copiare il `LocalIntranet`set di autorizzazioni per, rinominarlo in " <xref:System.Data.SqlClient> CustomLocalIntranet", aggiungere le autorizzazioni, Import il set di autorizzazioni CustomLocalIntranet usando [Caspol. exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../tools/caspol-exe-code-access-security-policy-tool.md)e impostare `LocalIntranet_Zone` il set di autorizzazioni di su CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Set di autorizzazioni di esempio  
  Di seguito è riportato un set di autorizzazioni di esempio per il provider di dati .NET Framework per SQL Server in uno scenario ad attendibilità parziale. Per informazioni sulla creazione di set di autorizzazioni personalizzati, vedere [configurazione di set di autorizzazioni tramite Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilità con codice non gestito  
- Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Windows. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md).  
+ Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Windows. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../interop/index.md).  
   
  In .NET Framework la compatibilità con versioni precedenti di componenti COM esistenti viene supportata fornendo l'accesso tramite l'interoperabilità COM. È possibile incorporare componenti COM in un'applicazione .NET Framework usando gli strumenti di interoperabilità COM per importare i tipi COM attinenti. Una volta importati, i tipi COM sono pronti per l'uso. L'interoperabilità COM consente anche ai client COM di accedere a codice gestito esportando i metadati dell'assembly in una libreria dei tipi e registrando il componente gestito come componente COM. Per ulteriori informazioni, vedere [interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Protezione delle applicazioni ADO.NET](securing-ado-net-applications.md)
 - [Sicurezza nel codice nativo e .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Sicurezza basata sui ruoli](../../../standard/security/role-based-security.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

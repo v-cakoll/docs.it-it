@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379898"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779235"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigazione: Supporto di tocco e stilo basato su puntatore
 
@@ -40,7 +40,7 @@ Di seguito sono riportati problemi noti correnti con lo stack tocco/stilo basato
 
       Questo può potenzialmente bloccare l'applicazione fino a quando non viene rilevato l'input del mouse. Gli sviluppatori dovranno quindi avviare l'opzione di trascinamento della selezione dagli eventi del mouse.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Consenso esplicito al supporto di tocco/stilo basato su WM_POINTER
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Consenso esplicito al supporto di tocco/stilo basato su WM_POINTER
 
 Gli sviluppatori che desiderano abilitare questo stack possono aggiungere quanto segue al file app.config dell'applicazione:
 
@@ -56,4 +56,4 @@ Rimuovendo questa voce o impostandone il valore su `false`, questo stack facolta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Retargeting Changes in the .NET Framework 4.7 (Reindirizzamento delle modifiche in .NET Framework 4.7)](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Retargeting Changes in the .NET Framework 4.7 (Reindirizzamento delle modifiche in .NET Framework 4.7)](retargeting-changes-in-the-net-framework-4-7.md)

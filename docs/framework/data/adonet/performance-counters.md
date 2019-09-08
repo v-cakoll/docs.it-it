@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 360e4a956aec74b6b71185d6acf2f4071d22e2ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a529cae724d24b47d856f86744eebe87d68cb158
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951216"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783306"
 ---
 # <a name="performance-counters-in-adonet"></a>Contatori di prestazioni in ADO.NET
 In ADO.NET 2.0 è stato introdotto il supporto espanso per i contatori delle prestazioni, che include il supporto per <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. I contatori delle prestazioni <xref:System.Data.SqlClient> disponibili nelle versioni precedenti di ADO.NET sono stati deprecati e sostituiti con i nuovi contatori delle prestazioni descritti in questo argomento. È possibile usare i contatori delle prestazioni di ADO.NET per monitorare lo stato dell'applicazione e le risorse di connessione che usa. I contatori delle prestazioni possono essere monitorati tramite Performance Monitor di Windows. In alternativa, è possibile accedervi a livello di codice usando la classe <xref:System.Diagnostics.PerformanceCounter> nello spazio dei nomi <xref:System.Diagnostics>.  
@@ -396,9 +396,9 @@ class Program
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Pool di connessioni OLE DB, ODBC e Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Connessione a un'origine dati](connecting-to-a-data-source.md)
+- [Pool di connessioni OLE DB, ODBC e Oracle](ole-db-odbc-and-oracle-connection-pooling.md)
 - [Contatori delle prestazioni per ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Runtime Profiling](../../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)
+- [Runtime Profiling](../../debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)
 - [Introduzione al monitoraggio delle soglie di prestazioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [Panoramica di ADO.NET](ado-net-overview.md)

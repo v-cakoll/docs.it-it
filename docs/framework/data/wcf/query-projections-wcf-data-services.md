@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931161"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779826"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proiezioni di query (WCF Data Services)
 
@@ -102,7 +102,7 @@ Di seguito vengono descritti i comportamenti quando si proiettano i risultati in
 
 Alla definizione di una proiezione di query si applicano le considerazioni aggiuntive seguenti:
 
-- Quando si definiscono feed personalizzati per il formato Atom, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate vengano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [personalizzazione del feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Quando si definiscono feed personalizzati per il formato Atom, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate vengano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [personalizzazione del feed](feed-customization-wcf-data-services.md).
 
 - Quando vengono apportati inserimenti a un tipo proiettato che non contiene tutte le proprietà dell'entità nel modello di dati del servizio dati, le proprietà non incluse nella proiezione vengono impostate sui valori predefiniti nel client.
 
@@ -112,10 +112,10 @@ Alla definizione di una proiezione di query si applicano le considerazioni aggiu
 
 - Quando una proiezione include una proprietà di navigazione, gli oggetti correlati vengono caricati in modo implicito senza necessità di chiamare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. Il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> non è supportato in una query proiettata.
 
-- Le proiezioni di query eseguite nel client vengono convertite per l'uso dell'opzione query `$select` nell'URI della richiesta. Se una query con proiezione viene eseguita su una versione precedente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che non supporta l'opzione query `$select`, viene restituito un errore. Questa situazione può inoltre verificarsi quando <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> di <xref:System.Data.Services.DataServiceBehavior> per il servizio dati viene impostato su un valore pari a <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Le proiezioni di query eseguite nel client vengono convertite per l'uso dell'opzione query `$select` nell'URI della richiesta. Se una query con proiezione viene eseguita su una versione precedente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che non supporta l'opzione query `$select`, viene restituito un errore. Questa situazione può inoltre verificarsi quando <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> di <xref:System.Data.Services.DataServiceBehavior> per il servizio dati viene impostato su un valore pari a <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](data-service-versioning-wcf-data-services.md).
 
-Per altre informazioni, vedere [Procedura: Risultati](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)della query di progetto.
+Per altre informazioni, vedere [Procedura: Risultati](how-to-project-query-results-wcf-data-services.md)della query di progetto.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: cb39ead1fe15e3bfcf67370e4675dcae3bbf9801
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 79cb2ce7ffae81aeba9aaca557e37ba566a8370c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203892"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784756"
 ---
 # <a name="creating-a-datareader"></a>Creazione di un oggetto DataReader
 Le classi <xref:System.Data.DataTable> e <xref:System.Data.DataSet> dispongono di un metodo <xref:System.Data.DataTable.CreateDataReader%2A> che restituisce il contenuto del tipo <xref:System.Data.DataTable> o della raccolta <xref:System.Data.DataSet> dell'oggetto <xref:System.Data.DataSet.Tables%2A> come uno o più set di risultati forward-only di sola lettura.  
@@ -35,4 +35,4 @@ Le classi <xref:System.Data.DataTable> e <xref:System.Data.DataSet> dispongono d
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [DataTableReader](datatablereaders.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

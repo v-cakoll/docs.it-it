@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963190"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782765"
 ---
 # <a name="schema-restrictions"></a>Restrizione dello schema
-Il secondo parametro facoltativo del metodo **GetSchema** è costituito dalle restrizioni utilizzate per limitare la quantità di informazioni sullo schema restituite e viene passato al metodo GetSchema come una matrice di stringhe. La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
+Il secondo parametro facoltativo del metodo **GetSchema** è costituito dalle restrizioni utilizzate per limitare la quantità di informazioni sullo schema restituite e viene passato al metodo **GetSchema** come una matrice di stringhe. La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
   
  Nella tabella seguente, ad esempio, vengono descritte le restrizioni supportate dalla raccolta di schemi "Tables" usando il provider di dati .NET Framework per SQL Server: Restrizioni aggiuntive per le raccolte di schemi di SQL Server vengono indicate alla fine di questo argomento.  
   
@@ -25,7 +25,7 @@ Il secondo parametro facoltativo del metodo **GetSchema** è costituito dalle re
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Impostazione dei valori di restrizione  
- Per usare una delle restrizioni della raccolta di schemi "Tables", è sufficiente creare una matrice di stringa con quattro elementi, quindi posizionare un valore nell'elemento che corrisponde al numero della restrizione. Ad esempio, per limitare le tabelle restituite dal metodo GetSchema solo alle tabelle nello schema "Sales", impostare il secondo elemento della matrice su "Sales" prima di passarlo al metodo GetSchema .  
+ Per usare una delle restrizioni della raccolta di schemi "Tables", è sufficiente creare una matrice di stringa con quattro elementi, quindi posizionare un valore nell'elemento che corrisponde al numero della restrizione. Ad esempio, per limitare le tabelle restituite dal metodo **GetSchema** solo alle tabelle nello schema "Sales", impostare il secondo elemento della matrice su "Sales" prima di passarlo al metodo **GetSchema** .  
   
 > [!NOTE]
 > Le raccolte di restrizioni per `SqlClient` e `OracleClient` includono una colonna `ParameterName` aggiuntiva. La colonna di restrizione predefinita è ancora disponibile per garantire la compatibilità con le versioni precedenti, ma attualmente è ignorata. Per ridurre il rischio di attacchi SQL injection quando si specificano i valori di restrizione, si consiglia di usare query con parametri invece di sostituire le stringhe.  
@@ -33,7 +33,7 @@ Il secondo parametro facoltativo del metodo **GetSchema** è costituito dalle re
 > [!NOTE]
 > Il numero di elementi nella matrice deve essere inferiore o uguale al numero di restrizioni supportato per la raccolta di schemi specificato, in caso contrario verrà generato un tipo <xref:System.ArgumentException>. Il numero di restrizioni può essere inferiore al numero massimo consentito. Le restrizioni mancanti verranno considerate null (senza restrizioni).  
   
- È possibile eseguire una query su un provider gestito .NET Framework per determinare l'elenco delle restrizioni supportate chiamando il metodo GetSchema con il nome della raccolta di schemi delle restrizioni, ovvero "Restrictions". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco dei nomi delle raccolte, i nomi delle restrizioni, i valori di restrizione predefiniti e i numeri delle restrizioni.  
+ È possibile eseguire una query su un provider gestito .NET Framework per determinare l'elenco delle restrizioni supportate chiamando il metodo **GetSchema** con il nome della raccolta di schemi delle restrizioni, ovvero "Restrictions". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco dei nomi delle raccolte, i nomi delle restrizioni, i valori di restrizione predefiniti e i numeri delle restrizioni.  
   
 ### <a name="example"></a>Esempio  
  Negli esempi seguenti viene illustrato come utilizzare il <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> metodo della .NET Framework provider di dati per la classe SQL Server <xref:System.Data.SqlClient.SqlConnection> per recuperare informazioni sullo schema relative a tutte le tabelle contenute nel database di esempio **AdventureWorks** . e per limitare le informazioni restituite alle sole tabelle nello schema "Sales":  
@@ -263,4 +263,4 @@ class Program
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: b4a61306cd9b61f84eff16ffaac302317b6dfe44
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c4e782b670bfc74a651ce38457c05d9acfcf0e8c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959187"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783899"
 ---
 # <a name="establishing-the-connection"></a>Stabilire una connessione
-Per eseguire la connessione a Microsoft SQL Server, usare l'oggetto <xref:System.Data.SqlClient.SqlConnection> del provider di dati .NET Framework per SQL Server. Per eseguire la connessione a un'origine dati OLE DB, usare l'oggetto <xref:System.Data.OleDb.OleDbConnection> del provider di dati .NET Framework per OLE DB. Per eseguire la connessione a un'origine dati ODBC, usare l'oggetto <xref:System.Data.Odbc.OdbcConnection> del provider di dati .NET Framework per ODBC. Per eseguire la connessione a un'origine dati Oracle, usare l'oggetto <xref:System.Data.OracleClient.OracleConnection> del provider di dati .NET Framework per Oracle. Per archiviare e recuperare in modo sicuro le stringhe di connessione, vedere [protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Per eseguire la connessione a Microsoft SQL Server, usare l'oggetto <xref:System.Data.SqlClient.SqlConnection> del provider di dati .NET Framework per SQL Server. Per eseguire la connessione a un'origine dati OLE DB, usare l'oggetto <xref:System.Data.OleDb.OleDbConnection> del provider di dati .NET Framework per OLE DB. Per eseguire la connessione a un'origine dati ODBC, usare l'oggetto <xref:System.Data.Odbc.OdbcConnection> del provider di dati .NET Framework per ODBC. Per eseguire la connessione a un'origine dati Oracle, usare l'oggetto <xref:System.Data.OracleClient.OracleConnection> del provider di dati .NET Framework per Oracle. Per archiviare e recuperare in modo sicuro le stringhe di connessione, vedere [protezione delle informazioni di connessione](protecting-connection-information.md).  
   
 ## <a name="closing-connections"></a>Disconnessione  
  Al termine dell'utilizzo, chiudere sempre la connessione in modo che possa essere restituita al pool. Il blocco `Using` in Visual Basic o C# elimina automaticamente la connessione quando il codice esce dal blocco, anche in caso di eccezione non gestita. Per altre informazioni, vedere [istruzione using](../../../csharp/language-reference/keywords/using-statement.md) e [istruzione using](../../../visual-basic/language-reference/statements/using-statement.md) .  
   
- È anche possibile usare il metodo `Close` o `Dispose` dell'oggetto connessione del provider in uso. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Ad esempio, una connessione che esce dall'ambito ma non viene chiusa in modo esplicito verrà restituita al pool di connessioni solo se è stata raggiunta la dimensione massima del pool e la connessione è ancora valida. Per ulteriori informazioni, vedere [OLE DB, ODBC e pool di connessioni Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
+ È anche possibile usare il metodo `Close` o `Dispose` dell'oggetto connessione del provider in uso. Le connessioni che non vengono chiuse in modo esplicito potrebbero non essere aggiunte o restituite al pool. Ad esempio, una connessione che esce dall'ambito ma non viene chiusa in modo esplicito verrà restituita al pool di connessioni solo se è stata raggiunta la dimensione massima del pool e la connessione è ancora valida. Per ulteriori informazioni, vedere [OLE DB, ODBC e pool di connessioni Oracle](ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
 > Non chiamare `Close` `Dispose` o in una **connessione**, un **DataReader**o qualsiasi altro oggetto gestito nel `Finalize` metodo della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo `Finalize` nella relativa definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
-> Nel server non vengono generati eventi di accesso e di disconnessione quando una connessione viene recuperata dal o restituita al pool di connessioni, in quanto la connessione non viene effettivamente chiusa quando viene restituita al pool di connessioni. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+> Nel server non vengono generati eventi di accesso e di disconnessione quando una connessione viene recuperata dal o restituita al pool di connessioni, in quanto la connessione non viene effettivamente chiusa quando viene restituita al pool di connessioni. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](sql-server-connection-pooling.md).  
   
 ## <a name="connecting-to-sql-server"></a>Connessione a SQL Server  
- Il formato della stringa di connessione supportato dal provider di dati .NET Framework per SQL Server è simile al formato della stringa di connessione OLE DB (ADO). Per informazioni sui nomi e sui valori validi del formato della stringa, vedere la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È anche possibile usare la classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Il formato della stringa di connessione supportato dal provider di dati .NET Framework per SQL Server è simile al formato della stringa di connessione OLE DB (ADO). Per informazioni sui nomi e sui valori validi del formato della stringa, vedere la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È anche possibile usare la classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](connection-string-builders.md).  
   
  Nel codice di esempio seguente viene descritta la procedura di creazione e di apertura di una connessione a un database SQL Server.  
   
@@ -144,7 +144,7 @@ nwindConn.Open();
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Pool di connessioni OLE DB, ODBC e Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Connessione a un'origine dati](connecting-to-a-data-source.md)
+- [Stringhe di connessione](connection-strings.md)
+- [Pool di connessioni OLE DB, ODBC e Oracle](ole-db-odbc-and-oracle-connection-pooling.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

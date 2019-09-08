@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938439"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780683"
 ---
 # <a name="table-valued-parameters"></a>Parametri valutati a livello di tabella
 I parametri valutati a livello di tabella consentono di eseguire facilmente il marshaling di più righe di dati di un'applicazione client in SQL Server senza richiedere più round trip o logica speciale lato server per l'elaborazione dei dati. È possibile usare i parametri con valori di tabella per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in arrivo vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Comandi e parametri](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Parametri DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
+- [Comandi e parametri](../commands-and-parameters.md)
+- [Parametri DataAdapter](../dataadapter-parameters.md)
+- [Operazioni sui dati SQL Server in ADO.NET](sql-server-data-operations.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

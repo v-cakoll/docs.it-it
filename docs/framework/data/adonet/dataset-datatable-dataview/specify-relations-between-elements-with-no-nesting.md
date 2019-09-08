@@ -2,12 +2,12 @@
 title: Specifica di relazioni tra elementi senza alcun annidamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 83dce7173c016a7d7d2d626bb7a3606de29d54ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204475"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784275"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Specifica di relazioni tra elementi senza alcun annidamento
 Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. È tuttavia possibile specificare in modo esplicito le relazioni tra elementi che non sono annidati tramite l'annotazione **msdata: Relationship** .  
@@ -68,4 +68,4 @@ Nested: False
 
 - [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

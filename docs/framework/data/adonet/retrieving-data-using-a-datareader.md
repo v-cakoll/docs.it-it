@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963175"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794402"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati usando un DataReader
 Per recuperare i dati usando un **DataReader**, creare un'istanza dell'oggetto **Command** e quindi creare un **DataReader** chiamando **Command. ExecuteReader** per recuperare le righe da un'origine dati. **DataReader** fornisce un flusso di dati non memorizzato nel buffer che consente alla logica procedurale di elaborare in modo efficiente i risultati da un'origine dati. Il **DataReader** è una scelta ottimale quando si recuperano grandi quantità di dati perché i dati non vengono memorizzati nella cache.
@@ -25,7 +25,7 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-Utilizzare il metodo **DataReader. Read** per ottenere una riga dai risultati della query. È possibile accedere a ogni colonna della riga restituita passando il nome o il numero ordinale della colonna a **DataReader**. Tuttavia, per ottenere prestazioni ottimali **, DataReader** fornisce una serie di metodi che consentono di accedere ai valori delle colonne nei tipi di dati nativi (GetDateTime, GetDouble, GetGuid, GetInt32 e così via). Per un elenco di metodi tipizzati della funzione di accesso per i data **Reader**specifici del <xref:System.Data.OleDb.OleDbDataReader> provider <xref:System.Data.SqlClient.SqlDataReader>di dati, vedere e. Utilizzando i metodi tipizzati della funzione di accesso quando si conosce il tipo di dati sottostante, è possibile ridurre la quantità di conversione del tipo necessaria durante il recupero del valore della colonna.  
+Utilizzare il metodo **DataReader. Read** per ottenere una riga dai risultati della query. È possibile accedere a ogni colonna della riga restituita passando il nome o il numero ordinale della colonna a **DataReader**. Tuttavia, per ottenere prestazioni ottimali, **DataReader** fornisce una serie di metodi che consentono di accedere ai valori delle colonne nei tipi di dati nativi (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**e così via). Per un elenco di metodi tipizzati della funzione di accesso per i data **Reader**specifici del <xref:System.Data.OleDb.OleDbDataReader> provider <xref:System.Data.SqlClient.SqlDataReader>di dati, vedere e. Utilizzando i metodi tipizzati della funzione di accesso quando si conosce il tipo di dati sottostante, è possibile ridurre la quantità di conversione del tipo necessaria durante il recupero del valore della colonna.  
   
  Nell'esempio seguente viene eseguita l'iterazione di un oggetto **DataReader** e vengono restituite due colonne da ogni riga.  
   
@@ -40,7 +40,7 @@ Utilizzare il metodo **DataReader. Read** per ottenere una riga dai risultati de
  Mentre un **DataReader** è aperto, la **connessione** viene utilizzata esclusivamente da tale **DataReader**. Non è possibile eseguire alcun comando per la **connessione**, inclusa la creazione di un altro **DataReader**, fino alla chiusura del **DataReader** originale.  
   
 > [!NOTE]
-> Non chiamare **Close** o Dispose per una **connessione**, un **DataReader**o qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se la classe non è proprietaria di risorse non gestite, non includere un metodo **Finalize** nella definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
+> Non chiamare **Close** o **Dispose** per una **connessione**, un **DataReader**o qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se la classe non è proprietaria di risorse non gestite, non includere un metodo **Finalize** nella definizione della classe. Per altre informazioni, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Recupero di più set di risultati con NextResult  
  Se **DataReader** restituisce più set di risultati, chiamare il metodo **NextResult** per scorrere i set di risultati in modo sequenziale. Nell'esempio seguente viene illustrata l'elaborazione dei risultati di due dichiarazioni SELECT da parte del tipo <xref:System.Data.SqlClient.SqlDataReader> usando il metodo <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
@@ -57,7 +57,7 @@ Utilizzare il metodo **DataReader. Read** per ottenere una riga dai risultati de
 ## <a name="working-with-ole-db-chapters"></a>Uso dei capitoli OLE DB  
  I set<xref:System.Data.OleDb.OleDbDataReader>di righe gerarchici, o capitoli (OLE DB tipo **DBTYPE_HCHAPTER**, ADO Type adChapter), possono essere recuperati utilizzando. Quando una query che include un capitolo viene restituita come **DataReader**, il capitolo viene restituito come una colonna nel **DataReader** e viene esposto come oggetto **DataReader** .  
   
- Il **set di dati** ADO.NET può essere utilizzato anche per rappresentare i set di righe gerarchici utilizzando le relazioni padre-figlio tra le tabelle. Per ulteriori informazioni, vedere [DataSet, DataTable e](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)DataViews.  
+ Il **set di dati** ADO.NET può essere utilizzato anche per rappresentare i set di righe gerarchici utilizzando le relazioni padre-figlio tra le tabelle. Per ulteriori informazioni, vedere [DataSet, DataTable e DataViews](./dataset-datatable-dataview/index.md).  
   
  Nell'esempio di codice seguente viene usato il provider MSDataShape per generare una colonna del capitolo contenente gli ordini per ogni cliente presente in un elenco di clienti.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Per evitare un **overflow**, è consigliabile gestire anche qualsiasi conversione dal tipo di numero Oracle a un tipo di .NET Framework valido prima di archiviare il valore in un oggetto <xref:System.Data.DataRow>. È possibile utilizzare l' <xref:System.Data.Common.DataAdapter.FillError> evento per determinare se si è verificato un **overflow** . Per ulteriori informazioni sull' <xref:System.Data.Common.DataAdapter.FillError> evento, vedere Gestione di [eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Per evitare un **overflow**, è consigliabile gestire anche qualsiasi conversione dal tipo di numero Oracle a un tipo di .NET Framework valido prima di archiviare il valore in un oggetto <xref:System.Data.DataRow>. È possibile utilizzare l' <xref:System.Data.Common.DataAdapter.FillError> evento per determinare se si è verificato un **overflow** . Per ulteriori informazioni sull' <xref:System.Data.Common.DataAdapter.FillError> evento, vedere Gestione di [eventi DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [Comandi e parametri](commands-and-parameters.md)
+- [Recupero di informazioni sullo schema del database](retrieving-database-schema-information.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

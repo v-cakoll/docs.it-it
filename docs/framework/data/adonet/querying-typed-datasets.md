@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651740"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782973"
 ---
-# <a name="query-typed-datasets"></a>Eseguire query sui set di dati tipizzati
+# <a name="query-typed-datasets"></a>Eseguire query su DataSet tipizzati
 
-Se lo schema del <xref:System.Data.DataSet> è noto in fase di progettazione dell'applicazione, è consigliabile usare un oggetto tipizzato <xref:System.Data.DataSet> quando si usa LINQ to DataSet. Un oggetto tipizzato <xref:System.Data.DataSet> è una classe che deriva da un <xref:System.Data.DataSet>. In quanto tale, tale oggetto eredita tutti i metodi, gli eventi e le proprietà di un <xref:System.Data.DataSet>. Inoltre, un oggetto tipizzato <xref:System.Data.DataSet> fornisce metodi fortemente tipizzati, proprietà ed eventi. È quindi possibile accedere a tabelle e colonne in base al nome, anziché usare metodi basati su raccolta. Le query risultano quindi più semplici e più leggibili. Per altre informazioni, vedere [dataset tipizzati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+Se lo schema di <xref:System.Data.DataSet> è noto in fase di progettazione dell'applicazione, è consigliabile usare un oggetto tipizzato <xref:System.Data.DataSet> quando si usa LINQ to DataSet. Un oggetto <xref:System.Data.DataSet> tipizzato è una classe che deriva da <xref:System.Data.DataSet>un oggetto. In quanto tale, tale oggetto eredita tutti i metodi, gli eventi e le proprietà di un <xref:System.Data.DataSet>. Un oggetto tipizzato <xref:System.Data.DataSet> fornisce inoltre metodi, eventi e proprietà fortemente tipizzati. È quindi possibile accedere a tabelle e colonne in base al nome, anziché usare metodi basati su raccolta. Le query risultano quindi più semplici e più leggibili. Per altre informazioni, vedere [DataSet tipizzati](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ to DataSet supporta anche l'esecuzione di query su un oggetto tipizzato <xref:System.Data.DataSet>. Con un oggetto tipizzato <xref:System.Data.DataSet>, non è necessario utilizzare il tipo generico <xref:System.Data.DataRowExtensions.Field%2A> metodo o <xref:System.Data.DataRowExtensions.SetField%2A> metodo per accedere ai dati di colonna. I nomi delle proprietà sono disponibili in fase di compilazione perché le informazioni sul tipo è incluso nel <xref:System.Data.DataSet>. LINQ to DataSet fornisce accesso ai valori di colonna con il tipo corretto, in modo che gli errori di mancata corrispondenza di tipo vengono intercettati durante la compilazione del codice anziché in fase di esecuzione.
+LINQ to DataSet supporta anche l'esecuzione di query su <xref:System.Data.DataSet>un oggetto tipizzato. Con un oggetto <xref:System.Data.DataSet>tipizzato, non è necessario usare il metodo <xref:System.Data.DataRowExtensions.Field%2A> o <xref:System.Data.DataRowExtensions.SetField%2A> il metodo generico per accedere ai dati della colonna. I nomi delle proprietà sono disponibili in fase di compilazione perché le informazioni sul tipo <xref:System.Data.DataSet>sono incluse in. LINQ to DataSet fornisce l'accesso ai valori di colonna come tipo corretto, in modo che vengano rilevati errori di mancata corrispondenza del tipo quando il codice viene compilato anziché in fase di esecuzione.
 
-Prima di iniziare l'esecuzione di query tipizzati <xref:System.Data.DataSet>, è necessario generare la classe usando il **Progettazione DataSet** in Visual Studio. Per altre informazioni, vedere [creare e configurare i set di dati](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Prima di iniziare a eseguire query su un <xref:System.Data.DataSet>oggetto tipizzato, è necessario generare la classe usando **Progettazione DataSet** in Visual Studio. Per altre informazioni, vedere [creare e configurare set](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)di dati.
 
 ## <a name="example"></a>Esempio
 
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Query su tabella incrociata](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Query su singola tabella](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [Esecuzione di query su oggetti DataSet](querying-datasets-linq-to-dataset.md)
+- [Query su tabella incrociata](cross-table-queries-linq-to-dataset.md)
+- [Query su singola tabella](single-table-queries-linq-to-dataset.md)

@@ -2,12 +2,12 @@
 title: Deduzione di colonne
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2718cbcf29799f99c8648b129fdb6079a6f6d344
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203595"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786185"
 ---
 # <a name="inferring-columns"></a>Deduzione di colonne
 Una volta che ADO.NET ha determinato quali elementi di un documento XML devono essere inferiti come tabelle per un tipo <xref:System.Data.DataSet>, vengono inferite le colonne di tali tabelle. In ADO.NET 2,0 è stato introdotto un nuovo motore di inferenza dello schema che deduce un tipo di dati fortemente tipizzato per ogni elemento **simpleType** . Nelle versioni precedenti il tipo di dati di un elemento **simpleType** derivato era sempre **xsd: String**.  
@@ -72,4 +72,4 @@ Una volta che ADO.NET ha determinato quali elementi di un documento XML devono e
 - [Caricamento delle informazioni dello schema DataSet da XML](loading-dataset-schema-information-from-xml.md)
 - [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

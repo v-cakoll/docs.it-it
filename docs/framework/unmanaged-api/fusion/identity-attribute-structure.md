@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751543"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796494"
 ---
-# <a name="identityattribute-structure"></a>Struttura IDENTITY_ATTRIBUTE
-Contiene informazioni sugli attributi di metadati su un' [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) istanza.  
+# <a name="identity_attribute-structure"></a>Struttura IDENTITY_ATTRIBUTE
+Contiene informazioni sugli attributi di metadati relativi a un'istanza di [IDefinitionIdentity](idefinitionidentity-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
-|Member|Descrizione|  
+|Member|DESCRIZIONE|  
 |------------|-----------------|  
-|`pszNamespace`|Un puntatore a una stringa di caratteri con terminazione null che contiene lo spazio dei nomi dell'attributo è in.|  
-|`pszName`|Un puntatore a una stringa di caratteri con terminazione null che contiene il nome dell'attributo.|  
-|`pszValue`|Un puntatore a una stringa di caratteri con terminazione null che contiene il valore dell'attributo.|  
+|`pszNamespace`|Puntatore a una stringa di caratteri con terminazione null che contiene lo spazio dei nomi in cui si trova l'attributo.|  
+|`pszName`|Puntatore a una stringa di caratteri con terminazione null che contiene il nome dell'attributo.|  
+|`pszValue`|Puntatore a una stringa di caratteri con terminazione null che contiene il valore dell'attributo.|  
   
 ## <a name="remarks"></a>Note  
- Il `IDENTITY_ATTRIBUTE` struttura contiene tre puntatori a stringhe di caratteri con terminazione null. Queste tre stringhe descrivono un attributo.  
+ La `IDENTITY_ATTRIBUTE` struttura contiene tre puntatori a stringhe di caratteri con terminazione null. Queste tre stringhe descrivono un attributo.  
   
- Un'istanza di un `IDENTITY_ATTRIBUTE` struttura è associata a un'istanza di un [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) struttura. Il `IDENTITY_ATTRIBUTE` struttura contiene le stringhe effettive e il corrispondente `IDENTITY_ATTRIBUTE_BLOB` struttura Elenca gli offset per le tre stringhe elencate nella `IDENTITY_ATTRIBUTE` struttura.  
+ Un'istanza di una `IDENTITY_ATTRIBUTE` struttura è associata a un'istanza di una struttura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . La `IDENTITY_ATTRIBUTE` struttura contiene le stringhe effettive e la struttura `IDENTITY_ATTRIBUTE_BLOB` corrispondente elenca gli offset alle `IDENTITY_ATTRIBUTE` tre stringhe elencate nella struttura.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -58,6 +58,6 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [Struttura IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
-- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Interfaccia IDefinitionIdentity](idefinitionidentity-interface.md)
+- [Struttura IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)
+- [Strutture Fusion](fusion-structures.md)
