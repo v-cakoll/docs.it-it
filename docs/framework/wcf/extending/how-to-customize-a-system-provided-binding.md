@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b92382b4a37168c33f9e97077ad292d27ea5bc3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797018"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Procedura: Personalizzare un'associazione basata sul sistema
-Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che consentono di configurare alcune delle proprietà degli elementi di associazione sottostante, ma non tutte le proprietà. In questo argomento viene illustrato come impostare proprietà sugli elementi di associazione per creare un'associazione personalizzata.  
+Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che consentono di configurare alcune delle proprietà degli elementi di associazione sottostanti, ma non tutte le proprietà. In questo argomento viene illustrato come impostare proprietà sugli elementi di associazione per creare un'associazione personalizzata.  
   
- Per altre informazioni su come creare e configurare gli elementi di associazione senza utilizzare le associazioni fornite dal sistema direttamente, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Per ulteriori informazioni su come creare e configurare direttamente gli elementi di associazione senza utilizzare le associazioni fornite dal sistema, vedere [associazioni personalizzate](custom-bindings.md).  
   
- Per altre informazioni sulla creazione e l'estensione delle associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Per ulteriori informazioni sulla creazione e sull'estensione di associazioni personalizzate, vedere [estensione di binding](extending-bindings.md).  
   
  In WCF tutte le associazioni sono costituite da *elementi di associazione*. Ogni elemento di associazione deriva dalla classe <xref:System.ServiceModel.Channels.BindingElement>. Le associazioni fornite dal sistema, ad esempio <xref:System.ServiceModel.BasicHttpBinding>, creano e configurano propri elementi di associazione. In questo argomento viene illustrato come accedere e modificare le proprietà di questi elementi di associazione che non sono direttamente esposte sull'associazione; in particolare, la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- I singoli elementi di associazione contenuti in una raccolta rappresentata dal <xref:System.ServiceModel.Channels.BindingElementCollection> classe e vengono aggiunti nell'ordine indicato: Flusso delle transazioni, sessione affidabile, protezione, Duplex composito, unidirezionale, Stream Security, codifica dei messaggi e trasporto. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione. In questa raccolta di elementi di associazione possono essere inclusi anche elementi di associazione definiti dall'utente, che devono essere visualizzati nello stesso ordine descritto in precedenza. Ad esempio, un trasporto definito dall'utente deve essere l'ultimo elemento della raccolta di elementi di associazione.  
+ I singoli elementi di associazione sono contenuti in una raccolta rappresentata <xref:System.ServiceModel.Channels.BindingElementCollection> dalla classe e vengono aggiunti nell'ordine seguente: Flusso delle transazioni, sessione affidabile, sicurezza, duplex composito, unidirezionale, sicurezza del flusso, codifica dei messaggi e trasporto. Si noti che non tutti gli elementi di associazione elencati sono necessari in ogni associazione. In questa raccolta di elementi di associazione possono essere inclusi anche elementi di associazione definiti dall'utente, che devono essere visualizzati nello stesso ordine descritto in precedenza. Ad esempio, un trasporto definito dall'utente deve essere l'ultimo elemento della raccolta di elementi di associazione.  
   
  La classe <xref:System.ServiceModel.BasicHttpBinding> contiene tre elementi di associazione:  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
   
 3. Un elemento di associazione del trasporto obbligatorio: <xref:System.ServiceModel.Channels.HttpTransportBindingElement> o <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
- In questo esempio si crea un'istanza dell'associazione, generare una *binding personalizzato* da quest'ultimo, esaminare gli elementi di associazione nell'associazione personalizzata e quando si trova l'elemento di associazione HTTP, impostiamo relativo `KeepAliveEnabled` proprietà `false`. La proprietà `KeepAliveEnabled` non è esposta direttamente su `BasicHttpBinding`, pertanto è necessario creare un'associazione personalizzata per spostarsi verso il basso sull'elemento di associazione e impostare questa proprietà.  
+ In questo esempio viene creata un'istanza dell'associazione, viene generata un' *associazione personalizzata* , vengono esaminati gli elementi di associazione nell'associazione personalizzata e quando si trova l'elemento di associazione http la relativa `KeepAliveEnabled` proprietà viene impostata su. `false` La proprietà `KeepAliveEnabled` non è esposta direttamente su `BasicHttpBinding`, pertanto è necessario creare un'associazione personalizzata per spostarsi verso il basso sull'elemento di associazione e impostare questa proprietà.  
   
 ### <a name="to-modify-a-system-provided-binding"></a>Per modificare un'associazione fornita dal sistema  
   
@@ -55,4 +55,4 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Associazioni personalizzate](custom-bindings.md)

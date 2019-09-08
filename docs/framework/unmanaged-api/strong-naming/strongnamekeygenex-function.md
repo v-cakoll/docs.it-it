@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2ed9ba4b580b8f64fc05dbb429742442a36acf5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f9ab908866402bd7a883114466f32921321a5ee6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757458"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799008"
 ---
 # <a name="strongnamekeygenex-function"></a>Funzione StrongNameKeyGenEx
-Genera una nuova coppia di chiavi pubblica/privata con la dimensione della chiave specificata per l'uso di nome sicuro.  
+Genera una nuova coppia di chiavi pubblica/privata con la dimensione della chiave specificata, per l'uso del nome sicuro.  
   
- Questa funzione è stata deprecata. Usare la [StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,45 +42,45 @@ BOOLEAN StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Parametri  
  `wszKeyContainer`  
- [in] Il nome di contenitore di chiavi richiesto. `wszKeyContainer` deve essere una stringa non vuota, oppure null per generare un nome temporaneo.  
+ in Nome del contenitore di chiavi richiesto. `wszKeyContainer`deve essere una stringa non vuota o null per generare un nome temporaneo.  
   
  `dwFlags`  
- [in] Specifica se mantenere la chiave di registrazione. Sono supportati i valori seguenti:  
+ in Specifica se lasciare la chiave registrata. Sono supportati i valori seguenti:  
   
-- 0x00000000 - utilizzato quando `wszKeyContainer` è null per generare un nome di contenitore di chiavi temporanee.  
+- 0x00000000: viene usato `wszKeyContainer` quando è null per generare un nome del contenitore di chiavi temporaneo.  
   
-- 0x00000001 (`SN_LEAVE_KEY`): Specifica che la chiave deve essere registrata a sinistra.  
+- 0x00000001 (`SN_LEAVE_KEY`): specifica che la chiave deve essere lasciata registrata.  
   
  `dwKeySize`  
- [in] Dimensione richiesta della chiave, espressa in bit.  
+ in Dimensioni richieste della chiave, in bit.  
   
  `ppbKeyBlob`  
- [out] La coppia di chiavi pubblica/privata restituita.  
+ out Coppia di chiavi pubblica/privata restituita.  
   
  `pcbKeyBlob`  
- [out] Le dimensioni, in byte, di `ppbKeyBlob`.  
+ out Dimensione, in byte, di `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` al termine dell'esecuzione; in caso contrario, `false`.  
+ `true`al completamento; in caso `false`contrario,.  
   
 ## <a name="remarks"></a>Note  
- Le versioni di .NET Framework 1.0 e 1.1 richiedono un `dwKeySize` pari a 1024 bit per firmare un assembly con nome sicuro; versione 2.0 aggiunge il supporto per le chiavi a 2048 bit.  
+ Per la firma di un assembly con un `dwKeySize` nome sicuro, le versioni di .NET Framework 1,0 e 1,1 richiedono un valore di 1024 bit. la versione 2,0 aggiunge i supporti per le chiavi a 2048 bit.  
   
- Una volta recuperata la chiave, è necessario chiamare il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) funzione per rilasciare la memoria allocata.  
+ Dopo che la chiave è stata recuperata, è necessario chiamare la funzione [StrongNameFreeBuffer](strongnamefreebuffer-function.md) per rilasciare la memoria allocata.  
   
- Se il `StrongNameKeyGenEx` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funzione per recuperare l'ultimo errore generato.  
+ Se la `StrongNameKeyGenEx` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [Metodo StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Metodo StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [Metodo StrongNameKeyGen](../hosting/iclrstrongname-strongnamekeygen-method.md)
+- [Interfaccia ICLRStrongName](../hosting/iclrstrongname-interface.md)

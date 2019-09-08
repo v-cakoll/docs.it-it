@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203370"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784392"
 ---
 # <a name="merging-dataset-contents"></a>Unione di contenuti di dataset
 
@@ -91,4 +91,4 @@ Nell'esempio di codice seguente viene selezionato un `DataSet` esistente con agg
 - [DataAdapter e DataReader](../dataadapters-and-datareaders.md)
 - [Recupero e modifica di dati in ADO.NET](../retrieving-and-modifying-data.md)
 - [Recupero di identità o di valori numerati automaticamente](../retrieving-identity-or-autonumber-values.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

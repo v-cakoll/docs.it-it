@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781067"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799109"
 ---
 # <a name="strongnameerrorinfo-function"></a>Funzione StrongNameErrorInfo
 Ottiene l'ultimo codice di errore che è stato generato da una delle funzioni con nome sicuro.  
@@ -39,16 +39,16 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- L'ultimo codice di errore COM impostato da una delle funzioni con nome sicuro.  
+ Ultimo codice di errore COM impostato da una delle funzioni con nome sicuro.  
   
 ## <a name="remarks"></a>Note  
- La maggior parte dei metodi con nome sicuro restituiscono un semplice `true` o `false` indicazione del completamento. Usare il `StrongNameErrorInfo` funzione per recuperare un valore HRESULT che specifica l'ultimo errore generato dalle funzioni con nome sicuro.  
+ La maggior parte dei metodi con nome sicuro restituisce `true` una `false` semplice o un'indicazione del completamento corretto. Utilizzare la `StrongNameErrorInfo` funzione per recuperare un valore HRESULT che specifica l'ultimo errore generato dalle funzioni con nome sicuro.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

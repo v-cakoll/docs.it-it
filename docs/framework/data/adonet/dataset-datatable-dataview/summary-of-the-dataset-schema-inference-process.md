@@ -2,12 +2,12 @@
 title: Riepilogo del processo di inferenza dello schema dataset
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 5266d08212e5259bd5b242a70d61e29ad9008006
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b0dd22412ddda86aa2883a26353abb1516a94e17
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203253"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785951"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Riepilogo del processo di inferenza dello schema dataset
 Il processo di inferenza determina innanzitutto, sulla base del documento XML, quali elementi verranno inferiti come tabelle. Sulla base delle rimanenti informazioni XML, il processo di inferenza consente quindi di determinare le colonne per tali tabelle. Nel caso di tabelle annidate, gli oggetti <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> vengono generati dal processo di inferenza.  
@@ -26,7 +26,7 @@ Il processo di inferenza determina innanzitutto, sulla base del documento XML, q
   
 - Gli elementi a cui non sono associati attributi o elementi figlio e che non si ripetono vengono inferiti come colonne.  
   
-- Per gli elementi inferiti come tabelle nidificate all'interno di altri elementi inferiti come tabelle, viene creata una **DataRelation** annidata tra le due tabelle. Una nuova colonna chiave primaria denominata **TableName_Id** viene aggiunta a entrambe le tabelle e utilizzata da DataRelation. Viene creato un **vincolo ForeignKeyConstraint** tra le due tabelle usando la colonna **TableName_Id** .  
+- Per gli elementi inferiti come tabelle nidificate all'interno di altri elementi inferiti come tabelle, viene creata una **DataRelation** annidata tra le due tabelle. Una nuova colonna chiave primaria denominata **TableName_Id** viene aggiunta a entrambe le tabelle e utilizzata da **DataRelation**. Viene creato un **vincolo ForeignKeyConstraint** tra le due tabelle usando la colonna **TableName_Id** .  
   
 - Per gli elementi inferiti come tabelle e che contengono testo ma privi di elementi figlio, viene creata una nuova colonna denominata **TableName_Text** per il testo di ogni elemento. Se un elemento viene inferito come tabella e dispone di testo, ma a tale elemento sono associati anche elementi figlio, il testo verrà ignorato.  
   
@@ -37,4 +37,4 @@ Il processo di inferenza determina innanzitutto, sulla base del documento XML, q
 - [Caricamento delle informazioni dello schema DataSet da XML](loading-dataset-schema-information-from-xml.md)
 - [Uso di XML in un set di dati](using-xml-in-a-dataset.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

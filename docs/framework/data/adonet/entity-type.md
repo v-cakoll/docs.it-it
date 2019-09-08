@@ -2,25 +2,25 @@
 title: tipo di entità
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: dd1e8a7605c29b3dacaa7ccf9156af2a9b65d5b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efd3ea0972148e885d4b22b49040640539bb28cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795126"
 ---
 # <a name="entity-type"></a>tipo di entità
-Il *tipo di entità* è il blocco predefinito fondamentale per descrivere la struttura dei dati con Entity Data Model (EDM). In un modello concettuale, un tipo di entità rappresenta la struttura di concetti di livello superiore, quale ad esempio clienti o ordini. Un tipo di entità è un modello per le istanze del tipo di entità. Ogni modello contiene le informazioni seguenti:  
+Il *tipo di entità* è il blocco predefinito fondamentale per la descrizione della struttura dei dati con il Entity Data Model (EDM). In un modello concettuale, un tipo di entità rappresenta la struttura di concetti di livello superiore, quale ad esempio clienti o ordini. Un tipo di entità è un modello per le istanze del tipo di entità. Ogni modello contiene le informazioni seguenti:  
   
 - Un nome univoco. Obbligatorio.  
   
-- Un' [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) definito da una o più proprietà. Obbligatorio.  
+- [Chiave di entità](entity-key.md) definita da una o più proprietà. Obbligatorio.  
   
-- I dati nel formato [proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
+- Dati sotto forma di [Proprietà](property.md). (Facoltative)  
   
-- [Le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) che consentono di navigare da un' [finali](../../../../docs/framework/data/adonet/association-end.md) di un [associazione](../../../../docs/framework/data/adonet/association-type.md) su altra estremità. (facoltativo)  
+- [Proprietà di navigazione](navigation-property.md) che consentono la navigazione da un'entità [finale](association-end.md) di un' [associazione](association-type.md) all'altra estremità. (facoltativo)  
   
- In un'applicazione, un'istanza di un tipo di entità rappresenta un oggetto specifico, quale ad esempio un cliente o un ordine specifico. Ogni istanza di un tipo di entità deve avere un valore univoco [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) all'interno di un' [set di entità](../../../../docs/framework/data/adonet/entity-set.md).  
+ In un'applicazione, un'istanza di un tipo di entità rappresenta un oggetto specifico, quale ad esempio un cliente o un ordine specifico. Ogni istanza di un tipo di entità deve avere una [chiave di entità](entity-key.md) univoca all'interno di un [set di entità](entity-set.md).  
   
  Due istanze di tipi di entità sono considerate uguali solo se sono dello stesso tipo e se i valori delle rispettive chiavi di entità sono uguali.  
   
@@ -31,12 +31,12 @@ Il *tipo di entità* è il blocco predefinito fondamentale per descrivere la str
   
  Si noti che le proprietà di ogni tipo di entità che costituiscono la chiave di entità vengono indicate con "(Key)".  
   
- Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente:  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente:  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [facet](../../../../docs/framework/data/adonet/facet.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)
+- [facet](facet.md)

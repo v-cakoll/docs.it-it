@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744532"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796597"
 ---
 # <a name="iassemblynamegetproperty-method"></a>Metodo IAssemblyName::GetProperty
-Ottiene un puntatore per la proprietà fa riferimento l'identificatore della proprietà specificata.  
+Ottiene un puntatore alla proprietà a cui fa riferimento l'identificatore di proprietà specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT GetProperty (
   
 ## <a name="parameters"></a>Parametri  
  `PropertyId`  
- [in] Identificatore univoco per la proprietà richiesta.  
+ in Identificatore univoco per la proprietà richiesta.  
   
  `pvProperty`  
- [out] I dati di proprietà restituita.  
+ out Dati della proprietà restituiti.  
   
  `pcbProperty`  
- [in, out] Le dimensioni, in byte, di `pvProperty`.  
+ [in, out] Dimensione, in byte, di `pvProperty`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -56,4 +56,4 @@ HRESULT GetProperty (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)

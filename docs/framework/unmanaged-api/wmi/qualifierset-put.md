@@ -1,6 +1,6 @@
 ---
 title: Funzione QualifierSet_Put (riferimenti alle API non gestite)
-description: La funzione QualifierSet_Put scrive qualificatore denominato e il relativo valore.
+description: La funzione QualifierSet_Put scrive il qualificatore denominato e il relativo valore.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Put
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377871"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798267"
 ---
-# <a name="qualifiersetput-function"></a>QualifierSet_Put (funzione)
+# <a name="qualifierset_put-function"></a>QualifierSet_Put (funzione)
 
-Scrive il qualificatore e il valore denominati. Nuovo qualificatore sovrascrive il valore precedente con lo stesso nome. Se il qualificatore non esiste, viene creato.
+Scrive il qualificatore e il valore denominati. Il nuovo qualificatore sovrascrive il valore precedente con lo stesso nome. Se il qualificatore non esiste, viene creato.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,23 +44,23 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`\
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`\
-[in] Un puntatore a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) istanza.
+in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`\
-[in] Il nome del qualificatore da scrivere.
+in Nome del qualificatore da scrivere.
 
 `pVal`\
-[in] Un puntatore a un valore valido `VARIANT` che contiene il qualificatore da scrivere. Questo parametro non può essere `null`.
+in Puntatore a un oggetto valido `VARIANT` che contiene il qualificatore da scrivere. Questo parametro non può `null`essere.
 
 `lFlavor`\
-[in] Una delle costanti seguenti che definisce il contrassegno qualificatore desiderato per questo qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
+in Una delle costanti seguenti che definisce le versioni del qualificatore desiderate per questo qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Il qualificatore può essere sottoposto a override in un'istanza o una classe derivata. **Questo è il valore predefinito.** |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Il qualificatore può essere sottoposto a override in una classe o un'istanza derivata. **Si tratta del valore predefinito.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Il qualificatore viene propagato alle istanze. |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Il qualificatore viene propagato alle classi derivate. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Il qualificatore non può essere sottoposto a override in una classe o in un'istanza derivata. |
@@ -68,25 +68,25 @@ HRESULT QualifierSet_Put (
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Value  |DESCRIZIONE  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Si è verificato un tentativo non valido per specificare il **chiave** qualificatore su una proprietà che non può essere una chiave. Le chiavi sono specificate nella definizione della classe per un oggetto e non possono essere modificate in ogni istanza. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Si è verificato un tentativo non valido di specificare il qualificatore di **chiave** su una proprietà che non può essere una chiave. Le chiavi sono specificate nella definizione della classe per un oggetto e non possono essere modificate per ogni singola istanza. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Il `pVal` parametro non è di un tipo di qualificatore valido. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Non è possibile chiamare il `QualifierSet_Put` metodo sul qualificatore poiché l'oggetto proprietario non consente sostituzioni. |
-| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Non è possibile chiamare il `QualifierSet_Put` metodo sul qualificatore perché l'oggetto proprietario non consente le sostituzioni. |
+| `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) .
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** WMINet_Utils.idl
+**Intestazione:** WMINet_Utils. idl
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

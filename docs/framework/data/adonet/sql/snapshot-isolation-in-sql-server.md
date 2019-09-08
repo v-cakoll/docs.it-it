@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958004"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791747"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
@@ -118,7 +118,7 @@ SqlTransaction sqlTran =
   
 - Inizia, ma non completa, sqlTransaction1 usando l'isolamento SNAPSHOT. Nella transazione vengono selezionate tre righe di dati.  
   
-- Crea una seconda SqlConnection in **AdventureWorks** e crea una seconda transazione usando il livello di isolamento Read committed che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
+- Crea una seconda **SqlConnection** in **AdventureWorks** e crea una seconda transazione usando il livello di isolamento Read committed che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
   
 - Esegue il commit di sqlTransaction2.  
   
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server e ADO.NET](index.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)
 - [Guida al controllo delle versioni delle righe e dei blocchi delle transazioni](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

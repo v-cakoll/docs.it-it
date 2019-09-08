@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784851"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Aggiunta di colonne a un oggetto DataTable
 Un <xref:System.Data.DataTable> oggetto contiene una raccolta <xref:System.Data.DataColumn> di oggetti a cui fa riferimento la proprietà **Columns** della tabella. Tale raccolta di colonne, insieme a eventuali vincoli, consente di definire lo schema, o struttura, della tabella.  
@@ -47,7 +47,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
  Nell'esempio si noti che le proprietà della colonna **CustID** sono impostate in modo da non consentire valori **DBNull** e vincolare i valori in modo che siano univoci. Tuttavia, se si definisce la colonna **CustID** come colonna chiave primaria della tabella, la proprietà **AllowDBNull** verrà impostata automaticamente su **false** e la proprietà **Unique** verrà impostata automaticamente su **true**. Per ulteriori informazioni, vedere [definizione delle chiavi primarie](defining-primary-keys.md).  
   
 > [!CAUTION]
-> Se per una colonna non viene specificato un nome di colonna, alla colonna viene assegnato il nome predefinito incrementale Column*N,* che inizia con "Column1", quando viene aggiunto a DataColumnCollection. Si consiglia di evitare la convenzione di denominazione "Column*N*" quando si fornisce un nome di colonna, perché il nome fornito potrebbe entrare in conflitto con un nome di colonna predefinito esistentein DataColumnCollection. Se il nome fornito è già presente, viene generata un'eccezione.  
+> Se per una colonna non viene specificato un nome di colonna, alla colonna viene assegnato il nome predefinito incrementale Column*N,* che inizia con "Column1", quando viene aggiunto a **DataColumnCollection**. Si consiglia di evitare la convenzione di denominazione "Column*N*" quando si fornisce un nome di colonna, perché il nome fornito potrebbe entrare in conflitto con un nome di colonna predefinito esistente in **DataColumnCollection**. Se il nome fornito è già presente, viene generata un'eccezione.  
   
  Se si sta usando l'oggetto <xref:System.Xml.Linq.XElement> come proprietà <xref:System.Data.DataColumn.DataType%2A> di un oggetto <xref:System.Data.DataColumn> nell'oggetto <xref:System.Data.DataTable>, la serializzazione XML non funzionerà quando si legge nei dati. Ad esempio, se si scrive un oggetto <xref:System.Xml.XmlDocument> usando il metodo `DataTable.WriteXml`, durante la serializzazione in XML è presente un nodo padre aggiuntivo nell'oggetto <xref:System.Xml.Linq.XElement>. Per risolvere questo problema, usare il tipo <xref:System.Data.SqlTypes.SqlXml> invece dell'oggetto <xref:System.Xml.Linq.XElement>. `ReadXml` e `WriteXml` funzionano correttamente con l'oggetto <xref:System.Data.SqlTypes.SqlXml>.  
   
@@ -58,4 +58,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataTable>
 - [Definizione dello schema DataTable](datatable-schema-definition.md)
 - [DataTable](datatables.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

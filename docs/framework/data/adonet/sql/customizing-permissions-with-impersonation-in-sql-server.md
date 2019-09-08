@@ -2,12 +2,12 @@
 title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961087"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782480"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Uso di EXECUTE AS con REVERT  
  È possibile usare l'istruzione REVERT Transact-SQL per ripristinare il contesto di esecuzione originale.  
   
- La clausola facoltativa with no Revert cookie @variableName= consente di riportare il contesto di esecuzione al chiamante se @variableName la variabile contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante dell'istruzione Execute As, il chiamante può garantire che il contesto di esecuzione non possa essere modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per ulteriori informazioni sul pool di connessioni in ADO.NET, vedere [SQL Server pool di connessioni (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ La clausola facoltativa with no Revert cookie @variableName= consente di riportare il contesto di esecuzione al chiamante se @variableName la variabile contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante dell'istruzione Execute As, il chiamante può garantire che il contesto di esecuzione non possa essere modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per ulteriori informazioni sul pool di connessioni in ADO.NET, vedere [SQL Server pool di connessioni (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Specifica del contesto di esecuzione  
  Oltre a specificare un utente, è inoltre possibile usare EXECUTE AS con le parole chiave seguenti.  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Modifica di dati con stored procedure](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Gestione delle autorizzazioni con stored procedure in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Scrittura dinamica sicura in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Firma di stored procedure in SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Modifica di dati con stored procedure](../modifying-data-with-stored-procedures.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

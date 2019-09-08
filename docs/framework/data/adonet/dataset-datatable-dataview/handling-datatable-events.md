@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203678"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786257"
 ---
 # <a name="handling-datatable-events"></a>Gestione di eventi DataTable
 Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che possono essere elaborati da un'applicazione. Nella tabella seguente vengono descritti gli eventi di `DataTable`.  
   
-|event|DESCRIZIONE|  
+|event|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Viene generato dopo la chiamata al metodo <xref:System.Data.DataTable.EndInit%2A> di `DataTable`. Questo evento è progettato principalmente per supportare gli scenari in fase di progettazione.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Viene generato dopo la modifica di un valore in <xref:System.Data.DataColumn>.|  
@@ -84,4 +84,4 @@ Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che po
 - [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
 - [Gestione di eventi DataAdapter](../handling-dataadapter-events.md)
 - [Gestione di eventi di set di dati](handling-dataset-events.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

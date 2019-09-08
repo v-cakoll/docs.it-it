@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949423"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786693"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Creazione di un oggetto DataView (LINQ to DataSet)
 Esistono due modi per creare un oggetto <xref:System.Data.DataView> nel contesto LINQ to DataSet. È possibile creare un <xref:System.Data.DataView> oggetto da una query di LINQ to DataSet <xref:System.Data.DataTable>su un oggetto oppure è possibile crearlo da un oggetto tipizzato <xref:System.Data.DataTable>o non tipizzato. In entrambi i <xref:System.Data.DataView> casi, si crea usando uno <xref:System.Data.DataTableExtensions.AsDataView%2A> dei metodi di estensione. <xref:System.Data.DataView> non è direttamente costruibile nel contesto LINQ to DataSet.  
@@ -19,7 +19,7 @@ Esistono due modi per creare un oggetto <xref:System.Data.DataView> nel contesto
   
  <xref:System.Data.DataView> costruisce un indice, offrendo un significativo incremento delle prestazioni nel caso di operazioni in cui è possibile usare l'indice, ad esempio ordinamento e filtro. L'indice relativo a un oggetto <xref:System.Data.DataView> viene compilato sia quando si crea <xref:System.Data.DataView> che quando si modifica una qualsiasi delle informazioni relative all'ordinamento o al filtraggio. Se si crea un oggetto <xref:System.Data.DataView> e quindi si impostano le impostazioni sull'ordinamento o il filtraggio in un secondo momento, l'indice verrà compilato almeno due volte, ovvero una volta durante la creazione di <xref:System.Data.DataView> e una seconda volta quando viene modificata una qualsiasi delle proprietà di ordinamento o filtro.  
   
- Per ulteriori informazioni sul filtro e l'ordinamento con <xref:System.Data.DataView>, vedere [filtro con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) e [ordinamento con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+ Per ulteriori informazioni sul filtro e l'ordinamento con <xref:System.Data.DataView>, vedere [filtro con DataView](filtering-with-dataview-linq-to-dataset.md) e [ordinamento con DataView](sorting-with-dataview-linq-to-dataset.md).  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>Creazione di una DataView da una query LINQ to DataSet  
  Un <xref:System.Data.DataView> oggetto può essere creato dai risultati di una query di LINQ to DataSet, in cui i risultati sono una proiezione <xref:System.Data.DataRow> di oggetti. Il nuovo oggetto <xref:System.Data.DataView> eredita le informazioni di filtro e ordinamento della query da cui è stato creato.  
@@ -72,6 +72,6 @@ Esistono due modi per creare un oggetto <xref:System.Data.DataView> nel contesto
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Data binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtro con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Ordinamento con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Data binding e LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Filtro con DataView](filtering-with-dataview-linq-to-dataset.md)
+- [Ordinamento con DataView](sorting-with-dataview-linq-to-dataset.md)

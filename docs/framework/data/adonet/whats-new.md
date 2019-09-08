@@ -2,34 +2,34 @@
 title: Novità in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0a02ca3885524c5fcf8def603acdce33a972d283
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379979"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791267"
 ---
 # <a name="whats-new-in-adonet"></a>Novità in ADO.NET
 
-Le funzionalità seguenti sono nuove in ADO.NET in .NET Framework 4.5.
+Le funzionalità seguenti sono nuove in ADO.NET nella .NET Framework 4,5.
 
 ## <a name="sqlclient-data-provider"></a>Provider di dati SqlClient
 
-Le funzionalità seguenti sono nuove in Provider di dati .NET Framework per SQL Server in .NET Framework 4.5:
+Le funzionalità seguenti sono nuove nell'provider di dati di .NET Framework per SQL Server in .NET Framework 4,5:
 
 - Le parole chiave della stringa di connessione ConnectRetryCount e ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) consentono di controllare la funzionalità di resilienza di una connessione inattiva.
 
-- Supporto del flusso da SQL Server a un'applicazione supporta scenari in cui i dati nel server sono dati non strutturati.  Visualizzare [supporto del flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) per altre informazioni.
+- Il supporto del flusso da SQL Server a un'applicazione supporta scenari in cui i dati nel server non sono strutturati.  Per ulteriori informazioni, vedere [supporto del flusso SqlClient](sqlclient-streaming-support.md) .
 
-- È stato aggiunto il supporto per la programmazione asincrona.  Visualizzare [programmazione asincrona](../../../../docs/framework/data/adonet/asynchronous-programming.md) per altre informazioni.
+- È stato aggiunto il supporto per la programmazione asincrona.  Per ulteriori informazioni, vedere [programmazione asincrona](asynchronous-programming.md) .
 
-- Gli errori di connessione verranno registrati nel registro eventi esteso. Per altre informazioni, vedere [Traccia dati in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).
+- Gli errori di connessione verranno registrati nel registro eventi esteso. Per altre informazioni, vedere [Traccia dati in ADO.NET](data-tracing.md).
 
-- SqlClient ora offre supporto per la disponibilità elevata SQL Server, funzionalità di ripristino di emergenza, AlwaysOn. Per altre informazioni, vedere [supporto SqlClient per disponibilità elevata, ripristino di emergenza](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+- SqlClient dispone ora del supporto per la funzionalità di ripristino di emergenza e disponibilità elevata SQL Server, AlwaysOn. Per ulteriori informazioni, vedere il [supporto SqlClient per la disponibilità elevata e il ripristino di emergenza](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Una password può essere passata come un <xref:System.Security.SecureString> quando si usa l'autenticazione di SQL Server. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlCredential>.
+- Una password può essere passata come <xref:System.Security.SecureString> quando si usa l'autenticazione SQL Server. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlCredential>.
 
-- Quando `TrustServerCertificate` è false e `Encrypt` è true, il nome del server (o l'indirizzo IP) in un certificato SSL di SQL Server deve corrispondere esattamente il server name (o indirizzo IP) specificato nella stringa di connessione. In caso contrario, il tentativo di connessione non riuscirà. Per altre informazioni, vedere la descrizione dell'opzione di connessione `Encrypt` in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Quando `TrustServerCertificate` è false e `Encrypt` è true, il nome del server (o indirizzo IP) in un certificato SSL SQL Server deve corrispondere esattamente al nome del server (o indirizzo IP) specificato nella stringa di connessione. In caso contrario, il tentativo di connessione non riuscirà. Per altre informazioni, vedere la descrizione dell'opzione di connessione `Encrypt` in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
   Se questa modifica impedisce a un'applicazione esistente di stabilire una connessione in futuro, è possibile correggere l'applicazione usando una delle operazioni seguenti:
 
@@ -39,24 +39,23 @@ Le funzionalità seguenti sono nuove in Provider di dati .NET Framework per SQL 
 
   - Usare il nome di dominio completo nella stringa di connessione.
 
-- SqlClient supporta la protezione estesa. Per altre informazioni sulla protezione estesa, vedere [la connessione al motore di Database usando estesi protezione](https://go.microsoft.com/fwlink/?LinkId=219978).
+- SqlClient supporta la protezione estesa. Per ulteriori informazioni sulla protezione estesa, vedere [connessione al motore di database mediante la protezione estesa](https://go.microsoft.com/fwlink/?LinkId=219978).
 
-- SqlClient supporta le connessioni ai database LocalDB. Per altre informazioni, vedere [supporto SqlClient per LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).
+- SqlClient supporta le connessioni ai database LocalDB. Per ulteriori informazioni, vedere [supporto SqlClient per il database locale](./sql/sqlclient-support-for-localdb.md).
 
 - `Type System Version=SQL Server 2012;` è il nuovo valore da passare alla proprietà di connessione `Type System Version`. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se una colonna è di tipo sparse (vedere [raccolte di schemi di SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) per altre informazioni). Per altre informazioni sulle colonne di tipo sparse, vedere [utilizzo di colonne di tipo Sparse](https://go.microsoft.com/fwlink/?LinkId=224244).
+- SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica se una colonna è una colonna di tipo sparse. per ulteriori informazioni, vedere [SQL Server raccolte di schemi](sql-server-schema-collections.md) . Per ulteriori informazioni sulle colonne di tipo sparse, vedere [utilizzo di colonne di tipo sparse](https://go.microsoft.com/fwlink/?LinkId=224244).
 
-- L'assembly Microsoft.SqlServer.Types.dll, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. Le applicazioni che fanno riferimento a questo assembly potrebbero avere esito negativo. Per altre informazioni, vedere [le modifiche di rilievo alle funzionalità del motore di Database](https://go.microsoft.com/fwlink/?LinkId=224367).
+- L'assembly Microsoft.SqlServer.Types.dll, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. Le applicazioni che fanno riferimento a questo assembly potrebbero avere esito negativo. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità di motore di database](https://go.microsoft.com/fwlink/?LinkId=224367).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-.NET Framework 4.5 aggiunge le API che abilitano nuovi scenari quando si lavora con Entity Framework 5.0. Per altre informazioni sui miglioramenti e funzionalità che sono stati aggiunti a Entity Framework 5.0, vedere gli argomenti seguenti: [Quali sono le novità](https://go.microsoft.com/fwlink/?LinkID=251106) e [le versioni di Entity Framework e il controllo delle versioni](https://go.microsoft.com/fwlink/?LinkId=234899).
+Il .NET Framework 4,5 aggiunge API che consentono nuovi scenari quando si lavora con Entity Framework 5,0. Per ulteriori informazioni sui miglioramenti e sulle funzionalità aggiunti alla Entity Framework 5,0, vedere gli argomenti seguenti: [Novità e](https://go.microsoft.com/fwlink/?LinkID=251106) Entity Framework versioni [e controllo delle versioni](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Quali sono le novità in WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](index.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)
+- [SQL Server e ADO.NET](./sql/index.md)
+- [Novità di WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

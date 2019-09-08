@@ -2,47 +2,47 @@
 title: Riferimenti
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3c33613c3b20020248b0ba6bb9e17266edc07bae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610575"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792837"
 ---
 # <a name="reference"></a>Riferimenti
 Questa sezione descrive informazioni di riferimento per gli sviluppatori che usano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Sono anche incoraggiati a cercare problemi specifici di Microsoft Docs e in particolare per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. È inoltre possibile studiare un white paper in cui viene descritta in dettaglio la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti esempi di codice Visual Basic e C#. Per altre informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
+ Si consiglia inoltre di eseguire ricerche Microsoft Docs per problemi specifici e, in particolare, di partecipare al [Forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. È inoltre possibile studiare un white paper in cui viene descritta in dettaglio la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti esempi di codice Visual Basic e C#. Per ulteriori informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- Descrive come common language costrutti di runtime (CLR) abbiano espressioni corrispondenti in SQL where solo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è fornita una conversione nel motore di conversione esplicita.  
+ [Tipi di dati e funzioni](data-types-and-functions.md)  
+ Viene descritto il modo in cui i costrutti di Common Language Runtime (CLR) presentano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] espressioni corrispondenti in SQL solo dove ha fornito in modo esplicito una conversione nel motore di traduzione.  
   
- [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- Descrive la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approccio basato su attributi per il mapping un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti per un database di SQL Server.  
+ [Mapping basato su attributi](attribute-based-mapping.md)  
+ Viene descritto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'approccio basato su attributi per il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapping di un modello a oggetti a un database SQL Server.  
   
- [Generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Generazione di codice in LINQ to SQL](code-generation-in-linq-to-sql.md)  
  Viene descritto come vengono ottenute metainformazioni da un database in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], quindi come vengono generati file di codice.  
   
- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)  
- Descrive la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approccio di mapping esterno per il mapping un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti per un database di SQL Server. Viene fornita la definizione dello schema XSD per i file di mapping.  
+ [External Mapping](external-mapping.md) (Mapping esterno)  
+ Viene descritto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'approccio di mapping esterno per eseguire [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] il mapping di un modello a oggetti a un database SQL Server. Viene fornita la definizione dello schema XSD per i file di mapping.  
   
- [Domande frequenti](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
+ [Domande frequenti](frequently-asked-questions.md)  
  Vengono fornite risposte alle domande comuni relative a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [SQL Server Compact e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Descrive le differenze da SQL Server in SQL Server Compact 3.5 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applicazioni.  
+ [SQL Server Compact e LINQ to SQL](sql-server-compact-and-linq-to-sql.md)  
+ Viene descritto il modo in cui SQL Server Compact 3,5 differisce da SQL Server nelle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applicazioni.  
   
- [Conversione dell'operatore query standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
- Viene descritto come [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte gli operatori Query Standard in comandi SQL.  
+ [Conversione dell'operatore query standard](standard-query-operator-translation.md)  
+ Viene descritto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in che modo converte gli operatori di query standard in comandi SQL.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](index.md)  
  Viene fornito un portale per l'accesso ad argomenti relativi a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [LINQ (Language-Integrated Query) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
  [LINQ (Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Fornisce i portali per [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] argomenti.  
+ Fornisce i portali [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] per gli argomenti.  
   
- [Cenni preliminari sul controllo Server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Viene descritto come la <xref:System.Web.UI.WebControls.LinqDataSource> controllo espone [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] agli sviluppatori Web tramite l'architettura del controllo origine dati ASP.NET.
+ [Cenni preliminari sul controllo server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
+ Viene descritto il <xref:System.Web.UI.WebControls.LinqDataSource> modo in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] cui il controllo espone agli sviluppatori Web tramite l'architettura del controllo origine dati ASP.NET.

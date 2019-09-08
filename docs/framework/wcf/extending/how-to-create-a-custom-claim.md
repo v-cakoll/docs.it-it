@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399aba1a6ad70ae37355f529a291ab2f604af03f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619613"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797082"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedura: Creare un'attestazione personalizzata
-L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) offre un set di tipi di attestazione incorporati e diritti con le funzioni di supporto per la creazione di <xref:System.IdentityModel.Claims.Claim> istanze con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziale client supportati da WCF per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
+L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) fornisce un set di tipi di attestazioni e diritti predefiniti con le funzioni di supporto <xref:System.IdentityModel.Claims.Claim> per la creazione di istanze con tali tipi e diritti. Queste attestazioni predefinite sono progettate per modellare le informazioni disponibili nei tipi di credenziali client supportate da WCF per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Per creare un'attestazione personalizzata basata su un tipo di dati primitivo  
   
@@ -21,7 +21,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
     1. Stabilire un valore univoco per il tipo di attestazione.  
   
-         Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco di tipi di attestazione definiti da WCF, vedere il <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
+         Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco dei tipi di attestazione definiti da WCF, vedere la <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
     2. Scegliere il tipo di dati primitivo e il valore della risorsa.  
   
@@ -29,7 +29,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
     3. Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
   
-         Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nel <xref:System.IdentityModel.Claims.Rights> classe.  
+         Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nella <xref:System.IdentityModel.Claims.Rights> classe.  
   
          È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il diritto sia univoco.  
   
@@ -44,7 +44,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
     1. Stabilire un valore univoco per il tipo di attestazione.  
   
-         Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco di tipi di attestazione definiti da WCF, vedere il <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
+         Il tipo di attestazione è un identificatore di stringa univoco. È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il tipo di attestazione sia univoco. Per un elenco dei tipi di attestazione definiti da WCF, vedere la <xref:System.IdentityModel.Claims.ClaimTypes> classe.  
   
     2. Scegliere o definire un tipo non primitivo serializzabile per la risorsa.  
   
@@ -59,7 +59,7 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
     3. Scegliere un diritto definito da WCF o un valore univoco per un diritto personalizzato.  
   
-         Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nel <xref:System.IdentityModel.Claims.Rights> classe.  
+         Un diritto è un identificatore di stringa univoco. I diritti definiti da WCF sono definiti nella <xref:System.IdentityModel.Claims.Rights> classe.  
   
          È responsabilità di chi progetta l'attestazione personalizzata assicurare che l'identificatore di stringa usato per il diritto sia univoco.  
   
@@ -81,4 +81,4 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)

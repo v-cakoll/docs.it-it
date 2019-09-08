@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41e79a4c9587e3e738039cbf6a84087a2e7fc9b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787470"
 ---
 # <a name="getalinkmessagedll-function"></a>Funzione GetALinkMessageDll
-Trova e carica la DLL dei messaggi. Restituisce 0 se non è stato possibile che si trova o caricare la DLL dei messaggi. La DLL dei messaggi deve essere in una sottodirectory il cui nome è un ID di lingua, o nella directory corrente.  
+Trova e carica la DLL del messaggio. Restituisce 0 se non è stato possibile trovare o caricare la DLL del messaggio. La DLL del messaggio deve trovarsi in una sottodirectory il cui nome è un ID lingua o nella directory corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** alink.h  
+ **Intestazione:** ALink. h  
   
  **Libreria**: ALink. dll  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

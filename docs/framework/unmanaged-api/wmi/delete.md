@@ -1,6 +1,6 @@
 ---
-title: Eliminare la funzione (riferimenti alle API non gestite)
-description: La funzione di eliminazione Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
+title: Funzione Delete (riferimenti alle API non gestite)
+description: La funzione Delete Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636728"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798678"
 ---
 # <a name="delete-function"></a>Funzione Delete
 
-Elimina la proprietà specificata e tutti i relativi i qualificatori da una definizione di classe CIM.
+Elimina la proprietà specificata e tutti i relativi qualificatori da una definizione di classe CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,39 +42,39 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`\
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`\
-[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
+in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] Il nome della proprietà da eliminare. `wszName` deve essere un puntatore a un valore valido `LPCWSTR`.
+in Nome della proprietà da eliminare. `wszName`deve essere un puntatore a un oggetto `LPCWSTR`valido.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | La proprietà non può essere eliminata. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Impossibile eliminare la proprietà. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` non è valido. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | La proprietà specificata non esiste. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Non è disponibile memoria sufficiente per completare l'operazione. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente per completare l'operazione. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | La proprietà viene ereditata da una classe base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | La proprietà è una proprietà di sistema. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La funzione eliminato un valore sostitutivo predefinito per la classe corrente. Il valore predefinito per questa proprietà nella classe padre è stato riattivato. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La funzione ha eliminato un valore predefinito di override per la classe corrente. Il valore predefinito per questa proprietà nella classe padre è stato riattivato. |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::D Elimina](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) .
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** WMINet_Utils.idl
+**Intestazione:** WMINet_Utils. idl
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

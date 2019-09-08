@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203505"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786214"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Caricamento delle informazioni dello schema di dataset da XML
 Lo schema di un <xref:System.Data.DataSet> oggetto (le tabelle, le colonne, le relazioni e i vincoli) può essere definito a livello di codice, creato mediante i metodi <xref:System.Data.Common.DataAdapter> **Fill** o **FillSchema** di un oggetto o caricato da un documento XML. Per caricare le informazioni sullo schema del **set di dati** da un documento XML, è possibile usare il metodo **ReadXmlSchema** o **InferXmlSchema** del **set di dati**. **ReadXmlSchema** consente di caricare o dedurre le informazioni sullo schema del **set di dati** dal documento che contiene lo schema XSD (XML Schema Definition Language) o da un documento XML con XML Schema inline. **InferXmlSchema** consente di dedurre lo schema dal documento XML ignorando determinati spazi dei nomi XML specificati dall'utente.  
@@ -21,7 +21,7 @@ Lo schema di un <xref:System.Data.DataSet> oggetto (le tabelle, le colonne, le r
 ## <a name="readxmlschema"></a>ReadXmlSchema  
  Per caricare lo schema di un **DataSet** da un documento XML senza caricare dati, è possibile usare il metodo **ReadXmlSchema** del **DataSet**. **ReadXmlSchema** crea lo schema del **set di dati** definito utilizzando lo schema XSD (XML Schema Definition Language).  
   
- Il metodo **ReadXmlSchema** accetta un solo argomento di un nome file, un flusso o un **XmlReader** che contiene il documento XML da caricare. È possibile che nel documento XML sia contenuto solo lo schema, oppure che in tale documento sia contenuto lo schema inline con elementi XML contenenti dati. Per informazioni dettagliate sulla scrittura di uno schema inline come XML Schema, vedere derivazione [della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Il metodo **ReadXmlSchema** accetta un solo argomento di un nome file, un flusso o un **XmlReader** che contiene il documento XML da caricare. È possibile che nel documento XML sia contenuto solo lo schema, oppure che in tale documento sia contenuto lo schema inline con elementi XML contenenti dati. Per informazioni dettagliate sulla scrittura di uno schema inline come XML Schema, vedere [derivazione della struttura relazionale di DataSet da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
  Se il documento XML passato a **ReadXmlSchema** non contiene informazioni sullo schema inline, **ReadXmlSchema** dedurrà lo schema dagli elementi nel documento XML. Se il **set di dati** contiene già uno schema, lo schema corrente verrà esteso mediante l'aggiunta di nuove tabelle, se non esistono già. Nelle tabelle esistenti non verranno aggiunte nuove colonne. Se una colonna aggiunta esiste già nel set di **dati** ma dispone di un tipo incompatibile con la colonna trovata nel codice XML, viene generata un'eccezione. Per informazioni dettagliate sul modo in cui **ReadXmlSchema** deduce uno schema da un documento XML, vedere [deduzione della struttura relazionale di DataSet da XML](inferring-dataset-relational-structure-from-xml.md).  
   
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- A causa degli attributi specificati per gli elementi nel documento XML precedente, sia il metodo **ReadXmlSchema** che il metodo **ReadXml** con **XmlReadMode** **InferSchema** creeranno tabelle per ogni elemento nel documento **Categories**, **CategoryID**, **CategoryName**, **Description**, **Products**, **ProductID**, **ReorderLevel**e Discontinued. Per ulteriori informazioni, vedere [deduzione della struttura relazionale di DataSet da XML](inferring-dataset-relational-structure-from-xml.md). Tuttavia, una struttura più appropriata consiste nel creare solo le tabelle Categories e Products, quindi creare le colonne **CategoryID**, **CategoryName**e **Description** nella tabella **Categories** eLe colonne ProductID, **ReorderLevel**e Discontinued nella tabella **Products** . Per assicurarsi che lo schema inferito ignori gli attributi specificati negli elementi XML, usare il metodo **InferXmlSchema** e specificare lo spazio dei nomi XML per **officedata** da ignorare, come illustrato nell'esempio seguente.  
+ A causa degli attributi specificati per gli elementi nel documento XML precedente, sia il metodo **ReadXmlSchema** che il metodo **ReadXml** con **XmlReadMode** **InferSchema** creeranno tabelle per ogni elemento nel documento **Categories**, **CategoryID**, **CategoryName**, **Description**, **Products**, **ProductID**, **ReorderLevel**e **Discontinued**. Per ulteriori informazioni, vedere [deduzione della struttura relazionale di DataSet da XML](inferring-dataset-relational-structure-from-xml.md). Tuttavia, una struttura più appropriata consiste nel creare solo le tabelle **Categories** e **Products** , quindi creare le colonne **CategoryID**, **CategoryName**e **Description** nella tabella **Categories** eLe colonne ProductID, **ReorderLevel**e **Discontinued** nella tabella **Products** . Per assicurarsi che lo schema inferito ignori gli attributi specificati negli elementi XML, usare il metodo **InferXmlSchema** e specificare lo spazio dei nomi XML per **officedata** da ignorare, come illustrato nell'esempio seguente.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [Deduzione della struttura relazionale di DataSet da XML](inferring-dataset-relational-structure-from-xml.md)
 - [Caricamento di un oggetto DataSet da XML](loading-a-dataset-from-xml.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

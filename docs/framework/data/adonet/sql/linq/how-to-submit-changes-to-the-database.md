@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902694"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793111"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Procedura: Inviare modifiche al database
 Indipendentemente da quante modifiche si apportano agli oggetti, queste vengono applicate solo alle repliche in memoria. Le modifiche non vengono apportate ai dati effettivi nel database e non saranno trasmesse al server finché non si chiama in modo esplicito <xref:System.Data.Linq.DataContext.SubmitChanges%2A> su <xref:System.Data.Linq.DataContext>.  
   
- Quando si effettua questa chiamata, <xref:System.Data.Linq.DataContext> tenta di convertire le modifiche in comandi SQL equivalenti. È possibile usare una logica personalizzata per eseguire l'override di queste azioni, ma l'ordine di invio viene gestito da un servizio del <xref:System.Data.Linq.DataContext> noto come il *processore delle modifiche*. Di seguito viene riportata la sequenza degli eventi:  
+ Quando si effettua questa chiamata, <xref:System.Data.Linq.DataContext> tenta di convertire le modifiche in comandi SQL equivalenti. È possibile usare la logica personalizzata per eseguire l'override di queste azioni, ma l'ordine di invio è orchestrato da un servizio <xref:System.Data.Linq.DataContext> del noto come *processore delle modifiche*. Di seguito viene riportata la sequenza degli eventi:  
   
 1. Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esamina il set di oggetti conosciuti per determinare se a tali oggetti sono state associate nuove istanze. In caso affermativo, queste nuove istanze vengono aggiunte al set di oggetti registrati.  
   
@@ -35,7 +35,7 @@ Indipendentemente da quante modifiche si apportano agli oggetti, queste vengono 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Rilevare e risolvere gli invii in conflitto](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Procedura: Rilevare e risolvere gli invii in conflitto](how-to-detect-and-resolve-conflicting-submissions.md)
+- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)
+- [Download di database di esempio](downloading-sample-databases.md)
+- [Creazione e invio di modifiche dei dati](making-and-submitting-data-changes.md)

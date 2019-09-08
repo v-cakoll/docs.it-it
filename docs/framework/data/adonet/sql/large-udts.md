@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909875"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794018"
 ---
 # <a name="large-udts"></a>Tipi di grandi dimensioni definiti dall'utente
 I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server. I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
@@ -27,7 +27,7 @@ I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il s
 1. [Tipi definiti dall'utente CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recupero di schemi UDT tramite GetSchema  
- Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>. Per ulteriori informazioni, vedere [SQL Server raccolte di schemi](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ Il metodo <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> di <xref:System.Data.SqlClient.SqlConnection> restituisce informazioni sullo schema del database in un oggetto <xref:System.Data.DataTable>. Per ulteriori informazioni, vedere [SQL Server raccolte di schemi](../sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>Valori della colonna GetSchemaTable per i tipi UDT  
  Il metodo <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> di <xref:System.Data.SqlClient.SqlDataReader> restituisce un oggetto <xref:System.Data.DataTable> che descrive i metadati della colonna. La tabella seguente descrive le differenze tra i metadati della colonna per i tipi UDT di grandi dimensioni tra SQL Server 2005 e SQL Server 2008.  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Recupero di informazioni sullo schema del database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
+- [Recupero di informazioni sullo schema del database](../retrieving-database-schema-information.md)
+- [Mapping dei tipi di dati SQL Server](../sql-server-data-type-mappings.md)
+- [Dati binari e con valori elevati SQL Server](sql-server-binary-and-large-value-data.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

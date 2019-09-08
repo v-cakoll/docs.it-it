@@ -2,18 +2,18 @@
 title: Supporto del flusso SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791404"
 ---
 # <a name="sqlclient-streaming-support"></a>Supporto del flusso SqlClient
 
-Supporto del flusso tra SQL Server e un'applicazione (nuova in .NET Framework 4.5) supporta i dati non strutturati nel server (documenti, immagini e file multimediali). Un database di SQL Server può archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB possa usare molta memoria.
+Il supporto dello streaming tra SQL Server e un'applicazione (novità di .NET Framework 4,5) supporta i dati non strutturati nel server (documenti, immagini e file multimediali). Un database SQL Server può archiviare oggetti binari di grandi dimensioni (BLOB), ma il recupero di BLOB può utilizzare una grande quantità di memoria.
 
-Supporto da e verso SQL Server del flusso semplifica la scrittura di applicazioni per i dati di flusso, senza dover caricare completamente i dati in memoria, generando un minor numero eccezioni di overflow di memoria.
+Il supporto dello streaming da e verso SQL Server semplifica la scrittura di applicazioni che generano flussi di dati, senza dover caricare completamente i dati in memoria, con un minor numero di eccezioni di overflow della memoria.
 
 Il supporto del flusso consentirà inoltre una migliore scalabilità delle applicazioni di livello intermedio, specialmente negli scenari in cui gli oggetti business si connettono a SQL Azure per inviare, recupera e modificare BLOB di grandi dimensioni.
 
@@ -24,9 +24,9 @@ Il supporto del flusso consentirà inoltre una migliore scalabilità delle appli
 
 ## <a name="streaming-support-from-sql-server"></a>Supporto del flusso da SQL Server
 
-Supporto del flusso da SQL Server introduce nuove funzionalità nella <xref:System.Data.Common.DbDataReader> e nel <xref:System.Data.SqlClient.SqlDataReader> classi per ottenere <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> degli oggetti e intraprendere le azioni necessarie. Queste classi vengono usate per recuperare i dati dalle query. Di conseguenza, il supporto di Streaming da SQL Server destinato agli scenari OLTP e applica per on-premise e off-premise gli ambienti.
+Il supporto del flusso da SQL Server introduce nuove funzionalità <xref:System.Data.Common.DbDataReader> in e <xref:System.Data.SqlClient.SqlDataReader> nelle classi per ottenere <xref:System.IO.Stream>gli oggetti, <xref:System.Xml.XmlReader>e <xref:System.IO.TextReader> e reagire a essi. Queste classi vengono usate per recuperare i dati dalle query. Di conseguenza, il supporto del flusso da SQL Server risolve scenari OLTP e si applica agli ambienti locali e non locali.
 
-I membri seguenti sono stati aggiunti a <xref:System.Data.SqlClient.SqlDataReader> per abilitare il supporto di streaming da SQL Server:
+I membri seguenti sono stati aggiunti <xref:System.Data.SqlClient.SqlDataReader> a per abilitare il supporto del flusso da SQL Server:
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ I membri seguenti sono stati aggiunti a <xref:System.Data.SqlClient.SqlDataReade
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-I membri seguenti sono stati aggiunti a <xref:System.Data.Common.DbDataReader> per abilitare il supporto di streaming da SQL Server:
+I membri seguenti sono stati aggiunti <xref:System.Data.Common.DbDataReader> a per abilitare il supporto del flusso da SQL Server:
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,9 +48,9 @@ I membri seguenti sono stati aggiunti a <xref:System.Data.Common.DbDataReader> p
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a>Supporto del flusso a SQL Server
+## <a name="streaming-support-to-sql-server"></a>Supporto dello streaming per SQL Server
 
-Supporto per SQL Server del flusso introduce nuove funzionalità nella <xref:System.Data.SqlClient.SqlParameter> classe in modo che può accettare e rispondere agli <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> oggetti. <xref:System.Data.SqlClient.SqlParameter> viene usato per passare i parametri a query e stored procedure.
+Il <xref:System.Data.SqlClient.SqlParameter> supporto del flusso per SQL Server introduce nuove funzionalità nella classe in modo che possa accettare e <xref:System.Xml.XmlReader>reagire agli <xref:System.IO.TextReader> oggetti, <xref:System.IO.Stream>e. <xref:System.Data.SqlClient.SqlParameter> viene usato per passare i parametri a query e stored procedure.
 
 L'eliminazione di un oggetto <xref:System.Data.SqlClient.SqlCommand> o la chiamata di <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve annullare qualsiasi operazione di flusso. Se un'applicazione invia <xref:System.Threading.CancellationToken>, l'annullamento non è garantito.
 
@@ -70,15 +70,15 @@ I seguenti tipi <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> accettera
 
 - **Xml**
 
-Il **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo accetterà un <xref:System.Data.SqlClient.SqlParameter.Value%2A> di <xref:System.Xml.XmlReader>.
+Il tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> accetterà un <xref:System.Data.SqlClient.SqlParameter.Value%2A> di <xref:System.Xml.XmlReader>.
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> può accettare valori di tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream>.
 
 Gli oggetti <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> verranno trasferiti fino al valore definito da <xref:System.Data.SqlClient.SqlParameter.Size%2A>.
 
-## <a name="sample----streaming-from-sql-server"></a>Esempio di Flusso da SQL Server
+## <a name="sample----streaming-from-sql-server"></a>Esempio: flusso da SQL Server
 
-Usare l'istruzione Transact-SQL seguente per creare il database di esempio:
+Usare il codice Transact-SQL seguente per creare il database di esempio:
 
 ```sql
 CREATE DATABASE [Demo]
@@ -101,13 +101,13 @@ Nell'esempio vengono descritte le operazioni seguenti:
 
 - Evitare di bloccare un thread di interfaccia utente fornendo una modalità asincrona per recuperare i file di grandi dimensioni.
 
-- Trasferire un file di testo di grandi dimensioni da SQL Server in .NET Framework 4.5.
+- Trasferire un file di testo di grandi dimensioni da SQL Server .NET Framework 4,5.
 
-- Trasferire un file XML di grandi dimensioni da SQL Server in .NET Framework 4.5.
+- Trasferire un file XML di grandi dimensioni da SQL Server .NET Framework 4,5.
 
-- Recuperare dati da SQL Server.
+- Recuperare i dati da SQL Server.
 
-- Trasferire il file di grandi dimensioni (BLOB) da un database di SQL Server a un altro senza esaurire la memoria.
+- Trasferire file di grandi dimensioni (BLOB) da un database SQL Server a un altro senza esaurire la memoria.
 
 ```csharp
 using System;
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a>Esempio di Flusso a SQL Server
+## <a name="sample----streaming-to-sql-server"></a>Esempio--flusso a SQL Server
 
-Usare l'istruzione Transact-SQL seguente per creare il database di esempio:
+Usare il codice Transact-SQL seguente per creare il database di esempio:
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -323,9 +323,9 @@ GO
 
 Nell'esempio vengono descritte le operazioni seguenti:
 
-- Trasferimento di un BLOB di grandi dimensioni in SQL Server in .NET Framework 4.5.
+- Trasferimento di un BLOB di grandi dimensioni a SQL Server in .NET Framework 4,5.
 
-- Trasferimento di un file di testo di grandi dimensioni in SQL Server in .NET Framework 4.5.
+- Trasferimento di un file di testo di grandi dimensioni in SQL Server .NET Framework 4,5.
 
 - Utilizzo della nuova funzionalità asincrona per trasferire un BLOB di grandi dimensioni.
 
@@ -333,7 +333,7 @@ Nell'esempio vengono descritte le operazioni seguenti:
 
 - Annullamento del trasferimento di un BLOB di grandi dimensioni.
 
-- Lo streaming da un server SQL Server in un altro usando la nuova funzionalità asincrona.
+- Flusso da un SQL Server a un altro tramite la nuova funzionalità asincrona.
 
 ```csharp
 using System;
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Esempio di Flusso da un server SQL Server in un altro Server SQL
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Esempio: streaming da un SQL Server a un altro SQL Server
 
-In questo esempio viene illustrato come trasmettere in modo asincrono un BLOB di grandi dimensioni da un Server SQL a un altro, con supporto per l'annullamento.
+In questo esempio viene illustrato come trasmettere in modo asincrono un BLOB di grandi dimensioni da un SQL Server a un altro, con supporto per l'annullamento.
 
 ```csharp
 using System;
@@ -524,4 +524,4 @@ namespace StreamingFromServerToAnother {
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)

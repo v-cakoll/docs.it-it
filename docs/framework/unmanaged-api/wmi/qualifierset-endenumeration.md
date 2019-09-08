@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782589"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798326"
 ---
-# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration (funzione)
-Termina l'enumerazione iniziato con una chiamata per il [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) (funzione).  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration (funzione)
+Termina l'enumerazione iniziata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,30 +40,30 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`  
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`   
-[in] Un puntatore a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) istanza.
+in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore seguente restituito da questa funzione è definito nel *WbemCli.h* file di intestazione, oppure è possibile definirlo come costante nel codice:
+Il valore seguente restituito da questa funzione è definito nel file di intestazione *WbemCli. h* oppure è possibile definirlo come costante nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) .
 
-Questa chiamata è consigliata, ma non obbligatorio. Rilascia immediatamente le risorse associate all'enumerazione.
+Questa chiamata è consigliata, ma non obbligatoria. Rilascia immediatamente le risorse associate all'enumerazione.
 
 ## <a name="requirements"></a>Requisiti  
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
-**Intestazione:** WMINet_Utils.idl  
+**Intestazione:** WMINet_Utils. idl  
   
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

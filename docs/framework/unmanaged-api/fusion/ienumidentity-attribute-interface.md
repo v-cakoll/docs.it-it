@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697342"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796462"
 ---
-# <a name="ienumidentityattribute-interface"></a>Interfaccia IEnumIDENTITY_ATTRIBUTE
-Funge da un enumeratore per gli attributi dell'oggetto codice nell'ambito corrente.  
+# <a name="ienumidentity_attribute-interface"></a>Interfaccia IEnumIDENTITY_ATTRIBUTE
+Funge da enumeratore per gli attributi dell'oggetto di codice nell'ambito corrente.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Ottiene un puntatore a interfaccia a una nuova `IEnumIDENTITY_ATTRIBUTE` che contiene gli stessi membri di questo `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Scrive i dati contenuti negli elementi di questo `IEnumIDENTITY_ATTRIBUTE` al buffer di dati specificato.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Ottiene un puntatore a interfaccia a un `IEnumIDENTITY_ATTRIBUTE` nuovo oggetto che contiene gli stessi membri `IEnumIDENTITY_ATTRIBUTE`di questo oggetto.|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Scrive i dati contenuti negli elementi di questo `IEnumIDENTITY_ATTRIBUTE` oggetto nel buffer di dati specificato.|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|Ottiene il numero specificato di attributi, a partire dalla posizione corrente.|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumIDENTITY_ATTRIBUTE`.|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|Sposta in avanti il puntatore all'istruzione per il numero specificato di elementi, a partire dalla posizione corrente.|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumIDENTITY_ATTRIBUTE`oggetto.|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|Sposta il puntatore all'istruzione in poi in base al numero specificato di elementi, a partire dalla posizione corrente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -45,4 +45,4 @@ Funge da un enumeratore per gli attributi dell'oggetto codice nell'ambito corren
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfacce Fusion](fusion-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: f572f683511fe90951f841c80eae448a9cb6054b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663927"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785086"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funzioni locali (Guida per programmatori C#)
 
@@ -31,7 +31,7 @@ Le funzioni locali, tuttavia, non possono essere dichiarate all'interno di un me
 > [!NOTE]
 > In alcuni casi, è possibile usare un'espressione lambda per implementare le funzionalità supportate anche da una funzione locale. Per un confronto, vedere [Confronto tra funzioni locali ed espressioni Lambda](../../local-functions-vs-lambdas.md).
 
-Le funzioni locali rendono chiaro l'obiettivo del codice. Chiunque legga il codice, ad esempio, può vedere che il metodo può essere chiamato solo dal metodo contenitore. Per i progetti in team, le funzioni locali impediscono anche a un altro sviluppatore di chiamare per errore il metodo direttamente da un altro punto della classe o dello struct.
+Le funzioni locali rendono chiaro l'obiettivo del codice. Chiunque legga il codice può vedere che il metodo non è richiamabile, ad eccezione del metodo contenitore. Per i progetti in team, le funzioni locali impediscono anche a un altro sviluppatore di chiamare per errore il metodo direttamente da un altro punto della classe o dello struct.
  
 ## <a name="local-function-syntax"></a>Sintassi delle funzioni locali
 

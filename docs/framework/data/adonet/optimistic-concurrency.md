@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929236"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794684"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica. L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  Quando si usa il modello di concorrenza ottimistica, è possibile applicare anche criteri meno restrittivi. Ad esempio, se si usano solo le colonne di chiave primaria nella clausola WHERE, i dati verranno sovrascritti, indipendentemente dagli eventuali aggiornamenti apportati alle altre colonne successivamente all'ultima query. È inoltre possibile applicare una clausola WHERE solo a colonne specifiche, in modo che i dati vengano sovrascritti a meno che particolari campi non siano stati aggiornati successivamente all'ultima query.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- L'evento **RowUpdated** dell' <xref:System.Data.Common.DataAdapter> oggetto può essere usato in combinazione con le tecniche descritte in precedenza, per fornire una notifica all'applicazione di violazioni della concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornamento di una riga **modificata** da un **set di dati**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. L' <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce una proprietà **RecordsAffected** contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando Update per la verifica della concorrenza ottimistica, la proprietà **RecordsAffected** restituirà, di conseguenza, un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, perché non è stato aggiornato alcun record. In questo caso viene generata un'eccezione. L'evento **RowUpdated** consente di gestire questa occorrenza ed evitare l'eccezione impostando un valore **RowUpdatedEventArgs. status** appropriato, ad esempio **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sull'evento **RowUpdated** , vedere [gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ L'evento **RowUpdated** dell' <xref:System.Data.Common.DataAdapter> oggetto può essere usato in combinazione con le tecniche descritte in precedenza, per fornire una notifica all'applicazione di violazioni della concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornamento di una riga **modificata** da un **set di dati**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. L' <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce una proprietà **RecordsAffected** contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando Update per la verifica della concorrenza ottimistica, la proprietà **RecordsAffected** restituirà, di conseguenza, un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, perché non è stato aggiornato alcun record. In questo caso viene generata un'eccezione. L'evento **RowUpdated** consente di gestire questa occorrenza ed evitare l'eccezione impostando un valore **RowUpdatedEventArgs. status** appropriato, ad esempio **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sull'evento **RowUpdated** , vedere [gestione di eventi DataAdapter](handling-dataadapter-events.md).  
   
- Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** su **true**, prima di chiamare **Update**e rispondere alle informazioni sugli errori archiviate nella proprietà **RowError** di una determinata riga al termine dell' **aggiornamento** . Per ulteriori informazioni, vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** su **true**, prima di chiamare **Update**e rispondere alle informazioni sugli errori archiviate nella proprietà **RowError** di una determinata riga al termine dell' **aggiornamento** . Per ulteriori informazioni, vedere [informazioni sugli errori di riga](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Esempio di concorrenza ottimistica  
  Di seguito è riportato un semplice esempio che imposta **UpdateCommand** di un **DataAdapter** per verificare la concorrenza ottimistica, quindi utilizza l'evento **RowUpdated** per verificare le violazioni della concorrenza ottimistica. Quando viene rilevata una violazione della concorrenza ottimistica, l'applicazione imposta il **RowError** della riga per cui l'aggiornamento è stato emesso per riflettere una violazione della concorrenza ottimistica.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Aggiornamento di origini dati con DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)
+- [Aggiornamento di origini dati con DataAdapter](updating-data-sources-with-dataadapters.md)
+- [Informazioni sugli errori di riga](./dataset-datatable-dataview/row-error-information.md)
+- [Transazioni e concorrenza](transactions-and-concurrency.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

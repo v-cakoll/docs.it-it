@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 851abcae9c3edea5c971bd2bc4523c3cec757cc9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770976"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796813"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>Metodo IAssemblyCache::CreateAssemblyScavenger
-Riservato per uso interno dalla tecnologia fusion.  
+Riservato per uso interno da parte della tecnologia Fusion.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ HRESULT CreateAssemblyScavenger (
   
 ## <a name="parameters"></a>Parametri  
  `ppUnkReserved`  
- [out] L'oggetto restituito `IUnknown` puntatore.  
+ out Puntatore restituito `IUnknown` .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -48,4 +48,4 @@ HRESULT CreateAssemblyScavenger (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)
