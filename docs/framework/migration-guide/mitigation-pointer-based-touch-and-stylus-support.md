@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379898"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779235"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="0db26-102">Mitigazione: Supporto di tocco e stilo basato su puntatore</span><span class="sxs-lookup"><span data-stu-id="0db26-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="107b8-102">Mitigazione: Supporto di tocco e stilo basato su puntatore</span><span class="sxs-lookup"><span data-stu-id="107b8-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
 
-<span data-ttu-id="0db26-103">Le applicazioni WPF destinate a .NET Framework 4.7 e che sono in esecuzione nei sistemi Windows a partire da Windows 10 Creators Update possono abilitare lo stack facoltativo di tocco/stilo basato su `WM_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="0db26-103">WPF applications that target the .NET Framework 4.7 and are running on Windows Systems starting with Windows 10 Creators Update can enable an optional `WM_POINTER`-based WPF touch/stylus stack.</span></span>
+<span data-ttu-id="107b8-103">Le applicazioni WPF destinate a .NET Framework 4.7 e che sono in esecuzione nei sistemi Windows a partire da Windows 10 Creators Update possono abilitare lo stack facoltativo di tocco/stilo basato su `WM_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="107b8-103">WPF applications that target the .NET Framework 4.7 and are running on Windows Systems starting with Windows 10 Creators Update can enable an optional `WM_POINTER`-based WPF touch/stylus stack.</span></span>
 
-## <a name="impact"></a><span data-ttu-id="0db26-104">Impatto</span><span class="sxs-lookup"><span data-stu-id="0db26-104">Impact</span></span>
+## <a name="impact"></a><span data-ttu-id="107b8-104">Impatto</span><span class="sxs-lookup"><span data-stu-id="107b8-104">Impact</span></span>
 
-<span data-ttu-id="0db26-105">Gli sviluppatori che non attivano in modo esplicito il supporto tocco/stilo basato su puntatore non dovrebbero riscontrare alcuna modifica nel comportamento di tocco/stilo WPF.</span><span class="sxs-lookup"><span data-stu-id="0db26-105">Developers who do not explicitly enable pointer-based touch/stylus support should see no change in WPF touch/stylus behavior.</span></span>
+<span data-ttu-id="107b8-105">Gli sviluppatori che non attivano in modo esplicito il supporto tocco/stilo basato su puntatore non dovrebbero riscontrare alcuna modifica nel comportamento di tocco/stilo WPF.</span><span class="sxs-lookup"><span data-stu-id="107b8-105">Developers who do not explicitly enable pointer-based touch/stylus support should see no change in WPF touch/stylus behavior.</span></span>
 
-<span data-ttu-id="0db26-106">Di seguito sono riportati problemi noti correnti con lo stack tocco/stilo basato su `WM_POINTER`:</span><span class="sxs-lookup"><span data-stu-id="0db26-106">The following are current known issues with the optional `WM_POINTER`-based touch/stylus stack:</span></span>
+<span data-ttu-id="107b8-106">Di seguito sono riportati problemi noti correnti con lo stack tocco/stilo basato su `WM_POINTER`:</span><span class="sxs-lookup"><span data-stu-id="107b8-106">The following are current known issues with the optional `WM_POINTER`-based touch/stylus stack:</span></span>
 
-- <span data-ttu-id="0db26-107">Nessun supporto per l'input penna in tempo reale.</span><span class="sxs-lookup"><span data-stu-id="0db26-107">No support for real-time inking.</span></span>
+- <span data-ttu-id="107b8-107">Nessun supporto per l'input penna in tempo reale.</span><span class="sxs-lookup"><span data-stu-id="107b8-107">No support for real-time inking.</span></span>
 
-   <span data-ttu-id="0db26-108">Anche se i plug-in della stilo e dell'input penna continuano a funzionare, essi vengono elaborati nel thread dell'interfaccia utente, il che può comportare un peggioramento delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="0db26-108">While inking and stylus plugins still work, they are processed on the UI thread, which can lead to poor performance.</span></span>
+   <span data-ttu-id="107b8-108">Anche se i plug-in della stilo e dell'input penna continuano a funzionare, essi vengono elaborati nel thread dell'interfaccia utente, il che può comportare un peggioramento delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="107b8-108">While inking and stylus plugins still work, they are processed on the UI thread, which can lead to poor performance.</span></span>
 
-- <span data-ttu-id="0db26-109">Modifiche del comportamento dovuti alla promozione da eventi di tocco/stilo agli eventi del mouse.</span><span class="sxs-lookup"><span data-stu-id="0db26-109">Behavioral changes due to changes in promotion from touch/stylus events to mouse events.</span></span>
+- <span data-ttu-id="107b8-109">Modifiche del comportamento dovuti alla promozione da eventi di tocco/stilo agli eventi del mouse.</span><span class="sxs-lookup"><span data-stu-id="107b8-109">Behavioral changes due to changes in promotion from touch/stylus events to mouse events.</span></span>
 
-  - <span data-ttu-id="0db26-110">La modifica potrebbe avere un comportamento diverso.</span><span class="sxs-lookup"><span data-stu-id="0db26-110">Manipulation may behave differently.</span></span>
+  - <span data-ttu-id="107b8-110">La modifica potrebbe avere un comportamento diverso.</span><span class="sxs-lookup"><span data-stu-id="107b8-110">Manipulation may behave differently.</span></span>
 
-  - <span data-ttu-id="0db26-111">L'opzione Trascina selezione non dà la risposta appropriata per l'input tocco.</span><span class="sxs-lookup"><span data-stu-id="0db26-111">Drag/Drop will not show appropriate feedback for touch input.</span></span> <span data-ttu-id="0db26-112">(Questa operazione non influisce sull'input della stilo.)</span><span class="sxs-lookup"><span data-stu-id="0db26-112">(This does not affect stylus input.)</span></span>
+  - <span data-ttu-id="107b8-111">L'opzione Trascina selezione non dà la risposta appropriata per l'input tocco.</span><span class="sxs-lookup"><span data-stu-id="107b8-111">Drag/Drop will not show appropriate feedback for touch input.</span></span> <span data-ttu-id="107b8-112">(Questa operazione non influisce sull'input della stilo.)</span><span class="sxs-lookup"><span data-stu-id="107b8-112">(This does not affect stylus input.)</span></span>
 
-  - <span data-ttu-id="0db26-113">L'opzione Trascina selezione non può essere avviata per gli eventi di tocco/stilo.</span><span class="sxs-lookup"><span data-stu-id="0db26-113">Drag/Drop can no longer be initiated on touch/stylus events.</span></span>
+  - <span data-ttu-id="107b8-113">L'opzione Trascina selezione non può essere avviata per gli eventi di tocco/stilo.</span><span class="sxs-lookup"><span data-stu-id="107b8-113">Drag/Drop can no longer be initiated on touch/stylus events.</span></span>
 
-      <span data-ttu-id="0db26-114">Questo può potenzialmente bloccare l'applicazione fino a quando non viene rilevato l'input del mouse.</span><span class="sxs-lookup"><span data-stu-id="0db26-114">This can potentially cause the application to become unresponsive until mouse input is detected.</span></span> <span data-ttu-id="0db26-115">Gli sviluppatori dovranno quindi avviare l'opzione di trascinamento della selezione dagli eventi del mouse.</span><span class="sxs-lookup"><span data-stu-id="0db26-115">Instead, developers should initiate drag and drop from mouse events.</span></span>
+      <span data-ttu-id="107b8-114">Questo può potenzialmente bloccare l'applicazione fino a quando non viene rilevato l'input del mouse.</span><span class="sxs-lookup"><span data-stu-id="107b8-114">This can potentially cause the application to become unresponsive until mouse input is detected.</span></span> <span data-ttu-id="107b8-115">Gli sviluppatori dovranno quindi avviare l'opzione di trascinamento della selezione dagli eventi del mouse.</span><span class="sxs-lookup"><span data-stu-id="107b8-115">Instead, developers should initiate drag and drop from mouse events.</span></span>
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a><span data-ttu-id="0db26-116">Consenso esplicito al supporto di tocco/stilo basato su WM_POINTER</span><span class="sxs-lookup"><span data-stu-id="0db26-116">Opting in to WM_POINTER-based touch/stylus support</span></span>
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a><span data-ttu-id="107b8-116">Consenso esplicito al supporto di tocco/stilo basato su WM_POINTER</span><span class="sxs-lookup"><span data-stu-id="107b8-116">Opting in to WM_POINTER-based touch/stylus support</span></span>
 
-<span data-ttu-id="0db26-117">Gli sviluppatori che desiderano abilitare questo stack possono aggiungere quanto segue al file app.config dell'applicazione:</span><span class="sxs-lookup"><span data-stu-id="0db26-117">Developers who wish to enable this stack can add the following to their application's app.config file:</span></span>
+<span data-ttu-id="107b8-117">Gli sviluppatori che desiderano abilitare questo stack possono aggiungere quanto segue al file app.config dell'applicazione:</span><span class="sxs-lookup"><span data-stu-id="107b8-117">Developers who wish to enable this stack can add the following to their application's app.config file:</span></span>
 
 ```xml
 <configuration>
@@ -52,8 +52,8 @@ ms.locfileid: "66379898"
 </configuration>
 ```
 
-<span data-ttu-id="0db26-118">Rimuovendo questa voce o impostandone il valore su `false`, questo stack facoltativo viene disattivato.</span><span class="sxs-lookup"><span data-stu-id="0db26-118">Removing this entry or setting its value to `false` turns this optional stack off.</span></span>
+<span data-ttu-id="107b8-118">Rimuovendo questa voce o impostandone il valore su `false`, questo stack facoltativo viene disattivato.</span><span class="sxs-lookup"><span data-stu-id="107b8-118">Removing this entry or setting its value to `false` turns this optional stack off.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0db26-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0db26-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="107b8-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="107b8-119">See also</span></span>
 
-- [<span data-ttu-id="0db26-120">Retargeting Changes in the .NET Framework 4.7 (Reindirizzamento delle modifiche in .NET Framework 4.7)</span><span class="sxs-lookup"><span data-stu-id="0db26-120">Retargeting Changes in the .NET Framework 4.7</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [<span data-ttu-id="107b8-120">Retargeting Changes in the .NET Framework 4.7 (Reindirizzamento delle modifiche in .NET Framework 4.7)</span><span class="sxs-lookup"><span data-stu-id="107b8-120">Retargeting Changes in the .NET Framework 4.7</span></span>](retargeting-changes-in-the-net-framework-4-7.md)
