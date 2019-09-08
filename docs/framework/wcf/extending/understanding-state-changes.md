@@ -2,12 +2,12 @@
 title: Informazioni sui cambiamenti di stato
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796948"
 ---
 # <a name="understanding-state-changes"></a>Informazioni sui cambiamenti di stato
 In questo argomento vengono descritti gli stati e le transizioni dei canali, i tipi utilizzati per strutturare gli stati dei canali e come implementarli.  
@@ -28,12 +28,12 @@ In questo argomento vengono descritti gli stati e le transizioni dei canali, i t
   
  Tutti gli oggetti <xref:System.ServiceModel.ICommunicationObject> iniziano con lo stato Created. In questo stato un'applicazione può configurare l'oggetto impostandone le proprietà. Una volta che l'oggetto ha assunto uno stato diverso da Created, viene considerato immutabile.  
   
- ![Transizione dello stato del canale](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Transizione dello stato del canale](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. La macchina a stati di ICommunicationObject.  
   
  Windows Communication Foundation (WCF) fornisce una classe base astratta denominata <xref:System.ServiceModel.Channels.CommunicationObject> che implementa <xref:System.ServiceModel.ICommunicationObject> e la macchina a Stati del canale. Di seguito è illustrato un diagramma di stato modificato specifico di <xref:System.ServiceModel.Channels.CommunicationObject>. Oltre alla macchina a stati <xref:System.ServiceModel.ICommunicationObject>, è indicato l'intervallo in cui vengono richiamati metodi <xref:System.ServiceModel.Channels.CommunicationObject> aggiuntivi.  
   
- ![Modifiche di stato](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Modifiche di stato](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stati ICommunicationObject con chiamate a eventi e metodi protetti.  
   
 ### <a name="icommunicationobject-events"></a>Eventi ICommunicationObject  
@@ -90,7 +90,7 @@ Figura 2. Implementazione dell'oggetto CommunicationObject della macchina a stat
   
  Imposta quindi lo stato su Opening e chiama OnOpening() (che genera l'evento Opening), OnOpen() e OnOpened(), nell'ordine specificato. OnOpened() imposta lo stato su Opened e genera l'evento Opened. Se uno di questi elementi genera un'eccezione, Open() chiama Fault() e consente all'eccezione di emergere. Nel diagramma seguente il processo Open è illustrato più dettagliatamente.  
   
- ![Modifiche di stato](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Modifiche di stato](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Eseguire l'override del metodo OnOpen per implementare logica di apertura personalizzata, quale l'apertura di un oggetto di comunicazione interno.  
   
  Metodo Close  
@@ -101,7 +101,7 @@ Eseguire l'override del metodo OnOpen per implementare logica di apertura person
   
  Il metodo Close() può essere chiamato a qualsiasi stato. Tenta di chiudere l'oggetto normalmente. Se viene rilevato un errore, l'oggetto viene terminato. Il metodo non esegue alcuna operazione se lo stato corrente è Closing o Closed. In caso contrario imposta lo stato su Closing. Se lo stato originale era Created, Opening o Faulted, chiama Abort() (vedere il diagramma seguente). Se lo stato originale era Opened, chiama OnClosing() (che genera l'evento Closing), OnClose() e OnClosed(), nell'ordine specificato. Se alcuni di questi elementi generano eccezioni, Close() chiama Abort() e consente all'eccezione di emergere. OnClosed() imposta lo stato su Closed e genera l'evento Closed. Nel diagramma seguente il processo Close è illustrato più dettagliatamente.  
   
- ![Modifiche di stato](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![Modifiche di stato](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 Eseguire l'override del metodo OnClose per implementare logica di chiusura personalizzata, quale la chiusura di un oggetto di comunicazione interno. Tutta la logica di chiusura corretta che può bloccarsi a lungo (ad esempio, in attesa della risposta dell'altro lato) deve essere implementata in OnClose() perché utilizza un parametro di timeout e perché non viene chiamata come parte Abort().  
   
  Abort  
@@ -111,7 +111,7 @@ Post-condizione: Lo stato è Closed. Può generare un'eccezione.
   
  Il metodo Abort() non esegue alcuna operazione se lo stato corrente è Closed o se l'oggetto è stato terminato in precedenza, facendo ad esempio in modo che Abort() venisse eseguito su un altro thread. In caso contrario imposta lo stato su Closing e chiama OnClosing() (che genera l'evento Closing), OnAbort() e OnClosed(), nell'ordine specificato, senza chiamare OnClose perché l'oggetto sta per essere terminato, non chiuso. OnClosed() imposta lo stato su Closed e genera l'evento Closed. Se uno di questi elementi genera un'eccezione, l'eccezione viene generata nuovamente al chiamante di Abort. Le implementazioni di OnClosing(), OnClosed() e OnAbort() non si devono bloccare, ad esempio su input/output. Nel diagramma seguente il processo Abort è illustrato più dettagliatamente.  
   
- ![Modifiche di stato](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![Modifiche di stato](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 Eseguire l'override del metodo OnAbort per implementare logica di terminazione personalizzata, quale la terminazione di un oggetto di comunicazione interno.  
   
  Fault  
@@ -142,7 +142,7 @@ Eseguire l'override del metodo OnAbort per implementare logica di terminazione p
 |Aperto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Chiuso|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso un oggetto sia stato chiuso da una chiamata precedente ed esplicita ad Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
+|Chiuso|Sì|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> nel caso un oggetto sia stato chiuso da una chiamata precedente ed esplicita ad Abort. Se si chiama Close per l'oggetto, viene generata un'eccezione <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
 |Chiuso|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Non riuscito|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   

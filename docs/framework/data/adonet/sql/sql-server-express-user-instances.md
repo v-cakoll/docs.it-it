@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938486"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780842"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Connessione a un'origine dati](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server e ADO.NET](index.md)
+- [Stringhe di connessione](../connection-strings.md)
+- [Connessione a un'origine dati](../connecting-to-a-data-source.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

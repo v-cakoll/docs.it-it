@@ -2,17 +2,17 @@
 title: Deduzione della struttura relazionale di dataset da XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204811"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785327"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Deduzione della struttura relazionale di dataset da XML
 La struttura relazionale, o schema, di un tipo <xref:System.Data.DataSet> è costituita da tabelle, colonne, vincoli e relazioni. Quando si carica un tipo <xref:System.Data.DataSet> dall'XML, lo schema può essere predefinito oppure creato, implicitamente o tramite inferenza, dall'XML caricato. Per ulteriori informazioni sul caricamento dello schema e del contenuto di <xref:System.Data.DataSet> un da XML, vedere [caricamento di un DataSet da](loading-a-dataset-from-xml.md) XML e [caricamento delle informazioni sullo schema del set di dati da XML](loading-dataset-schema-information-from-xml.md).  
   
- Se lo schema di un <xref:System.Data.DataSet> oggetto viene creato da XML, il metodo preferito consiste nello specificare in modo esplicito lo schema utilizzando il linguaggio XSD (XML Schema Definition), come descritto in derivazione della [struttura relazionale del set di dati da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)o XML-Data Reduced (XDR). Se nell'XML non è disponibile un XML Schema o uno schema XDR, è possibile inferire lo schema del tipo <xref:System.Data.DataSet> dalla struttura degli elementi e degli attributi XML.  
+ Se lo schema di un <xref:System.Data.DataSet> oggetto viene creato da XML, il metodo preferito consiste nello specificare in modo esplicito lo schema utilizzando il linguaggio XSD (XML Schema Definition), come descritto in [derivazione della struttura relazionale del set di dati da XML Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)o XML-Data Reduced (XDR). Se nell'XML non è disponibile un XML Schema o uno schema XDR, è possibile inferire lo schema del tipo <xref:System.Data.DataSet> dalla struttura degli elementi e degli attributi XML.  
   
  Contenuto della sezione vengono descritte le regole relative all'inferenza dello schema del tipo <xref:System.Data.DataSet> mediante l'illustrazione degli elementi e degli attributi XML, delle relative strutture e dello schema inferito del tipo <xref:System.Data.DataSet> risultante.  
   
@@ -49,4 +49,4 @@ La struttura relazionale, o schema, di un tipo <xref:System.Data.DataSet> è cos
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

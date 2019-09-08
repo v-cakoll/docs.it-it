@@ -1,6 +1,6 @@
 ---
-title: Initialize (funzione) (riferimenti alle API non gestite)
-description: La funzione di inizializzazione esegue l'inizializzazione di WMI.
+title: Funzione Initialize (riferimenti alle API non gestite)
+description: La funzione Initialize esegue l'inizializzazione WMI.
 ms.date: 11/06/2017
 api_name:
 - Initialize
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049297"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798435"
 ---
 # <a name="initialize-function"></a>Initialize (funzione)
 
@@ -41,15 +41,15 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-[in] `true` per indicare che sono consentite le chiamate a QueryInterface sugli oggetti WMI. `false` in caso contrario.
+in `true` per indicare che le chiamate a QueryInterface sugli oggetti WMI sono consentite; `false` in caso contrario,.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione restituisce sempre `S_OK` (0).
+La funzione restituisce `S_OK` sempre (0).
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils.def
 

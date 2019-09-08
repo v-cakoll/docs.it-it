@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742273"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777477"
 ---
 # <a name="assemblyoptions-enumeration"></a>Enumerazione AssemblyOptions
-Enumera le opzioni di assembly.  
+Enumera le opzioni dell'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,32 +58,32 @@ typedef enum _AssemblyOptions {
   
 |Campo|Descrizione|  
 |-----------|-----------------|  
-|optAssemTitle|Stringa - rappresenta il titolo dell'assembly.|  
-|optAssemDescription|Stringa - contiene la descrizione dell'assembly.|  
-|optAssemConfig|Stringa - contiene la configurazione dell'assembly.|  
-|optAssemOS|Stringa, codificata come: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String: rappresenta il titolo dell'assembly.|  
+|optAssemDescription|String: contiene la descrizione dell'assembly.|  
+|optAssemConfig|Stringa: contiene la configurazione dell'assembly.|  
+|optAssemOS|Codificata come stringa: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|Stringa - contiene le impostazioni locali di assembly.|  
-|optAssemVersion|Stringa, codificata come: "Revisione".|  
-|optAssemCompany|Stringa - contiene l'azienda.|  
-|optAssemProduct|Stringa - contiene il nome del prodotto.|  
-|optAssemProductVersion|Stringa (anche nota come InformationalVersion).|  
-|optAssemCopyright|Stringa - contiene le informazioni sul copyright.|  
-|optAssemTrademark|Stringa - contiene le informazioni sul marchio.|  
-|optAssemKeyFile|String (nome file).|  
+|optAssemLocale|Stringa: contiene le impostazioni locali dell'assembly.|  
+|optAssemVersion|Codificata in stringa come: "Major. minor. Build. Revision".|  
+|optAssemCompany|Stringa: contiene l'azienda.|  
+|optAssemProduct|Stringa: contiene il nome del prodotto.|  
+|optAssemProductVersion|Stringa (nota anche come InformationalVersion).|  
+|optAssemCopyright|Stringa: contiene le informazioni sul copyright.|  
+|optAssemTrademark|Stringa: contiene le informazioni sul marchio.|  
+|optAssemKeyFile|Stringa (nome file).|  
 |optAssemKeyName|Stringa (il nome della chiave).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (noto anche come DelaySign).|  
-|optAssemFileVersion|Stringa - codificato come "Revisione", identico ProductVersion.|  
-|optAssemSatelliteVer|Stringa - codificato come "Revisione".|  
-|optLastAssemOption|Un contatore del numero di elementi.|  
+|optAssemFileVersion|Codificata in formato stringa come "Major. minor. Build. Revision", uguale a ProductVersion.|  
+|optAssemSatelliteVer|Codificata in formato stringa come "Major. minor. Build. Revision".|  
+|optLastAssemOption|Contatore del numero di elementi.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** alink.h  
+ **Intestazione:** ALink. h  
   
  **Libreria**: ALink. dll  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

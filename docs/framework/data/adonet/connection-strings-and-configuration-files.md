@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785670"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Stringhe di connessione e file di configurazione
-Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.  
+Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](../../tools/ildasm-exe-il-disassembler.md). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.  
   
 ## <a name="working-with-application-configuration-files"></a>Utilizzo dei file di configurazione delle applicazioni  
  I file di configurazione delle applicazioni contengono impostazioni specifiche di una determinata applicazione. Ad esempio, un'applicazione ASP.NET può includere uno o più file **web.config**, mentre un'applicazione Windows può includere un file **app.config** facoltativo. I file di configurazione condividono elementi comuni, anche se il nome e il percorso variano a seconda dell'host dell'applicazione.  
@@ -36,7 +36,7 @@ Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, 
 ```  
   
 > [!NOTE]
-> È possibile salvare parte di una stringa di connessione in un file di configurazione e usare la classe <xref:System.Data.Common.DbConnectionStringBuilder> per completarlo in fase di esecuzione. Questa funzione è utile nelle situazioni in cui non si conoscono in anticipo gli elementi della stringa di connessione o quando non si desidera salvare informazioni sensibili in un file di configurazione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> È possibile salvare parte di una stringa di connessione in un file di configurazione e usare la classe <xref:System.Data.Common.DbConnectionStringBuilder> per completarlo in fase di esecuzione. Questa funzione è utile nelle situazioni in cui non si conoscono in anticipo gli elementi della stringa di connessione o quando non si desidera salvare informazioni sensibili in un file di configurazione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Uso di file di configurazione esterni  
  I file di configurazione esterni sono file distinti che contengono un frammento di un file di configurazione costituito da un'unica sezione. Al file di configurazione esterno viene quindi fatto riferimento dal file di configurazione principale. L'archiviazione della sezione **connectionStrings** in un file fisicamente distinto risulta utile nelle situazioni in cui le stringhe di connessione potrebbero essere modificate dopo la distribuzione dell'applicazione. Ad esempio, il comportamento ASP.NET standard prevede il riavvio di un dominio di applicazione quando i file di configurazione vengono modificati, con la conseguenza che le informazioni sullo stato vanno perse. Tuttavia, la modifica di un file di configurazione esterno non provoca un riavvio dell'applicazione. Oltre che in ASP.NET, i file di configurazione esterni possono essere usati anche nelle applicazioni Windows. È possibile inoltre usare la sicurezza e le autorizzazioni di accesso ai file per limitare l'accesso ai file di configurazione esterni. L'uso di file di configurazione esterni in fase di esecuzione è trasparente e non richiede codice speciale.  
@@ -134,7 +134,7 @@ Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, 
   
  È possibile configurare altri provider di configurazione protetta aggiungendoli al file **machine.config**. È inoltre possibile creare un proprio provider di configurazione protetta ereditando dalla classe base astratta <xref:System.Configuration.ProtectedConfigurationProvider>. La tabella seguente descrive i due file di configurazione inclusi in .NET Framework.  
   
-|Provider|Descrizione|  
+|Provider|DESCRIZIONE|  
 |--------------|-----------------|  
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa l'algoritmo di crittografia RSA per crittografare e decrittografare i dati. L'algoritmo RSA può essere usato per la crittografia a chiave pubblica e per le firme digitali. È anche noto come crittografia a "chiave pubblica" o asimmetrica perché impiega due chiavi diverse. È possibile usare lo [strumento di registrazione di IIS per ASP.NET (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) per crittografare le sezioni di un file Web.config e gestire le chiavi di crittografia. In ASP.NET il file di configurazione viene decrittografato al momento dell'elaborazione. L'identità dell'applicazione ASP.NET deve disporre di accesso in lettura alla chiave di crittografia usata per crittografare e decrittografare le sezioni crittografate.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Usa DPAPI (Data Protection API) di Windows per crittografare le sezioni di configurazione. Usa i servizi di crittografia incorporati di Windows e può essere configurato per la protezione specifica del computer o specifica dell'account utente. La protezione specifica del computer risulta utile quando più applicazioni sullo stesso server devono condividere informazioni. La protezione specifica dell'account utente può essere usata con i servizi eseguiti con un'identità utente specifica, ad esempio un ambiente di hosting condiviso. Ogni applicazione viene eseguita con un'identità distinta, limitando l'accesso a risorse quali file e database.|  
@@ -171,9 +171,9 @@ Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Generatori di stringhe di connessione](connection-string-builders.md)
+- [Protezione delle informazioni di connessione](protecting-connection-information.md)
 - [Uso delle classi di configurazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configurazione di applicazioni](../../../../docs/framework/configure-apps/index.md)
+- [Configurazione di applicazioni](../../configure-apps/index.md)
 - [Amministrazione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)

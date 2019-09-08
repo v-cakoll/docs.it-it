@@ -2,12 +2,12 @@
 title: Oggetti DataSet, DataTable e DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 4b5e81f415685d6ee3529c7e4f9d389e8017427e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203642"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786189"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Oggetti DataSet, DataTable e DataView
 L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati residente in memoria, che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati in esso contenuta. Un <xref:System.Data.DataSet> rappresenta un set completo di dati che include le tabelle in cui sono contenuti, ordinati e vincolati i dati e le relazioni tra le tabelle.  
@@ -81,4 +81,4 @@ L'oggetto <xref:System.Data.DataSet> di ADO.NET è una rappresentazione di dati 
 ## <a name="see-also"></a>Vedere anche
 
 - [ADO.NET](../index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

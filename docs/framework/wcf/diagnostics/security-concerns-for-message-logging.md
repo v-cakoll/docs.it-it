@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044260"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795940"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -107,9 +107,9 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
   
 - Registro informazioni personali note non consentito: Questo evento viene generato quando non è consentita la registrazione di informazioni personali note. Questo errore si verifica `logKnownPii` quando l'attributo `source` dell'elemento nel file app. config o Web. config è impostato su `true`, ma l' `enableLoggingKnownPii` attributo nell' `machineSettings` elemento del file Machine. config è impostato su `false`. Non viene generata alcuna eccezione.  
   
- Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere registrazione degli [eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere registrazione degli [eventi](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Problemi di sicurezza e suggerimenti utili per la traccia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Registrazione messaggi](message-logging.md)
+- [Problemi di sicurezza e suggerimenti utili per la traccia](./tracing/security-concerns-and-useful-tips-for-tracing.md)

@@ -2,17 +2,17 @@
 title: Cenni preliminari sulla sicurezza in SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582805"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780945"
 ---
 # <a name="overview-of-sql-server-security"></a>Cenni preliminari sulla sicurezza in SQL Server
 Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurezza, costituisce il modo migliore per fronteggiare i rischi per la sicurezza. SQL Server offre un'architettura di sicurezza progettata per consentire ad amministratori e sviluppatori di database di creare applicazioni di database protette e contrastare minacce. Ogni versione di SQL Server è stata migliorata rispetto alle versioni precedenti grazie all'introduzione di nuove funzionalità. La sicurezza non può essere limitata a una o più nuove funzionalità. Ogni applicazione presenta infatti speciali requisiti di sicurezza. Gli sviluppatori devono pertanto individuare la combinazione di funzionalità più appropriate per contrastare le minacce note e prevedere eventuali minacce future.  
   
- Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server. Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta. Ogni entità a protezione diretta di SQL Server sono associate *le autorizzazioni* che possono essere concesse a un *dell'entità*, ovvero un singolo utente, gruppo o processo concesso l'accesso a SQL Server. Il framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite *authentication* e *autorizzazione*.  
+ Un'istanza di SQL Server contiene una raccolta gerarchica di entità, a partire dal server. Ogni server contiene più database, ciascuno dei quali contiene una raccolta di oggetti a protezione diretta. Ogni SQL Server entità a protezione diretta dispone di *autorizzazioni* associate che possono essere concesse a un' *entità*, ovvero un singolo, un gruppo o un processo a cui viene concesso l'accesso a SQL Server. Il Framework di sicurezza di SQL Server gestisce l'accesso alle entità a protezione diretta tramite *l'autenticazione* e l' *autorizzazione*.  
   
 - L'autenticazione è il processo di accesso a SQL Server, in base al quale un'entità di sicurezza richiede l'accesso inviando credenziali che vengono valutate dal server. L'autenticazione consente di stabilire l'identità dell'utente o del processo da autenticare.  
   
@@ -21,27 +21,27 @@ Una strategia di difesa in profondità, basata su livelli sovrapposti di sicurez
  Negli argomenti in questa sezione vengono illustrati gli elementi fondamentali della sicurezza di SQL Server e vengono forniti collegamenti agli argomenti completi della versione pertinente della documentazione online di SQL Server.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [Autenticazione in SQL Server](authentication-in-sql-server.md)  
  Vengono descritti gli account di accesso e l'autenticazione di SQL Server e vengono forniti i collegamenti a ulteriori risorse.  
   
- [Ruoli server e database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [Ruoli server e database in SQL Server](server-and-database-roles-in-sql-server.md)  
  Vengono descritti i ruoli predefiniti del database e del server, i ruoli personalizzati del database, nonché gli account predefiniti e vengono forniti i collegamenti a ulteriori risorse.  
   
- [Proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [Proprietà e separazione tra schemi e utenti in SQL Server](ownership-and-user-schema-separation-in-sql-server.md)  
  Vengono illustrate la proprietà degli oggetti e la distinzione tra schema e utente e vengono forniti i collegamenti a ulteriori risorse.  
   
- [Autorizzazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [Autorizzazioni in SQL Server](authorization-and-permissions-in-sql-server.md)  
  Viene spiegato come concedere autorizzazioni usando il principio dei privilegi minimi e vengono forniti i collegamenti a ulteriori risorse.  
   
- [Crittografia dei dati in SQL Server](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
+ [Crittografia dei dati in SQL Server](data-encryption-in-sql-server.md)  
  Vengono descritte le opzioni di crittografia dei dati disponibili in SQL Server e vengono forniti i collegamenti a ulteriori risorse.  
   
- [Sicurezza dell'integrazione CLR in SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
+ [Sicurezza dell'integrazione CLR in SQL Server](clr-integration-security-in-sql-server.md)  
  Vengono forniti i collegamenti alle risorse sulla sicurezza relative all'integrazione CLR.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Sicurezza di SQL Server](sql-server-security.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

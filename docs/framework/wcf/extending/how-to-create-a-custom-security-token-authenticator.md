@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8e964b1124bb19faa79b0dc5e4ecebd83a56acf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767182"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797059"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Procedura: creare un autenticatore del token di sicurezza personalizzato
 In questo argomento viene illustrato come creare un autenticatore del token di sicurezza personalizzato e come integrarlo con un gestore del token di sicurezza personalizzato. Un autenticatore del token di sicurezza codi sicurezzantenuto di un token di sicurezza fornito con un messaggio in ingresso. Se la convalida ha esito positivo, l'autenticatore restituisce una raccolta di istanze <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che, quando valutata, restituisce un set di attestazioni.  
   
- Per utilizzare un autenticatore del token di sicurezza personalizzato in Windows Communication Foundation (WCF), è necessario innanzitutto creare credenziali personalizzate e sicurezza implementazioni del gestore di token. Per altre informazioni sulla creazione di credenziali personalizzate e un sicurezza gestore del token, vedere [procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
+ Per utilizzare un autenticatore del token di sicurezza personalizzato in Windows Communication Foundation (WCF), è necessario innanzitutto creare credenziali personalizzate e implementazioni del gestore del token di sicurezza. Per ulteriori informazioni sulla creazione di credenziali personalizzate e di un gestore del token [di sicurezza, vedere Procedura dettagliata: Creazione di credenziali](walkthrough-creating-custom-client-and-service-credentials.md)client e del servizio personalizzate.
   
 ## <a name="procedures"></a>Procedure  
   
@@ -42,12 +42,12 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
   
 3. Implementare la proprietà di sola lettura <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>. Questa proprietà deve restituire un emittente dei set di attestazioni ottenuti dal token. Tale emittente deve corrispondere all'emittente del token o a un'autorità responsabile della convalida del contenuto del token. Nell'esempio seguente viene utilizzata l'attestazione dell'emittente passata alla classe dall'autenticatore del token di sicurezza personalizzato creato nella procedura precedente. L'autenticatore del token di sicurezza personalizzato utilizza il set di attestazioni fornito dal sistema (restituito dalla proprietà <xref:System.IdentityModel.Claims.ClaimSet.System%2A>) per rappresentare l'emittente del token nome utente.  
   
-4. Implementare il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Questo metodo compila un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> (passata come argomento) con attestazioni basate sul contenuto del token di sicurezza in ingresso. Il metodo restituisce `true` al termine della valutazione. Nei casi in cui l'implementazione si basa sulla presenza di altri criteri di autorizzazione che forniscono informazioni aggiuntive al contesto di valutazione, questo metodo può restituire `false` se le informazioni necessarie non sono ancora presenti nel contesto di valutazione. In tal caso, WCF chiamerà il metodo nuovamente dopo la valutazione di tutti gli altri criteri di autorizzazione generati per il messaggio in ingresso se almeno uno di questi criteri di autorizzazione modificato il contesto di valutazione.  
+4. Implementare il metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Questo metodo compila un'istanza della classe <xref:System.IdentityModel.Policy.EvaluationContext> (passata come argomento) con attestazioni basate sul contenuto del token di sicurezza in ingresso. Il metodo restituisce `true` al termine della valutazione. Nei casi in cui l'implementazione si basa sulla presenza di altri criteri di autorizzazione che forniscono informazioni aggiuntive al contesto di valutazione, questo metodo può restituire `false` se le informazioni necessarie non sono ancora presenti nel contesto di valutazione. In tal caso, WCF chiamerà nuovamente il metodo dopo aver valutato tutti gli altri criteri di autorizzazione generati per il messaggio in arrivo se almeno uno di questi criteri di autorizzazione ha modificato il contesto di valutazione.  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
 
- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) viene descritto come creare credenziali personalizzate e un sicurezza personalizzata gestore del token. Per utilizzare l'autenticatore del token di sicurezza personalizzato qui creato, viene modificata un'implementazione del gestore del token di sicurezza per restituire l'autenticatore personalizzato dal metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. Il metodo restituisce un autenticatore quando viene passato un requisito di token di sicurezza appropriato.  
+ [Procedura dettagliata: Creazione di credenziali](walkthrough-creating-custom-client-and-service-credentials.md) client e del servizio personalizzate descrive come creare credenziali personalizzate e un gestore del token di sicurezza personalizzato. Per utilizzare l'autenticatore del token di sicurezza personalizzato qui creato, viene modificata un'implementazione del gestore del token di sicurezza per restituire l'autenticatore personalizzato dal metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. Il metodo restituisce un autenticatore quando viene passato un requisito di token di sicurezza appropriato.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Per integrare un autenticatore del token di sicurezza personalizzato con un gestore del token di sicurezza personalizzato  
   
@@ -64,5 +64,5 @@ In questo argomento viene illustrato come creare un autenticatore del token di s
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
-- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Procedura: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Procedura: Creare un provider di token di sicurezza personalizzato](how-to-create-a-custom-security-token-provider.md)

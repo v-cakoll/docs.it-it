@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 07f9ae01fae5e4badbc13670ee56a2f05e303c0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968515"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779360"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigazione: Nuovo compilatore JIT a 64 bit
 A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 64 bit per la compilazione JIT. Questa modifica non riguarda il compilatore JIT a 32 bit.  
@@ -52,7 +52,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
 ## <a name="mitigation-of-other-issues"></a>Mitigazione di altri problemi  
  Nel caso di qualsiasi altra differenza nel comportamento tra il codice compilato con la versione precedente del compilatore a 64 bit e quello compilato con la versione nuova, oppure tra le versioni di debug e rilascio dell'app compilate entrambe con il nuovo compilatore JIT a 64 bit, è possibile eseguire le operazioni seguenti per compilare l'app con la versione precedente del compilatore JIT a 64 bit:  
   
-- In base all'applicazione, è possibile aggiungere l'elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al file di configurazione dell'applicazione. Le operazioni seguenti consentono di disattivare la compilazione con il nuovo compilatore JIT a 64 bit e usare invece il compilatore JIT a 64 bit legacy.  
+- In base all'applicazione, è possibile aggiungere l'elemento [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) al file di configurazione dell'applicazione. Le operazioni seguenti consentono di disattivare la compilazione con il nuovo compilatore JIT a 64 bit e usare invece il compilatore JIT a 64 bit legacy.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -71,5 +71,5 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-- [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) (Elemento useLegacyJit>)
+- [Modifiche al runtime](runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md) (Elemento useLegacyJit>)

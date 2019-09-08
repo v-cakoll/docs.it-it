@@ -2,12 +2,12 @@
 title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033904"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782360"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
 
@@ -64,9 +64,9 @@ L'esempio seguente descrive come configurare l'applicazione di filtri a livello 
 ## <a name="see-also"></a>Vedere anche
 
 - [Sicurezza a livello di riga](/sql/relational-databases/security/row-level-security)
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Gestione delle autorizzazioni con stored procedure in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Scrittura dinamica sicura in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

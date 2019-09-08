@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254210"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799263"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -108,6 +108,6 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 - [Framework di destinazione](frameworks.md)
 - [Guida a .NET Core](../core/index.md)
 - [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)
-- [Introduzione a .NET e Docker](../core/docker/intro-net-docker.md)
+- [Introduzione a .NET e Docker](../core/docker/introduction.md)
 - [.NET Components Overview](components.md) (Panoramica dei componenti .NET)
 - [.NET Microservices. Architecture for Containerized .NET Applications](../architecture/microservices/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)

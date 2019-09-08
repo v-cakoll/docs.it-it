@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: 0be17e7ceb6a5e5230d2619be350266d0282078c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c0f41d23264bbe5c9130cb5a0b03686331bc92b1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910801"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781613"
 ---
 # <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Procedura: Specificare quando vengono generate eccezioni di concorrenza
-In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un'eccezione <xref:System.Data.Linq.ChangeConflictException> viene generata quando gli oggetti non vengono aggiornati a causa di conflitti di concorrenza ottimistici. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un'eccezione <xref:System.Data.Linq.ChangeConflictException> viene generata quando gli oggetti non vengono aggiornati a causa di conflitti di concorrenza ottimistici. Per ulteriori informazioni, vedere [concorrenza ottimistica: Panoramica](optimistic-concurrency-overview.md).  
   
  Prima di inviare le modifiche al database, è possibile specificare quando dovranno essere generate le eccezioni di concorrenza:  
   
@@ -31,5 +31,5 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un'eccezi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)
+- [Creazione e invio di modifiche dei dati](making-and-submitting-data-changes.md)

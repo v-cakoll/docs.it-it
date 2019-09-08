@@ -2,12 +2,12 @@
 title: Metodi System.TimeSpan
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947095"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781047"
 ---
 # <a name="systemtimespan-methods"></a>Metodi System.TimeSpan
 Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> dipende molto dalle versioni di .NET Framework e di Microsoft SQL Server in uso.  
@@ -34,11 +34,11 @@ Il supporto dei membri per <xref:System.TimeSpan?displayProperty=nameWithType> d
 > Per eseguire il mapping di <xref:System.TimeSpan?displayProperty=nameWithType> a una colonna `TIME` SQL con LINQ to SQL è necessario disporre di .NET Framework 3.5 SP1 o versione successiva. Il tipo di dati `TIME` SQL è disponibile solo in Microsoft SQL Server 2008 e versioni successive.  
   
 ### <a name="addition-and-subtraction"></a>Aggiunta e sottrazione  
- Sebbene il tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni. Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL. È possibile trovare altre considerazioni per l'utilizzo di tipi di data e ora SQL nel mapping dei tipi [SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Sebbene il tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR supporti l'aggiunta e la sottrazione, il tipo `TIME` SQL non supporta queste operazioni. Per questo motivo, le query LINQ to SQL genereranno errori se viene eseguito un tentativo di aggiunta e sottrazione quando sono mappate al tipo `TIME` SQL. È possibile trovare altre considerazioni per l'utilizzo di tipi di data e ora SQL nel mapping dei tipi [SQL-CLR](sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Concetti relativi alle query](query-concepts.md)
+- [Creazione del modello a oggetti](creating-the-object-model.md)
+- [Mapping del tipo SQL-CLR](sql-clr-type-mapping.md)
+- [Tipi di dati e funzioni](data-types-and-functions.md)

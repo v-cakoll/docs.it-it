@@ -2,12 +2,12 @@
 title: Comando dotnet-add reference
 description: Il comando dotnet add reference offre un'opzione utile per aggiungere riferimenti da progetto a progetto.
 ms.date: 06/26/2019
-ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421997"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784041"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -17,7 +17,7 @@ ms.locfileid: "67421997"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>NOME
 
 `dotnet add reference`: aggiunge riferimenti da progetto a progetto.
 
@@ -27,7 +27,7 @@ ms.locfileid: "67421997"
 
 ## <a name="description"></a>Description
 
-Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferimenti al progetto in un progetto. Dopo l'esecuzione del comando, al file di progetto vengono aggiunti gli elementi [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items).
+Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferimenti al progetto in un progetto. Dopo l'esecuzione del comando, `<ProjectReference>` gli elementi vengono aggiunti al file di progetto.
 
 ```xml
 <ItemGroup>

@@ -2,12 +2,12 @@
 title: Privacy e sicurezza dei dati
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988724"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783223"
 ---
 # <a name="privacy-and-data-security"></a>Privacy e sicurezza dei dati
 La salvaguardia e la gestione di informazioni sensibili nelle applicazioni ADO.NET dipendono dai prodotti e dalle tecnologie sottostanti usati per crearle. ADO.NET non fornisce direttamente servizi per la protezione o la crittografia dei dati.  
@@ -18,7 +18,7 @@ La salvaguardia e la gestione di informazioni sensibili nelle applicazioni ADO.N
  Diversamente dalla crittografia, che consente di crittografare i dati e di decrittografarli in un secondo momento, l'hash dei dati è un processo irreversibile. Risulta utile quando si desidera impedire la manomissione dei dati verificando che non siano stati alterati. Con stringhe di input identiche, gli algoritmi di hash producono sempre valori di output brevi facilmente confrontabili. [Garantendo l'integrità dei dati con i codici hash](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) viene descritto come generare e verificare i valori hash.  
   
 ## <a name="encrypting-configuration-files"></a>Crittografia dei file di configurazione  
- La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta. Le stringhe di connessione salvate nei file di configurazione vengono archiviate in file XML standard per i quali in .NET Framework è stato definito un set comune di elementi. La configurazione protetta consente di crittografare informazioni sensibili in un file di configurazione. Sebbene sia stata progettata principalmente per applicazioni ASP.NET, questa funzionalità può essere usata anche per crittografare sezioni dei file di configurazione nelle applicazioni Windows. Per altre informazioni, vedere [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta. Le stringhe di connessione salvate nei file di configurazione vengono archiviate in file XML standard per i quali in .NET Framework è stato definito un set comune di elementi. La configurazione protetta consente di crittografare informazioni sensibili in un file di configurazione. Sebbene sia stata progettata principalmente per applicazioni ASP.NET, questa funzionalità può essere usata anche per crittografare sezioni dei file di configurazione nelle applicazioni Windows. Per altre informazioni, vedere [Protezione delle informazioni di connessione](protecting-connection-information.md).  
   
 ## <a name="securing-string-values-in-memory"></a>Protezione di valori stringa in memoria  
  Se un oggetto <xref:System.String> contiene informazioni sensibili, ad esempio password, numeri di carta di credito o dati personali, vi è il rischio che tali informazioni possano essere rivelate dopo l'uso poiché i dati non vengono eliminati dalla memoria del computer.  
@@ -29,6 +29,6 @@ La salvaguardia e la gestione di informazioni sensibili nelle applicazioni ADO.N
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](securing-ado-net-applications.md)
+- [Sicurezza di SQL Server](./sql/sql-server-security.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf67506fca161a64dd5d4ee915031c155c49241
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754039"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796649"
 ---
 # <a name="iassemblynameclone-method"></a>Metodo IAssemblyName::Clone
-Crea una copia superficiale di questo [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) oggetto.  
+Crea una copia superficiale di questo oggetto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parametri  
  `pName`  
- [out] La copia restituita di questo `IAssemblyName` oggetto.  
+ out Copia restituita dell' `IAssemblyName` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -48,4 +48,4 @@ HRESULT Clone (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)

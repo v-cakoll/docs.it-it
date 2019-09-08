@@ -7,26 +7,26 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910998"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787757"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), librerie di classi base e altre librerie gestite. Questo argomento descrive le funzionalità principali di .NET Framework in base alla versione, fornisce informazioni sulle versioni CLR sottostanti e sugli ambienti di sviluppo associati, e identifica le versioni installate dal sistema operativo Windows.  
   
 > [!NOTE]
-> Per informazioni sul download e l'installazione di .NET Framework, vedere [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).  
+> Per informazioni sul download e l'installazione di .NET Framework, vedere [Install the .NET Framework for developers](../install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).  
   
  La tabella seguente contiene un riassunto della cronologia delle versioni di .NET Framework, correlando ciascuna di esse con Visual Studio, Windows e Windows Server. In Visual Studio viene fornita la funzionalità di multitargeting, pertanto l'utente non è limitato alla versione di .NET Framework elencata.  
   
  Ogni nuova versione di .NET Framework conserva funzionalità dalle versioni precedenti e ne aggiunge nuove. CLR viene identificato dal relativo numero di versione. Il numero di versione di .NET Framework viene incrementato a ogni rilascio, sebbene la versione CLR non venga sempre incrementata. Ad esempio, .NET Framework 4, 4.5 e versioni più recenti includono CLR 4, ma .NET Framework 2.0, 3.0 e 3.5 includono CLR 2.0. (non c'è nessuna versione 3 di CLR).  
   
- Per un elenco completo dei sistemi operativi supportati, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per i download, vedere [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md). Per determinare quali versioni di .NET Framework siano installate in un computer, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).  
+ Per un elenco completo dei sistemi operativi supportati, vedere [Requisiti di sistema](../get-started/system-requirements.md). Per i download, vedere [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md). Per determinare quali versioni di .NET Framework siano installate in un computer, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).  
   
- Nella tabella le versioni di .NET Framework installate nelle versioni dei sistemi operativi contrassegnate da ✓ nelle colonne **Inclusa in/Può essere installata su Windows** e **Inclusa in/Può essere installata su Windows Server** devono essere [abilitate nel Pannello di controllo](../../../docs/framework/install/dotnet-35-windows-10.md) (per Windows) oppure devono essere abilitate tramite Server Manager (per Windows Server).  
+ Nella tabella le versioni di .NET Framework installate nelle versioni dei sistemi operativi contrassegnate da ✓ nelle colonne **Inclusa in/Può essere installata su Windows** e **Inclusa in/Può essere installata su Windows Server** devono essere [abilitate nel Pannello di controllo](../install/dotnet-35-windows-10.md) (per Windows) oppure devono essere abilitate tramite Server Manager (per Windows Server).  
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
@@ -53,7 +53,7 @@ Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), li
 
 <sup>\*</sup>&nbsp;&nbsp;.NET Framework deve essere abilitato per il sistema operativo tramite [Pannello di controllo (per Windows) o Server Manager (per Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
 
- In generale, non è opportuno disinstallare alcuna versione di .NET Framework presente nel computer, perché un'applicazione usata potrebbe essere basata su una versione specifica e smettere di funzionare se tale versione viene rimossa. È possibile caricare più versioni di .NET Framework contemporaneamente in un computer. Ciò significa che è possibile installare .NET Framework senza dover disinstallare le versioni precedenti. Per altre informazioni, vedere [Introduzione a .NET Framework](../../../docs/framework/get-started/index.md).
+ In generale, non è opportuno disinstallare alcuna versione di .NET Framework presente nel computer, perché un'applicazione usata potrebbe essere basata su una versione specifica e smettere di funzionare se tale versione viene rimossa. È possibile caricare più versioni di .NET Framework contemporaneamente in un computer. Ciò significa che è possibile installare .NET Framework senza dover disinstallare le versioni precedenti. Per altre informazioni, vedere [Introduzione a .NET Framework](../get-started/index.md).
 
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Scelta come destinazione ed esecuzione di app .NET Framework per le versioni 4.5 e successive  
  .NET Framework 4.5 è un aggiornamento sul posto che sostituisce .NET Framework 4 nel computer. Analogamente, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, e 4.8 sono aggiornamenti sul posto di .NET Framework 4.5, ovvero usano la stessa versione di runtime, ma le versioni degli assembly vengono aggiornate e includono tipi e membri nuovi. Dopo aver installato uno di questi aggiornamenti, le app .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 o .NET Framework 4.7 dovrebbero continuare a funzionare senza richiedere la ricompilazione. Non è tuttavia vero il contrario. Non è consigliabile eseguire app destinate a una versione successiva di .NET Framework su una versione precedente di .NET Framework. Ad esempio, non è consigliabile eseguire un'app destinata a .NET Framework 4.6 in .NET Framework 4.5. Si applicano le linee guida seguenti:  
@@ -64,19 +64,19 @@ Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), li
   
      .NET framework 4.5.1 e .NET Framework 4.5 vengono usati qui solo come esempi. Questo principio si applica a qualsiasi app destinata a una versione successiva di .NET Framework rispetto a quella installata nel sistema in cui è in esecuzione.  
   
- Alcune modifiche in .NET Framework possono richiedere modifiche al codice dell'app. Vedere [Compatibilità delle applicazioni](application-compatibility.md) prima di eseguire le app esistenti con .NET Framework 4.5 o versioni successive. Per altre informazioni sull'installazione della versione corrente, vedere [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md). Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) nel sito Web del supporto tecnico Microsoft.  
+ Alcune modifiche in .NET Framework possono richiedere modifiche al codice dell'app. Vedere [Compatibilità delle applicazioni](application-compatibility.md) prima di eseguire le app esistenti con .NET Framework 4.5 o versioni successive. Per altre informazioni sull'installazione della versione corrente, vedere [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md). Per informazioni sul supporto per .NET Framework, vedere [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) nel sito Web del supporto tecnico Microsoft.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Destinazione ed esecuzione di app per versioni precedenti  
 
-Le versioni 2.0, 3.0 e 3.5 di .NET Framework sono compilate con la stessa versione di CLR (CLR 2.0). Queste versioni rappresentano i livelli successivi di una singola installazione. Ogni versione viene compilata in modo incrementale sulle versioni precedenti. Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 affiancate in un computer. Se si installa la versione 3.5, si ottengono automaticamente i livelli 2.0 e 3.0 e le app create per le versioni 2.0, 3.0 e 3.5 possono essere eseguite sulla versione 3.5. Tuttavia, .NET Framework 4 interrompe questo approccio su più livelli e le versioni successive (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 e 4.8) rappresentano anche i livelli successivi di una singola installazione.  A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di CLR in un unico processo. Per altre informazioni, vedere [Assembly ed esecuzione side-by-side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+Le versioni 2.0, 3.0 e 3.5 di .NET Framework sono compilate con la stessa versione di CLR (CLR 2.0). Queste versioni rappresentano i livelli successivi di una singola installazione. Ogni versione viene compilata in modo incrementale sulle versioni precedenti. Non è possibile eseguire le versioni 2.0, 3.0 e 3.5 affiancate in un computer. Se si installa la versione 3.5, si ottengono automaticamente i livelli 2.0 e 3.0 e le app create per le versioni 2.0, 3.0 e 3.5 possono essere eseguite sulla versione 3.5. Tuttavia, .NET Framework 4 interrompe questo approccio su più livelli e le versioni successive (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 e 4.8) rappresentano anche i livelli successivi di una singola installazione.  A partire da .NET Framework 4, è possibile usare l'hosting side-by-side in-process per eseguire più versioni di CLR in un unico processo. Per altre informazioni, vedere [Assembly ed esecuzione side-by-side](../app-domains/assemblies-and-side-by-side-execution.md).  
   
- Se inoltre l'app è destinata alla versione 2.0, 3.0 o 3.5, agli utenti potrebbe essere richiesto di abilitare .NET Framework 3.5 in un computer Windows 8, Windows 8.1 o Windows 10 prima di eseguire l'app. Per altre informazioni, vedere [Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
+ Se inoltre l'app è destinata alla versione 2.0, 3.0 o 3.5, agli utenti potrebbe essere richiesto di abilitare .NET Framework 3.5 in un computer Windows 8, Windows 8.1 o Windows 10 prima di eseguire l'app. Per altre informazioni, vedere [Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8](../install/dotnet-35-windows-10.md).  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
-- Se non si ha familiarità con .NET Framework, vedere la [panoramica](../../../docs/framework/get-started/overview.md) per un'introduzione ai concetti e alle funzionalità chiave.  
+- Se non si ha familiarità con .NET Framework, vedere la [panoramica](../get-started/overview.md) per un'introduzione ai concetti e alle funzionalità chiave.  
   
-- Per le nuove funzionalità e i miglioramenti in .NET Framework 4.5 e nelle relative versioni intermedie, vedere [Novità di .NET Framework](../../../docs/framework/whats-new/index.md).  
+- Per le nuove funzionalità e i miglioramenti in .NET Framework 4.5 e nelle relative versioni intermedie, vedere [Novità di .NET Framework](../whats-new/index.md).  
   
 - Per informazioni sulla migrazione di un'app da .NET Framework 4 a .NET Framework 4.5 e alle versioni intermedie, vedere la [guida di migrazione](index.md).  
   
@@ -86,4 +86,4 @@ Le versioni 2.0, 3.0 e 3.5 di .NET Framework sono compilate con la stessa versio
 
 - [Compatibilità tra versioni](version-compatibility.md)
 - [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
-- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

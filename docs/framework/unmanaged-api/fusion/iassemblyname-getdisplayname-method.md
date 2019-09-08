@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f48f2d95829d2c8111065e5f4ede4e43a16d63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753967"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796657"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>Metodo IAssemblyName::GetDisplayName
-Ottiene il nome leggibile dell'assembly a cui fa riferimento [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) oggetto.  
+Ottiene il nome leggibile dell'assembly a cui fa riferimento questo oggetto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,16 +39,16 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Parametri  
  `szDisplayName`  
- [out] Il buffer di stringa che contiene il nome dell'assembly di riferimento.  
+ out Buffer di stringa che contiene il nome dell'assembly a cui si fa riferimento.  
   
  `pccDisplayName`  
- [in, out] Le dimensioni di `szDisplayName` in caratteri "wide", incluso il carattere di terminazione null.  
+ [in, out] Dimensioni in caratteri `szDisplayName` Wide, incluso un carattere di terminazione null.  
   
  `dwDisplayFlags`  
- [in] Una combinazione bit per bit di [ASM_DISPLAY_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) i valori che determinano le caratteristiche di `szDisplayName`.  
+ in Combinazione bit per bit di valori [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) che influenzano le `szDisplayName`funzionalità di.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -56,5 +56,5 @@ HRESULT GetDisplayName (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Enumerazioni Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)
+- [Enumerazioni Fusion](fusion-enumerations.md)

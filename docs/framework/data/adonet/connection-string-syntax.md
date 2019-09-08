@@ -2,12 +2,12 @@
 title: Sintassi delle stringhe di connessione
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784923"
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -30,7 +30,7 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- I generatori di stringhe di connessione consentono di costruire stringhe di connessione sintatticamente valide in fase di esecuzione, pertanto non è necessario concatenare manualmente i valori delle stringhe di connessione nel codice. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ I generatori di stringhe di connessione consentono di costruire stringhe di connessione sintatticamente valide in fase di esecuzione, pertanto non è necessario concatenare manualmente i valori delle stringhe di connessione nel codice. Per altre informazioni, vedere [Compilatori di stringhe di connessione](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Autenticazione di Windows  
  È consigliabile usare l'autenticazione di Windows (talvolta definita *sicurezza integrata*) per connettersi alle origini dati che la supportano. La sintassi usata nella stringa di connessione varia a seconda del provider. La tabella seguente illustra la sintassi dell'autenticazione di Windows usata con i provider di dati .NET Framework.  
@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Connessione e collegamento alle istanze utente di SQL Server Express  
  Le istanze utente sono una funzionalità di SQL Server Express. consentono a un utente che usa un account di Windows locale con privilegi minimi di collegarsi ed eseguire un database SQL Server senza la necessità di privilegi amministrativi. Un'istanza utente viene eseguita con le credenziali di Windows dell'utente, non come un servizio.  
   
- Per ulteriori informazioni sull'utilizzo delle istanze utente, vedere [SQL Server Express istanze utente](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Per ulteriori informazioni sull'utilizzo delle istanze utente, vedere [SQL Server Express istanze utente](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Uso di TrustServerCertificate  
  La `TrustServerCertificate` parola chiave è valida solo quando ci si connette a un'istanza di SQL Server con un certificato valido. Se `TrustServerCertificate` è impostata su `true`, il livello trasporto userà SSL per crittografare il canale e ignorerà l'analisi della catena di certificati per la convalida dell'attendibilità.  
@@ -116,8 +116,8 @@ Data Source=MySqlServer\MSSQL1;"
 |No|N/D|Sì|Yes|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
 |Sì|No|Ignorato|Ignorato|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
 |Sì|Sì|No (impostazione predefinita)|Ignorato|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
-|Sì|Sì|Sì|No (impostazione predefinita)|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|Sì|Yes|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
+|Yes|Sì|Sì|No (impostazione predefinita)|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|Sì|Sì|Sì|Sì|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
   
  Per ulteriori informazioni, vedere [utilizzo della crittografia senza convalida](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Stringhe di connessione](connection-strings.md)
+- [Connessione a un'origine dati](connecting-to-a-data-source.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

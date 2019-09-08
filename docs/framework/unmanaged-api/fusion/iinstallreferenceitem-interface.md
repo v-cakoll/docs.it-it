@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757898"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796389"
 ---
 # <a name="iinstallreferenceitem-interface"></a>Interfaccia IInstallReferenceItem
-Rappresenta un elemento installato nella global assembly cache.  
+Rappresenta un elemento installato nell'Global Assembly Cache.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
-|[Metodo GetReference](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Ottiene un puntatore per il `FUSION_INSTALL_REFERENCE` rappresentato da questa struttura `IInstallReferenceItem`.|  
+|[Metodo GetReference](iinstallreferenceitem-getreference-method.md)|Ottiene un puntatore alla `FUSION_INSTALL_REFERENCE` struttura rappresentata `IInstallReferenceItem`dall'oggetto.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -41,5 +41,5 @@ Rappresenta un elemento installato nella global assembly cache.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Struttura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Struttura FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)

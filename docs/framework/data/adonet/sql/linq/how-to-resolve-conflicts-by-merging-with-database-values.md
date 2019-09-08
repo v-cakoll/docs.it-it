@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943442"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793360"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Procedura: Risolvere i conflitti mediante l'unione con valori di database
-Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.KeepChanges> per unire i valori del database con i valori del membro client corrente. Per ulteriori informazioni, vedere [concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.KeepChanges> per unire i valori del database con i valori del membro client corrente. Per ulteriori informazioni, vedere [concorrenza ottimistica: Panoramica](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > In tutti i casi, viene innanzitutto aggiornato il record sul client recuperando i dati aggiornati dal database. Questa azione assicura che il successivo tentativo di aggiornamento non avrà esito negativo durante gli stessi controlli di concorrenza.  
@@ -42,6 +42,6 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Risolvere i conflitti sovrascrivendo i valori del database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Procedura: Risolvere i conflitti mantenendo i valori del database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [Procedura: Gestione dei conflitti di modifica](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Procedura: Risolvere i conflitti sovrascrivendo i valori del database](how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Procedura: Risolvere i conflitti mantenendo i valori del database](how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Procedura: Gestione dei conflitti di modifica](how-to-manage-change-conflicts.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779767"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operazioni di servizio (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server. Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI. Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate. Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. URI dell'operazione del servizio seguente, ad esempio, (in base il [Guida introduttiva](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servizio dati) passa il valore `London` per il `city` parametro:
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server. Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI. Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate. Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. Ad esempio, l'URI dell'operazione del servizio seguente, basato sul servizio dati di [avvio rapido](quickstart-wcf-data-services.md) , `London` passa il `city` valore al parametro:
 
 ```
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,9 +28,9 @@ La definizione per questa operazione del servizio è la seguente:
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-È possibile usare la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> dell'oggetto <xref:System.Data.Services.DataService%601> per accedere direttamente all'origine dati usata dal servizio dati. Per altre informazioni, vedere [Procedura: Definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+È possibile usare la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> dell'oggetto <xref:System.Data.Services.DataService%601> per accedere direttamente all'origine dati usata dal servizio dati. Per altre informazioni, vedere [Procedura: Definire un'operazione](how-to-define-a-service-operation-wcf-data-services.md)del servizio.
 
-Per informazioni su come chiamare un'operazione del servizio da un'applicazione client .NET Framework, vedere [chiamare operazioni del servizio](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).
+Per informazioni su come chiamare un'operazione del servizio da un'applicazione client di .NET Framework, vedere [chiamata di operazioni del servizio](calling-service-operations-wcf-data-services.md).
 
 ## <a name="service-operation-requirements"></a>Requisiti delle operazioni del servizio
 
@@ -100,7 +100,7 @@ La visibilità a livello di servizio delle operazioni del servizio viene control
 > [!NOTE]
 > Se un'operazione del servizio dispone di un tipo restituito nascosto mediante limitazione dell'accesso nei set di entità sottostanti, l'operazione del servizio non sarà disponibile alle applicazioni client.
 
-Per altre informazioni, vedere [Procedura: Definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+Per altre informazioni, vedere [Procedura: Definire un'operazione](how-to-define-a-service-operation-wcf-data-services.md)del servizio.
 
 ## <a name="raising-exceptions"></a>Generazione di eccezioni
 
@@ -111,4 +111,4 @@ Per altre informazioni, vedere [Procedura: Definire un'operazione del servizio](
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [Intercettori](interceptors-wcf-data-services.md)

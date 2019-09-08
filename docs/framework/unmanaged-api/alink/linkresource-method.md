@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741594"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776950"
 ---
 # <a name="linkresource-method"></a>Metodo LinkResource
 Collegamenti in una risorsa.  
@@ -46,22 +46,22 @@ HRESULT LinkResource(
  Nome del file.  
   
  `pszNewLocation`  
- Nuovo nome file facoltativo. Se diverso da NULL, `pszFileName` pszNewLocation verranno copiati.  
+ Nuovo nome file facoltativo. Se diverso da null, `pszFileName` verrà copiato in pszNewLocation.  
   
  `pszResourceName`  
  Nome della risorsa.  
   
  `dwFlags`  
- Flag di accessibilità, ad esempio `mrPublic` e `mrPrivate`. Questo parametro può essere passato a [metodo DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Flag di accessibilità `mrPublic` , `mrPrivate`ad esempio e. Questo parametro può essere passato al [metodo DefineManifestResource](../metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

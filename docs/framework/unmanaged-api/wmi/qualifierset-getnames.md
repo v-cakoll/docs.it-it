@@ -1,6 +1,6 @@
 ---
 title: Funzione QualifierSet_GetNames (riferimenti alle API non gestite)
-description: La funzione QualifierSet_GetNames recupera i nomi dei qualificatori da un oggetto o una proprietà.
+description: La funzione QualifierSet_GetNames recupera i nomi dei qualificatori da un oggetto o da una proprietà.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_GetNames
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636594"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798298"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames (funzione)
+# <a name="qualifierset_getnames-function"></a>QualifierSet_GetNames (funzione)
 
-Recupera i nomi di tutti i qualificatori o di determinati qualificatori disponibili dall'oggetto corrente o la proprietà.
+Recupera i nomi di tutti i qualificatori o di determinati qualificatori disponibili dall'oggetto o dalla proprietà corrente.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,46 +43,46 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`\
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`\
-[in] Un puntatore a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) istanza.
+in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`\
-[in] Uno dei seguenti flag o valori che specifica i nomi da includere nell'enumerazione.
+in Uno dei seguenti flag o valori che specifica i nomi da includere nell'enumerazione.
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-|  | 0 | Restituire i nomi di tutti i qualificatori. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi dei qualificatori specifici per la proprietà corrente o l'oggetto. <br/> Per una proprietà: Restituire solo gli e i qualificatori specifici per la proprietà (incluse le sostituzioni), non tali propagata dalla definizione della classe. <br/> Per un'istanza: Restituire solo i nomi di qualificatore specifici dell'istanza. <br/> Per una classe: Restituire solo i qualificatori specifici per la classe derivata.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: Restituisce solo i qualificatori propagati a questa proprietà dalla definizione della classe e non quelli dalla proprietà stessa. <br/> Per un'istanza: Restituzione solo tali qualificatori propagati dalla definizione della classe. <br/> Per una classe: Restituisce solo i nomi di qualificatore ereditati dalle classi padre. |
+|  | 0 | Restituisce i nomi di tutti i qualificatori. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituisce solo i nomi dei qualificatori specifici della proprietà o dell'oggetto corrente. <br/> Per una proprietà: Restituire solo i qualificatori specifici della proprietà (incluse le sostituzioni) e non i qualificatori propagati dalla definizione della classe. <br/> Per un'istanza: Restituisce solo nomi di qualificatori specifici dell'istanza. <br/> Per una classe: Restituisce solo i qualificatori specifici della classe derivata.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: Restituisce solo i qualificatori propagati a questa proprietà dalla definizione della classe e non da quelli della proprietà stessa. <br/> Per un'istanza: Restituisce solo i qualificatori propagati dalla definizione della classe. <br/> Per una classe: Restituisce solo i nomi dei qualificatori ereditati dalle classi padre. |
 
 `pstrNames`\
-[out] Un nuovo `SAFEARRAY` che contiene i nomi richiesti. La matrice può contenere 0 elementi. Se si verifica un errore, un nuovo `SAFEARRAY` non viene restituita.
+out Nuovo `SAFEARRAY` oggetto che contiene i nomi richiesti. La matrice può avere 0 elementi. Se si verifica un errore, non `SAFEARRAY` viene restituito un nuovo oggetto.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |DESCRIZIONE  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per iniziare una nuova enumerazione. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | La memoria disponibile non è sufficiente per iniziare una nuova enumerazione. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) .
 
-Dopo aver recuperato i nomi di qualificatore, è possibile accedere in base al nome ogni qualificatore chiamando il [QualifierSet_Get](qualifierset-get.md) (funzione).
+Una volta recuperati i nomi dei qualificatori, è possibile accedere a ogni qualificatore in base al nome chiamando la funzione [QualifierSet_Get](qualifierset-get.md) .
 
-Non è un errore per un determinato oggetto di avere zero qualificatori, pertanto il numero di stringhe nelle `pstrNames` nell'output restituito può essere 0, anche se la funzione restituisce `WBEM_S_NO_ERROR`.
+Non si tratta di un errore per un dato oggetto con qualificatori zero, quindi il numero di stringhe in `pstrNames` su restituito può essere 0, anche se la funzione restituisce `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** WMINet_Utils.idl
+**Intestazione:** WMINet_Utils. idl
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

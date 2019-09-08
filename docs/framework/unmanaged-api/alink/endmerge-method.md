@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8daf76e50b4c584115a55936aa9336c95a3669ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88f594117fffedb6acafef26a9e834dd951ea5bb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742073"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787537"
 ---
 # <a name="endmerge-method"></a>Metodo EndMerge
-Indica che tutti gli attributi personalizzati sono stati uniti nell'ambito di emissione.  
+Indica che tutti gli attributi personalizzati sono Stati Uniti nell'ambito di emissione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +43,10 @@ HRESULT EndMerge(
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

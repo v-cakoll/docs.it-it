@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651111"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795594"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Procedura: Controllare o modificare i parametri
-È possibile ispezionare o modificare i messaggi in ingresso o in uscita per una singola operazione su un oggetto client di Windows Communication Foundation (WCF) o un servizio WCF mediante l'implementazione di <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfaccia e inserendola nel runtime del servizio o client. In genere, viene utilizzato un comportamento dell'operazione per aggiungere controlli del parametro per una singola operazione; è tuttavia possibile utilizzare altri comportamenti per fornire facile accesso al runtime per un ambito più vasto. Per altre informazioni, vedere [client estendendo](../../../../docs/framework/wcf/extending/extending-clients.md) e [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+È possibile ispezionare o modificare i messaggi in arrivo o in uscita per una singola operazione su un oggetto client Windows Communication Foundation (WCF) o un servizio WCF implementando <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> l'interfaccia e inserendola nel runtime del client o del servizio. In genere, viene utilizzato un comportamento dell'operazione per aggiungere controlli del parametro per una singola operazione; è tuttavia possibile utilizzare altri comportamenti per fornire facile accesso al runtime per un ambito più vasto. Per ulteriori informazioni, vedere [estensione dei client](extending-clients.md) ed [estensione di Dispatcher](extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Controllo o modifica di parametri  
   
@@ -21,7 +21,7 @@ ms.locfileid: "64651111"
   
 2. Implementare un'interfaccia <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (a seconda dell'ambito richiesto) per aggiungere il controllo del parametro alle proprietà <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType>.  
   
-3. Inserire il comportamento prima di chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Per informazioni dettagliate, vedere [configurazione ed estensione del Runtime dei comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Inserire il comportamento prima di chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Per informazioni dettagliate, vedere [configurazione ed estensione del runtime con i comportamenti](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Esempio  
  Negli esempi di codice seguenti vengono illustrati, nell'ordine:  
@@ -42,4 +42,4 @@ ms.locfileid: "64651111"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configurazione ed estensione del runtime con i comportamenti](configuring-and-extending-the-runtime-with-behaviors.md)

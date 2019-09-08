@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780960"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
   
 > [!NOTE]
-> È inoltre possibile usare stored procedure nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per eseguire l'override del comportamento predefinito, specialmente per i processi `Create`, `Update` e `Delete`. Per ulteriori informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> È inoltre possibile usare stored procedure nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per eseguire l'override del comportamento predefinito, specialmente per i processi `Create`, `Update` e `Delete`. Per ulteriori informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](customizing-insert-update-and-delete-operations.md).  
   
  Ai fini di questa procedura dettagliata, si utilizzeranno due metodi mappati a stored procedure nel database di esempio Northwind: CustOrdersDetail e CustOrderHist. Il mapping viene eseguito quando si esegue lo strumento da riga di comando SqlMetal per generare un file di Visual Basic. Per altre informazioni, vedere la sezione successiva relativa ai prerequisiti.  
   
@@ -32,7 +32,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 - Il database di esempio Northwind.  
   
-     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest3.  
+     Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file northwnd.mdf nella cartella c:\linqtest3.  
   
 - Un file di codice Visual Basic generato dal database Northwind.  
   
@@ -40,7 +40,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
   
-     Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da sei attività principali:  
@@ -135,7 +135,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 6. Allo stesso modo per **Label2**, modificare la proprietà **Text** da **Label2** in **Enter CustomerID:** .  
   
-7. Allo stesso modo, modificare la proprietà **Text** per **Button1** in **Order**details.  
+7. Allo stesso modo, modificare la proprietà **Text** per **Button1** in **Order Details**.  
   
 8. Modificare la proprietà **Text** per **Button2** in **Order History**.  
   
@@ -143,7 +143,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ### <a name="to-handle-button-clicks"></a>Per gestire i clic sui pulsanti  
   
-1. Fare doppio clic su **Order** Details in **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
+1. Fare doppio clic su **Order Details** in **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
   
 2. Digitare il codice riportato di seguito nel gestore eventi `Button1`:  
   
@@ -164,7 +164,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Viene visualizzato Form1.  
   
-2. Nella casella **Enter OrderID** Digitare **10249** , quindi fare clic su **Order**details.  
+2. Nella casella **Enter OrderID** Digitare **10249** , quindi fare clic su **Order Details**.  
   
      I prodotti inclusi nell'ordine 10249 vengono elencati in una finestra di messaggio.  
   
@@ -176,7 +176,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-4. Nella casella **Enter OrderID** Digitare `123`, quindi fare clic su **Order**details.  
+4. Nella casella **Enter OrderID** Digitare `123`, quindi fare clic su **Order Details**.  
   
      Viene visualizzata una finestra di messaggio con l'indicazione che non è stato trovato alcun risultato.  
   
@@ -193,5 +193,5 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Apprendimento tramite procedure dettagliate](learning-by-walkthroughs.md)
+- [stored procedure](stored-procedures.md)

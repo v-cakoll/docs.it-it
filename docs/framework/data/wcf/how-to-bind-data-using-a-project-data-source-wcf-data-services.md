@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)"
+title: "Procedura: Associare dati utilizzando un'origine dati del progetto (WCF Data Services)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 69a0ec657f0a8cec34048776a4767cec23d091d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780170"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: Associare dati utilizzando un'origine dati del progetto (WCF Data Services)
 
-È possibile creare origini dati che si basano sugli oggetti dati generati in un'applicazione client WCF Data Services. Quando si aggiunge un riferimento a un servizio dati tramite il **Aggiungi riferimento al servizio** finestra di dialogo, un'origine dati del progetto viene creata con le classi dati client generate. Per ogni set di entità esposto dal servizio dati viene creata un'origine dati. È possibile creare form che visualizzino i dati del servizio mediante il trascinamento di questi elementi di origine dati dal **Zdroje dat** finestra nella finestra di progettazione. Questi elementi diventeranno controlli associati all'origine dati. Durante l'esecuzione, questa origine dati è associata a un'istanza del <xref:System.Data.Services.Client.DataServiceCollection%601> classe, che viene riempita con oggetti restituiti da una query al servizio dati. Per altre informazioni, vedere [associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+È possibile creare origini dati basate sugli oggetti dati generati in un'applicazione client WCF Data Services. Quando si aggiunge un riferimento a un servizio dati utilizzando la finestra di dialogo **Aggiungi riferimento al servizio** , viene creata un'origine dati del progetto insieme alle classi di dati client generate. Per ogni set di entità esposto dal servizio dati viene creata un'origine dati. È possibile creare form che visualizzano i dati dal servizio trascinando tali elementi dall'origine dati dalla finestra **origini dati** nella finestra di progettazione. Questi elementi diventeranno controlli associati all'origine dati. Durante l'esecuzione, questa origine dati è associata a un'istanza della <xref:System.Data.Services.Client.DataServiceCollection%601> classe, che viene riempita con gli oggetti restituiti da una query al servizio dati. Per ulteriori informazioni, vedere [associazione di dati a controlli](binding-data-to-controls-wcf-data-services.md).
 
- Negli esempi riportati in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+ Negli esempi riportati in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usare un'origine dati del progetto in una finestra WPF
 
-1. In Visual Studio in un progetto WPF aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. In un progetto WPF in Visual Studio aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento](how-to-add-a-data-service-reference-wcf-data-services.md)al servizio dati.
 
-2. Nel **Zdroje dat** finestra, espandere il `Customers` nodo il **NorthwindEntities** origine dati del progetto.
+2. Nella finestra **origini dati** espandere il `Customers` nodo nell'origine dati del progetto **NorthwindEntities** .
 
-3. Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
+3. Fare clic sull'elemento **CustomerID** , selezionare **ComboBox** nell'elenco e trascinare l'elemento **CustomerID** dal nodo **Customers** alla finestra di progettazione.
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto seguenti:
 
@@ -37,7 +37,7 @@ ms.locfileid: "64645643"
 
     - Oggetto <xref:System.Windows.Controls.Label>.
 
-4. Trascinare il **ordini** proprietà di navigazione nella finestra di progettazione.
+4. Trascinare la proprietà di navigazione **Orders** nella finestra di progettazione.
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto aggiuntivi seguenti:
 
@@ -45,7 +45,7 @@ ms.locfileid: "64645643"
 
     - Un controllo <xref:System.Windows.Controls.DataGrid> con associazione a dati denominato `ordersDataGrid`.
 
-5. (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
+5. Opzionale Trascinare gli elementi aggiuntivi dal nodo **Customers** alla finestra di progettazione.
 
 6. Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
 
@@ -59,11 +59,11 @@ ms.locfileid: "64645643"
 8. Nella finestra di progettazione selezionare la finestra.
 
     > [!NOTE]
-    > Assicurarsi di selezionare la finestra stessa anziché il contenuto incluso nella finestra. Se si seleziona la finestra, il **Name** casella di testo nella parte superiore della **proprietà** finestra deve contenere il nome della finestra.
+    > Assicurarsi di selezionare la finestra stessa anziché il contenuto incluso nella finestra. Se la finestra è selezionata, la casella di testo **nome** nella parte superiore della finestra **Proprietà** deve contenere il nome della finestra.
 
-9. Nel **delle proprietà** finestra, seleziona la **eventi** pulsante.
+9. Nella finestra **Proprietà** selezionare il pulsante **eventi** .
 
-10. Trovare il **Loaded** evento e quindi fare doppio clic sul menu a discesa elenco accanto a questo evento.
+10. Individuare l'evento **Loaded** , quindi fare doppio clic sull'elenco a discesa accanto a questo evento.
 
      In Visual Studio verrà aperto il file code-behind per la finestra e verrà generato un gestore di eventi <xref:System.Windows.FrameworkElement.Loaded>.
 
@@ -74,11 +74,11 @@ ms.locfileid: "64645643"
 
 12. Tramite questo codice viene creata un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601> per il tipo di `Customers` in base all'esecuzione di una query LINQ che restituisce un oggetto <xref:System.Collections.Generic.IEnumerable%601> di `Customers` insieme agli oggetti `Orders` correlati dal servizio dati Northwind e tale istanza viene associata a `customersViewSource`.
 
-## <a name="use-a-project-data-source-in-a-windows-form"></a>Usare un'origine dati del progetto in un modulo di Windows
+## <a name="use-a-project-data-source-in-a-windows-form"></a>Usare un'origine dati del progetto in un Windows Form
 
-1. Nel **Zdroje dat** finestra, espandere il **clienti** nodo il **NorthwindEntities** origine dati del progetto.
+1. Nella finestra **origini dati** espandere il nodo **Customers** nell'origine dati del progetto **NorthwindEntities** .
 
-2. Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
+2. Fare clic sull'elemento **CustomerID** , selezionare **ComboBox** nell'elenco e trascinare l'elemento **CustomerID** dal nodo **Customers** alla finestra di progettazione.
 
      Nel form verranno creati i controlli seguenti:
 
@@ -90,11 +90,11 @@ ms.locfileid: "64645643"
 
     - Oggetto <xref:System.Windows.Forms.Label>.
 
-3. Trascinare il **ordini** proprietà di navigazione al form.
+3. Trascinare la proprietà di navigazione **Orders** nel form.
 
 4. Verrà creato il controllo `ordersBindingSource` con la proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> impostata su `customersBindingSource` e la proprietà <xref:System.Windows.Forms.BindingSource.DataMember%2A> impostata su `Customers`. Nel form verrà inoltre creato il controllo con associazione a dati `ordersDataGridView`, accompagnato da un controllo etichetta con il titolo appropriato.
 
-5. (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
+5. Opzionale Trascinare gli elementi aggiuntivi dal nodo **Customers** alla finestra di progettazione.
 
 6. Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
 
@@ -119,5 +119,5 @@ ms.locfileid: "64645643"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Procedura: Associare dati a elementi Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Libreria client WCF Data Services](wcf-data-services-client-library.md)
+- [Procedura: Associare dati a elementi Windows Presentation Foundation](bind-data-to-wpf-elements-wcf-data-services.md)

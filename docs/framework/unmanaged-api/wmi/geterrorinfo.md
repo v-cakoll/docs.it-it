@@ -1,5 +1,5 @@
 ---
-title: 'IMetaDataImport:: GetErrorInfo (funzione) (riferimenti alle API non gestite)'
+title: Funzione GetErrorInfo (riferimenti alle API non gestite)
 description: La funzione GetErrorInfo recupera le informazioni sull'errore dalla chiamata di funzione precedente.
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746549"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798576"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo (funzione)
 Recupera le informazioni di errore dalla chiamata di funzione precedente.  
@@ -36,14 +36,14 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) oggetto se la chiamata di funzione ha esito positivo, o `null` se ha esito negativo.
+Puntatore a un oggetto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se la chiamata di funzione ha esito positivo `null` o se ha esito negativo.
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IComThreadingInfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.def  
   

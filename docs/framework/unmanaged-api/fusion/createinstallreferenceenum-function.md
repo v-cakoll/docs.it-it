@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da77d2eb848419c35e57ffacc8bf3d4580106fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764333"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795396"
 ---
 # <a name="createinstallreferenceenum-function"></a>Funzione CreateInstallReferenceEnum
-Ottiene un puntatore a un [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) istanza che rappresenta un elenco di riferimenti di un'applicazione per l'assembly specificato.  
+Ottiene un puntatore a un'istanza di [IInstallReferenceEnum](iinstallreferenceenum-interface.md) che rappresenta un elenco di riferimenti di un'applicazione all'assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,28 +41,28 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>Parametri  
  `ppRefEnum`  
- [out] L'oggetto restituito `IInstallReferenceEnum` puntatore.  
+ out Puntatore restituito `IInstallReferenceEnum` .  
   
  `pName`  
- [in] Il [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) che identifica l'assembly per cui si desidera enumerare i riferimenti.  
+ in [IAssemblyName](iassemblyname-interface.md) che identifica l'assembly per il quale enumerare i riferimenti.  
   
  `dwFlags`  
- [in] Flag che influenzano il comportamento dell'enumeratore.  
+ in Flag che influenzano il comportamento dell'enumeratore.  
   
  `pvReserved`  
- [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria:** Fusion. dll e mscorwks. dll. Usare Fusion. dll invece di Mscorwks. dll per verificare che da usare come destinazione la versione corretta di .NET Framework.  
+ **Libreria** Fusion. dll e mscorwks. dll. Usare Fusion. dll invece di mscorwks. dll per assicurarsi di avere come destinazione la versione corretta del .NET Framework.  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Interfaccia IInstallReferenceEnum](iinstallreferenceenum-interface.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)
+- [Funzioni statiche globali Fusion](fusion-global-static-functions.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205244"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784799"
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Se si modificano i nomi degli elementi nello schema sottostante, il **set** di dati tipizzato farà riferimento a oggetti che non esistono nell'origine dati, oltre a perdere un riferimento agli oggetti esistenti nell'origine dati.  
   
- Utilizzando le annotazioni, è possibile personalizzare i nomi degli oggetti nel **set di dati** tipizzato con nomi più significativi, rendendo il codice più leggibile e il **set di dati** tipizzato più semplice per l'utilizzo da parte dei client, lasciando intatto lo schema sottostante. Ad esempio, l'elemento dello schema seguente per la tabella Customers del database **Northwind** genera un nome di oggetto **DataRow** di **CustomersRow** e un <xref:System.Data.DataRowCollection> oggettodenominato Customers.  
+ Utilizzando le annotazioni, è possibile personalizzare i nomi degli oggetti nel **set di dati** tipizzato con nomi più significativi, rendendo il codice più leggibile e il **set di dati** tipizzato più semplice per l'utilizzo da parte dei client, lasciando intatto lo schema sottostante. Ad esempio, l'elemento dello schema seguente per la tabella **Customers** del database **Northwind** genera un nome di oggetto **DataRow** di **CustomersRow** e un <xref:System.Data.DataRowCollection> oggetto denominato **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 </xs:element>  
 ```  
   
- Il nome di un DataRowCollection dei **clienti** è significativo nel codice client, ma un nome **DataRow** di **CustomersRow** è fuorviante perché è un singolo oggetto. Negli scenari comuni, inoltre, l'oggetto verrebbe denominato senza l'identificatore di **riga** , ma verrebbe semplicemente definito oggetto **Customer** . La soluzione consiste nell'annotare lo schema e nell'identificare nuovi nomi per gli oggetti **DataRow** e **DataRowCollection** . Di seguito viene riportata una versione annotata dello schema precedente.  
+ Il nome di un **DataRowCollection** dei **clienti** è significativo nel codice client, ma un nome **DataRow** di **CustomersRow** è fuorviante perché è un singolo oggetto. Negli scenari comuni, inoltre, l'oggetto verrebbe denominato senza l'identificatore di **riga** , ma verrebbe semplicemente definito oggetto **Customer** . La soluzione consiste nell'annotare lo schema e nell'identificare nuovi nomi per gli oggetti **DataRow** e **DataRowCollection** . Di seguito viene riportata una versione annotata dello schema precedente.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,7 +39,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 </xs:element>  
 ```  
   
- Se si specifica un valore tipizzato **Customer** , viene generato il nome dell'oggetto **DataRow** del **cliente**. Specificando un valore **typedPlural** di **Customers** , viene mantenuto il nome **DataRowCollection** dei **clienti**.  
+ Se si specifica un valore **tipizzato** **Customer** , viene generato il nome dell'oggetto **DataRow** del **cliente**. Specificando un valore **typedPlural** di **Customers** , viene mantenuto il nome **DataRowCollection** dei **clienti**.  
   
  Nella seguente tabella sono indicate le annotazioni disponibili.  
   
@@ -80,7 +80,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Di seguito è riportato uno schema con annotazioni di esempio che espone la tabella Customers del database **Northwind** con una relazione con la tabella **Orders** inclusa.  
+ Di seguito è riportato uno schema con annotazioni di esempio che espone la tabella **Customers** del database **Northwind** con una relazione con la tabella **Orders** inclusa.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Nell'esempio di codice seguente viene utilizzato un **set di dati** fortemente tipizzato creato dallo schema di esempio. Viene utilizzato uno <xref:System.Data.SqlClient.SqlDataAdapter> per popolare la tabella Customers e <xref:System.Data.SqlClient.SqlDataAdapter> un'altra per popolare la tabella **Orders** . Il set di **dati** fortemente tipizzato definisce i DataRelation.  
+ Nell'esempio di codice seguente viene utilizzato un **set di dati** fortemente tipizzato creato dallo schema di esempio. Viene utilizzato uno <xref:System.Data.SqlClient.SqlDataAdapter> per popolare la tabella **Customers** e <xref:System.Data.SqlClient.SqlDataAdapter> un'altra per popolare la tabella **Orders** . Il set di **dati** fortemente tipizzato definisce i **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Set di dati tipizzati](typed-datasets.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

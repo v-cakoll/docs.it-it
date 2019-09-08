@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dbaa159314bf7bb05ff75287f601f619834fd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878384"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794620"
 ---
 # <a name="paging-through-a-query-result"></a>Spostarsi tra il risultato delle query
 Il paging del risultato di una query corrisponde al processo di restituzione dei risultati di una query in subset di dati di dimensioni inferiori o pagine. Si tratta di una tecnica comunemente usata per la visualizzazione di risultati in blocchi di dimensioni ridotte e di facile gestione.  
   
- Il **DataAdapter** fornisce una funzionalità per la restituzione solo una pagina di dati, tramite gli overload del **riempire** (metodo). Tuttavia, ciò potrebbe non essere ottimale per il paging dei risultati di query di grandi dimensioni perché, anche se il **DataAdapter** riempie la destinazione <xref:System.Data.DataTable> o <xref:System.Data.DataSet> con solo i record richiesti, le risorse per restituire il intera query sono comunque utilizzato. Per restituire una pagina di dati da un'origine dati senza usare le risorse per la restituzione dell'intera query, specificare dei criteri aggiuntivi per la query, in modo che vengano restituite solo le righe necessarie.  
+ **DataAdapter** fornisce una funzionalità per restituire solo una pagina di dati, tramite gli overload del metodo **Fill** . Tuttavia, questo potrebbe non essere la scelta migliore per il paging dei risultati di query di grandi dimensioni perché, sebbene l'oggetto <xref:System.Data.DataTable> DataAdapter <xref:System.Data.DataSet> riempia la destinazione o solo i record richiesti, vengono ancora utilizzate le risorse per restituire l'intera query. . Per restituire una pagina di dati da un'origine dati senza usare le risorse per la restituzione dell'intera query, specificare dei criteri aggiuntivi per la query, in modo che vengano restituite solo le righe necessarie.  
   
- Usare la **riempire** metodo per restituire una pagina di dati, specificare un **startRecord** parametro, il primo record della pagina di dati e un **maxRecords** parametro, per il numero di record nella pagina di dati.  
+ Per usare il metodo **Fill** per restituire una pagina di dati, specificare un parametro **startRecord** , per il primo record nella pagina di dati e un parametro **maxRecords** per il numero di record nella pagina di dati.  
   
- Esempio di codice seguente viene illustrato come utilizzare il **riempire** per restituire la prima pagina del risultato della query in cui le dimensioni di pagina corrispondono a cinque record.  
+ Nell'esempio di codice seguente viene illustrato come utilizzare il metodo **Fill** per restituire la prima pagina di un risultato della query in cui la dimensione della pagina è cinque record.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Nell'esempio precedente, il **set di dati** viene compilato solo con cinque record, ma l'intero **ordini** viene restituita una tabella. Per riempire il **set di dati** con gli stessi cinque record, ma restituire solo cinque record, usare la parte superiore e le clausole WHERE nell'istruzione SQL, come nell'esempio di codice seguente.  
+ Nell'esempio precedente, il **set di dati** viene riempito solo con cinque record, ma viene restituita l'intera tabella **Orders** . Per riempire il **set** di dati con gli stessi cinque record, ma restituire solo cinque record, usare le clausole TOP e WHERE nell'istruzione SQL, come nell'esempio di codice seguente.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- Per restituire la pagina successiva di record usando l'overload del metodo di **riempire** metodo che accetta il **startRecord** e **maxRecords** parametri, incrementare l'indice corrente di record da le dimensioni di pagina e il riempimento della tabella. Tenere presente che il server di database restituisce i risultati di query completa anche se solo una pagina di record è stato aggiunto per il **set di dati**. Nell'esempio di codice seguente i contenuti delle tabelle vengono cancellati prima che tali tabelle siano compilate con la pagina successiva di dati. Per ridurre i percorsi al server database, è possibile archiviare in una cache locale un determinato numero di righe restituite.  
+ Per restituire la pagina successiva di record utilizzando l'overload del metodo **Fill** che accetta i parametri **startRecord** e **maxRecords** , incrementare l'indice del record corrente in base alle dimensioni della pagina e compilare la tabella. Tenere presente che il server di database restituisce l'intero risultato della query anche se al **set di dati**viene aggiunta solo una pagina di record. Nell'esempio di codice seguente i contenuti delle tabelle vengono cancellati prima che tali tabelle siano compilate con la pagina successiva di dati. Per ridurre i percorsi al server database, è possibile archiviare in una cache locale un determinato numero di righe restituite.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -125,5 +125,5 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

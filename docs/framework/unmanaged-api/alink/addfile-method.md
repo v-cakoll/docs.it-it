@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742390"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787683"
 ---
 # <a name="addfile-method"></a>Metodo AddFile
-Aggiunge i file dell'assembly. È anche utilizzabile per creare moduli non associati.  
+Aggiunge file all'assembly. Può essere usato anche per creare moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,28 +41,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID univoco dell'assembly da essere ampliata.  
+ ID univoco dell'assembly da incrementare.  
   
  `pszFilename`  
  Nome completo del file da aggiungere.  
   
  `dwFlags`  
- Flag, ad esempio COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` viene passato a [metodo DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Flag FileDef com+, ad `ffContainsNoMetaData` esempio `ffWriteable`e. `dwFlags`viene passato al [Metodo DefineFile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfaccia da utilizzare per la creazione dei metadati, se necessario.  
+ Interfaccia di [interfaccia IMetaDataEmit](../metadata/imetadataemit-interface.md) da usare per creare i metadati, se necessario.  
   
  `pFileToken`  
- Puntatore a dove verrà archiviata l'ID univoco del file aggiunto.  
+ Puntatore alla posizione in cui verrà archiviato l'ID univoco del file aggiunto.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

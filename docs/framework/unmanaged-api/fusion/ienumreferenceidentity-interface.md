@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697251"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796436"
 ---
 # <a name="ienumreferenceidentity-interface"></a>Interfaccia IEnumReferenceIdentity
-Funge da un enumeratore per una raccolta di `IReferenceIdentity` oggetti.  
+Funge da enumeratore per una raccolta di `IReferenceIdentity` oggetti.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Ottiene un puntatore a interfaccia a una nuova `IEnumReferenceIdentity` che contiene gli stessi membri di questo `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Clone`|Ottiene un puntatore a interfaccia a un `IEnumReferenceIdentity` nuovo oggetto che contiene gli stessi membri `IEnumReferenceIdentity`di questo oggetto.|  
 |`IEnumReferenceIdentity::Next`|Ottiene il numero specificato di `IReferenceIdentity` oggetti, a partire dalla posizione corrente.|  
-|`IEnumReferenceIdentity::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Skip`|Sposta in avanti il puntatore all'istruzione per il numero specificato di elementi, a partire dalla posizione corrente.|  
+|`IEnumReferenceIdentity::Reset`|Sposta il puntatore all'istruzione all'inizio di questo `IEnumReferenceIdentity`oggetto.|  
+|`IEnumReferenceIdentity::Skip`|Sposta il puntatore all'istruzione in poi in base al numero specificato di elementi, a partire dalla posizione corrente.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -44,5 +44,5 @@ Funge da un enumeratore per una raccolta di `IReferenceIdentity` oggetti.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interfaccia IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Interfaccia IReferenceIdentity](ireferenceidentity-interface.md)

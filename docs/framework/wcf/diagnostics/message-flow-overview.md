@@ -2,12 +2,12 @@
 title: Cenni preliminari sul flusso di messaggi
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963049"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795973"
 ---
 # <a name="message-flow-overview"></a>Cenni preliminari sul flusso di messaggi
 In un sistema distribuito che contiene servizi interconnessi è necessario determinare relazioni causali tra i servizi. È importante comprendere i vari componenti che appartengono a un flusso di richiesta per supportare scenari critici, ad esempio monitoraggio dello stato, risoluzione dei problemi e analisi della causa radice. Per abilitare la correlazione di tracce tra i vari servizi, in .NET Framework 4 è stato aggiunto supporto tramite le funzionalità seguenti:
@@ -18,15 +18,15 @@ In un sistema distribuito che contiene servizi interconnessi è necessario deter
 
 - Rilevamento ETW per WF: Questa funzionalità Usa i record di rilevamento generati dai servizi WF per fornire visibilità sullo stato corrente e sullo stato di avanzamento del flusso di lavoro.
 
- Gli errori registrati in un record di rilevamento o di traccia possono essere usati per individuare difetti del codice o messaggi in formato non corretto. La proprietà ActivityId del nodo relativo alla correlazione nell'intestazione del messaggio dell'evento può essere usata per determinare l'attività in cui si è verificato l'errore. Per abilitare la traccia del flusso di messaggi in base all'ID attività, vedere [configurazione della traccia del flusso di messaggi](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). In questo argomento viene illustrato come abilitare la traccia del flusso di messaggi nel progetto creato nell'Esercitazione introduttiva.
+ Gli errori registrati in un record di rilevamento o di traccia possono essere usati per individuare difetti del codice o messaggi in formato non corretto. La proprietà ActivityId del nodo relativo alla correlazione nell'intestazione del messaggio dell'evento può essere usata per determinare l'attività in cui si è verificato l'errore. Per abilitare la traccia del flusso di messaggi in base all'ID attività, vedere [configurazione della traccia del flusso di messaggi](./etw/configuring-message-flow-tracing.md). In questo argomento viene illustrato come abilitare la traccia del flusso di messaggi nel progetto creato nell'Esercitazione introduttiva.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Per abilitare la traccia del flusso di messaggi nell'Esercitazione introduttiva
 
 1. Aprire Visualizzatore eventi facendo clic su **Start**, **Esegui**e immettendo `eventvwr.exe`.
 
-2. Se non è stata abilitata la traccia analitica, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Selezionare **Visualizza**, Mostra **log analitici e di debug**. Fare clic con il pulsante destro del mouse su analitico e selezionare **Abilita log**. Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce.
+2. Se non è stata abilitata la traccia analitica, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **server applicazioni-applicazioni**. Selezionare **Visualizza**, Mostra **log analitici e di debug**. Fare clic con il pulsante destro del mouse su **analitico** e selezionare **Abilita log**. Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce.
 
-3. Aprire l'esempio creato nell' [esercitazione Introduzione](../../../../docs/framework/wcf/getting-started-tutorial.md) in Visual Studio 2012. Si noti che è necessario eseguire Visual Studio 2012 come amministratore in modo che sia possibile creare il servizio. Se sono stati installati gli esempi WCF, è possibile aprire il [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che contiene il progetto completato creato nell'esercitazione.
+3. Aprire l'esempio creato nell' [esercitazione Introduzione](../getting-started-tutorial.md) in Visual Studio 2012. Si noti che è necessario eseguire Visual Studio 2012 come amministratore in modo che sia possibile creare il servizio. Se sono stati installati gli esempi WCF, è possibile aprire il [Introduzione](../samples/getting-started-sample.md), che contiene il progetto completato creato nell'esercitazione.
 
 4. Fare clic con il pulsante destro del mouse sul progetto di **servizio** e scegliere **Aggiungi**, **nuovo elemento**. Selezionare **file di configurazione dell'applicazione** e fare clic su **OK**.
 
@@ -63,7 +63,7 @@ In un sistema distribuito che contiene servizi interconnessi è necessario deter
     Trace.CorrelationManager.ActivityId = guid;
     ```
 
-10. Aggiornare ed esaminare il registro analitico.  Cercare gli eventi con ID evento 220.  Selezionare l'evento e fare clic sulla scheda **Dettagli** nel riquadro di anteprima. Questo evento conterrà l'ID di correlazione per l'attività chiamante.
+10. Aggiornare ed esaminare il registro **analitico** .  Cercare gli eventi con ID evento 220.  Selezionare l'evento e fare clic sulla scheda **Dettagli** nel riquadro di anteprima. Questo evento conterrà l'ID di correlazione per l'attività chiamante.
 
     ```xml
     <Correlation ActivityID="{A066CCF1-8AB3-459B-B62F-F79F957A5036}" />

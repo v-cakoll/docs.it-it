@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784792"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Applicazione di una trasformazione XSLT a un DataSet
-Il **WriteXml** metodo per il <xref:System.Data.DataSet> consente di scrivere il contenuto di un **set di dati** come dati XML. Tali dati XML vengono solitamente convertiti in un formato diverso mediante XSLT (Extensible Stylesheets Language Transformations). Tuttavia, la sincronizzazione una **set di dati** con un <xref:System.Xml.XmlDataDocument> consente di applicare un foglio di stile XSLT al contenuto di un **set di dati** senza dover prima scrivere il contenuto del  **Set di dati** come dati XML mediante **WriteXml**.  
+Il metodo **WriteXml** di <xref:System.Data.DataSet> consente di scrivere il contenuto di un **DataSet** come dati XML. Tali dati XML vengono solitamente convertiti in un formato diverso mediante XSLT (Extensible Stylesheets Language Transformations). Tuttavia, la sincronizzazione di un **DataSet** con <xref:System.Xml.XmlDataDocument> un oggetto consente di applicare un foglio di stile XSLT al contenuto di un **DataSet** senza dover prima scrivere il contenuto del **DataSet** come dati XML tramite **WriteXml**.  
   
- Nell'esempio seguente consente di popolare un **set di dati** con le tabelle e relazioni, viene sincronizzato il **set di dati** con un **XmlDataDocument**e scrive una parte del  **Set di dati** come file HTML usando un foglio di stile XSLT. Di seguito viene riportato il contenuto del foglio di stile XSLT.  
+ Nell'esempio seguente viene compilato un **set** di dati con tabelle e relazioni, viene sincronizzato il **set di dati** con un **XmlDataDocument**e viene scritta una parte del **set di dati** come file HTML utilizzando un foglio di stile XSLT. Di seguito viene riportato il contenuto del foglio di stile XSLT.  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +59,7 @@ Il **WriteXml** metodo per il <xref:System.Data.DataSet> consente di scrivere il
  Il codice seguente compila il **set di dati** e applica il foglio di stile XSLT.  
   
 > [!NOTE]
->  Se si sta applicando un foglio di stile XSLT da un **set di dati** che contiene le relazioni, si otterranno prestazioni ottimali se si imposta il **Nested** proprietà del <xref:System.Data.DataRelation> a **true**per ogni relazione annidata. Ciò consente di navigare all'interno della gerarchia e trasformare i dati mediante i fogli di stile XSLT, che implementano un'elaborazione sequenziale dall'alto verso il basso, anziché mediante gli assi di posizione XPath, ad esempio i nodi di pari livello precedenti e successivi nelle espressioni di verifica del nodo dei fogli di stile, che comportano un maggiore dispendio di risorse. Per altre informazioni sulle relazioni annidate, vedere [annidamento di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+> Se si applica un foglio di stile XSLT a un **set di dati** che contiene relazioni, si ottengono prestazioni ottimali se si imposta la <xref:System.Data.DataRelation> proprietà **Nested** di su **true** per ogni relazione annidata. Ciò consente di navigare all'interno della gerarchia e trasformare i dati mediante i fogli di stile XSLT, che implementano un'elaborazione sequenziale dall'alto verso il basso, anziché mediante gli assi di posizione XPath, ad esempio i nodi di pari livello precedenti e successivi nelle espressioni di verifica del nodo dei fogli di stile, che comportano un maggiore dispendio di risorse. Per ulteriori informazioni sulle relazioni annidate, vedere [nidificazione di oggetti DataRelation](nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sincronizzazione di DataSet e XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

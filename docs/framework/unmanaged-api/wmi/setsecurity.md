@@ -1,6 +1,6 @@
 ---
-title: Funzione SetSecurity (riferimenti alle API non gestite)
-description: La funzione SetSecurity recupera il token di rappresentazione del thread corrente.
+title: Funzione di sicurezza (riferimenti alle API non gestite)
+description: La funzione di sicurezza recupera il token di rappresentazione del thread corrente.
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798246"
 ---
-# <a name="setsecurity-function"></a>SetSecurity (funzione)
+# <a name="setsecurity-function"></a>Funzione di sicurezza
 
 Recupera il token di rappresentazione associato al thread corrente. 
 
@@ -41,22 +41,22 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parametri
 
 `pNeedToReset`\
-[out] Quando la funzione viene restituito, contiene un puntatore a un `boolean` che indica se il token deve essere reimpostato tramite una chiamata di [ResetSecurity](resetsecurity.md) (funzione).
+out Quando la funzione restituisce un valore, contiene un puntatore `boolean` a un valore che indica se il token deve essere reimpostato chiamando la funzione [ResetSecurity](resetsecurity.md) .
 
 `token`\
-[out] Quando la funzione viene restituito, contiene un puntatore all'handle del token di rappresentazione associate al thread corrente. Il valore può essere `null` se non vi è alcun token associato al thread corrente. 
+out Quando la funzione restituisce un valore, contiene un puntatore all'handle del token di rappresentazione associato al thread corrente. Il valore può essere `null` se al thread corrente non è associato alcun token. 
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è `S_OK` (0).
+Se la funzione ha esito positivo, il valore `S_OK` restituito è (0).
 
-Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero. Per ottenere informazioni sull'errore, chiamare il [GetErrorInfo](geterrorinfo.md) (funzione).
+Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero. Per ottenere informazioni estese sull'errore, chiamare la funzione [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
- **Intestazione:** WMINet_Utils.idl
+ **Intestazione:** WMINet_Utils. idl
 
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037890"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798639"
 ---
 # <a name="formatfromrawvalue-function"></a>Funzione FormatFromRawValue
 Converte un valore di dati sulle prestazioni non elaborati nel formato specificato o due valori di dati sulle prestazioni non elaborati se la conversione del formato è basata sul tempo. 
@@ -49,7 +49,7 @@ in Tipo di contatore. Per un elenco dei tipi di contatore, vedere [tipi di conta
 `dwFormat`\
 in Formato in cui convertire i dati delle prestazioni non elaborati. Può essere uno dei valori seguenti:
 
-|Costante  |Valore  |DESCRIZIONE |
+|Costante  |Valore  |Descrizione |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Restituisce il valore calcolato come valore a virgola mobile a precisione doppia. | 
 | `PDH_FMT_LARGE` | 0x00000400 | Restituisce il valore calcolato come intero a 64 bit. |
@@ -57,7 +57,7 @@ in Formato in cui convertire i dati delle prestazioni non elaborati. Può essere
 
 Uno dei valori precedenti può essere ORed con uno dei flag di ridimensionamento seguenti:
 
-|Costante  |Value  |DESCRIZIONE |
+|Costante  |Value  |Descrizione |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Non applicare i fattori di scala del contatore. |
 | `PDH_FMT_1000` | 0x00002000 | Moltiplicare il valore finale di 1.000. | 
@@ -89,7 +89,7 @@ Questa funzione esegue il wrapping di una chiamata alla funzione [FormatFromRawV
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
  **Libreria** PerfCounter.dll
 

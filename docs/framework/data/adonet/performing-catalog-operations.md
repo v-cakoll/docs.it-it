@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878225"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783252"
 ---
 # <a name="performing-catalog-operations"></a>Esecuzione di operazioni di catalogo
-Per eseguire un comando che modifica un database o un catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un **comandi** usando le istruzioni SQL appropriate dell'oggetto e una **connessione** oggetto. Eseguire il comando con il **ExecuteNonQuery** metodo per il **comando** oggetto.  
+Per eseguire un comando per la modifica di un database o di un catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un oggetto **Command** utilizzando le istruzioni SQL appropriate e un oggetto **Connection** . Eseguire il comando con il metodo **ExecuteNonQuery** dell'oggetto **Command** .  
   
  Nell'esempio di codice seguente viene creata una stored procedure in un database Microsoft SQL Server.  
   
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Uso di comandi per modificare i dati](using-commands-to-modify-data.md)
+- [Comandi e parametri](commands-and-parameters.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 606809533010f458272cd6fbbad6234217bddea2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf96770dd58c9b84596c082a615f626ec723cc6c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741612"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787242"
 ---
 # <a name="init-method"></a>Metodo Init
-Prepara gli oggetti che implementano il [interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) per l'uso.  
+Prepara gli oggetti che implementano l' [Interfaccia IALink](ialink-interface.md) per l'utilizzo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,19 +37,19 @@ HRESULT Init(
   
 ## <a name="parameters"></a>Parametri  
  `pDispenser`  
- [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) puntatore a dispenser di metadati.  
+ Puntatore all' [interfaccia IMetaDataDispenserEx](../metadata/imetadatadispenserex-interface.md) per il dispenser di metadati.  
   
  `pErrorHandler`  
- [Interfaccia IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) puntatore a un'interfaccia di gestione degli errori facoltativo.  
+ Puntatore all' [interfaccia IMetaDataError](../metadata/imetadataerror-interface.md) a un'interfaccia di gestione degli errori facoltativa.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

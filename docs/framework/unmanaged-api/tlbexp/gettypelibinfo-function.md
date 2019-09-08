@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040198"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798887"
 ---
 # <a name="gettypelibinfo-function"></a>Funzione GetTypeLibInfo
 Restituisce informazioni sulla libreria dei tipi specificata esaminando la relativa struttura [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
@@ -59,12 +59,12 @@ HRESULT GetTypeLibInfo(
  out Numero della versione secondaria della libreria dei tipi. Per la versione *x. y*, ad esempio, il numero di versione secondario è *y*.  
   
 ## <a name="remarks"></a>Note  
- La `GetTypeLibInfo` funzione viene chiamata da [Tlbexp. exe (utilità di esportazione della libreria dei tipi)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Questo strumento genera una libreria dei tipi che descrive i tipi in un assembly Common Language Runtime (CLR).  
+ La `GetTypeLibInfo` funzione viene chiamata da [Tlbexp. exe (utilità di esportazione della libreria dei tipi)](../../tools/tlbexp-exe-type-library-exporter.md). Questo strumento genera una libreria dei tipi che descrive i tipi in un assembly Common Language Runtime (CLR).  
   
  Se un parametro è null, la funzione restituisce un `HRESULT` di `E_POINTER`. In caso contrario, restituirà `S_OK`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** TlbRef. h  
   
@@ -74,5 +74,5 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di supporto Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Funzioni di supporto Tlbexp](index.md)
 - [LoadTypeLibEx (funzione)](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

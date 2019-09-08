@@ -2,12 +2,12 @@
 title: Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b5ffe69886b08903feab4373b1cd5c5244b3b3b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203446"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784517"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
 L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'interno di un documento. Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale. Se uno schema specifica l'elemento **keyref** , l'elemento viene convertito durante il processo di mapping dello schema in un vincolo di chiave esterna corrispondente sulle colonne delle tabelle di <xref:System.Data.DataSet>. Per impostazione predefinita, l'elemento **keyref** genera anche una relazione, con le proprietà **ParentTable**, **ChildTable**, **parentColumn**e **ChildColumn vengono specificate** specificate nella relazione.  
@@ -17,7 +17,7 @@ L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'in
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
 |**msdata:ConstraintOnly**|Se **ConstraintOnly = "true"** viene specificato nell'elemento **keyref** dello schema, viene creato un vincolo, ma non viene creata alcuna relazione. Se questo attributo non viene specificato (o è impostato su **false**), nel **set di dati**vengono creati sia il vincolo che la relazione.|  
-|**msdata:ConstraintName**|Se viene specificato l'attributo ConstraintName, il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** dell'elemento **keyref** nello schema fornisce il nome del vincolo nel **set di dati**.|  
+|**msdata:ConstraintName**|Se viene specificato l'attributo **ConstraintName** , il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** dell'elemento **keyref** nello schema fornisce il nome del vincolo nel **set di dati**.|  
 |**msdata:UpdateRule**|Se l'attributo **UpdateRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà Constraint **UpdateRule** nel **set di dati**. In caso contrario, la proprietà **UpdateRule** viene impostata su **Cascade**.|  
 |**msdata:DeleteRule**|Se l'attributo **DeleteRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà Constraint **DeleteRule** nel **set di dati**. In caso contrario, la proprietà **DeleteRule** viene impostata su **Cascade**.|  
 |**msdata:AcceptRejectRule**|Se l'attributo **AcceptRejectRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà Constraint **AcceptRejectRule** nel **set di dati**. In caso contrario, la proprietà **AcceptRejectRule** è impostata su **None**.|  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- Relazione tra le tabelle **Order** e **OrderDetail** . La proprietà nidificata è impostata su **false** perché i due elementi non sono annidati nello schema.  
+- Relazione tra le tabelle **Order** e **OrderDetail** . La proprietà **nidificata** è impostata su **false** perché i due elementi non sono annidati nello schema.  
   
     ```  
               ParentTable: Order  
@@ -113,4 +113,4 @@ Order(OrderNumber, EmpNumber)
 
 - [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Generazione di relazioni tra DataSet da XML Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

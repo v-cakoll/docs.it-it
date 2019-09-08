@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970771"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797104"
 ---
 # <a name="how-to-compare-claims"></a>Procedura: Confrontare le attestazioni
 
-L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) viene utilizzata per eseguire il controllo delle autorizzazioni. Un'attività comune consiste quindi nel confrontare le attestazioni presenti nel contesto di autorizzazione con le attestazioni richieste per eseguire l'azione richiesta o accedere alla risorsa richiesta. In questo argomento viene illustrato come confrontare le attestazioni, compresi i tipi di attestazione incorporati e personalizzati. Per ulteriori informazioni sull'infrastruttura del modello di identità, vedere [gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) viene utilizzata per eseguire il controllo delle autorizzazioni. Un'attività comune consiste quindi nel confrontare le attestazioni presenti nel contesto di autorizzazione con le attestazioni richieste per eseguire l'azione richiesta o accedere alla risorsa richiesta. In questo argomento viene illustrato come confrontare le attestazioni, compresi i tipi di attestazione incorporati e personalizzati. Per ulteriori informazioni sull'infrastruttura del modello di identità, vedere [gestione di attestazioni e autorizzazioni con il modello di identità](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 Questa operazione implica il confronto delle tre parti di un'attestazione (tipo, diritto e risorsa) con le stesse parti di un'altra attestazione per verificarne la corrispondenza. Vedere l'esempio seguente.
 
@@ -74,5 +74,5 @@ Nell'esempio seguente viene illustrato un confronto di attestazioni personalizza
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Procedura: Creare un'attestazione personalizzata](how-to-create-a-custom-claim.md)

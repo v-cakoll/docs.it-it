@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751585"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796495"
 ---
-# <a name="identityattributeblob-structure"></a>Struttura IDENTITY_ATTRIBUTE_BLOB
-Contiene informazioni su un singolo attributo in un assembly e costituito da tre `DWORD`s. Ogni `DWORD` è un offset in un buffer di caratteri prodotto dal `CurrentIntoBuffer` metodo per il [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfaccia  
+# <a name="identity_attribute_blob-structure"></a>Struttura IDENTITY_ATTRIBUTE_BLOB
+Contiene informazioni su un singolo attributo in un assembly ed è costituito da `DWORD`tre. Ogni `DWORD` è un offset in un buffer di caratteri prodotto `CurrentIntoBuffer` dal metodo dell'interfaccia [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,24 +38,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`ofsNamespace`|Il primo offset nel buffer di caratteri. Questo offset non è seguito dallo spazio dei nomi dell'attributo, ma da una serie di caratteri null. Pertanto, non viene usato.|  
-|`ofsName`|Il secondo offset nel buffer di caratteri. Questo percorso contrassegna l'inizio del nome dell'attributo.|  
-|`ofsValue`|Il terzo offset nel buffer di caratteri. Questo percorso contrassegna l'inizio del valore dell'attributo.|  
+|`ofsNamespace`|Primo offset nel buffer di caratteri. Questo offset non è seguito dallo spazio dei nomi dell'attributo, ma da una serie di caratteri null. Pertanto, non viene utilizzato.|  
+|`ofsName`|Secondo offset nel buffer di caratteri. Questo percorso contrassegna l'inizio del nome dell'attributo.|  
+|`ofsValue`|Terzo offset nel buffer di caratteri. Questo percorso contrassegna l'inizio del valore dell'attributo.|  
   
 ## <a name="sample"></a>Esempio  
- L'esempio seguente illustra alcuni passaggi di base, si otterrà un popolato `IDENTITY_ATTRIBUTE_BLOB` struttura:  
+ Nell'esempio seguente vengono illustrati alcuni passaggi di base, che alla fine comportano una struttura popolata `IDENTITY_ATTRIBUTE_BLOB` :  
   
-1. Ottenere un [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) per l'assembly.  
+1. Ottenere un [IReferenceIdentity](ireferenceidentity-interface.md) per l'assembly.  
   
-2. Chiamare il `IReferenceIdentity::EnumAttributes` metodo e ottenere un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Chiamare il `IReferenceIdentity::EnumAttributes` metodo e ottenere un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Creare un buffer di caratteri ed eseguirne il cast come un `IDENTITY_ATTRIBUTE_BLOB` struttura.  
+3. Creare un buffer di caratteri ed eseguirne il cast `IDENTITY_ATTRIBUTE_BLOB` come una struttura.  
   
-4. Chiamare il `CurrentIntoBuffer` metodo di `IEnumIDENTITY_ATTRIBUTE` interfaccia. Questo metodo consente di copiare gli attributi `Namespace`, `Name`, e `Value` nel buffer di caratteri. Gli tre offset di queste stringhe saranno rese disponibili nel `IDENTITY_ATTRIBUTE_BLOB` struttura.  
+4. Chiamare il `CurrentIntoBuffer` metodo `IEnumIDENTITY_ATTRIBUTE` dell'interfaccia. Questo metodo copia gli attributi `Namespace`, `Name`e `Value` nel buffer di caratteri. I tre offset a tali stringhe diventeranno disponibili nella `IDENTITY_ATTRIBUTE_BLOB` struttura.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,12 +222,12 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Esempio di output  
- Culture = neutral  
+ Impostazioni cultura = neutra  
   
- Nome = sistema  
+ nome = sistema  
   
  processorArchitecture = MSIL  
   
@@ -236,7 +236,7 @@ Exit:
  Versione = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -244,7 +244,7 @@ Exit:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [Struttura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Interfaccia IReferenceIdentity](ireferenceidentity-interface.md)
+- [Interfaccia IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)
+- [Struttura IDENTITY_ATTRIBUTE](identity-attribute-structure.md)
+- [Strutture Fusion](fusion-structures.md)

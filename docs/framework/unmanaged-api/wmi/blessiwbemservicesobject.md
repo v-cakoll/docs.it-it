@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761720"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798722"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Funzione BlessIWbemServicesObject
-Indica se le credenziali utente di consentono l'accesso a un oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) oggetto. 
+Indica se le credenziali utente consentono l'accesso a un oggetto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) specificato. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,40 +44,40 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>Parametri
 
 `pIWbemServices`\
-[in] Un puntatore a un oggetto servizio WMI.
+in Puntatore a un oggetto servizio WMI.
 
 `strUser`\
-[in] Il nome utente.
+in Nome utente.
 
 `strPassword`\
-[in] La password associata `strUser`.
+in Password associata a `strUser`.
 
 `strAuthority`\
-[in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
+in Nome di dominio dell'utente. Per ulteriori informazioni, vedere la funzione [ConnectServerWmi](connectserverwmi.md) .
 
 `impLevel`\
-[in] Il livello di rappresentazione.
+in Livello di rappresentazione.
 
 `authnLevel`\
-[in] Il livello di autorizzazione.
+in Livello di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *Winerror. h* oppure è possibile definirli come costanti nel codice:
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 
 | `E_FAIL` | 0x80000008 | Si è verificato un errore non specificato. |
-| `E_OUTOFMEMORY` | 0x80000002 | Memoria disponibile è insufficiente per eseguire l'operazione. | 
-| `S_OK` | 0 | La chiamata di funzione è riuscita. | 
+| `E_OUTOFMEMORY` | 0x80000002 | Memoria insufficiente per eseguire l'operazione. | 
+| `S_OK` | 0 | La chiamata di funzione è stata completata. | 
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
- **Intestazione:** WMINet_Utils.idl
+ **Intestazione:** WMINet_Utils. idl
 
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

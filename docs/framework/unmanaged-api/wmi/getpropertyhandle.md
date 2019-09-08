@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038252"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798550"
 ---
 # <a name="getpropertyhandle-function"></a>Funzione GetPropertyHandle
 
@@ -62,7 +62,7 @@ out Puntatore a un Integer contenente l'handle della proprietà.
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il nome di proprietà specificato non è stato trovato. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
@@ -79,7 +79,7 @@ Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject::
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
 **Intestazione:** WMINet_Utils. idl
 

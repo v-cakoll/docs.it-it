@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: a218a8e0fe3d2c17a0f09a40645c7b3ad26fb5ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dea5a2017479443cb747d31e253c1c83585ddd09
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791495"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes e DataSet
 In ADO.NET 2.0 è stato introdotto il supporto migliorato per i tipi per `DataSet` tramite lo spazio dei nomi  <xref:System.Data.SqlTypes>. I tipi <xref:System.Data.SqlTypes> sono progettati per fornire tipi di dati con la stessa semantica e la stessa precisione dei tipi di dati di un database di SQL Server. Ogni tipo di dati in <xref:System.Data.SqlTypes> dispone di un tipo di dati equivalente in SQL Server, con la stessa rappresentazione di dati sottostante.  
@@ -25,6 +25,6 @@ In ADO.NET 2.0 è stato introdotto il supporto migliorato per i tipi per `DataSe
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Mapping dei tipi di dati SQL Server](../sql-server-data-type-mappings.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../configuring-parameters-and-parameter-data-types.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

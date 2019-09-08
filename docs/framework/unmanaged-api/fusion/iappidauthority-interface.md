@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724ee01e91f1e9f4e34d2262610152a977ed4f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91ab2f71e7fb74f8e0e517b566d46d61c316ebe2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796833"
 ---
 # <a name="iappidauthority-interface"></a>Interfaccia IAppIdAuthority
-Fornisce metodi che generano e confrontare le chiavi per le identità dell'applicazione e i riferimenti.  
+Fornisce metodi che generano e confrontano le chiavi per le identità e i riferimenti dell'applicazione.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|Ottiene un valore che indica se le due [IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) istanze sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
-|`IAppIdAuthority::AreReferencesEqual`|Ottiene un valore che indica se le due [IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) istanze sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|Ottiene un valore che indica se le due definizioni di stringa specificato sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|Ottiene un valore che indica se i due riferimenti di stringa specificato sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
-|`IAppIdAuthority::CreateDefinition`|Ottiene un puntatore a interfaccia a un nuovo `IDefinitionAppId` istanza che rappresenta l'assembly nell'ambito corrente.|  
-|`IAppIdAuthority::CreateReference`|Ottiene un puntatore di interfaccia di un nuovo `IReferenceAppId` che rappresenta l'assembly nell'ambito corrente.|  
-|`IAppIdAuthority::DefinitionToText`|Ottiene una versione stringa dell'oggetto specificato `IDefinitionAppId`, usando i valori di flag specificato.|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|Ottiene un valore che indica se l'oggetto specificato `IDefinitionAppId` e `IReferenceAppId` rappresentano lo stesso assembly.|  
-|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Ottiene un valore che indica se la stringa di definizione specificato e una stringa di riferimento rappresentano lo stesso assembly.|  
-|`IAppIdAuthority::GenerateDefinitionKey`|Ottiene una chiave di stringa che rappresenta l'oggetto specificato `IDefinitionAppId` istanza.|  
-|`IAppIdAuthority::GenerateReferenceKey`|Ottiene una chiave di stringa che rappresenta l'oggetto specificato `IReferenceAppId` istanza.|  
-|`IAppIdAuthority::HashDefinition`|Ottiene una chiave hash per l'oggetto specificato `IDefinitionAppId` istanza.|  
-|`IAppIdAuthority::HashReference`|Ottiene una chiave hash per l'oggetto specificato `IReferenceAppId` istanza.|  
-|`IAppIdAuthority::ReferenceToText`|Ottiene una versione stringa dell'oggetto specificato `IReferenceAppId`, usando i valori di flag specificato.|  
-|`IAppIdAuthority::TextToDefinition`|Ottiene un puntatore a interfaccia per un `IDefinitionAppId` istanza che rappresenta l'assembly fa riferimento la chiave della stringa specificata.|  
-|`IAppIdAuthority::TextToReference`|Ottiene un puntatore a interfaccia per un `IReferenceAppId` istanza che rappresenta l'assembly fa riferimento la chiave della stringa specificata.|  
+|`IAppIdAuthority::AreDefinitionsEqual`|Ottiene un valore che indica se le due istanze di [IDefinitionAppId](idefinitionappid-interface.md) specificate sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
+|`IAppIdAuthority::AreReferencesEqual`|Ottiene un valore che indica se le due istanze di [IReferenceAppId](ireferenceappid-interface.md) specificate sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|Ottiene un valore che indica se le due definizioni di stringa specificate sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|Ottiene un valore che indica se i due riferimenti di stringa specificati sono uguali. È possibile passare il valore del flag IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION per ignorare le rispettive informazioni sulla versione.|  
+|`IAppIdAuthority::CreateDefinition`|Ottiene un puntatore a interfaccia a un'istanza `IDefinitionAppId` appena generata che rappresenta l'assembly nell'ambito corrente.|  
+|`IAppIdAuthority::CreateReference`|Ottiene un puntatore a interfaccia a un oggetto `IReferenceAppId` appena creato che rappresenta l'assembly nell'ambito corrente.|  
+|`IAppIdAuthority::DefinitionToText`|Ottiene una versione in formato stringa dell' `IDefinitionAppId`oggetto specificato, utilizzando i valori di flag specificati.|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|Ottiene un valore che indica se l'oggetto `IDefinitionAppId` specificato `IReferenceAppId` e rappresenta lo stesso assembly.|  
+|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Ottiene un valore che indica se la stringa di definizione e la stringa di riferimento specificate rappresentano lo stesso assembly.|  
+|`IAppIdAuthority::GenerateDefinitionKey`|Ottiene una chiave di stringa che rappresenta l' `IDefinitionAppId` istanza di specificata.|  
+|`IAppIdAuthority::GenerateReferenceKey`|Ottiene una chiave di stringa che rappresenta l' `IReferenceAppId` istanza di specificata.|  
+|`IAppIdAuthority::HashDefinition`|Ottiene una chiave hash per l'istanza `IDefinitionAppId` di specificata.|  
+|`IAppIdAuthority::HashReference`|Ottiene una chiave hash per l'istanza `IReferenceAppId` di specificata.|  
+|`IAppIdAuthority::ReferenceToText`|Ottiene una versione in formato stringa dell' `IReferenceAppId`oggetto specificato, utilizzando i valori di flag specificati.|  
+|`IAppIdAuthority::TextToDefinition`|Ottiene un puntatore a interfaccia a `IDefinitionAppId` un'istanza di che rappresenta l'assembly a cui fa riferimento la chiave di stringa specificata.|  
+|`IAppIdAuthority::TextToReference`|Ottiene un puntatore a interfaccia a `IReferenceAppId` un'istanza di che rappresenta l'assembly a cui fa riferimento la chiave di stringa specificata.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -56,4 +56,4 @@ Fornisce metodi che generano e confrontare le chiavi per le identità dell'appli
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfacce Fusion](fusion-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 31fb8af4653cefc8027f4061b46b9a29d8d07f8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963991"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782436"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -65,4 +65,4 @@ string activeServer = connection.DataSource;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

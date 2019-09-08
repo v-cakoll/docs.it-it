@@ -2,12 +2,12 @@
 title: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046010"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795919"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio in fase di esecuzione tramite un provider WCF Strumentazione gestione Windows (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
   
  Un provider WMI è un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. È costituito da un set di oggetti WMI che hanno coppie di valore/attributo. Le coppie possono essere costituite da un numero qualsiasi di tipi semplici. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. WCF espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
- Il provider WMI incorporato può essere attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite `wmiProviderEnabled` l'attributo [ \<della > di diagnostica](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) nella [ \<sezione > System. ServiceModel](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.  
+ Il provider WMI incorporato può essere attivato nel file di configurazione dell'applicazione. Questa operazione viene eseguita tramite `wmiProviderEnabled` l'attributo [ \<della > di diagnostica](../../../configure-apps/file-schema/wcf/diagnostics.md) nella [ \<sezione > System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , come illustrato nella configurazione di esempio seguente.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) espone i dati di ispezione di un servizio
 > [!CAUTION]
 > Se si usano i metodi forniti da .NET Framework per accedere ai dati WMI a livello di programmazione, tenere presente che questi metodi possono generare eccezioni nel momento in cui viene stabilita la connessione. La connessione non viene stabilita durante la costruzione dell'istanza <xref:System.Management.ManagementObject>, ma alla prima richiesta che comporta uno scambio di dati effettivo. Per intercettare le possibili eccezioni è pertanto necessario usare un blocco `try..catch`.  
   
- Per l'origine di traccia `System.ServiceModel` in WMI è possibile modificare il livello di registrazione della traccia e del messaggio, nonché le opzioni di registrazione dei messaggi. Questa operazione può essere eseguita accedendo all'istanza di [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , che espone le proprietà booleane `LogMessagesAtServiceLevel`seguenti `LogMessagesAtTransportLevel`: `LogMalformedMessages`,, `TraceLevel`e. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo verrà abilitata la registrazione dei messaggi a runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI.  
+ Per l'origine di traccia `System.ServiceModel` in WMI è possibile modificare il livello di registrazione della traccia e del messaggio, nonché le opzioni di registrazione dei messaggi. Questa operazione può essere eseguita accedendo all'istanza di [AppDomainInfo](appdomaininfo.md) , che espone le proprietà booleane `LogMessagesAtServiceLevel`seguenti `LogMessagesAtTransportLevel`: `LogMalformedMessages`,, `TraceLevel`e. Pertanto, se si configura un listener di traccia per la registrazione dei messaggi, ma si impostano queste opzioni su `false` nella configurazione, è possibile in seguito modificarle in `true` quando l'applicazione è in esecuzione. In questo modo verrà abilitata la registrazione dei messaggi a runtime. Analogamente, se si abilita la registrazione dei messaggi nel file di configurazione, è possibile disabilitarla al runtime usando WMI.  
   
- Se nel file di configurazione non viene specificato alcun listener di traccia per la registrazione dei messaggi né alcun listener di traccia `System.ServiceModel`, nessuna delle modifiche apportate verrà resa effettiva, anche se accettata da WMI. Per altre informazioni sulla corretta configurazione dei rispettivi listener, vedere Configurazione della [registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e [configurazione della traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Il livello di traccia di tutte le altre origini di traccia specificate dalla configurazione viene attivato all'avvio dell'applicazione e non può essere modificato.  
+ Se nel file di configurazione non viene specificato alcun listener di traccia per la registrazione dei messaggi né alcun listener di traccia `System.ServiceModel`, nessuna delle modifiche apportate verrà resa effettiva, anche se accettata da WMI. Per altre informazioni sulla corretta configurazione dei rispettivi listener, vedere Configurazione della [registrazione dei messaggi](../configuring-message-logging.md) e [configurazione della traccia](../tracing/configuring-tracing.md). Il livello di traccia di tutte le altre origini di traccia specificate dalla configurazione viene attivato all'avvio dell'applicazione e non può essere modificato.  
   
  WCF espone un `GetOperationCounterInstanceName` metodo per lo scripting. Se al metodo viene fornito un nome operazione, il metodo restituisce il nome di un'istanza di contatore delle prestazioni. L'input non viene tuttavia convalidato. Pertanto, se si fornisce un nome operazione errato, verrà restituito un nome di contatore errato.  
   

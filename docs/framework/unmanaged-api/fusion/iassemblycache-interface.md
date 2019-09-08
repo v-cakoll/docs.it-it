@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796772"
 ---
 # <a name="iassemblycache-interface"></a>Interfaccia IAssemblyCache
-Rappresenta la global assembly cache per l'uso con la tecnologia fusion.  
+Rappresenta l'Global Assembly Cache per l'utilizzo da parte della tecnologia Fusion.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo CreateAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Ottiene un riferimento a una nuova [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
-|[Metodo CreateAssemblyScavenger](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Riservato per uso interno dalla tecnologia fusion.|  
-|[Metodo InstallAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|Installa l'assembly specificato nella global assembly cache.|  
-|[Metodo QueryAssemblyInfo](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Ottiene i dati richiesti sull'assembly specificato.|  
-|[Metodo UninstallAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Disinstalla l'assembly specificato dalla global assembly cache.|  
+|[Metodo CreateAssemblyCacheItem](iassemblycache-createassemblycacheitem-method.md)|Ottiene un riferimento a un nuovo [IAssemblyCacheItem](iassemblycacheitem-interface.md).|  
+|[Metodo CreateAssemblyScavenger](iassemblycache-createassemblyscavenger-method.md)|Riservato per uso interno da parte della tecnologia Fusion.|  
+|[Metodo InstallAssembly](iassemblycache-installassembly-method.md)|Installa l'assembly specificato nel Global Assembly Cache.|  
+|[Metodo QueryAssemblyInfo](iassemblycache-queryassemblyinfo-method.md)|Ottiene i dati richiesti sull'assembly specificato.|  
+|[Metodo UninstallAssembly](iassemblycache-uninstallassembly-method.md)|Disinstalla l'assembly specificato dal Global Assembly Cache.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -45,5 +45,5 @@ Rappresenta la global assembly cache per l'uso con la tecnologia fusion.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Global Assembly Cache](../../app-domains/gac.md)

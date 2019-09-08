@@ -2,12 +2,12 @@
 title: 'Procedura: Importare informazioni WSDL personalizzate'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: d9a4609f08a95bbecca81aa6667102a0e4a73c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 930cb92d8193ba3ffc1f62191f2012e104091190
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767078"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796995"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Procedura: Importare informazioni WSDL personalizzate
 In questo argomento viene descritto come importare informazioni WSDL personalizzate. Per gestire le informazioni WSDL personalizzate, è necessario implementare l'interfaccia <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
@@ -79,6 +79,6 @@ In questo argomento viene descritto come importare informazioni WSDL personalizz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
-- [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Metadati](../feature-details/metadata.md)
+- [Esportazione e importazione di metadati](../feature-details/exporting-and-importing-metadata.md)
+- [Pubblicazione WSDL personalizzata](../samples/custom-wsdl-publication.md)

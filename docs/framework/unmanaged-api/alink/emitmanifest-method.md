@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777334"
 ---
 # <a name="emitmanifest-method"></a>Metodo EmitManifest
-Crea il manifesto finale. Chiamare questo metodo dopo l'importazione di tutti gli altri file e tutte le opzioni di impostazione. Non chiamare questo metodo per i moduli non associati.  
+Genera il manifesto finale. Chiamare questo metodo dopo l'importazione di tutti gli altri file e l'impostazione di tutte le opzioni. Non chiamare questo metodo per i moduli non associati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,19 +42,19 @@ HRESULT EmitManifest(
  ID dell'assembly.  
   
  `pdwReserveSize`  
- Riceve le dimensioni da riservare nel file di assembly, recuperarne [funzione StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ Riceve le dimensioni da riservare nel file di assembly, recuperate dalla [funzione StrongNameSignatureSize](../strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- Facoltativamente riceve il token del manifesto dell'assembly.  
+ Riceve facoltativamente il token del manifesto dell'assembly.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

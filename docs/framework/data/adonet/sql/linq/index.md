@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 86c7e9fae270e75d1ba7e9725ded22ea1961311a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbb2f8cf37bd05864dc93b8ebbd33466a9a2c55e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911996"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793086"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]è un componente di .NET Framework versione 3,5 che fornisce un'infrastruttura in fase di esecuzione per la gestione di dati relazionali come oggetti.  
@@ -22,16 +22,16 @@ ms.locfileid: "69911996"
  Nella documentazione inclusa in questa versione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritti i blocchi di compilazione di base, il processi e le tecniche necessari per la compilazione di applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. È anche possibile cercare Microsoft Docs per problemi specifici ed è possibile partecipare al forum su [LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, la [LINQ to SQL: query integrata nel linguaggio .NET per i dati relazionali](https://go.microsoft.com/fwlink/?LinkId=93205) white paper [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la tecnologia di dettagli, complete C# di Visual Basic ed esempi di codice.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ [Introduzione](getting-started.md)  
  Viene fornita una panoramica di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono fornite informazioni su come iniziare a usare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Guida per programmatori](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Guida per programmatori](programming-guide.md)  
  Vengono descritte le procedure per eseguire il mapping, creare query, eseguire operazioni di aggiornamento e debug e attività simili.  
   
- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Riferimento](reference.md)  
  Fornisce informazioni di riferimento sui diversi aspetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Tra gli argomenti vengono descritti il mapping dei tipi CLR SQL, la conversione dell'operatore di query standard e altri.  
   
- [Esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
+ [Esempi](samples.md)  
  Vengono forniti collegamenti a Visual Basic C# ed esempi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
@@ -44,13 +44,13 @@ ms.locfileid: "69911996"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Descrive [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] le tecnologie per Visual Basic utenti.  
   
- [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ e ADO.NET](../../linq-and-ado-net.md)  
  Collegamenti al portale di ADO.NET.  
   
  [Procedure dettagliate relative a LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Vengono elencate le procedure dettagliate disponibili per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [Download di database di esempio](downloading-sample-databases.md)  
  Viene descritto come scaricare i database di esempio usati nella documentazione.  
   
  [Cenni preliminari sul controllo server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

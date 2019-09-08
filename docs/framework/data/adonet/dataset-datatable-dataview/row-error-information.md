@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5ede6e2cd52ad55f8c35a42d137044dd1ceea400
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203230"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785962"
 ---
 # <a name="row-error-information"></a>Informazioni sugli errori di riga
 Per evitare di dover rispondere agli errori delle righe mentre si modificano i valori di una <xref:System.Data.DataTable>, è possibile aggiungere alla riga le informazioni sugli errori per un uso successivo. A questo scopo, l'oggetto <xref:System.Data.DataRow> fornisce una proprietà <xref:System.Data.DataRow.RowError%2A> su ciascuna riga. L'aggiunta di dati alla proprietà **RowError** di un **DataRow** imposta <xref:System.Data.DataRow.HasErrors%2A> la proprietà di **DataRow** su **true**. Se **DataRow** fa parte di una **DataTable**e **DataRow. HasErrors** è **true**, anche la proprietà **DataTable. HasErrors** è **true**. Questo vale anche per il **set di dati** a cui appartiene la **DataTable** . Quando si verificano errori, è possibile controllare la proprietà **HasErrors** per determinare se le informazioni sull'errore sono state aggiunte a qualsiasi riga. Se **HasErrors** è **true**, è possibile usare il <xref:System.Data.DataTable.GetErrors%2A> metodo dell' **oggetto DataTable** per restituire ed esaminare solo le righe con errori, come illustrato nell'esempio seguente.  
@@ -83,4 +83,4 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

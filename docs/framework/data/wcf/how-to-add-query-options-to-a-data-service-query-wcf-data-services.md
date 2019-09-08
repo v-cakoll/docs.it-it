@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere le opzioni di Query a una Query del servizio dati (WCF Data Services)'
+title: 'Procedura: Aggiungere opzioni di query a una query del servizio dati (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 2056b803b34faafdaebb85883de8b76ea2f9dcd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b0557938d1419b79c3191cf8f9110cab2f5ce6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765544"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790775"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Procedura: Aggiungere le opzioni di Query a una Query del servizio dati (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati da un'applicazione client basata su .NET Framework usando le classi del servizio dati client generate. Il modo più semplice per conseguire questo risultato consiste nel creare un 'espressione di query LINQ (Language Integrated Query) con le opzioni query desiderate. È inoltre possibile chiamare una serie di metodi di query LINQ per creare una query equivalente. È infine possibile usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere opzioni query a una query. In ciascuno di questi casi l'URI generato dal client include il set di entità richiesto con le opzioni query selezionate applicate. Per altre informazioni, vedere [l'esecuzione di query al servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Procedura: Aggiungere opzioni di query a una query del servizio dati (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati da un'applicazione client basata su .NET Framework usando le classi del servizio dati client generate. Il modo più semplice per conseguire questo risultato consiste nel creare un 'espressione di query LINQ (Language Integrated Query) con le opzioni query desiderate. È inoltre possibile chiamare una serie di metodi di query LINQ per creare una query equivalente. È infine possibile usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere opzioni query a una query. In ciascuno di questi casi l'URI generato dal client include il set di entità richiesto con le opzioni query selezionate applicate. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
- Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi dati client vengono create quando si completa la [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Nell'esempio riportato in questo argomento vengono usati il servizio dati Northwind di esempio e le classi del servizio dati client generate automaticamente. Questo servizio e le classi di dati client vengono creati al completamento della [WCF Data Services avvio rapido](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come creare un'espressione di query LINQ che restituisce solo gli ordini con un costo di spedizione maggiore di 30 dollari e ordina i risultati in senso decrescente in base alla data di spedizione.  
@@ -47,5 +47,5 @@ ms.locfileid: "61765544"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Procedura: Risultati della Query di progetto](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+- [Esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md)
+- [Procedura: Risultati query progetto](how-to-project-query-results-wcf-data-services.md)

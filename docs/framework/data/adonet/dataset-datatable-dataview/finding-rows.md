@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203712"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786326"
 ---
 # <a name="finding-rows"></a>Ricerca di righe
 È possibile eseguire ricerche di righe in base ai relativi valori della chiave di ordinamento usando i metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> del tipo <xref:System.Data.DataView>. La distinzione tra maiuscole e minuscole dei valori di ricerca nei metodi **Find** e **FindRows** è determinata dalla proprietà <xref:System.Data.DataTable> **CaseSensitive** dell'oggetto sottostante. Per restituire un risultato, è necessario che i valori di ricerca corrispondano interamente ai valori della chiave di ordinamento esistenti.  
@@ -98,4 +98,4 @@ else
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataView](dataviews.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

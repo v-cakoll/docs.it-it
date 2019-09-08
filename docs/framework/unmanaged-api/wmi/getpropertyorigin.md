@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 542c4a01a9fd56587d51421709ffb990707f2ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636791"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798489"
 ---
 # <a name="getpropertyorigin-function"></a>Funzione GetPropertyOrigin
 
@@ -43,42 +43,42 @@ HRESULT GetPropertyOrigin (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`\
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`\
-[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
+in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethodName`\
-[in] Il nome della proprietà per l'oggetto la cui classe proprietaria viene richiesto.
+in Nome della proprietà per l'oggetto di cui viene richiesta la classe proprietaria.
 
 `pstrClassName`\
-[out] Riceve il nome della classe cui appartiene la proprietà.
+out Riceve il nome della classe a cui appartiene la proprietà.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | La proprietà specificata non è stata trovata. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Impossibile trovare la proprietà specificata. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente per completare l'operazione. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) .
 
-Poiché una classe può ereditare le proprietà da uno o più classi base, gli sviluppatori spesso vogliono determinare la proprietà in cui è definito un metodo specifico.
+Poiché una classe può ereditare proprietà da una o più classi di base, gli sviluppatori spesso vogliono determinare la proprietà in cui è definito un determinato metodo.
 
-Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di chiamare la funzione poiché si tratta di un `out` parametro; questo puntatore non viene deallocato dopo la funzione restituisce.
+Il `pstrClassName` parametro non deve puntare a un oggetto `BSTR` valido prima che la funzione venga chiamata perché si `out` tratta di un parametro; questo puntatore non viene deallocato dopo la restituzione della funzione.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** WMINet_Utils.idl
+**Intestazione:** WMINet_Utils. idl
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779876"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerazioni su LINQ (WCF Data Services)
-In questo argomento vengono fornite informazioni sulla modalità con cui le query LINQ vengono composte ed eseguite quando si usa il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e sulle limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Per ulteriori informazioni sulla composizione e l'esecuzione di query su un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]servizio dati basato su, vedere [esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+In questo argomento vengono fornite informazioni sulla modalità con cui le query LINQ vengono composte ed eseguite quando si usa il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e sulle limitazioni dell'utilizzo di LINQ per eseguire una query su un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Per ulteriori informazioni sulla composizione e l'esecuzione di query su un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]servizio dati basato su, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Composizione di query LINQ  
  LINQ consente di comporre query per una raccolta di oggetti che implementa <xref:System.Collections.Generic.IEnumerable%601>. Entrambe le **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio e lo strumento DataSvcUtil. exe vengono utilizzate per generare una rappresentazione di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un servizio come classe contenitore di entità che eredita <xref:System.Data.Services.Client.DataServiceContext>da, oltre a oggetti che rappresentano entità restituite nei feed. Questi strumenti generano anche le proprietà per la classe contenitore di entità delle raccolte esposte come feed dal servizio. Ognuna di queste proprietà della classe che incapsula il servizio dati restituisce un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>. Dal momento che la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa l'interfaccia <xref:System.Linq.IQueryable%601> definita da LINQ, è possibile comporre una query LINQ per i feed esposti dal servizio dati che vengono convertiti dalla libreria client in un URI di richiesta query inviato al servizio dati in esecuzione.  
   
 > [!IMPORTANT]
-> La sintassi LINQ consente di esprimere un set di query più ampio di quello consentito dalla sintassi URI usata dai servizi dati [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Quando non è possibile eseguire il mapping della query a un URI nel servizio dati di destinazione, viene generato un oggetto <xref:System.NotSupportedException>. Per ulteriori informazioni, vedere [metodi LINQ non supportati](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) in questo argomento.  
+> La sintassi LINQ consente di esprimere un set di query più ampio di quello consentito dalla sintassi URI usata dai servizi dati [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Quando non è possibile eseguire il mapping della query a un URI nel servizio dati di destinazione, viene generato un oggetto <xref:System.NotSupportedException>. Per ulteriori informazioni, vedere [metodi LINQ non supportati](linq-considerations-wcf-data-services.md#unsupportedMethods) in questo argomento.  
   
  Nell'esempio seguente viene riportata una query LINQ che restituisce `Orders` con un costo di spedizione maggiore di 30 dollari e ordina i risultati in base alla data di spedizione, partendo da quella più recente:  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Questa query LINQ viene convertita nell'URI di query seguente che viene eseguito nel servizio dati di [avvio rapido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) basato su Northwind:  
+ Questa query LINQ viene convertita nell'URI di query seguente che viene eseguito nel servizio dati di [avvio rapido](quickstart-wcf-data-services.md) basato su Northwind:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Il client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di convertire entrambi tipi di query composte in un URI di query ed è possibile estendere una query LINQ aggiungendo i metodi di query a un'espressione di query. Quando si compongono query LINQ aggiungendo la sintassi del metodo a un'espressione di query o un elemento <xref:System.Data.Services.Client.DataServiceQuery%601>, le operazioni vengono aggiunte all'URI della query nell'ordine di chiamata dei metodi. Equivale alla chiamata del metodo <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> per aggiungere ogni opzione di query all'URI della query.  
   
 ## <a name="executing-linq-queries"></a>Esecuzione di query LINQ  
- Alcuni metodi di query LINQ, ad esempio <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> o <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, quando vengono aggiunti alla query ne causano l'esecuzione. Una query viene eseguita anche quando i risultati vengono enumerati in modo implicito, ad esempio durante un ciclo `foreach` o quando la query è assegnata a una raccolta `List`. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Alcuni metodi di query LINQ, ad esempio <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> o <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, quando vengono aggiunti alla query ne causano l'esecuzione. Una query viene eseguita anche quando i risultati vengono enumerati in modo implicito, ad esempio durante un ciclo `foreach` o quando la query è assegnata a una raccolta `List`. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
- Il client esegue una query LINQ in due parti. Ogni qualvolta possibile, le espressioni LINQ di una query vengono prima valutate sul client e quindi viene generata una query basata sull'URI che viene inviata al servizio dati per la valutazione rispetto ai dati del servizio. Per ulteriori informazioni, vedere la sezione [esecuzione di client e server nell'esecuzione](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) di [query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Il client esegue una query LINQ in due parti. Ogni qualvolta possibile, le espressioni LINQ di una query vengono prima valutate sul client e quindi viene generata una query basata sull'URI che viene inviata al servizio dati per la valutazione rispetto ai dati del servizio. Per ulteriori informazioni, vedere la sezione [esecuzione di client e server nell'esecuzione](querying-the-data-service-wcf-data-services.md#executingQueries) di [query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
- Quando non è possibile convertire una query LINQ in un URI di query conforme a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], viene generata un'eccezione quando viene tentata l'esecuzione. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Quando non è possibile convertire una query LINQ in un URI di query conforme a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], viene generata un'eccezione quando viene tentata l'esecuzione. Per ulteriori informazioni, vedere [esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>Esempi di query LINQ  
  Negli esempi delle sezioni seguenti vengono illustrati i tipi di query LINQ che possono essere eseguiti su un servizio [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expand  
- Quando si esegue una query su un servizio dati [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], è possibile richiedere che le entità relative all'entità di destinazione della query siano incluse nel feed restituito. Il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> viene chiamato su <xref:System.Data.Services.Client.DataServiceQuery%601> per il set di entità indirizzato dalla query LINQ, con il relativo nome del set di entità fornito come parametro `path`. Per ulteriori informazioni, vedere [caricamento di contenuto posticipato](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ Quando si esegue una query su un servizio dati [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], è possibile richiedere che le entità relative all'entità di destinazione della query siano incluse nel feed restituito. Il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> viene chiamato su <xref:System.Data.Services.Client.DataServiceQuery%601> per il set di entità indirizzato dalla query LINQ, con il relativo nome del set di entità fornito come parametro `path`. Per ulteriori informazioni, vedere [caricamento di contenuto posticipato](loading-deferred-content-wcf-data-services.md).  
   
  Negli esempi seguenti vengono mostrate modalità equivalenti per usare il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> in una query:  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Proiezioni di query](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Materializzazione di oggetti](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Esecuzione di query sul servizio dati](querying-the-data-service-wcf-data-services.md)
+- [Proiezioni di query](query-projections-wcf-data-services.md)
+- [Materializzazione di oggetti](object-materialization-wcf-data-services.md)
 - [OData Convenzioni URI](https://go.microsoft.com/fwlink/?LinkID=185564)

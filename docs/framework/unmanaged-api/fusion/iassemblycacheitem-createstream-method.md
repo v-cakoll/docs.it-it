@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629887"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796737"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Metodo IAssemblyCacheItem::CreateStream
 
-Crea un flusso con il nome specificato e il formato.
+Crea un flusso con il nome e il formato specificati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,26 +44,26 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>Parametri
 
 `dwFlags`\
-[in] Flag definiti in Fusion.
+in Flag definiti in Fusion. idl.
 
 `pszStreamName`\
-[in] Il nome del flusso da creare.
+in Nome del flusso da creare.
 
 `dwFormat`\
-[in] Il formato del file deve essere trasmessa.
+in Formato del file da trasmettere.
 
 `dwFormatFlags`\
-[in] Flag specifici del formato definito in Fusion.
+in Flag specifici del formato definiti in Fusion. idl.
 
 `ppIStream`\
-[out] Un puntatore all'indirizzo del valore restituito [IStream](/windows/desktop/api/objidl/nn-objidl-istream) istanza.
+out Puntatore all'indirizzo dell'istanza di [IStream](/windows/desktop/api/objidl/nn-objidl-istream) restituita.
 
 `puliMaxSize`\
-[in, optional] La dimensione massima del flusso fa `ppIStream`.
+[in, facoltativo] Dimensione massima del flusso a cui fa riferimento `ppIStream`.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
 **Intestazione:** Fusion. h
 

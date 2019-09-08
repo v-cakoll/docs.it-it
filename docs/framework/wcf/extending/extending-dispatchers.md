@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046004"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795741"
 ---
 # <a name="extending-dispatchers"></a>Estensione di dispatcher
 I dispatcher sono responsabili dell'estrazione dei messaggi in arrivo dai canali sottostanti, della loro conversione in chiamate al metodo nel codice dell'applicazione e della restituzione dei risultati al chiamante. Le estensioni del dispatcher consentono di modificare questa elaborazione.  È possibile implementare controlli di parametri e messaggi che controllano o modificano il contenuto dei messaggi o dei parametri.  È possibile modificare la modalità in cui i messaggi vengono indirizzati alle operazioni o forniscono altre funzionalità.
 
-In questo argomento viene descritto come utilizzare <xref:System.ServiceModel.Dispatcher.DispatchRuntime> le <xref:System.ServiceModel.Dispatcher.DispatchOperation> classi e in un'applicazione di servizio Windows Communication Foundation (WCF) per modificare il comportamento di esecuzione predefinito di un dispatcher o per intercettare o modificare messaggi, parametri o restituire valori prima o dopo l'invio o il recupero dal livello del canale. Per ulteriori informazioni sull'elaborazione di messaggi di runtime client equivalenti, vedere [estensione dei client](../../../../docs/framework/wcf/extending/extending-clients.md). Per comprendere il ruolo <xref:System.ServiceModel.IExtensibleObject%601> svolto dai tipi nell'accesso allo stato condiviso tra vari oggetti di personalizzazione del runtime, vedere [oggetti estensibili](../../../../docs/framework/wcf/extending/extensible-objects.md).
+In questo argomento viene descritto come utilizzare <xref:System.ServiceModel.Dispatcher.DispatchRuntime> le <xref:System.ServiceModel.Dispatcher.DispatchOperation> classi e in un'applicazione di servizio Windows Communication Foundation (WCF) per modificare il comportamento di esecuzione predefinito di un dispatcher o per intercettare o modificare messaggi, parametri o restituire valori prima o dopo l'invio o il recupero dal livello del canale. Per ulteriori informazioni sull'elaborazione di messaggi di runtime client equivalenti, vedere [estensione dei client](extending-clients.md). Per comprendere il ruolo <xref:System.ServiceModel.IExtensibleObject%601> svolto dai tipi nell'accesso allo stato condiviso tra vari oggetti di personalizzazione del runtime, vedere [oggetti estensibili](extensible-objects.md).
 
 ## <a name="dispatchers"></a>Dispatcher
 
@@ -22,11 +22,11 @@ Il livello del modello di servizi esegue la conversione tra il modello di progra
 
 Il dispatcher del canale (e la classe <xref:System.ServiceModel.Channels.IChannelListener> complementare) estrae i messaggi dal canale sottostante e li passa ai rispettivi dispatcher dell'endpoint. Ogni dispatcher dell'endpoint ha una classe <xref:System.ServiceModel.Dispatcher.DispatchRuntime> che indirizza i messaggi alla classe <xref:System.ServiceModel.Dispatcher.DispatchOperation> appropriata, responsabile della chiamata al metodo che implementa l'operazione. Durante il processo vengono richiamate varie classi di estensione facoltative e obbligatorie. In questo argomento viene illustrato come vengono assemblati questi pezzi e come è possibile modificare proprietà e inserirvi il proprio codice per estendere la funzionalità di base.
 
-Le proprietà dispatcher e gli oggetti di personalizzazione modificati vengono inseriti usando oggetti comportamento di servizi, endpoint, contratti o operazioni. In questo argomento non viene descritto come usare i comportamenti. Per ulteriori informazioni sui tipi utilizzati per inserire le modifiche al dispatcher, vedere [configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).
+Le proprietà dispatcher e gli oggetti di personalizzazione modificati vengono inseriti usando oggetti comportamento di servizi, endpoint, contratti o operazioni. In questo argomento non viene descritto come usare i comportamenti. Per ulteriori informazioni sui tipi utilizzati per inserire le modifiche al dispatcher, vedere [configurazione ed estensione del runtime con i comportamenti](configuring-and-extending-the-runtime-with-behaviors.md).
 
 Nel grafico seguente viene fornita una panoramica dettagliata degli elementi architettonici di un servizio.
 
-![Architettura del runtime di invio](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![Architettura del runtime di invio](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>Dispatcher del canale
 
@@ -44,30 +44,30 @@ Usare <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> per acquisire i d
 
 Esistono vari motivi per estendere il dispatcher:
 
-- Convalida di messaggi personalizzata. Gli utenti possono imporre che un messaggio sia valido per un certo schema. A questo scopo, è possibile implementare le interfacce degli intercettori di messaggi. Per un esempio, vedere [controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md).
+- Convalida di messaggi personalizzata. Gli utenti possono imporre che un messaggio sia valido per un certo schema. A questo scopo, è possibile implementare le interfacce degli intercettori di messaggi. Per un esempio, vedere [controlli messaggi](../samples/message-inspectors.md).
 
 - Registrazione di messaggi personalizzata. Gli utenti possono controllare e registrare un set di messaggi dell'applicazione che passano attraverso un endpoint. Questa operazione può essere eseguita anche con le interfacce degli intercettori di messaggi.
 
 - Trasformazioni di messaggi personalizzate. Gli utenti possono applicare determinate trasformazioni al messaggio nel runtime (ad esempio per il controllo delle versioni). Anche in questo caso, l'operazione può essere eseguita con le interfacce degli intercettori di messaggi.
 
-- Modello di dati personalizzato. Gli utenti possono disporre di un modello di serializzazione dei dati diverso da quelli supportati per impostazione predefinita <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>in <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>WCF (ossia,, e messaggi non elaborati). A questo scopo, è possibile implementare le interfacce dei formattatori di messaggi. Per un esempio, vedere il formattatore dell' [operazione e](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)il selettore dell'operazione.
+- Modello di dati personalizzato. Gli utenti possono disporre di un modello di serializzazione dei dati diverso da quelli supportati per impostazione predefinita <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>in <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>WCF (ossia,, e messaggi non elaborati). A questo scopo, è possibile implementare le interfacce dei formattatori di messaggi. Per un esempio, vedere il [formattatore dell'operazione e il selettore dell'operazione](../samples/operation-formatter-and-operation-selector.md).
 
 - Convalida di parametri personalizzata. Gli utenti possono imporre che i parametri tipizzati siano validi (a differenza di XML). A questo scopo, è possibile usare le interfacce di controllo dei parametri.
 
-- Invio di operazioni personalizzato. Gli utenti possono implementare l'invio su un elemento diverso dall'azione, ad esempio, sull'elemento corpo o su una proprietà del messaggio personalizzata. A questo scopo, usare l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Per un esempio, vedere il formattatore dell' [operazione e](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)il selettore dell'operazione.
+- Invio di operazioni personalizzato. Gli utenti possono implementare l'invio su un elemento diverso dall'azione, ad esempio, sull'elemento corpo o su una proprietà del messaggio personalizzata. A questo scopo, usare l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Per un esempio, vedere il [formattatore dell'operazione e il selettore dell'operazione](../samples/operation-formatter-and-operation-selector.md).
 
-- Pool di oggetti. Gli utenti possono eseguire il pool delle istanze invece di allocare una nuova istanza per ogni chiamata. A questo scopo, usare le interfacce del provider di istanze. Per un esempio, vedere [pooling](../../../../docs/framework/wcf/samples/pooling.md).
+- Pool di oggetti. Gli utenti possono eseguire il pool delle istanze invece di allocare una nuova istanza per ogni chiamata. A questo scopo, usare le interfacce del provider di istanze. Per un esempio, vedere [pooling](../samples/pooling.md).
 
 - Leasing di istanza. Gli utenti possono implementare un modello di leasing per la durata dell'istanza, simile a quello di .NET Framework Remoting. A questo scopo, è possibile usare le interfacce di durata del contesto dell'istanza.
 
 - Gestione degli errori personalizzata. Gli utenti possono controllare come vengono elaborati gli errori locali e come vengono comunicati ai client. A questo scopo, usare le interfacce <xref:System.ServiceModel.Dispatcher.IErrorHandler>.
 
-- Comportamenti di autorizzazione personalizzati. Gli utenti possono implementare il controllo di accesso personalizzato estendendo i pezzi di runtime Contratto o Operazione e aggiungendo controlli di sicurezza basati sui token presenti nel messaggio. L'operazione può essere eseguita con le interfacce degli intercettori di messaggi o di parametri. Per esempi, vedere [estensibilità di sicurezza](../../../../docs/framework/wcf/samples/security-extensibility.md).
+- Comportamenti di autorizzazione personalizzati. Gli utenti possono implementare il controllo di accesso personalizzato estendendo i pezzi di runtime Contratto o Operazione e aggiungendo controlli di sicurezza basati sui token presenti nel messaggio. L'operazione può essere eseguita con le interfacce degli intercettori di messaggi o di parametri. Per esempi, vedere [estensibilità di sicurezza](../samples/security-extensibility.md).
 
   > [!CAUTION]
   > Poiché la modifica delle proprietà di sicurezza può compromettere la sicurezza delle applicazioni WCF, è consigliabile intraprendere le modifiche relative alla sicurezza con attenzione ed eseguire test approfonditi prima della distribuzione.
 
-- Validator del runtime WCF personalizzati. È possibile installare validator personalizzati che esaminano i servizi, i contratti e le associazioni per applicare i criteri a livello di organizzazione rispetto alle applicazioni WCF. (Ad esempio, vedere [procedura: Bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).
+- Validator del runtime WCF personalizzati. È possibile installare validator personalizzati che esaminano i servizi, i contratti e le associazioni per applicare i criteri a livello di organizzazione rispetto alle applicazioni WCF. (Ad esempio, vedere [procedura: Bloccare gli endpoint nell'organizzazione](how-to-lock-down-endpoints-in-the-enterprise.md).
 
 ### <a name="using-the-dispatchruntime-class"></a>Utilizzo della classe DispatchRuntime
 
@@ -137,6 +137,6 @@ Le proprietà seguenti controllano l'esecuzione del runtime a livello di operazi
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Procedura: Esaminare e modificare i messaggi nel servizio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Procedura: Controllare o modificare i parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Procedura: Bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Procedura: Esaminare e modificare i messaggi nel servizio](how-to-inspect-and-modify-messages-on-the-service.md)
+- [Procedura: Controllare o modificare i parametri](how-to-inspect-or-modify-parameters.md)
+- [Procedura: Bloccare gli endpoint nell'organizzazione](how-to-lock-down-endpoints-in-the-enterprise.md)

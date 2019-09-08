@@ -2,12 +2,12 @@
 title: Stati di oggetti e rilevamento di modifiche
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781281"
 ---
 # <a name="object-states-and-change-tracking"></a>Stati di oggetti e rilevamento di modifiche
 
@@ -21,7 +21,7 @@ Nella tabella riportata di seguito sono elencati gli stati possibili per gli ogg
 |-----------|-----------------|
 |`Untracked`|Un oggetto non registrato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Di seguito vengono forniti alcuni esempi:<br /><br /> -Oggetto non sottoposto a query tramite l' <xref:System.Data.Linq.DataContext> oggetto corrente, ad esempio un oggetto appena creato.<br />: Oggetto creato tramite la deserializzazione.<br />-Oggetto su cui è stata eseguita una <xref:System.Data.Linq.DataContext>query tramite un oggetto diverso.|
 |`Unchanged`|Un oggetto recuperato usando l'istanza corrente di <xref:System.Data.Linq.DataContext> e che non risulta modificato da quando è stato creato.|
-|`PossiblyModified`|Oggetto *associato* a un <xref:System.Data.Linq.DataContext>oggetto. Per ulteriori informazioni, vedere [recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Oggetto *associato* a un <xref:System.Data.Linq.DataContext>oggetto. Per ulteriori informazioni, vedere [recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Un oggetto non recuperato usando l'istanza corrente di <xref:System.Data.Linq.DataContext>. In questo caso viene eseguita un'operazione `INSERT` in un database durante l'esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeUpdated`|Un oggetto che risulta modificato da quando è stato recuperato. In questo caso viene eseguita un'operazione `UPDATE` in un database durante l'esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeDeleted`|Un oggetto contrassegnato per l'eliminazione, che causa un'operazione `DELETE` in un database durante l'esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
@@ -31,7 +31,7 @@ Nella tabella riportata di seguito sono elencati gli stati possibili per gli ogg
 
 È possibile richiedere `Inserts` usando <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> in modo esplicito. In alternativa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può dedurre `Inserts` individuando gli oggetti connessi a uno degli oggetti noti che devono essere aggiornati. Se ad esempio si `Untracked` aggiunge un oggetto a un <xref:System.Data.Linq.EntitySet%601> oggetto o si imposta <xref:System.Data.Linq.EntityRef%601> un oggetto `Untracked` su un oggetto, l' `Untracked` oggetto viene reso raggiungibile tramite oggetti rilevati nel grafico. Durante l' <xref:System.Data.Linq.DataContext.SubmitChanges%2A>elaborazione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , attraversa gli oggetti rilevati e individua tutti gli oggetti persistenti raggiungibili che non vengono rilevati. Tali oggetti sono candidati per l'inserimento nel database.
 
-Per le classi in una gerarchia di <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>ereditarietà`o`, () imposta anche il valore del membro designato come discriminatore in modo che corrisponda al `o`tipo dell'oggetto. Qualora un tipo dovesse corrispondere al valore discriminante predefinito, questa azione causerà la sovrascrittura del valore discriminante con il valore predefinito. Per ulteriori informazioni, vedere [supporto](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)per l'ereditarietà.
+Per le classi in una gerarchia di <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>ereditarietà`o`, () imposta anche il valore del membro designato come *discriminatore* in modo che corrisponda al `o`tipo dell'oggetto. Qualora un tipo dovesse corrispondere al valore discriminante predefinito, questa azione causerà la sovrascrittura del valore discriminante con il valore predefinito. Per ulteriori informazioni, vedere [supporto](inheritance-support.md)per l'ereditarietà.
 
 > [!IMPORTANT]
 > Un oggetto aggiunto a un oggetto `Table` non si trova nella cache delle identità, che riflette solo gli oggetti recuperati dal database. Dopo una chiamata a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, l'entità aggiunta non viene visualizzata nelle query eseguite sul database finché non si completerà <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.
@@ -69,5 +69,5 @@ Se si aggiornano sia il riferimento obbligatorio che la chiave esterna corrispon
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Informazioni di base](background-information.md)
+- [Operazioni di inserimento, aggiornamento ed eliminazione](insert-update-and-delete-operations.md)

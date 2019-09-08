@@ -2,12 +2,12 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8a06accb11631f2dce6b0d39587d7274223c0e68
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203799"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786354"
 ---
 # <a name="dataviews"></a>DataView
 Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di associazione dati. Utilizzando un oggetto **DataView**, è possibile esporre i dati in una tabella con diversi ordinamenti ed è possibile filtrare i dati in base allo stato della riga o in base a un'espressione di filtro.  
@@ -61,4 +61,4 @@ Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

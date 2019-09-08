@@ -2,12 +2,12 @@
 title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963145"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782771"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -21,23 +21,23 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Vengono descritte le procedure consigliate e le tecniche in materia di sicurezza per la protezione delle informazioni di connessione, ad esempio l'uso della configurazione protetta per crittografare le stringhe di connessione.|  
+|[Protezione delle informazioni di connessione](protecting-connection-information.md)|Vengono descritte le procedure consigliate e le tecniche in materia di sicurezza per la protezione delle informazioni di connessione, ad esempio l'uso della configurazione protetta per crittografare le stringhe di connessione.|  
 |[Suggerimenti per le strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
-|[Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)|Viene descritto come compilare stringhe di esecuzione dall'input dell'utente in fase di esecuzione.|  
-|[Cenni preliminari sulla sicurezza in SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Viene descritta l'architettura di sicurezza di SQL Server.|  
+|[Generatori di stringhe di connessione](connection-string-builders.md)|Viene descritto come compilare stringhe di esecuzione dall'input dell'utente in fase di esecuzione.|  
+|[Cenni preliminari sulla sicurezza in SQL Server](./sql/overview-of-sql-server-security.md)|Viene descritta l'architettura di sicurezza di SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Comandi con parametri e SQL injection  
  L'uso di comandi con parametri consente di salvaguardarsi da attacchi SQL injection, un cui un utente non autorizzato inserisce in un'istruzione SQL un comando che compromette la sicurezza del server. I comandi con parametri consentono di evitare attacchi SQL injection garantendo che i valori ricevuti da un'origine esterna verranno passati come semplici valori e non come parte di un'istruzione Transact-SQL. Pertanto, i comandi Transact-SQL inseriti in un valore non verranno eseguiti sull'origine dati. Verranno invece valutati unicamente come un valore del parametro. Oltre ai vantaggi in termini di sicurezza, i comandi con parametri rappresentano un metodo pratico per organizzare i valori passati con un'istruzione Transact-SQL o a una stored procedure.  
   
  Per altre informazioni sull'uso dei comandi con parametri, vedere le risorse seguenti.  
   
-|Risorsa|Descrizione|  
+|Risorsa|DESCRIZIONE|  
 |--------------|-----------------|  
-|[Parametri DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Viene descritto come usare parametri con `DataAdapter`.|  
-|[Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Viene descritto come specificare i parametri e ottenere un valore restituito.|  
-|[Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Viene descritto come usare le stored procedure di SQL Server per incapsulare l'accesso ai dati.|  
+|[Parametri DataAdapter](dataadapter-parameters.md)|Viene descritto come usare parametri con `DataAdapter`.|  
+|[Modifica di dati con stored procedure](modifying-data-with-stored-procedures.md)|Viene descritto come specificare i parametri e ottenere un valore restituito.|  
+|[Gestione delle autorizzazioni con stored procedure in SQL Server](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Viene descritto come usare le stored procedure di SQL Server per incapsulare l'accesso ai dati.|  
   
 ## <a name="script-exploits"></a>Attacchi tramite script  
  Gli attacchi tramite script sono un altro tipo di intrusione in cui vengono inseriti caratteri dannosi in una pagina Web. I caratteri inseriti non vengono convalidati nel browser e verranno elaborati come parte della pagina.  
@@ -73,7 +73,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni, vedere la seguente risorsa.  
   
-|Risorsa|Descrizione|  
+|Risorsa|DESCRIZIONE|  
 |--------------|-----------------|  
 |[Sicurezza basata sui ruoli](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Viene illustrato come integrare codice gestito con i servizi di sicurezza COM+.|  
   
@@ -82,16 +82,16 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|Descrizione|  
+|Risorsa|DESCRIZIONE|  
 |--------------|-----------------|  
-|[Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)|Contiene argomenti in cui viene descritto come esporre componenti COM a .NET Framework e componenti .NET Framework a COM.|
+|[Interoperabilità con codice non gestito](../../interop/index.md)|Contiene argomenti in cui viene descritto come esporre componenti COM a .NET Framework e componenti .NET Framework a COM.|
 |[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Protezione delle applicazioni ADO.NET](securing-ado-net-applications.md)
+- [Sicurezza di SQL Server](./sql/sql-server-security.md)
 - [Suggerimenti per le strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle informazioni di connessione](protecting-connection-information.md)
+- [Generatori di stringhe di connessione](connection-string-builders.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

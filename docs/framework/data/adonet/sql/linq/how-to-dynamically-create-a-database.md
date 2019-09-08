@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940078"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793653"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procedura: Creare un database in modo dinamico
 In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database relazionale. Per descrivere la struttura del database relazionale è possibile eseguire il mapping basato sull'attributo o usare un file di mapping esterno. Entrambi gli scenari dispongono di informazioni sul database relazionale sufficienti per creare una nuova istanza del database mediante il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -50,8 +50,8 @@ In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database r
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
-- [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Mapping basato su attributi](attribute-based-mapping.md)
+- [External Mapping](external-mapping.md) (Mapping esterno)
+- [Mapping del tipo SQL-CLR](sql-clr-type-mapping.md)
+- [Informazioni di base](background-information.md)
+- [Creazione e invio di modifiche dei dati](making-and-submitting-data-changes.md)

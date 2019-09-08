@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: dbfd8a8b207c0da9403ac1f8ab36557c4abe383b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0f87b1b730eecf0edad75bd87ca8b491b96e1d2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204916"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784713"
 ---
 # <a name="defining-primary-keys"></a>Definizione di chiavi primarie
 In genere, in una tabella di database è presente una colonna o un gruppo di colonne che consente l'identificazione univoca di ogni riga della tabella. Tale colonna o gruppo di colonne di identificazione è definito chiave primaria.  
@@ -70,4 +70,4 @@ workTable.PrimaryKey = keyColumn;
 - <xref:System.Data.DataTable>
 - [Definizione dello schema DataTable](datatable-schema-definition.md)
 - [DataTable](datatables.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68be16c559431de871dc9ddb1963897b0927d49a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 197504cbb0dd66c0cf43dee718026fc63e918d60
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783170"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798860"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>Funzione StrongNameTokenFromPublicKey
-Ottiene un token che rappresenta una chiave pubblica. Un token con nome sicuro è il formato abbreviato di una chiave pubblica.  
+Ottiene un token che rappresenta una chiave pubblica. Un token di nome sicuro è il formato abbreviato di una chiave pubblica.  
   
- Questa funzione è stata deprecata. Usare la [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,36 +45,36 @@ BOOLEANStrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Parametri  
  `pbPublicKeyBlob`  
- [in] Una struttura di tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi usata per generare la firma con nome sicuro.  
+ in Struttura di tipo [PublicKeyBlob](publickeyblob-structure.md) che contiene la parte pubblica della coppia di chiavi utilizzata per generare la firma con nome sicuro.  
   
  `cbPublicKeyBlob`  
- [in] Le dimensioni, in byte, di `pbPublicKeyBlob`.  
+ in Dimensione, in byte, di `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Il token di nome sicuro corrispondente alla chiave passato `pbPublicKeyBlob`. Common language runtime alloca la memoria in cui restituire il token. Il chiamante deve liberare la memoria usando il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) (funzione).  
+ out Token del nome sicuro corrispondente alla chiave passata `pbPublicKeyBlob`. Il Common Language Runtime alloca la memoria in cui restituire il token. Il chiamante deve liberare questa memoria tramite la funzione [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbStrongNameToken`  
- [out] Le dimensioni, in byte, del token restituito nome sicuro.  
+ out Dimensione, in byte, del token del nome sicuro restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` al termine dell'esecuzione; in caso contrario, `false`.  
+ `true`al completamento; in caso `false`contrario,.  
   
 ## <a name="remarks"></a>Note  
- Un token con nome sicuro è il formato abbreviato di una chiave pubblica usata per risparmiare spazio quando si archiviano le informazioni sulla chiave nei metadati. In particolare, i token di nome sicuro vengono usati nei riferimenti ad assembly per fare riferimento all'assembly dipendenti.  
+ Un token di nome sicuro è il formato abbreviato di una chiave pubblica usata per risparmiare spazio durante l'archiviazione delle informazioni chiave nei metadati. In particolare, i token con nome sicuro vengono utilizzati nei riferimenti ad assembly per fare riferimento all'assembly dipendente.  
   
- Se il `StrongNameTokenFromPublicKey` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funzione per recuperare l'ultimo errore generato.  
+ Se la `StrongNameTokenFromPublicKey` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in mscoree. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [Metodo StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [Struttura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [Metodo StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [Metodo StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [Struttura PublicKeyBlob](publickeyblob-structure.md)

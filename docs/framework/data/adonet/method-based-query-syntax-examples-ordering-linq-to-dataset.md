@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
-ms.openlocfilehash: 76bc4751a25e82a731e136f838d12b8d1c1d691f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16a37cb0bc36741ad816d2aa038a1390e3282d9b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772086"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794986"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Esempi di sintassi delle query basate su metodo: Ordinamento (LINQ to DataSet)
 Negli esempi di questo argomento viene illustrato come usare i metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati usando la sintassi delle query basate su metodo.  
   
- Il `FillDataSet` metodo usato in questi esempi è specificato nel [caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ Il `FillDataSet` metodo utilizzato in questi esempi viene specificato nel [caricamento di dati in un DataSet](loading-data-into-a-dataset.md).  
   
  Negli esempi di questo argomento vengono usate le tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
- Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
+ Negli esempi di questo argomento vengono utilizzate le `using` istruzioni seguenti: / `Imports`  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Per altre informazioni, vedere [Procedura: Creare un progetto LINQ to DataSet In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Per altre informazioni, vedere [Procedura: Creare un progetto LINQ to DataSet in Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="orderby"></a>OrderBy  
   
@@ -52,7 +52,7 @@ Negli esempi di questo argomento viene illustrato come usare i metodi <xref:Syst
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Caricamento di dati in un oggetto DataSet](loading-data-into-a-dataset.md)
+- [Esempi di LINQ to DataSet](linq-to-dataset-examples.md)
 - [Panoramica degli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Panoramica degli operatori query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

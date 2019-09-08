@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: ebf5c61010a6f658d846ed435ea3a7d18d0d3832
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46c92301b717e285c4c18241f84d0069069c7bdc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934444"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783522"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modifica di dati con stored procedure
 Le stored procedure possono accettare dati come parametri di input e possono restituire dati come parametri di output, set di risultati o valori restituiti. Nell'esempio seguente vengono illustrati l'invio e la ricezione di parametri di input, parametri di output e valori restituiti in ADO.NET. Viene inserito un nuovo record in una tabella in cui la colonna della chiave primaria è una colonna Identity di un database SQL Server.  
@@ -41,7 +41,7 @@ RETURN @@ROWCOUNT
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [Esecuzione di un comando](executing-a-command.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

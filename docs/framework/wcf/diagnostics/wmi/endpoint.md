@@ -2,12 +2,12 @@
 title: Endpoint
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963605"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795903"
 ---
 # <a name="endpoint"></a>Endpoint
 Endpoint  
@@ -37,9 +37,9 @@ class Endpoint
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Recupera il nome dell'istanza del contatore delle prestazioni dell'operazione.|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Recupera il nome dell'istanza del contatore delle prestazioni dell'operazione.|  
   
-## <a name="properties"></a>Proprietà  
+## <a name="properties"></a>Properties  
  La classe Endpoint ha le proprietà seguenti:  
   
 ### <a name="address"></a>Indirizzo  
@@ -71,14 +71,14 @@ class Endpoint
  ID del dominio applicazione che ospita l'endpoint.  
   
 ### <a name="behaviors"></a>comportamenti  
- Tipo di dati: Matrice di Behavior  
+ Tipo di dati: Matrice di comportamenti  
   
  Tipo di accesso: Sola lettura  
   
  Raccolta dei comportamenti implementati da questo endpoint.  
   
-### <a name="binding"></a>Binding  
- Tipo di dati: Binding  
+### <a name="binding"></a>Associazione  
+ Tipo di dati: Associazione  
   
  Tipo di accesso: Sola lettura  
   
@@ -105,7 +105,7 @@ class Endpoint
   
  URI sul quale resta in attesa l'endpoint.  
   
-### <a name="name"></a>Nome  
+### <a name="name"></a>Name  
  Tipo di dati: stringa  
   
  Tipo di accesso: Sola lettura  

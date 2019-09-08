@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 5239117d375ef9c305863ff847c3aff3af91234d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e160f96be2a95262776994152a06b42b475887
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875784"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779815"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provider di reflection (WCF Data Services)
 
@@ -18,7 +18,7 @@ Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework,
 > [!NOTE]
 > È possibile usare il metodo <xref:System.Linq.Queryable.AsQueryable%2A> per restituire un'interfaccia <xref:System.Linq.IQueryable%601> da una classe che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. In questo modo è possibile usare la maggior parte dei tipi di raccolte generiche come origine dati per il servizio dati.
 
-Il provider di reflection supporta gerarchie di tipi. Per altre informazioni, vedere [Procedura: Creare un servizio dati tramite il Provider di Reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+Il provider di reflection supporta gerarchie di tipi. Per altre informazioni, vedere [Procedura: Creazione di un servizio dati tramite il provider](create-a-data-service-using-rp-wcf-data-services.md)di Reflection.
 
 ## <a name="inferring-the-data-model"></a>Deduzione del modello di dati
 
@@ -73,7 +73,7 @@ Quando un modello di dati viene derivato da classi di .NET Framework, i tipi pri
 
 ## <a name="enabling-updates-in-the-data-model"></a>Abilitazione di aggiornamenti nel modello di dati
 
-Per consentire aggiornamenti ai dati esposti tramite questo tipo di modello di dati, il provider di reflection definisce un'interfaccia <xref:System.Data.Services.IUpdatable>. Questa interfaccia indica al servizio dati la modalità da usare per rendere persistenti gli aggiornamenti ai tipi esposti. Per consentire aggiornamenti alle risorse definite dal modello di dati, la classe contenitore di entità deve implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per un esempio di un'implementazione del <xref:System.Data.Services.IUpdatable> dell'interfaccia, vedere [come: Creare un servizio dati usando un LINQ all'origine dati SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).
+Per consentire aggiornamenti ai dati esposti tramite questo tipo di modello di dati, il provider di reflection definisce un'interfaccia <xref:System.Data.Services.IUpdatable>. Questa interfaccia indica al servizio dati la modalità da usare per rendere persistenti gli aggiornamenti ai tipi esposti. Per consentire aggiornamenti alle risorse definite dal modello di dati, la classe contenitore di entità deve implementare l'interfaccia <xref:System.Data.Services.IUpdatable>. Per un esempio di implementazione dell' <xref:System.Data.Services.IUpdatable> interfaccia, vedere [procedura: Creare un servizio dati utilizzando un'origine](create-a-data-service-using-linq-to-sql-wcf.md)dati LINQ to SQL.
 
 Per fare in modo che gli aggiornamenti vengano propagati all'origine dati tramite il provider di reflection, l'interfaccia <xref:System.Data.Services.IUpdatable> richiede l'implementazione dei membri seguenti:
 
@@ -94,12 +94,12 @@ Per fare in modo che gli aggiornamenti vengano propagati all'origine dati tramit
 
 ## <a name="handling-concurrency"></a>Gestione della concorrenza
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta un modello di concorrenza ottimistica consentendo la definizione di un token di concorrenza per un'entità. Questo token di concorrenza, che include una o più proprietà dell'entità, viene usato dal servizio dati per determinare se si è verificata una modifica nei dati richiesti, aggiornati o eliminati. Quando i valori del token ottenuti dal valore eTag nella richiesta sono diversi da quelli correnti dell'entità, viene generata un'eccezione dal servizio dati. L'oggetto <xref:System.Data.Services.ETagAttribute> viene applicato a un tipo di entità per definire un token di concorrenza nel provider di reflection. Il token di concorrenza non può includere una proprietà della chiave o una proprietà di navigazione. Per altre informazioni, vedere [aggiornamento del servizio dati](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] supporta un modello di concorrenza ottimistica consentendo la definizione di un token di concorrenza per un'entità. Questo token di concorrenza, che include una o più proprietà dell'entità, viene usato dal servizio dati per determinare se si è verificata una modifica nei dati richiesti, aggiornati o eliminati. Quando i valori del token ottenuti dal valore eTag nella richiesta sono diversi da quelli correnti dell'entità, viene generata un'eccezione dal servizio dati. L'oggetto <xref:System.Data.Services.ETagAttribute> viene applicato a un tipo di entità per definire un token di concorrenza nel provider di reflection. Il token di concorrenza non può includere una proprietà della chiave o una proprietà di navigazione. Per ulteriori informazioni, vedere [aggiornamento del servizio dati](updating-the-data-service-wcf-data-services.md).
 
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Uso di LINQ to SQL con il provider di reflection
 
-Entity Framework è supportato a livello nativo per impostazione predefinita e rappresenta pertanto il provider di dati consigliato per l'uso di dati relazionali con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per usare classi LINQ to SQL con un servizio dati, è tuttavia possibile usare il provider di reflection. Il <xref:System.Data.Linq.Table%601> restituiti dai metodi a set di risultati di <xref:System.Data.Linq.DataContext> generate da LINQ per implementare SQL Object Relational Designer (O/R Designer) di <xref:System.Linq.IQueryable%601> interfaccia. In questo modo il provider di reflection è in grado di accedere a questi metodi e di restituire i dati di entità da SQL Server tramite le classi LINQ to SQL generate. Poiché LINQ to SQL non implementa l'interfaccia <xref:System.Data.Services.IUpdatable>, sarà tuttavia necessario aggiungere una classe parziale che estenda la classe parziale <xref:System.Data.Linq.DataContext> esistente per aggiungere l'implementazione di <xref:System.Data.Services.IUpdatable>. Per altre informazioni, vedere [Procedura: Creare un servizio dati usando un LINQ all'origine dati SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).
+Entity Framework è supportato a livello nativo per impostazione predefinita e rappresenta pertanto il provider di dati consigliato per l'uso di dati relazionali con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per usare classi LINQ to SQL con un servizio dati, è tuttavia possibile usare il provider di reflection. I <xref:System.Data.Linq.Table%601> set di risultati restituiti dai metodi nell'oggetto <xref:System.Data.Linq.DataContext> generato dal LINQ to SQL Object Relational Designer (O/R Designer) implementano l' <xref:System.Linq.IQueryable%601> interfaccia. In questo modo il provider di reflection è in grado di accedere a questi metodi e di restituire i dati di entità da SQL Server tramite le classi LINQ to SQL generate. Poiché LINQ to SQL non implementa l'interfaccia <xref:System.Data.Services.IUpdatable>, sarà tuttavia necessario aggiungere una classe parziale che estenda la classe parziale <xref:System.Data.Linq.DataContext> esistente per aggiungere l'implementazione di <xref:System.Data.Services.IUpdatable>. Per altre informazioni, vedere [Procedura: Creare un servizio dati utilizzando un'origine](create-a-data-service-using-linq-to-sql-wcf.md)dati LINQ to SQL.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Provider di servizi dati](data-services-providers-wcf-data-services.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783061"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798179"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (funzione)
 Scrive un numero specificato di byte in una proprietà identificata da un handle di proprietà.
@@ -43,42 +43,42 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`  
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) istanza.
+in Puntatore a un'istanza di [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `lHandle`  
-[in] Numero intero che contiene l'handle che identifica questa proprietà. L'handle può essere recuperato chiamando il [GetPropertyHandle](getpropertyhandle.md) (funzione).   
+in Intero contenente l'handle che identifica questa proprietà. È possibile recuperare l'handle chiamando la funzione [GetPropertyHandle](getpropertyhandle.md) .   
 
 `lNumBytes`  
-[in] Il numero di byte da scrivere per la proprietà. Vedere le [osservazioni](#remarks) sezione per altre informazioni.
+in Numero di byte scritti nella proprietà. Per ulteriori informazioni, vedere la sezione [osservazioni](#remarks) .
 
 `pHandle`   
-[out] Puntatore alla matrice di byte che contiene i dati.
+out Puntatore alla matrice di byte che contiene i dati.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Si è verificato un tipo non corrispondente. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Si è verificata una mancata corrispondenza del tipo. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Utilizzare questa funzione per impostare una stringa e tutti gli altri non -`DWORD` o non-`QWORD` dei dati.
+Usare questa funzione per impostare la stringa e tutti gli altri`DWORD` `QWORD` dati non o non.
 
-Per i valori delle proprietà non stringa `lNumBytes` devono avere la dimensione di correggere i dati del tipo di proprietà specificato. Per i valori di proprietà stringa `lNumBytes` deve essere la lunghezza della stringa specificata in byte con la stringa deve essere una lunghezza in byte pari ed essere seguito con un carattere di terminazione null.
+Per i valori di proprietà non `lNumBytes` stringa, deve essere la dimensione dati corretta del tipo di proprietà specificato. Per i valori delle proprietà `lNumBytes` di stringa, deve essere la lunghezza della stringa specificata in byte e la stringa stessa deve avere una lunghezza pari in byte e deve essere seguita da un carattere di terminazione null.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.idl  
+ **Intestazione:** WMINet_Utils. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

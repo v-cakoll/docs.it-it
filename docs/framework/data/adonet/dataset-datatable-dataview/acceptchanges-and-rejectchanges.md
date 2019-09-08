@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: a8589b157bc2579a03d856b73802abc9a4b42855
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204083"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785568"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges e RejectChanges
-Dopo la verifica dell'accuratezza delle modifiche apportate ai <xref:System.Data.DataTable>dati in un oggetto, è possibile accettare <xref:System.Data.DataRow.AcceptChanges%2A> le modifiche utilizzando <xref:System.Data.DataRow>il metodo dell' <xref:System.Data.DataSet>oggetto, <xref:System.Data.DataTable>o, che imposta i valori di **riga correnti come** I valori originali e impostano la proprietà **RowState** su Unchanged. L'accettazione o il rifiuto delle modifiche Cancella tutte le informazioni **RowError** e imposta la proprietà **HasErrors** su **false**. È inoltre possibile che l'accettazione o il rifiuto delle modifiche influisca sui dati di aggiornamento nell'origine dati. Per ulteriori informazioni, vedere [aggiornamento di origini dati con DataAdapter](../updating-data-sources-with-dataadapters.md).  
+Dopo la verifica dell'accuratezza delle modifiche apportate ai <xref:System.Data.DataTable>dati in un oggetto, è possibile accettare <xref:System.Data.DataRow.AcceptChanges%2A> le modifiche utilizzando <xref:System.Data.DataRow>il metodo dell' <xref:System.Data.DataSet>oggetto, <xref:System.Data.DataTable>o, che imposta i valori di **riga correnti come** I valori originali e impostano la proprietà **RowState** su **Unchanged**. L'accettazione o il rifiuto delle modifiche Cancella tutte le informazioni **RowError** e imposta la proprietà **HasErrors** su **false**. È inoltre possibile che l'accettazione o il rifiuto delle modifiche influisca sui dati di aggiornamento nell'origine dati. Per ulteriori informazioni, vedere [aggiornamento di origini dati con DataAdapter](../updating-data-sources-with-dataadapters.md).  
   
  Se nella **DataTable**sono presenti vincoli di chiave esterna, le modifiche accettate o rifiutate mediante **AcceptChanges** e **RejectChanges** vengono propagate alle righe figlio del **DataRow** in base **al ForeignKeyConstraint. AcceptRejectRule**. Per altre informazioni, vedere [vincoli DataTable](datatable-constraints.md).  
   
@@ -62,4 +62,4 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Manipolazione di dati in un oggetto DataTable](manipulating-data-in-a-datatable.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795482"
 ---
-# <a name="assemblyinfo-structure"></a>Struttura ASSEMBLY_INFO
-Contiene informazioni relative a un assembly registrato nella global assembly cache.  
+# <a name="assembly_info-structure"></a>Struttura ASSEMBLY_INFO
+Contiene informazioni su un assembly registrato nel Global Assembly Cache.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +38,18 @@ typedef struct _ASSEMBLY_INFO {
 } ASSEMBLY_INFO;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|Le dimensioni, in byte, della struttura. Questo campo è riservato per un'estendibilità futura.|  
-|`dwAssemblyFlags`|Flag che indicano i dettagli di installazione sull'assembly. Sono supportati i valori seguenti:<br /><br /> -Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato. Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` a questo valore.<br />-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente. La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` a questo valore.|  
-|`uliAssemblySizeInKB`|Dimensione totale, espressa in kilobyte, dei file che contiene l'assembly.|  
-|`pszCurrentAssemblyPathBuf`|Puntatore a un buffer di stringa che contiene il percorso corrente per il file manifesto. Il percorso deve terminare con un carattere null.|  
-|`cchBuf`|Il numero di caratteri "wide", incluso il carattere di terminazione null, che `pszCurrentAssemblyPathBuf` contiene.|  
+|`cbAssemblyInfo`|Dimensione, in byte, della struttura. Questo campo è riservato per l'estendibilità futura.|  
+|`dwAssemblyFlags`|Flag che indicano i dettagli di installazione dell'assembly. Sono supportati i valori seguenti:<br /><br /> : Valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato. La versione corrente del .NET Framework imposta `dwAssemblyFlags` sempre su questo valore.<br />: Valore ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, che indica che l'assembly è un payload residente. La versione corrente del .NET Framework non imposta `dwAssemblyFlags` mai su questo valore.|  
+|`uliAssemblySizeInKB`|Dimensioni totali, in kilobyte, dei file contenuti nell'assembly.|  
+|`pszCurrentAssemblyPathBuf`|Puntatore a un buffer di stringa che include il percorso corrente del file manifesto. Il percorso deve terminare con un carattere null.|  
+|`cchBuf`|Numero di caratteri wide, incluso il terminatore null, che `pszCurrentAssemblyPathBuf` contiene.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -57,5 +57,5 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
+- [Strutture Fusion](fusion-structures.md)
+- [Global Assembly Cache](../../app-domains/gac.md)

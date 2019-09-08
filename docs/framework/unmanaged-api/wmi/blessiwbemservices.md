@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636498"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799054"
 ---
 # <a name="blessiwbemservices-function"></a>Funzione BlessIWbemServices
-Indica se le credenziali utente di consentono l'accesso all'oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.   
+Indica se le credenziali utente consentono l'accesso alla classe [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) specificata.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,40 +44,40 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parametri
 
 `pIWbemServices`\
-[in] Un puntatore per il [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) oggetto per cui sono necessarie le autorizzazioni.
+in Puntatore all'oggetto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) per il quale sono necessarie le autorizzazioni.
 
 `strUser`\
-[in] Il nome utente.
+in Nome utente.
 
 `strPassword`\
-[in] La password associata `strUser`.
+in Password associata a `strUser`.
 
 `strAuthority`\
-[in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
+in Nome di dominio dell'utente. Per ulteriori informazioni, vedere la funzione [ConnectServerWmi](connectserverwmi.md) .
 
 `impLevel`\
-[in] Il livello di rappresentazione.
+in Livello di rappresentazione.
 
 `authnLevel`\
-[in] Il livello di autorizzazione.
+in Livello di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *Winerror. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 
 | `E_FAIL` | 0x80000008 | Si è verificato un errore non specificato. |
-| `E_OUTOFMEMORY` | 0x80000002 | Memoria disponibile è insufficiente per eseguire l'operazione. | 
-| `S_OK` | 0 | La chiamata di funzione è riuscita. | 
+| `E_OUTOFMEMORY` | 0x80000002 | Memoria insufficiente per eseguire l'operazione. | 
+| `S_OK` | 0 | La chiamata di funzione è stata completata. | 
 
 ## <a name="requirements"></a>Requisiti  
 
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.idl  
+ **Intestazione:** WMINet_Utils. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

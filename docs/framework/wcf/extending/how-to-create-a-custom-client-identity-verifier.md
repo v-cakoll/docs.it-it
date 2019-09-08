@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e7869efdba50d72cc61a1aebb767cf43927546
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767260"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795637"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Procedura: Creare un verificatore di identità client personalizzato
-Il *identità* funzionalità di Windows Communication Foundation (WCF) consente a un client di specificare in anticipo l'identità prevista del servizio. Ogni volta che un server esegue l'autenticazione al client, l'identità viene confrontata con l'identità prevista. (Per una spiegazione delle identità e il relativo funzionamento, vedere [identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+La funzionalità di *identità* di Windows Communication Foundation (WCF) consente a un client di specificare in anticipo l'identità prevista del servizio. Ogni volta che un server esegue l'autenticazione al client, l'identità viene confrontata con l'identità prevista. Per una spiegazione dell'identità e del relativo funzionamento, vedere [identità e autenticazione del servizio](../feature-details/service-identity-and-authentication.md).  
   
- Se necessario, la verifica può essere personalizzata usando un verificatore di identità personalizzato. È possibile, ad esempio, eseguire ulteriori controlli di verifica dell'identità del servizio. In questo esempio il verificatore di identità personalizzato verifica le attestazioni aggiuntive nel certificato X.509 restituito dal server. Per un'applicazione di esempio, vedere [esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
+ Se necessario, la verifica può essere personalizzata usando un verificatore di identità personalizzato. È possibile, ad esempio, eseguire ulteriori controlli di verifica dell'identità del servizio. In questo esempio il verificatore di identità personalizzato verifica le attestazioni aggiuntive nel certificato X.509 restituito dal server. Per un'applicazione di esempio, vedere [esempio di identità del servizio](../samples/service-identity-sample.md).  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>Per estendere la classe EndpointIdentity  
   
@@ -26,7 +26,7 @@ Il *identità* funzionalità di Windows Communication Foundation (WCF) consente 
      [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
      [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-### <a name="to-extend-the-identityverifier-class"></a>Per estendere la classe IdentityVerifier   
+### <a name="to-extend-the-identityverifier-class"></a>Per estendere la classe IdentityVerifier  
   
 1. Definire una nuova classe che deriva dall'interfaccia <xref:System.ServiceModel.Security.IdentityVerifier>. Questo esempio attribuisce un nome all'estensione `CustomIdentityVerifier`.  
   
@@ -44,7 +44,7 @@ Il *identità* funzionalità di Windows Communication Foundation (WCF) consente 
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Per implementare il metodo TryGetIdentity  
   
-1. Implementare il metodo <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> che determina se un'istanza della classe <xref:System.ServiceModel.EndpointIdentity> può essere restituita dal client. L'infrastruttura WCF chiama l'implementazione del `TryGetIdentity` metodo prima di tutto per recuperare l'identità del servizio dal messaggio. L'infrastruttura chiama quindi l'implementazione `CheckAccess` con le classi `EndpointIdentity` e <xref:System.IdentityModel.Policy.AuthorizationContext> restituite.  
+1. Implementare il metodo <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> che determina se un'istanza della classe <xref:System.ServiceModel.EndpointIdentity> può essere restituita dal client. L'infrastruttura WCF chiama prima l'implementazione del `TryGetIdentity` metodo per recuperare l'identità del servizio dal messaggio. L'infrastruttura chiama quindi l'implementazione `CheckAccess` con le classi `EndpointIdentity` e <xref:System.IdentityModel.Policy.AuthorizationContext> restituite.  
   
 2. Nel metodo `TryGetIdentity` inserire il seguente codice:  
   
@@ -86,5 +86,5 @@ Il *identità* funzionalità di Windows Communication Foundation (WCF) consente 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Esempio identità del servizio](../samples/service-identity-sample.md)
+- [Criteri di autorizzazione](../samples/authorization-policy.md)

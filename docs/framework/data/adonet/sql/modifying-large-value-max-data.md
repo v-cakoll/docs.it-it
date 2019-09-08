@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947018"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792047"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
 I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la dimensione massima di 8 kilobyte (KB) per le righe. In SQL Server viene fornito un identificatore `max` per i tipi di dati `varchar`, `nvarchar` e `varbinary` per consentire l'archiviazione di valori di dimensioni pari a 2^32 byte. Nelle colonne di tabelle e nelle variabili Transact-SQL possono essere specificati tipi di dati `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. In ADO.NET i tipi di dati `max` possono essere recuperati da un `DataReader` e possono inoltre essere specificati come parametri di input e di output senza richiedere una gestione speciale. Per tipi di dati `varchar` di grandi dimensioni, è possibile recuperare e aggiornare i dati in modo incrementale.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Dati binari e con valori elevati SQL Server](sql-server-binary-and-large-value-data.md)
+- [Mapping dei tipi di dati SQL Server](../sql-server-data-type-mappings.md)
+- [Operazioni sui dati SQL Server in ADO.NET](sql-server-data-operations.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

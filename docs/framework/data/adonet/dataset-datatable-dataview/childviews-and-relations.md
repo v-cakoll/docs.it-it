@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205191"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786579"
 ---
 # <a name="childviews-and-relations"></a>Oggetti ChildView e relazioni
 Se esiste una relazione tra le tabelle di un tipo <xref:System.Data.DataSet>, è possibile creare un tipo <xref:System.Data.DataView> contenente le righe della tabella figlio correlata usando il metodo <xref:System.Data.DataRowView.CreateChildView%2A> di <xref:System.Data.DataRowView> per le righe della tabella padre. Il codice seguente, ad esempio, Visualizza le **categorie** e i **prodotti** correlati in ordine alfabetico ordinato in base a **CategoryName** e **ProductName**.  
@@ -79,4 +79,4 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataView](dataviews.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

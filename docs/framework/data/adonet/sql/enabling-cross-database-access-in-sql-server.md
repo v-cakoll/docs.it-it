@@ -2,12 +2,12 @@
 title: Abilitazione dell'accesso tra database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794192"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Abilitazione dell'accesso tra database in SQL Server
 Il concatenamento della proprietà tra database si verifica quando una procedura di un database dipende dagli oggetti di un altro. Una catena di proprietà tra database funziona allo stesso modo del concatenamento della proprietà con un singolo database, ad eccezione del fatto che una catena di proprietà non interrotta richiede che tutti i proprietari degli oggetti siano mappati allo stesso account di accesso. Se l'oggetto di origine nel database di origine e gli oggetti di destinazione nei database di destinazione appartengono allo stesso account di accesso, le autorizzazioni sugli oggetti di destinazione non verranno controllate in SQL Server.  
@@ -48,13 +48,13 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Estensione della rappresentazione del Database tramite EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) e [opzione Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Gli articoli descrivono come configurare il concatenamento di un'istanza di SQL Server della proprietà tra database.|  
+|[Estensione della rappresentazione del database tramite l'opzione Execute As](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) e [cross db ownership chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Gli articoli descrivono come configurare il concatenamento della proprietà tra database per un'istanza di SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
+- [Gestione delle autorizzazioni con stored procedure in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Scrittura dinamica sicura in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Firma di stored procedure in SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

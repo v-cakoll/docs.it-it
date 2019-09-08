@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18e0b7b3547bb246588f6b255483d4c317e0df88
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7828c86018724bb934de99cab4617f9885fdca6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742223"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787615"
 ---
 # <a name="closeassembly-method"></a>Metodo CloseAssembly
-Consente di finalizzare le operazioni di assembly. Chiamare questo metodo prima di iniziare un nuovo assembly o un modulo non associato.  
+Finalizza le operazioni di assembly. Chiamare questo metodo prima di iniziare un nuovo modulo di assembly o non associato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +43,10 @@ HRESULT CloseAssembly(
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h.  
+ Richiede ALink. h.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

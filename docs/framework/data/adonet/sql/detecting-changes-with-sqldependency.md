@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877669"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782417"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Rilevamento di modifiche con SqlDependency
 
@@ -18,7 +18,7 @@ ms.locfileid: "61877669"
 
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza
 
-L'infrastruttura della dipendenza si basa su un oggetto <xref:System.Data.SqlClient.SqlConnection> che viene aperto quando viene chiamato <xref:System.Data.SqlClient.SqlDependency.Start%2A> per ricevere le notifiche relative alla modifica dei dati sottostanti per un comando specificato. Per controllare se un client è in grado di avviare la chiamata a `SqlDependency.Start`, vengono usati <xref:System.Data.SqlClient.SqlClientPermission> e gli attributi della sicurezza dall'accesso di codice. Per altre informazioni, vedere [abilitazione le notifiche di Query](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) e [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).
+L'infrastruttura della dipendenza si basa su un oggetto <xref:System.Data.SqlClient.SqlConnection> che viene aperto quando viene chiamato <xref:System.Data.SqlClient.SqlDependency.Start%2A> per ricevere le notifiche relative alla modifica dei dati sottostanti per un comando specificato. Per controllare se un client è in grado di avviare la chiamata a `SqlDependency.Start`, vengono usati <xref:System.Data.SqlClient.SqlClientPermission> e gli attributi della sicurezza dall'accesso di codice. Per altre informazioni, vedere [Abilitazione di notifiche di query](enabling-query-notifications.md) e [sicurezza dall'accesso di codice e ADO.NET](../code-access-security.md).
 
 ### <a name="example"></a>Esempio
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Notifiche di query in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Notifiche di query in SQL Server](query-notifications-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

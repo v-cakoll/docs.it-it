@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: f198de20a3fa788fb8d5f2dc4ebf799989814756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a6079db5e969154c4a9bb6451dd7c698c6d2088
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765713"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780380"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Provider di servizi dati personalizzati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un set di provider che consente di definire un modello di dati basato su tipi di dati ad associazione tardiva.  
@@ -20,12 +20,12 @@ ms.locfileid: "61765713"
 |Provider di query|Questo provider consente di eseguire query su un modello di dati personalizzato definito tramite l'interfaccia <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>. Il provider di query viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceQueryProvider>.|  
 |Provider di aggiornamento|Questo provider consente di applicare aggiornamenti ai tipi esposti in un provider del servizio dati personalizzato e di gestire la concorrenza. Un provider di aggiornamento viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>|  
 |Provider di paging|Questo provider viene usato con il provider del servizio dati personalizzato per abilitare il supporto di paging basato su server. Un provider di paging per un servizio dati personalizzato viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServicePagingProvider>.|  
-|Provider di flusso|Questo provider consente di esporre come flusso tipi di dati per oggetti binari di grandi dimensioni. Un provider di flusso viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Il provider di flusso può essere usato anche con i provider di origini dati di Entity Framework e di reflection. Per altre informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|Provider di flusso|Questo provider consente di esporre come flusso tipi di dati per oggetti binari di grandi dimensioni. Un provider di flusso viene creato mediante l'implementazione dell'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Il provider di flusso può essere usato anche con i provider di origini dati di Entity Framework e di reflection. Per ulteriori informazioni, vedere [provider di flussi](streaming-provider-wcf-data-services.md).|  
   
- Per altre informazioni, vedere l'articolo [provider di servizi dati personalizzati](https://go.microsoft.com/fwlink/?LinkID=186850) e il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Toolkit del Provider nel [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
+ Per ulteriori informazioni, vedere l'articolo [provider di servizi dati personalizzati](https://go.microsoft.com/fwlink/?LinkID=186850) e [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] il Toolkit del provider in [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Provider di Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
-- [Provider di reflection](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Provider di servizi dati](data-services-providers-wcf-data-services.md)
+- [Provider di Entity Framework](entity-framework-provider-wcf-data-services.md)
+- [Provider di reflection](reflection-provider-wcf-data-services.md)

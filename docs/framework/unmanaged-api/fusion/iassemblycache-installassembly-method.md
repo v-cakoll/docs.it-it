@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95c65e73c118b5358ac0a92dd0a1ca5545558e73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778749"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796797"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>Metodo IAssemblyCache::InstallAssembly
-Installa l'assembly specificato nella global assembly cache.  
+Installa l'assembly specificato nel Global Assembly Cache.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +39,20 @@ HRESULT InstallAssembly (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
+ in Flag definiti in Fusion. idl. Sono supportati i valori seguenti:  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
- [in] Il percorso per il manifesto per l'assembly da installare.  
+ in Percorso del manifesto per l'assembly da installare.  
   
  `pRefData`  
- [in] Oggetto [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struttura che contiene i dati per l'installazione.  
+ in Struttura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) che contiene i dati per l'installazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -60,4 +60,4 @@ HRESULT InstallAssembly (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)

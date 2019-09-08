@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746531"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798553"
 ---
 # <a name="getmethodorigin-function"></a>Funzione GetMethodOrigin
 Determina la classe in cui viene dichiarato un metodo.
@@ -42,39 +42,39 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`  
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`  
-[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
+in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethodName`  
-[in] Il nome del metodo per l'oggetto la cui classe proprietaria è richiesto. 
+in Nome del metodo per l'oggetto di cui viene richiesta la classe proprietaria. 
 
 `pstrClassName`  
-[out] Riceve il nome della classe cui appartiene il metodo.
+out Riceve il nome della classe a cui appartiene il metodo.
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |DESCRIZIONE  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il metodo specificato non è stato trovato. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non sono validi. |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
 
-Poiché una classe può ereditare i metodi da una o più classi base, gli sviluppatori spesso vogliono determinare la classe in cui è definito un metodo specifico.
+Poiché una classe può ereditare metodi da una o più classi base, gli sviluppatori spesso vogliono determinare la classe in cui è definito un determinato metodo.
 
-Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di chiamare la funzione poiché si tratta di un `out` parametro; questo puntatore non viene deallocato dopo la funzione restituisce.
+Il `pstrClassName` parametro non deve puntare a un oggetto `BSTR` valido prima che la funzione venga chiamata perché si `out` tratta di un parametro; questo puntatore non viene deallocato dopo la restituzione della funzione.
 
 ## <a name="requirements"></a>Requisiti  
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.idl  
+ **Intestazione:** WMINet_Utils. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

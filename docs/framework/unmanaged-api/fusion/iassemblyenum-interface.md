@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697433"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796668"
 ---
 # <a name="iassemblyenum-interface"></a>Interfaccia IAssemblyEnum
-Rappresenta un enumeratore per una matrice di `IAssemblyName` oggetti.  
+Rappresenta un enumeratore per una matrice `IAssemblyName` di oggetti.  
   
 ## <a name="methods"></a>Metodi  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Clone](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Crea una copia superficiale dell'oggetto `IAssemblyEnum` oggetto.|  
-|[Metodo GetNextAssembly](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Ottiene un puntatore al successivo `IAssemblyName` contenuti in questo `IAssemblyEnum` oggetto.|  
-|[Metodo Reset](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Reimposta la `IAssemblyEnum` oggetti sulla propria posizione inizia.|  
+|[Metodo Clone](iassemblyenum-clone-method.md)|Crea una copia superficiale dell' `IAssemblyEnum` oggetto.|  
+|[Metodo GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Ottiene un puntatore al successivo `IAssemblyName` contenuto `IAssemblyEnum` nell'oggetto.|  
+|[Metodo Reset](iassemblyenum-reset-method.md)|Reimposta l' `IAssemblyEnum` oggetto sulla relativa posizione iniziale.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -43,5 +43,5 @@ Rappresenta un enumeratore per una matrice di `IAssemblyName` oggetti.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interfacce Fusion](fusion-interfaces.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae87ebd0b8225f14ca029fac80528d47f5a866cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780105"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799068"
 ---
 # <a name="strongnamegetpublickey-function"></a>Funzione StrongNameGetPublicKey
-Ottiene la chiave pubblica da una coppia di chiavi pubblica/privata. La coppia di chiavi può essere fornita come un nome di contenitore di chiavi all'interno di un provider del servizio di crittografia (CSP) o come una raccolta di byte non elaborata.  
+Ottiene la chiave pubblica da una coppia di chiavi pubblica/privata. È possibile specificare la coppia di chiavi come nome del contenitore di chiavi all'interno di un provider del servizio di crittografia (CSP) o come raccolta di byte non elaborata.  
   
- Questa funzione è stata deprecata. Usare la [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) metodo invece.  
+ Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,44 +43,44 @@ BOOLEAN StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Parametri  
  `szKeyContainer`  
- [in] Il nome del contenitore di chiavi che contiene la coppia di chiavi pubblica/privata. Se `pbKeyBlob` è null, `szKeyContainer` deve specificare un contenitore valido all'interno del CSP. In questo caso, `StrongNameGetPublicKey` estrae la chiave pubblica dalla coppia di chiavi archiviata nel contenitore.  
+ in Nome del contenitore di chiavi che contiene la coppia di chiavi pubblica/privata. Se `pbKeyBlob` è null, `szKeyContainer` è necessario specificare un contenitore valido all'interno del CSP. In questo caso, `StrongNameGetPublicKey` estrae la chiave pubblica dalla coppia di chiavi archiviata nel contenitore.  
   
- Se `pbKeyBlob` non è null, si presuppone che la coppia di chiavi deve contenere la chiave BLOB binary large object ().  
+ Se `pbKeyBlob` non è null, si presuppone che la coppia di chiavi sia contenuta nel BLOB (Binary Large Object) della chiave.  
   
- Le chiavi devono essere Rivest-Shamir-Adleman (RSA di 1024 bit) le chiavi di firma. Nessun altro tipo di chiavi è supportato in questo momento.  
+ Le chiavi devono essere chiavi di firma Rivest-Shamir-Adleman (RSA) a 1024 bit. Al momento non sono supportati altri tipi di chiavi.  
   
  `pbKeyBlob`  
- [in] Un puntatore per la coppia di chiavi pubblica/privata. Questa coppia è nel formato creato da Win32 `CryptExportKey` (funzione). Se `pbKeyBlob` è null, il contenitore di chiavi specificato da `szKeyContainer` si presuppone che contenga la coppia di chiavi.  
+ in Puntatore alla coppia di chiavi pubblica/privata. Questa coppia è nel formato creato dalla funzione Win32 `CryptExportKey` . Se `pbKeyBlob` è null, si presuppone che il contenitore `szKeyContainer` di chiavi specificato da contenga la coppia di chiavi.  
   
  `cbKeyBlob`  
- [in] Le dimensioni, in byte, di `pbKeyBlob`.  
+ in Dimensione, in byte, di `pbKeyBlob`.  
   
  `ppbPublicKeyBlob`  
- [out] Chiave pubblica restituita BLOB. Il `ppbPublicKeyBlob` parametro è allocata da common language runtime e restituito al chiamante. Il chiamante deve liberare la memoria usando il [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) (funzione).  
+ out BLOB della chiave pubblica restituito. Il `ppbPublicKeyBlob` parametro viene allocato dal Common Language Runtime e restituito al chiamante. Il chiamante deve liberare la memoria tramite la funzione [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbPublicKeyBlob`  
- [out] Le dimensioni della chiave pubblica BLOB restituita.  
+ out Dimensioni del BLOB della chiave pubblica restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` al termine dell'esecuzione; in caso contrario, `false`.  
+ `true`al completamento; in caso `false`contrario,.  
   
 ## <a name="remarks"></a>Note  
- La chiave pubblica è contenuta un [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) struttura.  
+ La chiave pubblica è contenuta in una struttura [PublicKeyBlob](publickeyblob-structure.md) .  
   
- Se il `StrongNameGetPublicKey` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funzione per recuperare l'ultimo errore generato.  
+ Se la `StrongNameGetPublicKey` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** StrongName.h  
+ **Intestazione:** StrongName. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [Metodo StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [Struttura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [Metodo StrongNameGetPublicKey](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [Metodo StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [Interfaccia ICLRStrongName](../hosting/iclrstrongname-interface.md)
+- [Struttura PublicKeyBlob](publickeyblob-structure.md)

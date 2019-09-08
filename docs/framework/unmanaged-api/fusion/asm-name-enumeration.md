@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06d734bfd79e7752db427821a6ddc663b6e22b7d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 698fb8c8efcbe347c0e833b0dba01fffd3030de6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778541"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795499"
 ---
-# <a name="asmname-enumeration"></a>Enumerazione ASM_NAME
-Indica la versione, compilazione, le impostazioni cultura, firma e così via, dell'assembly le cui proprietà saranno recuperate o impostate [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) metodi.  
+# <a name="asm_name-enumeration"></a>Enumerazione ASM_NAME
+Indica la versione, la compilazione, le impostazioni cultura, la firma e così via dell'assembly le cui proprietà verranno recuperate o impostate dai metodi [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,15 +65,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Enumerazioni Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)
+- [Enumerazioni Fusion](fusion-enumerations.md)

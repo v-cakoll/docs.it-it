@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636732"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799028"
 ---
 # <a name="strongnamekeydelete-function"></a>Funzione StrongNameKeyDelete
 
 Elimina il contenitore di chiavi specificato.
 
-Questa funzione è stata deprecata. Usare la [StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) metodo invece.
+Questa funzione è stata deprecata. Usare invece il metodo [ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,25 +40,25 @@ BOOLEAN StrongNameKeyDelete (
 ## <a name="parameters"></a>Parametri
 
 `wszKeyContainer`\
-[in] Il nome del contenitore di chiavi da eliminare.
+in Nome del contenitore di chiavi da eliminare.
 
 ## <a name="return-value"></a>Valore restituito
 
-`true` al termine dell'esecuzione; in caso contrario, `false`.
+`true`al completamento; in caso `false`contrario,.
 
 ## <a name="remarks"></a>Note
 
-Usare la [StrongNameKeyInstall](strongnamekeyinstall-function.md) (funzione) per importare una coppia di chiavi pubblica/privata in un contenitore.
+Usare la funzione [StrongNameKeyInstall](strongnamekeyinstall-function.md) per importare una coppia di chiavi pubblica/privata in un contenitore.
 
-Se il `StrongNameKeyDelete` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](strongnameerrorinfo-function.md) funzione per recuperare l'ultimo errore generato.
+Se la `StrongNameKeyDelete` funzione non viene completata correttamente, chiamare la funzione [StrongNameErrorInfo](strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** StrongName.h
+**Intestazione:** StrongName. h
 
-**Libreria:** Inclusa come risorsa in Mscoree. dll
+**Libreria** Incluso come risorsa in MsCorEE. dll
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

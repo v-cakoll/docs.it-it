@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 42e7a715c8137574bff617715c1f174314080131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6b1eba063c9ec72ae14c12028dd0950b2ad95f5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943605"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793530"
 ---
 # <a name="how-to-map-database-relationships"></a>Procedura: Eseguire il mapping delle relazioni di database
 Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, può essere codificata come riferimenti alla proprietà nella classe di entità. Nel database di esempio Northwind, ad esempio, poiché in genere i clienti effettuano ordini, nel modello è sempre presente una relazione tra clienti e ordini.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]definisce un <xref:System.Data.Linq.Mapping.AssociationAttribute> attributo che consente di rappresentare tali relazioni. Questo attributo viene utilizzato insieme ai tipi <xref:System.Data.Linq.EntitySet%601> e <xref:System.Data.Linq.EntityRef%601> per rappresentare quello che in un database sarebbe una relazione di chiave esterna. Per ulteriori informazioni, vedere la sezione relativa all'attributo Association di [mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]definisce un <xref:System.Data.Linq.Mapping.AssociationAttribute> attributo che consente di rappresentare tali relazioni. Questo attributo viene utilizzato insieme ai tipi <xref:System.Data.Linq.EntitySet%601> e <xref:System.Data.Linq.EntityRef%601> per rappresentare quello che in un database sarebbe una relazione di chiave esterna. Per ulteriori informazioni, vedere la sezione relativa all'attributo Association di [mapping basato su attributi](attribute-based-mapping.md).  
   
 > [!NOTE]
 > I valori delle proprietà di archiviazione AssociationAttribute e ColumnAttribute rispettano la distinzione tra maiuscole e minuscole. Verificare, ad esempio, che per i valori dell'attributo della proprietà AssociationAttribute.Storage venga usata la stessa combinazione di maiuscole e minuscole adoperata per i nomi di proprietà corrispondenti usati in altri punti del codice. Questo vale per tutti i linguaggi di programmazione .NET, anche quelli che non sono in genere sensibili alla distinzione tra maiuscole e minuscole, incluso Visual Basic. Per altre informazioni sulla proprietà di archiviazione, vedere <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
@@ -48,12 +48,12 @@ Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, pu�
  È inoltre possibile invertire la situazione. Anziché usare la classe `Customer` per descrivere l'associazione tra clienti e ordini, è possibile usare la classe `Order`. La classe `Order` usa il tipo <xref:System.Data.Linq.EntityRef%601> per descrivere la relazione con la classe Customer, come nell'esempio di codice seguente.  
   
 > [!NOTE]
-> La <xref:System.Data.Linq.EntityRef%601> classe supporta il *caricamento posticipato*. Per ulteriori informazioni, *vedere* il [caricamento posticipato rispetto al caricamento immediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+> La <xref:System.Data.Linq.EntityRef%601> classe supporta il *caricamento posticipato*. Per ulteriori informazioni, *vedere* il [caricamento posticipato rispetto al caricamento immediato](deferred-versus-immediate-loading.md).  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Personalizzare le classi di entità tramite l'editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Procedura: Personalizzare le classi di entità tramite l'editor di codice](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Modello a oggetti LINQ to SQL](the-linq-to-sql-object-model.md)

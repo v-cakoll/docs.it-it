@@ -2,17 +2,17 @@
 title: vincolo di integrità referenziale
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: b442e15c75554e1b06e9ff89c7224430a0605f9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28880c7085f8b4e3dd2e51b5633c1f0e2a984a4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649630"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794452"
 ---
 # <a name="referential-integrity-constraint"></a>vincolo di integrità referenziale
-Oggetto *vincolo di integrità referenziale* in Entity Data Model (EDM) è simile a un vincolo di integrità referenziale in un database relazionale. Allo stesso modo che una colonna (colonne) da una tabella di database può fare riferimento o la chiave primaria di un'altra tabella, una [proprietà](../../../../docs/framework/data/adonet/property.md) (o proprietà) di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) può fare riferimento il [chiave di entità ](../../../../docs/framework/data/adonet/entity-key.md) di un altro tipo di entità. Il tipo di entità cui viene fatto riferimento viene chiamato il *entità finale principale* del vincolo. Il tipo di entità che fa riferimento l'entità finale principale viene chiamato il *entità finale dipendente* del vincolo.  
+Un *vincolo di integrità referenziale* nel Entity Data Model (EDM) è simile a un vincolo di integrità referenziale in un database relazionale. Nello stesso modo in cui una colonna (o più colonne) da una tabella di database può fare riferimento alla chiave primaria di un'altra tabella, una [Proprietà](property.md) (o più proprietà) di un [tipo di entità](entity-type.md) può fare riferimento alla [chiave di entità](entity-key.md) di un altro tipo di entità. Il tipo di entità a cui si fa riferimento viene chiamato *entità finale principale* del vincolo. Il tipo di entità che fa riferimento all'entità finale principale viene chiamato entità *finale dipendente* del vincolo.  
   
- Un vincolo di integrità referenziale è definito come parte di un' [association](../../../../docs/framework/data/adonet/association-type.md) tra due tipi di entità. La definizione per un vincolo di integrità referenziale specifica le informazioni seguenti:  
+ Un vincolo di integrità referenziale viene definito come parte di un' [associazione](association-type.md) tra due tipi di entità. La definizione per un vincolo di integrità referenziale specifica le informazioni seguenti:  
   
 - Entità finale principale del vincolo (un tipo di entità alla cui chiave di entità è fatto riferimento dall'entità finale dipendente).  
   
@@ -22,18 +22,18 @@ Oggetto *vincolo di integrità referenziale* in Entity Data Model (EDM) è simil
   
 - La proprietà o le proprietà di riferimento dell'entità finale dipendente.  
   
- Lo scopo dei vincoli di integrità referenziali in EDM è di assicurare che esistano sempre associazioni valide. Per altre informazioni, vedere [proprietà di chiave esterna](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ Lo scopo dei vincoli di integrità referenziali in EDM è di assicurare che esistano sempre associazioni valide. Per ulteriori informazioni, vedere [proprietà di chiave esterna](foreign-key-property.md).  
   
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con due associazioni: `WrittenBy` e `PublishedBy`. Il tipo di entità `Book` dispone di una proprietà, `PublisherId`, che fa riferimento alla chiave di entità del tipo di entità `Publisher` quando si definisce un vincolo di integrità referenziale sull'associazione `PublishedBy`.  
   
- ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "esempio di un modello di vincolo referenziale")  
+ ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "Esempio di modello di vincolo referenziale")  
   
- Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel seguente linguaggio CSDL viene definito un vincolo di integrità referenziale sull'associazione `PublishedBy` illustrata nel modello concettuale precedente.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel seguente linguaggio CSDL viene definito un vincolo di integrità referenziale sull'associazione `PublishedBy` illustrata nel modello concettuale precedente.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

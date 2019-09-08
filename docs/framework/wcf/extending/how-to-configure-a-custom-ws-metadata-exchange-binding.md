@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991224"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795662"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedura: Configurare un'associazione WS-Metadata Exchange personalizzata
-In questo argomento viene illustrato come configurare un'associazione WS-Metadata Exchange personalizzata. Windows Communication Foundation (WCF) include quattro associazioni di metadati definito dal sistema, ma è possibile pubblicare metadati usando qualsiasi associazione desiderata. In questo argomento viene illustrato come pubblicare metadati usando `wsHttpBinding`. Questa associazione offre la possibilità di esporre i metadati in modo sicuro. Il codice in questo articolo si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+In questo argomento viene illustrato come configurare un'associazione WS-Metadata Exchange personalizzata. Windows Communication Foundation (WCF) include quattro associazioni di metadati definite dal sistema, ma è possibile pubblicare i metadati utilizzando qualsiasi binding desiderato. In questo argomento viene illustrato come pubblicare metadati usando `wsHttpBinding`. Questa associazione offre la possibilità di esporre i metadati in modo sicuro. Il codice in questo articolo è basato sul [Introduzione](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Uso di un file di configurazione  
   
@@ -115,8 +115,8 @@ In questo argomento viene illustrato come configurare un'associazione WS-Metadat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [Recupero di metadati](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Pubblicazione di metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [Pubblicazione di endpoint dei metadati](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [Comportamento di pubblicazione dei metadati](../samples/metadata-publishing-behavior.md)
+- [Recupero di metadati](../samples/retrieve-metadata.md)
+- [Metadati](../feature-details/metadata.md)
+- [Pubblicazione di metadati](../feature-details/publishing-metadata.md)
+- [Pubblicazione di endpoint dei metadati](../publishing-metadata-endpoints.md)

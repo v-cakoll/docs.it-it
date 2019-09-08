@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910736"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793511"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Procedura: Rappresentare colonne come membri di classi
-Usare la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per associare un campo o proprietà a una colonna del database.  
+Utilizzare l' [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per associare un campo o una proprietà a una colonna del database.  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>Per eseguire il mapping di un campo o una proprietà a una colonna del database  
   
@@ -29,5 +29,5 @@ Usare la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Modello a oggetti LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Procedura: Personalizzare le classi di entità tramite l'editor di codice](how-to-customize-entity-classes-by-using-the-code-editor.md)

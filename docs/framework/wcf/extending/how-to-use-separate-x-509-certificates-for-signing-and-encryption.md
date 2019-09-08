@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e118c9ec29b8d4e46fe799f24bb8a96929bf2ed8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796956"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: Usare certificati X.509 separati per la firma e la crittografia
 
-Questo argomento illustra come configurare Windows Communication Foundation (WCF) per utilizzare certificati diversi per la firma dei messaggi e la crittografia nei client sia servizio.
+In questo argomento viene illustrato come configurare Windows Communication Foundation (WCF) per l'utilizzo di certificati diversi per la firma e la crittografia dei messaggi nel client e nel servizio.
 
-Per abilitare certificati separati da utilizzare per la firma e crittografia, un client personalizzato o servizio credenziali (o entrambi) deve essere creati, poiché WCF non forniscono un'API per impostare più certificati client o del servizio. È inoltre necessario specificare un gestore del token di sicurezza per utilizzare le informazioni di più certificati e creare un provider di token di sicurezza appropriato per l'utilizzo della chiave specificata e la direzione del messaggio.
+Per abilitare l'utilizzo di certificati distinti per la firma e la crittografia, è necessario creare credenziali di servizio o client personalizzate (oppure entrambe) perché WCF non fornisce un'API per impostare più certificati client o di servizio. È inoltre necessario specificare un gestore del token di sicurezza per utilizzare le informazioni di più certificati e creare un provider di token di sicurezza appropriato per l'utilizzo della chiave specificata e la direzione del messaggio.
 
 Nel diagramma seguente vengono illustrate le principali classi utilizzate, le classi da cui ereditano (contrassegnate da una freccia rivolta verso l'alto) e i tipi restituiti di alcuni metodi e proprietà.
 
@@ -34,17 +34,17 @@ Nel diagramma seguente vengono illustrate le principali classi utilizzate, le cl
 
   - Il relativo metodo <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> restituisce un'istanza di <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.
 
-![Nel grafico vengono mostrati come credenziali client vengono usate](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![Grafico che mostra la modalità di utilizzo delle credenziali client](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-Per altre informazioni sulle credenziali personalizzate, vedere [procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
+Per ulteriori informazioni sulle credenziali personalizzate, vedere [procedura dettagliata: Creazione di credenziali](walkthrough-creating-custom-client-and-service-credentials.md)client e del servizio personalizzate.
 
 Inoltre, è necessario creare un sistema di verifica dell'identità personalizzato e collegarlo a un elemento di associazione di sicurezza in un'associazione personalizzata. È inoltre necessario utilizzare le credenziali personalizzate anziché quelle predefinite.
 
 Nel diagramma seguente vengono illustrate le classi coinvolte nell'associazione personalizzata e il modo in cui viene collegato il sistema di verifica dell'identità personalizzato. I diversi elementi di associazione coinvolti ereditano tutti da <xref:System.ServiceModel.Channels.BindingElement>. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> dispone della proprietà <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> che restituisce un'istanza di <xref:System.ServiceModel.Security.IdentityVerifier>, da cui viene personalizzato `MyIdentityVerifier`.
 
-![Grafico che mostra un elemento di associazione personalizzato](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![Grafico che mostra un elemento di associazione personalizzato](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0BB4-4921-9bf4-20d4d82c3da5")
 
-Per altre informazioni sulla creazione di un verificatore di identità personalizzati, vedere Procedura: [Procedura: Creare un verificatore di identità Client personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).
+Per ulteriori informazioni sulla creazione di un verificatore di identità personalizzato, vedere Procedura: [Procedura: Creare un verificatore](how-to-create-a-custom-client-identity-verifier.md)di identità client personalizzato.
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Per utilizzare certificati separati per la firma e la crittografia
 
@@ -97,4 +97,4 @@ Per altre informazioni sulla creazione di un verificatore di identità personali
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate](walkthrough-creating-custom-client-and-service-credentials.md)

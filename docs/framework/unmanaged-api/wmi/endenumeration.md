@@ -1,6 +1,6 @@
 ---
 title: Funzione EndEnumeration (riferimenti alle API non gestite)
-description: La funzione di EndEnumeration termina un'enumerazione.
+description: La funzione EndEnumeration termina un'enumerazione.
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636778"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798819"
 ---
 # <a name="endenumeration-function"></a>Funzione EndEnumeration
 
-Termina una sequenza di enumerazione avviata con una chiamata per il [BeginEnumeration funzione](beginenumeration.md).
+Termina una sequenza di enumerazione avviata con una chiamata alla [funzione BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,31 +41,31 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`\
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`\
-[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
+in Puntatore a un'istanza di [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
 
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemClassObject:: EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Una chiamata al `EndEnumeration` funzione non è obbligatorio, ma è consigliabile in quanto rilascia le risorse associate all'enumerazione. Tuttavia, le risorse vengono deallocate automaticamente quando viene avviata l'enumerazione successiva o l'oggetto viene rilasciato.
+Una chiamata alla `EndEnumeration` funzione non è obbligatoria, ma è consigliata perché rilascia le risorse associate all'enumerazione. Tuttavia, le risorse vengono deallocate automaticamente quando viene avviata l'enumerazione successiva o l'oggetto viene rilasciato.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
 
-**Intestazione:** WMINet_Utils.idl
+**Intestazione:** WMINet_Utils. idl
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

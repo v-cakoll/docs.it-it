@@ -2,12 +2,12 @@
 title: Sequenze Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632339"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794589"
 ---
 # <a name="oracle-sequences"></a>Sequenze Oracle
 Il provider di dati .NET Framework per Oracle fornisce supporto per il recupero dei valori chiave delle sequenze di Oracle generati dal server dopo l'esecuzione di inserimenti tramite <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -20,7 +20,7 @@ Il provider di dati .NET Framework per Oracle fornisce supporto per il recupero 
   
  Quando si crea una sequenza in un database Oracle, è possibile definirne il valore iniziale e l'incremento tra i valori. È anche possibile eseguire una query sulla sequenza per rilevare nuovi valori prima di inviare nuove righe. Il codice è quindi in grado di riconoscere i valori chiave per le nuove righe prima che vengano inserite nel database.  
   
- Per altre informazioni sulla creazione di colonne a incremento automatico tramite SQL Server e ADO.NET, vedere [Retrieving Identity or Autonumber Values](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) e [creazione di colonne AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Per altre informazioni sulla creazione di colonne con incremento automatico usando SQL Server e ADO.NET, vedere [recupero di valori di identità o numeri](retrieving-identity-or-autonumber-values.md) automatici e [creazione di colonne AutoIncrement](./dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio in C# seguente viene illustrato come recuperare nuovi valori di sequenza da un database Oracle. Alla sequenza viene fatto riferimento nella query INSERT INTO usata per inviare le nuove righe e viene quindi restituito il valore di sequenza generato tramite la clausola RETURNING introdotta in Oracle10g. Viene aggiunta una serie di nuove righe in sospeso in <xref:System.Data.DataTable> usando la funzionalità di incremento automatico di ADO.NET per generare valori di chiave primaria "segnaposto". Si noti che il valore dell'incremento generato per la nuova riga è soltanto un "segnaposto". Il database potrebbe quindi generare valori diversi da quelli generati da ADO.NET.  
@@ -100,5 +100,5 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle e ADO.NET](oracle-and-adonet.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

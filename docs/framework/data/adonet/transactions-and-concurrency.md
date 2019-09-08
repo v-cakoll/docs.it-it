@@ -2,12 +2,12 @@
 title: Transazioni e concorrenza
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965209"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791311"
 ---
 # <a name="transactions-and-concurrency"></a>Transazioni e concorrenza
 Una transazione è costituita da un singolo comando o da un gruppo di comandi che vengono eseguiti come un pacchetto. Le transazioni consentono di combinare più operazioni in un'unica unità di lavoro. Se si verifica un problema in un determinato punto della transazione, sarà possibile annullare tutti gli aggiornamenti ripristinando la condizione antecedente all'inizio della transazione.  
@@ -22,23 +22,23 @@ Una transazione è costituita da un singolo comando o da un gruppo di comandi ch
  Le transazioni che coinvolgono diversi gestori di risorse, ad esempio una transazione tra SQL Server e Oracle, richiedono una transazione distribuita.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Transazioni locali](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [Transazioni locali](local-transactions.md)  
  Viene illustrato come eseguire transazioni su un database.  
   
- [Transazioni distribuite](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [Transazioni distribuite](distributed-transactions.md)  
  Viene descritto come eseguire transazioni distribuite in ADO.NET.  
   
- [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integrazione di System.Transactions con SQL Server](system-transactions-integration-with-sql-server.md)  
  Viene <xref:System.Transactions> descritta l'integrazione con SQL Server per l'utilizzo di transazioni distribuite.  
   
- [Concorrenza ottimistica](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [Concorrenza ottimistica](optimistic-concurrency.md)  
  Vengono descritte la concorrenza ottimistica e la concorrenza pessimistica e come è possibile verificare le violazioni della concorrenza.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni fondamentali sulle transazioni](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Nozioni fondamentali sulle transazioni](../transactions/transaction-fundamentals.md)
+- [Connessione a un'origine dati](connecting-to-a-data-source.md)
+- [Comandi e parametri](commands-and-parameters.md)
+- [DataAdapter e DataReader](dataadapters-and-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Panoramica di ADO.NET](ado-net-overview.md)

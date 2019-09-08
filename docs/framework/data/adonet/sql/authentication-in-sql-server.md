@@ -2,12 +2,12 @@
 title: Autenticazione in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957486"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794289"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 In SQL Server sono supportate due modalità di autenticazione: la modalità dell'autenticazione di Windows e la modalità mista.  
@@ -69,19 +69,19 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
  SQL Server fornisce i meccanismi di criteri password di Windows per SQL Server account di accesso quando [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] viene eseguito in o versioni successive. I criteri di complessità delle password sono progettati per fungere da deterrente agli attacchi a forza bruta aumentando il numero di password possibili. SQL Server possibile applicare gli stessi criteri di complessità e scadenza utilizzati [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] in alle password utilizzate all'interno SQL Server.  
   
 > [!IMPORTANT]
-> La concatenazione di stringhe di connessione dall'input dell'utente può lasciare il sistema vulnerabile a un attacco injection alle stringhe di connessione. Usare <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> La concatenazione di stringhe di connessione dall'input dell'utente può lasciare il sistema vulnerabile a un attacco injection alle stringhe di connessione. Usare <xref:System.Data.SqlClient.SqlConnectionStringBuilder> per creare stringhe di connessione sintatticamente valide in fase di esecuzione. Per altre informazioni, vedere [Compilatori di stringhe di connessione](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le seguenti risorse.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Entità](/sql/relational-databases/security/authentication-access/principals-database-engine)|Vengono descritti gli account di accesso e altre entità di sicurezza in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Connessione a un'origine dati](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Connessione a un'origine dati](../connecting-to-a-data-source.md)
+- [Stringhe di connessione](../connection-strings.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

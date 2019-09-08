@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4432b17e5d9aa875d8346b3329cd618e15222040
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771029"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796820"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Metodo IAssemblyCache::CreateAssemblyCacheItem
-Ottiene un riferimento a una nuova [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) oggetto.  
+Ottiene un riferimento a un nuovo oggetto [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +40,23 @@ HRESULT CreateAssemblyCacheItem (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Flag definiti in Fusion. Sono supportati i valori seguenti:  
+ in Flag definiti in Fusion. idl. Sono supportati i valori seguenti:  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- [in] Riservato per un'estendibilità futura. `pvReserved` deve essere un riferimento null.  
+ in Riservato per l'estendibilità futura. `pvReserved`deve essere un riferimento null.  
   
  `ppAsmItem`  
- [out] L'oggetto restituito `IAssemblyCacheItem` puntatore.  
+ out Puntatore restituito `IAssemblyCacheItem` .  
   
  `pszAssemblyName`  
- [in, optional] In formato non canonico, delimitati da virgole `name=value` coppie.  
+ [in, facoltativo] Coppie non canoniche delimitate `name=value` da virgole.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -64,5 +64,5 @@ HRESULT CreateAssemblyCacheItem (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Interfaccia IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)
+- [Interfaccia IAssemblyCacheItem](iassemblycacheitem-interface.md)

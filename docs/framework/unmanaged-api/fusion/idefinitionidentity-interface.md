@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff23330f307c10eac134048de39a6e19a67c75b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c595bfdcca84ee43a53e2ea913cc978ae0953e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796533"
 ---
 # <a name="idefinitionidentity-interface"></a>Interfaccia IDefinitionIdentity
 Rappresenta la firma univoca del codice che definisce l'applicazione nell'ambito corrente.  
   
 ## <a name="methods"></a>Metodi  
   
-|Metodo|Descrizione|  
+|Metodo|DESCRIZIONE|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a una nuova `IDefinitionIdentity` che è identico a questo oggetto `IDefinitionIdentity`, fatta eccezione per le modifiche di attributo specificato.|  
-|`IDefinitionIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) che contiene gli attributi associati a questo oggetto `IDefinitionIdentity`.|  
+|`IDefinitionIdentity::Clone`|Ottiene un puntatore a interfaccia a un `IDefinitionIdentity` nuovo oggetto identico `IDefinitionIdentity`a, ad eccezione delle modifiche di attributo specificate.|  
+|`IDefinitionIdentity::EnumAttributes`|Ottiene un puntatore a interfaccia a un oggetto [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) che contiene gli attributi associati `IDefinitionIdentity`all'oggetto.|  
 |`IDefinitionIdentity::GetAttribute`|Ottiene il valore dell'attributo con il nome specificato nello spazio dei nomi specificato.|  
-|`IDefinitionIdentity::SetAttribute`|Imposta l'attributo con il nome specificato nello spazio dei nomi specificato al valore specificato.|  
+|`IDefinitionIdentity::SetAttribute`|Imposta l'attributo con il nome specificato nello spazio dei nomi specificato sul valore specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Isolation. h  
   
@@ -44,4 +44,4 @@ Rappresenta la firma univoca del codice che definisce l'applicazione nell'ambito
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfacce Fusion](fusion-interfaces.md)

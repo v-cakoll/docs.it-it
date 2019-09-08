@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903981"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781601"
 ---
 # <a name="how-to-return-rowsets"></a>Procedura: Restituire set di righe
 In questo esempio viene restituito un rowset dal database e viene incluso un parametro di input per filtrare il risultato.  
   
- Quando si esegue una stored procedure che restituisce un set di righe, Usa un' *risultato* classe che archivia valori restituiti dalla stored procedure. Per altre informazioni, vedere [l'analisi codice in LINQ to SQL origine](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ Quando si esegue un stored procedure che restituisce un set di righe, si usa una classe di risultato che archivia i *risultati* restituiti dal stored procedure. Per ulteriori informazioni, vedere [analisi LINQ to SQL codice sorgente](analyzing-linq-to-sql-source-code.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è rappresentata una stored procedure che restituisce righe di clienti e usa un parametro di input per restituire solo le righe in cui è elencata "London" come città del cliente. In questo esempio si presuppone una classe `CustomersByCityResult` enumerabile.  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>Vedere anche
 
-- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [stored procedure](stored-procedures.md)
+- [Download di database di esempio](downloading-sample-databases.md)

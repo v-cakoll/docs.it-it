@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 0907aa2a66e1bf51fefc7bed8ea2612cc0c830fa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 09cee2f2b2c3288c835912c9f311bf2511c7b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203224"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785920"
 ---
 # <a name="sorting-and-filtering-data"></a>Ordinamento e applicazione di filtri ai dati
 In <xref:System.Data.DataView> sono disponibili diversi metodi di ordinamento e applicazione di filtri ai dati in una <xref:System.Data.DataTable>:  
@@ -31,7 +31,7 @@ In <xref:System.Data.DataView> sono disponibili diversi metodi di ordinamento e 
     |------------------------------|-----------------|  
     |**CurrentRows**|La versione di riga **corrente** di tutte le righe non **modificate**, **aggiunte**e **modificate** . Questa è l'impostazione predefinita.|  
     |**Aggiunto**|Versione di riga **corrente** di tutte le righe **aggiunte** .|  
-    |**Eliminato**|Versione di riga **originale** di tutte le righe eliminate.|  
+    |**Eliminato**|Versione di riga **originale** di tutte le righe **eliminate** .|  
     |**ModifiedCurrent**|Versione di riga **corrente** di tutte le righe **modificate** .|  
     |**ModifiedOriginal**|Versione di riga **originale** di tutte le righe **modificate** .|  
     |**None**|Nessuna riga.|  
@@ -63,4 +63,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataView](dataviews.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: Funzione QualifierSet_Get (riferimenti alle API non gestite)
-description: La funzione QualifierSet_Get Ottiene un qualificatore denominato.
+description: La funzione QualifierSet_Get ottiene un qualificatore denominato.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782580"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798307"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get (funzione)
+# <a name="qualifierset_get-function"></a>QualifierSet_Get (funzione)
 Ottiene il qualificatore denominato specificato.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,41 +44,41 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parametri
 
 `vFunc`   
-[in] Questo parametro è inutilizzato.
+in Questo parametro è inutilizzato.
 
 `ptr`   
-[in] Un puntatore a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) istanza.
+in Puntatore a un'istanza di [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`   
-[in] Il nome del qualificatore il cui valore viene richiesto.
+in Nome del qualificatore il cui valore è richiesto.
 
 `lFlags`   
 [in] Riservato. Questo parametro deve essere 0.
 
 `pVal`   
-[out] Al termine, il tipo corretto e il valore del qualificatore. Se la funzione ha esito negativo, il `VARIANT` a cui punta `pVal` non viene modificato. Se questo parametro è `null`, il parametro viene ignorato.
+out In caso di esito positivo, il tipo e il valore corretti per il qualificatore. Se la funzione `pVal` ha esito `VARIANT` negativo, l'oggetto a cui fa riferimento non viene modificato. Se questo parametro è `null`, il parametro viene ignorato.
 
 `plFlavor`   
-[out] Puntatore a un valore LONG che riceve i bit flavor qualificatore per il qualificatore richiesto. Se non si desiderano informazioni di versione, questo parametro può essere `null`. 
+out Puntatore a un oggetto LONG che riceve i bit di sapore del qualificatore per il qualificatore richiesto. Se non si desidera ottenere informazioni sul sapore, questo parametro `null`può essere. 
 
 ## <a name="return-value"></a>Valore restituito
 
-I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
+I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *WbemCli. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |DESCRIZIONE  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametro non valido. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il qualificatore specificato non esiste. |
-|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
+|`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è stata completata.  |
   
 ## <a name="remarks"></a>Note
 
-Questa funzione esegue il wrapping di una chiamata per il [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) (metodo).
+Questa funzione esegue il wrapping di una chiamata al metodo [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** WMINet_Utils.idl  
+ **Intestazione:** WMINet_Utils. idl  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
