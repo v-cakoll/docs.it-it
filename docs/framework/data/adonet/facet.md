@@ -2,22 +2,22 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b4a8a559d7297543812f3c67e3b90d06a011b0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959107"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783976"
 ---
 # <a name="facet"></a>facet
-Un *facet* viene usato per aggiungere dettagli a una definizione di proprietà di tipo primitivo. Una definizione di [Proprietà](../../../../docs/framework/data/adonet/property.md) contiene informazioni sul tipo di proprietà, ma spesso è necessario un maggior numero di dettagli. Un tipo di entità in un modello concettuale, ad esempio, potrebbe disporre di una proprietà di tipo `String` il cui valore non può essere impostato su null. I facet consentono di specificare questo livello di dettaglio.  
+Un *facet* viene usato per aggiungere dettagli a una definizione di proprietà di tipo primitivo. Una definizione di [Proprietà](property.md) contiene informazioni sul tipo di proprietà, ma spesso è necessario un maggior numero di dettagli. Un tipo di entità in un modello concettuale, ad esempio, potrebbe disporre di una proprietà di tipo `String` il cui valore non può essere impostato su null. I facet consentono di specificare questo livello di dettaglio.  
   
  Nella tabella seguente vengono descritti i facet supportati in EDM.  
   
 > [!NOTE]
 > I valori e i comportamenti esatti dei facet sono determinati dall'ambiente di runtime che usa un'implementazione EDM.  
   
-|Facet|DESCRIZIONE|Si applica a|  
+|Facet|Descrizione|Si applica a|  
 |-----------|-----------------|----------------|  
 |`Collation`|Specifica la sequenza di ordinamento da usare quando si eseguono operazioni di confronto e di ordinamento su valori della proprietà.|`String`|  
 |`ConcurrencyMode`|Indica che il valore della proprietà deve essere usato per le verifiche della concorrenza ottimistica.|Tutte le proprietà di tipo primitivo|  
@@ -30,11 +30,11 @@ Un *facet* viene usato per aggiungere dettagli a una definizione di proprietà d
 |`Unicode`|Viene indicato se il valore della proprietà viene archiviato come Unicode.|`String`|  
   
 ## <a name="example"></a>Esempio  
- Il [Entity Framework ADO.NET](../../../../docs/framework/data/adonet/ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo di entità `Book`. Si noti che i facet vengono implementati come attributi XML. I valori dei facet indicano che nessuna proprietà può essere impostata su null e che `Scale` e `Precision` della proprietà `Revision` sono entrambi impostati su 29.  
+ Il [Entity Framework ADO.NET](./ef/index.md) utilizza un linguaggio specifico di dominio (DSL) denominato Conceptual Schema Definition Language ([CSDL](./ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Nel linguaggio CSDL seguente viene definito un tipo di entità `Book`. Si noti che i facet vengono implementati come attributi XML. I valori dei facet indicano che nessuna proprietà può essere impostata su null e che `Scale` e `Precision` della proprietà `Revision` sono entrambi impostati su 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Concetti chiave di Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

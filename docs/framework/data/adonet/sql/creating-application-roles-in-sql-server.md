@@ -2,12 +2,12 @@
 title: Creazione di ruoli applicazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961172"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794284"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Creazione di ruoli applicazione in SQL Server
 I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database. Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione. Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  
@@ -47,9 +47,9 @@ I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione an
   
  Può essere opportuno considerare le seguenti alternative.  
   
-- Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per ulteriori informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usare il passaggio di contesto con l'istruzione EXECUTE AS e le relative clausole NO REVERT e WITH COOKIE. È possibile creare un account utente in un database non mappato a un account di accesso. Assegnare quindi le autorizzazioni a questo account. L'uzo di EXECUTE AS con un utente senza account di accesso è un sistema più sicuro, perché si basa su autorizzazioni e non su password. Per ulteriori informazioni, vedere [personalizzazione delle autorizzazioni con rappresentazione in SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per ulteriori informazioni, vedere la pagina relativa alla [firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per ulteriori informazioni, vedere la pagina relativa alla [firma di stored procedure in SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le seguenti risorse.  
@@ -60,7 +60,7 @@ I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione an
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Cenni preliminari sulla sicurezza in SQL Server](overview-of-sql-server-security.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

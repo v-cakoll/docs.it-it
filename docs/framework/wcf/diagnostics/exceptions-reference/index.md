@@ -2,58 +2,58 @@
 title: Riferimenti per le eccezioni
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e61f395cb107202a7c435648f53ad40fce318b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777390"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797327"
 ---
 # <a name="exceptions-reference"></a>Riferimenti per le eccezioni
-In questa sezione vengono elencate tutte le eccezioni nelle aree seguenti generate da Windows Communication Foundation (WCF):  
+In questa sezione sono elencate tutte le eccezioni nelle seguenti aree generate da Windows Communication Foundation (WCF):  
   
- [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
+ [IdentityModel](identitymodel-exceptions.md)  
   
- [Integrazione COM+](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [Integrazione COM+](com-integration.md)  
   
- [Configurazione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
+ [Configurazione](configuration.md)  
   
- [Comunicazioni principali: Framework dei canali](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Comunicazioni principali: Framework del canale](core-communications-channel-framework.md)  
   
- [Comunicazioni principali: Framework di connessione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Comunicazioni principali: Framework di connessione](core-communications-connection-framework.md)  
   
  Comunicazioni di base: canali di trasporto HTTP/HTTPS  
   
- [Comunicazioni principali: Canali di trasporto Duplex interni](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Comunicazioni principali: Canali di trasporto duplex interni](core-communications-internal-duplex-transport-channels.md)  
   
- [Comunicazioni principali: I canali di trasporto di Named Pipe](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Comunicazioni principali: Canali di trasporto named pipe](core-communications-named-pipe-transport-channels.md)  
   
- [Comunicazioni principali: Canali di trasporto TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Comunicazioni principali: Canali di trasporto TCP](core-communications-tcp-transport-channels.md)  
   
- [Comunicazioni principali: Framework di trasporto](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Comunicazioni principali: Framework di trasporto](core-communications-transport-framework.md)  
   
- [Comunicazioni principali: Utilità](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [Comunicazioni principali: Utilità](core-communications-utilities.md)  
   
- [Comunicazioni principali: Supporto Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Comunicazioni principali: Supporto di hosting](core-communications-webhost-support.md)  
   
- [Transazione](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
+ [Transazione](transaction-exceptions.md)  
   
- [Hosting](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/hosting-exceptions.md)  
+ [Hosting](hosting-exceptions.md)  
   
- [Peer Channel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
+ [Peer Channel](peer-channel.md)  
   
- [Trasporto di integrazione MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
+ [Trasporto di integrazione MSMQ](msmq-integration-transport.md)  
   
- [Trasporto MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [Trasporto MSMQ](msmq-transport.md)  
   
- [Messaggistica affidabile](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
+ [Messaggistica affidabile](reliable-messaging.md)  
   
- [Eccezioni di sicurezza](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/security-exceptions.md)  
+ [Eccezioni di sicurezza](security-exceptions.md)  
   
- [Framework dei servizi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework.md)  
+ [Framework dei servizi](service-framework.md)  
   
- [Dati framework dei servizi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework-data.md)  
+ [Dati framework dei servizi](service-framework-data.md)  
   
- [Formattatore delle transazioni](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
+ [Formattatore delle transazioni](transaction-formatter.md)  
   
- [Strumenti](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)
+ [Strumenti](tools.md)

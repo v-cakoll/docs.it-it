@@ -2,12 +2,12 @@
 title: Autorizzazioni in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918103"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782595"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorizzazioni in SQL Server
 Quando si creano oggetti di database, è necessario concedere in modo esplicito le autorizzazioni per renderli accessibili agli utenti. Ogni oggetto a protezione diretta dispone di autorizzazioni che possono essere concesse a un'entità di sicurezza usando istruzioni di autorizzazione.  
@@ -31,7 +31,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 ## <a name="permission-statements"></a>Istruzioni di autorizzazione  
  La tabella seguente descrive le tre istruzioni di autorizzazione Transact-SQL.  
   
-|Istruzione di autorizzazione|DESCRIZIONE|  
+|Istruzione di autorizzazione|Descrizione|  
 |--------------------------|-----------------|  
 |GRANT|Consente di concedere un'autorizzazione.|  
 |REVOKE|Consente di revocare un'autorizzazione. Corrisponde allo stato predefinito di un nuovo oggetto. Un'autorizzazione revocata a un utente o a un ruolo può tuttavia ancora essere ereditata da altri gruppi o ruoli a cui è assegnata l'entità di sicurezza.|  
@@ -60,9 +60,9 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Ruoli server e database in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Proprietà e separazione tra schemi e utenti in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protezione delle applicazioni ADO.NET](../securing-ado-net-applications.md)
+- [Scenari di sicurezza delle applicazioni in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Autenticazione in SQL Server](authentication-in-sql-server.md)
+- [Ruoli server e database in SQL Server](server-and-database-roles-in-sql-server.md)
+- [Proprietà e separazione tra schemi e utenti in SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

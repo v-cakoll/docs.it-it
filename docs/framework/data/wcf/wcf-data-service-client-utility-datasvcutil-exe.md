@@ -6,26 +6,26 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e9502176e0cc2f36d67ee3dc8e8d0739a009b2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583631"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790198"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilità client WCF Data Services (DataSvcUtil.exe)
 
-DataSvcUtil.exe è uno strumento da riga di comando fornito da WCF Data Services che utilizza un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed e genera le classi del servizio dati client necessarie per accedere a un servizio dati da un'applicazione client .NET Framework. Questa utilità consente di generare classi di dati usando le origini di metadati seguenti:
+DataSvcUtil. exe è uno strumento da riga di comando fornito da WCF Data Services che utilizza un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed e genera le classi del servizio dati client necessarie per accedere a un servizio dati da un'applicazione client .NET Framework. Questa utilità consente di generare classi di dati usando le origini di metadati seguenti:
 
-- L'URI radice di un servizio dati. L'utilità richiede il documento dei metadati del servizio che descrive il modello di dati esposto dal servizio dati. Per altre informazioni, vedere [OData: Documento di metadati di servizio](https://go.microsoft.com/fwlink/?LinkId=186070).
+- L'URI radice di un servizio dati. L'utilità richiede il documento dei metadati del servizio che descrive il modello di dati esposto dal servizio dati. Per ulteriori informazioni, vedere [OData: Documento](https://go.microsoft.com/fwlink/?LinkId=186070)di metadati del servizio.
 
-- Un file di modello di dati (con estensione CSDL) definito tramite lo schema conceptual schema definition language (CSDL), come definito nel [ \[MC-CSDL\]: Formato di File di definizione dello Schema concettuale](https://go.microsoft.com/fwlink/?LinkID=159072) specifica.
+- Un file del modello di dati (con estensione CSDL) definito utilizzando il Conceptual Schema Definition Language (CSDL), come definito [in \[MC-\]CSDL: Specifica del formato](https://go.microsoft.com/fwlink/?LinkID=159072) del file di definizione dello schema concettuale.
 
-- Un file con estensione edmx creato usando gli strumenti di Entity Data Model forniti con Entity Framework. Per altre informazioni, vedere la [ \[MC-EDMX\]: Entity Data Model per il formato dei pacchetti di servizi dati](https://go.microsoft.com/fwlink/?LinkID=178833) specifica.
+- Un file con estensione edmx creato usando gli strumenti di Entity Data Model forniti con Entity Framework. Per ulteriori informazioni, vedere [ \[MC-edmx\]: Entity Data Model per la specifica del formato](https://go.microsoft.com/fwlink/?LinkID=178833) di pacchetti di servizi dati.
 
-Per altre informazioni, vedere [Procedura: Generare manualmente classi del servizio dati Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
+Per altre informazioni, vedere [Procedura: Generare manualmente classi](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)del servizio dati client.
 
-Lo strumento DataSvcUtil.exe viene installato nella directory di .NET Framework. In molti casi, trova in *C:\Windows\Microsoft.NET\Framework\v4.0*. Per i sistemi a 64 bit, questa si trova nella *C:\Windows\Microsoft.NET\Framework64\v4.0*. È anche possibile accedere allo strumento DataSvcUtil.exe dal prompt dei comandi per gli sviluppatori per Visual Studio.
+Lo strumento DataSvcUtil. exe viene installato nella directory .NET Framework. In molti casi, si trova in *C:\Windows\Microsoft.NET\Framework\v4.0*. Per i sistemi a 64 bit, si trova in *C:\Windows\Microsoft.NET\Framework64\v4.0*. È anche possibile accedere allo strumento DataSvcUtil. exe da Prompt dei comandi per gli sviluppatori per Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,10 +43,10 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/language:`[VB&#124;CSharp]|Consente di specificare il linguaggio per i file di codice sorgente generati. Il linguaggio predefinito è C#.|
 |`/nologo`|Consente di disattivare la visualizzazione del messaggio di copyright.|
 |`/out:` *\<file>*|Consente di specificare il nome del file di codice sorgente contenente le classi del servizio dati client generate.|
-|`/uri:` *\<string>*|L'URI del feed OData.|
-|`/version:`[1.0&#124;2.0]|Specifica la versione accettata più recente di OData. La versione viene determinata in base il `DataServiceVersion` attributo dell'elemento DataService nei metadati del servizio dati restituiti. Per altre informazioni, vedere [controllo delle versioni del servizio dati](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md). Quando si specifica la `/dataservicecollection` parametro, è necessario specificare anche `/version:2.0` per consentire il data binding.|
+|`/uri:` *\<string>*|URI del feed OData.|
+|`/version:`[1.0&#124;2.0]|Specifica la versione più recente accettata di OData. La versione viene determinata in base all' `DataServiceVersion` attributo dell'elemento DataService nei metadati del servizio dati restituiti. Per ulteriori informazioni, vedere [controllo delle versioni del servizio dati](data-service-versioning-wcf-data-services.md). Quando si specifica il `/dataservicecollection` parametro, è necessario specificare `/version:2.0` anche per abilitare Data Binding.|
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Generazione della libreria client del servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [Procedura: Aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Generazione della libreria client del servizio dati](generating-the-data-service-client-library-wcf-data-services.md)
+- [Procedura: Aggiungere un riferimento al servizio dati](how-to-add-a-data-service-reference-wcf-data-services.md)

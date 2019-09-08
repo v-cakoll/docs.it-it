@@ -2,30 +2,30 @@
 title: Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793471"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780536"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
 
-Questa è la seconda attività di avvio rapido di WCF Data Services. In questa attività si avvia WCF Data Services da Visual Studio e, facoltativamente, disabilita la lettura di feed nel Web browser. È quindi recuperare il documento di definizione del servizio, nonché accedere alle risorse del servizio dati inviando richieste GET HTTP attraverso un browser alle risorse esposte.
+Questa è la seconda attività del WCF Data Services avvio rapido. In questa attività si avvia il WCF Data Services da Visual Studio e, facoltativamente, si disabilita la lettura del feed nel Web browser. È quindi possibile recuperare il documento di definizione del servizio e accedere alle risorse del servizio dati inviando richieste HTTP GET tramite un Web browser alle risorse esposte.
 
 > [!NOTE]
-> Per impostazione predefinita, Visual Studio assegna automaticamente un numero di porta all'URI `localhost` del computer in uso. In questa attività viene usato il numero di porta `12345` negli URI di esempio. Per altre informazioni su come impostare un numero di porta specifico nel progetto di Visual Studio, vedere [creazione del servizio dati](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+> Per impostazione predefinita, Visual Studio assegna automaticamente un numero di porta all'URI `localhost` del computer in uso. In questa attività viene usato il numero di porta `12345` negli URI di esempio. Per ulteriori informazioni su come impostare un numero di porta specifico nel progetto di Visual Studio, vedere [creazione del servizio dati](creating-the-data-service.md).
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Per richiedere il documento di servizio predefinito usando Internet Explorer
 
-1. In Internet Explorer dal **degli strumenti** dal menu **Opzioni Internet**, fare clic sul **contenuto** scheda, fare clic su **impostazioni**e deselezionare  **Attivare la visualizzazione di lettura feed**.
+1. In Internet Explorer scegliere **Opzioni Internet**dal menu **strumenti** , fare clic sulla scheda **contenuto** , fare clic su **Impostazioni**e deselezionare **Attiva visualizzazione feed**.
 
      In questo modo viene disabilitata la lettura dei feed. Se non si disabilita questa funzionalità, anziché visualizzare i dati XML non elaborati, il browser considererà il documento con codifica AtomPub restituito come un feed XML.
 
     > [!NOTE]
     > Se nel browser non è possibile visualizzare il feed come dati XML non elaborati, dovrebbe ancora essere possibile visualizzarlo come codice sorgente per la pagina.
 
-2. In Visual Studio, premere il **F5** tasto per avviare il debug dell'applicazione.
+2. In Visual Studio premere il tasto **F5** per avviare il debug dell'applicazione.
 
 3. Aprire un browser sul computer locale. Nella barra degli indirizzi digitare l'URI seguente:
 
@@ -69,13 +69,13 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
      Verranno filtrati gli ordini che appartengono al cliente specifico `ALFKI`, in modo che venga restituito solo un ordine specifico in base al valore `OrderID` fornito.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
-L'accesso di WCF Data Services da un Web browser, con il browser invia HTTP GET richieste alle risorse specificate è stato eseguito correttamente. L'utilizzo di un browser consente di sperimentare il funzionamento della sintassi di indirizzamento delle richieste e visualizzare i risultati. L'accesso a un servizio dati di produzione non viene in genere eseguito mediante questo metodo. Di norma, le applicazioni interagiscono con il servizio dati tramite linguaggi di codice delle applicazioni o di script. Si creerà quindi un'applicazione client che utilizza librerie client per accedere alle risorse del servizio dati come se fossero oggetti CLR (Common Language Runtime):
+È stato eseguito l'accesso al WCF Data Services da un Web browser, con il browser che invia richieste HTTP GET alle risorse specificate. L'utilizzo di un browser consente di sperimentare il funzionamento della sintassi di indirizzamento delle richieste e visualizzare i risultati. L'accesso a un servizio dati di produzione non viene in genere eseguito mediante questo metodo. Di norma, le applicazioni interagiscono con il servizio dati tramite linguaggi di codice delle applicazioni o di script. Si creerà quindi un'applicazione client che utilizza librerie client per accedere alle risorse del servizio dati come se fossero oggetti CLR (Common Language Runtime):
 
 > [!div class="nextstepaction"]
-> [Creazione dell'applicazione client .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+> [Creazione dell'applicazione client .NET Framework](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Accesso alle risorse di un servizio dati](accessing-data-service-resources-wcf-data-services.md)

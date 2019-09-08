@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374464"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795478"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate
 
@@ -42,11 +42,11 @@ In questo argomento viene illustrato come implementare credenziali client e del 
 
 La creazione di una classe di credenziali personalizzate è solo il primo passaggio, perché il motivo per la personalizzazione delle credenziali consiste nel modificare il comportamento WCF relativo al provisioning delle credenziali, alla serializzazione dei token di sicurezza o all'autenticazione. Negli altri argomenti di questa sezione viene descritto come creare serializzatori e autenticatori personalizzati. In questo caso, la creazione di una classe di credenziali personalizzate è il primo tema dei passaggi. Le azioni successive (creazione di serializzatori e autenticatori personalizzati) possono essere eseguite solo dopo avere creato credenziali personalizzate. Gli argomenti aggiuntivi basati su questo argomento includono:
 
-- [Procedura: Creare un provider di token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Procedura: Creare un provider di token di sicurezza personalizzato](how-to-create-a-custom-security-token-provider.md)
 
-- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](how-to-create-a-custom-security-token-authenticator.md)
 
-- [Procedura: Creare un token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)personalizzato.
+- [Procedura: Creare un token](how-to-create-a-custom-token.md)personalizzato.
 
 ## <a name="procedures"></a>Procedure
 
@@ -70,11 +70,11 @@ La creazione di una classe di credenziali personalizzate è solo il primo passag
 
 1. Definire una nuova classe derivata da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.
 
-2. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzati [, vedere Procedura: Creare un provider](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)di token di sicurezza personalizzato.
+2. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzati [, vedere Procedura: Creare un provider](how-to-create-a-custom-security-token-provider.md)di token di sicurezza personalizzato.
 
-3. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni sugli autenticatori del token di sicurezza personalizzati [, vedere Procedura: Creare un autenticatore](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)del token di sicurezza personalizzato.
+3. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni sugli autenticatori del token di sicurezza personalizzati [, vedere Procedura: Creare un autenticatore](how-to-create-a-custom-security-token-authenticator.md)del token di sicurezza personalizzato.
 
-4. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e sui serializzatori di token di sicurezza [personalizzati, vedere Procedura: Creare un token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)personalizzato.
+4. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e sui serializzatori di token di sicurezza [personalizzati, vedere Procedura: Creare un token](how-to-create-a-custom-token.md)personalizzato.
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
@@ -158,11 +158,11 @@ Una volta configurata la classe del gestore di configurazione, può essere integ
 
 1. Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.
 
-2. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzati [, vedere Procedura: Creare un provider](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)di token di sicurezza personalizzato.
+2. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzati [, vedere Procedura: Creare un provider](how-to-create-a-custom-security-token-provider.md)di token di sicurezza personalizzato.
 
-3. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni sugli autenticatori del token di sicurezza personalizzati [, vedere Procedura: Creare un](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) argomento dell'autenticatore del token di sicurezza personalizzato.
+3. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni sugli autenticatori del token di sicurezza personalizzati [, vedere Procedura: Creare un](how-to-create-a-custom-security-token-authenticator.md) argomento dell'autenticatore del token di sicurezza personalizzato.
 
-4. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e sui serializzatori di token di sicurezza [personalizzati, vedere Procedura: Creare un token](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)personalizzato.
+4. facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e sui serializzatori di token di sicurezza [personalizzati, vedere Procedura: Creare un token](how-to-create-a-custom-token.md)personalizzato.
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
@@ -188,6 +188,6 @@ Aggiungere il supporto per la configurazione utilizzando i passaggi descritti in
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Procedura: Creare un provider di token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Procedura: Creazione di un token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Procedura: Creare un provider di token di sicurezza personalizzato](how-to-create-a-custom-security-token-provider.md)
+- [Procedura: Creare un autenticatore del token di sicurezza personalizzato](how-to-create-a-custom-security-token-authenticator.md)
+- [Procedura: Creazione di un token personalizzato](how-to-create-a-custom-token.md)

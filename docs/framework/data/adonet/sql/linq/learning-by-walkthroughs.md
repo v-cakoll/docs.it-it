@@ -2,12 +2,12 @@
 title: Apprendimento tramite procedure dettagliate
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929218"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781319"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprendimento tramite procedure dettagliate
 La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione fornisce diverse procedure dettagliate. In questo argomento vengono discussi alcuni problemi generali relativi alle procedure, inclusa la risoluzione dei problemi, e vengono forniti i collegamenti a diverse procedure dettagliate di base per acquisire familiarità con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,22 +22,22 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 |Obiettivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti e query sempliciC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: Esecuzione di query tra relazioni (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: Esecuzione di query tra relazioniC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: Manipolazione dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: Manipolazione di dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Usare stored procedure.|[Procedura dettagliata: Utilizzo solo di stored procedure (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: Utilizzo solo di stored procedureC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Creare una classe di entità ed eseguire una semplice query.|[Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Procedura dettagliata: Modello a oggetti e query sempliciC#()](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Aggiungere una seconda classe ed eseguire una query più complessa.<br /><br /> Richiede il completamento della procedura dettagliata precedente.|[Procedura dettagliata: Esecuzione di query tra relazioni (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Procedura dettagliata: Esecuzione di query tra relazioniC#()](walkthrough-querying-across-relationships-csharp.md)|  
+|Aggiungere, modificare ed eliminare elementi nel database.|[Procedura dettagliata: Manipolazione dei dati (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Procedura dettagliata: Manipolazione di dati (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Usare stored procedure.|[Procedura dettagliata: Utilizzo solo di stored procedure (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Procedura dettagliata: Utilizzo solo di stored procedureC#()](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Generale  
  Le informazioni seguenti riguardano queste procedure dettagliate in generale:  
   
 - Ambiente: Ogni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procedura dettagliata usa Visual Studio come Integrated Development Environment (IDE).  
   
-- Motori SQL: Queste procedure dettagliate vengono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per ulteriori informazioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Motori SQL: Queste procedure dettagliate vengono scritte per essere implementate tramite SQL Server Express. Se non si dispone di SQL Server Express, è possibile scaricarlo gratuitamente. Per ulteriori informazioni, vedere [download di database di esempio](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per ulteriori informazioni, vedere [sicurezza in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > Nelle procedure dettagliate di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene usato un nome file come stringa di connessione. La possibilità di specificare semplicemente un nome file è un aspetto pratico di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per gli utenti di SQL Server Express. Prestare sempre attenzione ai problemi di sicurezza. Per ulteriori informazioni, vedere [sicurezza in LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]per le procedure dettagliate è in genere necessario il database di esempio Northwind. Per ulteriori informazioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]per le procedure dettagliate è in genere necessario il database di esempio Northwind. Per ulteriori informazioni, vedere [download di database di esempio](downloading-sample-databases.md).  
   
 - Le finestre di dialogo e i comandi di menu visualizzati nelle procedure dettagliate potrebbero essere diversi da quelli descritti nella Guida, a seconda delle impostazioni attive o dell'edizione di Visual Studio. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -72,7 +72,7 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 1. Nel riquadro sinistro del **Gestione configurazione SQL Server**espandere **SQL Server configurazione di rete 2005**e quindi fare clic su **protocolli per SQLEXPRESS**.  
   
-2. Nel riquadro destro verificare che sia abilitato il protocollo **Named Pipes** . In caso contrario, fare clic con il pulsante destro del mouse su Named Pipes, quindi scegliere **Abilita**.  
+2. Nel riquadro destro verificare che sia abilitato il protocollo **Named Pipes** . In caso contrario, fare clic con il pulsante destro del mouse su named **Pipes** , quindi scegliere **Abilita**.  
   
      Sarà necessario arrestare e riavviare il servizio. Eseguire i passaggi illustrati nel blocco successivo.  
   
@@ -89,4 +89,4 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Introduzione](getting-started.md)

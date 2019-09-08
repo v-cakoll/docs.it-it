@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626432"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792151"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)
-Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
+In questa procedura dettagliata viene illustrato [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] l'utilizzo delle *associazioni* per rappresentare relazioni di chiave esterna nel database.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Questa procedura dettagliata è stata scritta usando Impostazioni di sviluppo di Visual Basic.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- È necessario avere completato [procedura dettagliata: Query (Visual Basic) e modello a oggetti semplice](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest.  
+ È necessario avere completato [la procedura dettagliata: Modello a oggetti e query semplici (Visual Basic](walkthrough-simple-object-model-and-query-visual-basic.md)). Questa procedura dettagliata si basa su tale procedura dettagliata, inclusa la presenza del file northwnd.mdf in c:\linqtest.  
   
 ## <a name="overview"></a>Panoramica  
  La procedura dettagliata è costituita da tre attività principali:  
@@ -49,7 +49,7 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Creazione ed esecuzione di un query sulla relazione Customer-Order  
- A questo punto è possibile accedere direttamente agli oggetti `Order` dagli oggetti `Customer` o viceversa. Non è necessaria l'esplicita *join* tra customers e orders.  
+ A questo punto è possibile accedere direttamente agli oggetti `Order` dagli oggetti `Customer` o viceversa. Non è necessario un *join* esplicito tra clienti e ordini.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
   
@@ -86,11 +86,11 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 4. Premere INVIO nella finestra Console per chiudere l'applicazione.  
   
-5. Nel **File** menu, fare clic su **Salva tutto** se si desidera salvare questa applicazione.  
+5. Scegliere **Salva tutto** dal menu **file** se si desidera salvare l'applicazione.  
   
-## <a name="next-steps"></a>Passaggi successivi  
- Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
+## <a name="next-steps"></a>Fasi successive  
+ Procedura dettagliata successiva ([procedura dettagliata: La manipolazione dei dati (Visual Basic](walkthrough-manipulating-data-visual-basic.md))) illustra come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Apprendimento tramite procedure dettagliate](learning-by-walkthroughs.md)

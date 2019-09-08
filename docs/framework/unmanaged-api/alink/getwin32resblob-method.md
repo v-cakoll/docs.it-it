@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741791"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777364"
 ---
 # <a name="getwin32resblob-method"></a>Metodo GetWin32ResBlob
-Recupera il blob di risorse Win32. Chiamare questo metodo dopo aver impostato le opzioni di assembly.  
+Recupera il BLOB di risorse Win32. Chiamare questo metodo dopo aver impostato le opzioni di assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,28 +44,28 @@ HRESULT GetWin32ResBlob(
  ID dell'assembly.  
   
  `FileToken`  
- Token file utilizzato per recuperare il nome del file da utilizzare quando si crea la risorsa di versione Win32  
+ Token del file usato per recuperare il nome file da usare quando si costruisce la risorsa della versione Win32  
   
  `fDll`  
- TRUE se una DLL, file di un file eseguibile è false.  
+ TRUE se il file è una DLL, false per un file EXE.  
   
  `pszIconFile`  
- Icona facoltativa da inserire nell'oggetto blob di risorse.  
+ Icona facoltativa da inserire nel BLOB di risorse.  
   
  `ppResBlob`  
- Riceve il blob di risorse.  
+ Riceve il BLOB di risorse.  
   
  `pcbResBlob`  
- Riceve le dimensioni del blob.  
+ Riceve la dimensione del BLOB.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Alink (API)](index.md)

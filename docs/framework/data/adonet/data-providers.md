@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949819"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785645"
 ---
 # <a name="net-framework-data-providers"></a>Provider di dati .NET Framework
 Un provider di dati .NET Framework viene utilizzato per la connessione a un database, l'esecuzione di comandi e il recupero dei risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. I provider di dati .NET Framework sono semplici, creando un livello minimo tra l'origine dati e il codice, aumentando le prestazioni senza sacrificare le funzionalità.  
@@ -54,12 +54,12 @@ Un provider di dati .NET Framework viene utilizzato per la connessione a un data
 > [!NOTE]
 > Il .NET Framework provider di dati per ODBC presenta un'architettura simile a quella della .NET Framework provider di dati per OLE DB; ad esempio, effettua una chiamata a un componente del servizio ODBC.  
   
- ![Provider di dati](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Provider di dati](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Confronto tra il provider di dati .NET Framework per SQL Server e il provider di dati .NET Framework per OLE DB  
   
  Il .NET Framework provider di dati per le classi SQL Server si trova nello <xref:System.Data.SqlClient> spazio dei nomi.  
   
- Il provider di dati .NET Framework per SQL Server supporta transazioni sia locali che distribuite. Per le transazioni distribuite, la .NET Framework provider di dati per SQL Server, per impostazione predefinita, viene integrata automaticamente in una transazione e ottiene i dettagli della transazione da servizi <xref:System.Transactions>componenti di Windows o. Per ulteriori informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Il provider di dati .NET Framework per SQL Server supporta transazioni sia locali che distribuite. Per le transazioni distribuite, la .NET Framework provider di dati per SQL Server, per impostazione predefinita, viene integrata automaticamente in una transazione e ottiene i dettagli della transazione da servizi <xref:System.Transactions>componenti di Windows o. Per ulteriori informazioni, vedere [transazioni e concorrenza](transactions-and-concurrency.md).  
   
  Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.SqlClient` nelle applicazioni.  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>Provider di dati .NET Framework per OLE DB  
- Il provider di dati .NET Framework per OLE DB (OleDb) USA OLE DB nativi tramite l'interoperabilità COM per consentire l'accesso ai dati. Il provider di dati .NET Framework per OLE DB supporta transazioni sia locali che distribuite. Per le transazioni distribuite, la .NET Framework provider di dati per OLE DB, per impostazione predefinita, viene integrata automaticamente in una transazione e ottiene i dettagli della transazione da Servizi componenti di Windows. Per ulteriori informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Il provider di dati .NET Framework per OLE DB (OleDb) USA OLE DB nativi tramite l'interoperabilità COM per consentire l'accesso ai dati. Il provider di dati .NET Framework per OLE DB supporta transazioni sia locali che distribuite. Per le transazioni distribuite, la .NET Framework provider di dati per OLE DB, per impostazione predefinita, viene integrata automaticamente in una transazione e ottiene i dettagli della transazione da Servizi componenti di Windows. Per ulteriori informazioni, vedere [transazioni e concorrenza](transactions-and-concurrency.md).  
   
  La tabella seguente illustra i provider testati con ADO.NET.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>Provider di dati .NET Framework per ODBC  
- Il .NET Framework provider di dati per ODBC (ODBC) USA Gestione driver ODBC nativa (DM) per abilitare l'accesso ai dati. Il provider di dati ODBC supporta transazioni sia locali che distribuite. Per le transazioni distribuite, il provider di dati per ODBC si inserisce automaticamente, per impostazione predefinita, in una transazione e ottiene i dettagli relativi alla transazione da Servizi componenti di Windows. Per ulteriori informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Il .NET Framework provider di dati per ODBC (ODBC) USA Gestione driver ODBC nativa (DM) per abilitare l'accesso ai dati. Il provider di dati ODBC supporta transazioni sia locali che distribuite. Per le transazioni distribuite, il provider di dati per ODBC si inserisce automaticamente, per impostazione predefinita, in una transazione e ottiene i dettagli relativi alla transazione da Servizi componenti di Windows. Per ulteriori informazioni, vedere [transazioni e concorrenza](transactions-and-concurrency.md).  
   
  Nella tabella seguente sono illustrati i driver ODBC testati con ADO.NET.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > Per la .NET Framework provider di dati per ODBC è necessario MDAC 2,6 o versione successiva ed è consigliato MDAC 2,8 SP1. È possibile scaricare MDAC 2.8 SP1 da [Archiviazione e accesso ai dati: Centro per sviluppatori](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Provider di dati .NET Framework per Oracle  
- Il .NET Framework provider di dati per Oracle (OracleClient) consente l'accesso ai dati alle origini dati Oracle tramite il software di connettività client Oracle. Il provider di dati può essere usato con il software client Oracle 8.1.7 o versione successiva. Il provider di dati supporta transazioni sia locali che distribuite. Per ulteriori informazioni, vedere [transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Il .NET Framework provider di dati per Oracle (OracleClient) consente l'accesso ai dati alle origini dati Oracle tramite il software di connettività client Oracle. Il provider di dati può essere usato con il software client Oracle 8.1.7 o versione successiva. Il provider di dati supporta transazioni sia locali che distribuite. Per ulteriori informazioni, vedere [transazioni e concorrenza](transactions-and-concurrency.md).  
   
  Il .NET Framework provider di dati per Oracle richiede il software client Oracle (versione 8.1.7 o successiva) nel sistema prima di potersi connettere a un'origine dati Oracle.  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](ado-net-overview.md)
+- [Recupero e modifica di dati in ADO.NET](retrieving-and-modifying-data.md)

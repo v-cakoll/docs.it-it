@@ -2,17 +2,17 @@
 title: WebHostHttpError
 ms.date: 03/30/2017
 ms.assetid: dff35e7e-5571-463d-abcf-7e048381f91f
-ms.openlocfilehash: 95890c2ac220ef6fd452ff6472828b4f8a08693d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2178731b6b2fa76efa471b3f2d6d8363f04d9d38
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944274"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796064"
 ---
 # <a name="webhosthttperror"></a>WebHostHttpError
 Id: 110  
   
- Gravità: Error  
+ Gravità: Errore  
   
  Categoria: ServiceModel  
   
@@ -21,5 +21,5 @@ Id: 110
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registrazione eventi](index.md)
+- [Riferimenti generali sugli eventi](events-general-reference.md)

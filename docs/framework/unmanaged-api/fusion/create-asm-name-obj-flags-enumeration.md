@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871ad81cd83c40d7299f39ede404e274b95b2ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795426"
 ---
-# <a name="createasmnameobjflags-enumeration"></a>Enumerazione CREATE_ASM_NAME_OBJ_FLAGS
-Specifica gli attributi di un [IAssemblyName (interfaccia)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) dell'oggetto quando viene costruito dalle [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) (funzione).  
+# <a name="create_asm_name_obj_flags-enumeration"></a>Enumerazione CREATE_ASM_NAME_OBJ_FLAGS
+Specifica gli attributi di un oggetto [interfaccia IAssemblyName](iassemblyname-interface.md) quando viene creato dalla funzione [CreateAssemblyNameObject](createassemblynameobject-function.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,17 +40,17 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|Indica che il parametro passato è un'identità del testo.|  
+|`CANOF_PARSE_DISPLAY_NAME`|Indica che il parametro passato è un'identità testuale.|  
 |`CANOF_SET_DEFAULT_VALUES`|Imposta alcuni valori predefiniti.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Verifica la regola di assembly friend (solo nome e chiave pubblica). Questo membro è solo per uso interno.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Una combinazione dei `CANOF_PARSE_DISPLAY_NAME` e `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flag. Questo membro è solo per uso interno.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Verifica la regola di assembly Friend (solo nome e chiave pubblica). Questo membro è solo per uso interno.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Combinazione dei `CANOF_PARSE_DISPLAY_NAME` flag e `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` . Questo membro è solo per uso interno.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -58,6 +58,6 @@ typedef enum {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Funzione CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [Enumerazioni Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Interfaccia IAssemblyName](iassemblyname-interface.md)
+- [Funzione CreateAssemblyNameObject](createassemblynameobject-function.md)
+- [Enumerazioni Fusion](fusion-enumerations.md)

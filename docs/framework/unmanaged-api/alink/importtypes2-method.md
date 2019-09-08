@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fddfffed499537f5746998a94a3ef32d035685
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741609"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787264"
 ---
 # <a name="importtypes2-method"></a>Metodo ImportTypes2
-Avvia l'importazione di tipi. Chiamare questo metodo per avviare l'importazione di tipi da ogni ambito importato attraverso [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Avvia l'importazione di tipi. Chiamare questo metodo per iniziare a importare i tipi da ogni ambito importato tramite il [metodo ImportFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametri  
  `AssemblyID`  
- ID dell'assembly in cui si desidera importare.  
+ ID dell'assembly in cui eseguire l'importazione.  
   
  `FileToken`  
- ID del file dal quale si desidera importare.  
+ ID del file da importare.  
   
  `dwScope`  
- Ambito in base zero da cui importare.  
+ Ambito in base zero da cui eseguire l'importazione.  
   
  `phEnum`  
- Riceve l'handle di enumeratore per i tipi nell'ambito specificato.  
+ Riceve l'handle dell'enumeratore per i tipi nell'ambito specificato.  
   
  `ppImportScope`  
- Facoltativamente, riceve [interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interfaccia.  
+ Riceve facoltativamente l'interfaccia dell' [interfaccia IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
- Facoltativamente, riceve il numero di tipi nell'ambito specificato.  
+ Riceve facoltativamente il numero di tipi nell'ambito specificato.  
   
 ## <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
- Richiede alink.h  
+ Richiede ALink. h  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interfaccia IALink2](ialink2-interface.md)
+- [Interfaccia IALink](ialink-interface.md)
+- [Alink (API)](index.md)

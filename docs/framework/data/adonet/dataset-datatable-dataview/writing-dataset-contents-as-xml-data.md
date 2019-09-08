@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203104"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785227"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Scrittura del contenuto di dataset come dati XML
 In ADO.NET è possibile scrivere una rappresentazione XML di un <xref:System.Data.DataSet>, con o senza schema. Se le informazioni relative allo schema sono incluse inline con il flusso o documento XML, tali informazioni verranno scritte usando il linguaggio XSD (XML Schema Definition Language). Nello schema sono contenute le definizioni delle tabelle del <xref:System.Data.DataSet>, oltre alle definizioni delle relazioni e dei vincoli.  
@@ -39,7 +39,7 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|Scrive il contenuto corrente dell'oggetto <xref:System.Data.DataSet> come dati XML con la struttura relazionale come XML Schema inline.|  
 |**DiffGram**|Scrive l'intero oggetto <xref:System.Data.DataSet> come DiffGram, inclusi i valori originali e quelli correnti. Per ulteriori informazioni, vedere [DiffGram](diffgrams.md).|  
   
- Quando si scrive una rappresentazione XML di <xref:System.Data.DataSet> un oggetto che contiene oggetti DataRelation, è probabile che il codice XML risultante abbia le righe figlio di ogni relazione annidata all'interno dei relativi elementi padre. A tale scopo, impostare la proprietà Nested di **DataRelation** su **true** quando si aggiunge <xref:System.Data.DataSet>la **DataRelation** a. Per ulteriori informazioni, vedere [nidificazione](nesting-datarelations.md)di oggetti DataRelation.  
+ Quando si scrive una rappresentazione XML di <xref:System.Data.DataSet> un oggetto che contiene oggetti **DataRelation** , è probabile che il codice XML risultante abbia le righe figlio di ogni relazione annidata all'interno dei relativi elementi padre. A tale scopo, impostare la proprietà **Nested** di **DataRelation** su **true** quando si aggiunge <xref:System.Data.DataSet>la **DataRelation** a. Per ulteriori informazioni, vedere [nidificazione di oggetti DataRelation](nesting-datarelations.md).  
   
  Di seguito sono riportati due esempi di scrittura della rappresentazione XML di un <xref:System.Data.DataSet> in un file. Nel primo esempio il nome file per il codice XML risultante viene passato come stringa a **WriteXml**. Nel secondo esempio viene passato un oggetto **System. io. StreamWriter** .  
   
@@ -66,10 +66,10 @@ xmlSW.Close();
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Mapping di colonne a elementi, attributi e testo XML  
  È possibile specificare il modo in cui una colonna di una tabella viene rappresentata in XML utilizzando la proprietà **ColumnMapping** dell'oggetto **DataColumn** . Nella tabella seguente vengono illustrati i diversi valori **MappingType** per la proprietà **ColumnMapping** di una colonna di tabella e il codice XML risultante.  
   
-|Valore MappingType|Descrizione|  
+|Valore MappingType|DESCRIZIONE|  
 |-----------------------|-----------------|  
 |**Elemento**|Questa è l'impostazione predefinita. La colonna viene scritta sotto forma di elemento XML. ColumnName rappresenta il nome dell'elemento e i contenuti della colonna vengono scritti come testo dell'elemento. Ad esempio:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Attributo**|La colonna viene scritta sotto forma di attributo XML dell'elemento XML per la riga corrente. ColumnName rappresenta il nome dell'attributo e i contenuti della colonna vengono scritti sotto forma di valore dell'attributo. Ad esempio:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**Attribute**|La colonna viene scritta sotto forma di attributo XML dell'elemento XML per la riga corrente. ColumnName rappresenta il nome dell'attributo e i contenuti della colonna vengono scritti sotto forma di valore dell'attributo. Ad esempio:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|I contenuti della colonna vengono scritti sotto forma di testo nell'elemento XML per la riga corrente. Ad esempio:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Si noti che non è possibile impostare **simpleContent** per una colonna di una tabella con colonne di **elementi** o relazioni annidate.|  
 |**Nascosto**|La colonna non viene scritta nell'output XML.|  
   
@@ -80,4 +80,4 @@ xmlSW.Close();
 - [Annidamento di oggetti DataRelation](nesting-datarelations.md)
 - [Scrittura di informazioni dello schema DataSet come XSD](writing-dataset-schema-information-as-xsd.md)
 - [Oggetti DataSet, DataTable e DataView](index.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

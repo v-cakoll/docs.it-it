@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63c1cb3c417e8e521c6ac8417d260ccb937863f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778711"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796753"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Metodo IAssemblyCache::UninstallAssembly
-Disinstalla l'assembly specificato dalla global assembly cache.  
+Disinstalla l'assembly specificato dal Global Assembly Cache.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,16 +40,16 @@ HRESULT UninstallAssembly (
   
 ## <a name="parameters"></a>Parametri  
  `dwFlags`  
- [in] Flag definiti in Fusion.  
+ in Flag definiti in Fusion. idl.  
   
  `pszAssemblyName`  
- [in] Il nome dell'assembly da disinstallare.  
+ in Nome dell'assembly da disinstallare.  
   
  `pRefData`  
- [in] Oggetto [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struttura che contiene i dati di installazione per l'assembly.  
+ in Struttura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) che contiene i dati di installazione per l'assembly.  
   
  `pulDisposition`  
- [out, optional] Uno dei valori disposition definiti in Fusion. I valori possibili includono quanto segue:  
+ [out, facoltativo] Uno dei valori di disposizione definiti in Fusion. idl. I valori possibili sono i seguenti:  
   
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,7 +64,7 @@ HRESULT UninstallAssembly (
 - IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Fusion. h  
   
@@ -72,4 +72,4 @@ HRESULT UninstallAssembly (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfaccia IAssemblyCache](iassemblycache-interface.md)

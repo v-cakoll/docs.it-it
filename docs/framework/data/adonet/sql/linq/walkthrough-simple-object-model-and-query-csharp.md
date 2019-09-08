@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Modello a oggetti e query semplici (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946915"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792139"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Procedura dettagliata: Modello a oggetti e query semplici (C#)
 
@@ -23,7 +23,7 @@ Questa procedura è stata scritta usando Impostazioni di sviluppo di Visual C#.
 
 - Per i file usati nella procedura dettagliata viene usata una cartella dedicata ("c:\linqtest5"). Creare la cartella prima di avviare la procedura.
 
-- Per questa procedura dettagliata è richiesto il database di esempio Northwind. Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file nella cartella c:\linqtest5.
+- Per questa procedura dettagliata è richiesto il database di esempio Northwind. Se questo database non è disponibile nel computer di sviluppo, è possibile scaricarlo dal sito di download Microsoft. Per istruzioni, vedere [download di database di esempio](downloading-sample-databases.md). Dopo avere scaricato il database, copiare il file nella cartella c:\linqtest5.
 
 ## <a name="overview"></a>Panoramica
 
@@ -140,7 +140,7 @@ In questo passaggio verrà effettivamente eseguita la query. Le espressioni di q
 2. ‎Premere F5 per eseguire il debug dell'applicazione.
 
     > [!NOTE]
-    > Se l'applicazione genera un errore di run-time, vedere la sezione relativa alla risoluzione dei problemi di [apprendimento per procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Se l'applicazione genera un errore di run-time, vedere la sezione relativa alla risoluzione dei problemi di [apprendimento per procedure dettagliate](learning-by-walkthroughs.md).
 
      I risultati della query nella finestra della console dovrebbero avere il seguente aspetto:
 
@@ -160,10 +160,10 @@ In questo passaggio verrà effettivamente eseguita la query. Le espressioni di q
 
 ## <a name="next-steps"></a>Fasi successive
 
-[Procedura dettagliata: L'argomento relativo all'esecuzioneC#di](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) query tra relazioni () continua nel punto in cui termina questa procedura dettagliata. Nella procedura dettagliata relativa alla query tra [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] relazioni viene illustrato come è possibile eseguire query tra tabelle, in modo analogo ai *join* in un database relazionale.
+[Procedura dettagliata: L'argomento relativo all'esecuzioneC#di](walkthrough-querying-across-relationships-csharp.md) query tra relazioni () continua nel punto in cui termina questa procedura dettagliata. Nella procedura dettagliata relativa alla query tra [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] relazioni viene illustrato come è possibile eseguire query tra tabelle, in modo analogo ai *join* in un database relazionale.
 
 Se si desidera eseguire la procedura dettagliata relativa all'esecuzione di query tra relazioni, è indispensabile salvare la soluzione per la procedura dettagliata appena completata.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Apprendimento tramite procedure dettagliate](learning-by-walkthroughs.md)

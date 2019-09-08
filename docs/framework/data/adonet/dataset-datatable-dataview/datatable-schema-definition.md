@@ -2,17 +2,17 @@
 title: Definizione dello schema di DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d18af8001fd24f3b21c3e7fd13f9dabb2587b322
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786384"
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
 Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli. Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
   
- I riferimenti basati sui nomi a colonne, relazioni e vincoli di una tabella distinguono tra maiuscole e minuscole. Pertanto, in una tabella possono coesistere due o più colonne, relazioni o vincoli con lo stesso nome ma che presentano una combinazione diversa di maiuscole e minuscole. Ad esempio, è possibile avere **col1** e **col1**. In tal caso, è necessario che in un riferimento a una delle colonne basato sul nome venga usato il nome con la stessa combinazione di maiuscole e minuscole adottata nella colonna. Se il nome non corrisponde, verrà generata un'eccezione. Se, ad esempio, nella tabella MyTable sono contenute le colonne **col1** e **col1**, è necessario fare riferimento a **col1** in base al nome **MyTable. Columns ["col1"]** e **col1** come **MyTable. Columns ["col1"]** . Il tentativo di fare riferimento a una delle colonne come **MyTable. Columns ["col1"]** genererebbe un'eccezione.  
+ I riferimenti basati sui nomi a colonne, relazioni e vincoli di una tabella distinguono tra maiuscole e minuscole. Pertanto, in una tabella possono coesistere due o più colonne, relazioni o vincoli con lo stesso nome ma che presentano una combinazione diversa di maiuscole e minuscole. Ad esempio, è possibile avere **col1** e **col1**. In tal caso, è necessario che in un riferimento a una delle colonne basato sul nome venga usato il nome con la stessa combinazione di maiuscole e minuscole adottata nella colonna. Se il nome non corrisponde, verrà generata un'eccezione. Se, ad esempio, nella **tabella MyTable sono contenute le** colonne **col1** e **col1**, è necessario fare riferimento a **col1** in base al nome **MyTable. Columns ["col1"]** e **col1** come **MyTable. Columns ["col1"]** . Il tentativo di fare riferimento a una delle colonne come **MyTable. Columns ["col1"]** genererebbe un'eccezione.  
   
  La distinzione tra maiuscole e minuscole non è rilevante se nella tabella è presente solo una colonna, una relazione o un vincolo con un determinato nome. Ovvero, se nella tabella non sono presenti altre relazioni o oggetti Constraint il cui nome corrisponda al nome della particolare colonna o relazione o oggetto Constraint, è possibile fare riferimento all'oggetto mediante il nome, usando sia lettere maiuscole che minuscole, senza che venga generata alcuna eccezione. Se, ad esempio, la tabella include solo **col1**, è possibile farvi riferimento usando **My. Colonne ["COL1"]** .  
   
@@ -38,4 +38,4 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
 ## <a name="see-also"></a>Vedere anche
 
 - [DataTable](datatables.md)
-- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Panoramica di ADO.NET](../ado-net-overview.md)

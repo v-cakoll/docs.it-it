@@ -2,12 +2,12 @@
 title: 'Procedura: Specificare nomi di database'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0daf754edf624410e0ea725acd6c266ccb7828dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037570"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781571"
 ---
 # <a name="how-to-specify-database-names"></a>Procedura: Specificare nomi di database
 Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su un attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> per specificare il nome di un database quando non viene fornito dalla connessione.  
@@ -24,5 +24,5 @@ Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Modello a oggetti LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Procedura: Personalizzare le classi di entità tramite l'editor di codice](how-to-customize-entity-classes-by-using-the-code-editor.md)
