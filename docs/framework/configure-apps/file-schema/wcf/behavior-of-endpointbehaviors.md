@@ -2,20 +2,21 @@
 title: <behavior> di <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: f14e80798a9b088508f23d718c8b386286ad65a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 81c9ec7bd82fa0b947e438632b293ab9110067f5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919847"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398244"
 ---
 # <a name="behavior-of-endpointbehaviors"></a>\<comportamento > di \<endpointBehaviors >
 L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento di un endpoint. Ogni comportamento è indicizzato in base al relativo `name`. Gli endpoint possono essere collegati a ciascun comportamento tramite questo nome. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e le associazioni e i comportamenti senza nome, vedere [Configurazione semplificata](../../../wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
- \<system.ServiceModel>  
-\<comportamenti >  
-\<endpointBehaviors>  
-\<comportamento >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comportamento >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +41,7 @@ L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso un servizio.|  
 |[\<callbackDebug>](callbackdebug.md)|Specifica il debug del servizio per un oggetto callback di Windows Communication Foundation (WCF).|  
