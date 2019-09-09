@@ -2,18 +2,20 @@
 title: Creazione di un servizio flusso di lavoro a esecuzione prolungata
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 1ca0f2ed4c2ab900191165d100848811e5436c3c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425411"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040408"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Creazione di un servizio flusso di lavoro a esecuzione prolungata
-In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata. L'esecuzione di tali servizi può durare molto tempo. A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive. In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria. Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.  In questo scenario viene implementato un sistema di ordini molto semplificato.  Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta, consente la restituzione di un ID ordine al client. A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.  Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine. Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine. L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata. In questo argomento presuppone che l'utente sappia creare soluzioni e progetti di Visual Studio 2012.
+
+In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata. L'esecuzione di tali servizi può durare molto tempo. A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive. In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria. Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.  In questo scenario viene implementato un sistema di ordini molto semplificato.  Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta, consente la restituzione di un ID ordine al client. A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.  Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine. Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine. L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata. In questo argomento si presuppone che si sappia come creare progetti e soluzioni di Visual Studio 2012.
 
 ## <a name="prerequisites"></a>Prerequisiti
- Per utilizzare questa procedura dettagliata è necessario aver installato i software seguenti:
+
+Per utilizzare questa procedura dettagliata è necessario aver installato i software seguenti:
 
 1. Microsoft SQL Server 2008
 
@@ -21,15 +23,15 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
 
 3. Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4. Si ha familiarità con WCF e Visual Studio 2012 e in grado di creare progetti e soluzioni.
+4. Si ha familiarità con WCF e Visual Studio 2012 e si sa come creare progetti/soluzioni.
 
 ### <a name="to-setup-the-sql-database"></a>Per impostare il database SQL
 
-1. Per salvare in modo permanente le istanze del servizio di flusso di lavoro è necessario disporre di Microsoft SQL Server e configurare un database per archiviare le istanze del flusso di lavoro salvate in modo permanente. Eseguire Microsoft SQL Management Studio facendo il **avviare** button, selezionando **tutti i programmi**, **Microsoft SQL Server 2008**, e **Microsoft SQL Management Studio**.
+1. Per salvare in modo permanente le istanze del servizio di flusso di lavoro è necessario disporre di Microsoft SQL Server e configurare un database per archiviare le istanze del flusso di lavoro salvate in modo permanente. Eseguire Microsoft SQL Management Studio facendo clic sul pulsante **Start** , selezionando **tutti i programmi**, **Microsoft SQL Server 2008**e **Microsoft SQL Management Studio**.
 
-2. Scegliere il **Connect** pulsante per accedere all'istanza di SQL Server
+2. Fare clic sul pulsante **Connetti** per accedere all'istanza di SQL Server
 
-3. Fare clic destro **database** nella visualizzazione struttura ad albero e selezionare **Nuovo Database...** Per creare un nuovo database denominato `SQLPersistenceStore`.
+3. Fare clic con il pulsante destro del mouse su **database** nella visualizzazione albero e selezionare **nuovo database.** per creare un nuovo database denominato `SQLPersistenceStore`.
 
 4. Eseguire il file di script SqlWorkflowInstanceStoreSchema.sql presente nella directory C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en del database SQLPersistenceStore per configurare gli schemi del database necessari.
 
@@ -37,106 +39,106 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>Per creare il servizio di flusso di lavoro ospitato dal Web
 
-1. Creare una soluzione di Visual Studio 2012 vuota, denominarlo `OrderProcessing`.
+1. Creare una soluzione Visual Studio 2012 vuota, denominarla `OrderProcessing`.
 
 2. Aggiungere un nuovo progetto Applicazione di servizi flusso di lavoro WCF denominato `OrderService` alla soluzione.
 
-3. Nella finestra di dialogo proprietà del progetto, selezionare la **Web** scheda.
+3. Nella finestra di dialogo Proprietà progetto selezionare la scheda **Web** .
 
-    1. Sotto **azione di avvio** selezionate **pagina specifica** e specificare `Service1.xamlx`.
+    1. In **azione di avvio** selezionare **pagina specifica** e `Service1.xamlx`specificare.
 
-         ![Proprietà del flusso di lavoro servizio progetto Web](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "creare il servizio del flusso di lavoro ospitati dal web - opzione pagina specifica")
+        ![Proprietà Web del progetto di servizio flusso di lavoro](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Creare l'opzione di pagina specifica del servizio del flusso di lavoro ospitato sul Web")
 
-    2. Sotto **i server** selezionate **server Web IIS locale usare**.
+    2. In **Server** selezionare **Usa server Web IIS locale**.
 
-         ![Impostazioni del Server Web locale](./media/creating-a-long-running-workflow-service/use-local-web-server.png "creare il servizio del flusso di lavoro ospitati dal web - opzione Usa Server Web IIS locale")
+        ![Impostazioni del server Web locale](./media/creating-a-long-running-workflow-service/use-local-web-server.png "Creare il servizio flusso di lavoro ospitato sul Web: usare l'opzione server Web IIS locale")
 
         > [!WARNING]
-        >  È necessario eseguire Visual Studio 2012 in modalità amministratore per effettuare tale impostazione.
+        > Per impostare questa impostazione, è necessario eseguire Visual Studio 2012 in modalità amministratore.
 
-         Questi due passaggi consentono di configurare il progetto del servizio di flusso di lavoro che deve essere ospitato da IIS.
+        Questi due passaggi consentono di configurare il progetto del servizio di flusso di lavoro che deve essere ospitato da IIS.
 
-4. Aprire `Service1.xamlx` se è già aperto ed eliminare quello esistente non **ReceiveRequest** e **SendResponse** attività.
+4. Aprire `Service1.xamlx` se non è già aperto ed eliminare le attività **ReceiveRequest** e **SendResponse** esistenti.
 
-5. Selezionare il **Sequential Service** attività e fare clic sui **variabili** collegare e aggiungere le variabili mostrate nell'illustrazione seguente. In questo modo verranno aggiunte alcune variabili che saranno utilizzate successivamente nel servizio di flusso di lavoro.
+5. Selezionare l'attività **sequenziale del servizio** e fare clic sul collegamento **variabili** e aggiungere le variabili illustrate nella figura seguente. In questo modo verranno aggiunte alcune variabili che saranno utilizzate successivamente nel servizio di flusso di lavoro.
 
     > [!NOTE]
-    >  Se CorrelationHandle non è presente nell'elenco a discesa tipo di variabile, selezionare **Cerca tipi** dall'elenco a discesa. Digitare CorrelationHandle nella **nome del tipo** casella, selezionare CorrelationHandle nella casella di riepilogo e fare clic su **OK**.
+    > Se CorrelationHandle non è presente nell'elenco a discesa tipo di variabile, selezionare **Cerca tipi** dall'elenco a discesa. Digitare CorrelationHandle nella casella **nome tipo** , selezionare CorrelationHandle nella casella di riepilogo e fare clic su **OK**.
 
-     ![Aggiungere le variabili](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "aggiungere le variabili per l'attività servizio sequenziale.")
+    ![Aggiungi variabili](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "Aggiungere variabili all'attività sequenziale del servizio.")
 
-6. Trascinare e rilasciare un **ReceiveAndSendReply** modello di attività nel **Sequential Service** attività. Un messaggio inviato da un client verrà ricevuto da questo set di attività tramite cui, a sua volta, verrà restituita una risposta.
+6. Trascinare e rilasciare un modello di attività **ReceiveAndSendReply** nell'attività **sequenziale del servizio** . Un messaggio inviato da un client verrà ricevuto da questo set di attività tramite cui, a sua volta, verrà restituita una risposta.
 
-    1. Selezionare il **ricezione** attività e impostare le proprietà evidenziate nella figura seguente.
+    1. Selezionare l'attività **Receive** e impostare le proprietà evidenziate nella figura seguente.
 
-         ![Impostare le proprietà di attività di ricezione](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "impostare le proprietà dell'attività Receive.")
+        ![Impostare le proprietà dell'attività Receive](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "Impostare le proprietà dell'attività Receive.")
 
-         La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione. Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive. Per altre informazioni sulle modalità di utilizzo dei contratti nei servizi del flusso di lavoro, vedere [uso di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
+        La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione. Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive. Per ulteriori informazioni sul modo in cui vengono utilizzati i contratti nei servizi flusso di lavoro, vedere [utilizzo di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
 
-    2. Fare clic su di **definire...**  collegare il **ReceiveStartOrder** attività e impostare le proprietà mostrate nell'illustrazione seguente.  Si noti che il **parametri** pulsante di opzione è selezionato, un parametro denominato `p_customerName` è associato il `customerName` variabile. Ciò consente di configurare il **ricezione** attività per ricevere dati e associarli a variabili locali.
+    2. Fare clic sul collegamento **Definisci** nell'attività **ReceiveStartOrder** e impostare le proprietà mostrate nella figura seguente.  Si noti che il pulsante di opzione **parametri** è selezionato, un `p_customerName` parametro denominato `customerName` è associato alla variabile. In questo modo l'attività **Receive** viene configurata in modo da ricevere alcuni dati e associare tali dati alle variabili locali.
 
-         ![Impostazione dei dati ricevuti dall'attività Receive](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "impostare le proprietà per i dati ricevuti dall'attività Receive.")
+        ![Impostazione dei dati ricevuti dall'attività Receive](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "Impostare le proprietà per i dati ricevuti dall'attività Receive.")
 
-    3. Selezionare il **SendReplyToReceive** attività e impostare la proprietà evidenziata mostrata nell'illustrazione seguente.
+    3. Selezionare l'attività **SendReplyToReceive** e impostare la proprietà evidenziata mostrata nella figura seguente.
 
-         ![Impostazione delle proprietà dell'attività SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
+        ![Impostazione delle proprietà dell'attività SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
-    4. Fare clic su di **definire...**  collegare il **SendReplyToStartOrder** attività e impostare le proprietà mostrate nell'illustrazione seguente. Si noti che il **parametri** pulsante di opzione è selezionato mentre un parametro denominato `p_orderId` è associato il `orderId` variabile. Questa impostazione consente di specificare che tramite l'attività SendReplyToStartOrder verrà restituito un valore di tipo stringa al chiamante.
+    4. Fare clic sul collegamento **Definisci** nell'attività **SendReplyToStartOrder** e impostare le proprietà mostrate nella figura seguente. Si noti che il pulsante di opzione **parametri** è selezionato; un parametro denominato `p_orderId` è associato `orderId` alla variabile. Questa impostazione consente di specificare che tramite l'attività SendReplyToStartOrder verrà restituito un valore di tipo stringa al chiamante.
 
-         ![Configurare i dati di contenuto attività SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "configurare le impostazioni delle attività SetReplyToStartOrder.")
+        ![Configurazione dei dati di contenuto dell'attività SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "Configurare l'impostazione per l'attività SetReplyToStartOrder.")
 
-    5. Trascinare e rilasciare un'attività Assign tra le **Receive** e **SendReply** attività e impostare le proprietà come illustrato nella figura seguente:
+    5. Trascinare e rilasciare un'attività Assign tra le attività **Receive** e **SendReply** e impostare le proprietà come illustrato nella figura seguente:
 
-         ![Aggiunta di un'attività assign](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "aggiungere un'attività assign.")
+        ![Aggiunta di un'attività Assign](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "Aggiungere un'attività Assign.")
 
-         In questo modo viene creato un nuovo ID ordine e il valore viene inserito nella variabile orderId.
+        In questo modo viene creato un nuovo ID ordine e il valore viene inserito nella variabile orderId.
 
-    6. Selezionare il **ReplyToStartOrder** attività. Nella finestra Proprietà fare clic sul pulsante con i puntini **CorrelationInitializers**. Selezionare il **Aggiungi inizializzatore** collegare, immettere `orderIdHandle` nella casella di testo dell'inizializzatore, selezionare l'inizializzatore correlazione Query per il tipo di correlazione e scegliere p_orderId nella casella a discesa query XPATH. Queste impostazioni sono mostrate nell'immagine seguente. Fare clic su **OK**.  Tale operazione consente di inizializzare una correlazione tra il client e questa istanza del servizio di flusso di lavoro. Quando viene ricevuto un messaggio contenente questo ID ordine, viene indirizzato a questa istanza del servizio di flusso di lavoro.
+    6. Selezionare l'attività **ReplyToStartOrder** . Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione per **CorrelationInitializers**. Selezionare il collegamento **Aggiungi inizializzatore** , `orderIdHandle` immettere nella casella di testo dell'inizializzatore, selezionare inizializzatore di correlazione query per il tipo di correlazione e selezionare p_orderId nella casella a discesa query XPath. Queste impostazioni sono mostrate nell'immagine seguente. Fare clic su **OK**.  Tale operazione consente di inizializzare una correlazione tra il client e questa istanza del servizio di flusso di lavoro. Quando viene ricevuto un messaggio contenente questo ID ordine, viene indirizzato a questa istanza del servizio di flusso di lavoro.
 
-         ![Aggiunta di un inizializzatore di correlazione](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "aggiungere un inizializzatore di correlazione.")
+        ![Aggiunta di un inizializzatore di correlazione](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Aggiungere un inizializzatore di correlazione.")
 
-7. Trascinare e rilasciare un'altra **ReceiveAndSendReply** attività alla fine del flusso di lavoro (all'esterno di **sequenza** che contiene il primo **ricezione** e  **SendReply** attività). Un secondo messaggio inviato dal client verrà ricevuto dal flusso di lavoro tramite cui, a sua volta, verrà fornita una risposta.
+7. Trascinare e rilasciare un'altra attività **ReceiveAndSendReply** alla fine del flusso di lavoro (all'esterno della **sequenza** contenente le prime attività **Receive** e **SendReply** ). Un secondo messaggio inviato dal client verrà ricevuto dal flusso di lavoro tramite cui, a sua volta, verrà fornita una risposta.
 
-    1. Selezionare il **sequenza** che contiene appena aggiunta **ricezione** e **SendReply** le attività e fare clic sul **variabili** pulsante. Aggiungere la variabile evidenziata nell'immagine seguente:
+    1. Selezionare la **sequenza** che contiene le attività **Receive** e **SendReply** appena aggiunte, quindi fare clic sul pulsante **variabili** . Aggiungere la variabile evidenziata nell'immagine seguente:
 
-         ![Aggiunta di nuove variabili](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "aggiungere la variabile di ItemId.")
-         
-         Aggiungere inoltre `orderResult` come **stringa** nel `Sequence` ambito.
+        ![Aggiunta di nuove variabili](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "Aggiungere la variabile itemId.")
 
-    2. Selezionare il **ricezione** attività e impostare le proprietà mostrate nell'illustrazione seguente:
+        Aggiungere `orderResult` anche come **stringa nell'ambito** `Sequence` .
 
-         ![Impostare le proprietà dell'attività Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "impostare le proprietà di attività di ricezione.")
-         
-         > [!NOTE]
-         >  Non dimenticare di modificare **ServiceContractName** campo `../IAddItem`.
+    2. Selezionare l'attività **Receive** e impostare le proprietà mostrate nella figura seguente:
 
-    3. Fare clic su di **definire...**  link nel **ReceiveAddItem** attività e aggiungere i parametri riportati nella figura seguente: questa impostazione configura l'attività di ricezione per accettare due parametri, l'ID dell'ordine e l'ID dell'elemento da ordinare.
+        ![Impostare le proprietà dell'attività Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Impostare le proprietà delle attività di ricezione.")
 
-         ![Specifica dei parametri per la seconda ricezione](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "configurare l'attività di ricezione per ricevere due parametri.")
+        > [!NOTE]
+        > Non dimenticare di modificare il campo ServiceContractName `../IAddItem`con.
 
-    4. Scegliere il **CorrelateOn** puntini di sospensione sul pulsante e immettere `orderIdHandle`. Sotto **le query XPath**, fare clic sulla freccia a discesa e selezionare `p_orderId`. In questo modo la correlazione viene configurata sulla seconda attività Receive. Per altre informazioni sulla correlazione, vedere [correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).
+    3. Fare clic sul collegamento **Definisci** nell'attività **ReceiveAddItem** e aggiungere i parametri mostrati nella figura seguente: in questo modo l'attività Receive viene configurata in modo da accettare due parametri, l'ID dell'ordine e l'ID dell'elemento ordinato.
 
-         ![Impostazione della proprietà CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "impostare la proprietà CorrelatesOn.")
+        ![Specifica dei parametri per la seconda ricezione](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "Configurare l'attività Receive per ricevere due parametri.")
 
-    5. Trascinare e rilasciare un' **se** attività immediatamente dopo il **ReceiveAddItem** attività. Il comportamento di questa attività è uguale a quello di un'istruzione IF.
+    4. Fare clic sul pulsante con i puntini di sospensione **CorrelateOn** e immettere `orderIdHandle`. In **query XPath**fare clic sulla freccia a discesa e selezionare `p_orderId`. In questo modo la correlazione viene configurata sulla seconda attività Receive. Per ulteriori informazioni sulla correlazione, vedere [correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).
 
-        1. Impostare il **condizione** proprietà `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
+        ![Impostazione della proprietà CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "Impostare la proprietà CorrelatesOn.")
 
-        2. Trascinare e rilasciare un' **assegnare** attività nel **quindi** sezione e un altro nel **Else** sezione impostazione delle proprietà del **assegnare** attività come illustrato nella figura seguente.
+    5. Trascinare e rilasciare un'attività **if** immediatamente dopo l'attività **ReceiveAddItem** . Il comportamento di questa attività è uguale a quello di un'istruzione IF.
 
-             ![Assegnazione del risultato della chiamata al servizio](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "assegnare il risultato della chiamata al servizio.")
+        1. Impostare la proprietà **Condition** su`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-             Se la condizione è `true` il **quindi** sezione verrà eseguita. Se la condizione è `false` il **Else** sezione viene eseguita.
+        2. Trascinare e rilasciare un'attività **assign** nella sezione **then** e un'altra nella sezione **else** per impostare le proprietà delle attività **assign** , come illustrato nella figura seguente.
 
-        3. Selezionare il **SendReplyToReceive** attività e impostare le **DisplayName** proprietà illustrato nella figura seguente.
+            ![Assegnazione del risultato della chiamata al servizio](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Assegnare il risultato della chiamata al servizio.")
 
-             ![Impostazione delle proprietà dell'attività SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "impostare le proprietà dell'attività SendReply.")
+            Se la condizione è `true` la sezione **then** verrà eseguita. Se la condizione è `false` la sezione **else** viene eseguita.
 
-        4. Fare clic su di **definire...**  collegare il **SetReplyToAddItem** attività e configurarlo come mostrato nella figura seguente. Ciò consente di configurare il **SendReplyToAddItem** attività per restituire il valore nel `orderResult` variabile.
+        3. Selezionare l'attività **SendReplyToReceive** e impostare la proprietà **DisplayName** mostrata nella figura seguente.
 
-             ![Impostazione del data binding per l'attività SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "impostare proprietà per l'attività SendReplyToAddItem.")
+            ![Impostazione delle proprietà dell'attività SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "Impostare la proprietà dell'attività SendReply.")
 
-8. Aprire il file Web. config e aggiungere gli elementi seguenti nel \<comportamento > sezione abilitare la persistenza del flusso di lavoro.
+        4. Fare clic sul collegamento **Definisci** nell'attività **SetReplyToAddItem** e configurarlo come illustrato nella figura seguente. In questo modo viene configurata l'attività **SendReplyToAddItem** per restituire `orderResult` il valore nella variabile.
+
+            ![Impostazione della data binding per l'attività SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "Imposta la proprietà per l'attività SendReplyToAddItem.")
+
+8. Aprire il file Web. config e aggiungere gli elementi seguenti nella \<sezione behavior > per abilitare la persistenza del flusso di lavoro.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -144,7 +146,7 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
     ```
 
     > [!WARNING]
-    >  Assicurarsi di sostituire l'host e il nome dell'istanza di SQL Server nel frammento di codice precedente.
+    > Assicurarsi di sostituire l'host e il nome dell'istanza di SQL Server nel frammento di codice precedente.
 
 9. Compilare la soluzione.
 
@@ -162,7 +164,7 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
 
 4. Nel metodo `Main()` del progetto client aggiungere il codice seguente:
 
-    ```
+    ```csharp
     static void Main(string[] args)
     {
        // Send initial message to start the workflow service
@@ -193,9 +195,9 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6. Per verificare che il servizio del flusso di lavoro è stata resa persistente, avviare SQL Server Management Studio visitando la **avviare** menu, se si seleziona **tutti i programmi**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.
+6. Per verificare che il servizio del flusso di lavoro sia stato salvato in modo permanente, avviare il SQL Server Management Studio dal menu **Start** , selezionando **tutti i programmi**, **Microsoft SQL Server 2008** **SQL Server Management Studio**.
 
-    1. Nel riquadro a sinistra espandere, **database**, **SQLPersistenceStore**, **viste** e fare clic destro **System.Activities.DurableInstancing.Instances**  e selezionare **seleziona le prime 1000 righe**. Nel **risultati** riquadro verificare sia presente almeno un'istanza elencata. Se durante l'esecuzione si è verificata un'eccezione potrebbero essere presenti altre istanze di esecuzioni precedenti. È possibile eliminare le righe esistenti facendo clic con il pulsante destro **System.Activities.DurableInstancing.Instances** e selezionando **modifica le prime 200 righe**, premendo il **Execute** pulsante, selezionando tutte le righe nel riquadro dei risultati e selezionando **Elimina**.  Per verificare che l'istanza visualizzata nel database sia l'istanza creata dall'applicazione, controllare che la visualizzazione delle istanze sia vuota prima di eseguire il client. Quando il client è in esecuzione, eseguire di nuovo la query (Seleziona le prime 1000 righe) e verificare che sia stata aggiunta una nuova istanza.
+    1. Nel riquadro a sinistra espandere **database**, **SQLPersistenceStore**, **viste** e fare clic con il pulsante destro del mouse su **System. Activities. DurableInstancing. instances** e scegliere **Seleziona le prime 1000 righe**. Nel riquadro **dei risultati** verificare che sia elencata almeno un'istanza. Se durante l'esecuzione si è verificata un'eccezione potrebbero essere presenti altre istanze di esecuzioni precedenti. È possibile eliminare le righe esistenti facendo clic con il pulsante destro del mouse su **System. Activities. DurableInstancing. Instances** e selezionando **modifica le prime 200 righe**, premendo il pulsante **Esegui** , selezionando tutte le righe nel riquadro risultati e selezionando **Elimina**.  Per verificare che l'istanza visualizzata nel database sia l'istanza creata dall'applicazione, controllare che la visualizzazione delle istanze sia vuota prima di eseguire il client. Quando il client è in esecuzione, eseguire di nuovo la query (Seleziona le prime 1000 righe) e verificare che sia stata aggiunta una nuova istanza.
 
 7. Premere INVIO per inviare il messaggio relativo all'aggiunta di elementi al servizio di flusso di lavoro. Nel client verrà visualizzato il testo seguente:
 

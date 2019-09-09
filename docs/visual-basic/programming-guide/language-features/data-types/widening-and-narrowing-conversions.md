@@ -19,24 +19,24 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 858b2b2e154b659470fa61b21f25ab61eabda012
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965649"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversioni di ampliamento e restrizione (Visual Basic)
-Una considerazione importante con una conversione del tipo è se il risultato della conversione è compreso nell'intervallo del tipo di dati di destinazione.  
+Una considerazione importante per la conversione di un tipo è la possibilità che il risultato della conversione sia compreso nell'intervallo del tipo di dati di destinazione.  
   
- Oggetto *conversione di ampliamento* imposta un valore su un tipo di dati che possa consentire di tutti i valori possibili dei dati originali.  Le conversioni di ampliamento mantenere il valore di origine, ma possono modificarne la rappresentazione. Ciò si verifica se si converte da un tipo integrale a `Decimal`, e viceversa `Char` a `String`.  
+ Una *conversione* verso un tipo di dati più ampio modifica un valore in un tipo di dati che può consentire qualsiasi valore possibile dei dati originali.  Le conversioni verso un tipo di dati più ampio conservano il valore di origine ma possono modificarne la rappresentazione. Questo errore si verifica se si esegue la conversione da `Decimal`un tipo integrale `Char` a `String`o da a.  
   
- Una *conversione verso un tipo di dati più piccolo* imposta un valore su un tipo di dati che potrebbe non contenere alcuni dei possibili valori. Ad esempio, un valore frazionario viene arrotondato quando viene convertito in un tipo integrale e un tipo numerico convertito in `Boolean` viene ridotto a uno `True` o `False`.  
+ Una *conversione verso un tipo di dati più piccolo* imposta un valore su un tipo di dati che potrebbe non contenere alcuni dei possibili valori. Ad esempio, un valore frazionario viene arrotondato quando viene convertito in un tipo integrale e un tipo numerico convertito in `Boolean` viene ridotto `True` a o `False`.  
   
 ## <a name="widening-conversions"></a>conversioni verso un tipo di dati più grande  
- La tabella seguente illustra lo standard di ampliamento.  
+ Nella tabella seguente vengono illustrate le conversioni standard verso un tipo di ampliamento.  
   
-|Tipo di dati|Si amplia in tipi di dati <sup>1</sup>|  
+|Tipo di dati|Viene ampliato ai tipi di dati <sup>1</sup>|  
 |---|---|  
 |[SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
@@ -49,54 +49,54 @@ Una considerazione importante con una conversione del tipo è se il risultato de
 |[Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|Qualsiasi tipo enumerato ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Il relativo tipo integrale sottostante e qualsiasi tipo a cui può ampliarsi nel tipo sottostante.|  
+|Qualsiasi tipo enumerato ([enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Il tipo integrale sottostante e qualsiasi tipo in cui viene ampliato il tipo sottostante.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Matrice `Char`|`Char` matrice, `String`|  
+|Matrice `Char`|`Char`matrice`String`|  
 |Qualsiasi tipo|[Oggetto](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
-|Qualsiasi tipo derivato|Qualsiasi tipo da cui viene derivato di base <sup>3</sup>.|  
+|Qualsiasi tipo derivato|Qualsiasi tipo di base da cui è derivato <sup>3</sup>.|  
 |Qualsiasi tipo|Qualsiasi interfaccia implementata.|  
-|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Qualsiasi tipo di dati o un tipo di oggetto.|  
+|[Nothing](../../../../visual-basic/language-reference/nothing.md)|Qualsiasi tipo di dati o tipo di oggetto.|  
   
  <sup>1</sup> per definizione, ogni tipo di dati viene ampliato a se stesso.  
   
- <sup>2</sup> conversioni dai `Integer`, `UInteger`, `Long`, `ULong`, oppure `Decimal` al `Single` o `Double` possono comportare una perdita di precisione, ma mai in ordine di grandezza. In questo senso non comportano la perdita di dati.  
+ <sup>2</sup> le conversioni da `Integer`, `UInteger`, `Long`, `ULong`o `Decimal` a opotrebbero`Double` comportare la perdita di precisione, ma mai in perdita di grandezza. `Single` In questo senso, non subiscono perdite di informazioni.  
   
- <sup>3</sup> potrebbe sembrare sorprendente che una conversione da un tipo derivato a uno dei tipi di base è una conversione di ampliamento. La giustificazione è che il tipo derivato contiene tutti i membri del tipo di base, pertanto viene qualificato come un'istanza del tipo di base. Nella direzione opposta, il tipo di base non contiene alcun membro nuovo definito dal tipo derivato.  
+ <sup>3</sup> potrebbe sembrare sorprendente che una conversione da un tipo derivato a uno dei relativi tipi di base sia più ampia. La giustificazione è che il tipo derivato contiene tutti i membri del tipo di base, quindi è qualificato come un'istanza del tipo di base. Nella direzione opposta, il tipo di base non contiene i nuovi membri definiti dal tipo derivato.  
   
- Le conversioni di ampliamento sempre eseguite correttamente in fase di esecuzione e non comportano perdita di dati. È sempre possibile eseguirle in modo implicito, indica se il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta il tipo di opzione di controllo `On` o su `Off`.  
+ Le conversioni verso un tipo di dati più ampio hanno sempre esito positivo in fase di esecuzione e non subiscono mai È sempre possibile eseguirli in modo implicito, se l' [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta l'opzione di `On` controllo del `Off`tipo su o su.  
   
 ## <a name="narrowing-conversions"></a>conversioni verso un tipo di dati più piccolo  
- Le conversioni di narrowing standard includono quanto segue:  
+ Di seguito sono riportate le conversioni standard più strette:  
   
-- Le istruzioni inverse delle conversioni di ampliamento nella precedente tabella (ad eccezione del fatto che ogni tipo viene ampliato a se stessa)  
+- Direzioni inverse delle conversioni verso un tipo di inverso più ampio nella tabella precedente, ad eccezione del fatto che ogni tipo viene ampliato a se stesso.  
   
-- Le conversioni in entrambe le direzioni tra [booleana](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualsiasi tipo numerico  
+- Conversioni in entrambe le direzioni tra il tipo [booleano](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) e qualsiasi tipo numerico  
   
-- Le conversioni da qualsiasi tipo numerico a qualsiasi tipo enumerato (`Enum`)  
+- Conversioni da qualsiasi tipo numerico a qualsiasi tipo enumerato (`Enum`)  
   
-- Le conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico `Boolean`, o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico, `Boolean`o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
-- Le conversioni da un tipo di dati o un oggetto tipo per un tipo derivato da esso  
+- Conversioni da un tipo di dati o da un tipo di oggetto a un tipo derivato da esso  
   
- Conversioni di Narrowing non sempre riuscire in fase di esecuzione e può avere esito negativo o comportano una perdita di dati. Si verifica un errore se il tipo di dati di destinazione non può ricevere il valore convertito. Ad esempio, una conversione numerica può comportare un overflow. Il compilatore non consente di eseguire conversioni di narrowing in modo implicito, a meno che il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta il tipo di opzione di controllo `Off`.  
+ Le conversioni verso un tipo di dati più piccolo non vengono sempre eseguite in fase di esecuzione e possono avere esito negativo o causare una perdita di dati. Si verifica un errore se il tipo di dati di destinazione non è in grado di ricevere il valore da convertire. Una conversione numerica, ad esempio, può causare un overflow. Il compilatore non consente di eseguire in modo implicito le conversioni verso un tipo di caratteri più piccolo, a meno che l' [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) non imposti l'opzione di controllo del tipo su `Off`.  
   
 > [!NOTE]
->  L'errore di conversione narrowing viene eliminata per le conversioni dagli elementi in un `For Each…Next` insieme alla variabile di controllo del ciclo. Per altre informazioni ed esempi, vedere la sezione "Conversioni di Narrowing" [For Each... Istruzione Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+> L'errore di conversione verso un tipo di ristringimento viene eliminato per le conversioni dagli elementi `For Each…Next` di una raccolta alla variabile di controllo del ciclo. Per ulteriori informazioni ed esempi, vedere la sezione relativa alle conversioni verso un tipo di dati più piccolo in [per ciascuna... Istruzione successiva](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### <a name="when-to-use-narrowing-conversions"></a>Quando usare le conversioni di restrizione  
- Si usa una conversione di narrowing quando si conosce che il valore di origine può essere convertito nel tipo di dati di destinazione senza errore o perdita di dati. Ad esempio, se si dispone di un `String` che si conosce contenente "True" o "False", è possibile usare il `CBool` parola chiave per convertirlo in `Boolean`.  
+### <a name="when-to-use-narrowing-conversions"></a>Quando usare le conversioni verso un tipo di caratteri più piccolo  
+ Si utilizza una conversione verso un tipo di dati più piccolo quando si sa che il valore di origine può essere convertito nel tipo di dati di destinazione senza errori o perdita di dati. Se, ad esempio, si dispone `String` di un oggetto che si conosce contiene "true" o "false", è possibile `CBool` utilizzare la parola chiave per `Boolean`convertirlo in.  
   
 ## <a name="exceptions-during-conversion"></a>Eccezioni durante la conversione  
- Poiché le conversioni di ampliamento sempre esito positivo, non generano eccezioni. Conversioni di Narrowing, quando non riescono, generano di solito le eccezioni seguenti:  
+ Poiché le conversioni verso un tipo di conversione più ampio hanno sempre esito positivo, non generano eccezioni. Le conversioni verso un tipo di testo più piccolo, in caso di errore, generano in genere le eccezioni seguenti:  
   
-- <xref:System.InvalidCastException> ovvero se non è stata definita alcuna conversione tra i due tipi  
+- <xref:System.InvalidCastException>: se non è stata definita alcuna conversione tra i due tipi  
   
-- <xref:System.OverflowException> : (solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
+- <xref:System.OverflowException>: (solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
   
- Se una classe o struttura definisce un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) da usare come un operatore di conversione da o verso tale classe o struttura, che `CType` possibile generare qualsiasi eccezione considera appropriata. Inoltre, che `CType` potrebbe chiamare funzioni di Visual Basic o i metodi di .NET Framework, che a sua volta è stato possibile generare un'ampia gamma di eccezioni.  
+ Se una classe o una struttura definisce una [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) che funge da operatore di conversione verso o da tale classe o struttura, `CType` che può generare qualsiasi eccezione ritenuta appropriata. Inoltre, è possibile `CType` che venga chiamato Visual Basic funzioni o metodi .NET Framework, che a loro volta possono generare una serie di eccezioni.  
   
-## <a name="changes-during-reference-type-conversions"></a>Modifiche apportate durante le conversioni di tipo riferimento  
- Una conversione da un *fanno riferimento a tipo* copia solo il puntatore al valore. Il valore stesso non viene copiato né modificato in alcun modo. L'unica cosa che è possibile modificare è il tipo di dati della variabile che contiene il puntatore. Nell'esempio seguente, il tipo di dati viene convertito dalla classe derivata a classe base, ma l'oggetto che entrambe le variabili a questo puntano rimane invariato.  
+## <a name="changes-during-reference-type-conversions"></a>Modifiche durante le conversioni di tipi di riferimento  
+ Una conversione da un *tipo riferimento* copia solo il puntatore al valore. Il valore stesso non viene copiato né modificato in alcun modo. L'unica cosa che può cambiare è il tipo di dati della variabile che contiene il puntatore. Nell'esempio seguente il tipo di dati viene convertito dalla classe derivata alla relativa classe di base, ma l'oggetto a cui puntano entrambe le variabili è invariato.  
   
 ```  
 ' Assume class cSquare inherits from class cShape.  
@@ -113,7 +113,7 @@ shape = square
 - [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Procedura: Convertire un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Procedura: Converte un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funzioni di conversione del tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

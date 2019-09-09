@@ -4,7 +4,7 @@ description: Architettura di Microservizi .NET per applicazioni .NET in contenit
 ms.date: 10/08/2018
 ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674258"
@@ -347,34 +347,34 @@ Come illustrato, usare gli eventi del dominio per implementare in modo esplicito
 - **Greg Young. What is a Domain Event?** (Che cos'è un evento di dominio?) \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg. Domain Events and Eventual Consistency** \ (Eventi di dominio e coerenza finale)
+- **Jan Stenberg. Domain Events and Eventual Consistency** (Eventi di dominio e coerenza finale) \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
-- **Jimmy Bogard. A better domain events pattern** \ (Un modello più efficiente di eventi di dominio)
+- **Jimmy Bogard. A better domain events pattern** (Un modello più efficiente di eventi di dominio) \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Progettazione efficace delle aggregazioni - Parte II: Integrazione delle aggregazioni)
+- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** (Progettazione efficace delle aggregazioni - Parte II: Integrazione delle aggregazioni) \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Rafforzamento del dominio: eventi di dominio)
+- **Jimmy Bogard. Strengthening your domain: Domain Events** (Rafforzamento del dominio: eventi di dominio) \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Tony Truong. Domain Events Pattern Example** \ (Esempio di modello di eventi di dominio)
+- **Tony Truong. Domain Events Pattern Example** (Esempio di modello di eventi di dominio) \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
+- **Udi Dahan. How to create fully encapsulated Domain Models** (Come creare modelli di dominio completamente incapsulati) \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan. Domain Events – Take 2** \ (Eventi di dominio, parte 2)
+- **Udi Dahan. Domain Events – Take 2** (Eventi di dominio, parte 2) \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan. Domain Events – Salvation** \ (Eventi di dominio: salvataggio)
+- **Udi Dahan. Domain Events – Salvation** (Eventi di dominio: salvataggio) \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist. Don't publish Domain Events, return them!** (Non pubblicare eventi di dominio, restituiscili!) \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures** \ (Eventi di integrazione nelle architetture DDD e di microservizi)
+- **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures** (Eventi di integrazione nelle architetture DDD e di microservizi) \
   <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]

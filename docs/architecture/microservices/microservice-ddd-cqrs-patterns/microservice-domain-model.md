@@ -89,7 +89,7 @@ EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.mi
 - **Oggetti valore nello sviluppo basato su test** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software) (Libro. Include una trattazione sugli oggetti valore) \
+- **Eric Evans. Progettazione basata su domini: Gestire le complessità nel software.** (Libro. Include una trattazione sugli oggetti valore) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Schema Aggregate

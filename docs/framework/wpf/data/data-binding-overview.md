@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400704"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567523"
 ---
 # <a name="data-binding-overview"></a>Panoramica sul data binding
 Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. Gli elementi possono essere associati a dati da un'ampia gamma di origini dati sotto forma di oggetti Common Language Runtime (CLR) [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]e. <xref:System.Windows.Controls.ContentControl>, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListView> , come e hanno una funzionalità incorporata per consentire lo stile flessibile di singoli elementi di dati o raccolte di elementi di dati. <xref:System.Windows.Controls.ListBox> In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
@@ -70,7 +70,7 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 - Sebbene non sia specificato nella figura, è opportuno notare che l'oggetto di origine del binding non è limitato a essere un oggetto CLR personalizzato. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]data binding supporta i dati sotto forma di oggetti CLR e [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Per fornire alcuni esempi, l'origine del binding può essere <xref:System.Windows.UIElement>un, qualsiasi oggetto elenco, un oggetto CLR associato a dati ADO.NET o servizi Web o un XmlNode che contiene i [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](binding-sources-overview.md).  
   
- Come detto in altri argomenti concernenti [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], è importante ricordare che quando si stabilisce un binding, si associa una destinazione del binding *a* un'origine del binding. Se, ad esempio, si visualizzano alcuni [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati sottostanti <xref:System.Windows.Controls.ListBox> in un oggetto utilizzando Data Binding <xref:System.Windows.Controls.ListBox> , si associa ai [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati.  
+ Quando si leggono altri argomenti dell'SDK, è importante ricordare che quando si stabilisce un'associazione, si associa una destinazione di binding a un'origine *di* associazione. Se, ad esempio, si visualizzano alcuni [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati sottostanti <xref:System.Windows.Controls.ListBox> in un oggetto utilizzando Data Binding <xref:System.Windows.Controls.ListBox> , si associa ai [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati.  
   
  Per stabilire un'associazione, utilizzare l' <xref:System.Windows.Data.Binding> oggetto. Nella parte restante di questo argomento vengono illustrati molti dei concetti associati a e alcune delle proprietà e l' <xref:System.Windows.Data.Binding> utilizzo dell'oggetto.  
   
@@ -90,7 +90,7 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 - Non illustrato nella figura è <xref:System.Windows.Data.BindingMode.OneTime> l'associazione, che fa in modo che la proprietà di origine Inizializza la proprietà di destinazione, ma le modifiche successive non vengono propagate. Ciò significa che se il contesto dati subisce una modifica o l'oggetto nel contesto dati viene modificato, la modifica non si riflette nella proprietà di destinazione. Questo tipo di binding è appropriato per dati in cui è opportuno usare uno snapshot dello stato corrente o che sono realmente statici. Questo tipo di binding è utile anche se si vuole inizializzare la proprietà di destinazione con un valore ricavato da una proprietà di origine e il contesto dei dati non è noto in anticipo. Si tratta essenzialmente di una forma più semplice di binding <xref:System.Windows.Data.BindingMode.OneWay> che offre prestazioni migliori nei casi in cui il valore di origine non cambia.  
   
- Si noti che per rilevare le modifiche dell'origine <xref:System.Windows.Data.BindingMode.OneWay> ( <xref:System.Windows.Data.BindingMode.TwoWay> applicabili alle associazioni e), l'origine deve implementare un meccanismo di notifica delle <xref:System.ComponentModel.INotifyPropertyChanged>modifiche di proprietà appropriato, ad esempio. Per [](how-to-implement-property-change-notification.md) un esempio di <xref:System.ComponentModel.INotifyPropertyChanged> implementazione, vedere implementare una notifica di modifica delle proprietà.  
+ Si noti che per rilevare le modifiche dell'origine <xref:System.Windows.Data.BindingMode.OneWay> ( <xref:System.Windows.Data.BindingMode.TwoWay> applicabili alle associazioni e), l'origine deve implementare un meccanismo di notifica delle <xref:System.ComponentModel.INotifyPropertyChanged>modifiche di proprietà appropriato, ad esempio. Per un esempio di implementazione di <xref:System.ComponentModel.INotifyPropertyChanged>, vedere [implementare una notifica di modifica delle proprietà](how-to-implement-property-change-notification.md).  
   
  Nella <xref:System.Windows.Data.Binding.Mode%2A> pagina delle proprietà sono disponibili ulteriori informazioni sulle modalità di associazione e un esempio di come specificare la direzione di un'associazione.  
   
@@ -133,7 +133,7 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  ![Diagramma che mostra la proprietà data binding background.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
- Ci si potrebbe chiedere perché funziona anche se la  proprietà ColorName è di tipo stringa, mentre <xref:System.Windows.Controls.Control.Background%2A> la proprietà è di <xref:System.Windows.Media.Brush>tipo. In questo caso viene usata la conversione di tipi predefinita, descritta nella sezione [Conversione dei dati](#data_conversion).  
+ Ci si potrebbe chiedere perché funziona anche se la proprietà *ColorName* è di tipo stringa, mentre <xref:System.Windows.Controls.Control.Background%2A> la proprietà è di <xref:System.Windows.Media.Brush>tipo. In questo caso viene usata la conversione di tipi predefinita, descritta nella sezione [Conversione dei dati](#data_conversion).  
   
 <a name="specifying_the_binding_source"></a>   
 ### <a name="specifying-the-binding-source"></a>Specifica dell'origine del binding  
@@ -186,7 +186,7 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  ![Diagramma che mostra il data binding proprietà predefinita.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
- Tuttavia, cosa accade se invece di avere una proprietà di tipo stringa l'oggetto di origine del  binding ha una proprietà <xref:System.Windows.Media.Color>color di tipo? In tal caso, per consentire il funzionamento dell'associazione, è necessario innanzitutto trasformare il valore della proprietà *color* in un elemento accettato dalla <xref:System.Windows.Controls.Control.Background%2A> proprietà. È necessario creare un convertitore personalizzato implementando l' <xref:System.Windows.Data.IValueConverter> interfaccia, come nell'esempio seguente:  
+ Tuttavia, cosa accade se invece di avere una proprietà di tipo stringa l'oggetto di origine del binding ha una proprietà <xref:System.Windows.Media.Color>color di tipo? In tal caso, per consentire il funzionamento dell'associazione, è necessario innanzitutto trasformare il valore della proprietà *color* in un elemento accettato dalla <xref:System.Windows.Controls.Control.Background%2A> proprietà. È necessario creare un convertitore personalizzato implementando l' <xref:System.Windows.Data.IValueConverter> interfaccia, come nell'esempio seguente:  
   
  [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
  [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
