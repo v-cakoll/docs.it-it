@@ -114,7 +114,7 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimal|  
 |`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
-### <a name="-operator"></a>Operatore \  
+### <a name="-operator"></a>Operatore \\  
  Nella tabella seguente vengono illustrati i tipi di dati `\` dei risultati per l'operatore. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 |||||||||||  
