@@ -2,12 +2,12 @@
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70296841"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848872"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
 
@@ -21,7 +21,7 @@ Per rendere più semplice iniziare, la guida illustra un'applicazione di riferim
 
 ## <a name="action-links"></a>Collegamenti all'azione
 
-- Scaricare questo eBook nel formato preferito: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) |
+- Scaricare questo eBook nel formato preferito: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Clonare o eseguire il fork dell'applicazione di riferimento [eShopOnContainers su GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
  

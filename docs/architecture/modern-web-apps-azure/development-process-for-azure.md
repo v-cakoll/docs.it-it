@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Proc
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374042"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849582"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -36,7 +36,7 @@ Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti n
 
 **Visual Studio Code e l'interfaccia della riga di comando per .NET** (strumenti multipiattaforma per Mac, Linux e Windows). Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code e l'interfaccia della riga di comando per .NET. Questi prodotti offrono un'esperienza semplice ed efficace che consente di ottimizzare il flusso di lavoro di sviluppo. Inoltre, Visual Studio Code supporta le estensioni per C\# e lo sviluppo Web offrendo IntelliSense e attività di collegamento all'interno dell'editor.
 
-[Download di .NET Core SDK](https://www.microsoft.com/net/download/core)
+[Download di .NET Core SDK](https://dotnet.microsoft.com/download)
 
 [Download di Visual Studio Code](https://code.visualstudio.com/download)
 

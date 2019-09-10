@@ -2,12 +2,12 @@
 title: Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux nell'agente nei cluster del servizio Azure Kubernetes
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672578"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848750"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilare applicazioni ASP.NET Core 2.2 distribuite come contenitori Linux in un agente di orchestrazione del servizio Azure Kubernetes
 
@@ -43,7 +43,7 @@ Verificare di avere selezionato come framework ASP.NET Core 2.2. .NET core 2.2 �
 
 **Figura 4-37**. Selezione di ASP.NET CORE 2.2 e del tipo di progetto API Web
 
-Se si ha una versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://www.microsoft.com/net/download/core#/sdk>.
+Se si ha una versione precedente di .NET Core, è possibile scaricare e installare la versione 2.2 da <https://dotnet.microsoft.com/download>.
 
 È possibile aggiungere il supporto per Docker al momento della creazione del progetto o in seguito, in qualsiasi momento. Per aggiungere il supporto per Docker dopo la creazione del progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e selezionare **Aggiungi** > **Supporto Docker** nel menu di scelta rapida.
 
@@ -89,7 +89,7 @@ Se si esegue il comando `docker image`, vengono visualizzate entrambe le immagin
 
 ### <a name="create-a-new-tag-for-the-image"></a>Creare un nuovo tag per l'immagine
 
-Ogni immagine del contenitore deve essere contrassegnata con il nome `loginServer` del registro. Questo tag viene usato per il routing quando si esegue il push delle immagini del contenitore nel registro delle immagini.
+Ogni immagine del contenitore deve essere contrassegnata con `loginServer` il nome del registro di sistema. Questo tag viene usato per il routing quando si effettua il push di immagini del contenitore in un registro immagini.
 
 È possibile visualizzare il nome `loginServer` dal portale di Azure. L'informazione deriva dal Registro Azure Container.
 
@@ -202,7 +202,7 @@ kubectl create -f mssample-deploy.yml
 
 ![Output della console del comando riportato sopra: deployment "mssamplesbook" created. service "mssample-kub-app" created.](media/kubectl-create-command.png)
 
-**Figura 4-48**. Eseguire la distribuzione in Kubernetes
+**Figura 4-48**. Distribuisci in Kubernetes
 
 Al termine della distribuzione, è possibile accedere alla console di Kubernetes con un proxy locale cui è possibile accedere temporaneamente con il comando seguente:
 

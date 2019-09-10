@@ -4,7 +4,7 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 ms.date: 10/08/2018
 ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674248"
@@ -91,19 +91,19 @@ L'uso della convalida dei campi con le annotazioni dei dati, ad esempio, consent
 - **Rick Anderson. Aggiunta della convalida** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Sostituzione della generazione di eccezioni con la notifica nelle convalide)
+- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Sostituzione della generazione di eccezioni con la notifica nelle convalide)\
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Specification and Notification Patterns** \ (Schema Specification e Notification)
+- **Specification and Notification Patterns** \ (Schema Specification e Notification)\
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Convalida nella progettazione basata su dominio (DDD))
+- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Convalida nella progettazione basata su dominio (DDD))\
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack. Domain Model Validation** \ (Convalida del modello di dominio)
+- **Colin Jack. Domain Model Validation** \ (Convalida del modello di dominio)\
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. Validation in a DDD world** \ (Convalida in un mondo DDD)
+- **Jimmy Bogard. Validation in a DDD world** \ (Convalida in un mondo DDD)\
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]

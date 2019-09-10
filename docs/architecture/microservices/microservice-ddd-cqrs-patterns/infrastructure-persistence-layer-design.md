@@ -4,7 +4,7 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 ms.date: 10/08/2018
 ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674118"
@@ -108,21 +108,21 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 
 ### <a name="repository-pattern"></a>Schema Repository
 
-- **The Repository pattern** \ (Lo schema Repository)
+- **The Repository pattern** \ (Lo schema Repository)\
   <https://deviq.com/repository-pattern/>
 
-- **Edward Hieatt and Rob Mee. Repository pattern** (Schema Repository). \
+- **Edward Hieatt and Rob Mee. Repository pattern** (Schema Repository).\ \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **The Repository pattern** \ (Lo schema Repository)
+- **The Repository pattern** \ (Lo schema Repository)\
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software) (Libro; include una trattazione dello schema repository) \
+- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software)\ (Libro; include una trattazione dello schema repository) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Schema Unit of Work
 
-- **Martin Fowler. Unit of Work pattern** (Schema Unit of Work). \
+- **Martin Fowler. Unit of Work pattern** (Schema Unit of Work).\ \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Implementazione degli schemi Repository e Unit of Work in un'applicazione ASP.NET MVC** \
