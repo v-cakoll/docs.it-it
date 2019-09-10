@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: daca11bf927260ee7362f122d1537598d6a49e0e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634151"
----
-<span data-ttu-id="8c47b-101">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="8c47b-101">Entity Framework</span></span>
