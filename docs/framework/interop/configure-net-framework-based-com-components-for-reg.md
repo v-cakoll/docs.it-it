@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625443"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853847"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -105,7 +105,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 4. Identificare ogni classe nell'assembly. Usare l'elemento `<clrClass>` per identificare in modo univoco ogni classe nell'assembly gestito. L'elemento, che costituisce un sottoelemento di `<assembly>` dispone degli attributi descritti nella tabella seguente.  
   
-    |Attributo|Description|Obbligatorio|  
+    |Attributo|Descrizione|Obbligatoria|  
     |---------------|-----------------|--------------|  
     |`clsid`|Identificatore che specifica la classe da attivare.|Sì|  
     |`description`|Stringa contenente informazioni sul componente. Il valore predefinito è una stringa vuota.|No|  
@@ -166,11 +166,9 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 3. Compilare di nuovo il file di origine dell'assembly e specificare il file di risorse usando l'opzione **/win32res**:  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     Anche in questo caso, `myresource.res` rappresenta il nome del file di risorse contenente la risorsa incorporata.  
+     Anche in `myresource.res` questo caso, è il nome del file di risorse contenente le risorse incorporate.  
   
 ## <a name="see-also"></a>Vedere anche
 

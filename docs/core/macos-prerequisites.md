@@ -5,12 +5,12 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: 4e0570beb0dd096d7d11cdcfb6a7ed20221c0386
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433903"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848950"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Prerequisiti per .NET Core in macOS
 
@@ -26,7 +26,7 @@ Questo articolo illustra le versioni macOS supportate e le dipendenze .NET Core 
 
 Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzioni supportati da .NET Core 2.1 e .NET Core 2.2, nonché delle versioni di sistemi operativi non supportate e dei criteri relativi al ciclo di vita, vedere [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) (.NET Core 2.1 - Versioni di sistemi operativi supportate) e [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) (.NET Core 2.2 - Versioni di sistemi operativi supportate).
 
-Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) (Download di .NET Core 2.2) o [.NET Core 2.1 downloads](https://www.microsoft.com/net/download/dotnet-core/2.1) (Download di .NET Core 2.1).
+Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2) (Download di .NET Core 2.2) o [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1) (Download di .NET Core 2.1).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -37,7 +37,7 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 d
 
 Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzioni supportati da .NET Core 1.1 e .NET Core 1.0, nonché delle versioni di sistemi operativi non supportate e dei criteri relativi al ciclo di vita, vedere [.NET Core 1.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) (.NET Core 1.1 - Versioni di sistemi operativi supportate) e [.NET Core 1.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) (.NET Core 1.0 - Versioni di sistemi operativi supportate).
 
-Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) (Download di .NET Core 1.1) o [.NET Core 1.0 downloads](https://www.microsoft.com/net/download/dotnet-core/1.0) (Download di .NET Core 1.0).
+Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.1) (Download di .NET Core 1.1) o [.NET Core 1.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.0) (Download di .NET Core 1.0).
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -47,7 +47,7 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 d
 
 Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzioni supportati da .NET Core 3.0, nonché delle versioni di sistemi operativi non supportate e dei criteri relativi al ciclo di vita, vedere [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (.NET Core 3.0 - Versioni di sistemi operativi supportate).
 
-Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downloads](https://www.microsoft.com/net/download/dotnet-core/3.0) (Download di .NET Core 3.0).
+Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0) (Download di .NET Core 3.0).
 
 ---
 
@@ -55,7 +55,7 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemi noti) per la versione installata.
+Scaricare e installare il .NET Core SDK dalla pagina di [download di .NET](https://dotnet.microsoft.com/download) . In caso di problemi con l'installazione in macOS, vedere l'argomento [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) (Problemi noti) per la versione installata.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -69,11 +69,11 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere gli argomenti [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) (Problemi noti della versione 1.0.0) e [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) (Problemi noti della versione 1.0.1).
+Scaricare e installare il .NET Core SDK dalla pagina di [download di .NET](https://dotnet.microsoft.com/download) . In caso di problemi con l'installazione in macOS, vedere gli argomenti [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) (Problemi noti della versione 1.0.0) e [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) (Problemi noti della versione 1.0.1).
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.com/net/download/core) (Download di .NET). In caso di problemi con l'installazione in macOS, vedere l'argomento [Release notes](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (Note sulla versione) per la versione installata.
+Scaricare e installare il .NET Core SDK dalla pagina di [download di .NET](https://dotnet.microsoft.com/download) . In caso di problemi con l'installazione in macOS, vedere l'argomento [Release notes](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (Note sulla versione) per la versione installata.
 
 ---
 

@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918888"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855252"
 ---
 # <a name="filter"></a>\<Filtra >
 
 Definisce un filtro di routing che determina il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo, nonché qualsiasi dato o parametro di supporto richiesto dal filtro.
 
-\<System. ServiceModel > \<routing > \<filtri > \<filtro >
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<routing>** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Filtra >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtra >**  
   
 ## <a name="syntax"></a>Sintassi  
   

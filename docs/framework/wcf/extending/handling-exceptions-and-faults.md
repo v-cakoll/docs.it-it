@@ -2,12 +2,12 @@
 title: Gestione di eccezioni ed errori
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795692"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851274"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
 Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno del servizio o nell'implementazione del client. Gli errori, d'altra parte, vengono utilizzati per comunicare problemi tra servizi, ad esempio dal server al client o viceversa. Oltre agli errori, i canali del trasporto spesso utilizzano meccanismi specifici per comunicare errori a livello di trasporto. Il trasporto HTTP, ad esempio, utilizza codici di stato, come 404, per comunicare un URL di endpoint inesistente (nessun endpoint al quale restituire un errore). Questo documento è composto da tre sezioni che contengono materiale sussidiario utile per gli autori di canali personalizzati. Nella prima sezione è contenuto materiale sussidiario sulle circostanze e le modalità di definizione e generazione delle eccezioni. Nella seconda sezione sono fornite istruzioni sulla generazione e l'utilizzo di errori. Nella terza sezione viene spiegato come fornire informazioni di traccia per aiutare l'utente del canale personalizzato a risolvere i problemi delle applicazioni in esecuzione.  
@@ -48,7 +48,7 @@ Errore SOAP 1.2 (sinistra) ed errore SOAP 1.1 (destra). Si noti che in SOAP 1.1 
   
  In SOAP un messaggio di errore viene definito come messaggio contenente solo un elemento Fault (un elemento denominato `<env:Fault>` come elemento figlio di `<env:Body>`. Il contenuto dell'elemento errore differisce leggermente SOAP 1.1 e SOAP 1.2, come mostrato in Figura 1. Tuttavia, la classe <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normalizza queste differenze in un unico modello a oggetti:  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -74,7 +74,7 @@ public abstract class MessageFault
   
  È necessario creare nuovi codici secondari di errore (o nuovi codici di errore se si utilizza SOAP 1.1) se è utile distinguere un errore a livello di programmazione. Ciò ha valore analogo alla creazione di un nuovo tipo di eccezione. È consigliabile evitare di utilizzare la notazione del punto con i codici di errore SOAP 1.1. Il [profilo di base WS-I](https://go.microsoft.com/fwlink/?LinkId=95177) sconsiglia anche l'uso della notazione del punto di codice di errore.  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  La proprietà `Reason` corrisponde a `env:Reason` (o `faultString` in SOAP 1.1), una descrizione intelligibile della condizione di errore analoga a un messaggio di eccezione. La classe `FaultReason` (e `env:Reason/faultString` SOAP) incorpora il supporto delle conversioni multiple nell'interesse della globalizzazione.  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -118,7 +118,7 @@ public class FaultReason
   
  Nel caso della generazione di un errore, è preferibile che il canale personalizzato non invii l'errore direttamente bensì generi un'eccezione e lasci al livello superiore la decisione di convertire l'eccezione in errore e la scelta della modalità di invio. Per favorire questa conversione, è opportuno che il canale fornisca un'implementazione di `FaultConverter` in grado di convertire l'eccezione generata dal canale personalizzato nell'errore appropriato. L'oggetto `FaultConverter` viene definito come:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -134,7 +134,7 @@ public class FaultConverter
   
  Ogni canale che genera errori personalizzati deve implementare `FaultConverter` e restituirlo da una chiamata a `GetProperty<FaultConverter>`. L'implementazione personalizzata di `OnTryCreateFaultMessage` deve convertire l'eccezione in un errore o delegare all'elemento `FaultConverter` del canale interno. Se il canale è un trasporto, deve convertire l'eccezione o il delegato nell'oggetto del codificatore `FaultConverter` o nel valore predefinito `FaultConverter` fornito in WCF. `FaultConverter` predefinito converte errori corrispondenti ai messaggi di errore specificati da WS-Addressing e SOAP. Di seguito è illustrata un'implementazione di `OnTryCreateFaultMessage` di esempio:  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  Il modello a oggetti seguente supporta la conversione dei messaggi in eccezioni:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  Un'implementazione tipica si presenta come segue:  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -290,7 +290,7 @@ public override bool OnTryCreateException(
   
  Se il canale del protocollo invia un'intestazione personalizzata con MustUnderstand=true e riceve un errore `mustUnderstand`, deve appurare se l'errore è dovuto all'intestazione inviata. A questo scopo tornano utili due membri nella classe `MessageFault`:  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -322,7 +322,7 @@ public class MessageFault
   
  Una volta in possesso di un'origine di traccia, chiamare i relativi metodi <xref:System.Diagnostics.TraceSource.TraceData%2A>, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> o <xref:System.Diagnostics.TraceSource.TraceInformation%2A> per scrivere voci di traccia nei listener di traccia. Per ogni voce di traccia che si scrive, è necessario classificare il tipo di evento in base ai tipi definiti in <xref:System.Diagnostics.TraceEventType>. Questa classificazione e l'impostazione del livello di traccia nella configurazione determinano se la voce di traccia è restituita al listener. Impostando il livello di traccia nella configurazione su `Warning`, ad esempio, si consente la scrittura delle voci di traccia `Warning`, `Error` e `Critical` bloccando però le voci Informazioni e Dettagliato. Segue un esempio di creazione di un'istanza di un'origine di traccia e di scrittura di una voce al livello Informazioni:  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911630"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854233"
 ---
 # <a name="working-with-data-definition-language"></a>Utilizzo di Data Definition Language
-A partire da .NET Framework versione 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta Data Definition Language (DDL). Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).  
+A partire da .NET Framework versione 4, il Entity Framework supporta Data Definition Language (DDL). Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).  
   
  Di seguito sono indicati i metodi di <xref:System.Data.Objects.ObjectContext> che usano la stringa di connessione e il contenuto SSDL per portare a termine le operazioni seguenti: creare o eliminare il database, verificare l'esistenza del database e visualizzare lo script DDL generato.  
   

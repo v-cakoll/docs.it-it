@@ -4,12 +4,12 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612225"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849062"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -27,7 +27,7 @@ Questo articolo illustra le dipendenze necessarie per sviluppare applicazioni .N
 
 .NET Core 2.x considera Linux come un singolo sistema operativo. Esiste una sola build di Linux (per l'architettura chip) per le distribuzioni di Linux supportate. 
 
-Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) (Download di .NET Core 2.2) o [.NET Core 2.1 downloads](https://www.microsoft.com/net/download/dotnet-core/2.1) (Download di .NET Core 2.1).
+Per i collegamenti per il download e altre informazioni, vedere [.NET Core 2.2 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.2) (Download di .NET Core 2.2) o [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1) (Download di .NET Core 2.1).
 
 .NET Core 2.x è supportato nelle seguenti distribuzioni/versioni Linux:
 
@@ -46,7 +46,7 @@ Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzion
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) (Download di .NET Core 1.1) o [.NET Core 1.0 downloads](https://www.microsoft.com/net/download/dotnet-core/1.0) (Download di .NET Core 1.0).
+Per i collegamenti per il download e altre informazioni, vedere [.NET Core 1.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.1) (Download di .NET Core 1.1) o [.NET Core 1.0 downloads](https://dotnet.microsoft.com/download/dotnet-core/1.0) (Download di .NET Core 1.0).
 
 NET Core 1.x è supportato nelle versioni/distribuzioni di Linux a 64 bit (`x86_64` o `amd64`) seguenti:
 
@@ -69,10 +69,10 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 
 .NET Core 3.0 Preview 1 è supportato nelle seguenti distribuzioni/versioni di Linux. 
 
-Sistema operativo                            | Versione               | Architetture  
+OS                            | Versione               | Architetture  
 ------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
+Red Hat Enterprise Linux.      | 6                     | X64
+Red Hat Enterprise Linux.<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
 Debian                        | 9                     | x64, ARM32\*, ARM64\*
 Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
@@ -154,7 +154,7 @@ Lo script assume come impostazione predefinita l'installazione della versione "L
 
 Lo script bash del programma di installazione viene usato negli scenari di automazione e nelle installazioni non di amministratore. Questo script legge anche le opzioni PowerShell, che possono quindi essere usate con lo script nei sistemi Linux/OS X.
 
-## <a name="troubleshoot"></a>Risolvere i problemi
+## <a name="troubleshoot"></a>Risolvere problemi
 
 Se si verificano problemi in fase di installazione di .NET Core in una distribuzione/versione Linux supportata, vedere i seguenti argomenti per le distribuzioni/versioni installate in uso:
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0060f14319bb0dfbed597e59dfe44666c4cfbe84
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250141"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854454"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Esempi di sintassi delle query basate su metodo: Spostamento tra relazioni
-Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono proprietà di collegamento usate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento vengono forniti esempi di sintassi delle query basate su metodo su come spostarsi tra le relazioni tramite le proprietà di navigazione in query LINQ to Entities.  
+Le proprietà di navigazione nel Entity Framework sono proprietà di collegamento utilizzate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento vengono forniti esempi di sintassi delle query basate su metodo su come spostarsi tra le relazioni tramite le proprietà di navigazione in query LINQ to Entities.  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   

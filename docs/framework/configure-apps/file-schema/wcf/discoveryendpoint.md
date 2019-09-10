@@ -2,19 +2,21 @@
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 6bb5be09ea598296f01e186280c45757dee9405d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32b14f8fb3235040a51455f2099a403c8312c699
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919142"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855402"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
 Questo elemento di configurazione definisce un endpoint standard con un contratto di individuazione fisso. Quando viene aggiunto alla configurazione del servizio, specifica la posizione di ascolto dei messaggi di individuazione. Quando viene aggiunto alla configurazione del client, specifica la posizione di invio delle query di individuazione.  
   
-\<system.serviceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> discoveryEndpoint**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +52,7 @@ Nessuno.
   
 ### <a name="parent-elements"></a>Elementi padre
 
-| Elemento | Descrizione |  
+| Elemento | DESCRIZIONE |  
 | ------- | ----------- |  
 | [\<standardEndpoints>](standardendpoints.md) | Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse. |  
   

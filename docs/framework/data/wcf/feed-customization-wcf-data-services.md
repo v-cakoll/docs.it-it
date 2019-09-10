@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790858"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854193"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalizzazione di feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] USA per esporre i dati come feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]supporta sia i formati Atom che JavaScript Object Notation (JSON) per i feed di dati. Quando si usa un feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornisce un metodo standard per serializzare i dati, ad esempio entità e relazioni, in un formato XML che può essere incluso nel corpo del messaggio http. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definisce un mapping predefinito delle proprietà di entità tra i dati contenuti nelle entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: Formato](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790858"
 > Quando si definiscono feed personalizzati, è necessario assicurarsi che tutte le proprietà dell'entità che dispongono di definizioni di mapping personalizzate siano incluse nella proiezione. Se una proprietà di entità mappata non è inclusa nella proiezione potrebbe verificarsi una perdita di dati. Per altre informazioni, vedere [proiezioni di query](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizzazione di feed con il provider di Entity Framework  
- Il modello di dati usato con il provider di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] è rappresentato come codice XML nel file con estensione edmx. In questo caso, gli attributi che definiscono i feed personalizzati vengono aggiunti agli elementi `EntityType` e `Property` che rappresentano tipi di entità e proprietà nel modello di dati. Questi attributi di personalizzazione del feed non sono [definiti in \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)del file di definizione dello schema concettuale, ovvero il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] formato utilizzato dal provider per definire il modello di dati. È pertanto necessario dichiarare gli attributi di personalizzazione dei feed in uno spazio dei nomi dello schema specifico, definito come `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Nel frammento XML seguente vengono illustrati gli attributi di personalizzazione dei feed applicati agli elementi `Property` del tipo di entità `Products` che definiscono le proprietà `ProductName`, `ReorderLevel` e `UnitsInStock`.  
+ Il modello di dati utilizzato con il provider di Entity Framework viene rappresentato come XML nel file con estensione edmx. In questo caso, gli attributi che definiscono i feed personalizzati vengono aggiunti agli elementi `EntityType` e `Property` che rappresentano tipi di entità e proprietà nel modello di dati. Questi attributi di personalizzazione del feed non sono [definiti in \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)del file di definizione dello schema concettuale, ovvero il formato utilizzato dal provider Entity Framework per definire il modello di dati. È pertanto necessario dichiarare gli attributi di personalizzazione dei feed in uno spazio dei nomi dello schema specifico, definito come `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Nel frammento XML seguente vengono illustrati gli attributi di personalizzazione dei feed applicati agli elementi `Property` del tipo di entità `Products` che definiscono le proprietà `ProductName`, `ReorderLevel` e `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

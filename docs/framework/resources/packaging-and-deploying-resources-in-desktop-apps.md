@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105919"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851607"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -176,13 +176,13 @@ Se si vuole è possibile rimuovere risorse dall'assembly principale e specificar
 
 Nell'esempio di .NET Framework seguente viene usato l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per archiviare le risorse di fallback di un'applicazione in un assembly satellite per la lingua francese (`fr`). L'esempio include due file di testo di risorse che definiscono un'unica risorsa stringa denominata `Greeting`. Il primo file, resources.fr.txt, contiene una risorsa per la lingua francese.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 Il secondo file, resources.ru.txt, contiene una risorsa per la lingua russa.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Poiché nell'assembly principale non sono incorporate risorse, non è necessario
 
 Quando si esegue l'esempio da un sistema la cui lingua è diversa dal russo viene visualizzato il seguente output:
 
-```
+```output
 Bon jour!
 ```
 

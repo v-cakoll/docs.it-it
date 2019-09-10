@@ -2,16 +2,16 @@
 title: Script dotnet-install
 description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
 ms.date: 01/16/2019
-ms.openlocfilehash: ed1a3341e678b405ae4aca35e3b49ada89eb069a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253904"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849569"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOME
 
 `dotnet-install.ps1` | `dotnet-install.sh`: script usato per l'installazione degli strumenti dell'interfaccia della riga di comando e del runtime condiviso di .NET Core.
 
@@ -25,7 +25,7 @@ macOS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>DESCRIZIONE
 
 Gli script `dotnet-install` vengono usati per eseguire un'installazione non amministrativa di .NET Core SDK, che include gli strumenti dell'interfaccia della riga di comando e il runtime condiviso di .NET Core.
 
@@ -55,7 +55,7 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
   - Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`.
   - Nome ramo. Ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` (per le versione notturne).
 
-  Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy#dotnet-core) (Criteri di supporto per .NET).
+  Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere la pagina [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) (Criteri di supporto per .NET).
 
 - **`-Version <VERSION>`**
 

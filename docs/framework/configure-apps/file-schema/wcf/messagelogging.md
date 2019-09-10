@@ -2,19 +2,20 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931409"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855130"
 ---
 # <a name="messagelogging"></a>\<messageLogging>
 Questo elemento definisce le impostazioni per le funzionalità di registrazione dei messaggi di Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-\<> di diagnostica  
-\<messageLogging>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di diagnostica**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> messageLogging**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +52,7 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |filters|L'elemento `filters` contiene una raccolta dei filtri di XPath. Se la registrazione dei messaggi di trasporto è attivata (`logMessagesAtTransportLevel` è `true`), verranno registrati solo i messaggi corrispondenti ai filtri.<br /><br /> I filtri vengono applicati solo a livello di trasporto. I filtri non influiscono sulla registrazione dei messaggi a livello di servizio e in formato non valido.<br /><br /> L'unico attributo di questo elemento, `filter`, è un XpathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   

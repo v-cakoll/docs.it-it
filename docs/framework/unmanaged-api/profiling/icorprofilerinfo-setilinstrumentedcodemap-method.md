@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661945"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855702"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Metodo ICorProfilerInfo::SetILInstrumentedCodeMap
 
-Imposta una mappa codici per la funzione specificata utilizzando voci della mappa specificate Microsoft intermediate language (MSIL).
+Imposta una mappa codice per la funzione specificata utilizzando le voci della mappa MSIL (Microsoft Intermediate Language) specificate.
 
 > [!NOTE]
-> In .NET Framework versione 2.0, la chiamata `SetILInstrumentedCodeMap` su un `FunctionID` che rappresenta una funzione generica in un determinato dominio dell'applicazione influirà su tutte le istanze della funzione nel dominio dell'applicazione.
+> Nel .NET Framework versione 2,0, la chiamata `SetILInstrumentedCodeMap` di su `FunctionID` un oggetto che rappresenta una funzione generica in un particolare dominio applicazione influirà su tutte le istanze di tale funzione nel dominio applicazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,54 +44,56 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parametri
 
 `functionId`\
-[in] L'ID della funzione per cui impostare la mappa del codice.
+in ID della funzione per la quale impostare la mappa del codice.
 
 `fStartJit`\
-[in] Un valore booleano che indica se la chiamata per il `SetILInstrumentedCodeMap` metodo è il primo di una particolare `FunctionID`. Impostare `fStartJit` al `true` nella prima chiamata a `SetILInstrumentedCodeMap` per un determinato `FunctionID`e a `false` successivamente.
+in Valore booleano che indica se la chiamata al `SetILInstrumentedCodeMap` metodo è la prima per un particolare. `FunctionID` Impostare `fStartJit` `SetILInstrumentedCodeMap` su `true` nella prima chiamata a per un oggetto specificato `FunctionID`e su `false` successivamente.
 
 `cILMapEntries`\
-[in] Il numero di elementi nel `cILMapEntries` matrice.
+in Numero di elementi nella `cILMapEntries` matrice.
 
 `rgILMapEntries`\
-[in] Matrice di strutture COR_IL_MAP, ognuno dei quali specifica un offset MSIL.
+in Matrice di strutture COR_IL_MAP, ognuna delle quali specifica un offset MSIL.
 
 ## <a name="remarks"></a>Note
 
-Spesso, un profiler inserisce istruzioni all'interno del codice sorgente di un metodo per instrumentare tale metodo (ad esempio, per inviare una notifica quando viene raggiunta una riga di origine specificato). `SetILInstrumentedCodeMap` consente a un profiler eseguire il mapping di istruzioni MSIL originale nelle nuove posizioni. Un profiler può usare la [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodo per ottenere l'offset MSIL originale per un determinato offset nativi.
+Un profiler spesso inserisce istruzioni all'interno del codice sorgente di un metodo per instrumentare il metodo (ad esempio, per inviare una notifica quando viene raggiunta una determinata riga di codice sorgente). `SetILInstrumentedCodeMap`consente a un profiler di eseguire il mapping delle istruzioni MSIL originali ai nuovi percorsi. Un profiler può usare il metodo [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) per ottenere l'offset MSIL originale per un offset nativo specificato.
 
-Il debugger presuppone che ogni offset precedente fa riferimento a un offset all'interno del codice MSIL originale, non modificato MSIL e che ogni nuovo offset fa riferimento all'offset all'interno del nuovo codice instrumentato MSIL. La mappa deve essere disposti in ordine crescente. Per l'esecuzione di istruzioni per il corretto funzionamento, seguire queste linee guida:
+Il debugger presuppone che ogni offset precedente faccia riferimento a un offset MSIL all'interno del codice MSIL originale, non modificato e che ogni nuovo offset faccia riferimento all'offset MSIL all'interno del nuovo codice instrumentato. La mappa deve essere ordinata in ordine crescente. Per il corretto funzionamento, attenersi alle seguenti linee guida:
 
-- Non riordinano le codice instrumentato MSIL.
+- Non riordinare il codice MSIL instrumentato.
 
 - Non rimuovere il codice MSIL originale.
 
-- Includere le voci per tutti i punti di sequenza dal file di database (PDB) di programma nella mappa. La mappa non esegue l'interpolazione voci mancanti. Pertanto, data la mappa seguente:
+- Includere le voci per tutti i punti di sequenza dal file di database di programma (PDB) nella mappa. La mappa non esegue l'interpolazione delle voci mancanti. Quindi, data la mappa seguente:
 
-  (0 precedente, 0 nuovi)
+  (0 vecchio, 0 nuovo)
 
-  (5 precedenti, 10 nuovi)
+  (5 anni, 10 nuovi)
 
-  (9 precedente, 20 nuovi)
+  (9 anni, 20 nuovi)
 
-  - Verrà eseguito il mapping di un offset 0, 1, 2, 3 o 4 precedente al nuovo offset 0.
+  - Viene eseguito il mapping di un offset precedente di 0, 1, 2, 3 o 4 al nuovo offset 0.
 
-  - Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.
+  - Viene eseguito il mapping di un offset precedente di 5, 6, 7 o 8 al nuovo offset 10.
 
-  - Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.
+  - Verrà eseguito il mapping di un offset precedente di 9 o superiore al nuovo offset 20.
 
-  - Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.
+  - Viene eseguito il mapping di un nuovo offset di 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 all'offset precedente 0.
 
-  - Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.
+  - Viene eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 alla precedente offset 5.
 
-  - Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.
+  - Verrà eseguito il mapping di un nuovo offset di 20 o superiore alla precedente offset 9.
+
+In .NET Framework 3,5 e versioni precedenti è necessario allocare la `rgILMapEntries` matrice chiamando il metodo [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Poiché il runtime acquisisce la proprietà della memoria, il profiler non deve tentare di liberarlo.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Intestazione:** CorProf.idl, CorProf.h
+**Intestazione:** CorProf. idl, CorProf. h
 
-**Libreria:** CorGuids.lib
+**Libreria** CorGuids.lib
 
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

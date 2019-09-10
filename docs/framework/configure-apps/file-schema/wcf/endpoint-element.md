@@ -2,19 +2,21 @@
 title: Elemento <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925819"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855387"
 ---
 # <a name="endpoint-element"></a>\<elemento > endpoint
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
   
- \<system.ServiceModel>  
-\<> del servizio  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dei servizi**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> del servizio**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endpoint**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +41,7 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |Address|Stringa che contiene l'indirizzo dell'endpoint. L'indirizzo può essere specificato come indirizzo assoluto o relativo. Se viene fornito un indirizzo relativo, l'host deve fornire un indirizzo di base appropriato per lo schema di trasporto usato nell'associazione. Se non viene configurato un indirizzo, si presuppone che l'indirizzo di base valga come indirizzo per quell'endpoint.<br /><br /> Il valore predefinito è una stringa vuota.|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare nell'endpoint.|  
@@ -64,7 +66,7 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<service>](service.md)|Sezione di configurazione che definisce un elenco di endpoint ai quali può connettersi un client.|  
   

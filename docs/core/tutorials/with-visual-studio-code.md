@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105098"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849462"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -18,7 +18,7 @@ ms.locfileid: "70105098"
 ## <a name="prerequisites"></a>Prerequisiti
 
 1. Installare [Visual Studio Code](https://code.visualstudio.com/).
-2. Installare [.NET Core SDK](https://www.microsoft.com/net/download/core).
+2. Installare [.NET Core SDK](https://dotnet.microsoft.com/download).
 3. Installare l'[estensione C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) per Visual Studio Code. Per altre informazioni su come installare estensioni in Visual Studio Code, vedere [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) (Marketplace delle estensioni di Visual Studio Code).
 
 ## <a name="hello-world"></a>Hello World

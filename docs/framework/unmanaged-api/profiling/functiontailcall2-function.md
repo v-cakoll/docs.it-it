@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e10b1a77586a09f8f5f7a59e811953fbede8773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586888"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851216"
 ---
 # <a name="functiontailcall2-function"></a>Funzione FunctionTailcall2
-Notifica al profiler che la funzione attualmente in esecuzione sta per effettuare una chiamata tail ad un'altra funzione e fornisce informazioni sullo stack frame.  
+Notifica al profiler che la funzione attualmente in esecuzione sta per eseguire una chiamata tail a un'altra funzione e fornisce informazioni sul stack frame.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp
 void __stdcall FunctionTailcall2 (  
     [in] FunctionID         funcId,   
     [in] UINT_PTR           clientData,   
@@ -38,39 +38,39 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parametri  
  `funcId`  
- [in] Identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.  
+ in Identificatore della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.  
   
  `clientData`  
- [in] Identificatore della funzione modificato, quali il profiler specificato in precedenza tramite [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.  
+ in Identificatore della funzione di cui è stato eseguito il mapping, che il profiler ha specificato in precedenza tramite [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), della funzione attualmente in esecuzione che sta per effettuare una chiamata tail.  
   
  `func`  
- [in] Oggetto `COR_PRF_FRAME_INFO` valore che punta alle informazioni sullo stack frame.  
+ in `COR_PRF_FRAME_INFO` Valore che punta alle informazioni relative all'stack frame.  
   
- Il profiler deve trattarlo come un handle opaco che può essere passato al motore di esecuzione la [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) (metodo).  
+ Il profiler deve considerarlo come un handle opaco che può essere passato di nuovo al motore di esecuzione nel metodo [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
 ## <a name="remarks"></a>Note  
- La funzione di destinazione della chiamata tail verrà utilizzato lo stack frame corrente e restituirà direttamente al chiamante della funzione che ha effettuato la parte finale di chiamata. Ciò significa che un [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback non verrà generato per una funzione che rappresenta la destinazione di una chiamata tail.  
+ La funzione di destinazione della chiamata tail utilizzerà l'stack frame corrente e tornerà direttamente al chiamante della funzione che ha eseguito la chiamata tail. Ciò significa che non verrà emesso un callback [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) per una funzione che è la destinazione di una chiamata tail.  
   
- Il valore dei `func` parametro non valido dopo il `FunctionTailcall2` funzione perché il valore potrebbe cambiare o essere distrutto.  
+ Il valore del `func` parametro non è valido dopo la restituzione della `FunctionTailcall2` funzione perché il valore può essere modificato o eliminato.  
   
- Il `FunctionTailcall2` funzione è un callback, è necessario implementarla. L'implementazione deve utilizzare il `__declspec`(`naked`) attributo della classe di archiviazione.  
+ La `FunctionTailcall2` funzione è un callback. è necessario implementarla. L'implementazione deve usare l' `__declspec`attributo`naked`della classe di archiviazione ().  
   
- Il motore di esecuzione non viene salvato alcun registro prima di chiamare questa funzione.  
+ Il motore di esecuzione non salva i registri prima di chiamare questa funzione.  
   
-- In ingresso, è necessario salvare tutti i registri che usi, tra cui quelle in unità a virgola mobile (FPU).  
+- In ingresso è necessario salvare tutti i registri utilizzati, inclusi quelli nell'unità a virgola mobile (FPU).  
   
-- In uscita, è necessario ripristinare lo stack recuperando tutti i parametri che sono stati inseriti dal relativo chiamante.  
+- All'uscita è necessario ripristinare lo stack scegliendo tutti i parametri di cui è stato eseguito il push dal chiamante.  
   
- L'implementazione di `FunctionTailcall2` non devono bloccare perché ritarderà l'operazione di garbage collection. L'implementazione non deve tentare una garbage collection perché lo stack potrebbe non essere in uno stato di garbage collection adatto. Se si tenta un'operazione di garbage collection, il runtime si bloccherà fino a `FunctionTailcall2` restituisce.  
+ L'implementazione di `FunctionTailcall2` non deve essere bloccata perché ritarderà Garbage Collection. L'implementazione non deve tentare un Garbage Collection perché lo stack potrebbe non essere in uno stato descrittivo Garbage Collection. Se viene effettuato un tentativo di Garbage Collection, il runtime si `FunctionTailcall2` bloccherà fino a quando non viene restituito.  
   
- Inoltre, il `FunctionTailcall2` funzione non deve chiamare codice gestito o causare in alcun modo un'allocazione di memoria gestita.  
+ Inoltre, la `FunctionTailcall2` funzione non deve chiamare nel codice gestito o in alcun modo causare un'allocazione managed memory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

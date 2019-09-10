@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Rami e cicli in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-  ms.translationtype: HT
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661011"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850677"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione interattiva "Numeri in C#". Fare clic sul collegamento **Rami e cicli** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Numeri in C#". Fare clic sul collegamento **Rami e cicli** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313658"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851569"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creare i file di risorse per le app .NET
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. Ad esempio:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  Se si usa C# e il file di codice sorgente è denominato Greeting.cs, il comando seguente crea un file eseguibile che include il file con estensione resources incorporato:
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

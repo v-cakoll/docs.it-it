@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041408"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851253"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 
@@ -29,7 +29,7 @@ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, u
 
 Al prompt dei comandi digitare quanto segue:
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ Nel visualizzatore è riportata una voce per ciascuna associazione di assembly n
 
 Nell'esempio seguente viene illustrata una voce di log in cui sono visualizzate informazioni dettagliate su un'associazione di assembly non riuscita.
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di asso
 
 Nel log seguente viene riportato un errore causato da una dipendenza inesistente nel momento in cui è stata creata l'immagine nativa per l'applicazione. Se le dipendenze in fase di esecuzione differiscono dalle dipendenze durante l'esecuzione di Ngen.exe, l'associazione a un'immagine nativa non è consentita.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 Nel log seguente viene riportato un errore di associazione dell'immagine nativa che si è verificato perché le impostazioni di sicurezza del computer nel momento in cui è stata eseguita l'applicazione erano diverse da quelle impostate al momento della creazione dell'immagine nativa.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

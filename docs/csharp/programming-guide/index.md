@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589483"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850967"
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
   
- La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. I principianti che non hanno alcuna dimestichezza con la programmazione o con C# possono visitare le [esercitazioni di introduzione a C#](../tutorials/intro-to-csharp/index.md) o l'esercitazione interattiva [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introduzione a C#), in cui non è richiesta alcuna conoscenza di programmazione.  
+ La maggior parte di questa sezione presuppone che siano già noti i concetti principali relativi a C# e alla programmazione in generale. Se si è un utente completo con la programmazione o C#con, è possibile visitare l'esercitazione [Introduzione alle C# esercitazioni](../tutorials/intro-to-csharp/index.md) o [.NET nel browser, in](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)cui non è necessaria alcuna conoscenza della programmazione precedente.  
   
  Per informazioni su parole chiave, operatori e direttive per il preprocessore specifici, vedere [Riferimenti per C#](../language-reference/index.md). Per informazioni sulla specifica del linguaggio C++, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md).  
   

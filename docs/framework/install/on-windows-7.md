@@ -5,12 +5,12 @@ description: Informazioni su come installare .NET Framework in Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 1e046641e5d09b13c41e1c5c4e07ed2531dfe058
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ae7401b1184829b8836055797281251164237
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267949"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853920"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installare .NET Framework in Windows 7 SP1 e Windows Server 2008 R2
 
@@ -39,6 +39,6 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Scaricare .NET Framework](https://dotnet.microsoft.com/download)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installare .NET Framework per sviluppatori](guide-for-developers.md)

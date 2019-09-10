@@ -2,19 +2,20 @@
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: b65cc4d04b5304e93b70509c9db3bc2248accb7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5f2bb030d13389e15cb44f1ddff3b8168b4f2140
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926441"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850262"
 ---
 # <a name="backuplists"></a>\<> backupLists
 Rappresenta una sezione di configurazione per la definizione di un set di servizi di backup usati nella gestione degli errori. Ogni elemento figlio è un elenco di backup che enumera un set di endpoint che si desidera vengano utilizzati dal servizio di routing nel caso in cui non sia possibile raggiungere l'endpoint primario. Se il primo endpoint dell'elenco non funziona, il servizio di routing eseguirà automaticamente il failover nel successivo endpoint dell'elenco.  In questo modo è possibile migliorare rapidamente l'affidabilità all'applicazione senza che sia necessario indicare all'applicazione client come gestire modelli complessi o la posizione in cui i servizi sono distribuiti.  
   
- \<system.serviceModel>  
-\<routing>  
-\<> backupLists  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di routing**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> backupLists**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ Rappresenta una sezione di configurazione per la definizione di un set di serviz
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<filter>](filter.md)|Contiene un elenco di endpoint che si desidera vengano utilizzati dal servizio di routing nel caso in cui non sia possibile raggiungere l'endpoint primario. .|  
   

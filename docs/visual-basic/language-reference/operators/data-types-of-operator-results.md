@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: b0ebdb723df6bdb4f74e1558537c307ddb917f64
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bc7f29ae0e29a4c2fbfdf2e40d2226e174a06d3a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "69923280"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856041"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipi di dati dei risultati degli operatori (Visual Basic)
 Visual Basic determina il tipo di dati del risultato di un'operazione in base ai tipi di dati degli operandi. In alcuni casi potrebbe trattarsi di un tipo di dati con un intervallo maggiore rispetto a quello di uno degli operandi.  
@@ -98,7 +98,7 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
   
  Se l'operando sinistro `Decimal`è `Single` `Double`,, o `String`, Visual Basic tenta di convertirlo in `Long` prima dell'operazione e il tipo di dati del risultato `Long`è. L'operando destro (il numero di posizioni di bit da spostare) `Integer` deve essere o un tipo che si `Integer`allarga a.  
   
-### <a name="binary----and-mod-operators"></a>Operatori binari +,-, * e mod  
+### <a name="binary----and-mod-operators"></a>Operatori binari +,- \*, e mod  
  Nella tabella seguente vengono illustrati i tipi di dati dei `+` risultati `–` per gli operatori `*` e `Mod` binari e gli operatori e. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati degli operandi, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
   
 |||||||||||  

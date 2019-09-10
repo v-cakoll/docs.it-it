@@ -2,18 +2,18 @@
 title: Generatore EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251621"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854725"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generatore EDM (EdmGen.exe)
 
-EdmGen.exe è uno strumento da riga di comando per l'uso di file di modello e di mapping [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Lo strumento EdmGen.exe consente di effettuare le operazioni seguenti:
+EdmGen. exe è uno strumento da riga di comando usato per lavorare con i file di modello e di mapping Entity Framework. Lo strumento EdmGen.exe consente di effettuare le operazioni seguenti:
 
-- Connettersi a un'origine dati tramite un provider di dati .NET Framework specifico dell'origine dati e generare il modello concettuale, il modello di archiviazione e il file di mapping (rispettivamente con estensione csdl, ssdl e msl) usati da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [Procedura: Utilizzare EdmGen. exe per generare i file](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)di modello e di mapping.
+- Connettersi a un'origine dati utilizzando un'origine dati specifica del .NET Framework provider di dati e generare il modello concettuale (con estensione CSDL), il modello di archiviazione (con estensione ssdl) e i file di mapping (con estensione msl) utilizzati dall'Entity Framework. Per altre informazioni, vedere [Procedura: Utilizzare EdmGen. exe per generare i file](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)di modello e di mapping.
 
 - Convalidare un modello esistente. Per altre informazioni, vedere [Procedura: Usare EdmGen. exe per convalidare i file](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)di modello e di mapping.
 
@@ -33,7 +33,7 @@ EdmGen /mode:choice [options]
 
 Quando si usa lo strumento EdmGen.exe, è necessario specificare una delle modalità seguenti.
 
-|Modalità|Descrizione|
+|Modalità|DESCRIZIONE|
 |----------|-----------------|
 |`/mode:ValidateArtifacts`|Consente di convalidare i file con estensione csdl, ssdl e msl e di visualizzare eventuali errori o avvisi.<br /><br /> Questa opzione richiede almeno uno degli argomenti `/inssdl` o `/incsdl`. Se si specifica `/inmsl`, sono necessari anche gli argomenti `/inssdl` e `/incsdl`.|
 |`/mode:FullGeneration`|Consente di usare le informazioni sulla connessione al database specificate nell'opzione `/connectionstring` e di generare file con estensione csdl, ssdl e msl, nonché file di visualizzazione e del livello di oggetti.<br /><br /> Questa opzione richiede l'argomento `/connectionstring` e un argomento `/project` oppure gli argomenti `/outssdl`, `/outcsdl`, `/outmsdl`, `/outobjectlayer`, `/outviews`, `/namespace` e `/entitycontainer`.|

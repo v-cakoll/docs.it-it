@@ -1,19 +1,19 @@
 ---
-title: Analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET
+title: Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 description: Generare automaticamente un modello di ML e il codice C# correlato per un set di dati di esempio
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254165"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856025"
 ---
-# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare i sentimenti usando l'interfaccia della riga di comando di ML.NET
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
 Di seguito sono riportate informazioni su come usare l'interfaccia della riga di comando ML.NET per generare automaticamente un modello ML.NET e il codice C# sottostante. Dopo aver specificato il set di dati e l'attività di Machine Learning da implementare, tramite l'interfaccia della riga di comando viene usato il motore AutoML per creare il codice sorgente di generazione e distribuzione del modello, oltre al modello binario.
 
@@ -26,7 +26,7 @@ In questa esercitazione verranno eseguite le operazioni seguenti:
 > - Esplorare il codice C# generato usato per il training del modello
 
 > [!NOTE]
-> Questo argomento si riferisce all'interfaccia della riga di comando ML.NET, attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Questo argomento si riferisce all'interfaccia della riga di comando ML.NET, attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per ulteriori informazioni, visitare la pagina [ml.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
 
 L'interfaccia della riga di comando ML.NET fa parte di ML.NET e l'obiettivo principale è "democratizzare" ML.NET per gli sviluppatori di .NET in modo che non sia necessario scrivere codice da zero quando iniziano a usarlo.
 

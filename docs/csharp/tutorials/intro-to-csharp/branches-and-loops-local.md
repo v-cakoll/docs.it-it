@@ -3,18 +3,18 @@ title: Rami e cicli - Esercitazione introduttiva su C#
 description: In questa esercitazione su rami e cicli si scriverà codice C# per esplorare la sintassi del linguaggio che supporta cicli e diramazioni condizionali per eseguire ripetutamente istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d329a871265ae42918fbf81c42be6667710e4c75
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587217"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850798"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
 Questa esercitazione descrive come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a queste variabili. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che esplorano i costrutti per rami e cicli in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 

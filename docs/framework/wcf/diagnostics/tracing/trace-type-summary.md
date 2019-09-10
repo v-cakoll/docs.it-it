@@ -2,31 +2,31 @@
 title: Riepilogo dei tipi di traccia
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647179"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856007"
 ---
 # <a name="trace-type-summary"></a>Riepilogo dei tipi di traccia
-[I livelli di origine](https://go.microsoft.com/fwlink/?LinkID=94943) definisce vari livelli di traccia: Critico, errore, avviso, informazioni e dettagliato, nonché SourceLevels il `ActivityTracing` flag che attiva o disattiva l'output di traccia gli eventi di trasferimento di limiti e attività.  
+I [livelli di origine](https://go.microsoft.com/fwlink/?LinkID=94943) definiscono diversi livelli di traccia: Critical, Error, Warning, Information e Verbose, oltre a fornire una descrizione del `ActivityTracing` flag, che attiva o disattiva l'output degli eventi relativi al limite della traccia e al trasferimento di attività.  
   
- È anche possibile esaminare [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) per i tipi di traccia che può essere emessi da <xref:System.Diagnostics>.  
+ È anche possibile esaminare [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) per i tipi di traccia che possono essere emessi da <xref:System.Diagnostics>.  
   
  Nella tabella seguente sono elencati quelli più importanti.  
   
-|Tipo di traccia|Descrizione|  
+|Tipo di traccia|DESCRIZIONE|  
 |----------------|-----------------|  
 |Critico|Errore irreversibile o arresto anomalo dell'applicazione.|  
-|Error|Errore risolvibile.|  
+|Errore|Errore risolvibile.|  
 |Avviso|Messaggio informativo.|  
 |Informazioni|Problema non critico.|  
 |Dettagliato|Traccia di debug.|  
-|Inizia|Avvio di un'unità logica di elaborazione.|  
+|Start|Avvio di un'unità logica di elaborazione.|  
 |Sospendi|Sospensione di un'unità logica di elaborazione.|  
 |Riprendi|Ripresa di un'unità logica di elaborazione.|  
-|Arresta|Interruzione di un'unità logica di elaborazione.|  
+|Arresto|Interruzione di un'unità logica di elaborazione.|  
 |Trasferimento|Modifica dell'identità di correlazione.|  
   
  Un'attività è definita come una combinazione dei tipi di traccia riportati sopra.  
@@ -47,12 +47,8 @@ ms.locfileid: "64647179"
   
  Quella che segue è un'espressione regolare che definisce un'attività ideale in ambito globale,  
   
-```  
-R+   
-```  
+`R+`  
   
  con R che è l'espressione regolare per un'attività nell'ambito locale. Ciò si traduce in,  
   
-```  
-[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  
-```
+`[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

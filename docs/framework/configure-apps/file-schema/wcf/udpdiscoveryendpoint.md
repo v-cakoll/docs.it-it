@@ -2,31 +2,33 @@
 title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: e6e567e8a657b4c1683ae4abfb14f96a0f272e4a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1729255c68c75f824b8cd8c87f106a4a9b3550f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934585"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854887"
 ---
 # <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint>
 Questo elemento di configurazione definisce un endpoint standard preconfigurato per le operazioni di individuazione su un'associazione multicast UDP. Questo endpoint dispone di un contratto fisso e supporta due versioni del protocollo WS-Discovery. Dispone inoltre di un'associazione UDP fissa e di un indirizzo predefinito come indicato nelle specifiche WS-Discovery (WS-Discovery aprile 2005 o WS-Discovery V1.1).  
   
- \<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> udpDiscoveryEndpoint**  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
 <system.serviceModel>
   <standardEndpoints>
-    <discoveryEndpoint>
+    <udpDiscoveryEndpoint>
       <standardEndpoint discoveryMode="Adhoc/Managed"
                         discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxResponseDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
-    </discoveryEndpoint>
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </system.serviceModel>
 ```  
@@ -36,7 +38,7 @@ Questo elemento di configurazione definisce un endpoint standard preconfigurato 
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |discoveryMode|Stringa che specifica la modalità del protocollo di individuazione. I valori validi sono "Adhoc" e "Managed". Nella modalità gestita il protocollo si basa su un proxy di individuazione che viene usato come un repository di servizi individuabili. Con la modalità Adhoc è necessario che il protocollo utilizzi il meccanismo multicast UDP per l'individuazione dei servizi disponibili. Questo valore è di tipo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.|  
 |discoveryVersion|Stringa che specifica una delle due versioni del protocollo WS-Discovery. I valori validi sono WSDiscovery11 e WSDiscoveryApril2005. Questo valore è di tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>.|  
@@ -46,7 +48,7 @@ Questo elemento di configurazione definisce un endpoint standard preconfigurato 
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<udpTransportSettings>](udptransportsettings.md)|Raccolta di impostazioni che consentono di configurare il trasporto UDP per l'endpoint UDP.|  
   

@@ -4,12 +4,12 @@ description: Informazioni su come creare librerie .NET Core usando gli strumenti
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202669"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849488"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
@@ -17,7 +17,7 @@ Questo articolo illustra come scrivere librerie per .NET usando gli strumenti de
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://www.microsoft.com/net/core) siano installati nel computer.
+È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://dotnet.microsoft.com/download) siano installati nel computer.
 
 Per le sezioni di questo documento relative alle versioni di .NET Framework è necessario avere [.NET Framework](https://dotnet.microsoft.com) installato in un computer Windows.
 

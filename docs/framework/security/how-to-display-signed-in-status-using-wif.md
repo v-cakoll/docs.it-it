@@ -3,12 +3,12 @@ title: 'Procedura: Visualizzare lo stato di accesso effettuato con WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2500c6ded485fca76715425b9a52258e07be08d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945696"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851549"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Procedura: Visualizzare lo stato di accesso effettuato con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -99,7 +99,7 @@ ms.locfileid: "69945696"
   
 2. Sostituire il markup esistente nel file **Default.aspx** con il seguente:  
   
-    ```  
+    ```aspx-csharp  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  

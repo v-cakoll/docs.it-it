@@ -2,19 +2,19 @@
 title: 'Procedura: Definire la stringa di connessione'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 8386f93d0e80aa824b1e91a130812b9b3a2b3619
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a78158c7553c0b479b935e3b94931313df912c2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306376"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854654"
 ---
 # <a name="how-to-define-the-connection-string"></a>Procedura: Definire la stringa di connessione
 
-In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale. In questo argomento si basa sul [Sales di AdventureWorks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) modello concettuale. Il modello Sales di AdventureWorks viene usato in tutti gli argomenti correlati ad attività inclusi nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questo argomento si presuppone che si è già configurato il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e definito modello Sales di AdventureWorks. Per altre informazioni, vedere [Procedura: File di Mapping e definire il modello manualmente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Le procedure descritte in questo argomento sono incluse anche in [come: Configurare manualmente un progetto Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).
+In questo argomento viene illustrato come definire la stringa di connessione usata per la connessione a un modello concettuale. Questo argomento è basato sul modello concettuale [Sales di AdventureWorks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) . Il modello Sales di AdventureWorks viene utilizzato in tutti gli argomenti correlati alle attività nella documentazione di Entity Framework. In questo argomento si presuppone che sia già stato configurato il Entity Framework e che sia stato definito il modello Sales di AdventureWorks. Per altre informazioni, vedere [Procedura: Definire manualmente i file](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))di modello e di mapping. Le procedure descritte in questo argomento sono incluse anche [in procedura: Configurare manualmente un progetto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))di Entity Framework.
 
 > [!NOTE]
-> Se si usa la procedura guidata Entity Data Model in un progetto di Visual Studio, viene automaticamente generato un file con estensione edmx e configura il progetto deve utilizzare il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [Procedura: Usare la procedura guidata Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+> Se si usa la procedura guidata Entity Data Model in un progetto di Visual Studio, viene generato automaticamente un file con estensione edmx e il progetto viene configurato per l'uso del Entity Framework. Per altre informazioni, vedere [Procedura: Utilizzare la procedura guidata Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Per definire la stringa di connessione Entity Framework
 
@@ -30,10 +30,10 @@ In questo argomento viene illustrato come definire la stringa di connessione usa
 </connectionStrings>
 ```
 
-Se il progetto non dispone di un file di configurazione dell'applicazione, è possibile aggiungerne uno selezionando **Aggiungi nuovo elemento** dal **Project** dal menu selezionando il **generali** categoria, selezionando **File di configurazione dell'applicazione**e quindi scegliendo **Add**.
+Se il progetto non dispone di un file di configurazione dell'applicazione, è possibile aggiungerne uno scegliendo **Aggiungi nuovo elemento** dal menu **progetto** , selezionando la categoria **generale** , selezionando **file di configurazione dell'applicazione**e quindi facendo clic su **Aggiungi**.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida rapida](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [Procedura: Creare un nuovo File con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [Procedura: Creare un nuovo file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
 - [Strumenti di ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

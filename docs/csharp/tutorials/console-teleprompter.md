@@ -3,12 +3,12 @@ title: Applicazione console
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
-ms.translationtype: HT
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348830"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851014"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -26,7 +26,7 @@ In questa esercitazione verranno create anche numerose funzionalità.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessario configurare il computer per l'esecuzione di .NET Core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core). Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
+È necessario configurare il computer per l'esecuzione di .NET Core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito.
 
 ## <a name="create-the-application"></a>Creare l'applicazione

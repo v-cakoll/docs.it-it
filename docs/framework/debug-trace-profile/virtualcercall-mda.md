@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2c8712837dab17f70be32617711c1bad9349508
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3864ae416df0a2516a4dd9e6cf92669f66f27bb1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766311"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853980"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall (MDA)
 L'assistente al debug gestito `virtualCERCall` viene attivato come avviso che indica che un sito di chiamata all'interno di un grafico chiamate di un'area a esecuzione vincolata fa riferimento a una destinazione virtuale, ovvero una chiamata virtuale a un metodo virtuale non finale o a una chiamata che usa un'interfaccia. Common Language Runtime (CLR) non può prevedere il metodo di destinazione di queste chiamate solo dal linguaggio intermedio e dall'analisi dei metadati. Di conseguenza, non è possibile preparare l'albero delle chiamate come parte del grafico dell'area a esecuzione vincolata e le interruzioni dei thread in tale sottoalbero non possono essere bloccate automaticamente. Questo assistente al debug gestito segnala i casi in cui un'area a esecuzione vincolata potrebbe dover essere estesa usando chiamate esplicite al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una volta che le informazioni aggiuntive necessarie per calcolare la destinazione della chiamata sono note in fase di esecuzione.  
@@ -35,7 +35,7 @@ L'assistente al debug gestito `virtualCERCall` viene attivato come avviso che in
   
 ## <a name="output"></a>Output  
   
-```  
+```output
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
 at IL offset 0x0024 to 'VirtualMethod', which is virtual and cannot be prepared automatically  
 at compile time. The caller must ensure this method is prepared explicitly at  

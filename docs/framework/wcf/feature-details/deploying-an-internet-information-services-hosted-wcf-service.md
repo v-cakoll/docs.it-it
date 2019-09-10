@@ -2,114 +2,114 @@
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486921"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856131"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 
-Lo sviluppo e distribuzione di un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS) include le attività seguenti:
+Lo sviluppo e la distribuzione di un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS) è costituito dalle attività seguenti:
 
 - Verificare che IIS, ASP.NET, WCF e il componente di attivazione WCF siano installati e registrati correttamente.
 
-- Creare una nuova applicazione IIS o riusare un'applicazione ASP.NET esistente.
+- Creare una nuova applicazione IIS o riutilizzare un'applicazione ASP.NET esistente.
 
-- Creare un file con estensione svc del servizio WCF.
+- Creare un file con estensione svc per il servizio WCF.
 
 - Distribuire l'implementazione del servizio nell'applicazione IIS.
 
 - Configurare il servizio WCF.
 
-Per una procedura dettagliata di creazione di un servizio WCF ospitato da IIS, vedere [come: Ospitare un servizio WCF in IIS](how-to-host-a-wcf-service-in-iis.md).
+Per una procedura dettagliata sulla creazione di un servizio WCF ospitato in IIS, [vedere Procedura: Ospitare un servizio WCF in IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Verificare che IIS, ASP.NET e WCF siano installati e registrati correttamente.
 
-WCF, IIS e ASP.NET deve essere installato per i servizi WCF ospitati in IIS funzioni correttamente. Le procedure per l'installazione di WCF (come parte di .NET Framework), ASP.NET e IIS variano a seconda del sistema operativo. Per altre informazioni sull'installazione di .NET Framework e WCF, vedere [installare .NET Framework per sviluppatori](../../install/guide-for-developers.md). Per installare IIS in Windows 10, aprire **programmi e funzionalità** nelle **Pannello di controllo** e quindi selezionare **o disattivazione delle funzionalità Windows attivare**. Nelle **funzionalità di Windows**, selezionare **Internet Information Services** e quindi scegliere **OK**.
+Per il corretto funzionamento dei servizi WCF ospitati da IIS, è necessario che siano installati WCF, IIS e ASP.NET. Le procedure per l'installazione di WCF (come parte del .NET Framework), ASP.NET e IIS variano a seconda del sistema operativo in uso. Per ulteriori informazioni sull'installazione di WCF e della .NET Framework, vedere [Install the .NET Framework for Developers](../../install/guide-for-developers.md). Per installare IIS in Windows 10, aprire **programmi e funzionalità** nel **Pannello di controllo** e quindi selezionare **attivazione o disattivazione delle funzionalità Windows**. In **funzionalità di Windows**selezionare **Internet Information Services** , quindi scegliere **OK**.
 
 ![Funzionalità di Windows con IIS evidenziato](media/windows-features-iis.png)
 
-Vedere le istruzioni per l'installazione di IIS in altri sistemi operativi [installare IIS in Windows Vista e Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) e [installare IIS 8.5 in Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
+Per istruzioni sull'installazione di IIS in altri sistemi operativi, vedere [installare IIS in Windows Vista e Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) e [installare IIS 8,5 in Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 
-Se IIS è già presente nel computer, il processo di installazione di .NET Framework registra automaticamente WCF con IIS. Se IIS viene installato dopo .NET Framework, è necessario un passaggio aggiuntivo per registrare WCF con IIS e ASP.NET. A tal fine, è possibile procedere come segue, a seconda del sistema operativo:
+Il processo di installazione di .NET Framework registra automaticamente WCF con IIS se IIS è già presente nel computer. Se IIS viene installato dopo l'.NET Framework, è necessario eseguire un passaggio aggiuntivo per registrare WCF con IIS e ASP.NET. A tal fine, è possibile procedere come segue, a seconda del sistema operativo:
 
-- Windows 7 e Windows Server 2003: Usare la [strumento di registrazione ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) dello strumento di registrazione di WCF con IIS. Per usare questo strumento, digitare **ServiceModelReg.exe /i /x** nel [prompt dei comandi per gli sviluppatori per Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 e Windows Server 2003: Utilizzare lo strumento di [registrazione ServiceModel (ServiceModelReg. exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) per registrare WCF con IIS. Per usare questo strumento, digitare **ServiceModelReg. exe/i/x** nell' [prompt dei comandi per gli sviluppatori per Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
-- Windows 7: Infine, è necessario verificare che ASP.NET sia configurato per usare .NET Framework versione 4 o versione successiva. Eseguire questa operazione eseguendo lo strumento ASPNET_Regiis con il `–i` opzione. Per altre informazioni, vedere [strumento di registrazione ASP.NET IIS](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: Infine, è necessario verificare che ASP.NET sia configurato per l'uso di .NET Framework versione 4 o successiva. A tale scopo, è possibile eseguire lo strumento Aspnet_regiis `–i` con l'opzione. Per ulteriori informazioni, vedere [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Creare una nuova applicazione IIS o riutilizzare un'applicazione ASP.NET esistente
 
-Servizi WCF ospitati in IIS devono risiedere all'interno di un'applicazione IIS. È possibile creare una nuova applicazione IIS per ospitare servizi WCF in modo esclusivo. In alternativa, è possibile distribuire un servizio WCF in un'applicazione esistente che sta già ospitando contenuto ASP.NET 2.0 (ad esempio pagine aspx e servizi Web ASP.NET [ASMX]). Per altre informazioni su queste opzioni, vedere la "Hosting WCF Side-by-Side con ASP.NET" e "Hosting WCF Services in modalità di compatibilità ASP.NET" sezioni nel [servizi WCF e ASP.NET](wcf-services-and-aspnet.md).
+I servizi WCF ospitati in IIS devono risiedere all'interno di un'applicazione IIS. È possibile creare una nuova applicazione IIS per ospitare esclusivamente i servizi WCF. In alternativa, è possibile distribuire un servizio WCF in un'applicazione esistente che ospita già contenuto ASP.NET 2,0 (ad esempio, pagine aspx e servizi Web ASP.NET [ASMX]). Per ulteriori informazioni su queste opzioni, vedere le sezioni "hosting di WCF affiancate con ASP.NET" e "hosting dei servizi WCF in modalità di compatibilità ASP.NET" in [servizi WCF e ASP.NET](wcf-services-and-aspnet.md).
 
-Si noti che IIS 6.0 e versioni successive riavviare periodicamente un'applicazione di programmazione isolata e orientata. Il valore predefinito è 1740 minuti. Il valore massimo supportato è 71.582 minuti. Il riavvio può essere disabilitato. Per altre informazioni su questa proprietà, vedere la [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Si noti che IIS 6,0 e versioni successive riavviano periodicamente un'applicazione di programmazione orientata a oggetti isolata. Il valore predefinito è 1740 minuti. Il valore massimo supportato è 71.582 minuti. Il riavvio può essere disabilitato. Per ulteriori informazioni su questa proprietà, vedere [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Creare un file con estensione svc per il servizio WCF
 
-Servizi WCF ospitati in IIS sono rappresentati come file di dati speciali (file con estensione svc) all'interno dell'applicazione IIS. Questo modello è simile al modo in cui le pagine ASMX sono rappresentate all'interno di un'applicazione IIS come file con estensione asmx. Un file con estensione svc contiene una direttiva di elaborazione specifica di WCF ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) che consente l'infrastruttura di hosting di WCF di attivare servizi ospitati in risposta ai messaggi in arrivo. La sintassi più comune per un file con estensione svc viene illustrata nell'istruzione seguente:
+I servizi WCF ospitati in IIS sono rappresentati come file di dati speciali (file con estensione svc) nell'applicazione IIS. Questo modello è simile al modo in cui le pagine ASMX sono rappresentate all'interno di un'applicazione IIS come file con estensione asmx. Un file con estensione svc contiene una direttiva di elaborazione specifica per WCF ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) che consente all'infrastruttura di hosting WCF di attivare servizi ospitati in risposta ai messaggi in arrivo. La sintassi più comune per un file con estensione svc viene illustrata nell'istruzione seguente:
 
-```
+```svc
 <% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
 ```
 
-È costituito il [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva e un solo attributo, `Service`. Il valore dell'attributo `Service` è il nome del tipo Common Language Runtime (CLR) dell'implementazione del servizio. L'utilizzo di questa direttiva equivale fondamentalmente alla creazione di un host del servizio tramite il seguente codice:
+È costituito [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dalla direttiva ServiceHost e da un solo attributo `Service`,. Il valore dell'attributo `Service` è il nome del tipo Common Language Runtime (CLR) dell'implementazione del servizio. L'utilizzo di questa direttiva equivale fondamentalmente alla creazione di un host del servizio tramite il seguente codice:
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-È inoltre possibile una configurazione di hosting aggiuntiva, ad esempio la creazione di un elenco di indirizzi di base per il servizio. È anche possibile utilizzare un <xref:System.ServiceModel.Activation.ServiceHostFactory> personalizzato per estendere la direttiva per l'utilizzo con soluzioni di hosting personalizzate. Le applicazioni di IIS che ospitano servizi WCF non sono responsabili della gestione di creazione e la durata di <xref:System.ServiceModel.ServiceHost> istanze. L'infrastruttura di hosting WCF gestito creerà i necessari <xref:System.ServiceModel.ServiceHost> dell'istanza in modo dinamico quando viene ricevuta la prima richiesta per il file con estensione svc. L'istanza non viene rilasciata finché non viene chiusa in modo esplicito dal codice o finché l'applicazione non viene riciclata.
+È inoltre possibile una configurazione di hosting aggiuntiva, ad esempio la creazione di un elenco di indirizzi di base per il servizio. È anche possibile utilizzare un <xref:System.ServiceModel.Activation.ServiceHostFactory> personalizzato per estendere la direttiva per l'utilizzo con soluzioni di hosting personalizzate. Le applicazioni IIS che ospitano servizi WCF non sono responsabili della gestione della creazione e della <xref:System.ServiceModel.ServiceHost> durata delle istanze. L'infrastruttura di hosting WCF gestita crea dinamicamente l'istanza necessaria <xref:System.ServiceModel.ServiceHost> quando viene ricevuta la prima richiesta per il file con estensione svc. L'istanza non viene rilasciata finché non viene chiusa in modo esplicito dal codice o finché l'applicazione non viene riciclata.
 
-Per altre informazioni sulla sintassi dei file con estensione svc, vedere [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
+Per ulteriori informazioni sulla sintassi per i file con estensione svc, vedere [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Distribuire l'implementazione del servizio all'applicazione IIS
 
-Servizi WCF ospitati in IIS utilizzano lo stesso modello di compilazione dinamica come ASP.NET 2.0. Come avviene con ASP.NET, è possibile distribuire il codice di implementazione per i servizi WCF ospitati in IIS in vari modi e in varie posizioni, come indicato di seguito:
+I servizi WCF ospitati in IIS utilizzano lo stesso modello di compilazione dinamica di ASP.NET 2,0. Come per ASP.NET, è possibile distribuire il codice di implementazione per i servizi WCF ospitati da IIS in diversi modi in varie posizioni, come indicato di seguito:
 
 - Come file dll precompilato nella Global Assembly Cache (GAC) o nella directory \bin dell'applicazione. I file binari precompilati non vengono aggiornati finché non viene distribuita una nuova versione della libreria di classi.
 
 - Come file di origine non compilati che si trovano nella directory \App_Code dell'applicazione. I file di origine situati in questa directory vengono richiesti dinamicamente durante l'elaborazione della prima richiesta dell'applicazione. Qualsiasi modifica ai file nella directory \App_Code provoca il riciclo e la ricompilazione dell'intera applicazione quando viene ricevuta la richiesta successiva.
 
-- Come codice non compilato posizionato direttamente nel file con estensione svc. Codice di implementazione può essere anche trovarsi in linea nel file con estensione svc del servizio, dopo il \@direttiva ServiceHost. Qualsiasi modifica al codice inline provoca il riciclo e la ricompilazione dell'applicazione quando viene ricevuta la richiesta successiva.
+- Come codice non compilato inserito direttamente nel file con estensione svc. Il codice di implementazione può anche essere individuato inline nel file con estensione svc del servizio \@, dopo la direttiva ServiceHost. Qualsiasi modifica al codice inline provoca il riciclo e la ricompilazione dell'applicazione quando viene ricevuta la richiesta successiva.
 
-Per altre informazioni sul modello di compilazione ASP.NET 2.0, vedere [Cenni preliminari sulla compilazione ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
+Per ulteriori informazioni sul modello di compilazione ASP.NET 2,0, vedere [Cenni preliminari sulla compilazione ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>Configurare il servizio WCF
 
-Servizi WCF ospitati in IIS memorizzano la propria configurazione nel file Web. config dell'applicazione. Servizi ospitati in IIS usano la sintassi e gli stessi elementi di configurazione come servizi WCF ospitati all'esterno di IIS. I vincoli seguenti sono tuttavia specifici per l'ambiente host IIS:
+I servizi WCF ospitati in IIS memorizzano la propria configurazione nel file Web. config delle applicazioni. I servizi ospitati in IIS utilizzano gli stessi elementi di configurazione e la stessa sintassi dei servizi WCF ospitati all'esterno di IIS. I vincoli seguenti sono tuttavia specifici per l'ambiente host IIS:
 
 - Indirizzi di base per i servizi ospitati in IIS.
 
-- Le applicazioni di servizi di hosting WCF all'esterno di IIS possono controllarne l'indirizzo di base dei servizi che ospitano passando un set di base indirizzo URI per il <xref:System.ServiceModel.ServiceHost> costruttore o fornendo un [ \<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) elemento il configurazione del servizio. I servizi ospitati in IIS non sono in grado di controllare i propri indirizzi di base che corrispondono agli indirizzi dei rispettivi file con estensione svc.
+- Le applicazioni che ospitano servizi WCF all'esterno di IIS possono controllare l'indirizzo di base dei servizi che ospitano passando un set di URI <xref:System.ServiceModel.ServiceHost> dell'indirizzo di base al costruttore o fornendo un [ \<elemento host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) nel servizio configurazione. I servizi ospitati in IIS non sono in grado di controllare i propri indirizzi di base che corrispondono agli indirizzi dei rispettivi file con estensione svc.
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Indirizzi endpoint per i servizi ospitati in IIS
 
-Quando sono ospitati in IIS, gli indirizzi endpoint sono sempre considerati relativi all'indirizzo del file con estensione svc che rappresenta il servizio. Ad esempio, se l'indirizzo di base di un servizio WCF è `http://localhost/Application1/MyService.svc` con la configurazione dell'endpoint seguente:
+Quando sono ospitati in IIS, gli indirizzi endpoint sono sempre considerati relativi all'indirizzo del file con estensione svc che rappresenta il servizio. Se, ad esempio, l'indirizzo di base di un servizio `http://localhost/Application1/MyService.svc` WCF è con la configurazione dell'endpoint seguente:
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-Ciò fornisce un endpoint che è possibile contattarlo `http://localhost/Application1/MyService.svc/anotherEndpoint`.
+In questo modo viene fornito un endpoint che può `http://localhost/Application1/MyService.svc/anotherEndpoint`essere raggiunto all'indirizzo.
 
-Analogamente, l'elemento di configurazione di endpoint che usa una stringa vuota come indirizzo relativo fornisce un endpoint raggiungibile al `http://localhost/Application1/MyService.svc`, ovvero l'indirizzo di base.
+Analogamente, l'elemento di configurazione dell'endpoint che utilizza una stringa vuota come indirizzo relativo fornisce un endpoint raggiungibile `http://localhost/Application1/MyService.svc`in, ovvero l'indirizzo di base.
 
 ```xml
 <endpoint address="" ... />
 ```
 
-Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre indirizzi endpoint relativi. Fornisce un indirizzo endpoint completo (ad esempio, `http://localhost/MyService.svc`) può causare errori nella distribuzione del servizio se l'indirizzo dell'endpoint non punta all'applicazione IIS che ospita il servizio che espone l'endpoint. L'utilizzo di indirizzi endpoint relativi per i servizi di hosting evita potenziali conflitti.
+Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre indirizzi endpoint relativi. La specifica di un indirizzo endpoint completo (ad esempio, `http://localhost/MyService.svc`) può causare errori nella distribuzione del servizio se l'indirizzo endpoint non punta all'applicazione IIS che ospita il servizio che espone l'endpoint. L'utilizzo di indirizzi endpoint relativi per i servizi di hosting evita potenziali conflitti.
 
 ### <a name="available-transports"></a>Trasporti disponibili
 
-Servizi WCF ospitati in IIS 5.1 e 6.0 di IIS sono limitate all'uso di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per IIS 7.0, i trasporti supportati includono HTTP, NET. TCP, NET. pipe, NET. MSMQ e MSMQ. FormatName per la compatibilità con applicazioni MSMQ esistenti.
+I servizi WCF ospitati in IIS 5,1 e IIS 6,0 sono limitati all'utilizzo di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per IIS 7,0, i trasporti supportati includono HTTP, NET. TCP, NET. pipe, NET. MSMQ e MSMQ. FormatName per la compatibilità con le versioni precedenti con le applicazioni MSMQ esistenti.
 
 ### <a name="http-transport-security"></a>Protezione del trasporto HTTP
 
-Servizi WCF ospitati in IIS possono avvalersi del protocollo HTTP (ad esempio, HTTPS e HTTP gli schemi di autenticazione, ad esempio Basic, Digest e l'autenticazione integrata di Windows) di sicurezza del trasporto, purché la directory virtuale IIS che contiene il servizio supporta quelli Impostazioni. Le impostazioni di sicurezza del trasporto HTTP sull'associazione di un endpoint di hosting devono corrispondere alle impostazioni di sicurezza del trasporto sulla directory virtuale IIS che lo contiene.
+I servizi WCF ospitati da IIS possono utilizzare la sicurezza del trasporto HTTP (ad esempio, gli schemi di autenticazione HTTPS e HTTP come Basic, digest e l'autenticazione integrata di Windows), purché la directory virtuale IIS che contiene il servizio supporti tali Impostazioni. Le impostazioni di sicurezza del trasporto HTTP sull'associazione di un endpoint di hosting devono corrispondere alle impostazioni di sicurezza del trasporto sulla directory virtuale IIS che lo contiene.
 
-Ad esempio, un endpoint WCF configurato per usare l'autenticazione digest HTTP deve risiedere in una directory virtuale IIS che è configurata anche per consentire l'autenticazione digest HTTP. Combinazioni non corrispondenti di impostazioni di IIS e le impostazioni di endpoint WCF generano un errore durante l'attivazione del servizio.
+Ad esempio, un endpoint WCF configurato per l'utilizzo dell'autenticazione digest HTTP deve risiedere in una directory virtuale IIS configurata anche per consentire l'autenticazione del digest HTTP. Combinazioni non corrispondenti di impostazioni IIS e impostazioni dell'endpoint WCF generano un errore durante l'attivazione del servizio.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,18 +4,18 @@ description: Questa esercitazione mostra come usare la funzionalità di interpol
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397810"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850922"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
 Questa esercitazione descrive come usare l'[interpolazione di stringhe](../../language-reference/tokens/interpolated.md) in C# per inserire i valori in un'unica stringa di risultato. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che descrivono come inserire valori in una stringa e formattare questi valori in modi diversi.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
 
 ## <a name="create-an-interpolated-string"></a>Creare una stringa interpolata
 

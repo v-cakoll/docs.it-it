@@ -4,12 +4,12 @@ description: Informazioni sui concetti relativi agli unit test in .NET Core tram
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: c48b2777b451598a0f3ccbb383d702d0069ff6ff
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373810"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849675"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e NUnit
 
@@ -19,7 +19,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) o versioni successive.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.
 - Editor di testo o editor di codice a scelta.
 
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine

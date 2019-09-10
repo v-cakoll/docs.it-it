@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378655"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851292"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
 Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.  
@@ -24,17 +24,17 @@ Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro obbligatorio.|Description|  
+|Parametro obbligatorio.|Descrizione|  
 |------------------------|-----------------|  
 |`assembly`|Nome dell'assembly per il quale configurare CorFlags.|  
   
-|Opzione|Description|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Imposta il flag 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Cancella il flag 32BITREQUIRED.|  
@@ -49,7 +49,7 @@ CorFlags.exe assembly [options]
 |**/RevertCLRHeader**|Ripristina la versione 2.0 dell'intestazione CLR.|  
 |**/UpgradeCLRHeader**|Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5. **Nota:**  per l'esecuzione nativa, gli assembly devono avere un'intestazione CLR versione 2.5 o successiva.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se non viene specificata alcuna opzione, lo strumento di conversione CorFlags visualizza i flag relativi all'assembly specificato.  
   
 ## <a name="see-also"></a>Vedere anche

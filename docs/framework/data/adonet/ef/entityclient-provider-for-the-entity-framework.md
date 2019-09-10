@@ -2,25 +2,25 @@
 title: Provider EntityClient per Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 70cc5a9aaa22cc563c910f9d250ad4565e34a135
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251594"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854708"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Provider EntityClient per Entity Framework
 EntityClient è un provider di dati usato dalle applicazioni Entity Framework per accedere a dati descritti in un  modello concettuale. Per informazioni sui modelli concettuali, vedere [modellazione e mapping](modeling-and-mapping.md). EntityClient usa altri provider di dati .NET Framework per accedere all'origine dati, ad esempio il provider di dati .NET Framework per SQL Server (SqlClient) in caso di accesso a un database SQL Server. Per informazioni sul provider SqlClient, vedere [SqlClient per la Entity Framework](sqlclient-for-the-entity-framework.md). Il provider EntityClient viene implementato nello spazio dei nomi <xref:System.Data.EntityClient>.  
   
 ## <a name="managing-connections"></a>Gestione di connessioni  
- Si basa su provider di dati ADO.NET specifici dell'archiviazione fornendo un oggetto <xref:System.Data.EntityClient.EntityConnection> a un provider di dati e a un database relazionale sottostanti. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Per costruire un <xref:System.Data.EntityClient.EntityConnection> oggetto, è necessario fare riferimento a un set di metadati che contiene i modelli e il mapping necessari e anche un nome di provider di dati e una stringa di connessione specifici per l'archiviazione. Una volta <xref:System.Data.EntityClient.EntityConnection> che l'oggetto è disponibile, è possibile accedere alle entità tramite le classi generate dal modello concettuale.  
+ Il Entity Framework si basa su provider di dati ADO.NET specifici dell'archiviazione fornendo un oggetto <xref:System.Data.EntityClient.EntityConnection> a un provider di dati e a un database relazionale sottostanti. Per costruire un <xref:System.Data.EntityClient.EntityConnection> oggetto, è necessario fare riferimento a un set di metadati che contiene i modelli e il mapping necessari e anche un nome di provider di dati e una stringa di connessione specifici per l'archiviazione. Una volta <xref:System.Data.EntityClient.EntityConnection> che l'oggetto è disponibile, è possibile accedere alle entità tramite le classi generate dal modello concettuale.  
   
  È possibile specificare una stringa di connessione nel file app.config.  
   
  <xref:System.Data.EntityClient> include anche la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Questa classe consente agli sviluppatori di creare a livello di codice stringhe di connessione sintatticamente corrette, nonché di analizzare e ricompilare le stringhe di connessione esistenti, usando le proprietà e i metodi della classe. Per altre informazioni, vedere [Procedura: Compilare una stringa](how-to-build-an-entityconnection-connection-string.md)di connessione EntityConnection.  
   
 ## <a name="creating-queries"></a>Creazione di query  
- Il [!INCLUDE[esql](../../../../../includes/esql-md.md)] linguaggio è un sottolinguaggio SQL indipendente dall'archiviazione che interagisce direttamente con gli schemi di entità concettuali e supporta Entity Data Model concetti quali l'ereditarietà e le relazioni. La <xref:System.Data.EntityClient.EntityCommand> classe viene utilizzata per eseguire un [!INCLUDE[esql](../../../../../includes/esql-md.md)] comando su un modello di entità. Quando si costruiscono oggetti <xref:System.Data.EntityClient.EntityCommand>, è possibile specificare un nome di stored procedure o un testo della query. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] funziona con provider di dati specifici dell'archiviazione per convertire il linguaggio [!INCLUDE[esql](../../../../../includes/esql-md.md)] generico in query specifiche dell'archiviazione. Per ulteriori informazioni sulla scrittura [!INCLUDE[esql](../../../../../includes/esql-md.md)] di query, vedere [linguaggio Entity SQL](./language-reference/entity-sql-language.md).  
+ Il [!INCLUDE[esql](../../../../../includes/esql-md.md)] linguaggio è un sottolinguaggio SQL indipendente dall'archiviazione che interagisce direttamente con gli schemi di entità concettuali e supporta Entity Data Model concetti quali l'ereditarietà e le relazioni. La <xref:System.Data.EntityClient.EntityCommand> classe viene utilizzata per eseguire un [!INCLUDE[esql](../../../../../includes/esql-md.md)] comando su un modello di entità. Quando si costruiscono oggetti <xref:System.Data.EntityClient.EntityCommand>, è possibile specificare un nome di stored procedure o un testo della query. Il Entity Framework funziona con i provider di dati specifici dell'archiviazione per [!INCLUDE[esql](../../../../../includes/esql-md.md)] tradurre Generic in query specifiche dell'archiviazione. Per ulteriori informazioni sulla scrittura [!INCLUDE[esql](../../../../../includes/esql-md.md)] di query, vedere [linguaggio Entity SQL](./language-reference/entity-sql-language.md).  
   
  Nell'esempio seguente viene creato <xref:System.Data.EntityClient.EntityCommand> un oggetto e viene assegnato [!INCLUDE[esql](../../../../../includes/esql-md.md)] un testo della query <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> alla relativa proprietà. Questa [!INCLUDE[esql](../../../../../includes/esql-md.md)] query richiede i prodotti ordinati in base al prezzo di listino dal modello concettuale. Il codice seguente non comporta alcuna conoscenza del modello di archiviazione.  
   

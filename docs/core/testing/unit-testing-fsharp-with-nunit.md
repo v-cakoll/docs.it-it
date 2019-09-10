@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: d654f77eb71b050b636476d67c62da3ea764edf7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374188"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849770"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit
 
@@ -21,7 +21,7 @@ In questa esercitazione viene illustrata un'esperienza interattiva di compilazio
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) o versioni successive.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) o versioni successive.
 - Editor di testo o editor di codice a scelta.
 
 ## <a name="creating-the-source-project"></a>Creazione del progetto di origine

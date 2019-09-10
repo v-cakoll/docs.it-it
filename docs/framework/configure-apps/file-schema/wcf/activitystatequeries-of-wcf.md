@@ -2,12 +2,12 @@
 title: <activityStateQueries>di WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 249ac3d91f6251a943dd856e4122b8b54f691702
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920292"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850576"
 ---
 # <a name="activitystatequeries-of-wcf"></a>\<> activityStateQueries di WCF
 
@@ -15,13 +15,14 @@ Rappresenta una raccolta di query usate per rilevare le modifiche al ciclo di vi
 
 Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel>  
-\<rilevamento >  
-\<profili >  
-\<trackingProfile>  
-\<> flusso di lavoro  
-\<activityStateQueries>  
-
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<rilevamento >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<profili >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di trackingProfile**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> flusso di lavoro**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> activityStateQueries**  
+  
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -58,7 +59,7 @@ Nessuno.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<activityStateQuery>](activitystatequery-of-wcf.md)|Query utilizzata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore.|
 

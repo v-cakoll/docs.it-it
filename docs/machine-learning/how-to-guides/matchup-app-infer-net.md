@@ -3,12 +3,12 @@ title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la progra
 description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
-ms.translationtype: HT
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211430"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855793"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 
@@ -22,7 +22,7 @@ La programmazione probabilistica permette di creare modelli statistici di proces
 
 - Configurazione di un ambiente di sviluppo locale
 
-  Questa guida pratica presuppone la presenza di un computer che possa essere usato per lo sviluppo. L'esercitazione su .NET [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux.
+  Questa guida pratica presuppone la presenza di un computer che possa essere usato per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in MacOS, Windows o Linux.
 
 ## <a name="create-your-app"></a>Creare l'app
 

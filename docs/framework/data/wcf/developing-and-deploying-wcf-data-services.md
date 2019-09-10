@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780323"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854076"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire WCF Data Services
 
@@ -121,7 +121,7 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
 Quando si distribuisce un servizio dati è opportuno considerare quanto segue:
 
-- Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. Visual Studio è in grado di creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione ASP.NET. Per altre informazioni, vedere [Procedura: Distribuire un database con un progetto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))di applicazione Web. Per un sito Web ASP.NET, è possibile eseguire questa operazione utilizzando la **pubblicazione guidata database** in Visual Studio. Per ulteriori informazioni, vedere [pubblicazione di un database SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Quando si distribuisce un servizio dati che utilizza il provider di Entity Framework per accedere a un database SQL Server, potrebbe essere necessario propagare anche strutture di dati, dati o entrambi con la distribuzione del servizio dati. Visual Studio è in grado di creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione ASP.NET. Per altre informazioni, vedere [Procedura: Distribuire un database con un progetto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))di applicazione Web. Per un sito Web ASP.NET, è possibile eseguire questa operazione utilizzando la **pubblicazione guidata database** in Visual Studio. Per ulteriori informazioni, vedere [pubblicazione di un database SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Poiché WCF Data Services include un'implementazione WCF di base, è possibile usare Windows Server AppFabric per monitorare un servizio dati distribuito in IIS in esecuzione in Windows Server. Per ulteriori informazioni sull'utilizzo di Windows Server AppFabric per il monitoraggio di un servizio dati, vedere il post di [WCF Data Services Tracking con Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

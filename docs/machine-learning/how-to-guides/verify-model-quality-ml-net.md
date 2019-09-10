@@ -3,17 +3,17 @@ title: Calcolare la metrica per valutare la qualità del modello di Machine Lear
 description: Informazioni su come calcolare la metrica per valutare e verificare la qualità del modello di Machine Learning con ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 2c7749205b862a42f42b857972057c441ab84364
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 529003913b166c966e131b006800f944096605b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641102"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855570"
 ---
 # <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Calcolare la metrica per valutare la qualità del modello di Machine Learning 
 
 > [!NOTE]
-> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per ulteriori informazioni, visitare la pagina [ml.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
 
 Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 

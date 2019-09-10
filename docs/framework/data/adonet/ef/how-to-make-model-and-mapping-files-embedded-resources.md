@@ -2,15 +2,15 @@
 title: 'Procedura: Definire i file di modello e di mapping come risorse incorporate'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: c88e0c09742d76c7508d7d782eabbe46035d3501
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 371f8f0317295ee39d543b5637afb93102036b62
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251441"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854586"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Procedura: Definire i file di modello e di mapping come risorse incorporate
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Consente di distribuire i file di modello e di mapping come risorse incorporate di un'applicazione. L'assembly con i file di mapping e di modello incorporati deve essere caricato nello stesso dominio applicazione della connessione dell'entità. Per altre informazioni, vedere [Connection Strings](connection-strings.md) (Stringhe di connessione). Per impostazione predefinita, gli strumenti di Entity Data Model incorporano i file di modello e di mapping. Quando si definiscono manualmente i file di modello e di mapping, utilizzare questa procedura per assicurarsi che i file vengano distribuiti come risorse incorporate insieme all'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+Il Entity Framework consente di distribuire i file di modello e di mapping come risorse incorporate di un'applicazione. L'assembly con i file di mapping e di modello incorporati deve essere caricato nello stesso dominio applicazione della connessione dell'entità. Per altre informazioni, vedere [Connection Strings](connection-strings.md) (Stringhe di connessione). Per impostazione predefinita, gli strumenti di Entity Data Model incorporano i file di modello e di mapping. Quando si definiscono manualmente i file di modello e di mapping, utilizzare questa procedura per assicurarsi che i file vengano distribuiti come risorse incorporate insieme a un'applicazione Entity Framework.  
   
 > [!NOTE]
 > Per gestire le risorse incorporate, è necessario ripetere la procedura ogni volta che si modificano i file di modello e di mapping.  

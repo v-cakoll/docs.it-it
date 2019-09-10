@@ -2,18 +2,22 @@
 title: <certificateReference> per <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 49c731b2637c15e0b968d8c2523c51c8e138e7bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926176"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849988"
 ---
 # <a name="certificatereference-for-identity"></a>\<> certificateReference per \<Identity >
 Specifica le impostazioni per la convalida del certificato X.509. Un client Windows Communication Foundation protetto (WCF) che si connette a un endpoint con questa identità verifica che le attestazioni presentate dal server contengano l'attestazione di identità usata per costruire l'identità.  
   
- \<identity>  
-\<certificateReference>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> client**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpoint**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identità**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> certificateReference**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,7 +35,7 @@ Specifica le impostazioni per la convalida del certificato X.509. Un client Wind
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |findValue|Specifica il valore da cercare nell'archivio certificati X.509. Il tipo contenuto in questo attributo deve soddisfare i requisiti del valore `X509FindType` specificato. Il valore predefinito è una stringa vuota.|  
 |isChainIncluded|Valore booleano che specifica se la convalida viene eseguita usando una catena di certificati.|  

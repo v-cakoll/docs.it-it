@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250492"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854381"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemi noti e considerazioni in LINQ to Entities
 In questa sezione vengono fornite informazioni sui problemi noti relativi alle query LINQ to Entities.  
@@ -42,7 +42,7 @@ In questa sezione vengono fornite informazioni sui problemi noti relativi alle q
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Mancato supporto degli Unsigned Integer  
- La [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] specifica di un tipo di Unsigned Integer in una query di LINQ to Entities non è supportata perché non supporta interi senza segno. Se si specifica una Unsigned Integer, viene <xref:System.ArgumentException> generata un'eccezione durante la conversione dell'espressione di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
+ La specifica di un tipo di Unsigned Integer in una query LINQ to Entities non è supportata perché il Entity Framework non supporta interi senza segno. Se si specifica una Unsigned Integer, viene <xref:System.ArgumentException> generata un'eccezione durante la conversione dell'espressione di query, come illustrato nell'esempio seguente. In questo esempio viene eseguita una query per un ordine con ID 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

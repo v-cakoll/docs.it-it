@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 6e79346a448012255020cc28b6534e734980b1db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39b71d3b5cbcfdc8bde3449560587f033c437d50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968841"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856161"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [procedura: Rappresenta un client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -158,7 +158,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
  Nel codice seguente viene illustrato come configurare il servizio.  
   
-```  
+```csharp
 // Create a binding that sets a certificate as the client credential type.  
 WSHttpBinding b = new WSHttpBinding();  
 b.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  

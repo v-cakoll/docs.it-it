@@ -3,16 +3,16 @@ title: Classi e oggetti - Esercitazione introduttiva su C#
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397819"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850730"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Esplorare la programmazione orientata agli oggetti con classi e oggetti
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="create-your-application"></a>Creare l'applicazione
 
@@ -208,7 +208,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 Digitare `dotnet run` per visualizzare i risultati.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 In caso di problemi, è possibile visualizzare il codice sorgente per questa esercitazione nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
 

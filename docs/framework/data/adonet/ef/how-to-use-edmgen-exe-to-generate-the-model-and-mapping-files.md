@@ -2,12 +2,12 @@
 title: 'Procedura: Usare EdmGen.exe per generare i file di modello e di mapping'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251414"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854563"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Procedura: Usare EdmGen.exe per generare i file di modello e di mapping
 In questo argomento viene illustrato come usare lo strumento Generatore EDM (EdmGen.exe) per generare i seguenti file in base al database School:  
@@ -24,7 +24,7 @@ In questo argomento viene illustrato come usare lo strumento Generatore EDM (Edm
   
  Lo strumento EdmGen.exe usa /mode:FullGeneration per la generazione dei file elencati in precedenza. Per ulteriori informazioni sui comandi EdmGen. exe, vedere [Generatore EDM (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
- Se si utilizza EdmGen. exe per generare i file di modello e di mapping, è comunque necessario configurare il progetto di Visual Studio per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]l'utilizzo di. Per altre informazioni, vedere [Procedura: Configurare manualmente un progetto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))di Entity Framework.  
+ Se si utilizza EdmGen. exe per generare i file di modello e di mapping, è comunque necessario configurare il progetto di Visual Studio per l'utilizzo del Entity Framework. Per altre informazioni, vedere [Procedura: Configurare manualmente un progetto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))di Entity Framework.  
   
 > [!NOTE]
 > Un modello concettuale generato da EdmGen.exe include tutti gli oggetti del database. Per generare un modello concettuale che include solo oggetti specifici, usare la Procedura guidata Entity Data Model. Per altre informazioni, vedere [Procedura: Utilizzare la procedura guidata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905064"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855961"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>Metodo IMetaDataAssemblyImport::FindManifestResourceByName
-Ottiene un puntatore alla risorsa di manifesto con il nome specificato.  
+Ottiene un puntatore alla risorsa del manifesto con il nome specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
@@ -38,20 +38,20 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Parametri  
  `szName`  
- [in] Il nome della risorsa.  
+ in Nome della risorsa.  
   
  `ptkManifestResource`  
- [out] La matrice utilizzata per archiviare il `mdManifestResource` i token di metadati, ognuno dei quali rappresenta una risorsa di manifesto.  
+ out Matrice utilizzata per archiviare i `mdManifestResource` token di metadati, ognuno dei quali rappresenta una risorsa di manifesto.  
   
 ## <a name="remarks"></a>Note  
- Il `FindManifestResourceByName` metodo Usa le regole standard utilizzate da common language runtime per la risoluzione dei riferimenti.  
+ Il `FindManifestResourceByName` metodo utilizza le regole standard utilizzate dal Common Language Runtime per la risoluzione dei riferimenti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

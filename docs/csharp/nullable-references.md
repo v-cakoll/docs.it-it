@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
-ms.translationtype: HT
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195927"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851072"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -56,20 +56,18 @@ Il supporto dei valori Null di un tipo in una dichiarazione di variabile viene c
 
 ## <a name="nullable-contexts"></a>Contesti nullable
 
-I contesti nullable consentono il controllo con granularità fine di come il compilatore interpreta le variabili dei tipi riferimento. Il **contesto dell'annotazione nullable** di una determinata riga di origine è `enabled` o `disabled`. Nel compilatore delle versioni precedenti a C# 8 la compilazione di tutto il codice viene eseguita in un contesto nullable `disabled`: Qualsiasi tipo riferimento potrebbe essere null. Il **contesto degli avvisi nullable** potrebbe essere impostato su `enabled`, `disabled` o `safeonly`. Il contesto degli avvisi nullable specifica gli avvisi generati dal compilatore usando l'analisi del flusso.
+I contesti nullable consentono il controllo con granularità fine di come il compilatore interpreta le variabili dei tipi riferimento. Il **contesto dell'annotazione nullable** di una determinata riga di origine è `enabled` o `disabled`. Nel compilatore delle versioni precedenti a C# 8 la compilazione di tutto il codice viene eseguita in un contesto nullable `disabled`: Qualsiasi tipo riferimento potrebbe essere null. Il **contesto degli avvisi Nullable** può essere impostato `enabled` su `disabled`o su. Il contesto degli avvisi nullable specifica gli avvisi generati dal compilatore usando l'analisi del flusso.
 
 Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono essere impostati per un progetto usando l'elemento `Nullable` nel file `csproj`. Questo elemento configura come il compilatore interpreta il supporto dei valori Null dei tipi e quali avvisi vengono generati. Le impostazioni valide sono:
 
 - `enable`: il contesto dell'annotazione nullable è **enabled**. Il contesto dell'avviso nullable è **enabled**.
   - Le variabili di un tipo riferimento, ad esempio `string`, sono non nullable.  Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
-- `disable`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **disabled**.
-  - Le variabili di un tipo riferimento sono indipendenti dai valori, come nelle versioni precedenti di C#. Tutti gli avvisi relativi al supporto dei valori Null sono disabilitati.
-- `safeonly`: il contesto dell'annotazione nullable è **enabled**. Il contesto dell'avviso nullable è **safeonly**.
-  - Le variabili di un tipo riferimento sono non nullable. Tutti gli avvisi relativi al supporto dei valori Null per la sicurezza sono abilitati.
 - `warnings`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **enabled**.
   - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
-- `safeonlywarnings`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **safeonly**.
-  - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null per la sicurezza sono abilitati.
+- `annotations`: il contesto dell'annotazione nullable è **enabled**. Il contesto dell'avviso nullable è **disabled**.
+  - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
+- `disable`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **disabled**.
+  - Le variabili di un tipo riferimento sono indipendenti dai valori, come nelle versioni precedenti di C#. Tutti gli avvisi relativi al supporto dei valori Null sono disabilitati.
 
 > [!IMPORTANT]
 > Il nome dell'elemento `Nullable` nelle versioni precedenti è `NullableContextOptions`. La ridenominazione è stata introdotta in Visual Studio 2019, 16.2-p1. .NET Core SDK 3.0.100-preview5-011568 non include questa modifica. Se si usa l'interfaccia della riga di comando di .NET Core, è necessario usare `NullableContextOptions` fino a quando non sarà disponibile la prossima anteprima.
@@ -78,21 +76,12 @@ Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono
 
 - `#nullable enable`: imposta il contesto dell'annotazione nullable e il contesto dell'avviso nullable su **enabled**.
 - `#nullable disable`: imposta il contesto dell'annotazione nullable e il contesto dell'avviso nullable su **disabled**.
-- `#nullable safeonly`: impostare il contesto dell'annotazione nullable su **enabled** e il contesto dell'avviso su **safeonly**.
 - `#nullable restore`: ripristina le impostazioni di progetto per il contesto dell'annotazione nullable e il contesto dell'avviso nullable.
 - `#pragma warning disable nullable`: impostare il contesto dell'avviso nullable su **disabled**.
 - `#pragma warning enable nullable`: impostare il contesto dell'avviso nullable su **enabled**.
 - `#pragma warning restore nullable`: ripristina le impostazioni di progetto per il contesto dell'avviso nullable.
-- `#pragma warning safeonly nullable`: imposta il contesto dell'avviso nullable su **safeonly**.
 
 I contesti dell'annotazione e dell'avviso nullable predefiniti sono `disabled`. Tale decisione significa che il codice esistente viene compilato senza modifiche e senza generare nuovi avvisi.
-
-Le differenze tra i contesti degli avvisi nullable `enabled` e `safeonly` sono gli avvisi relativi all'assegnazione di un riferimento nullable a un riferimento non nullable. L'assegnazione seguente genera un avviso in un contesto di avviso `enabled`, ma non in un contesto di avviso `safeonly`. La seconda riga, tuttavia, in cui `s` è dereferenziato, genera un avviso in un contesto `safeonly`:
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>Contesto dell'annotazione nullable
 
@@ -121,7 +110,7 @@ Il contesto dell'avviso nullable è diverso dal contesto dell'annotazione nullab
 1. La variabile è stata assegnata in modo definito a un valore non null.
 1. La variabile o l'espressione è stata confrontata con null prima di dereferenziarla.
 
-Il compilatore genera avvisi ogni volta che si dereferenzia una variabile o un'espressione in uno stato **maybe null** quando il contesto dell'avviso nullable è `enabled` o `safeonly`. Vengono generati avvisi anche quando un'espressione o una variabile **maybe null** è assegnata a un tipo riferimento non nullable quando il contesto dell'annotazione nullable è `enabled`.
+Il compilatore genera avvisi quando si dereferenzia una variabile o un'espressione in uno stato **forse null** quando il contesto di avviso `enabled`Nullable è. Vengono generati avvisi anche quando un'espressione o una variabile **maybe null** è assegnata a un tipo riferimento non nullable quando il contesto dell'annotazione nullable è `enabled`.
 
 ## <a name="learn-more"></a>Altre informazioni
 

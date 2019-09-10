@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57ab5eb418b5f0a9175074c87837c7cac8936346
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799054"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855965"
 ---
 # <a name="blessiwbemservices-function"></a>Funzione BlessIWbemServices
 Indica se le credenziali utente consentono l'accesso alla classe [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) specificata.   
@@ -30,7 +30,7 @@ Indica se le credenziali utente consentono l'accesso alla classe [IWbemServices]
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
    [in] BSTR strUser, 
@@ -65,7 +65,7 @@ in Livello di autorizzazione.
 
 I valori seguenti restituiti da questa funzione sono definiti nel file di intestazione *Winerror. h* oppure è possibile definirli come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |DESCRIZIONE  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 

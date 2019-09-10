@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Raccolta di elenchi
-  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
-  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-  ms.translationtype: HT
+  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/06/2019
-  ms.locfileid: "65063853"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850787"
 items:
 - durationInMinutes: 1
   content: >
@@ -218,7 +218,7 @@ items:
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: La procedura è stata completata.
   content: >-
-    È stata completata l'esercitazione interattiva "Rami e cicli". Fare clic sul collegamento **raccolte di elenchi** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni.
+    È stata completata l'esercitazione interattiva "Rami e cicli". Fare clic sul collegamento **raccolte di elenchi** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Maggiori informazioni su questi concetti sono disponibili in questi argomenti:

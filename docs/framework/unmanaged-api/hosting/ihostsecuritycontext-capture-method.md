@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f6ae812b64080a2c4d236a2be02ad81c4a11b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993018"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855535"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>Metodo IHostSecurityContext::Capture
-Ottiene un clone del [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) istanza restituita da una chiamata a [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
+Ottiene un clone dell'istanza di [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) restituita da una chiamata a [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp
 HRESULT Capture (  
     [out] IHostSecurityContext** ppClonedContext  
 );  
@@ -37,28 +37,28 @@ HRESULT Capture (
   
 ## <a name="parameters"></a>Parametri  
  `ppClonedContext`  
- [out] Un puntatore all'indirizzo di un clone di `IHostSecurityContext` oggetto devono essere acquisiti.  
+ out Puntatore all'indirizzo di un clone dell' `IHostSecurityContext` oggetto da acquisire.  
   
 ## <a name="return-value"></a>Valore restituito  
   
-|HRESULT|Descrizione|  
+|HRESULT|DESCRIZIONE|  
 |-------------|-----------------|  
-|S_OK|`Capture` stato restituito correttamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.|  
+|S_OK|`Capture`la restituzione è riuscita.|  
+|HOST_E_CLRNOTAVAILABLE|Il Common Language Runtime (CLR) non è stato caricato in un processo oppure CLR si trova in uno stato in cui non è possibile eseguire codice gestito o elaborare la chiamata correttamente.|  
 |HOST_E_TIMEOUT|Timeout della chiamata.|  
-|HOST_E_NOT_OWNER|Il chiamante non possiede il blocco.|  
-|HOST_E_ABANDONED|Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.|  
-|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Il chiamante non è il proprietario del blocco.|  
+|HOST_E_ABANDONED|Un evento è stato annullato mentre un thread bloccato o Fiber era in attesa su di esso.|  
+|E_FAIL|Si è verificato un errore irreversibile sconosciuto. Quando un metodo restituisce E_FAIL, CLR non è più utilizzabile all'interno del processo. Le chiamate successive ai metodi di hosting restituiscono HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Note  
- Il puntatore a interfaccia restituito dal `Capture` è un clone del contesto acquisito. Quando queste informazioni vengono spostate in un punto di codice asincrono, la sua durata è separata da quello del puntatore rispetto al quale è stata effettuata la chiamata. Il puntatore originale può pertanto essere rilasciato.  
+ Il puntatore di interfaccia restituito `Capture` da è un clone del contesto acquisito. Quando queste informazioni vengono spostate in un punto di codice asincrono, la relativa durata è separata da quella dell'indicatore di misura in cui è stata effettuata la chiamata. Il puntatore originale può pertanto essere rilasciato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
+ **Libreria** Incluso come risorsa in MSCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

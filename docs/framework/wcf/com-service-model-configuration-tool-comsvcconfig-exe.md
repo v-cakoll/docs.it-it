@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964194"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855660"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Strumento per la configurazione del modello di servizio di COM+ (ComSvcConfig.exe)
 Lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) consente di configurare le interfacce COM+ che si desidera siano esposte come servizi Web.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
@@ -42,7 +42,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  Nella tabella riportata di seguito sono descritti i flag che possono essere utilizzati con ComSvcConfig.exe.  
   
-|Opzione|Descrizione|  
+|Opzione|DESCRIZIONE|  
 |------------|-----------------|  
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Specifica l'applicazione COM+ da configurare.<br /><br /> Forma abbreviata `/a`.|  
 |`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Specifica componente e interfaccia COM+ che verranno configurati come contratto del servizio.<br /><br /> Forma abbreviata `/c`.<br /><br /> Sebbene sia possibile utilizzare il\*carattere jolly () quando si specificano i nomi dei componenti e delle interfacce, è consigliabile non utilizzarlo perché è possibile esporre interfacce che non si intendevano.|  
@@ -58,21 +58,21 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>DESCRIZIONE  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene aggiunta l'interfaccia `IFinances` del componente `ItemOrders.IFinancial` (dall'applicazione OnlineStore COM+) al set di interfacce esposte come servizi Web, utilizzando la modalità di hosting COM+. Tutti gli avvisi verranno restituiti oltre a qualsiasi errore incontrato.  
   
 ### <a name="code"></a>Codice  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>DESCRIZIONE  
  Nell'esempio seguente viene aggiunta l'interfaccia `IStockLevels` del componente `ItemInventory.Warehouse` (dall'applicazione OnlineWarehouse COM+) al set di interfacce esposte come servizi Web, utilizzando la modalità di hosting Web. Il Servizio Web è ospitato sul Web nella directory virtuale OnlineWarehouse di IIS.  
   
 ### <a name="code"></a>Codice  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
@@ -81,16 +81,16 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
   
 ### <a name="code"></a>Codice  
   
-```  
+```console  
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>DESCRIZIONE  
  L’esempio di seguito riportato elenca le interfacce ospitate COM+ attualmente esposte, insieme all'indirizzo corrispondente e ai dettagli di associazione, per l'applicazione OnlineStore COM+ sul computer locale.  
   
 ### <a name="code"></a>Codice  
   
-```  
+```console  
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   

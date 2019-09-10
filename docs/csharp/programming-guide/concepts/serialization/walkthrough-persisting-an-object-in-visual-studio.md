@@ -1,12 +1,12 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto tramite C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105929"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851037"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C\#
 
@@ -22,7 +22,7 @@ In questa procedura verrà creato un oggetto `Loan` di base i cui dati verranno 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Per consentire la compilazione e l'esecuzione, installare [.NET Core SDK](https://www.microsoft.com/net/core).
+- Per consentire la compilazione e l'esecuzione, installare [.NET Core SDK](https://dotnet.microsoft.com/download).
 
 - Installare l'editor del codice preferito, se non è già disponibile.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915430"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851475"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -30,11 +30,11 @@ L'utilità di importazione di controlli ActiveX converte in un controllo Windows
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 |Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Esempio  
  Il comando che segue genera MediaPlayer.dll e AxMediaPlayer.dll per il controllo `msdxm.ocx` di Media Player.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

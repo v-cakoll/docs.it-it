@@ -2,19 +2,20 @@
 title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: b0a344aa69085d50087eefc746236bc8ceacadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68479737cefe542a10a404a8b31a4820a430ffb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918852"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855207"
 ---
 # <a name="filtertables"></a>\<filterTables>
 Rappresenta una sezione di configurazione per la definizione di tabelle di routing contenenti i mapping tra i filtri di routing e gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro.  
   
- \<system.serviceModel>  
-\<routing>  
-\<routingTables>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di routing**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> filterTables**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +48,7 @@ Rappresenta una sezione di configurazione per la definizione di tabelle di routi
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<routing>](routing.md)|Sezione di configurazione contenente filtri e tabelle di routing.|  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948590"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851375"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -38,7 +38,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -46,12 +46,12 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*sourceStorename*|Archivio certificati contenente certificati, elenchi di scopi consentiti ai certificati o CRL da aggiungere, eliminare, salvare o visualizzare. Può trattarsi di un file di archivio o di un archivio di sistema.|  
 |*destinationStorename*|File o archivio certificati di output.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/add**|Aggiunge certificati, elenchi di scopi consentiti ai certificati e CRL a un archivio certificati.|  
 |**/all**|Aggiunge tutte le voci se usata con **/add**, le elimina se usata con **/del** e le visualizza se usata senza le opzioni **/add** o **/del**. Non è possibile usare l'opzione **/all** con **/put**.|  
@@ -72,7 +72,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 |**/7**|Salva l'archivio di destinazione come oggetto PKCS #7.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Certmgr.exe svolge le seguenti funzioni di base:  
   
 - Visualizza certificati, elenchi di scopi consentiti e CRL sulla console.  
@@ -97,43 +97,43 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 ## <a name="examples"></a>Esempi  
  Il comando che segue visualizza un archivio di sistema predefinito denominato `my` con output dettagliato.  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  Il comando che segue aggiunge tutti i certificati contenuti in un file denominato `myFile.ext` in un nuovo file denominato `newFile.ext`.  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  Il comando che segue aggiunge il certificato contenuto in un file denominato `testcert.cer` all'archivio di sistema `my`.  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  Il comando che segue aggiunge il certificato contenuto in un file denominato `TrustedCert.cer` all'archivio certificati radice.  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  Il comando che segue salva un certificato con il nome comune `myCert` contenuto nell'archivio di sistema `my` in un file denominato `newCert.cer`.  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  Il comando che segue elimina tutti gli elenchi di scopi consentiti contenuti nell'archivio di sistema `my` e salva l'archivio ottenuto in un file denominato `newStore.str`.  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  Il comando che segue salva nel file `my` un certificato contenuto nell'archivio di sistema `newFile`. Verrà chiesto di inserire il numero del certificato presente in `my` per inserirlo in `newFile`.  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

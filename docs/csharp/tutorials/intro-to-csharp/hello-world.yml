@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-  ms.translationtype: HT
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370319"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850793"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata l'esercitazione introduttiva "Hello C#". Fare clic sul collegamento **Numeri in C#** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito di .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni.
+    È stata completata l'esercitazione introduttiva "Hello C#". Fare clic sul collegamento **Numeri in C#** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito di .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Altre informazioni sul tipo `string`:

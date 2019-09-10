@@ -2,18 +2,18 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202817"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849618"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet restore`: ripristina le dipendenze e gli strumenti di un progetto.
 
@@ -37,7 +37,7 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto. Per impostazione predefinita, il ripristino delle dipendenze e degli strumenti viene eseguito in parallelo.
 
@@ -177,7 +177,7 @@ Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato
 
 `-s|--source <SOURCE>`
 
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Questa impostazione esegue l'override di tutte le origini specificate nei file *nuget.config*. È possibile specificare più origini, selezionando questa opzione più volte.
+Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l' <packageSource> elemento non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
 
 `--verbosity <LEVEL>`
 

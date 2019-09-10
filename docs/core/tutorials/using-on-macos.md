@@ -4,12 +4,12 @@ description: Questo documento specifica i passaggi e il flusso di lavoro da segu
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373793"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849352"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
@@ -20,7 +20,7 @@ Questo documento specifica i passaggi e il flusso di lavoro da seguire per crear
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Installare [.NET Core SDK](https://www.microsoft.com/net/core). .NET Core SDK include la versione più recente del framework e del runtime di .NET Core.
+Installare [.NET Core SDK](https://dotnet.microsoft.com/download). .NET Core SDK include la versione più recente del framework e del runtime di .NET Core.
 
 Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che migliorano l'esperienza di sviluppo in .NET Core.
 

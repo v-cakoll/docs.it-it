@@ -2,12 +2,12 @@
 title: Forma degli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248228"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854269"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma degli alberi dei comandi
 
@@ -17,7 +17,7 @@ Il modulo di generazione SQL è responsabile della generazione di una query SQL 
 
 Un albero dei comandi di query è una rappresentazione del modello a oggetti di una query. Tali alberi dei comandi di query hanno due funzioni:
 
-- Esprimere una query di input specificata per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].
+- Per esprimere una query di input specificata sulla Entity Framework.
 
 - Esprimere una query di output specificata per un provider, che descrive una query sul back-end.
 
@@ -25,7 +25,7 @@ Gli alberi dei comandi di query supportano una semantica più completa rispetto 
 
 La proprietà DBQueryCommandTree.Query è la radice dell'albero delle espressioni che descrive la logica della query. La proprietà DBQueryCommandTree.Parameters contiene un elenco di parametri usati nella query. L'albero delle espressioni è costituito da oggetti DbExpression.
 
-Un oggetto DbExpression rappresenta un'attività di calcolo. In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sono disponibili diversi tipi di espressione per la creazione di espressioni di query, incluse costanti, variabili, funzioni, costruttori e operatori relazionali standard come gli operatori di filtro e join. Ogni oggetto DbExpression dispone di una proprietà ResultType che rappresenta il tipo del risultato prodotto da tale espressione. Questo tipo viene espresso come TypeUsage.
+Un oggetto DbExpression rappresenta un'attività di calcolo. I Entity Framework per la composizione di espressioni di query, tra cui costanti, variabili, funzioni, costruttori e operatori relazionali standard come Filter e join, sono disponibili diversi tipi di espressioni. Ogni oggetto DbExpression dispone di una proprietà ResultType che rappresenta il tipo del risultato prodotto da tale espressione. Questo tipo viene espresso come TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Forme dell'albero dei comandi di query di output
 
@@ -75,7 +75,7 @@ Molte espressioni possono essere usate solo in modo limitato negli alberi dei co
 
 - Funzioni definite dall'utente.
 
-Le funzioni canoniche (vedere [funzioni canoniche](./language-reference/canonical-functions.md) per ulteriori informazioni) vengono specificate come [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]parte di e i provider devono fornire implementazioni per le funzioni canoniche basate su tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.
+Le funzioni canoniche (vedere [funzioni canoniche](./language-reference/canonical-functions.md) per ulteriori informazioni) vengono specificate come parte del Entity Framework e i provider devono fornire implementazioni per le funzioni canoniche basate su tali specifiche. Le funzioni di archivio si basano sulle specifiche contenute nel file manifesto del provider corrispondente. Le funzioni definite dall'utente si basano sulle specifiche di SSDL.
 
 Inoltre, le funzioni che includono l'attributo NiladicFunction non dispongono di argomenti e devono essere convertite senza la parentesi finale,  Ovvero, per  *\<FunctionName*  *\<> anziché FunctionName > ()* .
 

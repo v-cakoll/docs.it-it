@@ -2,32 +2,32 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248581"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854494"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
   
  I servizi di entità funzionano indipendentemente da un provider dell'archivio dati specifico, tuttavia consentono comunque a un provider di dati di definire in modo esplicito l'interazione di modelli, mapping e query con un archivio dati sottostante. Su un piano prettamente pratico, i servizi di entità potrebbero essere destinati solo a un provider di dati o a un archivio dati specifico.  
   
- I tipi supportati dal provider sono supportati direttamente o indirettamente dal database sottostante. Tali tipi no sono necessariamente i tipi di archivio, bensì i tipi usati dal provider per supportare [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. I tipi di archivio/provider vengono descritti in termini EDM (Entity Data Model).  
+ I tipi supportati dal provider sono supportati direttamente o indirettamente dal database sottostante. Questi tipi non sono necessariamente i tipi di archivio esatti, ma i tipi utilizzati dal provider per supportare il Entity Framework. I tipi di archivio/provider vengono descritti in termini EDM (Entity Data Model).  
   
  I tipi di parametri e i tipi restituiti per le funzioni supportate dall'archivio dati vengono specificati in termini EDM.  
   
 ## <a name="requirements"></a>Requisiti  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e l'archivio dati devono essere in grado di passare i dati da e verso tipi noti senza troncamento o perdita di dati.  
+ Il Entity Framework e l'archivio dati devono essere in grado di passare i dati nei tipi noti senza alcuna perdita di dati o troncamento.  
   
  Il manifesto del provider deve essere caricabile dagli strumenti in fase di progettazione senza che sia necessario aprire una connessione all'archivio dati.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Viene fatta distinzione tra maiuscole e minuscole, ma l'archivio dati sottostante potrebbe non essere. Quando nel manifesto vengono definiti e usati gli elementi di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
+ Il Entity Framework fa distinzione tra maiuscole e minuscole, ma l'archivio dati sottostante potrebbe non essere. Quando gli artefatti EDM, ad esempio identificatori e nomi di tipi, vengono definiti e utilizzati nel manifesto, è necessario che utilizzino la distinzione tra maiuscole e minuscole Entity Framework. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede un manifesto del provider per tutti i provider di dati. Se si tenta di utilizzare un provider che non dispone di un manifesto del [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]provider con, verrà ricevuto un errore.  
+ Il Entity Framework richiede un manifesto del provider per tutti i provider di dati. Se si tenta di utilizzare un provider che non dispone di un manifesto del provider con il Entity Framework, verrà ricevuto un errore.  
   
- Nella tabella seguente vengono descritti i tipi di eccezioni che verrebbero generati da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] quando l'interazione del provider genera eccezioni:  
+ Nella tabella seguente vengono descritti i tipi di eccezioni generate da Entity Framework quando si verificano eccezioni tramite l'interazione del provider:  
   
 |Problema|Eccezione|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
  Un provider deve supportare gli scenari seguenti:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Scrittura di un provider con mapping dei tipi simmetrico  
- È possibile scrivere un provider per l' [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] oggetto in cui ogni tipo di archivio esegue il mapping a un singolo tipo EDM, indipendentemente dalla direzione del mapping. Per un tipo di provider che presenta un mapping molto semplice che corrisponde a un tipo EDM, è possibile usare una soluzione simmetrica, in quanto il sistema dei tipi è semplice o corrisponde ai tipi EDM.  
+ È possibile scrivere un provider per la Entity Framework in cui ogni tipo di archivio esegue il mapping a un singolo tipo EDM, indipendentemente dalla direzione del mapping. Per un tipo di provider che presenta un mapping molto semplice che corrisponde a un tipo EDM, è possibile usare una soluzione simmetrica, in quanto il sistema dei tipi è semplice o corrisponde ai tipi EDM.  
   
  È possibile usare la semplicità del dominio e produrre un manifesto del provider dichiarativo statico.  
   
@@ -50,7 +50,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
 - Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Scrittura di un provider con mapping dei tipi asimmetrico  
- Quando si scrive un provider dell'archivio dati per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], è possibile che per alcuni tipi il mapping da EDM al tipo di provider sia diverso da quello dal provider al tipo EDM. Ad esempio, PrimitiveTypeKind.String EDM potrebbe essere mappato a nvarchar (4000) sul provider, mentre nvarchar (4000) viene mappato a PrimitiveTypeKind.String(MaxLength=4000) EDM.  
+ Quando si scrive un provider dell'archivio dati per la Entity Framework, il mapping del tipo EDM-to-provider per alcuni tipi può essere diverso dal mapping del tipo da provider a EDM. Ad esempio, PrimitiveTypeKind.String EDM potrebbe essere mappato a nvarchar (4000) sul provider, mentre nvarchar (4000) viene mappato a PrimitiveTypeKind.String(MaxLength=4000) EDM.  
   
  Scrivere un file XML con due sezioni:  
   
@@ -248,7 +248,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Per esprimere queste informazioni sui tipi nel manifesto del provider, è necessario che ogni dichiarazione TypeInformation definisca diverse descrizioni di facet per ogni oggetto Type:  
   
-|Nome attributo|Tipo di dati|Obbligatoria|Default Value|DESCRIZIONE|  
+|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Name|String|Sì|n/d|Nome del tipo di dati specifico del provider|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nome del tipo EDM|  
@@ -258,7 +258,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Yes|n/d|Nome/identificatore della funzione|  
+|NOME|String|Sì|n/d|Nome/identificatore della funzione|  
 |ReturnType|String|No|Void|Il tipo restituito EDM della funzione|  
 |Aggregate|Boolean|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
 |BuiltIn|Boolean|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
@@ -272,9 +272,9 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sì|n/d|Nome/identificatore del parametro.|  
+|NOME|String|Sì|n/d|Nome/identificatore del parametro.|  
 |Type|String|Yes|n/d|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direction|Sì|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-Inout|  
+|Modalità|Parametro<br /><br /> Direction|Yes|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  

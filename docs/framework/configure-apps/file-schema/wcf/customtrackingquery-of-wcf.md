@@ -2,12 +2,12 @@
 title: <customTrackingQuery>di WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: b034727dc89b58794ec2834cb0ff39cd7e5f1dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 204bbb6cf5ebcb30bf92b697885ecbbbd94385e0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919367"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855429"
 ---
 # <a name="customtrackingquery-of-wcf"></a>\<> customTrackingQuery di WCF
 
@@ -15,13 +15,14 @@ Rappresenta una query utilizzata per rilevare gli eventi definiti nelle attivit√
 
 Per ulteriori informazioni sulle query del profilo di rilevamento, vedere [profili di rilevamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel>  
-\<rilevamento >  
-\<profili >  
-\<trackingProfile>  
-\<> flusso di lavoro  
-\<customTrackingQueries>  
-\<customTrackingQuery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<rilevamento >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<profili >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di trackingProfile**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> flusso di lavoro**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> customTrackingQueries**](customtrackingqueries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> customTrackingQuery**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +47,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`activityName`|Stringa che specifica il nome dell'attivit√† che ha generato il record di rilevamento.|  
 |`name`|Stringa che specifica il nome del record di rilevamento personalizzato generato.|  

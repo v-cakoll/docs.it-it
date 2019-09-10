@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874185"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854046"
 ---
 # <a name="reentrancy-mda"></a>rientranza (MDA)
 L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.  
@@ -48,7 +48,7 @@ L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuat
 ## <a name="output"></a>Output  
  L'assistente al debug gestito indica il tentativo di reentrancy non valida.  Esaminare lo stack del thread per determinare il motivo per cui ciò si verifica e come risolvere il problema. Di seguito è riportato l'output di esempio.  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   

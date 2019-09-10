@@ -2,19 +2,20 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c12f57d68de870123d92c8a101e2999c24bb988f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936516"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855014"
 ---
 # <a name="service"></a>\<> del servizio
 L'elemento `service` contiene le impostazioni di un servizio Windows Communication Foundation (WCF). Contiene anche endpoint che espongono il servizio.  
   
- \<system.ServiceModel>  
-\<> dei servizi  
-\<> del servizio  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dei servizi**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> del servizio**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,7 +30,7 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare per creare l'istanza del servizio. Il nome del comportamento deve essere nell'ambito del punto in cui il servizio è definito. Il valore predefinito è una stringa vuota.|  
 |name|Attributo stringa obbligatorio che specifica il tipo del servizio per cui creare un'istanza. Questa impostazione deve corrispondere a un tipo valido. Il formato deve essere `Namespace.Class.`.|  
@@ -43,7 +44,7 @@ L'elemento `service` contiene le impostazioni di un servizio Windows Communicati
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<services>](services.md)|Elemento radice di tutti gli elementi di configurazione WCF.|  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249840"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854328"
 ---
 # <a name="null-comparisons"></a>Confronti Null
 Un valore `null` nell'origine dati indica che il valore è sconosciuto. In LINQ to Entities query è possibile verificare la presenza di valori null in modo che determinati calcoli o confronti vengano eseguiti solo su righe con dati validi o non null. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Ovvero, un confronto con un valore null non restituisce `true` o `false` `unknown`, restituisce. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
@@ -36,7 +36,7 @@ WHERE h.ShipDate IS Null
  Un *selettore di chiave* è una funzione utilizzata negli operatori di query standard per estrarre una chiave da un elemento. Nella funzione del selettore di chiave un'espressione può essere confrontata con una costante. La semantica dei valori Null di CLR viene usata in caso di confronto tra un'espressione e una costante Null o tra due costanti Null. La semantica dei valori Null dell'archivio viene usata se vengono confrontate due colonne con valori Null nell'origine dati. I selettori di chiave sono disponibili in molti operatori di query standard per il raggruppamento e l'ordinamento, come <xref:System.Linq.Queryable.GroupBy%2A> e vengono usati per selezionare le chiavi in base alle quali ordinare o raggruppare i risultati delle query.  
   
 ## <a name="null-property-on-a-null-object"></a>Proprietà Null in un oggetto Null  
- In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] le proprietà di un oggetto Null sono Null. Quando si tenta di fare riferimento a una proprietà di un oggetto Null in CLR, viene ricevuto un oggetto <xref:System.NullReferenceException>. Quando una query LINQ include una proprietà di un oggetto Null, è possibile che si verifichi un comportamento incoerente.  
+ Nel Entity Framework le proprietà di un oggetto null sono null. Quando si tenta di fare riferimento a una proprietà di un oggetto Null in CLR, viene ricevuto un oggetto <xref:System.NullReferenceException>. Quando una query LINQ include una proprietà di un oggetto Null, è possibile che si verifichi un comportamento incoerente.  
   
  Nella query seguente, ad esempio, viene eseguito il cast a `NewProduct` nel livello dell'albero dei comandi. Ciò potrebbe rendere la proprietà `Introduced` uguale a Null. Se nel database sono stati definiti confronti di valori Null in modo che il risultato del confronto di <xref:System.DateTime> sia True, la riga verrà inclusa.  
   

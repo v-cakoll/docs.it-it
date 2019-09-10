@@ -2,19 +2,20 @@
 title: <add> di <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926663"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850373"
 ---
 # <a name="add-of-protocolmapping"></a>\<aggiungere > di \<protocolMapping >
 Rappresenta un mapping del protocollo predefinito tra uno schema del protocollo di trasporto (ad esempio http, NET. TCP, NET. pipe e così via) e un'associazione Windows Communication Foundation (WCF). Quando si creano endpoint predefiniti in fase di esecuzione, WCF esamina i mapping configurati e decide il binding da usare per un determinato indirizzo di base.  
   
- \<system.serviceModel>  
-\<> protocolMapping  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> protocolMapping**](protocolmapping.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   

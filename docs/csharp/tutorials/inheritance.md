@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463813"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850996"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -18,7 +18,7 @@ Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una cara
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-In questa esercitazione si presuppone che sia stato installato .NET Core. Per le istruzioni di installazione, vedere [.NET Core installation guide](https://www.microsoft.com/net/core) (Guida all'installazione di .NET Core). È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
+In questa esercitazione si presuppone che sia stato installato il .NET Core SDK. Visitare la pagina di [download di .NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
 ## <a name="running-the-examples"></a>Esecuzione degli esempi
 

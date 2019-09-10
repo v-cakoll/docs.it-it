@@ -2,20 +2,20 @@
 title: Generazione SQL
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 2c18e88967fcba2b8414bfc171412eba908002b3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9c5301d3f4d5bc2e0db4a138c6d8ceb06d3a7845
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248407"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854361"
 ---
 # <a name="sql-generation"></a>Generazione SQL
-Quando si scrive un provider per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], è necessario convertire gli alberi dei comandi di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] in codice SQL comprensibile per un determinato database, ad esempio Transact-SQL per SQL Server o PL/SQL per Oracle. Contenuto della sezione viene illustrato come sviluppare un componente di generazione SQL (per le query SELECT) per un provider [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Per informazioni sulle query di inserimento, aggiornamento ed eliminazione, vedere la pagina relativa alla [modifica della generazione SQL](modification-sql-generation.md).  
+Quando si scrive un provider per la Entity Framework, è necessario tradurre Entity Framework alberi dei comandi in SQL che possono essere riconoscibili da un database specifico, ad esempio Transact-SQL per SQL Server o PL/SQL per Oracle. In questa sezione verrà illustrato come sviluppare un componente di generazione SQL (per le query SELECT) per un provider di Entity Framework. Per informazioni sulle query di inserimento, aggiornamento ed eliminazione, vedere la pagina relativa alla [modifica della generazione SQL](modification-sql-generation.md).  
   
- Per comprendere questa sezione è necessario avere familiarità con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e il modello di provider ADO.NET. È inoltre necessario conoscere gli alberi dei comandi e <xref:System.Data.Common.CommandTrees.DbExpression>.  
+ Per comprendere questa sezione, è necessario avere familiarità con il Entity Framework e il modello di provider ADO.NET. È inoltre necessario conoscere gli alberi dei comandi e <xref:System.Data.Common.CommandTrees.DbExpression>.  
   
 ## <a name="the-role-of-the-sql-generation-module"></a>Ruolo del modulo di generazione SQL  
- Il modulo di generazione SQL di un provider [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] converte un determinato albero dei comandi di query in una singola istruzione SQL SELECT destinata a un database conforme a SQL:1999. Se possibile, il codice SQL generato deve contenere alcune query annidate. Il modulo di generazione SQL non semplifica l'albero dei comandi di query di output. Tale semplificazione viene garantita da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] mediante, ad esempio, l'eliminazione di join e la compressione di nodi di filtro consecutivi.  
+ Il modulo di generazione SQL di un provider di Entity Framework converte una struttura ad albero dei comandi di query specifica in un'unica istruzione SQL SELECT destinata a un database conforme a SQL: 1999. Se possibile, il codice SQL generato deve contenere alcune query annidate. Il modulo di generazione SQL non semplifica l'albero dei comandi di query di output. Il Entity Framework esegue questa operazione, ad esempio eliminando i join e comprimendo i nodi di filtro consecutivi.  
   
  La classe <xref:System.Data.Common.DbProviderServices> è il punto di partenza per l'accesso al livello di generazione SQL per convertire gli alberi dei comandi in <xref:System.Data.Common.DbCommand>.  
   

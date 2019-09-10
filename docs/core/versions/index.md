@@ -4,12 +4,12 @@ description: Questo articolo illustra come viene specificata la versione di .NET
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104962"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849293"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
@@ -108,6 +108,6 @@ Ogni versione di .NET Core implementa una versione di .NET Standard. L'implement
 
 - [Framework di destinazione](../../standard/frameworks.md)
 - [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
-- [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://www.microsoft.com/net/core/support)
+- [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://dotnet.microsoft.com/platform/support/policy)
 - [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)
 - [Immagini Docker per .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

@@ -2,12 +2,12 @@
 title: Generazione di comandi SQL di modifica
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248578"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854287"
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 
@@ -27,7 +27,7 @@ Un oggetto DbModificationCommandTree è una rappresentazione del modello a ogget
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree e le relative implementazioni generate da rappresentano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sempre una singola operazione di riga. Questa sezione descrive questi tipi con i relativi vincoli in .NET Framework versione 3.5.
+DbModificationCommandTree e le relative implementazioni generate dal Entity Framework rappresentano sempre un'operazione di riga singola. Questa sezione descrive questi tipi con i relativi vincoli in .NET Framework versione 3.5.
 
 ![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Predicate specifica il predicato usato per determinare i membri della raccolta d
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generazione di comandi SQL di modifica nel provider di esempio
 
-Il [provider di esempio Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) illustra i componenti dei provider di dati ADO.NET che [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]supportano. È destinato a un database SQL Server 2005 e viene implementato come wrapper basato sul provider di dati ADO.NET 2.0 System.Data.SqlClient.
+Il [provider di esempio Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) illustra i componenti dei provider di dati ADO.NET che supportano l'Entity Framework. È destinato a un database SQL Server 2005 e viene implementato come wrapper basato sul provider di dati ADO.NET 2.0 System.Data.SqlClient.
 
 Il modulo di generazione SQL di modifica del provider di esempio (disponibile nel file SQL Generation\DmlSqlGenerator.cs) accetta un oggetto DbModificationCommandTree di input e produce una singola istruzione SQL di modifica, eventualmente seguita da un'istruzione Select per restituire un lettore se specificato da DbModificationCommandTree. Tenere presente che la forma dei comandi generati dipende dal database SQL Server di destinazione.
 

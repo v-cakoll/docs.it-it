@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-  ms.translationtype: HT
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880568"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850747"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    È stata completata questa esercitazione interattiva dedicata agli elenchi. Si tratta dell'introduzione finale all'esercitazione interattiva su C#. È possibile visitare il [sito Web .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice. Il passaggio "Per continuare ad apprendere" consente di tornare a queste esercitazioni per compilare progetti nel proprio computer.
+    È stata completata questa esercitazione interattiva dedicata agli elenchi. Si tratta dell'introduzione finale all'esercitazione interattiva su C#. È possibile visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
     Per altre informazioni sulle [raccolte .NET](../../../standard/collections/index.md), vedere gli articoli seguenti:

@@ -4,22 +4,22 @@ description: Risorse per imparare a creare applicazioni .NET Core in Windows, Li
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 5c45364cfe725d47cbb6108cd9d6ec9f981cef25
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849119"
 ---
 # <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
 Questo articolo fornisce informazioni sui concetti introduttivi di .NET Core. .NET core può essere installato in Windows, Linux e macOS. È possibile scrivere il codice nell'editor di testo preferito e produrre applicazioni e librerie multipiattaforma. 
 
-Se non si conosce .NET Core o la sua relazione con altre tecnologie .NET, iniziare con la panoramica [What is .NET](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet) (Descrizione di .NET). In poche parole, .NET Core è un'implementazione open source multipiattaforma di .NET.
+Se non si conosce .NET Core o la sua relazione con altre tecnologie .NET, iniziare con la panoramica [What is .NET](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) (Descrizione di .NET). In poche parole, .NET Core è un'implementazione open source multipiattaforma di .NET.
 
 ## <a name="create-an-application"></a>Creare un'applicazione
 
-Per prima cosa scaricare e installare [.NET Core SDK](https://www.microsoft.com/net/download/) sul computer.
+Per prima cosa scaricare e installare [.NET Core SDK](https://dotnet.microsoft.com/download) sul computer.
 
 Aprire quindi un terminale, ad esempio **PowerShell**, **prompt dei comandi**, o **bash**. Digitare i seguenti comandi `dotnet` per creare ed eseguire un'applicazione C#.
 

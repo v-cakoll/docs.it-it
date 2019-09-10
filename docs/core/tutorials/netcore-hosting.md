@@ -4,12 +4,12 @@ description: Informazioni su come ospitare il runtime di .NET Core dal codice na
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 1f04ccfa56c399a4dba003ec0de8a87f888ef848
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660529"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849324"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Scrivere un host di .NET Core personalizzato per controllare il runtime di .NET dal codice nativo
 
@@ -23,7 +23,7 @@ Questo articolo offre una panoramica dei passaggi necessari per avviare il runti
 
 Poiché gli host sono applicazioni native, in questa esercitazione verrà descritta la costruzione di un'applicazione C++ per l'hosting di .NET Core. Sarà necessario un ambiente di sviluppo C++, come quello incluso in [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
 
-Poiché sarà necessaria anche un'applicazione .NET Core semplice con cui testare l'host, installare [.NET Core SDK](https://www.microsoft.com/net/core) e [creare una piccola app di test .NET Core](with-visual-studio.md), ad esempio un'app 'Hello World'. L'app 'Hello World' creata dal nuovo modello di progetto della console di .NET Core è sufficiente.
+Poiché sarà necessaria anche un'applicazione .NET Core semplice con cui testare l'host, installare [.NET Core SDK](https://dotnet.microsoft.com/download) e [creare una piccola app di test .NET Core](with-visual-studio.md), ad esempio un'app 'Hello World'. L'app 'Hello World' creata dal nuovo modello di progetto della console di .NET Core è sufficiente.
 
 ## <a name="hosting-apis"></a>API di hosting
 Per l'hosting di .NET Core è possibile usare tre API diverse. Questo documento e i relativi [esempi](https://github.com/dotnet/samples/tree/master/core/hosting) associati illustrano tutte le opzioni.

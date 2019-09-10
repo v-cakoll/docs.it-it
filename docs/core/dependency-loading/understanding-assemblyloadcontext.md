@@ -4,12 +4,12 @@ description: Concetti chiave per comprendere lo scopo e il comportamento di Asse
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 293c586163921f9226916b177b3a29cc99c3e695
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70234603"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849228"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Informazioni su System. Runtime. loader. AssemblyLoadContext
 
@@ -54,7 +54,7 @@ In questa sezione vengono illustrati i principi generali per gli eventi e le fun
 
 - **Essere ripetibile**. Una query per una dipendenza specifica deve sempre generare la stessa risposta. È necessario che venga restituita la stessa istanza di dipendenza caricata. Questo requisito è fondamentale per la coerenza della cache. Per gli assembly gestiti in particolare, viene creata una <xref:System.Reflection.Assembly> cache. La chiave della cache è un nome di assembly <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>semplice,.
 - **In genere non generano**.  Si prevede che queste funzioni restituiscano `null` anziché generate quando non è in grado di trovare la dipendenza richiesta. La generazione di terminerà in modo anomalo la ricerca e propagherà un'eccezione al chiamante. La generazione deve essere limitata a errori imprevisti come un assembly danneggiato o una condizione di memoria insufficiente.
-- **Evitare**la ricorsione. Tenere presente che queste funzioni e gestori implementano le regole di caricamento per l'individuazione delle dipendenze. L'implementazione non deve chiamare le API che attivano la ricorsione. Il codice deve in genere chiamare le funzioni di caricamento **AssemblyLoadContext** che richiedono un percorso specifico o un argomento di riferimento alla memoria.
+- **Evitare la ricorsione**. Tenere presente che queste funzioni e gestori implementano le regole di caricamento per l'individuazione delle dipendenze. L'implementazione non deve chiamare le API che attivano la ricorsione. Il codice deve in genere chiamare le funzioni di caricamento **AssemblyLoadContext** che richiedono un percorso specifico o un argomento di riferimento alla memoria.
 - **Caricare nel AssemblyLoadContext corretto**. La scelta della posizione in cui caricare le dipendenze è specifica dell'applicazione.  La scelta è implementata da questi eventi e funzioni. Quando il codice chiama **AssemblyLoadContext** funzioni di caricamento per percorso, chiamarle nell'istanza in cui si vuole caricare il codice. In alcuni casi è possibile <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> chelagestionedelcaricosial'opzionepiùsemplice.`null`
 - Tenere **presente le gare di thread**. Il caricamento può essere attivato da più thread. AssemblyLoadContext gestisce le corse di thread mediante l'aggiunta atomica di assembly alla relativa cache. L'istanza di Race Loser è stata eliminata. Nella logica di implementazione non aggiungere una logica aggiuntiva che non gestisca correttamente più thread.
 
@@ -99,7 +99,7 @@ Data una coppia di tipi non corrispondenti è importante tenere presente anche q
 
 Vengono forniti due `a` oggetti `b`e, che consentono di valutare quanto segue nel debugger:
 
-```C#
+```csharp
 // In debugger look at each assembly's instance, Location, and FullName
 a.GetType().Assembly
 b.GetType().Assembly

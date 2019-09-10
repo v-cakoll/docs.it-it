@@ -3,18 +3,18 @@ title: Usare raccolte - Esercitazione introduttiva su C#
 description: Imparare a usare C# esplorando la raccolta List in questa esercitazione.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587260"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850876"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informazioni su come gestire le raccolte dati tramite il tipo di elenco generico
 
 Questa esercitazione introduttiva offre un'introduzione al linguaggio C# e i concetti di base relativi alla classe <xref:System.Collections.Generic.List%601>.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="a-basic-list-example"></a>Esempio di elenco di base
 

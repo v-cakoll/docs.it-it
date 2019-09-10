@@ -2,12 +2,12 @@
 title: Configurazione dei servizi WCF nel codice
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 699549305ce8ca17480285e33570c01d00c7cb97
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948435"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855639"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurazione dei servizi WCF nel codice
 Windows Communication Foundation (WCF) consente agli sviluppatori di configurare i servizi usando i file di configurazione o il codice.  I file di configurazione sono utili quando è necessario configurare un servizio dopo la relativa distribuzione. Quando si utilizzano i file di configurazione, un professionista IT deve solo aggiornare il file di configurazione. Non è necessario eseguire la ricompilazione. I file di configurazione, tuttavia, possono risultare complessi e difficili da gestire. Non è disponibile alcun supporto per il debug dei file di configurazione e, poiché il riferimento agli elementi di configurazione viene fatto in base ai nomi, i file di configurazione della creazione possono risultare difficili e soggetti a errori. WCF consente inoltre di configurare i servizi nel codice. Nelle versioni precedenti di WCF (4,0 e versioni precedenti) la configurazione dei servizi nel codice era molto semplice negli scenari indipendenti <xref:System.ServiceModel.ServiceHost> , la classe consentiva di configurare gli endpoint e i comportamenti prima di chiamare ServiceHost. Open. Negli scenari ospitati dal Web, tuttavia, non è possibile accedere direttamente alla classe <xref:System.ServiceModel.ServiceHost>. Per configurare un servizio ospitato dal Web era necessario creare un oggetto `System.ServiceModel.ServiceHostFactory` che creava l'oggetto <xref:System.ServiceModel.Activation.ServiceHostFactory> ed effettuava qualsiasi configurazione richiesta. A partire da .NET 4,5, WCF fornisce un modo più semplice per configurare i servizi ospitati in modalità self-hosted e Web nel codice.  
@@ -79,7 +79,7 @@ public class Service1 : IService1
   
  Le impostazioni nella sezione <`protocolMappings`> vengono utilizzate solo se non viene aggiunto alcun endpoint dell'applicazione <xref:System.ServiceModel.ServiceConfiguration> a a livello di codice. Facoltativamente <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , è possibile caricare la configurazione del servizio dal file di configurazione dell'applicazione predefinito chiamando, quindi modificare le impostazioni. La classe <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> consente inoltre di caricare la configurazione da una configurazione centralizzata. Nell'esempio di codice seguente viene illustrato come implementare questa azione:  
   
-```  
+```csharp
 public class Service1 : IService1   
 {   
     public void DoWork();   

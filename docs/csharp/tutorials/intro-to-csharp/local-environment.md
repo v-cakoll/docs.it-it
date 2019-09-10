@@ -2,19 +2,19 @@
 title: Introduzione a C# - Acquisire familiarità con gli strumenti di sviluppo
 description: Questo articolo presenta un'introduzione di base agli strumenti usati per sviluppare applicazioni C# e .NET nel computer.
 ms.date: 10/23/2018
-ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920662"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850760"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Acquisire familiarità con gli strumenti di sviluppo .NET
 
 Il primo passaggio dell'esecuzione di un'esercitazione nel computer consiste nel configurare l'ambiente di sviluppo.
-L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux.
+L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux.
 
-In alternativa è possibile installare [.NET Core SDK](https://www.microsoft.com/net/download) e [Visual Studio Code](https://code.visualstudio.com/).
+In alternativa è possibile installare [.NET Core SDK](https://dotnet.microsoft.com/download) e [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="basic-application-development-flow"></a>Flusso di sviluppo di applicazioni di base
 

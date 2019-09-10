@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: f1024e0bf245bbea23673cfb68de676383b672f2
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: HT
+ms.openlocfilehash: a5668d36e972699218633d8b8630d38a5c7cc9a3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051907"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853882"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installare .NET Framework in Windows Vista e Windows Server 2008
 
@@ -34,6 +34,6 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Scaricare .NET Framework](https://dotnet.microsoft.com/download)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installare .NET Framework per sviluppatori](guide-for-developers.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: HT
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221076"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854012"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Procedura: debug dei problemi di attivazione CLR
 
@@ -35,19 +35,19 @@ La registrazione dell'attivazione rimane attiva finché non viene rimosso il val
 
 - Impostare la variabile di ambiente `COMPLUS_CLRLoadLogDir` su una stringa che rappresenta il percorso completo di una directory esistente in cui si vuole archiviare i log di attivazione CLR.
 
-     La modalità di impostazione della variabile di ambiente ne determina l'ambito:
+    La modalità di impostazione della variabile di ambiente ne determina l'ambito:
 
-    - Se impostata a livello di sistema, l'attività di registrazione dell'attivazione rimane abilitata per tutte le applicazioni .NET Framework nel computer fino a quando non viene rimossa la variabile di ambiente.
+  - Se impostata a livello di sistema, l'attività di registrazione dell'attivazione rimane abilitata per tutte le applicazioni .NET Framework nel computer fino a quando non viene rimossa la variabile di ambiente.
 
-    - Se impostata a livello utente, la registrazione dell'attivazione è abilitata solo per l'account utente corrente. La registrazione continua fino a quando non viene rimossa la variabile di ambiente.
+  - Se impostata a livello utente, la registrazione dell'attivazione è abilitata solo per l'account utente corrente. La registrazione continua fino a quando non viene rimossa la variabile di ambiente.
 
-    - Se impostata dall'interno del processo prima del caricamento di CLR, la registrazione dell'attivazione rimane abilitata fino al termine del processo.
+  - Se impostata dall'interno del processo prima del caricamento di CLR, la registrazione dell'attivazione rimane abilitata fino al termine del processo.
 
-    - Se impostata dal prompt dei comandi prima di eseguire un'applicazione, la registrazione dell'attivazione è abilitata per qualsiasi applicazione eseguita da quel prompt.
+  - Se impostata dal prompt dei comandi prima di eseguire un'applicazione, la registrazione dell'attivazione è abilitata per qualsiasi applicazione eseguita da quel prompt.
 
-     Ad esempio, per archiviare i log di attivazione nella directory c:\clrloadlogs con ambito a livello di processo, aprire una finestra del prompt dei comandi e digitare il codice seguente prima di eseguire l'applicazione:
+    Ad esempio, per archiviare i log di attivazione nella directory c:\clrloadlogs con ambito a livello di processo, aprire una finestra del prompt dei comandi e digitare il codice seguente prima di eseguire l'applicazione:
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,56 +65,56 @@ Il log rispecchia l'ordine in cui le API di hosting di CLR sono state chiamate. 
 
 Nell'esempio seguente di log di attivazione le informazioni più utili sono evidenziate e descritte dopo il log.
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - Il **log di caricamento CLR** specifica il percorso dell'eseguibile che ha avviato il processo che ha caricato il codice gestito. Si noti che questo potrebbe essere un host nativo.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - Il **runtime installato** è un insieme di versioni di CLR installate nel computer candidate alla richiesta di attivazione.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
 - **Compilato con la versione** indica la versione di CLR usata per compilare il binario inviato a un metodo come [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
 - L'**installazione funzionalità su richiesta** fa riferimento all'abilitazione di .NET Framework 3.5 in Windows 8. Vedere [Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) per altre informazioni su questo scenario.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 

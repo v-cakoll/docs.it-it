@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951306"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855634"
 ---
 # <a name="wcf-performance-counters"></a>Contatori delle prestazioni di WCF
 Windows Communication Foundation (WCF) include un ampio set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione.  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) include un ampio set di contatori delle p
   
  È inoltre possibile abilitare contatori delle prestazioni nel codice nel modo seguente:  
   
-```  
+```csharp
 using System.Configuration;  
 using System.ServiceModel.Configuration;  
 using System.ServiceModel.Diagnostics;  
@@ -87,9 +87,7 @@ config.Save();
 ### <a name="service-performance-counters"></a>Contatori delle prestazioni a livello di servizio  
  I contatori delle prestazioni del servizio misurano il comportamento del servizio nel suo insieme e possono essere usati per diagnosticare le prestazioni dell'intero servizio. Sono reperibili nell'oggetto prestazione `ServiceModelService 4.0.0.0` in caso di visualizzazione con Performance Monitor. Le istanze vengono denominate usando il modello seguente:  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
  Un contatore nell'ambito di un servizio viene aggregato dal contatore in una raccolta di endpoint.  
   
@@ -98,9 +96,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="endpoint-performance-counters"></a>Contatori delle prestazioni a livello di endpoint  
  I contatori delle prestazioni a livello di endpoint consentono di analizzare i dati che riflettono la modalità di accettazione dei messaggi da parte di un endpoint. Sono reperibili nell'oggetto prestazione `ServiceModelEndpoint 4.0.0.0` in caso di visualizzazione con Performance Monitor. Le istanze vengono denominate usando il modello seguente:  
   
-```  
-(ServiceName).(ContractName)@(endpoint listener address)  
-```  
+`(ServiceName).(ContractName)@(endpoint listener address)`
   
  I dati sono simili a quelli raccolti per le singole operazioni, ma vengono aggregati soltanto nell'endpoint.  
   
@@ -112,9 +108,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="operation-performance-counters"></a>Contatori delle prestazioni a livello di operazione  
  I contatori delle prestazioni a livello di operazione sono reperibili nell'oggetto prestazione `ServiceModelOperation 4.0.0.0` in caso di visualizzazione con Performance Monitor. Ogni operazione ha un'istanza singola. Ovvero, se un determinato contratto ha 10 operazioni, ad esso sono associate 10 istanze di contatore per l'operazione. Le istanze di oggetti vengono denominate usando il modello seguente:  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Questo contatore consente di misurare come viene usata la chiamata e le prestazioni dell'operazione.  
   

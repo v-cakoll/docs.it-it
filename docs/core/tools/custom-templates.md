@@ -3,16 +3,16 @@ title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660583"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849851"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
-[.NET Core SDK](https://www.microsoft.com/net/download/core) viene distribuito con molti modelli già installati e pronti per l'uso. Il [comando `dotnet new`](dotnet-new.md) non consente solo di usare un modello, ma anche di installarlo e disinstallarlo. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
+[.NET Core SDK](https://dotnet.microsoft.com/download) viene distribuito con molti modelli già installati e pronti per l'uso. Il [comando `dotnet new`](dotnet-new.md) non consente solo di usare un modello, ma anche di installarlo e disinstallarlo. A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
 
 È possibile installare modelli personalizzati da un pacchetto NuGet in qualsiasi feed NuGet, facendo direttamente riferimento a un file NuGet con estensione *nupkg* o specificando una directory del file system che contiene il modello. Il motore del modello offre funzionalità che consentono di sostituire i valori, includere ed escludere file ed eseguire operazioni di elaborazione personalizzate quando si usa il modello.
 
@@ -22,7 +22,7 @@ Per seguire una procedura dettagliata e creare un modello, vedere l'esercitazion
 
 ### <a name="net-default-templates"></a>Modelli predefiniti .NET
 
-Quando si installa [.NET Core SDK](https://www.microsoft.com/net/download/core), si riceve circa una decina di modelli predefiniti per la creazione di progetti e file, tra cui app console, librerie di classi, progetti unit test, app ASP.NET Core (inclusi i progetti [Angular](https://angular.io/) e [React](https://facebook.github.io/react/)) e file di configurazione. Per elencare i modelli predefiniti, eseguire il comando `dotnet new` con l'opzione `-l|--list`:
+Quando si installa [.NET Core SDK](https://dotnet.microsoft.com/download), si riceve circa una decina di modelli predefiniti per la creazione di progetti e file, tra cui app console, librerie di classi, progetti unit test, app ASP.NET Core (inclusi i progetti [Angular](https://angular.io/) e [React](https://facebook.github.io/react/)) e file di configurazione. Per elencare i modelli predefiniti, eseguire il comando `dotnet new` con l'opzione `-l|--list`:
 
 ```console
 dotnet new --list
@@ -52,7 +52,7 @@ I file generati dal modello possono essere modificati in base alla logica e alle
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Member            | Tipo          | DESCRIZIONE |
+| Member            | Type          | Descrizione |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | string        | L'autore del modello. |

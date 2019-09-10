@@ -2,19 +2,20 @@
 title: <endpoint> di <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919104"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855315"
 ---
 # <a name="endpoint-of-client"></a>\<> endpoint di \<> client
 Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del canale usato dai client per connettersi agli endpoint del servizio nel server.  
   
- \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> client**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endpoint**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +36,7 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Descrizione|  
+|Attributo|DESCRIZIONE|  
 |---------------|-----------------|  
 |Address|Attributo stringa obbligatorio.<br /><br /> Specifica l'indirizzo dell'endpoint. Il valore predefinito è una stringa vuota. L'indirizzo deve essere un URI assoluto.|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare per creare un'istanza dell'endpoint. Il nome del comportamento deve essere nell'ambito del punto in cui il servizio è definito. Il valore predefinito è una stringa vuota.|  

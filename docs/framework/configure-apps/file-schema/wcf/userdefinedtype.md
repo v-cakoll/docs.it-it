@@ -2,20 +2,22 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940573"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854842"
 ---
 # <a name="userdefinedtype"></a>\<> di
 Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contratto di servizio.  
   
- \<system.ServiceModel>  
-\<comContracts>  
-\<comContract>  
-\<userDefinedTypes>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comcontratti >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> comContract**](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> userDefinedTypes**](userdefinedtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> di**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +52,7 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`userDefinedTypes`|Raccolta di elementi `userDefinedType`.|  
   

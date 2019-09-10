@@ -2,12 +2,12 @@
 title: Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251580"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855011"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 
@@ -137,11 +137,11 @@ Inoltre, quando si rendono bidimensionali i join, è possibile che si verifichi 
 
 ## <a name="avoid-select-"></a>Evitare SELECT *
 
-Non usare `SELECT *` per effettuare la selezione dalle tabelle di base. Il modello di archiviazione in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] un'applicazione può includere solo un subset delle colonne presenti nella tabella di database. In questo caso, è possibile che `SELECT *` produca un risultato errato. Al contrario, è necessario specificare tutte le colonne coinvolte tramite i nomi di colonna del tipo di risultato delle espressioni interessate.
+Non usare `SELECT *` per effettuare la selezione dalle tabelle di base. Il modello di archiviazione in un'applicazione Entity Framework può includere solo un subset delle colonne presenti nella tabella di database. In questo caso, è possibile che `SELECT *` produca un risultato errato. Al contrario, è necessario specificare tutte le colonne coinvolte tramite i nomi di colonna del tipo di risultato delle espressioni interessate.
 
 ## <a name="reuse-of-expressions"></a>Riutilizzo delle espressioni
 
-È possibile riutilizzare le espressioni nell'albero dei comandi di query passato da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Non presupporre che ogni espressione sia visualizzata solo una volta nell'albero dei comandi di query.
+È possibile riutilizzare le espressioni nell'albero dei comandi di query passato dal Entity Framework. Non presupporre che ogni espressione sia visualizzata solo una volta nell'albero dei comandi di query.
 
 ## <a name="mapping-primitive-types"></a>Mapping di tipi primitivi
 

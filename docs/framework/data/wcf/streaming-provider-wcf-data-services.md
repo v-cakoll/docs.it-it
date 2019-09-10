@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779788"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854105"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 
@@ -53,7 +53,7 @@ Per indicare che un'entità è un elemento entry di collegamento multimediale, a
 
 È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.
 
-Per un esempio di un servizio dati che usa il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere la serie [del provider di flusso post Data Services: Implementazione di un provider di flusso (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1).
+Per un esempio di un servizio dati che usa il provider di Entity Framework ed espone una risorsa multimediale, vedere la [serie di provider di streaming Post Data Services: Implementazione di un provider di flusso (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1).
 
 **Provider di reflection**
 
@@ -67,7 +67,7 @@ Quando si usano provider di servizi personalizzati, si implementa l'interfaccia 
 
 Per creare un servizio dati che supporta i flussi di dati binari, è necessario implementare l'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Questa implementazione consente al servizio dati di restituire al client i dati binari sotto forma di flusso e di usarli come flusso inviato dal client. Il servizio dati crea un'istanza di questa interfaccia ogni volta che deve accedere ai dati binari sotto forma di flusso. L'interfaccia <xref:System.Data.Services.Providers.IDataServiceStreamProvider> specifica i membri seguenti:
 
-|Nome del membro|DESCRIZIONE|
+|Nome del membro|Descrizione|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Questo metodo viene richiamato dal servizio dati per eliminare la risorsa multimediale corrispondente quando viene eliminato l'elemento entry di collegamento multimediale. Quando si implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, questo metodo contiene il codice che elimina la risorsa multimediale associata all'elemento entry di collegamento multimediale fornito.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Questo metodo viene richiamato dal servizio dati per restituire una risorsa multimediale come flusso. Quando si implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, questo metodo contiene il codice che fornisce un flusso usato dal servizio dati per restituire la risorsa multimediale associata all'elemento entry di collegamento multimediale specifico.|

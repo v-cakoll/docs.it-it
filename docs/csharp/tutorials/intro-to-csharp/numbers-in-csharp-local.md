@@ -3,18 +3,18 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661060"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850688"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
 Questa esercitazione presenta in modo interattivo i tipi numerici in C#. Si scriveranno piccole quantità di codice, quindi si compilerà ed eseguirà tale codice. L'esercitazione contiene una serie di lezioni che esplorano numeri e operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="explore-integer-math"></a>Esplorare le operazioni matematiche su interi
 

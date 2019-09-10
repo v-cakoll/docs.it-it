@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946566"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853843"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -89,7 +89,7 @@ extern "C" int MessageBox(
   
  La tabella seguente elenca il set completo di campi attributo relativi a platform invoke. Per ogni campo, la tabella include il valore predefinito e un collegamento a informazioni su come usare questi campi per definire le funzioni DLL non gestite.  
   
-|Campo|DESCRIZIONE|  
+|Campo|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Abilita o disabilita il mapping più appropriato.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Specifica la convenzione di chiamata da usare per passare gli argomenti del metodo. Il valore predefinito è `WinAPI`, che corrisponde a `__stdcall` per le piattaforme Intel a 32 bit.|  
@@ -189,7 +189,7 @@ class PInvokeScenario
   
  Le dichiarazioni di interfacce di interoperabilità COM seguenti ignorano i modificatori `Assert`, `Deny` e `PermitOnly`, analogamente agli esempi di platform invoke nella sezione precedente.  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -220,7 +220,7 @@ interface IAssertStubsItf
   
  Inoltre, il modificatore `Demand` non viene accettato negli scenari di dichiarazione di interfacce di interoperabilità COM, come illustrato nell'esempio seguente.  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  

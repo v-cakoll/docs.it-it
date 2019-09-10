@@ -2,12 +2,12 @@
 title: Funzioni canoniche
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251280"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854517"
 ---
 # <a name="canonical-functions"></a>Funzioni canoniche
 Contenuto della sezione vengono illustrate le funzioni canoniche supportate da tutti i provider di dati e che possono essere usate da tutte le tecnologie di query. Le funzioni canoniche non possono essere estese da un provider.  
@@ -18,9 +18,9 @@ Contenuto della sezione vengono illustrate le funzioni canoniche supportate da t
   
  Quando si usano funzioni canoniche in una query [!INCLUDE[esql](../../../../../../includes/esql-md.md)], la funzione appropriata viene chiamata nell'origine dati.  
   
- Per tutte le funzioni canoniche sono specificati in modo esplicito sia il comportamento in caso di input null che le condizioni di errore. I provider dell'archivio devono essere conformi a tale comportamento, ma questo comportamento non viene applicato da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+ Per tutte le funzioni canoniche sono specificati in modo esplicito sia il comportamento in caso di input null che le condizioni di errore. I provider dell'archivio devono essere conformi a tale comportamento, ma Entity Framework non impone questo comportamento.  
   
- Per gli scenari LINQ, le query [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] su comportano il mapping dei metodi CLR ai metodi nell'origine dati sottostante. I metodi CLR sono mappati alle funzioni canoniche, pertanto un set di metodi specifico può essere mappato correttamente indipendentemente dall'origine dati.  
+ Per gli scenari LINQ, le query sulla Entity Framework implicano il mapping dei metodi CLR ai metodi nell'origine dati sottostante. I metodi CLR sono mappati alle funzioni canoniche, pertanto un set di metodi specifico può essere mappato correttamente indipendentemente dall'origine dati.  
   
 ## <a name="canonical-functions-namespace"></a>Spazio dei nomi delle funzioni canoniche  
  Lo spazio dei nomi per le funzioni canoniche è <xref:System.Data.Metadata.Edm>. Lo spazio dei nomi <xref:System.Data.Metadata.Edm> viene incluso automaticamente in tutte le query. Se tuttavia viene importato un altro spazio dei nomi contenente una funzione con lo stesso nome di una funzione canonica (nello spazio dei nomi <xref:System.Data.Metadata.Edm>), è necessario specificare lo spazio dei nomi.  

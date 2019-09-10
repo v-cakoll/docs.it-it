@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 91ba139a4fad34edf813d76b290ccfe77450dc4c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959059"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851453"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
@@ -39,13 +39,13 @@ Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console
 caspol [options]  
 ```  
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> oppure<br /><br /> **-af** *assembly_file*|Aggiunge un assembly che implementa un oggetto di sicurezza personalizzato, ad esempio un'autorizzazione o una condizione di appartenenza personalizzata, nell'elenco di assembly completamente attendibili per uno specifico livello di criteri. L'argomento *file_assembly* specifica l'assembly da aggiungere. Il file deve essere firmato con un [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md). A questo scopo è possibile usare lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Ogni volta che un set di autorizzazioni contenente un'autorizzazione personalizzata viene aggiunto ai criteri, è necessario aggiungere l'assembly che implementa l'autorizzazione personalizzata all'elenco completamente attendibile per tale livello di criteri. Gli assembly che implementano oggetti di sicurezza personalizzati, quali condizioni di appartenenza o gruppi di codice personalizzati, utilizzati nei criteri di sicurezza, ad esempio i criteri del computer, devono essere sempre aggiunti all'elenco di assembly completamente attendibili. **Attenzione:**  Se l'assembly che implementa l'oggetto di sicurezza personalizzato fa riferimento ad altri assembly, aggiungere all'elenco di assembly completamente attendibili prima quelli a cui si fa riferimento. Gli oggetti di sicurezza personalizzati creati con Visual Basic, C++ e JScript fanno riferimento rispettivamente a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll o Microsoft.JScript.dll. Per impostazione predefinita, questi assembly non sono contenuti nell'elenco degli assembly totalmente attendibili, per cui è necessario aggiungere l'assembly appropriato all'elenco prima di aggiungere un oggetto di sicurezza personalizzato. Se questa operazione non riesce si verificheranno problemi nel sistema di sicurezza, provocando il mancato caricamento di tutti gli assembly. In questa situazione, l'opzione **-all -reset** di Caspol.exe non è in grado di ripristinare la sicurezza. Per ripristinare la sicurezza, modificare manualmente i file di sicurezza per rimuovere l'oggetto di sicurezza personalizzato.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> oppure<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Aggiunge un nuovo gruppo di codice alla gerarchia dei gruppi di codice. È possibile specificare *parent_label* oppure *parent_name*. L'argomento *parent_label* specifica l'etichetta (ad esempio 1. o 1.1.) del gruppo di codice padre del gruppo di codice aggiunto. L'argomento *parent_name* specifica il nome del gruppo di codice padre del gruppo di codice aggiunto. Dal momento che è possibile usare indifferentemente *parent_label* e *parent_name*, Caspol.exe deve essere in grado di distinguerli. Pertanto *parent_name* non può iniziare con un numero. Inoltre, *parent_name* può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura.<br /><br /> L'argomento *mship* specifica la condizione di appartenenza del nuovo gruppo di codice. Per altre informazioni, vedere la tabella degli argomenti *mship* più avanti in questa sezione.<br /><br /> L'argomento *pset_name* è il nome del set di autorizzazioni che verrà associato al nuovo gruppo di codice. È anche possibile impostare uno o più argomenti *flags* per il nuovo gruppo. Per altre informazioni, vedere la tabella degli argomenti *flags* più avanti in questa sezione.|  
@@ -95,14 +95,14 @@ caspol [options]
   
  L'argomento *flags*, utilizzabile con le opzioni **-addgroup** e **-chggroup**, viene specificato mediante uno degli argomenti elencati di seguito.  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |**-description** "*description*"|Se viene usato con l'opzione **-addgroup**, specifica la descrizione di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica la descrizione di un gruppo di codice da modificare. L'argomento *description* deve essere racchiuso tra virgolette doppie.|  
 |**-exclusive** {**on**&#124;**off**}|Quando è impostato su **on**, indica che solo il set di autorizzazioni associato al gruppo di codice da aggiungere o da modificare verrà considerato quando del codice soddisferà la condizione di appartenenza del gruppo di codice. Quando questa opzione è impostata su **off**, vengono considerati i set di autorizzazioni di tutti i gruppi di codice corrispondenti nel livello di criteri.|  
 |**-levelfinal** {**on**&#124;**off**}|Quando è impostato su **on**, indica che non verrà considerato alcun livello di criteri inferiore al livello del gruppo di codice aggiunto o modificato. Questa opzione è in genere utilizzata per i criteri definiti a livello di computer. Se ad esempio si imposta questo flag per un gruppo di codice a livello di computer ed esiste codice che soddisfa la condizione di appartenenza di tale gruppo di codice, i criteri definiti a livello utente per questo codice non verranno né calcolati né applicati.|  
 |**-name** "*name*"|Se viene usato con l'opzione **-addgroup**, specifica il nome di script di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica il nome di script di un gruppo di codice da modificare. L'argomento *name* deve essere racchiuso tra virgolette doppie. L'argomento *name* non può iniziare con un numero e può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura. È possibile fare riferimento ai gruppi di codice in base a questo argomento *name* anziché in base all'etichetta numerica. *name* è anche estremamente utile per la creazione di script.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  I criteri di sicurezza vengono espressi mediante tre livelli computer, utente e azienda. Il set di autorizzazioni che un assembly riceve è determinato dall'intersezione dei set di autorizzazioni consentiti da questi tre livelli di criteri. Ciascun livello di criteri è rappresentato da una struttura gerarchica di gruppi di codice. Ciascun gruppo di codice presenta una condizione di appartenenza che determina quale codice appartiene a tale gruppo. A ciascun gruppo di codice è inoltre associato un set di autorizzazioni denominato. Questo set di autorizzazioni specifica le autorizzazioni concesse dal runtime al codice che soddisfa la condizione di appartenenza. Una gerarchia dei gruppi di codice, insieme ai set di autorizzazioni denominati a essa associati, definisce e mantiene ciascun livello dei criteri di sicurezza. Per impostare il livello dei criteri di sicurezza, è possibile usare le opzioni **-user**, **-customuser**, **-machine** ed **-enterprise**.  
   
  Per altre informazioni sui criteri di sicurezza e sulle modalità con cui il runtime determina quali autorizzazioni concedere al codice, vedere [Gestione dei criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  

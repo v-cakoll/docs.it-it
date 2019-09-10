@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 9379f02c29f11606d0ef34323b16c1531927b0c8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698024"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849077"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -89,7 +89,7 @@ La pubblicazione di una distribuzione autonoma senza dipendenze di terze parti c
 
 1. Aggiungere il codice sorgente dell'applicazione.
 
-   Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
+   Aprire il file *Program.cs* o *Program. vb* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -150,7 +150,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
          1. Selezionare **Crea nuovo profilo** nella finestra di dialogo **Pubblica**.
 
-         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Scegliere **OK**.
+         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Selezionare **OK**.
 
          1. Selezionare il nuovo profilo (**FolderProfile1**) nell'elenco dei profili e assicurarsi che **Runtime di destinazione** sia `win10-x64`. In caso contrario, selezionare **Impostazioni**. Nella finestra di dialogo **Impostazioni profilo** impostare **Runtime di destinazione** su `win10-x64` e selezionare **Salva**. In alternativa selezionare **Annulla**.
 
@@ -216,7 +216,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
 
-I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. A tale scopo, effettuare le seguenti operazioni:
 
    1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 

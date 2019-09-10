@@ -2,20 +2,21 @@
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: fb7c699612ef12aae39aaeadaf170d0e8f2553cd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936439"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855142"
 ---
 # <a name="serviceactivations"></a>\<serviceActivations>
 
 Elemento di configurazione che consente di aggiungere impostazioni che definiscono le impostazioni di attivazione del servizio virtuale che vengono mappate ai tipi di servizio Windows Communication Foundation (WCF). In questo modo è possibile attivare servizi ospitati in WAS/IIS senza un file con estensione svc.
 
-\<system.ServiceModel>\
-\<serviceHostingEnvironment>\
-\<serviceActivations>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> serviceHostingEnvironment**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceActivations**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,7 +45,7 @@ Nessuno.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|DESCRIZIONE|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Definisce il tipo del quale l'ambiente host del servizio crea un'istanza per un determinato trasporto.|
 

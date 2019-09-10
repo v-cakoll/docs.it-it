@@ -4,12 +4,12 @@ description: Questo argomento descrive il processo di creazione di una soluzione
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6a3f6c82a92042eeca1cb79f4634277d6870ebaf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: a2459bfdc50e64b1d6710853b556c1bf226f07e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105259"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849563"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
@@ -25,18 +25,18 @@ In questa esercitazione viene illustrato come creare un'applicazione che accetta
 ## <a name="prerequisites"></a>Prerequisiti
 
 - OpenSSL (se è in esecuzione .NET Core 1.1): Vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
-- [.NET Core SDK 1.1 o versione successiva](https://www.microsoft.com/net/core#macos)
+- [.NET Core SDK 1.1 o versione successiva](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Creazione di una libreria
 
-1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Scegliere **Avanti**.
+1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **.NET Core**, selezionare il modello **Libreria .NET Standard**. Verrà creata una libreria .NET Standard che ha come destinazione .NET Core, nonché qualsiasi altra implementazione .NET che supporta la versione 2.0 di [.NET Standard](../../standard/net-standard.md). Selezionare **Avanti**.
 
    ![Finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project.png)
 
-1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Scegliere **Crea**.
+1. Assegnare al progetto il nome "TextUtils" (nome breve per "Text Utilities") e alla soluzione il nome "WordCounter". Lasciare selezionata la casella **Crea una directory del progetto nella directory della soluzione**. Selezionare **Create**.
 
    ![Opzioni della finestra di dialogo Nuovo progetto di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-new-project-options.png)
 
@@ -74,7 +74,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 1. Aggiungere un riferimento al progetto `TextUtils` per consentire l'interazione tra la libreria di test e la classe `WordCount`. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse su **Dipendenze** in **TestLibrary**. Scegliere **Modifica riferimenti** dal menu di scelta rapida.
 
-1. Nella finestra di dialogo **Modifica riferimenti** selezionare il progetto **TextUtils** nella scheda **Progetti**. Scegliere **OK**.
+1. Nella finestra di dialogo **Modifica riferimenti** selezionare il progetto **TextUtils** nella scheda **Progetti**. Selezionare **OK**.
 
    ![Finestra di dialogo Modifica riferimenti di Visual Studio per Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 

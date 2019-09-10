@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e625ac3968542c65e737093c0ac292de4c2ffa37
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250980"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854467"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Espressioni in query di LINQ to Entities
 Un'espressione è un frammento di codice che può restituire un singolo valore, oggetto, metodo o spazio dei nomi. Le espressioni possono contenere un valore letterale, una chiamata al metodo, un operatore e i relativi operandi oppure un nome semplice, ad esempio il nome di una variabile, un membro di un tipo, un parametro di un metodo, uno spazio dei nomi o un tipo. Le espressioni possono usare operatori che a loro volta usano altre espressioni come parametri oppure chiamate a metodi i cui parametri sono a loro volta altre chiamate a metodi. Le espressioni possono pertanto essere da semplici a molto complesse.  
   
- Nelle query LINQ to Entities, le espressioni possono contenere qualsiasi elemento consentito dai tipi all' <xref:System.Linq.Expressions> interno dello spazio dei nomi, incluse le espressioni lambda. Le espressioni che possono essere utilizzate nelle query LINQ to Entities sono un superset delle espressioni che possono essere utilizzate per eseguire una query [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]su.  Le espressioni che fanno parte di query su [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono limitate alle operazioni supportate da `ObjectQuery<T>` e dall'origine dati sottostante.  
+ Nelle query LINQ to Entities, le espressioni possono contenere qualsiasi elemento consentito dai tipi all' <xref:System.Linq.Expressions> interno dello spazio dei nomi, incluse le espressioni lambda. Le espressioni che possono essere utilizzate nelle query LINQ to Entities sono un superset delle espressioni che possono essere utilizzate per eseguire query sul Entity Framework. le espressioni che fanno parte di query sul Entity Framework sono limitate alle operazioni supportate da `ObjectQuery<T>` e origine dati sottostante.  
   
  Nell'esempio seguente il confronto nella clausola `Where` è un'espressione:  
   

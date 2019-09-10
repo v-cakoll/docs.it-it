@@ -4,16 +4,16 @@ description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960301"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855768"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
-La documentazione di .NET contiene una serie di esempi ed esercitazioni che illustrano il funzionamento di .NET. Questo argomento descrive come trovare, visualizzare e scaricare esercitazioni ed esempi per .NET Core, ASP.NET Core e C#. È possibile trovare risorse per apprendere il linguaggio di programmazione F# nel [sito di F# Foundation](https://fsharp.org/learn.html). Se si è interessati a esplorare C# usando un editor del codice online, iniziare con [questa esercitazione interattiva](https://www.microsoft.com/net/learn/in-browser-tutorial/1) e continuare con l'[esercitazione interattiva per C#](../csharp/tutorials/intro-to-csharp/index.md). Per istruzioni su come visualizzare e scaricare il codice di esempio, vedere la sezione [Visualizzazione e download degli esempi](#viewing-and-downloading-samples).
+La documentazione di .NET contiene una serie di esempi ed esercitazioni che illustrano il funzionamento di .NET. Questo argomento descrive come trovare, visualizzare e scaricare esercitazioni ed esempi per .NET Core, ASP.NET Core e C#. È possibile trovare risorse per apprendere il linguaggio di programmazione F# nel [sito di F# Foundation](https://fsharp.org/learn.html). Se si è interessati a esplorare C# usando un editor del codice online, iniziare con [questa esercitazione interattiva](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) e continuare con l'[esercitazione interattiva per C#](../csharp/tutorials/intro-to-csharp/index.md). Per istruzioni su come visualizzare e scaricare il codice di esempio, vedere la sezione [Visualizzazione e download degli esempi](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -116,6 +116,6 @@ Molti argomenti mostrano codice sorgente ed esempi disponibili per la visualizza
 1. Spostarsi all'interno delle cartelle del repository nel percorso dell'esempio. Il percorso relativo per il percorso dell'esempio viene visualizzato nella barra degli indirizzi del browser quando si segue il collegamento all'esempio.
 1. Per eseguire un esempio, sono disponibili diverse alternative:
    * Usare gli [strumenti dell'interfaccia della riga di comando dotnet](../core/tools/index.md): in una finestra della console passare alla cartella dell'esempio e usare i comandi dell'interfaccia della riga di comando dotnet.
-   * Usare [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): aprire l'esempio selezionando **File > Apri > Progetto/Soluzione** nella barra dei menu, passare alla cartella del progetto di esempio e selezionare il file di progetto (*.csproj* o *.fsproj*).
+   * Usare [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): aprire l'esempio selezionando **File > Apri > Progetto/Soluzione** nella barra dei menu, passare alla cartella del progetto di esempio e selezionare il file di progetto ( *.csproj* o *.fsproj*).
    * Usare [Visual Studio Code](https://code.visualstudio.com/): aprire l'esempio selezionando **File > Apri cartella** nella barra dei menu e selezionare la cartella del progetto di esempio.
    * Usare un ambiente IDE diverso che supporta .NET Core.

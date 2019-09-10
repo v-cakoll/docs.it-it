@@ -2,21 +2,22 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ffe2538fa2c3cb680285cfaa68c975c0f9d4b1bd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925659"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855286"
 ---
 # <a name="entries"></a>\<voci >
 Voce di routing contenente i mapping tra i filtri di routing e gli endpoint di destinazione ai quali inviare i messaggi quando viene trovata una corrispondenza di filtro.  
   
- \<system.serviceModel>  
-\<routing>  
-\<routingTables>  
-\<> tabella  
-\<voci >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di routing**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> filterTables**](filtertables.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> filterTable**](filtertable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<voci >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +50,7 @@ Voce di routing contenente i mapping tra i filtri di routing e gli endpoint di d
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<routing>](routing.md)|Sezione di configurazione contenente una tabella di routing.|  
   

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250677"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854440"
 ---
 # <a name="initialization-expressions"></a>Espressioni di inizializzazione
 Un'espressione di inizializzazione consente di inizializzare un nuovo oggetto. La maggior parte delle espressioni di inizializzazione è supportata, incluse le più recenti espressioni di inizializzazione di C# 3.0 e Visual Basic 9.0. I tipi seguenti possono essere inizializzati e restituiti da una query LINQ to Entities:  
   
 - Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
   
-- Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipi CLR supportati dal Entity Framework.
   
 - Raccolte inline.  
   
