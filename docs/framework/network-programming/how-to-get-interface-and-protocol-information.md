@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624571"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894718"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="c7958-102">Procedura: Ottenere informazioni su interfacce e protocolli</span><span class="sxs-lookup"><span data-stu-id="c7958-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="c7958-103">Questo esempio mostra come leggere le statistiche TCP di un'interfaccia di rete.</span><span class="sxs-lookup"><span data-stu-id="c7958-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="43c3b-102">Procedura: Ottenere informazioni su interfacce e protocolli</span><span class="sxs-lookup"><span data-stu-id="43c3b-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="43c3b-103">Questo esempio mostra come leggere le statistiche TCP di un'interfaccia di rete.</span><span class="sxs-lookup"><span data-stu-id="43c3b-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c7958-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c7958-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="43c3b-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="43c3b-104">Example</span></span>  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  
@@ -69,7 +69,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c7958-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="c7958-105">Compiling the Code</span></span>  
- <span data-ttu-id="c7958-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="c7958-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="43c3b-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="43c3b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="43c3b-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="43c3b-106">This example requires:</span></span>  
   
-- <span data-ttu-id="c7958-107">Riferimenti allo spazio dei nomi **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="c7958-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="43c3b-107">Riferimenti allo spazio dei nomi **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="43c3b-107">References to the **System.Net** namespace.</span></span>

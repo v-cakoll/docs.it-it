@@ -3,30 +3,31 @@ title: Indice delle procedure relative a WIF
 ms.date: 03/30/2017
 ms.assetid: 4e8c6d04-fc2e-4b55-8717-c4cbaf681381
 author: BrucePerlerMS
-ms.openlocfilehash: 3300db820772c9bee212f6a957de5c39e07037d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 306be82b25a0eacd7583f0e5302723b1dc5378a5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592188"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926896"
 ---
-# <a name="wif-how-tos-index"></a><span data-ttu-id="15c91-102">Indice delle procedure relative a WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-102">WIF How-To's Index</span></span>
-- [<span data-ttu-id="15c91-103">Procedura: Creare applicazione Web MVC ASP.NET in grado di riconoscere attestazioni con WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-103">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+# <a name="wif-how-tos-index"></a><span data-ttu-id="af771-102">Indice delle procedure relative a WIF</span><span class="sxs-lookup"><span data-stu-id="af771-102">WIF How-To's Index</span></span>
+
+- [<span data-ttu-id="af771-103">Procedura: Creare un'applicazione Web MVC ASP.NET in grado di riconoscere attestazioni con WIF</span><span class="sxs-lookup"><span data-stu-id="af771-103">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [<span data-ttu-id="15c91-104">Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-104">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [<span data-ttu-id="af771-104">Procedura: Creare un'applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF</span><span class="sxs-lookup"><span data-stu-id="af771-104">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [<span data-ttu-id="15c91-105">Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni mediante l'autenticazione basata su form</span><span class="sxs-lookup"><span data-stu-id="15c91-105">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [<span data-ttu-id="af771-105">Procedura: Creare un'applicazione ASP.NET in grado di riconoscere attestazioni usando l'autenticazione basata su form</span><span class="sxs-lookup"><span data-stu-id="af771-105">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-- [<span data-ttu-id="15c91-106">Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione di Windows</span><span class="sxs-lookup"><span data-stu-id="15c91-106">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
+- [<span data-ttu-id="af771-106">Procedura: Creare un'applicazione ASP.NET in grado di riconoscere attestazioni usando l'autenticazione di Windows</span><span class="sxs-lookup"><span data-stu-id="af771-106">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
-- [<span data-ttu-id="15c91-107">Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con la traccia WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-107">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+- [<span data-ttu-id="af771-107">Procedura: Eseguire il debug di applicazioni e servizi in grado di riconoscere attestazioni tramite la traccia WIF</span><span class="sxs-lookup"><span data-stu-id="af771-107">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
-- [<span data-ttu-id="15c91-108">Procedura: Visualizzazione firmato In stato con WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-108">How To: Display Signed In Status Using WIF</span></span>](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
+- [<span data-ttu-id="af771-108">Procedura: Visualizzare lo stato di accesso con WIF</span><span class="sxs-lookup"><span data-stu-id="af771-108">How To: Display Signed In Status Using WIF</span></span>](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
-- [<span data-ttu-id="15c91-109">Procedura: Abilitare il rilevamento riproduzione Token</span><span class="sxs-lookup"><span data-stu-id="15c91-109">How To: Enable Token Replay Detection</span></span>](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
+- [<span data-ttu-id="af771-109">Procedura: Abilita rilevamento riproduzione token</span><span class="sxs-lookup"><span data-stu-id="af771-109">How To: Enable Token Replay Detection</span></span>](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
   
-- [<span data-ttu-id="15c91-110">Procedura: Abilitare la traccia WIF</span><span class="sxs-lookup"><span data-stu-id="15c91-110">How To: Enable WIF Tracing</span></span>](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
+- [<span data-ttu-id="af771-110">Procedura: Abilita traccia WIF</span><span class="sxs-lookup"><span data-stu-id="af771-110">How To: Enable WIF Tracing</span></span>](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
   
-- [<span data-ttu-id="15c91-111">Procedura: Abilitare WIF per un'applicazione di servizio Web WCF</span><span class="sxs-lookup"><span data-stu-id="15c91-111">How To: Enable WIF for a WCF Web Service Application</span></span>](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
+- [<span data-ttu-id="af771-111">Procedura: Abilitare WIF per un'applicazione del servizio Web WCF</span><span class="sxs-lookup"><span data-stu-id="af771-111">How To: Enable WIF for a WCF Web Service Application</span></span>](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
-- [<span data-ttu-id="15c91-112">Procedura: Trasformare le attestazioni in ingresso</span><span class="sxs-lookup"><span data-stu-id="15c91-112">How To: Transform Incoming Claims</span></span>](../../../docs/framework/security/how-to-transform-incoming-claims.md)
+- [<span data-ttu-id="af771-112">Procedura: Trasformare le attestazioni in ingresso</span><span class="sxs-lookup"><span data-stu-id="af771-112">How To: Transform Incoming Claims</span></span>](../../../docs/framework/security/how-to-transform-incoming-claims.md)
