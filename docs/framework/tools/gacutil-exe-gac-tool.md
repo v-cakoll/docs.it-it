@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851237"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926880"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 
@@ -42,7 +42,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 ## <a name="parameters"></a>Parametri
 
-|Argomento|DESCRIZIONE|
+|Argomento|Descrizione|
 |--------------|-----------------|
 |*assemblyName*|Nome di un assembly. È possibile fornire un nome di assembly parzialmente specificato, quale `myAssembly`, o un nome di assembly completo, quale `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|
 |*assemblyPath*|Nome di un file contenente il manifesto di un assembly.|
@@ -103,6 +103,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > ```
 >
 > Ciò avviene perché Gacutil.exe crea internamente un percorso con un numero massimo di caratteri definito da MAX_PATH e costituito dagli elementi seguenti:
+>
 > - Radice della Global Assembly Cache: 34 caratteri (ad esempio, `C:\Windows\Microsoft.NET\assembly\`)
 > - Architettura: 7 o 9 caratteri (ad esempio, `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
 > - AssemblyName: fino a 91 caratteri, a seconda delle dimensioni degli altri elementi (ad esempio, `System.Xml.Linq\`)

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104889"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929405"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
@@ -24,7 +24,7 @@ Esempi del tipo di stime che è possibile eseguire con ML.NET:
 |Classificazione/categorizzazione|Suddivisione automatica del feedback dei clienti in categorie positive e negative|
 |Regressione/stima di valori continui|Stimare il prezzo di unità immobiliari sulla base di dimensioni e posizione|
 |Rilevamento anomalie|Rilevare le transazioni bancarie illecite |
-|Suggerimenti|Suggerire prodotti che possono risultare interessanti agli acquirenti online sulla base dei loro acquisti precedenti|
+|Consigli|Suggerire prodotti che possono risultare interessanti agli acquirenti online sulla base dei loro acquisti precedenti|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
@@ -82,6 +82,7 @@ Il codice del frammento seguente illustra l'applicazione più semplice di ML.NET
 ## <a name="code-workflow"></a>Flusso di lavoro del codice
 
 Il diagramma seguente rappresenta la struttura del codice dell'applicazione e il processo iterativo di sviluppo del modello:
+
 - Raccogliere e caricare i dati di training in un oggetto **IDataView**
 - Specificare una pipeline di operazioni per estrarre caratteristiche e applicare un algoritmo di apprendimento automatico
 - Eseguire il training di un modello chiamando **Fit()** sulla pipeline
@@ -174,7 +175,7 @@ Un'applicazione ML.NET inizia con un oggetto <xref:Microsoft.ML.MLContext>. Ques
 ||Previsione|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Ranking|<xref:Microsoft.ML.RankingCatalog>||
 ||Regressione|<xref:Microsoft.ML.RegressionCatalog>||
-||Consiglio|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
+||Recommendation|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.TimeSeries`|
 |Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 

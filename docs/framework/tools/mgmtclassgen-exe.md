@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364028"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894656"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*classeWMI*|Classe WMI per la quale generare una classe gestita ad associazione precoce.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/l**  *linguaggio*|Specifica il linguaggio in cui generare la classe gestita ad associazione precoce. È possibile specificare **CS** (C#; impostazione predefinita), **VB** (Visual Basic),  **MC** (C++) o  **JS** (JScript) come argomento del linguaggio.|  
 |**/m**  *computer*|Specifica il computer al quale eseguire la connessione ovvero quello sul quale risiede la classe WMI. Il valore predefinito è il computer locale.|  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u**  *nomeutente*|Specifica il nome utente da usare per l'accesso a un computer specificato dall'opzione **/m**.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Mgmtclassgen.exe utilizza il metodo <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. È possibile pertanto utilizzare un provider di codice personalizzato per generare codice in linguaggi gestiti diversi da C#, Visual Basic e JScript.  
   
  Le classi generate sono associate allo schema per il quale sono state generate. Quando lo schema sottostante una classe viene modificato è necessario generare nuovamente la classe se si desidera che essa rispecchi le modifiche dello schema.  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>Esempi  
  Il comando seguente genera una classe gestita in codice C# per la classe WMI **Win32_LogicalDisk** nello spazio dei nomi **Root\cimv2**. Lo strumento scrive la classe gestita nel file di origine che si trova nel percorso c:\disk.cs dello spazio dei nomi **ROOT.CIMV2.Win32**.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690162"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894622"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
 
@@ -21,13 +21,13 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 
 ## <a name="syntax"></a>Sintassi
 
-```shell
+```console
 ![command] [options]
 ```
 
 ## <a name="commands"></a>Comandi:
 
-|Comando|Description|
+|Comando|DESCRIZIONE|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Visualizza le informazioni sull'ultimo evento di memoria insufficiente verificatosi in una richiesta di allocazione all'heap di Garbage Collection (in Garbage Collection per il server, visualizza le informazioni sulla memoria insufficiente, se disponibili, per ogni heap di Garbage Collection).|
 |**BPMD** [ **-nofuturemodule**] [\<*nome modulo*> \<*nome metodo*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*numero punto di interruzione*>  **-clearall**|Crea un punto di interruzione in corrispondenza del metodo specificato nel modulo specificato.<br /><br /> Se il modulo e il metodo specificati non sono stati caricati, questo comando attende una notifica del caricamento e della compilazione JIT (just-in-time) del modulo prima di creare un punto di interruzione.<br /><br /> È possibile gestire l'elenco di punti di interruzione in sospeso usando le opzioni **-list**, **-clear** e **-clearall**:<br /><br /> L'opzione **-list** genera un elenco di tutti i punti di interruzione in sospeso. Se un punto di interruzione in sospeso dispone di un ID modulo diverso da zero, il punto di interruzione è specifico di una funzione in quel particolare modulo caricato. Se il punto di interruzione in sospeso dispone di un ID modulo pari a zero, il punto di interruzione si applica a moduli che non sono stati ancora caricati.<br /><br /> Usare l'opzione **-clear** o **-clearall** per rimuovere punti di interruzione in sospeso dall'elenco.|
@@ -94,7 +94,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**VMMap**|Attraversa lo spazio degli indirizzi virtuali e visualizza il tipo di protezione applicato a ogni regione.|
 |**VMStat**|Fornisce una visualizzazione di riepilogo dello spazio degli indirizzi virtuali, ordinata in base a ogni tipo di protezione applicato alla memoria (free, reserved, committed, private, mapped, image). La colonna TOTAL visualizza il risultato della colonna AVERAGE moltiplicato per la colonna BLK COUNT.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 L'estensione del debugger SOS consente di visualizzare informazioni sul codice in esecuzione nell'ambiente CLR. È ad esempio possibile utilizzarla per visualizzare informazioni sull'heap gestito, cercare eventuali danneggiamenti dell'heap, visualizzare i tipi di dati interni utilizzati dal runtime e visualizzare informazioni su tutto il codice gestito in esecuzione nel runtime.
 
@@ -104,7 +104,7 @@ Per usare l'estensione del debugger SOS in Visual Studio, installare [Windows Dr
 
 Per caricare l'estensione del debugger SOS nel debugger WinDbg.exe, eseguire il comando riportato sotto nello strumento:
 
-```
+```console
 .loadby sos clr
 ```
 
@@ -114,7 +114,7 @@ Per utilizzare un file dump creato in un altro computer, assicurarsi che il file
 
 Per caricare una versione specifica di SOS.dll, digitare il comando seguente nel debugger Windows:
 
-```
+```console
 .load <full path to sos.dll>
 ```
 
@@ -122,85 +122,85 @@ Per caricare una versione specifica di SOS.dll, digitare il comando seguente nel
 
 Il comando riportato di seguito visualizza il contenuto di una matrice in corrispondenza dell'indirizzo `00ad28d0`.  La visualizzazione parte dal secondo elemento e continua per cinque elementi.
 
-```
+```console
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
 Il comando riportato di seguito visualizza il contenuto di un assembly in corrispondenza dell'indirizzo `1ca248`.
 
-```
+```console
 !dumpassembly 1ca248
 ```
 
 Il comando riportato di seguito visualizza informazioni sull'heap del Garbage Collector.
 
-```
+```console
 !dumpheap
 ```
 
 Il comando riportato di seguito scrive il contenuto del log di stress in memoria in un file (predefinito) denominato StressLog.tx nella directory corrente.
 
-```
+```console
 !DumpLog
 ```
 
 Il comando riportato di seguito visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo `902f40`.
 
-```
+```console
 !dumpmd 902f40
 ```
 
 Il comando riportato di seguito visualizza informazioni su un modulo in corrispondenza dell'indirizzo `1caa50`.
 
-```
+```console
 !dumpmodule 1caa50
 ```
 
 Il comando riportato di seguito visualizza informazioni su un oggetto in corrispondenza dell'indirizzo `a79d40`.
 
-```
+```console
 !DumpObj a79d40
 ```
 
 Il comando riportato di seguito visualizza i campi di una classe di valori in corrispondenza dell'indirizzo `00a79d9c` utilizzando la tabella dei metodi in corrispondenza dell'indirizzo `0090320c`.
 
-```
+```console
 !DumpVC 0090320c 00a79d9c
 ```
 
 Il comando riportato di seguito visualizza la memoria di processo utilizzata dal Garbage Collector.
 
-```
+```console
 !eeheap -gc
 ```
 
 Il comando riportato di seguito visualizza tutti gli oggetti per i quali è pianificata la finalizzazione.
 
-```
+```console
 !finalizequeue
 ```
 
 Il comando riportato di seguito determina il dominio applicazione di un oggetto in corrispondenza dell'indirizzo `00a79d98`.
 
-```
+```console
 !findappdomain 00a79d98
 ```
 
 Il comando riportato di seguito visualizza tutti gli handle del Garbage Collector nel processo corrente.
 
-```
+```console
 !gcinfo 5b68dbb8
 ```
 
 Il comando riportato di seguito visualizza le strutture `MethodTable` e `EEClass` per il metodo `Main` nella classe `MainClass` nel modulo `unittest.exe`.
 
-```
+```console
 !name2ee unittest.exe MainClass.Main
 ```
 
 Il comando riportato di seguito visualizza informazioni sul token di metadati in corrispondenza dell'indirizzo `02000003` nel modulo `unittest.exe`.
 
-```
+```console
 !token2ee unittest.exe 02000003
 ```
 

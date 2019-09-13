@@ -3,12 +3,12 @@ title: Come usare l'API di Machine Learning automatizzato per ML.NET
 description: L'API di Machine Learning automatizzato per ML.NET consente di automatizzare il processo di compilazione del modello e genera un modello pronto per la distribuzione. Sono disponibili varie opzioni per configurare attività di Machine Learning automatizzato.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960421"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929400"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
 
@@ -26,13 +26,14 @@ Esempio:
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Selezionare il tipo di attività di apprendimento automatico
 Prima di creare un esperimento, determinare il tipo di problema di apprendimento automatico da risolvere. Il Machine Learning automatizzato supporta le seguenti attività di apprendimento automatico:
+
 * Classificazione binaria
 * Classificazione multiclasse
 * Regressione
@@ -104,6 +105,7 @@ Di seguito sono riportati alcuni esempi:
     ```
 
 L'elenco degli algoritmi di training supportati per ogni attività di apprendimento automatico è disponibile nel collegamento corrispondente riportato di seguito:
+
 * [Algoritmi di classificazione binaria supportati](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmi di classificazione multiclasse supportati](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmi di regressione supportati](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 Di seguito sono elencate tutte le metriche disponibili per attività ML:
+
 * [Metriche di classificazione binaria](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Metriche di classificazione multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [Metriche di regressione](xref:Microsoft.ML.AutoML.RegressionMetric)

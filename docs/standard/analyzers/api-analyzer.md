@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107378"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929357"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -30,6 +30,7 @@ L'analizzatore di API è disponibile come pacchetto NuGet [Microsoft.DotNet.Anal
 ### <a name="what-are-deprecated-apis"></a>Cosa sono le API deprecate?
 
 La famiglia .NET è un set di prodotti di grandi dimensioni che vengono aggiornati costantemente per soddisfare al meglio le esigenze dei clienti. È naturale che alcune API vengano deprecate e sostituite con nuove. Un'API viene considerata deprecata quando esiste un'alternativa migliore. Un modo per segnalare che un'API è deprecata e non deve essere usata consiste nel contrassegnarla con l'attributo <xref:System.ObsoleteAttribute>. Lo svantaggio di questo approccio è che esiste un solo ID di diagnostica per tutte le API obsolete (per C#, [CS0612](../../csharp/misc/cs0612.md)). Vale a dire che:
+
 - Non è possibile avere documenti dedicati per ogni caso.
 - Non è possibile eliminare specifiche categorie di avvisi. È possibile eliminarli tutti o non eliminarli affatto.
 - Per informare gli utenti di un nuovo elemento deprecato, occorre aggiornare un assembly di riferimento o un pacchetto di destinazione.

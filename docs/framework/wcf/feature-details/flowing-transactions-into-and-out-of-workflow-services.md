@@ -2,12 +2,12 @@
 title: Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: db1a1ef6bcf3f048584b39450c90fac3ff35646b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988814"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893378"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Propagazione di transazioni all'interno e all'esterno di servizi flusso di lavoro
 Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Affinché un'operazione del servizio diventi parte di una transazione di ambiente, posizionare un'attività <xref:System.ServiceModel.Activities.Receive> all'interno di un'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Qualsiasi chiamata effettuata da un'attività <xref:System.ServiceModel.Activities.Send> o un'attività <xref:System.ServiceModel.Activities.SendReply> all'interno di <xref:System.ServiceModel.Activities.TransactedReceiveScope> verrà effettuata anche all'interno della transazione di ambiente. Un'applicazione client del flusso di lavoro può creare una transazione di ambiente tramite l'attività <xref:System.Activities.Statements.TransactionScope> e chiamare operazioni del servizio utilizzando la transazione di ambiente. In questo argomento viene illustrato il processo di creazione di un servizio flusso di lavoro e di un client flusso di lavoro che partecipano a transazioni.  
@@ -37,7 +37,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 3. Aggiungere una nuova classe denominata `PrintTransactionInfo` al progetto `Common`. Questa classe è derivata da <xref:System.Activities.NativeActivity> ed esegue l'overload del metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -109,7 +109,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
      ![Aggiunta di un'attività Receive](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. Fare clic sul collegamento Definisci nell' <xref:System.ServiceModel.Activities.Receive> attività e apportare le impostazioni seguenti:  
+7. Fare clic sul collegamento **Definisci** nell' <xref:System.ServiceModel.Activities.Receive> attività e apportare le impostazioni seguenti:  
   
      ![Impostazione delle impostazioni dei messaggi per l'attività Receive](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
@@ -141,7 +141,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
      ![Dopo avere aggiunto Assign e WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. Fare clic con <xref:System.ServiceModel.Activities.Receive> il pulsante destro del mouse sull'attività e selezionare **Crea SendReply** e incollarla dopo l'ultima <xref:System.Activities.Statements.WriteLine> attività. Fare clic sul collegamento Definisci nell' `SendReplyToReceive` attività e apportare le impostazioni seguenti.  
+12. Fare clic con <xref:System.ServiceModel.Activities.Receive> il pulsante destro del mouse sull'attività e selezionare **Crea SendReply** e incollarla dopo l'ultima <xref:System.Activities.Statements.WriteLine> attività. Fare clic sul collegamento **Definisci** nell' `SendReplyToReceive` attività e apportare le impostazioni seguenti.  
   
      ![Impostazioni del messaggio di risposta](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
@@ -189,7 +189,7 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
      ![Impostazione delle proprietà dell'attività Send](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. Fare clic sul collegamento Definisci e impostare le impostazioni seguenti:  
+9. Fare clic sul collegamento **Definisci** e impostare le impostazioni seguenti:  
   
      ![Impostazioni del messaggio dell'attività Send](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
@@ -223,8 +223,8 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 2. Aprire il file Program.cs generato e il codice seguente:  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -263,8 +263,8 @@ Servizi e client del flusso di lavoro possono partecipare alle transazioni.  Aff
   
 2. Aprire il file program.cs e aggiungere il codice seguente.  
   
-    ```  
-    class Program  
+    ```csharp
+        class Program  
         {  
   
             private static AutoResetEvent syncEvent = new AutoResetEvent(false);  

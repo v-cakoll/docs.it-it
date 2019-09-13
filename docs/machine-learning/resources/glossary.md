@@ -4,12 +4,12 @@ description: Glossario dei principali termini relativi all'apprendimento automat
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710532"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929261"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -37,7 +37,7 @@ In ML.NET un catalogo è una raccolta di funzioni di estensione, raggruppate in 
 
 Ad esempio, ogni attività di apprendimento automatico (classificazione binaria, regressione, ranking e così via) include un catalogo di algoritmi di apprendimento automatico disponibili (formatori). Il catalogo per i formatori di classificazione binaria è: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>Classificazione
+## <a name="classification"></a>classificazione
 
 Quando i dati vengono usati per stimare una categoria, l'attività di [apprendimento automatico con supervisione](#supervised-machine-learning) viene denominata classificazione. Il termine [classificazione binaria](#binary-classification) fa riferimento alla stima di due sole categorie (ad esempio, la classificazione di un'immagine come un'immagine di un "gatto" o un "cane"). Il termine [classificazione multiclasse](#multiclass-classification) fa riferimento alla stima di più categorie (ad esempio, la classificazione di un'immagine come un'immagine di una specifica razza di cani).
 
@@ -45,9 +45,10 @@ Quando i dati vengono usati per stimare una categoria, l'attività di [apprendim
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione che indica il livello di adattamento dei dati a un modello. È compreso tra 0 e 1. Un valore pari a 0 indica che i dati sono casuali o non possono essere adattati al modello. Un valore pari a 1 indica che il modello corrisponde esattamente ai dati. È noto anche come r<sup>2</sup>, R<sup>2</sup> o r al quadrato.
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 I dati sono fondamentali per qualsiasi applicazione di apprendimento automatico. In ML.NET i dati sono rappresentati da oggetti <xref:Microsoft.ML.IDataView>. Gli oggetti di visualizzazione dei dati:
+
 - sono costituiti da colonne e righe
 - vengono valutati in modalità lazy, ovvero caricano i dati solo quando li chiama un'operazione
 - contengono uno schema che definisce il tipo, il formato e la lunghezza di ogni colonna
@@ -122,7 +123,7 @@ Un vettore di [funzionalità](#feature) costituito solo da valori numerici. È s
 
 Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pipeline è costituita dai passaggi di importazione dei dati, trasformazione, estrazione delle funzionalità e apprendimento. Una volta eseguito il training, una pipeline si trasforma in un modello.
 
-## <a name="precision"></a>Precisione
+## <a name="precision"></a>Precision
 
 Nell'ambito della [classificazione](#classification), la precisione di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi previsti come appartenenti alla classe.
 
@@ -153,7 +154,7 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione costitu
 
 Nell'ambito della [regressione](#regression), una metrica di valutazione costituita dalla radice quadrata della media dei quadrati degli errori.
 
-## <a name="scoring"></a>Assegnazione dei punteggi
+## <a name="scoring"></a>Punteggio
 
 L'assegnazione dei punteggi è il processo di applicazione di nuovi dati a un modello di apprendimento automatico sottoposto a training e la successiva generazione di stime. L'assegnazione dei punteggi è nota anche come inferenza. A seconda del tipo di modello, il punteggio può essere un valore non elaborato, una probabilità o una categoria.
 

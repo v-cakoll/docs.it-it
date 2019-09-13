@@ -3,12 +3,12 @@ title: Aggiornare le interfacce in modo sicuro con i membri dell'interfaccia pre
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252909"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926709"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i membri di interfaccia predefiniti in C# 8.0
 
@@ -17,6 +17,7 @@ A partire da C# 8.0 su .NET Core 3.0 è possibile definire un'implementazione qu
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > * Estendere le interfacce in modo sicuro aggiungendo metodi con implementazioni.
 > * Creare implementazioni con parametri per una maggiore flessibilità.
 > * Abilitare gli implementatori per fornire un'implementazione più specifica sotto forma di override.

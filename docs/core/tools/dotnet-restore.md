@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849618"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893291"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -177,7 +177,7 @@ Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato
 
 `-s|--source <SOURCE>`
 
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l' <packageSource> elemento non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
+Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l' `<packageSource>` elemento non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
 
 `--verbosity <LEVEL>`
 

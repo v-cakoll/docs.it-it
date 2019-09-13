@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052663"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894522"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
-In alcuni casi, l'uso della reflection nel codice non è ovvio, e pertanto la catena di strumenti .NET Native non mantiene i metadati necessari in fase di esecuzione. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
+In alcuni casi, l'uso della reflection nel codice non è ovvio, quindi la catena di strumenti .NET Native non mantiene i metadati necessari in fase di esecuzione. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
   
 ## <a name="typemakegenerictype-method"></a>Metodo Type.MakeGenericType  
  È possibile creare dinamicamente un'istanza di un tipo generico `AppClass<T>` chiamando il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> usando un codice simile al seguente:  
@@ -29,11 +29,9 @@ In alcuni casi, l'uso della reflection nel codice non è ovvio, e pertanto la ca
   
  Tuttavia, anche se si aggiungono i metadati per il tipo generico privo di istanze, la chiamata al metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):  
   
-```  
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
+Non è possibile eseguire questa operazione perché i metadati per il tipo seguente sono stati rimossi per motivi di prestazioni:  
   
-App1.AppClass`1<System.Int32>.  
-```  
+`App1.AppClass`1 < System. Int32 >'.  
   
  È possibile aggiungere la seguente direttiva di runtime al file di direttive di runtime per aggiungere i metadati `Activate` per la specifica creazione di un'istanza in `AppClass<T>` di <xref:System.Int32?displayProperty=nameWithType>:  
   
@@ -55,9 +53,9 @@ App1.AppClass`1<System.Int32>.
   
 - I metadati `Browse` per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
   
-- Metadati dinamici per il metodo da chiamare, in modo che il delegato della chiamata reflection non viene rimosso dalla catena di strumenti .NET Native. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
+- Metadati dinamici per il metodo che si vuole chiamare, in modo che il delegato della chiamata di reflection non venga rimosso dalla catena di strumenti .NET Native. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
-    ```  
+    ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
@@ -78,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  Se non sono presenti i metadati della matrice, si verificano i seguenti errori:  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
   
 App1.Class1[]  

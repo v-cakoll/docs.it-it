@@ -2,12 +2,12 @@
 title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Distribuire app .NET esistenti come contenitori di Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374026"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926480"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
@@ -143,6 +143,7 @@ Tuttavia, quando si pensa all'ambiente di distribuzione di produzione o anche ag
 **Figura 4-7.5.** Ecosistema di contenitori in Azure
 
 Dall'ecosistema di contenitori di Azure, i prodotti seguenti supportano i contenitori considerati infrastruttura:
+
 - **Istanze di contenitore di Azure (ACI)**
 - **Macchine virtuali di Azure** (Con il supporto del contenitore)
 - **Set di scalabilità di macchine virtuali di Azure** (Con il supporto del contenitore)

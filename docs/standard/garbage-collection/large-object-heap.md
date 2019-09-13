@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753963"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929145"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -132,7 +132,7 @@ Prima di raccogliere dati sulle prestazioni per un'area specifica, è necessario
 
 2. Esaminare altre aree note senza trovare elementi che possono spiegare il problema di prestazioni rilevato.
 
-Vedere il blog [Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) (Comprendere il problema prima di cercare una soluzione) per altre informazioni sui concetti fondamentali della memoria e della CPU.
+Vedere il blog [Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) (Comprendere il problema prima di cercare una soluzione) per altre informazioni sui concetti fondamentali della memoria e della CPU.
 
 Per raccogliere dati sulle prestazioni dell'heap oggetti grandi è possibile usare gli strumenti seguenti:
 
@@ -168,13 +168,13 @@ Figura 4: LOH dopo un'operazione GC di generazione 2
 
 Il Garbage Collector offre vari eventi ETW che favoriscono la comprensione delle operazioni dell'heap e del loro scopo. I post di blog seguenti illustrano come raccogliere e interpretare gli eventi GC con ETW:
 
-- [Eventi ETW - GC - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [Eventi ETW - GC - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [Eventi ETW - GC - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [Eventi ETW - GC - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [Eventi ETW - GC - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [Eventi ETW - GC - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [Eventi ETW - GC - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [Eventi ETW - GC - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 Per identificare un numero eccessivo di operazioni GC di generazione 2 causate da allocazioni di heap oggetti grandi temporanee, esaminare la colonna Motivo trigger per le operazioni GC. Per un test semplice che consente di allocare solo oggetti di grandi dimensioni temporanei, è possibile raccogliere informazioni sugli eventi ETW con la riga di comando [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) seguente:
 

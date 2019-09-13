@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790431"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894304"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Procedura: Generare manualmente classi del servizio dati client (WCF Data Services)
 WCF Data Services si integra con Visual Studio per consentire la generazione automatica di classi del servizio dati client quando si utilizza la finestra di dialogo **Aggiungi riferimento al servizio** per aggiungere un riferimento a un servizio dati in un progetto di Visual Studio. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento](how-to-add-a-data-service-reference-wcf-data-services.md)al servizio dati. È inoltre possibile generare in modo manuale le stesse classi del servizio dati client utilizzando lo strumento per la generazione del codice, ovvero `DataSvcUtil.exe`. Questo strumento, incluso con WCF Data Services, genera .NET Framework classi dalla definizione del servizio dati. Può inoltre essere usato per generare classi del servizio dati in base al file del modello concettuale (CSDL) e al file con estensione edmx che rappresenta un modello di Entity Framework in un progetto di Visual Studio.
@@ -43,7 +43,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF Data Services si integra con Visual Studio per consentire la generazione aut
 
 - Al prompt dei comandi eseguire il comando seguente senza interruzioni di riga:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e8d9f7acfcd8dfc4d0653916138ecb05665eb420
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937982"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894579"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (utilità di importazione della libreria dei tipi)
 L'utilità di importazione della libreria dei tipi consente di convertire le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti in un assembly di Common Language Runtime. L'output di Tlbimp.exe è un file binario (assembly) che contiene i metadati di runtime per i tipi definiti all'interno della libreria dei tipi originale. È possibile esaminare questo file con strumenti quali [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -28,7 +28,7 @@ L'utilità di importazione della libreria dei tipi consente di convertire le def
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 tlbimp tlbFile [options]  
 ```  
   
@@ -73,7 +73,7 @@ tlbimp tlbFile [options]
 > [!NOTE]
 > Le opzioni della riga di comando di Tlbimp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Pertanto, **/n** equivale a **/nologo** e **/ou:** *outfile.dll* equivale a **/out:** *outfile.dll*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Tlbimp.exe converte un'intera libreria dei tipi in blocco. Non è possibile utilizzare lo strumento per generare informazioni sui tipi per un subset dei tipi definiti in una singola libreria dei tipi.  
   
  Spesso risulta utile o necessario poter assegnare agli assembly [nomi sicuri](../app-domains/strong-named-assemblies.md). Pertanto, Tlbimp.exe include opzioni che permettono di fornire le informazioni necessarie alla generazione di assembly con nomi sicuri. Entrambe le opzioni **/keyfile:** e **/keycontainer:** consentono di firmare gli assembly con nomi sicuri. Pertanto, è sufficiente specificare solo una di queste opzioni alla volta.  
@@ -87,31 +87,31 @@ tlbimp tlbFile [options]
 ## <a name="examples"></a>Esempi  
  Il comando riportato di seguito genera un assembly con lo stesso nome della libreria dei tipi presente in `myTest.tlb` e con l'estensione .dll.  
   
-```  
+```console  
 tlbimp myTest.tlb   
 ```  
   
  Il comando riportato di seguito genera un assembly denominato `myTest.dll`.  
   
-```  
+```console  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
  Il comando riportato di seguito genera un assembly con lo stesso nome della libreria dei tipi specificata da `MyModule.dll\1` e con estensione dll. `MyModule.dll\1` deve trovarsi nella directory corrente.  
   
-```  
+```console  
 tlbimp MyModule.dll\1  
 ```  
   
  Il comando riportato di seguito genera un assembly denominato `myTestLib.dll` per la libreria dei tipi `TestLib.dll`. L'opzione **/transform:dispret** trasforma tutti i parametri [out, retval] dei metodi in dispinterfaces nella libreria dei tipi in valori restituiti nella libreria gestita.  
   
-```  
+```console  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
  La libreria dei tipi `TestLib.dll`, nell'esempio precedente, include un metodo dispinterface denominato `SomeMethod` che restituisce un valore void e presenta un parametro [out, retval]. Il codice riportato di seguito è la firma del metodo della libreria dei tipi di input per `SomeMethod` in `TestLib.dll`.  
   
-```  
+```cpp  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   

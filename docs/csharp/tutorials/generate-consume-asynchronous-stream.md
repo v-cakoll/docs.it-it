@@ -3,12 +3,12 @@ title: Generare e usare flussi asincroni
 description: Questa esercitazione avanzata illustra gli scenari in cui la generazione e l'uso di flussi asincroni rappresenta un modo più naturale di lavorare con sequenze di dati che potrebbero essere generate in modo asincrono.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926694"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Esercitazione: Generare e usare flussi asincroni con C# 8.0 e .NET Core 3.0
 
@@ -17,6 +17,7 @@ C# 8.0 introduce i **flussi asincroni**, che modellano un'origine di dati di flu
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Creare un'origine dati che genera una sequenza di elementi di dati in modo asincrono.
 > - Utilizzare tale origine dati in modo asincrono.
 > - Riconoscere quando la nuova interfaccia e l'origine dati sono da preferire rispetto alle sequenze di dati sincrone precedenti.

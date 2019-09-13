@@ -4,12 +4,12 @@ description: Panoramica dello strumento Microsoft WCF Web Service Reference Prov
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 806f6e90aedc669c3a56ce1cde64311bdd4af32c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750502"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926464"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usare lo strumento WCF Web Service Reference Provider
 
@@ -26,9 +26,10 @@ Nel corso degli anni, molti sviluppatori di Visual Studio hanno aumentato la pro
 
 > [!NOTE]
 > L'opzione **WCF Web Service Reference** è applicabile ai progetti creati con i modelli di progetto seguenti:
-> * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET Standard**
-> * **Visual C#** > **Web** > **Applicazione ASP.NET Core Web**
+>
+> * **Visual C#**  >  **.NET Core**
+> * **Visual C#**  >  **.NET Standard**
+> * **Visual C#**  > **Web** > **Applicazione ASP.NET Core Web**
 
 Se si usa il modello di progetto **Applicazione ASP.NET Core Web**, l'articolo illustra i passaggi per aggiungere un riferimento al servizio WFC al progetto:
 

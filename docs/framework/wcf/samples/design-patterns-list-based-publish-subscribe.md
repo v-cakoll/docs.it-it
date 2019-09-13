@@ -2,12 +2,12 @@
 title: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045569"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928831"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ Questo esempio illustra il modello di pubblicazione-sottoscrizione basato su ele
   
  Il servizio usa la comunicazione duplex. Il contratto di servizio `ISampleContract` è accoppiato a un contratto di callback `ISampleClientCallback`. Il servizio implementa operazioni del servizio di sottoscrizione e annullamento della sottoscrizione che consentono ai client di essere aggiunti o rimossi dall'elenco dei sottoscrittori. Il servizio implementa inoltre l'operazione del servizio `PublishPriceChange` chiamata dal programma dell'origine dati per fornire nuove informazioni al servizio. Il programma client implementa l'operazione del servizio `PriceChange` chiamata dal servizio per notificare a tutti i sottoscrittori la modifica di un prezzo.  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Il servizio usa un evento .NET Framework come meccanismo per informare tutti i sottoscrittori dell'esistenza di nuove informazioni. L'aggiunta di un client al servizio tramite una chiamata a Subscribe determina la disponibilità di un gestore eventi. La rimozione di un client dal servizio determina l'annullamento della sottoscrizione del relativo gestore eventi. Quando un'origine dati chiama il servizio per segnalare la modifica di un prezzo, il servizio genera l'evento, che a sua volta chiama ogni istanza del servizio, una per ogni client che ha effettuato la sottoscrizione, e causa l'esecuzione dei relativi gestori eventi. Ogni gestore eventi passa le informazioni al client corrispondente tramite la relativa funzione di callback.  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  

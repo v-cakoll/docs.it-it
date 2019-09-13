@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254039"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928547"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Distribuire un'applicazione .NET per Apache Spark in Databricks
 
@@ -18,6 +18,7 @@ Questa esercitazione illustra come distribuire un'applicazione .NET per Apache S
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Preparare Microsoft.Spark.Worker
 > - Pubblicare l'app Spark .NET
 > - Distribuire l'app in Databricks

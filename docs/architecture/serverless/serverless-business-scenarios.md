@@ -4,12 +4,12 @@ description: Impara a usare senza server un approccio pratico accedendo ad esemp
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577284"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926475"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenari di business serverless e casi d'uso
 
@@ -77,7 +77,7 @@ Funzioni di Azure viene usato per gestire un'applicazione a pagina singola (SPA)
 
 ![Esempio di Power BI](./media/power-bi-example.png)
 
-Il repository di abbreviazione del collegamento completo con le istruzioni è disponibile qui: [Abbreviazione URL senza server](https://github.com/jeremylikness/serverless-url-shortener). Per informazioni su una versione semplificata, vedere: [Archiviazione di Azure per app .NET senza server in pochi minuti](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Il repository di abbreviazione del collegamento completo con le istruzioni è disponibile qui: [Abbreviazione URL senza server](https://github.com/jeremylikness/serverless-url-shortener). Per informazioni su una versione semplificata, vedere: [Archiviazione di Azure per app .NET senza server in pochi minuti](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Verificare la connettività del dispositivo con un ping
 
@@ -89,7 +89,7 @@ Per altre informazioni, vedere [ping dell'hub Azure](https://azure.microsoft.com
 
 * [Generatore di mosaici foto di funzioni di Azure](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Ping dell'hub Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Archiviazione di Azure per app .NET senza server in pochi minuti](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Archiviazione di Azure per app .NET senza server in pochi minuti](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Porta la tua app](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [Lab di importazione CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Colla griglia di eventi](https://github.com/JeremyLikness/Event-Grid-Glue)

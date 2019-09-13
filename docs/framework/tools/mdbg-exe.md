@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199999"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894852"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
@@ -23,18 +23,18 @@ Al prompt di Gestione pacchetti, digitare quanto segue:
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
 ## <a name="commands"></a>Comandi:  
- Quando si è nel debugger (come indicato dal prompt **mdbg>**), digitare i comandi descritti nella sezione seguente:  
+ Quando si è nel debugger (come indicato dal prompt **mdbg>** ), digitare i comandi descritti nella sezione seguente:  
   
  **comando** [*argomenti*]  
   
  I comandi di MDbg.exe sono soggetti alla distinzione tra maiuscole e minuscole.  
   
-|Comando|Description|  
+|Comando|DESCRIZIONE|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*numero*]|Passa a un altro processo di cui viene eseguito il debug o visualizza i processi disponibili. I numeri non corrispondono a ID di processo (PID) effettivi ma a un elenco a indice zero.|  
 |**a**[**ttach**] [*pid*]|Esegue la connessione a un processo o visualizza i processi disponibili.|  
@@ -61,13 +61,13 @@ MDbg [ProgramName[arguments]] [options]
 |**log** [*tipoEvento*]|Imposta o visualizza gli eventi da registrare.|  
 |**mo**[**de**] [*opzione on/off*]|Imposta opzioni differenti del debugger. Usare `mode` senza opzioni per ottenere un elenco delle modalità di debug e delle relative impostazioni correnti.|  
 |**mon**[**itorInfo**] *riferimentoMonitoraggio*|Visualizza le informazioni sul blocco di monitoraggio degli oggetti.|  
-|**newo**[**bj**] *nomeTipo* [*argomenti...*]|Crea un nuovo oggetto di tipo *nomeTipo*.|  
+|**newo**[**bj**] *nomeTipo* [*argomenti...* ]|Crea un nuovo oggetto di tipo *nomeTipo*.|  
 |**n**[**ext**]|Esegue il codice e passa alla riga successiva anche se questa include molte chiamate di funzione.|  
 |**Opendump** *percorsoFileDump*|Apre il file dump specificato per il debug.|  
 |**o**[**ut**]|Esegue lo spostamento alla fine della funzione corrente.|  
 |**pa**[**th**] [*nomePercorso*]|Cerca i file di origine nel percorso specificato se il percorso non è disponibile nei binari.|  
 |**p**[**rint**] [*variabile*] &#124; [`-d`]|Visualizza tutte le variabili dell'ambito (**print**), visualizza la variabile specificata (**print** *variabile*) o visualizza le variabili del debugger (**print**`-d`).|  
-|**printe**[**xception**] [*-r*]|Visualizza l'ultima eccezione sul thread corrente. Usare l'opzione di ricorsione `–r` per attraversare la proprietà `InnerException` sull'oggetto eccezione per ottenere informazioni sull'intera catena delle eccezioni.|  
+|**printe**[**xception**] [ *-r*]|Visualizza l'ultima eccezione sul thread corrente. Usare l'opzione di ricorsione `–r` per attraversare la proprietà `InnerException` sull'oggetto eccezione per ottenere informazioni sull'intera catena delle eccezioni.|  
 |**pro**[**cessenum**]|Visualizza i processi attivi.|  
 |**q**[**uit**] [*codiceUscita*]|Esce dalla shell di MDbg.exe specificando, facoltativamente, il codice di uscita del processo.|  
 |**re**[**sume**] [`*` &#124; [`~`]*numeroThread*]|Riprende il thread corrente o quello specificato dal parametro *numeroThread*.<br /><br /> Se il parametro *numeroThread* viene specificato come `*` o se il numero del thread inizia con `~`, il comando viene applicato a tutti i thread ad eccezione di quello specificato da *numeroThread*.<br /><br /> La ripresa di un thread non sospeso non produce alcun effetto.|  
@@ -83,14 +83,14 @@ MDbg [ProgramName[arguments]] [options]
 |**uwgc**[**handle**] [*variabile*] &#124; [*indirizzo*]|Visualizza la variabile rilevata da un handle. L'handle può essere specificato in base al nome o all'indirizzo.|  
 |**when**|Visualizza le istruzioni `when` attualmente attive.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - Elimina l'istruzione `when` specificata dal numero o tutte le istruzioni `when` se viene specificato `all`.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - Il parametro *motivoInterruzione* può accettare uno dei seguenti valori:<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *condizione_specifica* può accettare uno dei seguenti valori:<br /><br /> -   *numero* - Per `ThreadCreated` e `BreakpointHit`, attiva l'azione solo quando arrestata da un numero ID thread/punto di interruzione con lo stesso valore.<br />-   [`!`]*nome* - Per `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` e `UnhandledExceptionThrown`, attiva l'operazione solo quando il nome corrisponde al nome di *motivoInterruzione*.<br /><br /> *condizione_specifica* deve essere vuoto per gli altri valori di *motivoInterruzione*.|  
 |**w**[**here**] [`-v`] [`-c` *profondità*] [*IDthread*]|Visualizza informazioni di debug relative agli stack frame.<br /><br /> -   L'opzione `-v` offre informazioni dettagliate su ogni stack frame visualizzato.<br />-   Specificando un numero per `depth`, limita il numero di frame visualizzati. Usare il comando **all** per visualizzare tutti i frame. Il valore predefinito è 100.<br />Se si specifica il parametro *IDthread*, è possibile determinare quale thread è associato allo stack. Il valore predefinito è il solo thread corrente. Usare il comando **all** per ottenere tutti i thread.|  
-|**x** [`-c`*numeroSimboli*] [*modulo*[`!`*modello*]]|Visualizza le funzioni che corrispondono al parametro `pattern` per un modulo.<br /><br /> Se viene specificato il parametro *numeroSimboli*, l'output viene limitato al numero indicato. Se non viene specificato `!` (che indica un'espressione regolare) per il parametro *modello*, vengono visualizzate tutte le funzioni. Se non viene specificato un valore per il parametro *modulo*, vengono visualizzati tutti i moduli caricati. È possibile usare simboli (*~#*) per impostare punti di interruzione tramite il comando **break**.|  
+|**x** [`-c`*numeroSimboli*] [*modulo*[`!`*modello*]]|Visualizza le funzioni che corrispondono al parametro `pattern` per un modulo.<br /><br /> Se viene specificato il parametro *numeroSimboli*, l'output viene limitato al numero indicato. Se non viene specificato `!` (che indica un'espressione regolare) per il parametro *modello*, vengono visualizzate tutte le funzioni. Se non viene specificato un valore per il parametro *modulo*, vengono visualizzati tutti i moduli caricati. È possibile usare simboli ( *~#* ) per impostare punti di interruzione tramite il comando **break**.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Compilare l'applicazione di cui eseguire il debug usando flag specifici del compilatore che determinano la generazione di simboli di debug da parte del compilatore. Per altre informazioni su questi flag, vedere la documentazione fornita con il compilatore. È possibile eseguire il debug delle applicazioni ottimizzate, tuttavia alcune informazioni di debug risulteranno mancanti. Molte variabili locali, ad esempio, non risulteranno visibili e le righe del codice sorgente non saranno accurate.  
   
  Dopo aver compilato l'applicazione, digitare **mdbg** al prompt dei comandi per avviare una sessione di debug, come illustrato nell'esempio seguente.  
   
-```  
+```console  
 C:\Program Files\Microsoft Visual Studio 8\VC>mdbg  
 MDbg (Managed debugger) v2.0.50727.42 (RTM.050727-4200) started.  
 Copyright (C) Microsoft Corporation. All rights reserved.  

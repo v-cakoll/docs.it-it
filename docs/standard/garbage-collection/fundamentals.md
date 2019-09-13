@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796854"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895280"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 
@@ -270,7 +270,7 @@ Nell'illustrazione riportata di seguito viene mostrata l'esecuzione simultanea d
 
 ## <a name="background-workstation-garbage-collection"></a>Garbage Collection della workstation in background
 
-In un'operazione di Garbage Collection in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. La modalità Garbage Collection in background non prevede impostazioni; viene abilitata automaticamente con la modalità simultanea. Le operazioni di Garbage Collection in background vengono usate in sostituzione delle operazioni simultanee. Al pari di queste ultime, le operazioni di Garbage Collection in background vengono eseguite in un thread dedicato e sono applicabili unicamente alle raccolte di generazione 2.
+Garbage Collection in background sostituisce Garbage Collection workstation simultanee a partire dal .NET Framework 4 e sostituisce Garbage Collection server simultanei a partire dal .NET Framework 4,5.  In un'operazione di Garbage Collection in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. Viene eseguita su un thread dedicato ed è applicabile solo alle raccolte di generazione 2. Il Garbage Collection in background viene abilitato automaticamente per impostazione predefinita e può essere abilitato o disabilitato con l' [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) impostazione di configurazione gcConcurrent > in .NET Framework Applications. 
 
 > [!NOTE]
 > Le operazioni di Garbage Collection in background sono disponibili solo in .NET Framework 4 e versioni successive. In .NET Framework 4 è supportato solo per l'operazione di Garbage Collection per workstation. A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background è disponibile sia per workstation sia per server.

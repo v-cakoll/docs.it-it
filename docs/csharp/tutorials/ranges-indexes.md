@@ -3,12 +3,12 @@ title: Esplorare intervalli di dati con indici e intervalli
 description: Questa esercitazione avanzata descrive come esplorare i dati usando indici e intervalli per esaminare le sezioni di un set di dati sequenziale.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105779"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926643"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
@@ -17,6 +17,7 @@ Gli intervalli e gli indici offrono una sintassi concisa per accedere a elementi
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Usare la sintassi per gli intervalli in una sequenza.
 > - Comprendere le decisioni a livello di progettazione per l'inizio e la fine di ogni sequenza.
 > - Analizzare gli scenari per i tipi <xref:System.Index> e <xref:System.Range>.
@@ -24,6 +25,7 @@ In questa esercitazione si imparerà a:
 ## <a name="language-support-for-indices-and-ranges"></a>Supporto del linguaggio per indici e intervalli
 
 Questo supporto del linguaggio si basa su due nuovi tipi e due nuovi operatori.
+
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
 - L'operatore `^`, che specifica che un indice è relativo alla fine di una sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.

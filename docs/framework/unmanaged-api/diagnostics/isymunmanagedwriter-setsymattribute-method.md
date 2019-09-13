@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650775"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894474"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Metodo ISymUnmanagedWriter::SetSymAttribute
-Definisce un attributo personalizzato in base al relativo nome. Questi attributi sono contenuti nell'archivio simboli, a differenza degli attributi personalizzati di metadati.  
+Definisce un attributo personalizzato in base al nome. Questi attributi sono conservati nell'archivio simboli, a differenza degli attributi personalizzati dei metadati.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametri  
  `parent`  
- [in] Il token di metadati per il quale viene definito l'attributo.  
+ in Token di metadati per il quale viene definito l'attributo.  
   
  `name`  
- [in] Un puntatore a un `WCHAR` che contiene il nome dell'attributo.  
+ in Puntatore a un oggetto `WCHAR` che contiene il nome dell'attributo.  
   
  `cData`  
- [in] Oggetto `ULONG32` che indica le dimensioni del `data` matrice.  
+ in Oggetto `ULONG32` che indica la dimensione `data` della matrice.  
   
  `data`  
- [in] Il valore dell'attributo.  
+ in Valore dell'attributo.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** CorSym.idl, CorSym.h  
+ **Intestazione:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vedere anche
 

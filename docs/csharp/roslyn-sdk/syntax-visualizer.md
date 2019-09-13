@@ -3,12 +3,12 @@ title: Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual St
 description: Il visualizzatore di sintassi è uno strumento visivo che consente di esaminare i modelli che .NET Compiler Platform SDK genera per il codice.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
-ms.translationtype: HT
+ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307201"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926790"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 
@@ -28,7 +28,7 @@ Questo comando apre il visualizzatore di sintassi sotto forma di finestra degli 
 
 Ancorare questa finestra degli strumenti in una posizione appropriata all'interno di Visual Studio, ad esempio sul lato sinistro. Il visualizzatore offre le informazioni sul file di codice corrente.
 
-Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È possibile creare sia progetti Visual Studio sia C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi esistente C# / VB file in questa istanza di Visual Studio e il Visualizzatore Visualizza albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
+Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È possibile creare sia progetti Visual Studio sia C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi esistente c# / VB file in questa istanza di Visual Studio e il Visualizzatore Visualizza albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizzazione di un albero della sintassi di C#](media/syntax-visualizer/visualize-csharp.png)
@@ -44,6 +44,7 @@ Gli alberi della sintassi includono tre tipi di elementi: *nodi*, *token* ed *el
 Ogni elemento dell'albero indica anche il relativo elemento **span**. L'elemento **span** rappresenta gli indici (posizione iniziale e finale) di tale nodo nel file di testo.  Nell'esempio precedente di C# il token "UsingKeyword [0..5)" selezionato ha un elemento **Span** di cinque caratteri, rappresentato dalla notazione [0..5)). La notazione "[..)" indica che l'indice iniziale è parte dello span, mentre non lo è l'indice finale.
 
 Esistono due modi per esplorare l'albero:
+
 * Espandere o fare clic sugli elementi dell'albero. Il visualizzatore seleziona automaticamente il testo corrispondente allo span dell'elemento nell'editor di codice.
 * Selezionare o fare clic sul testo nell'editor di codice. Nell'esempio precedente di Visual Basic, se si seleziona la riga contenente "Module Module1" nell'editor di codice, il visualizzatore passerà automaticamente al nodo ModuleStatement corrispondente nell'albero. 
 

@@ -1,37 +1,54 @@
 ---
-title: ?? Operatore ?? - Riferimenti per C#
+title: ?? e? = Operators C# -riferimento
 ms.custom: seodec18
-ms.date: 06/07/2019
+ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
+- ??=_CSharpKeyword
 helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
+- null-coalescing assignment [C#]
+- ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: 1e94038a41a6a6cc19be6c67bff2891397793fb3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024999"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924687"
 ---
-# <a name="-operator-c-reference"></a>?? Operatore ?? (Riferimenti per C#)
+# <a name="-and--operators-c-reference"></a>?? e? = OperatorsC# (riferimento)
 
 L'operatore null-coalescing `??` restituisce il valore dell'operando a sinistra se non è `null`; in caso contrario, valuta l'operando a destra e ne restituisce il risultato. L'operatore `??` non valuta l'operando a destra se l'operando a sinistra restituisce un valore non null.
 
-L'operatore null-coalescing si associa all'operando a destra, che significa che un'espressione nel formato
+Disponibile in C# 8,0 e versioni successive, l'operatore `??=` di assegnazione di Unione null assegna il valore dell'operando destro all'operando sinistro solo se l' `null`operando sinistro restituisce. L'operatore `??=` non valuta l'operando a destra se l'operando a sinistra restituisce un valore non null.
+
+[!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
+
+L'operando sinistro dell' `??=` operatore deve essere una variabile, una [proprietà](../../programming-guide/classes-and-structs/properties.md)o un elemento [indicizzatore](../../programming-guide/indexers/index.md) . Per ulteriori informazioni sull'assegnazione di Unione null, vedere la [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
+
+In C# 7,3 e versioni precedenti, il tipo dell'operando sinistro dell' `??` operatore deve essere un tipo di riferimento o un tipo di [valore Nullable](../../programming-guide/nullable-types/index.md). A partire C# da 8,0, il requisito viene sostituito con quanto segue: il tipo dell'operando sinistro degli `??` operatori e `??=` non può essere un tipo di valore non nullable. In particolare, è possibile usare gli operatori di Unione null con parametri di tipo non vincolati in C# 8,0 e versioni successive:
+
+[!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
+
+Gli operatori che uniscono i valori null sono associativi a destra. Ovvero espressioni nel formato
 
 ```csharp
 a ?? b ?? c
+d ??= e ??= f
 ```
 
-viene valutata come
+vengono valutati come
 
 ```csharp
 a ?? (b ?? c)
+d ??= (e ??= f)
 ```
 
-L'operatore `??` può essere utile negli scenari seguenti:
+## <a name="examples"></a>Esempi
+
+Gli operatori `??=` e possono essere utili negli scenari seguenti: `??`
 
 - Nelle espressioni con gli [operatori condizionali null ?. e ?[]](member-access-operators.md#null-conditional-operators--and-), è possibile usare l'operatore null-coalescing per creare un'espressione alternativa da valutare nel caso in cui il risultato dell'operazione con operazioni condizionali Null sia `null`:
 
@@ -49,13 +66,28 @@ L'operatore `??` può essere utile negli scenari seguenti:
 
   L'esempio precedente dimostra anche come usare [membri con corpo di espressione](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) per definire una proprietà.
 
+- A partire C# da 8,0, è possibile usare `??=` l'operatore per sostituire il codice del modulo
+
+  ```csharp
+  if (variable is null)
+  {
+      variable = expression;
+  }
+  ```
+
+  con il codice seguente:
+
+  ```csharp
+  variable ??= expression;
+  ```
+
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Non è possibile sottoporre a overload l'operatore null-coalescing.
+Non è `??` possibile `??=` eseguire l'overload degli operatori e.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
-Per altre informazioni, vedere la sezione [ null coalescing](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) di [Specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
+Per ulteriori informazioni sull' `??` operatore, vedere la sezione relativa all'operatore di Unione [null](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) nella [ C# specifica del linguaggio](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933660"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894693"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parametri
 
-| Argomento | DESCRIZIONE |
+| Argomento | Descrizione |
 | -------- | ----------- |
 |`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** Verificare che nell'ultima riga di codice del file di origine con estensione il sia presente uno spazio vuoto finale o un carattere di fine riga.|
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea un'immagine con preferenza per i 32 bit (PE32).|
 |**/alignment:** `integer`|Imposta FileAlignment sul valore specificato da `integer` nell'intestazione NT facoltativa. Se la direttiva IL .alignment è specificata nel file, questa opzione ne esegue l'override.|
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > Tutte le opzioni di *Ilasm.exe* non sono soggette alla distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/lis** equivale a **/listing** e **/res**:myresfile.res equivale a **/resource**:myresfile.res. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output**:*file.ext*, ad esempio, equivale a **/output**=*file.ext*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 L'assembler IL consente ai fornitori di strumenti di progettare e implementare generatori IL. Grazie a *Ilasm.exe*, gli sviluppatori di strumenti e compilatori possono concentrarsi su IL e sulla generazione di metadati senza doversi preoccupare di emettere IL nel formato di file di tipo PE.
 
@@ -110,7 +110,7 @@ Per altre informazioni sulla grammatica di IL, vedere il file asmparse.grammar i
 
 A partire da .NET Framework 4.5, è possibile associare un attributo personalizzato a un'implementazione di interfaccia usando codice analogo al seguente:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ A partire da .NET Framework 4.5, è possibile associare un attributo personalizz
 
 A partire da .NET Framework 4.5, è possibile specificare un BLOB (oggetto binario di grandi dimensioni) marshalling arbitrario usando la relativa rappresentazione binaria non elaborata, come illustrato nel codice seguente:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di codice C#. È possibile compilare questo codice in un assembly mediante lo strumento IL Assembler. Gli esempi di codice IL e C# visualizzano entrambi "Hello World!" nella console.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

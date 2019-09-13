@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780842"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894414"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -26,9 +26,9 @@ In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la fu
 ## <a name="enabling-user-instances"></a>Abilitazione delle istanze utente  
  Per generare le istanze utente, è necessario che sia in esecuzione un'istanza padre di SQL Server Express. Le istanze utente sono abilitate per impostazione predefinita durante l'installazione di SQL Server Express e possono essere abilitate o disabilitate in modo esplicito da un amministratore di sistema che esegue l'stored procedure di sistema **sp_configure** nell'istanza padre.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - La stringa di sostituzione `|DataDirectory|` racchiusa tra barre verticali fa riferimento alla directory di dati dell'applicazione che apre la connessione e fornisce un percorso relativo che indica la posizione dei file di database e di log, con estensione mdf e ldf. Se si desidera individuare altrove questi file, è necessario fornire il percorso completo.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  La posizione fisica alla quale `DataDirectory` punta dipende dal tipo di applicazione. In questo esempio il file Northwind.mdf da collegare è situato nella cartella \app_data dell'applicazione.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

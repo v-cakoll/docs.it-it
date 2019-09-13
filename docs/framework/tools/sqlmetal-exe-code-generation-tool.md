@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938001"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894616"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di .NET Framework. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -34,7 +34,7 @@ Lo strumento da riga di comando SqlMetal genera codice e mapping per il componen
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 sqlmetal [options] [<input file>]  
 ```  
   
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di estrazione**  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/views**|Estrae viste di database.|  
 |**/functions**|Estrae funzioni di database.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di output**  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Invia l'output come file .dbml. Non può essere usata con l'opzione **/map** .|  
 |**/code** *[:file]*|Invia l'output come codice sorgente. Non può essere usata con l'opzione **/dbml** .|  
@@ -70,14 +70,14 @@ sqlmetal [options] [<input file>]
   
  **Varie**  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/language:** *\<linguaggio>*|Specifica il linguaggio del codice sorgente.<br /><br /> Valori validi per *\<linguaggio>* : vb, csharp.<br /><br /> Valore predefinito: derivato dall'estensione nel nome file del codice.|  
 |**/namespace:** *\<nome>*|Specifica lo spazio dei nomi del codice generato. Valore predefinito: nessuno spazio dei nomi.|  
 |**/context:** *\<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
 |**/entitybase:** *\<tipo>*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
 |**/pluralize**|Rende automaticamente plurali o singolari i nomi delle classi e dei membri.<br /><br /> Opzione disponibile solo nella versione in lingua inglese degli Stati Uniti.|  
-|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: Nessuno.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: No.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **File di input**  
   
@@ -85,7 +85,7 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**\<file input>**|Specifica un file con estensione mdf di SQL Server Express, un file con estensione sdf di SQL Server Compact 3.5 oppure un file con estensione dbml intermedio.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il funzionamento di SqlMetal prevede di fatto due passaggi:  
   
 - Estrazione dei metadati del database in un file .dbml.  

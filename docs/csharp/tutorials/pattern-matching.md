@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105560"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926659"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -17,6 +17,7 @@ In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. T
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Riconoscere le situazioni in cui usare i criteri di ricerca.
 > - Usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
 > - Combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
@@ -293,7 +294,7 @@ Per questa funzionalità si useranno i criteri di ricerca, che verranno però in
 
 La tabella seguente mostra le combinazioni dei valori di input e il moltiplicatore dei prezzi per le ore di punta:
 
-| Day        | Ora         | Direzione | Sovrapprezzo |
+| Giorno        | Time         | Direction | Sovrapprezzo |
 | ---------- | ------------ | --------- |--------:|
 | Giorno feriale    | ore di punta del mattino | in entrata   | x 2,00  |
 | Giorno feriale    | ore di punta del mattino | in uscita  | x 1,00  |

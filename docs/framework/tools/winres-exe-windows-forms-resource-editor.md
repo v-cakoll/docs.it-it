@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937926"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894566"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -28,14 +28,14 @@ Winres.exe viene installato con Visual Studio. Per eseguire lo strumento, usare 
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```console
 winres resourceFile
 winres /?
 ```
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|DESCRIZIONE|
+|Argomento|Descrizione|
 |--------------|-----------------|
 |`resourceFile`|File di risorse da localizzare. Deve essere un form di Windows Form con estensione .resx o .resources generato dalla finestra di progettazione di Visual Studio. Winres.exe non è in grado di aprire file .resx o .resources generici.|
 
@@ -43,7 +43,7 @@ winres /?
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Lo stato degli elementi dell'interfaccia utente di un form in un progetto Windows Form viene in genere archiviato nei file di risorse, che possono essere file basati su XML con estensione .resx oppure le corrispondenti versioni binarie compilate con estensione .resources. Winres.exe fornisce funzionalità di modifica limitate per questi tipi di file all'esterno dell'ambiente di progettazione Visual Studio. In particolare, consente i seguenti tipi di operazioni di modifica:
 
@@ -116,13 +116,13 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
      Il seguente comando avvia Winres.exe e carica il form associato a `TestApp.resx` in Progettazione Form.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      Il seguente comando avvia Winres.exe e carica il form associato a `TestApp.resources` in Progettazione Form.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

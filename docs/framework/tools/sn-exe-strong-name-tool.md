@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938010"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894635"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -36,13 +36,13 @@ Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri]
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**-a** *fileCoppiaChiaviIdentità* *fileChiavePubblicaFirma*|Genera dati <xref:System.Reflection.AssemblySignatureKeyAttribute> per eseguire la migrazione della chiave di identità alla chiave di firma da un file.|  
 |**-ac** *fileChiavePubblicaIdentità* *contenitoreCoppiaChiaviIdentità* *fileChiavePubblicaIdentità*|Genera dati <xref:System.Reflection.AssemblySignatureKeyAttribute> per eseguire la migrazione della chiave di identità alla chiave di firma da un contenitore di chiavi.|  
@@ -79,7 +79,7 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 > Per essere valide, le opzioni di Sn.exe devono essere digitate esattamente come indicato, rispettando con precisione la combinazione di maiuscole e minuscole.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le opzioni **-R** e **–Rc** sono utili con gli assembly per cui è stata impostata la firma ritardata. In questo scenario solo la chiave pubblica viene impostata in fase di compilazione e la firma viene apposta in un secondo tempo, quando sarà nota la chiave privata.  
   
 > [!NOTE]
@@ -90,37 +90,37 @@ Lo strumento Nome sicuro presuppone che vengano generate coppie di chiavi pubbli
 ## <a name="examples"></a>Esempi  
  Il comando che segue crea una nuova coppia casuale di chiavi e la archivia in `keyPair.snk`.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  Il comando che segue archivia la chiave presente in `keyPair.snk` all'interno del contenitore `MyContainer` nel CSP del nome sicuro.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  Il comando che segue estrae la chiave pubblica da `keyPair.snk` e la archivia in `publicKey.snk`.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  Il comando che segue visualizza la chiave pubblica e il token per la chiave pubblica contenuti in `publicKey.snk`.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  Il comando che segue verifica l'assembly `MyAsm.dll`.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  Il comando che segue elimina `MyContainer` dal CSP predefinito.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   

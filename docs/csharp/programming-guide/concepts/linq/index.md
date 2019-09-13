@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592159"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926727"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
@@ -46,6 +46,7 @@ L'esempio seguente mostra l'operazione di query completa. L'operazione completa 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione introduttiva [Nozioni fondamentali sulle espressioni di query](../../../linq/query-expression-basics.md) e quindi leggere la documentazione per la tecnologia LINQ a cui si è interessati:   
+
 - Documenti XML: [LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ Per iniziare a utilizzare LINQ in C#, vedere l'esercitazione [Uso di LINQ](../..
 ## <a name="see-also"></a>Vedere anche
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)
+ 

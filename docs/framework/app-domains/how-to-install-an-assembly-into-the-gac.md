@@ -11,16 +11,17 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 233a7803cb59f9bfeac15d293dc3fb5a0db449c9
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: HT
+ms.openlocfilehash: 8e2d051cda9861da1af2caa65160b6e753b24bd1
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903751"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926505"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedura: Installare un assembly nella Global Assembly Cache
 
 Gli assembly condivisi da più applicazioni vengono archiviati nella Global Assembly Cache (GAC). Installare un assembly nella [Global Assembly Cache](gac.md) con uno dei componenti seguenti: 
+
 - [Windows Installer](#windows-installer)
 - [Strumento Global Assembly Cache](#global-assembly-cache-tool)
 
@@ -46,7 +47,7 @@ gacutil -i <assembly name>
 
 In questo comando *\<nome assembly>* è il nome dell'assembly da installare nella Global Assembly Cache.
 
-Se *gacutil.exe* non è presente nel percorso di sistema, usare il [Prompt dei comandi per gli sviluppatori per VS *\<versione>*](../tools/developer-command-prompt-for-vs.md).
+Se *gacutil.exe* non è presente nel percorso di sistema, usare il [Prompt dei comandi per gli sviluppatori per VS *\<versione>* ](../tools/developer-command-prompt-for-vs.md).
 
 L'esempio seguente consente di installare un assembly con nome file *hello.dll* nella Global Assembly Cache.
 

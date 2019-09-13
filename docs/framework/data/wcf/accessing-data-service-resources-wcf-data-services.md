@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791326"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894356"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Accesso alle risorse di un servizio dati (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] supporta per esporre i dati come feed con risorse indirizzabili tramite URI. Queste risorse vengono rappresentate in base alle convenzioni entità-relazione del [Entity Data Model](../adonet/entity-data-model.md). In questo modello le entità rappresentano unità operative di dati che corrispondono a tipi di dati in un dominio di applicazione, ad esempio clienti, ordini, elementi e prodotti. L'accesso ai dati di entità e la relativa modifica sono possibili mediante la semantica REST (Representational State Transfer), in particolare i verbi GET, PUT, POST e DELETE standard HTTP.  
@@ -21,44 +21,44 @@ ms.locfileid: "70791326"
 ## <a name="addressing-resources"></a>Indirizzamento di risorse  
  In [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] i dati esposti vengono indirizzati dal modello di dati tramite un URI. L'URI seguente restituisce ad esempio un feed che corrisponde al set di entità Customers, che contiene le voci per tutte le istanze del tipo di entità Customer:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  Le entità dispongono di proprietà speciali denominate chiavi di entità. Una chiave di entità viene usata per identificare in modo univoco una singola entità in un set di entità. In questo modo è possibile indirizzare un'istanza specifica di un tipo di entità nel set di entità. L'URI seguente restituisce ad esempio una voce per un'istanza specifica del tipo di entità Customer che presenta un valore chiave corrispondente ad `ALFKI`:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  Le proprietà primitive e complesse di un'istanza di entità possono anche essere indirizzate singolarmente. L'URI seguente restituisce ad esempio un elemento XML che contiene il valore della proprietà `ContactName` per un cliente (Customer) specifico:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  Se si include l'endpoint `$value` nell'URI precedente, nel messaggio di risposta viene restituito solo il valore della proprietà primitiva. Nell'esempio seguente viene restituita solo la stringa "Maria Anders" senza l'elemento XML:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  Le relazioni tra entità vengono definite mediante associazioni nel modello di dati. Queste associazioni consentono di indirizzare entità correlate usando le proprietà di navigazione di un'istanza di entità. Una proprietà di navigazione può restituire una sola entità correlata, nel caso di una relazione molti-a-uno, o un set di entità correlate, nel caso di una relazione uno-a-molti. L'URI seguente restituisce ad esempio un feed che corrisponde al set di tutte le entità Order correlate a un cliente specifico:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  Le relazioni, che in genere sono bidirezionali, sono rappresentate da una coppia di proprietà di navigazione. Al contrario della relazione mostrata nell'esempio precedente, l'URI seguente restituisce un riferimento all'entità Customer alla quale appartiene un'entità Order specifica:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]consente inoltre di indirizzare le risorse in base ai risultati delle espressioni di query. In questo modo è possibile filtrare i set di risorse in base a un'espressione valutata. L'URI seguente consente ad esempio di filtrare le risorse per restituire solo gli ordini per il cliente specificato inviati dal 22 settembre 1997:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  Per ulteriori informazioni, vedere [OData: Convenzioni](https://go.microsoft.com/fwlink/?LinkId=185564)URI.  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>Opzioni di query di sistema  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definisce un set di opzioni di query di sistema che è possibile utilizzare per eseguire operazioni di query tradizionali sulle risorse, quali filtro, ordinamento e paging. Ad esempio, l'URI seguente restituisce il set di tutte le `Order` entità, insieme alle entità `Order_Detail` correlate, i codici postali di `100`che non terminano con:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  Le voci del feed restituito vengono inoltre ordinate in base al valore della proprietà ShipCity degli ordini.  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>Indirizzamento delle relazioni  
  Oltre ad affrontare i set di entità e le istanze [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] di entità, consente inoltre di indirizzare le associazioni che rappresentano le relazioni tra entità. Questa funzionalità è necessaria per creare o modificare una relazione tra due istanze di entità, ad esempio lo spedizioniere correlato a un determinato ordine nel database Northwind di esempio. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]supporta un `$link` operatore per indirizzare in modo specifico le associazioni tra entità. L'URI seguente viene ad esempio specificato in un messaggio di richiesta PUT HTTP per modificare lo spedizioniere per l'ordine specificato in un nuovo spedizioniere.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  Per ulteriori informazioni, vedere [OData: Indirizzamento di collegamenti](https://go.microsoft.com/fwlink/?LinkId=187351)tra voci.  

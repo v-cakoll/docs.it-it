@@ -2,12 +2,12 @@
 title: Token personalizzato
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855516"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928661"
 ---
 # <a name="custom-token"></a>Token personalizzato
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      Il certificato viene memorizzato nell'archivio personale nel percorso di archivio `LocalMachine`. Il certificato viene archiviato nell'archivio LocalMachine per i servizi ospitati su IIS. Per i servizi indipendenti, è necessario modificare il file batch per archiviare il certificato del client nel percorso dell'archivio CurrentUser sostituendo la stringa LocalMachine con CurrentUser.
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - Per abilitare l'accesso alla chiave privata del certificato dal servizio ospitato su IIS, è necessario concedere le autorizzazioni alla chiave privata appropriate all'account utente con cui viene eseguito il processo ospitato da IIS. Questa operazione viene eseguita negli ultimi passaggi dello script Setup.bat.
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

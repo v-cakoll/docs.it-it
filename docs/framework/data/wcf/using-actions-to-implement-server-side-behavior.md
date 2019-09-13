@@ -2,12 +2,12 @@
 title: Utilizzo di azioni per implementare il comportamento lato server
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: bdfa8e37904395b402874b743ca4069cae75c504
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5c71cfe8965cf8edbe07ff7ae4c6be95b437bf80
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779698"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894260"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 
@@ -57,7 +57,7 @@ Le azioni OData consentono di implementare un comportamento che agisce su una ri
   
  Movies(1) specifica il filmato che si desidera valutare e Rate specifica l'azione di valutazione. Il valore effettivo della valutazione sarà presente nel corpo della richiesta HTTP come mostrato nell'esempio seguente:  
   
-```  
+```http
 POST http://MovieServer/MoviesService.svc/Movies(1)/Rate HTTP/1.1   
 Content-Type: application/json   
 Content-Length: 20   

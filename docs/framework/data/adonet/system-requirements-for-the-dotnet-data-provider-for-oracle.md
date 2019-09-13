@@ -2,12 +2,12 @@
 title: Requisiti di sistema per il provider di dati.NET Framework per Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780584"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894375"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisiti di sistema per il provider di dati.NET Framework per Oracle
 Per usare il provider di dati .NET Framework per Oracle, è necessario disporre di Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Si consiglia l'uso di MDAC 2.8 SP1.  
@@ -22,9 +22,7 @@ Per usare il provider di dati .NET Framework per Oracle, è necessario disporre 
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Impostazione del valore Unicode in un attributo della stringa di connessione  
  Quando si usa Oracle, è possibile usare l'attributo della stringa di connessione  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  per l'inizializzazione delle librerie del client Oracle in modalità UTF-16. In questo modo le librerie del client Oracle accetteranno stringhe UTF-16 (molto simili a quelle UCS-12) anziché multibyte. Ciò consente al provider di dati per Oracle di usare qualsiasi pagina di codice Oracle senza eseguire ulteriori operazioni di conversione. Questa configurazione è utile solo se per la comunicazione con un database Oracle 9i viene usato un client Oracle 9i e un set di caratteri alternativo di AL16UTF16. Quando un client Oracle 9i comunica con un server Oracle 9i, sono necessarie risorse aggiuntive per convertire i valori **CommandText** Unicode nel set di caratteri multibyte appropriato utilizzato dal server Oracle9i. Questo può essere evitato se si è certi di disporre della configurazione corretta, aggiungendo `Unicode=True` alla stringa di connessione.  
   

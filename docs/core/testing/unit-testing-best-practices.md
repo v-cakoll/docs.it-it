@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410370"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926392"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedure consigliate di testing unità con .NET Core e .NET Standard
 
@@ -43,6 +43,7 @@ Quando il codice è strettamente accoppiato, può risultare difficile eseguire u
 La scrittura di test per il codice ha l'effetto di disaccoppiare naturalmente il codice perché le verifiche sarebbero, in caso contrario, più difficili.
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Caratteristiche di un buon unit test
+
 - **Veloce**. Non è insolito per i progetti maturi comprendere migliaia di unit test. La durata dell'esecuzione degli unit test dovrebbe essere molto breve. Millisecondi.
 - **Isolato**. Gli unit test sono autonomi, possono essere eseguiti in modo isolato e non hanno dipendenze verso fattori esterni, ad esempio file system o database.
 - **Ripetibile**. Uno unit test deve generare risultati costanti, vale a dire, deve restituire sempre lo stesso risultato se tra le esecuzioni non si modifica alcun elemento.
@@ -106,11 +107,13 @@ La cosa principale da ricordare riguardo a mock e stub è che i mock sono analog
 
 ### <a name="naming-your-tests"></a>Denominare i test
 Il nome del test deve essere costituito da tre parti:
+
 - Nome del metodo testato.
 - Scenario in cui si sta testando.
 - Comportamento previsto quando viene richiamato lo scenario.
 
 #### <a name="why"></a>Perché?
+
 - Gli standard di denominazione sono importanti perché esprimono in modo esplicito l'intento del test.
 
 I test non si limitano a verificare che il codice funzioni, ma documentano anche il risultato. Osservando semplicemente il gruppo di unit test, sarà possibile dedurre il comportamento del codice senza neanche guardare il codice. Inoltre, quando i test hanno esito negativo, è possibile vedere esattamente quali scenari non soddisfano le aspettative.
@@ -123,11 +126,13 @@ I test non si limitano a verificare che il codice funzioni, ma documentano anche
 
 ### <a name="arranging-your-tests"></a>Disposizione dei test
 **Disporre, agire, asserire** è uno schema comune per gli unit test. Come suggerisce il nome, è costituito da tre azioni principali:
+
 - *Disporre* gli oggetti, creandoli e configurandoli in base alle esigenze.
 - *Agire* su un oggetto.
 - *Asserire* che un dato comportamento è come previsto.
 
 #### <a name="why"></a>Perché?
+
 - Separare nettamente l'oggetto del test dai passaggi *disporre* e *asserire*.
 - Il rischio di mescolare le asserzioni con il codice "agire" è minore.
 
@@ -143,6 +148,7 @@ La leggibilità è uno degli aspetti più importanti da considerare durante la s
 L'input da usare in uno unit test deve essere il più semplice possibile per verificare il comportamento che si sta testando.
 
 #### <a name="why"></a>Perché?
+
 - I test diventano più adattabili alle modifiche future nella base codice.
 - I test hanno un comportamento più simile a quello dell'implementazione.
 
@@ -158,6 +164,7 @@ Test che includono più informazioni rispetto a quelle necessarie per la verific
 La denominazione delle variabili negli unit test è importante quanto la denominazione delle variabili nel codice di produzione o anche di più. Gli unit test non devono contenere "stringhe magiche".
 
 #### <a name="why"></a>Perché?
+
 - Impediscono a chi legge il test di controllare il codice di produzione per scoprire ciò che rende il valore speciale.
 - Illustrano in modo esplicito ciò che si sta tentando di *dimostrare* anziché ciò che si tenta di *compiere*.
 
@@ -176,6 +183,7 @@ Le "stringhe magiche" possono causare confusione a chi legge il test. Se una str
 Quando si scrivono gli unit test bisogna evitare la concatenazione manuale di stringhe e le condizioni logiche, ad esempio `if`, `while`, `for`, `switch` e così via.
 
 #### <a name="why"></a>Perché?
+
 - Minore possibilità di introdurre un bug nei test.
 - Per concentrarsi sul risultato finale anziché sui dettagli di implementazione.
 
@@ -194,6 +202,7 @@ Se si introduce la logica nel gruppo di test, la possibilità di introdurre un b
 Se si richiede un oggetto o uno stato simile per i test, prediligere un metodo helper piuttosto che utilizzare gli attributi Setup e Teardown, se presenti.
 
 #### <a name="why"></a>Perché?
+
 - La lettura dei test è più agevole dal momento che la totalità del codice è visibile nel test.
 - Minore rischio di configurare troppo o troppo poco per il test specificato.
 - Minore rischio di condividere lo stato tra i test creando dipendenze non desiderate tra di essi.
@@ -223,10 +232,12 @@ Nel framework di testing unità, `Setup` viene chiamato prima di ogni unit test 
 
 ### <a name="avoid-multiple-asserts"></a>Evitare le asserzioni multiple
 Quando si scrivono i test, puntare a includere una sola asserzione per ogni test. Le strategie comuni per usare una sola asserzione includono:
+
 - Creare un test separato per ogni asserzione.
 - Usare test con parametri.
 
 #### <a name="why"></a>Perché?
+
 - Se un'asserzione ha esito negativo, le asserzioni successive non verranno valutate.
 - Garantisce che l'asserzione non venga applicata a più test case.
 - Offre il quadro completo del motivo per cui i test non sono riusciti. 

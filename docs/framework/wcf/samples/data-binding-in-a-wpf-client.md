@@ -2,12 +2,12 @@
 title: Associazione dati in un client Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045107"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928627"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associazione dati in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un'associazione dati in un client Windows Presentation Foundation (WPF). Nell'esempio viene utilizzato un servizio Windows Communication Foundation (WCF) che genera in modo casuale una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio vengono associate automaticamente all'interfaccia utente (UI) fornita dal client Windows Presentation Foundation (WPF).  
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come usare un'associazione dati in un client 
   
  L'associazione dati fa sì che un'origine dati venga associata automaticamente a un'interfaccia utente. Questa operazione semplifica il modello di programmazione, perché non richiede che ogni elemento dell'interfaccia utente venga aggiornato a livello di programmazione con i dati da un oggetto dati o da una matrice di oggetti dati. È possibile associare un oggetto a un singolo elemento dell'interfaccia utente oppure una matrice a un controllo che accetta più input, ad esempio un oggetto `ListBox`. Nell'esempio di codice seguente viene illustrato come associare i dati al `DataContext` di un elemento dell'interfaccia utente.  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

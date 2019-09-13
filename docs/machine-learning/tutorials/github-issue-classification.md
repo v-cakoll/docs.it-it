@@ -4,12 +4,12 @@ description: Informazioni su come usare ML.NET in uno scenario di classificazion
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710299"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929229"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Esercitazione: Categorizzare i problemi di supporto usando la classificazione multiclasse con ML NET
 
@@ -17,6 +17,7 @@ Questa esercitazione di esempio illustra come usare ML.NET per creare un classif
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > * Preparare i dati
 > * Trasformare i dati
 > * Eseguire il training del modello
@@ -372,6 +373,7 @@ La procedura è stata completata. È stato creato correttamente un modello di ap
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > * Preparare i dati
 > * Trasformare i dati
 > * Eseguire il training del modello

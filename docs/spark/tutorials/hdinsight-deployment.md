@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 81d1af1fd4e3329c4a289eea388edf8af57d7c4e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243942"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928478"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
 
@@ -18,6 +18,7 @@ Questa esercitazione illustra come distribuire un'applicazione .NET per Apache S
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > * Preparare Microsoft.Spark.Worker
 > * Pubblicare l'app Spark .NET
 > * Distribuire l'app in Azure HDInsight
@@ -79,11 +80,11 @@ Questo passaggio è necessario solo una volta per il cluster.
 
 Eseguire `install-worker.sh` nel cluster usando [azioni script di HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).
 
-|Impostazione|Valore|
+|Impostazione|Value|
 |-------|-----|
 |Tipo di script|Personalizzato|
 |NOME|Installare Microsoft.Spark.Worker|
-|URI script Bash|URI in cui è stato caricato `install-worker.sh`. Ad esempio, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`.|
+|URI script Bash|URI in cui è stato caricato `install-worker.sh`. Ad esempio: `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
 |Tipi di nodo|Lavoro|
 |Parametri|Parametri per `install-worker.sh`. Ad esempio, se `install-worker.sh` viene caricato in Azure Data Lake Gen2, sarà `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.|
 

@@ -4,12 +4,12 @@ description: In questa esercitazione viene illustrato come creare un'applicazion
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107171"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929023"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Esercitazione: Analizzare le valutazioni dei commenti di un sito web con la classificazione binaria in ML.NET
 
@@ -17,6 +17,7 @@ In questa esercitazione viene illustrato come creare un'applicazione console .NE
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > - Creare un'applicazione console
 > - Preparare i dati
 > - Caricare i dati
@@ -383,6 +384,7 @@ La creazione di modelli efficaci è un processo iterativo. Questo modello ha ini
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > - Creare un'applicazione console
 > - Preparare i dati
 > - Caricare i dati

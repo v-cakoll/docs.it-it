@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 12de3cd1663d9dfea66f32fcb7f456d44e31dc60
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929898"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894593"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (strumento per lo spazio di memorizzazione isolato)
 Lo strumento per lo spazio di memorizzazione isolato elenca o rimuove tutti gli archivi esistenti dell'utente attualmente connesso.  
@@ -26,13 +26,13 @@ Lo strumento per lo spazio di memorizzazione isolato elenca o rimuove tutti gli 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
 ```  
   
 ## <a name="parameters"></a>Parametri  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/h**[**elp**]|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/list**|Visualizza tutti gli archivi esistenti dell'utente attualmente connesso, inclusi gli archivi di tutte le applicazioni e di tutti gli assembly eseguiti da tale utente.|  
@@ -42,7 +42,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |**/roaming**|Seleziona l'archivio roaming. Usare questa opzione con l'opzione **/list** o **/remove** per specificare che l'operazione deve essere applicata all'archivio roaming.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Se si esegue Storeadm.exe dalla riga di comando senza specificare alcuna opzione, verranno visualizzate la sintassi e le opzioni dello strumento.  
   
  Le opzioni **/list** e **/remove** sono in genere usate singolarmente. Se tuttavia vengono specificate due o più opzioni, queste verranno eseguite nell'ordine in cui sono state immesse sulla riga di comando.  

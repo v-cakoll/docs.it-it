@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738974"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895039"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_analisi dello stack (funzione)
+# <a name="_efn_stacktrace-function"></a>\_AAPN\_(funzione StackTrace)
 Fornisce una rappresentazione testuale di una traccia dello stack gestito e una matrice di record `CONTEXT`, uno per ogni transizione tra codice non gestito e gestito.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,62 +42,62 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>Parametri  
  `Client`  
- [in] Il client in fase di debug.  
+ in Client di cui è in corso il debug.  
   
  `wszTextOut`  
- [out] La rappresentazione testuale dell'analisi dello stack.  
+ out Rappresentazione testuale della traccia dello stack.  
   
  `puiTextLength`  
- [out] Un puntatore al numero di caratteri in `wszTextOut`.  
+ out Puntatore al numero di caratteri in `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Matrice di contesti di transizione.  
+ out Matrice di contesti di transizione.  
   
  `puiTransitionContextCount`  
- [out] Puntatore al numero di contesti di transizione nella matrice.  
+ out Puntatore al numero di contesti di transizione nella matrice.  
   
  `uiSizeOfContext`  
- [in] Le dimensioni della struttura scelta.  
+ in Dimensione della struttura del contesto.  
   
  `Flags`  
- [in] Impostato su 0 o SOS_STACKTRACE_SHOWADDRESSES (0x01) per visualizzare il registro EBP e il puntatore dello stack invio (ESP) davanti a ogni `module!functionname` riga.  
+ in Impostare su 0 o SOS_STACKTRACE_SHOWADDRESSES (0x01) per visualizzare il registro EBP e il puntatore di stack di immissione (ESP) davanti a ogni `module!functionname` riga.  
   
 ## <a name="remarks"></a>Note  
- Il `_EFN_StackTrace` struttura può essere chiamata da un'interfaccia programmatica di WinDbg. I parametri vengono usati come indicato di seguito:  
+ La `_EFN_StackTrace` struttura può essere chiamata da un'interfaccia WinDbg a livello di codice. I parametri vengono usati come indicato di seguito:  
   
-- Se `wszTextOut` è null e `puiTextLength` è diverso da null, la funzione restituisce la lunghezza della stringa in `puiTextLength`.  
+- Se `wszTextOut` è null e `puiTextLength` non è null, la funzione restituisce la lunghezza della stringa `puiTextLength`in.  
   
-- Se `wszTextOut` è diverso da null, la funzione Archivia testo nel `wszTextOut` fino alla posizione indicata da `puiTextLength`. Restituita correttamente se si è verificato un spazio sufficiente nel buffer, o restituisce E_OUTOFMEMORY se il buffer non è sufficiente.  
+- Se `wszTextOut` non è null, la funzione archivia il `wszTextOut` testo fino alla posizione indicata da `puiTextLength`. Restituisce correttamente se lo spazio disponibile nel buffer è sufficiente oppure restituisce E_OUTOFMEMORY se il buffer non era sufficientemente lungo.  
   
-- La parte relativa alla transizione della funzione viene ignorato se `pTransitionContexts` e `puiTransitionContextCount` sono entrambi null. In questo caso, la funzione fornisce i chiamanti con output di testo dei soli nomi di funzione.  
+- La parte della funzione di transizione viene ignorata `pTransitionContexts` se `puiTransitionContextCount` e sono entrambi null. In questo caso, la funzione fornisce ai chiamanti l'output di testo solo dei nomi di funzione.  
   
-- Se `pTransitionContexts` è null e `puiTransitionContextCount` è non null, la funzione restituisce il numero necessario di voci di contesto nella `puiTransitionContextCount`.  
+- Se `pTransitionContexts` è null e `puiTransitionContextCount` non è null, la funzione restituisce il numero necessario di voci di contesto `puiTransitionContextCount`in.  
   
-- Se `pTransitionContexts` è non null, la funzione considera come una matrice di strutture di lunghezza `puiTransitionContextCount`. La dimensione della struttura viene specificata dalla `uiSizeOfContext`, e deve essere il valore pari [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` per l'architettura.  
+- Se `pTransitionContexts` non è null, la funzione lo considera come una matrice di strutture di lunghezza `puiTransitionContextCount`. Le dimensioni della struttura sono fornite `uiSizeOfContext`da e devono essere le dimensioni di [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` per l'architettura.  
   
-- `wszTextOut` viene scritto nel formato seguente:  
+- `wszTextOut`viene scritto nel formato seguente:  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- Se l'offset in esadecimale 0x0, non viene scritto alcun offset.  
+- Se l'offset in esadecimale è 0x0, non viene scritto alcun offset.  
   
-- Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce SOS_E_NOMANAGEDCODE.  
+- Se non è presente codice gestito nel thread attualmente nel contesto, la funzione restituisce SOS_E_NOMANAGEDCODE.  
   
-- Il `Flags` parametro è 0 o SOS_STACKTRACE_SHOWADDRESSES visualizzare EBP ed ESP davanti a ogni `module!functionname` riga. Per impostazione predefinita è 0.  
+- Il `Flags` parametro è 0 o SOS_STACKTRACE_SHOWADDRESSES per vedere EBP ed ESP davanti a ogni `module!functionname` riga. Per impostazione predefinita, è 0.  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace.h  
+ **Intestazione:** SOS_Stacktrace. h  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

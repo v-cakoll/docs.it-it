@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988023"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894983"
 ---
 # <a name="icordebugmodulegetname-method"></a>Metodo ICorDebugModule::GetName
-Ottiene il nome del file del modulo.  
+Ottiene il nome file del modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -42,20 +42,20 @@ HRESULT GetName(
  [in] Dimensione della matrice `szName`.  
   
  `pcchName`  
- [in] Puntatore alla lunghezza del nome restituito.  
+ in Puntatore alla lunghezza del nome restituito.  
   
  `szName`  
- [out] Matrice che archivia il nome restituito.  
+ out Matrice che archivia il nome restituito.  
   
 ## <a name="remarks"></a>Note  
- Il `GetName` metodo restituisce un HRESULT S_OK se il nome del modulo file corrisponda al nome del disco. `GetName` Restituisce un HRESULT S_FALSE se il nome viene creato, ad esempio per un modulo dinamico o in memoria.  
+ Il `GetName` metodo restituisce un valore HRESULT S_OK se il nome file del modulo corrisponde al nome su disco. `GetName`Restituisce un valore HRESULT S_FALSE se il nome viene fabbricato, ad esempio per un modulo dinamico o in memoria.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

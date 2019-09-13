@@ -4,12 +4,12 @@ description: Informazioni su come .NET effettua il marshalling dei tipi in una r
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
-ms.translationtype: HT
+ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041790"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929058"
 ---
 # <a name="type-marshaling"></a>Marshalling dei tipi
 
@@ -28,7 +28,7 @@ Il runtime tenta in genere di eseguire le operazioni necessarie durante il marsh
 
 La prima tabella descrive i mapping per i vari tipi per i quali il marshalling è lo stesso per P/Invoke e i campi.
 
-| Tipo .NET | Tipo nativo  |
+| Tipo di .NET | Tipo nativo  |
 |-----------|-------------------------|
 | `byte`    | `uint8_t`               |
 | `sbyte`   | `int8_t`                |
@@ -53,7 +53,7 @@ La prima tabella descrive i mapping per i vari tipi per i quali il marshalling �
 
 Alcune categorie di marshalling hanno impostazioni predefinite diverse a seconda che si stia eseguendo il marshalling come parametro o struttura.
 
-| Tipo .NET | Tipo nativo (parametro) | Tipo nativo (campo) |
+| Tipo di .NET | Tipo nativo (parametro) | Tipo nativo (campo) |
 |-----------|-------------------------|---------------------|
 | Matrice .NET | Un puntatore all'inizio della matrice delle rappresentazioni native degli elementi della matrice. | Non consentito senza un attributo `[MarshalAs]`|
 | Una classe con `LayoutKind` `Sequential` o `Explicit` | Un puntatore alla rappresentazione nativa della classe | La rappresentazione nativa della classe |
@@ -84,7 +84,7 @@ Se queste impostazioni predefinite non producono esattamente il risultato deside
 
 Quando si chiama un metodo su oggetti COM in .NET, il runtime di .NET cambia le regole del marshalling predefinito in modo da rispettare la semantica COM. Nella tabella seguente sono elencate le regole che i runtime .NET usano negli scenari COM:
 
-| Tipo .NET | Tipo nativo (chiamate al metodo COM) |
+| Tipo di .NET | Tipo nativo (chiamate al metodo COM) |
 |-----------|--------------------------------|
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
@@ -133,7 +133,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
 In alcuni casi il marshalling predefinito per la struttura non produce i risultati previsti. L'articolo [Personalizzazione del marshalling delle strutture](./customize-struct-marshaling.md) illustra come personalizzare la modalità di marshalling della struttura.

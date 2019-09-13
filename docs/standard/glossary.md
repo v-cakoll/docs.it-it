@@ -3,12 +3,12 @@ title: Glossario .NET
 description: Significato di termini selezionati usati nella documentazione di .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106915"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929071"
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -85,6 +85,7 @@ Il termine "ecosistema .NET" è diverso da termini simili, quali "stack .NET", q
 In termini generali, una raccolta completa di API che consente di semplificare lo sviluppo e la distribuzione di applicazioni basate su una particolare tecnologia. In tal senso, ASP.NET Core e Windows Form sono esempi di framework applicazione. Vedere anche [libreria](#library).
 
 La parola "framework" presenta un significato tecnico più specifico nei termini seguenti:
+
 - [.NET Framework](#net-framework)
 - [framework di destinazione](#target-framework)
 - [TFM (moniker framework di destinazione)](#tfm)
@@ -210,7 +211,7 @@ Un pacchetto NuGet &mdash; o semplicemente un pacchetto &mdash; è un file *ZIP*
 
 Il file *ZIP* è caratterizzato dall'estensione *NUPKG* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni di destinazione. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
 
-## <a name="platform"></a>platform
+## <a name="platform"></a>Piattaforma
 
 Sistema operativo e hardware in cui viene eseguito, ad esempio Windows, macOS, Linux, iOS e Android.
 

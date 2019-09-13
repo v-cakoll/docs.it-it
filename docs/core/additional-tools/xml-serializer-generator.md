@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 252d5f6655336669ba516393e17eb3d070611ea6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849243"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926606"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
 
 In questa esercitazione viene illustrato come usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione .NET Core di C#. Nel corso di questa esercitazione verranno illustrate le attività seguenti:
 
 > [!div class="checklist"]
+>
 > * Come creare un'app .NET Core
 > * Come aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator
 > * Come modificare il file MyApp.cspro per aggiungere dipendenze
@@ -120,6 +121,7 @@ Se è stato eseguito tutto correttamente, un assembly denominato *MyApp.XmlSeria
 
 La procedura è stata completata. Sono state eseguite le attività seguenti:
 > [!div class="checklist"]
+>
 > * Creazione di un'app .NET Core.
 > * Aggiunta di un riferimento al pacchetto Microsoft.XmlSerializer.Generator.
 > * Modifica del file MyApp.cspro per l'aggiunta di dipendenze.

@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come compilare un modello di regressi
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929441"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: Stimare i prezzi usando la regressione con ML.NET
 
@@ -17,6 +17,7 @@ Questa esercitazione illustra come creare un [modello di regressione](../resourc
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > * Preparare e identificare i dati
 > * Caricare e trasformare i dati
 > * Scegliere un algoritmo di apprendimento
@@ -269,6 +270,7 @@ La procedura è stata completata. È stato creato un modello di machine learning
 In questa esercitazione si è appreso come:
 
 > [!div class="checklist"]
+>
 > * Preparare e identificare i dati
 > * Creare una pipeline di apprendimento
 > * Caricare e trasformare i dati

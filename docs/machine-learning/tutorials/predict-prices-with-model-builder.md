@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107137"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929440"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Stimare i prezzi usando la regressione con il generatore di modelli
 
@@ -21,6 +21,7 @@ Il modello di stima dei prezzi del generatore di modelli può essere usato in qu
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > - Preparare e identificare i dati
 > - Scegliere uno scenario
 > - Caricare i dati
@@ -186,10 +187,11 @@ Il risultato del processo di training sarà la creazione di due progetti.
 
 Se in un secondo momento è necessario fare riferimento ai progetti generati all'interno di un'altra soluzione, è possibile trovarli all'interno della directory `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > - Preparare e identificare i dati
 > - Scegliere uno scenario
 > - Caricare i dati

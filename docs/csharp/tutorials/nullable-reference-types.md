@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105850"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926662"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -17,6 +17,7 @@ In C# 8 sono ora disponibili i **tipi riferimento nullable**, che completano i t
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > - Incorporare tipi riferimento nullable e non nullable nelle progettazioni.
 > - Abilitare i controlli dei tipi riferimento nullable in tutto il codice.
 > - Scrivere codice in cui il compilatore impone tali decisioni di progettazione.

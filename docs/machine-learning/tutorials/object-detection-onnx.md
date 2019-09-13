@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374520"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929087"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: Rilevare oggetti usando ONNX in ML.NET
 
@@ -21,6 +21,7 @@ Il training di un modello di rilevamento degli oggetti da zero richiede l'impost
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > - Informazioni sul problema
 > - Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
 > - Acquisire familiarità con il modello
@@ -710,6 +711,7 @@ La procedura è stata completata. È stato creato un modello di Machine Learning
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > - Informazioni sul problema
 > - Acquisire familiarità con ONNX e comprenderne il funzionamento con ML.NET
 > - Acquisire familiarità con il modello

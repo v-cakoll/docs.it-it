@@ -2,12 +2,12 @@
 title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791944"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894431"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
 Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né rilasciare utenti da un database che contiene oggetti di cui sono proprietari.  
@@ -17,7 +17,7 @@ Uno dei concetti principali in merito alla sicurezza di SQL Server è che i prop
   
  Usando la sintassi di denominazione in quattro parti per fare riferimento agli oggetti viene specificato il nome dello schema.  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   

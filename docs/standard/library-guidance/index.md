@@ -4,12 +4,12 @@ description: Procedure consigliate per gli sviluppatori nella creazione di libre
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: 85d76c8b2bd0f030e3fbc1987e6ff51d6da44e76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928956"
 ---
 # <a name="open-source-library-guidance"></a>Linee guida per le librerie open source
 
@@ -18,6 +18,7 @@ Questo materiale sussidiario offre indicazioni agli sviluppatori per la creazion
 Aspetti delle librerie .NET open source di qualità:
 
 > [!div class="checklist"]
+>
 > * **Inclusive**: le librerie .NET di qualità in genere supportano molti linguaggi di programmazione, piattaforme e applicazioni.
 > * **Stabili**: le librerie .NET di qualità coesistono nell'ecosistema .NET e vengono eseguite in applicazioni compilate con molte librerie.
 > * **Progettate per l'evoluzione**: le librerie .NET di qualità devono migliorare ed evolvere nel tempo, supportando gli utenti esistenti.

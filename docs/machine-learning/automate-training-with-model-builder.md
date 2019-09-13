@@ -4,12 +4,12 @@ description: Come usare il generatore di modelli di ML.NET per eseguire automati
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929473"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Che cos'è il generatore di modelli e come funziona?
 
@@ -29,6 +29,7 @@ Non è necessario avere competenze di Machine Learning per usare il generatore d
 È possibile trasferire molti scenari diversi nel generatore di modelli per generare un modello di Machine Learning per l'applicazione.
 
 Uno scenario è una descrizione del tipo di previsione che si vuole eseguire usando i dati. Ad esempio:
+
 - prevedere il volume di vendita futuro dei prodotti in base ai dati storici di vendita
 - classificare le valutazioni come positive o negative in base alle recensioni dei clienti
 - rilevare se una transazione bancaria è fraudolenta
@@ -41,6 +42,7 @@ Nel generatore di modelli è necessario selezionare un tipo di modello di Machin
 Per gli scenari in cui viene stimato un numero, il tipo di modello di Machine Learning è chiamato `regression`.
 
 Per gli scenari di stima di una categoria, il tipo di modello è `classification`. Sono disponibili due tipi di classificazione:
+
 - dove sono disponibili solo 2 categorie: `binary classification`.
 - dove sono disponibili tre o più categorie: `multiclass classification`.
 
@@ -80,7 +82,7 @@ Se si vuole prevedere un valore numerico con il proprio set di dati, è possibil
 
 Lo scenario personalizzato consente di scegliere manualmente il tipo di modello.
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 Dopo aver scelto il tipo di modello, il generatore di modelli richiede di specificare un set di dati. I dati vengono usati per il training, la valutazione e la scelta del modello più adatto per lo scenario.
 
@@ -89,10 +91,12 @@ Dopo aver scelto il tipo di modello, il generatore di modelli richiede di specif
 ### <a name="choose-the-output-to-predict-label"></a>Scegliere l'output da prevedere (etichetta)
 
 Un set di dati è una tabella di righe di esempi di training e di colonne di attributi. Ogni riga include:
+
 - un'**etichetta** (l'attributo da prevedere)
 - le **caratteristiche** (gli attributi usati come input per la previsione dell'etichetta).
 
 Per lo scenario di stima del prezzo della casa, è possibile usare le caratteristiche seguenti:
+
 - i metri quadrati della casa
 - il numero di camere da letto e bagni
 - il codice postale
@@ -105,12 +109,12 @@ L'etichetta è il prezzo storico della casa per la riga dei valori dei metri qua
 
 Se non sono ancora disponibili dati, provare uno dei set di dati seguenti:
 
-|Scenario|Tipo di modello|Dati|Label|Funzionalità|
+|Scenario|Tipo di modello|Data|Label|Funzionalità|
 |-|-|-|-|-|
 |Stima dei prezzi|Regressione|[dati delle tariffe dei taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tariffe|Tempo della corsa, distanza|
 |Rilevamento di anomalie|Classificazione binaria|[dati di vendita dei prodotti](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendita dei prodotti|Mese|
 |Analisi del sentiment|Classificazione binaria|[dati dei commenti del sito Web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etichetta (0 con sentiment negativo, 1 con sentiment positivo)|Commento, anno|
-|Rilevamento delle frodi|Classificazione binaria|[dati della carta di credito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudolento, 0 in caso contrario)|Quantità, V1-V28 (caratteristiche anonime)|
+|Rilevamento di frodi|Classificazione binaria|[dati della carta di credito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudolento, 0 in caso contrario)|Quantità, V1-V28 (caratteristiche anonime)|
 |Classificazione testo|Classificazione multiclasse|[dati del problema di GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|Titolo, descrizione|
 
 ## <a name="train"></a>Eseguire il training

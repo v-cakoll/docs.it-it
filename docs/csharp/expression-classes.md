@@ -3,12 +3,12 @@ title: Tipi di framework che supportano alberi delle espressioni
 description: Informazioni sui tipi di framework che supportano gli alberi delle espressioni, sulla creazione di alberi delle espressioni e sulle tecniche per l'uso delle API degli alberi delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198465"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925962"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipi di framework che supportano alberi delle espressioni
 
@@ -58,6 +58,7 @@ In questo semplice esempio si vede che nella creazione e nell'uso degli alberi d
 
 ## <a name="navigating-the-apis"></a>Esplorazione delle API
 Sono disponibili tipi di nodo Expression che eseguono il mapping a quasi tutti gli elementi della sintassi del linguaggio C#. Ogni tipo offre metodi specifici per il tipo di elemento di linguaggio. Vi sono molti elementi da tenere presenti contemporaneamente. Anziché tentare di memorizzare tutti gli elementi, ecco le tecniche consigliate per lavorare con gli alberi delle espressioni:
+
 1. Esaminare i membri dell'enumerazione `ExpressionType` per determinare i possibili nodi da esaminare. Questo è estremamente utile quando si intende analizzare e comprendere un albero delle espressioni.
 2. Esaminare i membri statici della classe `Expression` per compilare un'espressione. Tali metodi possono compilare qualsiasi tipo di espressione da un set dei relativi nodi figlio.
 3. Esaminare la classe `ExpressionVisitor` per compilare un albero delle espressioni modificato.

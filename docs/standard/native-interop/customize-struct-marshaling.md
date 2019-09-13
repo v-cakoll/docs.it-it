@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040145"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929044"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalizzazione del marshalling delle strutture
 
@@ -339,6 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>Marshaling `System.Object`
 
 In Windows è possibile effettuare il marshalling di campi di tipo `object` in codice nativo. È possibile effettuare il marshalling di questi campi in uno di tre tipi:
+
 - [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)

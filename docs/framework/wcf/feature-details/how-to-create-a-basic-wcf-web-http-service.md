@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636518"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895182"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procedura: Creare un servizio HTTP Web WCF di base
 
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
     > [!NOTE]
     > Se non viene aggiunto un endpoint, l'oggetto <xref:System.ServiceModel.Web.WebServiceHost> ne crea automaticamente uno predefinito. <xref:System.ServiceModel.Web.WebServiceHost> aggiunge anche <xref:System.ServiceModel.Description.WebHttpBehavior> e disabilita la pagina della Guida HTTP e la funzionalità GET WSDL (Web Services Description Language) in modo che l'endpoint dei metadati non interferisca con l'endpoint HTTP predefinito.
     >
-    >  L'aggiunta di un endpoint non SOAP con un URL "" provoca un comportamento imprevisto quando si tenta di chiamare un'operazione sull'endpoint. Il motivo è l'URI dell'endpoint è identico a come URI per la pagina della Guida (la pagina visualizzata quando si passa all'indirizzo di base di un servizio WCF) di ascolto.
+    >  L'aggiunta di un endpoint non SOAP con un URL "" provoca un comportamento imprevisto quando si tenta di chiamare un'operazione sull'endpoint. Il motivo è che l'URI di ascolto dell'endpoint è uguale all'URI della pagina della guida, ovvero la pagina visualizzata quando si passa all'indirizzo di base di un servizio WCF.
 
      Per evitare che ciò accada è possibile svolgere una delle azioni seguenti:
 
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
 
      In questo esempio viene dimostrato come ospitare un servizio Web con un'applicazione console. È anche possibile ospitare tale servizio all'interno di IIS. A questo scopo, specificare la classe <xref:System.ServiceModel.Activation.WebServiceHostFactory> in un file con estensione svc come è dimostrato nel codice seguente.
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) consente di creare un servizio che espone
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Per chiamare operazioni del servizio mappate a GET in Internet Explorer
 
-1. Aprire Internet Explorer, digitare "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e premere INVIO. L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/`), l'indirizzo relativo dell'endpoint (""), l'operazione del servizio da chiamare ("EchoWithGet") e un punto interrogativo seguito da un elenco di parametri denominati separati da una e commerciale (&).
+1. Aprire Internet Explorer e digitare "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e premere INVIO. L'URL contiene l'indirizzo di base del servizio (`http://localhost:8000/`), l'indirizzo relativo dell'endpoint (""), l'operazione del servizio da chiamare ("EchoWithGet") e un punto interrogativo seguito da un elenco di parametri denominati separati da una e commerciale (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Per chiamare operazioni del servizio nel codice
 

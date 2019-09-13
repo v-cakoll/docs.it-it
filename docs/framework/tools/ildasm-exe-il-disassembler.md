@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912486"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894877"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
@@ -28,7 +28,7 @@ Al prompt dei comandi digitare quanto segue:
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd*.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/out =** `filename`|Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.|
 |**/rtf**|Genera l'output in formato RTF (Rich Text Format). Non valida con l'opzione **/text**.|
@@ -78,20 +78,20 @@ Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per
 
 Le opzioni che seguono sono valide per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd* solo per l'output su file o console.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Mostra i metadati, dove `specifier` è:<br /><br /> **MDHEADER**: visualizza le informazioni sull'intestazione e le dimensioni dei metadati.<br /><br /> **HEX**: visualizza le informazioni in esadecimali e in testo normale.<br /><br /> **CSV**: visualizza i conteggi di record e le dimensioni di heap.<br /><br /> **UNREX**: visualizza i riferimenti esterni non risolti.<br /><br /> **SCHEMA**: visualizza le informazioni sull'intestazione e lo schema dei metadati.<br /><br /> **RAW**: visualizza le tabelle di metadati non elaborate.<br /><br /> **HEAPS**: visualizza gli heap non elaborati.<br /><br /> **VALIDATE**: convalida la coerenza dei metadati.<br /><br /> È possibile specificare **/metadata** più volte, con valori diversi per `specifier`.|
 
 Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Mostra i metadati di un singolo file oggetto nella libreria specificata.|
 
 > [!NOTE]
 > Tutte le opzioni per *Ildasm.exe* non sono soggette alla distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/quo** equivale a **/quoteallnames**. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output:** *nomefile*, ad esempio, equivale a **/output=** *nomefile*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 *Ildasm.exe* opera solo su file di tipo PE su disco. e non su file installati nella Global Assembly Cache.
 
@@ -117,14 +117,14 @@ A partire da .NET Framework 4.5, *Ildasm.exe* gestisce un BLOB (oggetto binario 
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 A partire da .NET Framework 4.5, *Ildasm.exe* visualizza gli attributi applicati alle implementazioni di interfaccia, come illustrato nel seguente estratto dell'output di *Ildasm.exe*:
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

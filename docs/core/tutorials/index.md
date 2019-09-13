@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647242"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925948"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni
 
@@ -44,6 +44,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Introduzione a F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Altro
+
 - [Testing unità in .NET Core tramite il test dotnet](../testing/unit-testing-with-dotnet-test.md)
 - [Testing unità con MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)

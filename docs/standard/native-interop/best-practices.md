@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per interfacciarsi con i c
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063093"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923774"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
 
@@ -29,7 +29,7 @@ Le linee guida in questa sezione si applicano a tutti gli scenari di interoperab
 
 ## <a name="dllimport-attribute-settings"></a>Impostazioni degli attributi DllImport
 
-| Impostazione | Impostazione predefinita | Consiglio | Dettagli |
+| Impostazione | Predefinito | Recommendation | Dettagli |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantenere l'impostazione predefinita  | Con l'impostazione esplicita su false, i valori restituiti HRESULT di errore verranno convertiti in eccezioni e il valore restituito nella definizione diventa Null di conseguenza.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dipende dall'API  | Impostare su true se l'API usa GetLastError e usare Marshal.GetLastWin32Error per ottenere il valore. Se l'API imposta una condizione che indica la presenza di un errore, recuperare l'errore prima di effettuare altre chiamate in modo da evitare di sovrascriverlo inavvertitamente.|
@@ -67,6 +67,7 @@ Per altre informazioni sul marshalling delle stringhe, vedere [Marshalling prede
 > Per le stringhe `[Out]`, CLR userà `CoTaskMemFree` per impostazione predefinita per liberare le stringhe o `SysStringFree` per le stringhe contrassegnate come `UnmanagedType.BSTR`.  
 **Per la maggior parte delle API con un buffer di stringhe di output:**  
 > Il numero di caratteri passato deve includere il carattere Null. Se il valore restituito è minore del numero di caratteri passato, la chiamata ha avuto esito positivo e il valore è il numero di caratteri *senza* il carattere Null finale. In caso contrario, il numero corrisponde alle dimensioni richieste del buffer *incluso* il carattere Null.  
+>
 > - Passando 5 si ottiene 4: la lunghezza della stringa è di 4 caratteri con un carattere Null finale.
 > - Passando 5 si ottiene 6: la lunghezza della stringa è di 5 caratteri ed è necessario un buffer di 6 caratteri per contenere il carattere Null.  
 > [Tipi di dati di Windows per le stringhe](/windows/desktop/Intl/windows-data-types-for-strings)
@@ -164,7 +165,7 @@ L'elenco seguente contiene i tipi di dati comunemente usati nelle API Windows e 
 
 I tipi seguenti hanno le stesse dimensioni in Windows a 32 e 64 bit, nonostante i nomi.
 
-| Larghezza | WINDOWS          | C (Windows)          | C#       | Alternativa                          |
+| Larghezza | Windows          | C (Windows)          | C#       | Alternativa                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |

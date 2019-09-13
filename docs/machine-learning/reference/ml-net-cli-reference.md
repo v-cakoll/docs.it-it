@@ -3,12 +3,12 @@ title: Comando auto-train nello strumento dell'interfaccia della riga di comando
 description: Panoramica, esempi e riferimento per il comando auto-train nello strumento dell'interfaccia della riga di comando di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397666"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929205"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Comando 'auto-train' nell'interfaccia della riga di comando di ML.NET
 
@@ -76,7 +76,7 @@ Creare ed eseguire il training di un modello di classificazione binaria con un s
 > mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
 ```
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `mlnet auto-train` - Esegue il training di più modelli ('n' iterazioni) in base al set di dati fornito e seleziona il modello migliore, lo salva come file serializzato con estensione zip e genera il codice C# correlato per l'assegnazione del punteggio e il training.
 
@@ -216,7 +216,8 @@ Esempio:
 `--has-header | -h` (bool)
 
 Specificare se i file di set di dati includono una riga di intestazione.
-I possibili valori sono:
+I valori possibili sono:
+
 - `true`
 - `false`
 

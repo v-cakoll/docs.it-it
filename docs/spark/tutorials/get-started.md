@@ -4,12 +4,12 @@ description: Informazioni su come eseguire un'app .NET per Apache Spark usando .
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577008"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928490"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Esercitazione: Introduzione a .NET per Apache Spark
 
@@ -18,6 +18,7 @@ Questa esercitazione illustra come eseguire un'app .NET per Apache Spark con .NE
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > * Preparare l'ambiente Windows per .NET per Apache Spark
 > * Scaricare **Microsoft.Spark.Worker**
 > * Creare ed eseguire un'applicazione .NET per Apache Spark semplice
@@ -124,6 +125,7 @@ La procedura è stata completata. È stata creata ed eseguita un'app .NET per Ap
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > * Preparare l'ambiente Windows per .NET per Apache Spark
 > * Scaricare **Microsoft.Spark.Worker**
 > * Creare ed eseguire un'applicazione .NET per Apache Spark semplice

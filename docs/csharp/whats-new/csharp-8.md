@@ -1,13 +1,13 @@
 ---
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374003"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926522"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -26,6 +26,7 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Tipi riferimento nullable](#nullable-reference-types)
 - [Flussi asincroni](#asynchronous-streams)
 - [Indici e intervalli](#indices-and-ranges)
+- [Assegnazione di Unione null](#null-coalescing-assignment)
 - [Tipi costruiti non gestiti](#unmanaged-constructed-types)
 - [Miglioramento delle stringhe verbatim interpolate](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).
+
+## <a name="null-coalescing-assignment"></a>Assegnazione di Unione null
+
+C#8,0 introduce l'operatore `??=`di assegnazione di Unione null. È possibile usare l' `??=` operatore per assegnare il valore dell'operando destro all'operando sinistro solo se l'operando sinistro restituisce. `null`
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+Per ulteriori informazioni, vedere [?? e?? = articolo Operators](../language-reference/operators/null-coalescing-operator.md) .
 
 ## <a name="unmanaged-constructed-types"></a>Tipi costruiti non gestiti
 

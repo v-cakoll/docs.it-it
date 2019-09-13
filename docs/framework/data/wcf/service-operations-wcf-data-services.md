@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894279"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operazioni di servizio (WCF Data Services)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server. Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI. Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate. Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. Ad esempio, l'URI dell'operazione del servizio seguente, basato sul servizio dati di [avvio rapido](quickstart-wcf-data-services.md) , `London` passa il `city` valore al parametro:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ I requisiti seguenti si applicano in caso di definizione di operazioni del servi
 
 È possibile indirizzare le operazioni del servizio inserendo il nome del metodo nel primo segmento di percorso di un URI. Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByState` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders`.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ Di seguito sono riportati i tipi restituiti validi per un'operazione del servizi
 
 A seconda del tipo restituito dell'operazione del servizio, è possibile aggiungere all'URI segmenti di percorso o opzioni di query aggiuntive. Ad esempio, l'URI riportato di seguito consente l'accesso a un'operazione `GetOrdersByCity` che restituisce una raccolta <xref:System.Linq.IQueryable%601> di oggetti `Orders` ordinati in ordine decrescente in base a `RequiredDate` insieme agli oggetti `Order_Details` correlati:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206086"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894533"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -84,27 +84,27 @@ ms.locfileid: "70206086"
 ## <a name="security-transparency-examples"></a>Esempi di trasparenza della sicurezza  
  Per usare le regole di trasparenza di .NET Framework 2.0 (trasparenza di livello 1), usare l'annotazione di assembly seguente:  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  Se si vuole rendere trasparente un intero assembly per indicare che l'assembly non contiene codice critico e non eleva in alcun modo i privilegi, è possibile aggiungere in modo esplicito la trasparenza all'assembly con l'attributo seguente:  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  Se si vuole combinare codice critico e codice trasparente nello stesso assembly, contrassegnare l'assembly con l'attributo <xref:System.Security.SecurityCriticalAttribute> per indicare che l'assembly può contenere codice critico, come segue:  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  Se si vogliono eseguire azioni SecurityCritical, contrassegnare in modo esplicito il codice che eseguirà l'azione critica con un altro attributo <xref:System.Security.SecurityCriticalAttribute>, come illustrato nell'esempio di codice seguente:  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  

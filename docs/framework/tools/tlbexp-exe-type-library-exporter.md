@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937996"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894759"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
@@ -26,13 +26,13 @@ L'utilità di esportazione della libreria dei tipi genera una libreria di tipi c
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
   
@@ -56,7 +56,7 @@ tlbexp assemblyName [options]
 > [!NOTE]
 > Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly. Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.  
   
 > [!IMPORTANT]
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Se si utilizza l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per specificare un valore <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> di `VT_UNKOWN` o `VT_DISPATCH`, gli eventuali utilizzi successivi del campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> verranno ignorati. Date, ad esempio, le seguenti firme:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  verrà generata la seguente libreria dei tipi:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Esempi  
  Il comando che segue genera una libreria dei tipi con lo stesso nome dell'assembly contenuto in `myTest.dll`.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  Il comando che segue genera una libreria dei tipi con il nome `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Utilizzare innanzitutto Tlbimp.exe per importare la libreria dei tipi `myLib.tlb` e salvarla con il nome `myLib.dll`.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  Il comando che segue utilizza il compilatore C# per compilare `Sample.dll,` che fa riferimento al file `myLib.dll` creato nell'esempio precedente.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  Il comando che segue genera una libreria dei tipi per `Sample.dll` che fa riferimento a `myLib.dll`.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

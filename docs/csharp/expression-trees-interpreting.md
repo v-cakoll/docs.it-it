@@ -3,12 +3,12 @@ title: Interpretazione di espressioni
 description: Informazioni su come scrivere codice per esaminare la struttura di un albero delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202979"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925679"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -357,6 +357,7 @@ Questo codice rappresenta una possibile implementazione per funzione matematica 
 Ciò sarebbe possibile se fosse già un delegato, ma non può essere chiamata nella sua forma di albero delle espressioni. Nella sezione relativa alla [creazione di alberi delle espressioni](expression-trees-building.md) verranno illustrate le tecniche per superare queste limitazioni.
 
 In questa espressione si incontrano i nodi di tutti questi tipi:
+
 1. Uguale (espressione binaria)
 2. Per (espressione binaria)
 3. Condizionale (l'espressione ? : )

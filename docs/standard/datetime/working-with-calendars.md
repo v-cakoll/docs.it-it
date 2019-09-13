@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106705"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929124"
 ---
 # <a name="working-with-calendars"></a>Utilizzo di calendari
 
@@ -139,6 +139,7 @@ I calendari dividono in genere le date in ere. Tuttavia, le <xref:System.Globali
 
 > [!IMPORTANT]
 > L'era REIWA, una nuova era in <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar>, inizia il 1 ° maggio 2019. Questo cambio interessa tutte le applicazioni che usano questi calendari. Per ulteriori informazioni, vedere gli articoli seguenti:
+>
 > - [Gestione di una nuova era nel calendario giapponese in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), che documenta le funzionalità aggiunte a .NET per supportare calendari con più ere e illustra le procedure consigliate da usare per la gestione dei calendari multi-era.
 > - [Preparare l'applicazione per la modifica dell'era giapponese](/windows/uwp/design/globalizing/japanese-era-change), che fornisce informazioni sul test delle applicazioni in Windows per garantirne la conformità alla modifica dell'era.
 > - [Riepilogo dei nuovi aggiornamenti dell'era giapponese per .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), che elenca .NET Framework aggiornamenti per le singole versioni di Windows correlate alla nuova era del calendario giapponese, nota nuove funzionalità di .NET Framework per il supporto di più epoche e include elementi cercare nei test delle applicazioni.
@@ -356,7 +357,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |  |  |
    |--|--|  
    |Chiave | NETFramework\AppContext\.HKEY_LOCAL_MACHINE\Software\Microsoft |
-   |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   |NOME | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |Type | REG_SZ |
    |Value | true | 
 

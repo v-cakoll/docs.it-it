@@ -3,12 +3,12 @@ title: Prerequisiti per .NET Core in Windows
 description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazioni .NET Core in computer Windows.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: 82d336bc4efb34d336d5078952683c1673c3fa8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331069"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926043"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -97,8 +97,9 @@ Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visua
 
 > [!IMPORTANT]
 > È possibile usare Visual Studio 2015 per lo sviluppo di .NET Core 1.x, ma non è consigliabile per i motivi seguenti:
-  > * Gli strumenti di .NET Core sono disponibili nella versione di anteprima che non è supportata.
-  > * I progetti sono basati sul file project.json che è stato deprecato.
+>
+> * Gli strumenti di .NET Core sono disponibili nella versione di anteprima che non è supportata.
+> * I progetti sono basati sul file project.json che è stato deprecato.
 >
 > Per altre informazioni sulle modifiche del formato del progetto, vedere [High-level overview of changes](./tools/cli-msbuild-architecture.md) (Panoramica generale delle modifiche).
 

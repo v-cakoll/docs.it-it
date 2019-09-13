@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637765"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929323"
 ---
 # <a name="implements-clause-visual-basic"></a>Clausola Implements (Visual Basic)
-Indica che un membro di classe o struttura fornisce l'implementazione per un membro definito in un'interfaccia.  
+Indica che un membro di classe o di struttura fornisce l'implementazione per un membro definito in un'interfaccia.  
   
 ## <a name="remarks"></a>Note  
-Il `Implements` parola chiave non è quello utilizzato per il [istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Si utilizza il `Implements` istruzione per specificare che una classe o struttura implementa una o più interfacce, e quindi per ogni membro è usare il `Implements` parola chiave per specificare quale interfaccia e il membro implementa.
+La `Implements` parola chiave non corrisponde all' [istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md). Usare l' `Implements` istruzione per specificare che una classe o una struttura implementa una o più interfacce, quindi per ogni membro si usa la parola `Implements` chiave per specificare l'interfaccia e il membro che implementa.
 
-Se una classe o struttura implementa un'interfaccia, deve includere il `Implements` istruzione immediatamente dopo il [istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md) oppure [Structure-istruzione](../../../visual-basic/language-reference/statements/structure-statement.md), e deve implementare tutti i membri definiti dall'interfaccia.
+Se una classe o una struttura implementa un'interfaccia, deve includere l' `Implements` istruzione immediatamente dopo l'istruzione di [classe](../../../visual-basic/language-reference/statements/class-statement.md) o di [struttura](../../../visual-basic/language-reference/statements/structure-statement.md)e deve implementare tutti i membri definiti dall'interfaccia.
 
 ## <a name="reimplementation"></a>Reimplementazione  
-In una classe derivata, si può reimplementare un membro di interfaccia che ha già implementato la classe di base. Questo comportamento è diverso dall'override del membro della classe base per i seguenti aspetti:
+In una classe derivata, è possibile reimplementare un membro di interfaccia che la classe base ha già implementato. Questa operazione è diversa rispetto all'override del membro della classe base nei seguenti aspetti:
 
-- Il membro della classe base non dovrà essere [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) per essere reimplementata.
-- Si può reimplementare il membro con un nome diverso.
+- Non è necessario che il membro della classe base sia [sottoponibile a override](../../../visual-basic/language-reference/modifiers/overridable.md) per essere reimplementato.
+- È possibile reimplementare il membro con un nome diverso.
 
-Il `Implements` parola chiave può essere utilizzata nei contesti seguenti:
+La `Implements` parola chiave può essere utilizzata nei contesti seguenti:
+
 - [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)

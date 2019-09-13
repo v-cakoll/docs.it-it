@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bf52a53e8f282f55a0071deb266dabb798fa3348
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8cde4f173fb1de5ebf271f4f080d21d587d3229e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254056"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928544"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark
 
@@ -18,6 +18,7 @@ Questa esercitazione illustra come distribuire un'applicazione .NET per Apache S
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
+>
 > * Preparare Microsoft.Spark.Worker
 > * Pubblicare l'app Spark .NET
 > * Distribuire l'app in Amazon EMR Spark

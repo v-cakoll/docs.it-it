@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: HT
+ms.openlocfilehash: 44ab00322419b99aeac51da0d836c60264da5194
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492439"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894657"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 
@@ -26,25 +26,25 @@ Al prompt dei comandi digitare quanto segue:
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```console
 regasm assemblyFile [options]
 ```
 
 ## <a name="parameters"></a>Parametri
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*fileAssembly*|Assembly da registrare con COM.|
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |------------|-----------------|
 |**/codebase**|Crea una voce Codebase nel Registro di sistema che specifica il percorso del file di un assembly non installato nella Global Assembly Cache. È consigliabile non specificare questa opzione se successivamente si intende installare nella Global Assembly Cache l'assembly che si sta registrando. L'argomento *fileAssembly* specificato con l'opzione **/codebase** deve essere un [assembly con nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md).|
 |**/registered**|Specifica che questo strumento includerà riferimenti solo alle librerie dei tipi che sono già state registrate.|
 |**/asmpath:directory**|Specifica una directory contenente riferimenti agli assembly. Deve essere usato insieme all'opzione **/regfile**.|
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|
-|**/regfile** [**:** *fileRegistrosistema*]|Genera il file .reg specificato per l'assembly, che contiene le voci del Registro di sistema necessarie. Se si specifica questa opzione, il Registro di sistema non viene modificato. Non è possibile usare questa opzione insieme alle opzioni **/u** o **/tlb**.|
+|**/regfile** [ **:** *fileRegistrosistema*]|Genera il file .reg specificato per l'assembly, che contiene le voci del Registro di sistema necessarie. Se si specifica questa opzione, il Registro di sistema non viene modificato. Non è possibile usare questa opzione insieme alle opzioni **/u** o **/tlb**.|
 |**/silent** o **/s**|Evita la visualizzazione dei messaggi di operazione riuscita.|
-|**/tlb** [**:** *fileLibreriaTipi*]|Genera, dall'assembly specificato, una libreria dei tipi contenente le definizioni dei tipi accessibili definiti all'interno dell'assembly stesso.|
+|**/tlb** [ **:** *fileLibreriaTipi*]|Genera, dall'assembly specificato, una libreria dei tipi contenente le definizioni dei tipi accessibili definiti all'interno dell'assembly stesso.|
 |**/unregister** o **/u**|Annulla la registrazione delle classi che possono essere create e trovate in *fileAssembly*. Se questa opzione viene omessa, le classi nell'assembly verranno registrate.|
 |**/verbose**|Specifica la modalità dettagliata. Se viene definita con l'opzione **/tlb**, visualizza l'elenco di tutti gli assembly a cui si fa riferimento e per i quali è necessario generare una libreria dei tipi.|
 |**/?** o **/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|
@@ -52,7 +52,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Le opzioni della riga di comando di Regasm.exe non sono soggette alla distinzione tra maiuscole e minuscole. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/t:** *outfile.tlb* equivale a **/tlb:** *outfile.tlb*.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 È possibile usare l'opzione **/regfile** per generare un file REG contenente le voci del Registro di sistema, anziché apportare le modifiche direttamente in tale Registro. Per aggiornare il Registro di sistema su un computer è necessario importare il file .reg con lo strumento Editor del Registro di sistema (Regedit.exe). Si noti che il file .reg non contiene alcun aggiornamento del Registro di sistema che può essere effettuato mediante funzioni del Registro di sistema definite dall'utente.  Si noti che l'opzione **/regfile** crea solo voci del Registro di sistema per le classi gestite.  Non vengono create voci per `TypeLibID` o `InterfaceID`.
 
@@ -68,19 +68,19 @@ Dopo aver registrato un assembly tramite Regasm.exe, è possibile installarlo ne
 
 Il comando che segue registra tutte le classi pubbliche contenute in `myTest.dll`.
 
-```
+```console
 regasm myTest.dll
 ```
 
 Il comando che segue genera il file `myTest.reg` contenente tutte le voci di Registro di sistema necessarie. Questo comando non aggiorna il Registro di sistema.
 
-```
+```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
 Il comando che segue registra tutte le classi pubbliche contenute in `myTest.dll` e genera e registra la libreria dei tipi `myTest.tlb` che contiene le definizioni di tutti i tipi pubblici definiti in `myTest.dll`.
 
-```
+```console
 regasm myTest.dll /tlb:myTest.tlb
 ```
 

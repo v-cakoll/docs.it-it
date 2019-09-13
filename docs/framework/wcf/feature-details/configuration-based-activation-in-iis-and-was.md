@@ -2,12 +2,12 @@
 title: Attivazione basata sulla configurazione in IIS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909779"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928776"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Attivazione basata sulla configurazione in IIS e WAS
 
@@ -31,6 +31,7 @@ L'attivazione basata sulla configurazione acquisisce i metadati posizionati nel 
  Con questa situazione nel file Web.config è possibile posizionare il codice sorgente del servizio nella directory App_Code dell'applicazione o un assembly compilato nella directory bin dell'applicazione.
 
 > [!NOTE]
+>
 > - Quando si utilizza l'attivazione basata sulla configurazione, il codice inline presente nei file con estensione svc non è supportato.
 > - L' `relativeAddress` attributo deve essere impostato su un indirizzo relativo, ad esempio\<"sub-directory >/Service.svc" o "~\</Sub-Directory/Service. svc".
 > - Se si registra un indirizzo relativo che non dispone di un'estensione nota associata a WCF, viene generata un'eccezione di configurazione.

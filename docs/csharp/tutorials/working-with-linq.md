@@ -3,12 +3,12 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926610"
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -339,6 +339,7 @@ In pratica, per alcuni algoritmi è più efficiente la valutazione eager, mentre
 ## <a name="conclusion"></a>Conclusione
 
 In questo progetto sono stati illustrati gli argomenti seguenti:
+
 - Uso di query LINQ per aggregare i dati in una sequenza significativa
 - Scrittura di metodi di estensione per aggiungere funzionalità personalizzate alle query LINQ
 - Individuazione delle aree del codice in cui le query LINQ potrebbero riscontrare problemi di prestazioni, ad esempio una riduzione della velocità
@@ -347,6 +348,7 @@ In questo progetto sono stati illustrati gli argomenti seguenti:
 Oltre a LINQ, è stata illustrata una tecnica usata dai prestigiatori per i trucchi con le carte. I prestigiatori usano il miscuglio Faro perché possono controllare lo spostamento di ogni carta nel mazzo. È una tecnica che, per mantenere la sua magia, dovrebbe restare nota a pochi.
 
 Per altre informazioni su LINQ, vedere:
+
 - [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
   - [Introduzione a LINQ](../programming-guide/concepts/linq/index.md)
   - [Operazioni di query LINQ di base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

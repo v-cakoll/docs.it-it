@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f17f815ea0f1f91284d3223ff233a87dc7ff71eb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946209"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892693"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 Quando si scrive il codice, è possibile creare a volte istruzioni lunghe che richiedono lo scorrimento orizzontale nell'editor di codice. Sebbene questa operazione non influisca sul modo in cui viene eseguito il codice, è difficile per l'utente o per chiunque legga il codice visualizzato sul monitor. In questi casi, è consigliabile suddividere la singola istruzione Long in più righe.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Per suddividere una singola istruzione in più righe  
   
-- Utilizzare il carattere di continuazione di riga, ovvero un carattere di`_`sottolineatura (), nel punto in cui si desidera che la riga si interrompa. Il carattere di continuazione di riga deve essere preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo).  
+-   Utilizzare il carattere di continuazione di riga, ovvero un carattere di`_`sottolineatura (), nel punto in cui si desidera che la riga si interrompa. Il carattere di sottolineatura deve essere immediatamente preceduto da uno spazio e seguito da un terminatore di riga (ritorno a capo) o (a partire dalla versione 16,0) di un commento seguito da un ritorno a capo. 
   
     > [!NOTE]
     > In alcuni casi, se si omette il carattere di continuazione di riga, il Visual Basic compilatore continuerà in modo implicito l'istruzione alla riga di codice successiva. Per un elenco degli elementi della sintassi per i quali è possibile omettere il carattere di continuazione di riga, vedere "continuazione di riga implicita" nelle [istruzioni](../../../visual-basic/programming-guide/language-features/statements.md).  

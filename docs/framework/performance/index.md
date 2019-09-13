@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943848"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927094"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -34,7 +34,7 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |----------|-----------------|  
 |Analisi prestazioni di Visual Studio|Consente di analizzare l'uso di CPU delle app .NET Framework che verranno distribuite in computer che eseguono il sistema operativo Windows.<br /><br /> Questo strumento è disponibile nel menu **Debug** di Visual Studio dopo l'apertura di un progetto. Per altre informazioni, vedere [Esplora prestazioni](/visualstudio/profiling/performance-explorer). **Nota:**  Se la piattaforma di destinazione è Windows Phone, usare Analisi applicazione di Windows Phone (vedere la prossima riga).|  
 |Analisi applicazione di Windows Phone|Consente di analizzare l'uso di CPU e memoria, la velocità di trasferimento dati della rete, la velocità di risposta dell'app e il consumo di batteria delle app Windows Phone.<br /><br /> Questo strumento è disponibile nel menu **Debug** per un progetto Windows Phone in Visual Studio dopo l'installazione di [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Per altre informazioni, vedere [profilatura delle app per Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Consente di identificare i problemi prestazionali correlati alla CPU e alla memoria. Questo strumento usa le API di profilatura di Event Tracing for Windows (ETW) e CLR per offrire analisi avanzate sulla CPU e la memoria, oltre a informazioni su Garbage Collection e compilazione del codice JIT. Per altre informazioni su come usare PerfView, vedere l'esercitazione e i file della Guida inclusi con l'app, le [esercitazioni video di Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) e i [post di blog](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> Per problemi specifici della memoria, vedere [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (Uso di PerfView per le analisi della memoria).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Consente di identificare i problemi prestazionali correlati alla CPU e alla memoria. Questo strumento usa le API di profilatura di Event Tracing for Windows (ETW) e CLR per offrire analisi avanzate sulla CPU e la memoria, oltre a informazioni su Garbage Collection e compilazione del codice JIT. Per altre informazioni su come usare PerfView, vedere l'esercitazione e i file della Guida inclusi con l'app, le [esercitazioni video di Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) e i [post di blog](https://blogs.msdn.microsoft.com/vancem/tag/perfview/).<br /><br /> Per problemi specifici della memoria, vedere [Using PerfView for Memory Investigations](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots) (Uso di PerfView per le analisi della memoria).|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Consente di determinare le prestazioni complessive del sistema, ad esempio l'uso di memoria e risorse di archiviazione da parte dell'app quando più applicazioni sono in esecuzione nello stesso computer. Lo strumento è disponibile nell'Area download come parte di Windows Assessment and Deployment Kit (ADK) per [!INCLUDE[win8](../../../includes/win8-md.md)]. Per altre informazioni, vedere [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Event Tracing for Windows (ETW)  

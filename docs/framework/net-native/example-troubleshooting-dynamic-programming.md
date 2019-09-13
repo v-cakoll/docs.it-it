@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910611"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894493"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Esempio: Risoluzione dei problemi di programmazione dinamica
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910611"
   
  Non tutti gli errori di ricerca dei metadati nelle app sviluppate con la catena di strumenti .NET Native generano un'eccezione.  Alcuni possono manifestarsi in maniera imprevista in un'applicazione.  Nell'esempio seguente viene illustrata una violazione di accesso causata da riferimento a un oggetto null:  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>Che cosa stava eseguendo l'app?  
  La prima cosa da notare è il sistema di parole chiave `async` alla base dello stack.  Determinare cosa stesse facendo davvero l'applicazione in un metodo `async` può risultare problematico, perché lo stack ha perso il contesto di chiamata di origine e ha eseguito il codice `async` su un thread diverso. Tuttavia, è possibile dedurre che l'applicazione sta provando a caricare la prima pagina.  Nell'implementazione di `NavigationArgs.Setup`, il codice seguente ha causato la violazione di accesso:  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  In questo caso, la proprietà `LayoutVM` su `AppViewModel.Current` era **null**.  Un'assenza di metadati ha causato una lieve differenza di comportamento e comportato l'annullamento dell'inizializzazione di una proprietà invece della relativa impostazione, come previsto dall'applicazione.  L'impostazione di un punto di interruzione nel codice dove `LayoutVM` avrebbe dovuto essere inizializzato potrebbe aiutare a fare chiarezza sulla situazione.  Tuttavia, notare che il tipo di `LayoutVM` è `App.Core.ViewModels.Layout.LayoutApplicationVM`.  L'unica direttiva di metadati presente finora nel file rd.xml è:  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780267"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894323"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting del servizio dati (WCF Data Services)
 Utilizzando WCF Data Services, è possibile creare un servizio che espone i dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Questo servizio dati è definito come una classe che eredita da <xref:System.Data.Services.DataService%601>. Questa classe fornisce la funzionalità necessaria per elaborare i messaggi di richiesta, eseguire aggiornamenti sull'origine dati e generare messaggi di risposta, come richiesto da OData. Un servizio dati, tuttavia, non può eseguire l'associazione e l'ascolto su un socket di rete per le richieste HTTP in ingresso. Per questa funzionalità obbligatoria, il servizio dati si basa su un componente di hosting.
@@ -40,7 +40,7 @@ Utilizzando WCF Data Services, è possibile creare un servizio che espone i dati
 
 Quando si usa la finestra di dialogo **Aggiungi nuovo elemento** in Visual Studio 2015 per definire un servizio dati in un'applicazione ASP.NET, lo strumento genera due nuovi file nel progetto. Il primo file presenta un'estensione `.svc` e indica al runtime WCF come creare un'istanza del servizio dati. Di seguito è riportato un esempio di questo file per il servizio dati di esempio Northwind creato al completamento della [Guida introduttiva](quickstart-wcf-data-services.md):
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

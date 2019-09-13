@@ -2,12 +2,12 @@
 title: Supporto SqlClient per LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780786"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894405"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Supporto SqlClient per LocalDB
 A partire da SQL Server nome in codice Denali, sarà disponibile una versione semplificata di SQL Server, denominata local DB. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
@@ -25,9 +25,7 @@ A partire da SQL Server nome in codice Denali, sarà disponibile una versione se
   
 - Specificare un'istanza di LocalDB nella stringa di connessione. Ad esempio, se il nome dell'istanza è `myInstance`, la stringa di connessione includerà:  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+    `server=(localdb)\\myInstance`  
   
  `User Instance=True` non è consentito quando ci si connette a un database di LocalDB.  
   

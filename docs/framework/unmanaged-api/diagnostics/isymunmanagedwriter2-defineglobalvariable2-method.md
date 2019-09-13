@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6bc6c52374ea047d2e76d346ee8bbc3faaa7bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a54d3cb1bb9abf740c2c9b5a9a8312a9612ae658
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650700"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894458"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>Metodo ISymUnmanagedWriter2::DefineGlobalVariable2
-Definisce una variabile globale singola.  
+Definisce una singola variabile globale.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable2(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -42,28 +42,28 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parametri  
  `name`  
- [in] Il nome della variabile globale.  
+ in Nome della variabile globale.  
   
  `attributes`  
- [in] Attributi della variabile globale.  
+ in Attributi della variabile globale.  
   
  `sigToken`  
- [in] Il token di metadati della firma.  
+ in Token di metadati della firma.  
   
  `addrKind`  
- [in] Il tipo di indirizzo.  
+ in Tipo di indirizzo.  
   
  `addr1`  
- [in] Il primo indirizzo relativo al parametro specificato.  
+ in Primo indirizzo per la specifica del parametro.  
   
  `addr2`  
- [in] Il secondo indirizzo relativo al parametro specificato.  
+ in Secondo indirizzo per la specifica del parametro.  
   
  `addr3`  
- [in] Terzo indirizzo relativo al parametro specificato.  
+ in Terzo indirizzo per la specifica del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.  
+ S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o un altro codice di errore.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** CorSym.idl  

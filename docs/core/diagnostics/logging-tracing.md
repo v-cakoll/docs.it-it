@@ -4,12 +4,12 @@ description: Introduzione alla registrazione e alla traccia di .NET Core.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 06781c6a5c1d771b1fa772539705cd1e2b3ad2d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70234614"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926357"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registrazione e traccia di .NET Core
 
@@ -32,6 +32,7 @@ Questa semplice tecnica è sorprendentemente potente. Può essere usato in situa
 Ognuna <xref:System.Console?displayProperty=nameWithType>delle <xref:System.Diagnostics.Trace?displayProperty=nameWithType>classi, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e fornisce API dello stile di stampa simili, utili per la registrazione.
 
 La scelta dell'API dello stile di stampa da usare dipende dall'utente. Le differenze principali sono:
+
 - <xref:System.Console?displayProperty=nameWithType>
   - Sempre abilitato e scrive sempre nella console.
   - Utile per le informazioni che il cliente potrebbe dover visualizzare nella versione.
@@ -80,6 +81,7 @@ Le API di basso livello potrebbero non essere la scelta migliore per le esigenze
 L' <xref:Microsoft.Extensions.Logging.ILogger> interfaccia è stata usata per creare un'interfaccia di registrazione comune in cui i logger possono essere inseriti tramite l'inserimento di dipendenze.
 
 Ad esempio, per consentire all'utente di scegliere la scelta migliore per l' `ASP.NET` applicazione, offre il supporto per una selezione di Framework incorporati e di terze parti:
+
 - [ASP.NET incorporati nei provider di registrazione](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET provider di registrazione di terze parti](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
@@ -102,6 +104,7 @@ Ad esempio, per consentire all'utente di scegliere la scelta migliore per l' `AS
 La formattazione della stringa può richiedere tempi di elaborazione della CPU evidenti.
 
 Nelle applicazioni critiche per le prestazioni, è consigliabile:
+
 - Evitare una grande quantità di registrazione quando nessuno è in ascolto. Evitare di creare costosi messaggi di registrazione controllando che la registrazione sia abilitata per prima.
 - Registra solo le informazioni utili.
 - Rinvia la formattazione in modo sofisticato alla fase di analisi.

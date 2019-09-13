@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003737"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894706"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
   
  Il provider di runtime genera eventi in base alle parole chiave (categorie di eventi) abilitate. È ad esempio possibile raccogliere gli eventi del caricatore abilitando la parola chiave `LoaderKeyword`.  
   
- Evento Tracing for Windows (ETW) eventi vengono registrati in un file con estensione etl, che in un secondo momento può essere post-elaborata in file con valori delimitati da virgole (CSV) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Gli eventi Event Tracing for Windows (ETW) vengono registrati in un file con estensione ETL, che può essere successivamente elaborato in un file con valori delimitati da virgole (CSV) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Provider di runtime  
  Il provider di runtime è il principale provider ETW di CLR.  
@@ -60,7 +60,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
 1. Attivare la registrazione ETW tramite il provider di runtime di CLR:  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
 2. Per arrestare la profilatura mentre il processo è ancora in esecuzione, avviare il provider di rundown per acquisire gli eventi `DCEnd`:  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
 3. Disattivare tutta la profilatura ETW:  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. Unire i profili per creare un unico file di log:  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

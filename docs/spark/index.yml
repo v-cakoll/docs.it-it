@@ -1,33 +1,56 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Documentazione di .NET per Apache Spark
+summary: Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, Machine Learning e query ad hoc con Apache Spark ovunque si scriva il codice .NET.
 metadata:
-  document_id: na
-  title: Documentazione di .NET per Apache Spark - Esercitazioni e informazioni di riferimento sulle API
-  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
-  ms.prod: dotnet-spark
+  title: Documentazione di .NET per Apache Spark
+  description: Informazioni su come usare .NET per Apache Spark per elaborare batch di dati, flussi in tempo reale, Machine Learning e query ad hoc con Apache Spark ovunque si scriva il codice .NET.
+  services: service
+  ms.service: dotnet-spark
   ms.topic: landing-page
-  ms.date: 05/17/2019
-  ms.author: mamccrea
+  ms.collection: collection
   author: mamccrea
-abstract:
-  description: 'Informazioni su come usare .NET per Apache Spark, le associazioni .NET per Spark scritte per il livello di interoperabilità Spark. È possibile elaborare batch di dati, flussi in tempo reale, Machine Learning e query ad-hoc con Apache Spark ovunque si scriva codice .NET. Esercitazioni, esempi di codice, informazioni di riferimento sulle API e altri documenti illustrano le relative procedure.'
-sections:
-  - title: Esercitazioni dettagliate
-    items:
-      - type: paragraph
-        text: 'Sfruttare le potenzialità di Apache Spark nelle applicazioni .NET:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/spark/tutorials/get-started">Introduzione a .NET per Apache Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Distribuire un'applicazione .NET per Apache Spark in Azure HDInsight</a>
-          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Distribuire un'applicazione .NET per Apache Spark in Amazon EMR Spark</a>
-          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Distribuire un'applicazione .NET per Apache Spark in Databricks</a>
-  - title: Riferimenti e risorse
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/?view=spark-dotnet">API .NET per Apache Spark</a>
-          - html: '<a href="https://github.com/dotnet/spark">.NET per Apache Spark su GitHub</a>'
+  ms.author: mamccrea
+  ms.date: 09/11/2019
+  ms.openlocfilehash: 9836e97aa2a958792fe95c8a1241d284ef860c45
+  ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+  ms.translationtype: MT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70928507"
+landingContent:
+- title: Informazioni su .NET per Apache Spark
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Che cos'è .NET per Apache Spark?
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: Riferimento API
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: Attività iniziali
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Introduzione a .NET per Apache Spark
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: Inizia in 10 minuti su Windows o Linux
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: Distribuire .NET per Apache Spark applicazione
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Distribuire in Azure HDInsight
+      url: tutorials/hdinsight-deployment.md
+    - text: Distribuire in AWS EMR Spark
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Distribuire in Databricks
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: Eseguire il debug dell'applicazione
+      url: how-to-guides/debug.md

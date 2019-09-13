@@ -2,15 +2,15 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928671"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
-Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transazionale. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
+Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa sull'esempio di [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
 
 > [!NOTE]
 > La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- Il codice del servizio nell'esempio è quello dell' [associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)transazionale.
+ Il codice del servizio nell'esempio è quello dell' [associazione MSMQ transazionale](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
  La comunicazione con il servizio avviene all'interno dell'ambito di una transazione. Il servizio legge messaggi dalla coda, esegue l'operazione e quindi visualizza i risultati dell'operazione. L'applicazione crea anche una coda per i messaggi non recapitabili.
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  Quando viene seguito, il client visualizza il messaggio.
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  Viene quindi eseguito il servizio messaggi non recapitabili che legge il messaggio, visualizza il codice di errore e reinvia il messaggio al servizio.
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  Il servizio viene avviato e quindi legge il messaggio reinviato e lo elabora.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -320,7 +320,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     3. Fare clic con il pulsante destro del mouse su **code di messaggi private**e selezionare **nuova**, **coda privata**.
 
-    4. Controllare la casella transazionale.
+    4. Controllare la casella **transazionale** .
 
     5. Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.
 

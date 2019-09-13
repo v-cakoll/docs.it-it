@@ -3,20 +3,20 @@ title: Preparare i dati per la creazione di un modello
 description: Informazioni su come usare le trasformazioni in ML.NET per manipolare e preparare i dati per un'ulteriore elaborazione o creazione di un modello.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929363"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Preparare i dati per la creazione di un modello
 
 Informazioni su come usare ML.NET per preparare i dati per un'ulteriore elaborazione o creazione di un modello.
 
-I dati sono spesso sparsi e non puliti. Inoltre, gli algoritmi di Machine Learning di ML.NET prevedono input o caratteristiche in un singolo vettore numerico. Uno degli obiettivi della preparazione dei dati, pertanto, è conferire ai dati il formato previsto dagli algoritmi di ML.NET. 
+I dati sono spesso sparsi e non puliti. Gli algoritmi di Machine Learning ML.NET prevedono che l'input o le funzionalità siano in un singolo vettore numerico. Analogamente, il valore da stimare (etichetta), soprattutto quando si tratta di dati categorici, deve essere codificato. Uno degli obiettivi della preparazione dei dati, pertanto, è conferire ai dati il formato previsto dagli algoritmi di ML.NET. 
 
 ## <a name="filter-data"></a>Filtrare i dati
 
@@ -294,7 +294,7 @@ Usando la prima voce come esempio, la descrizione dettagliata dei risultati gene
 
 **Testo originale: This is a good product**
 
-|Transform | DESCRIZIONE | Risultato
+|Transform | Descrizione | Risultato
 |--|--|--|
 |1. NormalizeText | Converte tutte le lettere in minuscolo per impostazione predefinita | this is a good product
 |2. TokenizeWords | Suddivide la stringa in singole parole | ["this","is","a","good","product"]

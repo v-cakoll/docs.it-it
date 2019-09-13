@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168873"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894788"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
@@ -23,7 +23,7 @@ Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  Lo strumento Firma supporta i comandi seguenti. Ogni comando è usato con set distinti di opzioni, elencati nelle rispettive sezioni.  
   
-|Comando|DESCRIZIONE|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |`catdb`|Aggiunge o rimuove un file di catalogo da un database di cataloghi. I database dei cataloghi vengono usati per la ricerca automatica di file di catalogo e sono identificati dal GUID. Per un elenco delle opzioni supportate dal comando `catdb`, vedere [Opzioni del comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
 |`sign`|Firma digitalmente i file. Le firme digitali impediscono la manomissione dei file e consentono agli utenti di verificare il firmatario in base a un certificato di firma. Per un elenco delle opzioni supportate dal comando `sign`, vedere [Opzioni del comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  Le opzioni riportate di seguito si applicano a tutti i comandi dello strumento Firma.  
   
-|Opzione globale|DESCRIZIONE|  
+|Opzione globale|Descrizione|  
 |-------------------|-----------------|  
 |**/q**|Non visualizza alcun output se il comando viene eseguito correttamente e visualizza un output minimo se il comando ha esito negativo.|  
 |**/v**|Visualizza un output dettagliato indipendentemente dall'esito del comando e visualizza messaggi di avviso.|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>Opzioni del comando catdb  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `catdb`.  
   
-|Opzione catdb|DESCRIZIONE|  
+|Opzione catdb|Descrizione|  
 |------------------|-----------------|  
 |`/d`|Specifica che il database dei cataloghi predefinito viene aggiornato. Se non si usa né l'opzione `/d` né l'opzione `/g`, viene aggiornato il database dei driver e dei componenti del sistema.|  
 |`/g` *GUID*|Specifica che il database dei cataloghi identificato dall'identificatore univoco globale *GUID* è aggiornato.|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Opzioni del comando sign  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `sign`.  
   
-|Opzioni del comando sign|DESCRIZIONE|  
+|Opzioni del comando sign|Descrizione|  
 |-------------------------|-----------------|  
 |`/a`|Seleziona automaticamente il miglior certificato di firma. Verranno trovati tutti i certificati validi che soddisfano tutte le condizioni specificate e verrà selezionato quello valido per il periodo più lungo. Se questa opzione non è presente, è prevista la presenza di un solo certificato di firma valido.|  
 |`/ac`  *file*|Aggiunge un altro certificato dal *file* al blocco di firme.|  
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>Opzioni del comando TimeStamp  
  Nella tabella seguente vengono illustrate le opzioni utilizzabili con il comando `TimeStamp`.  
   
-|Opzione TimeStamp|DESCRIZIONE|  
+|Opzione TimeStamp|Descrizione|  
 |----------------------|-----------------|  
 |`/p7`|Aggiunge un timestamp ai file PKCS #7.|  
 |`/t`  *URL*|Specifica l'URL del server di timestamp. È necessario che il file a cui viene aggiunto il timestamp sia stato precedentemente firmato. È richiesta l'opzione `/t` o `/tr`.|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Opzioni del comando Verify  
   
-|Opzione Verify|DESCRIZIONE|  
+|Opzione Verify|Descrizione|  
 |-------------------|-----------------|  
 |`/a`|Specifica che tutti i metodi possono essere usati per verificare il file. Innanzitutto, viene effettuata una ricerca nei database dei cataloghi per determinare se il file è firmato in un catalogo. Se non risulta firmato in alcun catalogo, viene effettuato un tentativo di verifica della firma incorporata del file. Questa opzione è consigliata per la verifica di file che possono risultare firmati o non firmati all'interno di un catalogo. Gli esempi di questi file includono i file o i driver di Windows.|  
 |`/ad`|Trova il catalogo usando il database dei cataloghi predefinito.|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Valore restituito  
  Lo strumento Firma restituisce uno dei seguenti codici di uscita quando termina.  
   
-|Codice di uscita|DESCRIZIONE|  
+|Codice di uscita|Descrizione|  
 |---------------|-----------------|  
 |0|Esecuzione completata correttamente.|  
 |1|Esecuzione non riuscita.|  
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>Esempi  
  Il seguente comando aggiunge il file di catalogo MyCatalogFileName.cat al database dei driver e dei componenti di sistema. L'opzione `/u` genera un nome univoco, se necessario, per impedire la sostituzione di un file di catalogo esistente denominato `MyCatalogFileName.cat`.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  Il comando seguente firma automaticamente un file usando il certificato migliore.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  Il comando seguente appone una firma digitale a un file usando un certificato archiviato in un file PFX protetto da password.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  Il comando seguente appone una firma digitale e un timestamp a un file. Il certificato usato per firmare il file è memorizzato in un file PFX.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Il comando seguente firma un file usando un certificato contenuto nell'archivio `My` con nome soggetto `My Company Certificate`.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  Il comando seguente firma un controllo ActiveX e fornisce le informazioni visualizzate da Internet Explorer quando viene richiesto all'utente di installare il controllo.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  Il comando seguente appone un timestamp a un file a cui è già stata apposta una firma digitale.  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Il comando seguente verifica che un file sia stato firmato.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  Il comando seguente verifica un file di sistema che può essere firmato in un catalogo.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  Il comando seguente verifica un file di sistema firmato in un catalogo denominato `MyCatalog.cat`.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
