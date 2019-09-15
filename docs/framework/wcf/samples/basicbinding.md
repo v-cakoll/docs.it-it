@@ -2,34 +2,34 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 0bd692ce0527b498b7514a57442817b86f6c2208
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045740"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990140"
 ---
-# <a name="basicbinding"></a><span data-ttu-id="89291-102">BasicBinding</span><span class="sxs-lookup"><span data-stu-id="89291-102">BasicBinding</span></span>
+# <a name="basicbinding"></a><span data-ttu-id="beaea-102">BasicBinding</span><span class="sxs-lookup"><span data-stu-id="beaea-102">BasicBinding</span></span>
 
-<span data-ttu-id="89291-103">Nell'esempio seguente viene illustrato l'utilizzo di `basicHttpBinding`, che fornisce la comunicazione HTTP e la massima interoperabilità con servizi Web di prima e seconda generazione.</span><span class="sxs-lookup"><span data-stu-id="89291-103">This sample demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>
+<span data-ttu-id="beaea-103">Nell'esempio seguente viene illustrato l'utilizzo di `basicHttpBinding`, che fornisce la comunicazione HTTP e la massima interoperabilità con servizi Web di prima e seconda generazione.</span><span class="sxs-lookup"><span data-stu-id="beaea-103">This sample demonstrates the use of `basicHttpBinding` that provides HTTP communication and maximum interoperability with first- and second-generation Web services.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="89291-104">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="89291-104">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>
+> <span data-ttu-id="beaea-104">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="beaea-104">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="89291-105">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="89291-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="89291-106">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="89291-106">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="beaea-105">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="beaea-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="beaea-106">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="beaea-106">Check for the following (default) directory before continuing.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> <span data-ttu-id="89291-107">Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi.</span><span class="sxs-lookup"><span data-stu-id="89291-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="89291-108">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="89291-108">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="beaea-107">Se questa directory non esiste, passare a [Windows Communication Foundation (WCF) ed esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ed esempi.</span><span class="sxs-lookup"><span data-stu-id="beaea-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="beaea-108">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="beaea-108">This sample is located in the following directory.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`
 
-## <a name="sample-details"></a><span data-ttu-id="89291-109">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="89291-109">Sample Details</span></span>
+## <a name="sample-details"></a><span data-ttu-id="beaea-109">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="beaea-109">Sample Details</span></span>
 
-<span data-ttu-id="89291-110">Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="89291-110">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>
+<span data-ttu-id="beaea-110">Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="beaea-110">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>
 
-<span data-ttu-id="89291-111">Per utilizzare l'associazione di base con comportamento predefinito è necessario solo il nome di sezione dell'associazione.</span><span class="sxs-lookup"><span data-stu-id="89291-111">To use the basic binding with default behavior, only the binding section name is required.</span></span> <span data-ttu-id="89291-112">Se si desidera configurare l'associazione di base e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione.</span><span class="sxs-lookup"><span data-stu-id="89291-112">If you want to configure the basic binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="89291-113">L'endpoint deve fare riferimento alla configurazione dell'associazione in base al `bindingConfiguration` nome usando l'attributo`endpoint`dell'elemento < >, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="89291-113">The endpoint must reference the binding configuration by name by using the `bindingConfiguration` attribute of the <`endpoint`> element, as shown in the following sample code.</span></span>
+<span data-ttu-id="beaea-111">Per utilizzare l'associazione di base con comportamento predefinito è necessario solo il nome di sezione dell'associazione.</span><span class="sxs-lookup"><span data-stu-id="beaea-111">To use the basic binding with default behavior, only the binding section name is required.</span></span> <span data-ttu-id="beaea-112">Se si desidera configurare l'associazione di base e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione.</span><span class="sxs-lookup"><span data-stu-id="beaea-112">If you want to configure the basic binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="beaea-113">L'endpoint deve fare riferimento alla configurazione dell'associazione in base al `bindingConfiguration` nome usando l'attributo`endpoint`dell'elemento < >, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="beaea-113">The endpoint must reference the binding configuration by name by using the `bindingConfiguration` attribute of the <`endpoint`> element, as shown in the following sample code.</span></span>
 
 ```xml
 <services>
@@ -44,7 +44,7 @@ ms.locfileid: "70045740"
 </services>
 ```
 
-<span data-ttu-id="89291-114">In questo esempio, la configurazione di associazione viene denominata `"Binding1"` e viene definita come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="89291-114">In this sample, the binding configuration is named `"Binding1"` and is defined as shown in the following code example.</span></span>
+<span data-ttu-id="beaea-114">In questo esempio, la configurazione di associazione viene denominata `"Binding1"` e viene definita come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="beaea-114">In this sample, the binding configuration is named `"Binding1"` and is defined as shown in the following code example.</span></span>
 
 ```xml
 <bindings>
@@ -69,11 +69,11 @@ ms.locfileid: "70045740"
 </bindings>
 ```
 
-<span data-ttu-id="89291-115">L'elemento di associazione fornisce attributi per l'impostazione della modalità di confronto di nome host, dimensione massima del messaggio, opzioni del proxy, timeout, codifica del messaggio e altre opzioni.</span><span class="sxs-lookup"><span data-stu-id="89291-115">The binding element provides attributes for setting the host name comparison mode, maximum message size, proxy options, timeouts, message encoding, and other options.</span></span>
+<span data-ttu-id="beaea-115">L'elemento di associazione fornisce attributi per l'impostazione della modalità di confronto di nome host, dimensione massima del messaggio, opzioni del proxy, timeout, codifica del messaggio e altre opzioni.</span><span class="sxs-lookup"><span data-stu-id="beaea-115">The binding element provides attributes for setting the host name comparison mode, maximum message size, proxy options, timeouts, message encoding, and other options.</span></span>
 
-<span data-ttu-id="89291-116">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="89291-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="89291-117">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="89291-117">Press ENTER in the client window to shut down the client.</span></span>
+<span data-ttu-id="beaea-116">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="beaea-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="beaea-117">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="beaea-117">Press ENTER in the client window to shut down the client.</span></span>
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -82,16 +82,16 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="89291-118">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="89291-118">To set up, build, and run the sample</span></span>
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="beaea-118">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="beaea-118">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="89291-119">Installare ASP.NET 4,0 usando il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="89291-119">Install ASP.NET 4.0 using the following command.</span></span>
+1. <span data-ttu-id="beaea-119">Installare ASP.NET 4,0 usando il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="beaea-119">Install ASP.NET 4.0 using the following command.</span></span>
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. <span data-ttu-id="89291-120">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="89291-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+2. <span data-ttu-id="beaea-120">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="beaea-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
 
-3. <span data-ttu-id="89291-121">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="89291-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+3. <span data-ttu-id="beaea-121">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="beaea-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
 
-4. <span data-ttu-id="89291-122">Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="89291-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>
+4. <span data-ttu-id="beaea-122">Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="beaea-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>
