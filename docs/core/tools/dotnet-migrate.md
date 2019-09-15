@@ -1,28 +1,21 @@
 ---
 title: Comando dotnet migrate
 description: Il comando dotnet migrate consente di eseguire la migrazione di un progetto e di tutte le relative dipendenze.
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202530"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990423"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Questo argomento si applica a: ✓** .NET Core 2.1.x SDK e versioni successive
+**Questo articolo si applica a: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet migrate`: esegue la migrazione di un progetto .NET Core Preview 2 a un progetto di tipo .NET Core SDK.
-
-> [!NOTE]
-> `dotnet migrate` verrà rimosso da .NET Core 3.0 SDK nella prossima versione di anteprima.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -31,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet migrate` esegue la migrazione di un progetto basato su *project.json* Preview 2 valido a un progetto *csproj* di tipo .NET Core SDK valido.
 
@@ -49,6 +42,8 @@ Il comando `dotnet migrate` mantiene il file *project.json* di cui è stata eseg
 Per impostazione predefinita, l'operazione di migrazione restituisce lo stato del processo di migrazione all'output standard (STDOUT). Se si usa l'opzione `--report-file <REPORT_FILE>`, l'output viene salvato nel file specificato.
 
 Il comando `dotnet migrate` supporta solo progetti basati su *project.json* Preview 2 validi. Questo significa che non è possibile usare questo comando per eseguire la migrazione di progetti basati su DNX o *project.json* Preview 1 direttamente a progetti MSBuild/csproj. È prima necessario eseguire manualmente la migrazione del progetto a un progetto basato su *project.json* Preview 2 e quindi usare il comando `dotnet migrate` per eseguire la migrazione del progetto.
+
+Il `dotnet migrate` comando non è più disponibile a partire da .NET Core 3,0 SDK.
 
 ## <a name="arguments"></a>Argomenti
 

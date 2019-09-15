@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 2b5bacfc453f16f9c484eebfddf92c6464f8cb78
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597086"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970916"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -66,7 +66,7 @@ using System.Linq;
   
  [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
-## <a name="general-guidelines"></a>Indicazioni generali  
+## <a name="general-guidelines"></a>Linee guida generali  
  In generale, si consiglia di implementare i metodi di estensione sporadicamente e solo se necessario. Se possibile, è opportuno che il codice client che deve estendere un tipo esistente esegua questa operazione creando un nuovo tipo derivato dal tipo esistente. Per altre informazioni, vedere [Ereditarietà](./inheritance.md).  
   
  Quando si utilizza un metodo di estensione per estendere un tipo di cui non è possibile modificare il codice sorgente, si corre il rischio che una modifica nell'implementazione del tipo provochi l'interruzione del metodo di estensione.  
@@ -77,7 +77,7 @@ using System.Linq;
   
 - I metodi di estensione vengono inseriti nell'ambito al livello dello spazio dei nomi. Se, ad esempio, si dispone di più classi statiche contenenti metodi di estensione in un solo spazio dei nomi denominato `Extensions`, verranno tutti inseriti nell'ambito dalla direttiva `using Extensions;`.  
   
- Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../framework/app-domains/assembly-versioning.md).
+ Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../standard/assembly/versioning.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

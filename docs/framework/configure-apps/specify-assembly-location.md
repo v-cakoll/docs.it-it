@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 43cd1d0edbb607f69f27661aae3372e93564b3b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932341"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971543"
 ---
 # <a name="specifying-an-assemblys-location"></a>Specifica della posizione di un assembly
 È possibile specificare la posizione di un assembly in due modi:  
   
 - Utilizzando l' [ \<elemento codeBase >](./file-schema/runtime/codebase-element.md) .  
   
-- Uso dell'elemento [ \<>](./file-schema/runtime/probing-element.md) di probe.  
+- Uso dell'elemento [ \<> di probe](./file-schema/runtime/probing-element.md) .  
   
  È anche possibile usare lo [strumento di configurazione .NET Framework (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) per specificare i percorsi degli assembly o specificare i percorsi per il Common Language Runtime per eseguire il probe degli assembly.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69932341"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Assembly in Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programmazione con gli assembly](../app-domains/programming-with-assemblies.md)
+- [Assembly in .NET](../../standard/assembly/index.md)
+- [Programmazione con gli assembly](../../standard/assembly/program.md)
 - [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurazione di app tramite file di configurazione](index.md)

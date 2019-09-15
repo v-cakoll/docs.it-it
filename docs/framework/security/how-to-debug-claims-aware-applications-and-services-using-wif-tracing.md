@@ -3,12 +3,12 @@ title: 'Procedura: Eseguire il debug di servizi e applicazioni in grado di ricon
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: effd670a4d0e12f0bca10301fabc361c73e03328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 604ebf5ad71197f6614ffa45b6d7c181d474e1aa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625872"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990473"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -76,14 +76,14 @@ ms.locfileid: "64625872"
     </system.diagnostics>  
     ```  
   
-3. La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per il **switchValue** , fare riferimento alla tabella di livello di traccia nell'argomento seguente: [Configurazione della traccia](../wcf/diagnostics/tracing/configuring-tracing.md).  
+3. La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per l'opzione **switchValue** , fare riferimento alla tabella livello di traccia disponibile nell'argomento seguente: [Configurazione della traccia](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
  In questo passaggio si userà lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) per analizzare i log di traccia di WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Per analizzare i log di traccia di WIF con lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe)  
   
-1. Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se è già stato installato il SDK di Windows, è possibile scaricarlo qui: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
+1. Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se il Windows SDK non è ancora stato installato, è possibile scaricarlo qui: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2. Eseguire lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) In genere è disponibile nella cartella **Bin** del percorso di installazione.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64625872"
   
 4. Esaminare le voci nella scheda **Attività**. Ogni voce contiene un numero di attività, il numero di tracce registrate, la durata dell'attività e i timestamp di inizio e fine.  
   
-5. Fare clic sulla scheda **Attività**. Nell'area principale dello strumento saranno visibili le voci di traccia dettagliate. Usare la **livello** elenco a discesa del menu per filtrare specifici a livello di traccia, ad esempio: **Tutti i**, **avviso**, **errori**, **informazioni**e così via.  
+5. Fare clic sulla scheda **Attività**. Nell'area principale dello strumento saranno visibili le voci di traccia dettagliate. Usare l'elenco a discesa **livello** nel menu per filtrare un livello specifico di tracce, ad esempio: **Tutti**, **avviso**, **errori**, **informazioni**e così via.  
   
 6. Fare clic sulle specifiche voci di traccia per esaminare i dettagli nell'area inferiore dello strumento. I dettagli sono disponibili nelle visualizzazioni **Formattato** e **XML** scegliendo le schede corrispondenti.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "64625872"
   
 |**ID errore**|**Messaggio di errore**|**Azione necessaria per correggere l'errore**|  
 |-|-|-|  
-|ID4175|L'emittente del token di sicurezza non è stato riconosciuto da IssuerNameRegistry.  Per accettare token di sicurezza da questa autorità emittente, configurare IssuerNameRegistry per restituire un nome valido per l'emittente.|L'errore può essere causato dall'aver copiato un'identificazione personale dallo snap-in MMC e averla poi incollata nel file *Web. config*. In particolare, copiando dalla finestra delle proprietà del certificato è possibile ottenere un carattere aggiuntivo non stampabile nella stringa di testo. Questo carattere aggiuntivo provoca l'esito negativo della corrispondenza identificazione personale. La procedura per copiare correttamente l'identificazione personale è reperibile in [basata sulle attestazioni l'accesso Single Sign-in per il Web e Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
+|ID4175|L'emittente del token di sicurezza non è stato riconosciuto da IssuerNameRegistry.  Per accettare token di sicurezza da questa autorità emittente, configurare IssuerNameRegistry per restituire un nome valido per l'emittente.|L'errore può essere causato dall'aver copiato un'identificazione personale dallo snap-in MMC e averla poi incollata nel file *Web. config*. In particolare, copiando dalla finestra delle proprietà del certificato è possibile ottenere un carattere aggiuntivo non stampabile nella stringa di testo. Questo carattere aggiuntivo provoca l'esito negativo della corrispondenza dell'identificazione personale. La procedura per copiare correttamente l'identificazione personale è disponibile in [Single Sign-on basato su attestazioni per il Web e Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Elementi correlati  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230853abf73a368bfcd8b88375c216fdadfc7d46
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: a5059f629a341bb4689428855807fb3c66b0949b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567268"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969075"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Esposizione di componenti COM a .NET Framework
 Questa sezione riepiloga il processo necessario per esporre un componente COM esistente al codice gestito. Per informazioni dettagliate sulla scrittura di server COM strettamente integrati con .NET Framework, vedere [Considerazioni di progettazione per l'interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -36,7 +36,7 @@ Questa sezione riepiloga il processo necessario per esporre un componente COM es
   
 4. [Distribuire un'applicazione di interoperabilità](deploying-an-interop-application.md).  
   
-     Per una distribuzione ottimale delle applicazioni di interoperabilità, distribuirle come assembly firmati [con nome sicuro](../app-domains/strong-named-assemblies.md) nella Global Assembly Cache.  
+     Per una distribuzione ottimale delle applicazioni di interoperabilità, distribuirle come assembly firmati [con nome sicuro](../../standard/assembly/strong-named.md) nella Global Assembly Cache.  
   
 ## <a name="see-also"></a>Vedere anche
 

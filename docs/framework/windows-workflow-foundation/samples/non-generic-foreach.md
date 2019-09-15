@@ -2,12 +2,12 @@
 title: ForEach non generica
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038068"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989029"
 ---
 # <a name="non-generic-foreach"></a>ForEach non generica
 Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] è disponibile un set di attività del flusso di controllo, inclusa <xref:System.Activities.Statements.ForEach%601> che consente di scorrere le raccolte <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -24,7 +24,7 @@ Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../inclu
 ## <a name="class-definition"></a>Definizione della classe  
  Nell'esempio di codice seguente viene illustrata la definizione di un'attività `ForEach` non generica.  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>Esempio di utilizzo di ForEach  
  Nel codice seguente viene illustrato come usare l'attività ForEach in un'applicazione.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -74,7 +74,7 @@ Activity sampleUsage =
 ## <a name="foreach-designer"></a>Finestra di progettazione ForEach  
  L'aspetto dell'ActivityDesigner per l'esempio è simile a quello della finestra di progettazione fornita per l'attività <xref:System.Activities.Statements.ForEach%601> incorporata. La finestra di progettazione viene visualizzata nella casella degli strumenti nella categoria **esempi**, **attività non generiche** . La finestra di progettazione è denominata **ForEachWithBodyFactory** nella casella degli strumenti, poiché l' <xref:System.Activities.Presentation.IActivityTemplateFactory> attività espone un oggetto nella casella degli strumenti che crea l'attività <xref:System.Activities.ActivityAction>con un oggetto configurato correttamente.  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

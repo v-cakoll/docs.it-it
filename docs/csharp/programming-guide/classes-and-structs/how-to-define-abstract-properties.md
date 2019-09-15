@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 57fd2ed3a26bf5986f9c8a1a6cae6b041811e84c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596863"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970892"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedura: Definire proprietà astratte (Guida per programmatori C#)
 L'esempio seguente mostra come definire proprietà di tipo [abstract](../../language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
@@ -59,4 +59,3 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../lang
 - [Classi e struct](./index.md)
 - [Classi e membri delle classi astratte e sealed](./abstract-and-sealed-classes-and-class-members.md)
 - [Proprietà](./properties.md)
-- [Procedura: Creare e usare assembly dalla riga di comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

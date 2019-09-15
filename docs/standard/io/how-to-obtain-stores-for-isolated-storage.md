@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622697"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969264"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Procedura: Recuperare archivi per lo spazio di memorizzazione isolato
 Un archivio isolato espone un file system virtuale all'interno di un raggruppamento dati. La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornisce numerosi metodi per l'interazione con un archivio isolato. Per creare e recuperare archivi, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornisce tre metodi statici:  
@@ -62,4 +62,4 @@ Un archivio isolato espone un file system virtuale all'interno di un raggruppame
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
 - [Tipi di isolamento](../../../docs/standard/io/types-of-isolation.md)
-- [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assembly in .NET](../assembly/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589128"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972094"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 
@@ -137,7 +137,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Per impostare la proprietà Incorpora tipi di interoperabilità
 
-1. Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).
 
      Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`. Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito. Per altre informazioni, vedere [Uso del tipo dynamic](../types/using-type-dynamic.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364240"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991813"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelli di costruttore sicuri per DependencyObject
 In genere, i costruttori di classe non devono chiamare callback come metodi virtuali o delegati, in quanto possono essere chiamati come inizializzazione di base di costruttori per una classe derivata. L'uso di elementi virtuali può avvenire in un stato incompleto dell'inizializzazione di qualsiasi dato oggetto. Il sistema di proprietà stesso, tuttavia, chiama ed espone internamente i callback come parte del sistema di proprietà di dipendenza. Una semplice operazione come l'impostazione di un valore della proprietà <xref:System.Windows.DependencyObject.SetValue%2A> di dipendenza con Call potenzialmente include un callback in un punto qualsiasi della determinazione. Per questa ragione, occorre prestare attenzione quando si impostano i valori delle proprietà di dipendenza all'interno del corpo di un costruttore, perché l'operazione può divenire problematica se il tipo viene usato come classe di base. È disponibile un modello specifico per l' <xref:System.Windows.DependencyObject> implementazione di costruttori che consente di evitare problemi specifici con gli Stati delle proprietà di dipendenza e i callback inerenti, documentati qui.  
@@ -35,7 +35,7 @@ In genere, i costruttori di classe non devono chiamare callback come metodi virt
   
  L'esempio di codice seguente e i successivi sono esempi di pseudo codice C# in cui questa regola viene violata e in cui viene illustrato il problema:  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Costruttori senza parametri che chiamano l'inizializzazione di base  
  Implementare questi costruttori che chiamano l'impostazione predefinita di base:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Costruttori non predefiniti (di comodo), che non corrispondono ad alcuna firma di base  
  Se questi costruttori usano i parametri per impostare le proprietà di dipendenza nell'inizializzazione, chiamare prima il costruttore senza parametri della classe per l'inizializzazione e quindi usare i parametri per impostare le proprietà di dipendenza. Queste ultime potrebbero essere proprietà di dipendenza definite dalla classe o proprietà di dipendenza ereditate dalle classi di base. In entrambi i casi, tuttavia, usare il modello seguente:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

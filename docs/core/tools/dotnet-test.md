@@ -2,22 +2,24 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410363"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988560"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet test`: driver di test .NET usato per eseguire gli unit test.
 
 ## <a name="synopsis"></a>Riepilogo
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -48,7 +50,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet test` viene usato per eseguire unit test in un determinato progetto. Il comando `dotnet test` avvia l'applicazione console di esecuzione dei test specificati per un progetto. L'applicazione di esecuzione dei test esegue i test definiti per un framework di unit test (ad esempio MSTest, NUnit o xUnit) e segnala l'esito positivo o negativo di ogni test. Se tutti i test hanno esito positivo, il test runner restituisce 0 come codice di uscita. Se invece i test hanno esito negativo, restituisce 1. L'applicazione di esecuzione dei test e la libreria di unit test sono disponibili come pacchetti NuGet e vengono ripristinati come dipendenze ordinarie per il progetto.
 
@@ -264,7 +266,7 @@ Eseguire i test nel progetto `test1`:
 
 Eseguire i test nel progetto nella directory corrente e generare un file dei risultati di test in formato trx:
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>Dettagli dell'opzione filter
 
@@ -276,12 +278,12 @@ Eseguire i test nel progetto nella directory corrente e generare un file dei ris
 
 | Framework di test | Proprietà supportate                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
 
-| Operatore | Funzione        |
+| Operator | Funzione        |
 | :------: | --------------- |
 | `=`      | Corrispondenza esatta     |
 | `!=`     | Corrispondenza non esatta |
@@ -293,9 +295,9 @@ Un'espressione senza `<operator>` viene considerata automaticamente come un'oper
 
 Le espressioni possono essere unite con operatori condizionali:
 
-| Operatore            | Funzione |
+| Operator            | Funzione |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | Oppure       |
 | `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602604"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970371"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
 L'opzione **-out** specifica il nome del file di output.  
@@ -28,7 +28,7 @@ L'opzione **-out** specifica il nome del file di output.
  `filename`  
  Il nome del file di output creato dal compilatore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella riga di comando è possibile specificare più file di output per la compilazione. Dopo l'opzione **-out** è prevista la presenza di uno o più file di codice sorgente. Tutti i file di codice sorgente verranno quindi compilati nel file di output specificato con l'opzione **-out**.  
   
  Specificare il nome completo e l'estensione del file che si vuole creare.  
@@ -45,7 +45,7 @@ L'opzione **-out** specifica il nome del file di output.
   
  I moduli prodotti durante una compilazione diventano file associati a un assembly prodotto anch'esso in fase di compilazione. Per visualizzare il manifesto dell'assembly e i file associati, usare [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
- L'opzione del compilatore -out è necessaria perché un file eseguibile sia la destinazione di un assembly Friend. Per altre informazioni, vedere [Assembly Friend](../../../standard/assembly/friend-assemblies.md).  
+ L'opzione del compilatore -out è necessaria perché un file eseguibile sia la destinazione di un assembly Friend. Per altre informazioni, vedere [Assembly Friend](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Vedere anche
 
 - [Opzioni del compilatore C#](./index.md)
-- [Assembly Friend](../../../standard/assembly/friend-assemblies.md)
+- [Assembly Friend](../../../standard/assembly/friend.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

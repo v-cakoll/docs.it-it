@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946467"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971828"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: Creare wrapper COM
 
@@ -55,7 +55,7 @@ In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al
   
 1. Creare un progetto libreria di classi per la classe gestita che si vuole eseguire in codice nativo. La classe deve avere un costruttore senza parametri.  
   
-     Verificare che l'assembly nel file AssemblyInfo abbia un numero di versione in quattro parti completo. Questo numero è obbligatorio per la gestione del controllo delle versioni nel Registro di sistema di Windows. Per altre informazioni sui numeri di versione, vedere [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Verificare che l'assembly nel file AssemblyInfo abbia un numero di versione in quattro parti completo. Questo numero è obbligatorio per la gestione del controllo delle versioni nel Registro di sistema di Windows. Per altre informazioni sui numeri di versione, vedere [Controllo delle versioni degli assembly](../../standard/assembly/versioning.md).  
   
 2. Scegliere **Proprietà** dal menu **Progetto**.  
   

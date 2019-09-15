@@ -2,12 +2,12 @@
 title: 'Procedura: Specificare credenziali di sicurezza del canale'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933452"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972440"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedura: Specificare credenziali di sicurezza del canale
 Il moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. Per la maggior parte dei servizi WCF è necessario che il client specifichi le credenziali per l'autenticazione e l'autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione com, è possibile usare <xref:System.ServiceModel.ComIntegration.IChannelCredentials> l'interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -31,7 +31,7 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 6. Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
-    ```  
+    ```vb  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -52,7 +52,7 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
      Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4). Per impostare il certificato client è inoltre possibile usare <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> al posto di <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>:  
   
-    ```  
+    ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
@@ -70,7 +70,7 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
 
 3. Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -95,7 +95,7 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
 
 2. Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -119,7 +119,7 @@ Il moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
      L'esempio di codice Visual Basic seguente mostra come chiamare il metodo <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>:  
   
-    ```  
+    ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/SomeService/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://SomeService.Samples"  

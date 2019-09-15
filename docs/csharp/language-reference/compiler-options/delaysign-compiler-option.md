@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603031"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970437"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opzioni del compilatore C#)
 
@@ -31,7 +31,7 @@ Questa opzione indica al compilatore di riservare spazio nel file di output in m
 
 Usare **-delaysign-** se si vuole un assembly con firma completa. Usare **-delaysign+** se si vuole solo inserire la chiave pubblica nell'assembly. L'impostazione predefinita è **-delaysign-** .
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 L'opzione **-delaysign** ha effetto solo se abbinata all'opzione [-keyfile](./keyfile-compiler-option.md) o [-keycontainer](./keycontainer-compiler-option.md).
 
@@ -41,7 +41,7 @@ Quando si richiede un assembly con firma completa, il compilatore genera un hash
 
 Ad esempio, l'uso di **-delaysign+** consente a un tester di inserire l'assembly nella Global Assembly Cache. Al termine del test, è possibile firmare completamente l'assembly inserendo la chiave privata nell'assembly con l'utilità [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md).
 
-Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) e [Ritardo della firma di un assembly](../../../framework/app-domains/delay-sign-assembly.md).
+Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md) e [Ritardo della firma di un assembly](../../../standard/assembly/delay-sign.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 

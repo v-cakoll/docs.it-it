@@ -2,12 +2,12 @@
 title: Indirizzamento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 249060896b97de1694dec121cb25219baccdd88b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045828"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990201"
 ---
 # <a name="addressing"></a>Indirizzamento
 Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le funzionalità degli indirizzi endpoint. L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md). In questo esempio, il servizio è indipendente. Sia il client che il servizio sono applicazioni console. Il servizio definisce più endpoint usando una combinazione di indirizzi endpoint relativi e assoluti.  
@@ -83,7 +83,7 @@ Nell'esempio relativo all'Indirizzamento vengono illustrati i vari aspetti e le 
   
  Quando si esegue l'esempio, il servizio enumera l'indirizzo, il nome dell'associazione e il nome del contratto per ognuno degli endpoint. Per ServiceHost, l'endpoint di scambio di metadati (MEX) è solo un altro endpoint, per cui viene incluso nell'elenco.  
   
-```  
+```console  
 Service endpoints:  
 Endpoint - address:  http://localhost:8000/ServiceModelSamples/service  
            binding:  WSHttpBinding  
@@ -107,7 +107,7 @@ Press <ENTER> to terminate service.
   
  Quando si esegue il client, le richieste e le risposte dell'operazione vengono visualizzate nelle finestre della console client e del servizio. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

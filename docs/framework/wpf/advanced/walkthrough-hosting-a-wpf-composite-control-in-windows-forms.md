@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400618"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991453"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si ha un investimento sostanziale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nel codice, può essere più efficace estendere l'applicazione esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con all'interno del Windows Forms Application. Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione del controllo](../controls/control-customization.md).  
@@ -116,7 +116,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Struttura di base del file code-behind  
  Il file code-behind è costituito da un singolo `MyControls`spazio dei nomi,, che conterrà `MyControlEventArgs`due classi, `MyControl1` e.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -305,7 +305,7 @@ Nell'immagine seguente viene illustrato un controllo composito WPF ospitato in u
 ### <a name="handling-onbuttonclick"></a>Gestione dell'evento OnButtonClick  
  L' `OnButtonClick` evento si verifica quando l'utente fa clic sul pulsante **OK** o **Annulla** .  
   
- Il gestore eventi controlla il `IsOK` campo dell'argomento dell'evento per determinare su quale pulsante è stato fatto clic. Le `lbl` *variabili di dati* corrispondono ai controllidescrittiinprecedenza.<xref:System.Windows.Forms.Label> Se l'utente fa clic sul pulsante **OK** , i dati dei <xref:System.Windows.Controls.TextBox> controlli del controllo vengono assegnati al controllo corrispondente. <xref:System.Windows.Forms.Label> Se l'utente fa clic su Annulla <xref:System.Windows.Forms.Label.Text%2A> , i valori vengono impostati sulle stringhe predefinite.  
+ Il gestore eventi controlla il `IsOK` campo dell'argomento dell'evento per determinare su quale pulsante è stato fatto clic. Le `lbl` *variabili di dati* corrispondono ai controllidescrittiinprecedenza.<xref:System.Windows.Forms.Label> Se l'utente fa clic sul pulsante **OK** , i dati dei <xref:System.Windows.Controls.TextBox> controlli del controllo vengono assegnati al controllo corrispondente. <xref:System.Windows.Forms.Label> Se l'utente faclic su Annulla <xref:System.Windows.Forms.Label.Text%2A> , i valori vengono impostati sulle stringhe predefinite.  
   
  Aggiungere il codice del gestore eventi click del pulsante seguente `Form1` alla classe.  
   

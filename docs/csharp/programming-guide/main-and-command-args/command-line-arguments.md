@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6e6fc815ee8c2d174db12f95eed8dc72a6ef5a62
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252986"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971958"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 È possibile inviare argomenti al metodo `Main` definendo il metodo in uno dei modi seguenti:  
@@ -71,8 +71,6 @@ long num = Convert.ToInt64(s);
   
 > [!NOTE]
 > Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](/visualstudio/ide/reference/debug-page-project-designer).  
-  
- Per altri esempi su come usare gli argomenti della riga di comando, vedere [Procedura: Creare e usare assembly dalla riga di comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

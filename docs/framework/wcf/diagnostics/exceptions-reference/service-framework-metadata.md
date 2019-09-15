@@ -2,12 +2,12 @@
 title: Metadati del framework dei servizi
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780796"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991208"
 ---
 # <a name="service-framework-metadata"></a>Metadati del framework dei servizi
 In questo argomento vengono elencate tutte le eccezioni generate dai metadati del framework dei servizi.  
@@ -18,7 +18,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dai metadati de
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|Il metodo End asincrono è stato chiamato sul canale errato.|  
 |AsyncEndCalledWithAnIAsyncResult|Il metodo End asincrono è stato chiamato con un IAsyncResult di un metodo Begin diverso.|  
-|AttemptedToGetContractTypeForButThatTypeIs1|È stato eseguito un tentativo di ottenere il tipo di contratto dell'entità specificata. Tuttavia, il tipo è diverso da ServiceContract né eredita un ServiceContract.|  
+|AttemptedToGetContractTypeForButThatTypeIs1|Tentativo di ottenere il tipo di contratto per l'oggetto specificato. Il tipo non è un ServiceContract e non eredita un ServiceContract.|  
 |CannotHaveTwoOperationsWithTheSameName3|Nello stesso contratto non possono essere presenti due operazioni aventi lo stesso nome. I metodi specificati contenuti nel tipo specificato violano questa regola. È possibile cambiare il nome di una delle operazioni modificando il nome del metodo o utilizzando la proprietà Name di OperationContractAttribute.|  
 |CannotInheritTwoOperationsWithTheSameName3|Impossibile ereditare due diverse operazioni aventi lo stesso nome. Le operazioni specificate appartenenti ai contratti specificati violano questa regola. È possibile cambiare il nome di una delle operazioni modificando il nome del metodo o utilizzando la proprietà Name di OperationContractAttribute.|  
 |CantCreateChannelWithManualAddressing|Impossibile creare il canale per un contratto che richiede un request/reply e un'associazione che a sua volta richiede l'indirizzamento manuale ma supporta solo la comunicazione duplex.|  

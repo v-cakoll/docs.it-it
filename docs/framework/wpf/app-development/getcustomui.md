@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947966"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991370"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-Chiamato dal PresentationHost.exe per ottenere lo stato personalizzato e messaggi di errore dall'host, se è implementato.  
+Chiamato da PresentationHost. exe per ottenere i messaggi di errore e di stato personalizzati dall'host, se implementati.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
 ## <a name="parameters"></a>Parametri  
  `pwzProgressAssemblyName`  
   
- [out] Un puntatore all'assembly che contiene l'interfaccia utente lo stato di avanzamento fornita dall'host.  
+ out Puntatore all'assembly che contiene l'interfaccia utente di avanzamento fornita dall'host.  
   
  `pwzProgressClassName`  
   
- [out] Il nome della classe che è l'interfaccia utente lo stato di avanzamento fornita dall'host, preferibilmente una [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file con <xref:System.Windows.Controls.Page> elemento di primo livello. Questa classe si trova nell'assembly specificato da `pwzProgressAssemblyName`.  
+ out Il nome della classe che rappresenta l'interfaccia utente di avanzamento fornita dall'host, preferibilmente un [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file con <xref:System.Windows.Controls.Page> è il relativo elemento di livello principale. Questa classe risiede nell'assembly specificato da `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
- [out] Un puntatore all'assembly che contiene l'interfaccia utente di errore fornito dall'host.  
+ out Puntatore all'assembly che contiene l'interfaccia utente degli errori fornita dall'host.  
   
  `pwzErrorClassName`  
   
- [out] Il nome della classe che corrisponde all'utente di errore fornito dall'host di interfaccia, preferibilmente un file XAML con <xref:System.Windows.Controls.Page> elemento di primo livello. Questa classe si trova nell'assembly specificato da `pwzErrorAssemblyName`.  
+ out Nome della classe che rappresenta l'interfaccia utente degli errori fornita dall'host, preferibilmente un file XAML con <xref:System.Windows.Controls.Page> è il relativo elemento di livello principale. Questa classe risiede nell'assembly specificato da `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  HRESULT: Ignorato.  
   
 ## <a name="remarks"></a>Note  
- Un'applicazione host può avere un tema specifico che interfacce utente predefinite del PresentationHost.exe potrebbero non essere conforme a. In questo caso, l'applicazione host può implementare [GetCustomUI](getcustomui.md) per restituire lo stato di avanzamento ed errore interfacce utente a PresentationHost.exe. Chiama sempre PresentationHost.exe [GetCustomUI](getcustomui.md) prima di usare le interfacce utente predefinite.  
+ Un'applicazione host può presentare un tema specifico a cui le interfacce utente predefinite di PresentationHost. exe potrebbero non essere conformi. In tal caso, l'applicazione host può implementare [GetCustomUI](getcustomui.md) per restituire le interfacce utente di stato e di errore in PresentationHost. exe. PresentationHost. exe chiamerà sempre [GetCustomUI](getcustomui.md) prima di usare le interfacce utente predefinite.  
   
- Questa funzione viene chiamata una volta durante l'inizializzazione di PresentationHost.  
+ Questa funzione viene chiamata una sola volta durante l'inizializzazione di PresentationHost.  
   
 ## <a name="see-also"></a>Vedere anche
 

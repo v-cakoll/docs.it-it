@@ -2,22 +2,24 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893291"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969762"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>NOME
 
 `dotnet restore`: ripristina le dipendenze e gli strumenti di un progetto.
 
 ## <a name="synopsis"></a>Riepilogo
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

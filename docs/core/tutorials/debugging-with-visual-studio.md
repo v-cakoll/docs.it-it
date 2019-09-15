@@ -3,12 +3,12 @@ title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Stud
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f318c163db6cfdd6de5aa99edebfeeb4bb470a02
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7239ca52c0b90c4cfacd68581f569b9ac7d70eae
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926159"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969384"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
@@ -25,6 +25,8 @@ Le modalità *Debug* e *Rilascio* sono due configurazioni di compilazione predef
 ## <a name="setting-a-breakpoint"></a>Impostazione di un punto di interruzione
 
 Eseguire il programma in modalità Debug e provare alcune funzionalità di debug:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

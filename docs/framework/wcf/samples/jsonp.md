@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039549"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989773"
 ---
 # <a name="jsonp"></a>JSONP
 In questo esempio viene illustrato come supportare JSONP (JSON with Padding) nei servizi WCF REST. JSONP è una convenzione usata per richiamare script tra domini mediante la generazione di tag script nel documento corrente. Il risultato viene restituito in una funzione di callback specificata. JSONP si basa sul concetto che i tag come `<script src="http://..." >` possono valutare gli script di qualsiasi dominio e lo script recuperato da tali tag viene valutato all'interno di un ambito in cui possono essere già definite altre funzioni.
@@ -39,13 +39,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 
  ScriptManager gestisce l'interazione con il servizio non rivelando la complessità dell'implementazione manuale dell'accesso JSONP. Quando `crossDomainScriptAccessEnabled` è impostato su `true` e il formato della risposta per un'operazione è JSON, l'infrastruttura WCF esamina l'URI della richiesta per un parametro della stringa di query di callback ed esegue il wrapping della risposta JSON con il valore della stringa di query di callback parametro. Nell'esempio la pagina Web chiama il servizio WCF REST con l'URI seguente:
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  Poiché il parametro della stringa di query di callback dispone di un valore `JsonPCallback`, il servizio WCF restituisce la risposta JSONP illustrata nell'esempio seguente.
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 

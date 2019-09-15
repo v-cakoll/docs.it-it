@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044405"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989679"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procedura: Creare un flusso di lavoro del diagramma di flusso
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad <xref:System.Activities.Statements.Flowchart> esempio l'attività, che le attività personalizzate della [procedura precedente: Creare un argomento](how-to-create-an-activity.md) di attività. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -118,15 +118,15 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 9. Fare clic sulla seconda attività **FlowDecision** per selezionarla. Nella **finestra Proprietà**Digitare l'espressione seguente nella casella valore proprietà **condizione** .  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. Trascinare due attività **WriteLine** dalla sezione **primitive** della **casella degli strumenti** e rilasciarle in modo che siano affiancate al di sotto delle due attività **FlowDecision** . Connettere la **vera** azione dell'attività **FlowDecision** inferiore all'attività **WriteLine** più a sinistra e l'azione **false** all'attività **WriteLine** più a destra.  
   
 11. Fare clic sull'attività **WriteLine** più a sinistra per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** nella **finestra Proprietà**.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 13. Fare clic sull'attività **WriteLine** più a destra per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** nella **finestra Proprietà**.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

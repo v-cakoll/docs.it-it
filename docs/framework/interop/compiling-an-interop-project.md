@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69013011"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969096"
 ---
 # <a name="compiling-an-interop-project"></a>Compilazione di un progetto di interoperabilità
 
@@ -30,7 +30,7 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 
  Le differenze tra queste due tecniche sono discusse più dettagliatamente in [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- L'incorporamento dei tipi di interoperabilità con Visual Studio è illustrato in [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) e [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).
+ L'incorporamento dei tipi di interoperabilità con Visual Studio è illustrato in [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual](../../standard/assembly/embed-types-visual-studio.md)Studio.
 
  Per fare riferimento a un assembly di interoperabilità con un compilatore da riga di comando e incorporare le informazioni sul tipo negli eseguibili, usare l'opzione del compilatore [/link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e specificare il nome dell'assembly.
 
@@ -44,6 +44,5 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../standard/language-independence-and-language-independent-components.md)
 - [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)

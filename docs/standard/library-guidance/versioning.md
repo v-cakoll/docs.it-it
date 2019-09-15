@@ -4,12 +4,12 @@ description: Procedure consigliate per il controllo delle versioni delle libreri
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
-ms.translationtype: HT
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204743"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969013"
 ---
 # <a name="versioning"></a>Controllo delle versioni
 
@@ -53,7 +53,7 @@ La versione dell'assembly viene usata da CLR in fase di esecuzione per scegliere
 
 CLR .NET Framework in Windows richiede una corrispondenza esatta per il caricamento di un assembly con nome sicuro. Ad esempio, la compilazione di `Libary1, Version=1.0.0.0` è stata eseguita con un riferimento a `Newtonsoft.Json, Version=11.0.0.0`. .NET Framework caricherà solo la versione esatta `11.0.0.0`. Per caricare una versione diversa in fase di esecuzione, è necessario aggiungere un reindirizzamento di binding al file di configurazione dell'applicazione .NET.
 
-La combinazione di nome sicuro e versione dell'assembly permette il [caricamento della versione dell'assembly in modalità strict](../../framework/app-domains/assembly-versioning.md). Sebbene l'uso di un nome sicuro per una libreria offra diversi vantaggi, spesso comporta eccezioni in fase di esecuzione quando un assembly non viene trovato e sono necessari [reindirizzamenti di binding](../../framework/configure-apps/redirect-assembly-versions.md) in `app.config`/`web.config` per risolvere il problema. Il caricamento di assembly .NET Core è meno rigido e CLR .NET Core carica automaticamente gli assembly in fase di esecuzione con una versione più recente.
+La combinazione di nome sicuro e versione dell'assembly permette il [caricamento della versione dell'assembly in modalità strict](../assembly/versioning.md). Sebbene l'uso di un nome sicuro per una libreria offra diversi vantaggi, spesso comporta eccezioni in fase di esecuzione quando un assembly non viene trovato e sono necessari [reindirizzamenti di binding](../../framework/configure-apps/redirect-assembly-versions.md) in `app.config`/`web.config` per risolvere il problema. Il caricamento di assembly .NET Core è meno rigido e CLR .NET Core carica automaticamente gli assembly in fase di esecuzione con una versione più recente.
 
 **✔️ VALUTARE** se includere solo una versione principale in AssemblyVersion.
 

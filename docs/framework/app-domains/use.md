@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: ad05d005ece4a52e2df0dbb7e044522db58f1787
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "61674890"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971865"
 ---
 # <a name="using-application-domains"></a>Uso dei domini dell'applicazione
 I domini dell'applicazione offrono un'unità di isolamento per Common Language Runtime. Vengono creati ed eseguiti all'interno di un processo. I domini dell'applicazione vengono solitamente creati da un host di runtime, che è un'applicazione responsabile del caricamento del runtime in un processo e dell'esecuzione di codice utente all'interno di un dominio dell'applicazione. L'host di runtime crea un processo e un dominio dell'applicazione predefinito ed esegue codice gestito all'interno di esso. Gli host di runtime includono ASP.NET, Microsoft Internet Explorer e la shell di Windows.  
@@ -36,7 +36,7 @@ I domini dell'applicazione offrono un'unità di isolamento per Common Language R
  [Procedura: Caricare assembly in un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Viene descritto come caricare un assembly in un dominio dell'applicazione.  
   
- [Procedura: Reperire informazioni su tipo e membro da un assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [Procedura: Reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
  Viene descritto come recuperare informazioni su un assembly.  
   
  [Creazione di copie replicate di assembly](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
@@ -45,7 +45,7 @@ I domini dell'applicazione offrono un'unità di isolamento per Common Language R
  [Procedura: Ricevere notifiche di eccezioni first-chance](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Viene spiegato come è possibile ricevere una notifica della generazione di un'eccezione, prima che Common Language Runtime abbia iniziato la ricerca di gestori di eccezioni.  
   
- [Risoluzione caricamenti assembly](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
+ [Risoluzione caricamenti assembly](../../standard/assembly/resolve-loads.md)  
  Vengono offerte indicazioni sull'uso dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per risolvere gli errori di caricamento di assembly.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -53,10 +53,10 @@ I domini dell'applicazione offrono un'unità di isolamento per Common Language R
  Rappresenta un dominio dell'applicazione. Offre metodi per creare e controllare i domini dell'applicazione.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assembly in .NET](../../standard/assembly/index.md)  
  Viene offerta una panoramica delle funzioni svolte dagli assembly.  
   
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programmazione con gli assembly](../../standard/assembly/program.md)  
  Descrive come creare, firmare e impostare attributi sugli assembly.  
   
  [Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

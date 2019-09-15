@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778339"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972229"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: Scambiare messaggi in coda con endpoint WCF
-Le code garantiscono che la messaggistica affidabile può verificarsi tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Le procedure seguenti illustrano come assicurare una comunicazione durevole tra un client e un servizio utilizzando lo standard di associazione in coda quando si implementa il servizio WCF.  
+Le code assicurano che la messaggistica affidabile possa essere eseguita tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Nelle procedure riportate di seguito viene illustrato come garantire la comunicazione durevole tra un client e un servizio utilizzando l'associazione in coda standard durante l'implementazione del servizio WCF.  
   
- In questa sezione illustra come usare <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione in coda tra un client WCF e un servizio WCF.  
+ In questa sezione viene illustrato come <xref:System.ServiceModel.NetMsmqBinding> utilizzare per la comunicazione in coda tra un client WCF e un servizio WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Per utilizzare l'accodamento in un servizio WCF  
   
@@ -41,7 +41,7 @@ Le code garantiscono che la messaggistica affidabile può verificarsi tra un cli
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5. Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. Per altre informazioni sull'uso di configurazione WCF, vedere [servizi di configurazione WCF](../configuring-services.md).  
+5. Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. Per ulteriori informazioni sull'utilizzo della configurazione WCF, vedere [configurazione dei servizi WCF](../configuring-services.md).  
 
 6. Creare un host per il servizio `OrderProcessing` utilizzando l'elemento <xref:System.ServiceModel.ServiceHost> che legge i messaggi dalla coda e li elabora. Aprire l'host del servizio per rendere disponibile il servizio. Visualizzare un messaggio che indichi all'utente di premere un tasto qualsiasi per terminare il servizio. Chiamare `ReadLine` per attendere che il tasto venga premuto, quindi chiudere il servizio.  
   
@@ -50,15 +50,15 @@ Le code garantiscono che la messaggistica affidabile può verificarsi tra un cli
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Per creare un client per il servizio in coda  
   
-1. Nell'esempio seguente viene illustrato come eseguire l'applicazione host e utilizzare lo strumento Svcutil.exe per creare il client WCF.  
+1. Nell'esempio seguente viene illustrato come eseguire l'applicazione host e utilizzare lo strumento Svcutil. exe per creare il client WCF.  
   
-    ```  
+    ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
 2. Definire un <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard, come illustrato nell'esempio seguente.  
 
-3. Creare un ambito di transazione da scrivere nella coda transazionale, chiamata di `SubmitPurchaseOrder` operazione e chiudere il client WCF, come illustrato nell'esempio seguente.  
+3. Creare un ambito di transazione per scrivere nella coda transazionale, chiamare l' `SubmitPurchaseOrder` operazione e chiudere il client WCF, come illustrato nell'esempio seguente.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -80,7 +80,7 @@ Le code garantiscono che la messaggistica affidabile può verificarsi tra un cli
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Procedura: Scambiare messaggi con gli endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

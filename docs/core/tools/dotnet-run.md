@@ -2,22 +2,24 @@
 title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202803"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969756"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.
 
 ## <a name="synopsis"></a>Riepilogo
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -44,7 +46,7 @@ dotnet run [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando. Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando. Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice. I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965267"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972100"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: Creazione di listener di log personalizzati (Visual Basic)
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
@@ -33,7 +33,7 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
  Per assicurarsi che `My.Application.Log` usi il listener di log, assegnare un nome sicuro all'assembly che contiene il listener di log.  
   
- La procedura seguente prevede alcuni semplici passaggi per la creazione di un assembly di listener di log con nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ La procedura seguente prevede alcuni semplici passaggi per la creazione di un assembly di listener di log con nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../../standard/assembly/create-use-strong-named.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Per assegnare un nome sicuro all'assembly di listener di log  
   

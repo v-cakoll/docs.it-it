@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f819f60d6c5d5cf78f223e5cdf98ffa51f22692
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593670"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971763"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
@@ -27,31 +27,31 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 - [Procedura: Caricare assembly in un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
   
-- [Procedura: Reperire informazioni su tipo e membro da un assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+- [Procedura: Reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
   
  **Assembly**  
   
-- [Procedura: Determinare il nome completo di un assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [Procedura: Determinare il nome completo di un assembly](../../standard/assembly/find-fully-qualified-name.md)  
   
-- [Procedura: Compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+- [Procedura: Compilare un assembly su singolo file](build-single-file-assembly.md)  
   
-- [Procedura: Compilare un assembly con più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+- [Procedura: Compilare un assembly con più file](build-multifile-assembly.md)  
   
-- [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Procedura: Creare una coppia di chiavi pubblica/privata](../../standard/assembly/create-public-private-key-pair.md)  
   
-- [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)  
   
-- [Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
+- [Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../standard/assembly/reference-strong-named.md)  
   
-- [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+- [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [Procedura: Installare un assembly nella Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+- [Procedura: Installare un assembly nella Global Assembly Cache](install-assembly-into-gac.md)  
   
 - [Procedura: Visualizzare il contenuto della Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
   
 - [Procedura: Rimuovere un assembly dalla Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
-- [Procedura: Visualizzare il contenuto degli assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Procedura: Visualizzare il contenuto degli assembly](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

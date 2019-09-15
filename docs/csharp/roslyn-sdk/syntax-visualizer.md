@@ -3,12 +3,12 @@ title: Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual St
 description: Il visualizzatore di sintassi è uno strumento visivo che consente di esaminare i modelli che .NET Compiler Platform SDK genera per il codice.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926790"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972021"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Esplorare il codice con il visualizzatore di sintassi Roslyn in Visual Studio
 
@@ -29,6 +29,8 @@ Questo comando apre il visualizzatore di sintassi sotto forma di finestra degli 
 Ancorare questa finestra degli strumenti in una posizione appropriata all'interno di Visual Studio, ad esempio sul lato sinistro. Il visualizzatore offre le informazioni sul file di codice corrente.
 
 Creare un nuovo progetto usando il comando **File** > **Nuovo progetto**. È possibile creare sia progetti Visual Studio sia C#. Quando Visual Studio apre il file di codice principale di questo progetto, il visualizzatore ne visualizza l'albero della sintassi. È possibile aprire qualsiasi esistente c# / VB file in questa istanza di Visual Studio e il Visualizzatore Visualizza albero della sintassi del file. Se in Visual Studio sono aperti più file di codice, viene visualizzato l'albero della sintassi del file di codice attualmente attivo, vale a dire il file di codice con lo stato attivo.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizzazione di un albero della sintassi di C#](media/syntax-visualizer/visualize-csharp.png)

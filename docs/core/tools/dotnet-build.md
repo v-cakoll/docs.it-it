@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168066"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988528"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -17,7 +17,7 @@ ms.locfileid: "70168066"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet build`: consente di compilare un progetto e tutte le relative dipendenze.
 
@@ -25,7 +25,7 @@ ms.locfileid: "70168066"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -94,13 +94,13 @@ File di progetto o di soluzione da compilare. Se non viene specificato alcun fil
 
   Contrassegna la compilazione come non sicura per la compilazione incrementale. Questo flag disattiva la compilazione incrementale e impone una ricompilazione pulita del grafico delle dipendenze del progetto.
 
-* **`--no-logo`**
-
-  Non visualizza il messaggio di avvio né il messaggio di copyright. Disponibile a partire da .NET Core 3.0 SDK.
-
 * **`--no-restore`**
 
   Non esegue un ripristino implicito durante la compilazione. Disponibile a partire da .NET Core 2.0 SDK.
+
+* **`--nologo`**
+
+  Non visualizza il messaggio di avvio né il messaggio di copyright. Disponibile a partire da .NET Core 3.0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

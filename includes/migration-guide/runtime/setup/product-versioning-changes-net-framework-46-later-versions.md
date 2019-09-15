@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fca31a98c2dd3427501b3c6bfe4f52fcec086709
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: a02887327390afb6859c0d5f78a8875bff9539e6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67858371"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997641"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>Modifiche apportate al controllo delle versioni del prodotto in .NET Framework 4.6 e versioni successive
 
@@ -15,4 +15,3 @@ ms.locfileid: "67858371"
 |Ambito|Secondario|
 |Versione|4.6|
 |Tipo|Runtime|
-

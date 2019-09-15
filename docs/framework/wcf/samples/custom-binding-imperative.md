@@ -2,12 +2,12 @@
 title: Codice imperativo per associazioni personalizzate
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045658"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990032"
 ---
 # <a name="custom-binding-imperative"></a>Codice imperativo per associazioni personalizzate
 Nell'esempio viene illustrato come scrivere codice imperativo per definire e utilizzare associazioni personalizzate senza utilizzare un file di configurazione o un client generato da Windows Communication Foundation (WCF). Questo esempio combina le funzionalità fornite dal trasporto HTTP e il canale di sessione attendibile per creare un'associazione basata su HTTP attendibile. Questo esempio si basa sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

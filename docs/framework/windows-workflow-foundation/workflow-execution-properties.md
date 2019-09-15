@@ -2,12 +2,12 @@
 title: Proprietà di esecuzione del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913603"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988594"
 ---
 # <a name="workflow-execution-properties"></a>Proprietà di esecuzione del flusso di lavoro
 Tramite l'archiviazione thread-local (TLS), CLR gestisce un contesto di esecuzione per ogni thread. Questo contesto di esecuzione determina le proprietà note dei thread quali l'identità del thread, la transazione di ambiente e il set di autorizzazioni corrente oltre alle proprietà del thread definite dall'utente come gli slot denominati.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  Quando il flusso di lavoro viene richiamato, l'output seguente viene scritto nella finestra della console.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

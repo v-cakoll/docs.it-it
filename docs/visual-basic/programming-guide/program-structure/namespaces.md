@@ -16,34 +16,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd7ac0487a5878122d9b1717a5e5fc8bf21a4ea7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586292"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972046"
 ---
 # <a name="namespaces-in-visual-basic"></a>Spazi dei nomi in Visual Basic
 Gli spazi dei nomi organizzano gli oggetti definiti in un assembly. Gli assembly possono contenere più spazi dei nomi, che a loro volta possono contenere altri spazi dei nomi. Gli spazi dei nomi consentono di evitare problemi di ambiguità e di semplificare i riferimenti quando si usano gruppi di oggetti di grandi dimensioni, ad esempio librerie di classi.  
   
- Ad esempio, .NET Framework definisce il <xref:System.Windows.Forms.ListBox> classe la <xref:System.Windows.Forms?displayProperty=nameWithType> dello spazio dei nomi. Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
+ Ad esempio, il .NET Framework definisce la <xref:System.Windows.Forms.ListBox> classe <xref:System.Windows.Forms?displayProperty=nameWithType> nello spazio dei nomi. Il frammento di codice seguente illustra come dichiarare una variabile usando il nome completo per questa classe:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitare conflitti di nomi  
- Gli spazi dei nomi .NET framework risolvere un problema, talvolta chiamato *inquinamento dello spazio dei nomi*, in cui lo sviluppatore di una libreria di classi è complicato dall'uso di nomi simili in un'altra libreria. Questi conflitti con i componenti esistenti sono talvolta denominati *conflitti di nomi*.  
+ .NET Framework gli spazi dei nomi risolvono un problema talvolta denominato *inquinamento dello spazio dei nomi*, in cui lo sviluppatore di una libreria di classi è ostacolato dall'uso di nomi simili in un'altra libreria. Questi conflitti con i componenti esistenti sono talvolta denominati *conflitti di nomi*.  
   
- Se, ad esempio, si crea una nuova classe denominata `ListBox`, è possibile usarla all'interno del progetto senza qualificazione. Tuttavia, se si desidera usare .NET Framework <xref:System.Windows.Forms.ListBox> classe nello stesso progetto, è necessario usare un riferimento completo per rendere univoco il riferimento. Se il riferimento non è univoco, Visual Basic genera un errore che informa che il nome è ambiguo. L'esempio di codice seguente illustra come dichiarare questi oggetti:  
+ Se, ad esempio, si crea una nuova classe denominata `ListBox`, è possibile usarla all'interno del progetto senza qualificazione. Tuttavia, se si vuole usare la classe .NET Framework <xref:System.Windows.Forms.ListBox> nello stesso progetto, è necessario usare un riferimento completo per rendere univoco il riferimento. Se il riferimento non è univoco, Visual Basic genera un errore che informa che il nome è ambiguo. L'esempio di codice seguente illustra come dichiarare questi oggetti:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- La figura seguente mostra due gerarchie dello spazio dei nomi, entrambi contenenti un oggetto denominato `ListBox`:  
+ Nella figura seguente sono illustrate due gerarchie dello spazio dei nomi, `ListBox`entrambe contenenti un oggetto denominato:  
   
  ![Screenshot che mostra due gerarchie dello spazio dei nomi.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  Per impostazione predefinita, ogni file eseguibile creato con Visual Basic contiene uno spazio dei nomi con lo stesso nome del progetto. Se, ad esempio, si definisce un oggetto all'interno di un progetto denominato `ListBoxProject`, il file eseguibile ListBoxProject.exe conterrà uno spazio dei nomi chiamato `ListBoxProject`.  
   
- Più assembly possono usare lo stesso spazio dei nomi. Visual Basic li gestisce come un singolo set di nomi. È ad esempio possibile definire classi per uno spazio dei nomi chiamato `SomeNameSpace` in un assembly denominato `Assemb1`e altre classi per lo stesso spazio dei nomi da un assembly denominato `Assemb2`.  
+ Più assembly possono usare lo stesso spazio dei nomi. Visual Basic li considera come un singolo set di nomi. È ad esempio possibile definire classi per uno spazio dei nomi chiamato `SomeNameSpace` in un assembly denominato `Assemb1`e altre classi per lo stesso spazio dei nomi da un assembly denominato `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>nomi completi  
  I nomi completi sono riferimenti a oggetti preceduti dal nome dello spazio dei nomi in cui è definito l'oggetto. È possibile usare gli oggetti definiti in altri progetti se si crea un riferimento alla classe (scegliendo **Aggiungi riferimento** dal menu **Progetto** ) e quindi usare il nome completo per l'oggetto nel codice. Il frammento di codice seguente mostra come usare il nome completo per un oggetto dallo spazio dei nomi di un altro progetto:  
@@ -60,7 +60,7 @@ Gli spazi dei nomi organizzano gli oggetti definiti in un assembly. Gli assembly
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- Se si prova a usare `Class1` senza definirlo in modo completo, Visual Basic genera un errore che informa che il nome `Class1` è ambiguo.  
+ Se si tenta di utilizzare `Class1` senza la qualifica completa, Visual Basic genera un errore che informa che il nome `Class1` è ambiguo.  
   
 ## <a name="namespace-level-statements"></a>Istruzioni a livello di spazio dei nomi  
  All'interno di uno spazio dei nomi è possibile definire elementi quali moduli, interfacce, classi, delegati, enumerazioni, strutture e altri spazi dei nomi. Non è invece possibile definire elementi come proprietà, routine, variabili ed eventi a livello di spazio dei nomi. Questi elementi devono essere dichiarati all'interno di contenitori quali moduli, strutture o classi.  
@@ -124,7 +124,6 @@ End Namespace
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [Assembly in .NET](../../../standard/assembly/index.md)
-- [Procedura: Creare e usare assembly dalla riga di comando](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
-- [Riferimenti e istruzione Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Scrittura di codice nelle soluzioni Office](/visualstudio/vsto/writing-code-in-office-solutions) 
+- [Riferimenti e istruzione Imports](references-and-the-imports-statement.md)
+- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Scrittura di codice nelle soluzioni Office](/visualstudio/vsto/writing-code-in-office-solutions)

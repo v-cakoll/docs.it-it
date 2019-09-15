@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 419b32f2a460ca153d28206524a38c7c9fa86173
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929390"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991359"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Caricare i dati da file e altre origini
 
@@ -33,7 +33,7 @@ public class HousingData
 {
     [LoadColumn(0)]
     public float Size { get; set; }
- 
+
     [LoadColumn(1, 3)]
     [VectorType(3)]
     public float[] HistoricalPrices { get; set; }
@@ -53,7 +53,7 @@ L'attributo [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) specifica
 > [!IMPORTANT]
 > L'attributo [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) è necessario solo per caricare dati da un file.
 
-Caricare le colonne come: 
+Caricare le colonne come:
 
 - Colonne singole come `Size` e `CurrentPrices` nella classe `HousingData`.
 - Più colonne contemporaneamente sotto forma di vettore come `HistoricalPrices` nella classe `HousingData`.
@@ -108,7 +108,7 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 ## <a name="load-data-from-a-relational-database"></a>Caricare dati da un database relazionale
 
 > [!NOTE]
-> DatabaseLoader è attualmente in versione di anteprima. Può essere usato facendo riferimento ai pacchetti NuGet [Microsoft. ml. Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) e [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) . 
+> DatabaseLoader è attualmente in versione di anteprima. Può essere usato facendo riferimento ai pacchetti NuGet [Microsoft. ml. Experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) e [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) .
 
 ML.NET supporta il caricamento di dati da un'ampia gamma di database relazionali supportati da [`System.Data`](xref:System.Data) che includono SQL Server, database SQL di Azure, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 e molti altri.
 
@@ -142,7 +142,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Definire la stringa di connessione, nonché il comando SQL da eseguire nel database e creare un' `DatabaseSource` istanza. In questo esempio viene utilizzato un database SQL Server database locale con un percorso di file. Tuttavia, DatabaseLoader supporta qualsiasi altra stringa di connessione valida per i database in locale e nel cloud.  
+Definire la stringa di connessione, nonché il comando SQL da eseguire nel database e creare un' `DatabaseSource` istanza. In questo esempio viene utilizzato un database SQL Server database locale con un percorso di file. Tuttavia, DatabaseLoader supporta qualsiasi altra stringa di connessione valida per i database in locale e nel cloud.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -196,7 +196,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 Caricare la raccolta in memoria in un'interfaccia [`IDataView`](xref:Microsoft.ML.IDataView) con il metodo [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) presuppone che l'oggetto [`IEnumerable`](xref:System.Collections.IEnumerable) da cui viene caricato sia di tipo thread-safe. 
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) presuppone che l'oggetto [`IEnumerable`](xref:System.Collections.IEnumerable) da cui viene caricato sia di tipo thread-safe.
 
 ```csharp
 // Create MLContext

@@ -2,12 +2,12 @@
 title: Reflection (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 9b4322d83ad43cd3e49647df49c15bb5c917e1be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7906ca6f02a369e6f4d51f11f96616b6a89f48c5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924096"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971669"
 ---
 # <a name="reflection-c"></a>Reflection (C#)
 La reflection specifica oggetti di tipo <xref:System.Type> che descrivono assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà. Se si usano attributi nel codice, la reflection consente di accedervi. Per altre informazioni, vedere [Attributi](../../../standard/attributes/index.md).  
@@ -67,4 +67,4 @@ System.Console.WriteLine(info);
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [Assembly in Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assembly in .NET](../../../standard/assembly/index.md)

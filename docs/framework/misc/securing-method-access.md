@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206118"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971047"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,7 +28,7 @@ ms.locfileid: "70206118"
   
  Il codice gestito offre diversi modi per limitare l'accesso ai metodi:  
   
-- Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non dedurre attendibilità dalla parolachiave Protected, che non viene necessariamente utilizzata nel contesto di sicurezza.  
+- Limitare l'ambito di accessibilità alla classe, all'assembly o alle classi derivate, se possono essere attendibili. Questo è il modo più semplice per limitare l'accesso del metodo. Si noti che, in generale, le classi derivate possono essere meno affidabili rispetto alla classe da cui derivano, anche se in alcuni casi condividono l'identità della classe padre. In particolare, non dedurre attendibilità dalla parola chiave **protected**, che non viene necessariamente utilizzata nel contesto di sicurezza.  
   
 - Limitare l'accesso al metodo ai chiamanti di un'identità specificata, sostanzialmente, qualsiasi [evidenza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) particolare (nome sicuro, autore, zona e così via) scelta.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70206118"
   
 - Richiedere le classi derivate che eseguono l'override di metodi specifici per ottenere un'identità o autorizzazione specificata.  
   
- L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> In questo esempio viene utilizzato con una **richiesta** per il nome sicuro. Per informazioni basate su attività su come firmare un assembly con un nome sicuro, vedere [creazione e uso di assembly con nome sicuro](../app-domains/create-and-use-strong-named-assemblies.md).  
+ L'esempio seguente illustra come proteggere una classe pubblica per l'accesso limitato richiedendo che i chiamanti siano firmati con un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> In questo esempio viene utilizzato con una **richiesta** per il nome sicuro. Per informazioni basate su attività su come firmare un assembly con un nome sicuro, vedere [creazione e uso di assembly con nome sicuro](../../standard/assembly/create-use-strong-named.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  

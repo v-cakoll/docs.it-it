@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03a5594b689a52b641ecece0f9a92fb6cdfe5735
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61819704"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991279"
 ---
 # <a name="dates-times-and-time-zones"></a>Date, ore e fusi orari
 
@@ -24,7 +24,7 @@ Oltre alla struttura di base <xref:System.DateTime>, .NET fornisce le classi seg
 
 * <xref:System.TimeZone>
 
-  Usare questa classe con il fuso orario locale del sistema e il fuso UTC (Coordinated Universal Time). La funzionalità della classe <xref:System.TimeZone> è ampiamente sostituita dalla classe <xref:System.TimeZoneInfo>.
+  Usare questa classe con il fuso orario locale del sistema e il fuso UTC (Coordinated Universal Time). La funzionalità della <xref:System.TimeZone> classe è ampiamente sostituita <xref:System.TimeZoneInfo> dalla classe.
 
 * <xref:System.TimeZoneInfo>
 
@@ -44,35 +44,35 @@ Questa sezione della documentazione include le informazioni necessarie per usare
 
 [Ricerca dei fusi orari definiti in un sistema locale](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) Descrive come enumerare i fusi orari disponibili in un sistema locale.
 
-[Procedura: Enumerare i fusi orari presenti in un computer](../../../docs/standard/datetime/enumerate-time-zones.md) vengono forniti esempi che enumerano i fusi orari definiti nel Registro di sistema del computer e che consentono agli utenti di selezionare un fuso orario predefinito da un elenco.
+[Procedura: Enumerare i fusi orari presenti in](../../../docs/standard/datetime/enumerate-time-zones.md) un computer fornisce esempi che enumerano i fusi orari definiti nel registro di sistema di un computer e che consentono agli utenti di selezionare un fuso orario predefinito da un elenco.
 
-[Procedura: Accedere ora UTC e l'ora locale zona agli oggetti predefiniti](../../../docs/standard/datetime/access-utc-and-local.md) viene descritto come accedere all'ora UTC e il fuso orario locale.
+[Procedura: Accedere agli oggetti](../../../docs/standard/datetime/access-utc-and-local.md) predefiniti dell'ora UTC e del fuso orario locale descrive come accedere all'ora UTC e al fuso orario locale.
 
-[Procedura: Creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md) descrive come creare un'istanza di un <xref:System.TimeZoneInfo> oggetto dal Registro di sistema locale.
+[Procedura: Creare un'istanza di un](../../../docs/standard/datetime/instantiate-time-zone-info.md) oggetto TimeZoneInfo descrive come creare un' <xref:System.TimeZoneInfo> istanza di un oggetto dal registro di sistema locale.
 
 [Creazione di un'istanza di un oggetto DateTimeOffset](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md) Illustra i modi per creare un'istanza di un oggetto <xref:System.DateTimeOffset> e i modi per convertire un valore <xref:System.DateTime> in un valore <xref:System.DateTimeOffset>.
 
-[Procedura: Creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) viene descritto come creare un fuso orario personalizzato che non supporta la transizione alla e dall'ora legale.
+[Procedura: Crea fusi orari senza regole](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) di regolazione descrive come creare un fuso orario personalizzato che non supporta la transizione da e verso l'ora legale.
 
-[Procedura: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) viene descritto come creare un fuso orario personalizzato che supporta uno o più transizioni da e verso l'ora legale.
+[Procedura: Creare fusi orari con regole](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) di regolazione descrive come creare un fuso orario personalizzato che supporta una o più transizioni da e verso l'ora legale.
 
 [Salvataggio e ripristino dei fusi orari](../../../docs/standard/datetime/saving-and-restoring-time-zones.md) Descrive il supporto <xref:System.TimeZoneInfo> per la serializzazione e deserializzazione dei dati del fuso orario e illustra alcuni degli scenari in cui è possibile usare tali funzionalità.
 
-[Procedura: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) viene descritto come creare un fuso orario personalizzato e salvare le informazioni in un file di risorse.
+[Procedura: Salva fusi orari in una risorsa](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) incorporata descrive come creare un fuso orario personalizzato e salvare le informazioni in un file di risorse.
 
-[Procedura: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) viene descritto come creare un'istanza di fusi orari personalizzati che sono stati salvati in un file di risorsa incorporata.
+[Procedura: Ripristina fusi orari da una risorsa](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) incorporata descrive come creare un'istanza di fusi orari personalizzati che sono stati salvati in un file di risorse incorporato.
 
 [Esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md) Descrive i problemi relativi ad aggiunta, sottrazione e confronto dei valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.
 
-[Procedura: Usare fusi orari nella data e ora aritmetico](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) illustra come eseguire la data e ora aritmetico che riflettano le regole di regolazione del fuso orario.
+[Procedura: Usare fusi orari nell'aritmetica](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) di data e ora illustra come eseguire operazioni aritmetiche di data e ora che riflettano le regole di rettifica del fuso orario.
 
 [Conversione tra DateTime e DateTimeOffset](../../../docs/standard/datetime/converting-between-datetime-and-offset.md) Descrive come eseguire la conversione tra i valori <xref:System.DateTime> e <xref:System.DateTimeOffset>.
 
 [Conversione degli orari tra fusi orari](../../../docs/standard/datetime/converting-between-time-zones.md) Descrive come eseguire la conversione di ore tra un fuso orario e un altro.
 
-[Procedura: Risolvere orari ambigui](../../../docs/standard/datetime/resolve-ambiguous-times.md) descrive come risolvere un orario ambiguo eseguendone il mapping all'ora solare del fuso orario.
+[Procedura: Risolvi orari](../../../docs/standard/datetime/resolve-ambiguous-times.md) ambigui descrive come risolvere un orario ambiguo eseguendone il mapping all'ora solare del fuso orario.
 
-[Procedura: Consentire agli utenti di risolvere orari ambigui](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) viene descritto come consentire agli utenti di determinare il mapping tra un'ora locale ambigua e l'ora UTC.
+[Procedura: Consentire agli utenti di risolvere](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) orari ambigui descrive come consentire a un utente di determinare il mapping tra un'ora locale ambigua e l'ora UTC (Coordinated Universal Time).
 
 ## <a name="reference"></a>Riferimenti
 

@@ -5,18 +5,20 @@ author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 07/13/2019
-ms.openlocfilehash: 4e0570beb0dd096d7d11cdcfb6a7ed20221c0386
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d391c18a371d721419c298f2987894f16ecbd169
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848950"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969917"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Prerequisiti per .NET Core in macOS
 
 Questo articolo illustra le versioni macOS supportate e le dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer macOS. Le versioni del sistema operativo e le dipendenze indicate di seguito sono valide per le tre modalità di sviluppo di app .NET Core in ambiente Mac: tramite la [riga di comando con l'editor preferito](tutorials/using-with-xplat-cli.md), con [Visual Studio Code](https://code.visualstudio.com/) e con [Visual Studio per Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link).
 
 ## <a name="supported-macos-versions"></a>Versioni macOS supportate
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

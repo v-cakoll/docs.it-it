@@ -2,12 +2,12 @@
 title: Attività personalizzata SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038106"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988987"
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. L'attività personalizzata usa le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare posta elettronica in modo asincrono e per inviare messaggi di posta elettronica con l'autenticazione di. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di rilascio di prova.  
@@ -47,7 +47,7 @@ In questo esempio viene illustrato come creare un'attività personalizzata che d
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Invio di un messaggio di posta elettronica usando token specificati nel corpo del messaggio  
  In questo frammento di codice viene illustrato come è possibile inviare messaggi di posta elettronica nel cui corpo sono presenti token. Si noti il modo in cui i token vengono specificati nella proprietà Body. I valori per tali token vengono specificati nella proprietà Token.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Invio di un messaggio di posta elettronica tramite un modello  
  In questo frammento di codice viene illustrato come inviare un messaggio di posta elettronica usando un token del modello nel corpo. Si noti che quando si imposta la proprietà `BodyTemplateFilePath` non è necessario specificare il valore per la proprietà Body (il contenuto del file modello verrà copiato nel corpo).  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Invio di messaggi di posta elettronica in modalità test  
  Questo frammento di codice Mostra come impostare le due proprietà di test: `TestMailTo` impostando su tutti i messaggi verranno `john.doe@contoso.con` inviati a (senza considerare i valori di a, CC, Ccn). Se si imposta TestDropPath, tutti i messaggi di posta elettronica in uscita verranno inoltre salvati nel percorso specificato. È possibile impostare queste proprietà in modo indipendente l'una dall'altra perché non sono correlate.  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  

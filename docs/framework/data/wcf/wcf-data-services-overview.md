@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790233"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991108"
 ---
 # <a name="wcf-data-services-overview"></a>Panoramica di WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]consente la creazione e l' [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]utilizzo di servizi dati per il Web o una Intranet tramite. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]consente di esporre i dati come risorse indirizzabili tramite URI. In questo modo è possibile accedere ai dati e modificarli utilizzando la semantica REST (Representational State Transfer), in particolare i verbi GET, PUT, POST e DELETE standard HTTP. Questo argomento offre cenni preliminari sia sui modelli che sulle pratiche definiti da [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e fornisce informazioni sulle funzioni disponibili in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che consentono di utilizzare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] nelle applicazioni basate su .NET Framework.  
@@ -18,9 +18,9 @@ ms.locfileid: "70790233"
 ## <a name="address-data-as-resources"></a>Indirizzare i dati come risorse  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] espone i dati come risorse indirizzabili tramite URI. I percorsi delle risorse vengono creati in base alle convenzioni entità-relazione di Entity Data Model. In questo modello le entità rappresentano unità operative di dati in un dominio applicazione, ad esempio clienti, ordini, elementi e prodotti. Per ulteriori informazioni, vedere [Entity Data Model](../adonet/entity-data-model.md).  
   
- In [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] le risorse di entità vengono indirizzate come set di entità contenenti istanze dei tipi di entità. Ad esempio, l'URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` restituisce tutti gli ordini `Northwind` del servizio dati correlati al cliente con un `CustomerID` valore di`ALFKI.`  
+ In [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] le risorse di entità vengono indirizzate come set di entità contenenti istanze dei tipi di entità. Ad esempio, l'URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> restituisce tutti gli ordini `Northwind` del servizio dati correlati al cliente con un `CustomerID` valore di`ALFKI.`  
   
- Le espressioni di query consentono di eseguire operazioni di query tradizionali, quali filtro, ordinamento e paging, sulle risorse. L'URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` filtra ad esempio le risorse in modo da restituire solo gli ordini con un costo di spedizione superiore a 50 dollari. Per ulteriori informazioni, vedere [accesso alle risorse del servizio dati](accessing-data-service-resources-wcf-data-services.md).  
+ Le espressioni di query consentono di eseguire operazioni di query tradizionali, quali filtro, ordinamento e paging, sulle risorse. Ad esempio, l'URI <https://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI")/Orders? $Filter = Freight gt 50 > Filtra le risorse per restituire solo gli ordini con un costo di spedizione superiore a $50. Per ulteriori informazioni, vedere [accesso alle risorse del servizio dati](accessing-data-service-resources-wcf-data-services.md).  
   
 ## <a name="interoperable-data-access"></a>Accesso ai dati interoperativo  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]si basa su protocolli Internet standard per rendere interoperabili i servizi dati con applicazioni che non usano la .NET Framework. Poiché è possibile usare gli URI standard per indirizzare i dati, l'applicazione può accedere ai dati e modificarli usando la semantica REST (Representational State Transfer), in particolare i verbi HTTP standard di GET, PUT, POST e DELETE. In questo modo è possibile accedere a questi servizi da qualsiasi client in grado di analizzare e di accedere ai dati trasmessi su protocolli HTTP standard.  

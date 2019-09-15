@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 2f651b68d845e062ad950bb626e30c755d6d9df6
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: f1147bf090af23c2f27bac14ab895657ccee60e3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169158"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991552"
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono introdotti i problemi che è necessario conoscere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] quando si scrivono applicazioni per il mercato globale. Gli elementi di programmazione della globalizzazione sono definiti in .NET <xref:System.Globalization> nello spazio dei nomi.
@@ -39,7 +39,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 ### <a name="encoding"></a>Codifica
  La codifica supportata da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sono ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 e UTF-8. L'istruzione Encoding si trova all'inizio del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] documento. Se non esiste alcun attributo di codifica né un ordine dei byte, il parser userà il valore predefinito UTF-8. UTF-8 e UTF-16 sono i tipi di codifica preferiti. UTF-7 non è supportato. Nell'esempio seguente viene illustrato come specificare una codifica UTF-8 in un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file.
 
-```
+```xaml
 ?xml encoding="UTF-8"?
 ```
 
@@ -51,7 +51,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
  Nell'esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] seguente viene usato `fr-CA` l'attributo Language per specificare il francese canadese.
 
-```xml
+```xaml
 <TextBlock xml:lang="fr-CA">Découvrir la France</TextBlock>
 ```
 
@@ -173,7 +173,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
  Per risolvere il problema, è necessario impostare l'attributo di fallback su una lingua neutra. Uno sviluppatore di applicazioni può facoltativamente rimuovere risorse dall'assembly principale e specificare che le risorse sono disponibili in un assembly satellite corrispondente a impostazioni cultura specifiche. Per controllare questo processo <xref:System.Resources.NeutralResourcesLanguageAttribute>, usare. Il costruttore della <xref:System.Resources.NeutralResourcesLanguageAttribute> classe dispone di due firme, una che accetta un <xref:System.Resources.UltimateResourceFallbackLocation> parametro per <xref:System.Resources.ResourceManager> specificare il percorso in cui deve estrarre le risorse di fallback: assembly principale o assembly satellite. L'esempio seguente mostra come usare l'attributo. Per il percorso di fallback finale, il codice fa <xref:System.Resources.ResourceManager> in modo che l'oggetto cerchi le risorse nella sottodirectory "de" della directory dell'assembly attualmente in esecuzione.
 
-```
+```csharp
 [assembly: NeutralResourcesLanguageAttribute(
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```

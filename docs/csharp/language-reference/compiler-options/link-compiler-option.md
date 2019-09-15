@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4c96f7be5ac500886ea036c93b4651fa814ee58a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924754"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970100"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opzioni del compilatore C#)
 Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  
@@ -31,10 +31,10 @@ Indica al compilatore di rendere disponibili al progetto in fase di compilazione
   
 ## <a name="arguments"></a>Argomenti  
  `fileList`  
- Obbligatorio. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.  
+ Richiesto. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.  
   
-## <a name="remarks"></a>Osservazioni  
- L'opzione `-link`consente di distribuire un'applicazione in cui sono incorporate informazioni sul tipo. L'applicazione può quindi usare i tipi in un assembly di runtime che implementano le informazioni sul tipo incorporate senza dovere far riferimento all'assembly di runtime. Se vengono pubblicate diverse versioni dell'assembly di runtime, l'applicazione che contiene le informazioni sul tipo incorporate può funzionare con le diverse versioni senza che sia necessaria la ricompilazione. Per un esempio, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+## <a name="remarks"></a>Note  
+ L'opzione `-link`consente di distribuire un'applicazione in cui sono incorporate informazioni sul tipo. L'applicazione può quindi usare i tipi in un assembly di runtime che implementano le informazioni sul tipo incorporate senza dovere far riferimento all'assembly di runtime. Se vengono pubblicate diverse versioni dell'assembly di runtime, l'applicazione che contiene le informazioni sul tipo incorporate può funzionare con le diverse versioni senza che sia necessaria la ricompilazione. Per un esempio, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).  
   
  L'opzione `-link` è particolarmente utile quando si usa l'interoperabilità COM. È possibile incorporare tipi COM in modo che per l'applicazione non sia più necessario un assembly di interoperabilità primario nel computer di destinazione. L'opzione `-link` indica al compilatore di incorporare le informazioni sul tipo COM dall'assembly di interoperabilità a cui si fa riferimento nel codice compilato risultante. Il tipo COM viene identificato dal valore CLSID (GUID). Di conseguenza, l'applicazione può essere eseguita in un computer di destinazione in cui sono stati installati gli stessi tipi COM con gli stessi valori CLSID. Le applicazioni che consentono di automatizzare Microsoft Office costituiscono un valido esempio. Poiché applicazioni come Office mantengono in genere lo stesso valore CLSID in versioni diverse, l'applicazione può usare i tipi COM a cui si fa riferimento purché .NET Framework 4 o versioni successive sia installato nel computer di destinazione e l'applicazione usi metodi, proprietà o eventi inclusi nei tipi COM a cui si fa riferimento.  
   
@@ -84,7 +84,7 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 ## <a name="see-also"></a>Vedere anche
 
 - [Opzioni del compilatore C#](./index.md)
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
 - [-reference (opzioni del compilatore C#)](./reference-compiler-option.md)
 - [-noconfig (opzioni del compilatore C#)](./noconfig-compiler-option.md)
 - [Compilazione dalla riga di comando con csc.exe](./command-line-building-with-csc-exe.md)

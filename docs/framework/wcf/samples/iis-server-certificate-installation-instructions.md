@@ -2,12 +2,12 @@
 title: Istruzioni di installazione certificato server IIS (Internet Information Services)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 1bb9c8bb2fedc846f46f665fbfd00178e5c72975
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044915"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989860"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Istruzioni di installazione certificato server IIS (Internet Information Services)
 Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.  
@@ -15,7 +15,7 @@ Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Informat
 ## <a name="step-1-creating-certificates"></a>Passaggio 1. Creazione di certificati  
  Per creare un certificato per il computer, aprire un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire il file Setup. bat incluso in tutti gli esempi che usano la comunicazione protetta con IIS. Assicurarsi che il percorso includa la cartella contenente Makecert.exe prima di eseguire questo file batch. Il comando seguente viene utilizzato per creare il certificato nel file Setup.bat.  
   
-```  
+```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
@@ -49,7 +49,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 > [!IMPORTANT]
 > Questo codice è necessario solo per certificati di prova come ad esempio quelli creati da Makecert.exe. Non è una pratica consigliabile per il codice di produzione.  
   
-```  
+```csharp  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
@@ -76,6 +76,6 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 - Rimuovere il certificato del computer utilizzando il comando seguente.  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:443  
     ```

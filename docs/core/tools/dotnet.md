@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 06/04/2018
-ms.openlocfilehash: 8de6a6f7e584dc472dc23d60f113b03610abb3ef
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926234"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969784"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -18,6 +18,8 @@ ms.locfileid: "70926234"
 `dotnet`: uno strumento per la gestione dei file binari e del codice sorgente di .NET.
 
 ## <a name="synopsis"></a>Riepilogo
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -43,7 +45,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 `dotnet` è uno strumento per la gestione dei file binari e del codice sorgente di .NET. Espone i comandi che eseguono attività specifiche, come ad esempio [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md). Ogni comando definisce i propri argomenti. Digitare `--help` dopo ogni comando per accedere a una breve documentazione della Guida.
 

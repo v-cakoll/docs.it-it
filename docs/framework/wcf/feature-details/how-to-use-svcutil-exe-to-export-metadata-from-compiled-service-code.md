@@ -2,12 +2,12 @@
 title: 'Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932564"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991175"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato
 Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di dati in assembly compilati, come segue:  
@@ -30,7 +30,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
     > [!NOTE]
     > Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
-    ```  
+    ```console
     svcutil.exe Contracts.dll  
     ```  
   
@@ -58,7 +58,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
     > [!NOTE]
     > Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
-    ```  
+    ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
@@ -71,7 +71,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
     > [!NOTE]
     > Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
   
-    ```  
+    ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
@@ -80,26 +80,26 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
   
  Per esportare metadati per il contratto di servizio  
   
-```  
+```console  
 svcutil.exe Contracts.dll  
 ```  
   
  Per esportare metadati per i contratti dati.  
   
-```  
+```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
  Per esportare metadati per l'implementazione del servizio  
   
-```  
+```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
  `<path>` è il percorso di Contracts.dll.  
   
-```  
-// The following service contract and data contracts are compiled into   
+```csharp
+// The following service contract and data contracts are compiled into
 // Contracts.dll.  
 [ServiceContract(ConfigurationName="IPeopleFinder")]  
 public interface IPersonFinder  
@@ -133,8 +133,10 @@ public class Address
     [DataMember]  
     public Person person;  
 }  
-  
-// The following service implementation is compiled into Service.exe.     
+```
+
+```csharp
+// The following service implementation is compiled into Service.exe.
 // This service uses the contracts specified in Contracts.dll.  
 [ServiceBehavior(ConfigurationName = "MyService")]  
 public class MyService : IPersonFinder  
@@ -146,7 +148,9 @@ public class MyService : IPersonFinder
         return address;  
     }  
 }  
-  
+```
+
+```xml  
 <!-- The following is the configuration file for Service.exe. -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  

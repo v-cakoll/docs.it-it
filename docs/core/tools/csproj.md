@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397540"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969850"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -29,7 +29,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Suggerimenti
+### <a name="recommendations"></a>Consigli
 
 Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandard.Library` in modo implicito, ecco le procedure consigliate:
 
@@ -43,7 +43,7 @@ Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandar
 
 La maggior parte degli utilizzi di [`<PackageReference>`](#packagereference) richiede l'impostazione dell'attributo `Version` per specificare la versione del pacchetto NuGet da usare. Se però si usa .NET Core 2.1 o 2.2 e si fa riferimento a [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) o [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), l'attributo non è necessario. .NET Core SDK può selezionare automaticamente la versione dei pacchetti che deve essere usata.
 
-### <a name="recommendation"></a>Consiglio
+### <a name="recommendation"></a>Recommendation
 
 Quando si fa riferimento ai pacchetti `Microsoft.AspNetCore.App` o `Microsoft.AspNetCore.All`, non specificarne la versione. Se si specifica una versione, l'SDK potrebbe visualizzare l'avviso NETSDK1071. Per non visualizzare più questo avviso, rimuovere la versione del pacchetto come nell'esempio seguente:
 
@@ -74,7 +74,7 @@ La tabella seguente mostra gli elementi e i [GLOB](https://en.wikipedia.org/wiki
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (o altre estensioni del linguaggio) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
-| nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| Nessuna              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
 > Il criterio **GLOB Exclude** esclude sempre le cartelle `./bin` e `./obj`, rappresentate rispettivamente dalle proprietà MSBuild `$(BaseOutputPath)` e `$(BaseIntermediateOutputPath)`. Nel complesso, tutte le esclusioni sono rappresentate da `$(DefaultItemExcludes)`.
@@ -389,7 +389,7 @@ Elenco con valori delimitati da punto e virgola di coppie chiave=valore.
 
 ## <a name="assemblyinfo-properties"></a>Proprietà AssemblyInfo
 
-Gli [attributi dell'assembly](../../framework/app-domains/set-assembly-attributes.md) che in genere erano presenti in un file *AssemblyInfo* ora vengono automaticamente generati dalle proprietà.
+Gli [attributi dell'assembly](../../standard/assembly/set-attributes.md) che in genere erano presenti in un file *AssemblyInfo* ora vengono automaticamente generati dalle proprietà.
 
 ### <a name="properties-per-attribute"></a>Proprietà dei singoli attributi
 

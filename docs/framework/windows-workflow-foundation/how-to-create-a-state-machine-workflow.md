@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044393"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989821"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedura: Creare un flusso di lavoro della macchina a stati
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. Questo argomento illustra la creazione di un flusso di lavoro che usa sia attività predefinite, ad <xref:System.Activities.Statements.StateMachine> esempio l'attività, che le attività personalizzate della [procedura precedente: Creare un argomento](how-to-create-an-activity.md) di attività. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -86,7 +86,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 4. Tornare alla visualizzazione complessiva della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella parte superiore della finestra di progettazione del flusso di lavoro.  
   
-5. Trascinare un'attività **stato** dalla sezione **macchina a stati** della **casella degli strumenti** nella finestra di progettazione del flusso di lavoro e posizionarla sullo stato di destinazione dell' **inizializzazione** . Si noti che quattro triangoli verranno visualizzati intorno allo stato di inizializzazione della **destinazione** quando il nuovo stato si trova su di esso. Rilasciare il nuovo stato sul triangolo immediatamente sotto lo stato di inizializzazione della **destinazione** . In questo modo il nuovo stato viene posizionato sul flusso di lavoro e viene creata una transizione dallo stato di **destinazione** dell'inizializzazione al nuovo stato.  
+5. Trascinare un'attività **stato** dalla sezione **macchina a stati** della **casella degli strumenti** nella finestra di progettazione del flusso di lavoro e posizionarla sullo stato di destinazione dell' **inizializzazione** . Si noti che quattro triangoli verranno visualizzati intorno allo stato di **inizializzazione della destinazione** quando il nuovo stato si trova su di esso. Rilasciare il nuovo stato sul triangolo immediatamente sotto lo stato di **inizializzazione della destinazione** . In questo modo il nuovo stato viene posizionato sul flusso di lavoro e viene creata una transizione dallo stato di **destinazione dell'inizializzazione** al nuovo stato.  
   
 6. Fare clic su **state1** per selezionarlo, impostare DisplayName `Enter Guess`su, quindi fare doppio clic sullo stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
   
@@ -116,7 +116,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 15. Trascinare un'attività **ReadInt** dalla sezione **NumberGuessWorkflowActivities** della **casella degli strumenti** e rilasciarla nella sezione **trigger** della transizione.  
   
-16. Nella **finestra Proprietà** per l'attività **ReadInt** `"EnterGuess"` , digitare, incluse le virgolette, nella casella del valore della proprietà BookmarkName `Guess` e digitare nella casella valore proprietà **risultato**  
+16. Nella **finestra Proprietà** per l'attività **ReadInt** `"EnterGuess"` , digitare, incluse le virgolette, nella casella del valore della proprietà **BookmarkName** e digitare `Guess` nella casella valore proprietà **risultato**  
   
 17. Digitare l'espressione seguente nella casella del valore della proprietà **Condition** della transizione **Guess Correct** .  
   
@@ -141,7 +141,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     > [!NOTE]
     > Si noti che se <xref:System.Activities.Statements.Transition.Condition%2A> di una transizione restituisce `false` (o tutti gli stati di una transizione trigger condivisa restituiscono `false`), la transizione non si verificherà e tutti i trigger per tutte le transizioni dallo stato verranno rinviati. In questa esercitazione, questa situazione non può verificarsi a causa della modalità con cui le condizioni vengono configurate (esistono azioni specifiche per verificare se il valore indicato è corretto o errato).  
   
-20. Fare doppio clic sulla transizione Guess errata nella finestra di progettazione del flusso di lavoro per espanderla. Si noti che il **trigger** è già impostato sulla stessa attività **ReadInt** utilizzata dalla transizione Guess **Correct** .  
+20. Fare doppio clic sulla transizione **Guess errata** nella finestra di progettazione del flusso di lavoro per espanderla. Si noti che il **trigger** è già impostato sulla stessa attività **ReadInt** utilizzata dalla transizione **Guess Correct** .  
   
 21. Digitare l'espressione seguente nella casella del valore della proprietà **Condition** .  
   
@@ -157,21 +157,21 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 23. Digitare l'espressione seguente nella casella del valore della proprietà **Condition** dell'attività **if** .  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. Trascinare due attività **WriteLine** dalla sezione **primitive** della **casella degli strumenti** e rilasciarle in modo che una si trovi nella sezione **then** dell'attività **if** e una si trovi nella sezione **else** .  
   
 25. Fare clic sull'attività **WriteLine** nella sezione **then** per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** .  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. Fare clic sull'attività **WriteLine** nella sezione **else** per selezionarla e digitare l'espressione seguente nella casella del valore della proprietà **Text** .  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946369"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971354"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -37,7 +37,7 @@ al sources options
 
 È possibile specificare una o più `sources` tra quelle riportate di seguito.
 
-| Origine | DESCRIZIONE |
+| Source | DESCRIZIONE |
 | ------ | ----------- |
 |`file`[,`target`]|Copia il contenuto del modulo `file` nel nome file specificato da `target`. Al termine dell'operazione di copia, *Al.exe* compila `target` in un assembly.|
 |**/embed[risorse]:** `file`[,`name`[,`private`]]|Incorpora la risorsa specificata da `file` nell'immagine contenente il manifesto dell'assembly. *Al.exe* copia i contenuti di `file` nell'immagine eseguibile di tipo PE.<br /><br /> Il parametro `name` è un identificatore interno per la risorsa. Per impostazione predefinita nell'assembly le risorse sono pubbliche, ovvero visibili ad altri assembly. La specifica del parametro `private` rende le risorse non visibili ad altri assembly.<br /><br /> Se `file` è un file di risorse .NET Framework creato ad esempio dal [generatore di file di risorse (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri in <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* di <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.<br /><br /> Se ad *Al.exe* vengono passati solo file di risorse, il file di output sarà un assembly di risorse satellite.|
@@ -45,7 +45,7 @@ al sources options
 
 È possibile specificare le `options` seguenti. L'opzione **/out** è obbligatoria.
 
-| Opzione | DESCRIZIONE |
+| Opzione | Descrizione |
 | ------ | ----------- |
 |**/algid:** `id`|Specifica un algoritmo per generare un hash per tutti i file di un assembly su più file, ad eccezione del file contenente il manifesto dell'assembly. L'algoritmo predefinito è CALG_SHA1. Per altri algoritmi, vedere ALG_ID nella documentazione relativa a Platform SDK. Per la prima versione di .NET Framework sono validi solo gli algoritmi CALG_SHA1 e CALG_MD5.<br /><br /> I valori hash vengono archiviati nella tabella dei file del manifesto dell'assembly. In fase di installazione e caricamento i file dell'assembly vengono verificati rispetto ai valori hash.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) nel codice sorgente di qualsiasi modulo.|
 |**/base[address]:** `addr`|Specifica l'indirizzo in corrispondenza del quale caricare una DLL nel computer dell'utente in fase di esecuzione. Il caricamento delle applicazioni risulta più veloce se si specifica l'indirizzo di base delle DLL anziché lasciare al sistema operativo il compito di rilocare le DLL nello spazio di processo.|
@@ -73,13 +73,13 @@ al sources options
 |**/template:** `filename`|Specifica l'assembly, `filename`, dal quale ereditare tutti i metadati dell'assembly, ad eccezione del campo relativo alle impostazioni cultura.<br /><br /> Gli assembly creati con **/template** sono assembly satellite.|
 |**/title:** `text`|Specifica una stringa per il campo **Titolo** dell'assembly. Se `text` contiene uno spazio, racchiudere la stringa tra virgolette doppie (" "). Questa stringa è un attributo personalizzato dell'assembly ed è visualizzabile mediante reflection.<br /><br /> Se non si specifica **/win32res**, l'opzione **/title** viene visualizzata in Esplora file come risorsa **Descrizione** Win32 e usata dalla shell come nome descrittivo di un'applicazione. Viene visualizzata anche nel sottomenu **Apri con** del menu di scelta rapida dei tipi di file supportati da più applicazioni.<br /><br /> Se text è una stringa vuota, la risorsa **Descrizione** Win32 viene visualizzata come spazio singolo.<br /><br /> Se si specifica **/win32res**, **/title** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyTitleAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/trade[mark]:** `text`|Specifica una stringa per il campo **Marchio** dell'assembly. Se `text` contiene uno spazio, racchiudere la stringa tra virgolette doppie (" "). Questa stringa è un attributo personalizzato dell'assembly ed è visualizzabile mediante reflection.<br /><br /> Se non si specifica **/win32res**, l'opzione **/trademark** viene visualizzata in Esplora file come risorsa **Marchio** Win32.<br /><br /> Se text è una stringa vuota, la risorsa **Marchio** Win32 viene visualizzata come spazio singolo.<br /><br /> Se si specifica **/win32res**, **/trademark** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyTrademarkAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
-|**/v[ersion]:** `version`|Specifica le informazioni sulla versione dell'assembly. Il formato della stringa di versione è `major`.`minor`.`build`.`revision`. Il valore predefinito è 0.<br /><br /> Se si specifica **/version**, è necessario specificare anche `major`. Se si specifica `major` e `minor`, è possibile specificare un asterisco (\*) per `build`. In questo caso il valore `build` coinciderà con il numero dei giorni trascorsi dal 1 gennaio 2000, ora locale, e il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Se si specifica `major`, `minor` e `build`, è possibile specificare un asterisco per `revision`. In questo caso, il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Le stringhe di versione valide sono pertanto le seguenti:<br /><br /> x<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> dove X è una costante di tipo Unsigned Short diversa da 65535 (0-65534).<br /><br /> Se non si specifica **/win32res**, l'opzione **/version** viene usata come risorsa **Versione assembly** Win32.<br /><br /> Se non si specificano **/win32res**, **/productversion** e **/fileversion**, l'opzione **/version** viene usata per le risorse **Versione assembly**, Versione file e **Versione prodotto** Win32.<br /><br /> Se si specifica **/win32res**, **/version** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyVersionAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
+|**/v[ersion]:** `version`|Specifica le informazioni sulla versione dell'assembly. Il formato della stringa di versione è `major`.`minor`.`build`.`revision`. Il valore predefinito è 0.<br /><br /> Se si specifica **/version**, è necessario specificare anche `major`. Se si specifica `major` e `minor`, è possibile specificare un asterisco (\*) per `build`. In questo caso il valore `build` coinciderà con il numero dei giorni trascorsi dal 1 gennaio 2000, ora locale, e il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Se si specifica `major`, `minor` e `build`, è possibile specificare un asterisco per `revision`. In questo caso, il valore `revision` sarà uguale alla metà del numero dei secondi trascorsi dalla mezzanotte del giorno corrente, ora locale.<br /><br /> Le stringhe di versione valide sono pertanto le seguenti:<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> dove X è una costante di tipo Unsigned Short diversa da 65535 (0-65534).<br /><br /> Se non si specifica **/win32res**, l'opzione **/version** viene usata come risorsa **Versione assembly** Win32.<br /><br /> Se non si specificano **/win32res**, **/productversion** e **/fileversion**, l'opzione **/version** viene usata per le risorse **Versione assembly**, Versione file e **Versione prodotto** Win32.<br /><br /> Se si specifica **/win32res**, **/version** non influisce sulle informazioni della risorsa Win32.<br /><br /> È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyVersionAttribute>) nel codice sorgente di qualsiasi modulo MSIL.|
 |**/win32icon:** `filename`|Inserisce nell'assembly un file icona (.ico). Il file .ico determina l'aspetto desiderato del file di output in Esplora File.|
 |**/win32res:** `filename`|Inserisce nel file di output una risorsa Win32 (file .res). È possibile creare un file di risorse Win32 usando il Compilatore di risorse. Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.|
 |`@filename`|Specifica un file di risposta contenente i comandi di *Al.exe*.<br /><br /> Nel file di risposta i comandi possono essere disposti uno per riga oppure tutti sulla stessa riga, separati da uno o più spazi.|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Tutti i compilatori di Visual Studio producono assembly. Tuttavia, se sono presenti uno o più moduli, ovvero metadati senza un manifesto, è possibile usare *Al.exe* per creare un assembly con il manifesto in un file separato.
 
@@ -89,7 +89,7 @@ Per installare assembly nella cache, rimuovere assembly dalla cache oppure elenc
 
 La tabella seguente contiene l'elenco degli errori generati da *Al.exe*.
 
-| Error | DESCRIZIONE |
+| Errore | DESCRIZIONE |
 | ----- | ----------- |
 |al1001|Errore interno del compilatore<br /><br /> Provare a determinare se *Al.exe* ha generato l'errore perché non è in grado di analizzare una sintassi imprevista. Quindi contattare il Supporto tecnico Microsoft.|
 |al1002|Memoria insufficiente<br /><br /> *Al.exe* ha esaurito la memoria ed è stato arrestato. Aumentare la quantità di memoria disponibile.|
@@ -178,5 +178,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [*Sn.exe* (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programmazione con gli assembly](../../standard/assembly/program.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

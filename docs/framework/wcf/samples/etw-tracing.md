@@ -2,12 +2,12 @@
 title: Traccia ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c484e3438ad3512bd6186297f3edf8068a60795e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fb1a1dc77ee6a7be25aade18f76f89464bef0387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044997"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989953"
 ---
 # <a name="etw-tracing"></a>Traccia ETW
 In questo esempio viene illustrato come implementare la traccia End-to-End (E2E) utilizzando il sistema Event Tracing for Windows (ETW) e il `ETWTraceListener` fornito in questo esempio. L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e include la traccia ETW.  
@@ -56,7 +56,7 @@ In questo esempio viene illustrato come implementare la traccia End-to-End (E2E)
   
  Il listener di traccia ETW supporta i log circolari. Per abilitare questa funzionalità, passare a **Start**, **Esegui** e digitare `cmd` per avviare una console comandi. Nel comando seguente, sostituire il parametro `<logfilename>` con il nome del file di log.  
   
-```  
+```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
@@ -64,14 +64,14 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
   
  Per avviare la sessione, digitare il comando seguente:  
   
-```  
-Logman start Wcf  
+```console  
+logman start Wcf  
 ```  
   
  Una volta completato il log, è possibile interrompere la sessione con il comando seguente.  
   
-```  
-Logman stop Wcf  
+```console  
+logman stop Wcf  
 ```  
   
  Questo processo genera log circolari binari che è possibile elaborare con lo strumento preferito, incluso [lo strumento Visualizzatore di tracce dei servizi (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) o Tracerpt.  

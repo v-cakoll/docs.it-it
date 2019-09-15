@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421750"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970049"
 ---
 # <a name="using-directive-c-reference"></a>Direttiva using (Riferimenti per C#)
 
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 L'ambito di una direttiva `using` è limitato al file in cui viene visualizzata.
 
@@ -75,8 +75,6 @@ using s.RegularExpressions;
 Creare una direttiva `using` per usare i tipi in uno spazio dei nomi senza dover specificare tale spazio dei nomi. Una direttiva `using` non offre accesso ad alcuno spazio dei nomi annidato nello spazio dei nomi specificato.
 
 Gli spazi dei nomi sono disponibili in due categorie: definiti dall'utente e definiti dal sistema. Gli spazi dei nomi definiti dall'utente vengono definiti nel codice. Per un elenco di spazi dei nomi definiti dal sistema, vedere [Browser API .NET](../../../../api/index.md).
-
-Per esempi relativi ai metodi di riferimento in altri assembly, vedere [Create and Use Assemblies Using the Command Line](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md) (Creazione e uso degli assembly usando la riga di comando).
 
 ## <a name="example-1"></a>Esempio 1
 

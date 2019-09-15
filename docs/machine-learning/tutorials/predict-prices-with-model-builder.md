@@ -3,15 +3,15 @@ title: Stimare i prezzi usando la regressione con il generatore di modelli
 description: Questa esercitazione illustra come creare un modello di regressione usando il generatore di modelli ML.NET per stimare i prezzi, nel caso specifico le tariffe dei taxi di New York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929440"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991355"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Stimare i prezzi usando la regressione con il generatore di modelli
 
@@ -89,17 +89,9 @@ Il generatore di modelli accetta i dati da due origini, un database di SQL Serve
 
 L'attività di Machine Learning usata per eseguire il training del modello di stima dei prezzi in questa esercitazione è la regressione. Durante il processo di training del modello, il generatore di modelli esegue il training di modelli separati usando impostazioni e algoritmi di regressione diversi per individuare il modello di prestazioni migliore per il set di dati.
 
-Il tempo necessario per l'esecuzione del training di ogni modello è proporzionato alla quantità di dati. Usare questo grafico come guida per selezionare un valore adeguato per il campo `Time to train (seconds)`:
+Il tempo necessario per l'esecuzione del training di ogni modello è proporzionato alla quantità di dati. Generatore di modelli seleziona automaticamente un valore predefinito per il **tempo di training (secondi)** in base alle dimensioni dell'origine dati.
 
-*Dimensioni del set di dati  | Tipo di set di dati       | Avg. Durata del training*
-------------- | ------------------ | --------------
-0 - 10 MB     | Numerico e testo   | 10 sec
-10 - 100 MB   | Numerico e testo   | 10 min
-100 - 500 MB  | Numerico e testo   | 30 min
-500 - 1 GB    | Numerico e testo   | 60 min
-1 GB+         | Numerico e testo   | 3 ore+
-
-1. Poiché il file di dati di training è più di 10MB, usare 600 secondi (10 minuti) come valore per *Time to train (seconds)* (Durata training (secondi)).
+1. Lasciare il valore predefinito così come è il *tempo per il training (secondi)* , a meno che non si preferisca eseguire il training per un periodo di tempo più lungo.
 2. Selezionare *Start Training* (Avvia training).
 
 Durante il processo di training i dati dell'avanzamento vengono visualizzati nella sezione `Progress` del passaggio relativo al training.

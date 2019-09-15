@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c95e30c65c6096140fca0c1241e76fbc7af4df3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37769a84ca623e2f7f246d36180aa17537e90bfa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929129"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990226"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: Specificare un'associazione al client in codice
 Questo esempio illustra un client creato in modo da utilizzare un servizio di calcolatrice. Inoltre, l'associazione a tale client viene specificata in modo imperativo in codice. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Questa procedura presuppone che il servizio di calcolatrice sia in esecuzione. Per informazioni sulla creazione del servizio, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Viene inoltre utilizzata la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) offre per generare automaticamente i componenti client. Lo strumento genera il codice client di accesso al servizio.  
+ Questa procedura presuppone che il servizio di calcolatrice sia in esecuzione. Per informazioni sulla compilazione del servizio, vedere [procedura: Specificare un'associazione al servizio nella](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)configurazione. Viene inoltre utilizzato lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) fornisce per generare automaticamente i componenti client. Lo strumento genera il codice client di accesso al servizio.  
   
  Il client viene compilato in due parti. Lo strumento Svcutil.exe genera la classe `ClientCalculator` che implementa l'interfaccia `ICalculator`. Questa applicazione client viene quindi costruita creando un'istanza della classe `ClientCalculator` e specificando in codice l'associazione e l'indirizzo del servizio.  
   
- Per la copia di origine di questo esempio, vedere la [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) esempio.  
+ Per la copia di origine di questo esempio, vedere l'esempio di [base](../../../docs/framework/wcf/samples/basicbinding.md) .  
   
 ### <a name="to-specify-a-custom-binding-in-code"></a>Per specificare in codice un'associazione personalizzata  
   
 1. Utilizzare Svcutil.exe dalla riga di comando per generare il codice da metadati del servizio.  
   
-    ```  
+    ```console  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   

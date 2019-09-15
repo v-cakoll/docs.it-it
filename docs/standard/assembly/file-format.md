@@ -3,19 +3,19 @@ title: Formato dei file di assembly .NET
 description: Informazioni sul formato dei file di assembly .NET, usato per descrivere e contenere le app e le librerie .NET.
 author: richlander
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666628"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970159"
 ---
 # <a name="net-assembly-file-format"></a>Formato dei file di assembly .NET
 
-.NET definisce un formato di file binario, "assembly", che viene usato per descrivere completamente e contenere i programmi .NET. Gli assembly vengono usati per i programmi, nonché per tutte le librerie dipendenti. Un programma .NET può essere eseguito come uno di più assembly, senza altri elementi necessari, oltre all'implementazione di .NET appropriata. Le dipendenze native, incluse le API del sistema operativo, rappresentano una problematica separata e non sono contenute nel formato di assembly .NET, anche se a volte vengono descritte con questo formato (ad esempio, WinRT).
+.NET definisce un formato di file binario, *assembly*, che viene usato per descrivere completamente e contenere i programmi .NET. Gli assembly vengono usati per i programmi, nonché per tutte le librerie dipendenti. Un programma .NET può essere eseguito come uno di più assembly, senza altri elementi necessari, oltre all'implementazione di .NET appropriata. Le dipendenze native, incluse le API del sistema operativo, rappresentano un problema distinto e non sono contenute nel formato di assembly .NET, anche se a volte vengono descritte con questo formato (ad esempio, WinRT).
 
 > Ogni componente CLI usa metadati specifici per dichiarazioni, implementazioni e riferimenti. Quindi, i metadati specifici di un componente sono indicati come metadati del componente e il componente risultante viene definito come autodescrittivo, in base alla specifica ECMA 335 I.9.1 relativa a componenti e assembly.
 
@@ -23,7 +23,7 @@ Il formato è completamente specificato e standardizzato come [ECMA 335](https:/
 
 Il formato è indipendente dalla CPU e dal sistema operativo. È stato usato come parte delle implementazioni di .NET che usano molti chip e CPU. Anche se è basato su Windows, il formato può essere implementato in qualsiasi sistema operativo. Il motivo per cui è considerato la scelta migliore per l'interoperabilità del sistema operativo è il fatto che la maggior parte dei valori vengono archiviati in formato little endian. Non presenta un'affinità specifica alle dimensioni del puntatore del computer, ad esempio 32 bit o 64 bit.
 
-Il formato di assembly .NET offre anche una descrizione accurata della struttura di un programma o una libreria specifica. Descrive i componenti interni di un assembly, in particolare i riferimenti e i tipi di assembly e la relativa struttura interna. Gli strumenti o le API sono in grado di leggere ed elaborare queste informazioni per la visualizzazione o per prendere decisioni a livello di codice.
+Il formato di assembly .NET offre anche una descrizione accurata della struttura di un programma o una libreria specifica. Vengono descritti i componenti interni di un assembly, in particolare i riferimenti e i tipi di assembly definiti e la relativa struttura interna. Gli strumenti o le API sono in grado di leggere ed elaborare queste informazioni per la visualizzazione o per prendere decisioni a livello di codice.
 
 ## <a name="format"></a>Formato
 
@@ -33,6 +33,6 @@ Il formato binario .NET è basato sul formato di [file PE](https://en.wikipedia.
 
 Intestazioni di assembly da ECMA 335 II.25.1, struttura del formato di file di runtime.
 
-## <a name="processing-the-assemblies"></a>Elaborazione degli assembly
+## <a name="process-the-assemblies"></a>Elaborare gli assembly
 
 È possibile scrivere strumenti o API per elaborare gli assembly. Le informazioni sugli assembly consentono di prendere decisioni a livello di codice in fase di runtime, riscrivere gli assembly, inserire IntelliSense di API in un editor e generare documentazione. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> e [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sono esempi validi di strumenti usati di frequente per questo scopo.

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786866"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971825"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -50,12 +50,12 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
  A seconda del tipo di applicazione che si intende compilare, è opportuno considerare l'implementazione di autorizzazioni basate sui ruoli anche nel database. Per ulteriori informazioni sulla sicurezza basata sui ruoli in SQL Server, vedere [SQL Server sicurezza](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assembly  
- Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo della versione, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione .NET Framework. Un assembly fornisce infatti una raccolta di tipi e risorse che interagiscono tra loro e costituiscono un'unità logica della funzionalità. Per CLR un tipo non esiste al di fuori del contesto di un assembly. Per altre informazioni sulla creazione e la distribuzione di assembly, vedere [programmazione con gli assembly](../../app-domains/programming-with-assemblies.md).  
+ Gli assembly costituiscono l'unità fondamentale della distribuzione, del controllo della versione, del riutilizzo, dell'ambito di attivazione e delle autorizzazioni di sicurezza per un'applicazione .NET Framework. Un assembly fornisce infatti una raccolta di tipi e risorse che interagiscono tra loro e costituiscono un'unità logica della funzionalità. Per CLR un tipo non esiste al di fuori del contesto di un assembly. Per altre informazioni sulla creazione e la distribuzione di assembly, vedere [programmazione con gli assembly](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assegnazione di nomi sicuri agli assembly  
  Un nome sicuro, o firma digitale, è costituito dall'identità dell'assembly, che include il nome in testo semplice, il numero di versione e informazioni sulle impostazioni cultura (se fornite), nonché una chiave pubblica e una firma digitale. La firma digitale viene generata da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, contenente i nomi e gli hash di tutti i file che costituiscono l'assembly.  
   
- L'assegnazione di nomi sicuri consente a un'applicazione o a un componente di disporre di un'identità univoca utilizzabile da altri software per riferirsi esplicitamente a tale applicazione o componente. Consente inoltre di proteggere gli assembly dallo spoofing da parte di un assembly contenente codice dannoso e garantisce la compatibilità tra diverse versioni di un componente. Agli assembly che verranno distribuiti nella Global Assembly Cache (GAC) deve essere assegnato un nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../app-domains/create-and-use-strong-named-assemblies.md).  
+ L'assegnazione di nomi sicuri consente a un'applicazione o a un componente di disporre di un'identità univoca utilizzabile da altri software per riferirsi esplicitamente a tale applicazione o componente. Consente inoltre di proteggere gli assembly dallo spoofing da parte di un assembly contenente codice dannoso e garantisce la compatibilità tra diverse versioni di un componente. Agli assembly che verranno distribuiti nella Global Assembly Cache (GAC) deve essere assegnato un nome sicuro. Per altre informazioni, vedere [Creazione e utilizzo degli assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Attendibilità parziale in ADO.NET 2.0  
  Con ADO.NET 2.0 i provider di dati .NET Framework per SQL Server, per OLE DB, per ODBC e per Oracle possono essere eseguiti in ambienti ad attendibilità parziale. Nelle versioni precedenti di .NET Framework le applicazioni non totalmente attendibili supportavano solo <xref:System.Data.SqlClient>.  

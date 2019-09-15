@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc4c0336c8a67a1b4e70f71ba5f5406da1fbb2ff
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964682"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972382"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Specifica il nome dell'assembly di cui fa parte il modulo.  
@@ -37,14 +37,14 @@ Specifica il nome dell'assembly di cui fa parte il modulo.
   
 - L'assembly a cui si fa riferimento ha concesso l'accesso dell'assembly Friend all'assembly in cui verrà compilato il modulo.  
   
- Per ulteriori informazioni sulla creazione di un modulo, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Per ulteriori informazioni sugli assembly Friend, vedere [assembly Friend](../../../standard/assembly/friend-assemblies.md).  
+ Per ulteriori informazioni sulla creazione di un modulo, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Per ulteriori informazioni sugli assembly Friend, vedere [assembly Friend](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > L' `-moduleassemblyname` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si compila da un prompt dei comandi.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Compilare un assembly su più file](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Procedura: Compilare un assembly su più file](../../../framework/app-domains/build-multifile-assembly.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ Specifica il nome dell'assembly di cui fa parte il modulo.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Assembly in .NET](../../../standard/assembly/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Assembly Friend](../../../standard/assembly/friend-assemblies.md)
+- [Assembly Friend](../../../standard/assembly/friend.md)

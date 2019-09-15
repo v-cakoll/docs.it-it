@@ -8,20 +8,20 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 525ef52ecbbc61fba787fa8286c56c638d837faf
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959622"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988394"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Accesso ai membri non esposti del Document Object Model HTML gestito
-Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xref:System.Windows.Forms.HtmlElement> che espone le proprietà, metodi ed eventi che hanno in comune di tutti gli elementi HTML. In alcuni casi, tuttavia, è necessario accedere ai membri che l'interfaccia gestita non espone direttamente. In questo argomento esamina due modi per l'accesso a membri non esposti, incluse le funzioni JScript e VBScript definite all'interno di una pagina Web.  
+Il codice HTML Document Object Model (Dom) gestito contiene una classe <xref:System.Windows.Forms.HtmlElement> denominata che espone le proprietà, i metodi e gli eventi di tutti gli elementi HTML in comune. In alcuni casi, tuttavia, sarà necessario accedere ai membri non esposti direttamente dall'interfaccia gestita. In questo argomento vengono esaminati due modi per accedere ai membri non esposti, incluse le funzioni JScript e VBScript definite all'interno di una pagina Web.  
   
-## <a name="accessing-unexposed-members-through-managed-interfaces"></a>L'accesso ai membri non esposti tramite interfacce gestite  
- <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> forniscono quattro metodi che consentono l'accesso ai membri non esposti. Nella tabella seguente illustra i tipi e i relativi metodi.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Accesso ai membri non esposti tramite interfacce gestite  
+ <xref:System.Windows.Forms.HtmlDocument>e <xref:System.Windows.Forms.HtmlElement> forniscono quattro metodi che consentono l'accesso ai membri non esposti. La tabella seguente illustra i tipi e i metodi corrispondenti.  
   
-|Tipo di membro|Metodi|  
+|Tipo di membro|Metodo/i|  
 |-----------------|-----------------|  
 |Proprietà (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
 |Metodi|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
@@ -29,9 +29,9 @@ Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xr
 |Eventi (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
 |Eventi (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- Quando si utilizzano questi metodi, si presuppone che si dispone di un elemento del tipo sottostante corretto. Si supponga che si desidera essere in ascolto per il `Submit` eventi di un `FORM` pagina elemento in un elemento HTML, in modo che sia possibile eseguire alcune operazioni di pre-elaborazione nel `FORM`del valori prima che l'utente li invia al server. In teoria, è possibile controllare il codice HTML, è possibile definire le `FORM` per avere un valore univoco `ID` attributo.  
+ Quando si usano questi metodi, si presuppone che si disponga di un elemento del tipo sottostante corretto. Si supponga di voler ascoltare l' `Submit` evento di un `FORM` elemento in una pagina HTML, in modo da poter eseguire alcune operazioni di `FORM`pre-elaborazione sui valori di prima che l'utente li invii al server. Idealmente, se si ha il controllo sul codice HTML, è necessario definire `FORM` per avere un attributo `ID` univoco.  
   
-```  
+```html  
 <HTML>  
   
     <HEAD>  
@@ -47,29 +47,29 @@ Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xr
 </HTML>  
 ```  
   
- Dopo il caricamento della pagina nel <xref:System.Windows.Forms.WebBrowser> (controllo), è possibile usare il <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> metodo per recuperare le `FORM` in fase di esecuzione tramite `form1` come argomento.  
+ Una volta caricata questa pagina nel <xref:System.Windows.Forms.WebBrowser> controllo, è possibile utilizzare il <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> metodo per recuperare `FORM` in fase di esecuzione utilizzando `form1` come argomento.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## <a name="accessing-unmanaged-interfaces"></a>L'accesso a interfacce non gestite  
- È anche possibile accedere membri non esposti del DOM HTML gestito tramite le interfacce non gestite modello COM (Component Object) esposte da ogni classe DOM. Ciò è consigliabile se è necessario effettuare diverse chiamate con membri non esposti, o se i membri non esposti restituiscano altre interfacce non gestite non integrate in DOM. HTML gestito  
+## <a name="accessing-unmanaged-interfaces"></a>Accesso a interfacce non gestite  
+ È anche possibile accedere ai membri non esposti sul DOM HTML gestito usando le interfacce di Component Object Model non gestite (COM) esposte da ogni classe DOM. Questa operazione è consigliata se è necessario effettuare diverse chiamate a membri non esposti o se i membri non esposti restituiscono altre interfacce non gestite non sottoposte a incapsulamento dal DOM HTML gestito.  
   
- Nella tabella seguente mostra tutte le interfacce non gestite esposte tramite DOM. HTML gestito Fare clic su ogni collegamento per una spiegazione dell'utilizzo e, ad esempio codice.  
+ La tabella seguente mostra tutte le interfacce non gestite esposte tramite il DOM HTML gestito. Fare clic su ogni collegamento per una spiegazione dell'utilizzo e per il codice di esempio.  
   
-|Tipo|Interfaccia non gestita|  
+|Type|Interfaccia non gestita|  
 |----------|-------------------------|  
 |<xref:System.Windows.Forms.HtmlDocument>|<xref:System.Windows.Forms.HtmlDocument.DomDocument%2A>|  
 |<xref:System.Windows.Forms.HtmlElement>|<xref:System.Windows.Forms.HtmlElement.DomElement%2A>|  
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Il modo più semplice per usare le interfacce COM consiste nell'aggiungere un riferimento alla libreria DOM HTML (Mshtml. dll) non gestita dall'applicazione, anche se ciò non è supportata. Per altre informazioni, vedere [934368 articolo della Knowledge Base](https://support.microsoft.com/kb/934368).  
+ Il modo più semplice per usare le interfacce COM consiste nell'aggiungere un riferimento alla libreria DOM HTML non gestita (MSHTML. dll) dall'applicazione, anche se questa operazione non è supportata. Per ulteriori informazioni, vedere l' [articolo della Knowledge Base 934368](https://support.microsoft.com/kb/934368).  
   
-## <a name="accessing-script-functions"></a>L'accesso a funzioni di Script  
- Una pagina HTML è possibile definire una o più funzioni usando un linguaggio di scripting come VBScript o JScript. Queste funzioni vengono posizionate all'interno di un `SCRIPT` nella pagina e può essere eseguito su richiesta o in risposta a un evento in DOM.  
+## <a name="accessing-script-functions"></a>Accesso alle funzioni di script  
+ Una pagina HTML può definire una o più funzioni utilizzando un linguaggio di scripting, ad esempio JScript o VBScript. Queste funzioni vengono posizionate all'interno `SCRIPT` di una pagina della pagina e possono essere eseguite su richiesta o in risposta a un evento nel DOM.  
   
- È possibile chiamare qualsiasi funzione di script è definita in una pagina HTML utilizzando la <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> (metodo). Se il metodo di script restituisce un elemento HTML, è possibile usare un cast per convertire il risultato in un <xref:System.Windows.Forms.HtmlElement>. Per dettagli ed esempio di codice, vedere <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ È possibile chiamare qualsiasi funzione script definita in una pagina HTML usando il <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> metodo. Se il metodo di script restituisce un elemento HTML, è possibile usare un cast per convertire il risultato restituito in <xref:System.Windows.Forms.HtmlElement>un oggetto. Per informazioni dettagliate ed esempi di codice <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>, vedere.  
   
 ## <a name="see-also"></a>Vedere anche
 

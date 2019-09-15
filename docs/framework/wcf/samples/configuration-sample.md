@@ -2,12 +2,12 @@
 title: Esempio di configurazione
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040101"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990077"
 ---
 # <a name="configuration-sample"></a>Esempio di configurazione
 Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.  
@@ -67,9 +67,7 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
   
  Il file di configurazione va oltre tali semplici passaggi modificando i comportamenti aggiuntivi. È possibile controllare le informazioni correlate all'individuazione tramite endpoint specifici. Ovvero, un utente può controllare se è possibile individuare un endpoint e può anche contrassegnare tale endpoint con <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> e metadati XML personalizzati. A tale scopo, l'utente deve aggiungere una proprietà `behaviorConfiguration` all'endpoint dell'applicazione. In questo caso, la proprietà seguente viene aggiunta all'endpoint dell'applicazione.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Tramite l'elemento di configurazione del comportamento, è possibile controllare gli attributi correlati all'individuazione. In questo caso, due ambiti vengono aggiunti all'endpoint dell'applicazione.  
   

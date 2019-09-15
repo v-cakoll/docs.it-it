@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851475"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970599"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (utilità di importazione di controlli ActiveX di Windows Form)
 L'utilità di importazione di controlli ActiveX converte in un controllo Windows Form le definizioni dei tipi in una libreria di tipi COM per un controllo ActiveX.  
@@ -36,13 +36,13 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Note  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*file*|Nome del file di origine contenente il controllo ActiveX da convertire. L'argomento del file deve avere l'estensione .dll oppure .ocx.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
-|`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|`/delaysign`|Specifica ad Aximp.exe di firmare il controllo risultante utilizzando la firma ritardata. È necessario specificare questa opzione con l'opzione `/keycontainer:`, `/keyfile:` o `/publickey:`. Per altre informazioni sulla firma ritardata, vedere [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |`/keycontainer:` *containerName*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata presente nel contenitore di chiavi specificato da *containerName*.|  
 |`/keyfile:` *filename*|Firma il controllo risultante con un nome sicuro usando la coppia di chiavi pubblica/privata ufficiale del server di pubblicazione trovata in *filename*.|  

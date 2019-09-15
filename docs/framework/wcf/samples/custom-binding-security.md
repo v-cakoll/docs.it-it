@@ -2,12 +2,12 @@
 title: Sicurezza delle associazioni personalizzate
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045608"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990006"
 ---
 # <a name="custom-binding-security"></a>Sicurezza delle associazioni personalizzate
 
@@ -62,7 +62,7 @@ L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di 
 
 Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
   Le righe seguenti nel file Setup.bat copiano il certificato server nell'archivio Persone attendibili del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
     3. Esportare il certificato del servizio aprendo un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguendo il comando seguente sul computer del servizio (sostituire `%SERVER_NAME%` con il nome completo del computer in cui il servizio è in esecuzione):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
     5. Importare il certificato del servizio aprendo un Prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguendo il comando seguente nel computer client (sostituire% NOME_SERVER% con il nome completo del computer in cui il servizio è in esecuzione):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

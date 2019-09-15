@@ -4,12 +4,12 @@ description: Informazioni su come ospitare il runtime di .NET Core dal codice na
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925931"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970863"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Scrivere un host di .NET Core personalizzato per controllare il runtime di .NET dal codice nativo
 
@@ -135,7 +135,7 @@ A differenza dell'API di hosting mscoree.h, descritta di seguito, le API CoreCLR
 
 ### <a name="step-5---run-managed-code"></a>Passaggio 5: Eseguire il codice gestito
 
-Con il runtime avviato, l'host può chiamare il codice gestito. Questa operazione può essere eseguita in due modi diversi. Il codice di esempio collegato a questa esercitazione usa la funzione `coreclr_create_delegate` per creare un delegato a un metodo gestito statico. Questa API accetta come input il [nome dell'assembly](../../framework/app-domains/assembly-names.md), un nome di tipo qualificato dallo spazio dei nomi e il nome del metodo e restituisce un delegato che può essere usato per richiamare il metodo.
+Con il runtime avviato, l'host può chiamare il codice gestito. Questa operazione può essere eseguita in due modi diversi. Il codice di esempio collegato a questa esercitazione usa la funzione `coreclr_create_delegate` per creare un delegato a un metodo gestito statico. Questa API accetta come input il [nome dell'assembly](../../standard/assembly/names.md), un nome di tipo qualificato dallo spazio dei nomi e il nome del metodo e restituisce un delegato che può essere usato per richiamare il metodo.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -231,7 +231,7 @@ Con un AppDomain attivo e in esecuzione, l'host può ora avviare l'esecuzione de
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Se `ExecuteAssembly` non soddisfa le esigenze dell'host, un'altra opzione consiste nell'usare `CreateDelegate` per creare un puntatore funzione a un metodo gestito statico. Questa operazione richiede che l'host conosca la firma del metodo chiamato per poter creare il tipo di puntatore funzione ma offre agli host la flessibilità di richiamare codice diverso da un punto di ingresso dell'assembly. Il nome dell'assembly specificato nel secondo parametro è il [nome completo dell'assembly gestito](../../framework/app-domains/assembly-names.md) della raccolta da caricare.
+Se `ExecuteAssembly` non soddisfa le esigenze dell'host, un'altra opzione consiste nell'usare `CreateDelegate` per creare un puntatore funzione a un metodo gestito statico. Questa operazione richiede che l'host conosca la firma del metodo chiamato per poter creare il tipo di puntatore funzione ma offre agli host la flessibilità di richiamare codice diverso da un punto di ingresso dell'assembly. Il nome dell'assembly specificato nel secondo parametro è il [nome completo dell'assembly gestito](../../standard/assembly/names.md) della raccolta da caricare.
 
 ```C++
 void *pfnDelegate = NULL;

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988163"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969067"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Creazione di un pacchetto di un assembly .NET Framework per COM
 
@@ -45,7 +45,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
 
   Gli assembly con nome sicuro firmati da un editore possono essere installati nella Global Assembly Cache. Gli assembly non firmati devono essere installati nel computer dell'utente come assembly privati.
 
-  Per altre informazioni, vedere [Considerazioni sulla sicurezza degli assembly](../app-domains/assembly-security-considerations.md).
+  Per altre informazioni, vedere [Considerazioni sulla sicurezza degli assembly](../../standard/assembly/security-considerations.md).
 
 - Inclusione di una libreria dei tipi
 
@@ -96,7 +96,7 @@ Lo [strumento di installazione dei servizi .NET (Regsvcs.exe)](../tools/regsvcs-
 - [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)
 - [Qualificazione di tipi .NET per l'interoperabilità](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Introduzione all'interfaccia della classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Considerazioni sulla sicurezza degli assembly](../app-domains/assembly-security-considerations.md)
+- [Considerazioni sulla sicurezza degli assembly](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrazione di assembly presso COM](registering-assemblies-with-com.md)
 - [Procedura: Incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910964"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971594"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 
@@ -118,7 +118,7 @@ In .NET Framework sono disponibili diverse funzionalità di base che semplifican
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Creazione di pacchetti e distribuzione di applicazioni .NET Framework
 
-Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NET Framework vengono illustrati in altre sezioni della documentazione. Queste sezioni includono informazioni sulle unità autodescrittive denominate [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), che non richiedono voci nel Registro di sistema, sugli [assembly con nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md), che assicurano l'univocità dei nomi e prevengono lo spoofing dei nomi e sul [controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md), che consente di risolvere molti dei problemi associati ai conflitti di DLL. Le sezioni seguenti forniscono informazioni sulla creazione di pacchetti e sulla distribuzione di applicazioni .NET Framework.
+Alcuni concetti relativi alla creazione di pacchetti e alla distribuzione in .NET Framework vengono illustrati in altre sezioni della documentazione. Queste sezioni includono informazioni sulle unità autodescrittive denominate [assembly](../../standard/assembly/index.md), che non richiedono voci nel Registro di sistema, sugli [assembly con nome sicuro](../../standard/assembly/strong-named.md), che assicurano l'univocità dei nomi e prevengono lo spoofing dei nomi e sul [controllo delle versioni degli assembly](../../standard/assembly/versioning.md), che consente di risolvere molti dei problemi associati ai conflitti di DLL. Le sezioni seguenti forniscono informazioni sulla creazione di pacchetti e sulla distribuzione di applicazioni .NET Framework.
 
 ### <a name="packaging"></a>Pacchetto
 

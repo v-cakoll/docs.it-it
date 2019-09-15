@@ -2,22 +2,24 @@
 title: Comando dotnet publish
 description: Il comando dotnet publish consente di pubblicare il progetto .NET Core in una directory.
 ms.date: 05/29/2018
-ms.openlocfilehash: 188a136c3e024f71f9b3e89d8e797fa3053f7e4c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: f9fea1a30e349ef949078e881756e2520d79ccbf
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202606"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969835"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet publish`: inserisce l'applicazione e le relative dipendenze in una cartella per la distribuzione in un sistema host.
 
 ## <a name="synopsis"></a>Riepilogo
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 

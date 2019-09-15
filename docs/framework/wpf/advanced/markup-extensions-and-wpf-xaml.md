@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965283"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991825"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Estensioni di markup e XAML WPF
 Questo argomento introduce le estensioni di markup per XAML, con informazioni sulle regole della sintassi, le finalità e il modello a oggetti di classe sottostante. Le estensioni di markup sono una funzionalità generale del linguaggio XAML e dell'implementazione .NET di servizi XAML. Questo argomento descrive in particolare le estensioni di markup per l'uso in XAML WPF.  
@@ -104,7 +104,7 @@ Questo argomento introduce le estensioni di markup per XAML, con informazioni su
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Annidamento di estensioni di markup nella sintassi XAML  
  L'annidamento di più estensioni di markup è supportato e viene valutata per prima l'estensione di markup a livello più profondo. Ad esempio, si consideri la sintassi seguente:  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

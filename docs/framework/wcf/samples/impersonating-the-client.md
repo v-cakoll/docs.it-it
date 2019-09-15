@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968334"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989830"
 ---
 # <a name="impersonating-the-client"></a>Rappresentazione di client
 L'esempio Rappresentazione di client mostra come rappresentare l'applicazione del chiamante al servizio così che il servizio possa accedere a risorse di sistema per conto del chiamante.  
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. Per dimostrare che il servizio rappresenta il chiamante, eseguire il client sotto un account diverso rispetto a quello sotto cui il servizio è in esecuzione. A tale scopo, al prompt dei comandi, digitare:  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

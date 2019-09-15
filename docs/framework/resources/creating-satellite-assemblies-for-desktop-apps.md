@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ad89e24bfc55497af52b827717b8b3965bd600
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041012"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970984"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 
@@ -52,9 +52,9 @@ Requisito del modello hub e spoke è che le risorse vengano inserite in posizion
 
 - L'assembly satellite deve avere lo stesso nome dell'applicazione e deve usare l'estensione di file ".resources.dll". Se ad esempio un'applicazione è denominata Example.exe, il nome di ogni assembly satellite deve essere Example.resources.dll. Si noti che il nome dell'assembly satellite non indica le impostazioni cultura dei file di risorse corrispondenti. L'assembly satellite, tuttavia, viene visualizzato in una directory che specifica le impostazioni cultura.
 
-- Le informazioni sulle impostazioni cultura dell'assembly satellite devono essere incluse nei metadati dell'assembly. Per archiviare il nome delle impostazioni cultura nei metadati dell'assembly satellite, specificare l'opzione `/culture` quando si incorporano le risorse nell'assembly satellite tramite [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md).
+- Le informazioni sulle impostazioni cultura dell'assembly satellite devono essere incluse nei metadati dell'assembly. Per archiviare il nome delle impostazioni cultura nei metadati dell'assembly satellite, specificare l'opzione `/culture` quando si incorporano le risorse nell'assembly satellite tramite [Assembly Linker](../tools/al-exe-assembly-linker.md).
 
-La figura seguente illustra una struttura di directory di esempio e i requisiti relativi alla posizione per le applicazioni che non si intende installare nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Gli elementi con estensione txt e resources non verranno forniti con l'applicazione finale. Questi sono file di risorse intermedi usati per creare gli assembly di risorse satellite finali. In questo esempio è possibile sostituire il file con estensione resx per i file con estensione txt. Per altre informazioni, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
+La figura seguente illustra una struttura di directory di esempio e i requisiti relativi alla posizione per le applicazioni che non si intende installare nella [Global Assembly Cache](../../framework/app-domains/gac.md). Gli elementi con estensione txt e resources non verranno forniti con l'applicazione finale. Questi sono file di risorse intermedi usati per creare gli assembly di risorse satellite finali. In questo esempio è possibile sostituire il file con estensione resx per i file con estensione txt. Per altre informazioni, vedere [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md).
 
 L'immagine seguente mostra la directory degli assembly satellite:
 
@@ -62,7 +62,7 @@ L'immagine seguente mostra la directory degli assembly satellite:
 
 ## <a name="compiling-satellite-assemblies"></a>compilazione di assembly satellite
 
-Per compilare file di testo o il file XML (con estensione resx) contenente risorse per file binari con estensione resources, si usa il [generatore di file di risorse (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Si usa quindi [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per compilare i file con estensione resources in assembly satellite. Al.exe crea un assembly dai file con estensione resources specificati. Gli assembly satellite possono contenere solo risorse. Non possono contenere codice eseguibile.
+Per compilare file di testo o il file XML (con estensione resx) contenente risorse per file binari con estensione resources, si usa il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md). Si usa quindi [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) per compilare i file con estensione resources in assembly satellite. Al.exe crea un assembly dai file con estensione resources specificati. Gli assembly satellite possono contenere solo risorse. Non possono contenere codice eseguibile.
 
 Il comando Al.exe seguente crea un assembly satellite per l'applicazione `Example` dal file di risorse strings.de.resources tedesco.
 
@@ -74,41 +74,40 @@ Il comando Al.exe seguente crea anche un assembly satellite per l'applicazione `
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
-```
-
-Nella tabella seguente vengono descritte in modo più dettagliato le opzioni di Al.exe usate in questi comandi.
-
-|Opzione|DESCRIZIONE|
+```  
+  
+ Nella tabella seguente vengono descritte in modo più dettagliato le opzioni di Al.exe usate in questi comandi.
+  
+|Opzione|Descrizione|
 |------------|-----------------|
 |**-target:** lib|Specifica che l'assembly satellite deve essere compilato in un file di libreria con estensione dll. Poiché un assembly satellite non contiene codice eseguibile e non rappresenta l'assembly principale dell'applicazione, è necessario salvare gli assembly satellite come DLL.|
 |**-embed:** strings.de.resources|Specifica il nome del file di risorse da incorporare quando Al.exe compila l'assembly. È possibile incorporare più file con estensione resources in un assembly satellite. Se si segue il modello hub e spoke, però, è necessario compilare un assembly satellite per ognuna delle impostazioni cultura. È tuttavia possibile creare file con estensione resources separati per le stringhe e gli oggetti.|
 |**-culture:** de|Specifica le impostazioni cultura della risorsa da compilare. Common Language Runtime usa queste informazioni durante la ricerca delle risorse per impostazioni cultura specifiche. Se si omette questa opzione, Al.exe compila comunque la risorsa, ma il runtime non sarà in grado di trovarla quando un utente la richiederà.|
 |**-out:** Example.resources.dll|Specifica il nome del file di output. Il nome deve seguire lo standard di denominazione *nomeBase*.resources.*estensione*, dove *nomeBase* è il nome dell'assembly principale ed *estensione* è un'estensione di file valida, ad esempio dll. Si noti che il runtime non è in grado di determinare le impostazioni cultura di un assembly satellite in base al nome del file di output. Per specificare tali impostazioni è necessario usare l'opzione **/culture**.|
-|**-template:** Example.dll|Specifica l'assembly dal quale l'assembly satellite deve ereditare tutti i metadati, ad eccezione del campo relativo alle impostazioni cultura. Questa opzione influisce sugli assembly satellite solo se si specifica un assembly con un [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md).|
-
-Per l'elenco completo delle opzioni disponibili con Al.exe, vedere [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).
-
-## <a name="satellite-assemblies-an-example"></a>Assembly satellite: Esempio
-
-Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza una finestra di messaggio contenente un saluto localizzato. L'esempio include le risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia) e russe (Russia). Le impostazioni cultura inglesi sono le impostazioni cultura di fallback. Per creare l'esempio, eseguire le operazioni seguenti:
-
+|**-template:** Example.dll|Specifica l'assembly dal quale l'assembly satellite deve ereditare tutti i metadati, ad eccezione del campo relativo alle impostazioni cultura. Questa opzione influisce sugli assembly satellite solo se si specifica un assembly con un [nome sicuro](../../standard/assembly/strong-named.md).|
+  
+ Per l'elenco completo delle opzioni disponibili con Al.exe, vedere [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
+  
+## <a name="satellite-assemblies-an-example"></a>Assembly satellite: Esempio  
+ Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza una finestra di messaggio contenente un saluto localizzato. L'esempio include le risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia) e russe (Russia). Le impostazioni cultura inglesi sono le impostazioni cultura di fallback. Per creare l'esempio, eseguire le operazioni seguenti:  
+  
 1. Creare un file di risorse denominato Greeting.resx o Greeting.txt che deve contenere le risorse per le impostazioni cultura predefinite. Salvare in questo file un'unica stringa denominata `HelloString` il cui valore sia "Hello world!" .
-
+  
 2. Per impostare le impostazioni cultura inglesi (en) come predefinite per l'applicazione, aggiungere l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> seguente al file AssemblyInfo dell'applicazione o al file di codice sorgente principale che verrà compilato nell'assembly principale dell'applicazione.
-
-    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]
-
-3. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:
-
-    - Per supportare le impostazioni cultura en-US, cioè Inglese (Stati Uniti), creare un file di risorse denominato Greeting.en-US.resx o Greeting.en-US.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Hi world!".
-
-    - Per supportare le impostazioni cultura fr-FR, cioè Francese (Francia), creare un file di risorse denominato Greeting.fr-FR.resx o Greeting.fr-FR.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Salut tout le monde!".
-
-    - Per supportare le impostazioni cultura ru-RU, cioè Russo (Russia), creare un file di risorse denominato Greeting.ru-RU.resx o Greeting.ru-RU.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Всем привет!".
-
-4. Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione resx in file con estensione resources:
-
+  
+     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+  
+3. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
+  
+    - Per supportare le impostazioni cultura en-US, cioè Inglese (Stati Uniti), creare un file di risorse denominato Greeting.en-US.resx o Greeting.en-US.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Hi world!".  
+  
+    - Per supportare le impostazioni cultura fr-FR, cioè Francese (Francia), creare un file di risorse denominato Greeting.fr-FR.resx o Greeting.fr-FR.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Salut tout le monde!".  
+  
+    - Per supportare le impostazioni cultura ru-RU, cioè Russo (Russia), creare un file di risorse denominato Greeting.ru-RU.resx o Greeting.ru-RU.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Всем привет!".  
+  
+4. Usare [Resgen.exe](../tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione resx in file con estensione resources:  
+  
     ```console
     resgen Greeting.resx
     resgen Greeting.en-us.resx
@@ -144,28 +143,25 @@ Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza
 
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll
-    ```
-
-    dove *culture* è il nome delle impostazioni cultura le cui risorse sono contenute dall'assembly satellite. Visual Studio gestisce questo processo automaticamente.
-
-È quindi possibile eseguire l'esempio. Questo effettua una selezione casuale tra le impostazioni cultura supportate, definisce le impostazioni cultura selezionate come correnti e visualizza il saluto localizzato.
-
-<a name="SN"></a>
-
-## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Installazione di assembly satellite nella Global Assembly Cache
-
-Invece di installare gli assembly in una sottodirectory locale dell'applicazione, è possibile installarli nella Global Assembly Cache. Ciò è particolarmente utile se alcuni assembly di librerie di classi e di risorse di librerie di classi vengono usati da più applicazioni.
-
-L'installazione di assembly nella Global Assembly Cache richiede che gli assembly abbiano nomi sicuri. Gli assembly con nomi sicuri, firmati con una coppia di chiavi pubblica/privata valida, contengono informazioni sulla versione usate dal runtime allo scopo di determinare l'assembly da usare per soddisfare una richiesta di associazione. Per altre informazioni sui nomi sicuri e sul controllo delle versioni, vedere [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md). Per altre informazioni sui nomi sicuri, vedere [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md).
-
-Quando si sviluppa un'applicazione, è improbabile che si possa accedere alla coppia di chiavi pubblica/privata finale. Per installare un assembly satellite nella Global Assembly Cache e assicurarsi che funzioni come previsto, è possibile usare la cosiddetta tecnica del ritardo della firma. Quando si ritarda la firma di un assembly, al momento della compilazione viene riservato spazio nel file per la firma con nome sicuro. La firma effettiva viene posticipata al momento in cui la coppia di chiavi pubblica/privata finale è disponibile. Per altre informazioni sul ritardo della firma, vedere [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).
-
-### <a name="obtaining-the-public-key"></a>Ottenere la chiave pubblica
-
-Per ritardare la firma di un assembly, è necessario avere accesso alla chiave pubblica. È possibile ottenere la chiave pubblica reale dall'organizzazione della società che eventualmente effettuerà la firma oppure creare una chiave pubblica con lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).
-
-Il comando Sn.exe seguente crea una coppia di chiavi pubblica/privata di test. L'opzione **-k** specifica che Sn.exe deve creare una nuova coppia di chiavi e salvarla in un file denominato TestKeyPair.snk.
-
+    ```  
+  
+     dove *culture* è il nome delle impostazioni cultura le cui risorse sono contenute dall'assembly satellite. Visual Studio gestisce questo processo automaticamente.
+  
+ È quindi possibile eseguire l'esempio. Questo effettua una selezione casuale tra le impostazioni cultura supportate, definisce le impostazioni cultura selezionate come correnti e visualizza il saluto localizzato.
+  
+<a name="SN"></a>   
+## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Installazione di assembly satellite nella Global Assembly Cache  
+ Invece di installare gli assembly in una sottodirectory locale dell'applicazione, è possibile installarli nella Global Assembly Cache. Ciò è particolarmente utile se alcuni assembly di librerie di classi e di risorse di librerie di classi vengono usati da più applicazioni.
+  
+ L'installazione di assembly nella Global Assembly Cache richiede che gli assembly abbiano nomi sicuri. Gli assembly con nomi sicuri, firmati con una coppia di chiavi pubblica/privata valida, contengono informazioni sulla versione usate dal runtime allo scopo di determinare l'assembly da usare per soddisfare una richiesta di associazione. Per altre informazioni sui nomi sicuri e sul controllo delle versioni, vedere [Controllo delle versioni degli assembly](../../standard/assembly/versioning.md). Per altre informazioni sui nomi sicuri, vedere [Assembly con nomi sicuri](../../standard/assembly/strong-named.md).
+  
+ Quando si sviluppa un'applicazione, è improbabile che si possa accedere alla coppia di chiavi pubblica/privata finale. Per installare un assembly satellite nella Global Assembly Cache e assicurarsi che funzioni come previsto, è possibile usare la cosiddetta tecnica del ritardo della firma. Quando si ritarda la firma di un assembly, al momento della compilazione viene riservato spazio nel file per la firma con nome sicuro. La firma effettiva viene posticipata al momento in cui la coppia di chiavi pubblica/privata finale è disponibile. Per altre informazioni sul ritardo della firma, vedere [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md).
+  
+### <a name="obtaining-the-public-key"></a>Ottenere la chiave pubblica  
+ Per ritardare la firma di un assembly, è necessario avere accesso alla chiave pubblica. È possibile ottenere la chiave pubblica reale dall'organizzazione della società che eventualmente effettuerà la firma oppure creare una chiave pubblica con lo [strumento Nome sicuro (Sn.exe)](../tools/sn-exe-strong-name-tool.md).
+  
+ Il comando Sn.exe seguente crea una coppia di chiavi pubblica/privata di test. L'opzione **-k** specifica che Sn.exe deve creare una nuova coppia di chiavi e salvarla in un file denominato TestKeyPair.snk.
+  
 ```console
 sn –k TestKeyPair.snk
 ```
@@ -178,7 +174,7 @@ sn –p TestKeyPair.snk PublicKey.snk
 
 ### <a name="delay-signing-an-assembly"></a>Ritardo della firma di un assembly
 
-Dopo aver ottenuto o creato la chiave pubblica, si usa [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per compilare l'assembly e specificare il ritardo della firma.
+Dopo aver ottenuto o creato la chiave pubblica, si usa [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) per compilare l'assembly e specificare il ritardo della firma.
 
 Il comando Al.exe seguente crea un assembly satellite con nome sicuro per la DLL StringLibrary dell'applicazione dal file di risorse strings.ja.resources:
 
@@ -200,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Installazione di un assembly satellite nella Global Assembly Cache
 
-Durante la ricerca di risorse nell'ambito del processo di fallback delle risorse, il runtime prima cerca nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Per altre informazioni, vedere la sezione "Processo di fallback delle risorse" dell'argomento [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Non appena un assembly satellite viene firmato con un nome sicuro, può essere installato nella Global Assembly Cache tramite lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md).
+Durante la ricerca di risorse nell'ambito del processo di fallback delle risorse, il runtime prima cerca nella [Global Assembly Cache](../../framework/app-domains/gac.md). Per altre informazioni, vedere la sezione "Processo di fallback delle risorse" dell'argomento [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md). Non appena un assembly satellite viene firmato con un nome sicuro, può essere installato nella Global Assembly Cache tramite lo [strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
 
 Il comando Gacutil.exe seguente installa StringLibrary.resources.dll nella Global Assembly Cache:
 
@@ -214,7 +210,7 @@ L'opzione **/i** specifica che Gacutil.exe deve installare l'assembly specificat
 
 L'esempio seguente usa un metodo di una libreria di classi .NET Framework per estrarre e restituire un messaggio di saluto localizzato contenuto in un file di risorse. La libreria e le relative risorse sono registrate nella Global Assembly Cache. L'esempio include risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia), russe (Russia) e inglesi. Le impostazioni cultura predefinite corrispondono a quelle inglesi e le risorse corrispondenti sono archiviate nell'assembly principale. All'inizio dell'esempio viene impostato il ritardo della firma della libreria e dei relativi assembly con una chiave pubblica. Questi vengono quindi firmati di nuovo con una coppia di chiavi pubblica/privata. Per creare l'esempio, eseguire le operazioni seguenti:
 
-1. Se non si usa Visual Studio, creare una coppia di chiavi pubblica/privata denominata ResKey.snk tramite il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente:
+1. Se non si usa Visual Studio, creare una coppia di chiavi pubblica/privata denominata ResKey.snk tramite il comando dello [strumento Nome sicuro (Sn.exe)](../tools/sn-exe-strong-name-tool.md) seguente:
 
     ```console
     sn –k ResKey.snk
@@ -222,7 +218,7 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
     Se si usa Visual Studio, generare il file di chiave tramite la scheda **Firma** della finestra di dialogo **Proprietà** del progetto.
 
-2. Usare il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente per creare un file di chiave pubblica denominato PublicKey.snk:
+2. Usare il comando dello [strumento Nome sicuro (Sn.exe)](../tools/sn-exe-strong-name-tool.md) seguente per creare un file di chiave pubblica denominato PublicKey.snk:
 
     ```console
     sn –p ResKey.snk PublicKey.snk
@@ -243,7 +239,7 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
     - Per supportare le impostazioni cultura "ru-RU", cioè Russo (Russia), creare un file di risorse denominato Strings.ru-RU.resx o Strings.ru-RU.txt e salvare al suo interno una sola stringa denominata `Greeting` il cui valore sia "Привет!".
 
-6. Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire il comando seguente per compilare i file con estensione resx in file con estensione resources:
+6. Usare [Resgen.exe](../tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire il comando seguente per compilare i file con estensione resx in file con estensione resources:
 
     ```console
     resgen filename
@@ -281,13 +277,13 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
     dove *culture* è il nome delle impostazioni cultura. In questo esempio i nomi delle impostazioni cultura sono en-US, fr-FR e ru-RU.
 
-10. Firmare nuovamente StringLibrary.dll tramite lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) come indicato di seguito:
+10. Firmare nuovamente StringLibrary.dll tramite lo [strumento Nome sicuro (Sn.exe)](../tools/sn-exe-strong-name-tool.md) come indicato di seguito:
 
     ```console
     sn –R StringLibrary.dll RealKeyPair.snk
     ```
 
-11. Firmare nuovamente i singoli assembly satellite. A tale scopo, usare lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) come indicato di seguito per ogni assembly satellite:
+11. Firmare nuovamente i singoli assembly satellite. A tale scopo, usare lo [strumento Nome sicuro (Sn.exe)](../tools/sn-exe-strong-name-tool.md) come indicato di seguito per ogni assembly satellite:
 
     ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk
@@ -322,9 +318,9 @@ L'esempio seguente usa un metodo di una libreria di classi .NET Framework per es
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+- [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Ritardo della firma di un assembly](../../standard/assembly/delay-sign.md)
+- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
+- [Sn.exe (strumento Nome sicuro)](../tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Risorse nelle applicazioni desktop](index.md)

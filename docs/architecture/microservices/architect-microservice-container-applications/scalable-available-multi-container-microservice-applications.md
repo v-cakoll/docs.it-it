@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Informazioni sulle opzioni che consentono di orchestrare microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate e le possibilità di Azure Dev Spaces nello sviluppo del ciclo di vita dell'applicazione Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675028"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991155"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -15,7 +15,7 @@ L'uso di agenti di orchestrazione per applicazioni pronte per la produzione è e
 
 La figura 4-23 illustra la distribuzione in un cluster di un'applicazione costituita da più microservizi (contenitori).
 
-![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di un Docker. Un host gestisce più contenitori](./media/image23.png)
+![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di Docker. Un host gestisce molti contenitori](./media/image23.png)
 
 **Figura 4-23**. Cluster di contenitori
 
@@ -35,7 +35,7 @@ I concetti di cluster e utilità di pianificazione sono strettamente correlati, 
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Piattaforme software per il clustering, l'orchestrazione e la pianificazione dei contenitori
 
-### <a name="kubernetes"></a>Kubernetes
+### <a name="kubernetes"></a>kubernetes
 
 ![Logo di Kubernetes](./media/image24.png)
 

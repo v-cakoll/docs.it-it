@@ -2,12 +2,12 @@
 title: Classe di base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637505"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989556"
 ---
 # <a name="nativeactivity-base-class"></a>Classe di base NativeActivity
 
@@ -36,11 +36,11 @@ ms.locfileid: "65637505"
 
 1. OpenVisual Studio 2010.
 
-2. Selezionare **File**, **nuove**e quindi **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **libreria di attività** nel **modelli** finestra. Assegnare al nuovo progetto il nome HelloActivity.
+2. Selezionare **file**, **nuovo**e quindi **progetto**. Selezionare **Workflow 4,0** in **Visual C#**  nella finestra **Tipi progetto** e selezionare il nodo **v2010** . Selezionare **libreria attività** nella finestra **modelli** . Assegnare al nuovo progetto il nome HelloActivity.
 
-3. Fare doppio clic su Activity1.xaml nel progetto HelloActivity e selezionare **Elimina**.
+3. Fare clic con il pulsante destro del mouse su Activity1. XAML nel progetto HelloActivity e selezionare **Elimina**.
 
-4. Pulsante destro del mouse sul progetto HelloActivity e selezionare **Add**e quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.
+4. Fare clic con il pulsante destro del mouse sul progetto HelloActivity, scegliere **Aggiungi**, quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.
 
 5. Nel file HelloActivity.cs aggiungere le seguenti istruzioni `using`.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637505"
 
 9. Usare l'oggetto <xref:System.Activities.NativeActivityContext> per pianificare un segnalibro. Per informazioni dettagliate sulla creazione, pianificazione e ripresa di un segnalibro, vedere <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

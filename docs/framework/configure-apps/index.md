@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912875"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972195"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -127,4 +127,4 @@ ms.locfileid: "69912875"
 - [Amministrazione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Gestione dei criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assembly in Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assembly in .NET](../../standard/assembly/index.md)

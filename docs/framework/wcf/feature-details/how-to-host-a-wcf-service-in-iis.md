@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878644"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972413"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
-Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per altre informazioni su IIS vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF che viene eseguito nell'ambiente IIS sfrutta appieno le funzionalità IIS, quali il riciclo dei processi, interruzione dell'inattività, il monitoraggio dello stato di processo e attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
+In questo argomento vengono illustrati i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per ulteriori informazioni su IIS, vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF in esecuzione nell'ambiente IIS sfrutta appieno le funzionalità di IIS, ad esempio il riciclo dei processi, l'arresto inattivo, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
   
- Per altre informazioni sulle modalità di interazione di WCF e ASP.NET, vedere [servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Per altre informazioni sulla configurazione della protezione, vedere [sicurezza](../../../../docs/framework/wcf/feature-details/security.md).  
+ Per ulteriori informazioni sull'interazione tra WCF e ASP.NET, vedere [servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Per ulteriori informazioni sulla configurazione della sicurezza, vedere [sicurezza](../../../../docs/framework/wcf/feature-details/security.md).  
   
- Per la copia di origine di questo esempio, vedere [IIS di Hosting usando il codice Inline](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
+ Per la copia di origine di questo esempio, vedere la pagina relativa all' [hosting di IIS con il codice inline](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Per creare un servizio ospitato da IIS  
   
-1. Confermare che IIS sia installato e in esecuzione nel computer. Per altre informazioni sull'installazione e configurazione di IIS vedere [Installing and Configuring IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. Confermare che IIS sia installato e in esecuzione nel computer. Per ulteriori informazioni sull'installazione e la configurazione di IIS, vedere [installazione e configurazione di iis 7,0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", verificare che ASP.NET possa accedere al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS fisicamente ubicata in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
+2. Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", assicurarsi che ASP.NET abbia accesso al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS che si trova fisicamente in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
   
-3. Creare un nuovo file "service.svc" nella directory dell'applicazione. Modificare questo file aggiungendo il codice seguente @ServiceHost elemento.  
+3. Creare un nuovo file "service.svc" nella directory dell'applicazione. Modificare questo file aggiungendo l'elemento seguente @ServiceHost .  
   
-    ```  
-    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
-    ```  
+   ```
+   <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
+   ```  
   
 4. Creare una sottodirectory App_Code all'interno della directory dell'applicazione.  
   
@@ -60,11 +60,11 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. Creare un file denominato "Web.config" e aggiungere il codice di configurazione seguente nel file. In fase di esecuzione, l'infrastruttura WCF utilizza le informazioni per costruire un endpoint con le applicazioni client possono comunicare.  
+10. Creare un file denominato "Web.config" e aggiungere il codice di configurazione seguente nel file. In fase di esecuzione, l'infrastruttura WCF utilizza le informazioni per costruire un endpoint con cui le applicazioni client possono comunicare.  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni sull'endpoint, associazioni e comportamenti vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. Per ulteriori informazioni sugli endpoint, le associazioni e i comportamenti predefiniti, vedere [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 11. Per assicurarsi che il servizio sia ospitato correttamente, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
   

@@ -2,12 +2,12 @@
 title: Migrazione da .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045861"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990173"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrazione da .NET Remoting a WCF
 In questo articolo viene descritto come eseguire la migrazione di un'applicazione che usa Servizi remoti .NET per l'uso di Windows Communication Foundation (WCF). Vengono confrontati concetti simili tra questi prodotti e quindi viene descritto come realizzare diversi scenari comuni di Servizi remoti .NET in WCF.  
@@ -15,7 +15,7 @@ In questo articolo viene descritto come eseguire la migrazione di un'applicazion
  Servizi remoti .NET è un prodotto legacy supportato solo per la compatibilità con le versioni precedenti. Non è sicuro in ambienti ad attendibilità mista poiché non è in grado di mantenere livelli di attendibilità distinti tra il client e il server. Ad esempio, è consigliabile non esporre mai un endpoint Servizi remoti .NET a Internet o a client non attendibili. Si consiglia di eseguire la migrazione delle applicazioni Servizi remoti .NET esistenti a tecnologie più recenti e sicure. Se la progettazione dell'applicazione usa solo HTTP ed è RESTful, è consigliabile l'API Web ASP.NET. Per altre informazioni, vedere l'API Web ASP.NET. Se l'applicazione è basata su SOAP o richiede protocolli diversi da HTTP, come ad esempio TCP, è consigliabile WCF.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>Confronto tra Servizi remoti .NET e WCF  
- In questa sezione vengono confrontati i componenti di base di Servizi remoti .NET con gli equivalenti di WCF. Questi componenti di base verranno usati in un secondo momento per creare alcuni scenari client-server comuni in WCF. Nella tabella seguente sono riepilogate le principali analogie e differenze tra Servizi remoti .NET e WCF.  
+ In questa sezione vengono confrontati i componenti di base di Servizi remoti .NET con gli equivalenti di WCF. Questi blocchi predefiniti vengono usati in un secondo momento per creare alcuni scenari client-server comuni in WCF. Nel grafico seguente sono riepilogate le analogie e le differenze principali tra .NET Remoting e WCF.  
   
 ||Servizi remoti .NET|WCF|  
 |-|-------------------|---------|  
@@ -207,7 +207,7 @@ public class WCFCustomer
   
  L'attributo [DataContract] identifica questo tipo come serializzabile e deserializzabile tra client e server. L'attributo [DataMember] identifica le singole proprietà o i singoli campi da serializzare.  
   
- Quando WCF invia un oggetto tra i livelli, serializza solo i valori e crea una nuova istanza dell'oggetto nell'altro livello. Tutte le interazioni con i valori dell'oggetto avvengono solo in locale: non comunicano con l'altro livello come nel caso degli oggetti in base al riferimento di Servizi remoti .NET. Per ulteriori informazioni, vedere [serializzazione e](./feature-details/serialization-and-deserialization.md)deserializzazione.  
+ Quando WCF invia un oggetto tra i livelli, serializza solo i valori e crea una nuova istanza dell'oggetto nell'altro livello. Tutte le interazioni con i valori dell'oggetto avvengono solo in locale: non comunicano con l'altro livello come nel caso degli oggetti in base al riferimento di Servizi remoti .NET. Per ulteriori informazioni, vedere [serializzazione e deserializzazione](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Funzionalità di gestione delle eccezioni  
   

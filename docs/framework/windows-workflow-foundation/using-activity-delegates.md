@@ -2,12 +2,12 @@
 title: Utilizzo di delegati di attività
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 8c9d82f47f709a89455f41691526b6ac9718a01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004614"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989087"
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.
@@ -22,7 +22,7 @@ Diverse attività [!INCLUDE[netfx_current_short](../../../includes/netfx-current
 
 L'oggetto ActionArgument è usato per propagare i singoli elementi della raccolta in WriteLine. Quando il flusso di lavoro viene richiamato, l'output seguente viene visualizzato nella console.
 
-```
+```console
 HelloWorld.
 ```
 
@@ -30,9 +30,9 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Per altre informazioni sugli inizializzatori di oggetto, vedere [come: Inizializzare gli oggetti senza chiamare un costruttore (C# Guida per programmatori)](https://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](https://go.microsoft.com/fwlink/?LinkId=161016).
+Per ulteriori informazioni sugli inizializzatori di oggetto, [vedere Procedura: Inizializzare gli oggetti senza chiamare unC# Costruttore (Guida](https://go.microsoft.com/fwlink/?LinkId=161015) per [programmatori) e procedura: Dichiarare un oggetto utilizzando un inizializzatore](https://go.microsoft.com/fwlink/?LinkId=161016)di oggetto.
 
-Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per il <xref:System.Activities.Statements.Catch%601> azione dell'attività è una <xref:System.Activities.Statements.WriteLine> attività e il dettaglio dell'eccezione vengono propagati tramite il `ex` <xref:System.Activities.DelegateInArgument%601>.
+Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per l' <xref:System.Activities.Statements.Catch%601> azione dell'attività Activity è un' <xref:System.Activities.Statements.WriteLine> attività e il dettaglio dell'eccezione viene propagata tramite l'oggetto `ex` <xref:System.Activities.DelegateInArgument%601>.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044919"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989861"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 In questo esempio viene illustrato come compilare un canale di protocollo personalizzato per utilizzare cookie HTTP per la gestione della sessione. Questo canale consente la comunicazione tra i servizi Windows Communication Foundation (WCF) e i client ASMX o tra i client WCF e i servizi ASMX.  
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
   
 - Quando il listener del canale è aperto, accetta un canale interno dal listener interno. Poiché il listener interno è un listener del datagramma e la durata di un canale accettato è separata dalla durata del listener, è possibile chiudere il listener interno e utilizzare solo il canale interno  
   
-    ```  
+    ```csharp  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
     this.innerChannel = this.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());  
     this.innerChannel.Open(timeoutHelper.RemainingTime());  
@@ -50,7 +50,7 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
   
 - Quando il processo aperto viene completato, si imposta un ciclo di messaggi per ricevere messaggi dal canale interno.  
   
-    ```  
+    ```csharp  
     IAsyncResult result = BeginInnerReceiveRequest();  
     if (result != null && result.CompletedSynchronously)  
     {  
@@ -65,13 +65,13 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
   
 - Quando arriva un messaggio, il canale del servizio esamina l'identificatore di sessione ed esegue il demultiplexing al canale della sessione appropriato. Il listener del canale gestisce un dizionario che esegue il mapping degli identificatori di sessione alle istanze del canale della sessione.  
   
-    ```  
+    ```csharp  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
  La `HttpCookieReplySessionChannel` classe implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. I livelli più elevati dello stack dei canali chiamano il metodo <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> per leggere le richieste per la sessione. Ogni canale della sessione ha una coda di messaggi privata in cui vengono inseriti messaggi dal canale del servizio.  
   
-```  
+```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
@@ -137,7 +137,7 @@ InputQueue<RequestContext> requestQueue;
   
  Quando si esegue l'esempio, verrà visualizzato l'output seguente:  
   
-```  
+```console  
 Simple binding:  
 AddItem(10000,2): ItemCount=2  
 AddItem(10550,5): ItemCount=7  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 1. Installare ASP.NET 4,0 usando il comando seguente.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

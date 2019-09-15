@@ -2,12 +2,12 @@
 title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911860"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991523"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML sono comunemente codificati nel formato di testo standard definito nella [specifica XML 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), gli sviluppatori e i progettisti di sistemi connessi sono in genere preoccupati per il footprint di rete (o le dimensioni) dei messaggi inviati attraverso la rete e il la codifica basata su testo di XML pone particolari difficoltà per il trasferimento efficiente di dati binari.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
 ### <a name="programming-model"></a>Modello di programmazione  
  Indipendentemente da quale dei tre codificatori incorporati viene utilizzato nell'applicazione, l'esperienza di programmazione è identica per quanto concerne il trasferimento di dati binari. La differenza risiede nel modo in cui WCF gestisce i dati in base ai relativi tipi di dati.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Modello di programmazione per i trasferimenti in flussi  
  Il modello di programmazione per il flusso è semplice. Per ricevere flussi di dati, specificare un contratto di operazione con un solo parametro di input tipizzato <xref:System.IO.Stream>. Per restituire flussi di dati, restituire un riferimento <xref:System.IO.Stream>.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Questa regola si applica in modo analogo ai contratti di messaggio. Come illustrato nel contratto di messaggio seguente, un solo membro del corpo nel contratto del messaggio può essere un flusso. Se si desidera comunicare informazioni aggiuntive con il flusso, queste informazioni devono essere incluse nelle intestazioni del messaggio. Il corpo del messaggio è riservato esclusivamente al contenuto del flusso.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  

@@ -2,12 +2,12 @@
 title: Sessione affidabile di associazione personalizzata
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: a68acc29629a47c2c4a3263f04ec4f6e32a7173c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b2679ad4c6e8595a7b6d6bc9818880da56781e38
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040060"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990003"
 ---
 # <a name="custom-binding-reliable-session"></a>Sessione affidabile di associazione personalizzata
 
@@ -92,7 +92,7 @@ Quando si esegue l'esempio tra più computer, è necessario modificare l'indiriz
 
 Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -105,7 +105,7 @@ Press <ENTER> to terminate client.
 
 1. Installare ASP.NET 4,0 usando il comando seguente:
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

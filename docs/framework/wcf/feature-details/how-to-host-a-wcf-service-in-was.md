@@ -2,12 +2,12 @@
 title: 'Procedura: hosting di un servizio WCF in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: cdab0876b65c190cd5d46f82218eb9fbb8234298
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988206"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972212"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: hosting di un servizio WCF in WAS
 Questo argomento descrive i passaggi di base necessari per creare un servizio di attivazione dei processi di Windows (noto anche come WAS) hosted Windows Communication Foundation (WCF). WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF utilizza l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute tramite i protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  
@@ -66,9 +66,9 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio di
   
 4. Creare un file Service.svc  contenente il codice seguente.  
   
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
   
 5. Posizionare il file Service.svc nella directory virtuale di IIS.  
   
@@ -76,8 +76,8 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio di
   
 1. Utilizzare [lo strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dalla riga di comando per generare codice dai metadati del servizio.  
   
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
+    ```console
+    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
 2. Il client generato contiene l'interfaccia `ICalculator` che definisce il contratto di servizio che l'implementazione del client deve soddisfare.  

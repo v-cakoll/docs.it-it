@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607042"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970180"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (opzioni del compilatore C#)
 Questa opzione aggiunge un modulo creato con l'opzione target:module nella compilazione in corso.  
@@ -28,7 +28,7 @@ Questa opzione aggiunge un modulo creato con l'opzione target:module nella compi
  `file`, `file2`  
  Un file di output che contiene i metadati. Il file non può contenere un manifesto dell'assembly. Per importare più di un file, separare i nomi dei file con una virgola o con un punto e virgola.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  In fase di esecuzione tutti i moduli aggiunti con **-addmodule** devono essere nella stessa directory del file di output. Ovvero, è possibile specificare un modulo in una directory in fase di compilazione, ma il modulo deve essere nella directory dell'applicazione in fase di esecuzione. Se il modulo non è nella directory dell'applicazione in fase di esecuzione, verrà restituita un'eccezione <xref:System.TypeLoadException>.  
   
  `file` non può contenere un assembly. Ad esempio, se il file di output è stato creato con [-target:module](./target-module-compiler-option.md), i relativi metadati possono essere importati con **-addmodule**.  
@@ -49,4 +49,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [Opzioni del compilatore C#](./index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
 - [Assembly su più file](../../../framework/app-domains/multifile-assemblies.md)
-- [Procedura: Compilare un assembly su più file](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Procedura: Compilare un assembly su più file](../../../framework/app-domains/build-multifile-assembly.md)

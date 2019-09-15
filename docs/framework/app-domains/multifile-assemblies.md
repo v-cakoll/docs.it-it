@@ -1,6 +1,6 @@
 ---
 title: Assembly su più file
-ms.date: 03/30/2017
+ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634171"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971870"
 ---
 # <a name="multifile-assemblies"></a>Assembly su più file
 
-È possibile creare assembly con più file usando i compilatori della riga di comando o Visual Studio con Visual C++. Un file all'interno dell'assembly deve contenere il manifesto dell'assembly. Un assembly che avvia un'applicazione deve inoltre contenere un punto di ingresso, ad esempio un metodo Main o WinMain.
+È possibile creare assembly su più file destinati ai .NET Framework usando compilatori della riga di comando o Visual Studio C++con Visual. Un file all'interno dell'assembly deve contenere il manifesto dell'assembly. Un assembly che avvia un'applicazione deve contenere anche un punto di ingresso, ad esempio `Main` un `WinMain` metodo o.
 
-Ad esempio, si supponga di avere un'applicazione contenente due moduli di codice, Client.cs e Stringer.cs. Stringer.cs crea lo spazio dei nomi `myStringer` a cui fa riferimento il codice in Client.cs. Client.cs contiene il metodo `Main`, che è il punto di ingresso dell'applicazione. In questo esempio vengono compilati i due moduli di codice e quindi viene creato un terzo file contenente il manifesto dell'assembly che avvia l'applicazione. Il manifesto dell'assembly fa riferimento a entrambi i moduli `Client` e `Stringer`.
+Si supponga, ad esempio, di disporre di un'applicazione che contiene due moduli di codice, *client.cs* e *Stringer.cs*. *Stringer.cs* crea lo `myStringer` spazio dei nomi a cui fa riferimento il codice in *client.cs*. *Client.cs* contiene il `Main` metodo, che è il punto di ingresso dell'applicazione. In questo esempio vengono compilati i due moduli di codice e quindi viene creato un terzo file contenente il manifesto dell'assembly che avvia l'applicazione. Il manifesto dell'assembly fa riferimento ai moduli *client* e *Stringer* .
 
 > [!NOTE]
 > Negli assembly su più file può essere presente un solo punto di ingresso, anche se l'assembly include più moduli di codice.
@@ -39,9 +39,9 @@ La scelta di creare un assembly su più file può essere consigliabile per varie
 
 - Per combinare moduli di codice scritti da più sviluppatori. Sebbene ogni sviluppatore possa compilare ogni modulo di codice in un assembly, questa operazione può forzare l'esposizione pubblica di alcuni tipi che non sarebbero esposti se tutti i moduli venissero inclusi in un assembly su più file.
 
-Dopo aver creato l'assembly, è possibile firmare il file che contiene il manifesto dell'assembly (e quindi l'assembly) oppure è possibile assegnare un nome sicuro al file (e all'assembly) e inserirlo nella Global Assembly Cache.
+Una volta creato l'assembly, è possibile firmare il file contenente il manifesto dell'assembly e, di conseguenza, l'assembly, oppure è possibile assegnare un nome sicuro al file e all'assembly e inserirlo nell'Global Assembly Cache.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Procedura: Compilare un assembly su più file](build-multifile-assembly.md)
+- [Programma con assembly](../../standard/assembly/program.md)

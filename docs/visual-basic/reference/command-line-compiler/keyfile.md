@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30b890cf3d523d1e33b433a1ff6109759bd9a5e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924876"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972323"
 ---
 # <a name="-keyfile"></a>-keyfile
 Specifica un file contenente una chiave o una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -35,11 +35,11 @@ Specifica un file contenente una chiave o una coppia di chiavi allo scopo di ass
   
  È possibile specificare questa opzione anche come attributo personalizzato (<xref:System.Reflection.AssemblyKeyFileAttribute>) nel codice sorgente di qualsiasi modulo Microsoft Intermediate Language.  
   
- Se nella stessa `-keyfile` compilazione vengono specificati sia che [-](../../../visual-basic/reference/command-line-compiler/keycontainer.md) key container (per opzione della riga di comando o attributo personalizzato), il compilatore tenta prima di tutto il contenitore di chiavi. Se l'operazione riesce, l'assembly viene firmato con le informazioni incluse nel contenitore di chiavi. Se il compilatore non trova il contenitore di chiavi, tenta il file specificato con `-keyfile`. Se l'operazione ha esito positivo, l'assembly viene firmato con le informazioni contenute nel file di chiave e le informazioni sulla chiave vengono installate nel contenitore di `sn -i`chiavi (simile a) in modo che nella compilazione successiva il contenitore di chiavi sarà valido.  
+ Se nella stessa `-keyfile` compilazione vengono specificati sia che [-key container](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (per opzione della riga di comando o attributo personalizzato), il compilatore tenta prima di tutto il contenitore di chiavi. Se l'operazione riesce, l'assembly viene firmato con le informazioni incluse nel contenitore di chiavi. Se il compilatore non trova il contenitore di chiavi, tenta il file specificato con `-keyfile`. Se l'operazione ha esito positivo, l'assembly viene firmato con le informazioni contenute nel file di chiave e le informazioni sulla chiave vengono installate nel contenitore di `sn -i`chiavi (simile a) in modo che nella compilazione successiva il contenitore di chiavi sarà valido.  
   
  Si noti che un file di chiave può contenere solo la chiave pubblica.  
   
- Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
+ Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
 > L' `-keyfile` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  

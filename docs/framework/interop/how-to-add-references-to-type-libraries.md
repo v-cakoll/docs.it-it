@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946487"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971895"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Procedura: Aggiungere riferimenti alle librerie dei tipi
 Quando si aggiunge un riferimento a una libreria dei tipi, Visual Studio genera un assembly di interoperabilità contenente metadati. Se è disponibile un assembly di interoperabilità primario, prima della generazione di un nuovo assembly di interoperabilità in Visual Studio verrà utilizzato l'assembly esistente.  
@@ -48,7 +48,6 @@ Quando si aggiunge un riferimento a una libreria dei tipi, Visual Studio genera 
 
 - [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
 - [/link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

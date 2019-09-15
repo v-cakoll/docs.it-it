@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588979"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991277"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: Programmazione di Office (C# e Visual Basic)
 
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.
 
-Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da distribuire gli assembly che interagiscono con i componenti COM senza distribuire assembly di interoperabilità primari (PIA) al computer dell'utente. Per altre informazioni, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da distribuire gli assembly che interagiscono con i componenti COM senza distribuire assembly di interoperabilità primari (PIA) al computer dell'utente. Per altre informazioni, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).
 
 In questa procedura dettagliata queste funzionalità vengono illustrate nel contesto della programmazione di Office, ma molte di esse sono utili anche nella programmazione generale. Nella procedura dettagliata si usa un componente aggiuntivo di Excel per creare una cartella di lavoro di Excel. A questo punto si crea un documento di Word contenente un collegamento alla cartella di lavoro. Infine, si visualizzerà come la dipendenza dell'assembly di interoperabilità primario può essere abilitata e disabilitata.
 
@@ -160,7 +160,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 
 4. Nel menu **File** della finestra IL DASM selezionare **File** > **Apri**. Fare doppio clic su **Visual Studio \<versione>** e su **Progetti**. Aprire la cartella per il progetto e cercare nella cartella bin/Debug il file *nome progetto*.dll. Fare doppio clic su *nome progetto*.dll. Una nuova finestra consente di visualizzare gli attributi del progetto, oltre ai riferimenti ad altri moduli e assembly. Notare che gli spazi dei nomi `Microsoft.Office.Interop.Excel` e `Microsoft.Office.Interop.Word` sono inclusi nell'assembly. Per impostazione predefinita in Visual Studio, il compilatore importa i tipi necessari da un assembly di interoperabilità primario a cui si fa riferimento nell'assembly.
 
-     Per altre informazioni, vedere [Procedura: Visualizzare il contenuto degli assembly](../../../framework/app-domains/how-to-view-assembly-contents.md).
+     Per altre informazioni, vedere [Procedura: Visualizzare il contenuto degli assembly](../../../standard/assembly/view-contents.md).
 
 5. Fare doppio clic sull'icona **MANIFESTO**. Viene visualizzata una finestra che include un elenco di assembly che contengono gli elementi a cui fa riferimento il progetto. `Microsoft.Office.Interop.Excel` e `Microsoft.Office.Interop.Word` non sono inclusi nell'elenco. Poiché i tipi che è necessario importare nell'assembly per il progetto, i riferimenti a un assembly di interoperabilità primario non sono necessari. Ciò rende più semplice la distribuzione. Gli assembly di interoperabilità primari non devono essere presenti nel computer dell'utente e, poiché un'applicazione non richiede la distribuzione di una versione specifica di un assembly di interoperabilità primario, è possibile progettare applicazioni compatibili con più versioni di Office, a condizione che le API necessarie siano presenti in tutte le versioni.
 
@@ -205,7 +205,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
 - [Espressioni lambda (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md)
 - [Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilità](./index.md)

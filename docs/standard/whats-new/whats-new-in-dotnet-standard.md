@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e67fe1436863da4050342bb224d67894111cc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: HT
+ms.openlocfilehash: 5be4bccf77d39a0b2c336d98a0e1e4d5250bec91
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712487"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972403"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
@@ -68,6 +68,8 @@ L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framew
 Con la versione 2.0 di .NET Core e .NET Standard, sia Visual Studio 2017 che l'[interfaccia della riga di comando di .NET Core](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie .NET Standard.
 
 Se si installa Visual Studio con il carico di lavoro **Sviluppo multipiattaforma .NET Core**, è possibile creare un progetto di libreria .NET Standard 2.0 usando un modello di progetto, come illustrato nella figura seguente:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

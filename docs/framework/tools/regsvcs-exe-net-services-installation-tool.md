@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c531a08e4555a8a076d81835bcceffa53e3ad7d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894822"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971807"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -41,9 +41,9 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|File di assembly di origine. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni, vedere [Firma di un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*assemblyFile.dll*|File di assembly di origine. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni, vedere [Firma di un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md).|  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -65,7 +65,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 ## <a name="remarks"></a>Note  
- Regsvcs.exe richiede un file di assembly di origine specificato da *FileAssembly.dll*. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni sulla firma con un nome sicuro, vedere [Firma di un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). I nomi dell'applicazione di destinazione e del file della libreria dei tipi sono facoltativi. L'argomento *nomeApplicazione* può essere generato dal file di assembly di origine e, se non esiste già, viene creato da Regsvcs.exe. L'argomento *filelibreriatipi* può specificare il nome di una libreria dei tipi. Se non lo si specifica, come impostazione predefinita verrà usato il nome dell'assembly.  
+ Regsvcs.exe richiede un file di assembly di origine specificato da *FileAssembly.dll*. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni sulla firma con un nome sicuro, vedere [Firma di un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md). I nomi dell'applicazione di destinazione e del file della libreria dei tipi sono facoltativi. L'argomento *nomeApplicazione* può essere generato dal file di assembly di origine e, se non esiste già, viene creato da Regsvcs.exe. L'argomento *filelibreriatipi* può specificare il nome di una libreria dei tipi. Se non lo si specifica, come impostazione predefinita verrà usato il nome dell'assembly.  
   
  Quando Regsvcs.exe registra i metodi di un componente, lo strumento è soggetto a [richieste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) e [richieste di collegamento](../../../docs/framework/misc/link-demands.md) su tali metodi. Poiché lo strumento viene eseguito in un ambiente completamente attendibile, molte richieste di autorizzazione vengono completate. Regsvcs.exe non è tuttavia in grado di registrare componenti con metodi protetti da una richiesta o una richiesta di collegamento per <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
@@ -89,5 +89,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](../../../docs/framework/tools/index.md)
-- [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

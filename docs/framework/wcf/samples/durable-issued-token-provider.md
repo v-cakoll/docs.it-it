@@ -2,12 +2,12 @@
 title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928828"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989948"
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
@@ -120,7 +120,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
      Per eseguire questa attività il provider di token personalizzato deriva dalla classe <xref:System.IdentityModel.Selectors.SecurityTokenProvider> ed esegue l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Questo metodo tenta di ottenere un token dalla cache o, se non è possibile trovare un token nella cache, recupera un token dal provider sottostante e quindi lo memorizza nella cache. In entrambi i casi, il metodo restituisce `SecurityToken`.  
   
-    ```csharp
+    ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
      La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> per un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> specifico che viene passato nel metodo `CreateSecurityTokenProvider`. Viene inoltre utilizzato un gestore del token di sicurezza per creare autenticatori del token e serializzatori del token, che però non vengono presi in esame in questo esempio. Nell'esempio, il gestore del token di sicurezza eredita dalla classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenProvider` per restituire il provider di token personalizzato quando i requisiti del token passati indicano che viene richiesto un token emesso.  
   
-    ```csharp
+    ```csharp  
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -166,7 +166,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
      La classe delle credenziali di un client viene utilizzata per rappresentare le credenziali configurate per il proxy client e crea il gestore del token di protezione utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.  
   
-    ```csharp
+    ```csharp  
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 4. Implementare la cache del token. L'implementazione di esempio utilizza una classe di base astratta tramite la quale utenti di una cache del token specificata interagiscono con la cache.  
   
-    ```csharp
+    ```csharp  
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
      L'esempio elimina la classe della credenziale client predefinita e fornisce la nuova classe della credenziale client affinché il client possa utilizzare la credenziale client personalizzata.  
   
-    ```csharp
+    ```csharp  
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  

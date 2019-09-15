@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044414"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989700"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedura: Creare un flusso di lavoro sequenziale
 
@@ -130,7 +130,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
 
 11. Digitare l'espressione seguente nella casella del valore della proprietà **Condition** dell'attività **if** appena aggiunta.
 
-    ```
+    ```text
     Guess < Target
     ```
 

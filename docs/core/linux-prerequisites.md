@@ -4,12 +4,12 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849062"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969873"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -22,6 +22,8 @@ Questo articolo illustra le dipendenze necessarie per sviluppare applicazioni .N
 > Il pacchetto .NET Core SDK non è richiesto per ambienti/server di produzione. È necessario solo il pacchetto di runtime di .NET Core per le app distribuite in ambienti di produzione. Il runtime di .NET Core viene distribuito con le app nell'ambito di una distribuzione indipendente, ma deve essere distribuito separatamente per le app dipendenti dal framework. Per altre informazioni sui tipi di distribuzione indipendenti e dipendenti dal framework, vedere [Distribuzione di applicazioni .NET Core](./deploying/index.md). Per linee guida specifiche, vedere anche [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Applicazioni Linux indipendenti).
 
 ## <a name="supported-linux-versions"></a>Versioni di Linux supportate
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 

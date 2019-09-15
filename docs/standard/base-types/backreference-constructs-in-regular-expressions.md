@@ -15,19 +15,19 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678358"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991652"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 
 I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa. Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.
 
 > [!NOTE]
-> Per fare riferimento a gruppi di acquisizione denominati e numerati in stringhe sostitutive, si usa una sintassi separata. Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md).
+> Per fare riferimento a gruppi di acquisizione denominati e numerati in stringhe sostitutive, si usa una sintassi separata. Per altre informazioni, vedere [Sostituzioni](substitutions-in-regular-expressions.md).
 
 .NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati. Per altre informazioni sui gruppi di acquisizione, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
@@ -53,7 +53,7 @@ Se il problema è dovuto all'ambiguità, è possibile usare la notazione `\k<`*n
 
 L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(\w)\1` costituita dagli elementi seguenti.
 
-|Elemento|Description|
+|Elemento|Descrizione|
 |-------------|-----------------|
 |`(\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna al primo gruppo di acquisizione.|
 |`\1`|Trova la corrispondenza del carattere successivo, uguale al valore del primo gruppo di acquisizione.|
@@ -75,7 +75,7 @@ dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espr
 
 L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(?<char>\w)\k<char>` costituita dagli elementi seguenti.
 
-|Elemento|Description|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
 |`(?<char>\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna a un gruppo di acquisizione denominato `char`.|
 |`\k<char>`|Trova la corrispondenza del carattere successivo, uguale al valore del gruppo di acquisizione denominato `char`.|
@@ -95,7 +95,7 @@ Se *nome* è la rappresentazione stringa di un numero e nessun gruppo di acquisi
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Al contrario, genera un'eccezione <xref:System.ArgumentException>. L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
+Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Viene invece generata un' <xref:System.ArgumentException>eccezione. L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -106,7 +106,7 @@ Un backreference fa riferimento alla definizione più recente di un gruppo, vale
 
 L'esempio seguente include un modello di espressione regolare `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \1. Nella tabella seguente sono descritti i modelli di espressione regolare.
 
-|Modello|Description|
+|Modello|Descrizione|
 |-------------|-----------------|
 |`(?<1>a)`|Trova la corrispondenza del carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|
 |`(?<1>\1b)*`|Trova 0 o più occorrenze del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|
@@ -126,7 +126,7 @@ In questo esempio `*` è un quantificatore di cicli, vale a dire che viene esegu
 
 Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza. Questo comportamento è illustrato dal modello delle espressioni regolari `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, definito nel modo seguente:
 
-|Modello|Description|
+|Modello|DESCRIZIONE|
 |-------------|-----------------|
 |`\b`|Inizia la corrispondenza sul confine di parola.|
 |`(\p{Lu}{2})`|Trova la corrispondenza di due maiuscole. Equivale al primo gruppo di acquisizione.|

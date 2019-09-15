@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948032"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971566"
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 
@@ -157,8 +157,8 @@ Se un altro progetto nell'app fa riferimento alla versione 1.0.0.0 dello stesso 
 - [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Autorizzazione di sicurezza per il reindirizzamento delle versioni di assembly](assembly-binding-redirection-security-permission.md)
-- [Assembly in Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programmazione con gli assembly](../app-domains/programming-with-assemblies.md)
+- [Assembly in .NET](../../standard/assembly/index.md)
+- [Programmazione con gli assembly](../../standard/assembly/program.md)
 - [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurazione di applicazioni](index.md)
 - [Schema delle impostazioni di runtime](./file-schema/runtime/index.md)

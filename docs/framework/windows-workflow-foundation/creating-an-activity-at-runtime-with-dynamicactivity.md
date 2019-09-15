@@ -2,12 +2,12 @@
 title: Creazione di un'attività in fase di esecuzione con DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de67fdd71f28bc0f4b16017d253682ca2615f854
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774075"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989731"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Creazione di un'attività in fase di esecuzione con DynamicActivity
 <xref:System.Activities.DynamicActivity> è una classe sealed concreta con costruttore pubblico. <xref:System.Activities.DynamicActivity> può essere usata per assemblare la funzionalità di attività in fase di esecuzione tramite un unico DOM di attività.  
@@ -23,13 +23,13 @@ ms.locfileid: "61774075"
   
 1. OpenVisual Studio 2010.  
   
-2. Selezionare **File**, **nuove**, **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **applicazione Console flusso di lavoro sequenziale** nel **modelli** finestra. Assegnare il nome DynamicActivitySample al nuovo progetto.  
+2. Selezionare **file**, **nuovo**, **progetto**. Selezionare **Workflow 4,0** in **Visual C#**  nella finestra **Tipi progetto** e selezionare il nodo **v2010** . Selezionare **applicazione console flusso di lavoro sequenziale** nella finestra **modelli** . Assegnare il nome DynamicActivitySample al nuovo progetto.  
   
-3. Fare doppio clic su Workflow1.xaml nel progetto HelloActivity e selezionare **Elimina**.  
+3. Fare clic con il pulsante destro del mouse su Workflow1. XAML nel progetto HelloActivity e selezionare **Elimina**.  
   
 4. Aprire Program.cs. Aggiungere la seguente direttiva all'inizio del file.  
   
-    ```  
+    ```csharp  
     using System.Collections.Generic;  
     ```  
   
@@ -66,35 +66,35 @@ ms.locfileid: "61774075"
                 Console.ReadLine();  
     ```  
   
-6. Eseguire l'applicazione. Una finestra della console con il testo "Hello World!" Consente di visualizzare.  
+6. Eseguire l'applicazione. Una finestra della console con il testo "Hello World!" Visualizza.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Per creare un'attività in fase di esecuzione usando il codice XAML  
   
-1. Open Visual Studio 2010.  
+1. Aprire Visual Studio 2010.  
   
-2. Selezionare **File**, **nuove**, **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **applicazione Console flusso di lavoro** nel **modelli** finestra. Assegnare il nome DynamicActivitySample al nuovo progetto.  
+2. Selezionare **file**, **nuovo**, **progetto**. Selezionare **Workflow 4,0** in **Visual C#**  nella finestra **Tipi progetto** e selezionare il nodo **v2010** . Selezionare **applicazione console flusso di lavoro** nella finestra **modelli** . Assegnare il nome DynamicActivitySample al nuovo progetto.  
   
-3. Aprire Workflow1.xaml nel progetto HelloActivity. Scegliere il **argomenti** opzione nella parte inferiore della finestra di progettazione. Creare un nuovo argomento `In` denominato `TextToWrite` di tipo `String`.  
+3. Aprire Workflow1.xaml nel progetto HelloActivity. Fare clic sull'opzione **argomenti** nella parte inferiore della finestra di progettazione. Creare un nuovo argomento `In` denominato `TextToWrite` di tipo `String`.  
   
-4. Trascinare un **WriteLine** attività dalle **primitive** sezione della casella degli strumenti nell'area di progettazione. Assegnare il valore `TextToWrite` per il **testo** proprietà dell'attività.  
+4. Trascinare un'attività **WriteLine** dalla sezione **primitive** della casella degli strumenti nell'area di progettazione. Assegnare il valore `TextToWrite` alla proprietà **Text** dell'attività.  
   
 5. Aprire Program.cs. Aggiungere la seguente direttiva all'inizio del file.  
   
-    ```  
+    ```csharp  
     using System.Activities.XamlIntegration;  
     ```  
   
 6. Sostituire il contenuto del metodo `Main` con il codice riportato di seguito.  
   
-    ```  
+    ```csharp  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
                     results = WorkflowInvoker.Invoke(act2, new Dictionary<string, object> { { "TextToWrite", "HelloWorld!" } });  
     Console.ReadLine();  
     ```  
   
-7. Eseguire l'applicazione. Una finestra della console con il testo "Hello World!" viene visualizzata.  
+7. Eseguire l'applicazione. Una finestra della console con il testo "Hello World!" appare.  
   
-8. Fare clic sul file Workflow1.xaml nel **Esplora soluzioni** e selezionare **Visualizza codice**. Si noti che la classe di attività viene creata con `x:Class` e la proprietà viene creata con `x:Property`.  
+8. Fare clic con il pulsante destro del mouse sul file Workflow1. XAML nella **Esplora soluzioni** e selezionare **Visualizza codice**. Si noti che la classe di attività viene creata con `x:Class` e la proprietà viene creata con `x:Property`.  
   
 ## <a name="see-also"></a>Vedere anche
 

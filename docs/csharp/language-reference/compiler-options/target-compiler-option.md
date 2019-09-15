@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606445"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970120"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opzioni del compilatore C#)
 L'opzione del compilatore **-target** può essere specificata in una delle quattro forme seguenti:  
@@ -37,7 +37,7 @@ L'opzione del compilatore **-target** può essere specificata in una delle quatt
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Per creare un file con estensione winmdobj intermedio.  
   
- Se non si specifica **-target:module**, **-target** provoca l'inserimento di un manifesto dell'assembly di .NET Framework in un file di output. Per altre informazioni, vedere [Assembly in Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) e [Attributi comuni](../../programming-guide/concepts/attributes/common-attributes.md).  
+ Se non si specifica **-target:module**, **-target** provoca l'inserimento di un manifesto dell'assembly di .NET Framework in un file di output. Per altre informazioni, vedere [assembly in .NET](../../../standard/assembly/index.md) e [attributi comuni](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  Il manifesto dell'assembly viene inserito nel primo file di output con estensione .exe della compilazione o nel primo DLL, se non esiste alcun file di output .exe. Ad esempio, nella riga di comando seguente il manifesto verrà inserito in `1.exe`:  
   

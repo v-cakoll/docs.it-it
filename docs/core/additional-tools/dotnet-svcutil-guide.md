@@ -4,12 +4,12 @@ description: Panoramica dello strumento Microsoft WCF dotnet-svcutil che aggiung
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 723855401f3a81edbd34c77481e4ff12db7dcdaf
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926443"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969931"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Strumento WCF dotnet-svcutil per .NET Core
 
@@ -23,6 +23,8 @@ Lo strumento **dotnet-svcutil** rappresenta un'alternativa al provider di serviz
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.
 
 ## <a name="prerequisites"></a>Prerequisiti
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 

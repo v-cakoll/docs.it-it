@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911002"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969109"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
@@ -35,7 +35,7 @@ L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione 
   
 - Assembly con nome sicuro.  
   
-     Nell'ambito dell'esecuzione side-by-side vengono usati assembly con nome sicuro per associare le informazioni sui tipi a una specifica versione di un assembly. In questo modo viene impedita l'associazione di un'applicazione o di un componente a una versione non valida di un assembly. Gli assembly con nome sicuro consentono la presenza di più versioni di un file sullo stesso computer e il relativo uso da parte delle applicazioni. Per altre informazioni, vedere [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md).  
+     Nell'ambito dell'esecuzione side-by-side vengono usati assembly con nome sicuro per associare le informazioni sui tipi a una specifica versione di un assembly. In questo modo viene impedita l'associazione di un'applicazione o di un componente a una versione non valida di un assembly. Gli assembly con nome sicuro consentono la presenza di più versioni di un file sullo stesso computer e il relativo uso da parte delle applicazioni. Per altre informazioni, vedere [Assembly con nomi sicuri](../../standard/assembly/strong-named.md).  
   
 - Archiviazione del codice con supporto della versione.  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Viene descritto come associare un'applicazione a una versione specifica di un assembly.|  
 |[Configuring Assembly Binding Redirection](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md) (Configurazione del reindirizzamento di associazione di assembly)|Viene illustrato come reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly di .NET Framework.|  
 |[In-Process Side-by-Side Execution](../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)|Viene illustrato come usare l'attivazione dell'host di runtime side-by-side in-process per eseguire più versioni di CLR in un solo processo.|  
-|[Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Viene fornita una panoramica sui concetti di base relativi agli assembly.|  
+|[Assembly in .NET](../../standard/assembly/index.md)|Viene fornita una panoramica sui concetti di base relativi agli assembly.|  
 |[Domini dell'applicazione](../../../docs/framework/app-domains/application-domains.md)|Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.|  
   
 ## <a name="reference"></a>Riferimenti  

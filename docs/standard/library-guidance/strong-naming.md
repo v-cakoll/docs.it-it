@@ -4,16 +4,16 @@ description: Procedure consigliate per la creazione di nomi sicuri per le librer
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640786"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968976"
 ---
 # <a name="strong-naming"></a>Denominazione sicura
 
-La creazione di nomi sicuri si riferisce alla firma di un assembly con una chiave, per produrre un [assembly con nome sicuro](../../framework/app-domains/strong-named-assemblies.md). Quando un assembly ha un nome sicuro, viene creata un'identità univoca basata sul nome e sul numero di versione dell'assembly e ciò può aiutare a evitare i conflitti di assembly.
+La creazione di nomi sicuri si riferisce alla firma di un assembly con una chiave, per produrre un [assembly con nome sicuro](../assembly/strong-named.md). Quando un assembly ha un nome sicuro, viene creata un'identità univoca basata sul nome e sul numero di versione dell'assembly e ciò può aiutare a evitare i conflitti di assembly.
 
 Lo svantaggio dei nomi sicuri è che .NET Framework in Windows abilita il caricamento in modalità strict per gli assembly con nome sicuro. Un riferimento a un assembly con nome sicuro deve corrispondere esattamente alla versione a cui viene fatto riferimento da un assembly, quindi gli sviluppatori devono [configurare reindirizzamenti di binding](../../framework/configure-apps/redirect-assembly-versions.md) quando l'assembly viene usato:
 

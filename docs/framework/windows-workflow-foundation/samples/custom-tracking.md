@@ -2,12 +2,12 @@
 title: Rilevamento personalizzato
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044294"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989405"
 ---
 # <a name="custom-tracking"></a>Rilevamento personalizzato
 Nell'esempio viene illustrato come creare un partecipante di rilevamento personalizzato e scrivere il contenuto dei dati di rilevamento nella console. Nell'esempio viene inoltre illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> popolati con dati definiti dall'utente. Il partecipante di rilevamento basato su console filtra gli oggetti <xref:System.Activities.Tracking.TrackingRecord> generati dal flusso di lavoro usando un oggetto profilo di rilevamento creato nel codice.
@@ -23,7 +23,7 @@ Nell'esempio viene illustrato come creare un partecipante di rilevamento persona
 
  Nella tabella seguente vengono indicati in dettaglio i record di rilevamento creati dall'esecuzione del flusso di lavoro.
 
-|Record di rilevamento|Descrizione|
+|Record di rilevamento|DESCRIZIONE|
 |---------------------|-----------------|
 |Record di rilevamento dell'istanza del flusso di lavoro.|Descrivono il ciclo di vita dell'istanza del flusso di lavoro. Ad esempio un record di istanza viene creato quando viene avviato o completato il flusso di lavoro.|
 |Record di rilevamento dello stato dell'attività.|Illustrano in dettaglio l'esecuzione dell'attività. Questi record indicano lo stato di un'attività del flusso di lavoro, ad esempio quando un'attività viene pianificata, quando viene completata o quando viene generato un errore.|
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Il partecipante di rilevamento completo viene implementato nel file ConsoleTrackingParticipant.cs. L'esempio di codice seguente è il metodo <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> per il partecipante di rilevamento personalizzato.
+ Il partecipante di rilevamento completo viene implementato nel file ConsoleTrackingParticipant.cs. L'esempio di codice seguente è <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> il metodo per il partecipante del rilevamento personalizzato.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

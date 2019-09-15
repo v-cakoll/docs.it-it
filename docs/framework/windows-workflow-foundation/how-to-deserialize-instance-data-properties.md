@@ -2,12 +2,12 @@
 title: "Procedura: Deserializzare le proprietà dei dati dell'istanza"
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: a53c8ceea2a2bf9840b92dc7119e681902da893e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619686"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989628"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Procedura: Deserializzare le proprietà dei dati dell'istanza
 È possibile che si presentino situazioni in cui un utente o un amministratore del flusso di lavoro desideri esaminare manualmente lo stato di un'istanza persistente del flusso di lavoro. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> fornisce una visualizzazione sulla tabella delle istanze che espone le quattro colonne indicate di seguito:  
@@ -20,15 +20,15 @@ ms.locfileid: "64619686"
   
 - WriteOnlyComplexDataProperties  
   
- Proprietà dei dati primitivi si riferiscono a proprietà i cui tipi .NET Framework sono considerati "comuni" (ad esempio, Int32 e String), mentre le proprietà di dati complessi fanno riferimento a tutti gli altri tipi. Un'enumerazione esatta di tipi primitivi viene trovata in un secondo momento in questo esempio di codice.  
+ Le proprietà dei dati primitivi fanno riferimento a proprietà i cui tipi di .NET Framework sono considerati "comuni" (ad esempio, Int32 e String), mentre le proprietà dei dati complessi si riferiscono a tutti gli altri tipi. Un'enumerazione esatta di tipi primitivi viene trovata in un secondo momento in questo esempio di codice.  
   
  Le proprietà Read/Write si riferiscono a proprietà che vengono restituite di nuovo all'esecuzione del flusso di lavoro quando un'istanza viene caricata. Le proprietà WriteOnly vengono scritte nel database e quindi non vengono mai rilette.  
   
- In questo esempio viene fornito il codice che consente a un utente di deserializzare le proprietà dei dati primitivi. Data una matrice di byte lettura dalla colonna readwriteprimitivedataproperties o WriteOnlyPrimitiveDataProperties, questo codice convertirà l'oggetto binario di grandi dimensioni (BLOB) in un <xref:System.Collections.Generic.Dictionary%602> di tipo \<XName, oggetto > in cui ogni valore di chiave coppia rappresenta un nome di proprietà e il valore corrispondente.  
+ In questo esempio viene fornito il codice che consente a un utente di deserializzare le proprietà dei dati primitivi. Data una matrice di byte letta dalla colonna binary large o WriteOnlyPrimitiveDataProperties, questo codice convertirà l'oggetto binario di grandi dimensioni (BLOB) in <xref:System.Collections.Generic.Dictionary%602> un oggetto \<di tipo XName, Object > dove ogni valore di chiave Pair rappresenta il nome di una proprietà e il relativo valore corrispondente.  
   
  In questo esempio non viene illustrato come deserializzare le proprietà dei dati complessi perché questa operazione non è attualmente supportata.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

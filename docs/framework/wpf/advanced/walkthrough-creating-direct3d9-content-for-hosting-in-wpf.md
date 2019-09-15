@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: e1cb5832ec6e383d1ee183b6bc9a86745ecc207c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605847"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991403"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Procedura dettagliata: Creazione di contenuto Direct3D9 per l'hosting in WPF
-Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 in applicazioni WPF, vedere [interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).
+In questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 nelle applicazioni WPF, vedere [WPF and Direct3D9 Interoperation](wpf-and-direct3d9-interoperation.md).
 
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 
@@ -23,7 +23,7 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 
 - Configurare il progetto Direct3D9 per l'hosting in un'applicazione WPF.
 
- Al termine, si avrà una DLL che contiene contenuto Direct3D9 per l'uso in un'applicazione WPF.
+ Al termine, si disporrà di una DLL che contiene contenuto Direct3D9 per l'uso in un'applicazione WPF.
 
 ## <a name="prerequisites"></a>Prerequisiti
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
@@ -33,92 +33,92 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 - DirectX SDK 9 o versione successiva.
 
 ## <a name="creating-the-direct3d9-project"></a>Creazione del progetto Direct3D9
- Il primo passaggio è per creare e configurare il progetto Direct3D9.
+ Il primo passaggio consiste nel creare e configurare il progetto Direct3D9.
 
 #### <a name="to-create-the-direct3d9-project"></a>Per creare il progetto Direct3D9
 
 1. Creare un nuovo progetto Win32 in C++ denominato `D3DContent`.
 
-     La creazione guidata applicazione Win32 apre e Visualizza la schermata iniziale.
+     Si apre la creazione guidata applicazione Win32 e viene visualizzata la schermata iniziale.
 
-2. Scegliere **Avanti**.
+2. Fare clic su **Avanti**.
 
-     Viene visualizzata la schermata impostazioni dell'applicazione.
+     Viene visualizzata la schermata Impostazioni applicazione.
 
-3. Nel **tipo di applicazione:** selezionare la **DLL** opzione.
+3. Nella sezione **tipo di applicazione:** selezionare l'opzione **dll** .
 
 4. Scegliere **Fine**.
 
-     Il progetto D3DContent viene generato.
+     Viene generato il progetto D3DContent.
 
-5. In Esplora soluzioni fare clic sul progetto D3DContent e selezionare **proprietà**.
+5. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto D3DContent e scegliere **Proprietà**.
 
-     Il **pagine delle proprietà D3DContent** verrà visualizzata la finestra di dialogo.
+     Verrà visualizzata la finestra di dialogo **pagine delle proprietà di D3DContent** .
 
-6. Selezionare il **C/C++** nodo.
+6. Selezionare il nodo **CC++ /** .
 
-7. Nel **directory di inclusione aggiuntive** , specificare il percorso di DirectX sono inclusi cartelle. Il percorso predefinito per questa cartella è %ProgramFiles%\Microsoft DirectX SDK (*versione*) \Include.
+7. Nel campo **directory di inclusione aggiuntive** specificare il percorso della cartella di inclusione DirectX. Il percorso predefinito per questa cartella è%Programmi%\Microsoft DirectX SDK (*Version*) \Include.
 
-8. Fare doppio clic il **Linker** nodo per espanderlo.
+8. Fare doppio clic sul nodo **linker** per espanderlo.
 
-9. Nel **Directory librerie aggiuntive** campo, specificare il percorso della cartella di librerie DirectX. Il percorso predefinito per questa cartella è %ProgramFiles%\Microsoft DirectX SDK (*versione*) \Lib\x86.
+9. Nel campo **Directory librerie aggiuntive** specificare il percorso della cartella librerie DirectX. Il percorso predefinito per questa cartella è%Programmi%\Microsoft DirectX SDK (*Version*) \Lib\x86.
 
-10. Selezionare il **Input** nodo.
+10. Selezionare il nodo di **input** .
 
-11. Nel **dipendenze aggiuntive** campo, aggiungere il `d3d9.lib` e `d3dx9.lib` file.
+11. Nel campo **dipendenze aggiuntive** aggiungere i `d3d9.lib` file e `d3dx9.lib` .
 
-12. In Esplora soluzioni aggiungere un nuovo file di definizione di modulo (def) denominato `D3DContent.def` al progetto.
+12. In Esplora soluzioni aggiungere un nuovo file di definizione del modulo (con estensione def `D3DContent.def` ) denominato al progetto.
 
-## <a name="creating-the-direct3d9-content"></a>Creazione di contenuto Direct3D9
- Per ottenere prestazioni ottimali, il contenuto Direct3D9 necessario utilizzare impostazioni particolare. Il codice seguente viene illustrato come creare una superficie Direct3D9 con le caratteristiche di prestazioni migliori. Per altre informazioni, vedere [considerazioni sulle prestazioni per l'interoperabilità di WPF e Direct3D9](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
+## <a name="creating-the-direct3d9-content"></a>Creazione del contenuto di Direct3D9
+ Per ottenere prestazioni ottimali, il contenuto di Direct3D9 deve usare impostazioni particolari. Nel codice seguente viene illustrato come creare una superficie Direct3D9 con le caratteristiche di prestazioni ottimali. Per ulteriori informazioni, vedere [considerazioni sulle prestazioni per l'interoperabilità Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
 
 #### <a name="to-create-the-direct3d9-content"></a>Per creare il contenuto di Direct3D9
 
-1. In Esplora soluzioni aggiungere tre classi C++ al progetto denominato nel modo seguente.
+1. Utilizzando Esplora soluzioni, aggiungere tre C++ classi al progetto denominate quanto segue.
 
-     `CRenderer` (con un distruttore virtuale)
+     `CRenderer`(con distruttore virtuale)
 
      `CRendererManager`
 
      `CTriangleRenderer`
 
-2. Aprire Renderer. h nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+2. Aprire Renderer. h nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3. Aprire Renderer. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+3. Aprire Renderer. cpp nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4. Aprire RendererManager. H nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+4. Aprire RendererManager. h nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5. Aprire RendererManager. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+5. Aprire RendererManager. cpp nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6. Aprire TriangleRenderer. H nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+6. Aprire TriangleRenderer. h nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7. Aprire TriangleRenderer. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+7. Aprire TriangleRenderer. cpp nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8. Aprire file stdafx. h nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+8. Aprire stdafx. h nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
-9. Aprire DllMain. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
+9. Aprire DllMain. cpp nell'editor di codice e sostituire il codice generato automaticamente con il codice seguente.
 
      [!code-cpp[System.Windows.Interop.D3DImage#DllMain](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
 
-10. Aprire D3DContent nell'editor del codice.
+10. Aprire D3DContent. def nell'editor di codice.
 
 11. Sostituire il codice generato automaticamente con il codice seguente.
 
-    ```
+    ```cpp
     LIBRARY "D3DContent"
 
     EXPORTS
@@ -135,9 +135,9 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 
 12. Compilare il progetto.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
-- Ospitare il contenuto Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Ospitare il contenuto di Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in](walkthrough-hosting-direct3d9-content-in-wpf.md)WPF.
 
 ## <a name="see-also"></a>Vedere anche
 

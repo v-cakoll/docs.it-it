@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Le applicazioni di produzione reale devono essere distribuite e gestite con agenti di orchestrazione che gestiscono l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373698"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990490"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -15,7 +15,7 @@ L'uso di agenti di orchestrazione per applicazioni pronte per la produzione è e
 
 La figura 4-6 illustra la distribuzione in un cluster di un'applicazione costituita da più microservizi (contenitori).
 
-![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di un Docker. Un host gestisce più contenitori](./media/image6.png)
+![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di Docker. Un host gestisce molti contenitori](./media/image6.png)
 
 **Figura 4-6**. Cluster di contenitori
 

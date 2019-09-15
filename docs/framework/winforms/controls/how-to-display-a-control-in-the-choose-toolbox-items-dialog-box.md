@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti'
-ms.date: 03/30/2017
+ms.date: 08/23/2019
 helpviewer_keywords:
 - global assembly cache [Windows Forms], Choose Toolbox Items dialog box
 - AssemblyFoldersEx [Windows Forms], Choose Toolbox Items dialog box
@@ -11,12 +11,12 @@ ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 9a6938b4fe651e13f3ec96642db6027143f1f028
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: f52c1d127df8f0e831db0749e3453bb1c54d5886
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015888"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972062"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti
 
@@ -24,7 +24,7 @@ Quando si sviluppano e si distribuiscono i controlli, è possibile che tali cont
 
 Per visualizzare il controllo nella finestra di dialogo Scegli elementi della casella degli strumenti:
 
-- Installare l'assembly di controllo nel Global Assembly Cache. Per altre informazioni, vedere [Procedura: Installare un assembly nella Global Assembly Cache](../../app-domains/how-to-install-an-assembly-into-the-gac.md)
+- Installare l'assembly di controllo nel Global Assembly Cache. Per altre informazioni, vedere [Procedura: Installare un assembly nella Global Assembly Cache](../../app-domains/install-assembly-into-gac.md)
 
   -oppure-
 
@@ -33,5 +33,5 @@ Per visualizzare il controllo nella finestra di dialogo Scegli elementi della ca
 ## <a name="see-also"></a>Vedere anche
 
 - [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md)
-- [Procedura: Installare un assembly nella Global Assembly Cache](../../app-domains/how-to-install-an-assembly-into-the-gac.md)
+- [Procedura: Installare un assembly nella Global Assembly Cache](../../app-domains/install-assembly-into-gac.md)
 - [Procedura dettagliata: Popolamento automatico della casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

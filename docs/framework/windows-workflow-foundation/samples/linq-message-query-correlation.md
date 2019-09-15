@@ -2,12 +2,12 @@
 title: Correlazione di query del messaggio LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: b758296970340890403557770f91237c953f5d91
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038137"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989335"
 ---
 # <a name="linq-message-query-correlation"></a>Correlazione di query del messaggio LINQ
 In questo esempio viene illustrato come eseguire una correlazione basata sul contenuto usando un'implementazione <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizzata anziché l'oggetto <xref:System.ServiceModel.XPathMessageQuery> fornito dal sistema.  
@@ -22,7 +22,7 @@ In questo esempio viene illustrato come eseguire una correlazione basata sul con
   
 1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, è necessario aggiungere gli ACL URL appropriati (per informazioni dettagliate, vedere [configurazione di http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), eseguendo Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   

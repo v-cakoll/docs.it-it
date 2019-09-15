@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: c39b9a313d265187605d51a2c78c7d3d3dcdb056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f1be14ad7ddb6973cc89f10c1735ba2ebce13f97
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923911"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971653"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM (Guida per programmatori C#)
-Le *proprietà indicizzate* migliorano l'uso delle proprietà COM dotate di parametri nella programmazione C#. Tali proprietà operano congiuntamente ad altre funzionalità di Visual C#, ad esempio gli [argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md), un nuovo tipo ([dynamic](../../language-reference/keywords/dynamic.md)) e le [informazioni sul tipo incorporate](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md), per migliorare la programmazione di Microsoft Office.  
+Le *proprietà indicizzate* migliorano l'uso delle proprietà COM dotate di parametri nella programmazione C#. Tali proprietà operano congiuntamente ad altre funzionalità di Visual C#, ad esempio gli [argomenti denominati e facoltativi](../classes-and-structs/named-and-optional-arguments.md), un nuovo tipo ([dynamic](../../language-reference/keywords/dynamic.md)) e le [informazioni sul tipo incorporate](../../../standard/assembly/embed-types-visual-studio.md), per migliorare la programmazione di Microsoft Office.  
   
  Nelle versioni precedenti di C# i metodi sono accessibili come proprietà solo se il metodo `get` non dispone di parametri e il metodo `set` ha un unico parametro valore. Non tutte le proprietà COM soddisfano tuttavia tali restrizioni. Ad esempio, la proprietà <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> di Excel possiede una funzione di accesso `get` che richiede un parametro per il nome dell'intervallo. In passato, poiché non era possibile accedere direttamente alla proprietà `Range`, era necessario usare il metodo`get_Range`, come illustrato nell'esempio seguente.  
   

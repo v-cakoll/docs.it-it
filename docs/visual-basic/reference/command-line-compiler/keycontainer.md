@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 5892baaa2732d95cfe698147e06b914af968adc5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab81642cd756bfdf525f34ac675173600de5b104
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929418"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972344"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -37,7 +37,7 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
   
  È possibile passare al compilatore le informazioni di crittografia anche tramite [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Usare [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) se si vuole un assembly con firma parziale.  
   
- Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) .  
+ Per ulteriori informazioni sulla firma di un assembly [, vedere Creazione e utilizzo di assembly con nome sicuro](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
 > L' `-keycontainer` opzione non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.  

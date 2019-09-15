@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924547"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971671"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificatori di accesso (Guida per programmatori C#)
 Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che controlla se possono essere usati da altro codice nell'assembly o in assembly di terze parti. È possibile usare i modificatori di accesso seguenti per specificare l'accessibilità di un tipo o di un membro quando viene dichiarato:  
@@ -44,7 +44,7 @@ Tutti i tipi e i membri dei tipi hanno un livello di accessibilità, che control
   
  Le classi derivate non possono avere un'accessibilità maggiore di quella dei tipi di base. In altre parole, non è possibile avere una classe `B` public che deriva da una classe `A` internal. Se questo fosse consentito, avrebbe l'effetto di rendere `A` pubblic, perché tutti i membri protected e internal di `A` sarebbero accessibili dalla classe derivata.  
   
- È possibile abilitare altri assembly specifici per accedere ai tipi internal usando InternalsVisibleToAttribute. Per altre informazioni, vedere [Friend Assemblies](../../../standard/assembly/friend-assemblies.md) (Assembly friend).  
+ È possibile abilitare altri assembly specifici per accedere ai tipi internal usando InternalsVisibleToAttribute. Per altre informazioni, vedere [Friend Assemblies](../../../standard/assembly/friend.md) (Assembly friend).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Accessibilità dei membri struct e di classe  
  I membri di classe (inclusi le classi e gli struct annidati) possono essere dichiarati con uno qualsiasi dei sei tipi di accesso. I membri struct non possono essere dichiarati protected perché struct non supporta l'ereditarietà.  
