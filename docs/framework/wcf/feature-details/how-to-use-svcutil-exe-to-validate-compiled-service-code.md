@@ -2,15 +2,15 @@
 title: 'Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be8755ab4281b40d23ea4c8674c8c4f33631e7b6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038753"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991600"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato
-È possibile usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rilevare errori in configurazioni e le implementazioni del servizio senza ospitare il servizio.  
+È possibile utilizzare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rilevare gli errori nelle configurazioni e nelle implementazioni del servizio senza ospitare il servizio.  
   
 ### <a name="to-validate-a-service"></a>Per convalidare un servizio  
   
@@ -18,9 +18,9 @@ ms.locfileid: "62038753"
   
 2. Aprire un prompt dei comandi SDK.  
   
-3. Al prompt dei comandi, avviare lo strumento Svcutil.exe usando il formato seguente. Per altre informazioni sui vari parametri, vedere la sezione convalida del servizio di [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) argomento.  
+3. Al prompt dei comandi, avviare lo strumento Svcutil.exe usando il formato seguente. Per ulteriori informazioni sui vari parametri, vedere l'argomento Service Validationsection dell'argomento [ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) .  
   
-    ```  
+    ```console
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  
     ```  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62038753"
 ## <a name="example"></a>Esempio  
  Il comando seguente implementa il servizio myServiceName nel file eseguibile myServiceHost.exe.  Il file di configurazione per il servizio (myServiceHost.exe.config) viene automaticamente caricato.  
   
-```  
+```console  
 svcutil /validate /serviceName:myServiceName myServiceHost.exe  
 ```  
   

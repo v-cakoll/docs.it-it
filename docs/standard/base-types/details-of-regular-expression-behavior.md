@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963397"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895216"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Dettagli sul comportamento delle espressioni regolari
 Il motore delle espressioni regolari di .NET Framework è un selettore di espressioni regolari di backtracking che incorpora un motore NFA (Nondeterministic Finite Automaton) tradizionale come quello usato da Perl, Python, Emacs e Tcl. Ciò lo distingue dai motori delle espressioni regolari puri DFA (Deterministic Finite Automaton), più veloci ma più limitati, come quelli usati in awk, egrep o lex. Lo distingue anche dai motori NFA POSIX, standardizzati ma più lenti. Nella sezione seguente vengono descritti i tre tipi di motori delle espressioni regolari e viene spiegato perché le espressioni regolari in .NET Framework vengono implementate usando un motore NFA tradizionale.  
@@ -45,7 +45,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Le versioni greedy e lazy di questa espressione regolare vengono definite come illustrato nella tabella seguente:
   
-    |Modello|DESCRIZIONE|  
+    |Modello|Descrizione|  
     |-------------|-----------------|  
     |`.+` (quantificatore greedy)|Trova almeno un'occorrenza di qualsiasi carattere. In questo modo il motore delle espressioni regolari considera soddisfatta la corrispondenza con l'intera stringa ed esegue il backtracking, necessario per verificare le corrispondenze con il resto del criterio.|  
     |`.+?` (quantificatore lazy)|Trova almeno un'occorrenza di qualsiasi carattere, ma accetta la corrispondenza con il minor numero possibile di caratteri.|  
@@ -61,7 +61,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      L'espressione regolare `\b[A-Z]+\b(?=\P{P})` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|DESCRIZIONE|  
+    |Modello|Descrizione|  
     |-------------|-----------------|  
     |`\b`|Inizia la corrispondenza sul confine di parola.|  
     |`[A-Z]+`|Trova la corrispondenza con qualsiasi carattere alfabetico una o più volte. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -93,12 +93,12 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-    |Modello|DESCRIZIONE|  
+    |Modello|Descrizione|  
     |-------------|-----------------|  
     |`^`|Inizia la corrispondenza all'inizio di una riga.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Trova la corrispondenza con zero o un'occorrenza della stringa `<PRIVATE>` seguita da un carattere di spazio vuoto. Assegna la corrispondenza a un gruppo di acquisizione denominato `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Se il gruppo di acquisizione `Pvt` esiste, trova una o più occorrenze di uno o più caratteri alfanumerici seguiti da zero o un separatore di punteggiatura seguito da un carattere di spazio vuoto. Assegna la sottostringa al primo gruppo di acquisizione.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|Se il gruppo di acquisizione `Pvt` non esiste, trova una o più occorrenze di uno o più caratteri alfanumerici seguiti da zero o un separatore di punteggiatura seguito da un carattere di spazio vuoto. Assegna la sottostringa al terzo gruppo di acquisizione.|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|Se il gruppo di acquisizione `Pvt` non esiste, trova una o più occorrenze di uno o più caratteri alfanumerici seguiti da zero o un separatore di punteggiatura seguito da un carattere di spazio vuoto. Assegna la sottostringa al terzo gruppo di acquisizione.|  
     |`\r?$`|Trova la corrispondenza alla fine di una riga o alla fine della stringa.|  
   
      Per altre informazioni sulla valutazione condizionale, vedere [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -131,7 +131,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
      L'espressione regolare ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` viene definita come illustrato nella tabella seguente.  
   
-    |Modello|DESCRIZIONE|  
+    |Modello|Descrizione|  
     |-------------|-----------------|  
     |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
     |`[A-Z0-9]`|Trova la corrispondenza con qualsiasi carattere numerico o alfanumerico. Il confronto non rileva la differenza tra maiuscole e minuscole.|  
@@ -143,7 +143,7 @@ Il motore delle espressioni regolari di .NET Framework è un selettore di espres
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informazioni su come il backtracking delle espressioni regolari si dirama per trovare corrispondenze alternative.|  
 |[Compilazione e riutilizzo](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informazioni sulla compilazione e sul riutilizzo di espressioni regolari per ottimizzare le prestazioni.|  
