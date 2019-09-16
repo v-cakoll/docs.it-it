@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959874"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 Il `Async` modificatore indica che il metodo o l' [espressione lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) modificata è asincrona. Questi metodi sono detti *metodi asincroni*.  
@@ -20,7 +20,7 @@ Il `Async` modificatore indica che il metodo o l' [espressione lambda](../../../
  Un metodo asincrono è un modo pratico per eseguire le operazioni potenzialmente di lunga durata senza bloccare il thread del chiamante. Il chiamante di un metodo asincrono può riprendere il proprio lavoro senza attendere il completamento del metodo asincrono.  
   
 > [!NOTE]
->  Le parole chiave `Async` e `Await` sono state introdotte in Visual Studio 2012. Per un'introduzione alla programmazione asincrona, vedere [programmazione asincrona con Async e await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> Le parole chiave `Async` e `Await` sono state introdotte in Visual Studio 2012. Per un'introduzione alla programmazione asincrona, vedere [programmazione asincrona con Async e await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Nell'esempio seguente viene illustrata la struttura di un metodo async. Per convenzione, i nomi dei metodi async terminano con "Async".  
   
@@ -47,7 +47,7 @@ End Function
  La parola chiave `Async` è una parola chiave non riservata. È una parola chiave quando si modifica un metodo o un'espressione lambda. In tutti gli altri contesti, viene interpretata come identificatore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Un metodo asincrono è una routine [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) o una routine di [](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) <xref:System.Threading.Tasks.Task> funzione con un tipo restituito o <xref:System.Threading.Tasks.Task%601>. Il metodo non può dichiarare parametri [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
+ Un metodo asincrono è una routine [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) o una routine di [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) con un tipo restituito <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Il metodo non può dichiarare parametri [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
   
  Specificare `Task(Of TResult)` per il tipo restituito di un metodo asincrono se l'istruzione [return](../../../visual-basic/language-reference/statements/return-statement.md) del metodo ha un operando di tipo TResult. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. In altre parole, una chiamata al metodo restituisce `Task`, ma quando `Task` viene completato, ogni istruzione `Await` in attesa di `Task` non produce un valore risultante.  
   

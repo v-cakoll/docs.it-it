@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84e4c70c973fb19be6800d2cbaf76ea137f58b28
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88f31ae29efee9b353c2dcc679724db73da5444e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969419"
 ---
 # <a name="corbindtoruntimeex-function"></a>Funzione CorBindToRuntimeEx
-Consente l'host non gestiti di caricare common language runtime (CLR) in un processo. Il [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` funzioni eseguono la stessa operazione, ma il `CorBindToRuntimeEx` funzione consente di impostare i flag per specificare il comportamento di CLR.  
+Consente agli host non gestiti di caricare il Common Language Runtime (CLR) in un processo. Le funzioni [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` eseguono la stessa operazione, ma la `CorBindToRuntimeEx` funzione consente di impostare i flag per specificare il comportamento di CLR.  
   
- Questa funzione è stata deprecata in .NET Framework 4.  
+ Questa funzione è stata deprecata nel .NET Framework 4.  
   
- Questa funzione accetta un set di parametri che consentono a un host eseguire le operazioni seguenti:  
+ Questa funzione accetta un set di parametri che consentono a un host di eseguire le operazioni seguenti:  
   
-- Specificare la versione del runtime che verrà caricato.  
+- Consente di specificare la versione del runtime da caricare.  
   
-- Indicare se la compilazione di server o workstation deve essere caricata.  
+- Indica se è necessario caricare la build del server o della workstation.  
   
-- Controllare se l'operazione garbage collection simultanea o non simultanea operazione di garbage collection viene eseguita.  
+- Controllare se viene eseguita la Garbage Collection simultanea Garbage Collection o non simultanea.  
   
 > [!NOTE]
->  Garbage collection simultanea non è supportata nelle applicazioni in esecuzione WOW64 x86 dell'emulatore su sistemi a 64 bit che implementino l'architettura Intel Itanium (in precedenza denominato IA-64). Per altre informazioni sull'utilizzo di WOW64 nei sistemi Windows a 64 bit, vedere [delle applicazioni in esecuzione a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).  
+> La Garbage Collection simultanea non è supportata nelle applicazioni che eseguono l'emulatore WOW64 x86 nei sistemi a 64 bit che implementano l'architettura Intel Itanium (denominata in precedenza IA-64). Per ulteriori informazioni sull'utilizzo di WOW64 in sistemi Windows a 64 bit, vedere [esecuzione di applicazioni a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).  
   
 - Controllare se gli assembly vengono caricati come indipendenti dal dominio.  
   
-- Ottenere un puntatore a interfaccia a un [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) che può essere utilizzato per impostare opzioni aggiuntive per la configurazione di un'istanza di Common Language Runtime prima che venga avviato.  
+- Ottenere un puntatore a interfaccia a un [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) che può essere utilizzato per impostare opzioni aggiuntive per la configurazione di un'istanza di CLR prima che venga avviata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,21 +59,21 @@ HRESULT CorBindToRuntimeEx (
   
 ## <a name="parameters"></a>Parametri  
  `pwszVersion`  
- [in] Stringa che descrive la versione di CLR a cui si desidera caricare.  
+ in Stringa che descrive la versione di CLR che si desidera caricare.  
   
- Un numero di versione in .NET Framework è costituito da quattro parti separate da punti: *revisione*. La stringa passata come `pwszVersion` deve iniziare con il carattere "v" seguito dalle prime tre parti del numero di versione (ad esempio, "v 1.0.1529").  
+ Un numero di versione nel .NET Framework è costituito da quattro parti separate da punti: *Major. minor. Build. Revision*. La stringa passata come `pwszVersion` deve iniziare con il carattere "v" seguito dalle prime tre parti del numero di versione (ad esempio, "v 1.0.1529").  
   
- Alcune versioni di CLR installate con un'istruzione di criteri che specifica la compatibilità con le versioni precedenti di CLR. Per impostazione predefinita, valuta lo shim di avvio `pwszVersion` contro le istruzioni dei criteri e carichi la versione più recente del runtime che è compatibile con la versione richiesta. Un host può forzare lo shim per ignorare la valutazione dei criteri e caricare la versione esatta specificata nel `pwszVersion` passando un valore di `STARTUP_LOADER_SAFEMODE` per il `startupFlags` parametro, come descritto di seguito.  
+ Alcune versioni di CLR vengono installate con un'istruzione di criteri che specifica la compatibilità con le versioni precedenti di CLR. Per impostazione predefinita, lo shim di avvio `pwszVersion` valuta le istruzioni dei criteri e carica la versione più recente del runtime compatibile con la versione richiesta. Un host può forzare lo shim a ignorare la valutazione dei criteri e caricare la versione `pwszVersion` esatta specificata in passando un `STARTUP_LOADER_SAFEMODE` valore per `startupFlags` il parametro, come descritto di seguito.  
   
- Se il chiamante specifica null per `pwszVersion`, `CorBindToRuntimeEx` identifica il set di runtime installati cui numeri di versione sono inferiori al runtime di .NET Framework 4 e carica la versione più recente del runtime da tale set. Non caricherà il .NET Framework 4 o versione successiva e non riesce se non è installata alcuna versione precedente. Si noti che il passaggio di null non consente all'host di alcun controllo sulla quale versione del runtime è caricata. Sebbene questo approccio potrebbe essere appropriato in alcuni scenari, è consigliabile che l'host di fornisca una versione specifica di caricare.  
+ Se il chiamante specifica null per `pwszVersion`, `CorBindToRuntimeEx` identifica il set di runtime installati i cui numeri di versione sono inferiori al runtime di .NET Framework 4 e carica la versione più recente del runtime da tale set. Non caricherà il .NET Framework 4 o versione successiva e avrà esito negativo se non è installata alcuna versione precedente. Si noti che il passaggio di valori null consente all'host di non controllare la versione del runtime caricata. Sebbene questo approccio possa essere appropriato in alcuni scenari, si consiglia vivamente all'host di fornire una versione specifica da caricare.  
   
  `pwszBuildFlavor`  
- [in] Stringa che specifica se caricare il server o la compilazione di workstation di CLR. I valori validi sono `svr` e `wks`. La compilazione di server è ottimizzata per sfruttare più processori per operazioni di garbage collection e la compilazione di workstation è ottimizzata per le applicazioni client in esecuzione in un computer a processore singolo.  
+ in Stringa che specifica se caricare il server o la build della workstation di CLR. I valori validi sono `svr` e `wks`. La compilazione server è ottimizzata per sfruttare i vantaggi di più processori per le operazioni di Garbage Collection e la compilazione della workstation è ottimizzata per le applicazioni client in esecuzione su un computer a processore singolo.  
   
- Se `pwszBuildFlavor` è impostato su null, la compilazione di workstation viene caricata. Durante l'esecuzione in un computer a processore singolo, la compilazione di workstation viene sempre caricata, anche se `pwszBuildFlavor` è impostata su `svr`. Tuttavia, se `pwszBuildFlavor` è impostata su `svr` e garbage collection simultanea è specificata (vedere la descrizione del `startupFlags` parametro), viene caricata la compilazione di server.  
+ Se `pwszBuildFlavor` è impostato su null, viene caricata la compilazione della workstation. Quando è in esecuzione in un computer a processore singolo, la compilazione della workstation viene sempre caricata, anche `svr`se `pwszBuildFlavor` è impostato su. Tuttavia, se `pwszBuildFlavor` è impostato su `svr` e viene specificato Garbage Collection simultaneo ( `startupFlags` vedere la descrizione del parametro), viene caricata la compilazione del server.  
   
  `startupFlags`  
- [in] Una combinazione di valori del [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione. Questi flag controllano il comportamento di garbage collection simultanea e il codice indipendente dal dominio la `pwszVersion` parametro. Se non è impostato alcun flag, il valore predefinito è singolo dominio. Di seguito vengono illustrati i valori validi.  
+ in Combinazione di valori dell'enumerazione [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) . Questi flag controllano Garbage Collection simultanee, il codice indipendente dal dominio e il comportamento `pwszVersion` del parametro. Il valore predefinito è Single Domain se non è impostato alcun flag. Di seguito vengono illustrati i valori validi.  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -101,41 +101,41 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- Per una descrizione di questi flag, vedere la [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione.  
+ Per una descrizione di questi flag, vedere l'enumerazione [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
   
  `rclsid`  
- [in] Il `CLSID` della coclasse che implementa il [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o il [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interfaccia. I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ in Della coclasse che implementa l'interfaccia [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost.](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) `CLSID` I valori supportati sono CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] Il `IID` dell'interfaccia richiesta da `rclsid`. Valori supportati sono IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
+ in Dell'interfaccia richiesta da `rclsid`. `IID` I valori supportati sono IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] Il puntatore a interfaccia restituito `riid`.  
+ out Puntatore a interfaccia restituito a `riid`.  
   
 ## <a name="remarks"></a>Note  
  Se `pwszVersion` specifica una versione di runtime che non esiste, `CorBindToRuntimeEx` restituisce un valore HRESULT di CLR_E_SHIM_RUNTIMELOAD.  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>Contesto di esecuzione e il flusso dell'identità di Windows  
- Nella versione 1 di CLR, il <xref:System.Security.Principal.WindowsIdentity> oggetto non passa attraverso punti asincroni, ad esempio nuovi thread, i pool di thread o i callback di timer. Nella versione 2.0 di CLR, un <xref:System.Threading.ExecutionContext> oggetto esegue il wrapping di alcune informazioni relative al thread attualmente in esecuzione e ne effettua attraverso punti asincroni qualsiasi, ma non tra i limiti del dominio applicazione. Analogamente, il <xref:System.Security.Principal.WindowsIdentity> oggetto anche passa attraverso punti asincroni qualsiasi. Pertanto, la rappresentazione corrente nel thread, se presente, flussi troppo.  
+## <a name="execution-context-and-flow-of-windows-identity"></a>Contesto di esecuzione e flusso di identità Windows  
+ Nella versione 1 di CLR, l' <xref:System.Security.Principal.WindowsIdentity> oggetto non scorre tra punti asincroni, ad esempio nuovi thread, pool di thread o callback del timer. Nella versione 2,0 di CLR, un <xref:System.Threading.ExecutionContext> oggetto esegue il wrapping di alcune informazioni sul thread attualmente in esecuzione e lo trasmette attraverso qualsiasi punto asincrono, ma non tra i limiti del dominio applicazione. Analogamente, <xref:System.Security.Principal.WindowsIdentity> l'oggetto fluisce anche su qualsiasi punto asincrono. Quindi, la rappresentazione corrente sul thread, se presente, scorre anche.  
   
  È possibile modificare il flusso in due modi:  
   
-1. Modificando la <xref:System.Threading.ExecutionContext> le impostazioni per sopprimere il flusso in un singolo thread (vedere la <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> metodi).  
+1. Modificando le <xref:System.Threading.ExecutionContext> impostazioni per escludere il flusso per ogni singolo thread (vedere i <xref:System.Threading.ExecutionContext.SuppressFlow%2A>metodi, <xref:System.Security.SecurityContext.SuppressFlow%2A>e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> ).  
   
-2. Modificando la modalità predefinita del processo per la modalità di compatibilità di versione 1, in cui il <xref:System.Security.Principal.WindowsIdentity> oggetto non passa attraverso punti asincroni, qualsiasi indipendentemente il <xref:System.Threading.ExecutionContext> impostazioni sul thread corrente. Come si modifica la modalità predefinita varia a seconda se si usa un file eseguibile gestito o un'interfaccia di hosting non gestita per caricamento di CLR:  
+2. Modificando la modalità predefinita del processo con la modalità di compatibilità versione 1, <xref:System.Security.Principal.WindowsIdentity> in cui l'oggetto non viene propagato in alcun punto asincrono <xref:System.Threading.ExecutionContext> , indipendentemente dalle impostazioni nel thread corrente. La modalità di modifica della modalità predefinita varia a seconda che si usi un eseguibile gestito o un'interfaccia di hosting non gestita per caricare il CLR:  
   
-    1. Per gli eseguibili gestiti, è necessario impostare il `enabled` attributo del [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento `true`.  
+    1. Per i file eseguibili gestiti, è necessario `enabled` impostare l'attributo [ \<](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) dell'elemento > legacyImpersonationPolicy `true`su.  
   
-    2. Per non gestiti di interfacce di hosting, impostare il `STARTUP_LEGACY_IMPERSONATION` flag nel `startupFlags` parametro quando si chiama il `CorBindToRuntimeEx` (funzione).  
+    2. Per le interfacce di hosting non gestite, impostare `STARTUP_LEGACY_IMPERSONATION` il flag `startupFlags` nel parametro quando si chiama `CorBindToRuntimeEx` la funzione.  
   
-     La modalità di compatibilità di versione 1 si applica all'intero processo e per tutti i domini applicazione nel processo.  
+     La modalità di compatibilità versione 1 si applica all'intero processo e a tutti i domini applicazione nel processo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** MSCorEE.h  
+ **Intestazione:** MSCorEE. h  
   
- **Libreria:** MSCorEE.dll  
+ **Libreria** MSCorEE.dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
