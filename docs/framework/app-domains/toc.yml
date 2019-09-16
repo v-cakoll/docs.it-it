@@ -1,29 +1,33 @@
 - name: Domini applicazione e assembly
   href: index.md
   items:
-    - name: Assembly in Common Language Runtime
-      href: assemblies-in-the-common-language-runtime.md
+    - name: Ubicazione degli assembly
+      href: assembly-placement.md
+    - name: Global Assembly Cache
+      href: gac.md
+    - name: Utilizzo di assembly e della Global Assembly Cache
+      href: working-with-assemblies-and-the-gac.md
       items:
-        - name: Contenuto degli assembly
-          href: assembly-contents.md
-        - name: Manifesto dell'assembly
-          href: assembly-manifest.md
-        - name: Global Assembly Cache
-          href: gac.md
-        - name: Assembly con nomi sicuri
-          href: strong-named-assemblies.md
-        - name: Considerazioni sulla sicurezza degli assembly
-          href: assembly-security-considerations.md
-        - name: Controllo delle versioni degli assembly
-          href: assembly-versioning.md
-        - name: Ubicazione degli assembly
-          href: assembly-placement.md
-        - name: assembly ed esecuzione contemporanea di più versioni
-          href: assemblies-and-side-by-side-execution.md
+        - name: 'Procedura: Visualizzare il contenuto della Global Assembly Cache'
+          href: how-to-view-the-contents-of-the-gac.md
+        - name: 'Procedura: Installare un assembly nella Global Assembly Cache'
+          href: install-assembly-into-gac.md
+        - name: 'Procedura: Rimuovere un assembly dalla Global Assembly Cache'
+          href: how-to-remove-an-assembly-from-the-gac.md
+        - name: Utilizzo dei componenti serviti con la Global Assembly Cache
+          href: use-serviced-components-with-the-gac.md
     - name: Domini applicazione
       href: application-domains.md
     - name: Argomenti relativi alle procedure per domini applicazione e assembly
       href: application-domains-and-assemblies-how-to-topics.md
+    - name: 'Procedura: Creare un assembly su singolo file'
+      href: build-single-file-assembly.md
+    - name: Assembly su più file
+      href: multifile-assemblies.md
+    - name: 'Procedura: Creare un assembly su più file'
+      href: build-multifile-assembly.md
+    - name: 'Procedura: Condividere un assembly con altre applicazioni'
+      href: how-to-share-an-assembly-with-other-applications.md
     - name: Uso dei domini dell'applicazione
       href: use.md
       items:
@@ -37,62 +41,9 @@
           href: retrieve-setup-information.md
         - name: 'Procedura: Caricare assembly in un dominio dell''applicazione'
           href: how-to-load-assemblies-into-an-application-domain.md
-        - name: 'Procedura: Reperire informazioni su tipo e membro da un assembly'
-          href: how-to-obtain-type-and-member-information-from-an-assembly.md
         - name: Creazione di copie replicate di assembly
           href: shadow-copy-assemblies.md
         - name: 'Procedura: Ricevere notifiche di eccezioni first-chance'
           href: how-to-receive-first-chance-exception-notifications.md
-        - name: risoluzione caricamenti assembly
-          href: resolve-assembly-loads.md
-    - name: Programmazione con gli assembly
-      href: programming-with-assemblies.md
-      items:
-        - name: Creazione degli assembly
-          href: create-assemblies.md
-        - name: Nomi degli assembly
-          href: assembly-names.md
-        - name: 'Procedura: Determinare il nome completo di un assembly'
-          href: how-to-determine-assembly-fully-qualified-name.md
-        - name: Esecuzione di applicazioni Intranet in attendibilità totale
-          href: running-intranet-applications-in-full-trust.md
-        - name: Posizione dell'assembly
-          href: assembly-location.md
-        - name: 'Procedura: Compilare un assembly su singolo file'
-          href: how-to-build-a-single-file-assembly.md
-        - name: Assembly su più file
-          href: multifile-assemblies.md
-        - name: 'Procedura: Compilare un assembly con più file'
-          href: how-to-build-a-multifile-assembly.md
-        - name: Impostazione degli attributi dell'assembly
-          href: set-assembly-attributes.md
-        - name: Creazione e utilizzo degli assembly con nome sicuro
-          href: create-and-use-strong-named-assemblies.md
-          items:
-            - name: 'Procedura: Creare una coppia di chiavi pubblica/privata'
-              href: how-to-create-a-public-private-key-pair.md
-            - name: 'Procedura: Firmare un assembly con un nome sicuro'
-              href: how-to-sign-an-assembly-with-a-strong-name.md
-            - name: Denominazione sicura avanzata
-              href: enhanced-strong-naming.md
-            - name: 'Procedura: Aggiungere un riferimento a un assembly con nome sicuro'
-              href: how-to-reference-a-strong-named-assembly.md
-            - name: 'Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro'
-              href: how-to-disable-the-strong-name-bypass-feature.md
-        - name: Ritardo della firma di un assembly
-          href: delay-sign-assembly.md
-        - name: Utilizzo di assembly e della Global Assembly Cache
-          href: working-with-assemblies-and-the-gac.md
-          items:
-            - name: 'Procedura: Installare un assembly nella Global Assembly Cache'
-              href: how-to-install-an-assembly-into-the-gac.md
-            - name: 'Procedura: Visualizzare il contenuto della Global Assembly Cache'
-              href: how-to-view-the-contents-of-the-gac.md
-            - name: 'Procedura: Rimuovere un assembly dalla Global Assembly Cache'
-              href: how-to-remove-an-assembly-from-the-gac.md
-            - name: Utilizzo dei componenti serviti con la Global Assembly Cache
-              href: use-serviced-components-with-the-gac.md
-        - name: 'Procedura: Visualizzare il contenuto degli assembly'
-          href: how-to-view-assembly-contents.md
-        - name: Inoltro dei tipi in Common Language Runtime
-          href: type-forwarding-in-the-common-language-runtime.md
+    - name: Esecuzione di applicazioni Intranet in attendibilità totale
+      href: running-intranet-applications-in-full-trust.md
