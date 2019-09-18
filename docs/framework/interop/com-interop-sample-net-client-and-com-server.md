@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051861"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="77b3e-102">Esempio di interoperabilità COM: client .NET e server COM</span><span class="sxs-lookup"><span data-stu-id="77b3e-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="77b3e-103">Questo esempio illustra come un [client .NET](#cpconcominteropsamplenetclientcomserveranchor1), compilato per accedere a un [server COM](#cpconcominteropsamplenetclientcomserveranchor2), crea un'istanza di una coclasse COM e chiama membri della classe per eseguire calcoli relativi a un mutuo.</span><span class="sxs-lookup"><span data-stu-id="77b3e-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="b5903-102">Esempio di interoperabilità COM: client .NET e server COM</span><span class="sxs-lookup"><span data-stu-id="b5903-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="b5903-103">Questo esempio illustra come un [client .NET](#cpconcominteropsamplenetclientcomserveranchor1), compilato per accedere a un [server COM](#cpconcominteropsamplenetclientcomserveranchor2), crea un'istanza di una coclasse COM e chiama membri della classe per eseguire calcoli relativi a un mutuo.</span><span class="sxs-lookup"><span data-stu-id="b5903-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="77b3e-104">In questo esempio il client crea e chiama un'istanza della coclasse **Loan**, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli.</span><span class="sxs-lookup"><span data-stu-id="77b3e-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="77b3e-105">Diversi frammenti di codice di questo esempio vengono presentati in vari punti della sezione.</span><span class="sxs-lookup"><span data-stu-id="77b3e-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="b5903-104">In questo esempio il client crea e chiama un'istanza della coclasse **Loan**, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli.</span><span class="sxs-lookup"><span data-stu-id="b5903-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="b5903-105">Diversi frammenti di codice di questo esempio vengono presentati in vari punti della sezione.</span><span class="sxs-lookup"><span data-stu-id="b5903-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="77b3e-106">Client .NET</span><span class="sxs-lookup"><span data-stu-id="77b3e-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="b5903-106">Client .NET</span><span class="sxs-lookup"><span data-stu-id="b5903-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -154,7 +154,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="77b3e-107">Server COM</span><span class="sxs-lookup"><span data-stu-id="77b3e-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="b5903-107">Server COM</span><span class="sxs-lookup"><span data-stu-id="b5903-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -299,6 +299,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77b3e-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="77b3e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5903-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5903-108">See also</span></span>
 
-- [<span data-ttu-id="77b3e-109">Esposizione di componenti COM a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="77b3e-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+- [<span data-ttu-id="b5903-109">Esposizione di componenti COM a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b5903-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
