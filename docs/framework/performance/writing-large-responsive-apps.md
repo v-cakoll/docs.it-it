@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4e4b5822306fa8f4e6b4437f4a1bef92b53a86b9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927021"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046137"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#. 
@@ -39,7 +39,7 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fact 3: Strumenti efficaci che rendono la differenza  
  Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia. Microsoft fornisce un'ampia gamma di strumenti per le prestazioni, ad esempio [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
- PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria. È possibile acquisire eventi ETW ([Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread. PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9). 
+ PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria. È possibile acquisire eventi ETW ([Event Tracing for Windows](../wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread. PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9). 
   
 ### <a name="fact-4-its-all-about-allocations"></a>Fatto 4: Si tratta di allocazioni  
  Si potrebbe pensare che la creazione di un'app .NET Framework reattiva dipenda completamente dagli algoritmi, ad esempio dall'uso dell'ordinamento rapido invece dell'ordinamento a bolle, ma non è così. Il fattore principale nella creazione di un'app reattiva è costituito dall'allocazione della memoria, in particolare se le dimensioni dell'app sono molto elevate o se l'app elabora quantità elevate di dati. 
@@ -465,7 +465,7 @@ class Compilation { /*...*/
 
 - [Video di presentazione di questo argomento](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guida per principianti alla profilatura delle prestazioni](/visualstudio/profiling/beginners-guide-to-performance-profiling)
-- [Prestazioni](../../../docs/framework/performance/index.md)
+- [Prestazioni](index.md)
 - [Suggerimenti sulle prestazioni .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Esercitazioni su Channel 9 PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [SDK .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)

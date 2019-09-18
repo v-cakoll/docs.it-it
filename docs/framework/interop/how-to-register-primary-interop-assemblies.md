@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946669"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051733"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedura: Registrare assembly di interoperabilità primari
 
@@ -24,7 +24,7 @@ ms.locfileid: "69946669"
 
  Anche se non si prevede di esporre tipi COM di terze parti, l'uso dell'assembly di interoperabilità primario può facilitare l'interazione con i componenti COM. Tuttavia, questa strategia non fornisce alcuna protezione dalle eventuali modifiche apportate da un fornitore ai tipi definiti in un assembly di interoperabilità primario. Quando l'applicazione richiede questo tipo di protezione, generare un proprio assembly di interoperabilità invece di usare l'assembly di interoperabilità primario.
 
- È necessario registrare tutti gli assembly di interoperabilità primari acquisiti nel computer di sviluppo prima di potervi fare riferimento con Visual Studio. Visual Studio cerca e usa un assembly di interoperabilità primario la prima volta che si fa riferimento un tipo da una libreria di tipi COM. Se Visual Studio non riesce a trovare l'assembly di interoperabilità primario associato alla libreria di tipi, chiede di acquisirlo o propone di creare un altro assembly di interoperabilità. Analogamente, anche l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) usa il Registro di sistema per trovare gli assembly di interoperabilità primari.
+ È necessario registrare tutti gli assembly di interoperabilità primari acquisiti nel computer di sviluppo prima di potervi fare riferimento con Visual Studio. Visual Studio cerca e usa un assembly di interoperabilità primario la prima volta che si fa riferimento un tipo da una libreria di tipi COM. Se Visual Studio non riesce a trovare l'assembly di interoperabilità primario associato alla libreria di tipi, chiede di acquisirlo o propone di creare un altro assembly di interoperabilità. Analogamente, anche l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) usa il Registro di sistema per trovare gli assembly di interoperabilità primari.
 
  Anche se non è necessario registrare gli assembly di interoperabilità primari, a meno che non si preveda di usare Visual Studio, la registrazione offre due vantaggi:
 
@@ -32,7 +32,7 @@ ms.locfileid: "69946669"
 
 - È possibile evitare di generare accidentalmente un nuovo assembly di interoperabilità e di usarlo se, in futuro, si userà Visual Studio per fare riferimento a un tipo per cui si dispone di un assembly di interoperabilità primario non registrato.
 
-Usare lo [strumento di registrazione degli assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) per registrare un assembly di interoperabilità primario.
+Usare lo [strumento di registrazione degli assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) per registrare un assembly di interoperabilità primario.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Per registrare un assembly di interoperabilità primario
 

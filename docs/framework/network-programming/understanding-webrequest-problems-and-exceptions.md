@@ -2,12 +2,12 @@
 title: Informazioni su problemi ed eccezioni di WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c5712467cdebb854d09cb55c29878cb8b553f271
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215014"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047097"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Informazioni su problemi ed eccezioni di WebRequest
 <xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala. In alcuni casi la risoluzione di questi problemi non è scontata.  
@@ -15,7 +15,7 @@ ms.locfileid: "59215014"
 ## <a name="solutions"></a>Soluzioni  
  Esaminare la proprietà <xref:System.Net.WebException.Status%2A> di <xref:System.Net.WebException> per determinare il problema. La tabella seguente illustra i diversi valori di stato e alcune possibili soluzioni.  
   
-|Status|Dettagli|Soluzione|  
+|Stato|Dettagli|Soluzione|  
 |------------|-------------|--------------|  
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> -oppure-<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Si è verificato un problema con il socket sottostante. La connessione potrebbe essere stata reimpostata.|Riconnettersi e inviare nuovamente la richiesta.<br /><br /> Verificare che sia installato il Service Pack più recente.<br /><br /> Aumentare il valore della proprietà <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType>.<br /><br /> Impostare <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> su `false`.<br /><br /> Aumentare il numero massimo di connessioni con la proprietà <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Controllare la configurazione del proxy.<br /><br /> Se si usa SSL, verificare che il processo server disponga dell'autorizzazione per accedere all'archivio certificati.<br /><br /> Per l'invio di una grande quantità di dati, impostare <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> su `false`.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|Impossibile convalidare il certificato del server.|Provare ad aprire l'URI con Internet Explorer. Risolvere eventuali avvisi di sicurezza visualizzati da Internet Explorer. Se non è possibile risolvere l'avviso di sicurezza, è possibile creare una classe dei criteri dei certificati che implementa <xref:System.Net.ICertificatePolicy> che restituisce `true` e passarla a <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Vedere <https://support.microsoft.com/?id=823177>.<br /><br /> Assicurarsi che il certificato dell'Autorità di certificazione che ha firmato il certificato del server venga aggiunto all'elenco delle autorità di certificazione attendibili in Internet Explorer.<br /><br /> Assicurarsi che il nome host nell'URL corrisponda al nome comune nel certificato del server.|  
@@ -26,7 +26,7 @@ ms.locfileid: "59215014"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|L'applicazione ha tentato di scrivere in un socket già chiuso.|Il client o il server è sovraccarico. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere <https://support.microsoft.com/?id=821268> per modificare le impostazioni delle prestazioni del servizio Web.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|È stato superato il limite impostato (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) per la lunghezza del messaggio.|Aumentare il valore della proprietà <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Il servizio DNS (Domain Name Service) non è riuscito a risolvere il nome host del proxy.|Configurare il proxy in modo corretto. Vedere <https://support.microsoft.com/?id=318140>.<br /><br /> Forzare <xref:System.Net.HttpWebRequest> a non usare alcun proxy impostando la proprietà <xref:System.Net.HttpWebRequest.Proxy%2A> su `null`.|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La risposta dal server non è una risposta HTTP valida. Questo problema si verifica quando .NET Framework rileva che la risposta del server non è conforme alla specifica RFC per HTTP 1.1. Questo problema può verificarsi quando la risposta contiene intestazioni non corrette o delimitatori dell'intestazione non corretti. Il documento RFC 2616 definisce HTTP 1.1 e il formato valido per la risposta dal server. Per altre informazioni, vedere il documento [RFC 2616 - Hypertext Transfer Protocol - HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Ottenere una traccia di rete della transazione ed esaminare le intestazioni nella risposta.<br /><br /> Se l'applicazione richiede la risposta del server senza analisi (potrebbe rappresentare un problema per la sicurezza), impostare `useUnsafeHeaderParsing` su `true` nel file di configurazione. Vedere [Elemento \<httpWebRequest> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La risposta dal server non è una risposta HTTP valida. Questo problema si verifica quando .NET Framework rileva che la risposta del server non è conforme alla specifica RFC per HTTP 1.1. Questo problema può verificarsi quando la risposta contiene intestazioni non corrette o delimitatori dell'intestazione non corretti. Il documento RFC 2616 definisce HTTP 1.1 e il formato valido per la risposta dal server. Per altre informazioni, vedere il documento [RFC 2616 - Hypertext Transfer Protocol - HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Ottenere una traccia di rete della transazione ed esaminare le intestazioni nella risposta.<br /><br /> Se l'applicazione richiede la risposta del server senza analisi (potrebbe rappresentare un problema per la sicurezza), impostare `useUnsafeHeaderParsing` su `true` nel file di configurazione. Vedere [Elemento \<httpWebRequest> (impostazioni di rete)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Vedere anche
 

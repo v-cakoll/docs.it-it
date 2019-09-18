@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394268"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047870"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduzione ai protocolli di collegamento
 Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gestita di servizi Internet che possono essere integrati rapidamente e facilmente nelle applicazioni. Le classi di accesso a Internet negli spazi dei nomi <xref:System.Net> e <xref:System.Net.Sockets> possono essere usate per implementare applicazioni basate sul Web e basate su Internet.  
@@ -68,6 +68,6 @@ Microsoft .NET Framework offre un'implementazione a livelli, estendibile e gesti
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Programmazione di protocolli di collegamento](programming-pluggable-protocols.md)
+- [Programmazione di rete in .NET Framework](index.md)
+- [Esempi di programmazione di rete](network-programming-samples.md)

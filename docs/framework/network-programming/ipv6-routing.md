@@ -2,12 +2,12 @@
 title: Routing IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: caa1f33f46d13440eab18ba321ebcd8fa4eef129
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647271"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047784"
 ---
 # <a name="ipv6-routing"></a>Routing IPv6
 Uno dei vantaggi di IPv6 è che fornisce un meccanismo di routing flessibile. A causa del modo in cui gli ID rete IPv4 venivano e vengono allocati, tabelle di routing di grandi dimensioni devono essere gestite dai router che si trovano sulle backbone Internet. Questi router devono conoscere tutte le route per poter inoltrare i pacchetti potenzialmente indirizzati a qualsiasi nodo in Internet. Grazie a questa capacità di aggregare indirizzi, IPv6 consente un indirizzamento flessibile e riduce drasticamente le dimensioni delle tabelle di routing. In questa nuova architettura di indirizzamento i router intermedi devono tenere traccia solo della parte locale della rete per poter inoltrare i messaggi nel modo appropriato.  
@@ -35,5 +35,5 @@ Uno dei vantaggi di IPv6 è che fornisce un meccanismo di routing flessibile. A 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+- [Protocollo IPv6](internet-protocol-version-6.md)
+- [Socket](sockets.md)

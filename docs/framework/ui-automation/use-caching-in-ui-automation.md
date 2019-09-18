@@ -8,12 +8,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd7506d388ba215f671ee3c7c4bae09baf4cc2b3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953898"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040314"
 ---
 # <a name="use-caching-in-ui-automation"></a>Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente
 > [!NOTE]
@@ -65,4 +65,4 @@ ms.locfileid: "69953898"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Memorizzazione nella cache di client di automazione interfaccia utente](caching-in-ui-automation-clients.md)

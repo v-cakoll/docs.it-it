@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939700"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053849"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Panoramica delle estensioni di markup per XAML
 Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è una primitiva né un tipo XAML specifico. Per utilizzo dell'attributo, le estensioni di markup usano la sequenza di caratteri nota costituita da una parentesi graffa aperta `{` per l'immissione dell'ambito dell'estensione di markup e da una parentesi graffa chiusa `}` . Quando si usano i servizi XAML di .NET Framework, si possono usare alcune delle estensioni di markup predefinite del linguaggio XAML contenute nell'assembly System.Xaml. inoltre possibile creare una sottoclasse dalla classe <xref:System.Windows.Markup.MarkupExtension> , definita in System.Xaml, e definire estensioni di markup personalizzate. In alternativa, è possibile usare le estensioni di markup definite da un particolare framework se già si fa riferimento a tale framework.  
@@ -73,7 +73,7 @@ Le estensioni di markup sono una tecnica XAML per ottenere un valore che non è 
   
  Si supponga ad esempio che sia previsto che l'estensione di markup `Collate` supporti solo una modalità in cui è presente un argomento posizionale che rappresenta la relativa modalità, specificato come costante di enumerazione `CollationMode` . In questo caso, è necessario che sia presente un costruttore nel formato seguente:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  Gli argomenti sono detti argomenti posizionali perché l'ordine in base al quale vengono rilevati i token nell'utilizzo corrisponde all'ordine posizionale del parametro del costruttore a cui sono assegnati. Si consideri ad esempio la firma del costruttore seguente:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

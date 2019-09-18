@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ab3844b293d09cec02236fb9befd836aa4113ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949214"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046224"
 ---
 # <a name="runtime-information-etw-events"></a>Eventi ETW di informazione di runtime
 Questi eventi ETW registrano informazioni sul runtime, inclusi lo SKU, il numero della versione, la modalità di attivazione del runtime, i parametri della riga di comando con cui è stato avviato il runtime, il GUID (se applicabile) e altre informazioni rilevanti. Se più runtime sono in esecuzione all'interno di un processo, le informazioni fornite da questi eventi (ClrInstanceID) consentono di distinguere tra i runtime.  
   
- La tabella seguente mostra i due eventi di informazioni sui runtime. Gli eventi possono essere generati con qualsiasi parola chiave o maschera. Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ La tabella seguente mostra i due eventi di informazioni sui runtime. Gli eventi possono essere generati con qualsiasi parola chiave o maschera. Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
 |event|ID evento|Provider|Descrizione|  
 |-----------|--------------|--------------|-----------------|  
@@ -46,4 +46,4 @@ Questi eventi ETW registrano informazioni sul runtime, inclusi lo SKU, il numero
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

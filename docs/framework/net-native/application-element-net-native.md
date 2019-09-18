@@ -1,17 +1,17 @@
 ---
-title: <Application> Elemento (.NET Native)
+title: <Application>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657193"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049927"
 ---
-# <a name="application-element-net-native"></a>\<Applicazione > elemento (.NET Native)
+# <a name="application-element-net-native"></a>\<Elemento > applicazione (.NET Native)
 Funge da contenitore per i tipi a livello di applicazione e i membri del tipo i cui metadati sono disponibili per la reflection in fase di esecuzione e applica criteri di reflection di runtime a tutti gli elementi del programma in un'applicazione.  
   
  Elemento \<Directives>  
@@ -54,40 +54,40 @@ Elemento \<Application> (rd.xml)
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione di questo criterio da applicare ai tipi nell'applicazione. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
+|*policy_setting*|L'impostazione di questo criterio da applicare ai tipi nell'applicazione. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applica i criteri a tutti i tipi in un determinato assembly.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applica i criteri a tutti i tipi in un determinato spazio dei nomi.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri a un determinato tipo, ad esempio una classe o una struttura.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri a un tipo generico costruito. Ad esempio, un elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) può essere usato per definire i criteri per un tipo `List<String>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica criteri a un metodo su un particolare tipo.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applica i criteri a un metodo generico costruito.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applica criteri a una proprietà su un particolare tipo.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applica criteri a un campo su un particolare tipo.|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applica criteri a un evento su un particolare tipo.|  
+|[\<Assembly>](assembly-element-net-native.md)|Applica i criteri a tutti i tipi in un determinato assembly.|  
+|[\<Namespace>](namespace-element-net-native.md)|Applica i criteri a tutti i tipi in un determinato spazio dei nomi.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri a un determinato tipo, ad esempio una classe o una struttura.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri a un tipo generico costruito. Ad esempio, un elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md) può essere usato per definire i criteri per un tipo `List<String>`.|  
+|[\<Method>](method-element-net-native.md)|Applica criteri a un metodo su un particolare tipo.|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Applica i criteri a un metodo generico costruito.|  
+|[\<Property>](property-element-net-native.md)|Applica criteri a una proprietà su un particolare tipo.|  
+|[\<Field>](field-element-net-native.md)|Applica criteri a un campo su un particolare tipo.|  
+|[\<Event>](event-element-net-native.md)|Applica criteri a un evento su un particolare tipo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|L'elemento radice di un file di direttive di runtime.|  
+|[\<Directives>](directives-element-net-native.md)|L'elemento radice di un file di direttive di runtime.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) può contenere nessuno o un elemento `<Application>`. Non sono supportati più elementi `<Application>` in un solo file di direttive di reflection.  
+ L'elemento [\<Directives>](directives-element-net-native.md) può contenere nessuno o un elemento `<Application>`. Non sono supportati più elementi `<Application>` in un solo file di direttive di reflection.  
   
  L'elemento `<Application>` può essere usato in uno dei due modi seguenti:  
   
-- Come contenitore per definire gli elementi di programma i cui metadati sono necessari in fase di esecuzione. In tal caso, l'elemento `<Application>` non deve avere alcun attributo. Durante la compilazione, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio dell'elemento `<Application>` in tutte le librerie, incluse le librerie di base .NET Framework. Al contrario, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio di [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) solo nella libreria designata dall'elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- Come contenitore per definire gli elementi di programma i cui metadati sono necessari in fase di esecuzione. In tal caso, l'elemento `<Application>` non deve avere alcun attributo. Durante la compilazione, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio dell'elemento `<Application>` in tutte le librerie, incluse le librerie di base .NET Framework. Al contrario, gli strumenti di compilazione cercano gli elementi di programma identificati dagli elementi figlio di [\<Library>](library-element-net-native.md) solo nella libreria designata dall'elemento [\<Library>](library-element-net-native.md).  
   
-- Come elemento che imposta i criteri a livello di applicazione per la reflection, la serializzazione e l'interoperabilità. Gli attributi dell'elemento `<Application>` definiscono i criteri a livello di applicazione, che possono essere sottoposti a override da elementi figlio definiti dall'elemento `<Application>` o [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+- Come elemento che imposta i criteri a livello di applicazione per la reflection, la serializzazione e l'interoperabilità. Gli attributi dell'elemento `<Application>` definiscono i criteri a livello di applicazione, che possono essere sottoposti a override da elementi figlio definiti dall'elemento `<Application>` o [\<Library>](library-element-net-native.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Libreria > elemento](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Direttive > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Elemento > libreria](library-element-net-native.md)
+- [\<Elemento Directives >](directives-element-net-native.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

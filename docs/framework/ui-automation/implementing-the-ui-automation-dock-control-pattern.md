@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 9bc4f80569dc2bab68e3f65c9e99df72df372171
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968913"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043476"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementazione del pattern di controllo Dock di automazione interfaccia utente
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "69968913"
   
  In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IDockProvider>, incluse le informazioni relative alle proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.  
   
- Il pattern di controllo <xref:System.Windows.Automation.DockPattern> viene usato per esporre le proprietà di ancoraggio di un controllo all'interno di un contenitore di ancoraggio. Un contenitore di ancoraggio è un controllo che consente di disporre gli elementi figlio orizzontalmente e verticalmente, uno rispetto all'altro. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Il pattern di controllo <xref:System.Windows.Automation.DockPattern> viene usato per esporre le proprietà di ancoraggio di un controllo all'interno di un contenitore di ancoraggio. Un contenitore di ancoraggio è un controllo che consente di disporre gli elementi figlio orizzontalmente e verticalmente, uno rispetto all'altro. Per esempi di controlli che implementano questo pattern di controllo, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Ancoraggio del contenitore con due elementi figlio ancorati.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Ancoraggio del contenitore con due elementi figlio ancorati.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi" è impostata su DockPosition.Right e la finestra "Elenco errori" è impostata su DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -57,8 +57,8 @@ Esempio di ancoraggio da Visual Studio dove la finestra "Visualizzazione classi"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

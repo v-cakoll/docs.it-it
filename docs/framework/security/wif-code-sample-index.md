@@ -3,12 +3,12 @@ title: Indice degli esempi di codice di WIF
 ms.date: 03/30/2017
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 author: BrucePerlerMS
-ms.openlocfilehash: b1c875f6c49a3097a75f88b1c25555fd7e891b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e90c5f8681706aa0d52c74e6caff08edbf283da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909402"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045166"
 ---
 # <a name="wif-code-sample-index"></a>Indice degli esempi di codice di WIF
 
@@ -24,7 +24,7 @@ Di seguito sono elencati gli esempi di codice per Windows Identity Foundation 4.
 
 - [ClaimsAwareFormsAuthentication](https://go.microsoft.com/fwlink/?LinkID=248409) - Questo esempio molto semplice illustra che in .NET 4.5 si ottengono le attestazioni nelle entità di sicurezza indipendentemente da come si autenticano gli utenti.
 
-- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410)- questo esempio illustra come usare la classe ClaimsAuthorizationManager e l'oggetto ClaimsAuthorizationModule per applicare i propri criteri di autorizzazione.
+- [ClaimsBasedAuthorization](https://go.microsoft.com/fwlink/?LinkID=248410): in questo esempio viene illustrato come usare la classe ClaimsAuthorizationManager e ClaimsAuthorizationModule per applicare i propri criteri di autorizzazione.
 
 - [FederationMetadata](https://go.microsoft.com/fwlink/?LinkID=248411) - Questo esempio illustra sia la generazione dinamica (in un servizio token di sicurezza personalizzato) che l'utilizzo dinamico (in un'applicazione relying party) di documenti di metadati.
 
@@ -32,4 +32,4 @@ Di seguito sono elencati gli esempi di codice per Windows Identity Foundation 4.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+- [Windows Identity Foundation](index.md)

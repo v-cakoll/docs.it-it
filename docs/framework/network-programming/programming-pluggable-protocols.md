@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072341"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047396"
 ---
 # <a name="programming-pluggable-protocols"></a>programmazione di protocolli di collegamento
 Le classi astratte <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> rappresentano la base per i protocolli di collegamento. Tramite la derivazione di classi specifiche del protocollo da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>, un'applicazione può richiedere i dati da una risorsa Internet e leggere la risposta senza specificare il protocollo usato.  
@@ -33,7 +33,7 @@ Le classi astratte <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [Derivazione da WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Procedura: Eseguire il cast di tipo di un oggetto WebRequest per accedere a proprietà specifiche del protocollo](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Derivazione da WebRequest](deriving-from-webrequest.md)
+- [Derivazione da WebResponse](deriving-from-webresponse.md)
+- [Programmazione di rete in .NET Framework](index.md)
+- [Procedura: Eseguire il cast di tipo di un oggetto WebRequest per accedere a proprietà specifiche del protocollo](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589188"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053273"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
@@ -27,7 +27,7 @@ Il nome della struct deve essere un [nome di identificatore](../inside-a-program
 
 Qualsiasi classe o struct che implementa l'interfaccia <xref:System.IEquatable%601> deve contenere una definizione per un metodo <xref:System.IEquatable%601.Equals%2A> che corrisponde alla firma specificata dall'interfaccia. Di conseguenza, è possibile affidarsi a una classe che implementa `IEquatable<T>` per contenere un metodo `Equals` con cui un'istanza della classe può determinare se sia uguale a un'altra istanza della stessa classe.  
   
-La definizione di `IEquatable<T>` non fornisce un'implementazione per `Equals`. L'interfaccia definisce solo la firma. In tal modo, un'interfaccia in C# è simile a una classe astratta in cui tutti i metodi sono astratti. Tuttavia, una classe o struct può implementare più interfacce, ma una classe può ereditare una sola classe, astratta o meno.
+La definizione di `IEquatable<T>` non fornisce un'implementazione per `Equals`. Una classe o uno struct può implementare più interfacce, ma una classe può ereditare solo da una singola classe.
   
 Per altre informazioni sulle classi astratte, vedere [Classi e membri delle classi astratte e sealed](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   

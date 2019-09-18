@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3864ae416df0a2516a4dd9e6cf92669f66f27bb1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 561655f1d3de6efcac79c89907602cbf51bd3ff8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853980"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052228"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall (MDA)
 L'assistente al debug gestito `virtualCERCall` viene attivato come avviso che indica che un sito di chiamata all'interno di un grafico chiamate di un'area a esecuzione vincolata fa riferimento a una destinazione virtuale, ovvero una chiamata virtuale a un metodo virtuale non finale o a una chiamata che usa un'interfaccia. Common Language Runtime (CLR) non può prevedere il metodo di destinazione di queste chiamate solo dal linguaggio intermedio e dall'analisi dei metadati. Di conseguenza, non è possibile preparare l'albero delle chiamate come parte del grafico dell'area a esecuzione vincolata e le interruzioni dei thread in tale sottoalbero non possono essere bloccate automaticamente. Questo assistente al debug gestito segnala i casi in cui un'area a esecuzione vincolata potrebbe dover essere estesa usando chiamate esplicite al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una volta che le informazioni aggiuntive necessarie per calcolare la destinazione della chiamata sono note in fase di esecuzione.  
@@ -99,5 +99,5 @@ void MethodWithCer(MyClass object)
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

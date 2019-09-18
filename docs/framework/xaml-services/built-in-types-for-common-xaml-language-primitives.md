@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85fd0c04a40b9de64979e4da1459dbf8953a93bf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689710"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053886"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipi incorporati per primitive del linguaggio XAML comuni
 XAML 2009 introduce il supporto del livello di linguaggio XAML per diversi tipi di dati che sono primitive di uso frequente in Common Language Runtime (CLR) e in altri linguaggi di programmazione. XAML 2009 aggiunge il supporto per queste primitive: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`e `x:Array`  
@@ -29,7 +29,7 @@ XAML 2009 introduce il supporto del livello di linguaggio XAML per diversi tipi 
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>Tecniche precedenti per le primitive di linguaggio nel markup XAML  
  In XAML per le versioni di WPF precedenti era possibile fare riferimento alle primitive del linguaggio CLR eseguendo il mapping dell'assembly e dello spazio dei nomi che contenevano una classe di definizione della primitiva CLR per .NET Framework. La maggior parte di queste si trovano nell'assembly mscorlib e nello spazio dei nomi <xref:System> . Ad esempio, per usare <xref:System.Int32>era possibile dichiarare il mapping seguente (con un esempio di utilizzo come illustrato di seguito):  
   
-```  
+```xaml  
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
 xmlns:sys="clr-namespace:System;assembly=mscorlib">  
@@ -51,24 +51,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xboolean"></a>x:Boolean  
  Per il supporto CLR, la primitiva `x:Boolean` corrisponde a <xref:System.Boolean>.  
   
- XAML analizza i valori per `x:Boolean` senza fare distinzione tra maiuscole e minuscole. Tenere presente che `x:Bool` non rappresenta un'alternativa valida. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.17 e 5.4.11 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ XAML analizza i valori per `x:Boolean` senza fare distinzione tra maiuscole e minuscole. Tenere presente che `x:Bool` non rappresenta un'alternativa valida. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.17 e 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xchar"></a>x:Char  
  Per il supporto CLR, la primitiva `x:Char` corrisponde a <xref:System.Char>.  
   
- I tipi string e char interagiscono con la codifica globale del file a livello di XML. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.7 e 5.4.1](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ I tipi string e char interagiscono con la codifica globale del file a livello di XML. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.7 e 5.4.1](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xstring"></a>x:String  
  Per il supporto CLR, la primitiva `x:String` corrisponde a <xref:System.String>.  
   
- I tipi string e char interagiscono con la codifica globale del file a livello di XML. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] 5.2.6 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ I tipi string e char interagiscono con la codifica globale del file a livello di XML. Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xdecimal"></a>x:Decimal  
  Per il supporto CLR, la primitiva `x:Decimal` corrisponde a <xref:System.Decimal>.  
   
  Si noti che l'analisi XAML viene eseguita intrinsecamente con le impostazioni cultura `en-US` . Con le impostazioni cultura `en-US` , il separatore corretto per i componenti di un numero decimale è sempre un punto (`.`) indipendentemente dalle impostazioni cultura dell'ambiente di sviluppo o dell'eventuale destinazione client in cui XAML viene caricato in fase di esecuzione.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.14 e 5.4.8 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.14 e 5.4.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xsingle"></a>x:Single  
  Per il supporto CLR, la primitiva `x:Single` corrisponde a <xref:System.Single>.  
@@ -77,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Single` può supportare valori nel formato di notazione scientifico, se il primo carattere nella sintassi del testo è `e` o `E`.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.8 e 5.4.2](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.8 e 5.4.2](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xdouble"></a>x:Double  
  Per il supporto CLR, la primitiva `x:Double` corrisponde a <xref:System.Double>.  
@@ -86,48 +86,48 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  `x:Double` può supportare valori nel formato di notazione scientifico. Utilizzare il carattere `e` o `E` per introdurre la parte dell'esponente.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.9 e 5.4.3 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.9 e 5.4.3](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint16"></a>x:Int16  
  Per il supporto CLR, la primitiva `x:Int16` corrisponde a <xref:System.Int16> e `x:Int16` viene considerato con segno. In XAML l'assenza di un segno più (`+`) nella sintassi del testo indica implicitamente un valore con segno positivo.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.11 e 5.4.5 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.11 e 5.4.5](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint32"></a>x:Int32  
  Per il supporto CLR, la primitiva `x:Int32` corrisponde a <xref:System.Int32>. `x:Int32` viene considerato un valore con segno. In XAML l'assenza di un segno più (`+`) nella sintassi del testo indica implicitamente un valore con segno positivo.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.12 e 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.12 e 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xint64"></a>x:Int64  
  Per il supporto CLR, la primitiva `x:Int64` corrisponde a <xref:System.Int64>. `x:Int64` viene considerato un valore con segno. In XAML l'assenza di un segno più (`+`) nella sintassi del testo indica implicitamente un valore con segno positivo.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.13 e 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.13 e 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xtimespan"></a>x:TimeSpan  
  Per il supporto CLR, la primitiva `x:TimeSpan` corrisponde a <xref:System.TimeSpan>.  
   
  Si noti che l'analisi XAML per il formato di ora/data viene eseguita intrinsecamente con le impostazioni cultura `en-US` .  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.16 e 5.4.10 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.16 e 5.4.10](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xuri"></a>x:Uri  
  Per il supporto CLR, la primitiva `x:Uri` corrisponde a <xref:System.Uri>.  
   
  La verifica dei protocolli non fa parte della definizione XAML per `x:Uri`.  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.15 e 5.4.9](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.15 e 5.4.9](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xbyte"></a>x:Byte  
- Per il supporto CLR, la primitiva `x:Byte` corrisponde a <xref:System.Byte>. Oggetto <xref:System.Byte>  /  `x:Byte` viene considerato come senza segno.  
+ Per il supporto CLR, la primitiva `x:Byte` corrisponde a <xref:System.Byte>. Un <xref:System.Byte> oggetto  /  vieneconsideratocomesenzasegno`x:Byte` .  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.10 e 5.4.4 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.10 e 5.4.4](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xarray"></a>x:Array  
  Per il supporto CLR, la primitiva `x:Array` corrisponde a <xref:System.Array>.  
   
  In XAML 2006 è possibile definire una matrice utilizzando una sintassi dell'estensione di markup, mentre la sintassi di XAML 2009 è una primitiva definita dal linguaggio che non richiede l'accesso a un'estensione di markup. Per ulteriori informazioni sul supporto di XAML 2006, vedere [x:Array Markup Extension](x-array-markup-extension.md).  
   
- Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] 5.2.18 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Per la definizione delle specifiche del linguaggio XAML, vedere [ \[le\] sezioni MS-XAML 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 <a name="wpf_support"></a>   
 ## <a name="wpf-support"></a>Supporto WPF  

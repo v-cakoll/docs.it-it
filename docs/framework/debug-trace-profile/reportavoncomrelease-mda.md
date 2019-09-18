@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bea73a30cb103f0e72caf73a633229a0719dc6c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873951"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052319"
 ---
 # <a name="reportavoncomrelease-mda"></a>MDA reportAvOnComRelease
 L'assistente al debug gestito `reportAvOnComRelease` viene attivato quando vengono generate eccezioni a causa di errori nel conteggio dei riferimenti utente durante l'esecuzione dell'interoperabilità COM e l'uso del metodo <xref:System.Runtime.InteropServices.Marshal.Release%2A> o <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> in combinazione con chiamate COM non elaborate.  
@@ -51,5 +51,5 @@ L'assistente al debug gestito `reportAvOnComRelease` viene attivato quando vengo
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

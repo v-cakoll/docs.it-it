@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854013"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052195"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare qualsiasi versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
@@ -53,15 +53,15 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 - È necessario avere privilegi di amministratore per installare .NET Framework 4.5 e le relative versioni intermedie.
 
-- .NET Framework 4.5 è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'app in questi sistemi operativi. Analogamente, .NET Framework 4.5.1 è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. .NET Framework 4.6 è incluso in Windows 10, .NET Framework 4.6.1 è incluso in Windows 10 November Update e .NET Framework 4.6.2 è incluso in Windows 10 Anniversary Update.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è incluso in Windows 10 Fall Creators Update e .NET Framework 4.7.2 è incluso nell'aggiornamento di Windows 10 di ottobre 2018 e nell'aggiornamento di Windows 10 di aprile 2018. .NET Framework 4.8 è incluso nell'aggiornamento di Windows 10 di maggio 2019. Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md).
+- .NET Framework 4.5 è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], quindi non è necessario distribuirlo con l'app in questi sistemi operativi. Analogamente, .NET Framework 4.5.1 è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e Windows Server 2012 R2. .NET Framework 4.5.2 non è incluso in nessun sistema operativo. .NET Framework 4.6 è incluso in Windows 10, .NET Framework 4.6.1 è incluso in Windows 10 November Update e .NET Framework 4.6.2 è incluso in Windows 10 Anniversary Update.  .NET Framework 4.7 è incluso in Windows 10 Creators Update, .NET Framework 4.7.1 è incluso in Windows 10 Fall Creators Update e .NET Framework 4.7.2 è incluso nell'aggiornamento di Windows 10 di ottobre 2018 e nell'aggiornamento di Windows 10 di aprile 2018. .NET Framework 4.8 è incluso nell'aggiornamento di Windows 10 di maggio 2019. Per un elenco completo dei requisiti hardware e software, vedere [Requisiti di sistema](../get-started/system-requirements.md).
 
-- A partire da .NET Framework 4.5 gli utenti possono visualizzare un elenco di app .NET Framework in esecuzione durante l'installazione e chiuderle con facilità. In questo modo, è possibile evitare i riavvii del sistema dovuti alle installazioni di .NET Framework. Vedere [Riduzione dei riavvii del sistema](../../../docs/framework/deployment/reducing-system-restarts.md).
+- A partire da .NET Framework 4.5 gli utenti possono visualizzare un elenco di app .NET Framework in esecuzione durante l'installazione e chiuderle con facilità. In questo modo, è possibile evitare i riavvii del sistema dovuti alle installazioni di .NET Framework. Vedere [Riduzione dei riavvii del sistema](reducing-system-restarts.md).
 
 - Se si disinstalla .NET Framework 4.5 o una delle versioni intermedie, si rimuovono anche i file di .NET Framework 4 preesistenti. Se si vuole tornare a .NET Framework 4, è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [Installazione di .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
 - Il file ridistribuibile di .NET Framework 4.5 è stato aggiornato il 9 ottobre 2012 per risolvere un problema correlato a un timestamp errato in un certificato digitale, che ha causato la scadenza anticipata della firma digitale su file creati e firmati da Microsoft. Se in precedenza è stato installato .NET Framework 4.5 Redistributable Package del 16 agosto 2012, è consigliabile aggiornare la copia con l'ultimo file ridistribuibile dall' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Per altre informazioni su questo problema, vedere l' [avviso di sicurezza Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
-Per informazioni su come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete, vedere [Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md).
+Per informazioni su come un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema in una rete, vedere [Guida alla distribuzione per amministratori](guide-for-administrators.md).
 
 ## <a name="deployment-options-for-your-app"></a>Opzioni di distribuzione per le app
 
@@ -233,7 +233,7 @@ Per i codici restituiti comuni, vedere la sezione [Codici restituiti](#return-co
 
 Se è disponibile un pacchetto di installazione personalizzato, è possibile avviare automaticamente l'installazione di .NET Framework e tenerne traccia mentre viene visualizzato lo stato di avanzamento dell'installazione. In questo caso, assicurarsi che il codice riguardi quanto segue:
 
-- Verificare i [requisiti hardware e software di .NET Framework](../../../docs/framework/get-started/system-requirements.md).
+- Verificare i [requisiti hardware e software di .NET Framework](../get-started/system-requirements.md).
 
 - [Stabilire](#detect_net) se la versione corretta di .NET Framework è già installata nel computer dell'utente.
 
@@ -242,7 +242,7 @@ Se è disponibile un pacchetto di installazione personalizzato, è possibile avv
 
 - [Stabilire](#detecting-the-language-packs) se i Language Pack sono già installati nel computer dell'utente.
 
-- Se si vuole controllare la distribuzione, avviare automaticamente il processo di installazione di .NET Framework e tenerne traccia (vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Se si vuole controllare la distribuzione, avviare automaticamente il processo di installazione di .NET Framework e tenerne traccia (vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Se si distribuisce il programma di installazione offline, [concatenare separatamente i Language Pack](#chain_langpack).
 
@@ -291,7 +291,7 @@ Ad esempio, per rilevare se è installato il Language Pack giapponese completo (
 | | |
 |-|-|
 | Chiave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| NOME | Release |
+| Name | Release |
 | Type | DWORD |
 
 Per determinare se per una versione particolare di .NET Framework dalla 4.5 alla 4.7.2 è installata la versione di rilascio finale di un Language Pack, verificare il valore della chiave RELEASE del valore DWORD descritto nella sezione precedente, [Rilevamento di .NET Framework](#detect_net).
@@ -431,9 +431,9 @@ Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md)
-- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
-- [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md)
-- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Guida alla distribuzione per amministratori](guide-for-administrators.md)
+- [Requisiti di sistema](../get-started/system-requirements.md)
+- [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md)
+- [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)

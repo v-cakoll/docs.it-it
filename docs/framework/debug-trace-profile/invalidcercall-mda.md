@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754427"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052640"
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno del grafico delle aree a esecuzione vincolata è presente una chiamata a un metodo che non include alcun contratto di affidabilità o che include un contratto eccessivamente debole. Un contratto debole è un contratto che dichiara che il peggior stato di danneggiamento ha un ambito più vasto rispetto all'istanza passata alla chiamata, ovvero lo stato di <xref:System.AppDomain> o del processo può risultare danneggiato o il risultato non è sempre calcolabile in modo deterministico quando la chiamata avviene all'interno di un'area a esecuzione vincolata.  
@@ -58,4 +58,4 @@ L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

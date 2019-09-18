@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044138"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042879"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Ottenere elementi di automazione interfaccia utente
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044138"
  Questo argomento descrive i diversi modi in cui è possibile ottenere oggetti <xref:System.Windows.Automation.AutomationElement> per gli elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 > [!CAUTION]
-> Se c'è la possibilità che l'applicazione client cerchi di trovare elementi nell'interfaccia utente, è necessario effettuare tutte le chiamate a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in un thread separato. Per altre informazioni, vedere [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Se c'è la possibilità che l'applicazione client cerchi di trovare elementi nell'interfaccia utente, è necessario effettuare tutte le chiamate a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in un thread separato. Per altre informazioni, vedere [UI Automation Threading Issues](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Elemento radice  
@@ -85,7 +85,7 @@ ms.locfileid: "70044138"
 ### <a name="from-an-event"></a>Da un evento  
  Quando l'applicazione riceve un evento di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , l'oggetto di origine passato al gestore eventi è <xref:System.Windows.Automation.AutomationElement>. Se, ad esempio, sono stati sottoscritti gli eventi di modifica dello stato attivo, l'origine passata all'oggetto <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> è l'elemento che ha ricevuto lo stato attivo.  
   
- Per altre informazioni, vedere [Subscribe to UI Automation Events](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Per altre informazioni, vedere [Subscribe to UI Automation Events](subscribe-to-ui-automation-events.md).  
   
 ### <a name="from-a-point"></a>Da un punto  
  Se si conoscono le coordinate nella schermata (ad esempio, la posizione di un cursore), è possibile recuperare un oggetto <xref:System.Windows.Automation.AutomationElement> usando il metodo <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> statico.  
@@ -98,6 +98,6 @@ ms.locfileid: "70044138"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)
+- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)

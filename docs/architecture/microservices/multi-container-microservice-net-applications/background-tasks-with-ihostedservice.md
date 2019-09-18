@@ -2,12 +2,12 @@
 title: Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulle nuove opzioni per usare IHostedService e BackgroundService per implementare attività in background nei microservizi .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039877"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 
@@ -236,16 +236,16 @@ Ma anche per un `WebHost` distribuito in un pool di applicazioni, esistono scena
 
 L'interfaccia di `IHostedService` fornisce un modo pratico per avviare le attività in background in un'applicazione Web di ASP.NET Core (in .NET Core 2.0 ) o in qualsiasi processo/host (a partire da .NET Core 2.1 con `IHost`). Il vantaggio principale è la possibilità che si ottiene con l'annullamento automatico di pulire il codice delle attività in background quando è in corso la chiusura dell'host stesso.
 
-#### <a name="additional-resources"></a>Risorse aggiuntive
+## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Creare un'attività pianificata in ASP.NET Core/Standard 2.0** <br/>
-    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Creare un'attività pianificata in ASP.NET Core/Standard 2.0**  
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementazione di IHostedService in ASP.NET Core 2.0** <br/>
-    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementazione di IHostedService in ASP.NET Core 2.0**  
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **GenericHost Sample using ASP.NET Core 2.1** (Esempio di GenericHost con ASP.NET Core 2.1) <br/>
-    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **GenericHost Sample using ASP.NET Core 2.1** (Esempio di GenericHost con ASP.NET Core 2.1)  
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Precedente](test-aspnet-core-services-web-apps.md)

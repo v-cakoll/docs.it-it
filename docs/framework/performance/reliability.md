@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acb84c6617cdffabfe276895f81e7df2b04bb8bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046242"
 ---
 # <a name="reliability"></a>Affidabilità
 È importante che il codice in esecuzione in ambienti server, ad esempio SQL Server, fornisca protezione contro le eccezioni asincrone. L'affidabilità, come descritto in questo argomento, non è specifica di SQL Server, ma della scrittura di codice affidabile per qualsiasi host in esecuzione in un ambiente .NET Framework versione 2.0. SQL Server è tuttavia il primo servizio che fa un uso completo delle nuove funzionalità di affidabilità della versione 2.0, quindi viene usato come esempio.  
@@ -23,13 +23,13 @@ ms.locfileid: "61949292"
  Il codice in esecuzione in SQL Server deve rispettare linee guida per l'affidabilità più rigorose rispetto ad altri ambienti server. Ciò è dovuto al funzionamento stabile di SQL Server fino al limite estremo di utilizzo delle risorse.  Le eccezioni <xref:System.OutOfMemoryException> e <xref:System.Threading.ThreadAbortException> non sono rare nell'ambiente SQL Server. Queste linee guida in generale sono incentrate meno sull'affidabilità e più su come consentire al codice gestito completamente attendibile di generare un errore non grave in caso di riciclo a livello di <xref:System.AppDomain>, che rappresenta il modo principale in cui il server mantiene la coerenza e la disponibilità.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Programmazione per SQL Server e attributi di protezione host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
+ [Programmazione per SQL Server e attributi di protezione host](sql-server-programming-and-host-protection-attributes.md)  
  Descrive come viene usato l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> da SQL Server per limitare l'esecuzione del codice gestito.  
   
- [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)  
+ [Procedure consigliate per l'ottimizzazione dell'affidabilità](reliability-best-practices.md)  
  Fornisce linee guida per la scrittura di codice che soddisfa i requisiti di affidabilità.  
   
- [Aree a esecuzione vincolata](../../../docs/framework/performance/constrained-execution-regions.md)  
+ [Aree a esecuzione vincolata](constrained-execution-regions.md)  
  Descrive la funzione e il comportamento delle aree a esecuzione vincolata.  
   
 ## <a name="reference"></a>Riferimenti  

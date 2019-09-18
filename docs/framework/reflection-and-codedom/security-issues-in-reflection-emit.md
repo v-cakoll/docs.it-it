@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2bdaef52bbc4cac0abfcbf8724f3c5c602bc8f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956690"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045792"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemi di sicurezza nella reflection emit
 .NET Framework offre tre modalità per creare codice Microsoft Intermediate Language (MSIL), ciascuna con specifici problemi di sicurezza:  
@@ -36,7 +36,7 @@ ms.locfileid: "69956690"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Assembly dinamici  
- Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
+ Gli assembly dinamici vengono creati usando gli overload del metodo <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La maggior parte degli overload di questo metodo sono deprecati in .NET Framework 4 a causa dell'eliminazione dei criteri di sicurezza a livello di computer. Vedere [Modifiche di sicurezza](../security/security-changes.md). Gli overload rimanenti possono essere eseguiti da qualsiasi codice, indipendentemente dal livello di attendibilità. Questi overload rientrano in due gruppi: quelli che specificano un elenco di attributi da applicare all'assembly dinamico quando viene creato e quelli che non lo specificano. Se non si specifica il modello di trasparenza per l'assembly, applicando l'attributo <xref:System.Security.SecurityRulesAttribute> durante la creazione, il modello di trasparenza viene ereditato dall'assembly di creazione.  
   
 > [!NOTE]
 > Gli attributi applicati all'assembly dinamico dopo averlo creato mediante il metodo <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> non sono effettivi fino a quando l'assembly non viene salvato su disco e caricato di nuovo in memoria.  
@@ -139,7 +139,7 @@ ms.locfileid: "69956690"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Informazioni sulla versione  
- A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md).  
+ A partire da .NET Framework 4, i criteri di sicurezza a livello di computer vengono eliminati e la trasparenza della sicurezza diventa il meccanismo di imposizione predefinito. Vedere [Modifiche di sicurezza](../security/security-changes.md).  
   
  A partire da .NET Framework 2.0 Service Pack 1, non è più necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> quando si generano assembly e metodi dinamici. Questo flag è richiesto in tutte le versioni precedenti di .NET Framework.  
   
@@ -151,9 +151,9 @@ ms.locfileid: "69956690"
  .NET Framework 2.0 SP1 introduce infine i metodi ospitati anonimamente.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Informazioni su tipi e membri  
- A partire da .NET Framework 2.0 non sono necessarie autorizzazioni per ottenere informazioni sui tipi e i membri non pubblici. Per ottenere le informazioni necessarie a generare metodi dinamici viene usato Reflection. Ad esempio, gli oggetti <xref:System.Reflection.MethodInfo> vengono usati per generare le chiamate al metodo. Le versioni precedenti di .NET Framework richiedono <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Per altre informazioni, vedere [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection).  
+ A partire da .NET Framework 2.0 non sono necessarie autorizzazioni per ottenere informazioni sui tipi e i membri non pubblici. Per ottenere le informazioni necessarie a generare metodi dinamici viene usato Reflection. Ad esempio, gli oggetti <xref:System.Reflection.MethodInfo> vengono usati per generare le chiamate al metodo. Le versioni precedenti di .NET Framework richiedono <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Per altre informazioni, vedere [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)
-- [Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+- [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)
+- [Creazione di assembly e metodi dinamici](emitting-dynamic-methods-and-assemblies.md)

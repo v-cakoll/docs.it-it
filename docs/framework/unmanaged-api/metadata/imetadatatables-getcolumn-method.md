@@ -1,6 +1,6 @@
 ---
 title: Metodo IMetaDataTables::GetColumn
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataTables.GetColumn
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781541"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053669"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>Metodo IMetaDataTables::GetColumn
-Ottiene un puntatore al valore contenuto nella cella della colonna specificata e della riga nella tabella specificata.  
+Ottiene un puntatore al valore contenuto nella cella della colonna e della riga specificate nella tabella specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,27 +38,49 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri
+
  `ixTbl`  
- [in] L'indice della tabella.  
+ in Indice della tabella.  
   
  `ixCol`  
- [in] L'indice della colonna nella tabella.  
+ in Indice della colonna nella tabella.  
   
  `rid`  
- [in] L'indice della riga nella tabella.  
+ in Indice della riga nella tabella.  
   
  `pVal`  
- [out] Puntatore al valore della cella.  
+ out Puntatore al valore nella cella.  
+ 
+## <a name="remarks"></a>Note
+
+L'interpretazione del valore restituito tramite `pVal` dipende dal tipo della colonna. Il tipo di colonna può essere determinato chiamando [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+
+- Il metodo **GetColumn** converte automaticamente le colonne di tipo **RID** o **CodedToken** in valori completi a `mdToken` 32 bit.
+- Converte inoltre automaticamente i valori a 8 bit o a 16 bit in valori completi a 32 bit. 
+- Per le colonne di tipo *heap* , il valore di *pval* restituito sarà un indice nell'heap corrispondente.
+
+| Tipo di colonna              | pVal contiene | Commento                          |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *pval* conterrà un token completo. La funzione converte automaticamente il RID in un token completo. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Al ritorno, *pval* conterrà un token completo. La funzione decomprime automaticamente il CodedToken in un token completo. |
+| `iSHORT`(96)            | Int16         | Firma automaticamente estesa a 32 bit.  |
+| `iUSHORT`(97)           | UInt16        | Firma automaticamente estesa a 32 bit.  |
+| `iLONG`(98)             | Int32         |                                        | 
+| `iULONG`(99)            | UInt32        |                                        |
+| `iBYTE`(100)            | Byte          | Firma automaticamente estesa a 32 bit.  |
+| `iSTRING`(101)          | Indice dell'heap delle stringhe | *pval* è un indice nell'heap delle stringhe. Usare [IMetadataTables:: GetString](imetadatatables-getstring-method.md) per ottenere il valore della stringa di colonna effettivo. |
+| `iGUID`(102)            | Indice heap GUID | *pval* è un indice nell'heap GUID. Usare [IMetadataTables:: GetGuid](imetadatatables-getguid-method.md) per ottenere il valore effettivo del GUID della colonna. |
+| `iBLOB`(103)            | Indice heap BLOB | *pval* è un indice nell'heap BLOB. Usare [IMetadataTables:: GetBlob](imetadatatables-getblob-method.md) per ottenere il valore effettivo del BLOB della colonna. |
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria** Usato come risorsa in MsCorEE. dll  
   
- **Versioni di .NET framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 

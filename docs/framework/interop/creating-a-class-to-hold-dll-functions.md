@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626406"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051830"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Creazione di una classe che contenga le funzioni di DLL
 Il wrapping di una funzione di DLL frequentemente usata in una classe gestita è un modo efficace per incapsulare la funzionalità della piattaforma. Anche se non è obbligatorio in tutti i casi, è preferibile fornire un wrapper di classe, perché la definizione delle funzioni di DLL è un'attività complessa e soggetta a errori. In caso di programmazione in C# o in Visual Basic, è necessario dichiarare le funzioni di DLL in una classe o in un modulo Visual Basic.  
   
- All'interno di una classe si definisce un metodo statico per ogni funzione di DLL che si vuole chiamare. La definizione può includere informazioni aggiuntive, come il set di caratteri o la convenzione di chiamata usata per passare gli argomenti del metodo. Se si omettono queste informazioni, verranno usate le impostazioni predefinite. Per un elenco completo delle opzioni di dichiarazione e delle relative impostazioni predefinite, vedere [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+ All'interno di una classe si definisce un metodo statico per ogni funzione di DLL che si vuole chiamare. La definizione può includere informazioni aggiuntive, come il set di caratteri o la convenzione di chiamata usata per passare gli argomenti del metodo. Se si omettono queste informazioni, verranno usate le impostazioni predefinite. Per un elenco completo delle opzioni di dichiarazione e delle relative impostazioni predefinite, vedere [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md).  
   
  Una volta effettuato il wrapping è possibile chiamare i metodi della classe, così come si chiamano i metodi statici di qualsiasi altra classe. Con platform invoke, la funzione esportata sottostante viene gestita automaticamente.  
   
@@ -34,11 +34,11 @@ Il wrapping di una funzione di DLL frequentemente usata in una classe gestita è
   
 - Creare una sola classe per un insieme di funzioni di DLL correlate, al fine di formare raggruppamenti logici e ridurre l'overhead.  
   
- È possibile assegnare alla classe e ai relativi metodi i nomi che si preferiscono. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ È possibile assegnare alla classe e ai relativi metodi i nomi che si preferiscono. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Identificazione delle funzioni nelle DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)
-- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
+- [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)
+- [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
+- [Chiamata a una funzione di DLL](calling-a-dll-function.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040742"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053226"
 ---
 # <a name="application-domains"></a>Domini applicazione
 
@@ -64,7 +64,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
 - Se non viene caricato come indipendente dal dominio, un assembly deve essere sottoposto a compilazione JIT in ogni dominio applicazione in cui viene caricato. È tuttavia possibile scaricare l'assembly dal processo scaricando tutti i domini applicazione nei quali è caricato.  
   
- L'host di runtime determina se caricare gli assembly come indipendenti dal dominio nel momento in cui carica il runtime in un processo. Per le applicazioni gestite, applicare l'attributo <xref:System.LoaderOptimizationAttribute> al metodo del punto di ingresso del processo e specificare un valore dall'enumerazione <xref:System.LoaderOptimization> associata. Per applicazioni non gestite che ospitano Common Language Runtime, specificare il flag appropriato quando si chiama il metodo [CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ L'host di runtime determina se caricare gli assembly come indipendenti dal dominio nel momento in cui carica il runtime in un processo. Per le applicazioni gestite, applicare l'attributo <xref:System.LoaderOptimizationAttribute> al metodo del punto di ingresso del processo e specificare un valore dall'enumerazione <xref:System.LoaderOptimization> associata. Per applicazioni non gestite che ospitano Common Language Runtime, specificare il flag appropriato quando si chiama il metodo [CorBindToRuntimeEx](../unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
  Il caricamento di assembly indipendenti dal dominio può avvenire in tre modi:  
   
@@ -76,7 +76,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Il codice con compilazione JIT non può essere condiviso per gli assembly caricati nel contesto di origine del caricamento usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> della classe <xref:System.Reflection.Assembly> né può essere caricato da immagini usando overload del metodo <xref:System.Reflection.Assembly.Load%2A> che specificano matrici di byte.  
   
- Gli assembly compilati nel codice nativo usando il [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) possono essere condivisi tra domini dell'applicazione se sono stati caricati come indipendenti dal dominio la prima volta che sono stati caricati in un processo.  
+ Gli assembly compilati nel codice nativo usando il [generatore di immagini native (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) possono essere condivisi tra domini dell'applicazione se sono stati caricati come indipendenti dal dominio la prima volta che sono stati caricati in un processo.  
   
  Il codice con compilazione JIT per l'assembly contenente il punto di ingresso dell'applicazione è condiviso solo se possono essere condivise tutte le dipendenze.  
   
@@ -110,7 +110,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  La <xref:System.AppDomain> è l'interfaccia che consente di accedere ai domini applicazione a livello di codice. e include metodi per creare e scaricare domini, per creare istanze di tipi nei domini e per effettuare la registrazione per varie notifiche, come ad esempio quelle per scaricare i domini applicazione. La tabella riportata di seguito elenca i metodi di <xref:System.AppDomain> comunemente usati.  
   
-|Metodo AppDomain|DESCRIZIONE|  
+|Metodo AppDomain|Descrizione|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuovo dominio applicazione. Si consiglia di usare un overload di questo metodo che specifica un oggetto <xref:System.AppDomainSetup>. Si tratta del sistema preferito per impostare le proprietà di un nuovo dominio, quali la base o la directory radice dell'applicazione, il percorso del file di configurazione del dominio e il percorso di ricerca usato da Common Language Runtime per caricare gli assembly nel dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Esegue un assembly nel dominio applicazione. Si tratta di un metodo di istanza, pertanto è possibile utilizzarlo per eseguire codice in un altro dominio applicazione per il quale si dispone di un riferimento.|  
@@ -132,7 +132,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
  Tramite un'applicazione tipica vengono caricati diversi assembly in un dominio applicazione prima che il codice in essi contenuto possa essere eseguito.  
   

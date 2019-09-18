@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042077"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Argomenti sulle procedure relative ai provider di automazione interfaccia utente per il codice gestito
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "69914420"
  Questa sezione contiene esempi di codice che illustrano le [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] attività di [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] scrittura dei provider per gli elementi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Esporre un provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Restituire proprietà da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Generare eventi da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Creare un provider di automazione interfaccia utente lato client](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementare provider di automazione interfaccia utente in un'applicazione client](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Esporre un provider di automazione interfaccia utente lato server](expose-a-server-side-ui-automation-provider.md)  
+ [Restituire proprietà da un provider di automazione interfaccia utente](return-properties-from-a-ui-automation-provider.md)  
+ [Generare eventi da un provider di automazione interfaccia utente](raise-events-from-a-ui-automation-provider.md)  
+ [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)  
+ [Creare un provider di automazione interfaccia utente lato client](create-a-client-side-ui-automation-provider.md)  
+ [Implementare provider di automazione interfaccia utente in un'applicazione client](implement-ui-automation-providers-in-a-client-application.md)

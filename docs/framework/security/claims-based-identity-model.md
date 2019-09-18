@@ -3,15 +3,15 @@ title: Modello di identità basata sulle attestazioni
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: c09d3e177d8b0638f0260b76c163bf668235db29
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422402"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045529"
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
-Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
+Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Una richiesta può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
   
  In questo modello, un punto di accesso singolo è molto più semplice da ottenere e l'applicazione non viene più utilizzata per le operazioni seguenti:  
   
@@ -27,9 +27,9 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
   
  In questo argomento vengono fornite le seguenti informazioni:  
   
-- [Introduzione all'identità basata sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Introduzione all'identità basata sulle attestazioni](claims-based-identity-model.md#BKMK_1)  
   
-- [Scenario di base per un modello di identità basato sulle attestazioni](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Scenario di base per un modello di identità basato sulle attestazioni](claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Introduzione all'identità basata sulle attestazioni  
@@ -39,7 +39,7 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
  Ai fini della descrizione del modello di programmazione in Windows Identity Foundation (WIF), il termine "identità" verrà usato per rappresentare un set di attributi che descrivono un utente o un'altra entità in un sistema che si vuole proteggere.  
   
 ### <a name="claim"></a>Attestazione  
- Pensare a un'attestazione come una parte delle informazioni di identità, ad esempio nome, indirizzo di posta elettronica, age, l'appartenenza al ruolo Sales. Più sono le attestazioni ricevute dall'applicazione, maggiori saranno le informazioni di cui si disporrà sull'utente. Ci si potrebbe chiedere per quale motivo vengono definite "attestazioni" anziché "attributi", come avviene comunemente nella descrizione delle directory di un'organizzazione. Il motivo è correlato al metodo di recapito. In questo modello, gli attributi dell'utente in una directory non vengono trovati dall'applicazione. L'utente recapita le attestazioni all'applicazione tramite cui vengono esaminate. Tutte le attestazioni vengono eseguite da un'autorità di certificazione e vengono considerate attendibili dall'utente solo se anche l'autorità di certificazione è altrettanto attendibile. Ad esempio, un'attestazione effettuata da un controller di dominio della società viene considerata più attendibile di una effettuata dall'utente stesso. In WIF le attestazioni vengono rappresentate con un tipo <xref:System.Security.Claims.Claim>, che dispone di una proprietà <xref:System.Security.Claims.Claim.Issuer%2A> che consente all'utente di scoprire l'autore del rilascio dell'attestazione.  
+ Si pensi a un'attestazione come a una parte delle informazioni di identità, ad esempio nome, indirizzo di posta elettronica, età, appartenenza al ruolo Sales. Più sono le attestazioni ricevute dall'applicazione, maggiori saranno le informazioni di cui si disporrà sull'utente. Ci si potrebbe chiedere per quale motivo vengono definite "attestazioni" anziché "attributi", come avviene comunemente nella descrizione delle directory di un'organizzazione. Il motivo è correlato al metodo di recapito. In questo modello, gli attributi dell'utente in una directory non vengono trovati dall'applicazione. L'utente recapita le attestazioni all'applicazione tramite cui vengono esaminate. Tutte le attestazioni vengono eseguite da un'autorità di certificazione e vengono considerate attendibili dall'utente solo se anche l'autorità di certificazione è altrettanto attendibile. Ad esempio, un'attestazione effettuata da un controller di dominio della società viene considerata più attendibile di una effettuata dall'utente stesso. In WIF le attestazioni vengono rappresentate con un tipo <xref:System.Security.Claims.Claim>, che dispone di una proprietà <xref:System.Security.Claims.Claim.Issuer%2A> che consente all'utente di scoprire l'autore del rilascio dell'attestazione.  
   
 ### <a name="security-token"></a>Token di sicurezza  
  L'utente fornisce un set di attestazioni all'applicazione con una richiesta. In un servizio Web, queste attestazioni vengono eseguite nell'intestazione di sicurezza della busta SOAP. In un'applicazione Web basata sul browser, le attestazioni arrivano tramite HTTP POST dal browser dell'utente e, successivamente, possono essere memorizzate nella cache in un cookie se si desidera una sessione. Indipendentemente dalla modalità di arrivo, queste attestazioni devono essere serializzate, operazione durante la quale vengono utilizzati i token di sicurezza. Un token di sicurezza è un set serializzato di attestazioni con firma digitale di un'autorità emittente. La firma è importante: garantisce che l'utente non ha semplicemente costituito un gruppo di attestazioni che ha poi inviato. In situazioni a bassa sicurezza in cui la crittografia non è necessaria o desiderata, è possibile utilizzare token senza firma, ma uno scenario simile non è descritto in questo argomento.  
@@ -58,7 +58,7 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
  Quando si sviluppa un'applicazione basata sulle attestazioni, si compila un'applicazione relying party (RP). Il termine "applicazione relying party" è sinonimo di "applicazione in grado di riconoscere attestazioni" e "applicazione basata sulle attestazioni". Le applicazioni Web e i servizi Web possono essere entrambi esempi di relying party. Tramite un'applicazione relying party vengono utilizzati i token emessi da un servizio token di sicurezza e vengono estratte le attestazioni dai token per utilizzarle per attività correlate all'identità. WIF offre funzionalità di supporto per la compilazione di applicazioni relying party.  
   
 ### <a name="standards"></a>Standard  
- Per rendere interoperabile tutte le operazioni, nello scenario precedente sono stati utilizzati diversi standard WS-*. I criteri vengono recuperati tramite WS-MetadataExchange e i criteri stessi sono strutturati in base alla specifica WS-Policy. Tramite il servizio token di sicurezza vengono esposti gli endpoint con cui viene implementata la specifica WS-Trust, in cui viene illustrato come richiedere e ricevere i token di sicurezza. La maggior parte dei ruoli STS oggi rilasciare token formattato con Security Assertion Markup Language (SAML). un vocabolario XML riconosciuto dal settore utilizzabile per rappresentare le attestazioni in una modalità interoperabile. In alternativa, in una situazione con più piattaforme, questo consente di comunicare con un servizio token di sicurezza in una piattaforma completamente diversa e ottenere un punto di accesso singolo in tutte le applicazioni, indipendentemente dalla piattaforma.  
+ Per rendere interoperabile tutte le operazioni, nello scenario precedente sono stati utilizzati diversi standard WS-*. I criteri vengono recuperati tramite WS-MetadataExchange e i criteri stessi sono strutturati in base alla specifica WS-Policy. Tramite il servizio token di sicurezza vengono esposti gli endpoint con cui viene implementata la specifica WS-Trust, in cui viene illustrato come richiedere e ricevere i token di sicurezza. La maggior parte dei STSs oggi rilascia token formattati con Security Assertion Markup Language (SAML). un vocabolario XML riconosciuto dal settore utilizzabile per rappresentare le attestazioni in una modalità interoperabile. In alternativa, in una situazione con più piattaforme, questo consente di comunicare con un servizio token di sicurezza in una piattaforma completamente diversa e ottenere un punto di accesso singolo in tutte le applicazioni, indipendentemente dalla piattaforma.  
   
 ### <a name="browser-based-applications"></a>Applicazioni basate su browser  
  Gli smart client non sono gli unici a poter utilizzare il modello di identità basato sulle attestazioni. Questo modello può inoltre essere utilizzato dalle applicazioni basate sul browser (definite anche client passivi). Il funzionamento è descritto nello scenario seguente:  
@@ -69,14 +69,14 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
 ## <a name="basic-scenario-for-a-claims-based-identity-model"></a>Scenario di base per un modello di identità basato sulle attestazioni  
  Di seguito è riportato un esempio di un sistema basato sulle attestazioni.  
   
- ![Flusso di autenticazione di relying partner](../../../docs/framework/security/media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
+ ![Flusso di autenticazione di relying partner](./media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
   
  In questo diagramma viene mostrato un sito Web (l'applicazione relying party, RP) configurato per utilizzare WIF per l'autenticazione e un client, un Web browser, tramite cui si intende utilizzare il sito in questione.  
   
-1. Quando un utente non autenticato richiede una pagina, il browser viene reindirizzato alle pagine identity provider (IdP).  
+1. Quando un utente non autenticato richiede una pagina, il browser viene reindirizzato alle pagine del provider di identità (IdP).  
   
-2. Il provider di identità richiede all'utente di presentare le credenziali, ad esempio nome utente/password o l'autenticazione Kerberos.  
+2. Per l'IdP è necessario che l'utente presenti le proprie credenziali, ad esempio nome utente/password o autenticazione Kerberos.  
   
-3. I problemi di provider di identità nuovo un token che viene restituito al browser.  
+3. L'IdP rilascia un token a che viene restituito al browser.  
   
 4. Il browser viene ora di nuovo reindirizzato alla pagina richiesta originariamente in cui WIF determina se il token soddisfa i requisiti di accesso alla pagina. In questo caso viene emesso un cookie per stabilire una sessione in modo che l'autenticazione deve essere eseguita una sola volta e il controllo viene passato all'applicazione.

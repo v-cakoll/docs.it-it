@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170599"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048003"
 ---
 # <a name="http"></a>HTTP
 .NET Framework offre il supporto completo per il protocollo HTTP, che costituisce la maggior parte di tutto il traffico Internet, con le classi <xref:System.Net.HttpWebRequest> e <xref:System.Net.HttpWebResponse>. Queste classi, derivate da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>, vengono restituite per impostazione predefinita ogni volta che il metodo statico <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> rileva un URI che inizia con "http" o "https". Nella maggior parte dei casi, le classi **WebRequest** e **WebResponse** rendono disponibile tutto ciò che serve per eseguire la richiesta. Se tuttavia è necessario accedere alle funzionalità specifiche di HTTP esposte come proprietà, è possibile eseguire il cast di tipo di queste classi su **HttpWebRequest** o **HttpWebResponse**.  
@@ -33,6 +33,6 @@ ms.locfileid: "59170599"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Procedura: Accedere a proprietà specifiche di HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Accesso a Internet con un proxy](accessing-the-internet-through-a-proxy.md)
+- [Uso di protocolli applicativi](using-application-protocols.md)
+- [Procedura: Accedere a proprietà specifiche di HTTP](how-to-access-http-specific-properties.md)

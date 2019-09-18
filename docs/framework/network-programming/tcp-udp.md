@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172549"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047105"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) con le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Queste classi protocollo sono basate sulla classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e possono gestire i dettagli del trasferimento dei dati.  
@@ -34,9 +34,9 @@ Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso dei servizi TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Uso dei servizi UDP](../../../docs/framework/network-programming/using-udp-services.md)
-- [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Uso dei servizi TCP](using-tcp-services.md)
+- [Uso dei servizi UDP](using-udp-services.md)
+- [Uso di flussi nella rete](using-streams-on-the-network.md)
+- [Uso di un socket server asincrono](using-an-asynchronous-server-socket.md)
+- [Uso di un socket client asincrono](using-an-asynchronous-client-socket.md)
+- [Uso di protocolli applicativi](using-application-protocols.md)

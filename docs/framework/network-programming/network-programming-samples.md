@@ -2,12 +2,12 @@
 title: Esempi di programmazione di rete
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204549"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047600"
 ---
 # <a name="network-programming-samples"></a>Esempi di programmazione di rete
 Questa sezione contiene descrizioni e collegamenti per esempi di programmazione di rete scaricabili, che usano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e negli spazi dei nomi correlati. 
@@ -59,5 +59,5 @@ Questa sezione contiene descrizioni e collegamenti per esempi di programmazione 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Procedure per la programmazione di rete](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Programmazione di rete in .NET Framework](index.md)
+- [Procedure per la programmazione di rete](network-programming-how-to-topics.md)

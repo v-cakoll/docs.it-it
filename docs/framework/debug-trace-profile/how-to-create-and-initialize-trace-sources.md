@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 805e1cc7d1def74a2a3e7b28afd052be1c4836c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cab9cc33bd5a4697cac5de85de8aa72e7eb4d6c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596831"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052696"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procedura: Creare e inizializzare origini di traccia
 La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazioni per produrre tracce associabili all'applicazione. <xref:System.Diagnostics.TraceSource> fornisce metodi di traccia che consentono di tracciare con facilità eventi e dati e di generare tracce informative. L'output di traccia da <xref:System.Diagnostics.TraceSource> può essere creato e inizializzato con o senza l'utilizzo di file di configurazione. In questo argomento vengono fornite istruzioni per entrambe le opzioni. È tuttavia consigliabile utilizzare file di configurazione per semplificare la riconfigurazione delle tracce prodotte dalle origini di traccia in fase di esecuzione.  
@@ -84,4 +84,4 @@ La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazi
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)

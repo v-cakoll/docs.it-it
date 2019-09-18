@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 6243046e7e33a73f2479337cb64c2a236efcfafc
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662247"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047846"
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 
@@ -55,7 +55,7 @@ Un indirizzo unicast IPv6 è diviso in due parti. La prima parte contiene il pre
 
 L'esempio seguente mostra un indirizzo con prefisso a 64 bit.
 
-`3FFE:FFFF:0:CD30:0:0:0:0/64`.
+[https://login.microsoftonline.com/consumers/](`3FFE:FFFF:0:CD30:0:0:0:0/64`).
 
 In questo esempio il prefisso è `3FFE:FFFF:0:CD30`. L'indirizzo può anche essere scritto in formato compresso, come `3FFE:FFFF:0:CD30::/64`.
 
@@ -77,5 +77,5 @@ In generale, un nodo ha sempre un indirizzo locale rispetto al collegamento. Pu�
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+- [Protocollo IPv6](internet-protocol-version-6.md)
+- [Socket](sockets.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662390"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051714"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importazione di una libreria dei tipi come assembly
 
@@ -36,7 +36,7 @@ Per rendere queste informazioni sui tipi disponibili all'applicazione, è possib
 
 Quando si usano assembly di interoperabilità solo in fase di progettazione, è possibile incorporare le informazioni sui tipi dall'assembly di interoperabilità primario pubblicato dall'autore del componente COM. Tuttavia, non è necessario distribuire l'assembly di interoperabilità primario con l'applicazione.
 
-L'uso di assembly di interoperabilità primari solo in fase di progettazione permette di ridurre le dimensioni dell'applicazione, perché la maggior parte delle applicazioni non usa tutte le funzionalità di un componente COM. Il compilatore è molto efficiente quando incorpora le informazioni sui tipi: se l'applicazione usa solo alcuni dei metodi in un'interfaccia COM, il compilatore non incorpora quelli inutilizzati. Quando un'applicazione in cui sono incorporate informazioni sui tipi interagisce con un'altra applicazione di questo tipo o con un'applicazione che usa un assembly di interoperabilità primario, Common Language Runtime usa regole di equivalenza dei tipi per determinare se due tipi con lo stesso nome rappresentano lo stesso tipo COM. La conoscenza di queste regole non è necessaria per usare oggetti COM. Tuttavia, per altre informazioni sulle regole, vedere [Equivalenza dei tipi e tipi di interoperabilità incorporati](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md).
+L'uso di assembly di interoperabilità primari solo in fase di progettazione permette di ridurre le dimensioni dell'applicazione, perché la maggior parte delle applicazioni non usa tutte le funzionalità di un componente COM. Il compilatore è molto efficiente quando incorpora le informazioni sui tipi: se l'applicazione usa solo alcuni dei metodi in un'interfaccia COM, il compilatore non incorpora quelli inutilizzati. Quando un'applicazione in cui sono incorporate informazioni sui tipi interagisce con un'altra applicazione di questo tipo o con un'applicazione che usa un assembly di interoperabilità primario, Common Language Runtime usa regole di equivalenza dei tipi per determinare se due tipi con lo stesso nome rappresentano lo stesso tipo COM. La conoscenza di queste regole non è necessaria per usare oggetti COM. Tuttavia, per altre informazioni sulle regole, vedere [Equivalenza dei tipi e tipi di interoperabilità incorporati](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Generazione di metadati
 
@@ -46,11 +46,11 @@ Dopo aver individuato la libreria dei tipi che contiene l'implementazione del ti
 
 - Visual Studio
 
-  Visual Studio converte automaticamente i tipi COM in una libreria dei tipi in metadati in un assembly. Per istruzioni, vedere [Procedura: Aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).
+  Visual Studio converte automaticamente i tipi COM in una libreria dei tipi in metadati in un assembly. Per istruzioni, vedere [Procedura: Aggiungere riferimenti alle librerie dei tipi](how-to-add-references-to-type-libraries.md).
 
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md)
 
-  L'utilità di importazione della libreria dei tipi offre opzioni della riga di comando per modificare i metadati nel file di interoperabilità risultante, importare tipi da una libreria dei tipi esistente e generare un assembly di interoperabilità e uno spazio dei nomi. Per istruzioni, vedere [Procedura: Generare assembly di interoperabilità da librerie dei tipi](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).
+  L'utilità di importazione della libreria dei tipi offre opzioni della riga di comando per modificare i metadati nel file di interoperabilità risultante, importare tipi da una libreria dei tipi esistente e generare un assembly di interoperabilità e uno spazio dei nomi. Per istruzioni, vedere [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - Classe <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
@@ -75,12 +75,12 @@ Dopo aver individuato la libreria dei tipi che contiene l'implementazione del ti
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md)
 - [Personalizzazione di wrapper standard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Compilazione di un progetto di interoperabilità](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [Distribuzione di una applicazione di interoperabilità](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Procedura: Aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [Procedura: Generare assembly di interoperabilità da librerie dei tipi](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Compilazione di un progetto di interoperabilità](compiling-an-interop-project.md)
+- [Distribuzione di una applicazione di interoperabilità](deploying-an-interop-application.md)
+- [Procedura: Aggiungere riferimenti alle librerie dei tipi](how-to-add-references-to-type-libraries.md)
+- [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md)

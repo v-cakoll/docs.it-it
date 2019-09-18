@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043732"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046051"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: Definire un metodo generico tramite reflection emit
 
@@ -27,7 +27,7 @@ La seconda procedura illustra come creare il corpo del metodo e usare i parametr
 La terza procedura illustra come richiamare il metodo generico.
 
 > [!IMPORTANT]
-> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. Un metodo generico può appartenere a un tipo non generico, come nell'esempio seguente. Per un esempio di metodo non generico incluso in un tipo generico, vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).
+> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. Un metodo generico può appartenere a un tipo non generico, come nell'esempio seguente. Per un esempio di metodo non generico incluso in un tipo generico, vedere [Procedura: Definire un tipo generico tramite reflection emit](how-to-define-a-generic-type-with-reflection-emit.md).
 
 ### <a name="to-define-a-generic-method"></a>Per definire un metodo generico
 
@@ -36,7 +36,7 @@ La terza procedura illustra come richiamare il metodo generico.
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Definire un assembly dinamico e un modulo dinamico per contenere il tipo a cui appartiene il metodo generico. In questo caso l'assembly ha un unico modulo denominato `DemoMethodBuilder1` il cui nome corrisponde a quello dell'assembly seguito da un'estensione. In questo esempio l'assembly viene salvato su disco e anche eseguito, pertanto è specificato <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. È possibile usare lo strumento [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) per esaminare DemoMethodBuilder1.dll ed eseguirne un confronto con il codice Microsoft Intermediate Language (MSIL) relativo al metodo illustrato nel primo passaggio 1.
+2. Definire un assembly dinamico e un modulo dinamico per contenere il tipo a cui appartiene il metodo generico. In questo caso l'assembly ha un unico modulo denominato `DemoMethodBuilder1` il cui nome corrisponde a quello dell'assembly seguito da un'estensione. In questo esempio l'assembly viene salvato su disco e anche eseguito, pertanto è specificato <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. È possibile usare lo strumento [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) per esaminare DemoMethodBuilder1.dll ed eseguirne un confronto con il codice Microsoft Intermediate Language (MSIL) relativo al metodo illustrato nel primo passaggio 1.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ L'esempio di codice seguente crea il tipo non generico `DemoType` con il metodo 
 
 Il metodo ha un unico parametro formale che è una matrice di `TInput`. Il metodo restituisce un'istanza di `TOutput` che contiene gli elementi della matrice di input. `TOutput` può essere qualsiasi tipo di insieme generico che implementa l'interfaccia generica <xref:System.Collections.Generic.ICollection%601>.
 
-Quando il codice viene eseguito, l'assembly dinamico viene salvato come DemoGenericMethod1.dll e può essere esaminato mediante lo strumento [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).
+Quando il codice viene eseguito, l'assembly dinamico viene salvato come DemoGenericMethod1.dll e può essere esaminato mediante lo strumento [Ildasm.exe (Disassembler IL)](../tools/ildasm-exe-il-disassembler.md).
 
 > [!NOTE]
 > Per acquisire familiarità con le procedure per la creazione di codice, si consiglia di scrivere un programma Visual Basic, C# o Visual C++ che esegua l'attività che si tenta di creare e usare il disassembler per esaminare il codice MSIL prodotto dal compilatore.
@@ -169,4 +169,4 @@ L'esempio di codice include il codice sorgente equivalente al metodo creato. Il 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Procedura: Definire un tipo generico tramite reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917964"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051992"
 ---
 # <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917964"
 - Compilare tutte le comunicazioni in base agli standard di settore, per garantire l'integrazione del codice basato su .NET Framework con qualsiasi altro codice.
 
 > [!NOTE]
-> Per un'introduzione generale a .NET Framework per utenti e sviluppatori, vedere [Introduzione](../../../docs/framework/get-started/index.md).
+> Per un'introduzione generale a .NET Framework per utenti e sviluppatori, vedere [Introduzione](index.md).
 
 .NET Framework è costituito da Common Language Runtime (CLR) e dalla libreria di classi .NET Framework. Common Language Runtime rappresenta la base di .NET Framework e può essere considerato come un agente che gestisce il codice in fase di esecuzione, fornendo servizi di base quali gestione della memoria, gestione di thread e servizi remoti e attivando nel contempo una rigida indipendenza dai tipi e altre forme di accuratezza del codice che garantiscono sicurezza ed efficienza. Il concetto di gestione del codice è infatti un principio fondamentale di runtime. Il codice destinato al runtime è definito codice gestito, mentre quello non destinato al runtime è definito codice non gestito. La libreria di classi è una raccolta completa e orientata agli oggetti di tipi riusabili, da usare per lo sviluppo di app, da quelle tradizionali della riga di comando o con interfaccia utente grafica (GUI, Graphical User Interface) a quelle basate sulle più recenti innovazioni offerte da ASP.NET, quali Web Form e servizi Web XML.
 
@@ -77,15 +77,15 @@ Come ci si aspetta da una libreria di classi orientata agli oggetti, i tipi .NET
 
 - App console. Vedere [Compilazione di applicazioni console](../../standard/building-console-apps.md).
 
-- App GUI Windows (Windows Forms). Vedere [Windows Form](../../../docs/framework/winforms/index.md).
+- App GUI Windows (Windows Forms). Vedere [Windows Form](../winforms/index.md).
 
-- App Windows Presentation Foundation (WPF). Vedere [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- App Windows Presentation Foundation (WPF). Vedere [Windows Presentation Foundation](../wpf/index.md).
 
-- App ASP.NET. Vedere [Applicazioni Web con ASP.NET](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- App ASP.NET. Vedere [Applicazioni Web con ASP.NET](../develop-web-apps-with-aspnet.md).
 
-- Servizi Windows. Vedere [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Servizi Windows. Vedere [Introduzione alle applicazioni di servizio Windows](../windows-services/introduction-to-windows-service-applications.md).
 
-- App orientate ai servizi che usano Windows Communication Foundation (WCF). Vedere [Applicazioni orientate ai servizi con WCF](../../../docs/framework/wcf/index.md).
+- App orientate ai servizi che usano Windows Communication Foundation (WCF). Vedere [Applicazioni orientate ai servizi con WCF](../wcf/index.md).
 
 - App basate sul flusso di lavoro che usano Windows Workflow Foundation (WF). Vedere [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
-- [Guida all'installazione](../../../docs/framework/install/index.md)
-- [Guida di sviluppo](../../../docs/framework/development-guide.md)
-- [Strumenti](../../../docs/framework/tools/index.md)
+- [Requisiti di sistema](system-requirements.md)
+- [Guida all'installazione](../install/index.md)
+- [Guida di sviluppo](../development-guide.md)
+- [Strumenti](../tools/index.md)
 - [Esempi ed esercitazioni per .NET](../../samples-and-tutorials/index.md)
 - [Libreria di classi .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

@@ -2,12 +2,12 @@
 title: Uso delle classi di enumerazione anziché dei tipi enum
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni su come è possibile usare le classi di enumerazione anziché i tipi enum per risolvere alcune limitazioni di questi tipi.
 ms.date: 10/08/2018
-ms.openlocfilehash: ba687b700d7a6105baf71aa08a0d888afc9a8ec3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 575757b6022a9e7468c0ffc5d576dd16de3018f5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202741"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039937"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Usare le classi di enumerazione anziché i tipi enum
 
@@ -99,7 +99,7 @@ public class CardType : Enumeration
 
 - **CardType.cs**. Classe di enumerazione di esempio in eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
-    
+
 - **SmartEnum**. Ardalis - Classi che consentono di produrre enum fortemente tipizzati e più intelligenti in .NET. \
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 

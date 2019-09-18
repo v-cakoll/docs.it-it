@@ -3,12 +3,12 @@ title: WSTrustChannelFactory e WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633181"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044907"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che un client WCF supporta già la federazione. Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un binding personalizzato simile, è possibile abilitare l'autenticazione federata in un servizio.
@@ -25,7 +25,7 @@ Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che
 
 - Uso solo di WIF per ottenere un token dal servizio token di sicurezza e quindi consentire a un client WCF di eseguire l'autenticazione con questo token. Per altre informazioni, vedere l'esempio [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Il primo scenario è ovvio: I client WCF esistenti continueranno a funzionare con le relying party WIF e ai ruoli STS. Questo argomento illustra i due scenari rimanenti.
+ Il primo scenario è di chiara comprensione: I client WCF esistenti continueranno a funzionare con le relying party e STSs di WIF. Questo argomento illustra i due scenari rimanenti.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Miglioramento di un client WCF esistente con ActAs/OnBehalfOf
 In uno scenario di delega di identità tipico, un client chiama un servizio di livello intermedio, che chiama quindi un servizio back-end. Il servizio di livello intermedio funge da client o agisce per conto del client.
@@ -33,14 +33,14 @@ In uno scenario di delega di identità tipico, un client chiama un servizio di l
 > [!TIP]
 > Qual è la differenza tra ActAs e OnBehalfOf?
 >
-> Dal punto di vista protocollo WS-Trust:
+> Dal punto di vista del protocollo WS-Trust:
 >
 > 1. Un elemento token di sicurezza delle richieste ActAs indica che il richiedente vuole un token che include attestazioni relative a due entità distinte, ovvero il richiedente e un'entità esterna rappresentata dal token nell'elemento ActAs.
 > 2. Un elemento token di sicurezza delle richieste OnBehalfOf indica che il richiedente vuole un token che include attestazioni relative a una sola entità, ovvero l'entità esterna rappresentata dal token nell'elemento OnBehalfOf.
 >
 > La funzionalità ActAs viene usata in genere in scenari che richiedono la delega composita, dove il destinatario finale del token rilasciato può controllare l'intera catena di delega e vedere non solo il client, ma tutti gli intermediari. Ciò consente di eseguire il controllo di accesso, le attività di controllo e altre attività correlate basate sull'intera catena di delega di identità. La funzionalità ActAs viene in genere usata in sistemi multilivello per autenticare e passare informazioni sulle identità tra i livelli, senza dover passare tali informazioni a livello di applicazione/logica di business.
 >
-> La funzionalità OnBehalfOf viene usata negli scenari in cui è importante solo l'identità del client originale ed è in effetti uguale alla funzionalità di rappresentazione dell'identità disponibile in Windows. Quando viene usata la funzionalità OnBehalfOf, il destinatario finale del token rilasciato può visualizzare solo le attestazioni relative al client originale e le informazioni relative agli intermediari non vengono mantenute. Un modello comune in cui viene usata la funzionalità OnBehalfOf è il modello basato su proxy, nel quale il client non può accedere direttamente al servizio token di sicurezza, ma comunica invece tramite un gateway proxy. Il gateway proxy autentica il chiamante e inserisce le informazioni sul chiamante nell'elemento OnBehalfOf del messaggio del token di sicurezza delle richieste, che viene quindi inviato al vero servizio token di sicurezza per l'elaborazione. Il token risultante contiene solo attestazioni correlate al client del proxy, rendendo completamente trasparente il proxy al destinatario del token rilasciato. Si noti che WIF non supporta \<wsse:SecurityTokenReference> o \<wsa:EndpointReferences> come elemento figlio di \<wst:OnBehalfOf>. La specifica WS-Trust offre tre modi per identificare il richiedente originale, per conto del quale opera il proxy. Questi sono:
+> La funzionalità OnBehalfOf viene usata negli scenari in cui è importante solo l'identità del client originale ed è in effetti uguale alla funzionalità di rappresentazione dell'identità disponibile in Windows. Quando viene usata la funzionalità OnBehalfOf, il destinatario finale del token rilasciato può visualizzare solo le attestazioni relative al client originale e le informazioni relative agli intermediari non vengono mantenute. Un modello comune in cui viene usata la funzionalità OnBehalfOf è il modello basato su proxy, nel quale il client non può accedere direttamente al servizio token di sicurezza, ma comunica invece tramite un gateway proxy. Il gateway proxy autentica il chiamante e inserisce le informazioni sul chiamante nell'elemento OnBehalfOf del messaggio del token di sicurezza delle richieste, che viene quindi inviato al vero servizio token di sicurezza per l'elaborazione. Il token risultante contiene solo attestazioni correlate al client del proxy, rendendo completamente trasparente il proxy al destinatario del token rilasciato. Si noti che WIF non supporta \<wsse:SecurityTokenReference> o \<wsa:EndpointReferences> come elemento figlio di \<wst:OnBehalfOf>. La specifica WS-Trust offre tre modi per identificare il richiedente originale, per conto del quale opera il proxy. Si tratta di:
 >
 > - Riferimento al token di sicurezza. Un riferimento a un token, all'interno del messaggio o eventualmente recuperato fuori banda.
 > - Riferimento all'endpoint. Usato come chiave per la ricerca dei dati, anche in questo caso fuori banda.
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 Si noti che il parametro `out` nel metodo <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> consente l'accesso alla risposta del token di sicurezza delle richieste per l'analisi sul lato client.
 
-Finora visto solo come ottenere un token. Il token restituito dall'oggetto <xref:System.ServiceModel.Security.WSTrustChannel> è un oggetto `GenericXmlSecurityToken` che contiene tutte le informazioni necessarie per l'autenticazione in una relying party. L'esempio di codice seguente illustra come usare questo token.
+Finora è stato illustrato come ottenere un token. Il token restituito dall'oggetto <xref:System.ServiceModel.Security.WSTrustChannel> è un oggetto `GenericXmlSecurityToken` che contiene tutte le informazioni necessarie per l'autenticazione in una relying party. L'esempio di codice seguente illustra come usare questo token.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ Il metodo di estensione <xref:System.ServiceModel.ChannelFactory%601.CreateChann
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzionalità di WIF](../../../docs/framework/security/wif-features.md)
+- [Funzionalità di WIF](wif-features.md)

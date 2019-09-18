@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754479"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052768"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>MDA gcUnmanagedToManaged
 L'assistente al debug gestito `gcUnmanagedToManaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice non gestito al codice gestito.  
@@ -52,6 +52,6 @@ L'assistente al debug gestito `gcUnmanagedToManaged` determina un'operazione di 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

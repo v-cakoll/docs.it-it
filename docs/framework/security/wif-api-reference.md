@@ -3,12 +3,12 @@ title: Riferimento per le API di WPF
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fd7f34e619626ddca63074a89ec7253fd818ab55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958351"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045143"
 ---
 # <a name="wif-api-reference"></a>Riferimento per le API di WPF
 Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll). Questo argomento fornisce collegamenti agli spazi dei nomi WIF e una breve spiegazione delle classi contenute in ogni spazio dei nomi.  
@@ -20,7 +20,7 @@ Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: 
  Contiene le classi che rappresentano trasformazioni dei cookie, servizi token di sicurezza e lettori di dizionario XML specializzati.  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- Contiene le classi che forniscono la configurazione per le applicazioni e i servizi creati con Windows Identity Foundation (WIF). Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).  
+ Contiene le classi che forniscono la configurazione per le applicazioni e i servizi creati con Windows Identity Foundation (WIF). Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<identityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
  Contiene le classi che rappresentano gli elementi in un documento di metadati della federazione.  
@@ -29,10 +29,10 @@ Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: 
  Contiene le classi che rappresentano elementi WS-Trust.  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- Contiene le classi usate in scenari passivi (WS-Federation). Contiene anche alcune classi che rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Le impostazioni in questo elemento configurano WS-Federation per le applicazioni. Lo spazio dei nomi `System.IdentityModel.Services.Configuration` contiene la maggior parte delle classi usate per configurare WS-Federation.  
+ Contiene le classi usate in scenari passivi (WS-Federation). Contiene anche alcune classi che rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Le impostazioni in questo elemento configurano WS-Federation per le applicazioni. Lo spazio dei nomi `System.IdentityModel.Services.Configuration` contiene la maggior parte delle classi usate per configurare WS-Federation.  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- Contiene le classi che forniscono la configurazione per le applicazioni WIF che usano il protocollo WS-Federation. Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Lo spazio dei nomi `System.IdentityModel.Services` contiene anche alcune classi usate per configurare WS-Federation.  
+ Contiene le classi che forniscono la configurazione per le applicazioni WIF che usano il protocollo WS-Federation. Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Lo spazio dei nomi `System.IdentityModel.Services` contiene anche alcune classi usate per configurare WS-Federation.  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
  Contiene i gestori di token di sicurezza specializzati per scenari Web farm.  
@@ -48,5 +48,5 @@ Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)
-- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Guida di riferimento per la configurazione di WIF](wif-configuration-reference.md)
+- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

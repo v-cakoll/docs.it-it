@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046728"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
   
  Il provider di runtime genera eventi in base alle parole chiave (categorie di eventi) abilitate. È ad esempio possibile raccogliere gli eventi del caricatore abilitando la parola chiave `LoaderKeyword`.  
   
- Gli eventi Event Tracing for Windows (ETW) vengono registrati in un file con estensione ETL, che può essere successivamente elaborato in un file con valori delimitati da virgole (CSV) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Gli eventi Event Tracing for Windows (ETW) vengono registrati in un file con estensione ETL, che può essere successivamente elaborato in un file con valori delimitati da virgole (CSV) in base alle esigenze. Per informazioni su come convertire il file con estensione etl in un file con estensione csv, vedere [Controllo della registrazione di .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Provider di runtime  
  Il provider di runtime è il principale provider ETW di CLR.  
   
  Il GUID del provider di runtime di CLR è e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
- Per alcuni esempi di registrazione e visualizzazione di eventi ETW di CLR tramite strumenti comunemente disponibili, vedere [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Per alcuni esempi di registrazione e visualizzazione di eventi ETW di CLR tramite strumenti comunemente disponibili, vedere [Controllo della registrazione di .NET Framework](controlling-logging.md).  
   
- Oltre a usare parole chiave, come `LoaderKeyword`, può essere necessario abilitare parole chiave per la registrazione di eventi che possono essere generati troppo di frequente. Questi eventi sono abilitati dalle parole chiave `StartEnumerationKeyword` e `EndEnumerationKeyword`, riepilogate in [Parole chiave e livelli ETW di CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ Oltre a usare parole chiave, come `LoaderKeyword`, può essere necessario abilitare parole chiave per la registrazione di eventi che possono essere generati troppo di frequente. Questi eventi sono abilitati dalle parole chiave `StartEnumerationKeyword` e `EndEnumerationKeyword`, riepilogate in [Parole chiave e livelli ETW di CLR](clr-etw-keywords-and-levels.md).  
   
 ## <a name="the-rundown-provider"></a>Provider di rundown  
  Il provider di rundown deve essere attivato per determinati usi finalizzati a scopi specifici. Per la maggior parte degli utenti, tuttavia, dovrebbe essere sufficiente il provider di runtime.  
@@ -93,4 +93,4 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Eventi ETW in Common Language Runtime](etw-events-in-the-common-language-runtime.md)

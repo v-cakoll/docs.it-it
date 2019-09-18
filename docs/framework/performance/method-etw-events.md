@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949253"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046381"
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 
@@ -36,9 +36,9 @@ Gli eventi dei metodi CLR sono suddivisi ulteriormente in:
 
 ## <a name="clr-method-events"></a>Eventi dei metodi CLR
 
-La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).
+La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Informativo (4)|
 |`NGenKeyword` (0x20) nel provider di runtime|Informativo (4)|
@@ -56,14 +56,14 @@ La tabella seguente mostra le informazioni sull'evento.
 
 La tabella seguente mostra i dati dell'evento.
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|DESCRIZIONE|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco di un metodo. Per i metodi helper JIT, è impostato sull'indirizzo iniziale del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo (0 per helper JIT).|
 |MethodStartAddress|win:UInt64|Indirizzo iniziale del metodo.|
 |MethodSize|win:UInt32|Dimensioni del metodo.|
 |MethodToken|win:UInt32|0 per metodi dinamici e helper JIT.|
-|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4: Metodo di codice con compilazione JIT (in caso contrario, codice di un'immagine nativa NGEN).<br /><br /> 0x8: Metodo di supporto.|
+|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4 Metodo di codice con compilazione JIT (in caso contrario, codice immagine nativa NGEN).<br /><br /> 0x8 Metodo Helper.|
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|
 
 [Torna all'inizio](#top)
@@ -76,7 +76,7 @@ Questi eventi vengono generati solo nel provider di rundown. Indicano la fine de
 
 La tabella seguente illustra la parola chiave e il livello
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) nel provider di rundown|Informativo (4)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|
@@ -105,7 +105,7 @@ La tabella seguente mostra i dati dell'evento.
 
 La tabella seguente illustra la parola chiave e il livello
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
@@ -130,7 +130,7 @@ La tabella seguente mostra i dati dell'evento.
 |MethodStartAddress|win:UInt64|Indirizzo iniziale.|
 |MethodSize|win:UInt32|Lunghezza del metodo.|
 |MethodToken|win:UInt32|0 per metodi dinamici e helper JIT.|
-|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4: Metodo con compilazione JIT (in caso contrario, generato da NGen.exe)<br /><br /> 0x8: Metodo di supporto.|
+|MethodFlags|win:UInt32|0x1: Metodo dinamico.<br /><br /> 0x2: Metodo generico.<br /><br /> 0x4 Metodo compilato tramite JIT (in caso contrario, generato da NGen. exe)<br /><br /> 0x8 Metodo Helper.|
 |MethodNameSpace|win:UnicodeString|Nome completo dello spazio dei nomi associato al metodo.|
 |MethodName|win:UnicodeString|Nome completo della classe associata al metodo.|
 |MethodSignature|win:UnicodeString|Firma del metodo (elenco con valori delimitati da virgole di nomi di tipo).|
@@ -144,7 +144,7 @@ La tabella seguente mostra i dati dell'evento.
 
 La tabella seguente illustra la parola chiave e il livello
 
-|Parola chiave per la generazione dell'evento|Livello|
+|Parola chiave per la generazione dell'evento|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
@@ -153,13 +153,13 @@ La tabella seguente illustra la parola chiave e il livello
 
 La tabella seguente mostra le informazioni sull'evento.
 
-|event|ID evento|Descrizione|
+|event|ID evento|DESCRIZIONE|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Generato quando un metodo viene compilato tramite JIT.|
 
 La tabella seguente mostra i dati dell'evento.
 
-|Nome campo|Tipo di dati|Descrizione|
+|Nome campo|Tipo di dati|DESCRIZIONE|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo.|
@@ -172,4 +172,4 @@ La tabella seguente mostra i dati dell'evento.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

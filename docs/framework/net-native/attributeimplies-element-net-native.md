@@ -1,17 +1,17 @@
 ---
-title: <AttributeImplies> Elemento (.NET Native)
+title: <AttributeImplies>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868538"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049907"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > elemento (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<Elemento > AttributeImplies (.NET Native)
 Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,16 +51,16 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<AttributeImplies>` viene usato se il relativo tipo contenitore è un attributo (cioè, una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>). Se l'attributo viene applicato a un particolare elemento di programma, il criterio definito dall'elemento `<AttributeImplies>` viene applicato a tale elemento di programma.  
@@ -69,7 +69,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Digitare > elemento](type-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)
+- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)

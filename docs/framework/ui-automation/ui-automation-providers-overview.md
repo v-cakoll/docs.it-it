@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8db2e6cbd1f0c0dd61ecb8e147133b8c608ea8f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914384"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042035"
 ---
 # <a name="ui-automation-providers-overview"></a>Cenni preliminari sui provider di automazione interfaccia utente
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "69914384"
 ### <a name="navigation"></a>Navigazione  
  Gli elementi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] vengono esposti ai client sotto forma di albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] genera l'albero passando da un elemento a un altro. Lo spostamento è abilitato per i provider per ogni elemento, ciascuno dei quali può puntare a un elemento padre, di pari livello e figlio.  
   
- Per altre informazioni sulla visualizzazione client dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Per altre informazioni sulla visualizzazione client dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 ### <a name="views"></a>Visualizzazioni  
  Un client può vedere l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nelle tre visualizzazioni principali, come illustrato nella tabella seguente.  
@@ -57,7 +57,7 @@ ms.locfileid: "69914384"
 |Visualizzazione controlli|Contiene elementi che sono controlli.|  
 |Visualizzazione contenuto|Contiene elementi che includono contenuti.|  
   
- Per altre informazioni sulle visualizzazioni client dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Per altre informazioni sulle visualizzazioni client dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
  È responsabilità dell'implementazione del provider definire un elemento come elemento contenuto o elemento controllo. Gli elementi controllo possono essere anche elementi contenuto, mentre tutti gli elementi contenuto sono elementi controllo.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "69914384"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Implementazione del provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)

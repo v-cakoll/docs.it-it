@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136045"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047249"
 ---
 # <a name="sockets"></a>socket
 Lo spazio dei nomi <xref:System.Net.Sockets> contiene un'implementazione gestita dell'interfaccia Windows Sockets. Tutte le altre classi di accesso alla rete nello spazio dei nomi <xref:System.Net> si basano su questa implementazione dei socket.  
@@ -31,6 +31,6 @@ Lo spazio dei nomi <xref:System.Net.Sockets> contiene un'implementazione gestita
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Procedura: Creare un socket](how-to-create-a-socket.md)
 
-- [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Uso di protocolli applicativi](using-application-protocols.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875082"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052947"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 
@@ -46,7 +46,7 @@ La prima cosa da fare è determinare il motivo per cui CLR non è stato in grado
 
 - Determinare la causa usando i dati forniti dall'assistente al debug gestito `bindingFailure`:
 
-  - Eseguire [Fuslogvw.exe (Visualizzatore log binding assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) per leggere i log degli errori prodotti dal binder di assembly.
+  - Eseguire [Fuslogvw.exe (Visualizzatore log binding assembly)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) per leggere i log degli errori prodotti dal binder di assembly.
 
   - Determinare se l'assembly si trova nella posizione richiesta. Nel caso dei metodi <xref:System.Reflection.Assembly.LoadFrom%2A> e <xref:System.Reflection.Assembly.LoadFile%2A>, la posizione richiesta può essere determinata facilmente. Nel caso del metodo <xref:System.Reflection.Assembly.Load%2A>, che esegue il binding usando l'identità dell'assembly, è necessario cercare gli assembly corrispondenti all'identità specificata nella Global Assembly Cache e nel percorso di analisi della proprietà <xref:System.AppDomain.BaseDirectory%2A> del dominio applicazione.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

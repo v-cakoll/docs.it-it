@@ -2,12 +2,12 @@
 title: Stato e dati nelle applicazioni di Docker
 description: Gestione di stato e dati nelle applicazioni di Docker. Le istanze dei microservizi sono espandibili, ma I DATI NON LO SONO.Informazioni su come gestire questo aspetto con i microservizi.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673128"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039586"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
@@ -47,7 +47,7 @@ I **montaggi di tipo tmpfs** sono essenzialmente cartelle virtuali presenti solo
 
 Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in host Docker diversi. A tale scopo, si può tuttavia usare un driver del volume che supporta gli host remoti.
 
-![I volumi possono essere condivisi tra contenitori, ma solo nello stesso host, a meno che non si usi un driver remoto che supporta host remoti. ](./media/image5.png)
+![I volumi possono essere condivisi tra contenitori, ma solo nello stesso host, a meno che non si usi un driver remoto che supporta host remoti.](./media/image5.png)
 
 **Figura 4-5**. Volumi di dati e origini dati esterne per applicazioni basate su contenitore
 

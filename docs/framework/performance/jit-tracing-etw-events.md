@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616392"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046423"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
 <a name="top"></a> Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.  
@@ -27,9 +27,9 @@ ms.locfileid: "64616392"
 ## <a name="jit-inlining-events"></a>Eventi di incorporamento JIT  
   
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed  
- La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "64616392"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64616392"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -92,7 +92,7 @@ ms.locfileid: "64616392"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
@@ -104,7 +104,7 @@ ms.locfileid: "64616392"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|Spazio dei nomi del metodo compilato.|  
 |MethodBeingCompiledName|win:UnicodeString|Nome del metodo compilato.|  
@@ -122,7 +122,7 @@ ms.locfileid: "64616392"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|Dettagliato (5)|  
   
@@ -151,4 +151,4 @@ ms.locfileid: "64616392"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

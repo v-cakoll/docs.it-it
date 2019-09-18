@@ -10,43 +10,43 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b7713548b6269f079ef32b5bf1fe4fa630edcc8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617148"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053790"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Tipo XAML intrinseco x:Code
-Consente il posizionamento del codice all'interno di una produzione XAML. Tale codice può essere compilato da qualsiasi implementazione di processore XAML che consente la compilazione XAML o a sinistra in produzione XAML per utilizzi successivi, ad esempio interpretazione da un runtime.  
+Consente di posizionare il codice in una produzione XAML. Tale codice può essere compilato da qualsiasi implementazione del processore XAML che compila XAML o lasciata nell'ambiente di produzione XAML per utilizzi successivi, ad esempio l'interpretazione da parte di un Runtime.  
   
 ## <a name="xaml-object-element-usage"></a>Utilizzo della sintassi XAML per gli elementi oggetto  
   
-```  
+```xaml  
 <x:Code>  
    // code instructions, usually enclosed by CDATA...  
 </x:Code>  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il codice all'interno di `x:Code` elemento della direttiva XAML viene sempre interpretato nello spazio dei nomi XML generale e gli spazi dei nomi XAML specificato. Pertanto, in genere è necessario racchiudere il codice usato per `x:Code` all'interno di un `CDATA` segmento.  
+ Il codice all'interno `x:Code` dell'elemento di direttiva XAML viene ancora interpretato nello spazio dei nomi XML generale e negli spazi dei nomi XAML forniti. Pertanto, in genere è necessario racchiudere il codice usato per `x:Code` all'interno di un `CDATA` segmento.  
   
- `x:Code` non è consentito per tutti i possibili meccanismi di distribuzione di una produzione XAML. Il codice deve essere compilato nel framework specifici (ad esempio WPF). In altri Framework, `x:Code` utilizzo potrebbe essere impedito a livello generale.  
+ `x:Code`non è consentito per tutti i meccanismi di distribuzione possibili di una produzione XAML. In Framework specifici, ad esempio WPF, è necessario compilare il codice. In altri Framework, `x:Code` l'utilizzo potrebbe essere in genere non consentito.  
   
- Per i framework che consentono a managed `x:Code` il contenuto, il compilatore di linguaggio corretto da usare per `x:Code` contenuto è determinato dalle impostazioni e le destinazioni del progetto che lo contiene viene usato per compilare l'applicazione.  
+ Per i Framework che consentono contenuto `x:Code` gestito, il compilatore di linguaggio corretto da utilizzare `x:Code` per il contenuto è determinato dalle impostazioni e dalle destinazioni del progetto contenitore utilizzato per compilare l'applicazione.  
   
-## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
- Codice dichiarati all'interno di `x:Code` per WPF ha alcune limitazioni rilevanti:  
+## <a name="wpf-usage-notes"></a>Note sull'utilizzo di WPF  
+ Il codice dichiarato `x:Code` in per WPF presenta diverse limitazioni rilevanti:  
   
-- Il `x:Code` elemento della direttiva deve essere un elemento figlio immediato dell'elemento radice della produzione XAML.  
+- L' `x:Code` elemento Directive deve essere un elemento figlio immediato dell'elemento radice della produzione XAML.  
   
-- [Direttiva X:Class](x-class-directive.md) deve essere fornita per l'elemento radice padre.  
+- è necessario fornire la [direttiva x:Class](x-class-directive.md) sull'elemento radice padre.  
   
-- Il codice inserito all'interno di `x:Code` verrà considerato dalla compilazione per rientrare nell'ambito della classe parziale che è già creata per la pagina XAML. Di conseguenza deve essere tutto il codice che è definire membri o le variabili di tale classe parziale.  
+- Il codice inserito in `x:Code` verrà gestito dalla compilazione affinché si trovi nell'ambito della classe parziale che è già stata creata per la pagina XAML. Pertanto tutto il codice definito deve essere membro o variabili della classe parziale.  
   
-- Non è possibile definire altre classi, diverso da una classe all'interno della classe parziale di annidamento (è consentito l'annidamento, ma non accade in genere perché le classi annidate non possono essere fatto riferimento in XAML). Spazi dei nomi CLR nomi diverso da quello utilizzato per la classe parziale esistente non può essere definita o aggiungere.  
+- Non è possibile definire classi aggiuntive, tranne annidando una classe all'interno della classe parziale (l'annidamento è consentito, ma non è tipico perché in XAML non è possibile fare riferimento alle classi annidate). Non è possibile definire o aggiungere spazi dei nomi CLR diversi dallo spazio dei nomi usato per la classe parziale esistente.  
   
-- I riferimenti alle entità di codice all'esterno dello spazio dei nomi CLR classe parziale devono essere completi. Se i membri dichiarati sono gli override per i membri di classe parziale sottoponibile a override, questo deve essere specificato con la parola chiave override specifico del linguaggio. Se i membri dichiarati `x:Code` ambito sono in conflitto con i membri della classe parziale creato di fuori di XAML, in modo che il compilatore segnala il conflitto, il file XAML non è possibile compilare o caricare.  
+- I riferimenti alle entità di codice all'esterno dello spazio dei nomi CLR della classe parziale devono essere tutti completi. Se i membri dichiarati sono override dei membri della classe parziale sottoponibili a override, è necessario specificarli con la parola chiave di override specifica della lingua. Se i membri dichiarati nell' `x:Code` ambito sono in conflitto con i membri della classe parziale creata da XAML, in modo che il compilatore segnali il conflitto, il file XAML non può essere compilato o caricato.  
   
 ## <a name="see-also"></a>Vedere anche
 

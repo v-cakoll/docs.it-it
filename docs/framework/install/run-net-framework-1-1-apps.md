@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ad78c9a277af23eebe357ef986ea59d16bb444e
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: aae87b60e207ebe406e863f123e1dc3e56aeb4f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833740"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051927"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Eseguire app .NET Framework 1.1 in Windows 8, Windows 8.1 o Windows 10
 
-.NET Framework 1.1 non è supportato nei sistemi operativi [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] o Windows 10. In alcuni casi, .NET Framework 1.1 viene identificato specificamente come obbligatorio per l'esecuzione di un'app. In questi casi è necessario contattare il fornitore di software indipendente (ISV), per aggiornare l'app e poterla eseguire in .NET Framework 3.5 SP1 o versioni successive. Per altre informazioni, vedere [Migrazione da .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
+.NET Framework 1.1 non è supportato nei sistemi operativi [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] o Windows 10. In alcuni casi, .NET Framework 1.1 viene identificato specificamente come obbligatorio per l'esecuzione di un'app. In questi casi è necessario contattare il fornitore di software indipendente (ISV), per aggiornare l'app e poterla eseguire in .NET Framework 3.5 SP1 o versioni successive. Per altre informazioni, vedere [Migrazione da .NET Framework 1.1](../migration-guide/migrating-from-the-net-framework-1-1.md).
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>Installare .NET Framework 1.1 da un CD o dall'Area download
 
@@ -24,5 +24,5 @@ Non è possibile installare manualmente .NET Framework 1.1 in [!INCLUDE[win8](..
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Migrazione da .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)
-- [Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [Migrazione da .NET Framework 1.1](../migration-guide/migrating-from-the-net-framework-1-1.md)
+- [Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8](dotnet-35-windows-10.md)

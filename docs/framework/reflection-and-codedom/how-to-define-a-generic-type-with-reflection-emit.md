@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912523"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045994"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
   
 > [!IMPORTANT]
-> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. La maggior parte dei metodi appartenenti a tipi generici non sono generici, come nell'esempio seguente. Per un esempio di creazione di un metodo generico, vedere [Procedura: Definire un metodo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Un metodo non può essere considerato generico solo perché appartiene a un tipo generico e ne usa i parametri di tipo. Per essere generico, un metodo deve avere un elenco specifico di parametri di tipo. La maggior parte dei metodi appartenenti a tipi generici non sono generici, come nell'esempio seguente. Per un esempio di creazione di un metodo generico, vedere [Procedura: Definire un metodo generico tramite reflection emit](how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Per definire un tipo generico  
   
@@ -121,7 +121,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
  Il programma include un metodo che visualizza informazioni su un tipo generico e un metodo che visualizza i vincoli speciali in un parametro di tipo. Questi metodi vengono usati per visualizzare informazioni sulla classe `Sample` completata.  
   
- Il programma salva il modulo completato su disco come `GenericEmitExample1.dll` in modo che sia possibile aprirlo con [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ed esaminare il codice MSIL per la classe `Sample`.  
+ Il programma salva il modulo completato su disco come `GenericEmitExample1.dll` in modo che sia possibile aprirlo con [Ildasm.exe (Disassembler IL)](../tools/ildasm-exe-il-disassembler.md) ed esaminare il codice MSIL per la classe `Sample`.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

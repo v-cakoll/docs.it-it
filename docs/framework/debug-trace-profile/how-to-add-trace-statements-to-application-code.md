@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948016"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052745"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione
 I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**e **Fail**. Questi metodi possono essere divisi in due categorie: **Write**, **WriteLine**e Fail generano l'output in modo **non** condizionale, mentre **WriteIf**, **WriteLineIf**e **Assert** verificano una condizione booleana e scrivono o non scrivono in base al valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
@@ -90,7 +90,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)
+- [Procedura: Creare, inizializzare e configurare opzioni di traccia](how-to-create-initialize-and-configure-trace-switches.md)
+- [Opzioni di traccia](trace-switches.md)
+- [Listener di traccia](trace-listeners.md)

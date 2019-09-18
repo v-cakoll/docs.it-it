@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044670"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 
 Lo strumento Global Assembly Cache consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -48,7 +48,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |*assemblyPath*|Nome di un file contenente il manifesto di un assembly.|
 |*assemblyListFile*|Percorso di un file di testo ANSI che elenca gli assembly da installare o disinstallare. Per usare un file di testo per installare assembly, specificare il percorso di ciascun assembly in una riga separata del file. I percorsi relativi vengono interpretati rispetto alla posizione di *assemblyListFile*. Per utilizzare un file di testo per disinstallare assembly, specificare il nome completo di ogni assembly in una riga separata del file. Vedere gli esempi di contenuto di *assemblyListFile* più avanti in questo argomento.|
 
-|Opzione|Descrizione|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
 |**/cdl**|Elimina il contenuto della Download Cache.|
 |**/f**|Specificare questa opzione con le opzioni **/i** o **/i** per forzare la reinstallazione di un assembly. Se un assembly con lo stesso nome esiste già nella Global Assembly Cache, verrà sovrascritto.|
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u**  *assemblyName*|Disinstalla un assembly dalla cache di assembly globale.|
 |**/uf**  *assemblyName*|Forza la disinstallazione di un assembly specificato rimuovendone tutti i riferimenti.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/f**. **Nota:**  Non è possibile usare questa opzione per rimuovere un assembly installato con Microsoft Windows Installer. Se si tenta di eseguire questa operazione, verrà visualizzato un messaggio di errore.|
 |**/ul** *assemblyListFile*|Disinstalla uno o più assembly specificati in *assemblyListFile* dalla Global Assembly Cache.|
-|**/u**[**ngen**] *assemblyName*|Disinstalla un assembly specificato dalla Global Assembly Cache. Se l'assembly specificato dispone di conteggi dei riferimenti esistenti, verranno visualizzati i conteggi dei riferimenti e l'assembly non verrà rimosso dalla Global Assembly Cache. **Nota:**  In .NET Framework versione 2.0 l'opzione `/ungen` non è supportata. Usare invece il comando `uninstall` di [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> Se si specifica **/ungen** in .NET Framework versioni 1.0 e 1.1, Gacutil.exe rimuove l'assembly dalla cache delle immagini native. In questa cache vengono archiviate le immagini native degli assembly create usando il [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
+|**/u**[**ngen**] *assemblyName*|Disinstalla un assembly specificato dalla Global Assembly Cache. Se l'assembly specificato dispone di conteggi dei riferimenti esistenti, verranno visualizzati i conteggi dei riferimenti e l'assembly non verrà rimosso dalla Global Assembly Cache. **Nota:**  In .NET Framework versione 2.0 l'opzione `/ungen` non è supportata. Usare invece il comando `uninstall` di [Ngen.exe (generatore di immagini native)](ngen-exe-native-image-generator.md). <br /><br /> Se si specifica **/ungen** in .NET Framework versioni 1.0 e 1.1, Gacutil.exe rimuove l'assembly dalla cache delle immagini native. In questa cache vengono archiviate le immagini native degli assembly create usando il [generatore di immagini native (Ngen.exe)](ngen-exe-native-image-generator.md).|
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Disinstalla un riferimento a un assembly specificato dalla Global Assembly Cache. Per rimuovere un riferimento a un assembly, è necessario specificare gli stessi parametri *scheme*, *id* e *description* specificati con le opzioni **/i** e **/r** (o **/ir**) al momento dell'installazione dell'assembly. Per una descrizione dei valori validi che è possibile specificare per questi parametri, vedere l'opzione **/r**.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/r**.|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Regasm.exe (strumento di registrazione di assembly)](regasm-exe-assembly-registration-tool.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

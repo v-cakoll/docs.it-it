@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874211"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052362"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance (MDA)
 
-Il `PInvokeStackImbalance` assistente al debug gestito (MDA) viene attivato quando CLR rileva che la profondità dello stack dopo una chiamata PInvoke non corrisponde la profondità dello stack previsto, la convenzione di chiamata specificata base il <xref:System.Runtime.InteropServices.DllImportAttribute> attributo e il dichiarazione dei parametri nella firma gestita.
+L' `PInvokeStackImbalance` assistente al debug gestito viene attivato quando CLR rileva che la profondità dello stack dopo una chiamata platform invoke non corrisponde alla profondità dello stack prevista, <xref:System.Runtime.InteropServices.DllImportAttribute> in base alla convenzione di chiamata specificata nell'attributo e Dichiarazione dei parametri nella firma gestita.
 
 L'assistente al debug gestito `PInvokeStackImbalance` viene implementato solo per piattaforme x86 a 32 bit.
 
 > [!NOTE]
-> Il `PInvokeStackImbalance` assistente al debug gestito è disabilitato per impostazione predefinita. In Visual Studio 2017, il `PInvokeStackImbalance` assistente al debug gestito viene visualizzato nei **assistenti al debug gestito** nell'elenco il **impostazioni eccezioni** nella finestra di dialogo (che viene visualizzata quando si seleziona **Debug**  >  **Windows** > **impostazioni eccezioni**). Tuttavia, selezionando o deselezionando le **Interrompi se generata** casella di controllo non abilitare o disabilitare l'assistente al debug gestito; opzione controlla solo se Visual Studio genera un'eccezione quando viene attivato l'assistente al debug gestito.
+> L' `PInvokeStackImbalance` assistente al debug gestito è disabilitato per impostazione predefinita. In Visual Studio 2017, l' `PInvokeStackImbalance` assistente al debug gestito viene visualizzato nell'elenco **assistenti al debug gestito** nella finestra di dialogo **Impostazioni eccezioni** (visualizzata quando > si seleziona**finestre**  >   **di debug). Impostazioni delle eccezioni**). Tuttavia, la selezione o la cancellazione della casella di controllo **Interrompi quando viene generata** non Abilita o Disabilita l'assistente al debug gestito; controlla solo se Visual Studio genera un'eccezione quando viene attivato l'assistente al debug gestito.
 
 ## <a name="symptoms"></a>Sintomi
 
@@ -48,7 +48,7 @@ Forza l'uso del percorso non ottimizzato in CLR per tutte le chiamate PInvoke.
 
 Il messaggio dell'assistente al debug gestito fornisce il nome della chiamata al metodo PInvoke che sta causando lo sbilanciamento dello stack. Un messaggio di esempio di una chiamata PInvoke al metodo `SampleMethod` è:
 
-**Una chiamata alla funzione di PInvoke 'SampleMethod' è sbilanciato lo stack. È probabile che la firma PInvoke gestita non corrisponde alla firma di destinazione non gestita. Verificare che la convenzione di chiamata e i parametri della firma PInvoke corrispondono alla firma non gestita di destinazione.**
+**Una chiamata alla funzione PInvoke ' SampleMethod ' ha sbilanciato lo stack. Questa operazione è probabilmente dovuta al fatto che la firma PInvoke gestita non corrisponde alla firma di destinazione non gestita. Verificare che la convenzione di chiamata e i parametri della firma PInvoke corrispondano alla firma non gestita di destinazione.**
 
 ## <a name="configuration"></a>Configurazione
 
@@ -63,5 +63,5 @@ Il messaggio dell'assistente al debug gestito fornisce il nome della chiamata al
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

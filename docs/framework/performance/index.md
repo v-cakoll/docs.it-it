@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927094"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046460"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -38,14 +38,14 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Consente di determinare le prestazioni complessive del sistema, ad esempio l'uso di memoria e risorse di archiviazione da parte dell'app quando più applicazioni sono in esecuzione nello stesso computer. Lo strumento è disponibile nell'Area download come parte di Windows Assessment and Deployment Kit (ADK) per [!INCLUDE[win8](../../../includes/win8-md.md)]. Per altre informazioni, vedere [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Event Tracing for Windows (ETW)  
- ETW è una tecnica che consente di ottenere informazioni diagnostiche sul codice in esecuzione ed è essenziale per molti degli strumenti per le prestazioni indicati in precedenza. ETW crea log per particolari eventi generati dalle app .NET Framework e da Windows. Con ETW è possibile abilitare e disabilitare la registrazione in modo dinamico e dunque eseguire analisi dettagliate negli ambienti di produzione senza riavviare l'app. .NET Framework offre supporto per gli eventi ETW ed ETW è usato da numerosi strumenti per la profilatura e le prestazioni per generare dati sulle prestazioni. Spesso questi strumenti abilitano e disabilitano gli eventi ETW, quindi è utile conoscerli. È possibile usare specifici eventi ETW per raccogliere informazioni sulle prestazioni relative a particolari componenti dell'app. Per altre informazioni sul supporto ETW in .NET Framework, vedere [ETW Events in the Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md) (Eventi ETW in Common Language Runtime) e [Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md).  
+ ETW è una tecnica che consente di ottenere informazioni diagnostiche sul codice in esecuzione ed è essenziale per molti degli strumenti per le prestazioni indicati in precedenza. ETW crea log per particolari eventi generati dalle app .NET Framework e da Windows. Con ETW è possibile abilitare e disabilitare la registrazione in modo dinamico e dunque eseguire analisi dettagliate negli ambienti di produzione senza riavviare l'app. .NET Framework offre supporto per gli eventi ETW ed ETW è usato da numerosi strumenti per la profilatura e le prestazioni per generare dati sulle prestazioni. Spesso questi strumenti abilitano e disabilitano gli eventi ETW, quindi è utile conoscerli. È possibile usare specifici eventi ETW per raccogliere informazioni sulle prestazioni relative a particolari componenti dell'app. Per altre informazioni sul supporto ETW in .NET Framework, vedere [ETW Events in the Common Language Runtime](etw-events-in-the-common-language-runtime.md) (Eventi ETW in Common Language Runtime) e [Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ](etw-events-in-task-parallel-library-and-plinq.md).  
   
 ## <a name="performance-by-app-type"></a>Prestazioni per tipo di applicazione  
  Per ogni tipo di app .NET Framework esistono procedure consigliate, considerazioni e strumenti per la valutazione delle prestazioni diversi. La tabella seguente contiene collegamenti ad argomenti relativi alle prestazioni per specifici tipi di app .NET Framework.  
   
 |Tipo di app|Vedere|  
 |--------------|---------|  
-|App .NET Framework per tutte le piattaforme|[Garbage Collection e prestazioni](../../standard/garbage-collection/performance.md)<br /><br /> [Suggerimenti sulle prestazioni](../../../docs/framework/performance/performance-tips.md)|  
+|App .NET Framework per tutte le piattaforme|[Garbage Collection e prestazioni](../../standard/garbage-collection/performance.md)<br /><br /> [Suggerimenti sulle prestazioni](performance-tips.md)|  
 |App [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] scritte in C++, C# e Visual Basic|[Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Cenni preliminari sulle prestazioni di ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
@@ -54,7 +54,7 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Memorizzazione nella cache in applicazioni .NET Framework](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Descrive tecniche per la memorizzazione nella cache dei dati per migliorare le prestazioni dell'app.|  
-|[Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
-|[Affidabilità](../../../docs/framework/performance/reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
-|[Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework](../../../docs/framework/performance/writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|
+|[Memorizzazione nella cache in applicazioni .NET Framework](caching-in-net-framework-applications.md)|Descrive tecniche per la memorizzazione nella cache dei dati per migliorare le prestazioni dell'app.|  
+|[Inizializzazione differita](lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
+|[Affidabilità](reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
+|[Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework](writing-large-responsive-apps.md)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|

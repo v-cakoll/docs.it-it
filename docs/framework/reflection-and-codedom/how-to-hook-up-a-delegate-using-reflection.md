@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 937dca59be8b83526ebf6cd4c369532b1a8b9afe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935718"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045986"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: Associare un delegato tramite reflection
 Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, non è possibile usare le funzioni del linguaggio come l'operatore `+=` di C# o l'[istruzione AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) di Visual Basic per associare gli eventi. Le procedure seguenti illustrano come associare un metodo esistente a un evento recuperando tutti i tipi necessari tramite reflection e come creare un metodo dinamico usando reflection emit e associarlo a un evento.  
@@ -80,7 +80,7 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Generare il corpo di un metodo. Il metodo carica una stringa, chiama l'overload del metodo <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> che accetta una stringa, estrae il valore restituito dallo stack perché il gestore non ha alcun tipo restituito e termina. Per altre informazioni sulla creazione di metodi dinamici, vedere [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
+2. Generare il corpo di un metodo. Il metodo carica una stringa, chiama l'overload del metodo <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> che accetta una stringa, estrae il valore restituito dallo stack perché il gestore non ha alcun tipo restituito e termina. Per altre informazioni sulla creazione di metodi dinamici, vedere [Procedura: Definire ed eseguire metodi dinamici](how-to-define-and-execute-dynamic-methods.md).  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -111,5 +111,5 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Procedura: Definire ed eseguire metodi dinamici](how-to-define-and-execute-dynamic-methods.md)
+- [Reflection](reflection.md)

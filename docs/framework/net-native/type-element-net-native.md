@@ -1,17 +1,17 @@
 ---
-title: <Type> Elemento (.NET Native)
+title: <Type>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc93d1af65a34381005c3f3987dd18a8e7bba8d9
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689275"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049146"
 ---
-# <a name="type-element-net-native"></a>\<Tipo > elemento (.NET Native)
+# <a name="type-element-net-native"></a>\<Elemento Type > (.NET Native)
 
 Applica i criteri di runtime a un determinato tipo, ad esempio una classe o una struttura.
 
@@ -55,48 +55,48 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Value|Descrizione|
 |-----------|-----------------|
-|*type_name*|Nome del tipo. Se questo elemento `<Type>` è figlio di un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) o di un altro elemento `<Type>`, *type_name* può includere il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|
+|*type_name*|Nome del tipo. Se questo elemento `<Type>` è figlio di un elemento [\<Namespace>](namespace-element-net-native.md) o di un altro elemento `<Type>`, *type_name* può includere il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|
 
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi
 
 |Value|Descrizione|
 |-----------|-----------------|
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
-|[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Se il tipo contenitore è un attributo, definisce i criteri di runtime per gli elementi del codice a cui è applicato l'attributo.|
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applica i criteri di reflection a un evento appartenente a questo tipo.|
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applica i criteri di reflection a un campo appartenente a questo tipo.|
-|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Applica i criteri al tipo di parametro di un tipo generico.|
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Applica criteri a un tipo, se tale criterio è stato applicato al tipo rappresentato dall'oggetto contenente l'elemento `<Type>`.|
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection a un metodo appartenente a questo tipo.|
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applica criteri di reflection a un metodo generico costruito, appartenente a questo tipo.|
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applica i criteri di reflection a una proprietà appartenente a questo tipo.|
-|[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.|
+|[\<AttributeImplies>](attributeimplies-element-net-native.md)|Se il tipo contenitore è un attributo, definisce i criteri di runtime per gli elementi del codice a cui è applicato l'attributo.|
+|[\<Event>](event-element-net-native.md)|Applica i criteri di reflection a un evento appartenente a questo tipo.|
+|[\<Field>](field-element-net-native.md)|Applica i criteri di reflection a un campo appartenente a questo tipo.|
+|[\<GenericParameter>](genericparameter-element-net-native.md)|Applica i criteri al tipo di parametro di un tipo generico.|
+|[\<ImpliesType>](impliestype-element-net-native.md)|Applica criteri a un tipo, se tale criterio è stato applicato al tipo rappresentato dall'oggetto contenente l'elemento `<Type>`.|
+|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection a un metodo appartenente a questo tipo.|
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Applica criteri di reflection a un metodo generico costruito, appartenente a questo tipo.|
+|[\<Property>](property-element-net-native.md)|Applica i criteri di reflection a una proprietà appartenente a questo tipo.|
+|[\<Subtypes>](subtypes-element-net-native.md)|Applica i criteri di runtime a tutte le classi ereditate per il tipo contenitore.|
 |`<Type>`|Applica criteri di reflection un tipo annidato.|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|DESCRIZIONE|
 |-------------|-----------------|
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime.|
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applica i criteri di reflection a tutti i tipi in un determinato assembly.|
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.|
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applica criteri di reflection a tutti i tipi in uno spazio dei nomi.|
+|[\<Application>](application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime.|
+|[\<Assembly>](assembly-element-net-native.md)|Applica i criteri di reflection a tutti i tipi in un determinato assembly.|
+|[\<Library>](library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.|
+|[\<Namespace>](namespace-element-net-native.md)|Applica criteri di reflection a tutti i tipi in uno spazio dei nomi.|
 |`<Type>`|Applica i criteri di reflection a un tipo e a tutti i membri.|
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|
 
 ## <a name="remarks"></a>Note
 
 La reflection, la serializzazione e gli attributi di interoperabilità sono facoltativi. Se non è presente, l'elemento `<Type>` funge da contenitore i cui tipi figlio definiscono criteri per i singoli membri.
 
-Se un elemento `<Type>` è figlio di un elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), `<Type>` o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre.
+Se un elemento `<Type>` è figlio di un elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md), `<Type>` o [\<TypeInstantiation>](typeinstantiation-element-net-native.md), sottopone a override le impostazioni dei criteri definite dall'elemento padre.
 
-Un elemento `<Type>` di un tipo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri. I criteri di tipi generici costruiti sono definiti dall'elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).
+Un elemento `<Type>` di un tipo generico applica i relativi criteri a tutte le istanze che non dispongono di propri criteri. I criteri di tipi generici costruiti sono definiti dall'elemento [\<TypeInstantiation>](typeinstantiation-element-net-native.md).
 
 Se il tipo è un tipo generico, il nome è decorato da un simbolo di accento grave ( \`) seguito dal relativo numero di parametri generici. Ad esempio, l'attributo `Name` di un elemento `<Type>` per la classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> viene visualizzato come ``Name="System.Collections.Generic.List`1"``.
 
@@ -106,7 +106,7 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Poiché i metadati per il <xref:System.Collections.Generic.List%601> classe non viene incluso automaticamente dalla catena di strumenti .NET Native, nell'esempio viene eseguito visualizzare le informazioni sul membro richiesto in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
+ Poiché i metadati per <xref:System.Collections.Generic.List%601> la classe non vengono inclusi automaticamente dalla catena di strumenti .NET native, l'esempio non riesce a visualizzare le informazioni sul membro richieste in fase di esecuzione. Per fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime. Da notare che dal momento che è stato fornito un elemento [<Namespace\>](namespace-element-net-native.md) padre, non è necessario fornire un nome di tipo completo nell'elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -124,7 +124,7 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Poiché i metadati per il <xref:System.String> oggetto non è disponibile, la chiamata al <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metodo genera un <xref:System.NullReferenceException> eccezione in fase di esecuzione ora quando viene compilato con la catena di strumenti .NET Native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
+ Poiché i metadati per <xref:System.String> l'oggetto non sono disponibili, la chiamata <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> al metodo genera <xref:System.NullReferenceException> un'eccezione in fase di esecuzione quando viene compilata con la catena di strumenti .NET native. Per eliminare l'eccezione e fornire i metadati necessari, aggiungere il seguente elemento `<Type>` al file di direttive di runtime:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -137,6 +137,6 @@ Nell'esempio seguente viene usata la reflection per visualizzare le informazioni
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)
+- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 74471ef7eec73c3bdab9299eb5c82af6545e9b6a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e9815e4c2c0740f213632681200e48c8e4786657
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662272"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043387"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementazione del pattern di controllo Invoke di automazione interfaccia utente
 
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.
 
 In questo argomento vengono presentate le linee guida e le convenzioni per l'implementazione di <xref:System.Windows.Automation.Provider.IInvokeProvider>, incluse le informazioni relative a eventi e proprietà. Alla fine della panoramica sono elencati collegamenti ad altro materiale di riferimento.
 
-Il pattern di controllo <xref:System.Windows.Automation.InvokePattern> viene usato per supportare i controlli che non mantengono lo stato quando sono attivati, bensì avviano o eseguono una singola azione non ambigua. I controlli che mantengono lo stato, ad esempio caselle di controllo e pulsanti di opzione, devono invece implementare rispettivamente <xref:System.Windows.Automation.Provider.IToggleProvider> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider> . Per esempi di controlli che implementano il pattern di controllo Invoke, vedere [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).
+Il pattern di controllo <xref:System.Windows.Automation.InvokePattern> viene usato per supportare i controlli che non mantengono lo stato quando sono attivati, bensì avviano o eseguono una singola azione non ambigua. I controlli che mantengono lo stato, ad esempio caselle di controllo e pulsanti di opzione, devono invece implementare rispettivamente <xref:System.Windows.Automation.Provider.IToggleProvider> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider> . Per esempi di controlli che implementano il pattern di controllo Invoke, vedere [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -61,7 +61,7 @@ Le proprietà e i metodi seguenti sono obbligatori per l'implementazione di <xre
 
 |Membri obbligatori|Tipo di membro|Note|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|metodo|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente un valore senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|statico|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente un valore senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|
 
 <a name="Exceptions"></a>
 
@@ -75,9 +75,9 @@ I provider devono generare le eccezioni seguenti.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Richiamare un controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Richiamare un controllo usando l'automazione interfaccia utente](invoke-a-control-using-ui-automation.md)
+- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)

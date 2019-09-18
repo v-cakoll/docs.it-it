@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851375"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044814"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
   
- Lo strumento viene installato automaticamente insieme a Visual Studio. Per avviare lo strumento, utilizzare il [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Lo strumento viene installato automaticamente insieme a Visual Studio. Per avviare lo strumento, utilizzare il [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
 > Lo strumento di gestione dei certificati (Certmgr.exe) è un'utilità da riga di comando, da non confondere con lo snap-in certificati (Certmgr.msc) di Microsoft Management Console (MMC). Poiché Certmgr.msc in genere si trova nella directory di sistema di Windows, l'immissione di `certmgr` nella riga di comando potrebbe caricare lo snap-in di MMC Certificati anche se è stato aperto il Prompt dei comandi per gli sviluppatori per Visual Studio. Questo accade perché il percorso dello snap-in precede il percorso dello strumento di gestione dei certificati nella variabile di ambiente PATH. Se si verifica questo problema, è possibile eseguire i comandi Certmgr.exe specificando il percorso dell'eseguibile.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
- Per una panoramica dei certificati X.509, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Per una panoramica dei certificati X.509, vedere [Utilizzo dei certificati](../wcf/feature-details/working-with-certificates.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -46,7 +46,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*sourceStorename*|Archivio certificati contenente certificati, elenchi di scopi consentiti ai certificati o CRL da aggiungere, eliminare, salvare o visualizzare. Può trattarsi di un file di archivio o di un archivio di sistema.|  
 |*destinationStorename*|File o archivio certificati di output.|  
@@ -92,7 +92,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Esempi  
  Il comando che segue visualizza un archivio di sistema predefinito denominato `my` con output dettagliato.  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
+- [Strumenti](index.md)
 - [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert) (Makecert.exe, strumento di creazione certificati)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

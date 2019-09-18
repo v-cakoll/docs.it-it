@@ -3,12 +3,12 @@ title: Creazione della prima applicazione Web ASP.NET in grado di riconoscere at
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422399"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045585"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Creazione della prima applicazione Web ASP.NET in grado di riconoscere attestazioni
 ## <a name="applies-to"></a>Si applica a  
@@ -19,7 +19,7 @@ ms.locfileid: "67422399"
   
  In questo argomento viene illustrato lo scenario di compilazione di applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF. Uno scenario di applicazione in grado di riconoscere attestazioni prevede in genere tre partecipanti: l'applicazione stessa, l'utente finale e il servizio token di sicurezza, come illustrato nella figura seguente:  
   
- ![Diagramma che mostra i componenti di un'App Web di base WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![Diagramma che illustra i componenti di un'app Web di base WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. Tramite l'applicazione in grado di riconoscere attestazioni viene utilizzato WIF per identificare le richieste non autenticate e per reindirizzarle al servizio token di sicurezza.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422399"
   
  Il servizio token di sicurezza è un servizio tramite cui vengono rilasciati dei token alla riuscita dell'autenticazione. Microsoft offre due servizi token di sicurezza standard del settore:  
   
-- [Active Directory Federation Services (ADFS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory Federation Services (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Servizio di controllo di accesso di Microsoft Azure (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. ACS è un servizio cloud, fornito come parte della piattaforma Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. Ad esempio, è possibile usare STS di sviluppo locale che fa parte del [Identity and Access Tool per Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) che è disponibile gratuitamente online.  
+ AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. ACS è un servizio cloud, fornito come parte della piattaforma Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. Ad esempio, è possibile usare il servizio STS di sviluppo locale che fa parte di [Identity and Access Tool per Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , disponibile gratuitamente online.  
   
  Per compilare la prima applicazione ASP.NET in grado di riconoscere attestazioni mediante WIF, seguire le istruzioni in uno dei collegamenti seguenti:  
   
-- [Procedura: Creare applicazione Web MVC ASP.NET in grado di riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Procedura: Creare un'applicazione Web MVC ASP.NET in grado di riconoscere attestazioni con WIF](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Procedura: Creare un'applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni mediante l'autenticazione basata su form](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Procedura: Creare un'applicazione ASP.NET in grado di riconoscere attestazioni usando l'autenticazione basata su form](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Guida introduttiva a WIF](getting-started-with-wif.md)

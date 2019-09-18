@@ -2,12 +2,12 @@
 title: Quando scegliere .NET Framework per i contenitori Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Quando scegliere .NET Framework per i contenitori Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784092"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039650"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando scegliere .NET Framework per i contenitori Docker
 
@@ -45,22 +45,22 @@ Anche se .NET Core 3 (in corso di sviluppo al momento della stesura di questo ar
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Utilizzo di una piattaforma o di un'API che non supporta .NET Core
 
-Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Ad esempio, alcuni servizi di Azure forniscono un SDK non ancora disponibile per l'utilizzo in .NET Core. Si tratta di un problema temporaneo, perché alla fine tutti i servizi di Azure useranno .NET Core. Ad esempio, [Azure DocumentDB SDK per .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) è stato rilasciato in anteprima il 16 novembre 2016 e ora è disponibile a livello generale come versione stabile.
+Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Ad esempio, alcuni servizi di Azure forniscono un SDK non ancora disponibile per l'utilizzo in .NET Core. Si tratta di un problema temporaneo, perché alla fine tutti i servizi di Azure useranno .NET Core. Ad esempio, [Azure DocumentDB SDK per .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) è stato rilasciato in anteprima il 16 novembre 2016 e ora è disponibile a livello generale come versione stabile.
 
 Nel frattempo, se una piattaforma o un servizio in Azure ancora non supporta .NET Core tramite l'API client, è possibile usare l'API REST equivalente del servizio di Azure o l'SDK client in .NET Framework.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Guida a .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **Porting from .NET Framework to .NET Core** (Portabilità da .NET Framework a .NET Core)  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **Guida di .NET Core in Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET Components Overview** (Panoramica dei componenti .NET)  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[Precedente](net-core-container-scenarios.md)

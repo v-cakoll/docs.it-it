@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226573"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048106"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Procedura: Impostare criteri di cache per una richiesta
 L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta. L'input di esempio è un URI, ad esempio `http://www.contoso.com/`.  
@@ -107,8 +107,8 @@ End Namespace
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
+- [Criteri di cache](cache-policy.md)
+- [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

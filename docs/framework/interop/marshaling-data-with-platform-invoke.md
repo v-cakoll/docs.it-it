@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: HT
+ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412396"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051681"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshalling dei dati con platform invoke
 
@@ -25,7 +25,7 @@ Per chiamare le funzioni esportate da una libreria non gestita, un'applicazione 
 
 - Sostituire i tipi di dati non gestiti con tipi di dati gestiti.
 
-È possibile usare la documentazione fornita con una funzione non gestita per costruire un prototipo gestito equivalente, applicando l'attributo con i relativi campi facoltativi e sostituendo i tipi di dati non gestiti con quelli gestiti. Per istruzioni su come applicare l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute>, vedere [Utilizzo di funzioni DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
+È possibile usare la documentazione fornita con una funzione non gestita per costruire un prototipo gestito equivalente, applicando l'attributo con i relativi campi facoltativi e sostituendo i tipi di dati non gestiti con quelli gestiti. Per istruzioni su come applicare l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute>, vedere [Utilizzo di funzioni DLL non gestite](consuming-unmanaged-dll-functions.md).
 
 Questa sezione fornisce esempi che dimostrano come creare prototipi di funzioni gestite per passare argomenti e ricevere valori restituiti da funzioni esportate mediante librerie non gestite. Gli esempi illustrano anche l'uso dell'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> e della classe <xref:System.Runtime.InteropServices.Marshal> per effettuare il marshalling esplicito dei dati.
 
@@ -33,7 +33,7 @@ Questa sezione fornisce esempi che dimostrano come creare prototipi di funzioni 
 
 La tabella seguente include un elenco di tipi di dati usati nelle API Windows e nelle funzioni di tipo C. Molte librerie non gestite contengono funzioni che passano questi tipi di dati come parametri e valori restituiti. La terza colonna indica il tipo di valore o la classe incorporata corrispondente di .NET Framework che si usa nel codice gestito. In alcuni casi, è possibile sostituire il tipo elencato nella tabella con un tipo delle stesse dimensioni.
 
-|Tipo non gestito nelle API Windows|Tipo non gestito del linguaggio C|Tipo gestito|Description|
+|Tipo non gestito nelle API Windows|Tipo non gestito del linguaggio C|Tipo gestito|Descrizione|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Applicato a una funzione che non restituisce un valore.|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> o <xref:System.UIntPtr?displayProperty=nameWithType>|32 bit nei sistemi operativi Windows a 32 bit, 64 bit nei sistemi operativi Windows a 64 bit.|

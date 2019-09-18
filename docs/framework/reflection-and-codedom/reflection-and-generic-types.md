@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967196"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045926"
 ---
 # <a name="reflection-and-generic-types"></a>Reflection e tipi generici
 <a name="top"></a> Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo generico perché quest'ultimo è associato a un insieme di parametri di tipo, se è una definizione di tipo generico, o a un insieme di argomenti di tipo, se è un tipo costruito. Un metodo generico si differenzia da un metodo ordinario esattamente nello stesso modo.  
@@ -38,7 +38,7 @@ ms.locfileid: "69967196"
   
  La reflection fornisce metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> che consentono di accedere alla matrice di parametri di tipo e stabilire se un'istanza di <xref:System.Type> rappresenta un parametro di tipo o un tipo effettivo.  
   
- Per un codice di esempio che illustra i metodi descritti in questo articolo, vedere [Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+ Per un codice di esempio che illustra i metodi descritti in questo articolo, vedere [Procedura: Esaminare e creare istanze di tipi generici tramite reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  Nelle considerazioni che seguono si presuppone la conoscenza della terminologia relativa ai generics, ad esempio la differenza tra argomenti e parametri di tipo e quella tra tipi costruiti aperti o chiusi. Per altre informazioni, vedere [Generics](../../standard/generics/index.md).  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura: Esaminare e creare istanze di tipi generici tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
+|[Procedura: Esaminare e creare istanze di tipi generici tramite reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra come usare le proprietà e i metodi di <xref:System.Type> e <xref:System.Reflection.MethodInfo> per esaminare i tipi generici.|  
 |[Generics](../../standard/generics/index.md)|Descrive la funzionalità generics con la relativa modalità di supporto in .NET Framework.|  
-|[Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Mostra come usare la reflection emit per generate tipi generici in assembly dinamici.|  
-|[Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descrive la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|
+|[Procedura: Definire un tipo generico tramite reflection emit](how-to-define-a-generic-type-with-reflection-emit.md)|Mostra come usare la reflection emit per generate tipi generici in assembly dinamici.|  
+|[Visualizzazione delle informazioni sul tipo](viewing-type-information.md)|Descrive la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23a36d1709f03583ce39af0e7c80bb1ecd7cf809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754388"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052680"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>MDA illegalPrepareConstrainedRegion
 L'assistente al debug gestito `illegalPrepareConstrainedRegion` viene attivato quando una chiamata al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> non precede immediatamente l'istruzione `try` del gestore di eccezioni. Poiché questa restrizione è a livello MSIL, è consentita la presenza di un'origine che non genera codice tra la chiamata e l'istruzione `try`, ad esempio commenti.  
@@ -24,7 +24,7 @@ L'assistente al debug gestito `illegalPrepareConstrainedRegion` viene attivato q
  Area a esecuzione vincolata che non viene mai considerata come tale, ma come semplice blocco di gestione delle eccezioni (`finally` o `catch`). Di conseguenza, l'area non viene eseguita nel caso di una condizione di memoria insufficiente o di interruzione del thread.  
   
 ## <a name="cause"></a>Causa  
- Il modello di preparazione per un'area a esecuzione vincolata non è stato applicato correttamente.  Si tratta di un evento di errore. Il <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> chiamata al metodo usato per contrassegnare i gestori di eccezioni come introduzione a un'area a esecuzione vincolata in loro `catch` / `finally` / `fault` / `filter` blocchi devono essere usati immediatamente prima di `try` istruzione.  
+ Il modello di preparazione per un'area a esecuzione vincolata non è stato applicato correttamente.  Si tratta di un evento di errore. La <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> chiamata al metodo utilizzata per contrassegnare i gestori di eccezioni come introduzione a `catch` una CER `fault` `filter` / `finally` / / nei blocchi deve essere utilizzata immediatamente prima del `try` istruzione.  
   
 ## <a name="resolution"></a>Risoluzione  
  Assicurarsi che la chiamata a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> avvenga immediatamente prima dell'istruzione `try`.  
@@ -68,5 +68,5 @@ void MethodWithInvalidPCR()
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

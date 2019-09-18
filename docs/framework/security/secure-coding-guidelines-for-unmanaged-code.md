@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045357"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
 Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API del codice nativo, come Win32). Poiché questo comporta il superamento del perimetro di sicurezza per il codice gestito, è necessaria la dovuta attenzione. Se il codice è indipendente dalla sicurezza, sia il proprio codice sia il codice da cui viene chiamato devono avere l'autorizzazione per codice non gestito (<xref:System.Security.Permissions.SecurityPermission> con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato).  
   
- Tuttavia, è spesso sconsigliabile fornire al chiamante autorizzazioni di questo tipo. In questi casi, il codice attendibile può essere intermediario, simile al wrapper gestito o al codice di libreria descritto in [Protezione del codice wrapper](../../../docs/framework/misc/securing-wrapper-code.md). Se la funzionalità di codice non gestito sottostante è totalmente sicura, può essere esposta direttamente; in caso contrario, è richiesto prima un controllo di autorizzazione appropriato (domanda).  
+ Tuttavia, è spesso sconsigliabile fornire al chiamante autorizzazioni di questo tipo. In questi casi, il codice attendibile può essere intermediario, simile al wrapper gestito o al codice di libreria descritto in [Protezione del codice wrapper](../misc/securing-wrapper-code.md). Se la funzionalità di codice non gestito sottostante è totalmente sicura, può essere esposta direttamente; in caso contrario, è richiesto prima un controllo di autorizzazione appropriato (domanda).  
   
  Quando il codice chiama codice non gestito, ma non si vuole che i chiamanti siano autorizzati ad accedere al codice non gestito, è necessario dichiarare tale diritto. Un'asserzione blocca il percorso stack in corrispondenza del frame. È necessario assicurarsi di non creare un problema di sicurezza in questo processo. In genere, ciò significa che è necessario richiedere un'autorizzazione dei chiamanti appropriata e quindi usare il codice non gestito per eseguire solo operazioni consentite dall'autorizzazione e nient'altro. In alcuni casi (ad esempio, una funzione GET time-of-day), il codice non gestito può essere esposto direttamente ai chiamanti senza controlli di sicurezza. Il codice in cui viene eseguita l'asserzione deve consentire in ogni caso la gestione della sicurezza.  
   

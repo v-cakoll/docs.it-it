@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972030"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053176"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache archivia gli assembly specificamente designati per essere condivisi da più applicazioni nel computer.  
@@ -31,7 +31,7 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
   
 - Usare un programma di installazione progettato per funzionare con la Global Assembly Cache. Questa è l'opzione preferita per l'installazione degli assembly nella Global Assembly Cache.  
   
-- Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), disponibile con Windows SDK.  
+- Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md), disponibile con Windows SDK.  
   
     > [!NOTE]
     > Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario usare Windows Installer. Usare lo strumento Global Assembly Cache solo in scenari di sviluppo, poiché non prevede il conteggio dei riferimenti di assembly né altre funzionalità disponibili con il programma di installazione di Windows.  
@@ -45,5 +45,5 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
 ## <a name="see-also"></a>Vedere anche
 
 - [Assembly in .NET](../../standard/assembly/index.md)
-- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Uso di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)
 - [Assembly con nomi sicuri](../../standard/assembly/strong-named.md)

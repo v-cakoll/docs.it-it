@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 08/08/2019
-ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c230fa201fce02ab537afc4e14468788d32b8c8a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990417"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039484"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -63,117 +63,117 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 ## <a name="options"></a>Opzioni
 
-* **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration {Debug|Release}`**
 
   Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
 
-* **`--force`**
+- **`--force`**
 
   Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. La specifica di questo flag equivale all'eliminazione del file *project.assets.json*. Opzione disponibile a partire da .NET Core 2.0 SDK.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Stampa una breve guida per il comando.
 
-* **`--include-source`**
+- **`--include-source`**
 
   Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output. I file di origine sono inclusi nella `src` cartella all'interno del pacchetto di simboli.
 
-* **`--include-symbols`**
+- **`--include-symbols`**
 
   Include i pacchetti NuGet dei simboli di debug oltre ai pacchetti NuGet normali nella directory di output.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). Disponibile a partire da .NET Core 3.0 SDK.
 
-* **`--no-build`**
+- **`--no-build`**
 
   Non compila il progetto prima della compressione. Imposta anche in modo implicito il flag `--no-restore`.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   Ignora i riferimenti da progetto a progetto e ripristina solo il progetto radice. Opzione disponibile a partire da .NET Core 2.0 SDK.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   Non esegue un ripristino implicito quando si esegue il comando. Opzione disponibile a partire da .NET Core 2.0 SDK.
 
-* **`--nologo`**
+- **`--nologo`**
 
   Non visualizza il messaggio di avvio né il messaggio di copyright. Disponibile a partire da .NET Core 3.0 SDK.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   Inserisce i pacchetti compilati nella directory specificata.
 
-* **`--runtime <RUNTIME_IDENTIFIER>`**
+- **`--runtime <RUNTIME_IDENTIFIER>`**
 
   Specifica il runtime di destinazione per cui ripristinare i pacchetti. Per un elenco degli identificatori di runtime (RID, Runtime Identifier), vedere il [catalogo RID](../rid-catalog.md). Opzione disponibile a partire da .NET Core 2.0 SDK.
 
-* **`-s|--serviceable`**
+- **`-s|--serviceable`**
 
   Imposta il flag utilizzabile dai servizi nel pacchetto. Per altre informazioni, vedere [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog .NET: .NET 4.5.1 supporta gli aggiornamenti della sicurezza Microsoft per le librerie NuGet di .NET).
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   Definisce il valore della proprietà MSBuild `$(VersionSuffix)` nel progetto.
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
 ## <a name="examples"></a>Esempi
 
-* Comprimere il progetto nella directory corrente:
+- Comprimere il progetto nella directory corrente:
 
   ```console
   dotnet pack
   ```
 
-* Comprimere il progetto `app1`:
+- Comprimere il progetto `app1`:
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* Comprimere il progetto nella directory corrente e inserire i pacchetti risultanti nella cartella `nupkgs`:
+- Comprimere il progetto nella directory corrente e inserire i pacchetti risultanti nella cartella `nupkgs`:
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* Comprimere il progetto nella directory corrente e inserirlo nella cartella `nupkgs`, ignorando il passaggio relativo alla compilazione:
+- Comprimere il progetto nella directory corrente e inserirlo nella cartella `nupkgs`, ignorando il passaggio relativo alla compilazione:
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* Con il suffisso della versione del progetto configurato come `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` nel file con estensione *csproj*, comprimere il progetto corrente e aggiornare la versione del pacchetto risultante con il suffisso specificato:
+- Con il suffisso della versione del progetto configurato come `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` nel file con estensione *csproj*, comprimere il progetto corrente e aggiornare la versione del pacchetto risultante con il suffisso specificato:
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* Impostare la versione del pacchetto su `2.1.0` con la proprietà MSBuild `PackageVersion`:
+- Impostare la versione del pacchetto su `2.1.0` con la proprietà MSBuild `PackageVersion`:
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* Comprimere il progetto per un [framework di destinazione](../../standard/frameworks.md) specifico:
+- Comprimere il progetto per un [framework di destinazione](../../standard/frameworks.md) specifico:
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino (.NET Core SDK 2.0 e versioni successive):
+- Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino (.NET Core SDK 2.0 e versioni successive):
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* Comprimere il progetto usando un [file con estensione nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Comprimere il progetto usando un [file con estensione nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget

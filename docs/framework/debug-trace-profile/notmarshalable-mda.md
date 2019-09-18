@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753699"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052422"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable (MDA)
 L'assistente al debug gestito `notMarshalable` viene attivato quando Common Language Runtime rileva un puntatore a interfaccia COM senza un proxy/stub registrato valido oppure un'implementazione non corretta dell'interfaccia `IMarshal` durante il marshalling dell'interfaccia tra i vari contesti.  
@@ -51,5 +51,5 @@ L'assistente al debug gestito `notMarshalable` viene attivato quando Common Lang
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

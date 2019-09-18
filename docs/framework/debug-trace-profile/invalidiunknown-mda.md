@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754538"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052599"
 ---
 # <a name="invalidiunknown-mda"></a>MDA invalidIUnknown
 L'assistente al debug gestito `invalidIUnknown` viene attivato quando un puntatore `IUnknown` non valido viene passato dal codice nativo al codice gestito. La ricerca dell'interfaccia `IUnknown` nel puntatore `IUnknown` non riesce.  
@@ -48,5 +48,5 @@ L'assistente al debug gestito `invalidIUnknown` viene attivato quando un puntato
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

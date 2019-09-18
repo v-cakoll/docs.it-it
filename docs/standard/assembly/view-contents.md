@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizza contenuto assembly'
+title: 'Procedura: Visualizzare il contenuto degli assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973026"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053953"
 ---
-# <a name="how-to-view-assembly-contents"></a>Procedura: Visualizza contenuto assembly
+# <a name="how-to-view-assembly-contents"></a>Procedura: Visualizzare il contenuto degli assembly
+
 È possibile usare [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) per visualizzare informazioni di Microsoft Intermediate Language (MSIL) in un file. Se il file esaminato è un assembly, è possibile che le informazioni includano gli attributi dell'assembly, oltre a riferimenti ad altri moduli e assembly. Queste informazioni possono risultare utili nel determinare se un file è un assembly o se è parte di un assembly e se il file contiene riferimenti ad altri moduli o assembly.  
   
 Per visualizzare il contenuto di un assembly tramite *Ildasm. exe*, digitare **Ildasm** \< *assembly name*> al prompt dei comandi. Ad esempio, il comando seguente Disassembla l'assembly *Hello. exe* .  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Per visualizzare le informazioni del manifesto dell'assembly, fare doppio clic sull'icona del **manifesto** nella finestra del disassembler MSIL.  
   
 ## <a name="example"></a>Esempio  
+
 L'esempio seguente inizia con un programma "Hello World" di base. Dopo la compilazione del programma, utilizzare *Ildasm. exe* per disassemblare l'assembly *Hello. exe* e visualizzare il manifesto dell'assembly.  
 
 ```cpp
@@ -106,7 +108,7 @@ Se si esegue il comando *Ildasm. exe* nell'assembly *Hello. exe* e si fa doppio 
   
  Nella tabella seguente vengono descritte le singole direttive del manifesto dell'assembly dell'assembly *Hello. exe* utilizzato nell'esempio.  
   
-|Direttiva|DESCRIZIONE|  
+|Direttiva|Descrizione|  
 |---------------|-----------------|  
 |**.assembly extern \<** *nome assembly* **>**|Specifica un altro assembly contenente elementi a cui il modulo corrente fa riferimento (in questo esempio `mscorlib`).|  
 |**.publickeytoken \<** *token* **>**|Specifica il token della chiave effettiva dell'assembly a cui viene fatto riferimento.|  

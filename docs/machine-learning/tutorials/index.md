@@ -3,12 +3,12 @@ title: Esercitazioni di ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
-ms.translationtype: HT
+ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671888"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054018"
 ---
 # <a name="mlnet-tutorials"></a>Esercitazioni di ML.NET 
 
@@ -22,7 +22,8 @@ Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.y
 - [Classificazione delle immagini](image-classification.md): illustra come ripetere il training di un modello TensorFlow esistente per creare un classificatore di immagini personalizzato usando ML.NET.
 - [Rilevamento anomalie](sales-anomaly-detection.md): informazioni su come creare un'applicazione di rilevamento delle anomalie per l'analisi dei dati di vendita dei prodotti.
 - [Rilevare gli oggetti in immagini](object-detection-onnx.md): illustra come rilevare gli oggetti in immagini usando un modello ONNX con training preliminare.
+- [Classificazione dei sentimenti delle revisioni dei film](text-classification-tf.md): informazioni su come caricare un modello TensorFlow con training preliminare per classificare i sentimenti delle recensioni di film.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 Per altri esempi in cui viene usato ML.NET, vedere il repository GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples).

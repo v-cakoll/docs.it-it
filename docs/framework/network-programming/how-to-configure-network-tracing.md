@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: dc9b6b5399063026c0bbe5735964ed42a21168fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048373"
 ---
 # <a name="how-to-configure-network-tracing"></a>Procedura: Configurare la traccia di rete
-Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete. Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata. Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md).  
+Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete. Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata. Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](enabling-network-tracing.md).  
   
  Il file di configurazione del computer, machine.config, è memorizzato nella cartella %Windir%\Microsoft.NET\Framework nella directory in cui è installato Windows. Esiste un file machine.config separato nelle cartelle %Windir%\Microsoft.NET\Framework per ogni versione di .NET Framework installata nel computer, ad esempio C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config o C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.  
   
@@ -99,7 +99,7 @@ Nel file di configurazione del computer o dell'applicazione sono contenute le im
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Interpretazione della traccia di rete](interpreting-network-tracing.md)
+- [Traccia di rete in .NET Framework](network-tracing.md)
+- [Abilitazione della traccia di rete](enabling-network-tracing.md)
+- [Traccia e strumentazione di applicazioni](../debug-trace-profile/tracing-and-instrumenting-applications.md)

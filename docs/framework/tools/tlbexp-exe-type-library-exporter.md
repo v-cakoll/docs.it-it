@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894759"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044004"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -36,7 +36,7 @@ tlbexp assemblyName [options]
 |--------------|-----------------|  
 |*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Specifica il percorso in cui eseguire la ricerca degli assembly. Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.<br /><br /> Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).|  
 |**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  L'intero assembly viene convertito in un'unica operazione. Non è possibile utilizzare Tlbexp.exe per generare informazioni sui tipi per un sottoinsieme dei tipi definiti in un assembly.  
   
- Questo strumento non può essere usato per produrre una libreria dei tipi da un assembly importato mediante l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Al contrario, è necessario riferirsi alla libreria dei tipi originale importata con Tlbimp.exe. È possibile esportare una libreria dei tipi da un assembly che fa riferimento agli assembly importati utilizzando Tlbimp.exe. Vedere la sezione degli esempi di seguito.  
+ Questo strumento non può essere usato per produrre una libreria dei tipi da un assembly importato mediante l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](tlbimp-exe-type-library-importer.md). Al contrario, è necessario riferirsi alla libreria dei tipi originale importata con Tlbimp.exe. È possibile esportare una libreria dei tipi da un assembly che fa riferimento agli assembly importati utilizzando Tlbimp.exe. Vedere la sezione degli esempi di seguito.  
   
  Tlbexp.exe colloca le librerie dei tipi generate nella directory di lavoro corrente o nella directory specificata per il file di output. Da un unico assembly possono essere generate più librerie dei tipi.  
   
- Tlbexp.exe genera una libreria dei tipi ma non la registra. Questo comportamento è opposto a quello dello [strumento di registrazione degli assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), che effettua sia la generazione che la registrazione delle librerie dei tipi. Per generare e registrare una libreria dei tipi con COM, utilizzare Regasm.exe.  
+ Tlbexp.exe genera una libreria dei tipi ma non la registra. Questo comportamento è opposto a quello dello [strumento di registrazione degli assembly (Regasm.exe)](regasm-exe-assembly-registration-tool.md), che effettua sia la generazione che la registrazione delle librerie dei tipi. Per generare e registrare una libreria dei tipi con COM, utilizzare Regasm.exe.  
   
  Se non si specificano né l'opzione `/win32`, né l'opzione `/win64`, verrà generata una libreria dei tipi a 32 o 64 bit corrispondente al tipo di computer, a 32 o a 64 bit, utilizzato per l'esecuzione della compilazione. Ai fini della compilazione incrociata, è possibile utilizzare l'opzione `/win64` su un computer a 32 bit per generare una libreria dei tipi a 64 bit e l'opzione `/win32` su un computer a 64 bit per generare una libreria dei tipi a 32 bit. Nelle librerie dei tipi a 32 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. Nelle librerie dei tipi a 64 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Tutti i tipi di dati (ad esempio i dati di tipo puntatore quali `IntPtr` e `UIntPtr`) vengono convertiti di conseguenza.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Strumenti](index.md)
+- [Regasm.exe (strumento di registrazione di assembly)](regasm-exe-assembly-registration-tool.md)
 - [Riepilogo della conversione da assembly a libreria dei tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](tlbimp-exe-type-library-importer.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

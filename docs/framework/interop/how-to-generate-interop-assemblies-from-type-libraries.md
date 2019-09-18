@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a3ee82a9091f0caeee010ec79632ce703efb589
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: fcdff732afce90f725f4730f0054296e389ada1b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338839"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051793"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Procedura: Generare assembly di interoperabilità da librerie dei tipi
-[Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) è uno strumento da riga di comando che converte in metadati le coclassi e le interfacce contenute in una libreria dei tipi COM. Questo strumento crea automaticamente un assembly di interoperabilità e lo spazio dei nomi per le informazioni sui tipi. Dopo che i metadati di una classe sono disponibili, i client gestiti possono creare istanze del tipo COM e chiamarne i metodi, come se si trattasse di un'istanza di .NET. Tlbimp.exe converte un'intera libreria dei tipi in metadati in una sola operazione e non può generare informazioni sui tipi per un subset dei tipi definiti in una libreria dei tipi.  
+[Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md) è uno strumento da riga di comando che converte in metadati le coclassi e le interfacce contenute in una libreria dei tipi COM. Questo strumento crea automaticamente un assembly di interoperabilità e lo spazio dei nomi per le informazioni sui tipi. Dopo che i metadati di una classe sono disponibili, i client gestiti possono creare istanze del tipo COM e chiamarne i metodi, come se si trattasse di un'istanza di .NET. Tlbimp.exe converte un'intera libreria dei tipi in metadati in una sola operazione e non può generare informazioni sui tipi per un subset dei tipi definiti in una libreria dei tipi.  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Per generare un assembly di interoperabilità da una libreria dei tipi  
   
@@ -43,5 +43,5 @@ tlbimp LoanLib.tlb /out: LOANLib.dll
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Importazione di una libreria dei tipi come assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)
+- [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)

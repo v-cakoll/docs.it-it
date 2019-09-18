@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853966"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052091"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853966"
 
 ## <a name="chainer-sample"></a>Esempio di chainer
 
-L'esempio di Chainer avvia l'installazione di .NET Framework 4.5 in modo invisibile all'utente e tiene traccia dello stato di avanzamento. Questo esempio è simile all'esempio di chainer di .NET Framework 4. Tuttavia, in questo caso, è possibile evitare i riavvii del sistema elaborando la finestra di messaggio per chiudere le app di .NET Framework 4. Per informazioni sulla finestra di messaggio, vedere [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). L'esempio può essere usato con il programma di installazione di .NET Framework 4, In questo caso, il messaggio non viene inviato.
+L'esempio di Chainer avvia l'installazione di .NET Framework 4.5 in modo invisibile all'utente e tiene traccia dello stato di avanzamento. Questo esempio è simile all'esempio di chainer di .NET Framework 4. Tuttavia, in questo caso, è possibile evitare i riavvii del sistema elaborando la finestra di messaggio per chiudere le app di .NET Framework 4. Per informazioni sulla finestra di messaggio, vedere [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](reducing-system-restarts.md). L'esempio può essere usato con il programma di installazione di .NET Framework 4, In questo caso, il messaggio non viene inviato.
 
 > [!WARNING]
 > È necessario eseguire l'esempio come amministratore.
@@ -311,5 +311,5 @@ Un server tipico crea un nome file MMIO casuale, crea il file (come illustrato n
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Distribuzione](../../../docs/framework/deployment/index.md)
+- [Guida alla distribuzione per gli sviluppatori](deployment-guide-for-developers.md)
+- [Distribuzione](index.md)

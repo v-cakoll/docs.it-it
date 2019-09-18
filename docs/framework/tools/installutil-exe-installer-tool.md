@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: HT
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496690"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044530"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Strumento Programma di installazione)
 
 Lo strumento Programma di installazione è un'utilità da riga di comando che consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di assembly specificati. Questo strumento funziona insieme alle classi nello spazio dei nomi <xref:System.Configuration.Install>.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -38,7 +38,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Parametri
 
-|Argomento|Description|
+|Argomento|DESCRIZIONE|
 |--------------|-----------------|
 |`assembly`|Nome file dell'assembly in cui eseguire i componenti del programma di installazione. Omettere questo parametro se si desidera specificare il nome sicuro dell'assembly utilizzando l'opzione `/AssemblyName`.|
 
@@ -46,9 +46,9 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Opzioni
 
-|Opzione|Description|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> oppure<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|
+|`/h[elp]`<br /><br /> -oppure-<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|
 |`/help` *assembly*<br /><br /> -oppure-<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|
 |`/InstallStateDir=[` *directoryName* `]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|
@@ -71,7 +71,7 @@ Tutte le opzioni e i parametri della riga di comando vengono scritti nel file di
 > [!IMPORTANT]
 > In alcuni casi, i parametri passati al programma di installazione possono includere informazioni riservate o personali che, per impostazione predefinita, vengono scritte in un file di log di testo normale. Per evitare questo comportamento, è possibile eliminare il file di log specificando `/LogFile=` (senza l'argomento *filename*) dopo Installutil.exe nella riga di comando.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le applicazioni .NET Framework sono costituite da file di programma tradizionali e risorse associate, quali code di messaggi, log eventi e contatori delle prestazioni, che è necessario creare quando l'applicazione viene distribuita. È possibile utilizzare i componenti del programma di installazione di un assembly per creare queste risorse quando l'applicazione viene installata e rimuoverle quando l'applicazione viene disinstallata. Installutil.exe rileva ed esegue questi componenti del programma di installazione.
 
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Configuration.Install>
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

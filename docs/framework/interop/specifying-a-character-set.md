@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469693"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051640"
 ---
 # <a name="specifying-a-character-set"></a>Specifica di un set di caratteri
 Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controlla il marshalling delle stringhe e determina in che modo la funzionalità platform invoke trova i nomi di funzione in una DLL. Questo argomento descrive entrambi i comportamenti.  
@@ -149,6 +149,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
+- [Esempi di platform invoke](platform-invoke-examples.md)
+- [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)

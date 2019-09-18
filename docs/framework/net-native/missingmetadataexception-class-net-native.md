@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb9300917f06ec8e48f2dd412e008efec4dc6917
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941665"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049475"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Classe MissingMetadataException (.NET Native)
 
@@ -20,7 +20,7 @@ Eccezione generata quando la reflection viene usata per recuperare i metadati ch
 **Spazio dei nomi:** System.Reflection
 
 > [!IMPORTANT]
-> La `MissingMetadataException` classe è destinata esclusivamente all'uso interno da parte della catena di strumenti .NET native. La classe non può essere usata in codice di terze parti ed è preferibile evitare di gestire l'eccezione nel codice dell'applicazione. Al contrario, eliminare l'eccezione aggiungendo le voci al [file delle direttive di runtime](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Per altre informazioni, vedere la sezione Osservazioni.
+> La `MissingMetadataException` classe è destinata esclusivamente all'uso interno da parte della catena di strumenti .NET native. La classe non può essere usata in codice di terze parti ed è preferibile evitare di gestire l'eccezione nel codice dell'applicazione. Al contrario, eliminare l'eccezione aggiungendo le voci al [file delle direttive di runtime](runtime-directives-rd-xml-configuration-file-reference.md). Per altre informazioni, vedere la sezione Osservazioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,12 +32,12 @@ La classe `MissingMetadataException` ha i seguenti membri:
 
 ## <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-----------------|-----------------|
 |`public MissingMetadataException()`|Inizializza una nuova istanza della classe `MissingMetadataException` usando un messaggio fornito dal sistema che descrive l'errore.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.|
 |`public MissingMetadataException(String message)`|Inizializza una nuova istanza della classe `MissingMetadataException` con un messaggio di errore specificato.<br /><br /> Questo costruttore è solo per uso interno da parte della catena di strumenti .NET Native.|
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>Proprietà
 
 |Proprietà|DESCRIZIONE|
 |--------------|-----------------|
@@ -74,7 +74,7 @@ La classe `MissingMetadataException` ha i seguenti membri:
 
 Eccezione `MissingMetadataException` generata quando la reflection viene usata per accedere ai metadati che non sono disponibili in un assembly.
 
-I metadati disponibili per un'app in fase di esecuzione sono definiti dal file di direttive di runtime (configurazione XML), \*. Rd. XML. Per evitare che l'app generi questa eccezione, è necessario modificare il file \*.rd.xm per definire i metadati che devono essere presenti in fase di esecuzione. Per informazioni sul formato del file \*.rd.xml, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+I metadati disponibili per un'app in fase di esecuzione sono definiti dal file di direttive di runtime (configurazione XML), \*. Rd. XML. Per evitare che l'app generi questa eccezione, è necessario modificare il file \*.rd.xm per definire i metadati che devono essere presenti in fase di esecuzione. Per informazioni sul formato del file \*.rd.xml, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > L'eccezione indica che i metadati richiesti dall'applicazione non sono disponibili in fase di esecuzione. Per questo motivo, l'eccezione non va gestita in un blocco `try`/`catch`. È invece necessario diagnosticare la causa dell'eccezione ed eliminarla usando un file di direttive di runtime. Per ottenere la voce che è possibile aggiungere al file di direttive di runtime che elimina l'eccezione, è possibile usare uno dei due strumenti di risoluzione dei problemi:
@@ -88,6 +88,6 @@ La classe `MissingMetadataException` non contiene membri univoci. Tutti i membri
 
 - <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.TypeAccessException>
-- [Classe MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
-- [Classe MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Classe MissingInteropDataException](missinginteropdataexception-class-net-native.md)
+- [Classe MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044085"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040335"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044085"
   
  Questo argomento contiene gli scenari e il codice di esempio che illustrano come e quando sia possibile usare <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per individuare un elemento nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica in modo univoco un elemento di automazione interfaccia utente dagli elementi di pari livello. Per altre informazioni sugli identificatori di proprietà correlati all'identificazione dei controlli, vedere [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> identifica in modo univoco un elemento di automazione interfaccia utente dagli elementi di pari livello. Per altre informazioni sugli identificatori di proprietà correlati all'identificazione dei controlli, vedere [UI Automation Properties Overview](ui-automation-properties-overview.md).  
   
 > [!NOTE]
 > <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> non garantisce un'identità univoca in tutto l'albero. Per essere utile, richiede in genere informazioni sui contenitori e sull'ambito. Ad esempio, un'applicazione può contenere un controllo menu con più voci di menu di livello superiore che, a loro volta, contengono più voci di menu figlio. Queste voci di menu secondarie possono essere identificate da uno schema generico, ad esempio "Item1", "Item 2" e così via, consentendo la presenza di identificatori duplicati per gli elementi figlio nelle voci di menu di primo livello.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044085"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Panoramica dell'albero di automazione interfaccia utente](ui-automation-tree-overview.md)
+- [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](find-a-ui-automation-element-based-on-a-property-condition.md)

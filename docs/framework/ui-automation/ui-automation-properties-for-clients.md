@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914450"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042125"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Proprietà di automazione interfaccia utente per i client
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914450"
   
  Le proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono di sola lettura. Per impostare le proprietà di un controllo, è necessario usare i metodi del pattern di controllo appropriato. Ad esempio, usare il metodo <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> per modificare i valori di posizione di una finestra a scorrimento.  
   
- Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per altre informazioni, vedere [Caching nei client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
+ Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per altre informazioni, vedere [Caching nei client di automazione interfaccia utente](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>ID di proprietà  
  Gli identificatori di proprietà (ID) sono valori univoci e costanti incapsulati negli <xref:System.Windows.Automation.AutomationProperty> oggetti. Le applicazioni client di automazione interfaccia utente ottengono questi <xref:System.Windows.Automation.AutomationElement> ID dalla classe o dalla classe di pattern di controllo appropriata <xref:System.Windows.Automation.ScrollPattern>, ad esempio. I provider di automazione interfaccia utente li ottengono da <xref:System.Windows.Automation.AutomationElementIdentifiers> o da una delle classi di identificatori di pattern di controllo, ad esempio <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
@@ -90,7 +90,7 @@ ms.locfileid: "69914450"
 ## <a name="additional-automationelement-properties"></a>Proprietà AutomationElement aggiuntiva  
  Oltre alle strutture delle proprietà <xref:System.Windows.Automation.AutomationElement.Current%2A> e <xref:System.Windows.Automation.AutomationElement.Cached%2A> , l'oggetto <xref:System.Windows.Automation.AutomationElement> ha le proprietà seguenti, recuperate tramite semplici funzioni di accesso della proprietà.  
   
-|Gli|Descrizione|  
+|Gli|DESCRIZIONE|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|Insieme di oggetti <xref:System.Windows.Automation.AutomationElement> figlio presenti nella cache.|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|Oggetto <xref:System.Windows.Automation.AutomationElement> padre presente nella cache.|  
@@ -99,6 +99,6 @@ ms.locfileid: "69914450"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Implementazione del provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Sottoscrivere gli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Memorizzazione nella cache di client di automazione interfaccia utente](caching-in-ui-automation-clients.md)
+- [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)
+- [Sottoscrivere gli eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md)

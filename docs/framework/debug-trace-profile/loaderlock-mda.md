@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754232"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052549"
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di codice gestito in un thread che contiene il blocco del caricatore del sistema operativo Microsoft Windows.  Qualsiasi esecuzione di questo tipo non è valida perché può comportare il verificarsi di deadlock e l'uso di DLL prima che siano state inizializzate dal caricatore del sistema operativo.  
@@ -57,4 +57,4 @@ L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

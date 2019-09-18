@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894835"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044327"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
 Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio. Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice. In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -34,7 +34,7 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|DESCRIZIONE|  
 |--------------|-----------------|  
 |*filename*|File eseguibile di tipo PE per il quale controllare il codice MSIL e i metadati.|  
   
@@ -122,7 +122,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Scrittura di codice indipendente dai tipi verificabile](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Strumenti](index.md)
+- [Scrittura di codice indipendente dai tipi verificabile](../misc/code-access-security-basics.md#typesafe_code)
 - [Indipendenza dai tipi e sicurezza](../../standard/security/key-security-concepts.md#type-safety-and-security)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

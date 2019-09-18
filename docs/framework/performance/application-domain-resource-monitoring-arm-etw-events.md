@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616640"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046776"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM)
 <a name="top"></a> Questi eventi forniscono informazioni di diagnostica dettagliate sullo stato di un dominio applicazione. È possibile usare questi eventi o la funzionalità di monitoraggio delle risorse del dominio applicazione (ARM) per ottenere le stesse informazioni.  
@@ -33,9 +33,9 @@ ms.locfileid: "64616640"
 ## <a name="threadcreated-event"></a>Evento ThreadCreated  
  Questo evento viene generato anche nel provider di rundown come `ThreadDC` (sotto la parola chiave `AppDomainResourceManagementRundownKeyword` ). Questo è l'unico evento che viene generato nel provider di rundown in questa categoria.  
   
- La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
@@ -63,7 +63,7 @@ ms.locfileid: "64616640"
 ## <a name="appdomainmemallocated-event"></a>Evento AppDomainMemAllocated  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "64616640"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificatore del dominio dell'applicazione per la quale viene segnalato l’utilizzo della risorsa.|  
 |Allocato|win:UInt64|Il numero totale di byte allocati in questo dominio applicazione, poiché è stato creato il dominio dell'applicazione (non viene sottratta la quantità di memoria liberata).|  
@@ -87,7 +87,7 @@ ms.locfileid: "64616640"
 ## <a name="appdomainmemsurvived-event"></a>Evento AppDomainMemSurvived  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64616640"
 ## <a name="threadappdomainenter-event"></a>Evento ThreadAppDomainEnter  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
@@ -137,7 +137,7 @@ ms.locfileid: "64616640"
 ## <a name="threadterminated-event"></a>Evento ThreadTerminated  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementKeyword` (0x800)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616640"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

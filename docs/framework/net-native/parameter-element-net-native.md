@@ -1,17 +1,17 @@
 ---
-title: <Parameter> Elemento (.NET Native)
+title: <Parameter>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867056"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049343"
 ---
-# <a name="parameter-element-net-native"></a>\<Parametro > elemento (.NET Native)
+# <a name="parameter-element-net-native"></a>\<Elemento > parametro (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,9 +57,9 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -68,14 +68,14 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento `<Parameter>` è figlio dell'elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) e viene usato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
+ L'elemento `<Parameter>` è figlio dell'elemento [\<Method>](method-element-net-native.md) e viene usato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Elemento \<Method>](method-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)

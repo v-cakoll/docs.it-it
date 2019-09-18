@@ -3,12 +3,12 @@ title: Creazione del primo servizio WCF che può riconoscere attestazioni
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 330d785721cb434f74ec746310a71bfd39fefd0b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690183"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045547"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Creazione del primo servizio WCF che può riconoscere attestazioni
 ## <a name="applies-to"></a>Si applica a  
@@ -20,7 +20,7 @@ ms.locfileid: "66690183"
 ## <a name="overview"></a>Panoramica  
  In questo argomento viene illustrato lo scenario di compilazione di servizi WCF in grado di riconoscere attestazioni mediante WIF. Uno scenario di servizio Web in grado di riconoscere attestazioni è in genere caratterizzato da tre partecipanti: il servizio Web stesso, l'utente finale e il servizio token di sicurezza. come illustrato nella figura seguente:  
   
- ![Diagramma che mostra i componenti WIF le attestazioni compatibile con servizio WCF di base.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
+ ![Diagramma che mostra i componenti del servizio WCF in grado di riconoscere attestazioni di base.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1. Tramite il client del servizio WCF (talvolta definito agente) viene utilizzato WIF per inviare le credenziali al servizio token di sicurezza e alla riuscita dell'autenticazione, tramite l'agente viene emesso un token dal servizio token di sicurezza.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66690183"
   
  Il servizio token di sicurezza è un servizio tramite cui vengono rilasciati dei token alla riuscita dell'autenticazione. Microsoft offre due servizi token di sicurezza standard del settore:  
   
-- [Active Directory Federation Services (ADFS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory Federation Services (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
+- [Servizio di controllo di accesso di Microsoft Azure (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
- AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. Azure Active Directory Access Control (detto anche Servizio di controllo di accesso o ACS) è un servizio cloud, fornito come parte di Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. Ad esempio, è possibile usare STS di sviluppo locale che fa parte del [Identity and Access Tool per Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) che è disponibile gratuitamente online.  
+ AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. Azure Active Directory Access Control (detto anche Servizio di controllo di accesso o ACS) è un servizio cloud, fornito come parte di Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. Ad esempio, è possibile usare il servizio STS di sviluppo locale che fa parte di [Identity and Access Tool per Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , disponibile gratuitamente online.  
   
- Per compilare il primo servizio WCF in grado di riconoscere attestazioni mediante WIF, vedere [How To: Abilitare WIF per un'applicazione di servizio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Per compilare il primo servizio WCF in grado di riconoscere attestazioni usando [WIF, vedere Procedura: Abilitare WIF per un'applicazione](how-to-enable-wif-for-a-wcf-web-service-application.md)del servizio Web WCF.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Guida introduttiva a WIF](getting-started-with-wif.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052133"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 
@@ -144,7 +144,9 @@ La modalità sicura può essere impostata per l'intera applicazione o per gli as
 In terzo luogo, il runtime esamina il file di configurazione del computer. Questo file, denominato Machine.config, si trova nel computer locale nella sottodirectory Config della directory radice in cui è installato il runtime. Questo file può essere usato dagli amministratori per specificare le restrizioni relative all'associazione di assembly locali nel computer. Le impostazioni nel file di configurazione del computer hanno la precedenza su tutte le altre impostazioni di configurazione. Tuttavia, ciò non implica che tutte le impostazioni di configurazione debbano essere inserite in questo file. La versione determinata dal file dei criteri amministratore è finale e non può essere sottoposta a override. Gli override specificati nel file Machine.config file hanno effetto su tutte le applicazioni. Per altre informazioni sui file di configurazione, vedere [Configurazione delle app con file di configurazione](../configure-apps/index.md).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Passaggio 2: Controllo di assembly a cui è stato fatto riferimento in precedenza
+
 Se l'assembly è stato richiesto anche nelle chiamate precedenti, Common Language Runtime usa l'assembly è già caricato. Ciò può avere implicazioni per la denominazione di assembly che costituiscono un'applicazione. Per altre informazioni sulla denominazione degli assembly, vedere [Nomi degli assembly](../../standard/assembly/names.md).
 
 Se una richiesta precedente per l'assembly non è riuscita, le richieste successive verranno interrotte immediatamente senza effettuare alcun tentativo di caricamento dell'assembly. A partire da .NET Framework versione 2.0, gli errori relativi all'associazione di assembly vengono memorizzati nella cache e le informazioni memorizzate nella cache vengono usate per determinare se tentare di caricare l'assembly.

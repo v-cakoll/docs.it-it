@@ -1,17 +1,17 @@
 ---
-title: <TypeParameter> Elemento (.NET Native)
+title: <TypeParameter>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0de00b9313b60b3a527dd0380ae90d82731a8c02
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982462"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049055"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter > elemento (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<Elemento > TypeParameter (.NET Native)
 Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,21 +57,21 @@ Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|Descrizione|  
+|Elemento|DESCRIZIONE|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
 ## <a name="remarks"></a>Note  
- L'elemento `<TypeParameter>` è simile all'elemento [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), ma può essere applicato solo a parametri di tipo <xref:System.Type>. Applica i criteri a qualsiasi tipo rappresentato al runtime dall'argomento Type specificato dall'attributo `Name`.  
+ L'elemento `<TypeParameter>` è simile all'elemento [\<Parameter>](parameter-element-net-native.md), ma può essere applicato solo a parametri di tipo <xref:System.Type>. Applica i criteri a qualsiasi tipo rappresentato al runtime dall'argomento Type specificato dall'attributo `Name`.  
   
  Ad esempio, il serializzatore JSON di NewtonSoft include un metodo statico `JsonConvert.DeserializeObject(String value, Type type)`. Le seguenti direttive di reflection:  
   
@@ -96,7 +96,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Elemento \<Method>](method-element-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)

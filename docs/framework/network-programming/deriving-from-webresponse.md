@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226045"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048584"
 ---
 # <a name="deriving-from-webresponse"></a>Derivazione da WebResponse
 La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce metodi e proprietà di base per creare un risposta specifica del protocollo adatta al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe <xref:System.Net.WebRequest> per richiedere i dati dalle risorse ricevono le risposte in **WebResponse**. I discendenti specifici del protocollo **WebResponse** devono implementare i membri astratti della classe **WebResponse**.  
@@ -43,5 +43,5 @@ La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Programmazione di protocolli di collegamento](programming-pluggable-protocols.md)
+- [Derivazione da WebRequest](deriving-from-webrequest.md)

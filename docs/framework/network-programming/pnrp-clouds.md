@@ -2,12 +2,12 @@
 title: Cloud PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623036"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047365"
 ---
 # <a name="pnrp-clouds"></a>Cloud PNRP
 Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attraverso la rete. Il termine "cloud" è sinonimo di "rete di peer" e "grafico peer-to-peer".  
@@ -34,4 +34,4 @@ Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attra
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Protocollo PNRP (Peer Name Resolution Protocol)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [Protocollo PNRP (Peer Name Resolution Protocol)](peer-name-resolution-protocol.md)

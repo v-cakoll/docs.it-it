@@ -2,18 +2,18 @@
 title: Immagini Docker .NET ufficiali
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Immagini Docker .NET ufficiali
 ms.date: 01/07/2019
-ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675708"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039640"
 ---
 # <a name="official-net-docker-images"></a>Immagini Docker .NET ufficiali
 
 Le immagini Docker .NET ufficiali sono immagini Docker create e ottimizzate da Microsoft. Sono disponibili pubblicamente nei repository Microsoft nell'[hub Docker](https://hub.docker.com/u/microsoft/). Ogni repository può contenere più immagini, a seconda delle versioni di .NET e a seconda del sistema operativo e delle relative versioni, ad esempio Linux Debian, Linux Spline, Windows Nano Server, Windows Server Core e così via.
 
-Da .NET Core 2.1, tutte le immagini .NET Core, tra cui ASP.NET Core, sono disponibili nell'hub Docker nel repository di immagini .NET Core: https://hub.docker.com/_/microsoft-dotnet-core/
+Poiché .NET Core 2,1, tutte le immagini .NET Core, incluse per ASP.NET Core sono disponibili nell'hub Docker nel repository di immagini .NET Core: <https://hub.docker.com/\_/microsoft-dotnet-core/>.
 
 La maggior parte dei repository di immagini fornisce contrassegni completi che consentono di selezionare sia una versione specifica del framework che un sistema operativo (distribuzione di Linux o versione di Windows).
 
@@ -43,10 +43,10 @@ Anche se sono presenti più versioni delle immagini .NET Core e ASP.NET Core, tu
 
 Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si troveranno più versioni delle immagini classificate o contrassegnate con tag. Questi tag consentono di decidere l'immagine da usare a seconda della versione necessaria, come quelle nella tabella seguente:
 
-| Image                                       | Commenti                                                                                          |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Image | Commenti |
+|-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2.2** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
-| mcr.microsoft.com/dotnet/core/sdk:**2.2**    | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura)                                  |
+| mcr.microsoft.com/dotnet/core/sdk:**2.2** | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura) |
 
 > [!div class="step-by-step"]
 > [Precedente](net-container-os-targets.md)

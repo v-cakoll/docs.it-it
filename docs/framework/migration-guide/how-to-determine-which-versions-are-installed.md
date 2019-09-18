@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928427"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051598"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: Determinare le versioni di .NET Framework installate
 
@@ -72,7 +72,7 @@ Per informazioni sul rilevamento degli aggiornamenti installati per ogni version
 
 3. Verificare la presenza di una voce DWORD denominata **Release**. Se esiste, .NET Framework 4.5 o versioni successive è installato. Il valore è una chiave di rilascio che corrisponde a una particolare versione di .NET Framework. Nella figura seguente, ad esempio, il valore della voce **Release** è *378389*, ovvero la chiave di rilascio per .NET Framework 4.5.
 
-     ![Voce del Registro di sistema per .NET Framework 4.5](media/clr-installdir.png "Voce del Registro di sistema per .NET Framework 4.5")
+     ![Voce del Registro di sistema per .NET Framework 4.5](./media/clr-installdir.png "Voce del Registro di sistema per .NET Framework 4.5")
 
 La tabella seguente elenca il valore della voce DWORD **Release** nei singoli sistemi operativi per .NET Framework 4.5 e versioni successive.
 
@@ -163,7 +163,7 @@ Per cercare una versione minima richiesta di .NET Framework diversa, sostituire 
 
     La figura seguente illustra la sottochiave e la relativa voce **Version** per .NET Framework 3.5.
 
-    ![Voce del Registro di sistema per .NET Framework 3.5.](media/net-4-and-earlier.png ".NET framework 3.5 e versioni precedenti")
+    ![Voce del Registro di sistema per .NET Framework 3.5.](./media/net-4-and-earlier.png ".NET framework 3.5 e versioni precedenti")
 
 <a name="net_c"></a>
 

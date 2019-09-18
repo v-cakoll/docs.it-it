@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015108"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043953"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementazione dei provider di automazione interfaccia utente sul lato client
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015108"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]fornisce provider per i [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controlli standard e Windows Forms. Inoltre, un provider di fallback offre supporto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] parziale a qualsiasi controllo che non è servito da un altro provider o proxy sul lato server, ma dispone di un'implementazione di Microsoft Active Accessibility. Tutti questi provider vengono caricati automaticamente e sono disponibili per le applicazioni client.  
   
- Per altre informazioni sul supporto di [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e Windows Forms controlli, vedere [supporto di automazione interfaccia utente per i controlli standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Per altre informazioni sul supporto di [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e Windows Forms controlli, vedere [supporto di automazione interfaccia utente per i controlli standard](ui-automation-support-for-standard-controls.md).  
   
  Le applicazioni possono inoltre registrare altri provider lato client.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015108"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Creare un provider di automazione interfaccia utente lato client](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementare provider di automazione interfaccia utente in un'applicazione client](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [Creare un provider di automazione interfaccia utente lato client](create-a-client-side-ui-automation-provider.md)
+- [Implementare provider di automazione interfaccia utente in un'applicazione client](implement-ui-automation-providers-in-a-client-application.md)

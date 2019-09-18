@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299124"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048097"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione
 I criteri di cache predefiniti basati sul tempo consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.  
@@ -64,8 +64,8 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
+- [Criteri di cache](cache-policy.md)
+- [Criteri di cache basati sulla posizione](location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

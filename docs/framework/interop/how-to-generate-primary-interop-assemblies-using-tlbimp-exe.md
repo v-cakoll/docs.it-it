@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971783"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051772"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedura: Generare assembly di interoperabilità primari tramite Tlbimp.exe
 
 È possibile generare un assembly di interoperabilità primario in due modi:
 
-- Usando l'[Utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) fornita da Windows SDK.
+- Usando l'[Utilità di importazione della libreria dei tipi (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) fornita da Windows SDK.
 
-  Il modo più semplice per produrre assembly di interoperabilità primari consiste nell'usare [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe fornisce le misure di sicurezza seguenti:
+  Il modo più semplice per produrre assembly di interoperabilità primari consiste nell'usare [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe fornisce le misure di sicurezza seguenti:
 
   - Verifica di altri assembly di interoperabilità primari registrati prima della creazione di nuovi assembly di interoperabilità per eventuali riferimenti annidati alla libreria dei tipi.
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Registrare assembly di interoperabilità primari](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [Procedura: Registrare assembly di interoperabilità primari](how-to-register-primary-interop-assemblies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 0851ad42cd5ce2dd6b49ad7656479d5237fd5874
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647351"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047872"
 ---
 # <a name="internet-protocol-version-6"></a>protocollo IPv6
 IPv6 (Internet Protocol version 6) è una nuova famiglia di protocolli standard per il livello di rete di Internet. IPv6 è progettato per risolvere molti dei problemi riscontrati nell'attuale versione della famiglia di protocolli IP (chiamata IPv4), relativi a esaurimento di indirizzi, sicurezza, configurazione automatica, estendibilità e così via. IPv6 estende le funzionalità di Internet in modo da permettere nuovi tipi di applicazioni, tra cui applicazioni peer-to-peer e per dispositivi mobili. Di seguito sono elencati i problemi principali dell'attuale protocollo IPv4:  
@@ -42,7 +42,7 @@ IPv6 (Internet Protocol version 6) è una nuova famiglia di protocolli standard 
   
 - Autenticazione e riservatezza integrate.  
   
- Per altre informazioni, vedere [Indirizzamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Routing IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Configurazione automatica di IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Abilitazione e disabilitazione di IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) e [Procedura: Modificare il file di configurazione del computer per abilitare il supporto IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ Per altre informazioni, vedere [Indirizzamento IPv6](ipv6-addressing.md), [Routing IPv6](ipv6-routing.md), [Configurazione automatica di IPv6](ipv6-auto-configuration.md), [Abilitazione e disabilitazione di IPv6](enabling-and-disabling-ipv6.md) e [Procedura: Modificare il file di configurazione del computer per abilitare il supporto IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Riferimenti  
  Di seguito sono elencati alcuni documenti RFC selezionati disponibili nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/):  
@@ -60,5 +60,5 @@ IPv6 (Internet Protocol version 6) è una nuova famiglia di protocolli standard 
 ## <a name="see-also"></a>Vedere anche
 
 - [IPv6 Sockets Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29) (Esempio di socket IPv6)
-- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+- [Esempi di programmazione di rete](network-programming-samples.md)
+- [Socket](sockets.md)

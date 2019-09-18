@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 1427e91174d2a4ad0ded17086774dc799850d7d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0677e600864954040ac650afaf647f2c4e30e351
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71041821"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo DataGrid
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "69914119"
  Nelle sezioni seguenti vengono definiti la struttura ad albero necessaria di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , le proprietà, i pattern di controllo e gli eventi per il tipo di controllo DataGrid. I requisiti di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] si applicano a tutti i controlli griglia dati, in [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  
- Nella tabella seguente vengono illustrate la visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relativo ai controlli griglia dati e viene descritto il possibile contenuto di ogni visualizzazione. Per altre informazioni sull'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+ Nella tabella seguente vengono illustrate la visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relativo ai controlli griglia dati e viene descritto il possibile contenuto di ogni visualizzazione. Per altre informazioni sull'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "69914119"
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
- La tabella seguente elenca le proprietà il cui valore o la cui definizione è particolarmente rilevante per i controlli griglia dati. Per altre informazioni sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ La tabella seguente elenca le proprietà il cui valore o la cui definizione è particolarmente rilevante per i controlli griglia dati. Per altre informazioni sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md).  
   
 |Proprietà|Value|Note|  
 |--------------|-----------|-----------|  
@@ -48,14 +48,14 @@ ms.locfileid: "69914119"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vedere le note.|Il controllo griglia dati in genere ottiene il valore per la proprietà `Name` da un'etichetta di testo statico. Se non è presente alcuna etichetta di testo statico, lo sviluppatore di un'applicazione deve assegnare un valore alla proprietà `Name` . Il valore della proprietà `Name` non deve mai essere il contenuto testuale del controllo di modifica.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>Pattern di controllo obbligatori per l'automazione interfaccia utente  
- La tabella seguente elenca i pattern di controllo che devono essere supportati da tutti i controlli griglia dati. Per altre informazioni sui pattern di controllo, vedere [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+ La tabella seguente elenca i pattern di controllo che devono essere supportati da tutti i controlli griglia dati. Per altre informazioni sui pattern di controllo, vedere [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 |Pattern di controllo|Supporto|Note|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|Sì|Il controllo griglia dati stesso supporta sempre il pattern di controllo Grid perché gli elementi che contiene sono i metadati disposti in una griglia.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|A seconda dei casi|La possibilità di scorrere la griglia dati dipende dal contenuto e dalla presenza o meno delle barre di scorrimento.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|A seconda dei casi|La possibilità di selezionare la griglia dati dipende dal contenuto.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Sì|Il controllo griglia dati ha sempre un'intestazione all'interno del relativo sottoalbero. Per tale motivo, il pattern di controllo Table deve essere supportato.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Yes|Il controllo griglia dati ha sempre un'intestazione all'interno del relativo sottoalbero. Per tale motivo, il pattern di controllo Table deve essere supportato.|  
   
  Gli elementi di dati nei contenitori di griglia dati supporteranno almeno:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69914119"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
- La tabella seguente elenca gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] che devono essere supportati da tutti i controlli griglia dati. Per altre informazioni sugli eventi, vedere [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ La tabella seguente elenca gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] che devono essere supportati da tutti i controlli griglia dati. Per altre informazioni sugli eventi, vedere [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -91,7 +91,7 @@ ms.locfileid: "69914119"
 ## <a name="date-grid-control-type-example"></a>Esempio di tipo di controllo griglia dati  
  Nell'immagine seguente viene illustrato un controllo visualizzazione elenco che implementa il tipo di controllo DataGrid.  
   
- ![Rappresentazione grafica di un controllo di visualizzazione elenco con due elementi di dati](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Rappresentazione grafica di un controllo di visualizzazione elenco con due elementi di dati](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  La visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relative al controllo visualizzazione elenco sono visualizzate di seguito. I pattern di controllo per ogni elemento di automazione sono indicati tra parentesi.  
   
@@ -104,5 +104,5 @@ ms.locfileid: "69914119"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types-overview.md)
+- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851253"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044676"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 
@@ -25,7 +25,7 @@ Il Visualizzatore log associazione assembly consente di visualizzare i dettagli 
 > [!IMPORTANT]
 > È necessario eseguire fuslogvw.exe con privilegi di amministratore.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7 con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7 con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -60,7 +60,7 @@ Nel visualizzatore è riportata una voce per ciascuna associazione di assembly n
 
     - Descrizione dei criteri di controllo delle versioni applicati a livello di applicazione, editore o amministratore.
 
-    - Provenienza o meno dell'assembly dalla [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).
+    - Provenienza o meno dell'assembly dalla [Global Assembly Cache](../app-domains/gac.md).
 
     - Elenco di tutti gli URL di sondaggio.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Log di associazioni per immagini native
 
-Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di associazione di assembly. In alternativa, è possibile registrare le associazioni di assembly per le immagini native create usando [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).
+Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di associazione di assembly. In alternativa, è possibile registrare le associazioni di assembly per le immagini native create usando [Ngen.exe (generatore di immagini native)](ngen-exe-native-image-generator.md).
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Per registrare le associazioni di assembly per le immagini native
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. Immettere il percorso nella casella di testo **Percorso personalizzato log**.
 
 > [!NOTE]
-> Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.
+> Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.
 >
 > Se l'applicazione non gestita ospita Common Language Runtime mediante l'implementazione delle interfacce `IHostAssemblyManager` e `IHostAssemblyStore`, le voci di logo non possono essere archiviate nella cache wininet.  Per visualizzare le voci di log di host personalizzati che implementano tali interfacce, è necessario specificare un percorso alternativo per il log.
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.TypeLoadException>
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Come il runtime individua gli assembly](../deployment/how-the-runtime-locates-assemblies.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

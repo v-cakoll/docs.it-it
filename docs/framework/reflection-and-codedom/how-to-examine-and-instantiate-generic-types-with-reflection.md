@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928246"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046024"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: Esaminare e creare istanze di tipi generici tramite reflection
 Le informazioni sui tipi generici vengono ottenute esattamente come quelle relative ad altri tipi, ovvero esaminando un oggetto <xref:System.Type> che rappresenta il tipo generico. La differenza principale è data dal fatto che un tipo generico dispone di un elenco di oggetti <xref:System.Type> che rappresentano i relativi parametri di tipo generico. La prima procedura in questa sezione esamina i tipi generici.  
@@ -119,6 +119,6 @@ Le informazioni sui tipi generici vengono ottenute esattamente come quelle relat
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Reflection e tipi generici](reflection-and-generic-types.md)
+- [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
 - [Generics](../../standard/generics/index.md)

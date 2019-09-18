@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894877"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044654"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
 
 Il disassembler IL è uno strumento complementare all'assembler IL (*Ilasm.exe*). *Ildasm.exe* accetta un file eseguibile di tipo PE contenente codice di linguaggio intermedio (IL) e crea un file di testo adatto come input per *Ilasm.exe*.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -186,7 +186,7 @@ Un tipo annidato deve essere preceduto dalla classe in cui è contenuto, delimit
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Strumenti](index.md)
+- [Ilasm.exe (Assembler IL)](ilasm-exe-il-assembler.md)
 - [Processo di esecuzione gestita](../../standard/managed-execution-process.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

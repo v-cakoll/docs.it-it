@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971828"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051797"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedura: Creare wrapper COM
 
@@ -45,7 +45,7 @@ In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Per creare un Runtime Callable Wrapper con gli strumenti di .NET Framework  
   
-- Eseguire lo strumento [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Eseguire lo strumento [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md).  
   
  Questo strumento crea un assembly che contiene i metadati di runtime per i tipi definiti nella libreria dei tipi originale.  
   
@@ -67,11 +67,11 @@ In Visual Studio 2005 è possibile aggiungere il wrapper COM come riferimento al
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Per creare un COM Callable Wrapper con gli strumenti di .NET Framework  
   
-Eseguire lo strumento [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+Eseguire lo strumento [Regasm.exe (strumento di registrazione di assembly)](../tools/regasm-exe-assembly-registration-tool.md).  
   
 Questo strumento legge i metadati in un assembly e aggiunge le voci necessarie nel Registro di sistema. Di conseguenza, i client COM possono creare classi di .NET Framework in modo trasparente. È possibile usare l'assembly come se fosse una classe COM nativa.  
   
-È possibile eseguire Regasm.exe su un assembly disponibile in qualsiasi directory e quindi eseguire [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) per spostarlo nella Global Assembly Cache. Lo spostamento dell'assembly non invalida le voci del Registro di sistema per la posizione, perché la Global Assembly Cache viene sempre esaminata se l'assembly non viene trovato in altre posizioni.  
+È possibile eseguire Regasm.exe su un assembly disponibile in qualsiasi directory e quindi eseguire [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md) per spostarlo nella Global Assembly Cache. Lo spostamento dell'assembly non invalida le voci del Registro di sistema per la posizione, perché la Global Assembly Cache viene sempre esaminata se l'assembly non viene trovato in altre posizioni.  
   
 ## <a name="see-also"></a>Vedere anche
 

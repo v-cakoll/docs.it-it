@@ -1,13 +1,13 @@
 ---
 title: Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 description: Informazioni su come usare HttpClientFactory, disponibile a partire da .NET Core 2.1, per la creazione di istanze `HttpClient`, semplificandone l'uso nelle applicazioni.
-ms.date: 01/07/2019
-ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: 6c862171ee6b5eda6f95694878bfa43518a9bdfa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674478"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039970"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usare HttpClientFactory per l'implementazione di richieste HTTP resilienti
 
@@ -15,24 +15,26 @@ ms.locfileid: "68674478"
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemi con la classe HttpClient originale disponibile in .NET Core
 
-La classe [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) originale e ben nota può essere usata facilmente, ma in alcuni casi non viene usata correttamente dagli sviluppatori. 
+La classe originale e Nota <xref:System.Net.Http.HttpClient> può essere facilmente utilizzata, ma in alcuni casi non viene utilizzata correttamente da molti sviluppatori.
 
 Come primo problema, sebbene questa classe sia eliminabile, il suo utilizzo con l'istruzione `using` non rappresenta la scelta migliore perché, anche quando si elimina l'oggetto `HttpClient`, il socket sottostante non viene rilasciato immediatamente e può generare quindi un problema serio di esaurimento di socket. Per altre informazioni su questo problema, vedere il post di blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Uso errato di HttpClient e conseguente destabilizzazione del software).
 
-La classe `HttpClient` è pertanto destinata a essere avviata una sola volta e a essere riusata nell'arco della vita di un'applicazione. La creazione di un'istanza di una classe `HttpClient` per ogni richiesta esaurisce il numero di socket disponibili con carichi voluminosi. Questo problema genera errori `SocketException`. I possibili approcci per risolvere il problema si basano sulla creazione dell'oggetto `HttpClient` come oggetto singleton o statico, come illustrato in questo [articolo di Microsoft sull'utilizzo della classe HttpClient](/dotnet/csharp/tutorials/console-webapiclient). 
+La classe `HttpClient` è pertanto destinata a essere avviata una sola volta e a essere riusata nell'arco della vita di un'applicazione. La creazione di un'istanza di una classe `HttpClient` per ogni richiesta esaurisce il numero di socket disponibili con carichi voluminosi. Questo problema genera errori `SocketException`. I possibili approcci per risolvere il problema si basano sulla creazione dell'oggetto `HttpClient` come oggetto singleton o statico, come illustrato in questo [articolo di Microsoft sull'utilizzo della classe HttpClient](../../../csharp/tutorials/console-webapiclient.md).
 
-Esiste tuttavia un secondo problema con la classe `HttpClient` legato al suo utilizzo come oggetto singleton o statico. In questo caso un oggetto `HttpClient` singleton o statico non rispetta le modifiche DNS, come descritto in questo [problema nel repository di GitHub di .NET Core](https://github.com/dotnet/corefx/issues/11224). 
+Esiste tuttavia un secondo problema con la classe `HttpClient` legato al suo utilizzo come oggetto singleton o statico. In questo caso, un singleton o static `HttpClient` non rispetta le modifiche DNS, come illustrato in questo [problema](https://github.com/dotnet/corefx/issues/11224) nel repository GitHub DotNet/CoreFx. 
 
-Per risolvere i problemi menzionati e semplificare la gestione delle istanze di `HttpClient`, in .NET Core 2.1 è stato introdotto un nuovo oggetto `HttpClientFactory` che può essere usato anche per implementare le chiamate HTTP resilienti tramite l'integrazione con Polly.   
+Per risolvere i problemi menzionati e semplificare la gestione delle istanze di `HttpClient`, in .NET Core 2.1 è stato introdotto un nuovo oggetto `HttpClientFactory` che può essere usato anche per implementare le chiamate HTTP resilienti tramite l'integrazione con Polly.
+
+[Polly](http://www.thepollyproject.org/) è una libreria di gestione degli errori temporanei che consente agli sviluppatori di aggiungere resilienza alle applicazioni, usando alcuni criteri predefiniti in modo Fluent e thread-safe.
 
 ## <a name="what-is-httpclientfactory"></a>Scopo di HttpClientFactory
 
 L'oggetto `HttpClientFactory` è progettato per:
 
-- Offrire una posizione centrale per la denominazione e la configurazione di istanze di HttpClient logiche. È ad esempio possibile configurare un client (agente di servizio) preconfigurato per l'accesso a un microservizio specifico.
+- Fornire una posizione centralizzata per la denominazione e `HttpClient` la configurazione di oggetti logici. È ad esempio possibile configurare un client (agente di servizio) preconfigurato per l'accesso a un microservizio specifico.
 - Codificare il concetto di middleware in uscita tramite la delega di gestori in `HttpClient` e l'implementazione di middleware basato su Polly per sfruttarne i criteri di resilienza.
-- `HttpClient` include già il concetto di delega di gestori concatenati per le richieste HTTP in uscita. Si registrano i client HTTP nella factory ed è anche possibile usare un gestore Polly che consente l'uso dei criteri di Polly per i nuovi tentativi, gli interruttori, ecc.
-- Gestire la durata di HttpClientMessageHandlers per evitare i problemi menzionati che possono verificarsi quando si gestiscono le durate di `HttpClient` personalmente. 
+- `HttpClient` include già il concetto di delega di gestori concatenati per le richieste HTTP in uscita. Si registrano client HTTP nella Factory ed è possibile usare un gestore Polly per usare i criteri di Polly per i tentativi, interruttori e così via.
+- Gestire la durata di `HttpClientMessageHandlers` per evitare i problemi o i problemi indicati che possono verificarsi quando `HttpClient` si gestiscono le durate stesse.
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Modi diversi di usare HttpClientFactory
 
@@ -43,7 +45,7 @@ Esistono molti modi per usare `HttpClientFactory` nell'applicazione:
 - Usare client tipizzati
 - Usare client generati
 
-Per ragioni di brevità, questo materiale sussidiario illustra il modo più strutturato per usare `HttpClientFactory`, che consiste nell'usare i client tipizzati (modello di agente del servizio), ma tutte le opzioni sono documentate e sono attualmente elencate in questo [articolo che descrive l'uso di HttpClientFactory](/aspnet/core/fundamentals/http-requests?#consumption-patterns).  
+Per motivi di brevità, questo materiale sussidiario illustra il modo più strutturato per usare `HttpClientFactory`, ovvero l'uso di client tipizzati (modello di agente di servizio). Tuttavia, tutte le opzioni sono documentate e sono attualmente elencate in questo [articolo relativo all'utilizzo di HttpClientFactory](/aspnet/core/fundamentals/http-requests#consumption-patterns).
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>Come usare i client tipizzati con HttpClientFactory
 
@@ -55,7 +57,7 @@ Il diagramma seguente visualizza l'uso dei client tipizzati con `HttpClientFacto
 
 **Figura 8-4**. Uso di HttpClientFactory con le classi client tipizzati.
 
-In primo luogo configurare `HttpClientFactory` nell'applicazione, aggiungendo un riferimento al pacchetto `Microsoft.Extensions.Http` che include il metodo di estensione `AddHttpClient()` per `IServiceCollection`. Questo metodo di estensione registra l'oggetto `DefaultHttpClientFactory` da usare come oggetto singleton per l'interfaccia `IHttpClientFactory`. Definisce una configurazione temporanea per l'oggetto `HttpMessageHandlerBuilder`. Questo gestore di messaggi (oggetto `HttpMessageHandler`), estratto da un pool, viene usato dall'oggetto `HttpClient` restituito dalla factory.
+Per prima cosa `HttpClientFactory` , configurare nell'applicazione installando `Microsoft.Extensions.Http` il pacchetto NuGet che include `AddHttpClient()` il metodo di `IServiceCollection`estensione per. Questo metodo di estensione registra l'oggetto `DefaultHttpClientFactory` da usare come oggetto singleton per l'interfaccia `IHttpClientFactory`. Definisce una configurazione temporanea per l'oggetto `HttpMessageHandlerBuilder`. Questo gestore di messaggi (oggetto `HttpMessageHandler`), estratto da un pool, viene usato dall'oggetto `HttpClient` restituito dalla factory.
 
 Nel codice successivo è possibile vedere come usare `AddHttpClient()` per registrare i client tipizzati (agenti di servizio) che devono usare `HttpClient`.
 
@@ -67,9 +69,32 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-La registrazione dei servizi client illustrata nel codice precedente consente a `DefaultClientFactory` di creare un `HttpClient` configurato in modo specifico per ogni servizio, come illustrato nel paragrafo successivo.
+La registrazione dei servizi client come illustrato nel codice precedente consente `DefaultClientFactory` di creare uno standard `HttpClient` per ogni servizio.
 
-Mediante la semplice registrazione della classe del servizio client con `AddHttpClient()` l'oggetto `HttpClient` che viene inserito nella classe userà la configurazione e i criteri forniti al momento della registrazione. Nelle sezioni successive questi criteri verranno visualizzati come tentativi o interruttori di Polly.
+È anche possibile aggiungere la configurazione specifica dell'istanza nella registrazione a, ad esempio, configurare l'indirizzo di base e aggiungere alcuni criteri di resilienza, come illustrato nel codice seguente:
+
+```csharp
+services.AddHttpClient<ICatalogService, CatalogService>(client =>
+{
+    client.BaseAddress = new Uri(Configuration["BaseUrl"])
+})
+    .AddPolicyHandler(GetRetryPolicy())
+    .AddPolicyHandler(GetCircuitBreakerPolicy());
+```
+
+Per l'esempio, è possibile visualizzare uno dei criteri precedenti nel codice seguente:
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+}
+```
+
+Per altre informazioni sull'uso di Polly, vedere l' [articolo successivo](implement-http-call-retries-exponential-backoff-polly.md).
 
 ### <a name="httpclient-lifetimes"></a>Durate di HttpClient
 
@@ -82,7 +107,7 @@ Gli oggetti `HttpMessageHandler` nel pool hanno una durata, che è l'intervallo 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
 services.AddHttpClient<ICatalogService, CatalogService>()
-                 .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
+    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
 
 Ogni client tipizzato o client denominato può avere un proprio valore configurato di durata del gestore. Impostare la durata su `InfiniteTimeSpan` per disabilitare la scadenza del gestore.
@@ -122,7 +147,7 @@ Un client tipizzato è di fatto un oggetto temporaneo, vale a dire che ne viene 
 
 ### <a name="use-your-typed-client-classes"></a>Uso di classi di client tipizzato
 
-Dopo avere implementato le classi del tipo e averle registrate con AddHttpClient(), è possibile usarle ovunque si possano avere servizi inseriti da DI, ad esempio in qualsiasi codice di Razor Pages o qualsiasi controller di un'app Web MVC, come nel seguente codice estratto da eShopOnContainers.
+Infine, una volta che le classi tipizzate sono state implementate e `AddHttpClient()`sono state registrate con, è possibile usarle ovunque sia possibile inserire i servizi da di. Ad esempio, in un codice della pagina Razor o in un controller di un'app Web MVC, come nel codice seguente da eShopOnContainers:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -131,18 +156,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
     {
         private ICatalogService _catalogSvc;
 
-        public CatalogController(ICatalogService catalogSvc) => 
+        public CatalogController(ICatalogService catalogSvc) =>
                                                            _catalogSvc = catalogSvc;
 
-        public async Task<IActionResult> Index(int? BrandFilterApplied, 
-                                               int? TypesFilterApplied, 
-                                               int? page, 
+        public async Task<IActionResult> Index(int? BrandFilterApplied,
+                                               int? TypesFilterApplied,
+                                               int? page,
                                                [FromQuery]string errorMsg)
         {
             var itemsPage = 10;
-            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0, 
-                                                            itemsPage, 
-                                                            BrandFilterApplied, 
+            var catalog = await _catalogSvc.GetCatalogItems(page ?? 0,
+                                                            itemsPage,
+                                                            BrandFilterApplied,
                                                             TypesFilterApplied);
             //… Additional code
         }
@@ -151,15 +176,18 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Il codice visualizzato fino a questo punto esegue solo normali richieste HTTP. La parte sorprendente inizia nelle sezioni seguenti, dove aggiungendo semplicemente criteri e gestori di delega ai client tipizzati registrati, tutte le richieste HTTP che devono essere eseguite da `HttpClient` funzionano tenendo in considerazione i criteri di resilienza, ad esempio i tentativi con backoff esponenziale, gli interruttori o qualsiasi altro gestore di delega personalizzato per implementare funzionalità di sicurezza aggiuntive, come l'uso di token di autorizzazione o qualsiasi altra funzionalità personalizzata. 
+Il codice visualizzato fino a questo punto esegue solo normali richieste HTTP. La parte sorprendente inizia nelle sezioni seguenti, dove aggiungendo semplicemente criteri e gestori di delega ai client tipizzati registrati, tutte le richieste HTTP che devono essere eseguite da `HttpClient` funzionano tenendo in considerazione i criteri di resilienza, ad esempio i tentativi con backoff esponenziale, gli interruttori o qualsiasi altro gestore di delega personalizzato per implementare funzionalità di sicurezza aggiuntive, come l'uso di token di autorizzazione o qualsiasi altra funzionalità personalizzata.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Uso di HttpClientFactory in .NET Core**\
-  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **Uso di HttpClientFactory in .NET Core** \
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **Repository di GitHub su HttpClientFactory**\
+- **Repository di GitHub su HttpClientFactory** \
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+
+- **Polly (libreria .NET con funzionalità di resilienza e gestione degli errori temporanei)**  \
+  <http://www.thepollyproject.org/>
 
 >[!div class="step-by-step"]
 >[Precedente](explore-custom-http-call-retries-exponential-backoff.md)

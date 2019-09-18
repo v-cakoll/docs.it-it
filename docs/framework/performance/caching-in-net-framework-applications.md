@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927039"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046782"
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -41,7 +41,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 > [!NOTE]
 > La classe <xref:System.Runtime.Caching.MemoryCache> è modellata in base all'oggetto cache ASP.NET definito nello spazio dei nomi <xref:System.Web.Caching>. Pertanto, la logica di memorizzazione nella cache interna è simile alla logica fornita nelle versioni precedenti di ASP.NET.  
   
- Per un esempio di come usare per la memorizzazione nella cache in un'applicazione WPF, [vedere Procedura dettagliata: Memorizzazione nella cache dei dati dell'applicazione in](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)un'applicazione WPF.  
+ Per un esempio di come usare per la memorizzazione nella cache in un'applicazione WPF, [vedere Procedura dettagliata: Memorizzazione nella cache dei dati dell'applicazione in](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)un'applicazione WPF.  
   
 ## <a name="caching-in-aspnet-applications"></a>Memorizzazione nella cache in applicazioni ASP.NET  
  Le classi di memorizzazione nella cache nello spazio dei nomi <xref:System.Runtime.Caching> offrono funzionalità per memorizzare dati nella cache in ASP.NET.  
@@ -79,5 +79,5 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Procedura dettagliata: Memorizzazione nella cache dei dati dell'applicazione in un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procedura dettagliata: Memorizzazione nella cache dei dati dell'applicazione in un'applicazione WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Procedura dettagliata: Memorizzazione nella cache dei dati dell'applicazione in ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

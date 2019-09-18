@@ -6,7 +6,7 @@ metadata:
   title: 'Documentazione di ML.NET - Esercitazioni, informazioni di riferimento sulle API'
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 08/15/2019
+  ms.date: 09/16/2019
   ms.author: nakersha
   author: natke
 abstract:
@@ -28,12 +28,14 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Creare un sistema di raccomandazione di film con la fattorizzazione di matrice</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Creare un classificatore di immagini personalizzato con TensorFlow</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Rilevare gli oggetti nelle immagini con ONNX</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">Classificare le opinioni dei film con TensorFlow</a>
       - type: paragraph
         text: '<b>Usare il generatore di modelli</b>, un''estensione grafica di Visual Studio:'
       - type: list
         style: unordered
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Stimare i prezzi con generatore di modelli</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">Creare un'applicazione Web di Razor Pages per analizzare i sentimenti</a>
       - type: paragraph
         text: '<b>Eseguire l''interfaccia della riga di comando di ml.NET</b>:'
       - type: list

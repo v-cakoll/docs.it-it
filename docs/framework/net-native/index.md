@@ -10,47 +10,47 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d295d0b35b4b93425c825f75857881a2e2ddc57
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660900"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049661"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilazione di app con .NET Native
 
-.NET native è una tecnologia di precompilazione per la compilazione e distribuzione di App di Windows che è inclusa in Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.
+.NET Native è una tecnologia di precompilazione per la compilazione e la distribuzione di app di Windows incluse in Visual Studio 2015 e versioni successive. che compila automaticamente la versione finale delle app scritte in codice gestito (C# o Visual Basic) e destina .NET Framework e Windows 10 al codice nativo.
 
-In genere, le applicazioni che usano .NET Framework vengono compilate in Microsoft Intermediate Language (IL). In fase di esecuzione, il compilatore just-in-time (JIT) traduce IL in codice nativo. Al contrario, .NET Native compila le app Windows direttamente in codice nativo. Per gli sviluppatori, questo significa che:
+In genere, le applicazioni che usano .NET Framework vengono compilate in Microsoft Intermediate Language (IL). In fase di esecuzione, il compilatore just-in-time (JIT) traduce IL in codice nativo. Al contrario, .NET Native compila le app di Windows direttamente nel codice nativo. Per gli sviluppatori, questo significa che:
 
-- Le app offrono le prestazioni del codice nativo. In genere, le prestazioni risulteranno superiori al codice che viene innanzitutto compilato a livello di integrità e quindi compilato in codice nativo tramite il compilatore JIT.
+- Le app offrono le prestazioni del codice nativo. In genere, le prestazioni saranno superiori a quelle del codice prima compilato in IL e quindi compilate in codice nativo dal compilatore JIT.
 
 - È possibile continuare a programmare in c# o Visual Basic.
 
 - È possibile continuare a sfruttare le risorse fornite da .NET Framework, tra cui la libreria di classi, gestione della memoria e Garbage Collection automatiche e la gestione delle eccezioni.
 
-Per gli utenti delle app .NET nativa offre i seguenti vantaggi:
+Per gli utenti delle app, .NET Native offre i vantaggi seguenti:
 
-- Tempi di esecuzione per la maggior parte delle App e gli scenari.
+- Tempi di esecuzione più rapidi per la maggior parte delle app e degli scenari.
 
-- Tempi di avvio più rapidi per la maggior parte delle App e gli scenari.
+- Tempi di avvio più rapidi per la maggior parte delle app e degli scenari.
 
-- Basso costo di distribuzione e l'aggiornamento.
+- Riduzione dei costi di distribuzione e aggiornamento.
 
-- Utilizzo memoria applicazione ottimizzata.
+- Utilizzo ottimizzato della memoria dell'app.
 
 > [!IMPORTANT]
-> Per la maggior parte delle App e gli scenari, .NET Native offre tempi di avvio significativamente più veloce e prestazioni superiori rispetto a un'app compilata in linguaggio intermedio o di un'immagine NGEN. Tuttavia, i risultati possono variare. Per assicurarsi che l'app ha tratto vantaggio dai miglioramenti delle prestazioni di .NET Native, è necessario confrontare le prestazioni con quello della versione non - .NET Native dell'app. Per altre informazioni, vedere [panoramica delle sessioni di prestazioni](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Per la maggior parte delle app e degli scenari, .NET Native offre tempi di avvio notevolmente più veloci e prestazioni superiori rispetto a un'app compilata con IL o a un'immagine NGEN. Tuttavia, i risultati possono variare. Per assicurarsi che l'app abbia tratto vantaggio dai miglioramenti apportati alle prestazioni di .NET Native, è necessario confrontarne le prestazioni con quella della versione nativa di non-.NET dell'app. Per ulteriori informazioni, vedere [Cenni preliminari sulle sessioni di prestazioni](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
 
-Ma prevede più di una compilazione in codice nativo .NET Native. trasforma il modo in cui le applicazioni di .NET Framework vengono compilate ed eseguite. In particolare:
+Tuttavia .NET Native implica più di una compilazione in codice nativo. trasforma il modo in cui le applicazioni di .NET Framework vengono compilate ed eseguite. In particolare:
 
 - Durante la precompilazione, le parti necessarie di .NET Framework vengono collegate staticamente nell'applicazione. Ciò consente di eseguire l'applicazione con le librerie app-local di .NET Framework e di effettuare l'analisi globale per offrire prestazioni ottimali del compilatore. Di conseguenza, l'avvio delle applicazioni sarà più rapido e coerente dopo l'aggiornamento di .NET Framework.
 
 - Il runtime di .NET Native è ottimizzato per la precompilazione statica e nella maggior parte dei casi offre prestazioni superiori. Allo stesso tempo, mantiene le funzionalità di reflection di base che gli sviluppatori troveranno estremamente produttive.
 
-- .NET native Usa il back-end stesso come il C++ compilatore, che è ottimizzato per scenari di precompilazione statici.
+- .NET Native usa lo stesso back-end del C++ compilatore, ottimizzato per scenari di precompilazione statici.
 
-.NET native è in grado di offrire i vantaggi delle prestazioni di C++ gestire gli sviluppatori di codice perché Usa gli strumenti identici o simili come C++ dietro le quinte, come illustrato in questa tabella.
+.NET Native è in grado di sfruttare i vantaggi delle C++ prestazioni di per gli sviluppatori di codice gestito, perché usa gli stessi C++ strumenti o simili di quelli usati sotto la cappa, come illustrato in questa tabella.
 
 ||.NET Native|C++|
 |-|----------------------------------------------------------------|-----------|
@@ -65,20 +65,20 @@ Per le app Windows per Windows 10, caricare i file binari per la compilazione co
 
 Per altre informazioni sullo sviluppo di applicazioni con la compilazione con .NET Native, vedere i seguenti argomenti:
 
-- [Introduzione a compilazione codice .NET Native: La procedura dettagliata dell'esperienza per sviluppatori](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Introduzione con la compilazione del codice .NET Native: Procedura dettagliata dell'esperienza per sviluppatori](getting-started-with-net-native.md)
 
-- [Compilazione e .NET native:](../../../docs/framework/net-native/net-native-and-compilation.md) Modo in cui .NET Native compila il progetto in codice nativo.
+- [.NET Native e compilazione:](net-native-and-compilation.md) Il modo in cui .NET Native compila il progetto in codice nativo.
 
-- [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Reflection e .NET Native](reflection-and-net-native.md)
 
-  - [API basate sulla reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+  - [API basate sulla reflection](apis-that-rely-on-reflection.md)
 
-  - [Riferimento all'API Reflection](../../../docs/framework/net-native/net-native-reflection-api-reference.md)
+  - [Riferimento all'API Reflection](net-native-reflection-api-reference.md)
 
-  - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+  - [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 
-- [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md) (Serializzazione e metadati)
+- [Serialization and Metadata](serialization-and-metadata.md) (Serializzazione e metadati)
 
-- [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)
+- [Migrating Your Windows Store App to .NET Native](migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)
 
-- [Risoluzione dei problemi generale per .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Risoluzione dei problemi generale per .NET Native](net-native-general-troubleshooting.md)

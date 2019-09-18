@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988401"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053264"
 ---
 # <a name="64-bit-applications"></a>Applicazioni a 64 bit
 Quando si compila un'applicazione, è possibile specificare che deve essere eseguita in un sistema operativo Windows a 64 bit come applicazione nativa o in WOW64 (Windows a 32 bit in Windows a 64 bit). WOW64 è un ambiente di compatibilità che consente di eseguire in un sistema a 64 bit un'applicazione a 32 bit. WOW64 è incluso in tutte le versioni a 64 bit del sistema operativo Windows.  
@@ -26,7 +26,7 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
 > [!NOTE]
 > Data la progettazione dell'emulazione x86 e del sottosistema WOW64 per la famiglia di processori Itanium, l'esecuzione delle applicazioni è limitata a un solo processore. Questi fattori riducono le prestazioni e la scalabilità delle applicazioni .NET Framework a 32 bit eseguite in sistemi basati su Itanium. Si consiglia di usare .NET Framework 4, che include il supporto a 64 bit nativo per sistemi basati su Itanium, per migliorare le prestazioni e la scalabilità.  
   
- Per impostazione predefinita, quando si esegue un'applicazione gestita a 64 bit in un sistema operativo Windows a 64 bit, non è possibile creare oggetti di più di 2 gigabyte (GB). Tuttavia, in .NET Framework 4.5 è possibile aumentare questo limite.  Per altre informazioni, vedere l'[elemento \<gcAllowVeryLargeObjects>](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Per impostazione predefinita, quando si esegue un'applicazione gestita a 64 bit in un sistema operativo Windows a 64 bit, non è possibile creare oggetti di più di 2 gigabyte (GB). Tuttavia, in .NET Framework 4.5 è possibile aumentare questo limite.  Per altre informazioni, vedere l'[elemento \<gcAllowVeryLargeObjects>](./configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
  Molti assembly vengono eseguiti allo stesso modo sia su CLR a 32 bit che su CLR a 64 bit. Tuttavia, alcuni programmi possono comportarsi in modo diverso, a seconda della versione di CLR, se contengono uno o più dei seguenti elementi:  
   
@@ -61,6 +61,6 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
 |Visual C++|È possibile creare applicazioni Microsoft Intermediate Language (MSIL) indipendenti dalla piattaforma usando **/clr:safe**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ include un compilatore separato per ogni sistema operativo a 64 bit. Per altre informazioni sull'uso di Visual C++ per creare applicazioni native eseguibili in un sistema operativo Windows a 64 bit, vedere [Programmazione a 64 bit con Visual C++](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinazione dello stato di un file EXE o di un file DLL  
- Per determinare se un file EXE o un file DLL deve essere eseguito solo su una piattaforma specifica o in WOW64, usare [CorFlags.exe (strumento di conversione CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) senza opzioni. È anche possibile usare CorFlags.exe per modificare lo stato della piattaforma di un file EXE o di un file DLL. Il numero di versione del runtime principale dell'intestazione CLR di un assembly di Visual Studio è impostato su 2, mentre quello secondario è impostato su 5. Le applicazioni con la versione di runtime secondaria impostata su 0 sono considerate applicazioni legacy e vengono sempre eseguite in WOW64.  
+ Per determinare se un file EXE o un file DLL deve essere eseguito solo su una piattaforma specifica o in WOW64, usare [CorFlags.exe (strumento di conversione CorFlags)](./tools/corflags-exe-corflags-conversion-tool.md) senza opzioni. È anche possibile usare CorFlags.exe per modificare lo stato della piattaforma di un file EXE o di un file DLL. Il numero di versione del runtime principale dell'intestazione CLR di un assembly di Visual Studio è impostato su 2, mentre quello secondario è impostato su 5. Le applicazioni con la versione di runtime secondaria impostata su 0 sono considerate applicazioni legacy e vengono sempre eseguite in WOW64.  
   
  Per eseguire query a livello di codice di un file EXE o DLL per determinare se deve essere eseguito solo su una piattaforma specifica o in WOW64, usare il metodo <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType>.

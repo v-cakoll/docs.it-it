@@ -4,12 +4,12 @@ description: Informazioni su come ripetere il training di un modello TensorFlow 
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929245"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054072"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Esercitazione: Ripetere il training di un classificatore di immagini TensorFlow con l'apprendimento trasferito e ML.NET
 
@@ -355,7 +355,7 @@ Convertire i dati di immagine e gli elementi `DataViews` della stima in `IEnumer
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-Chiamare il metodo `DisplayResults()` per visualizzare i dati e le stime come riga successiva nel metodo `ReuseAndTuneInceptionModel()`:
+Aggiungere il codice seguente per visualizzare i dati e le stime come righe successive nel `ReuseAndTuneInceptionModel()` metodo:
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 
@@ -373,7 +373,7 @@ Le metriche seguenti vengono valutate per la classificazione delle immagini:
 
 * `Log-loss`: vedere [Perdita di log](../resources/glossary.md#log-loss). Il valore desiderato per LogLoss è il valore più prossimo a 0.
 
-* [https://login.microsoftonline.com/common/](`Per class Log-loss`). Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
+* [https://login.microsoftonline.com/consumers/](`Per class Log-loss`). Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
 
 Usare il codice seguente per visualizzare le metriche, condividere i risultati e quindi intervenire su di essi:
 

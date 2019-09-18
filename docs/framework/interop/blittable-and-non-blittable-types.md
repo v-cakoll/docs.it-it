@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953184"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051895"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -53,7 +53,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
  Non sono copiabili da BLT i riferimenti a oggetti, incluse le matrici di riferimenti a oggetti che invece sono copiabili da BLT. È possibile, ad esempio, definire una struttura copiabile da BLT, ma non un tipo copiabile da BLT contenente una matrice di riferimenti alla struttura.  
   
- Per motivi di ottimizzazione, le matrici di tipi e classi copiabili da BLT contenenti solo membri copiabili da BLT vengono [bloccate](../../../docs/framework/interop/copying-and-pinning.md) e non copiate durante il marshalling. Quando il chiamante e il chiamato si trovano nello stesso apartment, può sembrare che il marshalling di questi tipi venga eseguito come parametri In/Out. Il marshalling di questi tipi, in realtà, viene eseguito come parametri In ed è necessario applicare gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> se si vuole eseguire il marshalling dell'argomento come parametro In/Out.  
+ Per motivi di ottimizzazione, le matrici di tipi e classi copiabili da BLT contenenti solo membri copiabili da BLT vengono [bloccate](copying-and-pinning.md) e non copiate durante il marshalling. Quando il chiamante e il chiamato si trovano nello stesso apartment, può sembrare che il marshalling di questi tipi venga eseguito come parametri In/Out. Il marshalling di questi tipi, in realtà, viene eseguito come parametri In ed è necessario applicare gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> se si vuole eseguire il marshalling dell'argomento come parametro In/Out.  
   
  Alcuni tipi di dati gestiti richiedono una rappresentazione diversa in un ambiente non gestito. Questi tipi di dati non copiabili da BLT devono essere convertiti in un formato di cui è possibile eseguire il marshalling. Le stringhe gestite, ad esempio, sono tipi non copiabili da BLT perché devono essere convertite in oggetti stringa prima di poter eseguire il marshalling.  
   
@@ -61,18 +61,18 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 |Tipi non copiabili da BLT|Description|  
 |-------------------------|-----------------|  
-|[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
+|[System.Array](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
 |[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Viene convertito in un carattere Unicode o ANSI.|  
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Viene convertito in un'interfaccia di classe.|  
-|[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Viene convertito in una variante o in un'interfaccia.|  
-|[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
-|[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|Viene convertito in una stringa che termina con un riferimento Null o un BSTR.|  
+|[System.Object](default-marshaling-for-objects.md)|Viene convertito in una variante o in un'interfaccia.|  
+|[System.Mdarray](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
+|[System.String](default-marshaling-for-strings.md)|Viene convertito in una stringa che termina con un riferimento Null o un BSTR.|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Viene convertito in una struttura con un layout a memoria fissa.|  
-|[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
+|[System.Szarray](default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
   
  I tipi di classe e oggetto sono supportati solo dall'interoperabilità COM. Per i tipi corrispondenti in Visual Basic, C#, e C++, vedere [Panoramica della libreria di classi](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)

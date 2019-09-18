@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648667"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051719"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificazione delle funzioni nelle DLL
 L'identità di una funzione di una DLL è costituita dagli elementi seguenti:  
@@ -31,7 +31,7 @@ L'identità di una funzione di una DLL è costituita dagli elementi seguenti:
   
  **MessageBoxA** è il punto di ingresso ANSI per la funzione **MessageBox**, mentre **MessageBoxW** è la versione Unicode. Per elencare i nomi di funzione per una DLL specifica, ad esempio user32.dll, è possibile eseguire numerosi strumenti della riga di comando. Ad esempio, è possibile usare `dumpbin /exports user32.dll` o `link /dump /exports user32.dll` per ottenere i nomi di funzione.  
   
- È possibile rinominare una funzione non gestita con qualsiasi nome desiderato all'interno del codice, a condizione di eseguire il mapping del nuovo nome al punto di ingresso originale nella DLL. Per istruzioni su come rinominare una funzione DLL non gestita in codice sorgente gestito, vedere [Specifica di un punto di ingresso](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ È possibile rinominare una funzione non gestita con qualsiasi nome desiderato all'interno del codice, a condizione di eseguire il mapping del nuovo nome al punto di ingresso originale nella DLL. Per istruzioni su come rinominare una funzione DLL non gestita in codice sorgente gestito, vedere [Specifica di un punto di ingresso](specifying-an-entry-point.md).  
   
  Platform invoke consente di controllare una parte significativa del sistema operativo chiamando funzioni nell'API Windows e altre DLL. Oltre all'API Windows, sono disponibili molte altre API e DLL tramite platform invoke.  
   
@@ -43,12 +43,12 @@ L'identità di una funzione di una DLL è costituita dagli elementi seguenti:
 |Kernel32.dll|Funzioni del sistema operativo di basso livello per la gestione delle memoria e delle risorse.|  
 |User32.dll|Funzioni di gestione di Windows per la gestione dei messaggi, i timer, i menu e le comunicazioni.|  
   
- Per la documentazione completa dell'API Windows, vedere l'SDK della piattaforma. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Per la documentazione completa dell'API Windows, vedere l'SDK della piattaforma. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Specifica di un punto di ingresso](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [Creazione di una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
+- [Specifica di un punto di ingresso](specifying-an-entry-point.md)
+- [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)
+- [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
+- [Chiamata a una funzione di DLL](calling-a-dll-function.md)

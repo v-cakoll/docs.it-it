@@ -1,5 +1,5 @@
 ---
-title: '{} -Sequenza di escape estensione di Markup'
+title: '{}Sequenza di escape-estensione di markup'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0646c62a1342eb160d1967e86ac286429013f3c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855608"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053871"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Sequenza di escape/Estensione di markup
-Fornisce la sequenza di escape XAML per i valori di attributo. La sequenza di escape consente ai valori successivi nell'attributo deve essere interpretato come valore letterale.  
+Fornisce la sequenza di escape XAML per i valori di attributo. La sequenza di escape consente di interpretare i valori successivi nell'attributo come valore letterale.  
   
 ## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
-```xml  
+```xaml  
 <object property="{} literalValue" .../>  
 ```  
   
 ## <a name="xaml-property-element-usage"></a>Utilizzo della sintassi XAML per elementi proprietà  
   
-```  
+```xaml  
 <object>  
   <object.property>  
     {} literalValue  
@@ -41,20 +41,20 @@ Fornisce la sequenza di escape XAML per i valori di attributo. La sequenza di es
   
 |||  
 |-|-|  
-|*literalValue*|Stringa letterale che segue la sequenza di escape. In genere questa stringa contiene una parentesi graffa aperta o chiusa ({o}).|  
+|*literalValue*|Stringa letterale che segue la sequenza di escape. Questa stringa contiene in genere una parentesi graffa di apertura o di chiusura ({o}).|  
   
 ## <a name="remarks"></a>Note  
- La sequenza di escape ({}) viene usato in modo che una parentesi graffa aperta ({}) può essere utilizzata come carattere letterale in XAML.  
+ Viene utilizzata la sequenza{}di escape () in modo che una parentesi graffa aperta ({) possa essere utilizzata come carattere letterale in XAML.  
   
- I lettori XAML in genere usano la parentesi graffa aperta ({}) per indicare il punto di ingresso di un'estensione di markup; tuttavia, è prima di tutto controllare il carattere successivo per determinare se si tratta di una parentesi graffa di chiusura (}). Solo quando le due parentesi graffe di apertura ({}) siano adiacenti, sono considerati una sequenza di escape.  
+ I reader XAML usano in genere la parentesi graffa aperta ({) per indicare il punto di ingresso di un'estensione di markup. Tuttavia, prima di tutto controllano il carattere successivo per determinare se si tratta di una parentesi graffa di chiusura (}). Solo quando le due parentesi graffe ({}) sono adiacenti, sono considerate una sequenza di escape.  
   
- Se la sequenza di escape viene rilevata, il reader XAML deve elaborare il resto della stringa sotto forma di stringa. Tuttavia, se la sequenza di escape viene applicata a un membro che dispone di un convertitore di tipi, la stringa potrebbe essere sottoposto a conversione del tipo quando viene interpretato da un writer XAML.  
+ Se viene rilevata la sequenza di escape, il reader XAML deve elaborare il resto della stringa sotto forma di stringa. Tuttavia, se la sequenza di escape viene applicata a un membro che dispone di un convertitore di tipi, la stringa potrebbe subire la conversione del tipo quando viene interpretata da un writer XAML.  
   
- La sequenza di escape non è un'estensione di markup e non è supportata da una classe. Tuttavia, è una convenzione che devono rispettare i lettori XAML (incluso il reader XAML personalizzati).  
+ La sequenza di escape non è un'estensione di markup e non è supportata da una classe. Tuttavia, è una convenzione che i reader XAML (compresi i lettori XAML personalizzati) devono rispettare.  
   
- Una virgoletta (") non può essere usata come una sequenza di escape in questo modo. Se è necessario impostare un segno di virgolette come valore della proprietà per una proprietà noncontent, usare la sintassi degli elementi e inserire le virgolette come stringa all'interno dell'elemento di proprietà oppure usare un'entità carattere XML. Per una proprietà di contenuto, la virgoletta può essere l'intero contenuto.  
+ In questo modo non è possibile usare come sequenza di escape le virgolette ("). Se è necessario impostare una virgoletta come valore della proprietà per una proprietà non di contenuto, utilizzare la sintassi dell'elemento proprietà e inserire le virgolette come una stringa all'interno dell'elemento Property oppure utilizzare un'entità carattere XML. Per una proprietà di contenuto, le virgolette possono essere l'intero contenuto.  
   
- La sequenza di escape ({}) è spesso necessario quando si specifica un tipo XML che deve includere un qualificatore dello spazio dei nomi in un percorso in cui può essere presente un'estensione di markup XAML. Ciò include l'inizio di un valore di attributo XAML e, in un'estensione di markup, immediatamente dopo il segno di uguale (=). L'esempio seguente illustra le sequenze di escape per uno spazio dei nomi XML che viene visualizzato all'inizio di un valore di attributo XAML.  
+ La sequenza di escape{}() è spesso obbligatoria quando si specifica un tipo XML che deve includere un qualificatore dello spazio dei nomi in una posizione in cui può essere visualizzata un'estensione di markup XAML. Questo include l'inizio di un valore di attributo XAML e in un'estensione di markup immediatamente dopo un segno di uguale (=). Nell'esempio seguente vengono illustrate le sequenze di escape per uno spazio dei nomi XML che viene visualizzato all'inizio di un valore di attributo XAML.  
   
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   

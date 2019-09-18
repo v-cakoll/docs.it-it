@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13c9aa7275ad792f8ace33519438f0a1dcc6b251
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971611"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053137"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedura: Rimuovere un assembly dalla Global Assembly Cache
 
 Esistono due modi per rimuovere un assembly dalla Global Assembly Cache (GAC):
 
-- Usando lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). È possibile usare questa opzione per disinstallare gli assembly inseriti nella GAC durante le fasi di sviluppo e test.
+- Usando lo [strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md). È possibile usare questa opzione per disinstallare gli assembly inseriti nella GAC durante le fasi di sviluppo e test.
 
 - Usando [Windows Installer](/windows/desktop/Msi/windows-installer-portal). È possibile usare questa opzione per disinstallare gli assembly quando si esegue il test dei pacchetti di installazione o per i sistemi di produzione.
 
@@ -54,6 +54,6 @@ gacutil -u hello
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Uso di assembly e della Global Assembly Cache](working-with-assemblies-and-the-gac.md)
 - [Procedura: Installare un assembly nella Global Assembly Cache](install-assembly-into-gac.md)
-- [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

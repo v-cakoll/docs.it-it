@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660320"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052917"
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA contextSwitchDeadlock
 
@@ -48,7 +48,7 @@ Per impostazione predefinita, il modello di threading per il thread principale d
 Per stabilire se l'assistente al debug gestito è stato falsamente abilitato, disabilitare tutti i punti di interruzione, riavviare l'applicazione e consentirne l'esecuzione senza interruzioni. Se l'assistente al debug gestito non è attivata, è probabile che l'attivazione iniziale fosse falsa. In questo caso, disabilitare l'assistente al debug gestito per evitare interferenze con la sessione di debug.
 
 > [!NOTE]
-> Questo assistente al debug gestito è il valore predefinito impostato per Visual Studio. Per informazioni sulla disabilitazione di assistenti al debug gestito, vedere [diagnostica degli errori con assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
+> Questo assistente al debug gestito si trova nel set predefinito per Visual Studio. Per informazioni su come disabilitare MDA, vedere la pagina relativa alla [diagnosi degli errori con gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
 
 ## <a name="resolution"></a>Risoluzione
 
@@ -75,5 +75,5 @@ Messaggio che descrive il contesto corrente e il contesto di destinazione.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshalling di interoperabilità](../interop/interop-marshaling.md)

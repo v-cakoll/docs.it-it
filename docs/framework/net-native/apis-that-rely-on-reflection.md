@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049967"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
-In alcuni casi, l'uso della reflection nel codice non è ovvio, quindi la catena di strumenti .NET Native non mantiene i metadati necessari in fase di esecuzione. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
+In alcuni casi, l'uso della reflection nel codice non è ovvio, quindi la catena di strumenti .NET Native non mantiene i metadati necessari in fase di esecuzione. In questo argomento vengono illustrati modelli di programmazione o API comuni non considerati parte dell'API di reflection ma basati sulla reflection per una corretta esecuzione. Se vengono usati nel codice sorgente, è possibile aggiungere informazioni su di essi al file di direttive di runtime (.rd.xml) in modo che le chiamate a queste API non generino un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md) o altre eccezioni al runtime.  
   
 ## <a name="typemakegenerictype-method"></a>Metodo Type.MakeGenericType  
  È possibile creare dinamicamente un'istanza di un tipo generico `AppClass<T>` chiamando il metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> usando un codice simile al seguente:  
@@ -27,7 +27,7 @@ In alcuni casi, l'uso della reflection nel codice non è ovvio, quindi la catena
   
  Questo assicura l'esito positivo della chiamata al metodo <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> e la restituzione di un oggetto <xref:System.Type> valido.  
   
- Tuttavia, anche se si aggiungono i metadati per il tipo generico privo di istanze, la chiamata al metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera un'eccezione [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md):  
+ Tuttavia, anche se si aggiungono i metadati per il tipo generico privo di istanze, la chiamata al metodo <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> genera un'eccezione [MissingMetadataException](missingmetadataexception-class-net-native.md):  
   
 Non è possibile eseguire questa operazione perché i metadati per il tipo seguente sono stati rimossi per motivi di prestazioni:  
   
@@ -92,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Introduzione](getting-started-with-net-native.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

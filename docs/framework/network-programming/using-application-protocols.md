@@ -13,17 +13,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: a127776544830e299118aefadf1735a856c095dd
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: f9af668a30920daa4634e402ab1922946b014051
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046998"
 ---
 # <a name="using-application-protocols"></a>Uso di protocolli applicativi
-.NET Framework supporta i protocolli applicativi Internet di uso comune. Questa sezione include informazioni sull'uso dei protocolli [HTTP](../../../docs/framework/network-programming/http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](../../../docs/framework/network-programming/sockets.md) per implementare protocolli personalizzati.  
+.NET Framework supporta i protocolli applicativi Internet di uso comune. Questa sezione include informazioni sull'uso dei protocolli [HTTP](http.md), "TCP" e "UDP", nonché informazioni sull'uso dell'interfaccia [Windows Sockets](sockets.md) per implementare protocolli personalizzati.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Programmazione di rete in .NET Framework](index.md)
+- [Esempi di programmazione di rete](network-programming-samples.md)

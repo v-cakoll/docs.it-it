@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disabilitare la funzionalità di bypass con nome sicuro'
+title: 'Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053981"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedura: Disabilitare la funzionalità di bypass con nome sicuro
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro
 A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome sicuro non vengono convalidate quando un assembly viene caricato in un oggetto <xref:System.AppDomain> con attendibilità totale, ad esempio l'oggetto predefinito <xref:System.AppDomain> per la zona `MyComputer`. Questo comportamento è reso possibile dalla funzionalità che consente di ignorare la verifica del nome sicuro. In un ambiente ad attendibilità totale le richieste di <xref:System.Security.Permissions.StrongNameIdentityPermission> hanno sempre esito positivo per gli assembly ad attendibilità totale firmati, indipendentemente dalla firma. L'unica restrizione è che l'assembly deve essere ad attendibilità totale perché la relativa area è ad attendibilità totale. Poiché il nome sicuro non è un fattore determinante in queste condizioni, non esiste alcun motivo per cui venga validato. Se la convalida di firme con nome sicuro viene ignorata, si ottengono miglioramenti significativi delle prestazioni.  
   
  La funzionalità che consente di ignorare il nome sicuro si applica a qualsiasi assembly ad attendibilità totale che non abbia la firma ritardata e che sia caricato in un oggetto <xref:System.AppDomain> ad attendibilità totale dalla directory specificata dalla proprietà <xref:System.AppDomainSetup.ApplicationBase%2A>.  
@@ -36,7 +36,7 @@ A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le firme con nome
   
 1. Aprire o creare il file di configurazione dell'applicazione.  
   
-     Per altre informazioni su questo file, vedere la sezione file di configurazione dell'applicazione in [configurare le app](../../framework/configure-apps/index.md).  
+    Per altre informazioni su questo file, vedere la sezione file di configurazione dell'applicazione in [configurare le app](../../framework/configure-apps/index.md).  
   
 2. Aggiungere quanto segue:  
   

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-ms.openlocfilehash: 0552fc005a25e83065bb44e425770f9cef84f71b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cbedb0051cbb08c2875e145a2bad35ae4d02a74e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082581"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053503"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>Risoluzione dei problemi: Debug dei servizi Windows
 Quando si esegue il debug di un'applicazione di servizio Windows, il servizio e **Windows Service Manager** interagiscono. **Service Manager** avvia il servizio chiamando il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, quindi attende 30 secondi che il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> restituisca il controllo. Se il metodo non restituisce il controllo entro questo periodo, il gestore visualizza un errore per indicare che non è possibile avviare il servizio.  
   
- Quando si esegue il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> come descritto in [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), è necessario essere a conoscenza di questo periodo di 30 secondi. Se si inserisce un punto di interruzione nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e non si procede entro 30 secondi, il gestore non avvierà il servizio.  
+ Quando si esegue il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> come descritto in [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md), è necessario essere a conoscenza di questo periodo di 30 secondi. Se si inserisce un punto di interruzione nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e non si procede entro 30 secondi, il gestore non avvierà il servizio.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](how-to-debug-windows-service-applications.md)
+- [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)

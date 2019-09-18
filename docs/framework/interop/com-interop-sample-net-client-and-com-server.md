@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051861"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Esempio di interoperabilità COM: client .NET e server COM
 Questo esempio illustra come un [client .NET](#cpconcominteropsamplenetclientcomserveranchor1), compilato per accedere a un [server COM](#cpconcominteropsamplenetclientcomserveranchor2), crea un'istanza di una coclasse COM e chiama membri della classe per eseguire calcoli relativi a un mutuo.  
@@ -301,4 +301,4 @@ static double Round(double value, short digits)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f003795bf2b8987786043a62d48b2623eb64015
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 64f3f2bb54bd454ef037da2f7e10dd9067bf2217
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949359"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045605"
 ---
 # <a name="resources-in-net-apps"></a>Risorse nelle app .NET
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
@@ -29,16 +29,16 @@ L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un
   
 ## <a name="creating-and-localizing-resources"></a>Creazione e localizzazione di risorse  
 
-In un'applicazione non localizzata, è possibile utilizzare i file di risorse come repository per i dati dell'applicazione, in particolare per le stringhe che altrimenti possono essere hard-coded in più posizioni nel codice sorgente. In genere, le risorse vengono create come testo, con estensione txt o come o file XML (RESX) e si utilizza [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilarle in file binari con estensione resources. Questi file possono quindi essere incorporati nel file eseguibile dell'applicazione tramite un compilatore di linguaggio. Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+In un'applicazione non localizzata, è possibile utilizzare i file di risorse come repository per i dati dell'applicazione, in particolare per le stringhe che altrimenti possono essere hard-coded in più posizioni nel codice sorgente. In genere, le risorse vengono create come testo, con estensione txt o come o file XML (RESX) e si utilizza [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md) per compilarle in file binari con estensione resources. Questi file possono quindi essere incorporati nel file eseguibile dell'applicazione tramite un compilatore di linguaggio. Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md).  
 
-È anche possibile localizzare le risorse dell'applicazione per impostazioni cultura specifiche. In questo modo è possibile compilare versioni localizzate (tradotte) delle applicazioni. Quando si sviluppa un'applicazione in cui vengono utilizzate risorse localizzate, è possibile definire delle impostazioni cultura che fungono da impostazioni cultura non associate ad alcun paese o di fallback le cui risorse vengono utilizzate se non ve ne sono di appropriate. In genere, le risorse delle impostazioni cultura non associate ad alcun paese vengono archiviate nel file eseguibile dell'applicazione. Le risorse rimanenti per le singole impostazioni cultura localizzate vengono archiviate in assembly satellite autonomi. Per altre informazioni, vedere [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
+È anche possibile localizzare le risorse dell'applicazione per impostazioni cultura specifiche. In questo modo è possibile compilare versioni localizzate (tradotte) delle applicazioni. Quando si sviluppa un'applicazione in cui vengono utilizzate risorse localizzate, è possibile definire delle impostazioni cultura che fungono da impostazioni cultura non associate ad alcun paese o di fallback le cui risorse vengono utilizzate se non ve ne sono di appropriate. In genere, le risorse delle impostazioni cultura non associate ad alcun paese vengono archiviate nel file eseguibile dell'applicazione. Le risorse rimanenti per le singole impostazioni cultura localizzate vengono archiviate in assembly satellite autonomi. Per altre informazioni, vedere [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).  
   
 ## <a name="packaging-and-deploying-resources"></a>Creazione del pacchetto e distribuzione delle risorse  
- Si sviluppano risorse di applicazioni localizzate in [assembly satellite](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). In un assembly satellite sono contenute le risorse di singole impostazioni cultura e non il codice dell'applicazione. Nel modello di distribuzione dell'assembly satellite si crea un'applicazione con un assembly predefinito (in genere l'assembly principale) e un assembly satellite per tutte le impostazioni cultura supportate dall'applicazione. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile sostituire o aggiornare facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
+ Si sviluppano risorse di applicazioni localizzate in [assembly satellite](packaging-and-deploying-resources-in-desktop-apps.md). In un assembly satellite sono contenute le risorse di singole impostazioni cultura e non il codice dell'applicazione. Nel modello di distribuzione dell'assembly satellite si crea un'applicazione con un assembly predefinito (in genere l'assembly principale) e un assembly satellite per tutte le impostazioni cultura supportate dall'applicazione. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile sostituire o aggiornare facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
   
- Determinare con attenzione le risorse che costituiranno l'assembly di risorse predefinito dell'applicazione. Poiché tale assembly fa parte dell'assembly principale, le eventuali modifiche apportate richiederanno la sostituzione dell'assembly principale. Se non viene fornita una risorsa predefinita, quando il [processo di recupero di una risorsa](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) di riserva proverà a cercarla verrà generata un'eccezione. In un'applicazione progettata correttamente, l'utilizzo delle risorse non deve mai generare un'eccezione.  
+ Determinare con attenzione le risorse che costituiranno l'assembly di risorse predefinito dell'applicazione. Poiché tale assembly fa parte dell'assembly principale, le eventuali modifiche apportate richiederanno la sostituzione dell'assembly principale. Se non viene fornita una risorsa predefinita, quando il [processo di recupero di una risorsa](packaging-and-deploying-resources-in-desktop-apps.md) di riserva proverà a cercarla verrà generata un'eccezione. In un'applicazione progettata correttamente, l'utilizzo delle risorse non deve mai generare un'eccezione.  
   
- Per ulteriori informazioni, leggere l'articolo [Creazione del package e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Per ulteriori informazioni, leggere l'articolo [Creazione del package e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Recupero di risorse  
  In fase di esecuzione, tramite un'applicazione vengono caricate le risorse localizzate appropriate per ciascun thread, in base alle impostazioni cultura specificate dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Questo valore della proprietà viene derivato come segue:  
@@ -66,7 +66,7 @@ In un'applicazione non localizzata, è possibile utilizzare i file di risorse co
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Concetti di base sulle applicazioni](../../standard/application-essentials.md)
-- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [Recupero di risorse](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+- [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
+- [Creazione del pacchetto e distribuzione delle risorse](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md)
+- [Recupero di risorse](retrieving-resources-in-desktop-apps.md)

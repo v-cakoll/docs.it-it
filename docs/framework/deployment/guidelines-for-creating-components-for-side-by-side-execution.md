@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614099"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052147"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Linee guida per la creazione di componenti per l'esecuzione affiancata di più versioni
 Per creare applicazioni o componenti gestiti progettati per l'esecuzione affiancata, seguire le indicazioni generali riportate di seguito.  
@@ -60,9 +60,9 @@ Per creare applicazioni o componenti gestiti progettati per l'esecuzione affianc
   
  La versione degli assembly viene usata dal runtime per il binding di assembly. Due assembly identici con numeri di versione diversi vengono gestiti dal runtime come due assembly diversi.  
   
- Lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) consente di sostituire un assembly solo quando il numero di versione del file è più recente. Windows Installer in genere non esegue l'installazione su un assembly a meno che il numero di versione dell'assembly non sia superiore.  
+ Lo [strumento Global Assembly Cache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) consente di sostituire un assembly solo quando il numero di versione del file è più recente. Windows Installer in genere non esegue l'installazione su un assembly a meno che il numero di versione dell'assembly non sia superiore.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Esecuzione side-by-side](side-by-side-execution.md)
+- [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

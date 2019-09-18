@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 032f43aa16dbca0f4ab0477d586e7568230b7381
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971807"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044257"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -27,7 +27,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
   
 - Configura i servizi aggiunti alla classe a livello di codice.  
   
- Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -67,7 +67,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
 ## <a name="remarks"></a>Note  
  Regsvcs.exe richiede un file di assembly di origine specificato da *FileAssembly.dll*. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni sulla firma con un nome sicuro, vedere [Firma di un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md). I nomi dell'applicazione di destinazione e del file della libreria dei tipi sono facoltativi. L'argomento *nomeApplicazione* può essere generato dal file di assembly di origine e, se non esiste già, viene creato da Regsvcs.exe. L'argomento *filelibreriatipi* può specificare il nome di una libreria dei tipi. Se non lo si specifica, come impostazione predefinita verrà usato il nome dell'assembly.  
   
- Quando Regsvcs.exe registra i metodi di un componente, lo strumento è soggetto a [richieste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) e [richieste di collegamento](../../../docs/framework/misc/link-demands.md) su tali metodi. Poiché lo strumento viene eseguito in un ambiente completamente attendibile, molte richieste di autorizzazione vengono completate. Regsvcs.exe non è tuttavia in grado di registrare componenti con metodi protetti da una richiesta o una richiesta di collegamento per <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Quando Regsvcs.exe registra i metodi di un componente, lo strumento è soggetto a [richieste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) e [richieste di collegamento](../misc/link-demands.md) su tali metodi. Poiché lo strumento viene eseguito in un ambiente completamente attendibile, molte richieste di autorizzazione vengono completate. Regsvcs.exe non è tuttavia in grado di registrare componenti con metodi protetti da una richiesta o una richiesta di collegamento per <xref:System.Security.Permissions.StrongNameIdentityPermission> o <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Per usare Regsvcs.exe, è necessario disporre dei privilegi amministrativi sul computer locale.  
   
@@ -88,6 +88,6 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
+- [Strumenti](index.md)
 - [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

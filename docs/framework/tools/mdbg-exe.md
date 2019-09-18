@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b652fae47a321ca41e1f518e9077cd68f24c91c9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e2b8f96e9a042681642225ad4e644c6fd1f001cb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894852"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044428"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  I comandi di MDbg.exe sono soggetti alla distinzione tra maiuscole e minuscole.  
   
-|Comando|DESCRIZIONE|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*numero*]|Passa a un altro processo di cui viene eseguito il debug o visualizza i processi disponibili. I numeri non corrispondono a ID di processo (PID) effettivi ma a un elenco a indice zero.|  
 |**a**[**ttach**] [*pid*]|Esegue la connessione a un processo o visualizza i processi disponibili.|  
@@ -106,5 +106,5 @@ mdbg>
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

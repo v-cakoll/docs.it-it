@@ -15,17 +15,17 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047776"
 ---
 # <a name="listening-with-sockets"></a>attesa con socket
 I socket listener o server aprono una porta in rete e quindi attendono che un client si connetta alla porta. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare un servizio remoto per una rete TCP/IP.  
   
- L'indirizzo univoco di un servizio TCP/IP è definito dalla combinazione dell'indirizzo IP dell'host con il numero di porta del servizio, in modo da creare un endpoint per il servizio. La classe <xref:System.Net.Dns> fornisce i metodi che restituiscono informazioni sugli indirizzi di rete supportati dal dispositivo di rete locale. Quando il dispositivo di rete locale ha più di un indirizzo di rete o se il sistema locale supporta più di un dispositivo di rete, la classe **Dns** restituisce informazioni su tutti gli indirizzi di rete e l'applicazione deve scegliere quello appropriato per il servizio. IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere [Registro dei numeri di porta per nomi di servizio e protocolli di trasporto](https://www.iana.org/assignments/port-numbers)  Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535.  
+ L'indirizzo univoco di un servizio TCP/IP è definito dalla combinazione dell'indirizzo IP dell'host con il numero di porta del servizio, in modo da creare un endpoint per il servizio. La classe <xref:System.Net.Dns> fornisce i metodi che restituiscono informazioni sugli indirizzi di rete supportati dal dispositivo di rete locale. Quando il dispositivo di rete locale ha più di un indirizzo di rete o se il sistema locale supporta più di un dispositivo di rete, la classe **Dns** restituisce informazioni su tutti gli indirizzi di rete e l'applicazione deve scegliere quello appropriato per il servizio. IANA (Internet Assigned Numbers Authority) definisce i numeri di porta per i servizi comuni. Per altre informazioni, vedere [Registro dei numeri di porta per nomi di servizio e protocolli di trasporto](https://www.iana.org/assignments/port-numbers) Altri servizi possono avere numeri di porta registrati nell'intervallo da 1024 a 65.535.  
   
  L'esempio seguente crea un oggetto <xref:System.Net.IPEndPoint> per un server combinando il primo indirizzo IP restituito da **Dns** per l'host computer con un numero di porta scelto dall'intervallo di numeri di porta registrato.  
   
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Uso di socket client](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+- [Uso di un socket server sincrono](using-a-synchronous-server-socket.md)
+- [Uso di un socket server asincrono](using-an-asynchronous-server-socket.md)
+- [Uso di socket client](using-client-sockets.md)
+- [Procedura: Creare un socket](how-to-create-a-socket.md)
+- [Socket](sockets.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953199"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042504"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953199"
  In questa sezione sono contenute le panoramiche e le procedure per lo sviluppo di client di automazione interfaccia utente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Automazione interfaccia utente e ridimensionamento schermo](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Supporto per automazione interfaccia utente dei controlli standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Mapping dei pattern di controllo per client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Ottenere elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Problemi relativi al threading di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Procedure relative alle proprietà](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [Automazione interfaccia utente e ridimensionamento schermo](ui-automation-and-screen-scaling.md)  
+ [Supporto per automazione interfaccia utente dei controlli standard](ui-automation-support-for-standard-controls.md)  
+ [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)  
+ [Memorizzazione nella cache di client di automazione interfaccia utente](caching-in-ui-automation-clients.md)  
+ [Proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md)  
+ [Mapping dei pattern di controllo per client di automazione interfaccia utente](control-pattern-mapping-for-ui-automation-clients.md)  
+ [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)  
+ [Ottenere elementi di automazione interfaccia utente](obtaining-ui-automation-elements.md)  
+ [Problemi relativi al threading di automazione interfaccia utente](ui-automation-threading-issues.md)  
+ [Procedure relative alle proprietà](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Automation>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952516"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053644"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedura: Aggiungere programmi di installazione all'applicazione di servizio
 Visual Studio include componenti di installazione che consentono di installare le risorse associate alle applicazioni di servizio. I componenti di installazione registrano un singolo servizio nel sistema in cui viene installato e informazione Gestione controllo servizi dell'esistenza del servizio. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra Proprietà per aggiungere automaticamente i programmi di installazione appropriati al progetto.  
@@ -47,11 +47,11 @@ Visual Studio include componenti di installazione che consentono di installare l
   
     |Value|Risultato|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per altre informazioni, vedere [Procedura: Avviare servizi](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Il servizio verrà avviato automaticamente a ogni riavvio del computer.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Impossibile avviare il servizio.|  
   
-6. Per determinare il contesto di sicurezza in cui verrà eseguito il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceProcessInstaller> e impostare i valori di proprietà appropriati. Per altre informazioni, vedere [Procedura: Specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Per determinare il contesto di sicurezza in cui verrà eseguito il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceProcessInstaller> e impostare i valori di proprietà appropriati. Per altre informazioni, vedere [Procedura: Specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md).  
   
 7. Eseguire l'override degli eventuali metodi che richiedono un'elaborazione personalizzata.  
   
@@ -62,7 +62,7 @@ Visual Studio include componenti di installazione che consentono di installare l
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Procedura: Specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Introduzione alle applicazioni di servizio Windows](introduction-to-windows-service-applications.md)
+- [Procedura: Installare e disinstallare servizi](how-to-install-and-uninstall-services.md)
+- [Procedura: Avviare servizi](how-to-start-services.md)
+- [Procedura: Specificare il contesto di sicurezza per i servizi](how-to-specify-the-security-context-for-services.md)

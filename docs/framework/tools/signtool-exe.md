@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894788"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044200"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>Parametri  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |`command`|Uno dei quattro comandi (`catdb`, `sign`, `Timestamp` o `Verify`) che specifica l'operazione da eseguire su un file. Per una descrizione di ogni comando, vedere la tabella successiva.|  
 |`options`|Opzione che modifica un comando. Oltre alle opzioni globali `/q` e `/v`, ciascun comando supporta un set univoco di opzioni.|  
@@ -37,12 +37,12 @@ signtool [command] [options] [file_name | ...]
   
  Lo strumento Firma supporta i comandi seguenti. Ogni comando è usato con set distinti di opzioni, elencati nelle rispettive sezioni.  
   
-|Comando|Descrizione|  
+|Comando|DESCRIZIONE|  
 |-------------|-----------------|  
-|`catdb`|Aggiunge o rimuove un file di catalogo da un database di cataloghi. I database dei cataloghi vengono usati per la ricerca automatica di file di catalogo e sono identificati dal GUID. Per un elenco delle opzioni supportate dal comando `catdb`, vedere [Opzioni del comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Firma digitalmente i file. Le firme digitali impediscono la manomissione dei file e consentono agli utenti di verificare il firmatario in base a un certificato di firma. Per un elenco delle opzioni supportate dal comando `sign`, vedere [Opzioni del comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Aggiunge un timestamp ai file. Per un elenco delle opzioni supportate dal comando `TimeStamp`, vedere [Opzioni del comando TimeStamp](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|Verifica la firma digitale dei file determinando se il certificato di firma è stato emesso da un'autorità attendibile, se è stato revocato e, facoltativamente, se è valido per criteri specifici. Per un elenco delle opzioni supportate dal comando `Verify`, vedere [Opzioni del comando Verify](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Aggiunge o rimuove un file di catalogo da un database di cataloghi. I database dei cataloghi vengono usati per la ricerca automatica di file di catalogo e sono identificati dal GUID. Per un elenco delle opzioni supportate dal comando `catdb`, vedere [Opzioni del comando catdb](signtool-exe.md#catdb).|  
+|`sign`|Firma digitalmente i file. Le firme digitali impediscono la manomissione dei file e consentono agli utenti di verificare il firmatario in base a un certificato di firma. Per un elenco delle opzioni supportate dal comando `sign`, vedere [Opzioni del comando sign](signtool-exe.md#sign).|  
+|`Timestamp`|Aggiunge un timestamp ai file. Per un elenco delle opzioni supportate dal comando `TimeStamp`, vedere [Opzioni del comando TimeStamp](signtool-exe.md#TimeStamp).|  
+|`Verify`|Verifica la firma digitale dei file determinando se il certificato di firma è stato emesso da un'autorità attendibile, se è stato revocato e, facoltativamente, se è valido per criteri specifici. Per un elenco delle opzioni supportate dal comando `Verify`, vedere [Opzioni del comando Verify](signtool-exe.md#Verify).|  
   
  Le opzioni riportate di seguito si applicano a tutti i comandi dello strumento Firma.  
   
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Opzioni del comando Verify  
   
-|Opzione Verify|Descrizione|  
+|Opzione Verify|DESCRIZIONE|  
 |-------------------|-----------------|  
 |`/a`|Specifica che tutti i metodi possono essere usati per verificare il file. Innanzitutto, viene effettuata una ricerca nei database dei cataloghi per determinare se il file è firmato in un catalogo. Se non risulta firmato in alcun catalogo, viene effettuato un tentativo di verifica della firma incorporata del file. Questa opzione è consigliata per la verifica di file che possono risultare firmati o non firmati all'interno di un catalogo. Gli esempi di questi file includono i file o i driver di Windows.|  
 |`/ad`|Trova il catalogo usando il database dei cataloghi predefinito.|  
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

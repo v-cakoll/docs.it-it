@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851607"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045571"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -58,7 +58,7 @@ Questo modello presenta diversi vantaggi:
 Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Vedere la colonna **Language tag** (Tag di lingua) nell'[elenco di nomi di lingua/area geografica supportati da Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). I nomi delle impostazioni cultura seguono lo standard definito da [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Per migliorare le prestazioni di ricerca, applicare l'attributo <xref:System.Res
 Il processo di fallback per le risorse di .NET Framework include i passaggi seguenti:
 
 > [!TIP]
-> L'elemento di configurazione [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) può contribuire a ottimizzare il processo di fallback delle risorse e il processo di probe degli assembly di risorse nel runtime. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> L'elemento di configurazione [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) può contribuire a ottimizzare il processo di fallback delle risorse e il processo di probe degli assembly di risorse nel runtime. Per altre informazioni vedere la sezione [Ottimizzazione del processo di fallback delle risorse](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
-1. Il runtime ricerca nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.
+1. Il runtime ricerca nella [Global Assembly Cache](../app-domains/gac.md) un assembly corrispondente alle impostazioni cultura richieste per l'applicazione.
 
      La Global Assembly Cache può archiviare assembly di risorse condivisi da più applicazioni. In tal modo non è necessario includere set di risorse specifici nella struttura di directory di ogni applicazione creata. Se il runtime rileva un riferimento all'assembly, cerca nell'assembly la risorsa richiesta. Se rileva la voce nell'assembly usa la risorsa richiesta. Se la voce non viene trovata la ricerca continua.
 
@@ -112,13 +112,13 @@ Si supponga ad esempio che l'applicazione richieda una risorsa localizzata in sp
 
 Se si verificano le seguenti condizioni, è possibile ottimizzare il processo con il quale il runtime cerca risorse negli assembly satellite
 
-- Gli assembly satellite vengono distribuiti nello stesso percorso in cui si trova l'assembly di codice. Se l'assembly di codice è installato nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) anche gli assembly satellite vengono installati nella Global Assembly Cache. Se l'assembly di codice è installato in una directory gli assembly satellite vengono installati in cartelle specifiche della directory, corrispondenti alle impostazioni cultura.
+- Gli assembly satellite vengono distribuiti nello stesso percorso in cui si trova l'assembly di codice. Se l'assembly di codice è installato nella [Global Assembly Cache](../app-domains/gac.md) anche gli assembly satellite vengono installati nella Global Assembly Cache. Se l'assembly di codice è installato in una directory gli assembly satellite vengono installati in cartelle specifiche della directory, corrispondenti alle impostazioni cultura.
 
 - Gli assembly satellite non vengono installati su richiesta.
 
 - Il codice dell'applicazione non gestisce l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-È possibile ottimizzare il probe per gli assembly satellite includendo l'elemento [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostando il relativo attributo `enabled` su `true` nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
+È possibile ottimizzare il probe per gli assembly satellite includendo l'elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e impostando il relativo attributo `enabled` su `true` nel file di configurazione dell'applicazione, come illustrato nell'esempio seguente.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Se si verificano le seguenti condizioni, è possibile ottimizzare il processo co
 </configuration>
 ```
 
-Il probe ottimizzato per gli assembly satellite è una funzionalità che richiede il consenso esplicito. In altri termini il runtime segue le fasi documentate in [Processo di fallback per le risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) salvo se nel file di configurazione dell'applicazione è presente l'elemento [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) e l'attributo `enabled` di tale elemento è impostato su `true`. In questo caso il processo di probe di un assembly satellite viene modificato come segue:
+Il probe ottimizzato per gli assembly satellite è una funzionalità che richiede il consenso esplicito. In altri termini il runtime segue le fasi documentate in [Processo di fallback per le risorse](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) salvo se nel file di configurazione dell'applicazione è presente l'elemento [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e l'attributo `enabled` di tale elemento è impostato su `true`. In questo caso il processo di probe di un assembly satellite viene modificato come segue:
 
 - Il runtime usa il percorso dell'assembly del codice padre per il probe dell'assembly satellite. Se l'assembly padre è installato nella Global Assembly Cache il runtime esegue il probe nella cache ma non nella directory dell'applicazione. Se l'assembly padre è installato in una directory dell'applicazione il runtime esegue il probe nella directory dell'applicazione ma non nella Global Assembly Cache.
 
@@ -186,7 +186,7 @@ Il secondo file, resources.ru.txt, contiene una risorsa per la lingua russa.
 Greeting=Добрый день
 ```
 
-Questi due file vengono compilati in file resources eseguendo il [generatore di file di risorse (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) dalla riga di comando. Per la risorsa di lingua francese il comando è:
+Questi due file vengono compilati in file resources eseguendo il [generatore di file di risorse (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) dalla riga di comando. Per la risorsa di lingua francese il comando è:
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Per la risorsa di lingua russa il comando è:
 
 **resgen.exe resources.ru.txt**
 
-È possibile incorporare i file resources in librerie di collegamento dinamico (DLL) eseguendo [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) dalla riga di comando con la seguente sintassi per la risorsa di lingua francese:
+È possibile incorporare i file resources in librerie di collegamento dinamico (DLL) eseguendo [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) dalla riga di comando con la seguente sintassi per la risorsa di lingua francese:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
-- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Risorse nelle applicazioni desktop](index.md)
+- [Global Assembly Cache](../app-domains/gac.md)
+- [Creazione dei file di risorsa](creating-resource-files-for-desktop-apps.md)
+- [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205808"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051814"
 ---
 # <a name="exposing-net-components-to-com"></a>Esposizione di componenti .NET a COM
 
@@ -27,7 +27,7 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
 
      Gli attributi personalizzati nel codice gestito possono migliorare l'interoperabilità di un componente.
 
-- [Preparazione di un assembly per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Preparazione di un assembly per COM](packaging-an-assembly-for-com.md).
 
      Gli sviluppatori COM potrebbero richiedere di riepilogare i passaggi previsti per fare riferimento agli assembly e distribuirli.
 
@@ -35,11 +35,11 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Per utilizzare un tipo gestito da COM
 
-1. [Registrare gli assembly con COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Registrare gli assembly con COM](registering-assemblies-with-com.md).
 
      I tipi in un assembly (e le librerie dei tipi) devono essere registrati in fase di progettazione. Se un programma di installazione non registra l'assembly, comunicare agli sviluppatori COM di usare Regasm.exe.
 
-2. [Fare riferimento a tipi .NET da COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md).
 
      Gli sviluppatori COM possono fare riferimento ai tipi in un assembly usando gli strumenti e le tecniche abituali.
 
@@ -53,5 +53,5 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)
-- [Esempio di interoperabilità COM: client COM e server .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Interoperabilità con codice non gestito](index.md)
+- [Esempio di interoperabilità COM: client COM e server .NET](com-interop-sample-com-client-and-net-server.md)

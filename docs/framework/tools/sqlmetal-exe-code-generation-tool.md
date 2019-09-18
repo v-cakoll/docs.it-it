@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894616"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044086"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di .NET Framework. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -30,7 +30,7 @@ Lo strumento da riga di comando SqlMetal genera codice e mapping per il componen
 > [!NOTE]
 > Gli sviluppatori che usano Visual Studio possono usare anche Object Relational Designer per generare classi di entità. Quando si usano database di grandi dimensioni, l'approccio basato sulla riga di comando rappresenta la scelta più adeguata. In quanto strumento da riga di comando, SqlMetal può essere usato in un processo di compilazione.  
   
- Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Al prompt dei comandi digitare quanto segue:  
+ Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md). Al prompt dei comandi digitare quanto segue:  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Opzioni di connessione**  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/server:** *\<nome>*|Specifica il nome del server di database.|  
 |**/database:** *\<nome>*|Specifica il catalogo del database contenuto nel server.|  
@@ -77,11 +77,11 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<tipo>*|Specifica il nome della classe del contesto dati. Valore predefinito: derivato dal nome del database.|  
 |**/entitybase:** *\<tipo>*|Specifica la classe base delle classi di entità nel codice generato. Valore predefinito: le entità non dispongono di classe base.|  
 |**/pluralize**|Rende automaticamente plurali o singolari i nomi delle classi e dei membri.<br /><br /> Opzione disponibile solo nella versione in lingua inglese degli Stati Uniti.|  
-|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: No.<br /><br /> Per altre informazioni, vedere [Serializzazione](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<opzione>*|Genera classi serializzabili.<br /><br /> Valori validi per *\<opzione>* : None, Unidirectional. Valore predefinito: No.<br /><br /> Per altre informazioni, vedere [Serializzazione](../data/adonet/sql/linq/serialization.md).|  
   
  **File di input**  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**\<file input>**|Specifica un file con estensione mdf di SQL Server Express, un file con estensione sdf di SQL Server Compact 3.5 oppure un file con estensione dbml intermedio.|  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Generare il modello a oggetti in Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [Generazione di codice in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [External Mapping](../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Procedura: Generare il modello a oggetti in Visual Basic o C#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Generazione di codice in LINQ to SQL](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [External Mapping](../data/adonet/sql/linq/external-mapping.md) (Mapping esterno)

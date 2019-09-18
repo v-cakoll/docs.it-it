@@ -11,27 +11,27 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624624"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048533"
 ---
 # <a name="enabling-network-tracing"></a>Abilitazione della traccia di rete
 La funzionalità di traccia di rete consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. È necessario completare le attività seguenti per abilitare la traccia di rete nell'applicazione:  
   
-- Compilare il codice con la traccia abilitata. Vedere [How to: Compilare in modo condizionale con traccia e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia.  
+- Compilare il codice con la traccia abilitata. Vedere [Procedura: Compilare in modo condizionale con traccia e debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) per altre informazioni sulle opzioni del compilatore necessarie per abilitare la traccia.  
   
 - Specificare una destinazione per l'output di traccia.  
   
-- Configurare il comportamento della traccia di rete. Vedere [How to: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) per informazioni dettagliate.  
+- Configurare il comportamento della traccia di rete. Vedere [Procedura: Configurare la traccia di rete](how-to-configure-network-tracing.md) per informazioni dettagliate.  
   
  Le destinazioni di traccia più comuni, dette anche listener di traccia, sono il listener predefinito e il file di log.  
   
  La traccia usa il listener predefinito se non si specifica un listener di traccia. Per visualizzare i messaggi inviati al listener predefinito, è possibile eseguire il codice in un debugger abilitato per il codice gestito, ad esempio il debugger CLR, fornito con .NET Framework SDK, o DBwin32.exe, fornito con Windows SDK. Usando il debugger CLR, i messaggi di traccia vengono visualizzati nella finestra **Output**.  
   
- Se si preferisce usare un file per ricevere le tracce, è possibile specificare un file di log usando le impostazioni di configurazione, come illustrato nell'esempio seguente. Per informazioni generali sui file di configurazione, vedere [File di configurazione](../../../docs/framework/configure-apps/index.md).  
+ Se si preferisce usare un file per ricevere le tracce, è possibile specificare un file di log usando le impostazioni di configurazione, come illustrato nell'esempio seguente. Per informazioni generali sui file di configurazione, vedere [File di configurazione](../configure-apps/index.md).  
   
  Per inviare le tracce a un file di log, aggiungere il nodo seguente al nodo `<system.diagnostics>` del file di configurazione appropriato (applicazione o computer). È possibile modificare il nome del file (trace.log) in base alle esigenze.  
   
@@ -47,6 +47,6 @@ La funzionalità di traccia di rete consente di accedere alle informazioni sulle
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Interpretazione della traccia di rete](interpreting-network-tracing.md)
+- [Traccia di rete in .NET Framework](network-tracing.md)
+- [Traccia e strumentazione di applicazioni](../debug-trace-profile/tracing-and-instrumenting-applications.md)

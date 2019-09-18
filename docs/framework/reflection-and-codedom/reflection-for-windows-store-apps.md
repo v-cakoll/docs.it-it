@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378601"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045945"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
 A partire da .NET Framework 4.5, .NET Framework è incluso un set di tipi e membri di reflection che possono essere usati nelle app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
@@ -43,5 +43,5 @@ A partire da .NET Framework 4.5, .NET Framework è incluso un set di tipi e memb
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Reflection](reflection.md)
 - [.NET per app di Windows Store – API supportate](https://go.microsoft.com/fwlink/?LinkID=225700)

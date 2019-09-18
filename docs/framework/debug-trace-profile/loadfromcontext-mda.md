@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 632d9119cf32aab66c87e345ec98c6867ed51592
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614374"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052524"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato un assembly nel contesto `LoadFrom`. Questa situazione può verificarsi come risultato di una chiamata di <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o di altri metodi simili.  
@@ -74,4 +74,4 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

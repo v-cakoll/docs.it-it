@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664026"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054060"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 
@@ -249,7 +249,7 @@ La procedura seguente descrive come impostare un punto di interruzione per misur
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Per impostare un punto di interruzione alla fine dell'operazione di Garbage Collection
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Per impostare un punto di interruzione alla fine dell'operazione di Garbage Collection
 
 - In WinDbg con l'estensione del debugger SOS caricata, digitare il comando seguente:
 
@@ -301,7 +301,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Per determinare se il problema è causato da Garbage Collection
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Per determinare se il problema è causato da Garbage Collection
 
 - Esaminare i due contatori delle prestazioni della memoria seguenti:
 
@@ -313,7 +313,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Per determinare se l'eccezione di memoria esaurita è gestita
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Per determinare se l'eccezione di memoria esaurita è gestita
 
 1. Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando di stampa dell'eccezione (**pe**):
 
@@ -347,7 +347,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Per determinare la quantità di memoria virtuale che è possibile riservare
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Per determinare la quantità di memoria virtuale che è possibile riservare
 
 - In WinDbg con l'estensione del debugger SOS caricata, digitare il comando seguente per ottenere l'area libera più grande:
 
@@ -381,7 +381,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Per determinare se è disponibile memoria fisica sufficiente
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Per determinare se è disponibile memoria fisica sufficiente
 
 1. Avviare Gestione risorse di Windows.
 
@@ -391,7 +391,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Per determinare la quantità di memoria di cui l'heap gestito esegue il commit
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Per determinare la quantità di memoria di cui l'heap gestito esegue il commit
 
 - Usare il contatore delle prestazioni della memoria `# Total committed bytes` per ottenere il numero di byte di cui l'heap gestito sta eseguendo il commit. Garbage Collector esegue il commit dei blocchi in un segmento nel modo necessario e non di tutti allo stesso tempo.
 
@@ -400,7 +400,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Per determinare la quantità di memoria riservata dall'heap gestito
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Per determinare la quantità di memoria riservata dall'heap gestito
 
 - Usare il contatore delle prestazioni della memoria `# Total reserved bytes`.
 
@@ -449,7 +449,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>Per determinare gli oggetti di grandi dimensioni nella generazione 2
+### <a name="to-determine-large-objects-in-generation-2"></a>Per determinare gli oggetti di grandi dimensioni nella generazione 2
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:
 
@@ -489,7 +489,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>Per determinare i riferimenti agli oggetti
+### <a name="to-determine-references-to-objects"></a>Per determinare i riferimenti agli oggetti
 
 - In WinDbg con l'estensione del debugger SOS caricata, digitare il comando seguente per elencare i riferimenti agli oggetti:
 
@@ -523,7 +523,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Per determinare se è stato eseguito un finalizzatore
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Per determinare se è stato eseguito un finalizzatore
 
 - Eseguire un programma di test contenente il codice seguente:
 
@@ -537,7 +537,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Per determinare se sono presenti oggetti in attesa di essere finalizzati
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Per determinare se sono presenti oggetti in attesa di essere finalizzati
 
 1. Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:
 
@@ -562,7 +562,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Per determinare la quantità di spazio libero nell'heap gestito
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Per determinare la quantità di spazio libero nell'heap gestito
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:
 
@@ -639,7 +639,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>Per determinare il numero di oggetti bloccati
+### <a name="to-determine-the-number-of-pinned-objects"></a>Per determinare il numero di oggetti bloccati
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente:
 
@@ -655,7 +655,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Per determinare il periodo di tempo in un'operazione di Garbage Collection
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Per determinare il periodo di tempo in un'operazione di Garbage Collection
 
 - Esaminare il contatore delle prestazioni della memoria `% Time in GC`.
 
@@ -743,7 +743,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Per determinare che cosa ha attivato un'operazione di Garbage Collection
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>Per determinare che cosa ha attivato un'operazione di Garbage Collection
 
 - Nel debugger WinDbg o di Visual Studio con l'estensione del debugger SOS caricata, digitare il comando seguente per mostrare tutti i thread con i rispettivi stack di chiamate:
 
@@ -822,7 +822,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Per determinare se l'utilizzo elevato della CPU è causato da Garbage Collection
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Per determinare se l'utilizzo elevato della CPU è causato da Garbage Collection
 
 - Correlare il valore del contatore delle prestazioni della memoria `% Time in GC` alla durata del processo.
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935734"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046249"
 ---
 # <a name="reliability-best-practices"></a>Procedure consigliate per l'ottimizzazione dell'affidabilità
 
@@ -91,7 +91,7 @@ La maggior parte delle classi che attualmente hanno un finalizzatore solo per el
 
 Si noti che <xref:System.Runtime.InteropServices.SafeHandle> non sostituisce <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  L'eliminazione esplicita delle risorse del sistema operativo offre ancora potenziali vantaggi in termini di prestazioni e di risoluzione di conflitti di risorse.  Basta considerare che i blocchi `finally` che eseguono l'eliminazione esplicita delle risorse potrebbero non venire eseguiti completamente.
 
-<xref:System.Runtime.InteropServices.SafeHandle> consente di implementare un metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> che esegue le operazioni appropriate per liberare l'handle, ad esempio passando lo stato a una routine di rilascio degli handle del sistema operativo oppure liberando un set di handle in un ciclo.  L'esecuzione di questo metodo è garantita da CLR.  È responsabilità dell'autore dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> garantire che l'handle venga rilasciato in qualsiasi circostanza. In caso contrario, l'handle andrà perso e ciò spesso causa una perdita delle risorse native associate all'handle. È quindi fondamentale strutturare le classi derivate di <xref:System.Runtime.InteropServices.SafeHandle> in modo che l'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non richieda l'allocazione di alcuna risorsa che potrebbe non essere disponibile al momento della chiamata. Si noti che è consentito chiamare metodi che possono generare errori nell'ambito dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, a condizione che il codice possa gestire tali errori e rispettare il contratto per rilasciare l'handle nativo. Ai fini del debug, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> restituisce un valore <xref:System.Boolean>, che può essere impostato su `false` qualora si verifichi un errore irreversibile che impedisce il rilascio della risorsa. In questo modo, verrà attivato l'assistente al debug gestito [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md), se abilitato, per aiutare nell'identificazione del problema. Non ci saranno altri effetti sul runtime. Il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non verrà chiamato di nuovo per la stessa risorsa e, di conseguenza, l'handle andrà perso.
+<xref:System.Runtime.InteropServices.SafeHandle> consente di implementare un metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> che esegue le operazioni appropriate per liberare l'handle, ad esempio passando lo stato a una routine di rilascio degli handle del sistema operativo oppure liberando un set di handle in un ciclo.  L'esecuzione di questo metodo è garantita da CLR.  È responsabilità dell'autore dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> garantire che l'handle venga rilasciato in qualsiasi circostanza. In caso contrario, l'handle andrà perso e ciò spesso causa una perdita delle risorse native associate all'handle. È quindi fondamentale strutturare le classi derivate di <xref:System.Runtime.InteropServices.SafeHandle> in modo che l'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non richieda l'allocazione di alcuna risorsa che potrebbe non essere disponibile al momento della chiamata. Si noti che è consentito chiamare metodi che possono generare errori nell'ambito dell'implementazione di <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, a condizione che il codice possa gestire tali errori e rispettare il contratto per rilasciare l'handle nativo. Ai fini del debug, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> restituisce un valore <xref:System.Boolean>, che può essere impostato su `false` qualora si verifichi un errore irreversibile che impedisce il rilascio della risorsa. In questo modo, verrà attivato l'assistente al debug gestito [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md), se abilitato, per aiutare nell'identificazione del problema. Non ci saranno altri effetti sul runtime. Il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> non verrà chiamato di nuovo per la stessa risorsa e, di conseguenza, l'handle andrà perso.
 
 L'oggetto <xref:System.Runtime.InteropServices.SafeHandle> non è appropriato in determinati contesti.  Poiché il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> può essere eseguito in un thread finalizzatore <xref:System.GC>, non è opportuno eseguire il wrapping in un oggetto <xref:System.Runtime.InteropServices.SafeHandle> degli handle che devono essere rilasciati in un thread specifico.
 
@@ -316,4 +316,4 @@ In questo modo, il compilatore JIT prepara tutto il codice nel blocco finally pr
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [Programmazione per SQL Server e attributi di protezione host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [Programmazione per SQL Server e attributi di protezione host](sql-server-programming-and-host-protection-attributes.md)

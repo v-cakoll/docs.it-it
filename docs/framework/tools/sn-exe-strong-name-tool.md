@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971850"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044157"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../standard/assembly/strong-named.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -27,7 +27,7 @@ Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri]
 
  Per altre informazioni sui nomi sicuri e sugli assembly con nomi sicuri, vedere [Assembly con nomi sicuri](../../standard/assembly/strong-named.md) e [Procedura: Firmare un assembly con un nome sicuro](../../standard/assembly/sign-strong-name.md).  
   
- Lo strumento Nome Sicuro viene installato automaticamente con Visual Studio. Per avviare lo strumento, usare il prompt dei comandi per lo sviluppatore (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Lo strumento Nome Sicuro viene installato automaticamente con Visual Studio. Per avviare lo strumento, usare il prompt dei comandi per lo sviluppatore (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > Nei computer a 64 bit eseguire la versione a 32 bit di Sn.exe tramite il Prompt dei comandi per gli sviluppatori per Visual Studio e la versione a 64 bit tramite il prompt dei comandi di Visual Studio x64 Win64. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*dimensionechiave*] *FileOut*|Genera una nuova chiave <xref:System.Security.Cryptography.RSACryptoServiceProvider> con la dimensione indicata e la scrive nel file specificato.  Nel file vengono scritte sia la chiave pubblica sia la chiave privata.<br /><br /> Se non si specifica una dimensione per la chiave, verrà generata una chiave a 1024 bit se è installato Microsoft Enhanced Cryptographic Provider; in caso contrario, verrà generata una chiave a 512 bit.<br /><br /> Il parametro *dimensionechiave* supporta lunghezze di chiavi da 384 bit a 16384 bit ad incrementi di 8 bit, se è installato Microsoft Enhanced Cryptographic Provider.  Se è stato installato Microsoft Base Cryptographic Provider, supporta lunghezze di chiave da 384 a 512 bit per incrementi di 8 bit.|  
 |**-m** [**y** *&#124;* **n**]|Indica se i contenitori delle chiavi sono specifici del computer o dell'utente. Se si specifica *y*, i contenitori delle chiavi sono specifici del computer. Se si specifica *n*, i contenitori delle chiavi sono specifici dell'utente.<br /><br /> Se non si specifica né y né n, questa opzione visualizzerà l'impostazione corrente.|  
 |**-o**  *FileIn* [*FileOut*]|Estrae la chiave pubblica da *FileIn* e la archivia in un file CSV. I byte della chiave pubblica sono separati da virgole. Questo formato è utile per gestire i riferimenti hardcoded alle chiavi sotto forma di matrici inizializzate nel codice sorgente. Se non si specifica un *FileOut*, questa opzione inserirà l'output negli Appunti. **Nota:**  Questa opzione non verifica che l'input sia solo una chiave pubblica. Se in `infile` è contenuta una coppia di chiavi con una chiave privata, verrà estratta anche la chiave privata.|  
-|**-p** *FileIn FileOut* [*algoritmohash*]|Estrae la chiave pubblica dalla coppia di chiavi in *FileIn* e la archivia in *FileOut*, eventualmente usando l'algoritmo RSA specificato da *algoritmohash*. È possibile usare questa chiave pubblica per ritardare la firma di un assembly tramite le opzioni **/delaysign+** e **/keyfile** di [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Quando per un assembly è impostata la firma ritardata, in fase di compilazione viene impostata solo la chiave pubblica e nel file viene riservato spazio per la firma che verrà aggiunta in un secondo momento, quando sarà nota la chiave privata.|  
+|**-p** *FileIn FileOut* [*algoritmohash*]|Estrae la chiave pubblica dalla coppia di chiavi in *FileIn* e la archivia in *FileOut*, eventualmente usando l'algoritmo RSA specificato da *algoritmohash*. È possibile usare questa chiave pubblica per ritardare la firma di un assembly tramite le opzioni **/delaysign+** e **/keyfile** di [Assembly Linker (Al.exe)](al-exe-assembly-linker.md). Quando per un assembly è impostata la firma ritardata, in fase di compilazione viene impostata solo la chiave pubblica e nel file viene riservato spazio per la firma che verrà aggiunta in un secondo momento, quando sarà nota la chiave privata.|  
 |**-pc**  *contenitore* *FileOut* [*algoritmohash*]|Estrae la chiave pubblica dalla coppia di chiavi in *contenitore* e la archivia in *FileOut*. Se si usa l'opzione *algoritmohash*, viene usato l'algoritmo RSA per estrarre la chiave pubblica.|  
 |**-Pb** [**y** *&#124;* **n**]|Specifica se sono applicati i criteri per ignorare i nomi sicuri. Se si specifica *y*, i nomi sicuri per gli assembly con attendibilità totale non vengono convalidati se caricati in <xref:System.AppDomain> con attendibilità totale. Se si specifica *n*, i nomi sicuri vengono convalidati per verificare se sono corretti, ma non per individuare un nome sicuro specifico. <xref:System.Security.Permissions.StrongNameIdentityPermission> non ha effetto sugli assembly con attendibilità totale. È necessario eseguire un controllo manuale per rilevare una corrispondenza di nomi sicuri.<br /><br /> Se non si specifica né `y` né `n`, questa opzione visualizzerà l'impostazione corrente. Il valore predefinito è `y`. **Nota:**  Nei computer a 64 bit è necessario impostare questo parametro sia nell'istanza di Sn.exe a 32 bit che in quella a 64 bit.|  
 |**-q**[**uiet**]|Specifica la modalità non interattiva. Evita la visualizzazione dei messaggi di esito positivo.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Strumenti](index.md)
+- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
 - [Assembly con nomi sicuri](../../standard/assembly/strong-named.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

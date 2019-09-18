@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754414"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052688"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedura: Usare TraceSource e filtri con listener di traccia
 Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di traccia avanzato. Il sistema di base è invariato: i messaggi di traccia vengono inviati tramite commutatori ai listener, che inviano i dati a un supporto di output associato. Una delle differenze principali per la versione 2.0 è che le tracce possono essere avviate tramite istanze della classe <xref:System.Diagnostics.TraceSource>. La classe <xref:System.Diagnostics.TraceSource> è progettata per operare come un sistema di traccia avanzato e può essere usata al posto dei metodi statici delle versioni precedenti delle classi di traccia <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. Le classi note <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> esistono ancora, ma la procedura consigliata prevede l'uso della classe <xref:System.Diagnostics.TraceSource> per la traccia.  
   
- Questo argomento descrive l'uso di <xref:System.Diagnostics.TraceSource> associata a un file di configurazione dell'applicazione.  È possibile, ma non consigliabile, gestire la traccia con <xref:System.Diagnostics.TraceSource> senza usare un file di configurazione. Per informazioni sulla traccia senza un file di configurazione, vedere [come: Creare e inizializzare origini di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ Questo argomento descrive l'uso di <xref:System.Diagnostics.TraceSource> associata a un file di configurazione dell'applicazione.  È possibile, ma non consigliabile, gestire la traccia con <xref:System.Diagnostics.TraceSource> senza usare un file di configurazione. Per informazioni sulla traccia senza un file di configurazione, [vedere Procedura: Creare e inizializzare origini](how-to-create-and-initialize-trace-sources.md)di traccia.  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Per creare e inizializzare l'origine di traccia  
   
@@ -169,5 +169,5 @@ Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di tr
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Procedura: Creare e inizializzare origini di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Procedura: Creare e inizializzare origini di traccia](how-to-create-and-initialize-trace-sources.md)
+- [Listener di traccia](trace-listeners.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422419"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046432"
 ---
 # <a name="interop-etw-events"></a>Eventi ETW di interoperabilità
 <a name="top"></a> Gli eventi di interoperabilità acquisiscono informazioni sulla generazione di stub e la memorizzazione nella cache di Microsoft Intermediate Language (MSIL).  
@@ -25,9 +25,9 @@ ms.locfileid: "67422419"
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated  
- La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informativo (4)|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67422419"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|L’identificatore del modulo.|  
 |StubMethodID|win:UInt64|L’identificatore del metodo stub.|  
-|StubFlags|win:UInt64|Flag per lo stub:<br /><br /> 0x1 - Interoperabilità inversa.<br /><br /> 0x2 - interoperabilità COM.<br /><br /> 0x4 - stub generato da NGen.exe.<br /><br /> 0x8 - Delegato.<br /><br /> 0x10 - argomento variabile.<br /><br /> 0x20 - Computer chiamato non gestito.|  
+|StubFlags|win:UInt64|Flag per lo stub:<br /><br /> 0x1 - Interoperabilità inversa.<br /><br /> 0x2 - interoperabilità COM.<br /><br /> 0x4 - stub generato da NGen.exe.<br /><br /> 0x8 - Delegato.<br /><br /> 0x10-argomento della variabile.<br /><br /> 0x20 - Computer chiamato non gestito.|  
 |ManagedInteropMethodToken|win:UInt32|Il token per il metodo di interoperabilità gestito.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Lo spazio dei nomi per il metodo di interoperabilità gestito.|  
 |ManagedInteropMethodName|win:UnicodeString|Il nome per il metodo di interoperabilità gestito.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67422419"
 ## <a name="ilstubcachehit-event"></a>Evento ILStubCacheHit  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informativo (4)|  
   
@@ -85,4 +85,4 @@ ms.locfileid: "67422419"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

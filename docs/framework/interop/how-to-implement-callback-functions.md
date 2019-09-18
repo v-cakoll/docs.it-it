@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894193"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051760"
 ---
 # <a name="how-to-implement-callback-functions"></a>Procedura: Implementare funzioni di callback
 La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale. In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.  
@@ -38,7 +38,7 @@ La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usand
   
 4. Assicurarsi che il garbage collector non recuperi il delegato prima che venga completata la funzione di callback. Quando si passa un delegato come parametro o si passa un delegato contenuto come campo in una struttura, questo non viene interessato per la durata della chiamata. Quindi, come nel seguente esempio di enumerazione, la funzione di callback viene completata prima che venga restituita la chiamata e non richiede operazioni aggiuntive dal chiamante gestito.  
   
-     Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata. Per informazioni dettagliate su come evitare operazioni di Garbage Collection, vedere [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md) con platform invoke.  
+     Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata. Per informazioni dettagliate su come evitare operazioni di Garbage Collection, vedere [Marshalling di interoperabilità](interop-marshaling.md) con platform invoke.  
   
 ## <a name="example"></a>Esempio  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzioni di callback](../../../docs/framework/interop/callback-functions.md)
-- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Funzioni di callback](callback-functions.md)
+- [Chiamata a una funzione di DLL](calling-a-dll-function.md)

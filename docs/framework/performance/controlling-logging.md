@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894930"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046681"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 
@@ -85,7 +85,7 @@ Per attivare la registrazione, un utente deve specificare tre impostazioni:
 
 ## <a name="viewing-clr-etw-events"></a>Visualizzazione di eventi ETW CLR
 
-Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Per una descrizione degli eventi, vedere [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md).
+Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Per una descrizione degli eventi, vedere [Eventi ETW di CLR](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Per visualizzare gli eventi ETW CLR tramite Tracerpt
 
@@ -114,4 +114,4 @@ Utilizzare i comandi elencati di seguito per visualizzare gli eventi ETW CLR. Pe
 ## <a name="see-also"></a>Vedere anche
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
-- [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Eventi ETW in Common Language Runtime](etw-events-in-the-common-language-runtime.md)

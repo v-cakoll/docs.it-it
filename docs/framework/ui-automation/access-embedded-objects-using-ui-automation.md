@@ -9,12 +9,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 83e54da5fdb75e3da44009ec700102d6bd7ae5e9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 110407079b37bce13bb6037d5755d2ef16a40214
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937958"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043959"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Accedere agli oggetti incorporati utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69937958"
   
  Gli oggetti incorporati sono considerati figli del provider di testo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Ciò consente di esporli con la stessa struttura ad albero di automazione interfaccia utente di tutti gli altri elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . La funzionalità, a sua volta, viene esposta con i pattern di controllo richiesti in genere dal tipo di controllo degli oggetti incorporati (ad esempio, poiché i collegamenti ipertestuali sono basati sul testo, supporteranno <xref:System.Windows.Automation.TextPattern>).  
   
- ![Oggetti incorporati in un contenitore di testo.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![Oggetti incorporati in un contenitore di testo.](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 Un documento di esempio con contenuto testuale ("sai?" ...) e due oggetti incorporati, ovvero un'immagine di una balena e un collegamento ipertestuale di testo, usati come destinazione per gli esempi di codice.  
   
 ## <a name="example"></a>Esempio  
@@ -54,8 +54,8 @@ Un documento di esempio con contenuto testuale ("sai?" ...) e due oggetti incorp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di TextPattern di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Panoramica di TextPattern di automazione interfaccia utente](ui-automation-textpattern-overview.md)
+- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](ui-automation-control-patterns-overview.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)
+- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)

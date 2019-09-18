@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894889"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046099"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection offre l'infrastruttura usata dai compilatori di linguaggi per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. Visual Basic consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  
@@ -102,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
 - [Conversione di tipi in .NET Framework](../../standard/base-types/type-conversion.md)

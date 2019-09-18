@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894622"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044091"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
 
@@ -27,7 +27,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 
 ## <a name="commands"></a>Comandi:
 
-|Comando|DESCRIZIONE|
+|Comando|Descrizione|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Visualizza le informazioni sull'ultimo evento di memoria insufficiente verificatosi in una richiesta di allocazione all'heap di Garbage Collection (in Garbage Collection per il server, visualizza le informazioni sulla memoria insufficiente, se disponibili, per ogni heap di Garbage Collection).|
 |**BPMD** [ **-nofuturemodule**] [\<*nome modulo*> \<*nome metodo*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*numero punto di interruzione*>  **-clearall**|Crea un punto di interruzione in corrispondenza del metodo specificato nel modulo specificato.<br /><br /> Se il modulo e il metodo specificati non sono stati caricati, questo comando attende una notifica del caricamento e della compilazione JIT (just-in-time) del modulo prima di creare un punto di interruzione.<br /><br /> È possibile gestire l'elenco di punti di interruzione in sospeso usando le opzioni **-list**, **-clear** e **-clearall**:<br /><br /> L'opzione **-list** genera un elenco di tutti i punti di interruzione in sospeso. Se un punto di interruzione in sospeso dispone di un ID modulo diverso da zero, il punto di interruzione è specifico di una funzione in quel particolare modulo caricato. Se il punto di interruzione in sospeso dispone di un ID modulo pari a zero, il punto di interruzione si applica a moduli che non sono stati ancora caricati.<br /><br /> Usare l'opzione **-clear** o **-clearall** per rimuovere punti di interruzione in sospeso dall'elenco.|
@@ -74,7 +74,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**IP2MD** \<*indirizzo codice*>|Visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo specificato nel codice con compilazione JIT.|
 |`ListNearObj` (`lno`) *\<obj_address>*|Visualizza gli oggetti che precedono e seguono l'indirizzo specificato. Il comando cerca l'indirizzo nell'heap di Garbage Collection che sembra un inizio valido di un oggetto gestito (in base a una tabella dei metodi valida) e l'oggetto che segue l'indirizzo dell'argomento.|
 |**MinidumpMode** [**0**] [**1**]|Impedisce l'esecuzione di comandi non sicuri quando si utilizza un minidump.<br /><br /> Passare **0** per disabilitare la funzionalità o **1** per abilitarla. Per impostazione predefinita, il valore **MinidumpMode** è impostato su **0**.<br /><br /> I minidump creati con il comando **.dump /m** o **.dump** contengono una quantità limitata di dati specifici di CLR e consentono la corretta esecuzione solo di un subset di comandi SOS. È possibile che alcuni comandi abbiano esito negativo con errori imprevisti perché aree richieste di memoria non sono mappate o sono mappate solo parzialmente. Questa opzione impedisce l'esecuzione di comandi non sicuri sui minidump.|
-|**Name2EE** \<*nome modulo*> \<*nome tipo o metodo*><br /><br /> -oppure-<br /><br /> **Name2EE** \<*nome modulo*> **!** \<*nome tipo o metodo*>|Visualizza le strutture `MethodTable` e `EEClass` per il tipo o il metodo specificato nel modulo specificato.<br /><br /> Il modulo specificato deve essere caricato nel processo.<br /><br /> Per ottenere il nome del tipo corretto, esplorare il modulo usando [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). È inoltre possibile passare `*` come parametro del nome del modulo per eseguire la ricerca in tutti i moduli gestiti caricati. Il parametro *nome modulo* può anche essere il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.<br /><br /> Questo comando supporta la sintassi del debugger Windows di <`module`>`!`<`type`>. Il tipo deve essere completo.|
+|**Name2EE** \<*nome modulo*> \<*nome tipo o metodo*><br /><br /> -oppure-<br /><br /> **Name2EE** \<*nome modulo*> **!** \<*nome tipo o metodo*>|Visualizza le strutture `MethodTable` e `EEClass` per il tipo o il metodo specificato nel modulo specificato.<br /><br /> Il modulo specificato deve essere caricato nel processo.<br /><br /> Per ottenere il nome del tipo corretto, esplorare il modulo usando [Ildasm.exe (Disassembler IL)](ildasm-exe-il-disassembler.md). È inoltre possibile passare `*` come parametro del nome del modulo per eseguire la ricerca in tutti i moduli gestiti caricati. Il parametro *nome modulo* può anche essere il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.<br /><br /> Questo comando supporta la sintassi del debugger Windows di <`module`>`!`<`type`>. Il tipo deve essere completo.|
 |**ObjSize** [\<*indirizzo oggetto*>] &#124; [ **-aggregate**] [ **-stat**]|Visualizza la dimensione dell'oggetto specificato. Se non si specifica alcun parametro, il comando **ObjSize** visualizza la dimensione di tutti gli oggetti trovati nei thread gestiti, visualizza tutti gli handle del Garbage Collector nel processo e somma la dimensione di tutti gli oggetti a cui puntano tali handle. Il comando **ObjSize** include la dimensione di tutti gli oggetti figlio oltre a quella dell'entità principale.<br /><br /> L'opzione **-aggregate** può essere usata con l'argomento **-stat** per ottenere una visualizzazione dettagliata dei tipi che contengono ancora una radice. Usando **!dumpheap -stat** e **!objsize -aggregate -stat** è possibile determinare quali oggetti non contengono più una radice e diagnosticare vari problemi relativi alla memoria.|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*indirizzo oggetto Exception*>]<br /><br /> -oppure-<br /><br /> **PE** [ **-nested**] [\<*indirizzo oggetto Exception*>]|Visualizza e formatta i campi di qualsiasi oggetto derivato dalla classe <xref:System.Exception> in corrispondenza dell'indirizzo specificato. Se non si specifica un indirizzo, il comando **PrintException** visualizza l'ultima eccezione generata nel thread corrente.<br /><br /> L'opzione **-nested** visualizza dettagli sugli oggetti eccezione annidati.<br /><br /> L'opzione **-lines** visualizza informazioni sull'origine, se disponibili.<br /><br /> È possibile utilizzare questo comando per formattare e visualizzare il campo `_stackTrace`, che è una matrice binaria.|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|Visualizza le variabili di ambiente del processo, il tempo CPU del kernel e le statistiche di utilizzo della memoria.|
@@ -206,5 +206,5 @@ Il comando riportato di seguito visualizza informazioni sul token di metadati in
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

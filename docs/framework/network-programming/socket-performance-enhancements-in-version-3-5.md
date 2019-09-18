@@ -2,12 +2,12 @@
 title: Miglioramenti apportati alle prestazioni socket nella versione 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333288"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047247"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Miglioramenti apportati alle prestazioni socket nella versione 3.5
 La classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> è stata migliorata nella versione 3.5 per l'uso da applicazioni che usano I/O di rete asincrono per ottenere le massime prestazioni. È stata aggiunta una serie di nuove classi nell'ambito di una serie di miglioramenti apportati alla classe <xref:System.Net.Sockets.Socket> che forniscono un modello asincrono alternativo che può essere usato da applicazioni socket ad alte prestazioni specializzate. Questi miglioramenti sono stati progettati in modo specifico per le applicazioni server di rete che richiedono prestazioni elevate. Un'applicazione può usare il modello asincrono migliorato in modo esclusivo o solo nelle aree dell'applicazione con esigenze particolari individuate, ad esempio per la ricezione di grandi quantità di dati.  
@@ -39,5 +39,5 @@ La classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> è stata
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Esempi di programmazione di rete](network-programming-samples.md)
 - [Esempi di codice socket](socket-code-examples.md)

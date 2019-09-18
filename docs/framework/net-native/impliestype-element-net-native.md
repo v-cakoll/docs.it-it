@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType> Elemento (.NET Native)
+title: <ImpliesType>Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049669"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > elemento (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<Elemento > ImpliesType (.NET Native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,7 +35,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|Descrizione|  
+|Attributo|Tipo di attributo|DESCRIZIONE|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
@@ -51,7 +51,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|Descrizione|  
+|Value|DESCRIZIONE|  
 |-----------|-----------------|  
 |*type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
   
@@ -59,7 +59,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -68,9 +68,9 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
+|[\<Type>](type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Method>](method-element-net-native.md)|Applica i criteri di reflection a un metodo.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<ImpliesType>` viene usato principalmente dalle librerie. Consente di risolvere il seguente scenario:  
@@ -99,7 +99,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 </Type>  
 ```  
   
- L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Ad esempio, immaginare un metodo generico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` che una determinata libreria accederà in modo dinamico con associato <xref:System.Collections.Generic.List%601> e <xref:System.Array> tipi. Questa operazione può essere espressa nel seguente modo:  
+ L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Si supponga, ad esempio, un `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` metodo generico a cui una determinata libreria accederà in modo dinamico <xref:System.Collections.Generic.List%601> insieme <xref:System.Array> ai tipi e associati. Questa operazione può essere espressa nel seguente modo:  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)
+- [Impostazioni dei criteri delle direttive di runtime](runtime-directive-policy-settings.md)

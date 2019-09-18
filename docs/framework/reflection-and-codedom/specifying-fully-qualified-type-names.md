@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61793003"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045822"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Specifica di nomi di tipo completi
 
@@ -128,7 +128,7 @@ Usare la barra rovesciata (\\) come carattere di escape per separare i token seg
 |\\*|Tipo di puntatore.|
 |\\[|Delimitatore delle dimensioni della matrice.|
 |\\]|Delimitatore delle dimensioni della matrice.|
-|\\.|Usare la barra rovesciata prima di un punto solo se il punto è usato in una specifica di matrice. I punti in NamespaceSpec non accettano la barra rovesciata.|
+|[https://login.microsoftonline.com/consumers/](\\).|Usare la barra rovesciata prima di un punto solo se il punto è usato in una specifica di matrice. I punti in NamespaceSpec non accettano la barra rovesciata.|
 |\\\|Barra rovesciata se necessaria come stringa letterale.|
 
 Si noti che in tutti i componenti TypeSpec, ad eccezione di AssemblyNameSpec, gli spazi sono rilevanti. In AssemblyNameSpec, gli spazi che precedono il separatore ',' sono rilevanti, ma gli spazi dopo il separatore ',' vengono ignorati.
@@ -143,13 +143,13 @@ Se lo spazio dei nomi fosse `Ozzy.Out+Back`, il segno di addizione dovrebbe esse
 
 Le informazioni minime necessarie in una specifica di nome di assembly è il nome testuale (IDENTIFIER) dell'assembly. È possibile far seguire l'IDENTIFIER da un elenco delimitato da virgole di coppie proprietà/valore, come descritto nella tabella seguente. La denominazione dell'IDENTIFIER deve seguire le regole di denominazione dei file. La denominazione dell'IDENTIFIER non fa distinzione tra maiuscole e minuscole.
 
-|Nome della proprietà|DESCRIZIONE|Valori consentiti|
+|Nome della proprietà|Descrizione|Valori consentiti|
 |-------------------|-----------------|----------------------|
-|**Version**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
+|**Versione**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|
 |**PublicKey**|Chiave pubblica completa|Valore di stringa della chiave pubblica completa in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**PublicKeyToken**|Token di chiave pubblica (hash a 8 byte della chiave pubblica completa)|Valore di stringa del token della chiave pubblica in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|
 |**Impostazioni cultura**|Impostazioni cultura dell'assembly|Impostazioni cultura dell'assembly in formato RFC 1766 o "neutral" per gli assembly indipendenti dal linguaggio (non satellite).|
-|**Personalizzato**|BLOB (Binary Large Object, Oggetto binario di grandi dimensioni) personalizzato. Attualmente viene usato solo in assembly generati dal [generatore di immagini native (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|Stringa personalizzata usata dal generatore di immagini native per notificare alla cache di assembly che l'assembly che si sta installando è un'immagine nativa e deve pertanto essere installato nella cache delle immagini native. Nota anche come stringa zap.|
+|**Impostazione personalizzata**|BLOB (Binary Large Object, Oggetto binario di grandi dimensioni) personalizzato. Attualmente viene usato solo in assembly generati dal [generatore di immagini native (Ngen)](../tools/ngen-exe-native-image-generator.md).|Stringa personalizzata usata dal generatore di immagini native per notificare alla cache di assembly che l'assembly che si sta installando è un'immagine nativa e deve pertanto essere installato nella cache delle immagini native. Nota anche come stringa zap.|
 
 L'esempio seguente illustra un **AssemblyName** per un assembly a nome semplice con le impostazioni cultura predefinite.
 
@@ -224,4 +224,4 @@ Per **ModuleBuilder.GetType**, `MyArray[0..5]` indica una matrice unidimensional
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)

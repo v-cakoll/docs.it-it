@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: e3b3b118c3db95f55c67c2b27149734efc8cbea8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 158ebf29bb504dd11f9e8416011226fc5846873e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968957"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043609"
 ---
 # <a name="get-ui-automation-element-properties"></a>Ottenere le proprietà degli elementi di automazione dell'interfaccia utente
 > [!NOTE]
@@ -41,6 +41,6 @@ ms.locfileid: "69968957"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](use-caching-in-ui-automation.md)
+- [Memorizzazione nella cache di client di automazione interfaccia utente](caching-in-ui-automation-clients.md)

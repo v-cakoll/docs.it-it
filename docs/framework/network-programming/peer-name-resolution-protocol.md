@@ -2,12 +2,12 @@
 title: Protocollo PNRP (Peer Name Resolution Protocol)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623022"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047510"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
@@ -50,5 +50,5 @@ Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Esempi di programmazione di rete](network-programming-samples.md)
 - [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)

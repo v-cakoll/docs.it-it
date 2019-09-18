@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894693"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044631"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
 L'assembler IL genera un file eseguibile di tipo PE dal linguaggio intermedio (IL). Per altre informazioni su IL, vedere [Processo di esecuzione gestita](../../standard/managed-execution-process.md). È possibile eseguire il file eseguibile così ottenuto, contenente il codice IL e i metadati necessari, per determinare se il codice IL viene eseguito come previsto.
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -36,7 +36,7 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parametri
 
-| Argomento | Descrizione |
+| Argomento | DESCRIZIONE |
 | -------- | ----------- |
 |`filename`|Nome del file di origine .il. Questo file è formato da direttive di dichiarazione di metadati e istruzioni IL simboliche. È possibile fornire più argomenti di file di origine per produrre un unico file PE con *Ilasm.exe*. **Nota:** Verificare che nell'ultima riga di codice del file di origine con estensione il sia presente uno spazio vuoto finale o un carattere di fine riga.|
 
@@ -92,7 +92,7 @@ L'assembler IL è in grado di esprimere tutte le funzionalità esistenti per IL 
 > [!NOTE]
 > È possibile che la compilazione abbia esito negativo se nell'ultima riga di codice del file di origine con estensione il non è presente uno spazio vuoto finale o un carattere di fine riga.
 
-È possibile utilizzare *Ilasm.exe* unitamente allo strumento complementare [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). *Ildasm.exe* accetta un file di tipo PE contenente codice IL e crea un file di testo adatto come input per *Ilasm.exe*. Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime. Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm.exe*, il file di testo IL ottenuto potrà essere modificato manualmente per aggiungere gli attributi mancanti. Sarà quindi possibile elaborare questo file di testo mediante *Ilasm.exe* per produrre un file eseguibile finale.
+È possibile utilizzare *Ilasm.exe* unitamente allo strumento complementare [*Ildasm.exe*](ildasm-exe-il-disassembler.md). *Ildasm.exe* accetta un file di tipo PE contenente codice IL e crea un file di testo adatto come input per *Ilasm.exe*. Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime. Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm.exe*, il file di testo IL ottenuto potrà essere modificato manualmente per aggiungere gli attributi mancanti. Sarà quindi possibile elaborare questo file di testo mediante *Ilasm.exe* per produrre un file eseguibile finale.
 
 È inoltre possibile ricorrere a questa tecnica per produrre un unico file PE sulla base di più file PE generati da diversi compilatori.
 
@@ -159,7 +159,7 @@ Il comando che segue assembla il file IL *myTestFile.il* e produce il file *.dll
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-L'esempio di codice seguente illustra un'applicazione molto semplice che visualizza "Hello World!" nella console. È possibile compilare questo codice e quindi utilizzare lo strumento [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) per generare un file IL.
+L'esempio di codice seguente illustra un'applicazione molto semplice che visualizza "Hello World!" nella console. È possibile compilare questo codice e quindi utilizzare lo strumento [*Ildasm.exe*](ildasm-exe-il-disassembler.md) per generare un file IL.
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ L'esempio di codice IL riportato di seguito corrisponde al precedente esempio di
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Strumenti](index.md)
+- [*Ildasm.exe* (Disassembler IL)](ildasm-exe-il-disassembler.md)
 - [Processo di esecuzione gestita](../../standard/managed-execution-process.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b420fb451bf1bb2078a4419a648a1407c39ad178
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851292"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044748"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
 Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -34,7 +34,7 @@ CorFlags.exe assembly [options]
 |------------------------|-----------------|  
 |`assembly`|Nome dell'assembly per il quale configurare CorFlags.|  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Imposta il flag 32BITREQUIRED.|  
 |**/32BIT[REQ]-**|Cancella il flag 32BITREQUIRED.|  
@@ -54,6 +54,6 @@ CorFlags.exe assembly [options]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
-- [Applicazioni a 64 bit](../../../docs/framework/64-bit-apps.md)
-- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Strumenti](index.md)
+- [Applicazioni a 64 bit](../64-bit-apps.md)
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

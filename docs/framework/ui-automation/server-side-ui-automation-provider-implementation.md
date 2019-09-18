@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044161"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042772"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 
@@ -34,7 +34,7 @@ In particolare, non usare campi delle classi in UIAutomationClient.dll come quel
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementazione di provider da elementi di Windows Presentation Foundation
 
-Per altre informazioni su questo argomento, vedere [Automazione interfaccia utente di un controllo personalizzato WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Per altre informazioni su questo argomento, vedere [Automazione interfaccia utente di un controllo personalizzato WPF](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ I provider per i controlli basati su HWND in genere non richiedono di specificar
 >
 > Il valore <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> viene in genere fornito dal provider host. Ad esempio, se un controllo personalizzato è derivato da <xref:System.Windows.Forms.Control>, il nome è derivato dalla proprietà `Text` del controllo.
 
-Per il codice di esempio, vedere [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Per il codice di esempio, vedere [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -129,7 +129,7 @@ Per il codice di esempio, vedere [Return Properties from a UI Automation Provide
 
 I provider[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] devono generare eventi per notificare alle applicazioni client le modifiche allo stato dell'interfaccia utente. Per generare gli eventi vengono usati i metodi seguenti.
 
-|Metodo|DESCRIZIONE|
+|Metodo|Descrizione|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Genera vari eventi, inclusi gli eventi attivati dai pattern di controllo.|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Genera un evento in seguito alla modifica di una proprietà [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|
@@ -191,9 +191,9 @@ A tale scopo, il provider di radice del frammento per il controllo Rebar espone 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica dei provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Esporre un provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Restituire proprietà da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Generare eventi da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Panoramica dei provider di automazione interfaccia utente](ui-automation-providers-overview.md)
+- [Esporre un provider di automazione interfaccia utente lato server](expose-a-server-side-ui-automation-provider.md)
+- [Restituire proprietà da un provider di automazione interfaccia utente](return-properties-from-a-ui-automation-provider.md)
+- [Generare eventi da un provider di automazione interfaccia utente](raise-events-from-a-ui-automation-provider.md)
+- [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Supportare pattern di controllo in un provider di automazione interfaccia utente](support-control-patterns-in-a-ui-automation-provider.md)

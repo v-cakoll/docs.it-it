@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967217"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052293"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
@@ -34,7 +34,7 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 3. Nella barra degli strumenti di Performance Monitor fare clic sull'icona **Aggiungi** (il segno di addizione), se presente. Se non è presente, fare clic con il pulsante destro del mouse nella finestra di monitoraggio e selezionare l'opzione **Aggiungi contatori** .  
   
-     Viene aperta la finestra di dialogo **Aggiungi contatori** . La casella di riepilogo **Contatori disponibili** visualizza gli oggetti prestazione disponibili. Esistono diversi oggetti predefiniti per le applicazioni .NET Framework, inclusi quelli per la gestione della memoria (**Memoria CLR .NET**), per l'interoperabilità (**Interoperabilità CLR .NET**), per la gestione delle eccezioni (**Eccezioni CLR .NET**) e per il multithreading (**LocksAndThreads CLR .NET**). Ogni oggetto prestazione include diversi contatori delle prestazioni singoli. Per un elenco dei contatori delle prestazioni disponibili in Performance Monitor, vedere [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+     Viene aperta la finestra di dialogo **Aggiungi contatori** . La casella di riepilogo **Contatori disponibili** visualizza gli oggetti prestazione disponibili. Esistono diversi oggetti predefiniti per le applicazioni .NET Framework, inclusi quelli per la gestione della memoria (**Memoria CLR .NET**), per l'interoperabilità (**Interoperabilità CLR .NET**), per la gestione delle eccezioni (**Eccezioni CLR .NET**) e per il multithreading (**LocksAndThreads CLR .NET**). Ogni oggetto prestazione include diversi contatori delle prestazioni singoli. Per un elenco dei contatori delle prestazioni disponibili in Performance Monitor, vedere [Performance Counters](performance-counters.md).  
   
 4. Selezionare la casella di controllo accanto al nome di un oggetto prestazione per visualizzare l'elenco dei singoli contatori delle prestazioni che supporta.  
   
@@ -46,15 +46,15 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
      Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su un nome dell'applicazione per monitorare il relativo contatore delle prestazioni.  
   
-     Per differenziare più versioni di runtime o per evitare ambiguità tra più applicazioni con lo stesso nome, è necessario modificare anche una chiave del Registro di sistema. Per altre informazioni, vedere [Performance Counters and In-Process Side-By-Side Applications](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
+     Per differenziare più versioni di runtime o per evitare ambiguità tra più applicazioni con lo stesso nome, è necessario modificare anche una chiave del Registro di sistema. Per altre informazioni, vedere [Performance Counters and In-Process Side-By-Side Applications](performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
 > Quando vengono installati nuovi contatori delle prestazioni mentre è in esecuzione la console prestazioni, arrestare e riavviare la console per rendere visibili i nuovi contatori.  
   
- Per profilare un assembly esistente in un'area o in una condivisione remota, assicurarsi che l'assembly remoto sia totalmente attendibile nel computer che esegue i contatori delle prestazioni. Se l'assembly non ha l'attendibilità totale, i contatori delle prestazioni non funzioneranno. Per informazioni sulla concessione dell'attendibilità alle diverse aree, vedere [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+ Per profilare un assembly esistente in un'area o in una condivisione remota, assicurarsi che l'assembly remoto sia totalmente attendibile nel computer che esegue i contatori delle prestazioni. Se l'assembly non ha l'attendibilità totale, i contatori delle prestazioni non funzioneranno. Per informazioni sulla concessione dell'attendibilità alle diverse aree, vedere [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> Nei sistemi in cui è installato il .NET Framework 4, performance monitor potrebbe non visualizzare i dati per i contatori delle prestazioni in alcune categorie, ad esempio **dati CLR .NET** e **rete CLR .NET**, per le applicazioni sviluppate con .NET Framework 1,1. In questo caso, è possibile configurare Performance Monitor per visualizzare questi dati aggiungendo l'elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al file di configurazione dell'applicazione.  
+> Nei sistemi in cui è installato il .NET Framework 4, performance monitor potrebbe non visualizzare i dati per i contatori delle prestazioni in alcune categorie, ad esempio **dati CLR .NET** e **rete CLR .NET**, per le applicazioni sviluppate con .NET Framework 1,1. In questo caso, è possibile configurare Performance Monitor per visualizzare questi dati aggiungendo l'elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al file di configurazione dell'applicazione.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lettura e creazione di contatori delle prestazioni a livello di codice  
  Il .NET Framework fornisce le classi che è possibile utilizzare per accedere a livello di codice alle stesse informazioni sulle prestazioni disponibili nella console prestazioni. È anche possibile usare queste classi per creare contatori delle prestazioni personalizzati. Nella tabella seguente vengono descritte alcune delle classi di monitoraggio delle prestazioni fornite nel .NET Framework.  
@@ -68,4 +68,4 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Contatori delle prestazioni](performance-counters.md)

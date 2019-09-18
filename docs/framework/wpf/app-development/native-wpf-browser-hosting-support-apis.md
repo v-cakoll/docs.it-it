@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817937"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053369"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API native WPF per il supporto dell'hosting del browser
 L'hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] di applicazioni nei Web browser è facilitato da un server di documenti attivo (noto anche come DocObject) registrato fuori dall'host WPF. Internet Explorer può essere attivato e integrato direttamente con un documento attivo. Per l'hosting di applicazioni XBAP e documenti XAML separati nei browser Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] , fornisce un plug-in NPAPI, che fornisce un ambiente di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] hosting simile al server dei documenti attivo come Internet Explorer. Tuttavia, il modo più semplice per ospitare le applicazioni XBAP e i documenti XAML in altri browser e applicazioni autonome è tramite il controllo Web browser di Internet Explorer. Il controllo Web browser fornisce l'ambiente di hosting del server di documenti attivo complesso, ma consente al proprio host di personalizzare ed estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  
@@ -22,7 +22,7 @@ L'hosting [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-tit
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  L'implementazione del server di documenti attivi WPF di [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) supporta numerosi comandi correlati alla navigazione e specifici del browser del gruppo di comandi OLE standard (con un GUID del gruppo di comandi null). Inoltre, riconosce un gruppo di comandi personalizzato denominato CGID_PresentationHost. Attualmente esiste un solo comando definito in questo gruppo.  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   

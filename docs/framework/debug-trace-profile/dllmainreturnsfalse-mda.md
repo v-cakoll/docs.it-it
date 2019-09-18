@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd987cea78d082eee26032d5f98a54dc0cd3e1d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adc05ae9bd357c142ff09de069aff446b5ea60e8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754687"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052850"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>MDA dllMainReturnsFalse
 L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzione `DllMain` gestita di un assembly utente, chiamata per il motivo DLL_PROCESS_ATTACH, restituisce FALSE.  
@@ -46,4 +46,4 @@ L'assistente al debug gestito `dllMainReturnsFalse` viene attivato se la funzion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostica degli errori tramite gli assistenti al debug gestito](diagnosing-errors-with-managed-debugging-assistants.md)

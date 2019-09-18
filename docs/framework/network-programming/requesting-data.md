@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047323"
 ---
 # <a name="requesting-data"></a>Richiesta di dati
 Lo sviluppo di applicazioni in esecuzione nell'ambiente operativo distribuito dell'attuale rete Internet richiede un metodo efficace e semplice da usare per il recupero dei dati da risorse di tutti i tipi. I protocolli di collegamento consentono di sviluppare applicazioni che usano una singola interfaccia per recuperare i dati da più protocolli Internet.  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Procedura: Richiedere una pagina Web e recuperare i risultati sotto forma di flusso](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Programmazione di rete in .NET Framework](index.md)
+- [Procedura: Richiedere una pagina Web e recuperare i risultati sotto forma di flusso](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

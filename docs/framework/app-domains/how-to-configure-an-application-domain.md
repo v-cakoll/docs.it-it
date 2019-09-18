@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb7223d2356ebec54ddd64dee514f1c8785e2d17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 06883646982aa6bd642dc4fce7881a289dad5901
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921573"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053197"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Procedura: Configurare un dominio dell'applicazione
 La classe <xref:System.AppDomainSetup> consente di specificare Common Language Runtime con informazioni di configurazione per un nuovo dominio dell'applicazione. Quando si creano domini dell'applicazione, la proprietà fondamentale è <xref:System.AppDomainSetup.ApplicationBase%2A>. Le altre proprietà **AppDomainSetup** vengono usate principalmente dagli host di runtime per configurare un particolare dominio dell'applicazione.  
@@ -36,4 +36,4 @@ La classe <xref:System.AppDomainSetup> consente di specificare Common Language R
 ## <a name="see-also"></a>Vedere anche
 
 - [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
-- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+- [Uso dei domini dell'applicazione](use.md)

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754375"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052721"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: Creare e inizializzare listener di traccia
 
 Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.
 
-I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad esempio, si desidera un record di testo di tutti gli output di traccia, creare un listener <xref:System.Diagnostics.TextWriterTraceListener>, che, quando è abilitato, scrive tutto l'output in un nuovo file di testo. Se invece si vuole visualizzare l'output solo durante l'esecuzione dell'applicazione, creare un listener <xref:System.Diagnostics.ConsoleTraceListener>, che indirizza tutto l'output a una finestra della console. Il listener <xref:System.Diagnostics.EventLogTraceListener> è in grado di indirizzare l'output di traccia a un registro eventi. Per altre informazioni, vedere [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md).
+I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad esempio, si desidera un record di testo di tutti gli output di traccia, creare un listener <xref:System.Diagnostics.TextWriterTraceListener>, che, quando è abilitato, scrive tutto l'output in un nuovo file di testo. Se invece si vuole visualizzare l'output solo durante l'esecuzione dell'applicazione, creare un listener <xref:System.Diagnostics.ConsoleTraceListener>, che indirizza tutto l'output a una finestra della console. Il listener <xref:System.Diagnostics.EventLogTraceListener> è in grado di indirizzare l'output di traccia a un registro eventi. Per altre informazioni, vedere [Listener di traccia](trace-listeners.md).
 
-È possibile creare listener di traccia in un [file di configurazione dell'applicazione](../../../docs/framework/configure-apps/index.md) o nel codice. È consigliabile usare file di configurazione dell'applicazione, in quanto consentono di aggiungere, modificare o rimuovere listener di traccia senza dover modificare il codice.
+È possibile creare listener di traccia in un [file di configurazione dell'applicazione](../configure-apps/index.md) o nel codice. È consigliabile usare file di configurazione dell'applicazione, in quanto consentono di aggiungere, modificare o rimuovere listener di traccia senza dover modificare il codice.
 
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Per creare e usare un listener di traccia tramite un file di configurazione
 
@@ -97,7 +97,7 @@ I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Listener di traccia](trace-listeners.md)
+- [Opzioni di traccia](trace-switches.md)
+- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](how-to-add-trace-statements-to-application-code.md)
+- [Traccia e strumentazione di applicazioni](tracing-and-instrumenting-applications.md)

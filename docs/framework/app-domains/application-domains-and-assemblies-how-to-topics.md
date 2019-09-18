@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971763"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053230"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
   
  **Domini dell'applicazione**  
   
-- [Procedura: Creare un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Procedura: Creare un dominio dell'applicazione](how-to-create-an-application-domain.md)  
   
-- [Procedura: Scaricare un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [Procedura: Scaricare un dominio dell'applicazione](how-to-unload-an-application-domain.md)  
   
-- [Procedura: Configurare un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [Procedura: Configurare un dominio dell'applicazione](how-to-configure-an-application-domain.md)  
   
-- [Procedura: Caricare assembly in un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [Procedura: Caricare assembly in un dominio dell'applicazione](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Procedura: Reperire informazioni su tipo e membro da un assembly](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 - [Procedura: Installare un assembly nella Global Assembly Cache](install-assembly-into-gac.md)  
   
-- [Procedura: Visualizzare il contenuto della Global Assembly Cache](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [Procedura: Visualizzare il contenuto della Global Assembly Cache](how-to-view-the-contents-of-the-gac.md)  
   
-- [Procedura: Rimuovere un assembly dalla Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [Procedura: Rimuovere un assembly dalla Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Procedura: Visualizzare il contenuto degli assembly](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Domini applicazione e assembly](../../../docs/framework/app-domains/index.md)
+- [Domini applicazione e assembly](index.md)

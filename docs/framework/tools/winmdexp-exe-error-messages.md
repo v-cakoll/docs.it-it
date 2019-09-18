@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025960"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043982"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messaggi di errore Winmdexp.exe
-Il processo di compilazione chiama [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **Componente Windows Runtime** in Visual Studio 2012, quindi i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**. Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`. Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.  
+Il processo di compilazione chiama [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md) quando si usa il modello **Componente Windows Runtime** in Visual Studio 2012, quindi i messaggi di errore di Winmdexp.exe vengono visualizzati in **Elenco errori**. Winmdexp.exe viene utilizzato in un modulo compilato con l'opzione `/target:winmdobj`. Poiché viene richiesto come input un modulo compilato, i messaggi di errore vengono visualizzati solo se la compilazione viene eseguita correttamente.  
   
  I messaggi di errore sono progettati per contenere tutte le informazioni necessarie per affrontare le condizioni di errore segnalate. Tuttavia, per alcuni problemi sono richieste più informazioni di quelle presenti nel messaggio. È possibile ottenere informazioni aggiuntive in [Diagnosi delle condizioni di errore di componenti Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127) nel Windows Dev Center.  
   
@@ -175,5 +175,5 @@ Il processo di compilazione chiama [Winmdexp.exe (strumento di esportazione di m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnosi delle condizioni di errore di componenti Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

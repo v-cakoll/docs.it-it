@@ -2,12 +2,12 @@
 title: Progettazione di un'applicazione orientata ai microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Conoscere i vantaggi e gli svantaggi di un'applicazione orientata ai microservizi, in modo da poter prendere una decisione consapevole.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926533"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039819"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -89,8 +89,8 @@ Pertanto, le unità di distribuzione per i microservizi (e anche per i database 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento**\
-    <https://aka.ms/eShopOnContainers/>
+- **Repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi
 
@@ -118,7 +118,7 @@ Una soluzione basata su microservizi come questa offre numerosi vantaggi:
 
 Una soluzione basata su microservizi come questa presenta anche alcuni svantaggi:
 
-**Applicazione distribuita**. La distribuzione dell'applicazione aumenta la complessità per gli sviluppatori in fase di progettazione e compilazione dei servizi. Ad esempio, gli sviluppatori devono implementare la comunicazione tra i servizi tramite protocolli quali HTTP o AMPQ, che implicano una maggiore complessità per i test e la gestione delle eccezioni. Anche la latenza per il sistema aumenta.
+**Applicazione distribuita**. La distribuzione dell'applicazione aumenta la complessità per gli sviluppatori in fase di progettazione e compilazione dei servizi. Ad esempio, gli sviluppatori devono implementare la comunicazione tra servizi usando protocolli come HTTP o AMPQ, che aggiunge complessità per i test e la gestione delle eccezioni. Anche la latenza per il sistema aumenta.
 
 **Complessità della distribuzione**. Un'applicazione che dispone di decine di tipi di microservizi e necessita di scalabilità elevata (dovendo essere in grado di creare molte istanze per ogni servizio e di bilanciare tali servizi su molti host) comporta un livello elevato di complessità di distribuzione per le operazioni IT e la gestione. Se non si usa un'infrastruttura orientata ai microservizi (come un agente di orchestrazione e un'utilità di pianificazione), questa ulteriore complessità può richiedere molte più attività di sviluppo dell'applicazione aziendale stessa.
 

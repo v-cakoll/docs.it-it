@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623052"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047362"
 ---
 # <a name="proxy-configuration"></a>Configurazione proxy
 Un server proxy gestisce le richieste di risorse del client. Un proxy può restituire una risorsa richiesta dalla cache o inoltrare la richiesta al server in cui risiede la risorsa. I proxy possono migliorare le prestazioni della rete riducendo il numero di richieste inviate ai server remoti. I proxy possono essere usati anche per limitare l'accesso alle risorse.  
@@ -24,7 +24,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 ## <a name="adaptive-proxies"></a>Proxy adattivi  
  In .NET Framework i proxy possono essere di due tipi: adattivi e statici. I proxy adattivi regolano le impostazioni quando viene modificata la configurazione di rete. Ad esempio, se un utente avvia una connessione di rete remota sul laptop, un proxy adattivo riconosce questa modifica, individua ed esegue il nuovo script di configurazione e regola le impostazioni in modo appropriato.  
   
- I proxy adattivi vengono configurati con uno script di configurazione (vedere [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). Lo script genera un set di protocolli di applicazioni e un proxy per ogni protocollo.  
+ I proxy adattivi vengono configurati con uno script di configurazione (vedere [Rilevamento automatico proxy](automatic-proxy-detection.md)). Lo script genera un set di protocolli di applicazioni e un proxy per ogni protocollo.  
   
  Le modifiche nell'ambiente di rete possono richiedere che il sistema usi un nuovo set di proxy. Se una connessione di rete non funziona o viene inizializzata una nuova connessione di rete, il sistema deve individuare l'origine appropriata dello script di configurazione nel nuovo ambiente ed eseguire il nuovo script.  
   
@@ -53,7 +53,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
   
  La tabella seguente mostra le opzioni di configurazione di un proxy statico.  
   
-|Impostazione di attributo, proprietà o file di configurazione|Description|  
+|Impostazione di attributo, proprietà o file di configurazione|Descrizione|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` o <xref:System.Net.WebProxy.Address>|Indirizzo del proxy da usare.|  
 |`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Valore che controlla se il proxy viene ignorato per gli indirizzi locali.|  
@@ -79,4 +79,4 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [Rilevamento automatico proxy](automatic-proxy-detection.md)
