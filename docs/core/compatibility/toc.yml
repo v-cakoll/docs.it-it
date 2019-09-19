@@ -2,7 +2,7 @@
   items:
     - name: Valutare le modifiche che causano un'interruzione
       href: index.md
-    - name: Modifiche che causano un'interruzione
-      href: breaking-changes.md
     - name: Categorie di modifiche che causano un'interruzione
       href: categories.md
+    - name: Modifiche che causano un'interruzione
+      href: breaking-changes.md

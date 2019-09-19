@@ -164,7 +164,7 @@
           href: keywords/fixed-statement.md
         - name: Istruzione lock
           href: keywords/lock-statement.md
-    - name: Parametri dei metodi
+    - name: Parametri di metodo
       items:
         - name: Passaggio di parametri
           href: keywords/method-parameters.md
@@ -190,7 +190,7 @@
               href: keywords/using-static.md
             - name: Istruzione using
               href: keywords/using-statement.md
-        - name: Alias extern
+        - name: extern alias
           href: keywords/extern-alias.md
     - name: Parole chiave di test del tipo
       items:
@@ -202,7 +202,7 @@
           href: keywords/new-constraint.md
         - name: dove
           href: keywords/where-generic-type-constraint.md
-    - name: Parole chiave per l'accesso
+    - name: Parole chiave di accesso
       items:
         - name: base
           href: keywords/base.md
@@ -226,7 +226,7 @@
           href: keywords/add.md
         - name: get
           href: keywords/get.md
-        - name: partial (tipo)
+        - name: parziale (Tipo)
           href: keywords/partial-type.md
         - name: partial (metodo)
           href: keywords/partial-method.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Operatori di accesso ai membri
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Operatori di cast e di test del tipo
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
@@ -321,7 +321,7 @@
     - name: Operatore =>
       href: operators/lambda-operator.md
       displayName: lambda
-    - name: 'Operatore ::'
+    - name: ':: (operatore)'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
     - name: Operatore await
