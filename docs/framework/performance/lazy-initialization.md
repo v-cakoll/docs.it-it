@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943812"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046404"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  
@@ -27,7 +27,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
  La tabella seguente elenca i tipi forniti da .NET Framework versione 4 per consentire l'inizializzazione differita in diversi scenari.  
   
-|Type|Descrizione|  
+|Type|DESCRIZIONE|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Classe wrapper che fornisce la semantica di inizializzazione differita per qualsiasi libreria di classi o tipo definito dall'utente.|  
 |<xref:System.Threading.ThreadLocal%601>|È simile a <xref:System.Lazy%601>, con la differenza che fornisce la semantica di inizializzazione differita in base a dati locali del thread. Ogni thread ha accesso al proprio valore univoco.|  
@@ -62,7 +62,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
  Per impostazione predefinita, gli oggetti <xref:System.Lazy%601> sono thread-safe. Di conseguenza, se il costruttore non specifica il tipo di thread safety, gli oggetti <xref:System.Lazy%601> creati sono thread-safe. Negli scenari di multithreading il primo thread che accede alla proprietà <xref:System.Lazy%601.Value%2A> di un oggetto <xref:System.Lazy%601> thread-safe lo inizializza per tutti gli accessi successivi in tutti i thread e tutti i thread condividono gli stessi dati. Di conseguenza, non importa quale thread inizializza l'oggetto e le race condition sono valide.  
   
 > [!NOTE]
-> È possibile estendere questa coerenza alle condizioni di errore usando la memorizzazione nella cache delle eccezioni. Per altre informazioni, vedere la sezione [Eccezioni negli oggetti Lazy](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects) di seguito.  
+> È possibile estendere questa coerenza alle condizioni di errore usando la memorizzazione nella cache delle eccezioni. Per altre informazioni, vedere la sezione [Eccezioni negli oggetti Lazy](lazy-initialization.md#ExceptionsInLazyObjects) di seguito.  
   
  L'esempio seguente mostra che la stessa istanza `Lazy<int>` ha lo stesso valore per tre thread separati.  
   
@@ -101,11 +101,11 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
 |Costruttore|Modalità di thread safety|Usa il metodo di inizializzazione|Le eccezioni vengono memorizzate nella cache|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|No|No|  
-|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Yes|Sì|  
+|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sì|Sì|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|No|No|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sì|Yes|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sì|Sì|  
 |Lazy(T)(LazyThreadSafetyMode)|Specificata dall'utente|No|No|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|Specificata dall'utente|Yes|No se l'utente specifica <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; in caso contrario, sì.|  
+|Lazy(T)(Func(T), LazyThreadSafetyMode)|Specificata dall'utente|Sì|No se l'utente specifica <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; in caso contrario, sì.|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>Implementazione di una proprietà a inizializzazione differita  
  Per implementare una proprietà pubblica usando l'inizializzazione differita, definire il campo sottostante della proprietà come <xref:System.Lazy%601> e restituire la proprietà <xref:System.Lazy%601.Value%2A> dalla funzione di accesso `get` della proprietà.  
@@ -157,4 +157,4 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
 - [Nozioni di base sul threading gestito](../../standard/threading/managed-threading-basics.md)
 - [Threads and Threading](../../standard/threading/threads-and-threading.md) (Thread e threading)
 - [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Procedura: Eseguire l'inizializzazione differita di oggetti](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Procedura: Eseguire l'inizializzazione differita di oggetti](how-to-perform-lazy-initialization-of-objects.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963304"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042353"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -51,7 +51,7 @@ ms.locfileid: "69963304"
 ## <a name="control-pattern-classes-and-interfaces"></a>Classi e interfacce dei pattern di controllo  
  Nella tabella seguente vengono descritti i pattern di controllo per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Sono inoltre elencate le classi usate dai client di automazione interfaccia utente per accedere ai pattern di controllo, nonché le interfacce usate dai provider di automazione interfaccia utente per implementarli.  
   
-|Classe del pattern di controllo|Interfaccia del provider|DESCRIZIONE|  
+|Classe del pattern di controllo|Interfaccia del provider|Descrizione|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usata per i controlli che possono essere ancorati in un contenitore di ancoraggio, ad esempio barre degli strumenti o caselle di strumenti.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usata per i controlli che possono essere espansi o compressi, ad esempio voci di menu in un'applicazione, come il menu **File** .|  
@@ -74,8 +74,8 @@ ms.locfileid: "69963304"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Mapping dei pattern di controllo per client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [Proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Pattern di controllo di automazione interfaccia utente per i client](ui-automation-control-patterns-for-clients.md)
+- [Mapping dei pattern di controllo per client di automazione interfaccia utente](control-pattern-mapping-for-ui-automation-clients.md)
+- [Panoramica di automazione interfaccia utente](ui-automation-overview.md)
+- [Proprietà di automazione interfaccia utente per i client](ui-automation-properties-for-clients.md)
+- [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)

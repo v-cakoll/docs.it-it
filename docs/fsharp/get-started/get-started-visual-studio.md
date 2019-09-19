@@ -2,12 +2,12 @@
 title: Introduzione F# a in Visual Studio
 description: Informazioni su come usare F# con Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629764"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082690"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione F# a in Visual Studio
 
@@ -33,7 +33,7 @@ Per iniziare, scrivere prima di tutto il codice.  Verificare che il `Program.fs`
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Nell'esempio di codice precedente è stata definita `square` una funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l'inferenza del [tipo](../language-reference/type-inference.md), `x` non è necessario specificare il tipo di.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base alla `square` modalità di chiamata.  Se si passa il `square`puntatore del mouse, viene visualizzato quanto segue:
+Nell'esempio di codice precedente è stata definita `square` una funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l' [inferenza del tipo](../language-reference/type-inference.md), `x` non è necessario specificare il tipo di.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base alla `square` modalità di chiamata.  Se si passa il `square`puntatore del mouse, viene visualizzato quanto segue:
 
 ```fsharp
 val square: x:int -> int
@@ -51,11 +51,11 @@ Si trova in questa funzione che viene chiamata la `square` funzione con un argom
 
 A questo punto verrà visualizzato quanto segue nella finestra della console visualizzata da Visual Studio:
 
-```
+```console
 12 squared is 144!
 ```
 
-Congratulazioni!  Il primo F# progetto è stato creato in Visual Studio, è stata F# scritta una funzione che ha stampato i risultati della chiamata a tale funzione ed è stato eseguito il progetto per visualizzare alcuni risultati.
+La procedura è stata completata.  Il primo F# progetto è stato creato in Visual Studio, è stata F# scritta una funzione che ha stampato i risultati della chiamata a tale funzione ed è stato eseguito il progetto per visualizzare alcuni risultati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

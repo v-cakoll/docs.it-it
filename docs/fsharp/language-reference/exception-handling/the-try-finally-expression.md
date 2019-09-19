@@ -2,12 +2,12 @@
 title: 'Eccezioni: Espressione try...finally'
 description: Scopri in che F# modo ' try... Infine, l'espressione consente di eseguire il codice di pulizia anche se un blocco di codice genera un'eccezione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630280"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083002"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Eccezioni: Espressione try...finally
 
@@ -34,7 +34,7 @@ Nel codice seguente viene illustrato l'utilizzo dell' `try...finally` espression
 
 Di seguito è riportato l'output della console.
 
-```
+```console
 Closing stream
 Exception handled.
 ```
@@ -45,7 +45,7 @@ Si noti che `try...with` il costrutto è un costrutto `try...finally` separato d
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-Nel contesto delle espressioni di calcolo, incluse le espressioni di sequenza e i flussi di lavoro asincroni, **provare...** le espressioni finally possono avere un'implementazione personalizzata. Per altre informazioni, vedere [espressioni di calcolo](../computation-expressions.md).
+Nel contesto delle espressioni di calcolo, incluse le espressioni di sequenza e i flussi di lavoro asincroni, **provare... le espressioni finally** possono avere un'implementazione personalizzata. Per altre informazioni, vedere [espressioni di calcolo](../computation-expressions.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988290"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049143"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 
@@ -37,35 +37,35 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 
 Il file di direttive di runtime usa lo spazio dei nomi `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
-L'elemento radice è l'elemento [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Può contenere zero o più elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e zero o un elemento [Application](../../../docs/framework/net-native/application-element-net-native.md), come illustrato nella struttura seguente. Gli attributi dell'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) possono definire criteri di reflection di runtime a livello di applicazione oppure possono fungere da contenitore per gli elementi figlio. L'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md), invece, è semplicemente un contenitore. Gli elementi figlio degli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md) e [Library](../../../docs/framework/net-native/library-element-net-native.md) definiscono i tipi, i metodi, i campi, le proprietà e gli eventi disponibili per la reflection.
+L'elemento radice è l'elemento [Directives](directives-element-net-native.md). Può contenere zero o più elementi [Library](library-element-net-native.md) e zero o un elemento [Application](application-element-net-native.md), come illustrato nella struttura seguente. Gli attributi dell'elemento [Application](application-element-net-native.md) possono definire criteri di reflection di runtime a livello di applicazione oppure possono fungere da contenitore per gli elementi figlio. L'elemento [Library](library-element-net-native.md), invece, è semplicemente un contenitore. Gli elementi figlio degli elementi [Application](application-element-net-native.md) e [Library](library-element-net-native.md) definiscono i tipi, i metodi, i campi, le proprietà e gli eventi disponibili per la reflection.
 
-Per le informazioni di riferimento, scegliere gli elementi dalla struttura seguente o vedere [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md). Nella seguente gerarchia, i puntini di sospensione contrassegnano una struttura ricorsiva. Le informazioni tra parentesi quadre indicano se tale elemento è facoltativo oppure obbligatorio e, se viene usato, il numero di istanze consentito (una o molte).
+Per le informazioni di riferimento, scegliere gli elementi dalla struttura seguente o vedere [Elementi direttiva di runtime](runtime-directive-elements.md). Nella seguente gerarchia, i puntini di sospensione contrassegnano una struttura ricorsiva. Le informazioni tra parentesi quadre indicano se tale elemento è facoltativo oppure obbligatorio e, se viene usato, il numero di istanze consentito (una o molte).
 
-[Direttive](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [applicazione](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M] [Sottotipi](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) O:1 [Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo che lo contiene è un attributo) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Metodo](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parametro](../../../docs/framework/net-native/parameter-element-net-native.md) di [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](../../../docs/framework/net-native/property-element-net-native.md) di [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) di [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Metodo](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parametro](../../../docs/framework/net-native/parameter-element-net-native.md) di [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](../../../docs/framework/net-native/property-element-net-native.md) di [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) di [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Libreria](../../../docs/framework/net-native/library-element-net-native.md) di [0: M] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) di [0: M] [Spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Spazio dei nomi](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M] [Sottotipi](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) O:1 [Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo che lo contiene è un attributo) O:1 [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Metodo](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](../../../docs/framework/net-native/property-element-net-native.md) di [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) di [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) di [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
-[Metodo](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](../../../docs/framework/net-native/property-element-net-native.md) di [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) di [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
+[Direttive](directives-element-net-native.md) [1:1] [applicazione](application-element-net-native.md) [0:1] [assembly](assembly-element-net-native.md) [0: m] [spazio dei nomi](namespace-element-net-native.md) [0: m]. . .
+[Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Spazio dei nomi](namespace-element-net-native.md) [0: M] [Spazio dei nomi](namespace-element-net-native.md) [0: M]. . .
+[Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Tipo](type-element-net-native.md) di [0: M] [Sottotipi](subtypes-element-net-native.md) (sottoclassi del tipo contenitore) O:1 [Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (il tipo che lo contiene è un attributo) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Metodo](method-element-net-native.md) [0: M] [Parametro](parameter-element-net-native.md) di [0: M] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](property-element-net-native.md) di [0: M] [Campo](field-element-net-native.md) di [0: M] [Evento](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M] [Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Metodo](method-element-net-native.md) [0: M] [Parametro](parameter-element-net-native.md) di [0: M] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](property-element-net-native.md) di [0: M] [Campo](field-element-net-native.md) di [0: M] [Evento](event-element-net-native.md) [0: M] [Libreria](library-element-net-native.md) di [0: M] [Assembly](assembly-element-net-native.md) di [0: M] [Spazio dei nomi](namespace-element-net-native.md) [0: M]. . .
+[Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Spazio dei nomi](namespace-element-net-native.md) [0: M] [Spazio dei nomi](namespace-element-net-native.md) [0: M]. . .
+[Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Tipo](type-element-net-native.md) di [0: M] [Sottotipi](subtypes-element-net-native.md) (sottoclassi del tipo contenitore) O:1 [Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (il tipo che lo contiene è un attributo) O:1 [GenericParameter](genericparameter-element-net-native.md) [0: M] [Metodo](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](property-element-net-native.md) di [0: M] [Campo](field-element-net-native.md) di [0: M] [Evento](event-element-net-native.md) [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M] [Tipo](type-element-net-native.md) di [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo generico costruito) [0: M]. . .
+[Metodo](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (metodo generico costruito) [0: M] [Proprietà](property-element-net-native.md) di [0: M] [Campo](field-element-net-native.md) di [0: M] [Evento](event-element-net-native.md) [0: M]
 
-L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) può non avere attributi oppure può avere gli attributi dei criteri descritti nella sezione [Direttive e criteri di runtime](#Directives).
+L'elemento [Application](application-element-net-native.md) può non avere attributi oppure può avere gli attributi dei criteri descritti nella sezione [Direttive e criteri di runtime](#Directives).
 
-Un elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) ha un solo attributo, `Name`, che specifica il nome di una libreria o di un assembly, senza l'estensione del file. Ad esempio, l'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) seguente si applica a un assembly denominato Extensions.dll.
+Un elemento [Library](library-element-net-native.md) ha un solo attributo, `Name`, che specifica il nome di una libreria o di un assembly, senza l'estensione del file. Ad esempio, l'elemento [Library](library-element-net-native.md) seguente si applica a un assembly denominato Extensions.dll.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,33 +82,33 @@ Un elemento [Library](../../../docs/framework/net-native/library-element-net-nat
 
 ## <a name="runtime-directives-and-policy"></a>Direttive e criteri di runtime
 
-L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) stesso e gli elementi figlio degli elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e [Application](../../../docs/framework/net-native/application-element-net-native.md) esprimono criteri, ovvero definiscono il modo in cui un'app può applicare la reflection a un elemento del programma. Il tipo di criterio è definito da un attributo dell'elemento (ad esempio, `Serialize`). Il valore di criterio è definito dal valore dell'attributo (ad esempio, `Serialize="Required"`).
+L'elemento [Application](application-element-net-native.md) stesso e gli elementi figlio degli elementi [Library](library-element-net-native.md) e [Application](application-element-net-native.md) esprimono criteri, ovvero definiscono il modo in cui un'app può applicare la reflection a un elemento del programma. Il tipo di criterio è definito da un attributo dell'elemento (ad esempio, `Serialize`). Il valore di criterio è definito dal valore dell'attributo (ad esempio, `Serialize="Required"`).
 
-Qualsiasi criterio specificato da un attributo di un elemento si applica a tutti gli elementi figlio che non specificano un valore per tale criterio. Ad esempio, se vengono specificati criteri da un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md), tali criteri si applicano a tutti i tipi e membri contenuti per i quali non sono stati esplicitamente specificati i criteri.
+Qualsiasi criterio specificato da un attributo di un elemento si applica a tutti gli elementi figlio che non specificano un valore per tale criterio. Ad esempio, se vengono specificati criteri da un elemento [Type](type-element-net-native.md), tali criteri si applicano a tutti i tipi e membri contenuti per i quali non sono stati esplicitamente specificati i criteri.
 
-I criteri che possono essere espressi dagli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) differiscono da quelli che possono essere espressi per i singoli membri (dagli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md)).
+I criteri che possono essere espressi dagli elementi [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) differiscono da quelli che possono essere espressi per i singoli membri (dagli elementi [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) ed [Event](event-element-net-native.md)).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Specifica di criteri per assembly, spazi dei nomi e tipi
 
-Gli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) supportano i tipi di criteri seguenti:
+Gli elementi [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) supportano i tipi di criteri seguenti:
 
 - `Activate`. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.
 
-- [https://login.microsoftonline.com/common/](`Browse`). Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.
+- `Browse`. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.
 
 - `Dynamic`. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.
 
-- [https://login.microsoftonline.com/common/](`Serialize`). Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.
+- `Serialize`. Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.
 
-- `DataContractSerializer`. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- [https://login.microsoftonline.com/consumers/](`DataContractSerializer`). Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
 - `DataContractJsonSerializer`. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- [https://login.microsoftonline.com/common/](`XmlSerializer`). Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- [https://login.microsoftonline.com/consumers/](`XmlSerializer`). Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`. Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.
+- [https://login.microsoftonline.com/consumers/](`MarshalObject`). Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.
 
-- [https://login.microsoftonline.com/common/](`MarshalDelegate`). Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.
+- [https://login.microsoftonline.com/consumers/](`MarshalDelegate`). Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.
 
 - `MarshalStructure` . Controlla i criteri per effettuare il marshalling delle strutture al codice nativo.
 
@@ -120,11 +120,11 @@ Le impostazioni associate a questi tipi di criteri sono:
 
 - `Excluded`. Disattivare il criterio per l'elemento di programma.
 
-- `Public`. Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova (in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)
+- [https://login.microsoftonline.com/consumers/](`Public`). Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova (in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)
 
 - `PublicAndInternal`. Attivare il criterio per i tipi o membri pubblici e interni se la catena di strumenti non li rimuove.
 
-- `Required Public`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
+- [https://login.microsoftonline.com/consumers/](`Required Public`). Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
 
 - `Required PublicAndInternal`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici e interni, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.
 
@@ -147,7 +147,7 @@ Il seguente file di direttive di runtime, ad esempio, definisce i criteri per tu
 
 ### <a name="specifying-policy-for-members"></a>Specifica di criteri per i membri
 
-Gli elementi [Property](../../../docs/framework/net-native/property-element-net-native.md) e [Field](../../../docs/framework/net-native/field-element-net-native.md) supportano i tipi di criteri seguenti:
+Gli elementi [Property](property-element-net-native.md) e [Field](field-element-net-native.md) supportano i tipi di criteri seguenti:
 
 - `Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.
 
@@ -155,7 +155,7 @@ Gli elementi [Property](../../../docs/framework/net-native/property-element-net-
 
 - `Serialize`: controlla l'accesso in fase di esecuzione al membro per abilitare istanze di tipi da serializzare e deserializzare da parte di librerie quali il serializzatore JSON di Newtonsoft. Questi criteri possono essere applicati a costruttori, campi e proprietà.
 
-Gli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md) supportano i tipi di criteri seguenti:
+Gli elementi [Method](method-element-net-native.md) ed [Event](event-element-net-native.md) supportano i tipi di criteri seguenti:
 
 - `Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.
 
@@ -173,9 +173,9 @@ Gli elementi [Method](../../../docs/framework/net-native/method-element-net-nati
 
 ## <a name="runtime-directives-file-semantics"></a>Semantica dei file di runtime direttive
 
-È possibile definire criteri contemporaneamente per gli elementi di livello più alto e più basso. Ad esempio, è possibile definire dei criteri per un assembly e per alcuni dei tipi di contenuti in tale assembly. Se non è rappresentato un particolare elemento di livello inferiore, esso eredita i criteri del padre. Ad esempio, se è presente un elemento `Assembly`, ma gli elementi `Type` sono assenti, il criterio specificato nell'elemento `Assembly` viene applicato a ciascun tipo nell'assembly. Più elementi possono anche applicare criteri allo stesso elemento di programma. Ad esempio, elementi [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) separati potrebbero definire lo stesso elemento di criteri per lo stesso assembly in modo diverso. Le sezioni seguenti spiegano come risolvere il criterio per un determinato tipo in questi casi.
+È possibile definire criteri contemporaneamente per gli elementi di livello più alto e più basso. Ad esempio, è possibile definire dei criteri per un assembly e per alcuni dei tipi di contenuti in tale assembly. Se non è rappresentato un particolare elemento di livello inferiore, esso eredita i criteri del padre. Ad esempio, se è presente un elemento `Assembly`, ma gli elementi `Type` sono assenti, il criterio specificato nell'elemento `Assembly` viene applicato a ciascun tipo nell'assembly. Più elementi possono anche applicare criteri allo stesso elemento di programma. Ad esempio, elementi [Assembly](assembly-element-net-native.md) separati potrebbero definire lo stesso elemento di criteri per lo stesso assembly in modo diverso. Le sezioni seguenti spiegano come risolvere il criterio per un determinato tipo in questi casi.
 
-Un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md) o [Method](../../../docs/framework/net-native/method-element-net-native.md) di un tipo o un metodo generico applica i relativi criteri a tutte le istanze che non hanno criteri propri. Ad esempio, un elemento `Type` che specifica i criteri per <xref:System.Collections.Generic.List%601> si applica a tutte le istanze costruite di tale tipo generico, a meno che non venga eseguito l'override per un particolare tipo generico costruito (come `List<Int32>`) da un elemento `TypeInstantiation`. In caso contrario, gli elementi definiscono i criteri per l'elemento di programma denominato.
+Un elemento [Type](type-element-net-native.md) o [Method](method-element-net-native.md) di un tipo o un metodo generico applica i relativi criteri a tutte le istanze che non hanno criteri propri. Ad esempio, un elemento `Type` che specifica i criteri per <xref:System.Collections.Generic.List%601> si applica a tutte le istanze costruite di tale tipo generico, a meno che non venga eseguito l'override per un particolare tipo generico costruito (come `List<Int32>`) da un elemento `TypeInstantiation`. In caso contrario, gli elementi definiscono i criteri per l'elemento di programma denominato.
 
 Quando un elemento è ambiguo, il motore ricerca corrispondenze e, se ne trova di esatte, le usa. Se trova più corrispondenze, si riceverà un avviso o un errore.
 
@@ -411,9 +411,9 @@ L'applicazione di uno di questi criteri a un tipo consente di serializzare il ti
 
 Questi criteri non hanno alcun effetto sui metodi o campi.
 
-Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).
+Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Elementi direttiva di runtime](runtime-directive-elements.md)
+- [Reflection e .NET Native](reflection-and-net-native.md)

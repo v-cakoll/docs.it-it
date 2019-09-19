@@ -2,12 +2,12 @@
 title: Flusso di lavoro di sviluppo per app Docker
 description: Informazioni dettagliate sul flusso di lavoro richiesto per lo sviluppo delle applicazioni basate su Docker. Iniziare gradualmente e approfondire alcuni dettagli per ottimizzare i Dockerfile e terminare con il flusso di lavoro semplificato disponibile quando si usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674818"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040247"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -204,28 +204,37 @@ Il Dockerfile iniziale può avere un aspetto simile al seguente:
 
 E questi sono i dettagli, riga per riga:
 
-<!-- markdownlint-disable MD029-->
-1. Avviare una fase con una "piccola" immagine di base solo di runtime, denominarla **base** per riferimento.
-2. Creare la directory **/app** nell'immagine.
-3. Esporre la porta **80**.
-<!-- skip -->
-5. Iniziare una nuova fase con una "grande" immagine per la compilazione e la pubblicazione, denominarla **build** per riferimento.
-6. Creare la directory **/src** nell'immagine.
-7. Fino alla riga 16, copiare i file **CSPROJ** dei progetti di riferimento, per poter ripristinare i pacchetti in un secondo momento.
-<!-- skip -->
-17. Ripristinare i pacchetti per il progetto **Catalog.API** e i progetti di riferimento.
-18. Copiare **tutti gli alberi di directory per soluzione** (tranne le directory e i file inclusi nel file **DOCKERIGNORE**) dalla directory **/src** nell'immagine.
-19. Impostare come cartella corrente il progetto **Catalog.API**.
-20. Compilare il progetto (e altre dipendenze del progetto) e l'output nella directory **/app** nell'immagine.
-<!-- skip -->
-22. Iniziare una nuova fase continuando dalla compilazione, denominarla **publish** per riferimento.
-23. Pubblicare il progetto (e le dipendenze) e l'output nella directory **/app** nell'immagine.
-<!-- skip -->
-25. Iniziare una nuova fase continuando da **base** e denominarla **final**
-26. Selezionare **/app** come directory corrente
-27. Copiare la directory **/app** dalla fase **publish** nella directory corrente
-28. Definire il comando da eseguire quando viene avviato il contenitore.
-<!-- markdownlint-enable MD029-->
+- **#1 riga:** Avviare una fase con una "piccola" immagine di base solo di runtime, denominarla **base** per riferimento.
+
+- **#2 riga:** Creare la directory **/app** nell'immagine.
+
+- **#3 riga:** Esporre la porta **80**.
+
+- **#5 riga:** Inizia una nuova fase con l'immagine "large" per la compilazione e la pubblicazione. Chiamare **Build** per riferimento.
+
+- **#6 riga:** Creare la directory **/src** nell'immagine.
+
+- **#7 riga:** Fino alla riga 16, copiare i file di progetto con **estensione csproj** a cui si fa riferimento per poter ripristinare i pacchetti in un secondo momento.
+
+- **#17 riga:** Ripristinare i pacchetti per il progetto **Catalog.API** e i progetti di riferimento.
+
+- **#18 riga:** Copiare **tutti gli alberi di directory per la soluzione** (ad eccezione dei file/directory inclusi nel file con **estensione dockerignore** ) nella directory **/src** nell'immagine.
+
+- **#19 riga:** Modificare la cartella corrente nel progetto **Catalog. API** .
+
+- **#20 riga:** Compilare il progetto (e altre dipendenze del progetto) e l'output nella directory **/app** nell'immagine.
+
+- **#22 riga:** Inizia una nuova fase continuando dalla compilazione. Chiamarlo **Publish** for Reference.
+
+- **#23 riga:** Pubblicare il progetto e le dipendenze e l'output nella directory **/app** nell'immagine.
+
+- **#25 riga:** Iniziare una nuova fase continuando da **base** e chiamarla **finale**.
+
+- **#26 riga:** Modificare la directory corrente in **/app**.
+
+- **#27 riga:** Copiare la directory **/app** dalla fase di **pubblicazione** alla directory corrente.
+
+- **#28 riga:** Definire il comando da eseguire quando viene avviato il contenitore.
 
 Esaminare ora alcune ottimizzazioni che consentono di migliorare le prestazioni generali del processo che, nel caso di eShopOnContainers, corrispondono a circa 22 minuti o più per la compilazione della soluzione completa nei contenitori Linux.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Si avrebbe lo stesso per ogni servizio, verrebbe copiata l'intera soluzione e verrebbe creato un livello di dimensioni maggiori ma:
 
-1) Il processo di copia verrebbe eseguito solo la prima volta (e quando si ricompila se viene modificato un file) e userebbe la cache per tutti gli altri servizi e
+1. Il processo di copia verrebbe eseguito solo la prima volta (e quando si ricompila se viene modificato un file) e userebbe la cache per tutti gli altri servizi e
 
-2) Poiché l'immagine più grande si verifica in una fase intermedia, non influisce sulle dimensioni dell'immagine finale.
+2. Poiché l'immagine più grande si verifica in una fase intermedia, non influisce sulle dimensioni dell'immagine finale.
 
 Un'altra ottimizzazione significativa riguarda il comando `restore` eseguito alla riga 17, che è diverso per ogni servizio di eShopOnContainers. Se si modifica tale riga semplicemente in:
 

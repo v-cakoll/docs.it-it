@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941285"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042320"
 ---
 # <a name="ui-automation-control-patterns"></a>Pattern di controllo per automazione interfaccia utente
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "69941285"
  In questa sezione vengono fornite informazioni dettagliate sull'utilizzo [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] dei pattern di controllo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Implementazione del pattern di controllo Dock di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [Implementazione del pattern di controllo ExpandCollapse di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [Implementazione del pattern di controllo Grid di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [Implementazione del pattern di controllo GridItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [Implementazione del pattern di controllo Invoke di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [Implementazione del pattern di controllo MultipleView di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [Implementazione del pattern di controllo RangeValue di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [Implementazione del pattern di controllo Scroll di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [Implementazione del pattern di controllo ScrollItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [Implementazione del pattern di controllo Selection di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [Implementazione del pattern di controllo SelectionItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [Implementazione del pattern di controllo Table di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [Implementazione del pattern di controllo TableItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [Implementazione del pattern di controllo Toggle di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [Implementazione del pattern di controllo Transform di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [Implementazione del pattern di controllo Value di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [Implementazione del pattern di controllo Window di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [Procedure relative alle proprietà](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [Implementazione del pattern di controllo Dock di automazione interfaccia utente](implementing-the-ui-automation-dock-control-pattern.md)  
+ [Implementazione del pattern di controllo ExpandCollapse di automazione interfaccia utente](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [Implementazione del pattern di controllo Grid di automazione interfaccia utente](implementing-the-ui-automation-grid-control-pattern.md)  
+ [Implementazione del pattern di controllo GridItem di automazione interfaccia utente](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [Implementazione del pattern di controllo Invoke di automazione interfaccia utente](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [Implementazione del pattern di controllo MultipleView di automazione interfaccia utente](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [Implementazione del pattern di controllo RangeValue di automazione interfaccia utente](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [Implementazione del pattern di controllo Scroll di automazione interfaccia utente](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [Implementazione del pattern di controllo ScrollItem di automazione interfaccia utente](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [Implementazione del pattern di controllo Selection di automazione interfaccia utente](implementing-the-ui-automation-selection-control-pattern.md)  
+ [Implementazione del pattern di controllo SelectionItem di automazione interfaccia utente](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [Implementazione del pattern di controllo Table di automazione interfaccia utente](implementing-the-ui-automation-table-control-pattern.md)  
+ [Implementazione del pattern di controllo TableItem di automazione interfaccia utente](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [Implementazione del pattern di controllo Toggle di automazione interfaccia utente](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [Implementazione del pattern di controllo Transform di automazione interfaccia utente](implementing-the-ui-automation-transform-control-pattern.md)  
+ [Implementazione del pattern di controllo Value di automazione interfaccia utente](implementing-the-ui-automation-value-control-pattern.md)  
+ [Implementazione del pattern di controllo Window di automazione interfaccia utente](implementing-the-ui-automation-window-control-pattern.md)  
+ [Procedure relative alle proprietà](ui-automation-control-patterns-how-to-topics.md)

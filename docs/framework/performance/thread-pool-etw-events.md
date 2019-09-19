@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046193"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
 <a name="top"></a> Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
@@ -28,9 +28,9 @@ ms.locfileid: "64624286"
  Questi eventi sono correlati al pool di thread di lavoro del runtime e forniscono notifiche per gli eventi thread (ad esempio, quando un thread viene creato o arrestato). Il pool di thread di lavoro usa un algoritmo adattivo per il controllo della concorrenza, dove il numero di thread viene calcolato in base alla velocità effettiva misurata. Gli eventi di pool del thread di lavoro possono essere usati per comprendere come un'applicazione usa il pool di thread e l'effetto che alcuni carichi di lavoro possono avere sul controllo della concorrenza.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart e ThreadPoolWorkerThreadStop  
- La tabella seguente illustra la parola chiave e il livello per questi eventi Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ La tabella seguente illustra la parola chiave e il livello per questi eventi Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64624286"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -77,13 +77,13 @@ ms.locfileid: "64624286"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|event|ID evento|Descrizione|  
+|event|ID evento|DESCRIZIONE|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra una modifica nel controllo, quando l'algoritmo di inserimento thread (spostamento verso l’alto) determina che una modifica nel livello di concorrenza è attiva.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "64624286"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -111,7 +111,7 @@ ms.locfileid: "64624286"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |Durata|win:Double|Quantità di tempo, espresso in secondi, durante il quale sono state raccolte queste statistiche.|  
 |Velocità effettiva|win:Double|Numero medio di completamenti al secondo durante questo intervallo.|  
@@ -131,10 +131,10 @@ ms.locfileid: "64624286"
 ## <a name="io-thread-events"></a>Eventi dei Thread di I/O  
  Questi eventi si verificano per i thread nel pool di thread di I/O (porte di completamento), che è asincrono.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -146,16 +146,16 @@ ms.locfileid: "64624286"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
+|Conteggio|win:UInt64|Numero di thread di I/O, tra cui il thread appena creato.|  
 |NumRetired|win:UInt64|Numero di thread di lavoro ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -169,14 +169,14 @@ ms.locfileid: "64624286"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
+|Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -188,16 +188,16 @@ ms.locfileid: "64624286"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
+|Conteggio|win:UInt64|Numero di thread di I/O nel pool di thread, incluso il presente.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
@@ -211,10 +211,10 @@ ms.locfileid: "64624286"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
+|Conteggio|win:UInt64|Numero di thread di I/O rimanenti nel pool di thread.|  
 |NumRetired|win:UInt64|Numero di thread di I/O ritirato.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

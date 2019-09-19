@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946838"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051837"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie di collegamento dinamico (DLL), ad esempio quelle disponibili nell'API Windows. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.  
@@ -29,15 +29,15 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
   
 #### <a name="to-consume-exported-dll-functions"></a>Per usare le funzioni DLL esportate  
   
-1. [Identificare le funzioni nelle DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identificare le funzioni nelle DLL](identifying-functions-in-dlls.md).  
   
      È necessario specificare almeno il nome della funzione e il nome della DLL che la contiene.  
   
-2. [Creare una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Creare una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md).  
   
      È possibile usare una classe esistente, creare una classe per ogni funzione non gestita o creare una classe contenente un set di funzioni non gestite correlate.  
   
-3. [Creare prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Creare prototipi nel codice gestito](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Usare l'istruzione **Declare** con le parole chiave **Function** e **Lib**. In pochissimi casi, è possibile usare **DllImportAttribute** con le parole chiave **Shared Function**. Questi casi vengono illustrati più avanti in questa sezione.  
   
@@ -45,11 +45,11 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
   
      [C++] Usare **DllImportAttribute** per identificare la DLL e la funzione. Contrassegnare il metodo o la funzione wrapper con **extern "C"** .  
   
-4. [Chiamare una funzione DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Chiamare una funzione DLL](calling-a-dll-function.md).  
   
-     Chiamare il metodo sulla classe gestita come qualsiasi altro metodo gestito. Il [passaggio di strutture](../../../docs/framework/interop/passing-structures.md) e l'[implementazione di funzioni di callback](../../../docs/framework/interop/callback-functions.md) sono casi particolari.  
+     Chiamare il metodo sulla classe gestita come qualsiasi altro metodo gestito. Il [passaggio di strutture](passing-structures.md) e l'[implementazione di funzioni di callback](callback-functions.md) sono casi particolari.  
   
- Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Informazioni dettagliate su platform invoke  
  Platform invoke si basa sui metadati per individuare le funzioni esportate ed effettuare il marshalling degli argomenti in fase di esecuzione. Nella figura seguente viene illustrato questo processo.  
@@ -73,6 +73,6 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)
-- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+- [Interoperabilità con codice non gestito](index.md)
+- [Esempi di platform invoke](platform-invoke-examples.md)
+- [Marshalling di interoperabilità](interop-marshaling.md)

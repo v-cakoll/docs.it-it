@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401519"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053806"
 ---
 # <a name="xclass-directive"></a>Direttiva x:Class
 Configura la compilazione del markup XAML per unire classi parziali tra markup e code-behind. La classe parziale del codice è definita in un file di codice separato in un linguaggio Common Language Specification (CLS), mentre la classe parziale di markup viene in genere creata dalla generazione del codice durante la compilazione XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  
@@ -35,7 +35,7 @@ Configura la compilazione del markup XAML per unire classi parziali tra markup e
 |`namespace`|facoltativo. Specifica uno spazio dei nomi CLR che contiene la classe parziale `classname`identificata da. Se `namespace` si specifica, un punto (.) `namespace` separa e `classname`. Vedere la sezione Osservazioni.|  
 |`classname`|Richiesto. Specifica il nome CLR della classe parziale che connette il codice XAML caricato e il code-behind per il codice XAML.|  
   
-## <a name="dependencies"></a>Dipendenze  
+## <a name="dependencies"></a>Dependencies  
  `x:Class`può essere specificato solo sull'elemento radice di una produzione XAML. `x:Class`non è valido per qualsiasi oggetto con un elemento padre nella produzione XAML. Per ulteriori informazioni, vedere [ \[la sezione MS\] -XAML 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Note  

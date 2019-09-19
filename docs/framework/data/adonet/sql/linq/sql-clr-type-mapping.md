@@ -2,12 +2,12 @@
 title: Mapping del tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053034"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  
@@ -44,7 +44,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matrice del comportamento in fase di esecuzione del mapping dei tipi  
  Nel diagramma seguente viene illustrato il comportamento previsto in fase di esecuzione dei mapping dei tipi specifici quando i dati vengono recuperati dal o salvati nel database. Ad eccezione della serializzazione, LINQ to SQL non supporta il mapping tra i tipi di dati CLR o SQL Server non specificati in questa matrice. Per ulteriori informazioni sul supporto della serializzazione, vedere [serializzazione binaria](#BinarySerialization).  
  
-![SQL Server alla tabella di mapping dei tipi di dati CLR SQL](media/sql-clr-type-mapping.png)
+![SQL Server alla tabella di mapping dei tipi di dati CLR SQL](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Alcuni mapping dei tipi possono comportare eccezioni di overflow o di perdita di dati durante la conversione da o verso il database.  

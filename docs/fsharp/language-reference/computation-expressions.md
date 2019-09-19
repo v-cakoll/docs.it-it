@@ -2,12 +2,12 @@
 title: Espressioni di calcolo
 description: Informazioni su come creare una sintassi pratica per la scrittura di F# calcoli in che possono essere sequenziati e combinati mediante costrutti e associazioni del flusso di controllo.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106576"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083052"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -32,7 +32,7 @@ Ogni espressione di calcolo è supportata da un tipo di *Generatore* . Il tipo d
 
 Tutte le espressioni di calcolo hanno il formato seguente:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 

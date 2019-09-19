@@ -3,12 +3,12 @@ title: "Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscer
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626125"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045443"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -70,7 +70,7 @@ ms.locfileid: "64626125"
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Per configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
-1. Aggiungere le definizioni di sezione di configurazione seguenti nel file di configurazione *Web.config*, che definiscono le sezioni di configurazione richieste da Windows Identity Foundation. Aggiungere le definizioni subito dopo l'elemento di apertura **\<configuration>**:  
+1. Aggiungere le definizioni di sezione di configurazione seguenti nel file di configurazione *Web.config*, che definiscono le sezioni di configurazione richieste da Windows Identity Foundation. Aggiungere le definizioni subito dopo l'elemento di apertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -100,7 +100,7 @@ ms.locfileid: "64626125"
     <authentication mode="None" />  
     ```  
   
-4. Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
+4. Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>** , all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>** . Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
   
     ```xml  
     <system.identityModel>  
@@ -218,4 +218,4 @@ ms.locfileid: "64626125"
   
 ## <a name="related-items"></a>Elementi correlati  
   
-- [Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Procedura: Creare un'applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

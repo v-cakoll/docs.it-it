@@ -2,12 +2,12 @@
 title: Classi astratte
 description: Informazioni sulle F# classi astratte, che lasciano alcuni o tutti i membri non implementati e rappresentano funzionalità comuni di un set diversificato di tipi di oggetti.
 ms.date: 05/16/2016
-ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d7fc87178cff7c5c824992c97198b49f87025f00
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629674"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082952"
 ---
 # <a name="abstract-classes"></a>Classi astratte
 
@@ -34,7 +34,7 @@ Le classi astratte devono `AbstractClass` avere l'attributo. Possono avere membr
 
 Una classe viene considerata astratta solo se sono presenti metodi astratti dichiarati ma non definiti. Pertanto, le classi con metodi astratti non sono necessariamente classi astratte. A meno che una classe non disponga di metodi astratti non definiti, non usare l'attributo **AbstractClass** .
 
-Nella sintassi precedente, il *modificatore* di accessibilità `public`può `private` essere `internal`, o. Per altre informazioni, vedere [Controllo di accesso](access-control.md).
+Nella sintassi precedente, il *modificatore di accessibilità* può `private` essere `internal` `public`, o. Per altre informazioni, vedere [Controllo di accesso](access-control.md).
 
 Come per gli altri tipi, le classi astratte possono avere una classe di base e una o più interfacce di base. Ogni classe o interfaccia di base viene visualizzata in una riga distinta `inherit` insieme alla parola chiave.
 
@@ -48,7 +48,7 @@ Il metodo di rotazione può essere sottoposto a override, come nella classe Circ
 
 **Output:**
 
-```
+```console
 Perimeter of square with side length 10.000000 is 40.000000
 Circumference of circle with radius 5.000000 is 31.415927
 Area of Square: 100.000000

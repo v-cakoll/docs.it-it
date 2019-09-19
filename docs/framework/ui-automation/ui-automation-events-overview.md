@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911546"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042166"
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "69911546"
 ## <a name="types-of-events"></a>Tipi di eventi  
  Gli eventi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono suddivisi nelle categorie seguenti.  
   
-|event|Descrizione|  
+|event|DESCRIZIONE|  
 |-----------|-----------------|  
 |Modifica proprietà|Generato quando una proprietà di un elemento o di un pattern di controllo di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] viene modificata. Ad esempio, se un client deve monitorare una casella di controllo di un'applicazione, può registrarsi per l'attesa di un evento di modifica per la proprietà <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Quando il controllo casella di controllo viene selezionato o deselezionato, il provider genera l'evento e il client può agire secondo necessità.|  
 |Azione elemento|Generato quando l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] viene modificata dall'utente finale o da attività a livello di codice, ad esempio quando si fa clic su un pulsante o quest'ultimo viene richiamato tramite <xref:System.Windows.Automation.InvokePattern>.|  
@@ -66,7 +66,7 @@ ms.locfileid: "69911546"
 ## <a name="ui-automation-event-arguments"></a>Argomenti di eventi di automazione interfaccia utente  
  Le classi seguenti incapsulano argomenti di eventi.  
   
-|Classe|DESCRIZIONE|  
+|Classe|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Contiene informazioni sul caricamento asincrono del contenuto, compresa la percentuale di completamento del caricamento.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Contiene informazioni su un evento semplice che non richiede dati aggiuntivi.|  
@@ -79,10 +79,10 @@ ms.locfileid: "69911546"
   
  Gli oggetti <xref:System.Windows.Automation.AutomationEvent> usati per l'identificazione di eventi sono ottenuti dai provider, che li recuperano da campi in <xref:System.Windows.Automation.AutomationElementIdentifiers> e da classi di identificatori di pattern di controllo quale <xref:System.Windows.Automation.DockPatternIdentifiers>. I campi equivalenti vengono ottenuti dalle applicazioni client da campi in <xref:System.Windows.Automation.AutomationElement> e da classi di pattern di controllo quale <xref:System.Windows.Automation.DockPattern>.  
   
- Per un elenco degli identificatori di evento, vedere [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
+ Per un elenco degli identificatori di evento, vedere [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Implementazione del provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Sottoscrivere gli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Eventi di automazione interfaccia utente per i client](ui-automation-events-for-clients.md)
+- [Implementazione del provider di automazione interfaccia utente lato server](server-side-ui-automation-provider-implementation.md)
+- [Sottoscrivere gli eventi di automazione interfaccia utente](subscribe-to-ui-automation-events.md)

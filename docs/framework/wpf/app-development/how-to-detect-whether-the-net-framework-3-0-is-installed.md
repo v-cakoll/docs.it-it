@@ -6,12 +6,12 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960249"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053442"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Procedura: Verificare se .NET Framework 3.0 è installato
 Prima che gli amministratori possano distribuire le applicazioni Microsoft .NET Framework in un sistema, è necessario verificare che il runtime di .NET Framework sia presente. In questo argomento viene fornito uno script scritto in HTML/JavaScript che gli amministratori possono utilizzare per determinare se il .NET Framework è presente in un sistema.  
@@ -23,7 +23,7 @@ Prima che gli amministratori possano distribuire le applicazioni Microsoft .NET 
 ## <a name="detect-the-net-clr-user-agent-string"></a>Rilevare la stringa dell'agente utente ".NET CLR"  
  Quando .NET Framework viene installato, il file MSI aggiunge ".NET CLR" e il numero di versione alla stringa UserAgent. Nell'esempio seguente viene illustrato uno script incorporato in una pagina HTML semplice. Lo script cerca la stringa UserAgent per determinare se .NET Framework è installato e visualizza un messaggio di stato sui risultati della ricerca.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

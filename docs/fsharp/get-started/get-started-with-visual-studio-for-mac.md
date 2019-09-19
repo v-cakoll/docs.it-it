@@ -2,12 +2,12 @@
 title: Introduzione F# a in Visual Studio per Mac
 description: Informazioni su come usare F# con Visual Studio per Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629762"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082982"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introduzione F# a in Visual Studio per Mac
 
@@ -33,9 +33,9 @@ Per iniziare, scrivere prima di tutto il codice.  Verificare che il `Program.fs`
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Nell'esempio di codice precedente è stata definita `square` una funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l'inferenza del [tipo](../language-reference/type-inference.md), `x` non è necessario specificare il tipo di.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base alla `square` modalità di chiamata.  Se si passa il `square`puntatore del mouse, viene visualizzato quanto segue:
+Nell'esempio di codice precedente è stata definita `square` una funzione che accetta un input denominato `x` e lo moltiplica per se stesso.  Poiché F# usa l' [inferenza del tipo](../language-reference/type-inference.md), `x` non è necessario specificare il tipo di.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e assegna un tipo a `x` in base alla `square` modalità di chiamata.  Se si passa il `square`puntatore del mouse, viene visualizzato quanto segue:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,11 +51,11 @@ Si trova in questa funzione che viene chiamata la `square` funzione con un argom
 
 A questo punto, nella Visual Studio per Mac finestra della console dovrebbe essere visualizzato quanto segue:
 
-```
+```console
 12 squared is 144!
 ```
 
-Congratulazioni!  Il primo F# progetto è stato creato in Visual Studio per Mac, è stata F# scritta una funzione che ha stampato i risultati della chiamata a tale funzione ed è stato eseguito il progetto per visualizzare alcuni risultati.
+La procedura è stata completata.  Il primo F# progetto è stato creato in Visual Studio per Mac, è stata F# scritta una funzione che ha stampato i risultati della chiamata a tale funzione ed è stato eseguito il progetto per visualizzare alcuni risultati.
 
 ## <a name="using-f-interactive"></a>Uso F# di Interactive
 
@@ -63,7 +63,7 @@ Una delle funzionalità migliori degli strumenti visivi F# in Visual Studio per 
 
 Per iniziare a usarlo, evidenziare `square` la funzione definita nel codice.  Quindi, fare clic su **modifica** dal menu di primo livello.  Selezionare quindi **Invia selezione a F# interattivo**.  Viene eseguito il codice nella finestra F# interattiva.  In alternativa, è possibile fare clic con il pulsante destro del mouse sulla selezione e scegliere **Invia selezione a F# interattivo**.  Verrà visualizzata la F# finestra interattiva con quanto segue:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Viene visualizzata la stessa firma di funzione per `square` la funzione, come illustrato in precedenza quando si passa il mouse sulla funzione.  Poiché `square` è ora definito nel processo F# interattivo, è possibile chiamarlo con valori diversi:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 In questo modo viene eseguita la funzione, viene associato il risultato a un `it`nuovo nome e vengono visualizzati il tipo e `it`il valore di.  Si noti che è necessario terminare ogni riga `;;`con.  Questo è il F# modo in cui Interactive conosce al termine della chiamata di funzione.  È anche possibile definire nuove funzioni in F# Interactive:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 Il precedente definisce una nuova funzione, `isOdd`, che accetta un `int` oggetto e verifica se è dispari.  È possibile chiamare questa funzione per vedere cosa restituisce con input diversi.  È possibile chiamare funzioni all'interno di chiamate di funzione:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 È anche possibile usare l' [operatore di invio tramite pipe](../language-reference/symbol-and-operator-reference/index.md) per eseguire il pipeline del valore in due funzioni:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

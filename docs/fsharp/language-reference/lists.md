@@ -2,12 +2,12 @@
 title: Elenchi
 description: Informazioni sugli F# elenchi, una serie ordinata e non modificabile di elementi dello stesso tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630734"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082917"
 ---
 # <a name="lists"></a>Elenchi
 
@@ -58,11 +58,11 @@ Poiché gli elenchi in F# non sono modificabili, qualsiasi operazione di modific
 
 Gli elenchi F# in vengono implementati come elenchi collegati singolarmente, il che significa che le operazioni che accedono solo all'elemento Head dell'elenco sono o (1) e l'accesso agli elementi è o (*n*).
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>Proprietà
 
 Il tipo di elenco supporta le proprietà seguenti:
 
-|Proprietà|Type|Descrizione|
+|Proprietà|Type|DESCRIZIONE|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Primo elemento.|
 |[Vuoto](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Proprietà statica che restituisce un elenco vuoto del tipo appropriato.|
@@ -99,7 +99,7 @@ Il codice precedente è ideale per elenchi di piccole dimensioni, ma con gli ele
 
 L'output è indicato di seguito:
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
@@ -120,7 +120,7 @@ Il codice seguente illustra l'uso di `List.exists`.
 
 L'output è indicato di seguito:
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ L'esempio seguente illustra l'uso di `List.exists2`.
 
 L'output è indicato di seguito:
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the
 
 L'output è indicato di seguito:
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ In modo analogo, [List. forall2](https://msdn.microsoft.com/library/bb611f02-827
 
 L'output è indicato di seguito:
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ L'esempio seguente illustra l'uso di `List.sort`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ L'esempio seguente illustra l'uso di `List.sortBy`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ L'esempio seguente illustra l'uso di `List.sortWith`. In questo esempio, la funz
 
 L'output è indicato di seguito:
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Se gli elementi devono essere trasformati per primi, chiamare [List. pick](https
 
 L'output è indicato di seguito:
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Un altro gruppo di operazioni di ricerca, [List. tryFind](https://msdn.microsoft
 
 L'output è indicato di seguito:
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ Gli elenchi che contengono tuple possono essere modificati da funzioni di compre
 
 L'output è indicato di seguito:
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ L'esempio di codice seguente illustra l'uso di `List.zip3`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo di [List
 
 L'output è indicato di seguito:
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,7 +285,7 @@ Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo di [List
 
 L'output è indicato di seguito:
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
@@ -297,7 +297,7 @@ F# supporta un'ampia gamma di operazioni sugli elementi di un elenco. Il più se
 
 L'output è indicato di seguito:
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -318,7 +318,7 @@ Un'altra funzione di uso frequente che trasforma gli elementi elenco è [List. m
 
 L'output è indicato di seguito:
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ L'esempio seguente illustra l'uso di `List.map2`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ L'esempio seguente illustra l'uso di `List.map3`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ L'esempio seguente illustra l'uso di `List.mapi`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,7 +358,7 @@ L'esempio seguente illustra l'uso di `List.mapi2`.
 
 L'output è indicato di seguito:
 
-```
+```console
 [0; 7; 18]
 ```
 
@@ -368,7 +368,7 @@ L'output è indicato di seguito:
 
 L'output è indicato di seguito:
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ Il codice seguente illustra l'uso di `List.choose` per selezionare parole in let
 
 L'output è indicato di seguito:
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 
@@ -398,7 +398,7 @@ Gli elenchi possono essere uniti. Per unire due elenchi in uno, usare [List. App
 
 ### <a name="fold-and-scan-operations"></a>Operazioni di riduzione e analisi
 
-Alcune operazioni sugli elenchi comportano interdipendenze tra tutti gli elementi di un elenco. Le operazioni di analisi e riduzioni `List.iter` sono `List.map` simili a e in quanto si richiama una funzione su ogni elemento, ma queste operazioni forniscono un parametro aggiuntivo denominato accumulatore che trasporta informazioni attraverso il calcolo.
+Alcune operazioni sugli elenchi comportano interdipendenze tra tutti gli elementi di un elenco. Le operazioni di analisi e riduzioni `List.iter` sono `List.map` simili a e in quanto si richiama una funzione su ogni elemento, ma queste operazioni forniscono un parametro aggiuntivo denominato *accumulatore* che trasporta informazioni attraverso il calcolo.
 
 Usare `List.fold` per eseguire un calcolo in un elenco.
 

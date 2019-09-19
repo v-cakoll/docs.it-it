@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954079"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040430"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Argomenti sulle procedure relative al pattern di testo dell'automazione interfaccia utente
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954079"
  Questa sezione include argomenti che illustrano come usare il modello di testo di automazione interfaccia utente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [Ottenere attributi di testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [Ottenere dettagli sugli attributi di testo misti usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [Scorrere il testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Accedere agli oggetti incorporati usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [Aggiungere contenuto a una casella di testo usando l'automazione interfaccia utente](add-content-to-a-text-box-using-ui-automation.md)  
+ [Trovare ed evidenziare il testo usando l'automazione interfaccia utente](find-and-highlight-text-using-ui-automation.md)  
+ [Ottenere attributi di testo usando l'automazione interfaccia utente](obtain-text-attributes-using-ui-automation.md)  
+ [Ottenere dettagli sugli attributi di testo misti usando l'automazione interfaccia utente](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [Scorrere il testo usando l'automazione interfaccia utente](traverse-text-using-ui-automation.md)  
+ [Accedere agli oggetti incorporati usando l'automazione interfaccia utente](access-embedded-objects-using-ui-automation.md)

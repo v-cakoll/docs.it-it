@@ -2,16 +2,16 @@
 title: Tipi flessibili
 description: Informazioni su come usare F# l'annotazione di tipo flessibile, che indica che un parametro, una variabile o un valore ha un tipo compatibile con un tipo specificato.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630258"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083069"
 ---
 # <a name="flexible-types"></a>Tipi flessibili
 
-Un'annotazione di *tipo flessibile* indica che un parametro, una variabile o un valore ha un tipo compatibile con un tipo specificato, in cui la compatibilità è determinata dalla posizione in una gerarchia orientata a oggetti di classi o interfacce. I tipi flessibili sono utili in particolare quando la conversione automatica a tipi di livello superiore nella gerarchia dei tipi non si verifica, ma si desidera comunque abilitare la funzionalità per l'utilizzo di qualsiasi tipo nella gerarchia o di qualsiasi tipo che implementa un'interfaccia.
+Un' *annotazione di tipo flessibile* indica che un parametro, una variabile o un valore ha un tipo compatibile con un tipo specificato, in cui la compatibilità è determinata dalla posizione in una gerarchia orientata a oggetti di classi o interfacce. I tipi flessibili sono utili in particolare quando la conversione automatica a tipi di livello superiore nella gerarchia dei tipi non si verifica, ma si desidera comunque abilitare la funzionalità per l'utilizzo di qualsiasi tipo nella gerarchia o di qualsiasi tipo che implementa un'interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -57,7 +57,7 @@ Il codice seguente usa `Seq.concat` per illustrare gli scenari che è possibile 
 
 L'output è indicato di seguito.
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

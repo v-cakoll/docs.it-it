@@ -2,12 +2,12 @@
 title: Matrici
 description: Informazioni su come creare e usare matrici nel linguaggio di F# programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 142d2c8d9aa7247e1490867a7bb905e2e7fec41e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ae8f3cfc84fbba4cac496d4221d140dadec25e10
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630046"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082958"
 ---
 # <a name="arrays"></a>Matrici
 
@@ -69,7 +69,7 @@ Il modulo [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com/libr
 
 L'output è indicato di seguito.
 
-```
+```console
 0 1 2 3 4 5 6 7 8 9
 ```
 
@@ -81,7 +81,7 @@ Diverse funzioni creano matrici senza richiedere una matrice esistente. [`Array.
 
 L'output è indicato di seguito.
 
-```
+```console
 Length of empty array: 0
 Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
@@ -93,7 +93,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 L'output del codice precedente è il seguente:
 
-```
+```console
 [|Test1; Test2; |]
 [|; Test2; |]
 ```
@@ -106,7 +106,7 @@ La stringa `Test1` viene visualizzata solo nella prima matrice perché l'operazi
 
 L'output mostra che la sottomatrice inizia dall'elemento 5 e contiene 10 elementi.
 
-```
+```console
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
@@ -118,7 +118,7 @@ Il codice seguente illustra **Array. Append**.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 [|1; 2; 3; 4; 5; 6|]
 ```
 
@@ -128,7 +128,7 @@ L'output del codice precedente è il seguente.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
@@ -138,7 +138,7 @@ L'output del codice precedente è il seguente.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
@@ -148,7 +148,7 @@ L'output del codice precedente è il seguente.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 [|(1, 1, 1); (1, 2, 2); (1, 3, 3); (2, 1, 2); (2, 2, 4); (2, 3, 6); (3, 1, 3);
 (3, 2, 6); (3, 3, 9)|]
 ```
@@ -159,7 +159,7 @@ L'output del codice precedente è il seguente.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 [|2; 4; 6; 8; 10|]
 ```
 
@@ -169,7 +169,7 @@ L'output del codice precedente è il seguente.
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 "Hello world!"
 ```
 
@@ -179,7 +179,7 @@ L'output del codice precedente è il seguente.
 
 L'output è
 
-```
+```console
 [|100; 36; 16; 4|]
 ```
 
@@ -308,7 +308,7 @@ Nel codice seguente viene illustrato l'utilizzo `Array.exists` di `Array.exists2
 
 L'output del codice precedente è il seguente.
 
-```
+```console
 true
 false
 false
@@ -321,7 +321,7 @@ Analogamente, la [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-fa
 
 L'output di questi esempi è il seguente.
 
-```
+```console
 false
 true
 true
@@ -338,7 +338,7 @@ Il codice seguente usa `Array.find` e `Array.findIndex` per individuare un numer
 
 L'output è indicato di seguito.
 
-```
+```console
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
@@ -350,7 +350,7 @@ Il codice seguente illustra l'uso di `Array.tryFind`. Questo codice dipende dal 
 
 L'output è indicato di seguito.
 
-```
+```console
 Found an element: 1
 Found an element: 729
 ```
@@ -363,7 +363,7 @@ Il codice seguente illustra l'uso di `Array.tryPick`. In questo caso, anziché u
 
 L'output è indicato di seguito.
 
-```
+```console
 Found an element 1 with square root 1 and cube root 1.
 Found an element 64 with square root 8 and cube root 4.
 Found an element 729 with square root 27 and cube root 9.
@@ -394,7 +394,7 @@ Queste funzioni per l'esecuzione di calcoli corrispondono alle funzioni con lo s
 
 L'output è indicato di seguito.
 
-```
+```console
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 

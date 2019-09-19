@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956701"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045894"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 
@@ -61,7 +61,7 @@ Queste regole valgono sempre, indipendentemente dal fatto che l'accesso al membr
 
 Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale (ad esempio in un dominio dell'applicazione creato mediante sandbox), il livello di attendibilità dell'assembly determina se può accedere a codice critico per la sicurezza: se l'assembly ha un nome sicuro e viene installato nella Global Assembly Cache, è un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.
 
-Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).
+Per altre informazioni sul modello di sicurezza in .NET Framework 4.5, vedere [Modifiche della sicurezza](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Reflection e trasparenza
 
@@ -117,9 +117,9 @@ Per la serializzazione, <xref:System.Security.Permissions.SecurityPermission> co
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)
-- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
-- [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Modifiche della sicurezza](../security/security-changes.md)
+- [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
+- [Problemi di sicurezza nella reflection emit](security-issues-in-reflection-emit.md)
+- [Visualizzazione delle informazioni sul tipo](viewing-type-information.md)
 - [Applicazione di attributi](../../standard/attributes/applying-attributes.md)
-- [Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)
+- [Accessing Custom Attributes](accessing-custom-attributes.md) (Accesso agli attributi personalizzati)

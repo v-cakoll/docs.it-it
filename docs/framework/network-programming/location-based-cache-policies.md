@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129896"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047675"
 ---
 # <a name="location-based-cache-policies"></a>criteri di cache basati sulla posizione
-I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
+I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
   
 ## <a name="cache-if-available-policy"></a>CacheIfAvailable (criterio)  
  Se una risorsa richiesta valida è nella cache locale, viene usata la risorsa memorizzata nella cache. In caso contrario, la richiesta per la risorsa viene inviata al server. Se la risorsa richiesta è disponibile in qualsiasi cache tra il client e il server, la richiesta può essere soddisfatta da una cache intermedia.  
@@ -48,8 +48,8 @@ I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Gestione della cache per le applicazioni di rete](cache-management-for-network-applications.md)
+- [Criteri di cache](cache-policy.md)
+- [Criteri di cache basati sull'ora](time-based-cache-policies.md)
+- [Configurazione della memorizzazione nella cache per applicazioni di rete](configuring-caching-in-network-applications.md)
+- [Elemento \<requestCaching> (impostazioni di rete)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

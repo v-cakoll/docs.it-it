@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616428"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046499"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
@@ -49,10 +49,10 @@ ms.locfileid: "64616428"
 - [GCTerminateConcurrentThread_V1 Event](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>GCStart_V1 Event  
- La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+## <a name="gcstart_v1-event"></a>GCStart_V1 Event  
+ La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -64,21 +64,21 @@ ms.locfileid: "64616428"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt32|L' *ennesima*Garbage Collection.|  
+|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che viene raccolta.|  
 |`Reason`|win:UInt32|Motivo per cui è stata attivata la Garbage Collection:<br /><br /> 0x0 - Allocazione heap oggetto piccolo.<br /><br /> 0x1 - Indotto.<br /><br /> 0x2 - Memoria insufficiente.<br /><br /> 0x3 - Vuoto.<br /><br /> 0x4 - Allocazione heap oggetto grande.<br /><br /> 0x5 - Spazio esaurito (per heap oggetto piccolo).<br /><br /> 0x6 - Spazio esaurito (per heap oggetto grande).<br /><br /> 0x7 - Indotto ma non forzato come blocco.|  
-|Tipo|win:UInt32|0x0 - Un'operazione di Garbage Collection bloccante è stata eseguita all'esterno della procedura di Garbage Collection in background.<br /><br /> 0x1 - Garbage Collection in background.<br /><br /> 0x2 - Un'operazione di Garbage Collection bloccante è stata eseguita durante la procedura di Garbage Collection in background.|  
+|Type|win:UInt32|0x0 - Un'operazione di Garbage Collection bloccante è stata eseguita all'esterno della procedura di Garbage Collection in background.<br /><br /> 0x1 - Garbage Collection in background.<br /><br /> 0x2 - Un'operazione di Garbage Collection bloccante è stata eseguita durante la procedura di Garbage Collection in background.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
  [Torna all'inizio](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>GCEnd_V1 Event  
+## <a name="gcend_v1-event"></a>GCEnd_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -92,17 +92,17 @@ ms.locfileid: "64616428"
   
 |Nome campo|Tipo di dati|Descrizione|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt32|L' *ennesima*Garbage Collection.|  
+|Conteggio|win:UInt32|L' *ennesima*Garbage Collection.|  
 |Profondità|win:UInt32|La generazione che è stata raccolta.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
  [Torna all'inizio](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1 Event  
+## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -134,10 +134,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1 Event  
+## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "64616428"
 |----------------|---------------|-----------------|  
 |Indirizzo|win:UInt64|Indirizzo del segmento.|  
 |Dimensioni|win:UInt64|Dimensione del segmento.|  
-|Tipo|win:UInt32|0x0 - Heap oggetto piccolo.<br /><br /> 0x1 - Heap oggetto grande.<br /><br /> 0x2 - Heap di sola lettura.|  
+|Type|win:UInt32|0x0 - Heap oggetto piccolo.<br /><br /> 0x1 - Heap oggetto grande.<br /><br /> 0x2 - Heap di sola lettura.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
  Si noti che la dimensione dei segmenti allocati dal Garbage Collector è specifico dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.  
@@ -161,10 +161,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1 Event  
+## <a name="gcfreesegment_v1-event"></a>GCFreeSegment_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -176,7 +176,7 @@ ms.locfileid: "64616428"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |Indirizzo|win:UInt64|Indirizzo del segmento.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
@@ -184,10 +184,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1 Event  
+## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -202,10 +202,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1 Event  
+## <a name="gcrestarteeend_v1-event"></a>GCRestartEEEnd_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -220,10 +220,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1 Event  
+## <a name="gcsuspendee_v1-event"></a>GCSuspendEE_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -235,7 +235,7 @@ ms.locfileid: "64616428"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
 |Motivo|win:UInt16|0x0 - Altro.<br /><br /> 0x1 - Garbage Collection.<br /><br /> 0x2 - Arresto del dominio applicazione.<br /><br /> 0x3. - Lancio del codice.<br /><br /> 0x4 - Arresto.<br /><br /> 0x5 - Debugger.<br /><br /> 0x6 - Preparazione per l'operazione di Garbage Collection.|  
 |Conteggio|win:UInt32|Il conteggio di Garbage Collection al momento. In genere, dopo di questo si assiste a un evento di avvio GC successivo. Il conteggio corrisponde al conteggio corrente + 1 quando si aumenta l'indice di GC durante un'operazione di Garbage Collection.|  
@@ -244,10 +244,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1 Event  
+## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 Event  
  La tabella seguente illustra la parola chiave e il livello:  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -262,10 +262,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2 Event  
+## <a name="gcallocationtick_v2-event"></a>GCAllocationTick_V2 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -290,10 +290,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1 Event  
+## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -308,10 +308,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1 Event  
+## <a name="gcfinalizersend_v1-event"></a>GCFinalizersEnd_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
   
@@ -323,18 +323,18 @@ ms.locfileid: "64616428"
   
  La tabella seguente mostra i dati dell'evento.  
   
-|Nome campo|Tipo di dati|Descrizione|  
+|Nome campo|Tipo di dati|DESCRIZIONE|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt32|Numero di finalizzatori eseguiti.|  
+|Conteggio|win:UInt32|Numero di finalizzatori eseguiti.|  
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
  [Torna all'inizio](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1 Event  
+## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
@@ -350,10 +350,10 @@ ms.locfileid: "64616428"
  [Torna all'inizio](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1 Event  
+## <a name="gcterminateconcurrentthread_v1-event"></a>GCTerminateConcurrentThread_V1 Event  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Livello|  
+|Parola chiave per la generazione dell'evento|Level|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|Informativo (4)|  
 |`ThreadingKeyword` (0x10000)|Informativo (4)|  
@@ -368,4 +368,4 @@ ms.locfileid: "64616428"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventi ETW di CLR](clr-etw-events.md)

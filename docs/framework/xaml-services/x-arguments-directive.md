@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 5bcd629e306169c1f7a61a316d76203827a2d0fe
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a18de9a07839f5b01620311832b85667680c12ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364274"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053826"
 ---
 # <a name="xarguments-directive"></a>Direttiva x:Arguments
 Pacchetti gli argomenti di costruzione per una dichiarazione di elemento oggetto costruttore senza parametri in XAML o per una dichiarazione di oggetto Metodo Factory.  
   
 ## <a name="xaml-element-usage-nonparameterless-constructor"></a>Utilizzo di elementi XAML (costruttore senza parametri)  
   
-```  
+```xaml  
 <object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -28,7 +28,7 @@ Pacchetti gli argomenti di costruzione per una dichiarazione di elemento oggetto
   
 ## <a name="xaml-element-usage-factory-method"></a>Utilizzo di elementi XAML (metodo Factory)  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -43,7 +43,7 @@ Pacchetti gli argomenti di costruzione per una dichiarazione di elemento oggetto
 |`oneOrMoreObjectElements`|Uno o più elementi oggetto che specificano gli argomenti da passare al costruttore o al metodo factory sottostante senza parametri.<br /><br /> L'utilizzo tipico consiste nell'utilizzare il testo di inizializzazione negli elementi oggetto per specificare i valori effettivi degli argomenti. Vedere la sezione esempi.<br /><br /> L'ordine degli elementi è significativo. I tipi XAML in ordine devono corrispondere ai tipi e all'ordine del tipo del costruttore di supporto o dell'overload del metodo factory.|  
 |`methodName`|Nome del metodo factory che deve elaborare eventuali `x:Arguments` argomenti.|  
   
-## <a name="dependencies"></a>Dipendenze  
+## <a name="dependencies"></a>Dependencies  
  `x:FactoryMethod`può modificare l'ambito e il comportamento `x:Arguments` in cui si applica.  
   
  Se non `x:FactoryMethod` è specificato, `x:Arguments` si applica alle firme alternative (non predefinite) dei costruttori di supporto.  

@@ -2,12 +2,12 @@
 title: Attributi
 description: Informazioni su F# come gli attributi consentono l'applicazione dei metadati a un costrutto di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567510"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082931"
 ---
 # <a name="attributes"></a>Attributi
 
@@ -27,8 +27,8 @@ Il *nome dell'attributo* fa riferimento al nome (possibilmente qualificato con g
 
 Gli *argomenti* sono gli argomenti del costruttore per il tipo di attributo. Se un attributo dispone di un costruttore predefinito, è possibile omettere l'elenco di argomenti e le parentesi. Gli attributi supportano sia gli argomenti posizionali che gli argomenti denominati. Gli *argomenti posizionali* sono argomenti utilizzati nell'ordine in cui sono visualizzati. Gli argomenti denominati possono essere utilizzati se l'attributo dispone di proprietà pubbliche. È possibile impostarle usando la sintassi seguente nell'elenco di argomenti.
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 Tali inizializzazioni di proprietà possono essere in qualsiasi ordine, ma devono seguire qualsiasi argomento posizionale. Di seguito è riportato un esempio di un attributo che usa gli argomenti posizionali e le inizializzazioni delle proprietà.

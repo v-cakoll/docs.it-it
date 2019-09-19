@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877050"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044733"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
 
@@ -48,7 +48,7 @@ Si potrebbero avere più prompt dei comandi, in base alla versione di Visual Stu
 
 1. Andare alla schermata **Start** ad esempio premendo il tasto WINDOWS![tasto WINDOWS sulla tastiera.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) sulla tastiera.
 
-2. Nella schermata **Start** premere il tasto WINDOWS![tasto WINDOWS sulla tastiera.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+2. Nella schermata **Start** premere il tasto WINDOWS![tasto WINDOWS sulla tastiera.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) [https://login.microsoftonline.com/consumers/](`+ Z`).
 
 3. Scegliere l'icona **Visualizzazione App** nella parte inferiore della schermata e quindi immettere `V`. Verrà visualizzato un elenco che include tutti i prompt dei comandi di Visual Studio installati.
 
@@ -88,9 +88,9 @@ Per semplificare l'accesso, è possibile aggiungere il prompt dei comandi per gl
 
    Verrà aggiunta la nuova voce di menu e sarà possibile accedere al prompt dei comandi dal menu **Strumenti**.
 
-   ![Voce di menu del prompt dei comandi in Visual Studio](media/command-prompt-vs-menu.png)
+   ![Voce di menu del prompt dei comandi in Visual Studio](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti](../../../docs/framework/tools/index.md)
+- [Strumenti](index.md)
 - [Gestione di strumenti esterni](/visualstudio/ide/managing-external-tools)

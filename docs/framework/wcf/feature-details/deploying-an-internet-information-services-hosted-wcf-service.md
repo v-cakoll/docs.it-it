@@ -2,12 +2,12 @@
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895104"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053305"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 
@@ -29,7 +29,7 @@ Per una procedura dettagliata sulla creazione di un servizio WCF ospitato in IIS
 
 Per il corretto funzionamento dei servizi WCF ospitati da IIS, è necessario che siano installati WCF, IIS e ASP.NET. Le procedure per l'installazione di WCF (come parte del .NET Framework), ASP.NET e IIS variano a seconda del sistema operativo in uso. Per ulteriori informazioni sull'installazione di WCF e della .NET Framework, vedere [Install the .NET Framework for Developers](../../install/guide-for-developers.md). Per installare IIS in Windows 10, aprire **programmi e funzionalità** nel **Pannello di controllo** e quindi selezionare **attivazione o disattivazione delle funzionalità Windows**. In **funzionalità di Windows**selezionare **Internet Information Services** , quindi scegliere **OK**.
 
-![Funzionalità di Windows con IIS evidenziato](media/windows-features-iis.png)
+![Funzionalità di Windows con IIS evidenziato](./media/windows-features-iis.png)
 
 Per istruzioni sull'installazione di IIS in altri sistemi operativi, vedere [installare IIS in Windows Vista e Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) e [installare IIS 8,5 in Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

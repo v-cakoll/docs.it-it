@@ -2,12 +2,12 @@
 title: Criteri attivi
 description: Informazioni su come utilizzare i F# criteri attivi per definire partizioni denominate che suddividono i dati di input nel linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629956"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083076"
 ---
 # <a name="active-patterns"></a>Criteri attivi
 
@@ -42,7 +42,7 @@ Si consideri, ad esempio, il criterio attivo seguente con un argomento.
 
 L'output di questo programma è il seguente:
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ Un altro uso dei modelli attivi consiste nel scomporre i tipi di dati in diversi
 
 L'output del programma precedente è il seguente:
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ In alcuni casi, è necessario partizionare solo una parte dello spazio di input.
 
 L'output dell'esempio precedente è il seguente:
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ Quando si usano modelli attivi parziali, talvolta le singole scelte possono esse
 
 L'output è indicato di seguito:
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ I criteri attivi accettano sempre almeno un argomento per l'elemento di cui vien
 
 L'output del codice precedente è il seguente:
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ I criteri attivi non sono limitati solo alle espressioni di criteri di ricerca, 
 
 L'output del codice precedente è il seguente:
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```
