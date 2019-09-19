@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952828"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053733"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -169,7 +169,7 @@ Nelle applicazioni destinate a .NET Framework 4.7.2 e versioni precedenti un con
 
 La figura seguente mostra la descrizione comando visualizzata quando l'utente seleziona un pulsante con la tastiera.
 
-![Descrizione comando visualizzata quando l'utente passa a un pulsante con la tastiera](media/tooltip.png)
+![Descrizione comando visualizzata quando l'utente passa a un pulsante con la tastiera](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ In .NET Framework 4.7.2, WPF ha aggiunto la possibilità di disegnare una selezi
 
 Per usare questa proprietà, è sufficiente aggiungerla al codice XAML e usare il pennello o l'associazione appropriata. La selezione testo risultante è simile alla seguente:
 
-![Descrizione comando visualizzata quando l'utente passa a un pulsante con la tastiera](media/selectiontextbrush-property.png)
+![Descrizione comando visualizzata quando l'utente passa a un pulsante con la tastiera](./media/selectiontextbrush-property.png)
 
 È possibile usare insieme le proprietà `SelectionBrush` e `SelectionTextBrush` per generare qualsiasi combinazione di colore primo piano e colore di sfondo che si ritiene appropriata.
 
@@ -447,8 +447,8 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - L'enumerazione <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, che definisce le i valori **LiveSetting** possibili seguenti:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
+  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>). L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
+  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>). L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
 
   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.
 
@@ -482,11 +482,11 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
   Prima: 
 
-  ![Controllo Expander con lo stato attivo prima dei miglioramenti per l'accessibilità](media/expander-before.png)
+  ![Controllo Expander con lo stato attivo prima dei miglioramenti per l'accessibilità](./media/expander-before.png)
 
   Dopo: 
 
-  ![Controllo Expander con lo stato attivo dopo i miglioramenti per l'accessibilità](media/expander-after.png)
+  ![Controllo Expander con lo stato attivo dopo i miglioramenti per l'accessibilità](./media/expander-after.png)
 
 - Controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
@@ -494,11 +494,11 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
   Prima: 
 
-  ![Pulsante di opzione con contrasto elevato con lo stato attivo prima dei miglioramenti per l'accessibilità](media/radio-button-before.png)
+  ![Pulsante di opzione con contrasto elevato con lo stato attivo prima dei miglioramenti per l'accessibilità](./media/radio-button-before.png)
 
   Dopo: 
 
-  ![Pulsante di opzione con contrasto elevato con lo stato attivo dopo i miglioramenti per l'accessibilità](media/radio-button-after.png)
+  ![Pulsante di opzione con contrasto elevato con lo stato attivo dopo i miglioramenti per l'accessibilità](./media/radio-button-after.png)
 
 - Controllo <xref:System.Windows.Controls.ComboBox>
 
@@ -506,31 +506,31 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
   Prima: 
 
-  ![Bordo e testo disabilitati del controllo ComboBox prima dei miglioramenti per l'accessibilità](media/combo-disabled-before.png)
+  ![Bordo e testo disabilitati del controllo ComboBox prima dei miglioramenti per l'accessibilità](./media/combo-disabled-before.png)
 
   Dopo:   
 
-  ![Bordo e testo disabilitati del controllo ComboBox dopo i miglioramenti per l'accessibilità](media/combo-disabled-after.png)
+  ![Bordo e testo disabilitati del controllo ComboBox dopo i miglioramenti per l'accessibilità](./media/combo-disabled-after.png)
 
   Inoltre, i pulsanti con lo stato attivo e disabilitati usano il colore del tema corretto.
 
   Prima:
 
-  ![Colori del tema dei pulsanti prima dei miglioramenti per l'accessibilità](media/button-themes-before.png) 
+  ![Colori del tema dei pulsanti prima dei miglioramenti per l'accessibilità](./media/button-themes-before.png) 
 
   Dopo: 
 
-  ![Colori del tema dei pulsanti dopo i miglioramenti per l'accessibilità](media/button-themes-after.png) 
+  ![Colori del tema dei pulsanti dopo i miglioramenti per l'accessibilità](./media/button-themes-after.png) 
 
   Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Ad esempio:
 
   Prima: 
 
-  ![Toolbar.ComboBoxStyleKey prima dei miglioramenti per l'accessibilità](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey prima dei miglioramenti per l'accessibilità](./media/comboboxstylekey-before.png) 
 
   Dopo: 
 
-  ![Toolbar.ComboBoxStyleKey dopo i miglioramenti per l'accessibilità](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey dopo i miglioramenti per l'accessibilità](./media/comboboxstylekey-after.png) 
 
 - Controllo <xref:System.Windows.Controls.DataGrid>
 
@@ -538,21 +538,21 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
   Prima: 
 
-  ![Freccia dell'indicatore di ordinamento prima dei miglioramenti per l'accessibilità](media/sort-indicator-before.png) 
+  ![Freccia dell'indicatore di ordinamento prima dei miglioramenti per l'accessibilità](./media/sort-indicator-before.png) 
 
   Dopo:   
 
-  ![Freccia dell'indicatore di ordinamento dopo i miglioramenti per l'accessibilità](media/sort-indicator-after.png) 
+  ![Freccia dell'indicatore di ordinamento dopo i miglioramenti per l'accessibilità](./media/sort-indicator-after.png) 
 
   Inoltre, in .NET Framework 4.7 e versioni precedenti, per lo stile di collegamento predefinito viene usato un colore non corretto al passaggio del mouse in modalità a contrasto elevato. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Analogamente, le colonne della casella di controllo per i controlli <xref:System.Windows.Controls.DataGrid> usano i colori previsti per il riscontro dello stato attivo della tastiera a partire da .NET Framework 4.7.1.
 
   Prima: 
 
-  ![Stile di collegamento predefinito DataGrid prima dei miglioramenti per l'accessibilità](media/default-link-style-before.png) 
+  ![Stile di collegamento predefinito DataGrid prima dei miglioramenti per l'accessibilità](./media/default-link-style-before.png) 
 
   Dopo:    
 
-  ![Stile di collegamento predefinito DataGrid dopo i miglioramenti per l'accessibilità](media/default-link-style-after.png) 
+  ![Stile di collegamento predefinito DataGrid dopo i miglioramenti per l'accessibilità](./media/default-link-style-after.png) 
 
 Per altre informazioni sui miglioramenti per l'accessibilità di WPF in .NET Framework 4.7.1, vedere [Miglioramenti di accessibilità in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ Alcuni esempi di modifiche per il contrasto elevato includono:
 
   Prima:
 
-  ![Testo disabilitato prima dei miglioramenti per l'accessibilità](media/wf-disabled-before.png) 
+  ![Testo disabilitato prima dei miglioramenti per l'accessibilità](./media/wf-disabled-before.png) 
 
   Dopo:
 
-  ![Testo disabilitato dopo i miglioramenti per l'accessibilità](media/wf-disabled-after.png) 
+  ![Testo disabilitato dopo i miglioramenti per l'accessibilità](./media/wf-disabled-after.png) 
 
 - Miglioramenti per il contrasto elevato nella finestra di dialogo di eccezione del thread.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614132"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052214"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedure consigliate per il caricamento di assembly
 Questo articolo illustra come evitare problemi di identità del tipo che possono causare eccezioni <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e altri errori. Nell'articolo vengono discussi i seguenti suggerimenti:  
@@ -44,7 +44,7 @@ Questo articolo illustra come evitare problemi di identità del tipo che possono
   
 - Il contesto di origine del caricamento contiene assembly caricati da percorsi nei quali il caricatore non esegue ricerche. Ad esempio i componenti aggiuntivi potrebbero essere installati in una directory che non si trova nel percorso dell'applicazione. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> e <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sono esempi di metodi che vengono caricati in base al percorso.  
   
-- Il contesto Reflection-Only contiene assembly caricati con i metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Il codice in questo contesto non può essere eseguito, pertanto non viene discusso in questo argomento. Per altre informazioni, vedere [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Il contesto Reflection-Only contiene assembly caricati con i metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Il codice in questo contesto non può essere eseguito, pertanto non viene discusso in questo argomento. Per altre informazioni, vedere [Procedura: Caricare assembly nel contesto Reflection-Only](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Se un assembly dinamico temporaneo è stato generato tramite reflection emit non è presente in nessun contesto. Inoltre la maggior parte degli assembly caricati con il metodo <xref:System.Reflection.Assembly.LoadFile%2A> vengono caricati senza contesto mentre gli assembly caricati da matrici di byte vengono caricati senza contesto a meno che la loro identità, dopo l'applicazione dei criteri, non stabilisca che si trovano nella Global Assembly Cache.  
   
