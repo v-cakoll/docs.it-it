@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373989"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117303"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -25,13 +25,13 @@ Se si scrive una nuova applicazione ASP.NET ASP.NET Core che deve usare dati rel
 
 Per usare EF Core con un database di SQL Server, eseguire il comando dell'interfaccia della riga di comando dotnet seguente:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
 Per aggiungere il supporto per un'origine dati InMemory per il test:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 ```
 
