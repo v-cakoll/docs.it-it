@@ -2,12 +2,12 @@
 title: Comando dotnet pack
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 ms.date: 08/08/2019
-ms.openlocfilehash: c230fa201fce02ab537afc4e14468788d32b8c8a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039484"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117648"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -17,13 +17,13 @@ ms.locfileid: "71039484"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NOME
+## <a name="name"></a>nome
 
 `dotnet pack`: comprime il codice in un pacchetto NuGet.
 
 ## <a name="synopsis"></a>Riepilogo
 
-```console
+```dotnetcli
 dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
     [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
     [-v|--verbosity] [--version-suffix]
@@ -127,54 +127,54 @@ Per impostazione predefinita, non è possibile creare un pacchetto dei progetti 
 
 - Comprimere il progetto nella directory corrente:
 
-  ```console
+  ```dotnetcli
   dotnet pack
   ```
 
 - Comprimere il progetto `app1`:
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj
   ```
 
 - Comprimere il progetto nella directory corrente e inserire i pacchetti risultanti nella cartella `nupkgs`:
 
-  ```console
+  ```dotnetcli
   dotnet pack --output nupkgs
   ```
 
 - Comprimere il progetto nella directory corrente e inserirlo nella cartella `nupkgs`, ignorando il passaggio relativo alla compilazione:
 
-  ```console
+  ```dotnetcli
   dotnet pack --no-build --output nupkgs
   ```
 
 - Con il suffisso della versione del progetto configurato come `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` nel file con estensione *csproj*, comprimere il progetto corrente e aggiornare la versione del pacchetto risultante con il suffisso specificato:
 
-  ```console
+  ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
 - Impostare la versione del pacchetto su `2.1.0` con la proprietà MSBuild `PackageVersion`:
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
 - Comprimere il progetto per un [framework di destinazione](../../standard/frameworks.md) specifico:
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:TargetFrameworks=net45
   ```
 
 - Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino (.NET Core SDK 2.0 e versioni successive):
 
-  ```console
+  ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
 - Comprimere il progetto usando un [file con estensione nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

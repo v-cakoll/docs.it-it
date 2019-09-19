@@ -4,12 +4,12 @@ description: Informazioni su come usare l'archivio pacchetti di runtime per spec
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697985"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116551"
 ---
 # <a name="runtime-package-store"></a>Archivio pacchetti di runtime
 
@@ -64,13 +64,13 @@ Il manifesto dell'archivio pacchetti di esempio seguente (*packages.csproj*) vie
 
 Eseguire il provisioning dell'archivio pacchetti di runtime eseguendo `dotnet store` con il manifesto dell'archivio pacchetti, il runtime e il framework:
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **Esempio**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ Il file *artifact.xml* seguente viene generato dopo l'esecuzione dell'esempio pr
 
 Se si dispone di un file manifesto di destinazione su disco, specificare il percorso del file durante la pubblicazione dell'app con il comando [ `dotnet publish` ](../tools/dotnet-publish.md):
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **Esempio**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 
@@ -110,7 +110,7 @@ Specificare più manifesti di destinazione quando si pubblica un'app ripetendo l
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Specifica dei manifesti di destinazione nel file di progetto
 
-Un'alternativa alla specifica di manifesti di destinazione con il comando [ `dotnet publish` ](../tools/dotnet-publish.md) è quella di specificarli nel file di progetto come elenco di percorsi delimitato da punto e virgola in un tag  **\<TargetManifestFiles>**.
+Un'alternativa alla specifica di manifesti di destinazione con il comando [ `dotnet publish` ](../tools/dotnet-publish.md) è quella di specificarli nel file di progetto come elenco di percorsi delimitato da punto e virgola in un tag  **\<TargetManifestFiles>** .
 
 ```xml
 <PropertyGroup>

@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925726"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116218"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -39,7 +39,7 @@ Un obiettivo fondamentale di .NET Core 2.1 è il miglioramento delle prestazioni
 
 - Uso dei server di compilazione SDK a esecuzione prolungata, ovvero processi che si estendono attraverso singole chiamate a `dotnet build`. Eliminano la necessità di compilare tramite JIT blocchi di codice di grandi dimensioni ogni volta che viene eseguito `dotnet build`. I processi del server di compilazione possono essere terminati automaticamente con il comando seguente:
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ Numerosi strumenti precedentemente disponibili solo a livello di singolo progett
 
 - `dotnet watch` fornisce un watcher del file system che rimane in attesa delle modifiche a un file prima di eseguire un determinato set di comandi. Ad esempio, il comando seguente ricompila automaticamente il progetto corrente e genera un output dettagliato ogni volta che viene modificato un file in esso contenuto:
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ Numerosi strumenti precedentemente disponibili solo a livello di singolo progett
 
 Per installare uno strumento globale, usare il comando [dotnet tool install](../tools/dotnet-tool-install.md). Ad esempio:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ Per modificare questo comportamento, cambiare l'impostazione per il roll forward
 
 - Quando si usano gli [strumenti dell'interfaccia della riga di comando di .NET Core](../tools/index.md), aggiungere l'opzione seguente con il valore a un comando di .NET Core, ad esempio `run`:
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

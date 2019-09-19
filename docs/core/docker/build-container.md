@@ -4,12 +4,12 @@ description: In questa esercitazione si apprenderà come distribuire un'applicaz
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926310"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116557"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Esercitazione: Distribuire un'app .NET Core in un contenitore
 
@@ -55,7 +55,7 @@ Salvare il file. La presenza del file forzerà .NET Core a usare la versione 2.2
 
 È necessario creare un'app .NET Core che verrà eseguita dal contenitore Docker. Aprire il terminale in uso, creare una cartella di lavoro se non è già stata creata e passare alla cartella. Nella cartella di lavoro eseguire il comando seguente per creare un nuovo progetto in una sottocartella denominata app:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Prima di aggiungere l'app .NET Core all'immagine Docker occorre pubblicarla. Si 
 
 Dalla cartella di lavoro accedere alla cartella **app** nel codice sorgente di esempio ed eseguire il comando seguente:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 
@@ -369,7 +369,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 Il comando `docker run` consente anche di modificare il comando `ENTRYPOINT` dal *Dockerfile* e di eseguire qualcosa di diverso, ma solo per il contenitore in questione. Ad esempio, usare il comando seguente per eseguire `bash` o `cmd.exe`. Modificare il comando in base alle esigenze.
 
-#### <a name="windows"></a>Windows
+#### <a name="windows"></a>WINDOWS
 In questo esempio `ENTRYPOINT` viene sostituito con `cmd.exe`. Si preme quindi <kbd>CTRL + C</kbd> per terminare il processo e arrestare il contenitore.
 
 ```console

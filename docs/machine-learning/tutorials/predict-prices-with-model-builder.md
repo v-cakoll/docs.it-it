@@ -1,19 +1,19 @@
 ---
-title: Stimare i prezzi usando la regressione con il generatore di modelli
+title: 'Esercitazione: Stimare i prezzi usando la regressione con il generatore di modelli'
 description: Questa esercitazione illustra come creare un modello di regressione usando il generatore di modelli ML.NET per stimare i prezzi, nel caso specifico le tariffe dei taxi di New York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991355"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117963"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>Stimare i prezzi usando la regressione con il generatore di modelli
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Esercitazione: Stimare i prezzi usando la regressione con il generatore di modelli
 
 Informazioni su come usare il generatore di modelli ML.NET per compilare un modello di regressione per stimare i prezzi.  L'app console .NET che viene sviluppata in questa esercitazione consente di stimare le tariffe dei taxi di New York in base ai relativi dati storici.
 
@@ -179,7 +179,7 @@ Il risultato del processo di training sarà la creazione di due progetti.
 
 Se in un secondo momento è necessario fare riferimento ai progetti generati all'interno di un'altra soluzione, è possibile trovarli all'interno della directory `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]

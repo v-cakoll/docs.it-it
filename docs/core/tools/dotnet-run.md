@@ -2,18 +2,18 @@
 title: Comando dotnet run
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 ms.date: 05/29/2018
-ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ec2a24b78f435dd1905ec67b6f3f4a4ec3f7e7fa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969756"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117478"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>nome
 
 `dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.
 
@@ -23,7 +23,7 @@ ms.locfileid: "70969756"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -31,7 +31,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
@@ -39,7 +39,7 @@ dotnet run [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -56,7 +56,7 @@ Se il progetto specifica più framework, l'esecuzione di `dotnet run` genera un 
 
 Il comando `dotnet run` viene usato nel contesto dei progetti e non di assembly di compilazione. Se in alternativa si prova a eseguire la DLL di un'applicazione dipendente da framework, è necessario usare [dotnet](dotnet.md) senza un comando. Ad esempio, per eseguire `myapp.dll`, usare:
 
-```console
+```dotnetcli
 dotnet myapp.dll
 ```
 

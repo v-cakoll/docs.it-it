@@ -3,12 +3,12 @@ title: 'Esercitazione: Creare una soluzione .NET Core in macOS usando Visual Stu
 description: Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core usando Visual Studio Code.
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082803"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117366"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Esercitazione: Creare una soluzione .NET Core in macOS usando Visual Studio Code
 
@@ -25,7 +25,7 @@ Installare [Visual Studio Code](https://code.visualstudio.com). Nel corso di que
 
 Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e premendo <kbd>F1</kbd> per aprire la tavolozza di Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo argomento nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -33,19 +33,19 @@ Avviare Visual Studio Code. Premere <kbd>CTRL</kbd> + <kbd> \` </kbd> (carattere
 
 Iniziare creando un file di soluzione, che funge da contenitore per uno o più progetti .NET Core. Nel terminale eseguire il [`dotnet new`](../tools/dotnet-new.md) comando per creare una nuova soluzione *Golden. sln* all'interno di una nuova cartella denominata *Golden*:
 
-```console
+```dotnetcli
 dotnet new sln -o golden
 ```
 
 Passare alla nuova cartella *Golden* ed eseguire il comando seguente per creare un progetto di libreria che produce due file,*Library. csproj* e *Class1.cs*, nella cartella *Library* :
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 Eseguire il comando [`dotnet sln`](../tools/dotnet-sln.md) per aggiungere il progetto *library.csproj* appena creato alla soluzione:
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -63,7 +63,7 @@ Il file *library.csproj* contiene le informazioni seguenti:
 
 I metodi della libreria serializzano e deserializzano gli oggetti in formato JSON. Per supportare la serializzazione e la deserializzazione JSON, aggiungere un riferimento al `Newtonsoft.Json` pacchetto NuGet. Il comando `dotnet add` aggiunge nuovi elementi a un progetto. Per aggiungere un riferimento al pacchetto NuGet, usare il comando [`dotnet add package`](../tools/dotnet-add-package.md) e specificare il nome del pacchetto:
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -77,7 +77,7 @@ Questa operazione aggiunge `Newtonsoft.Json` e le relative dipendenze al progett
 
 Eseguire [`dotnet restore`](../tools/dotnet-restore.md), ([vedere la nota](#dotnet-restore-note)), che ripristina le dipendenze e crea una cartella *obj* all'interno della *libreria* con tre file all'interno, tra cui un file *project.assets.json*:
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -100,7 +100,7 @@ La classe `Thing` contiene un metodo pubblico, `Get`, che restituisce la somma d
 
 Compilare la libreria con il comando [`dotnet build`](../tools/dotnet-build.md). Viene prodotto un file *library.dll* in *golden/library/bin/Debug/netstandard1.4*:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -108,19 +108,19 @@ dotnet build
 
 Compilare un progetto di test per la libreria. Dalla cartella *golden*, creare un nuovo progetto di test:
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 Aggiungere il progetto di test alla soluzione:
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 Aggiungere un riferimento a progetto alla libreria creata nella sezione precedente, in modo che il compilatore possa trovare e utilizzare il progetto di libreria. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -154,7 +154,7 @@ Si noti che si afferma che il valore 42 non è uguale a 19+23 (o 42) quando si c
 
 Dalla cartella *golden*, eseguire i comandi seguenti:
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -163,7 +163,7 @@ Questi comandi eseguiranno la ricerca in modo ricorsivo di tutti i progetti per 
 
 Modificare il file *UnitTest1.cs* e modificare l'asserzione da `Assert.NotEqual` a `Assert.Equal`. Eseguire il comando seguente dalla cartella *golden* per eseguire nuovamente il test, che questa volta ha esito positivo:
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -173,19 +173,19 @@ L'applicazione console creata tramite i passaggi seguenti stabilisce una dipende
 
 Creare una nuova applicazione console dalla cartella *golden*:
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 Aggiungere il progetto di applicazione console alla soluzione:
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 Creare la dipendenza dalla libreria eseguendo il `dotnet add reference` comando:
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -204,7 +204,7 @@ using Library;
 
 Eseguire il `dotnet run` comando seguente per avviare l'eseguibile, dove l'opzione `-p` in `dotnet run` specifica il progetto dell'applicazione principale. L'applicazione produce la stringa "The answer is 42" (la risposta è 42).
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

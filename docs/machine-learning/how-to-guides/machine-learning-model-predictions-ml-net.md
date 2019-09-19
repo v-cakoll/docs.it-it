@@ -1,16 +1,16 @@
 ---
 title: Effettuare previsioni con un modello con training
 description: Informazioni su come effettuare previsioni con un modello con training
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307393"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118014"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Effettuare previsioni con un modello con training
 
@@ -43,14 +43,12 @@ Analogamente ai nomi delle colonne di input `Features` e `Label`, ML.NET include
 Poiché l'algoritmo usato in questo esempio è un algoritmo di regressione lineare, il nome predefinito della colonna di output è `Score` definito dall'attributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) nella proprietà `PredictedPrice`.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-Il modello di dati `HousingPrediction` eredita da `HousingData` per rendere più semplice la visualizzazione dei dati di input originali con l'output generato dal modello.  
 
 ## <a name="set-up-a-prediction-pipeline"></a>Configurare una pipeline di previsione
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 Se si accede alla proprietà `Score` dell'oggetto `prediction`, si otterrà un valore simile a `150079`.
 
-## <a name="batch-prediction"></a>Previsione in batch
+## <a name="multiple-predictions"></a>Più stime
 
 Caricare i dati seguenti in [`IDataView`](xref:Microsoft.ML.IDataView). In questo caso, il nome di [`IDataView`](xref:Microsoft.ML.IDataView) è `inputData`. Poiché `CurrentPrice` è la destinazione o etichetta per cui si tenta di effettuare la previsione usando i nuovi dati, si presuppone che non includa ancora alcun valore.
 

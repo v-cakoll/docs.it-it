@@ -4,12 +4,12 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969873"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116584"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -71,10 +71,10 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 
 .NET Core 3.0 Preview 1 è supportato nelle seguenti distribuzioni/versioni di Linux. 
 
-OS                            | Versione               | Architetture  
+Sistema operativo                            | Versione               | Architetture  
 ------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux.      | 6                     | X64
-Red Hat Enterprise Linux.<br>CentOS<br>Oracle Linux  | 7                     | X64
+Red Hat Enterprise Linux      | 6                     | X64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
 Debian                        | 9                     | x64, ARM32\*, ARM64\*
 Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
@@ -150,13 +150,13 @@ Gli [script dotnet-install](./tools/dotnet-install-script.md) vengono usati per 
 
 Lo script assume come impostazione predefinita l'installazione della versione "LTS" più recente, che è attualmente .NET Core 1.1. Per installare .NET Core 2.1, eseguire lo script con l'opzione seguente:
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 
 Lo script bash del programma di installazione viene usato negli scenari di automazione e nelle installazioni non di amministratore. Questo script legge anche le opzioni PowerShell, che possono quindi essere usate con lo script nei sistemi Linux/OS X.
 
-## <a name="troubleshoot"></a>Risolvere problemi
+## <a name="troubleshoot"></a>Risolvere i problemi
 
 Se si verificano problemi in fase di installazione di .NET Core in una distribuzione/versione Linux supportata, vedere i seguenti argomenti per le distribuzioni/versioni installate in uso:
 

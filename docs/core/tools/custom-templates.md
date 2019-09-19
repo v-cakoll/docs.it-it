@@ -3,12 +3,12 @@ title: Modelli personalizzati per dotnet new
 description: Informazioni sui modelli personalizzati per qualsiasi tipo di file o progetto .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849851"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117809"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -24,7 +24,7 @@ Per seguire una procedura dettagliata e creare un modello, vedere l'esercitazion
 
 Quando si installa [.NET Core SDK](https://dotnet.microsoft.com/download), si riceve circa una decina di modelli predefiniti per la creazione di progetti e file, tra cui app console, librerie di classi, progetti unit test, app ASP.NET Core (inclusi i progetti [Angular](https://angular.io/) e [React](https://facebook.github.io/react/)) e file di configurazione. Per elencare i modelli predefiniti, eseguire il comando `dotnet new` con l'opzione `-l|--list`:
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -52,7 +52,7 @@ I file generati dal modello possono essere modificati in base alla logica e alle
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Member            | Type          | Descrizione |
+| Member            | Tipo          | Descrizione |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
 | `author`          | string        | L'autore del modello. |
@@ -170,7 +170,7 @@ Per installare un pacchetto, usare il comando [dotnet new -i|--install](dotnet-n
 
 Usare l'identificatore del pacchetto NuGet per installare un pacchetto di modelli.
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 Specificare il percorso di un file di pacchetto NuGet con estensione *nupkg*.
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 I modelli possono essere installati da una cartella di modello, come *mytemplate1* nell'esempio precedente. Specificare il percorso della cartella *.template.config*. Il percorso della directory del modello non deve essere assoluto. Un percorso assoluto è tuttavia necessario per disinstallare un modello installato da una cartella.
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 Il comando uninstall, senza altri parametri, elenca tutti i modelli installati.
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Per disinstallare un pacchetto, usare il comando [dotnet new -u|--uninstall](dot
 
 Se il pacchetto è stato installato tramite un feed NuGet o direttamente da un file con estensione *nupkg*, specificare l'identificatore.
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 Se il pacchetto è stato installato specificando un percorso per la cartella *.template.config*, usare tale percorso **assoluto** per disinstallare il pacchetto. È possibile visualizzare il percorso assoluto del modello nell'output generato dal comando `dotnet new -u`. Per altre informazioni, vedere la sezione precedente [Ottenere un elenco dei modelli installati](#get-a-list-of-installed-templates).
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 Dopo l'installazione di un modello, usare il modello eseguendo il comando `dotnet new <TEMPLATE>` come si farebbe con qualsiasi altro modello pre-installato. È possibile anche specificare [options](dotnet-new.md#options) per il comando `dotnet new`, includendo le opzioni specifiche del modello configurate nelle impostazioni del modello. Specificare il nome breve del modello direttamente nel comando:
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

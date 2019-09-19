@@ -2,18 +2,18 @@
 title: Comando dotnet test
 description: Il comando dotnet test viene usato per eseguire unit test in un determinato progetto.
 ms.date: 05/29/2018
-ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988560"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117574"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>nome
 
 `dotnet test`: driver di test .NET usato per eseguire gli unit test.
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988560"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
     [-v|--verbosity] [-- <RunSettings arguments>]
@@ -33,7 +33,7 @@ dotnet test [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 
@@ -42,7 +42,7 @@ dotnet test [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 
 dotnet test [-h|--help]
@@ -278,12 +278,12 @@ Eseguire i test nel progetto nella directory corrente e generare un file dei ris
 
 | Framework di test | Proprietà supportate                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
 
-| Operator | Funzione        |
+| Operatore | Funzione        |
 | :------: | --------------- |
 | `=`      | Corrispondenza esatta     |
 | `!=`     | Corrispondenza non esatta |
@@ -295,9 +295,9 @@ Un'espressione senza `<operator>` viene considerata automaticamente come un'oper
 
 Le espressioni possono essere unite con operatori condizionali:
 
-| Operator            | Funzione |
+| Operatore            | Funzione |
 | ------------------- | -------- |
-| <code>&#124;</code> | Oppure       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).

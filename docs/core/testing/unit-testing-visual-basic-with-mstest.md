@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 0ddeebbf1fce1a4899fb6c0fe5685a55f234b4ef
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 0b9dee45c980ae9288637967af20caf375f03fd1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373834"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117043"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e MSTest
 
@@ -71,7 +71,7 @@ Impostare *PrimeService.Tests* come directory corrente e creare un nuovo progett
 
 Per creare ed eseguire unit test, il progetto di test richiede altri pacchetti. Nel passaggio precedente `dotnet new` ha aggiunto MSTest e il Runner di MSTest. Aggiungere ora la libreria di classi `PrimeService` come un'altra dipendenza del progetto. Usare il comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 

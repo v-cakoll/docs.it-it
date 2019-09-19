@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 9885f666e68b795b9b6aba9cf31f9750e30fd170
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512279"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117060"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop WPF in .NET Core
 
@@ -18,7 +18,7 @@ Questo articolo descrive come convertire l'app desktop basata su Windows Present
 
 In questo articolo vengono usati vari nomi per identificare i tipi di file usati per la migrazione. Durante la migrazione del progetto personale i file verranno denominati in modo diverso, pertanto abbinarli mentalmente a quelli elencati di seguito:
 
-| File | DESCRIZIONE |
+| File | Descrizione |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyWPF.csproj** | Nome del progetto WPF di .NET Framework da convertire. |
@@ -94,7 +94,7 @@ Quindi sarà necessario creare il progetto **MyWPFCore.csproj** nella directory 
 
 Se non si vuole creare manualmente il file di progetto, è possibile usare Visual Studio o .NET Core SDK per generare il progetto. Tuttavia, è necessario eliminare tutti gli altri file generati dal modello di progetto, ad eccezione del file di progetto. Per usare l'SDK, eseguire il comando seguente dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet new wpf -o MyWPFAppCore -n MyWPFCore
 ```
 
@@ -111,7 +111,7 @@ SolutionFolder
 
 Il progetto **MyFormsCore.csproj** sarà aggiunto a **MyApps.sln** con Visual Studio o con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet sln add .\MyWPFAppCore\MyWPFCore.csproj
 ```
 
@@ -187,7 +187,7 @@ Aggiungere al progetto .NET Core ogni pacchetto NuGet a cui fa riferimento il pr
 
 È molto probabile che l'app WPF di .NET Framework includa un file **packages.config** che contiene un elenco di tutti i pacchetti NuGet a cui fa riferimento il progetto. È possibile esaminare questo elenco per determinare quali pacchetti NuGet aggiungere al progetto .NET Core. Ad esempio, se il progetto .NET Framework fa riferimento al pacchetto NuGet `MahApps.Metro`, aggiungerlo al progetto usando Visual Studio. È anche possibile aggiungere un riferimento al pacchetto con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package MahApps.Metro -v 2.0.0-alpha0262
 ```
 
@@ -203,7 +203,7 @@ Il comando precedente consente di aggiungere il riferimento NuGet seguente al pr
 
 Se si riscontrano problemi durante la compilazione dei progetti, è possibile che siano in uso alcune API solo per Windows disponibili in .NET Framework, ma non in .NET Core. È possibile provare ad aggiungere il pacchetto NuGet [Windows Compatibility Pack][compat-pack] al progetto. Questo pacchetto può essere eseguito solo in Windows e aggiunge circa 20.000 API Windows ai progetti .NET Core e .NET Standard.
 
-```cli
+```dotnetcli
 dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibility
 ```
 

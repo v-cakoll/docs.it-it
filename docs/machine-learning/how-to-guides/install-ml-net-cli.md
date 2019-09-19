@@ -3,12 +3,12 @@ title: Come installare lo strumento dell'interfaccia della riga di comando (CLI)
 description: Panoramica e installazione dello strumento dell'interfaccia della riga di comando (CLI) di ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106904"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117997"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Come installare lo strumento dell'interfaccia della riga di comando (CLI) di ML.NET
 
@@ -33,7 +33,7 @@ L'interfaccia della riga di comando di ML.NET viene installata come gli altri st
 
 L'esempio seguente illustra come installare l'interfaccia della riga di comando di ML.NET nel percorso del feed NuGet predefinito:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ Verranno visualizzate le informazioni della Guida per i comandi disponibili per 
 
 Se si sta tentando di installare una versione non definitiva o una versione specifica dello strumento, è possibile specificare il [framework](../../standard/frameworks.md) usando il formato seguente:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 È anche possibile verificare se il pacchetto è installato correttamente digitando il comando seguente:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 Digitare il comando seguente per disinstallare il pacchetto dal computer locale:
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 Digitare il comando seguente per aggiornare il pacchetto del computer locale:
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ Nel computer in cui si vuole abilitare il completamento, è necessario eseguire 
 
 1. Installare lo strumento globale `dotnet-suggest` eseguendo il comando seguente:
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 

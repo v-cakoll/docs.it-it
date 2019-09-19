@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849334"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117348"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -30,7 +30,7 @@ Se non si ha familiarità con il set di strumenti dell'interfaccia della riga di
 
 Aprire un prompt dei comandi e creare una cartella denominata *Hello*. Passare alla cartella creata e digitare:
 
-```console
+```dotnetcli
 dotnet new console
 dotnet run
 ```

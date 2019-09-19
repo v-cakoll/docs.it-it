@@ -2,12 +2,12 @@
 title: Comando dotnet clean
 description: Il comando dotnet clean consente di pulire la directory corrente.
 ms.date: 06/26/2019
-ms.openlocfilehash: 113bc076b9f14a471c631801fe4a7cb1e044a411
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168052"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117739"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -23,13 +23,13 @@ ms.locfileid: "70168052"
 
 ## <a name="synopsis"></a>Riepilogo
 
-```console
+```dotnetcli
 dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet clean` pulisce l'output della compilazione precedente. Viene implementato come una [destinazione di MSBuild](/visualstudio/msbuild/msbuild-targets). Per questo motivo, il progetto viene valutato quando tale comando viene eseguito. Vengono puliti solo gli output creati durante la compilazione. Vengono pulite sia la cartella intermedia (*obj*) sia quella dell'output finale (*bin*).
 
@@ -77,12 +77,12 @@ Progetto o soluzione MSBuild da pulire. Se non viene specificato alcun file di p
 
 * Pulire una compilazione predefinita del progetto:
 
-  ```console
+  ```dotnetcli
   dotnet clean
   ```
 
 * Pulire un progetto compilato con la configurazione di tipo Versione:
 
-  ```console
+  ```dotnetcli
   dotnet clean --configuration Release
   ```

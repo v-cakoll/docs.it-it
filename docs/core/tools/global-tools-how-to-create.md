@@ -4,12 +4,12 @@ description: Descrive come creare uno strumento globale. Lo strumento globale è
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202760"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117437"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creare uno strumento globale Core .NET tramite l'interfaccia della riga di comando di .NET Core
 
@@ -23,7 +23,7 @@ In questo articolo viene usata l'interfaccia della riga di comando di .NET Core 
 
 Lo strumento di esempio sarà un'applicazione console che genera un bot ASCII e stampa un messaggio. Creare innanzitutto una nuova applicazione console .NET Core.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 Eseguire il progetto e osservare l'output. Provare queste variazioni della riga di comando per ottenere risultati diversi:
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ Anche se `<PackageOutputPath>` è facoltativo, verrà usato in questo esempio. A
 
 Creare quindi un pacchetto NuGet per l'applicazione.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ Il file `botsay.1.0.0.nupkg` viene creato nella cartella identificata dal valore
 
 Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto:
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ A questo punto, dovrebbe essere possibile digitare `botsay` e ottenere una rispo
 
 Dopo aver completato la sperimentazione con lo strumento, è possibile rimuoverlo con il comando seguente:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

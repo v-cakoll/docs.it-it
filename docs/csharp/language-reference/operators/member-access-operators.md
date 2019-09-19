@@ -1,12 +1,14 @@
 ---
 title: Operatori di accesso ai membri - Riferimenti per C#
 description: Informazioni sugli operatori C# che è possibile usare per accedere ai membri di tipo.
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924634"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116127"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatori di accesso ai membri (Riferimenti per C#)
 
@@ -40,6 +47,8 @@ Quando si accede a un membro di tipo, è possibile utilizzare gli operatori segu
 - [`[]` (accesso agli elementi della matrice o a indicizzatori)](#indexer-operator-): per accedere a un elemento della matrice o a un indicizzatore di tipo
 - [`?.` e `?[]` (operatori condizionali Null)](#null-conditional-operators--and-): per eseguire un'operazione di accesso a un membro o a un elemento solo se un operando è diverso da Null
 - [`()` (chiamata)](#invocation-operator-): per chiamare un metodo a cui si accede o per richiamare un delegato
+- [(indice dalla fine): per indicare che la posizione dell'elemento è dalla fine di una sequenza `^` ](#index-from-end-operator-)
+- (intervallo): per specificare un intervallo di indici che è possibile usare per ottenere un intervallo di elementi di sequenza [ `..` ](#range-operator-)
 
 ## <a name="member-access-operator-"></a>Operatore di accesso ai membri .
 
@@ -149,9 +158,37 @@ Le parentesi si usano anche per richiamare un [costruttore](../../programming-gu
 
 Anche le [espressioni cast](type-testing-and-cast.md#cast-operator-), che eseguono conversioni dei tipi esplicite, usano le parentesi.
 
+## <a name="index-from-end-operator-"></a>Index from End Operator ^
+
+Disponibile in C# 8,0 e versioni successive, `^` l'operatore indica la posizione dell'elemento alla fine di una sequenza. Per una sequenza di lunghezza `length`, `^n` punta all'elemento con offset `length - n` dall'inizio di una sequenza. Ad esempio, `^1` punta all'ultimo elemento di una sequenza e `^length` punta al primo elemento di una sequenza.
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+Come illustrato nell'esempio precedente, Expression `^e` è <xref:System.Index?displayProperty=nameWithType> del tipo. Nell'espressione `^e`, il risultato di `e` deve `int`essere convertibile in modo implicito in.
+
+Per creare un intervallo di `^` indici, è anche possibile usare l'operatore con l' [operatore Range](#range-operator-) . Per altre informazioni, vedere [indici e intervalli](../../tutorials/ranges-indexes.md).
+
+## <a name="range-operator-"></a>Operatore di intervallo..
+
+Disponibile in C# 8,0 e versioni successive, `..` l'operatore specifica l'inizio e la fine di un intervallo di indici come operandi. L'operando sinistro è un inizio *inclusivo* di un intervallo. L'operando destro è una fine *esclusiva* di un intervallo. Uno degli operandi può essere un indice dall'inizio o dalla fine di una sequenza, come illustrato nell'esempio seguente:
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+Come illustrato nell'esempio precedente, Expression `a..b` è <xref:System.Range?displayProperty=nameWithType> del tipo. Nell'espressione `a..b`i risultati di `a` e `b` devono essere convertibili `int` in modo implicito <xref:System.Index>in o.
+
+È possibile omettere gli operandi dell' `..` operatore per ottenere un intervallo aperto:
+
+- `a..`equivale a`a..^0`
+- `..b`equivale a`0..b`
+- `..`equivale a`0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+Per altre informazioni, vedere [indici e intervalli](../../tutorials/ranges-indexes.md).
+
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Gli operatori `.` e `()` non possono essere sottoposti a overload. Anche l'operatore `[]` viene considerato un operatore che non supporta l'overload. Per il supporto dell'indicizzazione con tipi definiti dall'utente, usare gli [indicizzatori](../../programming-guide/indexers/index.md).
+Non è possibile `^`eseguire l' `..` overload degli `.`operatori, ,e.`()` Anche l'operatore `[]` viene considerato un operatore che non supporta l'overload. Per il supporto dell'indicizzazione con tipi definiti dall'utente, usare gli [indicizzatori](../../programming-guide/indexers/index.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

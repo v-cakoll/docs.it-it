@@ -3,12 +3,12 @@ title: Strumenti dell'interfaccia della riga di comando di .NET Core
 description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969887"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117387"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
@@ -105,7 +105,7 @@ La struttura dei comandi dell'interfaccia della riga di comando è composta dal 
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
@@ -113,7 +113,7 @@ dotnet /build_output/my_app.dll
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -130,8 +130,8 @@ Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il
 
 Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio:
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
 Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente nessuna voce ['global.json'](global-json.md) viene usata la versione più recente disponibile del SDK. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.

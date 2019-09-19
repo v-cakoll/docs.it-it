@@ -2,24 +2,24 @@
 title: Comando dotnet migrate
 description: Il comando dotnet migrate consente di eseguire la migrazione di un progetto e di tutte le relative dipendenze.
 ms.date: 08/08/2019
-ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990423"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117691"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 **Questo articolo si applica a: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
 
-## <a name="name"></a>Name
+## <a name="name"></a>nome
 
 `dotnet migrate`: esegue la migrazione di un progetto .NET Core Preview 2 a un progetto di tipo .NET Core SDK.
 
 ## <a name="synopsis"></a>Riepilogo
 
-```console
+```dotnetcli
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```

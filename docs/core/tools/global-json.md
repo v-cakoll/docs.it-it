@@ -3,12 +3,12 @@ title: panoramica di global.json
 description: Informazioni su come usare il file global.json per impostare la versione di .NET Core SDK durante l'esecuzione dei comandi dell'interfaccia della riga di comando di .NET Core.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849602"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117433"
 ---
 # <a name="globaljson-overview"></a>panoramica di global.json
 
@@ -24,13 +24,13 @@ Per altre informazioni su come specificare il runtime, vedere [Framework di dest
 
 ### <a name="sdk"></a>SDK
 
-Digitare:  Object
+Tipo: Object
 
 Specifica le informazioni sul .NET Core SDK da selezionare.
 
 #### <a name="version"></a>version
 
-Digitare:  String
+Tipo: Stringa
 
 La versione del .NET Core SDK da usare.
 
@@ -53,7 +53,7 @@ L'esempio seguente illustra il contenuto di un file *global.json*:
 
 È utile sapere quali versioni sono disponibili per configurarne una nel file *global.json*. È possibile trovare l'elenco completo degli SDK disponibili supportati nella pagina [scaricare .NET Core](https://dotnet.microsoft.com/download/dotnet-core) . A partire da .NET Core 2.1 SDK, è possibile eseguire il comando seguente per verificare quali versioni dell'SDK sono già installate nel computer:
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ Per installare altre versioni .NET Core SDK nel computer, visitare la pagina [do
 
 È possibile creare un nuovo file *global.json* nella directory corrente eseguendo il comando [dotnet new](dotnet-new.md), in modo simile al seguente esempio:
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

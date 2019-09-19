@@ -3,16 +3,16 @@ title: Esplorare intervalli di dati con indici e intervalli
 description: Questa esercitazione avanzata descrive come esplorare i dati usando indici e intervalli per esaminare le sezioni di un set di dati sequenziale.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926643"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117832"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
-Gli intervalli e gli indici offrono una sintassi concisa per accedere a elementi singoli o a intervalli secondari in un oggetto <xref:System.Array>, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Queste funzionalità offrono una sintassi più concisa e chiara per accedere a elementi singoli o a intervalli di elementi in una sequenza.
+Gli intervalli e gli indici forniscono una sintassi concisa per l'accesso a singoli elementi o <xref:System.Array>intervalli <xref:System.String>in <xref:System.Span%601>,, <xref:System.ReadOnlySpan%601>o. Queste funzionalità offrono una sintassi più concisa e chiara per accedere a elementi singoli o a intervalli di elementi in una sequenza.
 
 In questa esercitazione si imparerà a:
 
@@ -24,12 +24,12 @@ In questa esercitazione si imparerà a:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Supporto del linguaggio per indici e intervalli
 
-Questo supporto del linguaggio si basa su due nuovi tipi e due nuovi operatori.
+Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operatori:
 
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
-- L'operatore `^`, che specifica che un indice è relativo alla fine di una sequenza.
+- Indice dell'operatore `^`end, che specifica che un indice è relativo alla fine di una sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
-- L'operatore Range (`..`), che specifica l'inizio e fine di un intervallo come operandi.
+- Operatore `..`Range, che specifica l'inizio e la fine di un intervallo come operandi.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence[sequence.Length - n]`.
 

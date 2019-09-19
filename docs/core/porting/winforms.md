@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105221"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116526"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop Windows Forms in .NET Core
 
@@ -18,7 +18,7 @@ Questo articolo descrive come convertire un'app desktop basata su Windows Forms 
 
 In questo articolo vengono usati vari nomi per identificare i tipi di file usati per la migrazione. Durante la migrazione del progetto personale i file verranno denominati in modo diverso, pertanto abbinarli mentalmente a quelli elencati di seguito:
 
-| File | DESCRIZIONE |
+| File | Descrizione |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyForms.csproj** | Nome del progetto Windows Forms di .NET Framework da convertire. |
@@ -92,7 +92,7 @@ Successivamente, è necessario creare il progetto **MyFormsCore.csproj** nella d
 
 Se non si vuole creare manualmente il file di progetto, è possibile usare Visual Studio o .NET Core SDK per generare il progetto. Tuttavia, è necessario eliminare tutti gli altri file generati dal modello di progetto, ad eccezione del file di progetto. Per usare l'SDK, eseguire il comando seguente dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet new winforms -o MyFormsAppCore -n MyFormsCore
 ```
 
@@ -109,7 +109,7 @@ SolutionFolder
 
 È opportuno aggiungere il progetto **MyFormsCore.csproj** alla soluzione **MyApps.sln** con Visual Studio o l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 ```
 
@@ -167,7 +167,7 @@ Aggiungere al progetto .NET Core ogni pacchetto NuGet a cui fa riferimento il pr
 
 È molto probabile che l'app Windows Forms di .NET Framework includa un file **packages.config** che contiene un elenco di tutti i pacchetti NuGet a cui fa riferimento il progetto. È possibile esaminare questo elenco per determinare quali pacchetti NuGet aggiungere al progetto .NET Core. Ad esempio, se il progetto .NET Framework fa riferimento ai pacchetti NuGet `MetroFramework`, `MetroFramework.Design` e `MetroFramework.Fonts`, aggiungerli al progetto con Visual Studio o l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Design
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
@@ -189,7 +189,7 @@ Se è necessario convertire un progetto di libreria di controlli di Windows Form
 
 Riprendendo l'esempio del passaggio precedente, è possibile procedere espandendo i progetti e i file usati.
 
-| File | DESCRIZIONE |
+| File | Descrizione |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyControls.csproj** | Nome del progetto per controlli Windows Forms di .NET Framework da convertire. |
@@ -264,7 +264,7 @@ Come si può notare, il nodo `<OutputType>` è stato rimosso e per questo il com
 
 Successivamente, nel progetto **MyFormsCore.csproj** .NET Core principale aggiungere un riferimento alla nuova libreria di controlli Windows Forms .NET Core. Aggiungere un riferimento con Visual Studio o con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
@@ -280,7 +280,7 @@ Il comando precedente consente di aggiungere il codice seguente al progetto **My
 
 Se si riscontrano problemi durante la compilazione dei progetti, è possibile che siano in uso alcune API solo per Windows disponibili in .NET Framework, ma non in .NET Core. È possibile provare ad aggiungere il pacchetto NuGet [Windows Compatibility Pack][compat-pack] al progetto. Questo pacchetto può essere eseguito solo in Windows e aggiunge circa 20.000 API Windows ai progetti .NET Core e .NET Standard.
 
-```cli
+```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compatibility
 ```
 

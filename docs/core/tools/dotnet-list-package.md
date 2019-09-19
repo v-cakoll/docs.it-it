@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: Il comando "dotnet list package" offre un'opzione utile per visualizzare un elenco dei riferimenti al pacchetto per un progetto o una soluzione.
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168027"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117734"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -19,13 +19,13 @@ ms.locfileid: "70168027"
 
 ## <a name="synopsis"></a>Riepilogo
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet list package` offre un'opzione utile per visualizzare un elenco di tutti i riferimenti al pacchetto NuGet per un progetto o una soluzione specifica. Occorre prima di tutto compilare il progetto in modo da avere le risorse che il comando dovrà elaborare. L'esempio seguente mostra l'output del comando `dotnet list package` per il progetto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -121,18 +121,18 @@ File di progetto o di soluzione su cui eseguire le operazioni. Se non specificat
 
 * Elencare i riferimenti al pacchetto di un progetto specifico:
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * Elencare i riferimenti al pacchetto per cui sono disponibili versioni più recenti, incluse le versioni non definitive:
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * Elencare i riferimenti al pacchetto per un framework di destinazione specifico:
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

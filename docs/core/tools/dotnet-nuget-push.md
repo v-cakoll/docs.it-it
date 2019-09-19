@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: Il comando dotnet nuget push effettua il push di un pacchetto nel server e lo pubblica.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202552"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117501"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -24,13 +24,13 @@ ms.locfileid: "70202552"
 
 ## <a name="synopsis"></a>Riepilogo
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIZIONE
+## <a name="description"></a>Descrizione
 
 Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo pubblica. Il comando di push usa dettagli del server e delle credenziali presenti nel file di configurazione NuGet o nella catena di file di configurazione del sistema. Per altre informazioni sui file di configurazione, vedere [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configurazione del comportamento di NuGet). La configurazione predefinita di NuGet si ottiene caricando *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS) e quindi caricando qualsiasi file *nuget.config* o *.nuget\nuget.config* dalla directory radice dell'unità nella directory corrente.
 
@@ -90,37 +90,37 @@ Stampa una breve guida per il comando.
 
 * Esegue il push di *foo.nupkg* all'origine push predefinita, specificando una chiave API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
 * Esegue il push di *foo.nupkg* all'origine push personalizzata `https://customsource`, specificando una chiave API:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
 * Effettua il push di *foo.nupkg* all'origine push predefinita:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
 * Effettua il push di *foo.symbols.nupkg* all'origine simboli predefinita:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
 * Esegue il push di *foo.nupkg* all'origine push predefinita, specificando un timeout di 360 secondi:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
 * Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita:
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   

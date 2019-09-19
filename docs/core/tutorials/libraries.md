@@ -4,12 +4,12 @@ description: Informazioni su come creare librerie .NET Core usando gli strumenti
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849488"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117417"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
@@ -249,7 +249,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 1. Ripristinare i pacchetti e compilare i progetti:
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
@@ -321,7 +321,7 @@ Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega. 
 
 Il modo migliore per creare un riferimento a un progetto è l'uso dell'interfaccia della riga di comando di .NET Core per aggiungere un riferimento al progetto. Dalle directory di progetto **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** è possibile eseguire il comando seguente:
 
-```console
+```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
