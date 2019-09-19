@@ -13,32 +13,32 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: b9d9efb62e0c6bc0925662bc9424065922a1534c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106501"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051989"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Sviluppo di applicazioni client con .NET Framework
 
 Esistono diversi modi per sviluppare applicazioni basate su Windows con .NET Framework. È possibile usare uno di questi strumenti e framework: 
 
 - [Piattaforma UWP (Universal Windows Platform)](https://developer.microsoft.com/windows/apps)
-- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-- [Windows Form](../../docs/framework/winforms/index.md)
+- [Windows Presentation Foundation (WPF)](./wpf/index.md)
+- [Windows Form](./winforms/index.md)
 
 Questa sezione include argomenti che descrivono come creare applicazioni basate su Windows con Windows Presentation Foundation o Windows Form. Tuttavia, è anche possibile creare applicazioni Web con .NET Framework e applicazioni client per computer o dispositivi da rendere disponibili tramite Microsoft Store.
  
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
+[Windows Presentation Foundation](./wpf/index.md)  
 Vengono fornite informazioni sullo sviluppo di applicazioni con WPF.
 
-[Windows Form](../../docs/framework/winforms/index.md)  
+[Windows Form](./winforms/index.md)  
 Vengono fornite informazioni sullo sviluppo di applicazioni con Windows Form.
 
-[Tecnologie client comuni](../../docs/framework/common-client-technologies/index.md)  
+[Tecnologie client comuni](./common-client-technologies/index.md)  
 Vengono fornite informazioni sulle tecnologie aggiuntive utilizzabili durante lo sviluppo di applicazioni client.
 
 ## <a name="related-sections"></a>Sezioni correlate
@@ -52,7 +52,7 @@ Viene descritto il supporto di .NET Framework per le app di Windows Store, che �
 [.NET API per Windows Phone Silverlight](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
 Vengono elencate le API di .NET Framework che è possibile usare per creare app con Silverlight per Windows Phone.
   
-[Sviluppo per piattaforme multiple](../../docs/standard/cross-platform/index.md)  
+[Sviluppo per piattaforme multiple](../standard/cross-platform/index.md)  
 Vengono descritti i diversi modi disponibili per usare .NET Framework con i diversi tipi di app client.
 
 [Introduzione a siti Web ASP.NET](https://www.asp.net/get-started/websites)  
@@ -60,7 +60,7 @@ Vengono descritti i diversi modi in cui sviluppare app Web con ASP.NET.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [.NET Standard](../../docs/standard/net-standard.md)
-- [Panoramica](../../docs/framework/get-started/overview.md)
-- [Guida di sviluppo](../../docs/framework/development-guide.md)
-- [Applicazioni di servizi Windows](../../docs/framework/windows-services/index.md)
+- [.NET Standard](../standard/net-standard.md)
+- [Panoramica](./get-started/overview.md)
+- [Guida di sviluppo](./development-guide.md)
+- [Applicazioni di servizi Windows](./windows-services/index.md)
