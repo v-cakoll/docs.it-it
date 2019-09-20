@@ -2,12 +2,12 @@
 title: Comando dotnet-add reference
 description: Il comando dotnet add reference offre un'opzione utile per aggiungere riferimenti da progetto a progetto.
 ms.date: 06/26/2019
-ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784041"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117780"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -17,7 +17,7 @@ ms.locfileid: "70784041"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NOME
+## <a name="name"></a>nome
 
 `dotnet add reference`: aggiunge riferimenti da progetto a progetto.
 
@@ -65,18 +65,18 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 
 * Aggiungere un riferimento al progetto:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
 * Aggiungere più riferimenti al progetto nella directory corrente:
 
-  ```console
+  ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
 * Aggiungere più riferimenti al progetto usando un criterio GLOB in Linux/Unix:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
   ```
