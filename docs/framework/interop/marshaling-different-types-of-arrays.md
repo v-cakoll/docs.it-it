@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894172"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151753"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
 Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per altri dettagli, vedere [Copia e blocco](copying-and-pinning.md).  
   
  La tabella seguente elenca le opzioni di marshalling delle matrici e ne descrive l'utilizzo.  
   
-|Array|Descrizione|  
+|Matrice|Descrizione|  
 |-----------|-----------------|  
 |Di Integer in base al valore.|Passa una matrice di Integer come un parametro in.|  
 |Di Integer in base al riferimento.|Passa una matrice di Integer come un parametro in/out.|  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  In questo esempio, le strutture `MyPoint` e `MyPerson` contengono tipi incorporati. L'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> è impostato in modo da garantire che i membri vengano inseriti in memoria in sequenza, nell'ordine in cui appaiono.  
   
- La classe `LibWrap` contiene un set di metodi chiamati dalla classe `App` . Per informazioni specifiche sul passaggio di matrici, vedere i commenti nell'esempio seguente. Una matrice, che è un tipo di riferimento, viene passata come un parametro in per impostazione predefinita. Per permettere al chiamante di ricevere i risultati, **InAttribute** e **OutAttribute** devono essere applicati in modo esplicito all'argomento contenente la matrice.  
+ La classe `NativeMethods` contiene un set di metodi chiamati dalla classe `App` . Per informazioni specifiche sul passaggio di matrici, vedere i commenti nell'esempio seguente. Una matrice, che è un tipo di riferimento, viene passata come un parametro in per impostazione predefinita. Per permettere al chiamante di ricevere i risultati, **InAttribute** e **OutAttribute** devono essere applicati in modo esplicito all'argomento contenente la matrice.  
   
 ### <a name="declaring-prototypes"></a>Dichiarazione dei prototipi  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

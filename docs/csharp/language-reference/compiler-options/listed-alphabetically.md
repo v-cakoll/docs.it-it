@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 37eedc6d41867a6d5e6a49b8df5040c657bb2689
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602759"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151769"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
 
@@ -29,7 +29,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |[-baseaddress](baseaddress-compiler-option.md)|Specifica l'indirizzo di base della libreria da compilare.|
 |[-bugreport](bugreport-compiler-option.md)|Crea un file di report sui bug. Questo file verrà inviato con le informazioni sull'arresto anomalo se viene usato con -errorreport:prompt o -errorreport:send.|
 |[/fullpaths](checked-compiler-option.md)|Fa generare al compilatore i controlli dell'overflow.|
-|-checksumalgorithm:\<alg>|Specifica l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256. |
+|-checksumalgorithm:\<alg>|Specifica l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA256 (impostazione predefinita) o SHA1.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256. |
 |[-codepage](codepage-compiler-option.md)|Specifica la tabella di codici da utilizzare per l'apertura dei file di origine.|
 |[-debug](debug-compiler-option.md)|Crea informazioni di debug.|
 |[-define](define-compiler-option.md)|Definisce i simboli di compilazione condizionale.|

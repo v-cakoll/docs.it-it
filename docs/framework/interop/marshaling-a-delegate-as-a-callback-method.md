@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2697950a371d66f2e57731e0ff01ed531a07955e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946404"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151800"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshalling di un delegato come metodo di callback
 Questo esempio dimostra come passare delegati a una funzione non gestita che prevede puntatori a funzione. Un delegato è una classe che può contenere un riferimento a un metodo ed è equivalente a un puntatore a una funzione indipendente dai tipi o a una funzione di callback.
@@ -40,7 +40,7 @@ Nell'esempio di callback vengono usate le seguenti funzioni non gestite, illustr
 
 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) è una libreria non gestita personalizzata contenente un'implementazione per le funzioni elencate in precedenza.
 
-In questo esempio, la classe `LibWrap` contiene prototipi gestiti per i metodi `TestCallBack` e `TestCallBack2`. Entrambi i metodi di passano un delegato a una funzione di callback come parametro. La firma del delegato deve corrispondere alla firma del metodo a cui fa riferimento. Ad esempio, i delegati `FPtr` e `FPtr2` hanno firme identiche ai metodi `DoSomething` e `DoSomething2`.
+In questo esempio, la classe `NativeMethods` contiene prototipi gestiti per i metodi `TestCallBack` e `TestCallBack2`. Entrambi i metodi di passano un delegato a una funzione di callback come parametro. La firma del delegato deve corrispondere alla firma del metodo a cui fa riferimento. Ad esempio, i delegati `FPtr` e `FPtr2` hanno firme identiche ai metodi `DoSomething` e `DoSomething2`.
 
 ## <a name="declaring-prototypes"></a>Dichiarazione dei prototipi
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]

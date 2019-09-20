@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254167"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151839"
 ---
 # <a name="cleartype-registry-settings"></a>Impostazioni del Registro di sistema ClearType
 In questo argomento viene fornita una panoramica delle impostazioni del registro di sistema di Microsoft ClearType utilizzate dalle applicazioni WPF.  
@@ -63,7 +63,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Livello di gamma  
- Il livello di gamma fa riferimento alla relazione non lineare tra un valore in pixel e la luminanza. L'impostazione del livello di gamma deve corrispondere alle caratteristiche fisiche del dispositivo di visualizzazione, in caso contrario possono verificarsi distorsioni nell'output del rendering. Ad esempio, il testo potrebbe risultare troppo largo o troppo stretto o è possibile che compaiano sbavature di colore sui bordi dei gambi verticali dei glifi.  
+ Il livello di gamma fa riferimento alla relazione non lineare tra un valore in pixel e la luminanza. L'impostazione del livello di gamma deve corrispondere alle caratteristiche fisiche del dispositivo di visualizzazione, in caso contrario possono verificarsi distorsioni nell'output del rendering. Ad esempio, il testo potrebbe sembrare troppo ampio o troppo piccolo oppure le frange dei colori possono apparire sui bordi delle steli verticali dei glifi.  
   
  Il livello di gamma è un valore intero compreso tra 1000 e 2200. Il livello predefinito è 1900.  
   
@@ -80,7 +80,7 @@ In questo argomento viene fornita una panoramica delle impostazioni del registro
 ## <a name="pixel-structure"></a>Struttura del pixel  
  La struttura del pixel descrive il tipo di pixel alla base di un dispositivo di visualizzazione. La struttura del pixel è definita come uno di tre tipi:  
   
-|Type|Value|Descrizione|  
+|Tipo|Value|Descrizione|  
 |----------|-----------|-----------------|  
 |Semplice|0|Il dispositivo di visualizzazione non ha struttura del pixel. In questo caso le sorgenti di luce per ogni colore sono distribuite in modo uniforme nell'area dei pixel, condizione nota come rendering in scala di grigi. Questo è il funzionamento di un dispositivo di visualizzazione standard. ClearType non viene mai applicato al testo sottoposto a rendering.|  
 |RGB|1|Il dispositivo di visualizzazione dispone di pixel costituiti da tre strisce nell'ordine seguente: rosso, verde e blu. ClearType viene applicato al testo sottoposto a rendering.|  
