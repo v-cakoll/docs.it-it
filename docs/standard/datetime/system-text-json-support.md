@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151829"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182582"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Supporto di DateTime e DateTimeOffset in System.Text.Json
 
 La libreria System. Text. JSON analizza e scrive <xref:System.DateTime> i valori e <xref:System.DateTimeOffset> in base al profilo esteso ISO 8601:-2019.
-I [convertitori](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) forniscono supporto personalizzato per la serializzazione e la deserializzazione con <xref:System.Text.Json.JsonSerializer>.
+I [convertitori](xref:System.Text.Json.Serialization.JsonConverter%601) forniscono supporto personalizzato per la serializzazione e la deserializzazione con <xref:System.Text.Json.JsonSerializer>.
 È inoltre possibile implementare il supporto personalizzato quando <xref:System.Text.Json.Utf8JsonReader> si <xref:System.Text.Json.Utf8JsonWriter>utilizzano e.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>Supporto per il formato ISO 8601-1:2019
@@ -67,7 +67,7 @@ Il tentativo di leggere formati non conformi con <xref:System.Text.Json.Utf8Json
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>Quando si usa<xref:System.Text.Json.JsonSerializer>
 
-Se si desidera che il serializzatore esegua l'analisi o la formattazione personalizzata, è possibile implementare [convertitori personalizzati](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0).
+Se si desidera che il serializzatore esegua l'analisi o la formattazione personalizzata, è possibile implementare [convertitori personalizzati](xref:System.Text.Json.Serialization.JsonConverter%601).
 Ecco alcuni esempi:
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Con `DateTime(Offset).Parse` e`DateTime(Offset).ToString`

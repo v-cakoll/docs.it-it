@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666654"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182546"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Distribuire un modello in un'API Web ASP.NET Core
 
@@ -105,7 +105,7 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
 
 Per effettuare una singola previsione, usare [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Per poter usare la classe [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nell'applicazione è necessario crearla quando è richiesta. In tal caso, una procedura consigliata da prendere in considerazione è l'inserimento delle dipendenze.
 
-Per altre informazioni su questo argomento, vedere [Inserimento delle dipendenze in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Per altre informazioni su questo argomento, vedere [Inserimento delle dipendenze in ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
 
 1. Aprire la classe *Startup.cs* e aggiungere l'istruzione using seguente all'inizio del file:
 
@@ -202,4 +202,4 @@ La procedura è stata completata. Il modello per effettuare previsioni in Intern
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Distribuire in Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Distribuire in Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

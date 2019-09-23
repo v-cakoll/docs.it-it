@@ -4,12 +4,12 @@ description: In questo argomento viene descritto il processo di creazione di una
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: ff508bbe8d72a88ea32adfbed984d4e9e8b8e7ca
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 77e676c327b62369e7ddb9444bf8f246d3c5c2e8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925821"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182494"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac
 
@@ -25,9 +25,9 @@ Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sv
 
 Vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
 
-Vedere la guida al [supporto di .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) per assicurarsi di usare una versione supportata di .NET Core.
+Per assicurarsi di usare una versione supportata di .NET Core, vedere l'articolo del [supporto tecnico di .NET Core](/visualstudio/mac/net-core-support) .
 
-## <a name="get-started"></a>Attività iniziali
+## <a name="get-started"></a>Introduzione
 
 Se i prerequisiti e Visual Studio per Mac sono già installati, ignorare questa sezione e passare a [Creazione di un progetto](#creating-a-project). Seguire questa procedura per installare i prerequisiti e Visual Studio per Mac:
 

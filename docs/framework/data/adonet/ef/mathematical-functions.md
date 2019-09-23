@@ -2,24 +2,24 @@
 title: Funzioni matematiche
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: b6f248382f069df59a55e85e9a764b0df700fb26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e5658e28c7d806f7fd38f941bfa7254e7806e11
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780315"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182490"
 ---
 # <a name="mathematical-functions"></a>Funzioni matematiche
 
-Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni matematiche che eseguono calcoli in valori di input forniti come argomenti e restituiscono un risultato di tipo numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni. La tabella seguente descrive le funzioni matematiche SqlClient.  
+Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni matematiche che eseguono calcoli in valori di input forniti come argomenti e restituiscono un risultato di tipo numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni. Nella tabella seguente vengono descritte le funzioni matematiche SqlClient.  
   
-## <a name="absexpression"></a>Abs(Expression)
+## <a name="absexpression"></a>ABS (espressione)
 
 Esegue la funzione relativa al valore assoluto.
 
 **Argomenti**
 
-`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`.
+`expression`: `Int32` ,`Int64`, O .`Decimal` `Double`
 
 **Valore restituito**
 
@@ -29,7 +29,7 @@ Valore assoluto dell'espressione specificata.
 
 `SqlServer.ABS(-2)`
 
-## <a name="acosexpression"></a>ACOS(Expression)
+## <a name="acosexpression"></a>ARCCOS (espressione)
 
 Restituisce il valore dell'arcocoseno dell'espressione specificata.
 
@@ -45,7 +45,7 @@ Oggetto `Double`.
 
 `SqlServer.ACOS(.9)`
 
-## <a name="asinexpression"></a>ASIN(Expression)
+## <a name="asinexpression"></a>ASIN (espressione)
 
 Restituisce il valore dell'arcoseno dell'espressione specificata.
 
@@ -61,7 +61,7 @@ Oggetto `Double`.
 
 `SqlServer.ASIN(.9)`
 
-## <a name="atanexpression"></a>ATAN(Expression)
+## <a name="atanexpression"></a>ATAN (espressione)
 
 Restituisce il valore dell'arcotangente dell'espressione numerica specificata.
 
@@ -77,7 +77,7 @@ Oggetto `Double`.
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a>ATN2(expression, expression)
+## <a name="atn2expression-expression"></a>ATN2 (espressione, espressione)
 
 Restituisce l'angolo, in radianti, la cui tangente è compresa tra le due espressioni numeriche specificate.
 
@@ -93,24 +93,24 @@ Oggetto `Double`.
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a>Ceiling(Expression)
+## <a name="ceilingexpression"></a>CEILING (espressione)
 
 Converte l'espressione specificata nel valore Integer più piccolo che è maggiore o uguale a tale espressione.
 
 **Argomenti**
 
-`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`.
+`expression`: `Int32` ,`Int64`, O .`Decimal` `Double`
 
 **Valore restituito**
 
-Un' `Int32`, `Int64`, `Double`, o `Decimal`.
+`Int32` ,`Int64`, O .`Decimal` `Double`
 
 **Esempio** 
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
-## <a name="cosexpression"></a>COS(Expression)
+## <a name="cosexpression"></a>COS (espressione)
 
 Calcola il coseno trigonometrico dell'angolo specificato espresso in radianti. 
 
@@ -126,7 +126,7 @@ Oggetto `Double`.
 
 `SqlServer.COS(45)`
 
-## <a name="cotexpression"></a>COT(Expression)
+## <a name="cotexpression"></a>LETTIno (espressione)
 
 Calcola la cotangente trigonometrica dell'angolo specificato espresso in radianti. 
 
@@ -142,23 +142,23 @@ Oggetto `Double`.
 
 `SqlServer.COT(60)`
   
-## <a name="degreesradians"></a>DEGREES(RADIANS)
+## <a name="degreesradians"></a>GRADI (radianti)
 
 Restituisce l'angolo corrispondente in gradi. 
 
 **Argomenti** 
 
-`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+`expression`: `Int32` ,`Int64`, O .`Decimal` `Double` 
 
 **Valore restituito** 
 
-Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+`Int32` ,`Int64`, O .`Decimal` `Double` 
 
 **Esempio** 
 
 `SqlServer.DEGREES(3.1)`
 
-## <a name="expexpression"></a>EXP(Expression)
+## <a name="expexpression"></a>EXP (espressione)
 
 Calcola il valore esponenziale dell'espressione numerica specificata. 
 
@@ -170,9 +170,9 @@ Calcola il valore esponenziale dell'espressione numerica specificata.
 
 Oggetto `Double`. 
 
-**Esempio** `SqlServer.EXP(1)`
+**Esempio**`SqlServer.EXP(1)`
 
-## <a name="floorexpression"></a>FLOOR(Expression)
+## <a name="floorexpression"></a>FLOOR (espressione)
 
 Converte l'espressione specificata nel valore Integer più grande che risulta minore o uguale a tale espressione. 
 
@@ -189,7 +189,7 @@ Oggetto `Double`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
-## <a name="logexpression"></a>LOG(Expression)
+## <a name="logexpression"></a>LOG (espressione)
 
 Calcola il logaritmo naturale dell'espressione `float` specificata. 
 
@@ -205,7 +205,7 @@ Oggetto `Double`.
 
 `SqlServer.LOG(100)`
 
-## <a name="log10expression"></a>LOG10(expression)
+## <a name="log10expression"></a>LOG10 (espressione)
 
 Restituisce il logaritmo in base 10 dell'espressione `Double` specificata. 
 
@@ -233,7 +233,7 @@ Oggetto `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
+## <a name="powernumeric_expression-power_expression"></a>POWER(numeric_expression, power_expression)
 
 Calcola il valore dell'espressione specificata elevato alla potenza indicata.
 
@@ -241,8 +241,8 @@ Calcola il valore dell'espressione specificata elevato alla potenza indicata.
 
 |  |  |
 |--|--|
-|`numeric_expression`| Un' `Int32`, `Int64`, `Double`, o `Decimal`.|
-|`power_expression`| Oggetto `Double` che rappresenta la potenza a cui elevare il `numeric_expression`.| 
+|`numeric_expression`| `Int32` ,`Int64`, O .`Decimal` `Double`|
+|`power_expression`| Oggetto `Double` che rappresenta la potenza a cui generare l'oggetto `numeric_expression`.| 
 
 **Valore restituito** 
 
@@ -252,29 +252,29 @@ Valore dell'oggetto `numeric_expression` specificato alla potenza `power_express
 
 `SqlServer.POWER(2,7)`
 
-## <a name="radiansexpression"></a>RADIANS(Expression)
+## <a name="radiansexpression"></a>RADIAnti (espressione)
 
 Converte i gradi in radianti. 
 
 **Argomenti** 
 
-`expression`: Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+`expression`: `Int32` ,`Int64`, O .`Decimal` `Double` 
 
 **Valore restituito** 
 
-Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+`Int32` ,`Int64`, O .`Decimal` `Double` 
 
 **Esempio** 
 
 `SqlServer.RADIANS(360.0)`
 
-## <a name="randseed"></a>RAND([SEED])
+## <a name="randseed"></a>RAND ([valore di inizializzazione])
 
 Restituisce un valore casuale compreso tra 0 e 1. 
 
 **Argomenti** 
 
-Il valore di inizializzazione come un `Int32`. Se non è specificato, il Motore di database di SQL Server assegna un valore di inizializzazione in modo casuale. Per un valore di inizializzazione specificato, il risultato restituito è sempre lo stesso.
+Valore di inizializzazione come `Int32`. Se non è specificato, il Motore di database di SQL Server assegna un valore di inizializzazione in modo casuale. Per un valore di inizializzazione specificato, il risultato restituito è sempre lo stesso.
 
 **Valore restituito** 
 
@@ -284,7 +284,7 @@ Valore `Double` casuale compreso tra 0 e 1.
 
 `SqlServer.RAND()`
   
-## <a name="roundnumericexpression-lengthfunction"></a>Round(numeric_expression, Length[,Function])
+## <a name="roundnumeric_expression-lengthfunction"></a>ROUND (numeric_expression, length [, Function])
 
 Restituisce un'espressione numerica, arrotondata alla precisione o alla lunghezza specificata. 
 
@@ -292,9 +292,9 @@ Restituisce un'espressione numerica, arrotondata alla precisione o alla lunghezz
 
 |  |  |
 |--|--|
-|`numeric_expression`| Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+|`numeric_expression`| `Int32` ,`Int64`, O .`Decimal` `Double` 
 |`length`| Oggetto `Int32` che rappresenta la precisione a cui arrotondare `numeric_expression`. Quando `length` è un numero positivo, l'oggetto `numeric_expression` viene arrotondato al numero di posizioni decimali specificato da `length`. Quando `length` è un numero negativo, l'oggetto `numeric_expression` viene arrotondato a sinistra del separatore decimale, in base a quanto specificato da `length`.|
-|`function` | Facoltativo. Un `Int32` che rappresenta il tipo di operazione da eseguire. Quando viene omesso oppure ha un valore pari a 0 (impostazione predefinita), `numeric_expression` viene arrotondato. Quando un valore diverso da è specificato 0, `numeric_expression` viene troncato. |
+|`function` | Facoltativo. Oggetto `Int32` che rappresenta il tipo di operazione da eseguire. Quando Function viene omesso o ha un valore 0 (impostazione predefinita), `numeric_expression` viene arrotondato. Quando viene specificato un valore diverso da 0, `numeric_expression` viene troncato. |
 
 **Valore restituito** 
 
@@ -304,7 +304,7 @@ Valore dell'oggetto `numeric_expression` specificato alla potenza `power_express
 
 `SqlServer.ROUND(748.58, -3)`
 
-## <a name="signexpression"></a>Sign(Expression) 
+## <a name="signexpression"></a>SIGN (espressione) 
 
 Restituisce il segno positivo (+1), zero (0) o il segno negativo (-1) dell'espressione specificata. 
 
@@ -314,13 +314,13 @@ Restituisce il segno positivo (+1), zero (0) o il segno negativo (-1) dell'espre
 
 **Valore restituito** 
 
-Un' `Int32`, `Int64`, `Double`, o `Decimal`. 
+`Int32` ,`Int64`, O .`Decimal` `Double` 
 
 **Esempio** 
 
 `SqlServer.SIGN(-10)`
 
-## <a name="sinexpression"></a>Sin(Expression)
+## <a name="sinexpression"></a>SIN (espressione)
 
 Calcola il seno trigonometrico dell'angolo specificato, espresso in radianti, e restituisce un'espressione `Double`. 
 
@@ -332,9 +332,9 @@ Calcola il seno trigonometrico dell'angolo specificato, espresso in radianti, e 
 
 Oggetto `Double`. 
 
-**Esempio** `SqlServer.SIN(20)`
+**Esempio**`SqlServer.SIN(20)`
 
-## <a name="sqrtexpression"></a>SQRT(Expression)
+## <a name="sqrtexpression"></a>SQRT (espressione)
 
 Restituisce la radice quadrata dell'espressione specificata. 
 
@@ -346,9 +346,9 @@ Restituisce la radice quadrata dell'espressione specificata.
 
 Oggetto `Double`. 
 
-**Esempio** `SqlServer.SQRT(3600)`
+**Esempio**`SqlServer.SQRT(3600)`
 
-## <a name="squareexpression"></a>Square(Expression)
+## <a name="squareexpression"></a>SQUARE (espressione)
 
 Restituisce la radice dell'espressione specificata. 
 
@@ -364,7 +364,7 @@ Oggetto `Double`.
 
 `SqlServer.SQUARE(25)`
 
-## <a name="tanexpression"></a>TAN(Expression)
+## <a name="tanexpression"></a>TAN (espressione)
 
 Calcola la tangente di un'espressione specificata.
 
@@ -386,6 +386,6 @@ Per altre informazioni sulle funzioni matematiche supportate da SqlClient, veder
 
 - **SQL Server 2005:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
 - **SQL Server 2008:** [Funzioni matematiche (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
-- **SQL Server 2012 e versioni successive:** [Funzioni matematiche (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)
+- **SQL Server 2012 e versioni successive:** [Funzioni matematiche (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)
 
 - [SqlClient per funzioni Entity Framework](sqlclient-for-ef-functions.md)

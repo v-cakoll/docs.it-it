@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331550"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182561"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic opzioni del compilatore elencate per categoria
 Il Visual Basic compilatore della riga di comando viene fornito come alternativa alla compilazione di programmi dall'interno di Visual Studio Integrated Development Environment (IDE). Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando Visual Basic ordinate in base alla categoria funzionale.  
@@ -104,7 +104,7 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 |[-win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Inserisce un file ico nel file di output.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserisce una risorsa Win32 nel file di output.|  
   
-## <a name="miscellaneous"></a>Miscellaneous  
+## <a name="miscellaneous"></a>Varie  
   
 |Opzione|Scopo|  
 |---|---|  
@@ -129,4 +129,4 @@ Il Visual Basic compilatore della riga di comando viene fornito come alternativa
 ## <a name="see-also"></a>Vedere anche
 
 - [Opzioni del compilatore Visual Basic in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

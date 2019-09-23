@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare un componente aggiuntivo che costituisca un'interfaccia utente"
+title: "Procedura: Creare un componente aggiuntivo che costituisce un'interfaccia utente"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949137"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182648"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: Creare un componente aggiuntivo che costituisca un'interfaccia utente
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: Creare un componente aggiuntivo che costituisce un'interfaccia utente
 Questo esempio illustra come creare un componente aggiuntivo che è un Windows Presentation Foundation (WPF) ospitato da un'applicazione WPF autonoma.  
   
  Il componente aggiuntivo è un'interfaccia utente che rappresenta un controllo utente WPF. Il contenuto del controllo utente è costituito da un unico pulsante che consente di visualizzare una finestra di messaggio. L'applicazione autonoma WPF ospita l'interfaccia utente del componente aggiuntivo come contenuto della finestra principale dell'applicazione.  
@@ -28,7 +28,7 @@ Questo esempio illustra come creare un componente aggiuntivo che è un Windows P
   
  In questo esempio vengono evidenziate le estensioni WPF per il modello di componente aggiuntivo .NET Framework che Abilita questo scenario e si presuppone quanto segue:  
   
-- Conoscenza del modello di componente aggiuntivo .NET Framework, tra cui pipeline, componente aggiuntivo e sviluppo host. Se non si ha familiarità con questi concetti, vedere [componenti aggiuntivi ed estensibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Per un'esercitazione in cui viene illustrata l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, [vedere Procedura dettagliata: Creazione di un'applicazione](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))estendibile.  
+- Conoscenza del modello di componente aggiuntivo .NET Framework, tra cui pipeline, componente aggiuntivo e sviluppo host. Se non si ha familiarità con questi concetti, vedere [componenti aggiuntivi ed estensibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Per un'esercitazione in cui viene illustrata l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, [vedere Procedura dettagliata: Creazione di un'applicazione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))estendibile.  
   
 - Conoscenza delle estensioni WPF per il modello di componente aggiuntivo .NET Framework. Vedere [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md).  
   
@@ -120,5 +120,5 @@ L'applicazione host usa il tipico codice del modello di componente aggiuntivo .N
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md)

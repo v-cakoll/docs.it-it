@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401705"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182540"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401705"
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-È necessaria una certa familiarità con il modello di componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+È necessaria una certa familiarità con il modello di componente aggiuntivo .NET Framework. Per altre informazioni, vedere [Componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ Per poter usare i componenti aggiuntivi, le applicazioni host devono trovarli e 
 In definitiva, lo sviluppo di un modello di componente aggiuntivo affidabile è un'operazione tutt'altro che banale. Per questo motivo, il .NET Framework fornisce un'infrastruttura per la creazione di modelli di componenti aggiuntivi.
 
 > [!NOTE]
-> Per informazioni più dettagliate sui componenti aggiuntivi, vedere [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Per informazioni più dettagliate sui componenti aggiuntivi, vedere [Componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ La <xref:System.AddIn.Contract.INativeHandleContract>modalità <xref:System.AddI
 
 Per fare in modo che un componente aggiuntivo restituisca un'interfaccia utente a un'applicazione host, sono necessari gli elementi seguenti:
 
-1. È necessario creare l'applicazione host, il componente aggiuntivo e la pipeline, come descritto nella documentazione .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .
+1. È necessario creare l'applicazione host, il componente aggiuntivo e la pipeline, come descritto nella documentazione .NET Framework [componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .
 
 2. Il contratto deve implementare <xref:System.AddIn.Contract.IContract> e, per restituire un'interfaccia utente, il contratto deve dichiarare un metodo con un valore restituito di <xref:System.AddIn.Contract.INativeHandleContract>tipo.
 
@@ -147,7 +147,7 @@ Per un esempio in cui viene illustrato come implementare un componente aggiuntiv
 
 Quando un componente aggiuntivo è un'interfaccia utente, sono necessari gli elementi seguenti:
 
-1. È necessario creare l'applicazione host, il componente aggiuntivo e la pipeline, come descritto nella documentazione .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .
+1. È necessario creare l'applicazione host, il componente aggiuntivo e la pipeline, come descritto nella documentazione .NET Framework [componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) .
 
 2. L'interfaccia del contratto per il componente aggiuntivo deve implementare <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -311,7 +311,7 @@ Per impostazione predefinita, quando vengono usati più domini applicazione, i v
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Componenti aggiuntivi ed estendibilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domini dell'applicazione](../../app-domains/application-domains.md)
 - [Panoramica di .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Creazione di oggetti in remoto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

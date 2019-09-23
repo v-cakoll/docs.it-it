@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306066"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181513"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
@@ -59,7 +59,7 @@ Altre informazioni sui file binari specifici della piattaforma sono disponibili 
 
 ## <a name="sample-app"></a>App di esempio
 
-È possibile usare entrambe le app seguenti per visualizzare i comandi di pubblicazione. L'app viene creata eseguendo i comandi seguenti nel terminale:
+Per esplorare i comandi di pubblicazione, è possibile usare l'app seguente. L'app viene creata eseguendo i comandi seguenti nel terminale:
 
 ```dotnetcli
 mkdir apptest1
@@ -118,7 +118,7 @@ La pubblicazione di una distribuzione dipendente dal framework crea un'app che e
 
 ## <a name="framework-dependent-executable"></a>File eseguibile dipendente dal framework
 
-Per l'interfaccia della riga di comando di .NET Core SDK 3.x, il file eseguibile dipendente dal framework è la modalità predefinita per il comando `dotnet publish` di base. Se la destinazione è il sistema operativo corrente, non è necessario specificare altri parametri.
+Per l'interfaccia della riga di comando .NET Core SDK 3. x, l'eseguibile dipendente dal Framework (supportano) è `dotnet publish` la modalità predefinita per il comando di base. Se la destinazione è il sistema operativo corrente, non è necessario specificare altri parametri.
 
 In questa modalità viene creato un host eseguibile specifico della piattaforma per ospitare l'app multipiattaforma. Questa modalità è simile alla distribuzione dipendente dal framework che richiede un host sotto forma di comando `dotnet`. Il nome del file eseguibile host varia a seconda della piattaforma ed è simile a `<PROJECT-FILE>.exe`. È possibile eseguire questo eseguibile direttamente anziché chiamare `dotnet <PROJECT-FILE>.dll` per eseguire l'app.
 
@@ -128,8 +128,7 @@ La pubblicazione di un eseguibile dipendente dal framework crea un'app che esegu
 
 Per pubblicare un eseguibile dipendente dal framework è necessario usare le opzioni seguenti con il comando `dotnet publish` (ad eccezione di .NET Core 3.x con la piattaforma corrente come destinazione):
 
-- `-r <RID>`
-  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
 - `--self-contained false` Questa opzione indica a .NET Core SDK di creare un eseguibile come eseguibile dipendente dal framework.
 
@@ -142,14 +141,13 @@ Se si usa l'[app di esempio](#sample-app), eseguire `dotnet publish -f netcoreap
 
 ## <a name="self-contained-deployment"></a>Distribuzione autonoma
 
-Quando si pubblica una distribuzione autonoma, .NET Core SDK crea un eseguibile specifico della piattaforma. La pubblicazione di una distribuzione autonoma include tutti i file .NET Core necessari per eseguire l'app ma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Queste dipendenze devono essere presenti nel sistema prima dell'esecuzione dell'app.
+Quando si pubblica una distribuzione autonoma, .NET Core SDK crea un eseguibile specifico della piattaforma. La pubblicazione di un SCD include tutti i file di .NET Core necessari per eseguire l'app, ma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Queste dipendenze devono essere presenti nel sistema prima dell'esecuzione dell'app.
 
 La pubblicazione di una distribuzione autonoma crea un'app che non esegue il roll forward alla versione più recente disponibile della patch di protezione di .NET Core. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 È necessario usare le opzioni seguenti con il comando `dotnet publish` per pubblicare una distribuzione autonoma:
 
-- `-r <RID>`
-  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
 - `--self-contained true` Questa opzione indica a .NET Core SDK di creare un eseguibile come distribuzione autonoma.
 

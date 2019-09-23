@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373679"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182635"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Procedura dettagliata: Serializzare raccolte di tipi standard
 
 I controlli personalizzati a volte espongono una raccolta come proprietà. In questa procedura dettagliata viene illustrato come <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> utilizzare la classe per controllare la modalità di serializzazione di una raccolta in fase di progettazione. L'applicazione <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> del valore alla proprietà della raccolta garantisce che la proprietà verrà serializzata.
 
-Per copiare il codice in questo argomento come singolo listato, vedere [Procedura: Serializzare raccolte di tipi standard con DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Per copiare il codice in questo argomento come singolo listato, vedere [Procedura: Serializzare raccolte di tipi standard con DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -129,11 +129,11 @@ Per testare il comportamento di serializzazione del controllo, è necessario ins
 
 Quando si sa come serializzare una raccolta di tipi standard, è consigliabile integrare i controlli personalizzati in modo più approfondito nell'ambiente in fase di progettazione. Negli argomenti seguenti viene descritto come migliorare l'integrazione della fase di progettazione dei controlli personalizzati:
 
-- [Architettura della fase di progettazione](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Architettura della fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Panoramica della serializzazione della finestra di progettazione](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Panoramica della serializzazione della finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Procedura dettagliata: Creazione di un controllo Windows Forms che sfrutta le funzionalità della fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)
 

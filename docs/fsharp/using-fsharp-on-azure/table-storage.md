@@ -3,12 +3,12 @@ title: Introduzione all'archiviazione tabelle di Azure con F#
 description: Archivia i dati strutturati nel cloud usando l'archiviazione tabelle di Azure o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928997"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182608"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introduzione all'archiviazione tabelle di Azure e al Azure Cosmos DB API Tabella con F\#
 
@@ -192,7 +192,7 @@ Se si sta leggendo un numero elevato di entità e si vuole elaborarle quando ven
 Ora che sono state apprese le nozioni di base dell'archiviazione tabelle, seguire i collegamenti seguenti per informazioni sulle attività di archiviazione più complesse e la Azure Cosmos DB API Tabella.
 
 - [Introduzione a Azure Cosmos DB API Tabella](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Informazioni di riferimento sulla libreria client di archiviazione per .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Informazioni di riferimento sulla libreria client di archiviazione per .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Provider di tipi di archiviazione di Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del team di archiviazione di Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Configurazione delle stringhe di connessione](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

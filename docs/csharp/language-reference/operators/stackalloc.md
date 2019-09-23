@@ -1,17 +1,17 @@
 ---
 title: Operatore stackalloc - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433834"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182427"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operatore stackalloc (Riferimenti per C#)
 
@@ -31,6 +31,10 @@ Nell'espressione `stackalloc T[E]`, `T` deve essere un [tipo non gestito](../bui
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  A partire C# da 8,0, è possibile usare `stackalloc` un'espressione all'interno di altre <xref:System.Span%601> espressioni <xref:System.ReadOnlySpan%601> ogni volta che è consentita una variabile o, come illustrato nell'esempio seguente:
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > In presenza di memoria allocata nello stack, è consigliabile usare il tipo <xref:System.Span%601> o <xref:System.ReadOnlySpan%601> ogni qualvolta sia possibile.
 
@@ -39,6 +43,8 @@ Nell'espressione `stackalloc T[E]`, `T` deve essere un [tipo non gestito](../bui
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   Come illustrato nell'esempio precedente, quando si usa un tipo di puntatore è necessario adottare un contesto `unsafe`.
+
+  Nel caso dei tipi di puntatore, è possibile usare un' `stackalloc` espressione solo in una dichiarazione di variabile locale per inizializzare la variabile.
 
 Il contenuto della memoria appena allocata non è definito. A partire da C# 7.3, è possibile usare la sintassi dell'inizializzatore di matrice per definire il contenuto della memoria appena allocata. Nell'esempio seguente vengono illustrati vari modi per eseguire questa operazione.
 

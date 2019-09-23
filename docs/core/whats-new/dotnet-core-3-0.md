@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/17/2019
-ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 45d5117f264a24c2658debad9a111d4d4b9b9a8e
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116112"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182453"
 ---
 # <a name="whats-new-in-net-core-30-release-candidate-1"></a>Novità di .NET Core 3,0 (versione finale candidata 1)
 
 Questo articolo descrive le novità di .NET Core 3,0 tramite la versione finale candidata 1 (RC1). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio per Mac 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
 
 [Scarica e inizia subito a usare .NET Core 3,0 RC1](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
 
