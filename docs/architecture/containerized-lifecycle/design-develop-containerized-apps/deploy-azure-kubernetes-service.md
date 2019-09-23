@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Informazioni su come distribuire un'app usando il servizio Azure Kubernetes.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672628"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182367"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Distribuire nel servizio Azure Kubernetes
 
@@ -18,13 +18,13 @@ Prerequisiti per l'uso del servizio Azure Kubernetes:
 - Computer di sviluppo Linux o Mac
 - Computer di sviluppo Windows
   - Modalità sviluppatore abilitata in Windows
-  - Sottosistema di Windows per Linux
-- Interfaccia della riga di comando di Azure installata in [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+  - Sottosistema Windows per Linux
+- Interfaccia della riga di comando di Azure installata in [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 > [!NOTE]
 > Per informazioni complete su:
 >
-> Interfaccia della riga di comando di Azure: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Interfaccia della riga di comando di Azure: <https://docs.microsoft.com/cli/azure/index>
 >
 > Sottosistema Windows per Linux: <https://docs.microsoft.com/windows/wsl/about>
 

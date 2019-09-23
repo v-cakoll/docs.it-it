@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373769"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181948"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -109,7 +109,7 @@ Per i progetti API Web può essere utile usare l'attributo `[ApiController]`, ap
 > - **Filtri**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **Attributo ApiController**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Uso delle dipendenze
 
@@ -324,11 +324,11 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 > - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
 La protezione delle applicazioni Web è un argomento molto ampio con numerose considerazioni. A un livello di base, per garantire la sicurezza è necessario conoscere l'identità dell'utente da cui proviene una determinata richiesta e assicurarsi che la richiesta abbia accesso solo alle risorse necessarie. L'autenticazione è il processo di confronto delle credenziali specificate con una richiesta con quelle di un archivio di dati attendibili per verificare se la richiesta deve essere trattata come proveniente da un'entità nota. L'autorizzazione è il processo di limitazione dell'accesso a determinate risorse in base all'identità utente. Un terzo aspetto relativo alla sicurezza è la protezione delle richieste dall'intercettazione da terze parti per cui è necessario [assicurarsi che l'applicazione usi SSL](/aspnet/core/security/enforcing-ssl).
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Autenticazione
 
 ASP.NET Core Identity è un sistema di appartenenza che è possibile usare per supportare la funzionalità di accesso per l'applicazione. Include il supporto degli account utente locali e il supporto dei provider di accesso esterni come l'account Microsoft, Twitter, Facebook, Google e altri ancora. Oltre a ASP.NET Core Identity, l'applicazione può usare l'autenticazione di Windows o un provider di identità di terze parti come [Identity Server](https://github.com/IdentityServer/IdentityServer4).
 
@@ -369,7 +369,7 @@ public void Configure(IApplicationBuilder app)
 
 Per altre informazioni sulla [configurazione dell'autenticazione a due fattori](/aspnet/core/security/authentication/2fa) e l'[abilitazione di provider di accesso esterni](/aspnet/core/security/authentication/social/), vedere la documentazione ufficiale di ASP.NET Core.
 
-### <a name="authorization"></a>Authorization
+### <a name="authorization"></a>Autorizzazione
 
 La forma di autorizzazione più semplice prevede la limitazione dell'accesso per gli utenti anonimi. La limitazione può essere ottenuta semplicemente applicando l'attributo \[Authorize\] a determinati controller o azioni. Se vengono usati i ruoli, è possibile estendere ulteriormente l'attributo per limitare l'accesso agli utenti che appartengono a determinati ruoli, come illustrato di seguito:
 
