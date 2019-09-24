@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: Commenti sulla documentazione
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Risoluzione dell'overload
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: Grammatica
       items:
         - name: vb.html

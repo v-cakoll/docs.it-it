@@ -200,7 +200,7 @@
       items:
         - name: Vincolo new
           href: keywords/new-constraint.md
-        - name: dove
+        - name: where
           href: keywords/where-generic-type-constraint.md
     - name: Parole chiave di accesso
       items:
@@ -593,7 +593,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
     - name: Separatore di cifra iniziale
       href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-- name: 'C# 7.3 proposte specifiche'
+- name: 'Proposte per la specifica C# 7.3'
   items:
     - name: Vincoli di tipo generico non gestito
       href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
