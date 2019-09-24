@@ -39,7 +39,7 @@
       items:
         - name: Cenni preliminari sulla libreria di classi
           href: standard/class-library-overview.md
-        - name: Tipi di base
+        - name: Tipi base
           href: standard/base-types/
     - name: Librerie di classi .NET
       href: standard/class-libraries.md
@@ -498,7 +498,7 @@
           href: framework/wcf/
         - name: Windows Workflow Foundation
           href: framework/windows-workflow-foundation/
-        - name: Applicazioni di servizio di Windows
+        - name: Applicazioni di servizio Windows
           href: framework/windows-services/
         - name: Applicazioni a 64 bit
           href: framework/64-bit-apps.md
@@ -506,7 +506,7 @@
           href: framework/develop-web-apps-with-aspnet.md
         - name: Programmazione di rete in .NET Framework
           href: framework/network-programming/
-        - name: Configurazione di applicazioni
+        - name: Configurazione di app
           href: framework/configure-apps/
         - name: Compilazione di app con .NET Native
           href: framework/net-native/
@@ -587,7 +587,7 @@
           href: csharp/tutorials/pattern-matching.md
         - name: Applicazione console
           href: csharp/tutorials/console-teleprompter.md
-        - name: Client REST
+        - name: REST Client (Client REST)
           href: csharp/tutorials/console-webapiclient.md
         - name: 'Ereditarietà in C# e .NET'
           href: csharp/tutorials/inheritance.md
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'Novità di C#'
       items:
-        - name: 'C# 8.0 - Anteprima 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -1067,7 +1067,7 @@
               href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
             - name: Personalizzazione degli oggetti disponibili in My
               href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
-    - name: Concetti di programmazione
+    - name: Nozioni di base sulla programmazione
       href: visual-basic/programming-guide/concepts/index.md
       items:
         - name: Programmazione asincrona con Async e Await
@@ -1202,7 +1202,7 @@
           href: visual-basic/programming-guide/language-features/declared-elements/index.md
         - name: Delegati
           href: visual-basic/programming-guide/language-features/delegates/index.md
-        - name: Binding anticipato e tardivo
+        - name: Associazione anticipata e tardiva
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: Tipi di errore
           href: visual-basic/programming-guide/language-features/error-types.md
