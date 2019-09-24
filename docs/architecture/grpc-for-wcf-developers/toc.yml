@@ -1,0 +1,89 @@
+- name: gRPC per sviluppatori WCF
+  href: index.md
+  items:
+    - name: Introduzione
+      href: introduction.md
+    - name: Panoramica di gRPC
+      href: grpc-overview.md
+      items:
+        - name: Approccio di gRPC per RPC
+          href: approach.md
+        - name: Linguaggio di definizione dell'interfaccia
+          href: interface-definition-language.md
+        - name: Protocolli di rete
+          href: network-protocols.md
+        - name: Perché gRPC è consigliato per gli sviluppatori WCF
+          href: Why-grpc.md
+    - name: Buffer di protocollo
+      href: protocol-buffers.md
+      items:
+        - name: Messaggi protobuf
+          href: protobuf-messages.md
+        - name: Tipi di dati scalari protobuf
+          href: protobuf-data-types.md
+        - name: Tipi annidati protobuf
+          href: protobuf-nested-types.md
+        - name: Campi ripetuti per elenchi e matrici
+          href: protobuf-repeated.md
+        - name: Campi riservati protobuf
+          href: protobuf-reserved.md
+        - name: Campi Any e OneOf protobuf per i tipi variant
+          href: protobuf-any-oneof.md
+        - name: Enumerazioni protobuf
+          href: protobuf-enums.md
+        - name: Mappe protobuf per i dizionari
+          href: protobuf-maps.md
+    - name: Confronto tra servizi WCF e gRPC
+      href: wcf-services-to-grpc-comparison.md
+      items:
+        - name: Endpoint WCF e metodi gRPC
+          href: wcf-endpoints-grpc-methods.md
+        - name: Associazioni e trasporti WCF
+          href: wcf-bindings.md
+        - name: Tipi di RPC
+          href: rpc-types.md
+        - name: Metadati
+          href: metadata.md
+        - name: Gestione degli errori
+          href: error-handling.md
+        - name: Protocolli WS-*
+          href: ws-protocols.md
+    - name: Eseguire la migrazione di una soluzione WCF a gRPC
+      href: migrate-wcf-to-grpc.md
+      items:
+        - name: Creare un nuovo progetto ASP.NET Core gRPC
+          href: create-project.md
+        - name: Eseguire la migrazione di un servizio richiesta-riposta WCF a gRPC
+          href: migrate-request-reply.md
+        - name: Eseguire la migrazione di servizi duplex WCF a gRPC
+          href: migrate-duplex-services.md
+        - name: Servizi di streaming gRPC a confronto con i campi ripetuti
+          href: streaming-versus-repeated.md
+        - name: Librerie client
+          href: client-libraries.md
+    - name: Sicurezza nelle applicazioni gRPC
+      href: security.md
+      items:
+        - name: Credenziali di chiamata
+          href: call-credentials.md
+        - name: Credenziali del canale
+          href: channel-credentials.md
+        - name: Crittografia
+          href: encryption.md
+    - name: gRPC in produzione
+      href: grpc-in-production.md
+      items:
+        - name: Applicazioni self-hosted
+          href: self-hosted.md
+        - name: Docker
+          href: docker.md
+        - name: Kubernetes
+          href: kubernetes.md
+        - name: gRPC e mesh di servizi
+          href: service-mesh.md
+        - name: Bilanciamento del carico
+          href: load-balancing.md
+        - name: Gestione delle prestazioni delle applicazioni
+          href: application-performance-management.md
+    - name: Appendice
+      href: appendix.md
