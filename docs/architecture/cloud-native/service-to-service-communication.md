@@ -3,12 +3,12 @@ title: Comunicazione da servizio a servizio
 description: Informazioni sul modo in cui i microservizi nativi del cloud back-end comunicano con altri microservizi back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 7a69678fd38a69c3c2d7e91d4aea019c39141cb6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184673"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214394"
 ---
 # <a name="service-to-service-communication"></a>Comunicazione da servizio a servizio
 
@@ -60,7 +60,7 @@ Una delle opzioni più diffuse per la rimozione dell'accoppiamento di microservi
 
 ### <a name="service-aggregator-pattern"></a>Modello di Service aggregator
 
-Un'altra opzione per eliminare l'accoppiamento da microservizio a micrservice è un [microservizio aggregatore](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), illustrato in viola nella figura 4-10. 
+Un'altra opzione per eliminare l'accoppiamento da microservizio a microservizio è un [microservizio aggregatore](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), illustrato in viola nella figura 4-10. 
 
 ![Servizio aggregator](./media/aggregator-service.png)
 
@@ -232,4 +232,4 @@ Per le applicazioni native del cloud che devono trasmettere un numero elevato di
 
 >[!div class="step-by-step"]
 >[Precedente](front-end-communication.md)
->[Successivo](rest-grpc.md) <!-- Next Chapter -->
+>[Successivo](rest-grpc.md)

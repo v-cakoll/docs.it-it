@@ -1,16 +1,16 @@
 ---
-title: Modelli di comunicazione nativi del cloud
+title: Modelli di comunicazione cloud nativi
 description: Informazioni sui principali problemi di comunicazione del servizio nelle applicazioni native del cloud
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 0123d2e3da1bf8df29efcf2595a38c377dd1d1a1
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183378"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214010"
 ---
-# <a name="cloud-native-communication-patterns"></a>Modelli di comunicazione nativi del cloud
+# <a name="cloud-native-communication-patterns"></a>Modelli di comunicazione cloud nativi
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -20,7 +20,7 @@ Quando si costruisce un sistema nativo del cloud, la comunicazione diventa una d
 
 In un'applicazione monolitica, la comunicazione è semplice. I moduli di codice vengono eseguiti insieme nello stesso spazio eseguibile (processo) in un server. Questo approccio può avere vantaggi a livello di prestazioni, in quanto tutto viene eseguito insieme nella memoria condivisa, ma comporta un codice strettamente collegato che diventa difficile da gestire, evolvere e ridimensionare.
 
-I sistemi nativi del cloud implementano un'architettura basata su microservizi con molti microservizi indipendenti e piccoli. Ogni microservizio viene eseguito in un processo separato ed è in genere eseguito all'interno di un contenitore distribuito in un *cluster*. 
+I sistemi nativi del cloud implementano un'architettura basata su microservizi con molti microservizi indipendenti e piccoli. Ogni microservizio viene eseguito in un processo separato ed è in genere eseguito all'interno di un contenitore distribuito in un *cluster*.
 
 Un cluster raggruppa un pool di macchine virtuali insieme per formare un ambiente a disponibilità elevata. Sono gestite con uno strumento di orchestrazione, responsabile della distribuzione e della gestione dei microservizi in contenitori. La figura 4-1 Mostra un cluster [Kubernetes](https://kubernetes.io) distribuito nel cloud di Azure con i [servizi di Azure Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)completamente gestiti.
 
@@ -46,8 +46,7 @@ Sebbene forniscano molti vantaggi, i microservizi non sono disponibili in un pra
 
 I microservizi .NET del libro [: L'architettura per le applicazioni](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).NET in contenitori, disponibile gratuitamente da Microsoft, fornisce una copertura dettagliata dei modelli di comunicazione per le applicazioni di microservizi. In questo capitolo viene fornita una panoramica di alto livello di questi modelli insieme alle opzioni di implementazione disponibili nel cloud di Azure.
 
-In questo capitolo verranno innanzitutto indirizzate le comunicazioni tra le applicazioni front-end e i microservizi back-end. Verranno quindi esaminati i microservizi back-end che comunicano tra loro. Esamineremo la tecnologia di comunicazione up and gRPC. Infine, verranno esaminati nuovi modelli di comunicazione innovativi con la tecnologia mesh di servizi. Si vedrà anche come il cloud di Azure fornisca diversi tipi di *Servizi* di supporto per supportare la comunicazione nativa del cloud.  
-
+In questo capitolo verranno innanzitutto indirizzate le comunicazioni tra le applicazioni front-end e i microservizi back-end. Verranno quindi esaminati i microservizi back-end che comunicano tra loro. Esamineremo la tecnologia di comunicazione up and gRPC. Infine, verranno esaminati nuovi modelli di comunicazione innovativi con la tecnologia mesh di servizi. Si vedrà anche come il cloud di Azure fornisca diversi tipi di *Servizi* di supporto per supportare la comunicazione nativa del cloud.
 
 >[!div class="step-by-step"]
 >[Precedente](other-deployment-options.md)

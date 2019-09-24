@@ -2,12 +2,12 @@
 title: Resilienza della piattaforma Azure
 description: Architettura di app .NET cloud native per Azure | Resilienza dell'infrastruttura cloud con Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 5d8ddc65ccdf4bb305be62e5caca30eab49f87e2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182979"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214205"
 ---
 # <a name="azure-platform-resiliency"></a>Resilienza della piattaforma Azure
 
@@ -68,7 +68,7 @@ Il cloud si sviluppa in scala. La possibilità di aumentare o ridurre le risorse
 
 - *Sfrutta i vantaggi delle funzionalità di scalabilità automatica della piattaforma.* Usare le funzionalità di scalabilità automatica predefinite, laddove possibile, anziché meccanismi personalizzati o di terze parti. Laddove possibile, usare le regole di scalabilità pianificate per garantire che le risorse siano disponibili senza un ritardo di avvio, ma aggiungere la scalabilità automatica reattiva alle regole in base alle esigenze, per gestire modifiche impreviste della richiesta. Per altre informazioni, vedere [linee guida per la scalabilità](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automatica.
 
- - *Scalabilità verticale in modo aggressivo.* Una procedura finale è la scalabilità verticale in modo che sia possibile raggiungere rapidamente i picchi di traffico immediatamente senza perdere il business. E quindi ridurre le risorse non necessarie (ovvero rimuovere le risorse non necessarie) in modo conservativo per assicurare la stabilità del sistema. Un modo semplice per implementare questa operazione consiste nell'impostare il periodo di raffreddamento, ovvero il tempo di attesa tra le operazioni di ridimensionamento, fino a cinque minuti per l'aggiunta di risorse e fino a 15 minuti per la rimozione di istanze.
+- *Scalabilità verticale in modo aggressivo.* Una procedura finale è la scalabilità verticale in modo che sia possibile raggiungere rapidamente i picchi di traffico immediatamente senza perdere il business. E quindi ridurre le risorse non necessarie (ovvero rimuovere le risorse non necessarie) in modo conservativo per assicurare la stabilità del sistema. Un modo semplice per implementare questa operazione consiste nell'impostare il periodo di raffreddamento, ovvero il tempo di attesa tra le operazioni di ridimensionamento, fino a cinque minuti per l'aggiunta di risorse e fino a 15 minuti per la rimozione di istanze.
 
 ## <a name="built-in-retry-in-services"></a>Tentativi predefiniti nei servizi
 

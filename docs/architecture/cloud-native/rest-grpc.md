@@ -3,12 +3,12 @@ title: REST e gRPC
 description: Informazioni su gRPC, il suo ruolo in applicazioni native del cloud e su come differisce da HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 020b29fc13c72d7e42e5b555fe81e2836c907d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184820"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214543"
 ---
 # <a name="rest-and-grpc"></a>REST e gRPC
 
@@ -30,7 +30,7 @@ gRPC è un Framework RPC moderno che è leggero ed efficiente. Usa HTTP/2 per il
 
 gRPC è supportato nelle piattaforme più diffuse, tra cui Java C#,, Golang e NodeJS. 
 
-## <a name="protocol-buffers"></a>Buffer del protocollo
+## <a name="protocol-buffers"></a>Buffer di protocollo
 
 gRPC abbraccia un'altra tecnologia open source denominata [buffer del protocollo](https://developers.google.com/protocol-buffers/docs/overview) o messaggi protobuf per inviare e ricevere dati. Analogamente a un [contratto dati WCF](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-data-contracts), protobuf serializza i dati strutturati per i sistemi per la lettura e la scrittura. Riduce il sovraccarico dei formati leggibili come XML o JSON.
 
@@ -74,4 +74,3 @@ In futuro, gRPC potrebbe svolgere un ruolo importante in detronizzare il dominam
 >[!div class="step-by-step"]
 >[Precedente](service-to-service-communication.md)
 >[Successivo](service-mesh-communication-infrastructure.md)
-

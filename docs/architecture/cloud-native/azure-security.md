@@ -2,12 +2,12 @@
 title: Sicurezza di Azure per app native del cloud
 description: Architettura di app .NET cloud native per Azure | Sicurezza di Azure per le app cloud native
 ms.date: 06/30/2019
-ms.openlocfilehash: 79e1ec9bd91285041791e36275b03f128f2fe136
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183609"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214127"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Sicurezza di Azure per app native del cloud
 
@@ -265,8 +265,8 @@ Sebbene Cosmos DB non fornisca le chiavi di crittografia del cliente, il team ha
 
 ## <a name="keeping-secure"></a>Mantenimento della sicurezza
 
-Azure dispone di tutti gli strumenti necessari per rilasciare un prodotto altamente protetto. Tuttavia, una catena è altrettanto complessa del suo collegamento più debole. Se le applicazioni distribuite in Azure non sono sviluppate con un approccio di sicurezza appropriato e controlli di sicurezza efficaci, diventano il collegamento debole nella catena. Sono disponibili molti strumenti di analisi statica, librerie di crittografia e procedure di sicurezza eccezionali che è possibile usare per garantire che il software installato in Azure sia sicuro come Azure. WhiteSource ([strumenti di analisi statica](https://www.whitesourcesoftware.com/), [librerie di crittografia](https://www.libressl.org/)e [procedure di sicurezza](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), https://www.libressl.org/) LibreSSL [(e Red vs. I test di penetrazione della sicurezza interni](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) blu di Microsoft Azure sono rispettivamente esempi. 
+Azure dispone di tutti gli strumenti necessari per rilasciare un prodotto altamente protetto. Tuttavia, una catena è altrettanto complessa del suo collegamento più debole. Se le applicazioni distribuite in Azure non sono sviluppate con un approccio di sicurezza appropriato e controlli di sicurezza efficaci, diventano il collegamento debole nella catena. Sono disponibili molti strumenti di analisi statica, librerie di crittografia e procedure di sicurezza eccezionali che è possibile usare per garantire che il software installato in Azure sia sicuro come Azure. [strumenti di analisi statica](https://www.whitesourcesoftware.com/), [librerie di crittografia](https://www.libressl.org/)e [procedure di sicurezza](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), [ [LibreSSL](https://www.libressl.org/) e Red vs. I test di penetrazione della sicurezza interni](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) blu di Microsoft Azure sono rispettivamente esempi. 
 
 >[!div class="step-by-step"]
 >[Precedente](security.md)
->[Successivo](devops.md) <!-- Next Chapter -->
+>[Successivo](devops.md)
