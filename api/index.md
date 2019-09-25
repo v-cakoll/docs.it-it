@@ -2,19 +2,19 @@
 layout: ApiBrowserPage
 hide_bc: true
 title: Browser API .NET
-quickFilterColumn1: netframework-4.8,netcore-2.2,netstandard-2.0
+quickFilterColumn1: netframework-4.8,netcore-3.0,netstandard-2.1
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
 quickFilterColumn3: azure-dotnet,aspnetcore-2.2,ml-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.date: 04/02/2019
-ms.openlocfilehash: 92288ebb5a299b3091bff447f7f435ebc55fbc6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.date: 09/23/2019
+ms.openlocfilehash: 90b79840fc206f538721e27b2051a1ded2693696
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632322"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214046"
 ---
-# <a name="net-api-browser"></a><span data-ttu-id="a4d69-102">Browser API .NET</span><span class="sxs-lookup"><span data-stu-id="a4d69-102">.NET API Browser</span></span>
+# <a name="net-api-browser"></a><span data-ttu-id="2d6b0-102">Browser API .NET</span><span class="sxs-lookup"><span data-stu-id="2d6b0-102">.NET API Browser</span></span>
 
-<span data-ttu-id="a4d69-103">Benvenuti nel browser API .NET, un'unica risorsa completa per tutte le API basate su .NET di Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a4d69-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="a4d69-104">Iniziare a cercare qualsiasi API gestita digitandone il nome nella casella sottostante.</span><span class="sxs-lookup"><span data-stu-id="a4d69-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="a4d69-105">Altre informazioni sul browser API sono disponibili in questo [post del blog](https://aka.ms/apibrowser).</span><span class="sxs-lookup"><span data-stu-id="a4d69-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="a4d69-106">Per commenti e suggerimenti, creare un nuovo problema nel [repository MicrosoftDocs/feedback in GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span><span class="sxs-lookup"><span data-stu-id="a4d69-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>
+<span data-ttu-id="2d6b0-103">Benvenuti nel browser API .NET, un'unica risorsa completa per tutte le API basate su .NET di Microsoft.</span><span class="sxs-lookup"><span data-stu-id="2d6b0-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="2d6b0-104">Iniziare a cercare qualsiasi API gestita digitandone il nome nella casella sottostante.</span><span class="sxs-lookup"><span data-stu-id="2d6b0-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="2d6b0-105">Altre informazioni sul browser API sono disponibili in questo [post del blog](https://aka.ms/apibrowser).</span><span class="sxs-lookup"><span data-stu-id="2d6b0-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="2d6b0-106">Per commenti e suggerimenti, creare un nuovo problema nel [repository MicrosoftDocs/feedback in GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span><span class="sxs-lookup"><span data-stu-id="2d6b0-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>
