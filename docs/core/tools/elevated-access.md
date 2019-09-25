@@ -3,12 +3,12 @@ title: Accesso con privilegi elevati per comandi dotnet
 description: Informazioni sulle procedure consigliate per comandi dotnet che richiedono l'accesso con privilegi elevati.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: b6de87f375a584da25e160d79f51f1bc48f3c302
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969857"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216312"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Accesso con privilegi elevati per comandi dotnet
 
@@ -41,7 +41,7 @@ Se la cartella `%ProgramFiles%\dotnet-tools` è già esistente, eseguire le oper
 
 Per installare gli strumenti, eseguire il comando seguente al prompt con privilegi elevati. Verrà creata la cartella *dotnet-tools* durante l'installazione.
 
-```cmd
+```dotnetcli
 dotnet tool install PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools".
 ```
 
@@ -69,7 +69,7 @@ TOOLCOMMAND
 
 Al prompt con privilegi elevati digitare il comando seguente:
 
-```cmd
+```dotnetcli
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 

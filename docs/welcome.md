@@ -3,14 +3,14 @@ title: Introduzione a .NET
 description: Introduzione alla famiglia di tecnologie .NET.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855475"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216859"
 ---
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
@@ -29,10 +29,10 @@ Per informazioni sulle novità di .NET, vedere i blog seguenti:
 
 Seguire anche gli eventi .NET più recenti:
 
-- [Microsoft Connect()](https://www.microsoft.com/connectevent)
-- [Microsoft Build 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect()](https://www.microsoft.com/connectevent)
+- 
 Per informazioni sulle funzionalità più recenti aggiunte alle implementazioni di .NET e sui linguaggi supportati, vedere gli articoli seguenti:
 
 - [What's new in .NET Core](core/whats-new/index.md) (Novità di .NET Core)
@@ -52,8 +52,15 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 - [Guida a Visual Basic](visual-basic/index.md)
 - [Guida a ML.NET](machine-learning/index.yml)
 - [.NET per Apache Spark](spark/index.yml)
+- [Architettura delle applicazioni .NET](architecture/index.yml)
 
 È anche possibile esplorare i [riferimenti alle API .NET](/dotnet/api).
+
+## <a name="videos"></a>Video
+
+Esplora i video su Web, dispositivi mobili, C#desktop, Machine Learning, contenitori/Docker, accesso ai dati e altro ancora:
+
+[Serie di video su .NET 101](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>Open source
 

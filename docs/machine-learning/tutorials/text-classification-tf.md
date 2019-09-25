@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054307"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216888"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Esercitazione: Analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare in ML.NET
 
@@ -21,6 +21,7 @@ Il modello TensorFlow usato in questa esercitazione è stato sottoposto a traini
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
+>
 > * Caricare un modello di TensorFlow con training preliminare
 > * Trasforma il testo del commento del sito Web in funzionalità appropriate per il modello
 > * Usare il modello per eseguire una stima
@@ -80,14 +81,14 @@ Le revisioni del film sono testo in formato libero. L'applicazione converte il t
 
 Il primo consiste nel suddividere il testo in parole separate e utilizzare il file di mapping specificato per eseguire il mapping di ogni parola a una codifica di tipo Integer. Il risultato di questa trasformazione è una matrice integer a lunghezza variabile con una lunghezza corrispondente al numero di parole nella frase.
 
-|Proprietà| Value|Type|
+|Proprietà| Value|Tipo|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a una lunghezza fissa di 600. Si tratta della lunghezza prevista dal modello TensorFlow.
 
-|Proprietà| Value|Type|
+|Proprietà| Value|Tipo|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
@@ -120,7 +121,7 @@ La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a 
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` è la classe di stima usata dopo il training del modello. `MovieReviewSentimentPrediction`dispone di una `float` singola matrice`Prediction`() e `VectorType` di un attributo.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Creare il MLContext, il dizionario di ricerca e l'azione per ridimensionare le funzionalità
 
 La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET. L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro di creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
@@ -191,7 +192,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. Aggiungere il codice per creare il modello dalla pipeline:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     Un modello ml.NET viene creato dalla catena di estimatori nella pipeline chiamando il `Fit` metodo. In questo caso, i dati non vengono adattati per la creazione del modello, perché è già stato eseguito il training del modello TensorFlow. Viene fornito un oggetto visualizzazione dati vuoto per soddisfare i requisiti del `Fit` metodo.
 
@@ -200,10 +201,10 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 1. Aggiungere il `PredictSentiment` metodo sotto il `Main` metodo:
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. Aggiungere il codice seguente per creare `PredictionEngine` come prima riga `PredictSentiment()` nel metodo:
@@ -222,7 +223,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. La funzione [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) esegue una stima su una singola riga di dati:
 
-    |Proprietà| Value|Type|
+    |Proprietà| Value|Tipo|
     |-------------|-----------------------|------|
     |Previsione|[0,5459937, 0,454006255]|float []|
 
@@ -241,8 +242,8 @@ Compilare ed eseguire l'applicazione.
 I risultati dovrebbero essere simili a quanto riportato di seguito. Durante l'elaborazione, vengono visualizzati alcuni messaggi. Possono essere mostrati avvisi o messaggi relativi all'elaborazione. Questi messaggi sono stati rimossi dai risultati seguenti per maggiore chiarezza.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 La procedura è stata completata. A questo punto, è stato creato un modello di apprendimento automatico per la classificazione e la stima del sentimento dei messaggi riutilizzando un modello con training `TensorFlow` preliminare in ml.NET.
@@ -251,6 +252,7 @@ La procedura è stata completata. A questo punto, è stato creato un modello di 
 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
+>
 > * Caricare un modello di TensorFlow con training preliminare
 > * Trasforma il testo del commento del sito Web in funzionalità appropriate per il modello
 > * Usare il modello per eseguire una stima

@@ -3,12 +3,12 @@ title: Aggiornare le interfacce in modo sicuro con i membri dell'interfaccia pre
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926709"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216572"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i membri di interfaccia predefiniti in C# 8.0
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8.0 è disponibile a partire [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o dalla versione più recente del [SDK dell'anteprima di .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0). I membri di interfaccia predefiniti sono disponibili a partire dall'anteprima 4 di .NET Core 3.0.
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8,0 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
 ## <a name="scenario-overview"></a>Panoramica dello scenario
 

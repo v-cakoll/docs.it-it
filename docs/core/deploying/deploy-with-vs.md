@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969959"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216246"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -26,7 +26,7 @@ Le sezioni seguenti illustrano l'uso di Microsoft Visual Studio per creare i tip
 - Distribuzione autonoma
 - Distribuzione autonoma con dipendenze di terze parti
 
-Per informazioni sull'uso di Visual Studio per sviluppare applicazioni .NET Core, vedere [Prerequisiti per .NET Core in Windows](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
+Per informazioni sull'uso di Visual Studio per sviluppare applicazioni .NET Core, vedere [Prerequisiti per .NET Core in Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
 
 ## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
 
@@ -152,7 +152,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
          1. Selezionare **Crea nuovo profilo** nella finestra di dialogo **Pubblica**.
 
-         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Selezionare **OK**.
+         1. Nella finestra di dialogo **Selezionare una destinazione di pubblicazione**, in **Scegliere una cartella** impostare il percorso su *bin\Release\PublishOutput\win10-x64*. Scegliere **OK**.
 
          1. Selezionare il nuovo profilo (**FolderProfile1**) nell'elenco dei profili e assicurarsi che **Runtime di destinazione** sia `win10-x64`. In caso contrario, selezionare **Impostazioni**. Nella finestra di dialogo **Impostazioni profilo** impostare **Runtime di destinazione** su `win10-x64` e selezionare **Salva**. In alternativa selezionare **Annulla**.
 
@@ -218,7 +218,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
 
 Ripetere questi passaggi per definire eventuali piattaforme di destinazione dell'applicazione.
 
-I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. A tale scopo, effettuare le seguenti operazioni:
+I profili sono stati configurati e ora si è pronti per pubblicare l'applicazione. Per eseguire questa operazione:
 
    1. Se la finestra **Pubblica** non è attualmente aperta, fare clic con il pulsante destro del mouse sul progetto (non sulla soluzione) in **Esplora soluzioni** e selezionare **Pubblica**.
 

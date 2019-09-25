@@ -2,12 +2,12 @@
 title: 'Espressione Loops: for...in'
 description: Vedere come il F# ... nel costrutto di ciclo di espressioni viene usato per eseguire l'iterazione delle corrispondenze di un modello in una raccolta enumerabile.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630723"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216454"
 ---
 # <a name="loops-forin-expression"></a>Espressione Loops: for...in
 
@@ -44,7 +44,7 @@ Negli esempi di codice seguenti viene illustrato l'utilizzo dell' `for...in` esp
 
 L'output è indicato di seguito.
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ Nell'esempio seguente viene illustrato come eseguire il ciclo su una sequenza e 
 
 L'output è indicato di seguito.
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ Nell'esempio seguente viene illustrato come eseguire il ciclo su un intervallo d
 
 L'output di funzione1 è il seguente.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ Nell'esempio seguente viene illustrato come eseguire il ciclo su un intervallo c
 
 Di seguito è `function2` riportato l'output di.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ Nell'esempio seguente viene illustrato come utilizzare un intervallo di caratter
 
 Di seguito è `function3` riportato l'output di.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ Nell'esempio seguente viene illustrato come utilizzare un valore skip negativo p
 
 Di seguito è `function4` riportato l'output di.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ L'inizio e la fine dell'intervallo possono anche essere espressioni, ad esempio 
 
 Di seguito è `function5` riportato l'output di con questo input.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,7 +127,7 @@ Nell'esempio seguente viene illustrato l'utilizzo di un carattere jolly\_() quan
 
 L'output è indicato di seguito.
 
-```
+```console
 Number of elements in list1: 5
 ```
 

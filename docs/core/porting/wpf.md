@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4ff3ca9610e7fa9355931ca2013def1157fab8b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117060"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216191"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop WPF in .NET Core
 
@@ -52,7 +52,7 @@ Per la conversione di un'applicazione WPF di .NET Framework, esistono alcuni asp
 
 01. Si usa una versione diversa di WPF.
 
-    In concomitanza con il rilascio di .NET Core 3.0 Preview 1, è stato reso disponibile WPF come open source su GitHub. Il codice per WPF di .NET Core è un fork della base di codice di WPF di .NET Framework. È possibile che esistano alcune differenze che non consentono la conversione dell'app.
+    Quando è stato rilasciato .NET Core 3,0 Preview 1, WPF è passato a Open Source su GitHub. Il codice per WPF di .NET Core è una divisione del .NET Framework codebase WPF. È possibile che esistano alcune differenze che non consentono la conversione dell'app.
 
 01. [Windows Compatibility Pack][compat-pack] può essere utile per la migrazione.
 

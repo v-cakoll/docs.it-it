@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851072"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214407"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -83,7 +83,7 @@ Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono
 
 I contesti dell'annotazione e dell'avviso nullable predefiniti sono `disabled`. Tale decisione significa che il codice esistente viene compilato senza modifiche e senza generare nuovi avvisi.
 
-### <a name="nullable-annotation-context"></a>Contesto dell'annotazione nullable
+## <a name="nullable-annotation-context"></a>Contesto dell'annotazione nullable
 
 Il compilatore usa le regole seguenti in un contesto di annotazione nullable disabilitato:
 

@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969850"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216197"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -29,7 +29,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Consigli
+### <a name="recommendations"></a>Suggerimenti
 
 Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandard.Library` in modo implicito, ecco le procedure consigliate:
 
@@ -43,7 +43,7 @@ Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandar
 
 La maggior parte degli utilizzi di [`<PackageReference>`](#packagereference) richiede l'impostazione dell'attributo `Version` per specificare la versione del pacchetto NuGet da usare. Se però si usa .NET Core 2.1 o 2.2 e si fa riferimento a [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) o [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), l'attributo non è necessario. .NET Core SDK può selezionare automaticamente la versione dei pacchetti che deve essere usata.
 
-### <a name="recommendation"></a>Recommendation
+### <a name="recommendation"></a>Consiglio
 
 Quando si fa riferimento ai pacchetti `Microsoft.AspNetCore.App` o `Microsoft.AspNetCore.All`, non specificarne la versione. Se si specifica una versione, l'SDK potrebbe visualizzare l'avviso NETSDK1071. Per non visualizzare più questo avviso, rimuovere la versione del pacchetto come nell'esempio seguente:
 
@@ -74,7 +74,7 @@ La tabella seguente mostra gli elementi e i [GLOB](https://en.wikipedia.org/wiki
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (o altre estensioni del linguaggio) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
-| Nessuna              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
 > Il criterio **GLOB Exclude** esclude sempre le cartelle `./bin` e `./obj`, rappresentate rispettivamente dalle proprietà MSBuild `$(BaseOutputPath)` e `$(BaseIntermediateOutputPath)`. Nel complesso, tutte le esclusioni sono rappresentate da `$(DefaultItemExcludes)`.
@@ -125,13 +125,13 @@ Se il progetto contiene più framework di destinazione, i risultati del comando 
 
 ### <a name="sdk-attribute"></a>Attributo Sdk
 
-L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Negli strumenti .NET Core sono inclusi tre SDK principali e due SDK aggiuntivi quando viene usato .NET Core 3.0 Preview:
+L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Per .NET Core sono disponibili gli SDK seguenti:
 
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
 2. .NET Core Web SDK con l'ID di `Microsoft.NET.Sdk.Web`
 3. .NET Core Razor Class Library SDK con l'ID di `Microsoft.NET.Sdk.Razor`
-4. Servizio di ruolo di lavoro di .NET Core con l'ID di `Microsoft.NET.Sdk.Worker` (.NET Core 3.0 Preview)
-5. WinForms e WPF di .NET Core con l'ID di `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3.0 Preview)
+4. Il servizio del ruolo di lavoro di .NET Core `Microsoft.NET.Sdk.Worker` con ID (a partire da .NET Core 3,0)
+5. WinForms di .NET Core e WPF con ID (a `Microsoft.NET.Sdk.WindowsDesktop` partire da .NET Core 3,0)
 
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`.
 
@@ -250,7 +250,7 @@ Elenco con valori delimitati da punto e virgola di autori di pacchetti, corrispo
 
 Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
 
-### <a name="description"></a>DESCRIZIONE
+### <a name="description"></a>Descrizione
 
 Descrizione lunga per l'assembly. Se `PackageDescription` non è specificata, questa proprietà viene usata anche come descrizione del pacchetto.
 

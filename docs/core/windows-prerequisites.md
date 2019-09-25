@@ -1,30 +1,32 @@
 ---
 title: Prerequisiti per .NET Core in Windows
 description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazioni .NET Core in computer Windows.
+f1_keywords:
+- NETSDK1045
 ms.custom: updateeachvsrelease
-ms.date: 04/08/2019
-ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.date: 09/20/2019
+ms.openlocfilehash: c46a1f12ca20c0e21ee205e409a2a5a89e3389b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970292"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214559"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
 Questo articolo illustra le versioni supportate del sistema operativo per eseguire le applicazioni .NET Core in Windows. Le versioni di sistema operativo supportate e le dipendenze seguenti si applicano alle tre modalità di sviluppo di app .NET Core in Windows:
 
-* [Riga di comando](tutorials/using-with-xplat-cli.md)
-* [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+* [Riga di comando](./tutorials/using-with-xplat-cli.md)
+* [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-Se si sviluppa in Windows con Visual Studio 2017, la sezione [Prerequisiti con Visual Studio 2017](#prerequisites-with-visual-studio-2017) illustra in modo più dettagliato le versioni minime supportate per lo sviluppo .NET Core.
+Inoltre, se si sta sviluppando in Windows con Visual Studio, i [prerequisiti per lo sviluppo di app .NET Core con Visual Studio](#prerequisites-to-develop-net-core-apps-with-visual-studio) illustrano in modo più dettagliato le versioni minime supportate per lo sviluppo di .NET Core.
 
 ## <a name="net-core-supported-operating-systems"></a>Sistemi operativi supportati da .NET Core
 
 Gli articoli seguenti contengono un elenco completo dei sistemi operativi supportati da .NET Core per ogni versione:
 
-* [.NET Core 3.0 (Preview)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
+* [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
 * [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
@@ -51,23 +53,62 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET downloads]
 >
 > Oltre all'aggiornamento KB2999226, verificare che sia installato anche l'aggiornamento [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core verrà visualizzato un errore simile al seguente: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-for-net-core-30-preview-3"></a>Prerequisiti per .NET Core 3.0 Preview 3
-
-.NET core 3.0 Preview 3 ha gli stessi prerequisiti delle altre versioni di .NET Core. Se tuttavia si vuole usare Visual Studio per creare progetti .NET Core 3.0, è necessario usare [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). È possibile installare Visual Studio 2019 side-by-side con altre versioni di Visual Studio, senza alcun conflitto.
-
-## <a name="prerequisites-with-visual-studio-2017"></a>Prerequisiti con Visual Studio 2017
+## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Prerequisiti per lo sviluppo di app .NET Core con Visual Studio
     
-È possibile usare qualsiasi editor per sviluppare applicazioni .NET Core con .NET Core SDK. Visual Studio 2017 fornisce un ambiente di sviluppo integrato per le app .NET Core in Windows.
+Anche se è possibile usare qualsiasi editor per sviluppare applicazioni .NET Core usando il .NET Core SDK, Visual Studio 2017 e versioni successive forniscono una Integrated Development Environment per le app .NET Core in Windows.
 
-Nelle [note sulla versione ](/visualstudio/releasenotes/vs2017-relnotes) è possibile trovare altre informazioni sulle modifiche in Visual Studio 2017.
+<a name="vs-mapping"></a>
+
+Per ogni versione di .NET Core è necessaria una versione minima di Visual Studio. Per verificare la versione di Visual Studio:
+
+* Dal menu **Guida** scegliere **About Microsoft Visual Studio** (Informazioni su Microsoft Visual Studio).
+* Nella finestra di dialogo **Informazioni su Microsoft Visual Studio** verificare il numero di versione.
+
+La tabella seguente elenca la versione minima per ogni SDK:
+
+| Versione .NET Core SDK | Versione di Visual Studio                      |
+| --------------------- | ------------------------------------------ |
+| 3.0                   | Visual Studio 2019 versione 16,3 o successiva. |
+| 2.2                   | Visual Studio 2017 versione 15,9 o successiva. |
+| 2.1                   | Visual Studio 2017 versione 15,7 o successiva. |
+| 1. x                   | Visual Studio 2017 versione 15,0 o successiva. |
 
 <!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+Per sviluppare app .NET Core in Visual Studio 2019 usando .NET Core 3,0 SDK:
+
+* [Scaricare e installare Visual Studio 2019 versione 16,3 o successiva](/visualstudio/install/install-visual-studio) e selezionare uno dei carichi di lavoro seguenti che include la .NET Core SDK, a seconda del tipo di applicazione che si sta compilando:
+
+  * Il carico di lavoro **sviluppo multipiattaforma .NET Core** nella sezione **altri set di strumenti** .
+  * Il carico di lavoro di **sviluppo ASP.NET e Web** nella sezione **Web & cloud** .
+  * Carico di lavoro **sviluppo di NET desktop** nella sezione **Windows** .
+
+La figura seguente mostra il carico di lavoro **sviluppo multipiattaforma .NET Core** selezionato nell'interfaccia utente di Visual Studio:
+
+![Screenshot dell'installazione di Visual Studio 2019 con il carico di lavoro "sviluppo multipiattaforma .NET Core" selezionato](./media/windows-prerequisites/vs-2019-workloads.jpg)
+
+Visual Studio 2019 16,3 USA .NET Core 3,0 SDK per impostazione predefinita dopo l'installazione di uno di questi carichi di lavoro.
+
+Se si vuole che i progetti esistenti usino il runtime di .NET Core più recente, ridestinare ogni progetto .NET Core esistente a .NET Core 3,0 usando le istruzioni seguenti:
+
+* Scegliere **Proprietà** dal menu **Progetto**.
+* Nel menu di selezione del **Framework di destinazione** impostare il valore su **.NET Core 3,0**.
+
+![Screenshot della proprietà del progetto di applicazione di Visual Studio 2019 con la voce di menu Framework di destinazione ".NET Core 3,0" selezionata](./media/windows-prerequisites/target-dotnet-core-3-0.jpg)
+
+Dopo aver configurato Visual Studio con .NET Core 3,0 SDK, è possibile eseguire le operazioni seguenti:
+
+* Aprire, compilare ed eseguire progetti .NET Core 1.x e 2.x esistenti.
+* Ridestinare i progetti .NET Core 1. x e 2. x a .NET Core 3,0, compilare ed eseguire.
+* Creare nuovi progetti .NET Core 3,0.
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Per sviluppare app .NET Core in Visual Studio 2017 con .NET Core 2.2 SDK:
 
- 1. [Scaricare e installare Visual Studio 2017 versione 15.9.0 o successiva](/visualstudio/install/install-visual-studio) con il carico di lavoro **Sviluppo multipiattaforma con .NET Core** (nella sezione **Altri set di strumenti**) selezionato.
+* [Scaricare e installare Visual Studio 2017 versione 15.9.0 o successiva](/visualstudio/install/install-visual-studio) con il carico di lavoro **Sviluppo multipiattaforma con .NET Core** (nella sezione **Altri set di strumenti**) selezionato.
 
 ![Screenshot dell'installazione di Visual Studio 2017 con il carico di lavoro "Sviluppo multipiattaforma .NET Core" selezionato](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
@@ -78,7 +119,7 @@ Per aggiornare Visual Studio per usare .NET Core 2.2 SDK:
 
  1. Installare [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download).
 
- 1. Se si vuole che il progetto usi il runtime di .NET Core più recente, ridestinare i progetti .NET Core nuovi o esistenti a .NET Core 2.2 seguendo queste istruzioni:
+ 1. Se si vuole che il progetto usi la versione più recente di .NET Core Runtime, ridestinare ogni progetto .NET Core esistente o nuovo a .NET Core 2,2 usando le istruzioni seguenti:
 
     * Scegliere **Proprietà** dal menu **Progetto**.
     * Nel menu di selezione **Framework di destinazione** impostare il valore su **.NET Core 2.2**.
@@ -106,15 +147,3 @@ Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visua
 > Per altre informazioni sulle modifiche del formato del progetto, vedere [High-level overview of changes](./tools/cli-msbuild-architecture.md) (Panoramica generale delle modifiche).
 
 ---
-
-<a name="vs-mapping"></a>
-
-> [!TIP]
-> Per verificare la versione di Visual Studio:
->
-> * Dal menu **Guida** scegliere **About Microsoft Visual Studio** (Informazioni su Microsoft Visual Studio).
-> * Nella finestra di dialogo **Informazioni su Microsoft Visual Studio** verificare il numero di versione.
->   * Per le app .NET Core 3.0 Preview 3, Visual Studio 2019 versione 16.0 o successiva.
->   * Per le app .NET Core 2.2, Visual Studio 2017 versione 15.9 o successiva.
->   * Per le app .NET Core 2.1, Visual Studio 2017 versione 15.7 o successiva.
->   * Per le app .NET Core 1.x, Visual Studio 2017 versione 15.0 o successiva.

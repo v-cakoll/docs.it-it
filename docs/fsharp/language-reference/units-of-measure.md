@@ -2,12 +2,12 @@
 title: Unità di misura
 description: Informazioni sul modo in cui i valori a virgola mobile e Signed Integer in F# possono avere unità di misura associate, che in genere vengono usate per indicare la lunghezza, il volume e la massa.
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630154"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216683"
 ---
 # <a name="units-of-measure"></a>Unità di misura
 
@@ -81,7 +81,7 @@ Inoltre, quando si passano valori dimensionati a funzioni che prevedono numeri a
 
 Nella sessione di esempio seguente vengono mostrati gli output di e gli input di questo codice.
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.

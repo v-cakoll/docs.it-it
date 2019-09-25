@@ -2,14 +2,14 @@
 title: Guida a .NET Core
 description: .NET core è un'implementazione modulare ad alte prestazioni di .NET per la creazione di app di Windows, Mac e Linux. Vedere l'introduzione a .NET Core per iniziare.
 author: richlander
-ms.date: 08/01/2018
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: a6112851a3d9b46f02c26313e6537170786df10b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 95f18ca09852ce139a4b99ed7aef4802d4883e13
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117085"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216210"
 ---
 # <a name="net-core-guide"></a>Guida a .NET Core
 
@@ -19,19 +19,19 @@ Vedere [Informazioni su .NET Core](about.md) per altre informazioni su .NET Core
 
 Per imparare a creare una semplice applicazione .NET Core, vedere le [Esercitazioni di .NET Core](tutorials/index.md). Sono necessari pochi minuti per realizzare ed eseguire la prima app. Se si vuole provare .NET Core nel browser, vedere l'esercitazione online [Numeri in C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="download-net-core-22"></a>Scaricare .NET Core 2.2
+## <a name="download-net-core"></a>Download di .NET Core
 
-Scaricare [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) per provare .NET Core nel computer Windows, macOS o Linux. Visitare [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) se si preferisce usare i contenitori Docker.
+Scaricare il [.NET Core SDK](https://www.microsoft.com/net/download) per provare .NET Core nel computer Windows, MacOS o Linux. Se si preferisce usare i contenitori Docker, visitare l' [Hub Docker di .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 Tutte le versioni di .NET Core sono disponibili nella pagina [Download di .NET Core](https://dotnet.microsoft.com/download/dotnet-core) se si sta cercando un'altra versione di .NET Core.
 
-## <a name="net-core-22"></a>.NET Core 2.2
+## <a name="net-core-30"></a>.NET Core 3.0
 
-La versione più recente è [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Le nuove funzionalità includono: distribuzioni dipendenti dal framework, hook di avvio, autenticazione AAD con SQL di Azure e il supporto per Windows ARM32.
+La versione più recente è .NET Core 3,0. Le nuove funzionalità includono il supporto per desktop Windows con Windows Presentation Foundation (WPF) e Windows Forms C# , lo sviluppo Web di stack completo con blazer, nuovi miglioramenti per SignalR e il servizio C# Azure SignalR C# , nuove funzionalità del linguaggio con 8 e molto altro ancora. Per un elenco completo delle nuove funzionalità di .NET Core 3,0, vedere Novità di [.net core 3,0](./whats-new/dotnet-core-3-0.md).
 
 ## <a name="create-your-first-application"></a>Creare la prima applicazione
 
-Dopo aver installato .NET Core SDK, aprire un prompt dei comandi. Digitare i seguenti comandi `dotnet` per creare ed eseguire un'applicazione C#.
+Dopo aver installato .NET Core SDK, aprire un prompt dei comandi. Digitare i comandi `dotnet` seguenti per creare ed eseguire un' C# applicazione:
 
 ```dotnetcli
 dotnet new console
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>Supporto
 
-.NET Core è [supportato da Microsoft](https://dotnet.microsoft.com/platform/support/policy) in Windows, macOS e Linux. Viene aggiornato per sicurezza e qualità diverse volte l'anno, in genere ogni mese.
+.NET Core è [supportato da Microsoft](https://dotnet.microsoft.com/platform/support/policy), in Windows, MacOS e Linux. Viene aggiornato per sicurezza e qualità diverse volte l'anno, in genere ogni mese.
 
 Le distribuzioni binarie di .NET Core sono compilate e testate in server gestiti da Microsoft in Azure e sono supportate come qualsiasi prodotto Microsoft.
 

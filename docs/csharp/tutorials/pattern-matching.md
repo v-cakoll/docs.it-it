@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926659"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216545"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8 è disponibile con la versione più recente di [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o con l'[anteprima di .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) più recente.
+È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 
@@ -294,7 +294,7 @@ Per questa funzionalità si useranno i criteri di ricerca, che verranno però in
 
 La tabella seguente mostra le combinazioni dei valori di input e il moltiplicatore dei prezzi per le ore di punta:
 
-| Giorno        | Time         | Direction | Sovrapprezzo |
+| Day        | Ora         | Direzione | Sovrapprezzo |
 | ---------- | ------------ | --------- |--------:|
 | Giorno feriale    | ore di punta del mattino | in entrata   | x 2,00  |
 | Giorno feriale    | ore di punta del mattino | in uscita  | x 1,00  |

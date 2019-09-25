@@ -2,12 +2,12 @@
 title: 'Esercitazione: Creare un provider di tipi'
 description: Informazioni su come creare provider di F# tipi personalizzati in F# 3,0 esaminando diversi provider di tipi semplici per illustrare i concetti di base.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991872"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214267"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un provider di tipi
 
@@ -152,13 +152,13 @@ Prima di ricompilare il provider, assicurarsi di avere chiuso tutte le istanze d
 
 Per eseguire il debug di questo provider utilizzando le istruzioni Print, creare uno script che espone un problema con il provider e quindi utilizzare il codice seguente:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Per eseguire il debug di questo provider con Visual Studio, aprire il Prompt dei comandi per gli sviluppatori per Visual Studio con credenziali amministrative ed eseguire il comando seguente:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Ecco un'immagine del codice risultante decompilato usando Ildasm. exe:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Quando si creano provider di tipi, osservare le convenzioni seguenti.
 
 **Provider per i protocolli di connettività** In generale, i nomi della maggior parte delle dll del provider per i protocolli di connettività di dati e servizi, ad esempio le `TypeProvider` connessioni `TypeProviders`OData o SQL, devono terminare con o. Usare, ad esempio, un nome di DLL simile alla stringa seguente:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Verificare che i tipi forniti siano membri dello spazio dei nomi corrispondente e indicare il protocollo di connettività implementato:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ I suggerimenti seguenti potrebbero risultare utili durante il processo di svilup
 
 Spesso è possibile eseguire il debug dei provider di tipi usando FSC. exe in un file script di test, ad esempio script. FSX. È possibile avviare un debugger da un prompt dei comandi.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   È possibile usare la registrazione da stampa a stdout.

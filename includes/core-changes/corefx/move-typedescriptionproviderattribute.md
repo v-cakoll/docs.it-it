@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4fbec1028b6d75b90d4638814c877c263c8c8936
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4d479636f41095610eaf39f92ad0dad4863ab8b5
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181983"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216395"
 ---
 ### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute spostato in un altro assembly
 
@@ -32,7 +32,7 @@ Windows Form
 
 - nessuno
 
-<!-- 
+<!--
 
 ### Affected APIs
 

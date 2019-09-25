@@ -2,12 +2,12 @@
 title: Associazioni let nelle classi
 description: Informazioni su come definire campi privati e funzioni private per F# le classi usando associazioni ' Let ' nella definizione della classe.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1366ab8f1f4f606fe5947a8fc4df10de49346b3e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627479"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216526"
 ---
 # <a name="let-bindings-in-classes"></a>Associazioni let nelle classi
 
@@ -39,7 +39,7 @@ Negli esempi di codice seguenti vengono illustrati diversi `let` tipi di associa
 
 L'output è indicato di seguito.
 
-```
+```console
 10 52 1 204
 ```
 

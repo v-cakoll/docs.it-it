@@ -1,15 +1,15 @@
 ---
-title: Properties
+title: Proprietà
 description: Informazioni sulle F# proprietà, che sono membri che rappresentano i valori associati a un oggetto.
 ms.date: 05/16/2016
-ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c71d61e033501c2d535b5582c82d36ed8cb2241b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627421"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216425"
 ---
-# <a name="properties"></a>Properties
+# <a name="properties"></a>Proprietà
 
 Le *Proprietà* sono membri che rappresentano i valori associati a un oggetto.
 
@@ -93,7 +93,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 
 **Output**
 
-```
+```console
 class1.AutoProperty = 1853799794
 class1.AutoProperty = 1853799794
 class1.ExplicitProperty = 978922705
@@ -109,7 +109,7 @@ Le proprietà possono essere membri di classi, strutture, unioni discriminate, r
 
 Gli attributi possono essere applicati alle proprietà. Per applicare un attributo a una proprietà, scrivere l'attributo su una riga distinta prima della proprietà. Per altre informazioni, vedere [Attributi](../attributes.md).
 
-Per impostazione predefinita, le proprietà sono pubbliche. I modificatori di accessibilità possono anche essere applicati alle proprietà. Per applicare un modificatore di accessibilità, aggiungerlo immediatamente prima del nome della proprietà se `get` è destinato a entrambi i metodi e `set` . aggiungerlo prima delle `get` parole chiave `set` e se l'accessibilità è diversa obbligatorio per ogni funzione di accesso. Il *modificatore* di accessibilità può essere uno dei seguenti `public`: `private`, `internal`,. Per altre informazioni, vedere [Controllo di accesso](../access-control.md).
+Per impostazione predefinita, le proprietà sono pubbliche. I modificatori di accessibilità possono anche essere applicati alle proprietà. Per applicare un modificatore di accessibilità, aggiungerlo immediatamente prima del nome della proprietà se `get` è destinato a entrambi i metodi e `set` . aggiungerlo prima delle `get` parole chiave `set` e se l'accessibilità è diversa obbligatorio per ogni funzione di accesso. Il *modificatore di accessibilità* può essere uno dei seguenti `public`: `private`, `internal`,. Per altre informazioni, vedere [Controllo di accesso](../access-control.md).
 
 Le implementazioni delle proprietà vengono eseguite ogni volta che si accede a una proprietà.
 

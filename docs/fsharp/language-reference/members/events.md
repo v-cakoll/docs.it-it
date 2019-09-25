@@ -2,12 +2,12 @@
 title: Eventi
 description: Informazioni su F# come gli eventi consentono di associare chiamate di funzione a azioni utente, che sono importanti nella programmazione GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917284"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216469"
 ---
 # <a name="events"></a>Eventi
 
@@ -36,7 +36,7 @@ Per creare un evento in una classe che agisca come qualsiasi altro evento .NET F
 
 L'output è indicato di seguito.
 
-```
+```console
 Event1 occurred! Object data: Hello World!
 ```
 
@@ -46,7 +46,7 @@ Di seguito viene illustrata la funzionalità aggiuntiva fornita dal modulo `Even
 
 Di seguito è riportato l'output del codice precedente.
 
-```
+```console
 Event occurred.
 Given a value: Event occurred.
 ```

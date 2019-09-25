@@ -1,21 +1,21 @@
 ---
 title: Sintassi dettagliata
-description: Informazioni sulla differenza tra la sintassi dettagliata e leggera in di F# linguaggio di programmazione.
+description: Informazioni sulla differenza tra sintassi dettagliata e leggera nel linguaggio di F# programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641670"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214044"
 ---
 # <a name="verbose-syntax"></a>Sintassi dettagliata
 
-Sono disponibili per numerosi costrutti in due forme di sintassi di F# linguaggio: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non è viene comunemente utilizzata, ma offre il vantaggio di essere meno sensibili alla rientro. La sintassi leggera è più breve e utilizza il rientro per indicare l'inizio e alla fine di costrutti, anziché, ad esempio parole chiave aggiuntive `begin`, `end`, `in`e così via. La sintassi di predefinita è la sintassi leggera. In questo argomento viene descritta la sintassi per F# viene costruito quando non è abilitata la sintassi leggera. Sintassi dettagliata è sempre abilitata, in modo che anche se si abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la sintassi leggera, utilizzando il `#light "off"` direttiva.
+Esistono due forme di sintassi disponibili per molti costrutti nel F# linguaggio: *sintassi dettagliata* e *sintassi leggera*. La sintassi dettagliata non è comunemente utilizzata, ma presenta il vantaggio di essere meno sensibile ai rientri. La sintassi leggera è più breve e utilizza il rientro per segnalare l'inizio e la fine dei costrutti, anziché parole chiave `begin`aggiuntive `end`come `in`,, e così via. La sintassi predefinita è la sintassi semplificata. In questo argomento viene descritta la F# sintassi dei costrutti quando la sintassi Lightweight non è abilitata. La sintassi verbose è sempre abilitata, quindi anche se si Abilita la sintassi leggera, è comunque possibile usare la sintassi dettagliata per alcuni costrutti. È possibile disabilitare la sintassi Lightweight usando la `#light "off"` direttiva.
 
 ## <a name="table-of-constructs"></a>Tabella dei costrutti
 
-Nella tabella seguente illustra la sintassi leggera e dettagliata per F# costrutti di linguaggio in contesti in cui è presente una differenza tra le due forme. In questa tabella, le parentesi acute (&lt;&gt;) racchiudere gli elementi della sintassi fornita dall'utente. Vedere la documentazione per ogni costrutto di linguaggio per informazioni più dettagliate sulla sintassi usata all'interno di questi costrutti.
+La tabella seguente illustra la sintassi semplificata e dettagliata per F# i costrutti di linguaggio in contesti in cui esiste una differenza tra le due forme. In questa tabella, le parentesi angolari (&lt;&gt;) racchiudono gli elementi della sintassi specificati dall'utente. Per informazioni più dettagliate sulla sintassi usata all'interno di questi costrutti, vedere la documentazione relativa a ogni costrutto di linguaggio.
 
 <table>
 <tr>
@@ -44,7 +44,7 @@ espressioni composte
 </tr>
 <tr><td>
 
-nidificata `let` associazioni
+associazioni `let` annidate
 
 </td><td>
 
@@ -99,7 +99,7 @@ for counter = start to finish do
 
 </td><td>
 
-```
+```fsharp
 for counter = start to finish do
     ...
 done
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td>espressione di oggetto</td><td>
+<tr><td>espressione oggetto</td><td>
 
 ```fsharp
 { new <type-name>

@@ -4,12 +4,12 @@ description: Informazioni su come creare un'applicazione .NET Core che supporta 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849441"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216253"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creare un'applicazione .NET Core con i plug-in
 
@@ -22,15 +22,29 @@ In questa esercitazione verrà illustrato come:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Installare [.NET Core 3.0 Preview 2 SDK](https://dotnet.microsoft.com/download) o una versione più recente.
+- Installare [.NET Core 3,0](https://dotnet.microsoft.com/download) o una versione più recente.
 
 ## <a name="create-the-application"></a>Creare l'applicazione
 
 Il primo passaggio consiste nel creare l'applicazione:
 
-1. Creare una nuova cartella ed eseguire `dotnet new console -o AppWithPlugin` nella cartella. 
-2. Per semplificare la compilazione del progetto, creare un file di soluzione Visual Studio. Eseguire `dotnet new sln` nella stessa cartella. 
-3. Eseguire `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` per aggiungere il progetto dell'app alla soluzione.
+1. Creare una nuova cartella e in tale cartella eseguire il comando seguente:
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. Per semplificare la compilazione del progetto, creare un file di soluzione di Visual Studio usando. Eseguire il comando seguente nella stessa cartella:
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. Eseguire il comando seguente per aggiungere il progetto di app alla soluzione:
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 Ora è possibile compilare la struttura dell'applicazione. Sostituire il codice nel file *AppWithPlugin/Program.cs* con il codice seguente:
 
@@ -203,8 +217,18 @@ Usando un'istanza `PluginLoadContext` diversa per ogni plug-in, i plug-in posson
 
 Nella cartella radice eseguire le operazioni seguenti:
 
-1. Eseguire `dotnet new classlib -o HelloPlugin` per creare un nuovo progetto di libreria di classi denominato `HelloPlugin`.
-2. Eseguire `dotnet sln add HelloPlugin/HelloPlugin.csproj` per aggiungere il progetto alla soluzione `AppWithPlugin`. 
+1. Eseguire il comando seguente per creare un nuovo progetto di libreria di `HelloPlugin`classi denominato:
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. Eseguire il comando seguente per aggiungere il progetto alla `AppWithPlugin` soluzione:
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. Sostituire il file *HelloPlugin/Class1.cs* con un file denominato *HelloCommand.cs* con il contenuto seguente:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]

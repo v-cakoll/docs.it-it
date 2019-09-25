@@ -2,12 +2,12 @@
 title: Celle di riferimento
 description: Informazioni su F# come le celle di riferimento sono posizioni di archiviazione che consentono di creare valori modificabili con la semantica di riferimento.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627244"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216774"
 ---
 # <a name="reference-cells"></a>Celle di riferimento
 
@@ -50,12 +50,12 @@ let ref x = { contents = x }
 
 Nella tabella seguente sono indicate le funzionalità disponibili nella cella di riferimento.
 
-|Operatore, membro o campo|Descrizione|Type|Definizione|
+|Operatore, membro o campo|Descrizione|Tipo|Definizione|
 |--------------------------|-----------|----|----------|
 |`!` (operatore di dereferenziazione)|Restituisce il valore sottostante.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operatore di assegnazione)|Modifica il valore sottostante.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`operatore|Incapsula un valore in una nuova cella di riferimento.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value`Proprietà|Ottiene o imposta il valore sottostante.|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref` (operatore)|Incapsula un valore in una nuova cella di riferimento.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` (proprietà)|Ottiene o imposta il valore sottostante.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo del record)|Ottiene o imposta il valore sottostante.|`'a`|`let ref x = { contents = x }`|
 
 È possibile accedere al valore sottostante in diversi modi. Il valore restituito dall'operatore di dereferenziazione (`!`) non è un valore assegnabile. Se pertanto si modifica il valore sottostante, è necessario utilizzare l'operatore di assegnazione (`:=`).
@@ -66,7 +66,7 @@ Sia la proprietà `Value` che il campo `contents` sono valori assegnabili e poss
 
 L'output è indicato di seguito.
 
-```
+```console
 10
 10
 11

@@ -2,12 +2,12 @@
 title: 'Campi espliciti: Parola chiave Val'
 description: Informazioni sulla parola F# chiave ' Val ', che viene usata per dichiarare un percorso in cui archiviare un valore in un tipo di classe o di struttura senza inizializzare il tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627528"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216471"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: Parola chiave Val
 
@@ -48,7 +48,7 @@ Nel codice seguente viene illustrato l'uso di campi espliciti e, per il confront
 
 L'output è indicato di seguito:
 
-```
+```console
 11 12 abc
 30 def
 ```

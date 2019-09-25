@@ -2,12 +2,12 @@
 title: Parametri e argomenti
 description: Informazioni sul F# supporto delle lingue per la definizione dei parametri e il passaggio di argomenti a funzioni, metodi e proprietà.
 ms.date: 05/16/2016
-ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106600"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216832"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
@@ -56,7 +56,7 @@ Altri modelli a volte utilizzati negli argomenti sono il modello `as` e i modell
 
 L'output è indicato di seguito.
 
-```
+```console
 Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
@@ -121,7 +121,7 @@ Nell'esempio seguente viene illustrato l'utilizzo di parametri facoltativi.
 
 L'output è indicato di seguito.
 
-```
+```console
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true

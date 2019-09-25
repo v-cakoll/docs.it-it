@@ -2,12 +2,12 @@
 title: Identificatori di riga, di file e di percorso di origine
 description: Informazioni su come usare i valori di F# identificatore predefiniti che consentono di accedere al numero di riga, alla directory e al nome file del codice sorgente.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ff36210edc75370f8baf9ee7be057f3ac0c3979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f22c3dfb3cb106fbe45883ffd7de01feac30db00
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627122"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216755"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identificatori di riga, di file e di percorso di origine
 
@@ -33,7 +33,7 @@ Nella tabella seguente sono riepilogati gli identificatori di riga, file e perco
 |`__SOURCE_DIRECTORY__`|Restituisce il percorso completo corrente della directory di origine, considerando `#line` le direttive.|
 |`__SOURCE_FILE__`|Restituisce il nome del file di origine corrente, senza il relativo percorso, `#line` considerando le direttive.|
 
-Per ulteriori informazioni sulla `#line` direttiva, vedere direttive [del compilatore](compiler-directives.md).
+Per ulteriori informazioni sulla `#line` direttiva, vedere [direttive del compilatore](compiler-directives.md).
 
 ## <a name="example"></a>Esempio
 
@@ -43,7 +43,7 @@ Nell'esempio di codice riportato di seguito viene illustrato l'utilizzo di quest
 
 Output:
 
-```
+```console
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
 Source File: Program.fs

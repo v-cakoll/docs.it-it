@@ -2,12 +2,12 @@
 title: Criteri di ricerca
 description: Informazioni sul modo in F# cui vengono usati i modelli per confrontare i dati con le strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733475"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216807"
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -29,7 +29,7 @@ Ogni modello funge da regola per trasformare in qualche modo l'input. `match` Ne
 
 Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzione, l'input viene testato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella e i modelli vengono applicati in modo ricorsivo, dal primo all'ultimo come appaiono nel codice e da sinistra a destra per i modelli in ogni riga.
 
-|NOME|DESCRIZIONE|Esempio|
+|nome|Descrizione|Esempio|
 |----|-----------|-------|
 |Criterio costante|Qualsiasi valore letterale stringa, numerico o carattere, una costante di enumerazione o un identificatore di valore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modello di identificatore|Valore del case di un'unione discriminata, un'etichetta di eccezione o un case del criterio attivo|`Some(x)`<br /><br />`Failure(msg)`|
@@ -37,7 +37,7 @@ Nella tabella seguente sono illustrati i modelli supportati. In fase di esecuzio
 |`as`modello|*modello* come *identificatore*|`(a, b) as tuple1`|
 |Modello OR|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |Modello AND|*Ripetizione piatta1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Modello cons|identificatore:: *List-Identifier*|`h :: t`|
+|Modello cons|*identificatore:* : *List-Identifier*|`h :: t`|
 |Modello di elenco|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
 |Modello di matrice|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Modello racchiuso tra parentesi|( *modello* )|`( a )`|
@@ -95,7 +95,7 @@ L'uso del campo denominato è facoltativo, quindi nell'esempio precedente, sia `
 
 Quando si specificano più campi, usare il punto e virgola (;) come separatore.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()
@@ -133,7 +133,7 @@ Nell'esempio seguente viene illustrato il modello o.
 
 Per il modello AND è necessario che l'input corrisponda a due modelli. I tipi di entrambi i lati del modello e devono essere compatibili.
 
-L'esempio seguente è simile `detectZeroTuple` a quello illustrato nella sezione relativa al [modello](https://msdn.microsoft.com/library/#tuple) di tupla più avanti in `var1` questo `var2` argomento, ma in questo caso e vengono ottenuti come valori utilizzando il modello e.
+L'esempio seguente è simile `detectZeroTuple` a quello illustrato nella sezione relativa al [modello di tupla](https://msdn.microsoft.com/library/#tuple) più avanti in `var1` questo `var2` argomento, ma in questo caso e vengono ottenuti come valori utilizzando il modello e.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 

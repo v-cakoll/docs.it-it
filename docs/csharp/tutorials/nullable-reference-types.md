@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926662"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214421"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -25,7 +25,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la versione più recente di [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il C# compilatore 8 Beta è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)o [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 

@@ -2,12 +2,12 @@
 title: Stringhe
 description: Informazioni sul modo F# in cui il tipo ' String ' rappresenta il testo non modificabile come sequenza di caratteri Unicode.
 ms.date: 07/05/2019
-ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 25f5d7ce5059ba5ddb4e938313c511734c2d7320
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627098"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216741"
 ---
 # <a name="strings"></a>Stringhe
 
@@ -71,7 +71,7 @@ In alternativa, è possibile estrarre le sottostringhe usando la sintassi della 
 
 L'output è indicato di seguito.
 
-```
+```console
 abc
 def
 ```

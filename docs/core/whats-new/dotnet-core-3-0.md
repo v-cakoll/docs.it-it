@@ -6,40 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/17/2019
-ms.openlocfilehash: 45d5117f264a24c2658debad9a111d4d4b9b9a8e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 09/22/2019
+ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182453"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216272"
 ---
-# <a name="whats-new-in-net-core-30-release-candidate-1"></a>Novità di .NET Core 3,0 (versione finale candidata 1)
+# <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
-Questo articolo descrive le novità di .NET Core 3,0 tramite la versione finale candidata 1 (RC1). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+Questo articolo descrive le novità di .NET Core 3,0. Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
 
-[Scarica e inizia subito a usare .NET Core 3,0 RC1](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
+[Scarica e inizia subito a usare .NET Core 3,0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
 
-Per altre informazioni su ogni versione di anteprima, vedere gli annunci seguenti:
+Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
-- [Annuncio di .NET Core 3,0 RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
-- [Annuncio di .NET Core 3,0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
-- [Annuncio di .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
-- [Annuncio di .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
-- [Annuncio di .NET Core 3.0 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
-- [Annuncio di .NET Core 3.0 Preview 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
-- [Annuncio di .NET Core 3.0 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-- [Annuncio di .NET Core 3.0 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-- [Annuncio di .NET Core 3.0 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-- [Annuncio di .NET Core 3.0 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-
-## <a name="production-supported-preview"></a>Anteprima di produzione supportata
-
-.NET Core RC1 è considerato pronto per la produzione da Microsoft ed è completamente supportato. A partire dalla versione Preview 7, le nuove versioni si incentreranno sul perfezionamento di .NET Core 3.0 invece di aggiungere nuove funzionalità. Per ulteriori informazioni sulle modifiche apportate a RC1, vedere l' [annuncio RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/).
-
-Se si usa una versione di anteprima precedente, è necessario passare a RC1 per il supporto continuo "Go Live".
+.NET Core RC1 è stato considerato pronto per la produzione da Microsoft ed è stato completamente supportato. Se si usa una versione di anteprima, è necessario passare alla versione RTM per il supporto continuo.
 
 ## <a name="net-core-sdk-windows-installer"></a>Programma di installazione .NET Core SDK per Windows
 
@@ -47,13 +32,13 @@ Il programma di installazione di Windows Installer (MSI) per Windows è stato mo
 
 Per altre informazioni sul controllo delle versioni, vedere [Panoramica di come viene specificata la versione di .NET Core](../versions/index.md).
 
-## <a name="c-80-preview"></a>Anteprima di C# 8.0
+## <a name="c-80"></a>C# 8.0
 
-.NET core 3.0 supporta l'anteprima di C# 8.0. Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
+C#8,0 fa anche parte di questa versione, che include la funzionalità dei tipi di riferimento Nullable, i flussi asincroni e altri modelli. Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Anche se .NET Core 3.0 supporta **.NET Standard 2.1**, il modello `dotnet new classlib` predefinito genera un progetto per **.NET Standard 2.0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
+Sebbene .NET Core 3,0 supporti **.NET standard 2,1**, il modello predefinito `dotnet new classlib` genera un progetto che ancora è destinato **.NET standard 2,0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -515,7 +500,7 @@ Per altre informazioni sul supporto limitato per la porta seriale in Linux, vede
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker e limiti di memoria cgroup
 
-A partire da Preview 3, l'esecuzione di .NET Core 3.0 in Linux con Docker risulta migliorata usando limiti di memoria cgroup. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
+L'esecuzione di .NET Core 3,0 in Linux con Docker funziona meglio con i limiti di memoria cgroup. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
 
 - Dimensioni heap predefinite del Garbage Collector: massimo 20 MB o il 75% del limite di memoria nel contenitore.
 - È possibile impostare dimensioni esplicite come numero assoluto o percentuale di un limite cgroup.

@@ -2,12 +2,12 @@
 title: Overload degli operatori
 description: Informazioni su come eseguire l'overload di operatori aritmetici in una classe o in un tipo di F#record e a livello globale in.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627396"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216843"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
@@ -55,7 +55,7 @@ Quando il F# compilatore compila un'espressione di operatore, genera un metodo c
 
 Nella tabella seguente vengono illustrati gli operatori standard e i corrispondenti nomi generati.
 
-|Operator|Nome generato|
+|Operatore|Nome generato|
 |--------|--------------|
 |`[]`|`op_Nil`|
 |`::`|`op_Cons`|
@@ -97,7 +97,7 @@ Nella tabella seguente vengono illustrati gli operatori standard e i corrisponde
 
 Altre combinazioni di caratteri operatore che non sono elencate di seguito possono essere usate come operatori e hanno nomi costituiti dalla concatenazione di nomi per i singoli caratteri della tabella seguente. Ad esempio, +! diventa `op_PlusBang`.
 
-|Carattere operatore|Name|
+|Carattere operatore|nome|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|
@@ -123,7 +123,7 @@ Altre combinazioni di caratteri operatore che non sono elencate di seguito posso
 
 ## <a name="prefix-and-infix-operators"></a>Operatori prefix e infissi
 
-Si prevede che gli operatori di *prefisso* siano posizionati davanti a un operando o a operandi, molto simile a una funzione. Si prevede che gli operatori infissi siano posizionati tra i due operandi.
+Si prevede che gli operatori di *prefisso* siano posizionati davanti a un operando o a operandi, molto simile a una funzione. Si prevede che gli operatori *infissi* siano posizionati tra i due operandi.
 
 Solo determinati operatori possono essere utilizzati come operatori di prefisso. Alcuni operatori sono sempre operatori di prefisso, altri possono essere infissi o prefissi e i restanti sono sempre operatori infissi. Gli operatori che iniziano `!`con, `!=`ad eccezione di e `~`l'operatore, o sequenze ripetute di, sono sempre operatori di`~`prefisso. Gli operatori `+` `-` ,`&` ,,`%%` ,,, e possono essere operatori di prefisso o infissi. `+.` `-.` `&&` `%` È possibile distinguere la versione del prefisso di questi operatori dalla versione infissi aggiungendo `~` un oggetto all'inizio di un operatore di prefisso quando viene definito. L' `~` oggetto non viene utilizzato quando si utilizza l'operatore, solo quando è definito.
 
@@ -135,7 +135,7 @@ Il codice seguente illustra l'uso dell'overload degli operatori per implementare
 
 **Output:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8
