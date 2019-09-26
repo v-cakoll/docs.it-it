@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740879"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274251"
 ---
 # <a name="codechunkinfo-structure"></a>Struttura CodeChunkInfo
 
@@ -40,23 +40,23 @@ typedef struct _CodeChunkInfo {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`startAddr`|Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo iniziale del blocco.|  
-|`length`|Le dimensioni, in byte, del blocco.|  
+|`startAddr`|`CORDB_ADDRESS` Valore che specifica l'indirizzo iniziale del blocco.|  
+|`length`|Dimensione, in byte, del blocco.|  
   
 ## <a name="remarks"></a>Note  
- L'unico blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.  
+ Il singolo blocco di codice è un'area di codice nativo che fa parte di un oggetto di codice, ad esempio una funzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Metodo GetCodeChunks](icordebugcode2-getcodechunks-method.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

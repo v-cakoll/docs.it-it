@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740779"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274196"
 ---
-# <a name="cordebugsteprange-structure"></a>Struttura COR_DEBUG_STEP_RANGE
+# <a name="cor_debug_step_range-structure"></a>Struttura COR_DEBUG_STEP_RANGE
 Contene le informazioni sugli offset per un intervallo di codice.  
   
- Questa struttura viene utilizzata per la [StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) (metodo).  
+ Questa struttura viene utilizzata dal metodo [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,20 +41,20 @@ typedef struct {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`startOffset`|L'offset dell'inizio dell'intervallo.|  
-|`endOffset`|L'offset della fine dell'intervallo.|  
+|`startOffset`|Offset dell'inizio dell'intervallo.|  
+|`endOffset`|Offset della fine dell'intervallo.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Metodo StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Metodo StepRange](icordebugstepper-steprange-method.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

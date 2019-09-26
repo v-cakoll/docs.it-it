@@ -10,10 +10,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666166"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Formattare il controllo DataGrid di Windows Forms usando la finestra di progettazione
@@ -41,7 +41,7 @@ Per la procedura seguente è necessario un progetto di **applicazione Windows** 
 
 2. Nella finestra **Proprietà** impostare le proprietà seguenti, a seconda dei casi.
 
-    |Proprietà|DESCRIZIONE|
+    |Proprietà|Descrizione|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|La `BackColor` proprietà definisce il colore delle righe pari della griglia. Quando si imposta la <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> proprietà su un colore diverso, ogni altra riga viene impostata sul nuovo colore (righe 1, 3, 5 e così via).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Il colore di sfondo delle righe pari della griglia (righe 0, 2, 4, 6 e così via).|

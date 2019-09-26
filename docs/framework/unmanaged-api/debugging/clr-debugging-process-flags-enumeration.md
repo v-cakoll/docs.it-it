@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef142ed5284262fd758ff13af8207b2290938e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 292f6953fad0d65b368642543af107c73ec42ab5
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741154"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274107"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a>Enumerazione CLR_DEBUGGING_PROCESS_FLAGS
-Fornisce i valori utilizzati per il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) (metodo).  
+# <a name="clr_debugging_process_flags-enumeration"></a>Enumerazione CLR_DEBUGGING_PROCESS_FLAGS
+Fornisce i valori utilizzati dal metodo [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,24 +40,24 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Questo runtime dispone di un evento del debugger gestito a non-catch-up per l'invio. Vedere la sezione Osservazioni per distinguere tra gli eventi di aggiornamento e non-catch-up.|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|L'evento gestito che è in sospeso è un <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> richiesta.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Questo runtime include un evento debugger gestito non di recupero da inviare. Vedere la sezione Osservazioni per la distinzione tra eventi di recupero e non di recupero.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|L'evento gestito in sospeso è una <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> richiesta.|  
   
 ## <a name="remarks"></a>Note  
- Aggiornamento degli eventi includono processo, dominio dell'applicazione, assembly, modulo e le notifiche di creazione di thread che portano il debugger fino allo stato corrente dopo averla associata a un processo. Gli eventi non-catch-up, indicati dal `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, includere tutti gli altri eventi del debugger, ad esempio le eccezioni e le notifiche di assistente al debug gestito.  
+ Gli eventi di aggiornamento includono le notifiche relative a processo, dominio applicazione, assembly, modulo e creazione thread che consentono al debugger di raggiungere lo stato corrente dopo che è stato collegato a un processo. Gli eventi non di recupero, indicati dal `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, includono tutti gli altri eventi del debugger, ad esempio le eccezioni e le notifiche dell'assistente al debug gestito (MDA).  
   
- Il `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag consente al runtime di distinguere tra un'eccezione di terminazione e una richiesta per collegare un debugger gestito che può essere annullato.  
+ Il `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag consente al runtime di distinguere tra un'eccezione di terminazione e una richiesta di associazione di un debugger gestito che può essere annullato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** Metahost. idl, Metahost. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Enumerazioni di debug](debugging-enumerations.md)
+- [Debug](index.md)

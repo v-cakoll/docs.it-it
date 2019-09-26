@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fa8de1a561e59e00d5bd9e78172d78b417aeff0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22eeb8aba318d53efbc699d4492a86b2667bcfff
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951960"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274127"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>Enumerazione CorDebugCodeInvokeKind
 Descrive in che modo una funzione esportata richiama il codice gestito.  
@@ -33,7 +33,7 @@ typedef enum CorDebugCodeInvokeKind
 } CorDebugCodeInvokeKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -42,13 +42,13 @@ typedef enum CorDebugCodeInvokeKind
 |`CODE_INVOKE_KIND_TAILCALL`|Questo metodo richiama il codice gestito mediante una chiamata tail. L'esecuzione passo-passo e l'esecuzione di istruzioni per tutte le istruzioni della chiamata vengono completate nel codice gestito.|  
   
 ## <a name="remarks"></a>Note  
- Questa enumerazione viene utilizzata dal metodo [Metodo icordebugprocess6:: GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) per fornire informazioni sull'esecuzione del codice gestito.  
+ Questa enumerazione viene utilizzata dal metodo [Metodo icordebugprocess6:: GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md) per fornire informazioni sull'esecuzione del codice gestito.  
   
 > [!NOTE]
 > Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug. idl, CorDebug. h  
   
@@ -58,5 +58,5 @@ typedef enum CorDebugCodeInvokeKind
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Enumerazioni di debug](debugging-enumerations.md)
+- [Debug](index.md)

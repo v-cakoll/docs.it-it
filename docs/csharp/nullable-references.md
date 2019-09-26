@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214407"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272785"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -35,7 +35,7 @@ string? name;
 
 Le variabili in cui `?` non viene aggiunto al nome del tipo sono **tipi riferimento non nullable**, incluse tutte le variabili dei tipi riferimento nel codice esistente quando questa funzionalità è abilitata.
 
-Il compilatore usa l'analisi statica per determinare se un riferimento nullable è notoriamente non null. Il compilatore genera un avviso se si dereferenzia un riferimento nullable quando potrebbe essere null. È possibile eseguire l'override di questo comportamento usando l'**operatore null-forgiving** (`!`) che segue un nome di variabile. Se ad esempio si è certi che la variabile `name` non sia Null, ma il compilatore genera un avviso, è possibile scrivere il codice seguente per eseguire l'override dell'analisi del compilatore:
+Il compilatore usa l'analisi statica per determinare se un riferimento nullable è notoriamente non null. Il compilatore genera un avviso se si dereferenzia un riferimento nullable quando potrebbe essere null. È possibile eseguire l'override di questo comportamento usando l' **operatore** `!` che perdona i valori null dopo un nome di variabile. Se ad esempio si è certi che la variabile `name` non sia Null, ma il compilatore genera un avviso, è possibile scrivere il codice seguente per eseguire l'override dell'analisi del compilatore:
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ Il supporto dei valori Null di un tipo in una dichiarazione di variabile viene c
 
 I contesti nullable consentono il controllo con granularità fine di come il compilatore interpreta le variabili dei tipi riferimento. Il **contesto dell'annotazione nullable** di una determinata riga di origine è `enabled` o `disabled`. Nel compilatore delle versioni precedenti a C# 8 la compilazione di tutto il codice viene eseguita in un contesto nullable `disabled`: Qualsiasi tipo riferimento potrebbe essere null. Il **contesto degli avvisi Nullable** può essere impostato `enabled` su `disabled`o su. Il contesto degli avvisi nullable specifica gli avvisi generati dal compilatore usando l'analisi del flusso.
 
-Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono essere impostati per un progetto usando l'elemento `Nullable` nel file `csproj`. Questo elemento configura come il compilatore interpreta il supporto dei valori Null dei tipi e quali avvisi vengono generati. Le impostazioni valide sono:
+Il contesto di annotazione nullable e il contesto di avviso nullable possono essere impostati `Nullable` per un progetto utilizzando l'elemento nel file con *estensione csproj* . Questo elemento configura come il compilatore interpreta il supporto dei valori Null dei tipi e quali avvisi vengono generati. Le impostazioni valide sono:
 
 - `enable`: il contesto dell'annotazione nullable è **enabled**. Il contesto dell'avviso nullable è **enabled**.
   - Le variabili di un tipo riferimento, ad esempio `string`, sono non nullable.  Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
@@ -68,9 +68,6 @@ Il contesto dell'annotazione nullable e il contesto dell'avviso nullable possono
   - Le variabili di un tipo riferimento sono indipendenti dai valori. Tutti gli avvisi relativi al supporto dei valori Null sono abilitati.
 - `disable`: il contesto dell'annotazione nullable è **disabled**. Il contesto dell'avviso nullable è **disabled**.
   - Le variabili di un tipo riferimento sono indipendenti dai valori, come nelle versioni precedenti di C#. Tutti gli avvisi relativi al supporto dei valori Null sono disabilitati.
-
-> [!IMPORTANT]
-> Il nome dell'elemento `Nullable` nelle versioni precedenti è `NullableContextOptions`. La ridenominazione è stata introdotta in Visual Studio 2019, 16.2-p1. .NET Core SDK 3.0.100-preview5-011568 non include questa modifica. Se si usa l'interfaccia della riga di comando di .NET Core, è necessario usare `NullableContextOptions` fino a quando non sarà disponibile la prossima anteprima.
 
 È anche possibile usare le direttive per impostare questi stessi contesti ovunque nel progetto:
 
@@ -101,7 +98,7 @@ Il compilatore usa le regole seguenti in un contesto di annotazione nullable abi
 - Qualsiasi tipo riferimento nullable (indicato da `?` dopo il tipo nella dichiarazione della variabile) può essere null. L'analisi statica determina se il valore è non null quando viene dereferenziato. In caso contrario, il compilatore genera un avviso.
 - È possibile usare l'operatore null-forgiving per dichiarare che un riferimento nullable non è Null.
 
-In un contesto di annotazione nullable abilitato il carattere `?` aggiunto al tipo riferimento dichiara un **tipo riferimento nullable**. L'**operatore null forgiveness** (`!`) può essere aggiunto a un'espressione per dichiarare che l'espressione non è Null.
+In un contesto di annotazione nullable abilitato il carattere `?` aggiunto al tipo riferimento dichiara un **tipo riferimento nullable**. L' **operatore** `!` che perdona i valori null può essere aggiunto a un'espressione per dichiarare che l'espressione non è null.
 
 ## <a name="nullable-warning-context"></a>Contesto dell'avviso nullable
 

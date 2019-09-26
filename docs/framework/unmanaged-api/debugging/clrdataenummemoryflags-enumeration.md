@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740976"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274235"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>Enumerazione CLRDataEnumMemoryFlags
-Indica una chiamata a quali aree di memoria di [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) deve includere (metodo).  
+Indica le aree di memoria che devono essere incluse in una chiamata al metodo [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,18 +40,18 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|Un minidump, vale a dire, un dump di memoria di tipo sparse.|  
-|`CLRDATA_ENUM_MEM_HEAP`|Un dump di heap complete.|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|Minidump, ovvero un dump di memoria sparse.|  
+|`CLRDATA_ENUM_MEM_HEAP`|Dump completo dell'heap.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** ClrData.idl, ClrData.h  
+ **Intestazione:** ClrData. idl, ClrData. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

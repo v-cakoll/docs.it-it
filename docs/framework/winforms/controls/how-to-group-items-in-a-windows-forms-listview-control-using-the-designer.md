@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039404"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Raggruppare elementi in un controllo ListView di Windows Forms usando la finestra di progettazione
@@ -28,7 +28,7 @@ Per abilitare il raggruppamento, è innanzitutto necessario creare uno o più <x
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>Per aggiungere o rimuovere gruppi nella finestra di progettazione
 
-1. Nella finestra **Proprietà** fare clic sui puntini di![sospensione (il pulsante con i puntini di sospensione (...)](./media/visual-studio-ellipsis-button.png)nel pulsante finestra proprietà di Visual <xref:System.Windows.Forms.ListView.Groups%2A> Studio.) accanto alla proprietà.
+1. Nella finestra **Proprietà** fare clic sui **puntini** di![sospensione (il pulsante con i puntini di sospensione (...)](./media/visual-studio-ellipsis-button.png)nel pulsante finestra proprietà di Visual <xref:System.Windows.Forms.ListView.Groups%2A> Studio.) accanto alla proprietà.
 
      Viene visualizzato l' **Editor della raccolta ListView** .
 
@@ -36,7 +36,7 @@ Per abilitare il raggruppamento, è innanzitutto necessario creare uno o più <x
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>Per assegnare elementi a gruppi nella finestra di progettazione
 
-1. Nella finestra **Proprietà** fare clic sui puntini di![sospensione (il pulsante con i puntini di sospensione (...)](./media/visual-studio-ellipsis-button.png)nel pulsante finestra proprietà di Visual <xref:System.Windows.Forms.ListView.Items%2A> Studio.) accanto alla proprietà.
+1. Nella finestra **Proprietà** fare clic sui **puntini** di![sospensione (il pulsante con i puntini di sospensione (...)](./media/visual-studio-ellipsis-button.png)nel pulsante finestra proprietà di Visual <xref:System.Windows.Forms.ListView.Items%2A> Studio.) accanto alla proprietà.
 
      Viene visualizzato l' **Editor della raccolta ListViewItem** .
 

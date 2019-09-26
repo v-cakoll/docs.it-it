@@ -4,17 +4,17 @@ description: Elenca le modifiche di rilievo apportate in .NET CoreFx, la libreri
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7940da342bae6a745b6729ad00c42dbde27a96c8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 3838bcd7c127860a8307fe31bd85ed5addffb59e
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217136"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272706"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx modifiche di rilievo
 
 > [!IMPORTANT]
-> Questo articolo è in costruzione. Questo non è un elenco completo delle modifiche di rilievo di .NET Core. Per altre informazioni sulle modifiche di rilievo di .NET Core, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub. 
+> Questo articolo è in costruzione. Questo non è un elenco completo delle modifiche di rilievo di .NET Core. Per altre informazioni sulle modifiche di rilievo di .NET Core, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub.
 
 Di seguito è riportato un elenco di modifiche di rilievo CoreFx per la versione di .NET Core. CoreFx fornisce le primitive e altri tipi generali usati da .NET Core.
 
@@ -65,4 +65,3 @@ Di seguito è riportato un elenco di modifiche di rilievo CoreFx per la versione
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-

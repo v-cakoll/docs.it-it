@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741115"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274079"
 ---
-# <a name="clrdebuggingversion-structure"></a>Struttura CLR_DEBUGGING_VERSION
+# <a name="clr_debugging_version-structure"></a>Struttura CLR_DEBUGGING_VERSION
 Definisce la versione del prodotto di Common Language Runtime (CLR) per fini di debug.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -43,25 +43,25 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`wStructVersion`|Il numero di versione della struttura|  
+|`wStructVersion`|Numero di versione della struttura|  
 |`wMajor`|Numero di versione principale.|  
 |`wMinor`|Numero di versione secondario.|  
-|`wBuild`|Il numero di build.|  
-|`wRevision`|Il numero di revisione.|  
+|`wBuild`|Numero di Build.|  
+|`wRevision`|Numero di revisione.|  
   
 ## <a name="remarks"></a>Note  
- Il `CLR_DEBUGGING_VERSION` struttura è uguale alla struttura COR_VERSION, tuttavia, il `CLR_DEBUGGING_VERSION` struttura fornisce un campo della versione struttura aggiuntiva (`wStructVersion`). Attualmente, questo campo deve essere impostato su zero.  
+ La `CLR_DEBUGGING_VERSION` struttura corrisponde alla struttura COR_VERSION, tuttavia, la `CLR_DEBUGGING_VERSION` struttura fornisce un campo della versione della struttura aggiuntiva (`wStructVersion`). Attualmente, questo campo deve essere impostato su zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

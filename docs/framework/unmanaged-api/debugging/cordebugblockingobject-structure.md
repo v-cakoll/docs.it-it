@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740401"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273963"
 ---
 # <a name="cordebugblockingobject-structure"></a>Struttura CorDebugBlockingObject
-Definisce un oggetto che blocca un thread e il motivo specifico che il thread è bloccato.  
+Definisce un oggetto che blocca un thread e il motivo specifico per cui il thread è bloccato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,22 +41,22 @@ CorDebugBlockingReason blockingReason;
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`pBlockingObject`|L'oggetto su cui sta bloccando il thread. Questo oggetto è valido solo per la durata dello stato di sincronizzazione corrente. Se due thread sono bloccati nello stesso oggetto nello stesso stato sincronizzato, si sarebbe potuto prevedere la [GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) per restituire lo stesso valore. Tuttavia, le interfacce possono o potrebbero non essere puntatore equivalente.|  
-|`dwTimeout`|Il numero di millisecondi prima che l'operazione di blocco sarà previsto un timeout o il valore infinito, a indicare che si verifica alcun timeout. Il valore di timeout specifica la lunghezza totale del tempo per l'operazione di blocco, non l'ora in cui resta ancora da fare.|  
-|`blockingReason`|Il motivo è che il thread è bloccato su questo oggetto.|  
+|`pBlockingObject`|Oggetto su cui è bloccato il thread. Questo oggetto è valido solo per la durata dello stato sincronizzato corrente. Se due thread sono bloccati sullo stesso oggetto nello stesso stato sincronizzato, è possibile che il metodo [ICorDebugValue:: GetAddress](icordebugvalue-getaddress-method.md) restituisca lo stesso valore. Tuttavia, le interfacce possono essere o meno equivalenti del puntatore.|  
+|`dwTimeout`|Il numero di millisecondi prima del timeout dell'operazione di blocco oppure il valore infinito, che indica che non verrà timeout. Il valore di timeout specifica l'intervallo di tempo totale per l'operazione di blocco, non il tempo rimanente.|  
+|`blockingReason`|Motivo per cui il thread è bloccato su questo oggetto.|  
   
 ## <a name="remarks"></a>Note  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

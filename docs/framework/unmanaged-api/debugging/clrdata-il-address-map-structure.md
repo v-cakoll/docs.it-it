@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741028"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274299"
 ---
-# <a name="clrdatailaddressmap-structure"></a>Struttura CLRDATA_IL_ADDRESS_MAP
+# <a name="clrdata_il_address_map-structure"></a>Struttura CLRDATA_IL_ADDRESS_MAP
 
-Definisce un livello di integrità per il mapping dell'indirizzo.
+Definisce un valore IL per l'indirizzamento del mapping.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,24 +44,24 @@ typedef struct
 
 | Member         | Descrizione                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Offset IL per l'intervallo di indirizzi indipendente              |
-| `startAddress` | L'indirizzo iniziale dell'intervallo.                        |
-| `endAddress`   | L'indirizzo finale dell'intervallo.                          |
+| `ilOffset`     | Offset IL per l'intervallo di indirizzi contenuti              |
+| `startAddress` | Indirizzo iniziale dell'intervallo.                        |
+| `endAddress`   | Indirizzo finale dell'intervallo.                          |
 | `type`         | Tipo di dati. Questo valore non è attualmente utilizzato |
 
 ## <a name="remarks"></a>Note
 
-Questa struttura si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza, in cui `CLRDATA_ADDRESS` è un intero senza segno a 64 bit.
+Questa struttura si trova all'interno del runtime e non viene esposta tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza, `CLRDATA_ADDRESS` dove è una Unsigned Integer a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 
-**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
 **Intestazione:** nessuno  
-**Libreria:** nessuno   
+**Libreria** nessuno   
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazione CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debug](index.md)
+- [Strutture di debug](debugging-structures.md)

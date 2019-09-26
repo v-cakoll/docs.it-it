@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69913039"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
@@ -26,7 +26,7 @@ Se si dispone di Visual Studio 2017 versione 15,7 o successiva, è possibile dis
 
 1. Fare clic con il pulsante destro del mouse in **Esplora soluzioni** e scegliere **Proprietà**.
 
-2. Nella pagina dell' **applicazione** deselezionare l'opzione per la **generazione automatica** dei reindirizzamenti di binding.
+2. Nella pagina dell' **applicazione** deselezionare l'opzione per la **generazione automatica dei reindirizzamenti di binding** .
 
 3. Premere **CTRL**+**S** per salvare la modifica.
 

@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740541"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274044"
 ---
-# <a name="corilmap-structure"></a>Struttura COR_IL_MAP
+# <a name="cor_il_map-structure"></a>Struttura COR_IL_MAP
 Specifica le modifiche nell'offset relativo di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -36,61 +36,61 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`oldOffset`|Il vecchio offset Microsoft intermediate language (MSIL) relativo all'inizio della funzione.|  
-|`newOffset`|L'offset MSIL nuovo rispetto all'inizio della funzione.|  
-|`fAccurate`|`true` Se il mapping è nota l'accuratezza; in caso contrario, `false`.|  
+|`oldOffset`|Offset MSIL (Microsoft Intermediate Language) precedente relativo all'inizio della funzione.|  
+|`newOffset`|Nuovo offset MSIL relativo all'inizio della funzione.|  
+|`fAccurate`|`true`Se il mapping è noto come accurato; in caso `false`contrario,.|  
   
 ## <a name="remarks"></a>Note  
- Il formato della mappa è come segue: Il debugger presupporrà che `oldOffset` fa riferimento a un offset MSIL all'interno del codice MSIL originale, non modificato. Il `newOffset` parametro fa riferimento all'offset MSIL corrispondente all'interno del nuovo codice instrumentato.  
+ Il formato della mappa è il seguente: Si presuppone che `oldOffset` il debugger si riferisca a un offset MSIL all'interno del codice MSIL originale, non modificato. Il `newOffset` parametro fa riferimento all'offset MSIL corrispondente all'interno del nuovo codice instrumentato.  
   
- Per l'esecuzione di istruzioni per il corretto funzionamento, è necessario soddisfare i requisiti seguenti:  
+ Per il corretto funzionamento, è necessario soddisfare i requisiti seguenti:  
   
-- La mappa deve essere disposti in ordine crescente.  
+- La mappa deve essere ordinata in ordine crescente.  
   
-- Il codice instrumentato MSIL non deve essere riordinato.  
+- Il codice MSIL instrumentato non deve essere riordinato.  
   
-- Il codice MSIL originale non deve essere rimossi.  
+- Il codice MSIL originale non deve essere rimosso.  
   
-- La mappa deve includere le voci per eseguire il mapping di tutti i punti di sequenza dei file di database (PDB) di programma.  
+- La mappa deve includere le voci per eseguire il mapping di tutti i punti di sequenza dal file di database di programma (PDB).  
   
- La mappa non esegue l'interpolazione voci mancanti. Nell'esempio seguente viene illustrata una mappa e i relativi risultati.  
+ La mappa non esegue l'interpolazione delle voci mancanti. Nell'esempio seguente viene illustrata una mappa e i relativi risultati.  
   
- Eseguire il mapping:  
+ Mappa  
   
-- vecchio offset 0, 0 nuovo offset  
+- 0 offset precedente, 0 nuovo offset  
   
-- offset precedente 5, 10 nuovo offset  
+- 5 offset precedente, 10 nuovo offset  
   
-- offset precedente 9, 20 nuovo offset  
+- 9 offset precedente, 20 nuovo offset  
   
- Risultati:  
+ Risultati  
   
-- Un offset 0, 1, 2, 3 o 4 precedente verrà mappato a un nuovo offset pari a 0.  
+- Un offset precedente di 0, 1, 2, 3 o 4 verrà mappato a un nuovo offset di 0.  
   
-- Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.  
+- Viene eseguito il mapping di un offset precedente di 5, 6, 7 o 8 al nuovo offset 10.  
   
-- Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.  
+- Verrà eseguito il mapping di un offset precedente di 9 o superiore al nuovo offset 20.  
   
-- Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.  
+- Viene eseguito il mapping di un nuovo offset di 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 all'offset precedente 0.  
   
-- Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.  
+- Viene eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 alla precedente offset 5.  
   
-- Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.  
+- Verrà eseguito il mapping di un nuovo offset di 20 o superiore alla precedente offset 9.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl, CorProf.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

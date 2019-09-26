@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740816"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274212"
 ---
-# <a name="corarraylayout-structure"></a>Struttura COR_ARRAY_LAYOUT
+# <a name="cor_array_layout-structure"></a>Struttura COR_ARRAY_LAYOUT
 Fornisce informazioni sul layout di un oggetto Array in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,30 +45,30 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`componentID`|L'identificatore del tipo di oggetti che contiene la matrice.|  
-|`componentType`|Un valore di enumerazione CorElementType che indica se il componente è un riferimento di garbage collection, una classe di valore o una primitiva.|  
-|`firstElementOffset`|Offset al primo elemento nella matrice.|  
-|`elementSize`|Le dimensioni di ogni elemento.|  
-|`countOffset`|L'offset per il numero di elementi nella matrice.|  
-|`rankSize`|Le dimensioni di rango, in byte.|  
-|`numRanks`|Il numero di ranghi nella matrice.|  
-|`rankOffset`|L'offset in corrispondenza del quale iniziare la posizione in classifica.|  
+|`componentID`|Identificatore del tipo di oggetti contenuti nella matrice.|  
+|`componentType`|Valore di enumerazione CorElementType che indica se il componente è un riferimento Garbage Collection, una classe di valori o una primitiva.|  
+|`firstElementOffset`|Offset del primo elemento nella matrice.|  
+|`elementSize`|Dimensione di ogni elemento.|  
+|`countOffset`|Offset al numero di elementi nella matrice.|  
+|`rankSize`|Dimensioni in byte della classificazione.|  
+|`numRanks`|Numero di dimensioni nella matrice.|  
+|`rankOffset`|Offset in corrispondenza del quale vengono avviate le classificazioni.|  
   
 ## <a name="remarks"></a>Note  
- Il `rankSize` campo specifica la dimensione di un ordine di priorità in una matrice multidimensionale. È preciso per le matrici unidimensionali.  
+ Il `rankSize` campo specifica la dimensione di un rango in una matrice multidimensionale. È accurato anche per le matrici unidimensionali.  
   
  Il valore di `numRanks` è 1 per una matrice unidimensionale e `N` per una matrice multidimensionale di `N` dimensioni.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740558"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274015"
 ---
-# <a name="corpubenumprocess-enumeration"></a>Enumerazione COR_PUB_ENUMPROCESS
+# <a name="cor_pub_enumprocess-enumeration"></a>Enumerazione COR_PUB_ENUMPROCESS
 Identifica il tipo di processo da enumerare.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -44,14 +44,14 @@ typedef enum {
  La versione corrente dell'API di debug non gestito enumera solo i processi gestiti.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorPub.idl, CorPub.h  
+ **Intestazione:** CorPub. idl, CorPub. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Enumerazioni di debug](debugging-enumerations.md)

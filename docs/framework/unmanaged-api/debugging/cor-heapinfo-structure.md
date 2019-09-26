@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740662"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274183"
 ---
-# <a name="corheapinfo-structure"></a>Struttura COR_HEAPINFO
+# <a name="cor_heapinfo-structure"></a>Struttura COR_HEAPINFO
 Fornisce informazioni generali sull'heap di Garbage Collection, specificando anche se è enumerabile.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,27 +42,27 @@ typedef struct _COR_HEAPINFO {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Se le strutture di garbage collection sono valide e possono essere enumerati heap; in caso contrario, `false`.|  
-|`pointerSize`|Le dimensioni, in byte, dei puntatori sull'architettura di destinazione.|  
-|`numHeaps`|Il numero di logica di garbage collection heap nel processo.|  
-|`concurrent`|`TRUE` Se simultanee garbage collection (in background) è abilitata. in caso contrario, `FALSE`.|  
-|`gcType`|Un membro del [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) enumerazione che indica se il garbage collector è in esecuzione in una workstation o un server.|  
+|`areGCStructuresValid`|`true`Se Garbage Collection strutture sono valide e l'heap può essere enumerato; in caso `false`contrario,.|  
+|`pointerSize`|Dimensione, in byte, dei puntatori nell'architettura di destinazione.|  
+|`numHeaps`|Numero di heap Garbage Collection logici nel processo.|  
+|`concurrent`|`TRUE`Se Garbage Collection simultaneo (sfondo) è abilitato; in caso `FALSE`contrario,.|  
+|`gcType`|Membro dell'enumerazione [CorDebugGCType](cordebuggctype-enumeration.md) che indica se il Garbage Collector è in esecuzione su una workstation o un server.|  
   
 ## <a name="remarks"></a>Note  
- Un'istanza di `COR_HEAPINFO` struttura viene restituita chiamando il [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) (metodo).  
+ Viene restituita un' `COR_HEAPINFO` istanza della struttura chiamando il metodo [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Prima di enumerazione di oggetti nell'heap di garbage collection, è necessario verificare sempre il `areGCStructuresValid` campo per garantire che l'heap è in uno stato enumerabile. Per altre informazioni, vedere la [ICorDebugProcess5::GetGCHeapInformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) (metodo).  
+ Prima di enumerare gli oggetti nell'heap di Garbage Collection, è sempre necessario `areGCStructuresValid` controllare il campo per assicurarsi che l'heap sia in uno stato enumerabile. Per ulteriori informazioni, vedere il metodo [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

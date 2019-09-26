@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffbe571ebc3d14c12e57b1f805d77e56e97d12e1
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740562"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274178"
 ---
-# <a name="corversion-structure"></a>Struttura COR_VERSION
+# <a name="cor_version-structure"></a>Struttura COR_VERSION
 Archivia il numero di versione in quattro parti standard di Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -43,22 +43,22 @@ typedef struct _COR_VERSION {
 |------------|-----------------|  
 |`dwMajor`|Numero di versione principale.|  
 |`dwMinor`|Numero di versione secondario.|  
-|`dwBuild`|Il numero di build.|  
-|`dwSubBuild`|Il numero di build secondaria.|  
+|`dwBuild`|Numero di Build.|  
+|`dwSubBuild`|Numero della sottocompilazione.|  
   
 ## <a name="remarks"></a>Note  
- Se il numero di versione è 1.0.3705.288, il numero di versione principale è 1, 0 è il numero di versione secondaria, 3705 è il numero di build e 288 è il numero di build secondaria.  
+ Se il numero di versione è 1.0.3705.288, 1 è il numero di versione principale, 0 è il numero di versione secondario, 3705 è il numero di build e 288 è il numero di sottocompilazione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
  **Intestazione:** CorDebug.idl  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)

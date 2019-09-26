@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016133"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
@@ -289,7 +289,7 @@ In questo argomento viene fornita una panoramica di alcune delle principali funz
 ### <a name="typography-class-properties"></a>Proprietà della classe Typography  
  Nella tabella seguente sono elencate le proprietà, i valori e le impostazioni predefinite <xref:System.Windows.Documents.Typography> dell'oggetto.  
   
-|Proprietà|Valore/i|Default Value|  
+|Proprietà|Valore/i|Valore predefinito|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Valore numerico, byte|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
