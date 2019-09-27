@@ -23,7 +23,7 @@ In questo esempio viene descritto come compilare lo stack di canali in modo pers
  Il dispatcher apre innanzitutto il listener del canale, quindi accetta il canale di risposta singleton. Con il canale, inizia a inviare messaggi (richieste) in un ciclo infinito. Per ogni richiesta, crea un messaggio di risposta e lo restituisce al client.  
   
 ## <a name="creating-a-response-message"></a>Creazione di un messaggio di risposta  
- L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. È stata definita un'azione SOAP http://tempuri.org/HelloWorld/Hello predefinita "" per fornire filtri messaggi. Questa operazione è simile al concetto di contratto di servizio nell'implementazione WCF <xref:System.ServiceModel.ServiceHost>di.  
+ L'elaborazione del messaggio viene implementata nel tipo `MyServiceManager`. Nel metodo `HandleRequest`, l'intestazione `Action` del messaggio viene dapprima controllata per verificare se la richiesta è supportata. È stata definita un'azione SOAP"http://tempuri.org/HelloWorld/Hello"predefinita per fornire filtri messaggi. Questa operazione è simile al concetto di contratto di servizio nell'implementazione WCF <xref:System.ServiceModel.ServiceHost>di.  
   
  Nel caso dell'azione SOAP corretta, l'esempio recupera i dati del messaggio richiesti e genera una risposta corrispondente alla richiesta in modo analogo a quanto si verifica nel caso di <xref:System.ServiceModel.ServiceHost>.  
   

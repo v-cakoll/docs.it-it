@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926676"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332001"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -186,7 +186,7 @@ La classe di avvio è responsabile della configurazione dell'applicazione e dell
 
 Per gestire questo modello, distribuire un singolo contenitore per rappresentare l'applicazione. Per la scalabilità, è sufficiente aggiungere altre copie con un servizio di bilanciamento del carico. La semplicità deriva dalla gestione di un'unica distribuzione in un singolo contenitore o una singola macchina virtuale.
 
-![](./media/image5-13.png)
+![Figura 5-13](./media/image5-13.png)
 
 È possibile includere più componenti/librerie o livelli interni in ogni contenitore, come illustrato nella figura 5-13. In base al principio secondo il quale _"un contenitore esegue un'operazione e lo fa in un unico processo_", tuttavia, lo schema monolitico potrebbe generare conflitti.
 
@@ -198,7 +198,7 @@ Oltre al problema del ridimensionamento di tutti i componenti, le modifiche appo
 
 L'approccio monolitico è comune e molte organizzazioni usano questo approccio architetturale nelle loro attività di sviluppo. Molte stanno ottenendo buoni risultati, mentre altre stanno raggiungendo i limiti. Molte organizzazioni hanno progettato le proprie applicazioni usando questo modello perché gli strumenti e l'infrastruttura a loro disposizione erano troppo complesse per creare architetture orientate ai servizi e perché non ne hanno intravisto la necessità fino a quando le dimensioni dell'app non sono aumentate. Nel caso in cui i limiti dell'approccio monolitico stiano per essere raggiunti, la suddivisione dell'app per ottenere un uso migliore di contenitori e microservizi può costituire il passaggio logico successivo.
 
-![](./media/image5-14.png)
+![Figura 5-14](./media/image5-14.png)
 
 La distribuzione delle applicazioni monolitiche in Microsoft Azure può essere realizzata usando macchine virtuali dedicate per ogni istanza. Con i [set di scalabilità di macchine virtuali di Microsoft Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) è possibile ridimensionare facilmente le macchine virtuali. I [Servizi app di Azure](https://azure.microsoft.com/services/app-service/) sono in grado di eseguire le applicazioni monolitiche e di ridimensionare facilmente le istanze senza la necessità di gestire le macchine virtuali. I Servizi app di Azure possono eseguire anche singole istanze di contenitori Docker, semplificando la distribuzione. Usando Docker, è possibile distribuire una singola macchina virtuale come host Docker ed eseguire più istanze. Usando il bilanciamento del carico di Azure, come illustrato nella figura 5-14, è possibile gestire il ridimensionamento.
 

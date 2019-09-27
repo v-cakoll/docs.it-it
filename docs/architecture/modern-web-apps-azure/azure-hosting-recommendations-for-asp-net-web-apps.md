@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Cons
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675468"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331994"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
@@ -124,9 +124,9 @@ Per i dati temporanei basati su comandi o eventi e usati per orchestrare il comp
 
 L'architettura dovrebbe dipendere dai requisiti dell'applicazione. Sono disponibili molti servizi di Azure diversi. La scelta di quello giusto è una decisione importante. Microsoft offre una raccolta di architetture di riferimento per favorire l'identificazione delle architetture tipiche ottimizzate per scenari comuni. È possibile associare l'architettura di riferimento più conforme ai requisiti dell'applicazione o quantomeno un'architettura che garantisca un punto di partenza.
 
-La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagramma illustra un approccio di architettura consigliato per un sito Web CMS (Content Management System) Sitecore, ottimizzato per il marketing.
+La figura 11-1 illustra un'architettura di riferimento di esempio. Questo diagramma illustra un approccio di architettura consigliato per un sito Web CMS (Content Management System) Sitecore, ottimizzato per il marketing.
 
-![](./media/image11-2.png)
+![Figura 11-1](./media/image11-2.png)
 
 **Figura 11-1.** Architettura di riferimento del sito Web di marketing Sitecore.
 
@@ -150,7 +150,7 @@ La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagra
 - App Web per contenitori\
   <https://azure.microsoft.com/services/app-service/containers/>
 
-- Introduzione a servizio Azure Kubernetes\
+- Introduzione al servizio Azure Kubernetes\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
