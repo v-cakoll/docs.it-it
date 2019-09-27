@@ -6,14 +6,15 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 7a7a9d16d9f69071e9d1dacb0558f7ca92e1d21e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631029"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332763"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Procedura: Scrivere un metodo di estensione (Visual Basic)
+
 I metodi di estensione consentono di aggiungere metodi a una classe esistente. Il metodo di estensione può essere chiamato come se fosse un'istanza di tale classe.
 
 ### <a name="to-define-an-extension-method"></a>Per definire un metodo di estensione
@@ -36,13 +37,14 @@ I metodi di estensione consentono di aggiungere metodi a una classe esistente. I
 
     ```vb
     <Extension()>
-    Public Sub SubName (ByVal para1 As ExtendedType, <other parameters>)
+    Public Sub SubName(para1 As ExtendedType, <other parameters>)
          ' < Body of the method >
     End Sub
     ```
 
 ## <a name="example"></a>Esempio
- Nell'esempio seguente viene dichiarato un metodo di estensione nel `StringExtensions`modulo. Un secondo modulo, `Module1`, importa `StringExtensions` e chiama il metodo. Il metodo di estensione deve essere nell'ambito quando viene chiamato. Il metodo `PrintAndPunctuate` di estensione <xref:System.String> estende la classe con un metodo che Visualizza l'istanza di stringa seguita da una stringa di segni di punteggiatura inviati come parametro.
+
+ Nell'esempio seguente viene dichiarato un metodo di estensione nel modulo `StringExtensions`. Un secondo modulo, `Module1`, importa `StringExtensions` e chiama il metodo. Il metodo di estensione deve essere nell'ambito quando viene chiamato. Il metodo di estensione `PrintAndPunctuate` estende la classe <xref:System.String> con un metodo che Visualizza l'istanza di stringa seguita da una stringa di simboli di punteggiatura inviati come parametro.
   
 ```vb
 ' Declarations will typically be in a separate module.
@@ -50,8 +52,7 @@ Imports System.Runtime.CompilerServices
 
 Module StringExtensions
     <Extension()>
-    Public Sub PrintAndPunctuate(ByVal aString As String,
-                                 ByVal punc As String)
+    Public Sub PrintAndPunctuate(aString As String, punc As String)
         Console.WriteLine(aString & punc)
     End Sub
 
@@ -77,14 +78,15 @@ End Module
   
  Si noti che il metodo viene definito con due parametri e viene chiamato con una sola. Il primo parametro, `aString`, nella definizione del metodo è associato a `example`, l'istanza di `String` che chiama il metodo. L'output dell'esempio è il seguente:
   
- `Hello?`  
-  
- `Hello!!!!`  
+ ```console
+ Hello?
+ Hello!!!!
+ ```
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Metodi di estensione](./extension-methods.md)
-- [Istruzione Module](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Metodi di estensione](extension-methods.md)
+- [Istruzione Module](../../../language-reference/statements/module-statement.md)
+- [Parametri e argomenti delle routine](procedure-parameters-and-arguments.md)
+- [Ambito in Visual Basic](../declared-elements/scope.md)

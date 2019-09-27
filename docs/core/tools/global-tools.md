@@ -4,12 +4,12 @@ description: Panoramica degli strumenti globali .NET Core e dei comandi dell'int
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117460"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332012"
 ---
 # <a name="net-core-global-tools-overview"></a>Panoramica degli strumenti globali .NET Core
 
@@ -70,10 +70,10 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Gli strumenti globali possono essere installati nella directory predefinita o in un percorso specifico. Le directory predefinite sono:
 
-| Sistema operativo          | Path                          |
+| OS          | `Path`                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
+| Windows     | `%USERPROFILE%\.dotnet\tools` |
 
 Questi percorsi vengono aggiunti al percorso dell'utente alla prima esecuzione dell'SDK in modo che gli strumenti globali installati possano essere chiamati direttamente.
 
@@ -107,31 +107,6 @@ Per scoprire quali strumenti sono inclusi in un pacchetto di strumenti globali i
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>Problemi possibili
-
-Gli strumenti globali sono [applicazioni dipendenti dal framework](../deploying/index.md#framework-dependent-deployments-fdd), ovvero sono basati su un runtime di .NET Core installato nel computer. Se il runtime previsto non viene trovato, agli strumenti si applicano le normali regole di rollforward di runtime di .NET Core, ad esempio:
-
-* Un'applicazione esegue il roll forward alla versione di patch più recente della versione principale e secondaria specificate.
-* Se non è presente alcun runtime corrispondente con un numero di versione principale o secondaria, viene usata la successiva versione più elevata.
-* Il roll forward non viene eseguito tra due versioni di anteprima del runtime o tra versioni di anteprima e versioni di rilascio. Di conseguenza, gli strumenti globali creati usando le versioni di anteprima devono essere ricompilati e ripubblicati dall'autore e reinstallati.
-* È possibile che si verifichino ulteriori problemi con gli strumenti globali creati in .NET Core 2.1 Preview 1. Per altre informazioni, vedere [.NET Core 2.1 Preview 2 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md) (Problemi noti di NET Core 2.1 Preview 2).
-
-Se un'applicazione non trova un runtime appropriato, non viene eseguita e viene segnalato un errore.
-
-Un altro problema potrebbe essere costituito da uno strumento globale creato con un'anteprima precedente che non viene eseguito con i runtime .NET Core correntemente installati. È possibile visualizzare i runtime installati nel computer usando il comando seguente:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Contattare l'autore dello strumento globale e verificare se è possibile ricompilare e ripubblicare il pacchetto di strumenti in NuGet con un numero di versione aggiornata. Dopo aver aggiornato il pacchetto su NuGet, è possibile aggiornare la copia.
-
-L'interfaccia della riga di comando di .NET Core tenta di aggiungere i percorsi predefiniti alla variabile di ambiente PATH al primo utilizzo. Esistono tuttavia un paio di scenari in cui è possibile che il percorso non venga aggiunto automaticamente alla variabile di ambiente PATH, ad esempio:
-
-* Se è stata impostata la variabile di ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE`.
-* In macOS se è stato installato .NET Core SDK usando file *.tar.gz* e non *.pkg*.
-* In Linux è necessario modificare il file di ambiente della shell per configurare la variabile PATH.
-
 ## <a name="other-cli-commands"></a>Altri comandi dell'interfaccia della riga di comando
 
 .NET Core SDK contiene altri comandi che supportano gli strumenti globali .NET Core. Usare uno dei comandi `dotnet tool` con una delle opzioni seguenti:
@@ -162,3 +137,7 @@ Per visualizzare tutti gli strumenti globali attualmente installati nel computer
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Vedere anche
+
+* [Risolvere i problemi di utilizzo degli strumenti .NET Core](troubleshoot-usage-issues.md)

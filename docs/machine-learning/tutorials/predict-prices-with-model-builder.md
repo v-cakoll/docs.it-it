@@ -3,15 +3,15 @@ title: 'Esercitazione: Stimare i prezzi usando la regressione con il generatore 
 description: Questa esercitazione illustra come creare un modello di regressione usando il generatore di modelli ML.NET per stimare i prezzi, nel caso specifico le tariffe dei taxi di New York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/18/2019
+ms.date: 09/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117963"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332591"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Esercitazione: Stimare i prezzi usando la regressione con il generatore di modelli
 
@@ -46,11 +46,11 @@ Per un elenco di prerequisiti e istruzioni di installazione, vedere la [Guida al
 
 1. Il set di dati usato per il training e la valutazione del modello di Machine Learning è ricavato in origine dal set di dati NYC TLC Taxi Trip.
 
-    Per scaricare il set di dati, passare al [collegamento per il download di taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
+    1. Per scaricare il set di dati, passare al [collegamento per il download di taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
 
-    Quando si carica la pagina, fare clic con il pulsante destro del mouse in un punto qualsiasi della pagina e scegliere **Salva con nome**.
+    1. Quando si carica la pagina, fare clic con il pulsante destro del mouse in un punto qualsiasi della pagina e scegliere **Salva con nome**.
 
-    Usare la **finestra di dialogo Salva con nome** per salvare il file nella cartella *Dati* creata nel passaggio precedente.
+    1. Usare la **finestra di dialogo Salva con nome** per salvare il file nella cartella *Dati* creata nel passaggio precedente.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *taxi-fare-train.csv* e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
@@ -63,12 +63,12 @@ Ogni riga del set di dati `taxi-fare-train.csv` contiene i dettagli delle corse 
     - **vendor_id:** l'ID della società di taxi è una funzionalità.
     - **rate_code:** il tipo di tariffa del viaggio in taxi è una funzionalità.
     - **passenger_count:** il numero di passeggeri è una funzionalità.
-    - **trip_time_in_secs:** il tempo impiegato per il viaggio.
+    - **trip_time_in_secs:** il tempo impiegato per il viaggio. Si vuole stimare la tariffa del viaggio prima del termine. Al momento non si conosce la durata del viaggio. Il tempo non è pertanto una funzionalità e si escluderà questa colonna dal modello.
     - **trip_distance:** la distanza del viaggio è una funzionalità.
     - **payment_type:** il metodo di pagamento (contanti o carta di credito) è una funzionalità.
     - **fare_amount:** la tariffa totale corrisposta per il viaggio in taxi è l'etichetta.
 
-`label` è la colonna sulla quale eseguire le stime. Quando si esegue un'attività di regressione, l'obiettivo è stimare un valore numerico. In questo scenario di stima dei prezzi viene stimato il costo di una corsa in taxi. Pertanto, l'etichetta è **fare_amount**. Gli elementi identificati `features` sono gli input che vengono dati al modello per stimare l'oggetto `label`. In questo caso le colonne rimanenti vengono usate come input o funzionalità per stimare l'importo della tariffa.
+`label` è la colonna sulla quale eseguire le stime. Quando si esegue un'attività di regressione, l'obiettivo è stimare un valore numerico. In questo scenario di stima dei prezzi viene stimato il costo di una corsa in taxi. Pertanto, l'etichetta è **fare_amount**. Gli elementi identificati `features` sono gli input che vengono dati al modello per stimare l'oggetto `label`. In questo caso, il resto delle colonne, ad eccezione di **trip_time_in_secs** , viene usato come funzionalità o input per stimare l'importo della tariffa.
 
 ## <a name="choose-a-scenario"></a>Scegliere uno scenario
 
@@ -83,7 +83,8 @@ Il generatore di modelli accetta i dati da due origini, un database di SQL Serve
 
 1. Nel passaggio relativo ai dati dello strumento generatore di modelli selezionare *File* dall'elenco a discesa delle origini dati.
 1. Selezionare il pulsante accanto alla casella di testo *Seleziona un file* e usare Esplora File per cercare e selezionare *taxi-fare-test.csv* nella directory *Dati*.
-1. Scegliere *fare_amount* nell'elenco a discesa *Label or Column to Predict* (Etichetta o colonna per stima) e passare al passaggio relativo al training dello strumento generatore di modelli.
+1. Scegliere *fare_amount* nell'elenco *a discesa colonna da stimare (etichetta)* e passare al passaggio del training dello strumento generatore di modelli.
+1. Espandere l'elenco a discesa *colonne di input (funzionalità)* e deselezionare la colonna *trip_time_in_secs* per escluderla come funzionalità durante il training.
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 
@@ -113,43 +114,19 @@ Se non si è soddisfatti della precisione delle metriche,un modo semplice per mi
 
 Il risultato del processo di training sarà la creazione di due progetti.
 
-- TaxiFarePredictionML.ConsoleApp: un'applicazione console .NET Core che contiene il codice del modello di training e il consumo.
-- TaxiFarePredictionML.Model: una libreria di classi .NET Standard che contiene i modelli di dati che definiscono lo schema di input e output dei dati del modello, nonché la versione persistente del modello che ha avuto le prestazioni migliori durante il training.
+- TaxiFarePredictionML.ConsoleApp: Applicazione console .NET Core che contiene il codice di training del modello e il codice di consumo di esempio.
+- TaxiFarePredictionML.Model: Una libreria di classi .NET Standard contenente i modelli di dati che definiscono lo schema dei dati del modello di input e di output, la versione salvata del modello con le prestazioni migliori durante il training e una classe helper denominata `ConsumeModel` per eseguire stime.
 
 1. Nel passaggio del codice dello strumento generatore di modelli selezionare **Add Projects** (Aggiungi progetti) per aggiungere i progetti generati automaticamente alla soluzione.
-1. Fare clic con il pulsante destro del mouse sul progetto *TaxiFarePrediction*. In seguito, selezionare **Aggiungi > Riferimento**. Scegliere il nodo **Progetti > Soluzione** e dall'elenco contrassegnare il progetto *TaxiFarePredictionML.Model* e fare clic su OK.
 1. Aprire il file *Program.cs* nel progetto *TaxiFarePrediction*.
-1. Aggiungere le istruzioni using seguenti per fare riferimento al pacchetto NuGet *Microsoft.ML* e al progetto *TaxiFarePredictionML.Model*:
+1. Aggiungere l'istruzione using seguente per fare riferimento al progetto *TaxiFarePredictionML. Model* :
 
     ```csharp
     using System;
-    using Microsoft.ML;
-    using TaxiFarePredictionML.Model.DataModels;
+    using TaxiFarePredictionML.Model;
     ```
 
-1. Aggiungere il metodo `ConsumeModel` alla classe `Program`.
-
-    ```csharp
-    static ModelOutput ConsumeModel(ModelInput input)
-    {
-        // 1. Load the model
-        MLContext mlContext = new MLContext();
-        ITransformer mlModel = mlContext.Model.Load("MLModel.zip", out var modelInputSchema);
-
-        // 2. Create PredictionEngine
-        var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
-
-        // 3. Use PredictionEngine to use model on input data
-        ModelOutput result = predictionEngine.Predict(input);
-
-        // 4. Return prediction result
-        return result;
-    }
-    ```
-
-    `ConsumeModel` caricherà il modello sottoposto a training, creerà un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e lo userà per eseguire stime sui nuovi dati.
-
-1. Per eseguire una stima sui nuovi dati usando il modello, creare una nuova istanza della classe `ModelInput` e usare il metodo `ConsumeModel`. Si noti che l'importo della tariffa non fa parte dell'input, perché il modello genererà la stima per tale importo. Aggiungere il codice seguente al metodo `Main` ed eseguire l'applicazione.
+1. Per eseguire una stima sui nuovi dati utilizzando il modello, creare una nuova istanza della classe `ModelInput` all'interno del metodo `Main` dell'applicazione. Si noti che l'importo della tariffa non fa parte dell'input, perché il modello genererà la stima per tale importo. 
 
     ```csharp
     // Create sample data
@@ -158,23 +135,28 @@ Il risultato del processo di training sarà la creazione di due progetti.
         Vendor_id = "CMT",
         Rate_code = 1,
         Passenger_count = 1,
-        Trip_time_in_secs = 1271,
         Trip_distance = 3.8f,
         Payment_type = "CRD"
     };
+    ```
 
+1. Usare il metodo `Predict` dalla classe `ConsumeModel`. Il metodo `Predict` carica il modello sottoposto a training, crea una [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per il modello e la utilizza per eseguire stime sui nuovi dati. 
+
+    ```csharp
     // Make prediction
-    ModelOutput prediction = ConsumeModel(input);
+    ModelOutput prediction = ConsumeModel.Predict(input);
 
     // Print Prediction
     Console.WriteLine($"Predicted Fare: {prediction.Score}");
     Console.ReadKey();
     ```
 
+1. Eseguire l'applicazione.
+
     L'output generato dal programma dovrebbe essere simile al frammento di codice seguente:
 
     ```bash
-    Predicted Fare: 16.82245
+    Predicted Fare: 14.96086
     ```
 
 Se in un secondo momento è necessario fare riferimento ai progetti generati all'interno di un'altra soluzione, è possibile trovarli all'interno della directory `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.

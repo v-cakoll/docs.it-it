@@ -2,14 +2,14 @@
 title: Cos'è F#
 description: Informazioni sul linguaggio di F# programmazione e sulla F# programmazione di questo tipo. Informazioni sui tipi di dati avanzati, sulle funzioni e sul modo in cui si integrano.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630452"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332727"
 ---
-# <a name="what-is-f"></a>Che cos'è F\#
+# <a name="what-is-f"></a>Che cos'è F @ no__t-0
 
 F#è un linguaggio di programmazione funzionale che semplifica la scrittura di codice corretto e gestibile.
 
@@ -76,7 +76,7 @@ F#i record e le unioni discriminate sono non null, non modificabili e confrontab
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Applicare la correttezza alle funzioni e ai criteri di ricerca
 
-F#le funzioni sono facili da dichiarare e potenti in pratica. In [combinazione con i](./language-reference/pattern-matching.md)criteri di ricerca, consentono di definire il comportamento la cui correttezza viene applicata dal compilatore.
+F#le funzioni sono facili da dichiarare e potenti in pratica. In [combinazione con i criteri di](./language-reference/pattern-matching.md)ricerca, consentono di definire il comportamento la cui correttezza viene applicata dal compilatore.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -100,7 +100,7 @@ F#anche le funzioni sono di prima classe, ovvero possono essere passate come par
 F#dispone del supporto completo per gli oggetti, che sono tipi di dati utili quando è necessario combinare dati e funzionalità. F#le funzioni vengono usate per modificare gli oggetti.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

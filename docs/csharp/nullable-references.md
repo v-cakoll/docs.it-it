@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272785"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332369"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -74,9 +74,12 @@ Il contesto di annotazione nullable e il contesto di avviso nullable possono ess
 - `#nullable enable`: imposta il contesto dell'annotazione nullable e il contesto dell'avviso nullable su **enabled**.
 - `#nullable disable`: imposta il contesto dell'annotazione nullable e il contesto dell'avviso nullable su **disabled**.
 - `#nullable restore`: ripristina le impostazioni di progetto per il contesto dell'annotazione nullable e il contesto dell'avviso nullable.
-- `#pragma warning disable nullable`: impostare il contesto dell'avviso nullable su **disabled**.
-- `#pragma warning enable nullable`: impostare il contesto dell'avviso nullable su **enabled**.
-- `#pragma warning restore nullable`: ripristina le impostazioni di progetto per il contesto dell'avviso nullable.
+- `#nullable disable warnings`: impostare il contesto dell'avviso nullable su **disabled**.
+- `#nullable enable warnings`: impostare il contesto dell'avviso nullable su **enabled**.
+- `#nullable restore warnings`: ripristina le impostazioni di progetto per il contesto dell'avviso nullable.
+- `#nullable disable annotations`: Impostare il contesto di annotazione Nullable su **disabled**.
+- `#nullable enable annotations`: Impostare il contesto di annotazione Nullable su **Enabled**.
+- `#nullable restore annotations`: Ripristina il contesto di avviso delle annotazioni nelle impostazioni del progetto.
 
 I contesti dell'annotazione e dell'avviso nullable predefiniti sono `disabled`. Tale decisione significa che il codice esistente viene compilato senza modifiche e senza generare nuovi avvisi.
 

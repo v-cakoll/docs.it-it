@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929087"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332630"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Esercitazione: Rilevare oggetti usando ONNX in ML.NET
 
@@ -45,7 +45,7 @@ Questo esempio crea un'applicazione console .NET Core che rileva gli oggetti all
 
 Il rilevamento degli oggetti è una questione correlata alla visione artificiale. Sebbene sia un concetto strettamente correlato alla classificazione delle immagini, il rilevamento degli oggetti esegue l'operazione di classificazione delle immagini su scala più granulare. Il rilevamento degli oggetti individua _e_ classifica le entità all'interno delle immagini. Usare il rilevamento degli oggetti quando le immagini contengono più oggetti di tipi diversi.
 
-![](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Immagini affiancate che mostrano la classificazione delle immagini di un cane a sinistra e la classificazione degli oggetti di un gruppo in un cane a destra](./media/object-detection-onnx/img-classification-obj-detection.PNG)
 
 Ecco alcuni casi d'uso per il rilevamento degli oggetti:
 
@@ -66,7 +66,7 @@ Ci sono diversi tipi di reti neurali, tra cui i più comuni sono percettrone mul
 
 Il rilevamento degli oggetti è un'attività di elaborazione di immagini. Per questo motivo, i modelli di Deep Learning sottoposti a training per risolvere questo problema sono prevalentemente di tipo CNN. Il modello usato in questa esercitazione è il modello Tiny YOLOv2, una versione più compatta del modello YOLOv2 descritto nel documento: ["YOLO9000: Migliore, più veloce, più potente" di Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Il training di Tiny YOLOv2 viene eseguito sul set di dati Pascal VOC ed è costituito da 15 livelli in grado di eseguire stime per 20 diverse classi di oggetti. Poiché il modello Tiny YOLOv2 è una versione ridotta del modello YOLOv2 originale, rappresenta un compromesso tra velocità e accuratezza. I diversi livelli che compongono il modello possono essere visualizzati usando strumenti come Netron. L'esame del modello restituirebbe un mapping delle connessioni tra tutti i livelli che compongono la rete neurale, in cui ogni livello contiene il nome del livello insieme alle dimensioni del rispettivo input/output. Le strutture di dati usate per descrivere gli input e gli output del modello sono note come tensori. I tensori possono essere considerati contenitori che archiviano i dati in N dimensioni. Nel caso di Tiny YOLOv2, il nome del livello di input è `image` e prevede un tensore con dimensioni `3 x 416 x 416`. Il nome del livello di output è `grid` e genera un tensore di output con dimensioni `125 x 13 x 13`.
 
-![](./media/object-detection-onnx/netron-model-map.png)
+![Livello di input suddiviso in livelli nascosti, quindi livello di output](./media/object-detection-onnx/netron-model-map.png)
 
 Il modello YOLO accetta un'immagine `3(RGB) x 416px x 416px`. Il modello accetta questo input e lo passa attraverso i diversi livelli per produrre un output. L'output divide l'immagine di input in una griglia `13 x 13`, con ogni cella della griglia costituita da `125` valori.
 
@@ -74,11 +74,11 @@ Il modello YOLO accetta un'immagine `3(RGB) x 416px x 416px`. Il modello accetta
 
 Open Neural Network Exchange (ONNX) è un formato open source per i modelli di intelligenza artificiale. ONNX supporta l'interoperabilità tra framework. Ciò significa che è possibile eseguire il training di un modello in uno dei numerosi framework di apprendimento automatico diffusi, ad esempio PyTorch, eseguire la conversione in formato ONNX e utilizzare il modello ONNX in un framework diverso, come ML.NET. Per altre informazioni, vedere il [sito Web ONNX](https://onnx.ai/).
 
-![](./media/object-detection-onnx/onnx-frameworks.png)
+![Formati supportati da ONNX importati in ONNX, quindi usati da altri formati ONNX supportati](./media/object-detection-onnx/onnx-frameworks.png)
 
 Il modello Tiny YOLOv2 già sottoposto a training è archiviato in formato ONNX, una rappresentazione serializzata dei livelli e dei modelli appresi di tali livelli. In ML.NET, l'interoperabilità con ONNX viene raggiunta con i pacchetti NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) e [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). Il pacchetto [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contiene una serie di trasformazioni che accettano un'immagine e la codificano in valori numerici che possono essere usati come input in una pipeline di stima o di training. Il pacchetto [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) sfrutta il runtime ONNX per caricare un modello ONNX e usarlo per eseguire stime basate sull'input fornito.
 
-![](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![Flusso di dati del file ONNX nel runtime di ONNX e infine all' C# applicazione](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>Configurare il progetto .NET Core
 
@@ -183,7 +183,7 @@ Inizializzare la variabile `mlContext` con una nuova istanza di `MLContext` aggi
 
 Il modello segmenta un'immagine in una griglia `13 x 13`, in cui ogni cella è `32px x 32px`. Ogni cella della griglia contiene 5 rettangoli di selezione di oggetti potenziali. Un rettangolo di selezione contiene 25 elementi:
 
-![](./media/object-detection-onnx/model-output-description.png)
+![Esempio di griglia a sinistra e di esempio di rettangolo di delimitazione a destra](./media/object-detection-onnx/model-output-description.png)
 
 - `x` la posizione x del centro del rettangolo di selezione rispetto alla cella della griglia a cui è associato.
 - `y` la posizione y del centro del rettangolo di selezione rispetto alla cella della griglia a cui è associato.
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Per visualizzare le immagini con i rettangoli di selezione, passare alla directory `assets/images/output/`. Di seguito viene fornito un esempio da una delle immagini elaborate.
 
-![](./media/object-detection-onnx/image3.jpg)
+![Esempio di immagine elaborata di una sala da pranzo](./media/object-detection-onnx/image3.jpg)
 
 La procedura è stata completata. È stato creato un modello di Machine Learning per il rilevamento di oggetti riutilizzando un modello `ONNX` già sottoposto a training in ML.NET.
 
