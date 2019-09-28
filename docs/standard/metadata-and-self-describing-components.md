@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754939"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353903"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadati e componenti auto-descrittivi
 
@@ -84,9 +84,7 @@ Ciascuna riga di ciascuna tabella dei metadati è identificata in modo univoco n
 
 Un token di metadati è un numero a quattro byte. Il byte più significativo indica la tabella dei metadati a cui il token fa riferimento (metodi, tipi e così via). I rimanenti tre byte individuano la riga della tabella dei metadati che corrisponde all'elemento di programmazione che si sta descrivendo. Se si definisce un metodo in C# e lo si compila in un file PE, si potrà trovare il seguente token di metadati nella parte MSIL del file PE:
 
-```
-0x06000004
-```
+`0x06000004`
 
 Il byte più significativo (`0x06`) indica che si tratta di un token **MethodDef**. I tre byte meno significativi (`000004`) indicano a Common Language Runtime di cercare le informazioni che descrivono la definizione di questo metodo nella quarta riga della tabella **MethodDef**.
 
@@ -140,7 +138,7 @@ Durante l'esecuzione del codice, il runtime carica il modulo in memoria e cerca 
 
 Nell'esempio che segue viene illustrata parte del codice MSIL prodotto dalla funzione `Main` del codice precedente. È possibile vedere il codice MSIL e i metadati di qualsiasi applicazione .NET Framework usando il [disassemblatore MSIL (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,
@@ -163,9 +161,9 @@ Nella tabella che segue viene illustrata la parte di **MethodDef** a cui fa rife
 
 |Riga|RVA (Relative Virtual Address)|ImplFlags|Flag|nome<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gestito|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
-|2|0x00002058|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|Stringa|
-|3|0x0000208c|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Aggiunta|int, int, int|
+|1|0x00002050|IL<br /><br /> Gestita|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||
+|2|0x00002058|IL<br /><br /> Gestita|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|Stringa|
+|3|0x0000208c|IL<br /><br /> Gestita|Public<br /><br /> Static<br /><br /> ReuseSlot|Aggiunta|int, int, int|
 
 Ogni colonna della tabella contiene importanti informazioni sul codice. La colonna **RVA** consente al runtime di calcolare l'indirizzo di memoria iniziale del codice MSIL che definisce questo metodo. Le colonne **ImplFlags** e **Flags** contengono maschere di bit che descrivono il metodo, indicando ad esempio se il metodo è pubblico o privato. La colonna **Name** indicizza il nome del metodo nell'heap delle stringhe. La colonna **Signature** indicizza la definizione della firma del metodo nell'heap dei blob.
 
@@ -175,6 +173,6 @@ Grazie ai metadati, il runtime ha accesso a tutte le informazioni necessarie per
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Description|
+|Titolo|Descrizione|
 |-----------|-----------------|
 |[Attributi](../../docs/standard/attributes/index.md)|Viene descritto come applicare attributi, scrivere attributi personalizzati e recuperare le informazioni archiviate negli attributi.|

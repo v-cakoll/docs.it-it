@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605958"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353760"
 ---
 # <a name="char-c-reference"></a>char (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref
 
  I caratteri Unicode vengono usati per rappresentare la maggior parte delle lingue scritte di tutto il mondo.
 
-|Tipo|Intervallo|Dimensione|Tipo .NET|
+|Type|Intervallo|Size|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|Carattere Unicode a 16 bit|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -51,5 +51,4 @@ Per altre informazioni, vedere [Tipi integrali](~/_csharplang/spec/types.md#inte
 - [Tabella dei tipi incorporati](./built-in-types-table.md)
 - [Tabella delle conversioni numeriche implicite](./implicit-numeric-conversions-table.md)
 - [Tabella delle conversioni numeriche esplicite](./explicit-numeric-conversions-table.md)
-- [Tipi nullable](../../programming-guide/nullable-types/index.md)
 - [Stringhe](../../programming-guide/strings/index.md)

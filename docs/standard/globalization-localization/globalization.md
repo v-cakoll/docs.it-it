@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: HT
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442477"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393126"
 ---
 # <a name="globalization"></a>Globalizzazione
 
@@ -183,7 +183,7 @@ L'esempio seguente illustra questo problema. Viene salvato un singolo valore loc
 
 Quando i dati vengono ripristinati in un sistema con lo stesso fuso orario del sistema su cui sono stati serializzati, i valori di data e ora deserializzati riflettono accuratamente il valore originale, come mostra l'output:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -193,7 +193,7 @@ Quando i dati vengono ripristinati in un sistema con lo stesso fuso orario del s
 
 Tuttavia, se si ripristinano i dati in un sistema con un fuso orario diverso, solo il valore di data e orario formattato con la stringa di formato standard "O" (roundtrip) conserva le informazioni sul fuso orario e pertanto rappresenta lo stesso istante di tempo. Di seguito è riportato l'output quando i dati relativi a data e ora vengono ripristinati in un sistema con fuso orario standard dell'Europa occidentale:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -218,7 +218,7 @@ Ogni tecnica viene illustrata nell'esempio riportato di seguito.
 
 Quando i dati vengono serializzati in un sistema nel fuso orario del Pacifico e deserializzati in un sistema nel fuso orario dell'Europa occidentale, l'esempio visualizza il seguente output:
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local

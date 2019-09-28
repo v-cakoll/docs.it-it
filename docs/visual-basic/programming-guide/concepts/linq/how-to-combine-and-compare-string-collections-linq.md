@@ -2,12 +2,12 @@
 title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631049"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352888"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
 
 1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
 
 2. Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Creare un progetto di applicazione console VB.NET con un' `Imports` istruzione per lo spazio dei nomi System. Linq.
+Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
 
 ## <a name="see-also"></a>Vedere anche
 

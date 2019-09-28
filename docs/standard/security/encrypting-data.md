@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d37f7980c3024fa545e5395a4614dcd41a111794
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968697"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353196"
 ---
 # <a name="encrypting-data"></a>Crittografia dei dati
 La crittografia simmetrica e quella asimmetrica vengono eseguite usando processi diversi. La crittografia simmetrica viene eseguita sui flussi e di conseguenza è utile per crittografare grandi quantità di dati. La crittografia asimmetrica viene eseguita su un numero ridotto di byte e di conseguenza è utile solo per piccole quantità di dati.  
@@ -160,13 +160,13 @@ public class main
   
  Per la corretta esecuzione dell'esempio precedente, deve essere presente un processo in ascolto sull'indirizzo IP e il numero di porta specificati nella classe <xref:System.Net.Sockets.TcpClient> . Se esiste un processo di ascolto, il codice si connetterà al processo, crittograferà il flusso usando l'algoritmo simmetrico Rijndael e scriverà "Hello World!" nel flusso. Se il codice è corretto, visualizza il testo seguente nella console:  
   
-```  
+```console  
 The message was sent.  
 ```  
   
  Tuttavia, se non viene trovato alcun processo di ascolto o viene generata un'eccezione, il codice visualizza il testo seguente nella console:  
   
-```  
+```console  
 The connection failed.  
 ```  
   

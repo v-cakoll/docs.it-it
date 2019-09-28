@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: a6d0ea8705721b707dd4c70673c36c5a122d0f09
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 846e93022145495518489e652707e5cb06a9c7e2
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045503"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353344"
 ---
 # <a name="pooling"></a>Pooling
 In questo esempio viene illustrato come estendere Windows Communication Foundation (WCF) per supportare il pool di oggetti. L'esempio illustra come creare un attributo sintatticamente e semanticamente simile alla funzionalità dell'attributo `ObjectPoolingAttribute` di Enterprise Services. Il pool degli oggetti può fornire una spinta notevole alle prestazioni di un'applicazione. Tuttavia, può avere l'effetto contrario se non utilizzato correttamente. Il pool degli oggetti consente di ridurre il sovraccarico dovuto alla creazione continua di oggetti frequentemente utilizzati che richiedono un'inizializzazione estesa. Tuttavia, se una chiamata a un metodo su un oggetto del pool richiede una quantità considerevole di tempo, il pool degli oggetti mette in coda richieste aggiuntive appena viene raggiunta la dimensione del pool massima. Pertanto può non riuscire a soddisfare richieste di creazione di oggetti generando un'eccezione di timeout.  
@@ -22,13 +22,13 @@ In questo esempio viene illustrato come estendere Windows Communication Foundati
  I dispatcher del canale e dell'endpoint offrono estensibilità sul canale e sul contratto esponendo le varie proprietà che controllano il comportamento del dispatcher. La proprietà <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> consente inoltre di ispezionare, modificare e personalizzare la modalità di autenticazione dei certificati. Questo esempio si concentra sulla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> che punta all'oggetto che fornisce le istanze della classe del servizio.  
   
 ## <a name="the-iinstanceprovider"></a>Provider di istanze  
- In WCF, il dispatcher crea istanze della classe del servizio usando un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>oggetto che implementa l' <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaccia. Questa interfaccia ha tre metodi:  
+ In WCF, il dispatcher crea istanze della classe del servizio usando un <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, che implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Questa interfaccia ha tre metodi:  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Quando un messaggio arriva, il dispatcher chiama <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> il metodo per creare un'istanza della classe del servizio per elaborare il messaggio. La frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Ad esempio, se la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> è impostata su <xref:System.ServiceModel.InstanceContextMode.PerCall> viene creata una nuova istanza della classe del servizio per elaborare ogni messaggio che arriva, pertanto il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> viene chiamato ogni qualvolta arriva un messaggio.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Quando un messaggio arriva, il dispatcher chiama il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> per creare un'istanza della classe del servizio per elaborare il messaggio. La frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Ad esempio, se la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> è impostata su <xref:System.ServiceModel.InstanceContextMode.PerCall> viene creata una nuova istanza della classe del servizio per elaborare ogni messaggio che arriva, pertanto il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> viene chiamato ogni qualvolta arriva un messaggio.  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%29>: Si tratta di un metodo identico al metodo precedente, ad eccezione del fatto che viene richiamato quando non è presente alcun argomento del messaggio.  
   
-- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Quando è trascorso il ciclo di vita di un'istanza del servizio, il <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> Dispatcher chiama il metodo. Solo per il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: Quando è trascorso il ciclo di vita di un'istanza del servizio, il dispatcher chiama il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>. Solo per il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la frequenza delle chiamate a questo metodo è determinata dalla proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Pool di oggetti  
  Un'implementazione personalizzata della classe <xref:System.ServiceModel.Dispatcher.IInstanceProvider> fornisce la semantica del pool di oggetti necessaria per un servizio. Pertanto, questo esempio ha un tipo `ObjectPoolingInstanceProvider` che fornisce un'implementazione personalizzata della classe <xref:System.ServiceModel.Dispatcher.IInstanceProvider> per il pool. Quando `Dispatcher` chiama il metodo <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, anziché creare una nuova istanza, l'implementazione personalizzata cerca un oggetto esistente in un pool in memoria che viene restituito se disponibile. In caso contrario, viene creato un nuovo oggetto. Nell'esempio di codice seguente viene illustrata l'implementazione di `GetInstance`.  
@@ -80,7 +80,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
 }  
 ```  
   
- Il `ReleaseInstance` metodo fornisce una funzionalità di pulizia dell'inizializzazione. Normalmente il pool gestisce un numero minimo di oggetti per la durata del pool. Ci possono essere, tuttavia, periodi di utilizzo eccessivo che richiedono la creazione di oggetti aggiuntivi nel pool per raggiungere il limite massimo specificato nella configurazione. Successivamente, quando il pool diviene meno attivo, quegli oggetti in surplus possono divenire un sovraccarico aggiuntivo. Pertanto, quando il conteggio `activeObjectsCount` si azzera, viene avviato un timer, precedentemente inattivo, che inizia ed esegue un ciclo di pulizia.  
+ Il metodo `ReleaseInstance` fornisce una funzionalità di pulizia dell'inizializzazione. Normalmente il pool gestisce un numero minimo di oggetti per la durata del pool. Ci possono essere, tuttavia, periodi di utilizzo eccessivo che richiedono la creazione di oggetti aggiuntivi nel pool per raggiungere il limite massimo specificato nella configurazione. Successivamente, quando il pool diviene meno attivo, quegli oggetti in surplus possono divenire un sovraccarico aggiuntivo. Pertanto, quando il conteggio `activeObjectsCount` si azzera, viene avviato un timer, precedentemente inattivo, che inizia ed esegue un ciclo di pulizia.  
   
 ## <a name="adding-the-behavior"></a>Aggiunta del comportamento.  
  Le estensioni del livello del dispatcher vengono collegate utilizzando i comportamenti seguenti:  
@@ -101,11 +101,11 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  Questo esempio utilizza un attributo personalizzato. Quando la classe <xref:System.ServiceModel.ServiceHost> viene costruita esamina gli attributi utilizzati nella definizione del tipo del servizio e aggiunge i comportamenti disponibili alla raccolta di comportamenti della descrizione del servizio.  
   
- L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato da WCF quando è <xref:System.ServiceModel.ServiceHost> in corso l'inizializzazione di. I parametri seguenti vengono passati in questo metodo:  
+ L'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior> contiene tre metodi: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> e <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> viene utilizzato per assicurare che il comportamento possa essere applicato al servizio. In questo esempio, l'implementazione assicura che il servizio non sia configurato con <xref:System.ServiceModel.InstanceContextMode.Single>. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> viene utilizzato per configurare le associazioni del servizio. Non è obbligatorio in questo scenario. Il metodo <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> viene utilizzato per configurare i dispatcher del servizio. Questo metodo viene chiamato da WCF quando è in corso l'inizializzazione di <xref:System.ServiceModel.ServiceHost>. I parametri seguenti vengono passati in questo metodo:  
   
 - `Description`: Questo argomento fornisce la descrizione del servizio per l'intero servizio. Può essere utilizzato per controllare dati della descrizione sugli endpoint del servizio, contratti, associazioni e altri dati.  
   
-- `ServiceHostBase`: Questo argomento fornisce l' <xref:System.ServiceModel.ServiceHostBase> oggetto attualmente in fase di inizializzazione.  
+- `ServiceHostBase`: Questo argomento fornisce il <xref:System.ServiceModel.ServiceHostBase> che è attualmente in fase di inizializzazione.  
   
  Nell'implementazione personalizzata della classe <xref:System.ServiceModel.Description.IServiceBehavior> viene creata una nuova istanza di `ObjectPoolingInstanceProvider` e viene assegnata alla proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> in ogni <xref:System.ServiceModel.Dispatcher.DispatchRuntime> in ServiceHostBase.  
   
@@ -142,10 +142,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
             if ((this.throttlingBehavior == null) &&   
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
-                if (throttle == null)  
-                {  
-                    throttle = cd.ServiceThrottle;  
-                }  
+                throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
                     throw new   

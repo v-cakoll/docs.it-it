@@ -2,12 +2,12 @@
 title: Uso di DataContractSerializer e DataContractResolver per fornire la funzionalità di NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039869"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351659"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Uso di DataContractSerializer e DataContractResolver per fornire la funzionalità di NetDataContractSerializer
 Questo esempio dimostra come l'utilizzo di <xref:System.Runtime.Serialization.DataContractSerializer> con un <xref:System.Runtime.Serialization.DataContractResolver> appropriato offra la stessa funzionalità di <xref:System.Runtime.Serialization.NetDataContractSerializer>. Questo esempio mostra come creare il <xref:System.Runtime.Serialization.DataContractResolver> appropriato e come aggiungerlo a <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 

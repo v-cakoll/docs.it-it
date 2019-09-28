@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757495"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353717"
 ---
 # <a name="names-of-type-members"></a>Nomi di membri dei tipi
 I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e campi. Le sezioni seguenti illustrano le linee guida per assegnare nomi ai membri dei tipi.  
@@ -28,7 +28,7 @@ I tipi sono costituiti da membri: metodi, proprietà, eventi, costruttori e camp
   
  **✓ DO** Assegnare ai metodi nomi corrispondenti a verbi o frasi verbali.  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -56,7 +56,7 @@ public class String {
   
  Ad esempio, la proprietà seguente ottiene e imposta correttamente un valore di enumerazione denominato `Color`, pertanto è denominata `Color`:  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -99,7 +99,7 @@ public class Control {
   
  *Parti protette da copyright © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson Education, Inc. dal [linee guida di progettazione di Framework: Convenzioni, linguaggi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 da Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ @no__t 0Reprinted per autorizzazione di Pearson Education, Inc. dalle linee guida di progettazione di [Framework: Convenzioni, idiomi e modelli per le librerie .NET riutilizzabili, 2a edizione @ no__t-0 di Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo Microsoft Windows. *  
   
 ## <a name="see-also"></a>Vedere anche
 

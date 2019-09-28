@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608388"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353758"
 ---
 # <a name="value-types-c-reference"></a>Tipi valore (Riferimenti per C#)
 
@@ -32,7 +32,7 @@ Tutti i tipi valore sono derivati in modo implicito da <xref:System.ValueType?di
 
 A differenza dei tipi riferimento, non è possibile derivare un nuovo tipo da un tipo valore. Tuttavia, come i tipi riferimento, gli struct possono implementare interfacce.
 
-Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Le variabili dei [tipi nullable](../../programming-guide/nullable-types/index.md) corrispondenti possono invece essere `null`.
+Le variabili del tipo valore non possono essere `null` per impostazione predefinita. Tuttavia, le variabili dei [tipi valore Nullable](../../programming-guide/nullable-types/index.md) corrispondenti possono essere `null`.
 
 Ogni tipo valore ha un costruttore senza parametri implicito che inizializza il valore predefinito del tipo. Per informazioni sui valori predefiniti dei tipi valore, vedere [Tabella dei valori predefiniti](default-values-table.md).
 
@@ -109,4 +109,4 @@ Per informazioni sulla formattazione dell'output dei tipi numerici, vedere [Tabe
 - [Parole chiave di C#](index.md)
 - [Tipi](types.md)
 - [Tipi riferimento](reference-types.md)
-- [Tipi nullable](../../programming-guide/nullable-types/index.md)
+- [Tipi valore nullable](../../programming-guide/nullable-types/index.md)

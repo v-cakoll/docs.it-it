@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588404"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392164"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 
@@ -46,11 +46,11 @@ Il compilatore usa le informazioni sul tipo per assicurarsi che tutte le operazi
 > [!NOTE]
 > Gli sviluppatori C e C++ devono tenere presente che, in C#, [bool](../../language-reference/keywords/bool.md) non è convertibile in [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
-Il compilatore incorpora le informazioni sul tipo nel file eseguibile come metadati. Il Common Language Runtime (CLR) usa i metadati in fase di esecuzione per garantire una maggiore indipendenza dai tipi quando alloca e recupera la memoria.
+Il compilatore incorpora le informazioni sul tipo nel file eseguibile come metadati. Common Language Runtime (CLR) usa i metadati in fase di esecuzione per garantire ulteriormente l'indipendenza dai tipi quando alloca e recupera la memoria.
 
-### <a name="specifying-types-in-variable-declarations"></a>Definizione dei tipi nelle dichiarazioni di variabile
+### <a name="specifying-types-in-variable-declarations"></a>Specifica dei tipi nelle dichiarazioni di variabile
 
-Quando si dichiara una variabile o una costante in un programma, è necessario specificarne il tipo oppure usare la parola chiave [var](../../language-reference/keywords/var.md) per consentire al compilatore di dedurre il tipo. L'esempio seguente illustra alcune dichiarazioni di variabili che usano sia tipi numerici incorporati sia tipi complessi definiti dall'utente:
+Quando si dichiara una variabile o costante in un programma, è necessario specificarne il tipo oppure usare la parola chiave [var](../../language-reference/keywords/var.md) per consentire al compilatore di dedurre il tipo. L'esempio seguente illustra alcune dichiarazioni di variabili che usano sia tipi numerici incorporati sia tipi complessi definiti dall'utente:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
@@ -157,7 +157,7 @@ Poiché i valori letterali sono tipizzati e tutti i tipi derivano in ultima ista
 
 ## <a name="generic-types"></a>Tipi generici
 
-Un tipo può essere dichiarato con uno o più *parametri di tipo* che agiscono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Tali tipi sono definiti *tipi generici*. Ad esempio, il tipo <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> di .NET ha un solo parametro a cui, per convenzione, viene assegnato il nome *T*. Quando si crea un'istanza del tipo, si specifica il tipo degli oggetti che saranno contenuti nell'elenco, ad esempio, string:
+Un tipo può essere dichiarato con uno o più *parametri di tipo* che fungono da segnaposto per il tipo effettivo (*tipo concreto*) che il codice client specifica quando si crea un'istanza del tipo. Tali tipi sono definiti *tipi generici*. Ad esempio, il tipo <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> di .NET ha un solo parametro a cui, per convenzione, viene assegnato il nome *T*. Quando si crea un'istanza del tipo, si specifica il tipo degli oggetti che saranno contenuti nell'elenco, ad esempio, string:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 L'uso del parametro di tipo consente di riutilizzare la stessa classe per contenere qualsiasi tipo di elemento senza dover convertire ogni elemento in [object](../../language-reference/keywords/object.md). Le classi di raccolte generiche sono definite *raccolte fortemente tipizzate* perché il compilatore conosce il tipo specifico degli elementi della raccolta e può generare un errore in fase di compilazione se, ad esempio, si prova ad aggiungere un numero intero all'oggetto `stringList` nell'esempio precedente. Per altre informazioni, vedere [Generics](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Tipi impliciti, tipi anonimi e tipi nullable
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipi impliciti, tipi anonimi e tipi di valore Nullable
 
 Come indicato in precedenza, è possibile tipizzare una variabile locale (ma non membri di classe) in modo implicito usando la parola chiave [var](../../language-reference/keywords/var.md). Alla variabile viene comunque assegnato un tipo in fase di compilazione, specificato dal compilatore. Per altre informazioni, vedere [Variabili locali tipizzate in modo implicito](../classes-and-structs/implicitly-typed-local-variables.md).
 
 In alcuni casi non è consigliabile creare un tipo denominato per set semplici di valori correlati che non si intende archiviare o passare fuori dai limiti del metodo. A questo scopo è possibile creare *tipi anonimi*. Per altre informazioni, vedere [Tipi anonimi](../classes-and-structs/anonymous-types.md).
 
-I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). In CTS i tipi nullable sono istanze del tipo di struct generico <xref:System.Nullable%601?displayProperty=nameWithType>. I tipi nullable sono particolarmente utili quando si passano dati da e verso database in cui possono essere presenti valori numerici null. Per altre informazioni, vedere [Tipi nullable](../nullable-types/index.md).
+I tipi valore comuni non possono avere un valore [null](../../language-reference/keywords/null.md). È tuttavia possibile creare tipi valore nullable aggiungendo `?` dopo il tipo. Ad esempio, `int?` è un tipo `int` che può avere anche il valore [null](../../language-reference/keywords/null.md). I tipi di valore nullable sono istanze del tipo di struct generico <xref:System.Nullable%601?displayProperty=nameWithType>. I tipi di valore nullable sono particolarmente utili quando si passano dati da e verso database in cui i valori numerici potrebbero essere null. Per altre informazioni, vedere [tipi di valore Nullable](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Sezioni correlate
 

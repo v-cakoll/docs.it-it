@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Intercettare gli errori (Visual Basic) di analisi'
+title: 'Procedura: Rileva errori di analisi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352937"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Procedura: Intercettare gli errori (Visual Basic) di analisi
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Procedura: Rileva errori di analisi (Visual Basic)
 In questo argomento viene illustrato come rilevare XML non corretto o non valido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene implementato usando <xref:System.Xml.XmlReader>. Se a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene passato XML non corretto o non valido, la classe <xref:System.Xml.XmlReader> sottostante genererà un'eccezione. I vari metodi che analizzano il codice XML, ad esempio <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, non intercettano l'eccezione, che può quindi essere intercettata dall'applicazione.  
@@ -35,7 +35,7 @@ End Try
   
  Quando viene eseguito, questo codice genera la seguente eccezione:  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
@@ -43,4 +43,4 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Analisi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analisi di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

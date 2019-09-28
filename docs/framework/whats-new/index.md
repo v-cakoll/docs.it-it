@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374456"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353393"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -104,17 +104,14 @@ Gli endpoint di integrità vengono ampiamente usati tramite gli strumenti di orc
 
 Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazioni di integrità del servizio WCF:
 
-- Tramite codice. Ad esempio:
+- Tramite codice. Esempio:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
                      new Uri("http://contoso:81/Service1"));
   ServiceHealthBehavior healthBehavior =
       host.Description.Behaviors.Find<ServiceHealthBehavior>();
-  if (healthBehavior == null)
-  {
-     healthBehavior = new ServiceHealthBehavior();
-  }
+  healthBehavior ??= new ServiceHealthBehavior();
   host.Description.Behaviors.Add(healthBehavior);
   ```
 
@@ -129,7 +126,7 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Tramite un file di configurazione. Ad esempio:
+- Tramite un file di configurazione. Esempio:
 
   ```xml
   <behaviors>
@@ -141,7 +138,7 @@ Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazi
   </behaviors>
   ```
 
-È possibile eseguire una query sullo stato di integrità di un servizio usando i parametri di query, ad esempio `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`. Un codice di risposta HTTP può inoltre essere specificato per ogni parametro di query. Se si omette il codice di risposta HTTP per un parametro di query, per impostazione predefinita viene usato un codice di risposta HTTP 503. Ad esempio:
+È possibile eseguire una query sullo stato di integrità di un servizio usando i parametri di query, ad esempio `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`. Un codice di risposta HTTP può inoltre essere specificato per ogni parametro di query. Se si omette il codice di risposta HTTP per un parametro di query, per impostazione predefinita viene usato un codice di risposta HTTP 503. Esempio:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -257,7 +254,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-I metodi <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> consentono di generare nuove chiavi <xref:System.Security.Cryptography.DSA> o <xref:System.Security.Cryptography.RSA> con dimensioni chiave specifiche. Ad esempio:
+I metodi <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> consentono di generare nuove chiavi <xref:System.Security.Cryptography.DSA> o <xref:System.Security.Cryptography.RSA> con dimensioni chiave specifiche. Esempio:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -472,7 +469,7 @@ NET Framework 4.7.2 aggiunge il supporto per Always Encrypted basato su enclave.
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, che specifica i parametri di attestazione usati da SQL Server per ottenere le informazioni necessarie per l'esecuzione di un protocollo di attestazione particolare.
 
-Il file di configurazione dell'applicazione specifica quindi un'implementazione concreta della classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> astratta, che offre la funzionalità per il provider dell'enclave. Ad esempio:
+Il file di configurazione dell'applicazione specifica quindi un'implementazione concreta della classe <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> astratta, che offre la funzionalità per il provider dell'enclave. Esempio:
 
 ```xml
 <configuration>
@@ -655,7 +652,7 @@ ASP.NET elabora le richieste in una pipeline predefinita che include 23 eventi. 
 
 **Opzioni di hash SHA-2 per le credenziali di autenticazione di ASP.NET Forms**
 
-In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori di archiviare le credenziali utente con password con hash in file di configurazione usando MD5 o SHA1. A partire da .NET Framework 4.7.1, ASP.NET supporta anche nuove opzioni di hash SHA-2 sicure come SHA256, SHA384 e SHA512. SHA1 resta l'opzione predefinita ed è possibile definire un algoritmo hash non predefinito nel file di configurazione Web. Ad esempio:
+In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori di archiviare le credenziali utente con password con hash in file di configurazione usando MD5 o SHA1. A partire da .NET Framework 4.7.1, ASP.NET supporta anche nuove opzioni di hash SHA-2 sicure come SHA256, SHA384 e SHA512. SHA1 resta l'opzione predefinita ed è possibile definire un algoritmo hash non predefinito nel file di configurazione Web. Esempio:
 
 ```xml
 <system.web>
@@ -846,7 +843,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| Name                                 | Valore                                     |
+| nome                                 | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -970,7 +967,7 @@ Per gestire questo aspetto in .NET Framework 4.6.2 sono stati aggiunti i tre met
 
 La libreria di crittografia di Windows (CNG) ha aggiunto il supporto per l'archiviazione delle chiavi simmetriche persistenti e l'uso delle chiavi simmetriche archiviate nell'hardware e .NET Framework 4.6.2 ha reso possibile l'uso di questa funzionalità da parte degli sviluppatori.  Poiché le nozioni di nome della chiave e provider di chiavi sono specifiche dell'implementazione, questa funzionalità richiede l'uso del costruttore dei tipi di implementazione concreti anziché della modalità factory preferita, ad esempio la chiamata a `Aes.Create`.
 
-Il supporto per la crittografia simmetrica con chiave persistente esiste per gli algoritmi AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Ad esempio:
+Il supporto per la crittografia simmetrica con chiave persistente esiste per gli algoritmi AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Esempio:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)

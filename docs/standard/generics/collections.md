@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948918"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353952"
 ---
 # <a name="generic-collections-in-net"></a>Raccolte generiche in .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948918"
  La struttura generica <xref:System.Nullable%601> consente di usare tipi di valore come se potessero essere impostati su `null`. Può risultare utile quando si usano query di database, dove possono mancare campi che contengono tipi di valore. Il parametro di un tipo generico può essere qualsiasi tipo di valore.  
   
 > [!NOTE]
-> In C# e Visual Basic non è necessario usare <xref:System.Nullable%601> in modo esplicito perché questo linguaggio dispone della sintassi per i tipi nullable. Vedere [Tipi nullable (Guida per programmatori C#)](../../csharp/programming-guide/nullable-types/index.md) e [Tipi di valori nullable (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> In C# e Visual Basic non è necessario usare <xref:System.Nullable%601> in modo esplicito perché questo linguaggio dispone della sintassi per i tipi nullable. Vedere [tipi di valore NullableC# (Guida per programmatori)](../../csharp/programming-guide/nullable-types/index.md) e [tipi di valore Nullable (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  La struttura generica <xref:System.ArraySegment%601> consente di delimitare un intervallo di elementi in una matrice unidimensionale in base zero di qualsiasi tipo. Il parametro di tipo generico è il tipo degli elementi della matrice.  
   

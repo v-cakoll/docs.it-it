@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353912"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -49,7 +49,7 @@ Per assicurare questo approccio naturale, il CCW crea interfacce COM tradizional
 
 Oltre a esporre le interfacce che sono esplicitamente implementate da una classe dell'ambiente gestito, il runtime .NET fornisce le implementazioni delle interfacce COM elencate nella tabella seguente per conto dell'oggetto. Una classe .NET può eseguire l'override del comportamento predefinito fornendo la propria implementazione di queste interfacce. Il runtime, tuttavia, fornisce sempre l'implementazione delle interfacce **IUnknown** e **IDispatch**.
 
-|Interfaccia|DESCRIZIONE|
+|Interfaccia|Descrizione|
 |---------------|-----------------|
 |**IDispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|
@@ -60,7 +60,7 @@ Oltre a esporre le interfacce che sono esplicitamente implementate da una classe
 
  Le classi gestite possono anche fornire le interfacce COM descritte nella tabella che segue.
 
-|Interfaccia|DESCRIZIONE|
+|Interfaccia|Descrizione|
 |---------------|-----------------|
 |Interfaccia della classe (\_*nomeclasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|
@@ -100,7 +100,7 @@ public class Mammal
 
 Il client COM può ottenere un puntatore a un'interfaccia di classe denominata `_Mammal`. In .NET Framework è possibile usare l'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) per generare una libreria dei tipi contenente la definizione dell'interfaccia `_Mammal`. L'utilità di esportazione della libreria dei tipi non è supportata in .NET Core. Se la classe `Mammal` implementa una o più interfacce, queste appariranno sotto la coclasse.
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {

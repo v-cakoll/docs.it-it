@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946449"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353163"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Data Sample
 Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali dati in raccolte in memoria di clienti, prodotti, ordini e dettagli di ordini. Per sperimentare ulteriormente PLINQ, è possibile incollare esempi di codice da altri argomenti nel codice riportato in questo argomento e richiamarlo dal metodo `Main`. È anche possibile usare questi dati con query PLINQ personalizzate.  
@@ -35,7 +35,7 @@ Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali
   
 4. Premere F5 per verificare che il progetto venga compilato ed eseguito correttamente. Nella finestra della console verrà visualizzato l'output seguente.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +46,9 @@ Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Dati  
+## <a name="data"></a>Data  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

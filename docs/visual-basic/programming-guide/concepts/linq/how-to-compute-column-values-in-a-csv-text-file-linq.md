@@ -1,22 +1,22 @@
 ---
-title: 'Procedura: Calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)'
+title: 'Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592997"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351748"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Procedura: Calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (Visual Basic)
 In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
   
 ### <a name="to-create-the-source-file"></a>Per creare il file di origine  
   
 1. Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,7 +143,7 @@ End Class
  La query funziona usando il metodo <xref:System.String.Split%2A> per convertire ogni riga di testo in una matrice. Ogni elemento della matrice rappresenta una colonna. Infine, il testo in ogni colonna viene convertito in una rappresentazione numerica. Se il file è un file con valori delimitati da tabulazioni, aggiornare solo l'argomento nel metodo `Split` in `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
-Creare un progetto di applicazione console VB.NET, con un `Imports` istruzione dello spazio dei nomi System. Linq.
+Creare un progetto di applicazione console VB.NET con un'istruzione `Imports` per lo spazio dei nomi System. Linq.
   
 ## <a name="see-also"></a>Vedere anche
 

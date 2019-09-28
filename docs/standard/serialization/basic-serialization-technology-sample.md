@@ -2,12 +2,12 @@
 title: Esempio di tecnologia di serializzazione di base
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663777"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353148"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
 
@@ -25,7 +25,7 @@ Per ulteriori informazioni sulla serializzazione, vedere i commenti nei file di 
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Per compilare l'esempio utilizzando Visual Studio
 
-1. Aprire Esplora File e passare a una delle sottodirectory specifiche del linguaggio per il codice di esempio.
+1. Aprire Esplora file e passare a una delle sottodirectory specifiche del linguaggio per l'esempio.
 
 2. Fare doppio clic sull'icona relativa a SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, a seconda del linguaggio di programmazione che si desidera utilizzare, per aprire il file in Visual Studio.
 
@@ -48,7 +48,7 @@ L'applicazione di esempio accetta parametri della riga di comando che indicano i
 
 Di seguito è riportato un esempio:
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Per deserializzare il file **Test.xml** dell'esempio precedente, usare i paramet
 
 Di seguito è riportato un esempio:
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Nei due esempi precedenti, la lettera "x" nell'opzione della riga di comando ind
 
 Di seguito è riportato un esempio:
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 

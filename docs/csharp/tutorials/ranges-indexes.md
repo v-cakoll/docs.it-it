@@ -1,18 +1,18 @@
 ---
 title: Esplorare intervalli di dati con indici e intervalli
 description: Questa esercitazione avanzata descrive come esplorare i dati usando indici e intervalli per esaminare le sezioni di un set di dati sequenziale.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117832"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391960"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
-Gli intervalli e gli indici forniscono una sintassi concisa per l'accesso a singoli elementi o <xref:System.Array>intervalli <xref:System.String>in <xref:System.Span%601>,, <xref:System.ReadOnlySpan%601>o. Queste funzionalità offrono una sintassi più concisa e chiara per accedere a elementi singoli o a intervalli di elementi in una sequenza.
+Gli intervalli e gli indici forniscono una sintassi concisa per l'accesso a singoli elementi o intervalli in una sequenza.
 
 In questa esercitazione si imparerà a:
 
@@ -75,7 +75,15 @@ L'esempio seguente illustra molti dei motivi per cui sono state fatte tali scelt
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
-## <a name="scenarios-for-indices-and-ranges"></a>Scenari per indici e intervalli
+## <a name="type-support-for-indices-and-ranges"></a>Supporto dei tipi per gli indici e gli intervalli
+
+Se un tipo fornisce un [indicizzatore](../programming-guide/indexers/index.md) con un parametro <xref:System.Index> o <xref:System.Range>, supporta in modo esplicito gli indici o gli intervalli rispettivamente.
+
+Un tipo può essere **conteggiato** se dispone di una proprietà denominata `Length` o `Count` con un getter accessibile e un tipo restituito `int`. Un tipo conteggiabile che non supporta in modo esplicito gli indici o gli intervalli può fornire un supporto implicito. Per ulteriori informazioni, vedere le sezioni supporto implicito degli [indici](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [supporto per intervalli impliciti](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) della [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/ranges.md).
+
+I tipi .NET seguenti, ad esempio, supportano sia gli indici che gli intervalli: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> e <xref:System.ReadOnlySpan%601>. Il <xref:System.Collections.Generic.List%601> supporta gli indici, ma non supporta gli intervalli.
+
+## <a name="scenarios-for-indices-and-ranges"></a>Scenari per gli indici e gli intervalli
 
 Quando si vuole analizzare un intervallo secondario di un'intera sequenza, si usano spesso intervalli e indici. La nuova sintassi è più chiara e consente di capire meglio la funzione dell'intervallo secondario. La funzione locale `MovingAverage` accetta un <xref:System.Range> come argomento. In seguito il metodo enumera solo quell'intervallo durante il calcolo dei valori minimo e massimo e della media. Provare a includere il codice seguente nel progetto:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
-ms.translationtype: HT
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743843"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392460"
 ---
 # <a name="structs-c-programming-guide"></a>Struct (Guida per programmatori C#)
 
@@ -29,14 +29,14 @@ Gli struct condividono la maggior parte della sintassi come classi. Il nome dell
 - Gli struct possono dichiarare costruttori con parametri.
 - Uno struct non può ereditare da un altro struct o da una classe e non può essere la base di una classe. Tutti gli struct ereditano direttamente da <xref:System.ValueType>, che eredita da <xref:System.Object>.  
 - Uno struct può implementare le interfacce.
-- Uno struct non può essere `null` e non è possibile assegnare `null` a una variabile struct, a meno che la variabile non sia dichiarata come tipo nullable.
+- Uno struct non può essere `null` e non è possibile assegnare una variabile struct `null` a meno che la variabile non sia dichiarata come tipo di valore Nullable.
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
 - [Classi e struct](index.md)
 - [Classi](classes.md)
-- [Tipi nullable](../nullable-types/index.md)
+- [Tipi valore nullable](../nullable-types/index.md)
 - [Nomi di identificatore](../inside-a-program/identifier-names.md)
 - [Uso di struct](using-structs.md)
 - [Procedura: Differenza tra il passaggio di uno struct e il passaggio del riferimento a una classe a un metodo](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)

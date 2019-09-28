@@ -1,67 +1,71 @@
 ---
-title: 'Esercitazione: Ripetere il training del classificatore di immagini TensorFlow - apprendimento trasferito'
-description: Informazioni su come ripetere il training di un modello TensorFlow di classificazione delle immagini con l'apprendimento trasferito e ML.NET. Il modello originale è stato sottoposto a training per classificare le singole immagini. Dopo la ripetizione del training, il nuovo modello organizza le immagini in categorie ampie.
-ms.date: 07/09/2019
+title: 'Esercitazione: Generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare'
+description: Informazioni su come trasferire le informazioni da un modello TensorFlow esistente in un nuovo modello di classificazione delle immagini ML.NET. Il modello TensorFlow è stato sottoposto a training per classificare le immagini in un centinaio di categorie. Il modello ML.NET usa l'apprendimento del trasferimento per classificare le immagini in un minor numero di categorie più ampie.
+ms.date: 09/26/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+author: natke
+ms.author: nakersha
+ms.openlocfilehash: 28d8c18721bd353e961284935758a87679c8c8e0
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054072"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353688"
 ---
-# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Esercitazione: Ripetere il training di un classificatore di immagini TensorFlow con l'apprendimento trasferito e ML.NET
+# <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: Generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare
 
-Informazioni su come ripetere il training di un modello TensorFlow di classificazione delle immagini con l'apprendimento trasferito e ML.NET. Il modello originale è stato sottoposto a training per classificare le singole immagini. Dopo la ripetizione del training, il nuovo modello organizza le immagini in categorie ampie. 
+Informazioni su come trasferire le informazioni da un modello TensorFlow esistente in un nuovo modello di classificazione delle immagini ML.NET.
 
-Il training di un modello di [classificazione delle immagini](https://en.wikipedia.org/wiki/Outline_of_object_recognition) da zero richiede l'impostazione di milioni di parametri, di una considerevole quantità di dati di training con etichetta e di un notevole importo di risorse di calcolo (centinaia di ore di GPU). Anche se non è così efficace come il training di un modello personalizzato da zero, l'apprendimento trasferito consente di semplificare questo processo usando migliaia di immagini anziché milioni di immagini con etichetta e di creare un modello personalizzato abbastanza rapidamente (entro un'ora in un computer senza GPU).
+Il modello TensorFlow è stato sottoposto a training per classificare le immagini in un centinaio di categorie. Il modello ML.NET utilizza parte del modello TensorFlow nella relativa pipeline per eseguire il training di un modello per classificare le immagini in 3 categorie.
+
+Il training di un modello di [classificazione delle immagini](https://en.wikipedia.org/wiki/Outline_of_object_recognition) da zero richiede l'impostazione di milioni di parametri, di una considerevole quantità di dati di training con etichetta e di un notevole importo di risorse di calcolo (centinaia di ore di GPU). Anche se non è così efficace come il training di un modello personalizzato da zero, l'apprendimento trasferito consente di semplificare questo processo usando migliaia di immagini anziché milioni di immagini con etichetta e di creare un modello personalizzato abbastanza rapidamente (entro un'ora in un computer senza GPU). Questa esercitazione ridimensiona ulteriormente il processo, usando solo una decina di immagini di training.
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
 >
 > * Informazioni sul problema
-> * Riutilizzare e ottimizzare il modello con training preliminare
-> * Classificare le immagini
-
-## <a name="what-is-transfer-learning"></a>Che cos'è l'apprendimento trasferito?
-
-Sarebbe bello poter riutilizzare un modello che è già stato sottoposto a training per risolvere un problema analogo e rieseguire il training di tutti o di alcuni livelli di tale modello per risolvere un problema riscontrato. Questa tecnica che prevede il riutilizzo di parte di un modello già sottoposto a training per crearne uno nuovo è nota come [apprendimento trasferito](https://en.wikipedia.org/wiki/Transfer_learning).
-
-## <a name="image-classification-sample-overview"></a>Panoramica dell'esempio di classificazione delle immagini
-
-L'esempio è un'applicazione console che usa ML.NET per creare un classificatore di immagini riutilizzando un modello con training preliminare per classificare le immagini con una piccola quantità di dati di training.
+> * Incorporare il modello di TensorFlow con training preliminare nella pipeline ML.NET
+> * Eseguire il training e la valutazione del modello ML.NET
+> * Classificare un'immagine di test
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF). Si noti che per impostazione predefinita il progetto .NET per questa esercitazione è configurato per .NET Core 2.2.
 
+## <a name="what-is-transfer-learning"></a>Che cos'è l'apprendimento trasferito?
+
+L'apprendimento del trasferimento è il processo di utilizzo delle informazioni acquisite durante la risoluzione di un problema e l'applicazione a un problema diverso ma correlato.
+
+Per questa esercitazione si userà parte di un modello TensorFlow con training per classificare le immagini in migliaia di categorie, in un modello ML.NET che classifica le immagini in 3 categorie.
+
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato. 
+* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
 
-* Pacchetto NuGet Microsoft.ML 1.0.0
-* Pacchetto NuGet Microsoft.ML.ImageAnalytics 1.0.0
-* Pacchetto NuGet Microsoft.ML.TensorFlow 0.12.0
+* Pacchetto NuGet Microsoft.ML 1.3.1
+* Pacchetto NuGet Microsoft. ML. ImageAnalytics 1.3.1
+* Pacchetto NuGet Microsoft. ML. TensorFlow 1.3.1
 
 * [File ZIP della directory assets dell'esercitazione](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
 * [Modello di Machine Learning InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
-## <a name="select-the-appropriate-machine-learning-task"></a>Selezionare l'attività di apprendimento automatico appropriata
+## <a name="select-the-right-machine-learning-task"></a>Selezionare l'attività di Machine Learning corretta
+
+### <a name="deep-learning"></a>Deep Learning
 
 Il [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) è un subset di Machine Learning che sta rivoluzionando aree quali Visione artificiale e Riconoscimento vocale.
 
 I modelli di Deep Learning vengono sottoposti a training con set di grandi dimensioni di [dati con etichetta](https://en.wikipedia.org/wiki/Labeled_data) e [reti neurali](https://en.wikipedia.org/wiki/Artificial_neural_network) contenenti più livelli di apprendimento. Il Deep Learning:
 
 * Offre prestazioni ottimali per alcune attività come Visione artificiale.
+* Richiede enormi quantità di dati di training.
 
-* Assicura buone prestazioni con quantità di dati molto elevate.
-
-La classificazione delle immagini è un'attività comune di Machine Learning che consente di classificare automaticamente le immagini in più categorie, ad esempio tramite:
+La classificazione delle immagini è un'attività comune Machine Learning che consente di classificare automaticamente le immagini in categorie come:
 
 * Rilevamento di un volto umano in un'immagine.
-* Rilevamento di cani o gatti.
+* Rilevamento di gatti e cani.
 
- Oppure, come nelle immagini seguenti, determinando se un'immagine appartiene alla categoria dei cibi, dei giocattoli o degli elettrodomestici:
+ O come nelle immagini seguenti, determinare se un'immagine è un (n) cibo, giocattolo o Appliance:
 
 ![immagine di una pizza](./media/image-classification/220px-Pepperoni_pizza.jpg)
 ![immagine di un orsetto](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
@@ -74,31 +78,29 @@ La classificazione delle immagini è un'attività comune di Machine Learning che
 > * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" di [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - Fotografia autoprodotta, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=48166.
 > * "193px-Broodrooster.jpg" di [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - Opera propria, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27403
 
-L'apprendimento trasferito prevede alcune strategie, come la *ripetizione del training di tutti i livelli* e il *penultimo livello*. Questa esercitazione illustrerà e spiegherà come usare la *strategia del penultimo livello*. La *strategia del penultimo livello* riutilizza un modello che è già stato sottoposto a training per risolvere un problema specifico. Questa strategia prevede quindi la ripetizione del training del livello finale del modello per consentire la risoluzione di un nuovo problema. Il riutilizzo del modello già sottoposto a training nell'ambito del nuovo modello comporterà un risparmio significativo di tempo e risorse.
-
-Il modello di classificazione delle immagini riutilizza il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip), un modello di riconoscimento delle immagini ampiamente diffuso sottoposto a training con il set di dati `ImageNet`, in cui il modello TensorFlow prova a classificare intere immagini in migliaia di classi, come "Umbrella", "Jersey" e "Dishwasher".
-
-`Inception v1 model` può essere classificato come una [rete neurale convoluzionale profonda](https://en.wikipedia.org/wiki/Convolutional_neural_network) e può ottenere prestazioni ragionevoli con attività di riconoscimento visivo complesse, uguagliando o superando le prestazioni umane in alcuni campi. Il modello/algoritmo è stato sviluppato da più ricercatori ed è basato sul whitepaper originale ["Rethinking the Inception Architecture for Computer Vision" a cura di Szegedy e altri autori](https://arxiv.org/abs/1512.00567).
-
-Poiché il `Inception model` è già stato sottoposto a training con migliaia di immagini diverse, contiene le [caratteristiche delle immagini](https://en.wikipedia.org/wiki/Feature_(computer_vision)) necessarie per la loro identificazione. I livelli delle caratteristiche delle immagini inferiori riconoscono caratteristiche semplici (come i contorni), mentre quelli più elevati riconoscono caratteristiche più complesse (come le forme). Il livello finale è sottoposto a training con un set di dati molto più piccolo perché si inizia con un modello con training preliminare che è già in grado di classificare le immagini. Dal momento che il modello consente di classificare più di due categorie, questo è un esempio di un [classificatore multiclasse](../resources/tasks.md#multiclass-classification). 
-
-`TensorFlow` è un popolare toolkit di Deep Learning e Machine Learning che consente il training delle reti neurali profonde (e i calcoli numerici generali) e viene implementato come `transformer` in ML.NET. Per questa esercitazione, viene usato per riutilizzare il `Inception model`.
-
-Come illustrato nel diagramma seguente, viene aggiunto un riferimento ai pacchetti NuGet ML.NET nelle applicazioni .NET Core o .NET Framework. Dietro le quinte, ML.NET include e fa riferimento alla libreria `TensorFlow` nativa che consente di scrivere codice che carica un file del modello `TensorFlow` esistente già sottoposto a training per l'assegnazione del punteggio.  
-
-![Diagramma dell'architettura ML.NET per la trasformazione TensorFlow](./media/image-classification/tensorflow-mlnet.png)
-
-Il `Inception model` viene sottoposto a training per classificare le immagini in migliaia di categorie, ma è necessario classificare le immagini in un set più piccolo di categorie limitate. Specificare la parte `transfer` di `transfer learning`. È possibile trasferire la capacità del `Inception model` di riconoscere e classificare le immagini alle nuove categorie limitate del classificatore di immagini personalizzato.  
-
- Si intende ripetere il training dell'ultimo livello di tale modello usando un set di tre categorie:
+Il `Inception model` è stato sottoposto a training per classificare le immagini in mille categorie. Tuttavia, per questa esercitazione, è necessario classificare le immagini in un set di categorie più piccolo e solo in quelle categorie. Specificare la parte `transfer` di `transfer learning`. È possibile trasferire la capacità del `Inception model` di riconoscere e classificare le immagini alle nuove categorie limitate del classificatore di immagini personalizzato.
 
 * Cibo
 * Giocattoli
 * Elettrodomestici
 
-Il livello usa un [algoritmo di regressione logistica multinomiale](https://en.wikipedia.org/wiki/Multinomial_logistic_regression) per trovare la categoria corretta nel minor tempo possibile. Questo algoritmo procede alla classificazione tramite l'uso delle probabilità per determinare la risposta, assegnando un valore uno alla categoria corretta e un valore zero alle altre.  
+Questa esercitazione usa il modello di apprendimento avanzato del [modello](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) TensorFlow, un modello di riconoscimento delle immagini più diffuso con training sul set di dati `ImageNet`. Il modello TensorFlow classifica intere immagini in mille classi, ad esempio "Umbrella", "Jersey" e "lavastoviglie".
 
-### <a name="dataset"></a>DataSet
+Poiché il `Inception model` è già stato sottoposto a training su migliaia di immagini diverse, internamente contiene le [funzionalità di immagine](https://en.wikipedia.org/wiki/Feature_(computer_vision)) necessarie per l'identificazione dell'immagine. Per eseguire il training di un nuovo modello con un numero di classi molto inferiore, è possibile utilizzare queste funzionalità di immagine interne nel modello.
+
+Come illustrato nel diagramma seguente, viene aggiunto un riferimento ai pacchetti NuGet ML.NET nelle applicazioni .NET Core o .NET Framework. Dietro le quinte, ML.NET include e fa riferimento alla libreria nativa `TensorFlow` che consente di scrivere codice per il caricamento di un file di modello `TensorFlow` con training esistente.
+
+![Diagramma dell'architettura ML.NET per la trasformazione TensorFlow](./media/image-classification/tensorflow-mlnet.png)
+
+### <a name="multiclass-classification"></a>Classificazione multiclasse
+
+Dopo aver usato il modello di Inception TensorFlow per estrarre le funzionalità adatte come input per un algoritmo di apprendimento automatico classico, viene aggiunto un [classificatore multiclasse](../resources/tasks.md#multiclass-classification)ml.NET.
+
+Il trainer specifico usato in questo caso è l' [algoritmo di regressione logistica multinomiale](https://en.wikipedia.org/wiki/Multinomial_logistic_regression).
+
+L'algoritmo implementato da questo trainer garantisce prestazioni ottimali in caso di problemi con un numero elevato di funzionalità, come nel caso di un modello di apprendimento avanzato che opera sui dati di immagine.
+
+### <a name="data"></a>Data
 
 Ci sono due origini dati: il file `.tsv` e i file di immagine.  Il file `tags.tsv` contiene due colonne: la prima è definita come `ImagePath` e la seconda è l'oggetto `Label` corrispondente all'immagine. Il file di esempio seguente non ha una riga di intestazione e ha l'aspetto seguente:
 
@@ -116,366 +118,266 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 Le immagini di training e di test si trovano nelle cartelle assets che verranno scaricate in un file ZIP. Queste immagini appartengono a Wikimedia Commons.
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), il repository di file multimediali gratuiti.* Recuperate il 17 ottobre 2018, alle 10.48, da:  
-> https://commons.wikimedia.org/wiki/Pizza  
-> https://commons.wikimedia.org/wiki/Toaster  
-> https://commons.wikimedia.org/wiki/Teddy_bear  
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), il repository di file multimediali gratuiti.* Recuperato 10:48, 17 ottobre 2018 da: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
 
-## <a name="create-a-console-application"></a>Creare un'applicazione console
+## <a name="setup"></a>Configurazione
 
 ### <a name="create-a-project"></a>Creare un progetto
 
 1. Creare un'**applicazione console di .NET Core** con nome "TransferLearningTF".
 
-2. Installare il **pacchetto NuGet Microsoft.ML**:
+1. Installare il **pacchetto NuGet Microsoft.ML**:
 
-    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**. Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia e cercare **Microsoft.ML**. Fare clic sull'elenco a discesa **Versione**, selezionare il pacchetto **1.0.0** nell'elenco e quindi il pulsante **Installa**. Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** e quindi selezionare il pulsante **Accetto** nella finestra di dialogo **Accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati. Ripetere questi passaggi per **Microsoft.ML.ImageAnalytics v1.0.0** e **Microsoft.ML.TensorFlow v0.12.0**.
+    * In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e selezionare **Gestisci pacchetti NuGet**.
+    * Scegliere "nuget.org" come origine del pacchetto, selezionare la scheda Sfoglia e cercare **Microsoft.ML**.
+    * Fare clic sull'elenco a discesa **versione** , selezionare il pacchetto **1.3.1** nell'elenco e selezionare il pulsante **Installa** .
+    * Selezionare il pulsante **OK** nella finestra di dialogo **Anteprima modifiche** .
+    * Selezionare il pulsante **Accetto** nella finestra di dialogo **accettazione della licenza** se si accettano le condizioni di licenza per i pacchetti elencati.
+    * Ripetere questi passaggi per **Microsoft. ml. ImageAnalytics v 1.3.1** e **Microsoft. ml. TensorFlow v 1.3.1**.
 
-### <a name="prepare-your-data"></a>Preparare i dati
+### <a name="download-assets"></a>Scarica asset
 
 1. Scaricare il [file ZIP della directory assets del progetto](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip) e decomprimerlo.
 
-2. Copiare la directory `assets` nella directory del progetto *TransferLearningTF*. Questa directory e le relative sottodirectory contengono i file di dati e supporto (fatta eccezione per il modello Inception, che verrà scaricato e aggiunto nel passaggio successivo) richiesti per questa esercitazione.
+1. Copiare la directory `assets` nella directory del progetto *TransferLearningTF*. Questa directory e le relative sottodirectory contengono i file di dati e supporto (fatta eccezione per il modello Inception, che verrà scaricato e aggiunto nel passaggio successivo) richiesti per questa esercitazione.
 
-3. Scaricare il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) e decomprimere il file.
+1. Scaricare il [modello Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) e decomprimere il file.
 
-4. Copiare il contenuto della directory `inception5h` appena decompressa nella directory `assets\inputs-train\inception` del progetto *TransferLearningTF*. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
+1. Copiare il contenuto della directory `inception5h` appena decompressa nella directory `assets/inputs-train/inception` del progetto *TransferLearningTF*. Questa directory contiene il modello e i file di supporto aggiuntivi necessari per questa esercitazione, come illustrato nell'immagine seguente:
 
    ![Contenuto della directory Inception](./media/image-classification/inception-files.png)
 
-5. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file nella directory assets e nelle relative sottodirectory e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file nella directory assets e nelle relative sottodirectory e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
 ### <a name="create-classes-and-define-paths"></a>Creare le classi e definire i percorsi
 
-Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
+1. Aggiungere le istruzioni `using` seguenti all'inizio del file *Program.cs*:
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
+    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
 
-Creare campi globali per i percorsi delle diverse risorse e variabili globali per `LabelTokey`, `ImageReal` e `PredictedLabelValue`:
+1. Aggiungere il codice seguente alla riga immediatamente sopra il metodo `Main` per specificare i percorsi degli asset:
 
-* `_assetsPath` contiene il percorso delle risorse.
-* `_trainTagsTsv` contiene il percorso del file TSV dei tag dei dati delle immagini di training.
-* `_predictTagsTsv` contiene il percorso del file TSV dei tag dei dati delle immagini di stima.
-* `_trainImagesFolder` contiene il percorso delle immagini usate per il training del modello.
-* `_predictImagesFolder` contiene il percorso delle immagini che devono essere classificate dal modello sottoposto a training.
-* `_inceptionPb` contiene il percorso del modello Inception con training preliminare da riutilizzare per ripetere il training del modello.
-* `_inputImageClassifierZip` contiene il percorso da cui viene caricato il modello sottoposto a training.
-* `_outputImageClassifierZip` contiene il percorso in cui è salvato il modello sottoposto a training.
-* `LabelTokey` è il valore `Label` associato a una chiave.
-* `ImageReal` è la colonna contenente il valore dell'immagine stimato.
-* `PredictedLabelValue` è la colonna contenente il valore dell'etichetta stimato.
+    [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
 
-Aggiungere il codice seguente nella riga subito sopra il metodo `Main` per specificare questi percorsi e le altre variabili:
+1. Creare classi per i dati di input e le stime.
 
-[!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
+    [!code-csharp[DeclareImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImageData)]
 
-Creare alcune classi per i dati di input e le stime. Aggiungere una nuova classe al progetto:
+    `ImageData` è la classe dei dati di immagine di input e ha i campi <xref:System.String> seguenti:
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
+    * `ImagePath` contiene il nome del file di immagine.
+    * `Label` contiene un valore per l'etichetta dell'immagine.
 
-1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e impostare il campo **Nome** su *ImageData.cs*. Selezionare quindi il pulsante **Aggiungi**.
+1. Aggiungere una nuova classe al progetto per `ImagePrediction`:
 
-    Il file *ImageData.cs* verrà aperto nell'editor del codice. Aggiungere l'istruzione `using` seguente all'inizio di *ImageData.cs*:
+    [!code-csharp[DeclareImagePrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImagePrediction)]
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/ImageData.cs#AddUsings)]
+    `ImagePrediction` è la classe di stima delle immagini e ha i campi seguenti:
 
-Rimuovere la definizione di classe esistente e aggiungere il codice seguente per la classe `ImageData` al file *ImageData.cs*:
+    * `Score` contiene la percentuale di probabilità per una data classificazione dell'immagine.
+    * `PredictedLabelValue` contiene un valore per l'etichetta di classificazione dell'immagine stimata.
 
-[!code-csharp[DeclareTypes](../../../samples/machine-learning/tutorials/TransferLearningTF/ImageData.cs#DeclareTypes)]
-
-`ImageData` è la classe dei dati di immagine di input e ha i campi <xref:System.String> seguenti:
-
-* `ImagePath` contiene il nome del file di immagine.
-* `Label` contiene un valore per l'etichetta dell'immagine.
-
-Aggiungere una nuova classe al progetto per `ImagePrediction`:
-
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **Nuovo elemento**.
-
-1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e impostare il campo **Nome** su *ImagePrediction.cs*. Selezionare quindi il pulsante **Aggiungi**.
-
-    Il file *ImagePrediction.cs* verrà aperto nell'editor del codice. Rimuovere entrambe le istruzioni `using` `System.Collections.Generic` e `System.Text` all'inizio di *ImagePrediction.cs*:
-
-Rimuovere la definizione di classe esistente e aggiungere il codice seguente, che contiene la classe `ImagePrediction`, al file *ImagePrediction.cs*:
-
-[!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/ImagePrediction.cs#DeclareTypes)]
-
-`ImagePrediction` è la classe di stima delle immagini e ha i campi seguenti:
-
-* `Score` contiene la percentuale di probabilità per una data classificazione dell'immagine.
-* `PredictedLabelValue` contiene un valore per l'etichetta di classificazione dell'immagine stimata.
-
-`ImagePrediction` è la classe usata per la stima dopo il training del modello. Ha un oggetto `string` (`ImagePath`) per il percorso dell'immagine. L'elemento `Label` viene usato per riutilizzare il modello e ripeterne il training. `PredictedLabelValue` viene usato durante la valutazione e la stima. Per la valutazione vengono usati un input con dati di training, i valori stimati e il modello.
-
-La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET e l'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
+    `ImagePrediction` è la classe usata per la stima dopo il training del modello. Ha un oggetto `string` (`ImagePath`) per il percorso dell'immagine. Il `Label` viene utilizzato per riutilizzare ed eseguire il training del modello. `PredictedLabelValue` viene usato durante la valutazione e la stima. Per la valutazione vengono usati un input con dati di training, i valori stimati e il modello.
 
 ### <a name="initialize-variables-in-main"></a>Inizializzare le variabili in Main
 
-Inizializzare la variabile `mlContext` con una nuova istanza di `MLContext`.  Sostituire la riga `Console.WriteLine("Hello World!")` con il codice seguente nel metodo `Main`:
+1. Inizializzare la variabile `mlContext` con una nuova istanza di `MLContext`.  Sostituire la riga `Console.WriteLine("Hello World!")` con il codice seguente nel metodo `Main`:
 
-[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
+    [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
 
-### <a name="create-a-struct-for-default-parameters"></a>Creare uno struct per i parametri predefiniti
+    La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per tutte le operazioni ML.NET e l'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in Entity Framework.
 
-Il modello Inception ha diversi parametri predefiniti che è necessario passare. Creare uno struct per eseguire il mapping dei valori dei parametri predefiniti a nomi descrittivi con il codice seguente, subito dopo il metodo `Main()`:
+### <a name="create-a-struct-for-inception-model-parameters"></a>Creare uno struct per i parametri del modello di inizio
 
-[!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
+1. Il modello di inizio contiene diversi parametri che è necessario passare. Creare uno struct per eseguire il mapping dei valori del parametro ai nomi descrittivi con il codice seguente, subito dopo il metodo `Main()`:
+
+    [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
 
 ### <a name="create-a-display-utility-method"></a>Creare un metodo dell'utilità di visualizzazione
 
 Poiché i dati dell'immagine e le relative stime verranno visualizzati più volte, creare un metodo dell'utilità di visualizzazione per gestire la visualizzazione dell'immagine e dei risultati delle stime.
 
-Il metodo `DisplayResults()` esegue le attività seguenti:
+1. Creare il metodo `DisplayResults()` subito dopo lo struct `InceptionSettings`, usando il codice seguente:
 
-* Visualizza i risultati stimati.
+    ```csharp
+    private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
+    {
 
-Creare il metodo `DisplayResults()` subito dopo lo struct `InceptionSettings`, usando il codice seguente:
+    }
+    ```
 
-```csharp
-private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
-{
+1. Compilare il corpo del metodo `DisplayResults`:
 
-}
-```
-
-Il metodo `Transform()` ha popolato `ImagePath` in `ImagePrediction` insieme ai campi stimati. Nel corso del processo ML.NET ogni componente aggiunge colonne e ciò rende più facile visualizzare i risultati:
-
-[!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
-
-Verrà chiamato il metodo `DisplayResults()` nei due metodi di classificazione delle immagini.
+    [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
 ### <a name="create-a-tsv-file-utility-method"></a>Creare un metodo dell'utilità con file TSV
 
-Il metodo `ReadFromTsv()` esegue le attività seguenti:
+1. Creare il metodo `ReadFromTsv()` subito dopo il metodo `DisplayResults()`, usando il codice seguente:
 
-* Legge il file `tags.tsv` dei dati di immagine.
-* Aggiunge il percorso del file al nome del file di immagine.
-* Carica i dati del file in un oggetto IEnumerable`ImageData`.
+    ```csharp
+    public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
+    {
 
-Creare il metodo `ReadFromTsv()` subito dopo il metodo `PairAndDisplayResults()`, usando il codice seguente:
+    }
+    ```
 
-```csharp
-public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
-{
+1. Compilare il corpo del metodo `ReadFromTsv`:
 
-}
-```
+    [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
 
-Il codice seguente analizza il file `tags.tsv` per aggiungere il percorso del file al nome del file di immagine per la proprietà `ImagePath` e carica `Label` in un oggetto `ImageData`. Aggiungerlo come prima riga del metodo `ReadFromTsv()`.  È necessario il percorso completo del file per visualizzare i risultati della stima.
+    Il codice analizza il file `tags.tsv` per aggiungere il percorso del file di immagine per la proprietà `ImagePath` e caricarlo e il `Label` in un oggetto `ImageData`.
 
-[!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-ML.NET si basa su tre concetti fondamentali: [dati](../resources/glossary.md#data), [trasformatori](../resources/glossary.md#transformer) e [strumenti di stima](../resources/glossary.md#estimator).
+### <a name="create-a-method-to-make-a-prediction"></a>Creare un metodo per eseguire una stima
 
-## <a name="reuse-and-tune-pre-trained-model"></a>Riutilizzare e ottimizzare il modello con training preliminare
+1. Creare il metodo `ClassifySingleImage()` subito prima del metodo `DisplayResults()`, con il codice seguente:
 
-Aggiungere la seguente chiamata al metodo `ReuseAndTuneInceptionModel()` come riga successiva nel metodo `Main()`:
+    ```csharp
+    public static void ClassifySingleImage(MLContext mlContext, ITransformer model)
+    {
 
-[!code-csharp[CallReuseAndTuneInceptionModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallReuseAndTuneInceptionModel)]
+    }
+    ```
 
-Il metodo `ReuseAndTuneInceptionModel()` esegue le attività seguenti:
+1. Creare un oggetto `ImageData` che contiene il percorso completo e il nome del file di immagine per il singolo `ImagePath`. Aggiungere il codice seguente al metodo `ClassifySingleImage()` come righe successive:
 
-* Carica i dati.
-* Estrae e trasforma i dati.
-* Assegna un punteggio al modello TensorFlow.
-* Ottimizza il modello (ripete il training).
-* Visualizza i risultati del modello.
-* Valuta il modello.
-* Restituisce il modello.
+    [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
-Creare il metodo `ReuseAndTuneInceptionModel()`, subito dopo lo struct `InceptionSettings` e subito prima del metodo `DisplayResults()`, usando il codice seguente:
+1. Eseguire una singola stima, aggiungendo il codice seguente come riga successiva nel metodo `ClassifySingleImage`:
 
-```csharp
-public static ITransformer ReuseAndTuneInceptionModel(MLContext mlContext, string dataLocation, string imagesFolder, string inputModelLocation, string outputModelLocation)
-{
+    [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-}
-```
+    La classe [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità che esegue una stima su una singola istanza di dati. Per ottenere la stima, utilizzare il metodo [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) .
 
-### <a name="load-the-data"></a>Caricare i dati
+1. Visualizzare i risultati della stima come riga di codice successiva nel metodo `ClassifySingleImage()`:
 
-I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` è un modo flessibile ed efficiente di descrivere i dati tabulari (numerici e di testo). È possibile caricare dati da un file di testo o in tempo reale, ad esempio da un database SQL o file di log, in un oggetto `IDataView`.
+   [!code-csharp[DisplayPrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPrediction)]
 
-Caricare i dati usando il wrapper `MLContext.Data.LoadFromTextFile`. Aggiungere il codice seguente al metodo `ReuseAndTuneInceptionModel()` come riga successiva:
+## <a name="construct-the-mlnet-model-pipeline"></a>Costruire la pipeline del modello ML.NET
 
-[!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
+Una pipeline del modello ML.NET è una catena di estimatori. Si noti che non viene eseguita alcuna esecuzione durante la costruzione della pipeline. Gli oggetti Estimator vengono creati ma non eseguiti.
 
-### <a name="extract-features-and-transform-the-data"></a>Estrarre le funzionalità e trasformare i dati
+1. Aggiungere un metodo per generare il modello
 
-La pre-elaborazione e la pulizia dei dati sono attività importanti che devono essere eseguite prima che un set di dati possa essere usato efficacemente per l'apprendimento automatico.  L'uso dei dati senza queste attività di modellazione può generare risultati fuorvianti.
+    Questo metodo è il fulcro dell'esercitazione. Consente di creare una pipeline per il modello e di eseguire il training della pipeline per produrre il modello ML.NET. Valuta inoltre il modello rispetto ad alcuni dati di test precedentemente non visualizzati.
 
-Gli algoritmi di Machine Learning sono in grado di comprendere i dati sottoposti a [estrazione delle caratteristiche](../resources/glossary.md#feature) e quando si ha a che fare con reti neurali profonde è necessario adattare le immagini al formato previsto dalla rete. Questo formato è un [vettore numerico](../resources/glossary.md#numerical-feature-vector).
+    Creare il metodo `GenerateModel()`, subito dopo lo struct `InceptionSettings` e subito prima del metodo `DisplayResults()`, usando il codice seguente:
 
-Dopo il training e la valutazione, eseguire una stima con i valori della colonna **Etichetta**. Dal momento che si usa un modello con training preliminare, eseguire il mapping dei campi al nuovo modello con il metodo [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A). Questo metodo trasforma `Label` in una colonna di tipo chiave numerica (`LabelTokey`) aggiungendola come nuova colonna del set di dati.  Assegnare il nome `estimator` dal momento che verrà aggiunto anche l'algoritmo di training. Aggiungere la riga di codice successiva:
+    ```csharp
+    public static ITransformer GenerateModel(MLContext mlContext)
+    {
 
-[!code-csharp[MapValueToKey1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey1)]
+    }
+    ```
 
-Lo strumento di stima per l'elaborazione delle immagini usa algoritmi di estrazione delle caratteristiche della [rete neurale profonda](https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks) con training preliminare per l'estrazione delle caratteristiche. Quando si usano reti neurali profonde, si adattano le immagini al formato di rete previsto. Questo è il motivo per cui si usano numerose trasformazioni delle immagini per ottenere i dati di immagine nel formato previsto del modello:
+1. Aggiungere gli estimatori per caricare, ridimensionare ed estrarre i pixel dai dati dell'immagine:
 
-1. Le immagini della trasformazione `LoadImages` vengono caricate in memoria come tipo bitmap.
-2. La trasformazione `ResizeImages` ridimensiona le immagini dal momento che il modello con training preliminare ha una larghezza e un'altezza definite dell'immagine di input.
-3. La trasformazione `ExtractPixels` estrae i pixel dalle immagini di input e li converte in un vettore numerico.
+    [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
 
-Aggiungere queste trasformazioni delle immagini come righe di codice successive:
+    I dati dell'immagine devono essere elaborati nel formato previsto dal modello TensorFlow. In questo caso, le immagini vengono caricate in memoria, ridimensionate in modo coerente e i pixel vengono estratti in un vettore numerico.
 
-[!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
+1. Aggiungere lo strumento di stima per caricare il modello di TensorFlow e assegnare un punteggio:
 
-`LoadTensorFlowModel` è un metodo pratico che consente di caricare il modello `TensorFlow` una sola volta e quindi crea `TensorFlowEstimator` usando `ScoreTensorFlowModel`. `ScoreTensorFlowModel` estrae gli output specificati (le caratteristiche dell'immagine `softmax2_pre_activation` di `Inception model`) e assegna un punteggio a un set di dati usando il modello `TensorFlow` con training preliminare.
+    [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-`softmax2_pre_activation` supporta il modello nella determinazione della classe a cui appartengono le immagini. `softmax2_pre_activation` restituisce una probabilità per ognuna delle categorie per un'immagine e tutte queste probabilità devono ammontare a 1. Si presuppone che un'immagine apparterrà solo a una categoria, come illustrato nell'esempio seguente:
+    Questa fase della pipeline carica il modello TensorFlow in memoria, quindi elabora il vettore di valori pixel attraverso la rete del modello TensorFlow. L'applicazione di input a un modello di apprendimento avanzato e la generazione di un output mediante il modello viene definita **Punteggio**. Quando si utilizza il modello nel suo complesso, il Punteggio crea un'inferenza o una stima. 
 
-| Classe         | Probabilità   |
-| ------------- | ------------- |
-| `Food`        |  0.001        |
-| `Toy`         |  0.95         |
-| `Appliance`   |  0.06         |
+    In questo caso, si usa tutto il modello TensorFlow, ad eccezione dell'ultimo livello, che è il livello che esegue l'inferenza. L'output del penultimo livello è denominato `softmax_2_preactivation`. L'output di questo livello è effettivamente un vettore di funzionalità che caratterizzano le immagini di input originali.
 
-Aggiungere `TensorFlowTransform` a `estimator` con la riga di codice seguente:
+    Questo vettore di funzionalità generato dal modello TensorFlow verrà usato come input per un algoritmo di training di ML.NET.
 
-[!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
+1. Aggiungere lo strumento di stima per eseguire il mapping tra le etichette di stringa nei dati di training e i valori di chiave Integer:
 
-### <a name="choose-a-training-algorithm"></a>Scegliere un algoritmo di training
+    [!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey)]
 
-Per aggiungere l'algoritmo di training, chiamare il metodo wrapper `mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy()`.  L'oggetto [LbfgsMaximumEntropy](xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer) viene aggiunto a `estimator` e accetta le caratteristiche delle immagini di Inception (`softmax2_pre_activation`) e i parametri di input `Label` per l'apprendimento dai dati cronologici.  Aggiungere l'algoritmo di training con il codice seguente:
+    Il ML.NET Trainer aggiunto successivamente richiede che le etichette siano in formato `key` invece che stringhe arbitrarie. Una chiave è un numero con un mapping uno-a-uno a un valore stringa.
 
-[!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
+1. Aggiungere l'algoritmo di training ML.NET:
 
-È anche necessario eseguire il mapping di `predictedlabel` a `predictedlabelvalue`:
+    [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
 
-[!code-csharp[MapValueToKey2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey2)]
+1. Aggiungere lo strumento di stima per eseguire il mapping del valore della chiave stimata in una stringa:
 
-Il metodo `Fit()` esegue il training del modello trasformando il set di dati e applicando il training. Eseguire il fit del modello al set di dati e restituire il modello sottoposto a training aggiungendo il codice seguente come riga successiva nel metodo `ReuseAndTuneInceptionModel()`:
+    [!code-csharp[MapKeyToValue](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapKeyToValue)]
 
-[!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
+## <a name="train-the-model"></a>Eseguire il training del modello
 
-Il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) effettua previsioni per più righe di input specificate di un set di dati di test.  Trasformare i dati `Training` aggiungendo il codice seguente a `ReuseAndTuneInceptionModel()`:
+1. Caricare i dati di training usando il wrapper [LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options)) . Aggiungere il codice seguente al metodo `GenerateModel()` come riga successiva:
 
-[!code-csharp[TransformData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TransformData)]
+    [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
 
-Convertire i dati di immagine e gli elementi `DataViews` della stima in `IEnumerables` fortemente tipizzati per associarli per una visualizzazione semplificata. Usare il metodo `MLContext.CreateEnumerable()` a tale scopo, con il codice seguente:
+    I dati in ML.NET sono rappresentati come una [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` è un modo flessibile ed efficiente di descrivere i dati tabulari (numerici e di testo). È possibile caricare dati da un file di testo o in tempo reale, ad esempio da un database SQL o file di log, in un oggetto `IDataView`.
 
-[!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
+1. Eseguire il training del modello con i dati caricati in precedenza:
 
-Aggiungere il codice seguente per visualizzare i dati e le stime come righe successive nel `ReuseAndTuneInceptionModel()` metodo:
+    [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
-[!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
+    Il metodo `Fit()` addestra il modello applicando il set di dati di training alla pipeline.
 
-Dopo aver impostato la stima, il metodo [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A):
+## <a name="evaluate-the-accuracy-of-the-model"></a>Valutare l'accuratezza del modello
 
-* Valuta il modello (confrontando i valori stimati con gli oggetti `Labels` effettivi nel set di dati).
+1. Caricare e trasformare i dati di test aggiungendo il codice seguente alla riga successiva del metodo `GenerateModel`:
 
-* Restituisce le metriche relative alle prestazioni del modello.
+    [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
-Aggiungere il codice seguente al metodo `ReuseAndTuneInceptionModel()` come riga successiva:
+    Sono disponibili alcune immagini di esempio che è possibile utilizzare per valutare il modello. Analogamente ai dati di training, questi devono essere caricati in un `IDataView`, in modo che possano essere trasformati dal modello.
+   
+1. Aggiungere il codice seguente al metodo `GenerateModel()` per valutare il modello:
 
-[!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
+    [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
 
-Le metriche seguenti vengono valutate per la classificazione delle immagini:
+    Dopo aver impostato la stima, il metodo [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A):
 
-* `Log-loss`: vedere [Perdita di log](../resources/glossary.md#log-loss). Il valore desiderato per LogLoss è il valore più prossimo a 0.
+    * Consente di valutare il modello (confronta i valori stimati con il set di dati di test `labels`).
+    * Restituisce le metriche relative alle prestazioni del modello.
 
-* [https://login.microsoftonline.com/consumers/](`Per class Log-loss`). Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
+1. Visualizzare le metriche di accuratezza del modello
 
-Usare il codice seguente per visualizzare le metriche, condividere i risultati e quindi intervenire su di essi:
+    Usare il codice seguente per visualizzare le metriche, condividere i risultati e quindi intervenire su di essi:
 
-[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
+    [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
 
- Aggiungere il codice seguente per restituire il modello sottoposto a training come riga successiva:
+    Le metriche seguenti vengono valutate per la classificazione delle immagini:
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
+    * `Log-loss`: vedere [Perdita di log](../resources/glossary.md#log-loss). Il valore desiderato per LogLoss è il valore più prossimo a 0.
+    * `Per class Log-loss` (Indici per tabelle con ottimizzazione per la memoria). Il valore desiderato per LogLoss per classe è il valore più prossimo a 0.
 
-## <a name="classify-images-with-a-loaded-model"></a>Classificare le immagini con un modello caricato
+1. Aggiungere il codice seguente per restituire il modello sottoposto a training come riga successiva:
 
-Aggiungere la chiamata seguente al metodo `ClassifyImages()` come riga di codice successiva nel metodo `Main`:
+    [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
 
-[!code-csharp[CallClassifyImages](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifyImages)]
+## <a name="run-the-application"></a>Eseguire l'applicazione.
 
-Il metodo `ClassifyImages()` esegue le attività seguenti:
+1. Aggiungere la chiamata a `GenerateModel` nel metodo `Main` dopo la creazione della classe MLContext:
 
-* Legge il file TSV in `IEnumerable`.
-* Stima le classificazioni delle immagini in base ai dati di test.
+    [!code-csharp[CallGenerateModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallGenerateModel)]
 
-Creare il metodo `ClassifyImages()`, subito dopo il metodo `ReuseAndTuneInceptionModel()` e subito prima del metodo `PairAndDisplayResults()`, usando il codice seguente:
+1. Aggiungere la chiamata al metodo `ClassifySingleImage()` come riga di codice successiva nel metodo `Main`:
 
-```csharp
-public static void ClassifyImages(MLContext mlContext, string dataLocation, string imagesFolder, string outputModelLocation, ITransformer model)
-{
+    [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
-}
-```
+1. Eseguire l'app console (CTRL + F5). I risultati saranno simili all'output seguente.  È possibile che vengano visualizzati avvisi o messaggi di elaborazione che tuttavia, per chiarezza, sono stati rimossi dai risultati riportati di seguito.
 
-Per prima cosa, chiamare il metodo `ReadFromTsv()` per creare una classe `IEnumerable<ImageData>` contenente il percorso completo per ogni `ImagePath`. Questo percorso del file è necessario per associare i dati e i risultati della stima. È anche necessario convertire la classe `IEnumerable<ImageData>` in un elemento `IDataView` che verrà usato per la stima. Aggiungere il codice seguente al metodo `ClassifyImages()` come le due righe successive:
+    ```console
+    =============== Training classification model ===============
+    Image: broccoli.jpg predicted as: food with score: 0.976743
+    Image: pizza.jpg predicted as: food with score: 0.9751652
+    Image: pizza2.jpg predicted as: food with score: 0.9660203
+    Image: teddy2.jpg predicted as: toy with score: 0.9748783
+    Image: teddy3.jpg predicted as: toy with score: 0.9829691
+    Image: teddy4.jpg predicted as: toy with score: 0.9868168
+    Image: toaster.jpg predicted as: appliance with score: 0.9769174
+    Image: toaster2.png predicted as: appliance with score: 0.9800823
+    =============== Classification metrics ===============
+    LogLoss is: 0.0228266745633507
+    PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
+    =============== Making single image classification ===============
+    Image: toaster3.jpg predicted as: appliance with score: 0.9625379
 
-[!code-csharp[CallReadFromTSV](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallReadFromTSV)]
+    C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
+    Press any key to close this window . . .
+    ```
 
-Come è stato fatto in precedenza con i dati delle immagini di training, stimare la categoria dei dati di immagine di test usando il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) del modello passato. Aggiungere il codice seguente al metodo `ClassifyImages()` per le stime e per convertire gli elementi `IDataView` di `predictions` in un `IEnumerable` per l'associazione e la visualizzazione:
-
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Predict)]
-
-Per associare e visualizzare i dati di immagine di test e le stime, aggiungere il codice seguente per chiamare il metodo `DisplayResults()` precedentemente creato come riga successiva nel metodo `ClassifyImages()`:
-
-[!code-csharp[CallDisplayResults2](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults2)]
-
-## <a name="classify-a-single-image-with-a-loaded-model"></a>Classificare una singola immagine con un modello caricato
-
-Aggiungere la chiamata seguente al metodo `ClassifySingleImage()` come riga di codice successiva nel metodo `Main`:
-
-[!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
-
-Il metodo `ClassifySingleImage()` esegue le attività seguenti:
-
-* Carica un'istanza di `ImageData`.
-* Stima la classificazione delle immagini in base ai dati di test.
-
-Creare il metodo `ClassifySingleImage()`, subito dopo il metodo `ClassifyImages()` e subito prima del metodo `PairAndDisplayResults()`, usando il codice seguente:
-
-```csharp
-public static void ClassifySingleImage(MLContext mlContext, string imagePath, string outputModelLocation, ITransformer model)
-{
-
-}
-```
-
-Per prima cosa, creare una classe `ImageData` contenente il percorso completo e il nome del file di immagine per il singolo `ImagePath`. Aggiungere il codice seguente al metodo `ClassifySingleImage()` come righe successive:
-
-[!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
-
-La [classe PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API utile che esegue una stima su una singola istanza di dati. La funzione [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) effettua una previsione su una singola colonna di dati. Passare `imageData` a `PredictionEngine` per prevedere la categoria dell'immagine aggiungendo il codice seguente a `ClassifySingleImage()`:
-
-[!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
-
-Visualizzare i risultati della stima come riga di codice successiva nel metodo `ClassifySingleImage()`:
-
-[!code-csharp[DisplayPrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPrediction)]
-
-## <a name="results"></a>Risultati
-
-Dopo aver completato i passaggi precedenti, eseguire l'app console (CTRL+F5). I risultati saranno simili all'output seguente.  È possibile che vengano visualizzati avvisi o messaggi di elaborazione che tuttavia, per chiarezza, sono stati rimossi dai risultati riportati di seguito.
-
-```console
-=============== Training classification model ===============
-Image: broccoli.jpg predicted as: food with score: 0.976743
-Image: pizza.jpg predicted as: food with score: 0.9751652
-Image: pizza2.jpg predicted as: food with score: 0.9660203
-Image: teddy2.jpg predicted as: toy with score: 0.9748783
-Image: teddy3.jpg predicted as: toy with score: 0.9829691
-Image: teddy4.jpg predicted as: toy with score: 0.9868168
-Image: toaster.jpg predicted as: appliance with score: 0.9769174
-Image: toaster2.png predicted as: appliance with score: 0.9800823
-=============== Classification metrics ===============
-LogLoss is: 0.0228266745633507
-PerClassLogLoss is: 0.0277501705149937 , 0.0186303530571291 , 0.0217359128952187
-=============== Making classifications ===============
-Image: broccoli.png predicted as: food with score: 0.905548
-Image: pizza3.jpg predicted as: food with score: 0.9709008
-Image: teddy6.jpg predicted as: toy with score: 0.9750155
-=============== Making single image classification ===============
-Image: toaster3.jpg predicted as: appliance with score: 0.9625379
-
-C:\Program Files\dotnet\dotnet.exe (process 4304) exited with code 0.
-Press any key to close this window . . .
-```
-
-La procedura è stata completata. È stato creato un modello di Machine Learning per la classificazione delle immagini riutilizzando un modello `TensorFlow` con training preliminare in ML.NET.
+La procedura è stata completata. A questo punto è stato creato un modello di apprendimento automatico per la classificazione delle immagini applicando l'apprendimento del trasferimento a un modello `TensorFlow` in ML.NET.
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF).
 
@@ -483,8 +385,9 @@ In questa esercitazione si è appreso come:
 > [!div class="checklist"]
 >
 > * Informazioni sul problema
-> * Riutilizzare e ottimizzare il modello con training preliminare
-> * Classificare le immagini con un modello caricato
+> * Incorporare il modello di TensorFlow con training preliminare nella pipeline ML.NET
+> * Eseguire il training e la valutazione del modello ML.NET
+> * Classificare un'immagine di test
 
 Consultare il repository GitHub degli esempi di Machine Learning per esaminare un esempio di classificazione delle immagini esteso.
 > [!div class="nextstepaction"]

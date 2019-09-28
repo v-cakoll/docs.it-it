@@ -8,17 +8,17 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f0df3170289d780852ee14232e92c3b71412c548
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923940"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392374"
 ---
 # <a name="indexers-c-programming-guide"></a>Indicizzatori (Guida per programmatori C#)
 
 Gli indicizzatori consentono di indicizzare le istanze di una classe o struct esattamente come le matrici. Il valore indicizzato può essere impostato o recuperato senza specificare in modo esplicito un membro di istanza o tipo. Gli indicizzatori sono analoghi alle [proprietà](../classes-and-structs/properties.md), con la differenza che le relative funzioni di accesso accettano i parametri.  
- 
+
  Nell'esempio seguente viene definita una classe generica con i semplici metodi delle funzioni di accesso [get](../../language-reference/keywords/get.md) e [set](../../language-reference/keywords/set.md) per assegnare e recuperare i valori. La classe `Program` crea un'istanza di questa classe per archiviare le stringhe.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
@@ -34,7 +34,7 @@ Gli indicizzatori consentono di indicizzare le istanze di una classe o struct es
 
 Si noti che `=>` introduce il corpo dell'espressione e che la parola chiave `get` non è usata. 
 
-A partire da C# 7.0, le funzioni di accesso get e set possono essere implementate entrambe come membri con corpo di espressione. In questo caso, è necessario usare entrambe le parole chiave `get` e `set`. Ad esempio:
+A partire da C# 7.0, le funzioni di accesso get e set possono essere implementate entrambe come membri con corpo di espressione. In questo caso, è necessario usare entrambe le parole chiave `get` e `set`. Esempio:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

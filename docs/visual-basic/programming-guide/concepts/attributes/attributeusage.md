@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789116"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351821"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Determina come usare una classe di attributi personalizzati. `AttributeUsage` è un attributo che può essere applicato alle definizioni di attributi personalizzati per controllare come può essere applicato il nuovo attributo. Le impostazioni predefinite sono simili alle seguenti quando vengono applicate in modo esplicito:  
@@ -64,7 +64,7 @@ End Class
   
  In questo caso `MultiUseAttr` può essere applicato più volte perché `AllowMultiple` è impostato su `true`. Entrambi i formati illustrati per applicare più attributi sono validi.  
   
- Se `Inherited` è impostato su `false`, l'attributo non viene ereditato da classi che derivano da una classe con attributi. Ad esempio:  
+ Se `Inherited` è impostato su `false`, l'attributo non viene ereditato da classi che derivano da una classe con attributi. Esempio:  
   
 ```vb  
 Imports System  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>Esempio di output  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  

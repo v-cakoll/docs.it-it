@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: d5bcd5b06f6d922b29c2a494f1f63da1217e2b2d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: a042f0ae1c7673f7d21b39580db3d373835939cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817865"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353828"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia di sicurezza WPF - Progettazione della sicurezza
-Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di codice sicuro. Un elemento chiave dell'iniziativa Trustworthy Computing è [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] è una procedura di progettazione usata insieme a processi di progettazione standard per semplificare la generazione di codice sicuro. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] prevede dieci fasi che combinano procedure consigliate con formalizzazione, misurabilità e struttura aggiuntiva, tra cui:  
+Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di codice sicuro. Un elemento chiave dell'iniziativa Trustworthy Computing è la Microsoft Security Development Lifecycle (SDL). SDL è una procedura di progettazione usata insieme ai processi di progettazione standard per semplificare la distribuzione di codice sicuro. Il processo SDL è costituito da dieci fasi che combinano procedure consigliate con formalizzazione, misurabilità e struttura aggiuntiva, tra cui:  
   
 - Analisi della progettazione della sicurezza  
   
@@ -31,7 +31,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
 - Gestione della sicurezza dei prodotti in seguito al rilascio  
   
 ## <a name="wpf-specifics"></a>Specifiche di WPF  
- Il team di progettazione di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applica ed estende [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], la combinazione dei quali include i fattori chiave seguenti:  
+ Il team di progettazione di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applica ed estende il processo SDL, la cui combinazione include gli aspetti chiave seguenti:  
   
  [Classificazione dei rischi](#threat_modeling)  
   
@@ -43,7 +43,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
 <a name="threat_modeling"></a>   
 ### <a name="threat-modeling"></a>Classificazione dei rischi  
- La classificazione dei rischi è un componente centrale di [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] e viene usata per profilare un sistema in modo da determinare le potenziali vulnerabilità della sicurezza. Una volta identificate le vulnerabilità, la classificazione dei rischi garantisce anche che vengano attuate le misure di prevenzione appropriate.  
+ La modellazione delle minacce è un componente principale del processo SDL e viene usata per profilare un sistema per determinare potenziali vulnerabilità della sicurezza. Una volta identificate le vulnerabilità, la classificazione dei rischi garantisce anche che vengano attuate le misure di prevenzione appropriate.  
   
  A livello generale, la classificazione dei rischi comporta i passaggi principali seguenti, in cui viene usato un negozio di alimentari come esempio:  
   
@@ -65,13 +65,13 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
 <a name="tools"></a>   
 ### <a name="source-analysis-and-editing-tools"></a>Analisi del codice sorgente e strumenti di modifica  
- Oltre agli elementi di revisione manuale del codice di sicurezza di [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], il team di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa diversi strumenti per l'analisi del codice sorgente e le modifiche associate in modo da ridurre le vulnerabilità della sicurezza. Viene usata un'ampia gamma di strumenti di origine, tra cui:  
+ Oltre agli elementi di revisione manuale del codice di sicurezza del processo SDL, il team [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa diversi strumenti per l'analisi dell'origine e le modifiche associate per ridurre le vulnerabilità della sicurezza. Viene usata un'ampia gamma di strumenti di origine, tra cui:  
   
 - **FxCop**: Trova i problemi di sicurezza comuni nel codice gestito, dalle regole di ereditarietà all'utilizzo della sicurezza dall'accesso di codice, alla modalità di interoperabilità sicura con il codice non gestito. Vedere [FxCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 - **Prefisso/PREfast**: Trova le vulnerabilità della sicurezza e i problemi di sicurezza comuni nel codice non gestito, come i sovraccarichi del buffer, i problemi relativi alle stringhe di formato e il controllo degli errori.  
   
-- **API escluse**: Esegue ricerche nel codice sorgente per identificare l'utilizzo accidentale di funzioni che sono note per causare problemi di sicurezza `strcpy`, ad esempio. Una volta identificate, queste funzioni vengono sostituite con alternative più sicure.  
+- **API escluse**: Esegue ricerche nel codice sorgente per identificare l'utilizzo accidentale di funzioni che sono note per causare problemi di sicurezza, ad esempio `strcpy`. Una volta identificate, queste funzioni vengono sostituite con alternative più sicure.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Tecniche di test  
@@ -81,13 +81,13 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
 - **Test blackbox**: I tester tentano di individuare gli exploit di sicurezza esaminando l'API e le funzionalità e quindi tentano di attaccare il prodotto.  
   
-- **Regressione dei problemi di sicurezza da altri prodotti**: Se pertinente, vengono testati i problemi di sicurezza dei prodotti correlati. Ad esempio, sono state identificate e provate le [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]varianti appropriate di circa 60 problemi di sicurezza per Internet Explorer.  
+- **Regressione dei problemi di sicurezza da altri prodotti**: Se pertinente, vengono testati i problemi di sicurezza dei prodotti correlati. Ad esempio, sono state identificate le varianti appropriate di circa 60 problemi di sicurezza per Internet Explorer e ne è stata tentata l'applicabilità a [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 - **Test di penetrazione basati su strumenti tramite fuzzing dei file**: Il fuzzing dei file è l'exploit di un intervallo di input di un lettore di file tramite diversi input. Un esempio in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] in cui viene usata questa tecnica consiste nel verificare la presenza di errori nel codice di decodifica delle immagini.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Gestione del codice critico  
- Per [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compila un sandbox di sicurezza usando .NET Framework supporto per contrassegnare e tenere traccia del codice critico per la sicurezza che eleva i privilegi (vedere **metodologia critica** per la sicurezza nella [strategia di sicurezza di WPF-piattaforma Sicurezza](wpf-security-strategy-platform-security.md)). A causa degli elevati requisiti di qualità per il codice critico per la sicurezza, tale codice riceve un livello aggiuntivo di controllo della gestione del codice sorgente e della sicurezza. All'incirca dal 5% al 10% di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] è costituito da codice critico per la sicurezza, esaminato da un team di revisione dedicato. Il codice sorgente e il processo di archiviazione vengono gestiti verificando il codice critico per la sicurezza ed eseguendo il mapping di ogni entità critica (ovvero un metodo che contiene codice critico) al rispettivo stato di approvazione. Lo stato di approvazione include i nomi di uno o più revisori. Ogni compilazione giornaliera di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] confronta il codice critico con quello delle compilazioni precedenti per verificare la presenza di eventuali modifiche non approvate. Se un tecnico modifica codice critico senza l'approvazione del team di revisione, il codice viene identificato e corretto immediatamente. Questo processo permette l'applicazione e la gestione di un livello particolarmente elevato di controllo sul codice sandbox di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Per [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compila un sandbox di sicurezza usando .NET Framework supporto per contrassegnare e rilevare il codice critico per la sicurezza che eleva i privilegi (vedere la **metodologia critica** per la sicurezza nella strategia di sicurezza di [WPF-sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). A causa degli elevati requisiti di qualità per il codice critico per la sicurezza, tale codice riceve un livello aggiuntivo di controllo della gestione del codice sorgente e della sicurezza. All'incirca dal 5% al 10% di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] è costituito da codice critico per la sicurezza, esaminato da un team di revisione dedicato. Il codice sorgente e il processo di archiviazione vengono gestiti verificando il codice critico per la sicurezza ed eseguendo il mapping di ogni entità critica (ovvero un metodo che contiene codice critico) al rispettivo stato di approvazione. Lo stato di approvazione include i nomi di uno o più revisori. Ogni compilazione giornaliera di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] confronta il codice critico con quello delle compilazioni precedenti per verificare la presenza di eventuali modifiche non approvate. Se un tecnico modifica codice critico senza l'approvazione del team di revisione, il codice viene identificato e corretto immediatamente. Questo processo permette l'applicazione e la gestione di un livello particolarmente elevato di controllo sul codice sandbox di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
 

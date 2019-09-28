@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929145"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354050"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -211,7 +211,7 @@ Se è presente solo di un dump di memoria ed è necessario esaminare quali ogget
 
 Il codice seguente visualizza un output di esempio dell'analisi dell'heap oggetti grandi:
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +252,7 @@ Poiché l'heap degli oggetti grandi non è compattato, si può pensare che sia a
 
    L'esempio seguente visualizza la frammentazione nello spazio della memoria virtuale:
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000

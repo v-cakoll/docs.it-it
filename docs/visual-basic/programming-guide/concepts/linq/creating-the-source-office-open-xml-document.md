@@ -2,12 +2,12 @@
 title: Creazione del documento Office Open XML di origine (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965246"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352954"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creazione del documento Office Open XML di origine (Visual Basic)
 In questo argomento viene illustrato come creare il documento WordprocessingML di Office Open XML usato in altri esempi di questa esercitazione. Seguendo queste istruzioni, l'output ottenuto sarà uguale a quello indicato in ogni esempio.  
@@ -24,7 +24,7 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
   
 2. Incollare il testo seguente nel nuovo documento:  
   
-    ```  
+    ```text  
     Parsing WordprocessingML with LINQ to XML  
   
     The following example prints to the console.  
@@ -55,4 +55,4 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

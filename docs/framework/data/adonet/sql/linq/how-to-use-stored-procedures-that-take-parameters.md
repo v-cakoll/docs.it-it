@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793066"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353013"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedura: Usare stored procedure che accettano parametri
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene eseguito il mapping dei parametri di output ai parametri di riferimento, mentre per i tipi di valori il parametro viene dichiarato come nullable.  
   
- Per un esempio di come usare un parametro di input in una query che restituisce un set di righe [, vedere Procedura: Restituisce set di](how-to-return-rowsets.md)righe.  
+ Per un esempio di come usare un parametro di input in una query che restituisce un set di righe, vedere [How per: Restituisce set di righe @ no__t-0.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene accettato un solo parametro di input (l'ID del cliente) e viene restituito un parametro out (le vendite totali per quel cliente).  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [stored procedure](stored-procedures.md)
 - [Download di database di esempio](downloading-sample-databases.md)
-- [Uso dei tipi nullable](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Utilizzo di tipi di valore Nullable](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipi di valori nullable](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

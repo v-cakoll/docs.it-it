@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 80eb5fd8b6c3b9ca8473efd1cab23a406280f1fa
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487048"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392897"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
 Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da NET Framework 4, è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  
@@ -61,7 +61,7 @@ Un file mappato alla memoria include il contenuto di un file nella memoria virtu
 |Ottenere un oggetto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> da usare con il codice non gestito.|Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
 |Ritardare l'allocazione della memoria finché non viene creata una visualizzazione (solo file non persistenti).<br /><br /> Per determinare la dimensione di paging del sistema corrente, usare la proprietà <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con il valore <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> che hanno un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> come parametro.|  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Security  
  È possibile applicare i diritti di accesso quando si crea un file di cui è stato eseguito il mapping alla memoria, usando i metodi seguenti che accettano un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> come parametro:  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -122,7 +122,7 @@ Un file mappato alla memoria include il contenuto di un file nella memoria virtu
   
  L'output di `Process A` è indicato di seguito:  
   
-```  
+```console  
 Start Process B and press ENTER to continue.  
 Start Process C and press ENTER to continue.  
 Process A says: True  

@@ -1,5 +1,5 @@
 ---
-title: Tipi di valore nullable - Visual Basic
+title: Tipi di valore Nullable-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642140"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351773"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipi di valori nullable (Visual Basic)
 
-In alcuni casi si lavora con un tipo di valore che non hanno un valore definito in determinate circostanze. Ad esempio, un campo in un database potrebbe essere necessario distinguere tra l'assegnazione di un valore significativo e che non presentano un valore assegnato. I tipi di valore possono essere esteso per sfruttare i relativi valori normale o un valore null. Tale estensione viene chiamato un *tipo nullable*.
+Talvolta si utilizza un tipo di valore che non dispone di un valore definito in determinate circostanze. Ad esempio, un campo in un database potrebbe dover distinguere tra un valore assegnato significativo e senza un valore assegnato. I tipi di valore possono essere estesi in modo da usare i valori normali o un valore null. Tale estensione viene chiamata *tipo Nullable*.
 
-Ogni tipo che ammette valori null viene costruito dal modello generico <xref:System.Nullable%601> struttura. Si consideri un database che tiene traccia delle attività correlate al lavoro. L'esempio seguente crea un valore nullable `Boolean` digitare e viene dichiarata una variabile di quel tipo. È possibile scrivere la dichiarazione in tre modi:
+Ogni tipo nullable viene costruito dalla struttura <xref:System.Nullable%601> generica. Si consideri un database che tiene traccia delle attività correlate al lavoro. Nell'esempio seguente viene costruito un tipo Nullable `Boolean` e viene dichiarata una variabile di quel tipo. È possibile scrivere la dichiarazione in tre modi:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-La variabile `ridesBusToWork` può contenere un valore di `True`, un valore di `False`, o nessun valore. Il valore predefinito iniziale non è alcun valore, che in questo caso potrebbe significare che le informazioni non ha ancora ottenute per tale persona. Al contrario, `False` potrebbe significare che sono state ottenute le informazioni e la persona non recarsi il bus di funzionamento.
+La variabile `ridesBusToWork` può avere un valore di `True`, un valore di `False` o nessun valore. Il valore predefinito iniziale non è alcun valore, che in questo caso potrebbe indicare che le informazioni non sono state ancora ottenute per questa persona. Al contrario, `False` potrebbe significare che le informazioni sono state ottenute e che la persona non ha cavalcato il bus per lavorare.
 
-È possibile dichiarare le variabili e le proprietà con tipi nullable, ed è possibile dichiarare una matrice con elementi di un tipo nullable. È possibile dichiarare le procedure con tipi nullable come parametri, e si può restituire un tipo nullable da un `Function` procedure.
+È possibile dichiarare variabili e proprietà con tipi nullable ed è possibile dichiarare una matrice con elementi di un tipo Nullable. È possibile dichiarare procedure con tipi nullable come parametri ed è possibile restituire un tipo Nullable da una procedura `Function`.
 
-Impossibile costruire un tipo nullable in un tipo riferimento, ad esempio una matrice, un `String`, o una classe. Il tipo sottostante deve essere un tipo di valore. Per altre informazioni, vedere [Value Types and Reference Types](value-types-and-reference-types.md).
+Non è possibile costruire un tipo nullable in un tipo di riferimento, ad esempio una matrice, una `String` o una classe. Il tipo sottostante deve essere un tipo valore. Per altre informazioni, vedere [Value Types and Reference Types](value-types-and-reference-types.md).
 
-## <a name="using-a-nullable-type-variable"></a>Utilizzo di una variabile di tipo Nullable
+## <a name="using-a-nullable-type-variable"></a>Uso di una variabile di tipo Nullable
 
-I membri più importanti di un tipo che ammette valori null sono relativi <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A> proprietà. Per una variabile di un tipo nullable, <xref:System.Nullable%601.HasValue%2A> indica se la variabile contiene un valore definito. Se <xref:System.Nullable%601.HasValue%2A> viene `True`, è possibile leggere il valore da <xref:System.Nullable%601.Value%2A>. Si noti che entrambe <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A> sono `ReadOnly` proprietà.
+I membri più importanti di un tipo nullable sono le proprietà <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A>. Per una variabile di tipo nullable, <xref:System.Nullable%601.HasValue%2A> indica se la variabile contiene un valore definito. Se <xref:System.Nullable%601.HasValue%2A> è `True`, è possibile leggere il valore da <xref:System.Nullable%601.Value%2A>. Si noti che <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A> sono proprietà `ReadOnly`.
 
 ### <a name="default-values"></a>Valori predefiniti
 
-Quando si dichiara una variabile con un tipo che ammette valori null, relative <xref:System.Nullable%601.HasValue%2A> proprietà ha un valore predefinito di `False`. Ciò significa che per impostazione predefinita la variabile non ha valore definito, anziché il valore predefinito del relativo tipo di valore sottostante. Nell'esempio seguente, la variabile `numberOfChildren` inizialmente non ha valore definito, anche se il valore predefinito di `Integer` tipo è 0.
+Quando si dichiara una variabile con un tipo nullable, la relativa proprietà <xref:System.Nullable%601.HasValue%2A> ha il valore predefinito `False`. Questo significa che per impostazione predefinita la variabile non ha un valore definito, anziché il valore predefinito del tipo di valore sottostante. Nell'esempio seguente, la variabile `numberOfChildren` inizialmente non ha alcun valore definito, anche se il valore predefinito del tipo `Integer` è 0.
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Un valore null è utile per indicare un valore sconosciuto o non definito. Se `numberOfChildren` fosse stato dichiarato come `Integer`, non vi sarà alcun valore che potrebbe indicare che le informazioni non sono attualmente disponibili.
+Un valore null è utile per indicare un valore non definito o sconosciuto. Se `numberOfChildren` è stata dichiarata come `Integer`, non esiste alcun valore che potrebbe indicare che le informazioni non sono attualmente disponibili.
 
-### <a name="storing-values"></a>L'archiviazione dei valori
+### <a name="storing-values"></a>Archiviazione di valori
 
-Archiviare un valore in una variabile o proprietà di un tipo che ammette valori null nel modo usuale. L'esempio seguente assegna un valore alla variabile `numberOfChildren` dichiarato nell'esempio precedente.
+Un valore in una variabile o in una proprietà di un tipo nullable viene archiviato in modo tipico. Nell'esempio seguente viene assegnato un valore alla variabile `numberOfChildren` dichiarata nell'esempio precedente.
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-Se una variabile o una proprietà di un tipo nullable contiene un valore definito, è possibile che vengano tornerà allo stato iniziale di non avere un valore assegnato. Eseguire questa operazione impostando la variabile o proprietà `Nothing`, come illustrato nell'esempio seguente.
+Se una variabile o una proprietà di un tipo Nullable contiene un valore definito, è possibile fare in modo che venga ripristinato lo stato iniziale della mancata assegnazione di un valore. A tale scopo, impostare la variabile o la proprietà su `Nothing`, come illustrato nell'esempio seguente.
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Sebbene sia possibile assegnare `Nothing` a una variabile di un tipo nullable, è possibile testarlo per `Nothing` con il segno di uguale. Confronto che usa il segno di uguale `someVar = Nothing`, restituisce sempre `Nothing`. È possibile testare la variabile <xref:System.Nullable%601.HasValue%2A> proprietà per `False`, o di test usando la `Is` o `IsNot` operatore.
+> Sebbene sia possibile assegnare `Nothing` a una variabile di un tipo nullable, non è possibile testarla per `Nothing` usando il segno di uguale. Il confronto che usa il segno di uguale, `someVar = Nothing`, restituisce sempre `Nothing`. È possibile testare la proprietà <xref:System.Nullable%601.HasValue%2A> della variabile per `False` o eseguire il test usando l'operatore `Is` o `IsNot`.
 
 ### <a name="retrieving-values"></a>Recupero di valori
 
-Per recuperare il valore di una variabile di un tipo nullable, è necessario innanzitutto testare relativo <xref:System.Nullable%601.HasValue%2A> proprietà per confermare che ha un valore. Se si prova a leggere il valore quando <xref:System.Nullable%601.HasValue%2A> viene `False`, Visual Basic genera un <xref:System.InvalidOperationException> eccezione. Nell'esempio seguente viene illustrato il modo consigliato per la lettura della variabile `numberOfChildren` degli esempi precedenti.
+Per recuperare il valore di una variabile di un tipo nullable, è necessario prima testare la relativa proprietà <xref:System.Nullable%601.HasValue%2A> per verificare che disponga di un valore. Se si tenta di leggere il valore quando <xref:System.Nullable%601.HasValue%2A> è `False`, Visual Basic genera un'eccezione <xref:System.InvalidOperationException>. Nell'esempio seguente viene illustrato il modo consigliato per leggere la variabile `numberOfChildren` degli esempi precedenti.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>Confronto tra i tipi Nullable
+## <a name="comparing-nullable-types"></a>Confronto tra tipi Nullable
 
-Quando nullable `Boolean` variabili vengono usate in espressioni booleane, possono verificarsi `True`, `False`, o `Nothing`. Di seguito è riportato nella tabella di verità per `And` e `Or`. In quanto `b1` e `b2` disporrà di tre valori possibili, sono presenti nove combinazioni da valutare.
+Quando le variabili nullable `Boolean` vengono utilizzate nelle espressioni booleane, il risultato può essere `True`, `False` o `Nothing`. Di seguito è riportata la tabella di verità per `And` e `Or`. Poiché `b1` e `b2` hanno ora tre valori possibili, è necessario valutare nove combinazioni.
 
-|b1|b2|B1 e b2|B1 o b2|
+|b1|b2|B1 e B2|B1 o B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -78,38 +78,37 @@ Quando nullable `Boolean` variabili vengono usate in espressioni booleane, posso
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Quando è il valore di una variabile booleana o espressione `Nothing`, non è né `true` né `false`. Si osservi l'esempio riportato di seguito.
+Quando il valore di una variabile o di un'espressione booleana è `Nothing`, non è né `true` né `false`. Si osservi l'esempio riportato di seguito.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-In questo esempio `b1 And b2` restituisca `Nothing`. Di conseguenza, il `Else` clausola viene eseguita in ogni `If` istruzione e l'output è come segue:
+In questo esempio `b1 And b2` restituisce `Nothing`. Di conseguenza, la clausola `Else` viene eseguita in ogni istruzione `If` e l'output è il seguente:
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` e `OrElse`, che usano la valutazione, short circuit deve restituire i relativi operandi secondo quando restituisce il primo `Nothing`.
+> `AndAlso` e `OrElse`, che usano la valutazione del cortocircuito, devono valutare i secondi operandi quando il primo restituisce `Nothing`.
 
 ## <a name="propagation"></a>Propagazione
 
-Se uno o entrambi gli operandi di un aritmetica, di confronto, MAIUSC o operazione di tipo è nullable, anche il risultato dell'operazione è nullable. Se entrambi gli operandi hanno valori diversi da quelli `Nothing`, l'operazione viene eseguita sui valori sottostanti degli operandi, come se non fossero un tipo nullable. Nell'esempio seguente, le variabili `compare1` e `sum1` sono tipizzate in modo implicito. Se si posiziona il puntatore del mouse su di essi, si noterà che il compilatore deduce i tipi nullable per entrambi.
+Se uno o entrambi gli operandi di un'operazione aritmetica, di confronto, di spostamento o di tipo ammettono valori null, anche il risultato dell'operazione è nullable. Se entrambi gli operandi hanno valori che non sono `Nothing`, l'operazione viene eseguita sui valori sottostanti degli operandi, come se nessuno dei due fosse un tipo Nullable. Nell'esempio seguente le variabili `compare1` e `sum1` sono tipizzate in modo implicito. Se si posiziona il puntatore del mouse su di essi, si noterà che il compilatore deduce i tipi Nullable per entrambi.
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-Se il valore di uno o entrambi gli operandi `Nothing`, il risultato sarà `Nothing`.
+Se uno o entrambi gli operandi hanno un valore `Nothing`, il risultato sarà `Nothing`.
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
-## <a name="using-nullable-types-with-data"></a>Utilizzo dei tipi Nullable con dati
+## <a name="using-nullable-types-with-data"></a>Utilizzo di tipi nullable con dati
 
-Un database è uno dei posti più importanti da usare tipi nullable. Non tutti gli oggetti di database attualmente supportano i tipi nullable, mentre gli adattatori di tabella generati dalla finestra di progettazione. Visualizzare [TableAdapter supporto per i tipi nullable](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
+Un database è uno dei punti più importanti per usare i tipi nullable. Non tutti gli oggetti di database supportano attualmente i tipi nullable, ma gli adattatori di tabella generati dalla finestra di progettazione. Vedere [supporto TableAdapter per i tipi nullable](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Uso dei tipi nullable](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipi di dati](index.md)
 - [Value Types and Reference Types](value-types-and-reference-types.md)
 - [Risoluzione dei problemi relativi ai tipi di dati](troubleshooting-data-types.md)
@@ -118,3 +117,4 @@ Un database è uno dei posti più importanti da usare tipi nullable. Non tutti g
 - [Inferenza del tipo di variabile locale](../variables/local-type-inference.md)
 - [Operatore Is](../../../language-reference/operators/is-operator.md)
 - [Operatore IsNot](../../../language-reference/operators/isnot-operator.md)
+- [Utilizzo di tipi di valoreC#Nullable ()](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

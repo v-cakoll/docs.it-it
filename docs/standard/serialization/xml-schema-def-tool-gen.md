@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017982"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392857"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Procedura: Usare lo strumento XML Schema Definition per generare classi e documenti XML Schema Document
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema che descrive una classe o di generare la classe definita da un XML Schema. Le procedure descritte di seguito mostrano come eseguire queste operazioni.  
@@ -23,11 +23,11 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
   
 2. Passare lo schema XML come argomento allo strumento XML Schema Definition, che crea un set di classi esattamente corrispondenti allo schema XML, ad esempio:  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, deve essere lo spazio dei nomi XML Schema "http://www.w3.org/2001/XMLSchema" come illustrato nell'esempio seguente.  
+     Lo strumento è in grado di elaborare solo schemi che fanno riferimento alla specifica XML del World Wide Web Consortium del 16 marzo 2001. In altre parole, lo spazio dei nomi XML schema deve essere "http://www.w3.org/2001/XMLSchema", come illustrato nell'esempio seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,7 +46,7 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
   
 3. Passare la DLL come argomento a Xsd.exe, ad esempio:  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
@@ -59,5 +59,5 @@ Lo strumento XML Schema Definition (Xsd.exe) consente di generare un XML Schema 
 - [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Procedura: Serializzare un oggetto @ no__t-0
+- [Procedura: Deserializzare un oggetto @ no__t-0

@@ -2,12 +2,12 @@
 title: Ricerca di testo nei documenti di Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: f05df74f09373af140766f601cfae26404ada1b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9eb5eaa8326167501792745da047f904cf001c29
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630918"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352920"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Ricerca di testo nei documenti di Word (Visual Basic)
 
@@ -155,7 +155,7 @@ End Module
 
 Questo esempio produce il seguente output:
 
-```
+```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
@@ -296,7 +296,7 @@ End Module
 
 Questo esempio produce il seguente output:
 
-```
+```console
 StyleName:Code ><
 ```
 
@@ -304,7 +304,7 @@ StyleName:Code ><
 
 Notare che questo esempio viene eseguito quasi come se fosse stato scritto come una singola query. Perché ogni query viene implementata in modo lazy e posticipato, non restituisce i risultati finché non ne viene eseguita l'iterazione. Per ulteriori informazioni sull'esecuzione e la valutazione lazy, vedere [esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:
 
@@ -312,6 +312,6 @@ Nella sezione successiva vengono fornite ulteriori informazioni sui documenti Wo
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refactoring con una funzione pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [Esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

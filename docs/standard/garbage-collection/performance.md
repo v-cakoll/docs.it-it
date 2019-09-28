@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054060"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354022"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 
@@ -321,7 +321,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
     Se l'eccezione è gestita, <xref:System.OutOfMemoryException> viene visualizzato come tipo di eccezione, come mostrato nell'esempio seguente.
 
-    ```
+    ```console
     Exception object: 39594518
     Exception type: System.OutOfMemoryException
     Message: <none>
@@ -335,7 +335,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
     Il thread con lo stack che include le chiamate dell'eccezione è indicato dall'argomento `RaiseTheException`. Si tratta dell'oggetto eccezione gestita.
 
-    ```
+    ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
@@ -355,7 +355,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   L'area libera più grande viene visualizzata come indicato nell'output seguente.
 
-  ```
+  ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
@@ -369,7 +369,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   L'area libera più grande corrisponde al valore maggiore nella colonna MAXIMUM, come indicato nell'output seguente.
 
-  ```
+  ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
   ~~~~        ~~~~~~~   ~~~~~~~     ~~~~~~~   ~~~~~~~~~~  ~~~~
   Free:
@@ -415,7 +415,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Il risultato è il seguente.
 
-  ```
+  ```console
   Number of GC Heaps: 2
   ------------------------------
   Heap 0 (002db550)
@@ -457,9 +457,9 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Se l'heap gestito è di grandi dimensioni, il completamento di **dumpheap** può richiedere alcuni minuti.
 
-  È possibile iniziare l'analisi dalle ultime righe dell'output, perché elencano gli oggetti che usano la maggior parte dello spazio. Ad esempio:
+  È possibile iniziare l'analisi dalle ultime righe dell'output, perché elencano gli oggetti che usano la maggior parte dello spazio. Esempio:
 
-  ```
+  ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
   00155f80      533     15216804      Free
   7a747c78   791070     15821400 System.Collections.Specialized.ListDictionary+DictionaryNode
@@ -479,7 +479,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Di seguito viene riportato un esempio dei risultati.
 
-  ```
+  ```console
   Address  MT           Size  Gen
   1875d2c0 790fa3e0      152    2 System.String HighlightNullStyle_Blotter_PendingOrder-11_Blotter_PendingOrder-11
   …
@@ -503,7 +503,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Le radici trovate negli stack possono essere falsi positivi. Per altre informazioni, usare il comando `!help gcroot`.
 
-  ```
+  ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
   19010b78(DemoApp.FormDemoApp)->
   19011158(System.Windows.Forms.PropertyStore)->
@@ -551,7 +551,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
     Questo comando genera un output simile al seguente.
 
-    ```
+    ```console
        OSID     Special thread type
     2    cd0    DbgHelper
     3    c18    Finalizer
@@ -570,7 +570,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Questo comando visualizza le dimensioni totali di tutti gli oggetti liberi nell'heap gestito, come mostrato nell'esempio seguente.
 
-  ```
+  ```console
   total 230 objects
   Statistics:
         MT    Count    TotalSize Class Name
@@ -584,7 +584,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Questo comando genera un output simile al seguente. L'ultima riga mostra il segmento effimero.
 
-  ```
+  ```console
   Heap 0 (0015ad08)
   generation 0 starts at 0x49521f8c
   generation 1 starts at 0x494d7f64
@@ -604,7 +604,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Il risultato è il seguente. La generazione 0 è di circa 9 MB.
 
-  ```
+  ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
@@ -614,7 +614,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Il risultato è il seguente.
 
-  ```
+  ```console
   ------------------------------
   Heap 0
   total 409 objects
@@ -647,7 +647,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Le statistiche visualizzate includono il numero di handle bloccati, come indicato nell'esempio seguente.
 
-  ```
+  ```console
   GC Handle Statistics:
   Strong Handles:      29
   Pinned Handles:      10
@@ -665,7 +665,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   I dati seguenti mostrano quattro intervalli di campionamento di due secondi, per uno studio di otto secondi. Le colonne `Gen0`, `Gen1` e `Gen2` mostrano il numero di operazioni di Garbage Collection eseguite durante l'intervallo per la generazione.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
           1       9       3       1              10
           2      10       3       1               1
@@ -677,7 +677,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Questo esempio include cinque periodi.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
           1       9       3       1                3
           2      10       3       1                1
@@ -692,7 +692,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Ad esempio, i dati seguenti mostrano una sequenza di eventi verificatasi durante un'operazione di Garbage Collection non simultanea.
 
-  ```
+  ```console
   Timestamp    Event name
   513052        GCSuspendEEBegin_V1
   513078        GCSuspendEEEnd
@@ -711,7 +711,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   L'output seguente offre un esempio di un'operazione di Garbage Collection in background e include il processo, il thread e i campi evento. Non tutti i dati vengono visualizzati.
 
-  ```
+  ```console
   timestamp(us)    event name            process    thread    event field
   42504385        GCSuspendEEBegin_V1    Test.exe    4372             1
   42504648        GCSuspendEEEnd         Test.exe    4372
@@ -751,7 +751,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Questo comando genera un output simile al seguente.
 
-  ```
+  ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
   0012f454 30002894 mscorwks!GCInterface::CollectGeneration+0xa4
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
@@ -761,7 +761,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Se l'operazione di Garbage Collection è stata causata dall'allocazione di memoria, lo stack viene visualizzato in questo modo:
 
-  ```
+  ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
   0012f2b8 7a07cba8 mscorwks!WKS::gc_heap::try_allocate_more_space+0x1a1
   0012f2d4 7a07cefb mscorwks!WKS::gc_heap::allocate_more_space+0x18
@@ -781,7 +781,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Output di esempio (abbreviato per mostrare gli oggetti che usano la maggior parte dello spazio):
 
-  ```
+  ```console
   79124228    31857      9862328 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   00155f80    21248     12256296      Free
@@ -803,7 +803,7 @@ Questa sezione descrive le procedure per isolare la causa del problema di presta
 
   Output di esempio (abbreviato per mostrare gli oggetti che usano la maggior parte dello spazio):
 
-  ```
+  ```console
   79124228    26648      9314256 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   79103b6c   296770     13057880 System.Threading.ReaderWriterLock

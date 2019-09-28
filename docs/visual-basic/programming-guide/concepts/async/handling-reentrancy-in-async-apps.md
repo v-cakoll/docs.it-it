@@ -2,12 +2,12 @@
 title: Gestione della rientranza nelle app asincrone (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630943"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351984"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gestione della rientranza nelle app asincrone (Visual Basic)
 
@@ -22,7 +22,7 @@ Nell'esempio riportato in questo argomento viene scelto un pulsante **Start** pe
 
 Nell'esempio seguente viene illustrato l'output previsto se l'utente sceglie il pulsante **Start** una sola volta. Viene visualizzato un elenco dei siti Web scaricati con la dimensione, espressa in byte, di ogni sito. Il numero totale di byte viene visualizzato alla fine.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -37,7 +37,7 @@ TOTAL bytes returned:  890591
 
 Tuttavia, se l'utente sceglie il pulsante più volte, il gestore eventi viene chiamato più volte e il processo di download viene riattivato ogni volta. Di conseguenza, diverse operazioni asincrone sono in esecuzione contemporaneamente, l'output si sovrappone ai risultati e il numero totale di byte è poco chiaro.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -94,7 +94,7 @@ TOTAL bytes returned:  890591
 
 È possibile bloccare il pulsante **Start** durante l'esecuzione di un'operazione disabilitando il pulsante nella parte superiore del gestore eventi `StartButton_Click`. È possibile riabilitare il pulsante dall'interno un blocco `Finally` al termine dell'operazione in modo che gli utenti possano eseguire nuovamente l'applicazione.
 
-Il codice seguente illustra queste modifiche, contrassegnate da asterischi. È possibile aggiungere le modifiche al codice alla fine di questo argomento oppure è possibile scaricare l'app finita da [esempi asincroni: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)). Il nome del progetto è DisableStartButton.
+Il codice seguente illustra queste modifiche, contrassegnate da asterischi. È possibile aggiungere le modifiche al codice alla fine di questo argomento oppure scaricare l'app finita da esempi [Async: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)). Il nome del progetto è DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -136,7 +136,7 @@ Per configurare questo scenario, apportare le modifiche seguenti al codice di ba
         Dim cts As CancellationTokenSource
     ```
 
-2. In `StartButton_Click` determinare se un'operazione è già in corso. Se il valore di `cts` è `Nothing`, nessuna operazione è già attiva. Se il valore non `Nothing`è, l'operazione già in esecuzione viene annullata.
+2. In `StartButton_Click` determinare se un'operazione è già in corso. Se il valore di `cts` è `Nothing`, nessuna operazione è già attiva. Se il valore non è `Nothing`, l'operazione già in esecuzione viene annullata.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ Per configurare questo scenario, apportare le modifiche seguenti al codice di ba
     cts = newCTS
     ```
 
-4. Alla fine di `StartButton_Click`, il processo corrente è completo, quindi impostare il valore di `cts` nuovo su `Nothing`.
+4. Alla fine di `StartButton_Click`, il processo corrente è completo, quindi impostare il valore di `cts` di nuovo su `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -245,9 +245,9 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Se si sceglie il pulsante **Start** più volte durante l'esecuzione di questa app, i risultati generati devono essere simili all'output seguente.
+Se si sceglie il pulsante **Start** più volte mentre l'app è in esecuzione, si otterrà un risultato simile all'output seguente:
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -285,7 +285,7 @@ Le operazioni condividono un codice <xref:System.Threading.Tasks.Task> globale, 
 
 Nell'output seguente viene illustrato il risultato restituito quando l'utente sceglie il pulsante **Start** una sola volta. L'etichetta A indica che il risultato fa riferimento alla prima volta che il pulsante **Start** viene scelto. I numeri indicano l'ordine degli URL nell'elenco delle destinazioni di download.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -305,7 +305,7 @@ TOTAL bytes returned:  918876
 
 Se l'utente sceglie il pulsante **Start** tre volte, l'app genera un output simile alle righe seguenti. Le righe di informazioni che iniziano con un cancelletto (#) tengono traccia dello stato di avanzamento dell'applicazione.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -479,7 +479,7 @@ L'output mostra i modelli seguenti.
 
 - Un gruppo può essere avviato anche se un gruppo precedente è visualizzato nel relativo output, ma la visualizzazione dell'output del gruppo precedente non viene interrotta.
 
-  ```
+  ```console
   #Starting group A.
   #Task assigned for group A. Download tasks are active.
 
@@ -513,11 +513,11 @@ L'output mostra i modelli seguenti.
   TOTAL bytes returned:  915908
   ```
 
-- L' `pendingWork` attività si `Nothing` trova all'inizio di `FinishOneGroupAsync` solo per il gruppo a, che viene avviato per primo. Il gruppo A non ha ancora completato un'espressione await quando raggiunge `FinishOneGroupAsync`. Pertanto, il controllo non è stato restituito a `AccessTheWebAsync` e non è stata eseguita la prima assegnazione a `pendingWork`.
+- L'attività `pendingWork` è `Nothing` all'inizio di `FinishOneGroupAsync` solo per il gruppo A, che viene avviato per primo. Il gruppo A non ha ancora completato un'espressione await quando raggiunge `FinishOneGroupAsync`. Pertanto, il controllo non è stato restituito a `AccessTheWebAsync` e non è stata eseguita la prima assegnazione a `pendingWork`.
 
 - Le due righe seguenti sono sempre visualizzate insieme nell'output. Il codice non viene mai interrotto tra l'avvio dell'operazione di un gruppo in `StartButton_Click` e l'assegnazione di un'attività per il gruppo a `pendingWork`.
 
-  ```
+  ```console
   #Starting group B.
   #Task assigned for group B. Download tasks are active.
   ```
@@ -677,5 +677,5 @@ Nella sezione seguente viene illustrato il codice per compilare l'esempio come a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Accesso al Web tramite Async e await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Procedura dettagliata: Accesso al Web tramite Async e await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 12b7f69d7cbcac4a0270dcecfeb0c2cb8eb77fe2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 34157b19e342d4e10ac652aaf46c7186c4a19358
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421997"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353431"
 ---
 # <a name="null-c-reference"></a>null (Riferimenti per C#)
 
-La parola chiave `null` è un valore letterale che rappresenta un riferimento Null, ovvero un riferimento che non fa riferimento a un oggetto. `null` è il valore predefinito delle variabili di tipo riferimento. I tipi di valore ordinari non possono essere Null. Tuttavia, in C# 2.0 sono disponibili tipi di valori nullable. Vedere [Tipi nullable](../../programming-guide/nullable-types/index.md).
+La parola chiave `null` è un valore letterale che rappresenta un riferimento Null, ovvero un riferimento che non fa riferimento a un oggetto. `null` è il valore predefinito delle variabili di tipo riferimento. I tipi di valore normali non possono essere null, ad eccezione dei [tipi di valore Nullable](../../programming-guide/nullable-types/index.md).
 
 L'esempio seguente descrive alcuni comportamenti della parola chiave null:
 
@@ -30,7 +30,6 @@ L'esempio seguente descrive alcuni comportamenti della parola chiave null:
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../../language-reference/index.md)
-- [Guida per programmatori C#](../../programming-guide/index.md)
-- [Parole chiave di C#](index.md)
+- [Parole chiave C#](index.md)
 - [Tabella dei valori predefiniti](default-values-table.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Nothing (Visual Basic)](../../../visual-basic/language-reference/nothing.md)

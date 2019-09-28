@@ -4,12 +4,12 @@ description: Informazioni su come definire e usare valori restituiti e variabili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081846"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353879"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -27,12 +27,12 @@ Esistono alcune restrizioni per l'espressione che un metodo può restituire come
 
 - Il valore restituito non può essere il valore letterale `null`. La restituzione di `null` genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
-   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (senza istanza) o un [tipo nullable](../nullable-types/index.md) per un tipo valore.
- 
+   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (privo di istanze) o un [tipo di valore Nullable](../nullable-types/index.md) per un tipo valore.
+
 - Il valore restituito non può essere una costante, un membro di enumerazione, il valore restituito per valore da una proprietà o un metodo di un oggetto `class` o `struct`. La violazione di questa regola genera l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
 Inoltre, i valori restituiti di riferimento non sono consentiti per i metodi asincroni. Un metodo asincrono può restituire il controllo prima del termine dell'esecuzione, quando il valore restituito è ancora sconosciuto.
- 
+
 ## <a name="defining-a-ref-return-value"></a>Definizione di un valore restituito ref
 
 Un metodo che restituisce un *valore restituito di riferimento* deve soddisfare le due condizioni seguenti:

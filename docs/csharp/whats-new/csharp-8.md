@@ -1,17 +1,17 @@
 ---
-title: Novità di C# 8.0 - Guida a C#
-description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+title: Novità di C# 8,0- C# Guida
+description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
+ms.date: 09/20/2019
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926522"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396032"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
-Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibile provare.
+C#8,0 aggiunge le funzionalità e i miglioramenti seguenti al C# linguaggio:
 
 - [Membri di sola lettura](#readonly-members)
 - [Membri di interfaccia predefiniti](#default-interface-members)
@@ -28,10 +28,8 @@ Sono disponibili numerosi miglioramenti per il linguaggio C# che è già possibi
 - [Indici e intervalli](#indices-and-ranges)
 - [Assegnazione di Unione null](#null-coalescing-assignment)
 - [Tipi costruiti non gestiti](#unmanaged-constructed-types)
+- [stackalloc nelle espressioni annidate](#stackalloc-in-nested-expressions)
 - [Miglioramento delle stringhe verbatim interpolate](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Questo articolo è stato aggiornato per l'ultima volta per l'anteprima 5 di C# 8.0.
 
 Il resto di questo articolo descrive brevemente queste funzionalità. Se sono disponibili articoli approfonditi, vengono forniti collegamenti a queste panoramiche ed esercitazioni. È possibile esplorare queste funzionalità nell'ambiente in uso tramite lo strumento globale `dotnet try`:
 
@@ -377,18 +375,18 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="indices-and-ranges"></a>Indici e intervalli
 
-Gli intervalli e gli indici offrono una sintassi concisa per la specifica di intervalli secondari in una matrice, <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>.
+Gli indici e gli intervalli forniscono una sintassi concisa per l'accesso a singoli elementi o intervalli in una sequenza.
 
 Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operatori:
 
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
-- L'operatore `^`, che specifica che un indice è relativo alla fine della sequenza.
+- Indice dell'operatore end `^`, che specifica che un indice è relativo alla fine della sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
-- L'operatore Range (`..`), che specifica l'inizio e fine di un intervallo come operandi.
+- Operatore `..`Range, che specifica l'inizio e la fine di un intervallo come operandi.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
 
-Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, vale a dire che l'*inizio* è compreso nell'intervallo, mentre la *fine* non lo è. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo. 
+Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, vale a dire che l'*inizio* è compreso nell'intervallo, mentre la *fine* non lo è. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo.
 
 Di seguito verranno esaminati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
 
@@ -447,6 +445,8 @@ L'intervallo può quindi essere usato all'interno dei caratteri `[` e `]`:
 var text = words[phrase];
 ```
 
+Non solo le matrici supportano gli indici e gli intervalli. È anche possibile usare gli indici e gli intervalli con [String](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Per altre informazioni, vedere [supporto dei tipi per indici e intervalli](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+
 È possibile ottenere maggiori informazioni su indici e intervalli nell'esercitazione [Indici e intervalli](../tutorials/ranges-indexes.md).
 
 ## <a name="null-coalescing-assignment"></a>Assegnazione di Unione null
@@ -493,6 +493,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Per ulteriori informazioni, vedere [tipi non gestiti](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>stackalloc nelle espressioni annidate
+
+A partire C# da 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) <xref:System.Span%601?displayProperty=nameWithType> è di tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> o, è possibile usare l' `stackalloc` espressione in altre espressioni:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
 
