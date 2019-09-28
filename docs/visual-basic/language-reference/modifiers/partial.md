@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929945"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592110"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica che una dichiarazione di tipo è una definizione parziale del tipo.  
@@ -31,7 +31,7 @@ Indica che una dichiarazione di tipo è una definizione parziale del tipo.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -43,14 +43,14 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
 |`attrlist`|facoltativo. Elenco degli attributi applicabili al tipo. È necessario racchiudere l' [elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi angolari (`< >`).|  
 |`accessmodifier`|facoltativo. Specifica il tipo di codice che può accedere al tipo. Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|facoltativo. Vedere [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|facoltativo. Vedere [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Richiesto. Nome del tipo. Deve corrispondere al nome definito in tutte le altre dichiarazioni parziali dello stesso tipo.|  
+|`name`|Obbligatorio. Nome del tipo. Deve corrispondere al nome definito in tutte le altre dichiarazioni parziali dello stesso tipo.|  
 |`Of`|facoltativo. Specifica che si tratta di un tipo generico. Vedere [tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
 |`typelist`|Obbligatorio se [si usa.](../../../visual-basic/language-reference/statements/of-clause.md) Vedere [elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|facoltativo. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  

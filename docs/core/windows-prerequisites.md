@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: c46a1f12ca20c0e21ee205e409a2a5a89e3389b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214559"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591677"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -29,13 +29,10 @@ Gli articoli seguenti contengono un elenco completo dei sistemi operativi suppor
 * [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 Per i collegamenti per il download e altre informazioni, vedere [.NET downloads](https://dotnet.microsoft.com/download) (Download .NET) per scaricare la versione più recente o [.NET downloads archive](https://dotnet.microsoft.com/download/archives#dotnet-core) (Archivio di download .NET) per le versioni precedenti.
 
 ## <a name="net-core-dependencies"></a>Dipendenze .NET Core
-
-.NET Core 1.1 e versioni precedenti richiedono Visual C++ Redistributable per l'esecuzione in versioni di Windows precedenti a Windows 10 e Windows Server 2016. Questa dipendenza viene installata automaticamente dal programma di installazione di .NET Core.
 
 [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685) deve essere installato manualmente nei seguenti casi:
 
@@ -108,6 +105,7 @@ Dopo aver configurato Visual Studio con .NET Core 3,0 SDK, è possibile eseguire
 
 Per sviluppare app .NET Core in Visual Studio 2017 con .NET Core 2.2 SDK:
 
+* [Scaricare e installare Visual Studio 2019 versione 16,3 o successiva](/visualstudio/install/install-visual-studio) con il carico di lavoro **sviluppo multipiattaforma .NET Core** (nella sezione **altri set di strumenti** ) selezionato.
 * [Scaricare e installare Visual Studio 2017 versione 15.9.0 o successiva](/visualstudio/install/install-visual-studio) con il carico di lavoro **Sviluppo multipiattaforma con .NET Core** (nella sezione **Altri set di strumenti**) selezionato.
 
 ![Screenshot dell'installazione di Visual Studio 2017 con il carico di lavoro "Sviluppo multipiattaforma .NET Core" selezionato](./media/windows-prerequisites/vs-2017-workloads.jpg)
@@ -131,19 +129,5 @@ Dopo aver configurato Visual Studio con .NET Core 2.2 SDK, è possibile eseguire
 * Aprire, compilare ed eseguire progetti .NET Core 1.x e 2.x esistenti.
 * Ridestinare i progetti .NET Core 1.x e 2.x a .NET Core 2.2, compilarli ed eseguirli.
 * Creare nuovi progetti .NET Core 2.2.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visual Studio 2017](/visualstudio/install/install-visual-studio) con il carico di lavoro di **"Sviluppo multipiattaforma .NET Core"** (nella sezione **Altri set di strumenti**) selezionato.
-
-![Screenshot dell'installazione di Visual Studio 2017 con il carico di lavoro "Sviluppo multipiattaforma .NET Core" selezionato](./media/windows-prerequisites/vs-workloads.jpg)
-
-> [!IMPORTANT]
-> È possibile usare Visual Studio 2015 per lo sviluppo di .NET Core 1.x, ma non è consigliabile per i motivi seguenti:
->
-> * Gli strumenti di .NET Core sono disponibili nella versione di anteprima che non è supportata.
-> * I progetti sono basati sul file project.json che è stato deprecato.
->
-> Per altre informazioni sulle modifiche del formato del progetto, vedere [High-level overview of changes](./tools/cli-msbuild-architecture.md) (Panoramica generale delle modifiche).
 
 ---

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: 54de9c91d4e166b8ca1733952dfa9c98ebf11ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cdfbec917608211e19c39eb37bd12dbc7c4d33f
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778495"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592219"
 ---
 # <a name="-operator-visual-basic"></a>Operatore ^ (Visual Basic)
 
@@ -27,7 +27,7 @@ Eleva un numero alla potenza di un altro numero.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 number ^ exponent
 ```
 
@@ -41,48 +41,48 @@ Obbligatorio. Qualsiasi espressione numerica.
 
 ## <a name="result"></a>Risultato
 
-Il risultato viene `number` elevato alla potenza del `exponent`, sempre come una `Double` valore.
+Il risultato è `number` elevato alla potenza di `exponent`, sempre come valore `Double`.
 
 ## <a name="supported-types"></a>Tipi supportati
 
-`Double`. Gli operandi di tipo diversi vengono convertiti in `Double`.
+`Double` (Indici per tabelle con ottimizzazione per la memoria). Gli operandi di qualsiasi tipo diverso vengono convertiti in `Double`.
 
 ## <a name="remarks"></a>Note
 
 Visual Basic esegue sempre l'elevamento a potenza nel [tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md).
 
-Il valore di `exponent` può essere frazionari, negativo o entrambi.
+Il valore di `exponent` può essere frazionario, negativo o entrambi.
 
-Quando più di un elevamento a potenza viene eseguito in un'unica espressione, il `^` operatore viene valutato quando viene rilevata da sinistra a destra.
+Quando in un'unica espressione viene eseguita più di un elevamento a potenza, l'operatore `^` viene valutato in base a quanto rilevato da sinistra a destra.
 
 > [!NOTE]
-> Il `^` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore su una classe o struttura, assicurarsi di che comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+> L'operatore `^` può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. Se il codice usa questo operatore su una classe o una struttura di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa il `^` operatore per la generazione di un numero alla potenza di un esponente. Il risultato è il primo operando elevato alla potenza del secondo.
+Nell'esempio seguente viene usato l'operatore `^` per aumentare un numero alla potenza di un esponente. Il risultato è il primo operando elevato alla potenza del secondo.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
 L'esempio precedente produce i risultati seguenti:
 
-`exp1` è impostato su 4 (2 al quadrato).
+`exp1` è impostato su 4 (2 quadrato).
 
-`exp2` è impostato su 19683 (3 al cubo, quindi tale valore al cubo).
+`exp2` è impostato su 19683 (3 cubi, quindi il valore Cubed).
 
-`exp3` è impostato su -125 (al cubo -5).
+`exp3` è impostato su-125 (-5 Cubed).
 
-`exp4` è impostato su 625 (-5 elevato alla potenza quarto).
+`exp4` è impostato su 625 (-5 alla quarta potenza).
 
-`exp5` è impostato su 2 (radice cubica di 8).
+`exp5` è impostato su 2 (radice cubo di 8).
 
-`exp6` è impostato su 0,5 (1.0 diviso per la radice cubica di 8).
+`exp6` è impostato su 0,5 (1,0 diviso per la radice del cubo di 8).
 
-Si noti l'importanza delle parentesi nelle espressioni nell'esempio precedente. Because of *precedenza tra gli operatori*, Visual Basic esegue normalmente il `^` operatore prima degli altri, anche l'operatore unario `–` operatore. Se `exp4` e `exp6` fosse stato eseguito senza parentesi, che avrebbe prodotto i risultati seguenti:
+Si noti l'importanza delle parentesi nelle espressioni dell'esempio precedente. A causa della *precedenza degli operatori*, Visual Basic esegue normalmente l'operatore `^` prima di qualsiasi altro, anche l'operatore unario `–`. Se `exp4` e `exp6` sono stati calcolati senza parentesi, avrebbero prodotto i risultati seguenti:
 
-`exp4 = -5 ^ 4` viene calcolato come: (5 elevato alla potenza quarto), che comporterebbe-625.
+`exp4 = -5 ^ 4` verrebbe calcolato come – (dal 5 al quarto), il che comporterebbe-625.
 
-`exp6 = 8 ^ -1.0 / 3.0` viene calcolato come (8 per la potenza di-1 o 0.125) diviso per 3.0, risultato uguale a 0,041666666666666666666666666666667.
+`exp6 = 8 ^ -1.0 / 3.0` verrebbe calcolato come (da 8 a-1 potenza o 0,125) diviso per 3,0, che comporterebbe 0.041666666666666666666666666666667.
 
 ## <a name="see-also"></a>Vedere anche
 

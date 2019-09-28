@@ -9,56 +9,56 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: dbf01263723a9e2890dab57d5ffc3d467ed250fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a0391b0a5d76f36803b433369d4832c02b05e09
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801679"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592102"
 ---
 # <a name="ctype-function-visual-basic"></a>Funzione CType (Visual Basic)
 
-Restituisce il risultato della conversione esplicita di un'espressione in un tipo di dati specificato, oggetto, struttura, classe o interfaccia.
+Restituisce il risultato della conversione esplicita di un'espressione in un tipo di dati, oggetto, struttura, classe o interfaccia specificati.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 CType(expression, typename)
 ```
 
 ## <a name="parts"></a>Parti
 
-`expression` Qualsiasi espressione valida. Se il valore di `expression` non è compreso nell'intervallo consentito da `typename`, Visual Basic genera un'eccezione.
+`expression` qualsiasi espressione valida. Se il valore di `expression` non è compreso nell'intervallo consentito da `typename`, Visual Basic genera un'eccezione.
 
-`typename` Qualsiasi espressione valida in un' `As` clausola in un `Dim` istruzione, vale a dire, il nome di qualsiasi tipo di dati, oggetto, struttura, classe o interfaccia.
+`typename` qualsiasi espressione valida all'interno di una clausola `As` in un'istruzione `Dim`, ovvero il nome di qualsiasi tipo di dati, oggetto, struttura, classe o interfaccia.
 
 ## <a name="remarks"></a>Note
 
 > [!TIP]
-> È anche possibile usare le funzioni seguenti per eseguire una conversione del tipo:
+> Per eseguire una conversione del tipo è inoltre possibile utilizzare le funzioni seguenti:
 >
-> - Digitare, ad esempio funzioni di conversione `CByte`, `CDbl`, e `CInt` che eseguono una conversione in un tipo di dati specifico. Per altre informazioni, vedere [funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
-> - [Operatore DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) oppure [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md). Questi operatori richiedono che un tipo erediti da o implementi l'altro tipo. Possono fornire prestazioni migliori rispetto a `CType` durante la conversione da e verso il `Object` tipo di dati.
+> - Funzioni di conversione dei tipi quali `CByte`, `CDbl` e `CInt` che eseguono una conversione in un tipo di dati specifico. Per altre informazioni, vedere [funzioni di conversione dei tipi](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
+> - Operatore [DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) o [operatore TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md). Questi operatori richiedono che un tipo erediti da o implementi l'altro tipo. Possono fornire prestazioni leggermente migliori rispetto a `CType` quando si esegue la conversione da e verso il tipo di dati `Object`.
 
-`CType` viene compilata inline, il che significa che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi, il codice viene eseguito più velocemente perché viene chiamata alcuna procedura per eseguire la conversione.
+`CType` viene compilato inline, il che significa che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi, il codice viene eseguito più velocemente perché non viene chiamata alcuna routine per eseguire la conversione.
 
-Se non è stata definita alcuna conversione da `expression` al `typename` (ad esempio, da `Integer` a `Date`), Visual Basic viene visualizzato un messaggio di errore in fase di compilazione.
+Se non viene definita alcuna conversione da `expression` a `typename` (ad esempio, da `Integer` a `Date`), Visual Basic Visualizza un messaggio di errore in fase di compilazione.
 
-Se una conversione non riesce in fase di esecuzione, viene generata l'eccezione appropriata. Se una conversione di narrowing non riesce, un <xref:System.OverflowException> è il risultato più comune. Se la conversione non è definita, un <xref:System.InvalidCastException> in generata. Ad esempio, questa situazione può verificarsi se `expression` JE typu `Object` e il relativo tipo in fase di esecuzione non viene convertito in `typename`.
+Se una conversione non riesce in fase di esecuzione, viene generata l'eccezione appropriata. Se una conversione verso un tipo di ristringimento non riesce, il risultato più comune è @no__t 0. Se la conversione non è definita, viene generata un'eccezione <xref:System.InvalidCastException>. Questo problema può verificarsi, ad esempio, se `expression` è di tipo `Object` e il tipo in fase di esecuzione non dispone di conversione in `typename`.
 
-Se il tipo di dati `expression` oppure `typename` è una classe o struttura sono definiti, è possibile definire `CType` in quella classe o struttura come operatore di conversione. In questo modo `CType` agire come un *operatore di overload*. In questo caso, è possibile controllare il comportamento delle conversioni da e nella classe o struttura, incluse le eccezioni che possono essere generate.
+Se il tipo di dati di `expression` o `typename` è una classe o una struttura definita, è possibile definire `CType` su tale classe o struttura come operatore di conversione. Questo fa sì che `CType` funga da *operatore di overload*. In tal caso, è possibile controllare il comportamento delle conversioni da e verso la classe o la struttura, incluse le eccezioni che possono essere generate.
 
 ## <a name="overloading"></a>Overload
 
-Il `CType` operatore può anche essere sottoposti a overload in una classe o struttura definita all'esterno del codice. Se il codice esegue una conversione da o verso una classe o una struttura, assicurarsi di comprendere il comportamento del relativo `CType` operatore. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+È inoltre possibile eseguire l'overload dell'operatore `CType` su una classe o una struttura definita all'esterno del codice. Se il codice viene convertito in o da tale classe o struttura, assicurarsi di comprendere il comportamento dell'operatore `CType`. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="converting-dynamic-objects"></a>Conversione di oggetti dinamici
 
-Conversioni di tipi di oggetti dinamici vengono eseguite da conversioni dinamiche definite dall'utente che usano il <xref:System.Dynamic.DynamicObject.TryConvert%2A> o <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> metodi. Se si lavora con gli oggetti dinamici, utilizzare il <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> metodo per convertire l'oggetto dinamico.
+Le conversioni di tipi di oggetti dinamici vengono eseguite da conversioni dinamiche definite dall'utente che utilizzano i metodi <xref:System.Dynamic.DynamicObject.TryConvert%2A> o <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A>. Se si utilizzano oggetti dinamici, utilizzare il metodo <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> per convertire l'oggetto dinamico.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa il `CType` funzione per convertire un'espressione di `Single` tipo di dati.
+Nell'esempio seguente viene utilizzata la funzione `CType` per convertire un'espressione nel tipo di dati `Single`.
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 
@@ -71,5 +71,5 @@ Per altri esempi, vedere [conversioni implicite ed esplicite](../../../visual-ba
 - [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Funzioni di conversione](../../../visual-basic/language-reference/functions/conversion-functions.md)
 - [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Procedura: Definire un operatore di conversione @ no__t-0
 - [Conversione di tipi in .NET Framework](../../../standard/base-types/type-conversion.md)

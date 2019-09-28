@@ -1,21 +1,23 @@
 ---
 title: Che cos'è ML.NET e come funziona?
 description: ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete per usare ML.NET. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
-ms.date: 08/26/2019
+ms.date: 09/27/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929405"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592044"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Che cos'è ML.NET e come funziona?
 
-ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET. 
+ML.NET offre la possibilità di aggiungere funzionalità di Machine Learning alle applicazioni .NET, in scenari online o offline. Con questa funzionalità è possibile eseguire stime automatiche usando i dati disponibili per l'applicazione senza che sia necessario connettersi a una rete. Questo articolo illustra le nozioni fondamentali dell'apprendimento automatico in ML.NET.
+
+ML.NET viene eseguito in Windows, Linux e macOS con .NET Core o Windows con .NET Framework. 64 bit è supportato in tutte le piattaforme. 32 bit è supportato in Windows, ad eccezione delle funzionalità correlate a TensorFlow, LightGBM e ONNX.
 
 Esempi del tipo di stime che è possibile eseguire con ML.NET:
 
@@ -175,7 +177,7 @@ Un'applicazione ML.NET inizia con un oggetto <xref:Microsoft.ML.MLContext>. Ques
 ||Previsione|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Ranking|<xref:Microsoft.ML.RankingCatalog>||
 ||Regressione|<xref:Microsoft.ML.RegressionCatalog>||
-||Recommendation|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
+||Consiglio|<xref:Microsoft.ML.RecommendationCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.Recommender`|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Aggiungere il pacchetto NuGet `Microsoft.ML.TimeSeries`|
 |Uso dei modelli ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
