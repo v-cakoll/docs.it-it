@@ -31,7 +31,7 @@
       href: generics/
     - name: Spazi dei nomi
       href: namespaces/
-    - name: Tipi nullable
+    - name: Tipi valore nullable
       href: nullable-types/
     - name: Codice unsafe e puntatori
       href: unsafe-code-pointers/
