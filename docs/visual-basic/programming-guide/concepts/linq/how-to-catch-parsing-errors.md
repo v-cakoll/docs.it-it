@@ -1,23 +1,23 @@
 ---
-title: 'Procedura: Intercettare gli errori (Visual Basic) di analisi'
+title: 'Procedura: Rileva errori di analisi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352937"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="5de42-102">Procedura: Intercettare gli errori (Visual Basic) di analisi</span><span class="sxs-lookup"><span data-stu-id="5de42-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
-<span data-ttu-id="5de42-103">In questo argomento viene illustrato come rilevare XML non corretto o non valido.</span><span class="sxs-lookup"><span data-stu-id="5de42-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="56064-102">Procedura: Rileva errori di analisi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56064-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
+<span data-ttu-id="56064-103">In questo argomento viene illustrato come rilevare XML non corretto o non valido.</span><span class="sxs-lookup"><span data-stu-id="56064-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="5de42-104">viene implementato usando <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5de42-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="5de42-105">Se a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene passato XML non corretto o non valido, la classe <xref:System.Xml.XmlReader> sottostante genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="5de42-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="5de42-106">I vari metodi che analizzano il codice XML, ad esempio <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, non intercettano l'eccezione, che può quindi essere intercettata dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5de42-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="56064-104">viene implementato usando <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="56064-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="56064-105">Se a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] viene passato XML non corretto o non valido, la classe <xref:System.Xml.XmlReader> sottostante genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="56064-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="56064-106">I vari metodi che analizzano il codice XML, ad esempio <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, non intercettano l'eccezione, che può quindi essere intercettata dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="56064-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
   
- <span data-ttu-id="5de42-107">Si noti che non è possibile ottenere errori di analisi se si usano valori letterali XML.</span><span class="sxs-lookup"><span data-stu-id="5de42-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="5de42-108">Il compilatore Visual Basic intercetterà errori di XML non corretto o non valido.</span><span class="sxs-lookup"><span data-stu-id="5de42-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
+ <span data-ttu-id="56064-107">Si noti che non è possibile ottenere errori di analisi se si usano valori letterali XML.</span><span class="sxs-lookup"><span data-stu-id="56064-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="56064-108">Il compilatore Visual Basic intercetterà errori di XML non corretto o non valido.</span><span class="sxs-lookup"><span data-stu-id="56064-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5de42-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="5de42-109">Example</span></span>  
- <span data-ttu-id="5de42-110">Nel codice seguente si tenta di analizzare XML non valido:</span><span class="sxs-lookup"><span data-stu-id="5de42-110">The following code tries to parse invalid XML:</span></span>  
+## <a name="example"></a><span data-ttu-id="56064-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="56064-109">Example</span></span>  
+ <span data-ttu-id="56064-110">Nel codice seguente si tenta di analizzare XML non valido:</span><span class="sxs-lookup"><span data-stu-id="56064-110">The following code tries to parse invalid XML:</span></span>  
   
 ```vb  
 Try  
@@ -33,14 +33,14 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- <span data-ttu-id="5de42-111">Quando viene eseguito, questo codice genera la seguente eccezione:</span><span class="sxs-lookup"><span data-stu-id="5de42-111">When you run this code, it throws the following exception:</span></span>  
+ <span data-ttu-id="56064-111">Quando viene eseguito, questo codice genera la seguente eccezione:</span><span class="sxs-lookup"><span data-stu-id="56064-111">When you run this code, it throws the following exception:</span></span>  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- <span data-ttu-id="5de42-112">Per informazioni sulle eccezioni che si può prevedere vengano generate dai metodi <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> e <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, vedere la documentazione relativa a <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5de42-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
+ <span data-ttu-id="56064-112">Per informazioni sulle eccezioni che si può prevedere vengano generate dai metodi <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> e <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, vedere la documentazione relativa a <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="56064-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5de42-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5de42-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56064-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="56064-113">See also</span></span>
 
-- [<span data-ttu-id="5de42-114">Analisi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5de42-114">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="56064-114">Analisi di XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56064-114">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
