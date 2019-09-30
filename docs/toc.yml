@@ -317,13 +317,18 @@
       items:
         - name: Panoramica
           href: core/tools/index.md
-        - name: Strumenti globali
+        - name: Strumenti
           expanded: true
           items:
-            - name: Panoramica
-              href: core/tools/global-tools.md
-            - name: Creare uno strumento globale
-              href: core/tools/global-tools-how-to-create.md
+            - name: Strumenti globali
+              expanded: true
+              items:
+                - name: Panoramica
+                  href: core/tools/global-tools.md
+                - name: Creare uno strumento globale
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Risolvere i problemi di utilizzo degli strumenti
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Accesso con privilegi elevati
           href: core/tools/elevated-access.md
         - name: Modello di estendibilità
