@@ -18,7 +18,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 
 - Visual Studio 2012.
 
-- [https://login.microsoftonline.com/common/]([!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]).
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Dimostrazione
 
