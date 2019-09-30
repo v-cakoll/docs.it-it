@@ -114,7 +114,7 @@ Nella figura seguente viene illustrato lo stato vuoto iniziale del visitatore.  
 
 Quando si visita il nodo Project, viene effettuata la chiamata a VisitInputExpression sul relativo input (Join4), che attiva la visita di Join4 mediante il metodo VisitJoinExpression. Poiché si tratta di un join di livello superiore, IsParentAJoin restituisce false e un nuovo oggetto SqlSelectStatement (SelectStatement0) viene creato e inserito nello stack di istruzioni SELECT. Viene inoltre inserito un nuovo ambito (scope0) nella tabella dei simboli. Prima della visita del primo input di sinistra (Left) del join, nello stack IsParentAJoin viene inserito "true". Prima della visita di Join1, ovvero l'input di sinistra di Join4, lo stato del visitatore corrisponde a quello illustrato nella figura che segue.
 
-![Diagramma] di (./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44EA-8e74-c5001d5d5d79")
+![Diagramma](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44EA-8e74-c5001d5d5d79")
 
 Quando il metodo di visita del join viene richiamato su Join4, IsParentAJoin è true e pertanto riusa l'istruzione Select corrente SelectStatement0. Viene immesso un nuovo ambito (scope1). Prima di visitare l'elemento figlio di sinistra, Extent1, nello stack IsParentAJoin viene inserito un altro valore true.
 
@@ -156,7 +156,7 @@ Poiché si tratta di un join annidato, si cerca la proprietà "Extent4" nel dizi
 
 La condizione di join di Join4 viene elaborata in modo analogo. Il controllo viene restituito al metodo VisitInputExpression che ha elaborato il progetto di livello superiore. Analizzando FromExtents dell'oggetto SelectStatement0 restituito, si noterà che l'input viene identificato come un join e rimuove gli extent originali sostituendoli con un nuovo extent che include solo il simbolo di join. Viene aggiornata anche la tabella dei simboli e viene quindi elaborata la parte relativa alla proiezione del progetto. La risoluzione delle proprietà e la bidimensionalità degli extent del join corrispondono a quanto descritto in precedenza.
 
-![Diagramma] di (./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40AE-ACCC-a10e18e28b81")
+![Diagramma](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40AE-ACCC-a10e18e28b81")
 
 Viene infine prodotto l'oggetto SqlSelectStatement seguente:
 
