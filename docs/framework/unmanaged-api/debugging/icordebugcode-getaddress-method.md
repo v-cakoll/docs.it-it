@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdf8649e3cb2221e5c74eefd22959dc4b382236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7df668487601e4278b56e196a43d1154b643fd29
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747690"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700739"
 ---
-# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="ce2cc-102">Metodo ICorDebugCode::GetAddress</span><span class="sxs-lookup"><span data-stu-id="ce2cc-102">ICorDebugCode::GetAddress Method</span></span>
-<span data-ttu-id="ce2cc-103">Ottiene l'indirizzo virtuale relativo (RVA) del segmento di codice che rappresenta questa interfaccia "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="ce2cc-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
+# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="5cd11-102">Metodo ICorDebugCode::GetAddress</span><span class="sxs-lookup"><span data-stu-id="5cd11-102">ICorDebugCode::GetAddress Method</span></span>
+<span data-ttu-id="5cd11-103">Ottiene l'indirizzo RVA (relativo Virtual Address) del segmento di codice rappresentato da questa interfaccia "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="5cd11-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce2cc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ce2cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cd11-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5cd11-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -35,17 +35,15 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce2cc-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ce2cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5cd11-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5cd11-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="ce2cc-106">[out] Puntatore al RVA del segmento di codice.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-106">[out] A pointer to the RVA of the code segment.</span></span>  
+ <span data-ttu-id="5cd11-106">out Puntatore all'RVA del segmento di codice.</span><span class="sxs-lookup"><span data-stu-id="5cd11-106">[out] A pointer to the RVA of the code segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce2cc-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ce2cc-107">Requirements</span></span>  
- <span data-ttu-id="ce2cc-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce2cc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cd11-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5cd11-107">Requirements</span></span>  
+ <span data-ttu-id="5cd11-108">**Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5cd11-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce2cc-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ce2cc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5cd11-109">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="5cd11-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ce2cc-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce2cc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5cd11-110">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cd11-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ce2cc-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce2cc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ce2cc-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ce2cc-112">See also</span></span>
+ <span data-ttu-id="5cd11-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cd11-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

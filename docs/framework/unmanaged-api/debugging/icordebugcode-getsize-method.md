@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747498"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700808"
 ---
-# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="b6fbf-102">Metodo ICorDebugCode::GetSize</span><span class="sxs-lookup"><span data-stu-id="b6fbf-102">ICorDebugCode::GetSize Method</span></span>
-<span data-ttu-id="b6fbf-103">Ottiene la dimensione, espressa in byte, del codice binario rappresentato da "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="b6fbf-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="b6fbf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b6fbf-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="b6fbf-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b6fbf-105">Parameters</span></span>  
+# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="9d626-102">Metodo ICorDebugCode::GetSize</span><span class="sxs-lookup"><span data-stu-id="9d626-102">ICorDebugCode::GetSize Method</span></span>
+
+<span data-ttu-id="9d626-103">Ottiene la dimensione, in byte, del codice binario rappresentato da questo "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="9d626-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="9d626-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9d626-104">Syntax</span></span>
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="9d626-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9d626-105">Parameters</span></span>
+
  `pcBytes`  
- <span data-ttu-id="b6fbf-106">[out] Un puntatore alla dimensione, espressa in byte, del file binario di codice che questo `ICorDebugCode` oggetto rappresenta.</span><span class="sxs-lookup"><span data-stu-id="b6fbf-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="b6fbf-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b6fbf-107">Requirements</span></span>  
- <span data-ttu-id="b6fbf-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6fbf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="b6fbf-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b6fbf-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="b6fbf-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6fbf-110">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="b6fbf-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6fbf-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b6fbf-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b6fbf-112">See also</span></span>
+ <span data-ttu-id="9d626-106">out Puntatore alla dimensione, in byte, del codice binario rappresentato da questo oggetto `ICorDebugCode`.</span><span class="sxs-lookup"><span data-stu-id="9d626-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="9d626-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9d626-107">Requirements</span></span>
+
+ <span data-ttu-id="9d626-108">**Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d626-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="9d626-109">**Intestazione:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="9d626-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+ <span data-ttu-id="9d626-110">**Libreria** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d626-110">**Library:** CorGuids.lib</span></span>
+
+ <span data-ttu-id="9d626-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d626-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ 
