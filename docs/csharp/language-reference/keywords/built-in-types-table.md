@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605983"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698786"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabella dei tipi incorporati (Riferimenti per C#)
 
-La tabella seguente include le parole chiave per i tipi predefiniti di C#, che rappresentano gli alias dei tipi predefiniti nello spazio dei nomi <xref:System>.  
-  
+Nella tabella seguente vengono illustrate le parole chiave per C# i tipi incorporati, ovvero alias di tipi predefiniti nello spazio dei nomi <xref:System>:
+
 |Tipo C#|Tipo .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -36,11 +36,11 @@ La tabella seguente include le parole chiave per i tipi predefiniti di C#, che r
 |[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
-Tutti i tipi nella tabella, ad eccezione di `object` e `string`, sono detti tipi semplici.  
-  
-I tipi .NET e i relativi alias per le parole chiave per i tipi C# sono intercambiabili. Ad esempio, è possibile dichiarare una variabile integer, usando le seguenti dichiarazioni:  
+Tutti i tipi nella tabella, ad eccezione di `object` e `string`, sono detti tipi semplici.
+
+I tipi .NET e i relativi alias per le parole chiave per i tipi C# sono intercambiabili. Ad esempio, è possibile dichiarare una variabile integer, usando le seguenti dichiarazioni:
 
 ```csharp
 int x = 123;

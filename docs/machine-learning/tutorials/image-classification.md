@@ -1,17 +1,17 @@
 ---
 title: 'Esercitazione: Generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare'
 description: Informazioni su come trasferire le informazioni da un modello TensorFlow esistente in un nuovo modello di classificazione delle immagini ML.NET. Il modello TensorFlow è stato sottoposto a training per classificare le immagini in un centinaio di categorie. Il modello ML.NET usa l'apprendimento del trasferimento per classificare le immagini in un minor numero di categorie più ampie.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 28d8c18721bd353e961284935758a87679c8c8e0
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353688"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698655"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Esercitazione: Generare un modello di classificazione delle immagini ML.NET da un modello di TensorFlow con training preliminare
 
@@ -246,7 +246,10 @@ Poiché i dati dell'immagine e le relative stime verranno visualizzati più volt
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    La classe [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità che esegue una stima su una singola istanza di dati. Per ottenere la stima, utilizzare il metodo [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) .
+    Per ottenere la stima, utilizzare il metodo [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) . [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+    > [!NOTE]
+    > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.
 
 1. Visualizzare i risultati della stima come riga di codice successiva nel metodo `ClassifySingleImage()`:
 

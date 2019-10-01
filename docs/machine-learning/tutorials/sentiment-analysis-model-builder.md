@@ -1,17 +1,17 @@
 ---
 title: 'Esercitazione: Analizzare i sentimenti-classificazione binaria'
 description: Questa esercitazione illustra come creare un'applicazione Razor Pages che classifica i sentimenti dai commenti del sito Web ed esegue l'azione appropriata. Il classificatore dei sentimenti binari usa il generatore di modelli in Visual Studio.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332571"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700908"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Esercitazione: Analizzare i sentimenti dei commenti del sito Web in un'applicazione Web usando il generatore di modelli ML.NET
 
@@ -103,7 +103,7 @@ Il tempo necessario per l'esecuzione del training di ogni modello è proporziona
 
 ## <a name="evaluate-the-model"></a>Valutare il modello
 
-Il risultato del passaggio relativo al training è rappresentato dal modello con le prestazioni migliori. Nel passaggio di valutazione dello strumento generatore di modelli la sezione di output conterrà l'algoritmo usato dal modello con le prestazioni migliori nella voce **Best model** (Modello migliore), insieme con le metriche in **Best Model Quality (RSquared)** (Qualità modello migliore). Viene visualizzata anche una tabella di riepilogo con i cinque modelli migliori e le metriche relative.
+Il risultato del passaggio relativo al training è rappresentato dal modello con le prestazioni migliori. Nel passaggio Evaluate dello strumento generatore di modelli, la sezione output conterrà l'algoritmo utilizzato dal modello con le migliori prestazioni nella migliore voce del **modello** insieme alle metriche nell' **accuratezza del modello migliore**. Viene visualizzata anche una tabella di riepilogo con i cinque modelli migliori e le metriche relative.
 
 Se non si è soddisfatti della precisione delle metriche,un modo semplice per migliorarla consiste nell'aumentare la durata del training del modello o nell'usare più dati. In caso contrario, selezionare il collegamento al **codice** per passare al passaggio finale nello strumento generatore di modelli.
 
@@ -138,23 +138,43 @@ Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xre
 1. Aprire il file *Startup.cs* nel progetto *SentimentRazor* .
 1. Aggiungere le istruzioni using seguenti per fare riferimento al pacchetto NuGet *Microsoft.Extensions.ml* e al progetto *SentimentRazorML. Model* :
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
 1. Creare una variabile globale per archiviare il percorso del file di modello sottoposto a training.
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
 1. Il file del modello viene archiviato nella directory di compilazione insieme ai file di assembly dell'applicazione. Per semplificare l'accesso, creare un metodo helper chiamato `GetAbsolutePath` dopo il `Configure` metodo.
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
+
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
 1. Usare il `GetAbsolutePath` metodo `Startup` nel costruttore della `_modelPath`classe per impostare.
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
 1. Configurare per l'applicazione `ConfigureServices` nel metodo: `PredictionEnginePool`
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
 ### <a name="create-sentiment-analysis-handler"></a>Crea gestore analisi dei sentimenti
 
@@ -162,17 +182,27 @@ Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto
 
 1. Aprire il file *index.cshtml.cs* che si trova nella directory *pages* e aggiungere le istruzioni using seguenti:
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
     Per utilizzare l'oggetto `PredictionEnginePool` configurato `Startup` nella classe, è necessario inserirlo nel costruttore del modello in cui si desidera utilizzarlo.
 
 1. Aggiungere una variabile per fare riferimento `PredictionEnginePool` all'oggetto `IndexModel` all'interno della classe.
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
 1. Creare un costruttore nella `IndexModel` classe e inserire il `PredictionEnginePool` servizio al suo interno.
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
 1. Creare un gestore metodo che usi `PredictionEnginePool` per eseguire stime dall'input dell'utente ricevuto dalla pagina Web.
 
@@ -187,23 +217,33 @@ Le stime verranno effettuate nella pagina principale dell'applicazione. Pertanto
 
     1. All'interno `OnGetAnalyzeSentiment` del metodo, restituisce un sentimento *neutro* se l'input dell'utente è vuoto o null.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
     1. Dato un input valido, creare una nuova istanza di `ModelInput`.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
     1. Usare per `PredictionEnginePool` stimare i sentimenti.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
     1. Convertire il `bool` valore stimato in tossico o non tossico con il codice seguente.
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
     1. Infine, restituire le opinioni alla pagina Web.
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
 ### <a name="configure-the-web-page"></a>Configurare la pagina Web
 

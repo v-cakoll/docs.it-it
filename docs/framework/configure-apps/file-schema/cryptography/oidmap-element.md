@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927520"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698442"
 ---
-# <a name="oidmap-element"></a>\<Elemento > oidMap
+# <a name="oidmap-element"></a>Elemento > \<oidMap
 Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.  
   
- \<configuration>  
-\<mscorlib>  
-\<> cryptographySettings  
-\<oidMap>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<oidMap >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,11 +34,11 @@ Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<oidEntry>](oidentry-element.md)|Esegue il mapping di un OID ASN. 1 a un nome descrittivo.|  
   
@@ -51,7 +51,7 @@ Contiene i mapping degli identificatori di oggetto (OID) ASN. 1 alle classi.
 |`mscorlib`|Contiene l' `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > oidMap** per contenere un mapping di un OID per l'algoritmo hash RIPEMD-160 a un'implementazione di tale algoritmo hash.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<oidMap** per contenere un mapping di un OID per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo hash.  
   
 ```xml  
 <configuration>  

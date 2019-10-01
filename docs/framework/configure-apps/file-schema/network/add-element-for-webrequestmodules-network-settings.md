@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664212"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699581"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<aggiungere > elemento per webRequestModules (impostazioni di rete)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>Elemento > \<add per webRequestModules (impostazioni di rete)
 Aggiunge un modulo di richiesta Web personalizzato all'applicazione.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +39,13 @@ Aggiunge un modulo di richiesta Web personalizzato all'applicazione.
   
 ### <a name="attributes"></a>Attributi  
   
-|**Attributo**|**Descrizione**|  
+|**Attribute**|**Descrizione**|  
 |-------------------|---------------------|  
 |`prefix`|Prefisso URI per le richieste gestite da questo modulo di richiesta Web.|  
-|`type`|Il nome completo del tipo (indicato dalla <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato <xref:System.Reflection.Assembly.FullName%2A> dalla proprietà), separati da una virgola, che implementa questo modulo di richiesta Web.|  
+|`type`|Il nome completo del tipo (indicato dalla proprietà <xref:System.Type.FullName%2A>) e il nome dell'assembly (indicato dalla proprietà <xref:System.Reflection.Assembly.FullName%2A>), separati da una virgola, che implementa questo modulo di richiesta Web.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,13 +54,13 @@ Aggiunge un modulo di richiesta Web personalizzato all'applicazione.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Specifica i moduli da usare per richiedere informazioni dagli host di rete.|  
   
 ## <a name="remarks"></a>Note  
- L' `prefix` attributo definisce il prefisso URI che usa il modulo di richiesta Web specificato. I moduli di richiesta Web vengono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta a un server o a un percorso specifico in un server.  
+ L'attributo `prefix` definisce il prefisso URI che usa il modulo di richiesta Web specificato. I moduli di richiesta Web vengono in genere registrati per gestire un protocollo specifico, ad esempio HTTP o FTP, ma possono essere registrati per gestire una richiesta a un server o a un percorso specifico in un server.  
   
- Il modulo della richiesta Web viene creato quando un prefisso corrispondente URI viene passato al <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metodo.  
+ Il modulo della richiesta Web viene creato quando un prefisso corrispondente URI viene passato al metodo <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>.  
   
- Il valore `prefix` dell'attributo deve essere costituito dai caratteri iniziali di un URI valido. Ad esempio, `http` o `http://www.contoso.com`.
+ Il valore dell'attributo `prefix` deve essere costituito dai caratteri iniziali di un URI valido. Ad esempio, `http` o `http://www.contoso.com`.
   
- Il valore `type` dell'attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.
+ Il valore dell'attributo `type` deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

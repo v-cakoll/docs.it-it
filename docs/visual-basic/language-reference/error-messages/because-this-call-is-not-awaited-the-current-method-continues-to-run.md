@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619553"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701190"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata
 Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrente continuerà prima del completamento della chiamata. È possibile applicare l'operatore "Await" al risultato della chiamata.  
@@ -83,7 +83,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
      Nell'esempio, se si sceglie Call #1 o Call #2, il metodo asincrono senza attesa (`CalledMethodAsync`) termina dopo che il relativo chiamante (`CallingMethodAsync`) e il chiamante del chiamante (`StartButton_Click`) sono completati. Nell'ultima riga nell'output seguente viene mostrato quando viene completato il metodo chiamato. L'entrata e l'uscita dal gestore eventi tramite cui viene chiamato `CallingMethodAsync` nell'esempio completo sono contrassegnate nell'output.  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  

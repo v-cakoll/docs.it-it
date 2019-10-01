@@ -10,81 +10,81 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 870460d78eb2e627de2984c79571fd5172672b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 337d651e831dc2ab132056f6e9a1f2b5300bf7f8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629119"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701321"
 ---
-# <a name="-operator-visual-basic"></a>>> Operatore (Visual Basic)
-Esegue uno scorrimento a destra aritmetico in uno schema di bit.  
+# <a name="-operator-visual-basic"></a>Operatore > > (Visual Basic)
+Esegue uno spostamento a destra aritmetico in uno schema di bit.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 result = pattern >> amount  
 ```  
   
 ## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio. Valore numerico integrale. Il risultato dello spostamento dello schema di bit. Il tipo di dati è uguale a quello di `pattern`.  
+ Obbligatorio. Valore numerico integrale. Risultato dello spostamento dello schema di bit. Il tipo di dati è uguale a quello di `pattern`.  
   
  `pattern`  
- Obbligatorio. Espressione numerica integrale. Lo schema di bit da spostare. Il tipo di dati deve essere un tipo integrale (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
+ Obbligatorio. Espressione numerica integrale. Modello di bit da spostare. Il tipo di dati deve essere un tipo integrale`SByte`( `Byte` `Short`,, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
   
  `amount`  
- Obbligatorio. Espressione numerica. Il numero di bit da spostare lo schema di bit. Il tipo di dati deve essere `Integer` o ampliato a `Integer`.  
+ Obbligatorio. Espressione numerica. Numero di bit per spostare lo schema di bit. Il tipo di dati deve `Integer` essere o ampliato a. `Integer`  
   
 ## <a name="remarks"></a>Note  
- Aritmetici non sono circolari, ovvero i bit spostati oltre un'estremità del risultato non sono reintrodotto a altra estremità. In uno scorrimento aritmetico a destra, i bit spostati oltre la posizione del bit più a destra vengono ignorati e il bit più a sinistra (accesso) viene propagato nelle posizioni dei bit liberate a sinistra. Questo significa che se `pattern` ha un valore negativo, le posizioni vuote sono impostate su uno; in caso contrario, essi vengono impostati su zero.  
+ I turni aritmetici non sono circolari, il che significa che i bit spostati da un'estremità del risultato non vengono reintrodotti nell'altra estremità. In uno spostamento a destra aritmetico i bit spostati oltre la posizione del bit più a destra vengono eliminati e il bit più a sinistra (segno) viene propagato nelle posizioni dei bit sgomberate a sinistra. Ciò significa che se `pattern` ha un valore negativo, le posizioni sgomberate sono impostate su uno. in caso contrario, vengono impostati su zero.  
   
- Si noti che i tipi di dati `Byte`, `UShort`, `UInteger`, e `ULong` non sono firmati, pertanto non presenta alcun bit di segno per la propagazione. Se `pattern` è di qualsiasi tipi senza segno, le posizioni vuote sono sempre impostate su zero.  
+ Si noti che i tipi di dati `Byte`, `UShort`, `UInteger` e `ULong` non sono firmati, pertanto non è presente alcun bit di segno da propagare. Se `pattern` è di qualsiasi tipo senza segno, le posizioni sgomberate vengono sempre impostate su zero.  
   
- Per impedire lo spostamento da più bit quello che può contenere il risultato, Visual Basic nasconde il valore di `amount` con una maschera di dimensione corrispondente al tipo di dati di `pattern`. L'operatore AND binaria di questi valori viene utilizzato per l'entità dello spostamento. Le maschere di dimensioni sono i seguenti:  
+ Per impedire lo spostamento di più bit rispetto al risultato, Visual Basic maschera il valore di `amount` con una maschera di dimensioni corrispondente al tipo di dati di `pattern`. Il file binario e di questi valori viene utilizzato per l'importo dello spostamento. Le maschere delle dimensioni sono le seguenti:  
   
-|Tipo di dati `pattern`|Maschera di dimensioni (decimale)|Maschera di dimensioni (esadecimale)|  
+|Tipo di dati di `pattern`|Maschera dimensioni (decimale)|Maschera dimensioni (esadecimale)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Se `amount` è zero, il valore di `result` è identico a quello di `pattern`. Se `amount` è negativo, viene considerato come un valore senza segno e nascosto con la maschera delle dimensioni appropriate.  
+ Se `amount` è zero, il valore di `result` è identico al valore di `pattern`. Se `amount` è negativo, viene considerato come un valore senza segno e mascherato con la maschera di dimensioni appropriata.  
   
- Aritmetici non generano mai le eccezioni di overflow.  
+ I turni aritmetici non generano mai eccezioni di overflow.  
   
 ## <a name="overloading"></a>Overload  
- Il `>>` operatore può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice Usa l'operatore su una classe o struttura, assicurarsi di che comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ L'operatore `>>` può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. Se il codice usa questo operatore su una classe o una struttura di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `>>` operatore eseguire spostamenti a destra aritmetici in valori integrali. Il risultato ha sempre gli stessi dati di tipo come quello dell'espressione viene spostato.  
+ Nell'esempio seguente viene usato l'operatore `>>` per eseguire turni aritmetici a destra sui valori integrali. Il risultato ha sempre lo stesso tipo di dati dell'espressione spostata.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- I risultati dell'esempio precedente sono come segue:  
+ I risultati dell'esempio precedente sono i seguenti:  
   
-- `result1` is 2560 (0000 1010 0000 0000).  
+- `result1` è 2560 (0000 1010 0000 0000).  
   
 - `result2` is 160 (0000 0000 1010 0000).  
   
-- `result3` is 2 (0000 0000 0000 0010).  
+- `result3` è 2 (0000 0000 0000 0010).  
   
 - `result4` is 640 (0000 0010 1000 0000).  
   
-- `result5` è uguale a 0 (spostate 15 cifre a destra).  
+- `result5` è 0 (spostato di 15 posizioni a destra).  
   
- L'entità dello spostamento per `result4` è pari a 18 e 15, quali uguale a 2.  
+ Il valore Shift per `result4` viene calcolato come 18 e 15, che è uguale a 2.  
   
- Nell'esempio seguente mostra aritmetici su un valore negativo.  
+ Nell'esempio seguente vengono illustrati i turni aritmetici su un valore negativo.  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- I risultati dell'esempio precedente sono come segue:  
+ I risultati dell'esempio precedente sono i seguenti:  
   
-- `negresult1` is -512 (1111 1110 0000 0000).  
+- `negresult1` è-512 (1111 1110 0000 0000).  
   
-- `negresult2` è -1 (il bit di segno viene propagato).  
+- `negresult2` è-1 (il bit di segno viene propagato).  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,56 +3,53 @@ title: Migrazione di .NET Core da project.json
 description: Informazioni su come eseguire la migrazione di un progetto .NET Core meno recente usando project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105301"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698927"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrazione di progetti .NET Core da project.json
 
-In questo documento vengono illustrati gli scenari di migrazione per progetti .NET Core, in particolare vengono esaminati i tre scenari di migrazione seguenti:
+Questo documento illustra i tre scenari di migrazione seguenti per i progetti .NET Core:
 
 1. [Migrazione da uno schema valido più recente di *project.json* a *csproj*](#migration-from-projectjson-to-csproj)
 2. [Migrazione da DNX a csproj](#migration-from-dnx-to-csproj)
 3. [Migrazione da RC3 e progetti csproj .NET Core precedenti al formato finale](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-Questo documento è applicabile solo ai progetti .NET Core precedenti che usano ancora project.json. Non è applicabile per la migrazione da .NET Framework a .NET Core.
+Questo documento è applicabile solo ai progetti .NET Core precedenti che usano Project. JSON. Non si applica alla migrazione da .NET Framework a .NET Core.
 
 ## <a name="migration-from-projectjson-to-csproj"></a>Migrazione da project.json a csproj
 
 La migrazione dal formato con estensione *project.json* a quello con estensione *csproj* può essere eseguita mediante uno dei metodi seguenti:
 
-- [Visual Studio 2017](#visual-studio-2017)
+- [Visual Studio](#visual-studio)
 - [Strumento da riga di comando dotnet migrate](#dotnet-migrate)
 
-Entrambi i metodi usano lo stesso motore sottostante per eseguire la migrazione dei progetti, pertanto i risultati saranno gli stessi. Nella maggior parte dei casi, è sufficiente usare uno dei due modi per eseguire la migrazione dal formato *project.json* a *csproj*, non è necessaria alcuna modifica manuale del file di progetto. Il file in formato *csproj* risultante verrà denominato con lo stesso nome della directory che lo contiene.
+Entrambi i metodi usano lo stesso motore sottostante per eseguire la migrazione dei progetti, pertanto i risultati saranno gli stessi. Nella maggior parte dei casi, l'uso di uno di questi due modi per eseguire la migrazione di *Project. JSON* a *csproj* è l'unico elemento necessario e non è necessaria alcuna modifica manuale del file di progetto. Il file in formato *csproj* risultante verrà denominato con lo stesso nome della directory che lo contiene.
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+### <a name="visual-studio"></a>Visual Studio
 
-Quando si apre un file con estensione *xproj* o un file di soluzione che fa riferimento a file con estensione *xproj*, viene visualizzata la finestra di dialogo **Aggiornamento unidirezionale**. La finestra di dialogo consente di visualizzare i progetti di cui eseguire la migrazione.
-Se si apre un file di soluzione, verranno elencati tutti i progetti specificati nel file di soluzione. Rivedere l'elenco dei progetti di cui eseguire la migrazione e selezionare **OK**.
+Quando si apre un file con estensione *xproj* o un file di soluzione che fa riferimento a file con *estensione Xproj* in Visual Studio 2017 o visual studio 2019 versione 16,2 e versioni precedenti, viene visualizzata la finestra di dialogo **aggiornamento unidirezionale** . La finestra di dialogo consente di visualizzare i progetti di cui eseguire la migrazione. Se si apre un file di soluzione, verranno elencati tutti i progetti specificati nel file di soluzione. Rivedere l'elenco dei progetti di cui eseguire la migrazione e selezionare **OK**.
 
 ![Finestra di dialogo Aggiornamento unidirezionale con l'elenco di progetti di cui eseguire la migrazione](media/one-way-upgrade.jpg)
 
-Visual Studio eseguirà la migrazione di progetti selezionati automaticamente. Durante la migrazione di una soluzione, se non si selezionano tutti i progetti, verrà visualizzata la stessa finestra di dialogo che richiederà di aggiornare i progetti rimanenti di tale soluzione. Dopo la migrazione del progetto, è possibile visualizzare e modificare il relativo contenuto facendo clic sul progetto con il pulsante destro del mouse nella finestra **Esplora soluzioni** e selezionando **Modifica \<nome progetto>.csproj**.
+Visual Studio esegue automaticamente la migrazione dei progetti selezionati. Quando si esegue la migrazione di una soluzione, se non si scelgono tutti i progetti, viene visualizzata la stessa finestra di dialogo in cui viene chiesto di aggiornare i progetti rimanenti dalla soluzione. Dopo la migrazione del progetto, è possibile visualizzare e modificare il relativo contenuto facendo clic sul progetto con il pulsante destro del mouse nella finestra **Esplora soluzioni** e selezionando **Modifica \<nome progetto>.csproj**.
 
-I file di cui è stata eseguita la migrazione (*project.json*, *global.json*, *xproj* e file di soluzione) verranno spostati nella cartella *Backup*. Il file di soluzione di cui è stata eseguita la migrazione verrà aggiornato a Visual Studio 2017 e non sarà possibile aprirlo in versioni precedenti di Visual Studio.
-Viene salvato anche un file denominato *UpgradeLog.htm* che contiene un report di migrazione che viene aperto automaticamente.
+I file di cui è stata eseguita la migrazione (*Project. JSON*, *Global. JSON*, *. xproj*e file di soluzione) vengono spostati in una cartella di *backup* . Il file di soluzione migrato viene aggiornato a Visual Studio 2017 o a Visual Studio 2019 e non sarà possibile aprire il file di soluzione in Visual Studio 2015 o versioni precedenti. Anche un file denominato *UpgradeLog. htm* che contiene un report di migrazione viene salvato e aperto automaticamente.
 
 > [!IMPORTANT]
-> I nuovi strumenti non sono disponibili in Visual Studio 2015, pertanto non è possibile eseguire la migrazione di progetti in tale versione di Visual Studio.
+> Non è possibile eseguire la migrazione dei progetti con Visual Studio 2015.
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
-Nello scenario della riga di comando, è possibile usare il comando [`dotnet migrate`](../tools/dotnet-migrate.md). Esegue la migrazione di un progetto, di una soluzione o di un set di cartelle in tale ordine, a seconda di quale elemento è stato individuato.
-Quando si esegue la migrazione di un progetto, questa riguarda il progetto e tutte le relative dipendenze.
+Nello scenario della riga di comando, è possibile usare il comando [`dotnet migrate`](../tools/dotnet-migrate.md). Viene eseguita la migrazione di un progetto, una soluzione o un set di cartelle in tale ordine, a seconda di quali sono stati trovati. Quando si esegue la migrazione di un progetto, questa riguarda il progetto e tutte le relative dipendenze.
 
-I file di cui è stata eseguita la migrazione (*project.json*, *global.json*, e *xproj*) verranno spostati nella cartella *backup*.
+I file di cui è stata eseguita la migrazione (*Project. JSON*, *Global. JSON*e *. xproj*) vengono spostati in una cartella di *backup* .
 
 > [!NOTE]
-> Se si usa Visual Studio Code, il comando `dotnet migrate` non modifica i file specifici di Visual Studio Code, ad esempio `tasks.json`. Questi file devono essere modificati manualmente.
+> Se si utilizza Visual Studio Code, il comando `dotnet migrate` non modifica i file Visual Studio Code specifici, ad esempio `tasks.json`. Questi file devono essere modificati manualmente.
 > Questo vale anche se si usa Project Ryder o qualsiasi editor o ambiente di sviluppo integrato (IDE, Integrated Development Environment) diverso da Visual Studio.
 
 Per un confronto tra i formati project.json e csproj, vedere [Mapping tra le proprietà di project.json e csproj](../tools/project-json-to-csproj.md).

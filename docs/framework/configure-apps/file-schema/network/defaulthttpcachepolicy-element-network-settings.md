@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664147"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698272"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<Elemento > defaultHttpCachePolicy (impostazioni di rete)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>Elemento > \<defaultHttpCachePolicy (impostazioni di rete)
 Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultHttpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,18 +47,18 @@ Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di
 |`policyLevel`|Specifica se i criteri di memorizzazione nella cache sono automatici o se la cache è stata ignorata. Il valore predefinito è `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
- Il valore `policyLevel` dell'attributo `BypassCache` è o `Default`.  
+ Il valore dell'attributo `policyLevel` è `BypassCache` o `Default`.  
   
- I valori per `maximumAge`gli `maximumStale`elementi, `minimumFresh` e sono un intervallo di tempo esplicito con un formato *d*. *HH*:*mm*:*SS* (giorni, ore, minuti e secondi) `minValue` o costanti o `maxValue`, a seconda dei casi.  
+ I valori per gli elementi `maximumAge`, `maximumStale` e `minimumFresh` sono un intervallo di tempo esplicito con formato *d*. *HH*:*mm*:*SS* (giorni, ore, minuti e secondi) o costanti `minValue` o `maxValue`, a seconda dei casi.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

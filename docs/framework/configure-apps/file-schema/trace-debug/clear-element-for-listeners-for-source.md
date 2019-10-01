@@ -1,5 +1,5 @@
 ---
-title: <clear>Elemento per <listeners> per<source>
+title: Elemento <clear> per <listeners> per <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920541"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697198"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Cancella > elemento per \<i listener > per \<l'origine >
+# <a name="clear-element-for-listeners-for-source"></a>Elemento > \<clear per \<listeners > per \<source >
 Cancella la raccolta `Listeners` per un'origine di traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<origini >  
-\<> di origine  
-\<listener >  
-\<Cancella >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +34,10 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -50,13 +50,13 @@ Cancella la raccolta `Listeners` per un'origine di traccia.
 |`listeners`|Specifica i listener che raccolgono, archiviano e indirizzano i messaggi.|  
   
 ## <a name="remarks"></a>Note  
- L' `<clear>` elemento rimuove tutti i listener `Listeners` dalla raccolta per un'origine di <xref:System.Diagnostics.DefaultTraceListener>traccia, incluso. È possibile usare l' `<clear>` elemento prima di usare `<add>` l'elemento per assicurarsi che non ci siano altri listener attivi nella raccolta.  
+ L'elemento `<clear>` rimuove tutti i listener dalla raccolta `Listeners` per un'origine di traccia, incluso il <xref:System.Diagnostics.DefaultTraceListener>. È possibile utilizzare l'elemento `<clear>` prima di utilizzare l'elemento `<add>` per assicurarsi che non siano presenti altri listener attivi nella raccolta.  
   
 ## <a name="configuration-file"></a>File di configurazione  
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<clear>` elemento prima `console` di `<add>` utilizzare gli elementi per aggiungere i `Listeners` listener e `textListener` alla raccolta per l'origine `TraceSourceApp`di traccia.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<clear>` prima di utilizzare gli elementi `<add>` per aggiungere i listener `console` e `textListener` alla raccolta `Listeners` per l'origine di traccia `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

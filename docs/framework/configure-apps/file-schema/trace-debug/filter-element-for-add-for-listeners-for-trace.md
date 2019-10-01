@@ -1,5 +1,5 @@
 ---
-title: <filter>Elemento per <add> <listeners> per per<trace>
+title: Elemento <filter> per <add> per <listeners> per <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: afde5381a7dd7dfe6a1a9d238a2029511bd9bae2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6b1ec99c5aab8e85df7f1920aca32f49a5be066
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927141"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699369"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Filtra > elemento per \<Aggiungi > per \<i listener > per \<la traccia >
-Aggiunge un filtro a un listener nella `Listeners` raccolta per una traccia.  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>Elemento > \<filter per \<ADD > per @no__t > 2listeners per \<trace >
+Aggiunge un filtro a un listener nella raccolta `Listeners` per una traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<traccia >  
-\<listener >  
-\<add>  
-\<Filtra >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0Add >** ](add-element-for-listeners-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1filter >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,11 +40,11 @@ Aggiunge un filtro a un listener nella `Listeners` raccolta per una traccia.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro che deve ereditare dalla <xref:System.Diagnostics.TraceFilter> classe. È possibile utilizzare il nome completo dello spazio dei nomi del tipo, che corrisponde alla <xref:System.Type.FullName%2A> proprietà del tipo, oppure è possibile utilizzare il nome completo del tipo, incluse le informazioni sull'assembly, che corrisponde <xref:System.Type.AssemblyQualifiedName%2A> alla proprietà. Per informazioni sui nomi di tipo completi, vedere [specifica di nomi di tipo](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)completi.|  
+|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro che deve ereditare dalla classe <xref:System.Diagnostics.TraceFilter>. È possibile utilizzare il nome completo dello spazio dei nomi del tipo, che corrisponde alla proprietà <xref:System.Type.FullName%2A> del tipo, oppure è possibile utilizzare il nome completo del tipo, incluse le informazioni sull'assembly, che corrisponde alla proprietà <xref:System.Type.AssemblyQualifiedName%2A>. Per informazioni sui nomi di tipo completi, vedere [specifica di nomi di tipo](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)completi.|  
 |`initializeData`|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe di filtro specificata.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -57,12 +57,12 @@ Aggiunge un filtro a un listener nella `Listeners` raccolta per una traccia.
 |`add`|Aggiunge un listener alla raccolta `Listeners`.|  
   
 ## <a name="remarks"></a>Note  
- L' `<filter>` elemento deve essere contenuto in un `<add>` elemento per un listener di traccia che specifica il tipo del listener, non solo il nome di un listener definito in un [ \<> sharedListeners](sharedlisteners-element.md). Se il listener è definito in una [ \<> sharedListeners](sharedlisteners-element.md), il filtro per il listener deve essere definito in tale elemento.  
+ L'elemento `<filter>` deve essere contenuto in un elemento `<add>` per un listener di traccia che specifica il tipo del listener, non solo il nome di un listener definito in una [> \<sharedListeners](sharedlisteners-element.md). Se il listener è definito in una [> \<sharedListeners](sharedlisteners-element.md), il filtro per il listener deve essere definito in tale elemento.  
   
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<filter>` elemento per aggiungere un filtro al listener `console` nella `Listeners` raccolta per la traccia, specificando il livello dell'evento Filter `Error`come.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<filter>` per aggiungere un filtro al listener `console` nella raccolta `Listeners` per Trace, specificando il livello di evento Filter come `Error`.  
   
 ```xml  
 <configuration>  

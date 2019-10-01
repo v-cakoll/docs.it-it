@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921059"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699740"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<Elemento > mscorlib per le impostazioni di crittografia
-Contiene l' [ \<elemento > cryptographySettings](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>Elemento > \<mscorlib per le impostazioni di crittografia
+Contiene l' [elemento > \<cryptographySettings](cryptographysettings-element.md).  
   
- \<configuration>  
-\<mscorlib>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,7 @@ Contiene l' [ \<elemento > cryptographySettings](cryptographysettings-element.md
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -47,7 +47,7 @@ Contiene l' [ \<elemento > cryptographySettings](cryptographysettings-element.md
 |`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento mscorlib >** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo per restituire un `MyCryptoRSAClass` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<mscorlib** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

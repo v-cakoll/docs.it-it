@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920404"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699174"
 ---
-# <a name="trace-element"></a>\<Trace >-elemento
+# <a name="trace-element"></a>Elemento > \<trace
 Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<traccia >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
   
 ### <a name="child-elements"></a>Elementi figlio  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|Specifica un listener che raccoglie, archivia e instrada i messaggi.|  
   
@@ -71,7 +71,7 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<trace>` elemento per aggiungere il listener `MyListener` alla `Listeners` raccolta. `MyListener`Crea un file denominato `MyListener.log` e scrive l'output nel file. L' `useGlobalLock` attributo è impostato su `false`, che impedisce l'utilizzo del blocco globale se il listener di traccia è thread-safe. L' `autoflush` attributo è impostato su `true`, che fa sì che il listener di traccia scriva nel file, indipendentemente dal <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> fatto che il metodo venga chiamato. L' `indentsize` attributo è impostato su 0 (zero), che fa sì che il listener rientri zero spazi <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> quando viene chiamato il metodo.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<trace>` per aggiungere il listener `MyListener` alla raccolta `Listeners`. `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. L'attributo `useGlobalLock` è impostato su `false`, che impedisce l'utilizzo del blocco globale se il listener di traccia è thread-safe. L'attributo `autoflush` è impostato su `true`, che fa sì che il listener di traccia scriva nel file indipendentemente dal fatto che venga chiamato il metodo <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>. L'attributo `indentsize` è impostato su 0 (zero), che fa sì che il listener rientri zero spazi quando viene chiamato il metodo <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>.  
   
 ```xml  
 <configuration>  

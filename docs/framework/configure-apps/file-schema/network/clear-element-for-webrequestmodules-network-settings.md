@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95a190dac3a9512b404a054c60c48de9c4574790
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659432"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698331"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Cancella > elemento per webRequestModules (impostazioni di rete)
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>Elemento > \<clear per webRequestModules (impostazioni di rete)
 Rimuove tutti i moduli di richiesta Web registrati dall'applicazione.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<Cancella >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,10 +35,10 @@ Rimuove tutti i moduli di richiesta Web registrati dall'applicazione.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -47,7 +47,7 @@ Rimuove tutti i moduli di richiesta Web registrati dall'applicazione.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Specifica i moduli da usare per richiedere informazioni dagli host di rete.|  
   
 ## <a name="remarks"></a>Note  
- L' `clear` elemento rimuove tutti i moduli di richiesta Web registrati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
+ L'elemento `clear` rimuove tutti i moduli di richiesta Web registrati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

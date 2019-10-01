@@ -23,16 +23,16 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630137"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696871"
 ---
 # <a name="user-defined-data-type"></a>Tipo di dati definito dall'utente
 
-Include i dati in un formato definito dall'utente. L' `Structure` istruzione definisce il formato.
+Include i dati in un formato definito dall'utente. L'istruzione `Structure` definisce il formato.
 
 Le versioni precedenti di Visual Basic supportano il tipo definito dall'utente (UDT). La versione corrente espande il tipo definito dall'utente a una *struttura*. Una struttura è una concatenazione di uno o più *membri* di diversi tipi di dati. Visual Basic considera una struttura come una singola unità, sebbene sia anche possibile accedere singolarmente ai relativi membri.
 
@@ -44,17 +44,17 @@ Il valore predefinito di un tipo di dati della struttura è costituito dalla com
 
 ## <a name="declaration-format"></a>Formato della dichiarazione
 
-Una dichiarazione di struttura inizia con l' [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con `End Structure` l'istruzione. L' `Structure` istruzione fornisce il nome della struttura, che è anche l'identificatore del tipo di dati che la struttura sta definendo. Altre parti del codice possono usare questo identificatore per dichiarare variabili, parametri e valori restituiti della funzione in modo che siano del tipo di dati della struttura.
+Una dichiarazione di struttura inizia con l' [istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md) e termina con l'istruzione `End Structure`. L'istruzione `Structure` fornisce il nome della struttura, che è anche l'identificatore del tipo di dati che la struttura sta definendo. Altre parti del codice possono usare questo identificatore per dichiarare variabili, parametri e valori restituiti della funzione in modo che siano del tipo di dati della struttura.
 
-Le dichiarazioni tra le `Structure` istruzioni e `End Structure` definiscono i membri della struttura.
+Le dichiarazioni tra le istruzioni `Structure` e `End Structure` definiscono i membri della struttura.
 
 ## <a name="member-access-levels"></a>Livelli di accesso ai membri
 
-È necessario dichiarare ogni membro usando un' [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../visual-basic/language-reference/modifiers/private.md). Se si usa un' `Dim` istruzione, il livello di accesso predefinito è public.
+È necessario dichiarare ogni membro usando un' [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md) o un'istruzione che specifica il livello di accesso, ad esempio [public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)o [private](../../../visual-basic/language-reference/modifiers/private.md). Se si usa un'istruzione `Dim`, il livello di accesso predefinito è public.
 
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione
 
-- **Consumo di memoria.** Come per tutti i tipi di dati compositi, non è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura aggiungendo le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile presupporre in modo sicuro che l'ordine di archiviazione in memoria sia uguale all'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare l' <xref:System.Runtime.InteropServices.StructLayoutAttribute> attributo `Structure` all'istruzione.
+- **Consumo di memoria.** Come per tutti i tipi di dati compositi, non è possibile calcolare in modo sicuro il consumo di memoria totale di una struttura aggiungendo le allocazioni di archiviazione nominale dei relativi membri. Inoltre, non è possibile presupporre in modo sicuro che l'ordine di archiviazione in memoria sia uguale all'ordine di dichiarazione. Se è necessario controllare il layout di archiviazione di una struttura, è possibile applicare l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> all'istruzione `Structure`.
 
 - **Considerazioni sull'interoperabilità.** Se si è connessi con componenti non scritti per il .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che i tipi definiti dall'utente in altri ambienti non sono compatibili con Visual Basic tipi di struttura.
 
@@ -62,13 +62,13 @@ Le dichiarazioni tra le `Structure` istruzioni e `End Structure` definiscono i m
 
 - **Digitare i caratteri.** I tipi di dati della struttura non hanno un carattere di tipo letterale o un carattere di tipo identificatore.
 
-- **Tipo di Framework.** Nessun tipo corrispondente nell'.NET Framework. Tutte le strutture ereditano dalla classe <xref:System.ValueType?displayProperty=nameWithType>.NET Framework, ma nessuna struttura specifica corrisponde <xref:System.ValueType?displayProperty=nameWithType>a.
+- **Tipo di Framework.** Nessun tipo corrispondente nell'.NET Framework. Tutte le strutture ereditano dalla classe .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ma nessuna struttura specifica corrisponde a <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Esempio
 
 Nel paradigma seguente viene illustrato il contorno della dichiarazione di una struttura.
 
-```
+```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
     {Dim | Public | Friend | Private} member1 As datatype1
     ' ...

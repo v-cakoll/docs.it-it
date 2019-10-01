@@ -2,12 +2,12 @@
 title: Controllo delle versioni del linguaggio C# - Guida a C#
 description: Informazioni su come viene determinata la versione del linguaggio C# in base al progetto e sui diversi valori ai quali è possibile adattarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040344"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698801"
 ---
 # <a name="c-language-versioning"></a>Controllo delle versioni del linguaggio C#
 
@@ -23,7 +23,9 @@ Il compilatore determina un'impostazione predefinita in base a queste regole:
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|tutti|C# 7.3|
+|.NET Standard|2.1|C# 8.0|
+|.NET Standard|2.0|C# 7.3|
+|.NET Standard|1. x|C# 7.3|
 |.NET Framework|tutti|C# 7.3|
 
 ## <a name="default-for-previews"></a>Impostazione predefinita per le anteprime

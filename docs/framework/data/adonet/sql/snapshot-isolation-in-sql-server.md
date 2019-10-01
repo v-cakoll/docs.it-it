@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791747"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699067"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informazioni sull'isolamento dello snapshot e il controllo delle versioni delle righe  
- Una volta abilitato l'isolamento dello snapshot, le versioni di riga aggiornate per ogni transazione vengono mantenute in **tempdb**. Ciascuna transazione viene identificata mediante un numero di sequenza univoco. Questi numeri vengono registrati per ciascuna versione di riga. La transazione funziona con le versioni di riga più recenti che dispongono di un numero di sequenza che precede il numero di sequenza della transazione. La transazione ignora le versioni di riga più recenti, create dopo l'inizio della transazione stessa.  
+ Una volta abilitato l'isolamento dello snapshot, è necessario mantenere aggiornate le versioni di riga per ogni transazione.  Prima del SQL Server 2019, queste versioni venivano archiviate in **tempdb**. SQL Server 2019 introduce una nuova funzionalità, il recupero accelerato del database (ADR), che richiede un proprio set di versioni di riga.  Quindi, a partire da SQL Server 2019, se ADR non è abilitato, le versioni di riga vengono mantenute in **tempdb** come sempre.  Se ADR è abilitato, tutte le versioni di riga, entrambe correlate all'isolamento dello snapshot e all'ADR, vengono mantenute nell'archivio versioni permanente (PVS) dell'ADR, che si trova nel database utente in un filegroup specificato dall'utente. Ciascuna transazione viene identificata mediante un numero di sequenza univoco. Questi numeri vengono registrati per ciascuna versione di riga. La transazione funziona con le versioni di riga più recenti che dispongono di un numero di sequenza che precede il numero di sequenza della transazione. La transazione ignora le versioni di riga più recenti, create dopo l'inizio della transazione stessa.  
   
  Il termine "snapshot" è dovuto al fatto che tutte le query nella transazione rilevano la stessa versione, o snapshot, del database, in base allo stato del database all'inizio della transazione. In una transazione snapshot non vengono acquisiti blocchi sulle pagine di dati o sulle righe di dati sottostanti. In questo modo è possibile eseguire altre transazioni senza che vengano bloccate da una precedente transazione non completata. Le transazioni di modifica dei dati non bloccano le transazioni di lettura dei dati così come queste ultime non bloccano le transazioni di scrittura dei dati, esattamente come avviene nel livello di isolamento READ COMMITTED in SQL Server. Questo comportamento non bloccante riduce notevolmente la probabilità di blocchi critici per le transazioni complesse.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Una transazione snapshot usa sempre il controllo della concorrenza ottimistica, rifiutando blocchi che potrebbero impedire l'aggiornamento delle righe da parte di altre transazioni. Se una transazione snapshot tenta di eseguire il commit di un aggiornamento per una riga modificata dopo l'inizio della transazione, viene eseguito il rollback della transazione e viene generato un errore.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Utilizzo dell'isolamento dello snapshot in ADO.NET  
- L'isolamento dello snapshot è supportato in ADO.NET dalla classe <xref:System.Data.SqlClient.SqlTransaction>. Se un database è stato abilitato per l'isolamento dello snapshot ma non è configurato per READ_COMMITTED_SNAPSHOT in, è necessario avviare <xref:System.Data.SqlClient.SqlTransaction> un usando il valore di enumerazione **IsolationLevel. snapshot** quando <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> si chiama il metodo. Questo frammento di codice presuppone che la connessione sia un oggetto <xref:System.Data.SqlClient.SqlConnection> aperto.  
+ L'isolamento dello snapshot è supportato in ADO.NET dalla classe <xref:System.Data.SqlClient.SqlTransaction>. Se un database è stato abilitato per l'isolamento dello snapshot ma non è configurato per READ_COMMITTED_SNAPSHOT in, è necessario avviare un <xref:System.Data.SqlClient.SqlTransaction> usando il valore di enumerazione **IsolationLevel. snapshot** quando si chiama il metodo <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>. Questo frammento di codice presuppone che la connessione sia un oggetto <xref:System.Data.SqlClient.SqlConnection> aperto.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 9fa484f0a74d900bd6f0365f2ce71fd32e1422db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: eae60b2fc72ee8b8653d3a0517eeaaf8012e0372
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623187"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696747"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Procedura: Leggere da file di testo con più formati in Visual Basic
 L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.  
@@ -25,7 +25,7 @@ L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analiz
   
 1. Aggiungere un file di testo denominato testfile.txt al progetto. Aggiungere quanto segue al file di testo.  
   
-    ```  
+    ```text  
     Err  1001 Cannot access resource.  
     Err  2014 Resource not found.  
     Acc  10/03/2009User1      Administrator.  

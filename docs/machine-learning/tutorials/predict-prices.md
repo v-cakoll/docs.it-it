@@ -1,15 +1,15 @@
 ---
 title: 'Esercitazione: Stimare i prezzi usando la regressione'
 description: Questa esercitazione illustra come compilare un modello di regressione usando ML.NET per stimare i prezzi, in particolare le tariffe dei taxi di New York.
-ms.date: 05/09/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8db6b0c9ae1fd98724eda285423960546be8bac6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929441"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700952"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Esercitazione: Stimare i prezzi usando la regressione con ML.NET
 
@@ -245,7 +245,10 @@ Usare `PredictionEngine` per stimare l'importo della tariffa aggiungendo il codi
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-La [classe PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di servizio che consente di passare una singola istanza di dati e di eseguire quindi una stima su di essa.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+> [!NOTE]
+> L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.
 
 In questa esercitazione viene usato un solo viaggio di test all'interno di questa classe. Successivamente, è possibile aggiungere altri scenari da sperimentare con il modello. Aggiungere una corsa per testare la stima dei costi del modello sottoposto a training nel metodo `TestSinglePrediction()` creando un'istanza di `TaxiTrip`:
 

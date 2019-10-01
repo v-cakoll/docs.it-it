@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9b73c0dc1fe161616c08ef0501241d55e9fea9bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664045"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697935"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<rimuovere > elemento per authenticationModules (impostazioni di rete)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>Elemento > \<remove per authenticationModules (impostazioni di rete)
 Rimuove un modulo di autenticazione dall'applicazione.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,12 +38,12 @@ Rimuove un modulo di autenticazione dall'applicazione.
   
 ### <a name="attributes"></a>Attributi  
   
-|**Attributo**|**Descrizione**|  
+|**Attribute**|**Descrizione**|  
 |-------------------|---------------------|  
 |**type**|Nome del modulo di autenticazione da rimuovere.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -52,9 +52,9 @@ Rimuove un modulo di autenticazione dall'applicazione.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Specifica i moduli usati per autenticare le richieste di rete.|  
   
 ## <a name="remarks"></a>Note  
- L' `remove` elemento rimuove i moduli di autenticazione definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
+ L'elemento `remove` rimuove i moduli di autenticazione definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
   
- Il valore dell' `type` attributo deve essere un nome di classe valido.  
+ Il valore dell'attributo `type` deve essere un nome di classe valido.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 786f667bcba7959ac485b4abe667239b05059c45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941452"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699215"
 ---
-# <a name="applicationpool-element-web-settings"></a>\<Elemento > applicationPool (impostazioni Web)
+# <a name="applicationpool-element-web-settings"></a>Elemento > \<applicationPool (impostazioni Web)
 Specifica le impostazioni di configurazione usate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET è in esecuzione in modalità integrata in IIS 7,0 o versione successiva.  
   
 > [!IMPORTANT]
 > Questo elemento e la funzionalità che supporta funzionano solo se l'applicazione ASP.NET è ospitata in IIS 7,0 o versioni successive.  
   
- \<configuration>  
-\<Elemento System. Web > (impostazioni Web)  
-\<Elemento > applicationPool (impostazioni Web)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. Web >** ](system-web-element-web-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<applicationPool >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,7 +32,8 @@ Specifica le impostazioni di configurazione usate da ASP.NET per gestire il comp
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
   
@@ -43,7 +44,7 @@ Specifica le impostazioni di configurazione usate da ASP.NET per gestire il comp
 |`requestQueueLimit`|Specifica il numero massimo di richieste che possono essere accodate per ASP.NET in un singolo processo. Quando due o più applicazioni ASP.NET vengono eseguite in un unico pool di applicazioni, il set cumulativo di richieste effettuate a qualsiasi applicazione nel pool di applicazioni è soggetto a questa impostazione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -52,19 +53,21 @@ Specifica le impostazioni di configurazione usate da ASP.NET per gestire il comp
 |[\<system.web>](system-web-element-web-settings.md)|Contiene informazioni sul modo in cui ASP.NET interagisce con un'applicazione host.|  
   
 ## <a name="remarks"></a>Note  
- Quando si esegue IIS 7,0 o una versione successiva in modalità integrata, questa combinazione di elementi consente di configurare il modo in cui ASP.NET gestisce i thread e le richieste di Accodamento quando l'applicazione è ospitata in un pool di applicazioni IIS. Se si esegue IIS 6 oppure si esegue IIS 7,0 in modalità classica o in modalità ISAPI, queste impostazioni verranno ignorate.  
+
+Quando si esegue IIS 7,0 o una versione successiva in modalità integrata, questa combinazione di elementi consente di configurare il modo in cui ASP.NET gestisce i thread e le richieste di Accodamento quando l'applicazione è ospitata in un pool di applicazioni IIS. Se si esegue IIS 6 oppure si esegue IIS 7,0 in modalità classica o in modalità ISAPI, queste impostazioni verranno ignorate.  
   
- Le `applicationPool` impostazioni si applicano a tutti i pool di applicazioni eseguiti in una particolare versione del .NET Framework. Le impostazioni sono contenute in un file Aspnet. config. Esiste una versione di questo file per le versioni 2,0 e 4,0 del .NET Framework. (Le versioni 3,0 e 3,5 del .NET Framework condividono il file Aspnet. config con la versione 2,0).  
+Le impostazioni `applicationPool` si applicano a tutti i pool di applicazioni eseguiti in una particolare versione del .NET Framework. Le impostazioni sono contenute in un file Aspnet. config. Esiste una versione di questo file per le versioni 2,0 e 4,0 del .NET Framework. (Le versioni 3,0 e 3,5 del .NET Framework condividono il file Aspnet. config con la versione 2,0).  
   
 > [!IMPORTANT]
 > Se si esegue IIS 7,0 in [!INCLUDE[win7](../../../../../includes/win7-md.md)], è possibile configurare un file Aspnet. config separato per ogni pool di applicazioni. In questo modo è possibile personalizzare le prestazioni dei thread per ogni pool di applicazioni.  
   
- Per l' `maxConcurrentRequestsPerCPU` impostazione, l'impostazione predefinita di "5000" nella .NET Framework 4 Disattiva in modo efficace la limitazione delle richieste controllata da ASP.NET, a meno che non siano effettivamente presenti 5000 o più richieste per CPU. L'impostazione predefinita dipende invece dal pool di thread CLR per la gestione automatica della concorrenza per CPU. Le applicazioni che usano in modo esteso l'elaborazione di richieste asincrone o con numerose richieste a esecuzione prolungata bloccate sull'I/O di rete trarranno vantaggio dall'aumento del limite predefinito nel .NET Framework 4. Impostando `maxConcurrentRequestsPerCPU` su zero si disattiva l'uso di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste vengono mantenute nel thread di I/O di IIS e pertanto la concorrenza è limitata dalle impostazioni del thread IIS.  
+Per l'impostazione `maxConcurrentRequestsPerCPU`, l'impostazione predefinita di "5000" nella .NET Framework 4 Disattiva in modo efficace la limitazione delle richieste controllata da ASP.NET, a meno che non siano effettivamente presenti 5000 o più richieste per CPU. L'impostazione predefinita dipende invece dal pool di thread CLR per la gestione automatica della concorrenza per CPU. Le applicazioni che usano in modo esteso l'elaborazione di richieste asincrone o con numerose richieste a esecuzione prolungata bloccate sull'I/O di rete trarranno vantaggio dall'aumento del limite predefinito nel .NET Framework 4. Impostando `maxConcurrentRequestsPerCPU` su zero si disattiva l'uso di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste vengono mantenute nel thread di I/O di IIS e pertanto la concorrenza è limitata dalle impostazioni del thread IIS.  
   
- L' `requestQueueLimit` impostazione funziona allo stesso modo `requestQueueLimit` dell'attributo dell'elemento [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) , che viene impostato nei file Web. config per le applicazioni ASP.NET. Tuttavia, l' `requestQueueLimit` impostazione in un file Aspnet. config sostituisce l' `requestQueueLimit` impostazione in un file Web. config. In altre parole, se entrambi gli attributi sono impostati (per impostazione predefinita, questo è true) `requestQueueLimit` , l'impostazione nel file Aspnet. config ha la precedenza.  
+L'impostazione `requestQueueLimit` funziona allo stesso modo dell'attributo `requestQueueLimit` dell'elemento [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) , che viene impostato nei file Web. config per le applicazioni ASP.NET. Tuttavia, l'impostazione `requestQueueLimit` in un file Aspnet. config sostituisce l'impostazione `requestQueueLimit` in un file Web. config. In altre parole, se entrambi gli attributi sono impostati (per impostazione predefinita, questo è true), l'impostazione `requestQueueLimit` nel file Aspnet. config ha la precedenza.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo di ASP.NET nel file Aspnet. config nelle circostanze seguenti:  
+
+Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo di ASP.NET nel file Aspnet. config nelle circostanze seguenti:  
   
 - L'applicazione è ospitata in un pool di applicazioni IIS 7,0.  
   
@@ -72,7 +75,7 @@ Specifica le impostazioni di configurazione usate da ASP.NET per gestire il comp
   
 - L'applicazione usa la .NET Framework 3,5 SP1 o una versione successiva.  
   
- I valori nell'esempio sono i valori predefiniti.  
+I valori nell'esempio sono i valori predefiniti.  
   
 ```xml  
 <configuration>  

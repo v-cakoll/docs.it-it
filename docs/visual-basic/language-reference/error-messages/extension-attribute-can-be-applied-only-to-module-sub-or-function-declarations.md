@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95a67a552efacf9e77dc3ebc3e0187817a6d82e2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640718"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698588"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>È possibile applicare l'attributo 'Extension' solo alle dichiarazioni 'Module', 'Sub' o 'Function'
-L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire un metodo di estensione all'interno di un modulo standard. Il metodo di estensione può essere un' `Sub` routine o un `Function` procedure. Tutti i metodi di estensione devono essere contrassegnati con l'attributo di estensione `<Extension()>`, dal <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> dello spazio dei nomi. Facoltativamente, un modulo che contiene un metodo di estensione può essere contrassegnato nello stesso modo. Nessun altro uso dell'attributo di estensione è valido.  
+L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire un metodo di estensione all'interno di un modulo standard. Il metodo di estensione può essere una routine `Sub` o una procedura `Function`. Tutti i metodi di estensione devono essere contrassegnati con l'attributo extension, `<Extension()>`, dallo spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Facoltativamente, un modulo che contiene un metodo di estensione può essere contrassegnato nello stesso modo. Nessun altro uso dell'attributo di estensione è valido.  
   
  **ID errore:** BC36550  
   
@@ -23,12 +23,12 @@ L'unico modo per estendere un tipo di dati in Visual Basic consiste nel definire
   
 - Rimuovere l'attributo di estensione.  
   
-- Riprogettare l'estensione di un metodo, definito in un modulo contenitore.  
+- Riprogettare l'estensione come metodo, definito in un modulo contenitore.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente definisce una `Print` metodo per il `String` tipo di dati.  
+ Nell'esempio seguente viene definito un metodo `Print` per il tipo di dati `String`.  
   
-```  
+```vb  
 Imports StringUtility  
 Imports System.Runtime.CompilerServices  
 Namespace StringUtility  

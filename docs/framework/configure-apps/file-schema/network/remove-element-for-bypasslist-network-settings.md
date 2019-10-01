@@ -10,22 +10,22 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920954"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697901"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Rimuovi elemento > per l'elemento bypass (impostazioni di rete)
+# <a name="remove-element-for-bypasslist-network-settings"></a>Elemento > \<remove per l'elemento bypass (impostazioni di rete)
 
 Rimuove un indirizzo IP o un nome DNS dall'elenco di bypass del proxy.
 
-\<> di configurazione \
-\<System. net > \
-\<defaultProxy>\
-\<> di bypass \
-\<remove>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,13 +41,13 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ### <a name="attributes"></a>Attributi
 
-|**Attributo**|**Descrizione**|
+|**Attribute**|**Descrizione**|
 |-------------------|---------------------|
 |`address`|Espressione regolare che descrive un indirizzo IP o un nome DNS.|
 
 ### <a name="child-elements"></a>Elementi figlio
 
-Nessuno.
+No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -57,9 +57,9 @@ Nessuno.
 
 ## <a name="remarks"></a>Note
 
-L' `remove` elemento rimuove le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS dall'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.
+L'elemento `remove` rimuove le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS dall'elenco di indirizzi che ignorano un server proxy. Gli indirizzi sono stati definiti in precedenza nel file di configurazione o a un livello superiore nella gerarchia di configurazione.
 
-Il valore `address` dell'attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.
+Il valore dell'attributo `address` deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.
 
 Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../standard/base-types/regular-expressions.md).
 

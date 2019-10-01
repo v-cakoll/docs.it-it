@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927487"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699606"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Aggiungi elemento > per l'elemento bypass (impostazioni di rete)
+# <a name="add-element-for-bypasslist-network-settings"></a>Elemento > \<add per l'elemento bypass (impostazioni di rete)
 Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,12 +39,12 @@ Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.
   
 ### <a name="attributes"></a>Attributi  
   
-|**Attributo**|**Descrizione**|  
+|**Attribute**|**Descrizione**|  
 |-------------------|---------------------|  
 |**address**|Espressione regolare che descrive un indirizzo IP o un nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -53,11 +53,11 @@ Aggiunge un indirizzo IP o un nome DNS all'elenco di bypass del proxy.
 |[bypasslist](bypasslist-element-network-settings.md)|Fornisce un set di espressioni regolari che descrivono gli indirizzi che non utilizzano un proxy.|  
   
 ## <a name="remarks"></a>Note  
- L' `add` elemento inserisce le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS nell'elenco degli indirizzi che ignorano un server proxy.  
+ L'elemento `add` inserisce le espressioni regolari che descrivono gli indirizzi IP o i nomi dei server DNS nell'elenco degli indirizzi che ignorano un server proxy.  
   
- Il valore dell' `address` attributo deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
+ Il valore dell'attributo `address` deve essere un'espressione regolare che descrive un set di indirizzi IP o nomi host.  
   
- È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] +\\. contoso\\. com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z\\] +\\. contoso. com $".  
+ È necessario prestare attenzione quando si specifica un'espressione regolare per questo elemento. L'espressione regolare "[a-z] + @no__t -0.contoso\\.com" corrisponde a qualsiasi host nel dominio contoso.com, ma corrisponde anche a qualsiasi host nel dominio contoso.com.cpandl.com. Per trovare la corrispondenza solo con un host nel dominio contoso.com, usare un ancoraggio ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
   
  Per ulteriori informazioni sulle espressioni regolari, vedere. [.NET Framework espressioni regolari](../../../../standard/base-types/regular-expressions.md).  
   

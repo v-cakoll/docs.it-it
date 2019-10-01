@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664222"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698379"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<aggiungere > elemento per connectionManagement (impostazioni di rete)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>Elemento > \<add per connectionManagement (impostazioni di rete)
 Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.  
   
- \<configuration>  
-\<system.net>  
-\<> connectionManagement  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,13 +39,13 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
   
 ### <a name="attributes"></a>Attributi  
   
-|**Attributo**|**Descrizione**|  
+|**Attribute**|**Descrizione**|  
 |-------------------|---------------------|  
 |`address`|Stringa che descrive un indirizzo IP o un nome DNS.|  
 |`maxconnection`|Numero massimo di connessioni consentite verso un server. Se non impostato, il valore predefinito è 2.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -62,7 +62,7 @@ Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene configurata un'applicazione per l'utilizzo di quattro `www.contoso.com` connessioni al server e due connessioni a tutti gli altri server.  
+ Nell'esempio seguente viene configurata un'applicazione per l'utilizzo di quattro connessioni al server `www.contoso.com` e due connessioni a tutti gli altri server.  
   
 ```xml  
 <configuration>  

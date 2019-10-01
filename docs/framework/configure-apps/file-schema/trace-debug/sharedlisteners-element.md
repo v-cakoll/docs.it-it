@@ -11,19 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 41cabcbce13409b0842cbbd625028b51d32d59d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b419ecf451b79808e545525c7b8761175f390200
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926976"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699296"
 ---
-# <a name="sharedlisteners-element"></a>\<Elemento > sharedListeners
+# <a name="sharedlisteners-element"></a>Elemento > \<sharedListeners
 Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono alcuna traccia per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o alle tracce in base al nome.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<sharedListeners>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -53,12 +53,12 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
 |`system.diagnostics`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
 ## <a name="remarks"></a>Note  
- L'aggiunta di un listener alla raccolta di listener condivisi non lo rende un listener attivo. È comunque necessario aggiungerlo a un'origine di traccia o a una traccia aggiungendolo alla `Listeners` raccolta per l'elemento Trace. Le classi listener nel .NET Framework derivano dalla <xref:System.Diagnostics.TraceListener> classe.  
+ L'aggiunta di un listener alla raccolta di listener condivisi non lo rende un listener attivo. È comunque necessario aggiungerlo a un'origine di traccia o a una traccia aggiungendolo alla raccolta `Listeners` per l'elemento Trace. Le classi listener nel .NET Framework derivano dalla classe <xref:System.Diagnostics.TraceListener>.  
   
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<sharedListeners>` elemento per aggiungere il listener `console` alla `Listeners` raccolta per entrambe le <xref:System.Diagnostics.TraceSource> classi e <xref:System.Diagnostics.Trace> . Il listener di traccia della console scrive le informazioni di traccia nella console tramite <xref:System.Diagnostics.TraceSource> chiamate <xref:System.Diagnostics.Trace>a o.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<sharedListeners>` per aggiungere il listener `console` alla raccolta `Listeners` per le classi <xref:System.Diagnostics.TraceSource> e <xref:System.Diagnostics.Trace>. Il listener di traccia della console scrive le informazioni di traccia nella console tramite chiamate a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  

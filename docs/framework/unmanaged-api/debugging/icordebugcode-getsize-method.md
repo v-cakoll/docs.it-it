@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747498"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700808"
 ---
 # <a name="icordebugcodegetsize-method"></a>Metodo ICorDebugCode::GetSize
-Ottiene la dimensione, espressa in byte, del codice binario rappresentato da "ICorDebugCode".  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a>Parametri  
+
+Ottiene la dimensione, in byte, del codice binario rappresentato da questo "ICorDebugCode".
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a>Parametri
+
  `pcBytes`  
- [out] Un puntatore alla dimensione, espressa in byte, del file binario di codice che questo `ICorDebugCode` oggetto rappresenta.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** CorDebug.idl, CorDebug.h  
-  
- **Libreria:** CorGuids.lib  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche
+ out Puntatore alla dimensione, in byte, del codice binario rappresentato da questo oggetto `ICorDebugCode`.
+
+## <a name="requirements"></a>Requisiti
+
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+
+ **Intestazione:** CorDebug. idl, CorDebug. h
+
+ **Libreria** CorGuids.lib
+
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

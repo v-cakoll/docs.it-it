@@ -8,22 +8,22 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 6a868f62c6a327012a6225b86bf0103d178d6ab7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db3681ea141bb7e3905f6a470f5c74ce05f6ef4b
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921176"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699794"
 ---
-# <a name="cryptoclass-element"></a>\<Elemento > cryptoClass
+# <a name="cryptoclass-element"></a>Elemento > \<cryptoClass
 Contiene una classe di crittografia per la quale è stato eseguito il mapping a un nome descrittivo nell'elemento [\<nameEntry>](nameentry-element.md).  
   
- \<configuration>  
-\<mscorlib>  
-\<> cryptographySettings  
-\<cryptoNameMapping>  
-\<> cryptoClasses  
-\<> cryptoClass  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoClasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1cryptoClass >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ Contiene una classe di crittografia per la quale è stato eseguito il mapping a 
 |`customClassName`|Attributo obbligatorio.<br /><br /> Contiene le informazioni per la classe di crittografia. Utilizzare questo attributo per fornire un nome breve per la classe. È necessario specificare una stringa che soddisfi i requisiti specificati per [specificare nomi di tipo completi](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,7 +54,7 @@ Contiene una classe di crittografia per la quale è stato eseguito il mapping a 
 |`mscorlib`|Contiene l'elemento [\<cryptographySettings>](cryptographysettings-element.md).|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento > CryptoClass** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e usare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodo per restituire un `MyCryptoRSAClass` oggetto.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<cryptoClass** per fare riferimento a una classe di crittografia e configurare il Runtime. È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

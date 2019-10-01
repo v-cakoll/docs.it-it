@@ -8,19 +8,19 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663991"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697686"
 ---
-# <a name="settings-element-network-settings"></a>\<Elemento > Impostazioni (impostazioni di rete)
+# <a name="settings-element-network-settings"></a>Elemento > \<settings (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
   
- \<configuration>  
-\<system.net>  
-\<Impostazioni >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,19 +40,19 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|Personalizza i <xref:System.Net.HttpListener> parametri utilizzati dalla classe.|  
+|[httpListener](httplistener-element-network-settings.md)|Personalizza i parametri utilizzati dalla classe <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Personalizza i parametri della richiesta Web.|  
 |[ipv6](ipv6-element-network-settings.md)|Abilita il supporto protocollo Internet versione 6 (IPv6).|  
-|[\<Elemento > performanceCounter (impostazioni di rete)](performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
+|[Elemento > \<performanceCounter (impostazioni di rete)](performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Configura le connessioni alle risorse di rete.|  
 |[socket](socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
-|[\<Elemento > webProxyScript (impostazioni di rete)](webproxyscript-element-network-settings.md)|Configura le caratteristiche dello script utilizzato per individuare i proxy Web.|  
+|[Elemento > \<webProxyScript (impostazioni di rete)](webproxyscript-element-network-settings.md)|Configura le caratteristiche dello script utilizzato per individuare i proxy Web.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

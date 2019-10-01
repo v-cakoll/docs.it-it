@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 8fcd5cbe63a323a7509f5ff8c615364295c244d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2edc890049d62913d693ad61d8d814d012c0f482
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920559"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697188"
 ---
-# <a name="add-element-for-switches"></a>\<Aggiungi elemento > per \<le opzioni >
+# <a name="add-element-for-switches"></a>Elemento > \<add per \<switches >
 Specifica il livello in cui viene impostata un'opzione di traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<Opzioni >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<switches >** ](switches-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
 |**value**|Attributo obbligatorio.<br /><br /> Specifica il livello dell'opzione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,7 +54,7 @@ Specifica il livello in cui viene impostata un'opzione di traccia.
  È possibile modificare il livello di un'opzione di traccia inserendola in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivarla o disattivarla. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare livelli diversi per specificare i tipi di traccia o i messaggi di debug restituiti dall'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento Add >** per impostare l' `General` opzione <xref:System.Diagnostics.TraceLevel> Trace sul livello e abilitare l' `Data` opzione di traccia booleana.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<ADD** per impostare l'opzione di traccia `General` sul livello <xref:System.Diagnostics.TraceLevel> e abilitare l'opzione di traccia booleana `Data`.  
   
 ```xml  
 <configuration>  

@@ -3,12 +3,12 @@ title: Esplorare intervalli di dati con indici e intervalli
 description: Questa esercitazione avanzata descrive come esplorare i dati usando indici e intervalli per esaminare le sezioni di un set di dati sequenziale.
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391960"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699930"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
@@ -33,7 +33,7 @@ Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operator
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence[sequence.Length - n]`.
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

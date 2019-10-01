@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 6cdb75f150831ae3857a510d87b58773bdcf13c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609604"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701344"
 ---
 # <a name="sub-expression-visual-basic"></a>Sottoespressione (Visual Basic)
-Dichiara i parametri e il codice che definiscono un'espressione lambda di subroutine.  
+Dichiara i parametri e il codice che definiscono un'espressione lambda subroutine.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Sub ( [ parameterlist ] ) statement  
 - or -  
 Sub ( [ parameterlist ] )  
@@ -28,32 +28,32 @@ End Sub
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`parameterlist`|Facoltativo. Elenco di nomi delle variabili locali che rappresentano i parametri della procedura. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per altre informazioni, vedere [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri della stored procedure. Le parentesi devono essere presenti anche quando l'elenco è vuoto. Per altre informazioni, vedere [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`statement`|Obbligatorio. Una singola istruzione.|  
-|`statements`|Obbligatorio. Un elenco di istruzioni.|  
+|`statements`|Obbligatorio. Elenco di istruzioni.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto *espressione lambda* è una subroutine che non dispone di un nome e che esegue una o più istruzioni. È possibile usare un'espressione lambda in qualsiasi punto che è possibile usare un tipo delegato, ad eccezione come argomento a `RemoveHandler`. Per altre informazioni sui delegati e l'uso delle espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversione di tipo Relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Un' *espressione lambda* è una subroutine che non ha un nome e che esegue una o più istruzioni. È possibile usare un'espressione lambda ovunque sia possibile usare un tipo di delegato, ad eccezione di un argomento per `RemoveHandler`. Per altre informazioni sui delegati e sull'uso di espressioni lambda con i delegati, vedere [istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e conversione di delegati [rilassati](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
- La sintassi di un'espressione lambda è simile a quello di una subroutine standard. Le differenze sono i seguenti:  
+ La sintassi di un'espressione lambda è simile a quella di una subroutine standard. Le differenze sono le seguenti:  
   
 - Un'espressione lambda non ha un nome.  
   
 - Un'espressione lambda non può avere un modificatore, ad esempio `Overloads` o `Overrides`.  
   
-- Il corpo di un'espressione lambda a riga singola deve essere un'istruzione, non un'espressione. Il corpo può essere costituito da una chiamata a una routine sub, ma non da una chiamata a una routine di funzione.  
+- Il corpo di un'espressione lambda a riga singola deve essere un'istruzione, non un'espressione. Il corpo può essere costituito da una chiamata a una routine Sub, ma non da una chiamata a una routine di funzione.  
   
-- In un'espressione lambda, tutti i parametri devono avere specificati tipi di dati o tutti i parametri devono essere dedotti.  
+- In un'espressione lambda, tutti i parametri devono avere tipi di dati specificati oppure è necessario dedurre tutti i parametri.  
   
-- Facoltativo e `ParamArray` parametri non sono consentiti nelle espressioni lambda.  
+- I parametri facoltativi e `ParamArray` non sono consentiti nelle espressioni lambda.  
   
 - I parametri generici non sono consentiti nelle espressioni lambda.  
   
 ## <a name="example"></a>Esempio  
- Ecco un esempio di un'espressione lambda che scrive un valore nella console. L'esempio illustra sia la sintassi delle espressioni lambda a riga singola e a più righe di una subroutine. Per altri esempi, vedere [espressioni Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Di seguito è riportato un esempio di espressione lambda che scrive un valore nella console. Nell'esempio viene illustrata la sintassi delle espressioni lambda su una sola riga e su più righe per una subroutine. Per altri esempi, vedere [espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

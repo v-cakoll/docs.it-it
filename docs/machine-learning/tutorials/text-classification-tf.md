@@ -1,17 +1,17 @@
 ---
 title: 'Esercitazione: Analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare'
 description: Questa esercitazione illustra come usare un modello TensorFlow con training preliminare per classificare i sentimenti nei commenti dei siti Web. Il classificatore dei sentimenti binari è C# un'applicazione console sviluppata con Visual Studio.
-ms.date: 09/11/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e25e884769ad62d3d888986b1475000b543b24b1
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216888"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700931"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Esercitazione: Analizzare i sentimenti delle revisioni dei film usando un modello TensorFlow con training preliminare in ML.NET
 
@@ -81,14 +81,14 @@ Le revisioni del film sono testo in formato libero. L'applicazione converte il t
 
 Il primo consiste nel suddividere il testo in parole separate e utilizzare il file di mapping specificato per eseguire il mapping di ogni parola a una codifica di tipo Integer. Il risultato di questa trasformazione è una matrice integer a lunghezza variabile con una lunghezza corrispondente al numero di parole nella frase.
 
-|Proprietà| Value|Tipo|
+|Proprietà| Value|Type|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 La matrice di funzionalità a lunghezza variabile viene quindi ridimensionata a una lunghezza fissa di 600. Si tratta della lunghezza prevista dal modello TensorFlow.
 
-|Proprietà| Value|Tipo|
+|Proprietà| Value|Type|
 |-------------|-----------------------|------|
 |ReviewText|Questo film è molto valido|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
@@ -211,7 +211,10 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+
+    > [!NOTE]
+    > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.
 
 1. Aggiungere un commento per testare la stima del modello sottoposto a training nel metodo `Predict()` creando un'istanza di `MovieReview`:
 
@@ -223,7 +226,7 @@ La [classe MLContext](xref:Microsoft.ML.MLContext) è un punto di partenza per t
 
 1. La funzione [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) esegue una stima su una singola riga di dati:
 
-    |Proprietà| Value|Tipo|
+    |Proprietà| Value|Type|
     |-------------|-----------------------|------|
     |Previsione|[0,5459937, 0,454006255]|float []|
 

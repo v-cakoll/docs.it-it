@@ -2,22 +2,19 @@
 title: Elemento <iriParsing> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664080"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698101"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<Elemento > iriParsing (impostazioni URI)
+# <a name="iriparsing-element-uri-settings"></a>Elemento > \<iriParsing (impostazioni URI)
 Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.  
   
-## <a name="schema-hierarchy"></a>Gerarchia dello schema  
- [Elemento \<configuration>](../configuration-element.md)  
-  
- [\<Elemento > URI (impostazioni URI)](uri-element-uri-settings.md)  
-  
- [\<iriParsing>](iriparsing-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iriParsing >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +34,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 |`enabled`|Specifica se è abilitata l'analisi IRI. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuna  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -58,7 +55,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
   
 2. Consente di specificare se devono essere applicate le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
   
- L'abilitazione dell'analisi IRI (iriParsing `true`Enabled =) consente di eseguire la normalizzazione e il controllo dei caratteri in base alle regole IRI più recenti nella specifica RFC 3987. Il valore predefinito è `false` e effettuerà la normalizzazione e il controllo dei caratteri in base a RFC 2396 e RFC 3986 (per i valori letterali IPv6).  
+ L'abilitazione dell'analisi IRI (iriParsing `true`Enabled =) consente di eseguire la normalizzazione e il controllo dei caratteri in base alle regole IRI più recenti nella specifica RFC 3987. Il valore predefinito è `false` e effettuerà la normalizzazione e il controllo dei caratteri in base alle specifiche RFC 2396 e RFC 3986 (per i valori letterali IPv6).  
   
 ### <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
@@ -66,7 +63,7 @@ Specifica se l'analisi IRI (International Resource Identifier) viene applicata a
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- Nell'esempio seguente viene illustrata una configurazione utilizzata <xref:System.Uri> dalla classe per supportare l'analisi IRI e i nomi IDN.  
+ Nell'esempio seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN.  
   
 ### <a name="code"></a>Codice  
   

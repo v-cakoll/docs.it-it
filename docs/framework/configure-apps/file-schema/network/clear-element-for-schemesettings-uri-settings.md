@@ -2,20 +2,20 @@
 title: Elemento <clear> per schemeSettings (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 51c669aff767948523172aa075677ad3fb6478a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664171"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699436"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<Cancella > elemento per schemeSettings (impostazioni URI)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>Elemento > \<clear per schemeSettings (impostazioni URI)
 Cancella tutte le impostazioni dello schema esistente.  
   
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<Cancella >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,10 +27,10 @@ Cancella tutte le impostazioni dello schema esistente.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -39,7 +39,7 @@ Cancella tutte le impostazioni dello schema esistente.
 |[Elemento \<schemeSettings> (impostazioni URI)](schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, <xref:System.Uri?displayProperty=nameWithType> la classe Annulla l'escape per la percentuale di delimitatori di percorso codificati prima di eseguire la compressione del percorso. Questa operazione è stata implementata come meccanismo di sicurezza da attacchi come i seguenti:  
+ Per impostazione predefinita, la classe <xref:System.Uri?displayProperty=nameWithType> Annulla il carattere di escape per cento delimitatori di percorso codificati prima di eseguire la compressione del percorso. Questa operazione è stata implementata come meccanismo di sicurezza da attacchi come i seguenti:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -47,7 +47,7 @@ Cancella tutte le impostazioni dello schema esistente.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> First Class Annulla l'escape dei delimitatori di percorso e quindi applica la compressione del percorso. Il risultato del passaggio dell'URL dannoso precedente <xref:System.Uri?displayProperty=nameWithType> al costruttore della classe comporta l'URI seguente:  
+ Per questo motivo, la classe <xref:System.Uri?displayProperty=nameWithType> First Annulla l'escape dei delimitatori di percorso e quindi applica la compressione del percorso. Il risultato del passaggio dell'URL dannoso precedente al costruttore della classe <xref:System.Uri?displayProperty=nameWithType> comporta l'URI seguente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -57,7 +57,7 @@ Cancella tutte le impostazioni dello schema esistente.
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una configurazione utilizzata <xref:System.Uri> dalla classe che cancella tutte le impostazioni dello schema e quindi aggiunge il supporto per evitare l'escape dei delimitatori di percorso codificati in percentuale per lo schema http.  
+ Nell'esempio seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> che cancella tutte le impostazioni dello schema e quindi aggiunge il supporto per evitare l'escape dei delimitatori di percorso codificati in percentuale per lo schema http.  
   
 ```xml  
 <configuration>  

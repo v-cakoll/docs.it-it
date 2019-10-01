@@ -4,20 +4,20 @@ description: Informazioni su come i diversi valori di CharSet possono modificare
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
-ms.translationtype: HT
+ms.openlocfilehash: 301fa3d8bd379e76a0e751c3a20d0d8be37d9ac0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817844"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700929"
 ---
 # <a name="charsets-and-marshaling"></a>Set di caratteri e marshalling
 
-Il modo in cui viene eseguito il marshalling dei valori `char`, degli oggetti `string` e degli oggetti `System.Text.StringBuilder` dipende dal valore del campo `CharSet` per P/Invoke o la struttura. È possibile impostare il `CharSet` di P/Invoke, impostando il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> al momento della dichiarazione di P/Invoke. Per impostare il `CharSet` per una struttura, impostare il campo <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> nella dichiarazione dello struct. Quando questi campi attributo non vengono impostati, dipende dal compilatore del linguaggio determinare quale `CharSet` usare. Per impostazione predefinita, C# e VB usano il set di caratteri <xref:System.Runtime.InteropServices.CharSet.Ansi>.
+Il modo in cui viene eseguito il marshalling dei valori `char`, degli oggetti `string` e degli oggetti `System.Text.StringBuilder` dipende dal valore del campo `CharSet` per P/Invoke o la struttura. È possibile impostare il `CharSet` di P/Invoke, impostando il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> al momento della dichiarazione di P/Invoke. Per impostare il `CharSet` per un tipo, impostare il campo <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> sulla dichiarazione della classe o dello struct. Quando questi campi attributo non vengono impostati, dipende dal compilatore del linguaggio determinare quale `CharSet` usare. Per impostazione predefinita, C# e VB usano il set di caratteri <xref:System.Runtime.InteropServices.CharSet.Ansi>.
 
 La tabella seguente illustra il mapping tra ogni set di caratteri e la rappresentazione di un carattere o una stringa quando sottoposti a marshalling con tale set di caratteri:
 
-| Valore di `CharSet` | WINDOWS            | .NET Core 2.2 e versioni precedenti in Unix | .NET core 3.0 e versioni successive e Mono in Unix |
+| Valore di `CharSet` | Windows            | .NET Core 2.2 e versioni precedenti in Unix | .NET core 3.0 e versioni successive e Mono in Unix |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
 | Ansi            | `char` ([tabella codici Windows (ANSI)](/windows/win32/intl/code-pages) predefinita del sistema)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
 | Unicode         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |

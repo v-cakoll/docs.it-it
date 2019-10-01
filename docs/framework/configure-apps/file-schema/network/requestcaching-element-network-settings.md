@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659129"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697832"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (impostazioni di rete)
 Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`isPrivateCache`|Specifica se la cache fornisce l'isolamento tra le informazioni di utenti diversi. Il valore predefinito è `true`. Questo valore deve essere `false` per le applicazioni di livello intermedio.|  
 |`disableAllCaching`|Specifica che la memorizzazione nella cache è disabilitata per tutte le risposte Web e non può essere sottoposta a override a livello di codice.|  
@@ -49,7 +49,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
   
 ## <a name="policylevel-attribute"></a>policyLevel (attributo)  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`Default`|Restituisce la risorsa memorizzata nella cache se la risorsa è aggiornata, la lunghezza del contenuto è precisa e sono presenti gli attributi relativi alla scadenza, alla modifica e alla lunghezza del contenuto.|  
 |`BypassCache`|Restituisce la risorsa dal server.|  
@@ -65,7 +65,7 @@ Controlla il meccanismo di memorizzazione nella cache per le richieste di rete.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache HTTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
-|[\<Elemento > defaultFtpCachePolicy (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
+|[Elemento > \<defaultFtpCachePolicy (impostazioni di rete)](defaultftpcachepolicy-element-network-settings.md)|Elemento facoltativo.<br /><br /> Descrive se la memorizzazione nella cache FTP è attiva e descrive i criteri di memorizzazione nella cache predefiniti.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664054"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697993"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<Elemento > performanceCounter (impostazioni di rete)
+# <a name="performancecounter-element-network-settings"></a>Elemento > \<performanceCounter (impostazioni di rete)
 Abilita o Disabilita i contatori delle prestazioni di rete.  
   
- \<configuration>  
-\<system.net>  
-\<Impostazioni >  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,12 +36,12 @@ Abilita o Disabilita i contatori delle prestazioni di rete.
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|DESCRIZIONE|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`enabled`|Specifica se i contatori delle prestazioni di rete sono abilitati. Il valore predefinito è `false`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -56,10 +56,10 @@ Abilita o Disabilita i contatori delle prestazioni di rete.
   
  Il valore predefinito è che i contatori delle prestazioni di rete sono disabilitati.  
   
- È <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> possibile utilizzare la proprietà per ottenere il valore corrente dell'attributo **Enabled** dai file di configurazione applicabili.  
+ È possibile utilizzare la proprietà <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> per ottenere il valore corrente dell'attributo **Enabled** dai file di configurazione applicabili.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come configurare gli <xref:System.Net> spazi dei nomi e correlati per abilitare i contatori delle prestazioni di rete.  
+ Nell'esempio seguente viene illustrato come configurare gli spazi dei nomi <xref:System.Net> e correlati per abilitare i contatori delle prestazioni di rete.  
   
 ```xml  
 <configuration>  

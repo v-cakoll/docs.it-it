@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de9d77aa9ea853b6f044e91878044115588ca77c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935369"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701242"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Le matrici dichiarate come membri di struttura non possono essere dichiarate con una grandezza iniziale
-Matrice in una struttura è dichiarata con una dimensione iniziale. Non è possibile inizializzare qualsiasi elemento di struttura e la dichiarazione di una dimensione della matrice è una forma di inizializzazione.  
+Una matrice in una struttura viene dichiarata con una dimensione iniziale. Non è possibile inizializzare alcun elemento della struttura e la dichiarazione di una dimensione della matrice è una forma di inizializzazione.  
   
  **ID errore:** BC31043  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1. Definire la matrice in una struttura come dinamico (Nessuna dimensione iniziale).  
+1. Definire la matrice nella struttura come dinamica (nessuna dimensione iniziale).  
   
-2. Se è necessaria una determinata dimensione della matrice, è possibile ridimensionare una matrice dinamica con un [istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) quando viene eseguito il codice. Questa condizione è illustrata nell'esempio seguente.  
+2. Se è necessaria una determinata dimensione della matrice, è possibile ridimensionare una matrice dinamica con un' [istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) quando il codice è in esecuzione. Questa condizione è illustrata nell'esempio seguente.  
   
-    ```  
+    ```vb  
     Structure demoStruct  
         Public demoArray() As Integer  
     End Structure  

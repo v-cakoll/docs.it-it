@@ -4,12 +4,12 @@ description: Informazioni sui modi in cui le modifiche che causano un'interruzio
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: 68cd3580e80305e54b41610f05d939a6aff8b54d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "69577153"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698448"
 ---
 # <a name="breaking-change-categories"></a>Categorie di modifiche che causano un'interruzione
 
@@ -49,4 +49,4 @@ Mantenere la compatibilità con le edizioni successive non è un obiettivo di .N
 
 ## <a name="see-also"></a>Vedere anche
 
-[Valutare le modifiche che causano un'interruzione in .NET Core](index.md)
+- [Valutare le modifiche che causano un'interruzione in .NET Core](index.md)

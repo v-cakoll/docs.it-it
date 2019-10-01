@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926949"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699202"
 ---
-# <a name="sources-element"></a>\<Elemento Sources >
+# <a name="sources-element"></a>Elemento > \<sources
 Specifica le origini di traccia che avviano i messaggi di traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<origini >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,7 +35,7 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -54,7 +54,7 @@ Specifica le origini di traccia che avviano i messaggi di traccia.
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<sources>` elemento per aggiungere l'origine `mySource` di traccia e impostare il livello per l'opzione di origine `sourceSwitch`denominata. Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<sources>` per aggiungere l'origine di traccia `mySource` e per impostare il livello per l'opzione di origine denominata `sourceSwitch`. Viene aggiunto un listener di traccia della console che scrive le informazioni di traccia nella console.  
   
 ```xml  
 <configuration>  

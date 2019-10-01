@@ -12,23 +12,23 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063258"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701290"
 ---
 # <a name="typeof-operator-visual-basic"></a>Operatore TypeOf (Visual Basic)
-Controlla se il tipo di runtime del risultato dell'espressione è compatibile con il tipo con il tipo specificato.
+Verifica se il tipo di runtime del risultato di un'espressione è compatibile con il tipo specificato.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 result = TypeOf objectexpression Is typename  
 ```  
   
-```  
+```vb  
 result = TypeOf objectexpression IsNot typename  
 ```  
   

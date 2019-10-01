@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927013"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699344"
 ---
-# <a name="listeners-element-for-trace"></a>\<Listeners > elemento per \<Trace >
+# <a name="listeners-element-for-trace"></a>Elemento > \<listeners per \<trace >
 Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.  
   
- \<Configuration >-elemento  
-\<System. Diagnostics > elemento  
-\<Trace >-elemento  
-\<Listeners > elemento per \<Trace >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuno.  
+ No.  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -44,7 +44,7 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Aggiunge un listener alla raccolta `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Cancella la raccolta `Listeners` per una traccia.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Rimuove un listener dalla `Listeners` raccolta.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Rimuove un listener dalla raccolta `Listeners`.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -55,13 +55,13 @@ Specifica un listener che raccoglie, archivia e instrada i messaggi. I listener 
 |`trace`|Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.|  
   
 ## <a name="remarks"></a>Note  
- Le <xref:System.Diagnostics.Debug> classi <xref:System.Diagnostics.Trace> e condividono la stessa raccolta Listeners. Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizzerà lo stesso listener. Le classi del listener fornite con la .NET Framework derivano <xref:System.Diagnostics.TraceListener> dalla classe.  
+ Le classi <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> condividono la stessa raccolta **Listeners** . Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizzerà lo stesso listener. Le classi del listener fornite con la .NET Framework derivano dalla classe <xref:System.Diagnostics.TraceListener>.  
   
 ## <a name="configuration-file"></a>File di configurazione  
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'  **\<elemento listeners >** per `MyListener` aggiungere i listener e `MyEventListener` alla raccolta **Listeners** . `MyListener`Crea un file denominato `MyListener.log` e scrive l'output nel file. `MyEventListener`Crea una voce nel log eventi.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento **> \<listeners** per aggiungere i listener `MyListener` e `MyEventListener` alla raccolta **Listeners** . `MyListener` crea un file denominato `MyListener.log` e scrive l'output nel file. `MyEventListener` crea una voce nel registro eventi.  
   
 ```xml  
 <configuration>  

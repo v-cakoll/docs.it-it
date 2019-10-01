@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934277"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701019"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Il nome di variabile di intervallo può essere dedotto solo da un nome semplice o completo senza argomenti
-Un elemento di programmazione che accetta uno o più argomenti è incluso in una query LINQ. Il compilatore è in grado di dedurre una variabile di intervallo da tale elemento di programmazione.  
+Un elemento di programmazione che accetta uno o più argomenti è incluso in una query LINQ. Il compilatore non è in grado di dedurre una variabile di intervallo da tale elemento di programmazione.  
   
  **ID errore:** BC36599  
   
@@ -23,7 +23,7 @@ Un elemento di programmazione che accetta uno o più argomenti è incluso in una
   
 1. Specificare un nome di variabile esplicito per l'elemento di programmazione, come illustrato nel codice seguente:  
   
-```  
+```vb  
 Dim query = From var1 In collection1   
             Select VariableAlias= SampleFunction(var1), var1  
 ```  

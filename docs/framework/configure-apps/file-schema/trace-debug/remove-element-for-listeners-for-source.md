@@ -1,5 +1,5 @@
 ---
-title: <remove>Elemento per <listeners> per<source>
+title: Elemento <remove> per <listeners> per <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: edd27dd262004aead7db4d81db8ecab0e831dac1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a11308278f755ec8271477352d91d8797d105c5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926986"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699493"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<rimuovere > elemento per \<i listener > per \<l'origine >
+# <a name="remove-element-for-listeners-for-source"></a>Elemento > \<remove per \<listeners > per \<source >
 Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<origini >  
-\<> di origine  
-\<listener >  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`name`|Attributo obbligatorio.<br /><br /> Nome del listener da rimuovere dalla `Listeners` raccolta.|  
+|`name`|Attributo obbligatorio.<br /><br /> Nome del listener da rimuovere dalla raccolta `Listeners`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -53,14 +53,14 @@ Rimuove un listener dalla raccolta `Listeners` per un'origine di traccia.
 |`listeners`|Specifica i listener che raccolgono, archiviano e indirizzano i messaggi.|  
   
 ## <a name="remarks"></a>Note  
- L' `<remove>` elemento rimuove un listener specificato `Listeners` dalla raccolta per un'origine di traccia.  
+ L'elemento `<remove>` rimuove un listener specificato dalla raccolta `Listeners` per un'origine di traccia.  
   
- È possibile `Listeners` rimuovere un elemento dalla raccolta per un'origine di traccia a livello di codice chiamando il <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> metodo <xref:System.Diagnostics.TraceSource> sulla <xref:System.Diagnostics.TraceSource.Listeners%2A> proprietà dell'istanza.  
+ È possibile rimuovere un elemento dalla raccolta `Listeners` per un'origine di traccia a livello di codice chiamando il metodo <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> sulla proprietà <xref:System.Diagnostics.TraceSource.Listeners%2A> dell'istanza <xref:System.Diagnostics.TraceSource>.  
   
  Questo elemento può essere utilizzato nel file di configurazione del computer (Machine. config) e nel file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l' `<remove>` elemento prima di utilizzare `<add>` l'elemento per `Listeners` aggiungere il `console` listener alla raccolta per l'origine `TraceSourceApp`di traccia.  
+ Nell'esempio seguente viene illustrato come utilizzare l'elemento `<remove>` prima di utilizzare l'elemento `<add>` per aggiungere il listener `console` alla raccolta `Listeners` per l'origine di traccia `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

@@ -17,44 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748879"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700777"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>Metodo ICorDebugController::Continue
-Riprende l'esecuzione dei thread gestiti dopo una chiamata a [metodo Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-HRESULT Continue (  
-    [in] BOOL fIsOutOfBand  
-);  
-```  
-  
-## <a name="parameters"></a>Parametri  
+
+Riprende l'esecuzione di thread gestiti dopo una chiamata al [metodo Stop](icordebugcontroller-stop-method.md).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+HRESULT Continue (
+    [in] BOOL fIsOutOfBand
+);
+```
+
+## <a name="parameters"></a>Parametri
+
  `fIsOutOfBand`  
- [in] Impostare su `true` andare a un evento di out-of-band; in caso contrario, impostato su `false`.  
+ in Impostare su `true` se si continua da un evento fuori banda; in caso contrario, impostare su `false`.
+
+## <a name="remarks"></a>Note
+
+`Continue` continua il processo dopo una chiamata al metodo `ICorDebugController::Stop`.
+
+Quando si esegue il debug in modalità mista, non chiamare `Continue` sul thread di evento Win32 a meno che non si continui da un evento fuori banda.
+
+Un *evento in banda* può essere un evento gestito o un evento non gestito normale durante il quale il debugger supporta l'interazione con lo stato gestito del processo. In questo caso, il debugger riceve il callback [ICorDebugUnmanagedCallback::D ebugevent](icordebugunmanagedcallback-debugevent-method.md) con il relativo parametro `fOutOfBand` impostato su `false`.
   
-## <a name="remarks"></a>Note  
- `Continue` continua il processo dopo una chiamata al `ICorDebugController::Stop` (metodo).  
-  
- Quando si esegue il debug in modalità mista, non chiamare `Continue` in Win32 evento thread a meno che non si continui da un evento di out-of-band.  
-  
- Un' *eventi in banda* è un evento gestito o un normale evento non gestito durante il quale il debugger supporta l'interazione con la gestione degli Stati del processo. In questo caso, il debugger riceve la [ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) callback con relativo `fOutOfBand` parametro impostato su `false`.  
-  
- Un' *evento out-of-band* è un evento non gestito durante il quale è possibile l'interazione con la gestione degli Stati del processo durante il processo viene arrestato a causa di un evento. In questo caso, il debugger riceve la `ICorDebugUnmanagedCallback::DebugEvent` callback con relativo `fOutOfBand` parametro impostato su `true`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** CorDebug.idl, CorDebug.h  
-  
- **Libreria:** CorGuids.lib  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche
+Un *evento fuori banda* è un evento non gestito durante il quale l'interazione con lo stato gestito del processo è Impossibile quando il processo viene interrotto a causa dell'evento. In questo caso, il debugger riceve il callback `ICorDebugUnmanagedCallback::DebugEvent` con il relativo parametro `fOutOfBand` impostato su `true`.
+
+## <a name="requirements"></a>Requisiti
+
+ **Piattaforme** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Intestazione:** CorDebug. idl, CorDebug. h
+
+ **Libreria** CorGuids.lib
+
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664243"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698423"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<aggiungere > elemento per authenticationModules (impostazioni di rete)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>Elemento > \<add per authenticationModules (impostazioni di rete)
 Aggiunge un modulo di autenticazione all'applicazione.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Aggiungi >**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,12 +38,12 @@ Aggiunge un modulo di autenticazione all'applicazione.
   
 ### <a name="attributes"></a>Attributi  
   
-|**Attributo**|**Descrizione**|  
+|**Attribute**|**Descrizione**|  
 |-------------------|---------------------|  
-|`type`|Il nome completo del tipo (indicato dalla <xref:System.Type.FullName%2A> proprietà) e il nome dell'assembly (indicato <xref:System.Reflection.Assembly.FullName%2A> dalla proprietà), separati da una virgola.|  
+|`type`|Il nome completo del tipo (indicato dalla proprietà <xref:System.Type.FullName%2A>) e il nome dell'assembly (indicato dalla proprietà <xref:System.Reflection.Assembly.FullName%2A>), separati da una virgola.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ No.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -54,7 +54,7 @@ Aggiunge un modulo di autenticazione all'applicazione.
 ## <a name="remarks"></a>Note  
  Con l'elemento `add` viene aggiunto un modulo di autenticazione alla fine dell'elenco dei moduli di autenticazione registrati. I moduli di autenticazione vengono chiamati nell'ordine in cui sono stati aggiunti all'elenco.  
   
- Il valore `type` dell'attributo deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
+ Il valore dell'attributo `type` deve essere un nome di tipo valido e un nome di assembly corrispondente, separati da una virgola.  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

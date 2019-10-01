@@ -1,17 +1,17 @@
 ---
-title: "Procedura: creare eccezioni definite dall'utente con messaggi di eccezione localizzati"
+title: "Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati"
 description: Informazioni su come creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 author: Youssef1313
 ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: 1e5ef5658e4cb71d0689a1786494eaec57d4e7fb
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332991"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696710"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Procedura: creare eccezioni definite dall'utente con messaggi di eccezione localizzati
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Procedura: Creare eccezioni definite dall'utente con messaggi di eccezione localizzati
 
 In questo articolo si apprenderà come creare eccezioni definite dall'utente ereditate dalla classe di base <xref:System.Exception> con messaggi di eccezione localizzati tramite assembly satellite.
 
@@ -77,16 +77,22 @@ Per creare un'eccezione personalizzata, attenersi alla procedura seguente:
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-Il problema con la riga precedente è che "lo studente non è stato trovato". è solo una stringa costante. In un'applicazione localizzata è necessario avere messaggi diversi a seconda delle impostazioni cultura dell'utente.
+Il problema con la riga precedente è che `"The student cannot be found."` è semplicemente una stringa costante. In un'applicazione localizzata è necessario avere messaggi diversi a seconda delle impostazioni cultura dell'utente.
 Gli [assembly satellite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) sono un modo efficace per eseguire questa operazione. Un assembly satellite è un file con estensione dll che contiene risorse per una lingua specifica. Quando si richiede una specifica risorsa in fase di esecuzione, CLR trova tale risorsa a seconda delle impostazioni cultura dell'utente. Se non viene trovato alcun assembly satellite per tali impostazioni cultura, vengono utilizzate le risorse delle impostazioni cultura predefinite.
 
 Per creare i messaggi di eccezione localizzati:
 
 1. Creare una nuova cartella denominata *Resources* per conservare i file di risorse.
-1. Aggiungere un nuovo file di risorse. Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e selezionare **Aggiungi** -> **nuovo elemento** -> **file di risorse**. Denominare il file *ExceptionMessages. resx*. Questo è il file di risorse predefinito.
-1. Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nella figura seguente: @no__t 0Add le risorse alle impostazioni cultura predefinite @ no__t-1
+1. Aggiungere un nuovo file di risorse. Per eseguire questa operazione in Visual Studio, fare clic con il pulsante destro del mouse sulla cartella in **Esplora soluzioni**e selezionare **Aggiungi** > **nuovo elemento** > **file di risorse**. Denominare il file *ExceptionMessages. resx*. Questo è il file di risorse predefinito.
+1. Aggiungere una coppia nome/valore per il messaggio di eccezione, come illustrato nella figura seguente:
+
+   ![Aggiungere risorse alle impostazioni cultura predefinite](media/add-resources-to-default-culture.jpg)
+
 1. Aggiungere un nuovo file di risorse per il francese. Denominarlo *ExceptionMessages.fr-fr. resx*.
-1. Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese: @no__t 0Add le risorse per le impostazioni cultura fr-FR @ no__t-1
+1. Aggiungere nuovamente una coppia nome/valore per il messaggio di eccezione, ma con un valore francese:
+
+   ![Aggiungere risorse alle impostazioni cultura fr-FR](media/add-resources-to-fr-culture.jpg)
+
 1. Dopo aver compilato il progetto, la cartella di output di compilazione deve contenere la cartella *fr-fr* con un file con estensione *dll* , ovvero l'assembly satellite.
 1. L'eccezione viene generata con codice simile al seguente:
 
