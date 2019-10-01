@@ -5,8 +5,6 @@
   items:
     - name: Progettare applicazioni Web moderne con ASP.NET Core e Microsoft Azure
       href: modern-web-apps-azure/
-    - name: Architettura di app .NET cloud native per Azure
-      href: cloud-native/
     - name: Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows
       href: modernize-with-azure-containers/
     - name: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
@@ -15,6 +13,11 @@
       href: microservices/
     - name: 'App serverless: architettura, modelli e implementazione di Azure'
       href: serverless/
+- name: E-book in anteprima
+  expanded: true
+  items:
+    - name: Architettura di app .NET cloud native per Azure
+      href: cloud-native/
     - name: Blazor per sviluppatori Web Forms ASP.NET
       href: blazor-for-web-forms-developers/
     - name: ASP.NET Core gRPC per sviluppatori WCF
