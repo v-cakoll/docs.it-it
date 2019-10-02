@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045571"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736750"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 
@@ -42,20 +42,20 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
 Questo modello presenta diversi vantaggi:
 
 - È possibile aggiungere in modo incrementale risorse per nuove impostazioni cultura dopo la distribuzione di un'applicazione. Lo sviluppo di risorse specifiche per le impostazioni cultura può richiedere molto tempo. Questo modello consente di rilasciare l'applicazione principale e quindi di distribuire in un secondo momento le risorse specifiche delle impostazioni cultura.
-
 - È possibile aggiornare e modificare gli assembly satellite di un'applicazione senza ricompilare l'applicazione.
-
 - L'applicazione potrà caricare solo gli assembly satellite che contengono le risorse necessarie per impostazioni cultura specifiche. In questo modo è possibile ridurre notevolmente l'uso delle risorse di sistema.
 
  Tuttavia il modello presenta anche alcuni svantaggi:
 
 - È necessario gestire più set di risorse.
-
 - Il costo iniziale del test un'applicazione è più elevato, perché è necessario sottoporre a test diverse configurazioni. Si noti che a lungo termine sarà più semplice ed economico testare un'applicazione centrale con vari satelliti che testare e gestire più versioni internazionali parallele.
 
 ## <a name="resource-naming-conventions"></a>Convenzioni di denominazione delle risorse
 
 Quando si includono nel pacchetto le risorse dell'applicazione è necessario denominarle in base alle convenzioni previste dal Common Language Runtime. Il runtime identifica una risorsa in base al nome delle impostazioni cultura. A ogni set di impostazioni cultura viene assegnato un nome univoco, in genere una combinazione di un nome impostazioni cultura di due lettere minuscole associato a una lingua e (se necessario) un nome impostazioni cultura secondarie di due lettere maiuscole associato a un paese o a una regione. Il nome delle impostazioni cultura secondarie segue il nome delle impostazioni cultura ed è separato da un trattino (-). Ad esempio ja-JP corrisponde al giapponese parlato in Giappone, en-US corrisponde all'inglese parlato negli Stati Uniti d'America, de-DE corrisponde al tedesco parlato in Germania, de-AT corrisponde al tedesco parlato in Austria. Vedere la colonna **Language tag** (Tag di lingua) nell'[elenco di nomi di lingua/area geografica supportati da Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). I nomi delle impostazioni cultura seguono lo standard definito da [BCP 47](https://tools.ietf.org/html/bcp47).
+
+> [!NOTE]
+> Esistono alcune eccezioni per i nomi delle impostazioni cultura di due lettere, ad esempio `zh-Hans` per il cinese (semplificato).
 
 > [!NOTE]
 > Per informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](creating-resource-files-for-desktop-apps.md) e [Creazione di assembly satellite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -204,8 +204,8 @@ e con la seguente sintassi per la risorsa di lingua russa:
 
 Il codice sorgente dell'applicazione si trova in un file con nome Example1.cs o Example1.vb. Include l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per indicare che la risorsa di applicazione predefinita si trova nella sottodirectory fr. Crea un'istanza di Resource Manager, recupera il valore della risorsa `Greeting` e lo visualizza nella console.
 
-[!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
-[!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
+[!code-csharp[Conceptual.Resources.Packaging#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+[!code-vb[Conceptual.Resources.Packaging#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
 È quindi possibile compilare il codice sorgente C# dalla riga di comando come segue:
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423791"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736861"
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari .NET
 Le espressioni regolari ("regular expression") garantiscono un metodo efficace e flessibile per elaborare del testo. L'ampia notazione per la formulazione dei criteri di ricerca fornita dalle espressioni regolari consente di analizzare rapidamente grandi quantità di testo per trovare combinazioni di caratteri specifiche, per convalidare il testo verificandone la corrispondenza con un modello predefinito, ad esempio un indirizzo di posta elettronica, per estrarre, modificare, sostituire o eliminare sottostringhe di testo e per aggiungere le stringhe estratte a una raccolta per generare un rapporto. Per numerose applicazioni che gestiscono stringhe o che analizzano grandi blocchi di testo, le espressioni regolari rappresentano uno strumento indispensabile.  
@@ -37,21 +37,21 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
 - Criterio di espressione regolare da identificare nel testo.  
   
-     In .NET i criteri di espressione regolare vengono definiti a un linguaggio o una sintassi speciale, compatibile con le espressioni regolari Perl 5, che offre funzionalità aggiuntive come la corrispondenza da destra verso sinistra. Per altre informazioni, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
+     In .NET i criteri di espressione regolare vengono definiti a un linguaggio o una sintassi speciale, compatibile con le espressioni regolari Perl 5, che offre funzionalità aggiuntive come la corrispondenza da destra verso sinistra. Per altre informazioni, vedere [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md).  
   
 - Testo da analizzare per il criterio di espressione regolare.  
   
  I metodi della classe <xref:System.Text.RegularExpressions.Regex> consentono di eseguire le operazioni seguenti:  
   
-- Determinare se il criterio di espressione regolare è presente nel testo di input chiamando il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Per un esempio d'uso del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> per la convalida del testo, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Determinare se il criterio di espressione regolare è presente nel testo di input chiamando il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Per un esempio d'uso del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> per la convalida del testo, vedere [Procedura: Verificare che le stringhe siano nel formato di posta elettronica valido](how-to-verify-that-strings-are-in-valid-email-format.md).  
   
 - Recuperare una o tutte le occorrenze del testo che corrispondono al criterio di espressione regolare chiamando il metodo <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Il primo metodo restituisce un oggetto <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> che fornisce informazioni sul testo corrispondente. secondo metodo restituisce un oggetto <xref:System.Text.RegularExpressions.MatchCollection> che contiene un oggetto <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> per ogni corrispondenza trovata nel testo analizzato.  
   
-- Sostituire il testo che corrisponde al criterio di espressione regolare chiamando il metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Per esempi d'uso del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A> per modificare i formati di data e rimuovere i caratteri non validi da una stringa, vedere [Procedura: Rimuovere caratteri non validi da una stringa](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) e [Esempio: Modifica dei formati di data](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+- Sostituire il testo che corrisponde al criterio di espressione regolare chiamando il metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Per esempi d'uso del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A> per modificare i formati di data e rimuovere i caratteri non validi da una stringa, vedere [Procedura: Rimuovere caratteri non validi da una stringa](how-to-strip-invalid-characters-from-a-string.md) e [Esempio: Modifica dei formati di data](regular-expression-example-changing-date-formats.md).  
   
- Per una panoramica del modello a oggetti delle espressioni regolari, vedere [Modello a oggetti delle espressioni regolari](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
+ Per una panoramica del modello a oggetti delle espressioni regolari, vedere [Modello a oggetti delle espressioni regolari](the-regular-expression-object-model.md).  
   
- Per altre informazioni sul linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) o scaricare e stampare una delle brochure seguenti:  
+ Per altre informazioni sul linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md) o scaricare e stampare una delle brochure seguenti:  
   
  [Riferimento rapido in formato Word (DOCX)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Riferimento rapido in formato PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
@@ -62,16 +62,16 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
 ### <a name="example-1-replacing-substrings"></a>Esempio 1: Sostituzione di sottostringhe  
  Si presupponga che una lista di distribuzione contenga nomi che talvolta includono un titolo (Mr., Mrs., Miss o Ms.) oltre al nome e al cognome. Se non si vogliono includere i titoli quando si generano etichette per le buste dall'elenco, è possibile usare un'espressione regolare per rimuovere i titoli, come illustrato nell'esempio seguente.  
   
- [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
- [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
+ [!code-csharp[Conceptual.Regex#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
+ [!code-vb[Conceptual.Regex#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
  Il criterio di espressione regolare `(Mr\.? |Mrs\.? |Miss |Ms\.? )` trova una corrispondenza di tutte le occorrenze di "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" o "Ms.". La chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sostituisce la stringa corrispondente con <xref:System.String.Empty?displayProperty=nameWithType>, ovvero la rimuove dalla stringa originale.  
   
-### <a name="example-2-identifying-duplicated-words"></a>Esempio 2: Identificazione di parole duplicate  
+### <a name="example-2-identifying-duplicated-words"></a>Esempio 2 Identificazione di parole duplicate  
  La duplicazione accidentale delle parole è un errore comune commesso dagli autori. È possibile usare un'espressione regolare per identificare le parole duplicate, come illustrato nell'esempio seguente.  
   
- [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
- [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
+ [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
+ [!code-vb[Conceptual.Regex#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
  Il criterio di espressione regolare `\b(\w+?)\s\1\b` può essere interpretato nel modo seguente:  
   
@@ -90,8 +90,8 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
 ### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Esempio 3: Compilazione dinamica di un'espressione regolare dipendente dalle impostazioni cultura  
  L'esempio seguente illustra le potenzialità delle espressioni regolari combinate alla flessibilità offerta dalle funzionalità di globalizzazione di .NET. Viene usato l'oggetto <xref:System.Globalization.NumberFormatInfo> per determinare il formato dei valori di valuta nelle impostazioni cultura correnti del sistema. Queste informazioni vengono quindi usate per costruire in modo dinamico un'espressione regolare per l'estrazione dei valori di valuta dal testo. Per ogni corrispondenza, viene estratto il sottogruppo che contiene solo la stringa numerica, viene convertito in un valore <xref:System.Decimal> e viene calcolato un totale parziale.  
   
- [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
- [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
+ [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
+ [!code-vb[Conceptual.Regex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
  In un computer le cui impostazioni cultura correnti sono Inglese - Stati Uniti (en-US), l'esempio compila l'espressione regolare `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` dinamicamente. Questo criterio di espressione regolare può essere interpretato nel modo seguente:  
   
@@ -111,12 +111,12 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.|  
-|[Modello a oggetti delle espressioni regolari](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Fornisce esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|  
-|[Dettagli sul comportamento delle espressioni regolari](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Offre informazioni sulle funzionalità e il funzionamento delle espressioni regolari di .NET.|  
-|[Esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md)|Fornisce esempi di codice che illustrano gli usi tipici delle espressioni regolari.|  
+|[Linguaggio di espressioni regolari - Riferimento rapido](regular-expression-language-quick-reference.md)|Fornisce informazioni sul set di caratteri, di operatori e di costrutti che è possibile usare per definire le espressioni regolari.|  
+|[Modello a oggetti delle espressioni regolari](the-regular-expression-object-model.md)|Fornisce esempi di codice e informazioni che illustrano l'uso delle classi di espressioni regolari.|  
+|[Dettagli sul comportamento delle espressioni regolari](details-of-regular-expression-behavior.md)|Offre informazioni sulle funzionalità e il funzionamento delle espressioni regolari di .NET.|  
+|[Esempi di espressioni regolari](regular-expression-examples.md)|Fornisce esempi di codice che illustrano gli usi tipici delle espressioni regolari.|  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  

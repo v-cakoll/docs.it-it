@@ -2,12 +2,12 @@
 title: Attributi
 description: Informazioni su F# come gli attributi consentono l'applicazione dei metadati a un costrutto di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082931"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736809"
 ---
 # <a name="attributes"></a>Attributi
 
@@ -25,13 +25,13 @@ Nella sintassi precedente, la *destinazione* è facoltativa e, se presente, spec
 
 Il *nome dell'attributo* fa riferimento al nome (possibilmente qualificato con gli spazi dei nomi) di un tipo di attributo valido, con `Attribute` o senza il suffisso che viene in genere usato nei nomi di tipo di attributo. Ad esempio, il tipo `ObsoleteAttribute` può essere abbreviato in `Obsolete` solo in questo contesto.
 
-Gli *argomenti* sono gli argomenti del costruttore per il tipo di attributo. Se un attributo dispone di un costruttore predefinito, è possibile omettere l'elenco di argomenti e le parentesi. Gli attributi supportano sia gli argomenti posizionali che gli argomenti denominati. Gli *argomenti posizionali* sono argomenti utilizzati nell'ordine in cui sono visualizzati. Gli argomenti denominati possono essere utilizzati se l'attributo dispone di proprietà pubbliche. È possibile impostarle usando la sintassi seguente nell'elenco di argomenti.
+Gli *argomenti* sono gli argomenti del costruttore per il tipo di attributo. Se un attributo ha un costruttore senza parametri, è possibile omettere l'elenco di argomenti e le parentesi. Gli attributi supportano sia gli argomenti posizionali che gli argomenti denominati. Gli *argomenti posizionali* sono argomenti utilizzati nell'ordine in cui sono visualizzati. Gli argomenti denominati possono essere utilizzati se l'attributo dispone di proprietà pubbliche. È possibile impostarle usando la sintassi seguente nell'elenco di argomenti.
 
 ```fsharp
 property-name = property-value
 ```
 
-Tali inizializzazioni di proprietà possono essere in qualsiasi ordine, ma devono seguire qualsiasi argomento posizionale. Di seguito è riportato un esempio di un attributo che usa gli argomenti posizionali e le inizializzazioni delle proprietà.
+Tali inizializzazioni di proprietà possono essere in qualsiasi ordine, ma devono seguire qualsiasi argomento posizionale. Di seguito è riportato un esempio di un attributo che usa gli argomenti posizionali e le inizializzazioni delle proprietà:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
@@ -41,13 +41,13 @@ Gli attributi sono un costrutto di programmazione .NET che consente a un oggetto
 
 Gli attributi F# in possono essere applicati ai seguenti costrutti di programmazione: funzioni, metodi, assembly, moduli, tipi (classi, record, strutture, interfacce, delegati, enumerazioni, unioni e così via), costruttori, proprietà, campi, parametri, parametri di tipo e valori restituiti. Gli attributi non sono consentiti su binding all'interno di classi, espressioni o espressioni del flusso di `let` lavoro.
 
-In genere, la dichiarazione di attributo viene visualizzata direttamente prima della dichiarazione della destinazione dell'attributo. È possibile utilizzare contemporaneamente più dichiarazioni di attributo, come indicato di seguito.
+In genere, la dichiarazione di attributo viene visualizzata direttamente prima della dichiarazione della destinazione dell'attributo. È possibile utilizzare contemporaneamente più dichiarazioni di attributo, come indicato di seguito:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 È possibile eseguire query sugli attributi in fase di esecuzione usando la reflection .NET.
 
-È possibile dichiarare più attributi singolarmente, come nell'esempio di codice precedente, oppure è possibile dichiararli in un set di parentesi quadre se si usa un punto e virgola per separare i singoli attributi e costruttori, come illustrato di seguito.
+È possibile dichiarare più attributi singolarmente, come nell'esempio di codice precedente, oppure è possibile dichiararli in un set di parentesi quadre se si usa un punto e virgola per separare i singoli attributi e costruttori, come indicato di seguito:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ Gli attributi rilevati `Obsolete` in genere includono l'attributo, gli attributi
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Per le destinazioni `assembly` degli attributi `module`e, gli attributi vengono applicati a un'associazione di `do` primo livello nell'assembly. È possibile includere la parola `assembly` o `module` nella dichiarazione di attributo, come indicato di seguito.
+Per le destinazioni `assembly` degli attributi `module`e, gli attributi vengono applicati a un'associazione di `do` primo livello nell'assembly. È possibile includere la parola `assembly` o `module` nella dichiarazione dell'attributo, come indicato di seguito:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 Se si omette la destinazione dell'attributo per un attributo applicato a `do` un'associazione, F# il compilatore tenta di determinare la destinazione dell'attributo che risulta utile per tale attributo. Molte classi Attribute hanno un attributo di tipo `System.AttributeUsageAttribute` che include informazioni sulle possibili destinazioni supportate per tale attributo. Se il `System.AttributeUsageAttribute` indica che l'attributo supporta funzioni come destinazioni, l'attributo viene accettato per essere applicato al punto di ingresso principale del programma. `System.AttributeUsageAttribute` Se indica che l'attributo supporta gli assembly come destinazioni, il compilatore accetta l'attributo da applicare all'assembly. La maggior parte degli attributi non si applica sia alle funzioni che agli assembly, ma nei casi in cui lo fanno, l'attributo viene accettato per essere applicato alla funzione principale del programma. Se la destinazione dell'attributo viene specificata in modo esplicito, l'attributo viene applicato alla destinazione specificata.
 
-Anche se in genere non è necessario specificare la destinazione dell'attributo in modo esplicito, nella tabella seguente sono riportati i valori validi per la *destinazione* in un attributo, insieme ad esempi di utilizzo.
+Anche se in genere non è necessario specificare la destinazione dell'attributo in modo esplicito, i valori validi per la *destinazione* in un attributo insieme ad esempi di utilizzo sono illustrati nella tabella seguente:
 
 <table>
   <tr>

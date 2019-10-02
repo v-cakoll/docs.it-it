@@ -2,16 +2,16 @@
 title: Costruttori
 description: Informazioni su come definire e utilizzare i costruttori in F# per creare e inizializzare oggetti classe e struttura.
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627604"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736840"
 ---
 # <a name="constructors"></a>Costruttori
 
-In questo argomento viene descritto come definire e utilizzare i costruttori per creare e inizializzare oggetti classe e struttura.
+Questo articolo descrive come definire e usare i costruttori per creare e inizializzare oggetti classe e struttura.
 
 ## <a name="construction-of-class-objects"></a>Costruzione di oggetti classe
 
@@ -21,11 +21,11 @@ Il costruttore primario contiene `let` le `do` associazioni e visualizzate all'i
 
 Indipendentemente dal fatto che il costruttore che si vuole chiamare sia un costruttore primario o un costruttore aggiuntivo, è possibile creare oggetti usando un' `new` espressione, con o senza la parola `new` chiave Optional. Gli oggetti vengono inizializzati insieme agli argomenti del costruttore, elencando gli argomenti nell'ordine e separati da virgole e racchiusi tra parentesi o utilizzando argomenti e valori denominati tra parentesi. È inoltre possibile impostare le proprietà di un oggetto durante la costruzione dell'oggetto utilizzando i nomi delle proprietà e assegnando valori analogamente a come si utilizzano gli argomenti del costruttore denominati.
 
-Nel codice seguente viene illustrata una classe che dispone di un costruttore e diversi modi per creare oggetti.
+Nel codice seguente viene illustrata una classe che dispone di un costruttore e diversi modi per creare oggetti:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-L'output è indicato di seguito.
+L'output è indicato di seguito:
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>Costruzione di strutture
 
-Le strutture seguono tutte le regole delle classi. Pertanto, è possibile avere un costruttore primario ed è possibile fornire costruttori `new`aggiuntivi tramite. Tuttavia, esiste una differenza importante tra le strutture e le classi: le strutture possono avere un costruttore senza parametri, ovvero uno senza argomenti, anche se non è stato definito alcun costruttore primario. Il costruttore senza parametri Inizializza tutti i campi sul valore predefinito per quel tipo, in genere zero o l'equivalente. Tutti i costruttori definiti per le strutture devono avere almeno un argomento in modo che non siano in conflitto con il costruttore predefinito.
+Le strutture seguono tutte le regole delle classi. Pertanto, è possibile avere un costruttore primario ed è possibile fornire costruttori `new`aggiuntivi tramite. Tuttavia, esiste una differenza importante tra le strutture e le classi: le strutture possono avere un costruttore senza parametri, ovvero uno senza argomenti, anche se non è stato definito alcun costruttore primario. Il costruttore senza parametri Inizializza tutti i campi sul valore predefinito per quel tipo, in genere zero o l'equivalente. Tutti i costruttori definiti per le strutture devono avere almeno un argomento in modo che non siano in conflitto con il costruttore senza parametri.
 
 Inoltre, le strutture hanno spesso campi creati usando la `val` parola chiave. le classi possono anche avere questi campi. Le strutture e le classi con campi definiti tramite la `val` parola chiave possono essere inizializzate anche in costruttori aggiuntivi tramite espressioni di record, come illustrato nel codice seguente.
 
@@ -50,7 +50,7 @@ Un costruttore primario in una classe può eseguire codice in un' `do` associazi
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-Gli effetti collaterali del costruttore primario continuano a essere eseguiti. Di conseguenza, l'output è il seguente.
+Gli effetti collaterali del costruttore primario continuano a essere eseguiti. Di conseguenza, l'output è il seguente:
 
 ```console
 Created a person object.
@@ -64,7 +64,7 @@ Gli altri membri forniscono un nome per l'oggetto corrente nella definizione di 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-In costruttori aggiuntivi è inoltre possibile definire un identificatore autonomo inserendo la `as` clausola subito dopo i parametri del costruttore. Nell'esempio seguente viene illustrata questa sintassi.
+In costruttori aggiuntivi è inoltre possibile definire un identificatore autonomo inserendo la `as` clausola subito dopo i parametri del costruttore. Nell'esempio seguente viene illustrata questa sintassi:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ Il nome dell'identificatore auto non deve essere `this`. Può essere qualsiasi i
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>Assegnazione di valori a proprietà in fase di inizializzazione
 
-È possibile assegnare valori alle proprietà di un oggetto classe nel codice di inizializzazione aggiungendo un elenco di assegnazioni del form `property = value` all'elenco di argomenti per un costruttore. Queste operazioni sono illustrate nell'esempio di codice riportato di seguito.
+È possibile assegnare valori alle proprietà di un oggetto classe nel codice di inizializzazione aggiungendo un elenco di assegnazioni del form `property = value` all'elenco di argomenti per un costruttore. Questa operazione è illustrata nell'esempio di codice seguente:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Nella versione seguente del codice precedente viene illustrata la combinazione di argomenti ordinari, argomenti facoltativi e impostazioni delle proprietà in una chiamata al costruttore.
+Nella versione seguente del codice precedente viene illustrata la combinazione di argomenti ordinari, argomenti facoltativi e impostazioni delle proprietà in una chiamata al costruttore:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

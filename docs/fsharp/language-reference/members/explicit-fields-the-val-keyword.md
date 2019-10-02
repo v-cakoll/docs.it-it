@@ -2,12 +2,12 @@
 title: 'Campi espliciti: Parola chiave Val'
 description: Informazioni sulla parola F# chiave ' Val ', che viene usata per dichiarare un percorso in cui archiviare un valore in un tipo di classe o di struttura senza inizializzare il tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2703d9a2734cfda1614a401ec24c6630ec31b2f1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216471"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736829"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: Parola chiave Val
 
@@ -28,19 +28,16 @@ I campi espliciti possono essere statici o non statici. Il *modificatore di acce
 L'attributo [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) è obbligatorio nei campi espliciti nei tipi di classe con un costruttore primario. Questo attributo specifica che il campo viene inizializzato su zero. Il tipo del campo deve supportare l'inizializzazione su zero. Un tipo supporta l'inizializzazione su zero se corrisponde a uno dei seguenti tipi:
 
 - Un tipo primitivo con valore pari a zero.
-
 - Un tipo che supporta un valore null come valore normale, come valore anomalo o come rappresentazione di un valore. Questo include classi, tuple, record, funzioni, interfacce, tipi di riferimento .NET, il tipo `unit` e i tipi di unioni discriminati.
-
 - Un tipo di valore .NET.
-
 - Una struttura in cui tutti i campi supportano un valore predefinito pari a zero.
 
 Ad esempio, un campo non modificabile chiamato `someField` è un campo di supporto nella rappresentazione compilata .NET con il nome `someField@` e si accede al valore archiviato usando una proprietà denominata `someField`.
 
 Per un campo modificabile, la rappresentazione compilata .NET è un campo .NET.
 
->[!WARNING]
->Lo spazio dei `System.ComponentModel` nomi .NET Framework contiene un attributo con lo stesso nome. Per altre informazioni sull'attributo, vedere `System.ComponentModel.DefaultValueAttribute`.
+> [!WARNING]
+> Lo spazio dei `System.ComponentModel` nomi .NET Framework contiene un attributo con lo stesso nome. Per altre informazioni sull'attributo, vedere <xref:System.ComponentModel.DefaultValueAttribute>.
 
 Nel codice seguente viene illustrato l'uso di campi espliciti e, per il confronto, un'associazione `let` in una classe che dispone di un costruttore primario. Si noti che il campo associato `let``myInt1` è privato. Quando si fa riferimento al campo associato `let``myInt1` da un metodo membro, l'autoidentificatore `this` non è necessario. Ma quando si fa riferimento ai campi espliciti `myInt2` e `myString`, l'autoidentificatore è obbligatorio.
 
@@ -59,7 +56,7 @@ Nel codice seguente viene illustrato come usare i campi espliciti in una classe 
 
 L'output è `35 22`.
 
-Nel codice seguente viene illustrato come usare i campi espliciti in una struttura. Poiché una struttura è un tipo di valore, dispone automaticamente di un costruttore predefinito che imposta i valori dei campi su zero. Pertanto l'attributo `DefaultValue` non è obbligatorio.
+Nel codice seguente viene illustrato come usare i campi espliciti in una struttura. Poiché una struttura è un tipo valore, dispone automaticamente di un costruttore senza parametri che imposta i valori dei campi su zero. Pertanto l'attributo `DefaultValue` non è obbligatorio.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 

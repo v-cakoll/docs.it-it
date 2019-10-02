@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167649"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736877"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Descrivere le previsioni del modello con Permutation Feature Importance
 
@@ -18,7 +18,7 @@ Di seguito viene illustrato come descrivere le previsioni del modello di Machine
 
 I modelli di Machine Learning sono spesso considerati black box che accettano gli input e generano un output. I passaggi intermedi o le interazioni tra le caratteristiche che influenzano l'output vengono riconosciute raramente. Poiché il Machine Learning viene ora applicato a più aspetti delle attività quotidiane, ad esempio nel settore sanitario, è di importanza fondamentale comprenderne in che modo un modello di Machine Learning prende le decisioni. Ad esempio, se le diagnosi vengono effettuate tramite un modello di Machine Learning, i professionisti del settore sanitario necessitano di un modo per esaminare i fattori che hanno contribuito alle diagnosi. Una diagnosi corretta può fare una grande differenza nella velocità di recupero di un paziente. Più è dettagliato il livello di descrizione di un modello, maggiore sarà la fiducia dei professionisti del settore sanitario nell'accettare o rifiutare le decisioni prese dal modello.
 
-Per descrivere i modelli vengono usate tecniche diverse, tra cui PFI. PFI è una tecnica usata per descrivere i modelli di classificazione e regressione basata sul [documento *Random Forests* di Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (vedere la sezione 10). A livello generale, il funzionamento è basato sulla selezione in ordine casuale dei dati una caratteristica alla volta per l'intero set di dati e sul calcolo della diminuzione della metrica delle prestazioni dell'interesse. Maggiore è la modifica, maggiore è l'importanza della funzionalità. 
+Per descrivere i modelli vengono usate tecniche diverse, tra cui PFI. PFI è una tecnica usata per illustrare i modelli di classificazione e regressione ispirati al [documento sulle *foreste casuali* di Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (vedere la sezione 10). A livello generale, il funzionamento è basato sulla selezione in ordine casuale dei dati una caratteristica alla volta per l'intero set di dati e sul calcolo della diminuzione della metrica delle prestazioni dell'interesse. Maggiore è la modifica, maggiore è l'importanza della funzionalità. 
 
 Inoltre, evidenziando le funzionalità più importanti, i generatori di modelli possono concentrarsi sull'uso di un subset di funzionalità più significative che possono potenzialmente ridurre il rumore e i tempi di training.
 
@@ -26,7 +26,7 @@ Inoltre, evidenziando le funzionalità più importanti, i generatori di modelli 
 
 Le funzionalità del set di dati usate per questo esempio si trovano dalla colonna 1 alla colonna 12. L'obiettivo consiste nella previsione di `Price`. 
 
-| Colonna | Funzionalità | DESCRIZIONE 
+| Colonna | Funzionalità | Descrizione 
 | --- | --- | --- |
 | 1 | CrimeRate | Tasso di criminalità pro capite
 | 2 | ResidentialZones | Zone residenziali della città

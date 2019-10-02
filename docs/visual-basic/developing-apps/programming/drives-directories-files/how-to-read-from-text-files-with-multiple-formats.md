@@ -11,63 +11,62 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: eae60b2fc72ee8b8653d3a0517eeaaf8012e0372
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dc726f7648c1c0a564594331023f03d20569d766
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696747"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736816"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Procedura: Leggere da file di testo con più formati in Visual Basic
-L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.  
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedura: Leggere i file FEXT con più formati in Visual Basic
+
+L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a>Per analizzare un file di testo con più formati  
+### <a name="to-parse-a-text-file-with-multiple-formats"></a>Per analizzare un file di testo con più formati
+
+1. Aggiungere un file di testo denominato *TestFile. txt* al progetto. Aggiungere il contenuto seguente al file di testo:
+
+    ```text
+    Err  1001 Cannot access resource.
+    Err  2014 Resource not found.
+    Acc  10/03/2009User1      Administrator.
+    Err  0323 Warning: Invalid access attempt.
+    Acc  10/03/2009User2      Standard user.
+    Acc  10/04/2009User2      Standard user.
+    ```
+
+2. Definire il formato previsto e il formato usato al momento della segnalazione dell'errore. L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile. Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.
+
+     [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
+
+3. Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.
+
+     [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
+
+4. Scorrere le righe, verificando il formato prima della lettura.
+
+     [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
+
+5. Scrivere gli errori nella console.
+
+     [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
+
+## <a name="example"></a>Esempio
+
+Di seguito è riportato l'esempio completo che legge dal file `testfile.txt`:
+
+ [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
+
+## <a name="robust-programming"></a>Programmazione efficiente
+
+Le seguenti condizioni possono generare un'eccezione:  
   
-1. Aggiungere un file di testo denominato testfile.txt al progetto. Aggiungere quanto segue al file di testo.  
-  
-    ```text  
-    Err  1001 Cannot access resource.  
-    Err  2014 Resource not found.  
-    Acc  10/03/2009User1      Administrator.  
-    Err  0323 Warning: Invalid access attempt.  
-    Acc  10/03/2009User2      Standard user.  
-    Acc  10/04/2009User2      Standard user.  
-    ```  
-  
-2. Definire il formato previsto e il formato usato al momento della segnalazione dell'errore. L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile. Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.  
-  
-     [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
-  
-3. Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.  
-  
-     [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
-  
-4. Scorrere le righe, verificando il formato prima della lettura.  
-  
-     [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
-  
-5. Scrivere gli errori nella console.  
-  
-     [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
-  
-## <a name="example"></a>Esempio  
- Di seguito è riportato l'esempio completo di lettura dal file `testfile.txt`.  
-  
- [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
-  
-## <a name="robust-programming"></a>Programmazione efficiente  
- Le seguenti condizioni possono generare un'eccezione:  
-  
-- Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.  
-  
-- File specificato inesistente (<xref:System.IO.FileNotFoundException>).  
-  
-- Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file (<xref:System.Security.SecurityException>).  
-  
-- Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
-  
-- L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).  
-  
+- Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.
+- File specificato inesistente (<xref:System.IO.FileNotFoundException>).
+- Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file (<xref:System.Security.SecurityException>).
+- Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).
+- L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
@@ -76,6 +75,6 @@ L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analiz
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Procedura: Leggere da file di testo con valori delimitati da virgole](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Procedura: Leggere da file di testo a larghezza fissa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [Analisi dei file di testo con l'oggetto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [Procedura: Leggere da file di testo con valori delimitati da virgole](how-to-read-from-comma-delimited-text-files.md)
+- [Procedura: Leggere da file di testo a larghezza fissa](how-to-read-from-fixed-width-text-files.md)
+- [Analisi dei file di testo con l'oggetto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)
