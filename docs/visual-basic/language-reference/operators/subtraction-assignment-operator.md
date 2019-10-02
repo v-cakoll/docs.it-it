@@ -10,45 +10,45 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: be1ff4f10f6b30d8448d2441ee3ad2c1e2f80e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f857c8bf2f89120e047c49674ce9e8a3bff22f7d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013491"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701310"
 ---
 # <a name="--operator-visual-basic"></a>Operatore -= (Visual Basic)
-Sottrae il valore di un'espressione rispetto a quello di una proprietà o variabile e assegna il risultato alla variabile o proprietà.  
+Sottrae il valore di un'espressione dal valore di una variabile o di una proprietà e assegna il risultato alla variabile o alla proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 variableorproperty -= expression  
 ```  
   
 ## <a name="parts"></a>Parti  
  `variableorproperty`  
- Obbligatorio. Qualsiasi variabile numerica o una proprietà.  
+ Obbligatorio. Qualsiasi variabile o proprietà numerica.  
   
  `expression`  
  Obbligatorio. Qualsiasi espressione numerica.  
   
 ## <a name="remarks"></a>Note  
- L'elemento sul lato sinistro del `-=` operatore può essere una variabile semplice scalare, una proprietà o un elemento della matrice. La variabile o proprietà non può essere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ L'elemento sul lato sinistro dell'operatore `-=` può essere una variabile scalare semplice, una proprietà o un elemento di una matrice. La variabile o la proprietà non può essere di sola [lettura](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Il `-=` operatore sottrae prima il valore dell'espressione (sul lato destro dell'operatore) dal valore della variabile o proprietà (sul lato sinistro dell'operatore). L'operatore assegna il risultato dell'operazione per la variabile o proprietà.  
+ L'operatore `-=` sottrae prima di tutto il valore dell'espressione (sul lato destro dell'operatore) dal valore della variabile o della proprietà (sul lato sinistro dell'operatore). L'operatore assegna quindi il risultato dell'operazione alla variabile o alla proprietà.  
   
 ## <a name="overloading"></a>Overload  
- Il [-operatore (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) può essere *sottoposto a overload*, il che significa che una classe o struttura può ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. L'overload di `-` operatore influisce sul comportamento del `-=` operatore. Se il codice usi `-=` in una classe o struttura che esegue l'overload `-`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ L' [operatore-(Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md) può essere sottoposto a *Overload*, il che significa che una classe o una struttura può ridefinire il comportamento quando un operando ha il tipo della classe o della struttura. L'overload dell'operatore `-` influiscono sul comportamento dell'operatore `-=`. Se il codice USA `-=` su una classe o una struttura che esegue l'overload `-`, assicurarsi di comprendere il comportamento ridefinito. Per altre informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `-=` operatore per sottrarre uno `Integer` da un'altra variabile e assegna il risultato alla variabile di quest'ultimo.  
+ Nell'esempio seguente viene usato l'operatore `-=` per sottrarre una variabile `Integer` da un'altra e assegnare il risultato alla seconda variabile.  
   
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [-Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
+- [Operatore-(Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
