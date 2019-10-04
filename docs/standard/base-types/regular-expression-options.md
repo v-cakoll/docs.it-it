@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663976"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957359"
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 
@@ -114,7 +114,7 @@ Nelle sezioni seguenti sono riportate le opzioni supportate dalle espressioni re
 
 ## <a name="default-options"></a>Opzioni predefinite
 
-L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> indica che non sono state specificate opzioni e che il motore delle espressioni regolari usa il comportamento predefinito. Il comportamento predefinito include quanto segue:
+L'opzione <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> indica che non sono state specificate opzioni e che il motore delle espressioni regolari usa il comportamento predefinito. Sono inclusi gli elementi seguenti:
 
 - Il criterio viene interpretato come canonico anziché come espressione regolare ECMAScript.
 
@@ -172,7 +172,7 @@ L'esempio seguente estrae i nomi e i punteggi dei giocatori di bowling e li aggi
 
 Il criterio di ricerca di espressioni regolari `^(\w+)\s(\d+)\r*$` è definito nel modo illustrato nella tabella seguente.
 
-|Modello|DESCRIZIONE|
+|Pattern|Descrizione|
 |-------------|-----------------|
 |`^`|Comincia all'inizio della riga.|
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|
@@ -214,9 +214,7 @@ Per impostazione predefinita, i gruppi di acquisizione vengono definiti dall'uso
 
 I costrutti di raggruppamento vengono spesso usati solo per applicare quantificatori a più elementi di linguaggio e le sottostringhe acquisite non sono di alcun interesse. Ad esempio, se l'espressione regolare seguente:
 
-```
-\b\(?((\w+),?\s?)+[\.!?]\)?
-```
+`\b\(?((\w+),?\s?)+[\.!?]\)?`
 
 è intesa solo per l'estrazione di frasi che terminano con un punto, un punto esclamativo o un punto interrogativo da un documento, solo la frase risultante (rappresentata dall'oggetto <xref:System.Text.RegularExpressions.Match>) rappresenta un elemento di interesse. Le singola parole nella raccolta non lo sono.
 
@@ -229,7 +227,7 @@ L'esempio seguente mostra informazioni sulle corrispondenze restituite dal crite
 
 Il criterio di ricerca di espressioni regolari `\b\(?((?>\w+),?\s?)+[\.!?]\)?` è definito nel modo illustrato nella tabella seguente.
 
-|Modello|DESCRIZIONE|
+|Pattern|Descrizione|
 |-------------|-----------------|
 |`\b`|Inizia dal confine di una parola.|
 |`\(?`|Trova la corrispondenza di una o nessuna parentesi di apertura ("(").|
@@ -294,7 +292,7 @@ Nei casi seguenti, tuttavia, gli spazi in un'espressione regolare non vengono ig
 
 - Gli spazi vuoti non sono consentiti all'interno di un quantificatore tra parentesi, ad esempio `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1, 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.
 
-- Gli spazi vuoti non sono consentiti all'interno di una sequenza di caratteri che introduce un elemento di linguaggio. Ad esempio:
+- Gli spazi vuoti non sono consentiti all'interno di una sequenza di caratteri che introduce un elemento di linguaggio. Esempio:
 
   - L'elemento di linguaggio `(?:`*sottoespressione*`)` rappresenta un gruppo di non acquisizione e la porzione `(?:` dell'elemento non può contenere spazi vuoti. Il criterio `(? :`*sottoespressione*`)` genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione, perché il motore delle espressioni regolari non può analizzare il criterio e il criterio `( ?:`*sottoespressione*`)` non riesce a trovare la corrispondenza di *sottoespressione*.
 
@@ -339,7 +337,7 @@ Notare anche che l'asserzione lookahead (l'elemento di linguaggio `(?=`*sottoesp
 
 Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.
 
-|Modello|DESCRIZIONE|
+|Pattern|Descrizione|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|L'inizio della corrispondenza deve essere preceduto da una o due cifre decimali seguite da uno spazio.|
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|
@@ -376,7 +374,7 @@ Il comportamento di ECMAScript e quello delle espressioni regolari canoniche dif
 
   L'espressione regolare è definita nel modo illustrato nella tabella seguente.
 
-  |Modello|DESCRIZIONE|
+  |Pattern|Descrizione|
   |-------------|-----------------|
   |(a+)|Trova la corrispondenza della lettera "a" una o più volte. Equivale al secondo gruppo di acquisizione.|
   |(\1)|Trova la corrispondenza della sottostringa acquisita dal primo gruppo di acquisizione. Equivale al terzo gruppo di acquisizione.|

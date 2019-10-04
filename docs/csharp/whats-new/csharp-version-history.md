@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391956"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956644"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -28,7 +28,7 @@ Gli strumenti di compilazione per C# considerano la versione del linguaggio prin
 
 ## <a name="c-version-10"></a>C# versione 1.0
 
-Quando si torna indietro e si guarda C# , la versione 1,0, rilasciata con Visual Studio.NET 2002, ha un aspetto molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
+Quando si torna indietro e si guarda C# la versione 1,0, rilasciata con Visual Studio .NET 2002, è molto simile a Java. Come affermato [negli obiettivi di progettazione dichiarati per ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), C# cercava di essere "un linguaggio orientato agli oggetti di utilizzo generico, semplice e moderno".  All'epoca, somigliare molto a Java significava aver raggiunto tali obiettivi di progettazione di allora.
 
 Ma se si guarda ora com'era C# 1.0, la sensazione è di disorientamento. Mancavano le capacità asincrone predefinite e alcune delle semplici funzionalità relative ai generics che ora si danno per scontate. In realtà,i generics mancavano completamente.  E [LINQ](../linq/index.md)? Non era ancora disponibile. Queste aggiunte avrebbero richiesto ancora alcuni anni.
 
@@ -48,7 +48,7 @@ Le principali funzionalità di C# 1.0 includevano:
 
 ## <a name="c-version-12"></a>Versione C# 1.2
 
-Versione C# 1.2 fornita con Visual Studio 2003. Conteneva alcuni piccoli miglioramenti del linguaggio. L'aspetto più importante è che a partire da questa versione, il codice veniva generato in un ciclo `foreach` denominato <xref:System.IDisposable.Dispose%2A> in <xref:System.Collections.IEnumerator> quando <xref:System.Collections.IEnumerator> implementava <xref:System.IDisposable>.
+C#versione 1,2 fornita con Visual Studio .NET 2003. Conteneva alcuni piccoli miglioramenti del linguaggio. L'aspetto più importante è che a partire da questa versione, il codice veniva generato in un ciclo `foreach` denominato <xref:System.IDisposable.Dispose%2A> in <xref:System.Collections.IEnumerator> quando <xref:System.Collections.IEnumerator> implementava <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versione 2.0
 

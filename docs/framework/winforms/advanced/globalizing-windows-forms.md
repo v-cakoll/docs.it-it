@@ -1,6 +1,6 @@
 ---
-title: Globalizzazione di applicazioni Windows Form
-description: Questo argomento presenta un elenco di argomenti correlati alla globalizzazione di applicazioni Windows Form.
+title: Globalizzazione di applicazioni Windows Forms
+description: In questo argomento viene presentato un elenco di argomenti relativi alla globalizzazione delle applicazioni Windows Forms.
 ms.date: 06/08/2018
 helpviewer_keywords:
 - Windows Forms, globalization
@@ -9,27 +9,24 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e7794b731294e03515265ff33e82af4fde40efa
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004510"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956435"
 ---
-# <a name="globalizing-windows-forms-applications"></a>Globalizzazione di applicazioni Windows Form
+# <a name="globalizing-windows-forms-applications"></a>Globalizzazione di applicazioni Windows Forms
 
-*Globalizzazione* è il processo di progettazione e sviluppo di un prodotto software che funziona per più impostazioni cultura.
+La *globalizzazione* è il processo di progettazione e sviluppo di un prodotto software che funziona per più impostazioni cultura.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
-
-[Globalizzazione di Windows Form e codifica](encoding-and-windows-forms-globalization.md)  
-Descrive il supporto Unicode completo e le relative implicazioni.
 
 [Caratteri internazionali nei controlli e in Windows Form](international-fonts-in-windows-forms-and-controls.md)  
 Illustra quando e come selezionare tipi di carattere per la visualizzazione di caratteri internazionali in Windows Form.
 
 [Supporto bidirezionale per le Windows Forms Application](bi-directional-support-for-windows-forms-applications.md)  
-Viene illustrato come creare applicazioni basate su Windows che supportano lingue bidirezionali (right-to-left).
+Viene illustrato come creare applicazioni basate su Windows che supportano lingue bidirezionali (da destra a sinistra).
 
 [Visualizzazione di caratteri asiatici con la proprietà ImeMode](display-of-asian-characters-with-the-imemode-property.md)  
 Fornisce un'introduzione alla proprietà `ImeMode`, usta per controllare il tipo di input accettato da Windows Form o da un controllo.
@@ -44,12 +41,12 @@ Fornisce un'introduzione alla proprietà `ImeMode`, usta per controllare il tipo
 
 - [Procedura dettagliata: Download di assembly satellite su richiesta con l'API della distribuzione ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Procedura: Impostare la lingua e impostazioni cultura dell'interfaccia utente per la globalizzazione di Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+- [Procedura: Impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per Windows Forms globalizzazione @ no__t-0
 
-- [Procedura: Creare con mirroring di Windows Form e controlli](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+- [Procedura: Creare Windows Forms e controlli con mirroring @ no__t-0
 
-- [Procedura: Supportare la localizzazione in Windows Form usando AutoSize e il controllo TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+- [Procedura: Supporto della localizzazione nei Windows Forms con AutoSize e il controllo TableLayoutPanel @ no__t-0
 
-- [Procedura dettagliata: Localizzazione di Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+- [Procedura dettagliata: Localizzazione Windows Forms @ no__t-0
 
-- [Procedura dettagliata: Creazione di un Layout dalle proporzioni adattabili per la localizzazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
+- [Procedura dettagliata: Creazione di un layout per la regolazione della proporzione per la localizzazione @ no__t-0

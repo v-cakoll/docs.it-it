@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968589"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957347"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -44,7 +44,7 @@ Il recupero di un attributo personalizzato è un processo semplice. Dichiarare p
   
  Questo programma visualizza il testo seguente quando viene eseguito.  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  Se l'attributo non viene trovato, il metodo **GetCustomAttribute** inizializza `MyAttribute` per un valore null. Questo esempio cerca tale istanza in `MyAttribute` e informa l'utente se non vengono trovati attributi. Se `DeveloperAttribute` non viene trovato nell'ambito della classe, viene visualizzato il messaggio seguente nella console.  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   

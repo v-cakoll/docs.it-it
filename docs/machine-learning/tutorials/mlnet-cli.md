@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972003"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957395"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analizzare il sentiment usando l'interfaccia della riga di comando di ML.NET
 
@@ -52,7 +52,7 @@ Verrà usato un set di dati esistente per uno scenario di 'analisi del sentiment
 
 2. Copiare il file `yelp_labelled.txt` in qualsiasi cartella creata in precedenza, ad esempio `/cli-test`.
 
-3. Aprire un prompt dei comandi e passare alla cartella in cui è stato copiato il file del set di dati. Ad esempio:
+3. Aprire un prompt dei comandi e passare alla cartella in cui è stato copiato il file del set di dati. Esempio:
 
     ```console
     > cd /cli-test
@@ -204,7 +204,7 @@ Questi asset enumerati vengono descritti nei passaggi successivi dell'esercitazi
 
     Eseguire l'app console dal prompt dei comandi digitando i comandi seguenti:
 
-     ```
+     ```bash
      > cd SampleBinaryClassification
      > cd SampleBinaryClassification.ConsoleApp
 

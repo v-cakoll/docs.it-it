@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104638"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955962"
 ---
 # <a name="contributing"></a>Contributi al codice
 
 Grazie per l'interesse dimostrato nell'apporto di contributi alla documentazione di .NET.
 
-> È in corso lo spostamento delle linee guida in una guida alla collaborazione a livello di sito. 
+> È in corso lo spostamento delle linee guida in una guida alla collaborazione a livello di sito.
 > Per visualizzare il nuovo materiale sussidiario, vedere [Panoramica della guida per i collaboratori di Microsoft Docs](https://docs.microsoft.com/contribute/).
 
 Il documento illustra il processo per offrire il proprio contributo per gli articoli e gli esempi di codice ospitati nel [sito della documentazione di .NET](https://docs.microsoft.com/dotnet). I contributi possono essere semplici come le correzioni di errori di ortografia o complessi, ad esempio nuovi articoli.
@@ -22,18 +22,19 @@ Il documento illustra il processo per offrire il proprio contributo per gli arti
 
 Questo repository contiene la documentazione concettuale per .NET. Il sito della documentazione di .NET è costituito da più repository oltre a questo:
 
-- [Esempi e frammenti di codice](https://github.com/dotnet/samples)
-- [Riferimento API](https://github.com/dotnet/dotnet-api-docs)
-- [Riferimento di .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)
-
-Di seguito sono illustrati i problemi e le attività di tutti questi repository.
+- [Esempi e frammenti di codice](https://github.com/dotnet/samples)  
+    I problemi e le attività per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Riferimento alle API .NET](https://github.com/dotnet/dotnet-api-docs)  
+    I problemi e le attività per questo repository vengono rilevati in [DotNet/DotNet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Riferimento di .NET Compiler Platform SDK](https://github.com/dotnet/roslyn-api-docs)  
+    Problemi e taks per questo repository vengono rilevati in [DotNet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="process-for-contributing"></a>Processo per apportare il contributo
 
 Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.com/activities/hello-world/).
 
 **Passaggio 1:** Ignorare questo passaggio per le modifiche di piccola entità (ad esempio, per correggere un errore di digitazione o aprire immediatamente una richiesta pull per risolvere un problema rilevato nella documentazione). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
-Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
+Il contenuto all'interno della cartella *docs* è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
 -oppure-
 
@@ -43,7 +44,7 @@ Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibil
 
 - **Content updates** (Aggiornamenti del contenuto). A causa dell'enormità del set di documenti, il contenuto diventa facilmente obsoleto e richiede una revisione. Inoltre, per diversi motivi, alcuni contenuti sono stati duplicati o anche triplicati. L'aggiornamento del contenuto richiede di verificare che i singoli argomenti siano aggiornati o di revisionare il contenuto in un'area funzionale per eliminare i duplicati assicurandosi che tutto il contenuto univoco venga conservato nel set di documenti più piccolo.
 
-- **New content authoring** (Creazione di nuovi contenuti). Se si è interessati a creare il proprio argomento, questi problemi elencano gli argomenti che sarebbe opportuno aggiungere al set di documenti. Prima di iniziare a lavorare su un argomento, inviare un messaggio. Se si è interessati a scrivere un argomento non elencato qui, aprire un problema. 
+- **New content authoring** (Creazione di nuovi contenuti). Se si è interessati a creare il proprio argomento, questi problemi elencano gli argomenti che sarebbe opportuno aggiungere al set di documenti. Prima di iniziare a lavorare su un argomento, inviare un messaggio. Se si è interessati a scrivere un argomento non elencato qui, aprire un problema.
 
 È anche possibile esaminare l'elenco di [problemi aperti](https://github.com/dotnet/docs/issues) e proporsi per lavorare a quelli a cui si è interessati. I problemi aperti per il contributo sono contrassegnati dall'etichetta [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs). 
 
@@ -58,7 +59,7 @@ Se si tratta di un nuovo argomento, è possibile usare questo [file modello](./s
 Passare alla cartella che corrisponde alla posizione del sommario determinata per l'articolo nel passaggio 1.
 Questa cartella contiene i file markdown per tutti gli articoli nella sezione.
 Se necessario, creare una nuova cartella in cui inserire i file per il contenuto. L'articolo principale di tale sezione è denominato *index.md*.
-Per le immagini e le altre risorse statiche, creare una sottocartella denominata **media** all'interno della cartella contenente l'articolo, se non esiste già. Nella cartella **media** creare una sottocartella con il nome dell'articolo (tranne che per il file di indice).
+Per le immagini e le altre risorse statiche, creare una sottocartella denominata *media* all'interno della cartella contenente l'articolo, se non esiste già. Nella cartella *media* creare una sottocartella con il nome dell'articolo (tranne che per il file di indice).
 Includere gli esempi di dimensioni maggiori nella cartella *samples* nella radice del repository.
 
 Assicurarsi di seguire la sintassi di Markdown appropriata. Per altre informazioni, vedere la [guida di stile](./styleguide/template.md).
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`.
+**Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` o `dotnet/samples/master`.
 
 La richiesta pull dovrebbe avere *sempre* come destinazione il ramo master. È consigliabile non aprire *mai* una richiesta pull che ha come destinazione il ramo attivo.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959475"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956882"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Costrutti vari nelle espressioni regolari
 Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno consente di abilitare o disabilitare opzioni di corrispondenza specifiche all'interno di un modello dell'espressione regolare. I restanti due consentono di includere commenti in un'espressione regolare.  
@@ -25,13 +25,11 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
 ## <a name="inline-options"></a>Opzioni inline  
  È possibile impostare o disabilitare opzioni di corrispondenza specifiche del modello per una parte di espressione regolare usando la sintassi  
   
-```  
-(?imnsx-imnsx)  
-```  
+`(?imnsx-imnsx)`  
   
  Elencare le opzioni da abilitare dopo il punto interrogativo e le opzioni da disabilitare dopo il segno di sottrazione. Nella tabella seguente viene descritta ciascuna opzione. Per altre informazioni su ciascuna opzione, vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |`i`|Corrispondenza senza distinzione tra maiuscole e minuscole.|  
 |`m`|Modalità multiriga.|  
@@ -51,7 +49,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  Nell'esempio vengono definite due espressioni regolari. La prima, `\b(D\w+)\s(d\w+)\b`, corrisponde a due parole consecutive che iniziano con una "D" maiuscola e una "d" minuscola. La seconda espressione regolare, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opzioni inline per modificare questo modello, come descritto nella tabella seguente. Confrontando i risultati viene confermato l'effetto del costrutto `(?ixn)`.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(D\w+)`|Trovare la corrispondenza di una "D" maiuscola seguita da uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -65,7 +63,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  Nell'esempio seguente viene ripetuto il primo criterio dell'espressione regolare dell'esempio nella sezione precedente. Vengono aggiunti due commenti inline all'espressione regolare per indicare se il confronto fa distinzione tra maiuscole e minuscole. Il modello dell'espressione regolare, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, viene definito nel modo seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`(?# case-sensitive comparison)`|Un commento. Non influisce sul comportamento della corrispondenza tra modelli.|  
@@ -86,7 +84,7 @@ Le espressioni regolari in .NET includono tre costrutti vari di linguaggio. Uno 
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\{`|Trovare la corrispondenza con una parentesi graffa di apertura.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923290"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956985"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilatore XSLT (xsltc.exe)
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. Il foglio di stile compilato può quindi essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Non è possibile generare assembly firmati con xsltc.exe.  
@@ -19,19 +19,19 @@ Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di g
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>Argomento  
   
-|Argomento|DESCRIZIONE|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |`sourceFile`|Consente di specificare il nome del foglio di stile. Il foglio di stile deve essere un file locale o deve essere disponibile nella Intranet.|  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Consente di specificare il nome della classe del foglio di stile successivo. Il nome della classe può essere completo.<br /><br /> Per impostazione predefinita, il nome della classe corrisponde al nome del foglio di stile. Ad esempio, se viene compilato il foglio di stile customers.xsl, il nome predefinito della classe sarà customers.|  
 |`/debug[`+&#124;-`]`|Consente di specificare se generare le informazioni per il debug.<br /><br /> Se si specifica `+` o `/debug`, il compilatore genererà le informazioni per il debug e le inserirà in un file del database di programma con estensione PDB. Il nome del file PDB generato è `assemblyName`.pdb.<br /><br /> Se si specifica l'argomento `-`, che è attivo quando `/debug` non è specificato, non verranno create informazioni per il debug. Verrà generato un assembly finale. **Nota:**  la compilazione in modalità di debug può influire in modo significativo sulle prestazioni di XSLT.|  
@@ -43,7 +43,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`@` `file`|Consente di specificare un file che contiene le opzioni del compilatore.|  
 |`?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le soluzioni XSLT possono essere costituite da più moduli del foglio di stile. Lo strumento xsltc.exe genera assembly dai fogli di stile. Gli assembly possono quindi essere passati direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Tale comportamento può contribuire a ridurre i costi correlati alle prestazioni in alcuni scenari di distribuzione di XSLT.  
   
 > [!NOTE]
@@ -54,31 +54,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 ## <a name="examples"></a>Esempi  
  Il comando seguente consente di compilare il foglio di stile e di creare un assembly denominato booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  Il comando seguente consente di compilare il foglio di stile e di creare un assembly e un file PDB denominati rispettivamente booksort.dll e booksort.pdb.  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  Il comando seguente consente di compilare un foglio di stile che contiene l'elemento msxsl:script e di creare due assembly denominati calc.dll e calc_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  Il comando seguente consente di abilitare il supporto per gli script e per l'elaborazione DTD, nonché di creare due assembly denominati myTest.dll e myTest_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  Il comando seguente consente di compilare due moduli di fogli di stile e di creare un unico assembly denominato booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   

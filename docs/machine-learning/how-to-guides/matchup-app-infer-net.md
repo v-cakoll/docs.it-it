@@ -3,12 +3,12 @@ title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la progra
 description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117983"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957209"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 
@@ -138,7 +138,7 @@ dotnet run
 
 I risultati saranno simili ai seguenti:
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50

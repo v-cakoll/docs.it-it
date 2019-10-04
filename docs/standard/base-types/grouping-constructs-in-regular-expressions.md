@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963376"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957173"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -78,13 +78,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio dell'espressione regolare è il seguente:  
   
-```  
-(\w+)\s(\1)\W  
-```  
+`(\w+)\s(\1)\W`  
   
  Nella tabella seguente è illustrata l'interpretazione del criterio di ricerca di espressioni regolari.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|  
@@ -95,15 +93,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="named-matched-subexpressions"></a>Sottoespressioni corrispondenti denominate  
  Il costrutto di raggruppamento seguente acquisisce una sottoespressione corrispondente e consente di accedervi tramite nome o numero:  
   
-```  
-(?<name>subexpression)  
-```  
+`(?<name>subexpression)`  
   
  oppure:  
   
-```  
-(?'name'subexpression)  
-```  
+`(?'name'subexpression)`  
   
  dove *nome* è un nome di gruppo valido e *sottoespressione* è un qualsiasi criterio di ricerca di espressioni regolari valido. *nome* non deve contenere alcun simbolo di punteggiatura e non può iniziare con un numero.  
   
@@ -126,7 +120,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Un criterio di ricerca di espressioni regolari semplice illustra in che modo è possibile fare riferimento a gruppi denominati e numerati (non denominati) a livello di codice o tramite la sintassi del linguaggio delle espressioni regolari. L'espressione regolare `((?<One>abc)\d+)?(?<Two>xyz)(.*)` crea i gruppi di acquisizione seguenti in base a numero e nome. Il primo gruppo di acquisizione (numero 0) fa sempre riferimento all'intero criterio.  
   
-|numero|nome|Modello|  
+|numero|nome|Pattern|  
 |------------|----------|-------------|  
 |0|0 (nome predefinito)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (nome predefinito)|`((?<One>abc)\d+)`|  
@@ -141,13 +135,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari è il seguente:  
   
-```  
-(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)  
-```  
+`(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
  Nella tabella seguente viene illustrato come viene interpretata l'espressione regolare.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `duplicateWord`.|  
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|  
@@ -164,7 +156,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Nella tabella seguente viene illustrato come viene interpretata l'espressione regolare.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
 |`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
@@ -175,15 +167,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="balancing-group-definitions"></a>Definizioni di gruppo di bilanciamento  
  Una definizione di gruppo di bilanciamento elimina la definizione di un gruppo precedentemente definito e archivia nel gruppo corrente l'intervallo tra il gruppo precedentemente definito e il gruppo corrente. Questo costrutto di raggruppamento presenta il formato seguente:  
   
-```  
-(?<name1-name2>subexpression)  
-```  
+`(?<name1-name2>subexpression)`  
   
  oppure:  
   
-```  
-(?'name1-name2' subexpression)  
-```  
+`(?'name1-name2' subexpression)`
   
  dove *nome1* è il gruppo corrente (facoltativo), *nome2* è un gruppo precedentemente definito e *sottoespressione* è qualsiasi criterio di ricerca di espressioni regolari valido. La definizione di gruppo di bilanciamento elimina la definizione di *nome2* e archivia l'intervallo tra *nome2* e *nome1* in *nome1*. Se non è definito alcun gruppo *nome2* , viene eseguito il backtracking della corrispondenza. Poiché l'eliminazione dell'ultima definizione di *nome2* rivela la definizione precedente di *nome2*, questo costrutto consente di usare lo stack di acquisizioni per il gruppo *nome2* come contatore per tenere traccia dei costrutti annidati, come ad esempio le parentesi o le parentesi quadre di apertura e chiusura.  
   
@@ -199,13 +187,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari è:  
   
-```  
-^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$  
-```  
+`^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  L'espressione regolare viene interpretata nel modo seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`^`|Comincia all'inizio della stringa.|  
 |`[^<>]*`|Trova la corrispondenza di zero o più caratteri diversi da parentesi uncinate aperte o chiuse.|  
@@ -223,7 +209,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Nell'esempio, il motore delle espressioni regolari valuta la stringa di input "\<abc><mno\<xyz>>", come illustrato nella tabella seguente.  
   
-|Passaggio|Modello|Risultato|  
+|Passaggio|Pattern|Risultato|  
 |----------|-------------|------------|  
 |1|`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |2|`[^<>]*`|Cerca parentesi non uncinate prima della parentesi uncinata aperta; non trova corrispondenze.|  
@@ -254,9 +240,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 ## <a name="noncapturing-groups"></a>Gruppi di non acquisizione  
  Nel costrutto di raggruppamento seguente non viene acquisita la sottostringa quando viene trovata una corrispondenza con una sottoespressione:  
   
-```  
-(?:subexpression)  
-```  
+`(?:subexpression)`
   
  dove *sottoespressione* è un qualsiasi criterio valido di espressione regolare. Il costrutto del gruppo non di acquisizione viene generalmente usato quando un quantificatore è applicato a un gruppo, ma le sottostringhe acquisite dal gruppo non sono di alcun interesse.  
   
@@ -270,7 +254,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `(?:\b(?:\w+)\W*)+\.` trova la corrispondenza di una frase che termina con un punto. Poiché l'espressione regolare si concentra sulle frasi e non sulle singole parole, i costrutti di raggruppamento vengono usati esclusivamente come quantificatori. Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?:\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Non assegna il testo corrispondente a un gruppo acquisito.|  
@@ -293,7 +277,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Ad esempio, l'espressione regolare `\b(?ix: d \w+)\s` nell'esempio seguente usa opzioni inline in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi nel criterio durante l'identificazione delle parole che iniziano con la lettera "d". L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?ix: d \w+)`|Usando la corrispondenza senza distinzione tra maiuscole e minuscole e ignorando lo spazio vuoto in questo criterio, trova la corrispondenza con una "d" seguita da uno o più caratteri alfanumerici.|  
@@ -319,7 +303,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b\w+(?=\sis\b)` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -342,7 +326,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b(?!un)\w+\b` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?!un)`|Determina se i due caratteri successivi sono "un". Se non lo sono, è possibile stabilire la corrispondenza.|  
@@ -356,7 +340,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b\w+\b(?!\p{P})` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -380,7 +364,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `(?<=\b20)\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\d{2}`|Trova la corrispondenza con due cifre decimali.|  
 |`(?<=\b20)`|Continua la corrispondenza per verificare se le due cifre decimali sono precedute dalle cifre decimali "20" su un confine di parola.|  
@@ -405,7 +389,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza con uno o più caratteri alfanumerici seguiti da uno spazio vuoto.|  
@@ -434,7 +418,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare di non backtracking `(?>(\w)\1+).\b` è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`(\w)`|Trova la corrispondenza di un singolo carattere alfanumerico e la assegna al primo gruppo di acquisizione.|  
 |`\1+`|Trova la corrispondenza con il valore della prima sottostringa acquisita una o più volte.|  
@@ -461,7 +445,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `(\b(\w+)\W+)+` estrae singole parole da una stringa e viene definito come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Insieme, questi caratteri formano una parola. Equivale al secondo gruppo di acquisizione.|  
