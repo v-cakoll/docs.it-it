@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Eseguire la convalida tramite XSD (LINQ to XML) (Visual Basic)'
+title: 'Procedura: Convalida utilizzando XSD (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613353"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835059"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a><span data-ttu-id="9f59f-102">Procedura: Eseguire la convalida tramite XSD (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f59f-102">How to: Validate Using XSD (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="9f59f-103">Lo spazio dei nomi <xref:System.Xml.Schema> contiene metodi di estensione che semplificano la convalida di un albero XML rispetto a un file XSD (Schema Definition Language).</span><span class="sxs-lookup"><span data-stu-id="9f59f-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="9f59f-104">Per altre informazioni, vedere la documentazione del metodo <xref:System.Xml.Schema.Extensions.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="9f59f-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a><span data-ttu-id="b1a2e-102">Procedura: Convalida utilizzando XSD (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1a2e-102">How to: Validate Using XSD (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="b1a2e-103">Lo spazio dei nomi <xref:System.Xml.Schema> contiene metodi di estensione che semplificano la convalida di un albero XML rispetto a un file XSD (Schema Definition Language).</span><span class="sxs-lookup"><span data-stu-id="b1a2e-103">The <xref:System.Xml.Schema> namespace contains extension methods that make it easy to validate an XML tree against an XML Schema Definition Language (XSD) file.</span></span> <span data-ttu-id="b1a2e-104">Per altre informazioni, vedere la documentazione del metodo <xref:System.Xml.Schema.Extensions.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-104">For more information, see the <xref:System.Xml.Schema.Extensions.Validate%2A> method documentation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9f59f-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="9f59f-105">Example</span></span>  
- <span data-ttu-id="9f59f-106">Nell'esempio seguente viene creato un oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi vengono convalidati due oggetti <xref:System.Xml.Linq.XDocument> rispetto al set di schemi.</span><span class="sxs-lookup"><span data-stu-id="9f59f-106">The following example creates an <xref:System.Xml.Schema.XmlSchemaSet>, then validates two <xref:System.Xml.Linq.XDocument> objects against the schema set.</span></span> <span data-ttu-id="9f59f-107">Uno dei documenti è valido, l'altro non lo è.</span><span class="sxs-lookup"><span data-stu-id="9f59f-107">One of the documents is valid, the other is not.</span></span>  
+## <a name="example"></a><span data-ttu-id="b1a2e-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="b1a2e-105">Example</span></span>  
+ <span data-ttu-id="b1a2e-106">Nell'esempio seguente viene creato un oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi vengono convalidati due oggetti <xref:System.Xml.Linq.XDocument> rispetto al set di schemi.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-106">The following example creates an <xref:System.Xml.Schema.XmlSchemaSet>, then validates two <xref:System.Xml.Linq.XDocument> objects against the schema set.</span></span> <span data-ttu-id="b1a2e-107">Uno dei documenti è valido, l'altro non lo è.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-107">One of the documents is valid, the other is not.</span></span>  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -65,9 +65,9 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="9f59f-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="9f59f-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="b1a2e-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="b1a2e-108">This example produces the following output:</span></span>  
   
-```  
+```console  
 Validating doc1  
 doc1 validated  
   
@@ -76,12 +76,12 @@ The element 'Root' has invalid child element 'Child3'. List of possible elements
 doc2 did not validate  
 ```  
   
-## <a name="example"></a><span data-ttu-id="9f59f-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="9f59f-109">Example</span></span>  
- <span data-ttu-id="9f59f-110">Nell'esempio seguente viene verificato che il documento XML del [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) sia valido per lo schema del [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span><span class="sxs-lookup"><span data-stu-id="9f59f-110">The following example validates that the XML document from [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) is valid per the schema from [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span></span> <span data-ttu-id="9f59f-111">Viene quindi modificato il documento XML di origine.</span><span class="sxs-lookup"><span data-stu-id="9f59f-111">It then modifies the source XML document.</span></span> <span data-ttu-id="9f59f-112">Viene cambiato l'attributo `CustomerID` sul primo cliente.</span><span class="sxs-lookup"><span data-stu-id="9f59f-112">It changes the `CustomerID` attribute on the first customer.</span></span> <span data-ttu-id="9f59f-113">Dopo la modifica, gli ordini faranno riferimento a un cliente che non esiste, quindi il documento XML non verrà più convalidato.</span><span class="sxs-lookup"><span data-stu-id="9f59f-113">After the change, orders will then refer to a customer that does not exist, so the XML document will no longer validate.</span></span>  
+## <a name="example"></a><span data-ttu-id="b1a2e-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="b1a2e-109">Example</span></span>  
+ <span data-ttu-id="b1a2e-110">Nell'esempio seguente viene verificato che il documento XML del [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) sia valido per lo schema del [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span><span class="sxs-lookup"><span data-stu-id="b1a2e-110">The following example validates that the XML document from [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) is valid per the schema from [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span></span> <span data-ttu-id="b1a2e-111">Viene quindi modificato il documento XML di origine.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-111">It then modifies the source XML document.</span></span> <span data-ttu-id="b1a2e-112">Viene cambiato l'attributo `CustomerID` sul primo cliente.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-112">It changes the `CustomerID` attribute on the first customer.</span></span> <span data-ttu-id="b1a2e-113">Dopo la modifica, gli ordini faranno riferimento a un cliente che non esiste, quindi il documento XML non verrà più convalidato.</span><span class="sxs-lookup"><span data-stu-id="b1a2e-113">After the change, orders will then refer to a customer that does not exist, so the XML document will no longer validate.</span></span>  
   
- <span data-ttu-id="9f59f-114">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9f59f-114">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="b1a2e-114">Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b1a2e-114">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="9f59f-115">L'esempio usa lo schema XSD seguente: [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span><span class="sxs-lookup"><span data-stu-id="9f59f-115">This example uses the following XSD schema: [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span></span>  
+ <span data-ttu-id="b1a2e-115">L'esempio usa lo schema XSD seguente: [File XSD di esempio: Customers e Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span><span class="sxs-lookup"><span data-stu-id="b1a2e-115">This example uses the following XSD schema: [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).</span></span>  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -111,9 +111,9 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="9f59f-116">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="9f59f-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="b1a2e-116">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="b1a2e-116">This example produces the following output:</span></span>  
   
-```  
+```console  
 Attempting to validate  
 custOrdDoc validated  
   
@@ -122,7 +122,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9f59f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9f59f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1a2e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1a2e-117">See also</span></span>
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [<span data-ttu-id="9f59f-118">Creazione di alberi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f59f-118">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="b1a2e-118">Creazione di strutture ad albero XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1a2e-118">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
