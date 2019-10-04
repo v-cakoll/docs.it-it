@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)'
+title: 'Procedura: Utilizzare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: 9ebff2276fc9f574989530fdb07a0d0875ff74a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa0561ecc26139d191107521a8bb5fc2889332cd
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648806"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835068"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: Usare le annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: Utilizzare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (Visual Basic)
 Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.  
   
  Alcuni documenti XML sono "basati su documenti con contenuto misto". Con tali documenti, la forma dei nodi figlio di un elemento non è necessariamente nota. Ad esempio, un nodo che contiene testo può essere analogo al seguente:  
@@ -18,7 +18,7 @@ Le annotazioni possono essere usate per facilitare le trasformazioni di un alber
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Per ogni nodo di testo potrebbe essere disponibile un numero qualsiasi di elementi `<b>` e `<i>` figlio. Questo approccio è applicabile a diverse altre situazioni: ad esempio, le pagine che possono contenere una varietà di elementi figlio, ad esempio paragrafi normali, paragrafi puntati e bitmap. Le celle di una tabella possono contenere testo, elenchi a discesa o bitmap. Una delle caratteristiche principali dell'XML basato su documento è che non è noto quale sarà l'elemento figlio di un determinato elemento.  
+ Per ogni nodo di testo potrebbe essere disponibile un numero qualsiasi di elementi `<b>` e `<i>` figlio. Questo approccio si estende a una serie di altre situazioni, ad esempio le pagine che possono contenere un'ampia gamma di elementi figlio, ad esempio paragrafi regolari, paragrafi puntati e bitmap. Le celle di una tabella possono contenere testo, elenchi a discesa o bitmap. Una delle caratteristiche principali dell'XML basato su documento è che non è noto quale sarà l'elemento figlio di un determinato elemento.  
   
  Se si desidera trasformare gli elementi di un albero e non si dispone necessariamente di molte informazioni sugli elementi figlio di tali elementi, questo approccio basato sull'utilizzo di annotazioni si rivela efficace.  
   
@@ -135,7 +135,7 @@ End Module
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root>  
@@ -158,33 +158,23 @@ After Transform
 ## <a name="effecting-the-transform"></a>Esecuzione della trasformazione  
  Una piccola funzione, `XForm`, crea un nuovo albero trasformato dall'albero originale annotato.  
   
-- Lo pseudo-codice per la funzione è piuttosto semplice:  
+Lo pseudo-codice per la funzione è piuttosto semplice:  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
-If an element has an XElement annotation, then  
-    Return a new XElement  
-        The name of the new XElement is the annotation element's name.  
-        All attributes are copied from the annotation to the new node.  
-        All child nodes are copied from the annotation, with the  
-            exception that the special node xf:ApplyTransforms is  
-            recognized, and the source element's child nodes are  
-            iterated. If the source child node is not an XElement, it  
-            is copied to the new tree. If the source child is an  
-            XElement, then it is transformed by calling this function  
-            recursively.  
-If an element is not annotated  
-    Return a new XElement  
-        The name of the new XElement is the source element's name  
-        All attributes are copied from the source element to the  
-            destination's element.  
-        All child nodes are copied from the source element.  
-        If the source child node is not an XElement, it is copied to  
-            the new tree. If the source child is an XElement, then it  
-            is transformed by calling this function recursively.  
-```  
-  
- Di seguito è riportata l'implementazione di questa funzione:  
+> La funzione accetta un oggetto XElement come argomento e restituisce un XElement.
+>   
+> Se un elemento ha un'annotazione XElement, restituire un nuovo XElement:  
+>    - Il nome del nuovo XElement è il nome dell'elemento Annotation.  
+>    - Tutti gli attributi vengono copiati dall'annotazione al nuovo nodo.  
+>    - Tutti i nodi figlio vengono copiati dall'annotazione, con l'eccezione che viene riconosciuto il nodo speciale XF: ApplyTransforms e i nodi figlio dell'elemento di origine vengono iterati. Se il nodo figlio di origine non è XElement, viene copiato nel nuovo albero. Se l'elemento figlio di origine è XElement, viene trasformato chiamando questa funzione in modo ricorsivo.
+>  
+> Se un elemento non è annotato:  
+>    - Restituisce un nuovo XElement  
+>        - Il nome del nuovo XElement è il nome dell'elemento di origine.  
+>        - Tutti gli attributi vengono copiati dall'elemento di origine all'elemento della destinazione.  
+>        - Tutti i nodi figlio vengono copiati dall'elemento di origine.  
+>        - Se il nodo figlio di origine non è XElement, viene copiato nel nuovo albero. Se l'elemento figlio di origine è XElement, viene trasformato chiamando questa funzione in modo ricorsivo.  
+
+Di seguito è riportata l'implementazione di questa funzione:  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -346,7 +336,7 @@ End Module
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -380,4 +370,4 @@ After Transform
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programmazione LINQ to XML avanzata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

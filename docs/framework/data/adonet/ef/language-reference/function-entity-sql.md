@@ -2,19 +2,19 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250942"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833794"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Definisce una funzione nell'ambito di un comando di query Entity SQL.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Nome di un tipo supportato.  
   
- RACCOLTA (< type_definition`>` )  
+ RACCOLTA (< type_definition @ no__t-0)  
  Espressione che restituisce una raccolta di tipi supportati, righe o riferimenti.  
   
  REF **(** `data_type` **)**  
@@ -61,19 +61,19 @@ FUNCTION function-name
   
  `A()`  
   
- Per altre informazioni, vedere [Procedura: Chiamare una funzione](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))definita dall'utente.  
+ Per altre informazioni, vedere [Procedura: Chiamare una funzione definita dall'utente @ no__t-0.  
   
  Le funzioni possono essere dichiarate anche nel modello stesso. Le funzioni dichiarate nel modello vengono eseguite nello stesso modo delle funzioni dichiarate inline nel comando. Per ulteriori informazioni, vedere [funzioni definite dall'utente](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Esempio  
  Nel comando Entity SQL seguente viene definita una funzione `Products` che usa un valore Integer per filtrare i prodotti restituiti.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Esempio  
  Nel comando Entity SQL seguente viene definita una funzione `StringReturnsCollection` che usa una raccolta di stringhe per filtrare i contatti restituiti.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>Vedere anche
 

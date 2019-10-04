@@ -3,12 +3,12 @@ title: Tipi di base - Guida a C#
 description: Informazioni sui tipi di base (dati numerici, stringhe e oggetto) in tutti i programmi C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424462"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834242"
 ---
 # <a name="types-variables-and-values"></a>Tipi, variabili e valori
 
@@ -73,7 +73,7 @@ Come indicato in precedenza, è possibile digitare una variabile locale in modo 
   
 In alcuni casi non è consigliabile creare un tipo denominato per set semplici di valori correlati che non si intende archiviare o passare fuori dai limiti del metodo. A questo scopo è possibile creare *tipi anonimi*. Per altre informazioni, vedere [Tipi anonimi](programming-guide/classes-and-structs/anonymous-types.md).
 
-È prassi comune voler restituire più valori da un metodo. È possibile creare *tipi di tupla* che restituiscono più valori in una singola chiamata al metodo. Per altre informazioni, vedere [Tuple](tuples.md)
+È prassi comune voler restituire più valori da un metodo. È possibile creare *tipi di tupla* che restituiscono più valori in una singola chiamata al metodo. Per ulteriori informazioni, vedere [Tuple](tuples.md).
 
 ## <a name="the-common-type-system"></a>Sistema dei tipi comuni
 

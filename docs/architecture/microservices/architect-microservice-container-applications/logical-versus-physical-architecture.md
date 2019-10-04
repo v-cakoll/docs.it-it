@@ -2,12 +2,12 @@
 title: Architettura logica e architettura fisica
 description: Informazioni sulle differenze tra architetture logiche e architetture fisiche.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673058"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834406"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architettura logica e architettura fisica
 
@@ -25,7 +25,7 @@ Di conseguenza, un microservizio aziendale o un contesto delimitato è un'archit
 
 Come mostrato nella figura 4-8, il microservizio aziendale del catalogo può essere composto da numerosi servizi o processi. Questi possono essere costituiti da più servizi API Web ASP.NET o da altre tipologie di servizi che usano HTTP o altri protocolli. Inoltre, i servizi possono condividere gli stessi dati, purché siano coesi rispetto allo stesso dominio aziendale.
 
-![Diagramma del microservizio aziendale del catalogo, che contiene un servizio API, un servizio di ricerca e un database di SQL Server.](./media/image8.png)
+![Diagramma del microservizio aziendale del catalogo con server fisici.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Figura 4-8**. Microservizio aziendale con numerosi servizi fisici
 

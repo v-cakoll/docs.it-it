@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Stampare file XPS a livello di codice'
+title: 'Procedura: Stampa di file XPS a livello di codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855751"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834579"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>Procedura: Stampare file XPS a livello di codice
+# <a name="how-to-programmatically-print-xps-files"></a>Procedura: Stampa di file XPS a livello di codice
 
 È possibile utilizzare un overload del <xref:System.Printing.PrintQueue.AddJob%2A> metodo per stampare file XPS (XML Paper Specification) senza aprire un oggetto <xref:System.Windows.Controls.PrintDialog> o, in generale, qualsiasi. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]
 
@@ -27,7 +27,7 @@ Un altro modo per stampare XPS consiste nell'usare <xref:System.Windows.Controls
 
 I passaggi principali per l'uso del metodo a <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> tre parametri sono i seguenti. L'esempio riportato di seguito offre delle informazioni dettagliate.
 
-1. Determinare se la stampante è una stampante XPSDrv. (Vedere [Panoramica di stampa](printing-overview.md) per altre informazioni su XPSDrv.)
+1. Determinare se la stampante è una stampante XPSDrv. Per ulteriori informazioni su XPSDrv, vedere [Cenni preliminari sulla stampa](printing-overview.md) .
 
 2. Se la stampante non è una stampante XPSDrv, impostare l'apartment del thread a thread singolo.
 

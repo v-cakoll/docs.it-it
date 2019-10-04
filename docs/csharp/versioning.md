@@ -3,12 +3,12 @@ title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699926"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834051"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
@@ -110,5 +110,4 @@ Derived Method One: Derived Method One
 
 Il modificatore `override` viene valutato in fase di compilazione e il compilatore genera un errore se non trova un membro virtuale di cui eseguire l'override.
 
-Conoscere le tecniche descritte e sapere in quali situazioni usarle significa semplificare notevolmente la transizione da una versione all'altra di una libreria.
- 
+La conoscenza delle tecniche discusse e la comprensione delle situazioni in cui utilizzarle sono molto utili per facilitare la transizione tra le versioni di una libreria.

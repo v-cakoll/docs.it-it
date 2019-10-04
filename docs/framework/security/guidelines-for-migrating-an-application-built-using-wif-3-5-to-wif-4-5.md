@@ -3,12 +3,12 @@ title: Linee guida per la migrazione di un'applicazione compilata con le version
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045491"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834529"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5
 
@@ -110,7 +110,7 @@ Windows Identity Foundation 3.5 SDK offre un'utilità di federazione autonoma, F
 
 - L'utilità di federazione autonoma (FedUtil) non è disponibile in Windows Identity Foundation 4.5. È possibile usare Identity and Access Tool per modificare il file di configurazione per l'outsourcing della gestione delle identità a un servizio token di sicurezza.
 
-Per altre informazioni su Identity and Access Tool, vedere [Identity and Access Tool per Visual Studio 2012](identity-and-access-tool-for-vs.md)
+Per altre informazioni sullo strumento di identità e accesso, vedere [Identity and Access Tool per Visual Studio 2012](identity-and-access-tool-for-vs.md).
 
 <a name="BKMK_ToolingChanges"></a>
 

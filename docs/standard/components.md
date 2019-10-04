@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014951"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835274"
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -83,6 +83,26 @@ Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema oper
 - [MSBuild](/visualstudio/msbuild/msbuild), il motore di compilazione usato per compilare i progetti
 - [NuGet](/nuget/), il gestore di pacchetti Microsoft per .NET
 - Strumenti open source di orchestrazione della compilazione, ad esempio [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
+
+## <a name="applicable-standards"></a>Standard applicabili
+
+Il C# linguaggio e le specifiche dell'interfaccia Common Language Infrastructure della riga di comando (CLI) sono standardizzati tramite [ECMA International®](https://www.ecma-international.org/). Le prime edizioni di questi standard sono state pubblicate da ECMA nel 2001 dicembre.
+
+Le revisioni successive degli standard sono state sviluppate dai gruppi di attivitàC#TC49-TG2 () e TC49-TG3 (CLI) nel comitato tecnico dei linguaggi di programmazione ([TC49](https://www.ecma-international.org/memento/tc49.htm)) e sono state adottate dall'assembly generale ECMA e successivamente da ISO/IEC JTC 1 tramite il processo di rilevamento rapido ISO.
+
+### <a name="latest-standards"></a>Standard più recenti
+
+I documenti ECMA ufficiali seguenti sono disponibili per [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) e l' [interfaccia](http://www.ecma-international.org/publications/standards/Ecma-335.htm) della riga di comando ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
+
+- **Standard C# del linguaggio (versione 5,0)** : [ECMA-334. pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **Il Common Language Infrastructure**: Disponibile in formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e modulo [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
+- **Informazioni derivate dal file XML della partizione IV**: Questa operazione è disponibile nei formati [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
+ 
+I documenti ISO/IEC ufficiali sono disponibili nella pagina standard ISO/IEC [disponibili pubblicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/) . Questi collegamenti sono diretti da questa pagina:
+
+- **Information Technology-linguaggi di programmazione C#-** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Information Technology-partizioni di Common Language Infrastructure (CLI) I a vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Information Technology-Common Language Infrastructure (CLI)-report tecnico sulle informazioni derivate dal file XML della partizione IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Vedere anche
 

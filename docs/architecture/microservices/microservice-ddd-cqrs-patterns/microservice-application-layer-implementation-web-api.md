@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676578"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834357"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -203,7 +203,7 @@ Un comando viene inviato a un singolo ricevitore e non viene pubblicato. La pubb
 
 Un comando viene implementato con una classe contenente campi dati o raccolte con tutte le informazioni necessarie per eseguire tale comando. Un comando è un particolare tipo di DTO (Data Transfer Object), usato in modo specifico per richiedere modifiche o transazioni. Il comando in sé si basa esclusivamente sulle informazioni necessarie per elaborare il comando.
 
-L'esempio seguente illustra la classe CreateOrderCommand semplificata. Si tratta di un comando non modificabile usato nel microservizio degli ordini in eShopOnContainers.
+Nell'esempio seguente viene illustrata la classe `CreateOrderCommand` semplificata. Si tratta di un comando non modificabile usato nel microservizio degli ordini in eShopOnContainers.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ L'esempio seguente illustra la classe CreateOrderCommand semplificata. Si tratta
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ Un'altra caratteristica dei comandi è di non essere modificabili, perché l'uti
 
 Tenere presente che se si intende o si prevede che i comandi vengano sottoposti a un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMember]` (o `[JsonProperty]`), altrimenti il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti.
 
-Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. CreateOrderCommand, ad esempio, non ha un ID ordine, perché l'ordine non è ancora stato creato.
+Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. Ad esempio, `CreateOrderCommand` non dispone di un ID ordine, perché l'ordine non è ancora stato creato.
 
 Molte classi di comandi possono essere semplici e richiedere solo alcuni campi per gli stati che devono essere modificati, ad esempio quando si deve solo modificare lo stato di un ordine da "in corso" a "pagato" o "spedito" usando un comando simile al seguente:
 
@@ -335,7 +335,7 @@ L'importante in questo caso è che, quando un comando viene elaborato, tutta la 
 
 Quando i gestori comando sono complessi, con una logica eccessiva, può trattarsi di code smell. Esaminarli e, se si trova la logica di dominio, effettuare il refactoring del codice per spostare tale comportamento del dominio nei metodi degli oggetti dominio (la radice di aggregazione e l'entità figlio).
 
-Come esempio di classe di gestore comando, il codice seguente illustra la stessa classe CreateOrderCommandHandler vista all'inizio di questo capitolo. In questo caso, sono in evidenza il metodo Handle e le operazioni con gli oggetti o le aggregazioni del modello di dominio.
+Come esempio di una classe di gestori di comandi, il codice seguente mostra la stessa classe `CreateOrderCommandHandler` visualizzata all'inizio di questo capitolo. In questo caso, sono in evidenza il metodo Handle e le operazioni con gli oggetti o le aggregazioni del modello di dominio.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -473,14 +473,17 @@ Un altro valido motivo per usare lo schema Mediator è stato illustrato da Jimmy
 
 > Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta in ingresso, risposta in uscita. Questo aspetto è risultato piuttosto utile nella creazione di test dal comportamento coerente.
 
-Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effettivamente possibile usare l'oggetto Mediator. Se non si usasse l'oggetto Mediator, sarebbe necessario inserire tutte le dipendenze per tale controller, ad esempio un oggetto logger e altri. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
+Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effettivamente possibile usare l'oggetto Mediator. Se non si utilizza l'oggetto Mediator, è necessario inserire tutte le dipendenze per quel controller, ad esempio un oggetto logger e altri elementi. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
 
 ```csharp
 public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 Si può osservare che il Mediator fornisce un controller API Web essenziale. Inoltre, nei metodi del controller, il codice per inviare un comando all'oggetto Mediator è praticamente di una sola riga:
@@ -819,10 +822,10 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **CQRS and REST: the perfect match (CQRS e REST: la coppia perfetta)**  \
   <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
-- **MediatR Pipeline Examples (Esempi di pipeline MediatR)**  \
+- **MediatR Pipeline Examples** \ (Esempi di pipeline MediatR)
   <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
-- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)**  \
+- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core** \ (Fixture di test per sezioni verticali per MediatR e ASP.NET Core)
   <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
 - **MediatR Extensions for Microsoft Dependency Injection Released (Rilascio delle estensioni MediatR per l'inserimento di dipendenze Microsoft)**  \

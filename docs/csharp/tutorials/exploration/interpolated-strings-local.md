@@ -4,22 +4,22 @@ description: Questa esercitazione mostra come usare la funzionalità di interpol
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117849"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834128"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usare l'interpolazione di stringhe per la costruzione di stringhe formattate
 
 Questa esercitazione descrive come usare l'[interpolazione di stringhe](../../language-reference/tokens/interpolated.md) in C# per inserire i valori in un'unica stringa di risultato. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione contiene una serie di lezioni che descrivono come inserire valori in una stringa e formattare questi valori in modi diversi.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. È anche possibile completare la [versione interattiva](interpolated-strings.yml) di questa esercitazione nel browser.
 
 ## <a name="create-an-interpolated-string"></a>Creare una stringa interpolata
 
-Creare una directory denominata **interpolated**. Impostarla come directory corrente ed eseguire il comando seguente da una finestra della console:
+Creare una directory denominata *interpolated*. Impostarla come directory corrente ed eseguire il comando seguente da una finestra della console:
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 Questo comando crea una nuova applicazione console .NET Core nella directory corrente.
 
-Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con il codice seguente, sostituendo `<name>` con il nome:
+Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con il codice seguente, sostituendo `<name>` con il nome:
 
 ```csharp
 var name = "<name>";

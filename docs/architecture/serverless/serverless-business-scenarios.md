@@ -4,12 +4,12 @@ description: Impara a usare senza server un approccio pratico accedendo ad esemp
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926475"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834293"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scenari di business serverless e casi d'uso
 
@@ -33,7 +33,7 @@ Il repository completo e le istruzioni per compilare l'app per la logica sono di
 
 Vedere come implementare una semplice funzione di Azure senza server nel portale Web di Azure o in Visual Studio. Creazione di un client con Novell. Forms in esecuzione in Android, iOS e Windows. L'applicazione viene quindi perfezionata per usare JavaScript Object Notation (JSON) come mezzo di comunicazione tra il server e i client mobili con un back-end senza server.
 
-Per altre informazioni, vedere [implementazione di una semplice funzione di Azure con un client Novell. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+Per altre informazioni, vedere [implementazione di una semplice funzione di Azure con un client Novell. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Genera un mosaico foto con riconoscimento immagine senza server
 

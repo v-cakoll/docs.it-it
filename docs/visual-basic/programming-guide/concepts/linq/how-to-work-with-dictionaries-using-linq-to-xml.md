@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Usare dizionari tramite LINQ to XML (Visual Basic)'
+title: 'Procedura: Utilizzare i dizionari utilizzando LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614145"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835090"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Procedura: Usare dizionari tramite LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Procedura: Utilizzare i dizionari utilizzando LINQ to XML (Visual Basic)
 Spesso risulta utile eseguire la conversione in XML di varie strutture dati e la riconversione di altre strutture dati in XML. In questo argomento è illustrata un'implementazione specifica di questo approccio generale con la conversione di un oggetto <xref:System.Collections.Generic.Dictionary%602> in XML e viceversa.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa i valori letterali XML e una query in un'espressione incorporata. La query proietta nuovi <xref:System.Xml.Linq.XElement> oggetti, che quindi diventano il nuovo contenuto per il `Root` <xref:System.Xml.Linq.XElement> oggetto.  
+ In questo esempio vengono utilizzati valori letterali XML e una query in un'espressione incorporata. La query proietta nuovi oggetti <xref:System.Xml.Linq.XElement>, che diventano quindi il nuovo contenuto per l'oggetto `Root` <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  

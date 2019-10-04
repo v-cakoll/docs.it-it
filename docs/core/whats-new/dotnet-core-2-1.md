@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116218"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834253"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -55,7 +55,7 @@ Numerosi strumenti precedentemente disponibili solo a livello di singolo progett
 
    Si noti l'opzione `--` che precede l'opzione `--verbose`. Delimita le opzioni passate direttamente al comando `dotnet watch` dagli argomenti passati al processo figlio `dotnet`. Senza di essa, l'opzione `--verbose` si applica al comando `dotnet watch` e non al comando `dotnet build`.
   
-   Per altre informazioni, vedere [Sviluppare app ASP.NET Core con dotnet watch](/aspnet/core/tutorials/dotnet-watch).
+   Per altre informazioni, vedere [sviluppare app ASP.NET Core con DotNet Watch](/aspnet/core/tutorials/dotnet-watch).
 
 - `dotnet dev-certs` genera e gestisce i certificati usati durante lo sviluppo nelle applicazioni ASP.NET Core.
 
@@ -69,7 +69,7 @@ Numerosi strumenti precedentemente disponibili solo a livello di singolo progett
 
 .NET Core 2.1 supporta gli *strumenti globali*, vale a dire strumenti personalizzati disponibili globalmente dalla riga di comando. Il modello di estendibilità nelle versioni precedenti di .NET Core rendeva disponibili gli strumenti personalizzati a livello di singolo progetto solo usando [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
 
-Per installare uno strumento globale, usare il comando [dotnet tool install](../tools/dotnet-tool-install.md). Ad esempio:
+Per installare uno strumento globale, usare il comando [dotnet tool install](../tools/dotnet-tool-install.md). Esempio:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay

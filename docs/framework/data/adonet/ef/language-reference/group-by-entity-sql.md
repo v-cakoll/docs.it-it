@@ -2,19 +2,19 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 711fbdc2d51177037cf349150c3431de14b11974
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250904"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833786"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Specifica i gruppi nei quali devono essere inseriti gli oggetti restituiti da un'espressione ([SELECT](select-entity-sql.md)) di query.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
@@ -23,7 +23,7 @@ Specifica i gruppi nei quali devono essere inseriti gli oggetti restituiti da un
  Qualsiasi espressione di query valida sulla quale viene eseguito il raggruppamento. `expression` può essere una proprietà o un'espressione non di aggregazione che fa riferimento a una proprietà restituita dalla clausola FROM. Ogni espressione in una clausola GROUP BY deve restituire un tipo che può essere confrontato per verificare l'uguaglianza. Questi tipi sono in genere tipi primitivi scalari ad esempio numeri, stringhe e date. Non è possibile eseguire un raggruppamento in base a una raccolta.  
   
 ## <a name="remarks"></a>Note  
- Se le funzioni di aggregazione sono incluse nella \<clausola Select select list >, Group by calcola un valore di riepilogo per ogni gruppo. Quando si specifica GROUP BY, è necessario che l'elenco GROUP BY includa ogni nome di proprietà di qualsiasi espressione non di aggregazione nell'elenco di selezione oppure che l'espressione GROUP BY corrisponda esattamente all'espressione dell'elenco di selezione.  
+ Se le funzioni di aggregazione sono incluse nella clausola SELECT \<select list >, GROUP BY calcola un valore di riepilogo per ogni gruppo. Quando si specifica GROUP BY, è necessario che l'elenco GROUP BY includa ogni nome di proprietà di qualsiasi espressione non di aggregazione nell'elenco di selezione oppure che l'espressione GROUP BY corrisponda esattamente all'espressione dell'elenco di selezione.  
   
 > [!NOTE]
 > Se la clausola ORDER BY non viene specificata, i gruppi restituiti dalla clausola GROUP BY non sono in un ordine preciso. Per specificare un particolare ordinamento dei dati, è consigliabile usare sempre la clausola ORDER BY.  
@@ -50,7 +50,7 @@ Specifica i gruppi nei quali devono essere inseriti gli oggetti restituiti da un
   
  Ogni espressione chiave GROUP BY deve includere almeno un riferimento all'ambito di input:  
   
-```  
+```sql  
 SELECT FROM Persons as P  
 GROUP BY Q + P   -- GOOD  
 GROUP BY Q   -- BAD  
@@ -62,11 +62,11 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore GROUP BY per specificare i gruppi in cui gli oggetti vengono restituiti da una query. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
+1. Seguire la procedura descritta in [How per: Eseguire una query che restituisce i risultati di PrimitiveType @ no__t-0.  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
+ [!code-sql[DP EntityServices Concepts#GROUPBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#groupby)]  
   
 ## <a name="see-also"></a>Vedere anche
 

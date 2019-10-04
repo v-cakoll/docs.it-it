@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e1db413dfdcfa18403e1b67361cea710b203fe5d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045950"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834728"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: Autenticare con un nome utente e una password
 
-In questo argomento viene illustrato come abilitare un servizio Windows Communication Foundation (WCF) per autenticare un client con un nome utente e una password di dominio Windows. Si presuppone che l'utente disponga di un servizio WCF self-hosted funzionante. Per un esempio di creazione di un servizio WCF self-hosted di base, vedere [Introduzione esercitazione](../../../../docs/framework/wcf/getting-started-tutorial.md). In questo argomento si presuppone che il servizio sia configurato tramite codice. Se si desidera visualizzare un esempio di configurazione di un servizio simile utilizzando un file di configurazione, vedere [nome utente sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md) .
+In questo argomento viene illustrato come abilitare un servizio Windows Communication Foundation (WCF) per autenticare un client con un nome utente e una password di dominio Windows. Si presuppone che l'utente disponga di un servizio WCF self-hosted funzionante. Per un esempio di creazione di un servizio WCF self-hosted di base, vedere [Introduzione esercitazione](../../../../docs/framework/wcf/getting-started-tutorial.md). In questo argomento si presuppone che il servizio sia configurato tramite codice. Per un esempio di configurazione di un servizio simile usando un file di configurazione, vedere [nome utente](../samples/message-security-user-name.md)per la sicurezza dei messaggi.
 
 Per configurare un servizio in modo che effettui l'autenticazione dei client mediante il nome utente e la password di dominio Windows, utilizzare l'oggetto <xref:System.ServiceModel.WSHttpBinding> e impostare la relativa proprietà `Security.Mode` su `Message`. Inoltre, è necessario specificare un certificato X509 che verrà utilizzato per crittografare il nome utente e la password quando vengono inviati dal client al servizio.
 
@@ -25,14 +25,14 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
 
     ```csharp
     // ...
-    WSHttpBinding userNameBinding = new WSHttpBinding();
+    var userNameBinding = new WSHttpBinding();
     userNameBinding.Security.Mode = SecurityMode.Message;
     userNameBinding.Security.Message.ClientCredentialType = MessageCredentialType.UserName;
     svcHost.AddServiceEndpoint(typeof(IService1), userNameBinding, "");
     // ...
     ```
 
-2. Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete. Questo codice deve seguire immediatamente il codice illustrato sopra. Nell'esempio seguente viene utilizzato il certificato creato dal file Setup. bat dall'esempio di [nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md) per la sicurezza dei messaggi:
+2. Specificare il certificato del server utilizzato per crittografare le informazioni relative al nome utente e alla password inviate tramite la rete. Questo codice deve seguire immediatamente il codice illustrato sopra. Nell'esempio seguente viene utilizzato il certificato creato dal file Setup. bat dall'esempio di [nome utente](../samples/message-security-user-name.md) per la sicurezza dei messaggi:
 
     ```csharp
     // ...
@@ -44,7 +44,7 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Per chiamare il servizio passando nome utente e password
 
-1. L'applicazione client deve richiedere all'utente il nome utente e la password. Il codice seguente richiede all'utente il nome utente e la password.
+1. L'applicazione client deve richiedere all'utente il nome utente e la password. Il codice seguente chiede all'utente il nome utente e la password:
 
     > [!WARNING]
     > Questo codice non deve essere utilizzato in produzione poiché la password viene visualizzata durante l'immissione.
@@ -57,27 +57,26 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
         username = Console.ReadLine();
         Console.WriteLine("   Enter password:");
         password = Console.ReadLine();
-        return;
     }
     ```
 
-2. Creare un'istanza del proxy client specificando le credenziali del client come illustrato nel codice seguente:
+2. Creare un'istanza del proxy client specificando le credenziali del client, come illustrato nel codice seguente:
 
     ```csharp
     string username;
     string password;
 
-    // Instantiate the proxy
-    Service1Client proxy = new Service1Client();
+    // Instantiate the proxy.
+    var proxy = new Service1Client();
 
-    // Prompt the user for username & password
+    // Prompt the user for username & password.
     GetPassword(out username, out password);
 
-    // Set the user’s credentials on the proxy
+    // Set the user's credentials on the proxy.
     proxy.ClientCredentials.UserName.UserName = username;
     proxy.ClientCredentials.UserName.Password = password;
 
-    // Treat the test certificate as trusted
+    // Treat the test certificate as trusted.
     proxy.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust;
     // Call the service operation using the proxy
     ```
@@ -92,6 +91,6 @@ Nel client è necessario richiedere all'utente il nome utente e la password e sp
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Sicurezza del trasporto con autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
-- [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
-- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [Sicurezza del trasporto con autenticazione di base](transport-security-with-basic-authentication.md)
+- [Sicurezza delle applicazioni distribuite](distributed-application-security.md)
+- [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)

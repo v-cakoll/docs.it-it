@@ -2,12 +2,12 @@
 title: Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 description: Informazioni sui passaggi del "ciclo esterno" del flusso di lavoro DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673708"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834564"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps del ciclo esterno per un'applicazione Docker
 
@@ -104,7 +104,7 @@ Di conseguenza, dopo aver compilato i contenitori dell'applicazione nella pipeli
 
 Se si usa un singolo host, è possibile usare i comandi Docker, ad esempio docker-compose, per compilare e distribuire i contenitori correlati per testare e convalidare l'ambiente Docker in una singola macchina virtuale. Se si usa invece un cluster di agenti di orchestrazione come DC/OS, Kubernetes o Docker Swarm, è necessario distribuire i contenitori tramite un meccanismo o un agente di orchestrazione diverso, a seconda del cluster o dell'utilità di pianificazione selezionata.
 
-Di seguito sono elencati diversi tipi di test che è possibile eseguire sui contenitori Docker:
+Di seguito sono riportati alcuni tipi di test che è possibile eseguire nei contenitori docker:
 
 - Unit test per i contenitori Docker
 

@@ -1,15 +1,15 @@
 ---
-title: Refactoring in funzioni Pure (Visual Basic)
+title: Refactoring in funzioni pure (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e951b3e9108f26a9c861eb49c44bb0a510131819
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787166"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834920"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring in funzioni Pure (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring in funzioni pure (Visual Basic)
 
 Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire il refactoring del codice usando funzioni pure.
 
@@ -21,7 +21,7 @@ Come accennato in precedenza, una funzione pura prevede due caratteristiche util
 
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.
 
-In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) esercitazione viene illustrato come modificare un documento WordprocessingML e vengono forniti due esempi di come eseguire il refactoring tramite una funzione pura.
+In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: La manipolazione di contenuto in un documento WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) esercitazione illustra come modificare un documento WordprocessingML e include due esempi di come effettuare il refactoring con una funzione pura.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminazione di effetti collaterali e dipendenze esterne
 
@@ -48,11 +48,11 @@ End Module
 
 L'output del codice è il seguente:
 
-```
+```console
 StringOne-StringTwo
 ```
 
-Si noti che è irrilevante se i dati modificati hanno `public` oppure `private` è l'accesso, o un `shared` membro o un membro di istanza. Una funzione pura non modifica i dati all'eterno della funzione.
+Si noti che è irrilevante se i dati da modificare hanno l'accesso `public` o `private` oppure è un membro `shared` o un membro di istanza. Una funzione pura non modifica i dati all'eterno della funzione.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Funzione non pura che modifica un argomento
 
@@ -103,9 +103,9 @@ Un approccio che può risultare utile consiste nello scrivere funzioni localment
 
 Una caratteristica importante degli operatori di query standard è che vengono implementati come funzioni pure.
 
-Per altre informazioni, vedere [panoramica degli operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle trasformazioni funzionali Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduzione alle trasformazioni funzionali pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

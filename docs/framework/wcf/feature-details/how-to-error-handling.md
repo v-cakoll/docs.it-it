@@ -2,12 +2,12 @@
 title: 'Procedura: Gestione degli errori'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424597"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834708"
 ---
 # <a name="how-to-error-handling"></a>Procedura: Gestione degli errori
 
@@ -79,7 +79,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     </backupLists>
     ```
 
-4. Definire la tabella dei filtri, che associa il filtro all'endpoint deadDestination e all'elenco di endpoint di backup.  Il servizio di routing tenta in primo luogo di inviare il messaggio all'endpoint di destinazione associato al filtro. Poiché deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione, viene generato un errore di rete. Il servizio di Routing tenta quindi di inviare il messaggio all'endpoint specificato in backupEndpointList.
+4. Definire la tabella dei filtri, che associa il filtro all'endpoint deadDestination e all'elenco di endpoint di backup.  Il servizio di routing tenta in primo luogo di inviare il messaggio all'endpoint di destinazione associato al filtro. Poiché deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione, viene generato un errore di rete. Il servizio di routing tenta quindi di inviare il messaggio all'endpoint specificato in backupEndpointList.
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
           </filterTables>
     ```
 
-5. Per valutare i messaggi in ingresso rispetto al filtro contenuto nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.  L'esempio seguente illustra l'associazione di "filterTable1" agli endpoint servizio.
+5. Per valutare i messaggi in ingresso rispetto al filtro contenuto nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.  Nell'esempio seguente viene illustrata l'associazione di "filterTable1" con gli endpoint del servizio.
 
     ```xml
     <behaviors>
@@ -108,7 +108,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente costituisce un elenco completo del file di configurazione.
+Di seguito è riportato un elenco completo del file di configurazione:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

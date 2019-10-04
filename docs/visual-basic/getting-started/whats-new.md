@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895266"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835259"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -22,19 +22,19 @@ Questo argomento elenca i nomi delle funzionalità principali per ogni versione 
 ## <a name="current-version"></a>Versione corrente
 
 Visual Basic 16,0/Visual Studio 2019 versione 16,0  
-Per le nuove funzionalità, vedere [Visual Basic 16,0](#visual-basic-160)
+Per le nuove funzionalità, vedere [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
-Visual Basic 15.8 / Visual Studio 2017 versione 15.8 - Per le nuove funzionalità, vedere [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15,8/Visual Studio 2017 versione 15,8 per le nuove funzionalità, vedere [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15.5 / Visual Studio 2017 versione 15.5 - Per le nuove funzionalità, vedere [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15,5/Visual Studio 2017 versione 15,5 per le nuove funzionalità, vedere [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15.3 / Visual Studio 2017 versione 15.3 - Per le nuove funzionalità, vedere [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15,3/Visual Studio 2017 versione 15,3 per le nuove funzionalità, vedere [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017 / Visual Studio 2017 - Per le nuove funzionalità, vedere [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017/Visual Studio 2017 per le nuove funzionalità, vedere [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic / Visual Studio 2015 - Per le nuove funzionalità, vedere [Visual Basic 14](#visual-basic-14)
+Visual Basic/Visual Studio 2015 per le nuove funzionalità, vedere [Visual Basic 14](#visual-basic-14).
 
 Visual Basic / Visual Studio 2013 - Technology Preview della piattaforma del compilatore .NET ("Roslyn")
 

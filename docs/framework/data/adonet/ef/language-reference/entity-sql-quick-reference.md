@@ -2,24 +2,24 @@
 title: Riferimento rapido a Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ccfc461d394af8804c960ebf460e7fbfb025b64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251034"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833869"
 ---
 # <a name="entity-sql-quick-reference"></a>Riferimento rapido a Entity SQL
 In questo argomento viene fornita una guida di riferimento rapido alle query [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Le query in questo argomento sono basate sul modello Sales di AdventureWorks.  
   
 ## <a name="literals"></a>Valori letterali  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Stringa  
  I valori letterali carattere di tipo String possono essere Unicode e non Unicode. Le stringhe Unicode vengono anteposti a N. Ad esempio, `N'hello'`.  
   
  Di seguito è illustrato un esempio di valore letterale stringa Non-Unicode:  
   
-```  
+```sql  
 'hello'  
 --same as  
 "hello"  
@@ -27,7 +27,7 @@ In questo argomento viene fornita una guida di riferimento rapido alle query [!I
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |hello|  
   
@@ -36,7 +36,7 @@ In questo argomento viene fornita una guida di riferimento rapido alle query [!I
   
  Esempio:  
   
-```  
+```sql  
 DATETIME '2006-12-25 01:01:00.000'   
 --same as  
 DATETIME '2006-12-25 01:01'  
@@ -53,7 +53,7 @@ DATETIME '2006-12-25 01:01'
   
  Esempio:  
   
-```  
+```sql  
 --a collection of integers  
 {1, 2, 3}  
 ```  
@@ -72,18 +72,18 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>Costruttori di tipo  
   
 ### <a name="row"></a>ROW  
- [Row](row-entity-sql.md) costruisce un valore Anonimo, strutturalmente tipizzato (record) come in:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [Row](row-entity-sql.md) costruisce un valore anonimo con tipizzazione strutturale (record) come in: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Esempio:  
   
-```  
-SELECT VALUE row (product.ProductID as ProductID, product.Name   
-    as ProductName) FROM AdventureWorksEntities.Product AS product  
+```sql  
+SELECT VALUE row (product.ProductID AS ProductID, product.Name
+    AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
  Output:  
   
-|ProductID|NOME|  
+|ProductID|nome|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -97,22 +97,22 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
  Esempio:  
   
-```  
+```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
  Output:  
   
-|ProductID|Name|ProductNumber|…|  
+|ProductID|nome|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- Il`person("abc", 12)` [costruttore di tipo denominato](named-type-constructor-entity-sql.md) crea oggetti definiti dall'utente (denominati), ad esempio.  
+ Il [costruttore di tipo denominato](named-type-constructor-entity-sql.md) crea oggetti definiti dall'utente (denominati), ad esempio `person("abc", 12)`.  
   
  Esempio:  
   
-```  
+```sql  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,   
 o.ProductID, o.SpecialOfferID, o.UnitPrice, o.UnitPriceDiscount,   
 o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail   
@@ -132,13 +132,13 @@ AS o
 ### <a name="ref"></a>REF  
  [Ref](ref-entity-sql.md) crea un riferimento a un'istanza del tipo di entità. La query seguente restituisce ad esempio i riferimenti a ogni entità Order nel set di entità Orders:  
   
-```  
+```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -149,9 +149,9 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Esempio:  
   
-```  
+```sql  
 SELECT VALUE REF(p).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -168,9 +168,9 @@ SELECT VALUE REF(p).Name FROM
   
  Esempio:  
   
-```  
+```sql  
 SELECT VALUE DEREF(REF(p)).Name FROM   
-    AdventureWorksEntities.Product as p  
+    AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -187,9 +187,9 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Esempio:  
   
-```  
+```sql  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))   
-    FROM AdventureWorksEntities.Product as p  
+    FROM AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
@@ -204,12 +204,12 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>Funzioni  
   
 ### <a name="canonical"></a>Canoniche  
- Lo spazio dei nomi per le [funzioni canoniche](canonical-functions.md) è `Edm.Length("string")`EDM, come in. Non è necessario specificare lo spazio dei nomi a meno che non venga importato un altro spazio dei nomi contenente una funzione con lo stesso nome della funzione canonica. Se due spazi dei nomi includono la stessa funzione, l'utente deve specificare il nome completo.  
+ Lo spazio dei nomi per le [funzioni canoniche](canonical-functions.md) è EDM, come in `Edm.Length("string")`. Non è necessario specificare lo spazio dei nomi a meno che non venga importato un altro spazio dei nomi contenente una funzione con lo stesso nome della funzione canonica. Se due spazi dei nomi includono la stessa funzione, l'utente deve specificare il nome completo.  
   
  Esempio:  
   
-```  
-SELECT Length(c. FirstName) As NameLen FROM   
+```sql  
+SELECT Length(c. FirstName) AS NameLen FROM
     AdventureWorksEntities.Contact AS c   
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -223,12 +223,12 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Specifiche del provider Microsoft  
- Le `SqlServer` [funzioni specifiche del provider Microsoft](../sqlclient-for-ef-functions.md) si trovano nello spazio dei nomi.  
+ Le [funzioni specifiche del provider Microsoft](../sqlclient-for-ef-functions.md) si trovano nello spazio dei nomi `SqlServer`.  
   
  Esempio:  
   
-```  
-SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM   
+```sql  
+SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
     AdventureWorksEntities.Contact AS c WHERE   
     c.ContactID BETWEEN 10 AND 12  
 ```  
@@ -246,13 +246,13 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
   
  Esempio:  
   
-```  
+```sql  
 using SqlServer; LOWER('AA');  
 ```  
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |aa|  
   
@@ -261,14 +261,14 @@ using SqlServer; LOWER('AA');
   
  Esempio:  
   
-```  
-SELECT c.ContactID as ID, c.LastName as Name FROM   
+```sql  
+SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
  Output:  
   
-|id|NOME|  
+|id|nome|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -279,8 +279,8 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Esempio:  
   
-```  
-SELECT VALUE name FROM AdventureWorksEntities.Product as P   
+```sql  
+SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
@@ -294,11 +294,11 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>Navigazione  
- L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [Navigate](navigate-entity-sql.md) accetta il tipo di relazione \<qualificato come spazio\< dei nomi >. nome del tipo di relazione >. Navigate restituisce\<ref T > Se la cardinalità dell'oggetto finale è 1. Se la cardinalità dell'entità finale è n, viene restituita la raccolta\<< ref T > >.  
+ L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [Navigate](navigate-entity-sql.md) accetta il tipo di relazione qualificato come \<namespace >. @no__t-nome del tipo di 2relationship >. Navigate restituisce Ref @ no__t-0T > Se la cardinalità dell'entità finale è 1. Se la cardinalità dell'oggetto finale è n, viene restituita la raccolta < Ref @ no__t-0T > >.  
   
  Esempio:  
   
-```  
+```sql  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM   
     NAVIGATE(a, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS v)   
     FROM AdventureWorksEntities.Address AS a  
@@ -320,13 +320,13 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
   
  Esempio:  
   
-```  
-SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p  
+```sql  
+SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
  Output:  
   
-|Name|  
+|nome|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -340,7 +340,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|Name|ProductID|  
+|nome|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -352,7 +352,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
   
  Esempio:  
   
-```  
+```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   
@@ -360,7 +360,7 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 |Value|  
 |-----------|  
-|TRUE|  
+|true|  
   
 ## <a name="see-also"></a>Vedere anche
 

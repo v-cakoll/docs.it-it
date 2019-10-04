@@ -2,12 +2,12 @@
 title: Architettura di microservizi
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Il quadro generale dell'architettura di microservizi.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672988"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834391"
 ---
 # <a name="microservices-architecture"></a>Architettura di microservizi
 
@@ -19,11 +19,11 @@ Perché un'architettura di microservizi? In breve, offre flessibilità a lungo t
 
 I microservizi, inoltre, possono essere ampliati in modo indipendente. In altre parole, non si ha più un'applicazione monolitica che deve essere ampliata come singola unità, ma è possibile ampliare solo determinati microservizi. È possibile quindi ampliare solo l'area funzionale che richiede più potenza di elaborazione o larghezza di banda di rete per poter supportare la richiesta, senza dover ampliare inutilmente altre aree dell'applicazione. Ne consegue quindi una riduzione dei componenti hardware necessari e, pertanto, un considerevole risparmio economico.
 
-![Nell'approccio monolitico tradizionale l'applicazione ridimensiona clonando l'intera app in più server o macchine virtuali. Nell'approccio con microservizi le funzionalità sono separate in servizi più piccoli, in modo che ognuno di essi si possa ridimensionare in modo indipendente.](./media/image6.png)
+![Diagramma delle differenze tra i due metodi di distribuzione.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Figura 4-6**. Confronto tra distribuzione monolitica e approccio basato su microservizi
 
-Come illustrato nella figura 4-6, l'approccio basato su microservizi consente modifiche flessibili e una rapida iterazione di ogni microservizio, offrendo la possibilità di modificare piccole aree specifiche di applicazioni complesse, scalabili e di grandi dimensioni.
+Come illustrato nella figura 4-6, nell'approccio monolitico tradizionale l'applicazione viene ridimensionata clonando l'intera app in diversi server/VM. Nell'approccio con microservizi le funzionalità sono separate in servizi più piccoli, in modo che ognuno di essi si possa ridimensionare in modo indipendente. L'approccio basato su microservizi consente modifiche agili e iterazione rapida di ogni microservizio, in quanto è possibile modificare aree specifiche, piccole e complesse di applicazioni complesse, di grandi dimensioni.
 
 La progettazione di applicazioni basate su microservizi con granularità fine consente processi di integrazione continua e recapito continuo. Accelera inoltre la distribuzione di nuove funzioni nell'applicazione. La composizione di applicazioni con granularità fine consente inoltre di eseguire e testare microservizi in isolamento ed evolverli in modo autonomo, pur mantenendo contratti precisi tra di essi. A condizione che non vengano apportate modifiche alle interfacce o ai contratti, è possibile modificare l'implementazione interna di qualsiasi microservizio o aggiungere nuove funzionalità senza interrompere gli altri microservizi.
 

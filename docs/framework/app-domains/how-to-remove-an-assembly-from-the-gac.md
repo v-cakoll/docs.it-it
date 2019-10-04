@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053137"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834048"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedura: Rimuovere un assembly dalla Global Assembly Cache
 
@@ -28,29 +28,29 @@ Esistono due modi per rimuovere un assembly dalla Global Assembly Cache (GAC):
 
 - Usando [Windows Installer](/windows/desktop/Msi/windows-installer-portal). È possibile usare questa opzione per disinstallare gli assembly quando si esegue il test dei pacchetti di installazione o per i sistemi di produzione.
 
-### <a name="removing-an-assembly-with-gacutilexe"></a>Rimozione di un assembly con Gacutil.exe
+## <a name="removing-an-assembly-with-gacutilexe"></a>Rimozione di un assembly con Gacutil.exe
 
-1. Al prompt dei comandi digitare il seguente comando:
+Al prompt dei comandi digitare il seguente comando:
 
-    **gacutil –u** \<*nome assembly*>
+**gacutil –u** \<*nome assembly*>
 
-    In questo comando *nome assembly* è il nome dell'assembly da rimuovere dalla Global Assembly Cache.
+In questo comando *nome assembly* è il nome dell'assembly da rimuovere dalla Global Assembly Cache.
 
-    > [!WARNING]
-    > Evitare di usare Gacutil.exe per rimuovere assembly nei sistemi di produzione, perché è possibile che un assembly sia ancora richiesto da qualche applicazione. Usare invece Windows Installer che mantiene un conteggio dei riferimenti per ogni assembly installato nella GAC.
+> [!WARNING]
+> Evitare di usare Gacutil.exe per rimuovere assembly nei sistemi di produzione, perché è possibile che un assembly sia ancora richiesto da qualche applicazione. Usare invece Windows Installer che mantiene un conteggio dei riferimenti per ogni assembly installato nella GAC.
 
- L'esempio seguente rimuove un assembly denominato `hello.dll` dalla Global Assembly Cache.
+Nell'esempio seguente viene rimosso un assembly denominato `hello.dll` dal Global Assembly Cache:
 
-```
+```console
 gacutil -u hello
 ```
 
-### <a name="removing-an-assembly-with-windows-installer"></a>Rimozione di un assembly con Windows Installer
+## <a name="removing-an-assembly-with-windows-installer"></a>Rimozione di un assembly con Windows Installer
 
-1. In **Programmi e funzionalità** nel **Pannello di controllo** selezionare l'app da disinstallare. Se il pacchetto di installazione ha inserito assembly nella GAC, questi saranno rimossi da Windows Installer se non vengono usati da altre applicazioni.
+In **Programmi e funzionalità** nel **Pannello di controllo** selezionare l'app da disinstallare. Se il pacchetto di installazione ha inserito assembly nella GAC, questi saranno rimossi da Windows Installer se non vengono usati da altre applicazioni.
 
-    > [!NOTE]
-    > Windows Installer mantiene un conteggio dei riferimenti per gli assembly installati nella GAC. La rimozione di un assembly dalla Global Assembly Cache avviene solo quando il conteggio dei riferimenti raggiunge zero. Ciò indica che non viene usato da altre applicazioni installate da un pacchetto di Windows Installer.
+> [!NOTE]
+> Windows Installer mantiene un conteggio dei riferimenti per gli assembly installati nella GAC. La rimozione di un assembly dalla Global Assembly Cache avviene solo quando il conteggio dei riferimenti raggiunge zero. Ciò indica che non viene usato da altre applicazioni installate da un pacchetto di Windows Installer.
 
 ## <a name="see-also"></a>Vedere anche
 

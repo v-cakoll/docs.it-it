@@ -2,19 +2,19 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: cbaea82108dd3debcca972ca15dea248227330ac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3659f2c0690b00e728630c6e77308ba9d424bb1b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251111"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833927"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Consente di creare riferimenti a un'entità in un oggetto EntitySet.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
@@ -30,19 +30,19 @@ CreateRef(entityset_identifier, row_typed_expression)
   
  Nell'esempio seguente Orders e BadOrders sono entrambi oggetti EntitySet di tipo Order e si presuppone che Id sia la proprietà di chiave singola di Order. Nell'esempio viene illustrato in che modo è possibile creare un riferimento a un'entità in BadOrders. Si noti che il riferimento può essere inesatto,  ovvero potrebbe non identificare effettivamente un'entità specifica. In casi di questo tipo un'operazione `DEREF` su tale riferimento restituisce un valore Null.  
   
-```  
-select CreateRef(LOB.BadOrders, row(o.Id))   
-from LOB.Orders as o   
+```sql  
+SELECT CreateRef(LOB.BadOrders, row(o.Id))
+FROM LOB.Orders AS o
 ```  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore CREATEREF per creare riferimenti a un'entità in un set di entità. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura descritta in [How per: Eseguire una query che restituisce i risultati di StructuralType @ no__t-0.  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
+ [!code-sql[DP EntityServices Concepts#CREATEREF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#createref)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,17 +2,17 @@
 title: Riepilogo del processo di inferenza dello schema dataset
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: b0dd22412ddda86aa2883a26353abb1516a94e17
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785951"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833976"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Riepilogo del processo di inferenza dello schema dataset
 Il processo di inferenza determina innanzitutto, sulla base del documento XML, quali elementi verranno inferiti come tabelle. Sulla base delle rimanenti informazioni XML, il processo di inferenza consente quindi di determinare le colonne per tali tabelle. Nel caso di tabelle annidate, gli oggetti <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> vengono generati dal processo di inferenza.  
   
- Di seguito viene riportato un breve riepilogo delle regole di inferenza:  
+ Di seguito è riportato un breve riepilogo delle regole di inferenza:  
   
 - Gli elementi a cui sono associati attributi vengono inferiti come tabelle.  
   

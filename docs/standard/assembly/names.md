@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973152"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835313"
 ---
 # <a name="assembly-names"></a>Nomi degli assembly
 Il nome di un assembly viene archiviato nei metadati e ha un effetto significativo sull'ambito dell'assembly e sull'uso dell'assembly da parte di un'applicazione. Un assembly con un nome sicuro dispone di un nome completo costituito da nome, impostazioni cultura, chiave pubblica e numero di versione dell'assembly. Questo nome è spesso detto nome visualizzato. Nel caso degli assembly caricati è possibile ottenere tale nome con la proprietà <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -30,7 +30,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
   
  Il codice che richiede i tipi in un assembly deve usare un nome dell'assembly completo. Questa caratteristica è detta associazione completa. L'associazione parziale che specifica solo il nome di un assembly non è consentita per il riferimento ad assembly in .NET Framework.  
   
- Tutti i riferimenti agli assembly che costituiscono .NET Framework devono contenere anche il nome dell'assembly completo. Ad esempio il riferimento all'assembly System.Data .NET Framework per la versione 1.0 includerà:  
+ Tutti i riferimenti ad assembly che costituiscono il .NET Framework devono contenere anche il nome completo dell'assembly. Ad esempio, un riferimento all'assembly System. Data .NET Framework per la versione 1,0 include:  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  

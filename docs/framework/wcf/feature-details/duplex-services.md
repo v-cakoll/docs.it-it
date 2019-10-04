@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895165"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834778"
 ---
 # <a name="duplex-services"></a>Servizi duplex
 
@@ -87,7 +87,7 @@ Nel codice di esempio seguente viene illustrato come specificare l'indirizzo end
 ```
 
 > [!WARNING]
-> Il modello duplex non rileva automaticamente quando un servizio o un client chiude il canale. Quindi, se un client termina in modo imprevisto, per impostazione predefinita il servizio non riceve una notifica o se un servizio termina in modo imprevisto, il client non riceverà alcuna notifica. Se si utilizza un servizio disconnesso, viene generata <xref:System.ServiceModel.CommunicationException> l'eccezione. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario. Per ulteriori informazioni sulla gestione degli errori, vedere la pagina relativa alla [gestione degli errori WCF](../wcf-error-handling.md)
+> Il modello duplex non rileva automaticamente quando un servizio o un client chiude il canale. Quindi, se un client termina in modo imprevisto, per impostazione predefinita il servizio non riceve una notifica o se un servizio termina in modo imprevisto, il client non riceverà alcuna notifica. Se si utilizza un servizio disconnesso, viene generata <xref:System.ServiceModel.CommunicationException> l'eccezione. Client e servizi sono in grado di implementare il proprio protocollo per inviarsi vicendevolmente una notifica, se necessario. Per ulteriori informazioni sulla gestione degli errori, vedere la pagina relativa alla [gestione degli errori WCF](../wcf-error-handling.md).
 
 ## <a name="see-also"></a>Vedere anche
 

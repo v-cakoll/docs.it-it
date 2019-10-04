@@ -2,18 +2,18 @@
 title: 'Procedura: Elementi di ordinamento (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1bd76ade02f8f891e98b048ac866b6b9de65062f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710482"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835102"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Procedura: Elementi di ordinamento (Visual Basic)
 In questo esempio viene illustrato come scrivere una query che ordina i relativi risultati.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -29,7 +29,7 @@ Next
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: dati numerici in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -64,7 +64,7 @@ End Module
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  

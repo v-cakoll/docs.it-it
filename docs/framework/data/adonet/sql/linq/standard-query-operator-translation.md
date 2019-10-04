@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781022"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833674"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 
@@ -38,12 +38,12 @@ Il metodo <xref:System.Linq.Enumerable.Union%2A> viene definito per i tipi multi
 
 ### <a name="take-skip"></a>Metodi Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>i <xref:System.Linq.Enumerable.Skip%2A> metodi e sono definiti correttamente solo per i *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.
+i metodi <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> sono ben definiti solo per i *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "ignorare e prendere le eccezioni in SQL Server 2000" nella [sezione risoluzione dei problemi](troubleshooting.md).
 
-A causa delle limitazioni relative all'ordinamento in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL, tenta di spostare l'ordinamento dell'argomento di questi metodi sul risultato del metodo. Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
+A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento di questi metodi sul risultato del metodo. Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,7 +94,7 @@ Il valore `null` nelle regole di confronto viene definito da SQL Server. [!INCLU
 
 ### <a name="aggregates"></a>Aggregati
 
-Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]la semantica di SQL viene lasciata invariata e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per una sequenza vuota o per una sequenza che contiene solo valori null.
+Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la semantica di SQL viene lasciata invariata e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per una sequenza vuota o per una sequenza che contiene solo valori null.
 
 Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La somma, <xref:System.Linq.Enumerable.Sum%2A>, delle quantità di valori integer a 32 bit non viene calcolata utilizzando risultati a 64 bit ed è possibile che si verifichi un overflow per una conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Sum%2A>, anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.
 
@@ -102,7 +102,7 @@ In modo analogo la conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/
 
 ### <a name="entity-arguments"></a>Argomenti di entità
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]consente di usare i <xref:System.Linq.Enumerable.GroupBy%2A> tipi di entità nei metodi e. <xref:System.Linq.Enumerable.OrderBy%2A> Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abilita i tipi di entità da usare nei metodi <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A>. Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -121,17 +121,17 @@ Nell'implementazione dei metodi elencati di seguito è richiesta l'uguaglianza d
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]supporta l'uguaglianza e il confronto per gli argomenti *Flat* , ma non per gli argomenti che sono o contengono sequenze. Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL. Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta l'uguaglianza e il confronto per gli argomenti *Flat* , ma non per gli argomenti che sono o contengono sequenze. Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL. Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.
 
-Di seguito sono riportati esempi di argomenti non strutturati:
+Di seguito sono riportati alcuni esempi di argomenti Flat:
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-Gli esempi seguenti si riferiscono ad argomenti strutturati (gerarchici).
+Di seguito sono riportati alcuni esempi di argomenti non flat (gerarchici):
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Conversione di funzioni Visual Basic
 
@@ -158,7 +158,7 @@ Metodi di conversione:
 
 ### <a name="inheritance-mapping-restrictions"></a>Limitazioni relative al mapping di ereditarietà
 
-Per altre informazioni, vedere [Procedura: Mappare le gerarchie](how-to-map-inheritance-hierarchies.md)di ereditarietà.
+Per altre informazioni, vedere [Procedura: Mapping delle gerarchie di ereditarietà @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>Ereditarietà nelle query
 
@@ -198,7 +198,7 @@ Per ulteriori informazioni sul mapping a questi SQL Server tipi di data e ora, v
 
 ## <a name="sql-server-2000-support"></a>Supporto di SQL Server 2000
 
-Le seguenti SQL Server 2000 limitazioni (rispetto a Microsoft SQL Server 2005) influiscono sul [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporto.
+Le seguenti SQL Server 2000 limitazioni (rispetto a Microsoft SQL Server 2005) influiscono sul supporto di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operatori Cross Apply e Outer Apply
 
@@ -208,13 +208,13 @@ Questi operatori non sono disponibili in SQL Server 2000. [!INCLUDE[vbtecdlinq](
 
 ### <a name="text--ntext"></a>text/ntext
 
-I tipi `text` `nvarchar(max)`  /  `varchar(max)`di dati non possono essere utilizzati in determinate operazioni di query su, che sono supportate da Microsoft SQL Server 2005.  /  `ntext`
+I tipi di dati `text` @ no__t-1 @ no__t-2 non possono essere utilizzati in determinate operazioni di query su `varchar(max)` @ no__t-4 @ no__t-5, supportati da Microsoft SQL Server 2005.
 
 Non sono disponibili risoluzioni per questa limitazione. In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento attivato dalle query annidate
 
-SQL Server 2000 (tramite SP4) Binder presenta alcune idiosincrasie attivate da query nidificate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, non è possibile definire il set [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di query che potrebbero causare SQL Server eccezioni.
+SQL Server 2000 (tramite SP4) Binder presenta alcune idiosincrasie attivate da query nidificate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, non è possibile definire il set di query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che potrebbero causare SQL Server eccezioni.
 
 ### <a name="skip-and-take-operators"></a>Operatori Skip e Take
 
@@ -232,7 +232,7 @@ La materializzazione crea oggetti CLR da righe restituite da una o più query SQ
 
   - Cast dei tipi nelle proiezioni
 
-- I metodi che seguono <xref:System.Linq.Enumerable.AsEnumerable%2A> il metodo vengono *eseguiti localmente*. Questo metodo non provoca l'esecuzione immediata.
+- I metodi che seguono il metodo <xref:System.Linq.Enumerable.AsEnumerable%2A> vengono *eseguiti localmente*. Questo metodo non provoca l'esecuzione immediata.
 
 - È possibile usare `struct` come tipo restituito del risultato di una query o come un membro del tipo di risultato. Le entità devono essere classi. I tipi anonimi vengono materializzati come istanze della classe, tuttavia gli struct denominati, non le entità, possono essere usati nella proiezione.
 

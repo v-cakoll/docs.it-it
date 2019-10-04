@@ -4,12 +4,12 @@ description: Una guida a diversi modi per le architetture aziendali viene distri
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577634"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834330"
 ---
 # <a name="architecture-deployment-approaches"></a>Approcci alla distribuzione dell'architettura
 
@@ -97,13 +97,13 @@ I vantaggi dei contenitori includono:
 
 Un contenitore viene eseguito in un host contenitore, che a sua volta può essere eseguito in un computer bare metal o in una macchina virtuale. Più contenitori o istanze degli stessi contenitori possono essere eseguiti in un singolo host. Per il failover e la resilienza reali, i contenitori devono essere ridimensionati tra gli host.
 
-Per altre informazioni sui contenitori Docker, vedere [che cos'è Docker](../microservices/container-docker-introduction/docker-defined.md)?
+Per altre informazioni sui contenitori Docker, vedere [che cos'è Docker](../microservices/container-docker-introduction/docker-defined.md).
 
 Per gestire i contenitori tra gli host è in genere necessario uno strumento di orchestrazione, ad esempio Kubernetes. La configurazione e la gestione di soluzioni di orchestrazione possono aggiungere ulteriore sovraccarico e complessità ai progetti. Fortunatamente, molti provider di servizi cloud offrono servizi di orchestrazione attraverso soluzioni PaaS per semplificare la gestione dei contenitori.
 
 L'immagine seguente illustra un esempio di installazione di Kubernetes. Nodi nell'indirizzo di installazione con scalabilità orizzontale e failover. Eseguono istanze di contenitore Docker gestite dal server master. *Kubelet* è il client che inoltra i comandi da Kubernetes a docker.
 
-![kubernetes](./media/kubernetes-example.png)
+![Kubernetes](./media/kubernetes-example.png)
 
 Per ulteriori informazioni sull'orchestrazione, vedere [Kubernetes in Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes).
 
@@ -141,7 +141,7 @@ Esiste una vasta gamma di opzioni disponibili per l'architettura, incluso un app
 |**Scala**|VM       |Istanza |App      |Funzione  |
 |**Astrae**|Hardware|Piattaforma|Host sistema operativo|Runtime   |
 |**Unità** |VM       |Progetto  |Image    |Codice      |
-|**Durata**|Mesi|Da giorni a mesi|Da minuti a giorni|Da millisecondi a minuti|
+|**Durata**|mesi|Da giorni a mesi|Da minuti a giorni|Da millisecondi a minuti|
 |**Responsabilità**|Applicazioni, dipendenze, Runtime e sistema operativo|Applicazioni e dipendenze|Applicazioni, dipendenze e Runtime|Funzione
 
 * La **scala** si riferisce all'unità utilizzata per ridimensionare l'applicazione

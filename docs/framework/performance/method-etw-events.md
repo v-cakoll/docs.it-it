@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046381"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834556"
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 
@@ -36,16 +36,16 @@ Gli eventi dei metodi CLR sono suddivisi ulteriormente in:
 
 ## <a name="clr-method-events"></a>Eventi dei metodi CLR
 
-La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).
+La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [parole chiave e livelli ETW di CLR](clr-etw-keywords-and-levels.md).
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Informativo (4)|
 |`NGenKeyword` (0x20) nel provider di runtime|Informativo (4)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|
 |`NGENRundownKeyword` (0x20) nel provider di rundown|Informativo (4)|
 
-La tabella seguente mostra le informazioni sull'evento.
+La tabella seguente mostra le informazioni sull'evento:
 
 |event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
@@ -54,9 +54,9 @@ La tabella seguente mostra le informazioni sull'evento.
 |`MethodDCStart_V1`|137|Enumera i metodi durante un rundown di avvio.|
 |`MethodDCEnd_V1`|138|Enumera i metodi durante un rundown di fine.|
 
-La tabella seguente mostra i dati dell'evento.
+La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|DESCRIZIONE|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco di un metodo. Per i metodi helper JIT, è impostato sull'indirizzo iniziale del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo (0 per helper JIT).|
@@ -74,15 +74,15 @@ La tabella seguente mostra i dati dell'evento.
 
 Questi eventi vengono generati solo nel provider di rundown. Indicano la fine dell'enumerazione dei metodi durante un rundown di avvio o di fine. Ovvero, vengono generati quando è abilitata la parola chiave `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`o `AppDomainResourceManagementRundownKeyword` .
 
-La tabella seguente illustra la parola chiave e il livello
+La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) nel provider di rundown|Informativo (4)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|
 |`NGENRundownKeyword` (0x20) nel provider di rundown|Informativo (4)|
 
-La tabella seguente mostra le informazioni sull'evento.
+La tabella seguente mostra le informazioni sull'evento:
 
 |event|ID evento|Descrizione|
 |-----------|--------------|----------------|
@@ -91,7 +91,7 @@ La tabella seguente mostra le informazioni sull'evento.
 |`DCEndInit_V1`|148|Inviato prima dell'avvio dell'enumerazione durante un rundown di fine.|
 |`DCEndComplete_V1`|146|Inviato alla fine dell'enumerazione durante un rundown di fine.|
 
-La tabella seguente mostra i dati dell'evento.
+La tabella seguente mostra i dati dell'evento:
 
 |Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
@@ -103,16 +103,16 @@ La tabella seguente mostra i dati dell'evento.
 
 ## <a name="clr-method-verbose-events"></a>Eventi dettagliati dei metodi CLR
 
-La tabella seguente illustra la parola chiave e il livello
+La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Dettagliato (5)|
 |`NGENRundownKeyword` (0x20) nel provider di rundown|Dettagliato (5)|
 
-La tabella seguente mostra le informazioni sull'evento.
+La tabella seguente mostra le informazioni sull'evento:
 
 |event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
@@ -121,7 +121,7 @@ La tabella seguente mostra le informazioni sull'evento.
 |`MethodDCStartVerbose_V1`|141|Enumera i metodi durante un rundown di avvio.|
 |`MethodDCEndVerbose_V1`|142|Enumera i metodi durante un rundown di fine.|
 
-La tabella seguente mostra i dati dell'evento.
+La tabella seguente mostra i dati dell'evento:
 
 |Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
@@ -142,24 +142,24 @@ La tabella seguente mostra i dati dell'evento.
 
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted
 
-La tabella seguente illustra la parola chiave e il livello
+La tabella seguente illustra la parola chiave e il livello:
 
-|Parola chiave per la generazione dell'evento|Level|
+|Parola chiave per la generazione dell'evento|Livello|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|
 |`JitRundownKeyword` (0x10) nel provider di rundown|Dettagliato (5)|
 |`NGENRundownKeyword` (0x20) nel provider di rundown|Dettagliato (5)|
 
-La tabella seguente mostra le informazioni sull'evento.
+La tabella seguente mostra le informazioni sull'evento:
 
-|event|ID evento|DESCRIZIONE|
+|event|ID evento|Descrizione|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Generato quando un metodo viene compilato tramite JIT.|
 
-La tabella seguente mostra i dati dell'evento.
+La tabella seguente mostra i dati dell'evento:
 
-|Nome campo|Tipo di dati|DESCRIZIONE|
+|Nome campo|Tipo di dati|Descrizione|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|Identificatore univoco del metodo.|
 |ModuleID|win:UInt64|Identificatore del modulo a cui appartiene il metodo.|

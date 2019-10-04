@@ -2,12 +2,12 @@
 title: Gestire gli ambienti di produzione Docker
 description: Informazioni sui punti chiave per la gestione di un ambiente di produzione basato su contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673468"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834510"
 ---
 # <a name="manage-production-docker-environments"></a>Gestire gli ambienti di produzione Docker
 
@@ -17,13 +17,13 @@ La gestione e l'orchestrazione del cluster è il processo di controllo di un gru
 
 Il servizio contenitore consente la distribuzione rapida delle soluzioni open source di clustering e orchestrazione dei contenitori più diffuse. Usa le immagini Docker per assicurare la portabilità completa dei contenitori delle applicazioni. Tramite il servizio contenitore, è possibile distribuire DC/OS (supportato da Mesosphere e Apache Mesos) e i cluster Docker Swarm con i modelli di Azure Resource Manager o il portale di Azure per assicurare la scalabilità di queste applicazioni a migliaia, o persino a decine di migliaia, di contenitori.
 
-I cluster vengono distribuiti tramite set di scalabilità di macchine virtuali di Azure e sfruttano i vantaggi delle offerte di rete e di archiviazione di Azure. Per accedere al servizio contenitore è necessaria una sottoscrizione di Azure. Con il servizio contenitore è possibile sfruttare i vantaggi delle funzionalità di livello aziendale di Azure, mantenendo al tempo stesso la portabilità delle applicazioni, anche ai livelli di orchestrazione.
+Questi cluster vengono distribuiti usando i set di scalabilità di macchine virtuali di Azure e i cluster sfruttano le offerte di rete e di archiviazione di Azure. Per accedere al servizio contenitore è necessaria una sottoscrizione di Azure. Con il servizio contenitore è possibile sfruttare i vantaggi delle funzionalità di livello aziendale di Azure, mantenendo al tempo stesso la portabilità delle applicazioni, anche ai livelli di orchestrazione.
 
 La tabella 6-1 elenca strumenti di gestione comuni con gli agenti di orchestrazione, le utilità di pianificazione e la piattaforma di clustering correlati.
 
 **Tabella 6-1**. Strumenti di gestione Docker
 
-| Strumenti di gestione | DESCRIZIONE | Agenti di orchestrazione correlati |
+| Strumenti di gestione | Descrizione | Agenti di orchestrazione correlati |
 |------------------|-------------|-----------------------|
 | [Monitoraggio di Azure per contenitori](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Strumento di gestione Kubernetes dedicato di Azure | Servizio Azure Kubernetes (AKS) |
 | [Interfaccia utente Web di Kubernetes (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Strumento di gestione Kubernetes che consente di monitorare e gestire un cluster Kubernetes locale | Servizio Azure Kubernetes<br/>Kubernetes locale |
@@ -34,7 +34,7 @@ La tabella 6-1 elenca strumenti di gestione comuni con gli agenti di orchestrazi
 
 Un'altra opzione per la distribuzione e la gestione di cluster è Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) è una piattaforma di microservizi Microsoft che include l'orchestrazione dei contenitori e modelli di programmazione per sviluppatori per compilare applicazioni di microservizi a scalabilità elevata. Service Fabric supporta Docker in contenitori Linux e Windows e può essere eseguito in server Windows e Linux.
 
-Di seguito sono riportati gli strumenti di gestione di Service Fabric:
+Di seguito sono riportati Service Fabric strumenti di gestione:
 
 - Il [portale di Azure per Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) per le operazioni correlate ai cluster, ad esempio creazione/aggiornamento/eliminazione di un cluster oppure la configurazione dell'infrastruttura (macchine virtuali, bilanciamento del carico, rete e così via).
 

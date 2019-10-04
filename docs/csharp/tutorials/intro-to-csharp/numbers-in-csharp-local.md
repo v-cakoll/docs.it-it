@@ -3,24 +3,24 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b0dbb654253b7c6a1ead8f0454be86227a4afb68
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736712"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834091"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
 Questa esercitazione presenta in modo interattivo i tipi numerici in C#. Si scriveranno piccole quantità di codice, quindi si compilerà ed eseguirà tale codice. L'esercitazione contiene una serie di lezioni che esplorano numeri e operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="explore-integer-math"></a>Esplorare le operazioni matematiche su interi
 
-Creare una directory denominata **numbers-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console -n NumbersInCSharp -o .`.
+Creare una directory denominata *numbers-quickstart*. Impostarla come directory corrente ed eseguire `dotnet new console -n NumbersInCSharp -o .`.
 
-Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con quanto segue:
+Aprire *Program.cs* nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con quanto segue:
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 
-Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
+Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, un numero intero zero, positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
 
 - `-` per la sottrazione
 - `*` per la moltiplicazione
@@ -56,7 +56,7 @@ Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra per scoprire che cosa correggere.
 > Questo esercizio sarà utile per imparare la struttura del codice C#.
 
-Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithIntegers` e scrivere un nuovo metodo `Main` che chiama `WorkingWithIntegers`. Al termine, il codice dovrebbe risultare simile al seguente:
+Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithIntegers` e scrivere un nuovo metodo `Main` che chiama `WorkingWithIntegers`. Al termine, il codice dovrebbe essere simile al seguente:
 
 ```csharp
 using System;
@@ -277,7 +277,7 @@ Si sa che `0.3` periodico non è esattamente identico a `1/3`.
 
 ***Esercizio***
 
-Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazione e divisione usando il tipo `double`.  Provare calcoli più complessi.
+Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazione e divisione usando il tipo `double`. Provare calcoli più complessi.
 
 Dopo avere dedicato un po' di tempo all'esercizio, inserire il codice scritto in un nuovo metodo. Denominare il nuovo metodo `WorkWithDoubles`.
 

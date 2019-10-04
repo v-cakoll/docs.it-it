@@ -5,30 +5,30 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d4a0fd819d08fdd936dd1ef35e8cd8c00947f9e0
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662668"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834662"
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 
-In questo argomento illustra le linee guida per gli sviluppatori su come scrivere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le applicazioni con localizzabile [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In passato, la localizzazione di un'interfaccia utente era un processo molto tempo. Ogni lingua dell'interfaccia utente è stato adattato per richiedeva modifiche pixel per pixel. Oggi, con la progettazione e standard, di codifica corretti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] può essere costruito in modo che i localizzatori hanno ridimensionamento e riposizionamento a scopo. L'approccio alla scrittura di applicazioni che è possibile ridimensionare e riposizionare con maggiore semplicità viene definito layout automatico e può essere ottenuta utilizzando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettazione dell'applicazione.
+In questo argomento vengono presentate le linee guida per gli sviluppatori su come scrivere applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] localizzabile. In passato, la localizzazione di un'interfaccia utente era un processo che richiedeva molto tempo. Ogni lingua in cui l'interfaccia utente è stata adattata per la regolazione del pixel è necessaria. Oggi, con la progettazione corretta e gli standard di codifica corretti, è possibile costruire [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] in modo che i localizzatori abbiano un minor ridimensionamento e un riposizionamento. L'approccio alla scrittura di applicazioni che possono essere ridimensionate e riposizionate più facilmente viene definito layout automatico e può essere eseguito utilizzando la progettazione di applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 
 ## <a name="advantages-of-using-automatic-layout"></a>Vantaggi dell'uso del layout automatico
 
-Poiché il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di presentazione è potente e flessibile, offre la possibilità di layout di elementi in un'applicazione che può essere modificata per soddisfare i requisiti di lingue diverse. L'elenco seguente indica alcuni vantaggi del layout automatico.
+Poiché il sistema di presentazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è potente e flessibile, offre la possibilità di applicare il layout degli elementi di un'applicazione che possono essere modificati in base ai requisiti di lingue diverse. L'elenco seguente indica alcuni vantaggi del layout automatico.
 
-- Interfaccia utente viene visualizzata correttamente in qualsiasi linguaggio.
+- L'interfaccia utente viene visualizzata correttamente in qualsiasi lingua.
 
 - Riduce l'esigenza di ulteriori modifiche alla posizione e alle dimensioni dei controlli dopo la traduzione del testo.
 
 - Riduce l'esigenza di ulteriori modifiche alle dimensioni delle finestre.
 
-- Layout dell'interfaccia utente viene visualizzato correttamente in qualsiasi linguaggio.
+- Il layout dell'interfaccia utente viene visualizzato correttamente in qualsiasi lingua.
 
 - La localizzazione può essere ridotta a semplici attività che vanno poco oltre la traduzione delle stringhe.
 
@@ -44,7 +44,7 @@ Nell'esempio, l'unica operazione da compiere per creare un pulsante in lingua sp
 
 [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]
 
-La figura seguente mostra l'output degli esempi di codice:
+Il grafico seguente mostra l'output degli esempi di codice:
 
 ![Lo stesso pulsante con testo in lingue diverse](./media/use-automatic-layout-overview/auto-resizable-button.png)
 
@@ -52,19 +52,19 @@ La figura seguente mostra l'output degli esempi di codice:
 
 ## <a name="automatic-layout-and-coding-standards"></a>Layout automatico e standard di codifica
 
-Usa l'approccio di layout automatico richiede un set di codice e gli standard di progettazione e le regole per produrre un'interfaccia utente completamente localizzabile. Le linee guida riportate di seguito agevolano la codifica del layout automatico.
+L'uso dell'approccio di layout automatico richiede un set di regole e standard di codifica e progettazione per produrre un'interfaccia utente completamente localizzabile. Le linee guida riportate di seguito agevolano la codifica del layout automatico.
 
 **Non usare posizioni assolute**
 
-- Non usare <xref:System.Windows.Controls.Canvas> perché gli elementi vengono posizionati in modo assoluto.
+- Non usare <xref:System.Windows.Controls.Canvas> perché posiziona gli elementi in modo assoluto.
 
-- Uso <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, e <xref:System.Windows.Controls.Grid> per posizionare i controlli.
+- Usare <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel> e <xref:System.Windows.Controls.Grid> per posizionare i controlli.
 
-Per una discussione sui vari tipi di pannelli, vedere [pannelli Panoramica](../controls/panels-overview.md).
+Per una descrizione dei vari tipi di pannelli, vedere [Cenni preliminari sui pannelli](../controls/panels-overview.md).
 
-**Non si imposta una dimensione fissa per una finestra**
+**Non impostare dimensioni fisse per una finestra**
 
-- Usare <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Ad esempio:
+- Usare <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Esempio:
 
   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
@@ -72,15 +72,15 @@ Per una discussione sui vari tipi di pannelli, vedere [pannelli Panoramica](../c
 
 - Aggiungere un <xref:System.Windows.FrameworkElement.FlowDirection%2A> all'elemento radice dell'applicazione.
 
-  WPF offre un modo pratico per supportare orizzontali, bidirezionale e layout verticale. Nel framework della presentazione di <xref:System.Windows.FrameworkElement.FlowDirection%2A> proprietà può essere utilizzata per definire il layout. I modelli di direzione del flusso sono:
+  WPF offre un modo pratico per supportare layout orizzontali, bidirezionali e verticali. Nel Framework di presentazione, è possibile usare la proprietà <xref:System.Windows.FrameworkElement.FlowDirection%2A> per definire il layout. I modelli di direzione del flusso sono:
 
-  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb)-layout orizzontale per latino, asiatico e così via.
+  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb): layout orizzontale per il latino, l'Asia orientale e così via.
 
-  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb)-bidirezionale per arabo, ebraico e così via.
+  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb): bidirezionale per l'arabo, l'ebraico e così via.
 
-**Usare tipi di carattere compositi anziché tipi di carattere fisici**
+**Usare tipi di carattere compositi invece di tipi di carattere fisici**
 
-- Con tipi di carattere compositi, il <xref:System.Windows.Controls.Control.FontFamily%2A> proprietà non deve essere localizzata.
+- Con i tipi di carattere compositi non è necessario localizzare la proprietà <xref:System.Windows.Controls.Control.FontFamily%2A>.
 
 - Gli sviluppatori possono usare uno dei tipi di carattere riportati di seguito oppure crearne uno personalizzato.
 
@@ -88,34 +88,34 @@ Per una discussione sui vari tipi di pannelli, vedere [pannelli Panoramica](../c
   - Global San Serif
   - Global Serif
 
-**Aggiungere XML: lang**
+**Aggiungi XML: lang**
 
-- Aggiungere il `xml:lang` attributo nell'elemento radice dell'interfaccia utente, ad esempio `xml:lang="en-US"` per un'applicazione in lingua inglese.
+- Aggiungere l'attributo `xml:lang` nell'elemento radice dell'interfaccia utente, ad esempio `xml:lang="en-US"` per un'applicazione in lingua inglese.
 
-- Perché usare tipi di carattere compositi `xml:lang` per determinare il tipo di carattere da usare, impostare questa proprietà per supportare scenari multilingue.
+- Poiché i tipi di carattere composito utilizzano `xml:lang` per determinare il tipo di carattere da utilizzare, impostare questa proprietà per supportare scenari multilingue.
 
 <a name="autolay_grids"></a>
 
 ## <a name="automatic-layout-and-grids"></a>Layout automatico e griglie
 
-Il <xref:System.Windows.Controls.Grid> elemento, è utile per il layout automatico poiché consente a uno sviluppatore di posizionare gli elementi. Oggetto <xref:System.Windows.Controls.Grid> controllo è in grado di distribuire lo spazio disponibile tra gli elementi figlio, usando una disposizione di riga e colonna. Elementi dell'interfaccia utente possono estendersi su più celle, ed è possibile inserire griglie all'interno di griglie. Griglie sono utili perché consentono di creare e posizionare l'interfaccia utente complessa. L'esempio seguente illustra l'uso di una griglia per posizionare alcuni pulsanti e del testo. Si noti che l'altezza e la larghezza delle celle sono impostate per <xref:System.Windows.GridUnitType.Auto>; di conseguenza, la cella che contiene il pulsante con un'immagine viene modificata per adattarsi all'immagine.
+L'elemento <xref:System.Windows.Controls.Grid> è utile per il layout automatico perché consente agli sviluppatori di posizionare gli elementi. Un controllo <xref:System.Windows.Controls.Grid> è in grado di distribuire lo spazio disponibile tra gli elementi figlio, usando una disposizione di colonne e righe. Gli elementi dell'interfaccia utente possono estendersi su più celle ed è possibile disporre di griglie all'interno di griglie. Le griglie sono utili perché consentono di creare e posizionare interfacce utente complesse. L'esempio seguente illustra l'uso di una griglia per posizionare alcuni pulsanti e del testo. Si noti che l'altezza e la larghezza delle celle sono impostate su <xref:System.Windows.GridUnitType.Auto>; Pertanto, la cella che contiene il pulsante con un'immagine viene modificata in base all'immagine.
 
 [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]
 
 La figura seguente illustra la griglia prodotta dal codice precedente.
 
-![Esempio di Grid](./media/glob-grid.png "glob_grid") griglia
+Griglia di ![esempio griglia](./media/glob-grid.png "glob_grid")
 
 <a name="autolay_grids_issharedsizescope"></a>
 
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Layout automatico e griglie basate sull'uso della proprietà IsSharedSizeScope
 
-Oggetto <xref:System.Windows.Controls.Grid> elemento è utile nelle applicazioni localizzabili per creare controlli che vengono modificati per adattarsi al contenuto. In alcuni casi, tuttavia, può essere opportuno che i controlli mantengano una determinata dimensione indipendentemente dal contenuto. Ad esempio, nei casi dei pulsanti "OK", "Annulla" e "Sfoglia", probabilmente non si vuole che le dimensioni si adattino al contenuto. In questo caso il <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> proprietà associata è utile per condividere le stesse dimensioni tra più elementi grid. Nell'esempio seguente viene illustrato come condividere colonne e righe di dati tra più sulle dimensioni <xref:System.Windows.Controls.Grid> elementi.
+Un elemento <xref:System.Windows.Controls.Grid> è utile nelle applicazioni localizzabili per creare controlli che si adattano al contenuto. In alcuni casi, tuttavia, può essere opportuno che i controlli mantengano una determinata dimensione indipendentemente dal contenuto. Ad esempio, nei casi dei pulsanti "OK", "Annulla" e "Sfoglia", probabilmente non si vuole che le dimensioni si adattino al contenuto. In questo caso la proprietà associata <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> è utile per condividere le stesse dimensioni tra più elementi della griglia. Nell'esempio seguente viene illustrato come condividere dati di ridimensionamento di colonne e righe tra più elementi <xref:System.Windows.Controls.Grid>.
 
 [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]
 
 > [!NOTE]
-> Per l'esempio di codice completo, vedere [condivisione di proprietà di ridimensionamento tra griglie](../controls/how-to-share-sizing-properties-between-grids.md)
+> Per l'esempio di codice completo, vedere [condividere le proprietà di ridimensionamento tra le griglie](../controls/how-to-share-sizing-properties-between-grids.md).
 
 ## <a name="see-also"></a>Vedere anche
 

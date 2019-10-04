@@ -2,18 +2,18 @@
 title: Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 description: Informazioni sul flusso di lavoro del ciclo interno per lo sviluppo di applicazioni Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c97cd9ba8d740f13c22caa45e344c4961e3b0600
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214362"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834486"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 
 Prima di attivare il flusso di lavoro del ciclo esterno che coinvolge l'intero ciclo DevOps, è necessario che tutto abbia inizio nel computer dello sviluppatore. Si scrive il codice dell'app stessa usando i linguaggi o le piattaforme preferiti, e la si testa in locale (figura 4-21). In ogni caso, la questione importante è una. Indipendentemente dal linguaggio, dal framework o dalle piattaforme scelti, in questo flusso di lavoro specifico si sviluppano e testano sempre contenitori Docker, ma a livello locale.
 
-![Passaggio 1: Codice, esecuzione, debug](./media/image18.png)
+![Diagramma che illustra il concetto di un ambiente di sviluppo a ciclo interno.](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **Figura 4-21**. Contesto di sviluppo del ciclo interno
 
@@ -35,7 +35,7 @@ Le app sono costituite da servizi personalizzati e raccolte aggiuntive, vale a d
 
 La figura 4-22 illustra i passaggi di base che devono essere generalmente eseguiti per compilare un'app Docker e le descrizioni dettagliate di ogni passaggio.
 
-![Panoramica del flusso di lavoro: Passaggio 1: scrivere il codice dell'app, Passaggio 2: scrivere Dockerfile, Passaggio 3: creare immagini definite con Dockerfile, Passaggio 4: definire servizi con il file docker-compose, Passaggio 5: eseguire contenitori o app composte, Passaggio 6: testare app, Passaggio 7: eseguire il push per iniziare il ciclo esterno (pipeline CI/CD ) oppure continuare a sviluppare.](./media/image19.png)
+![Diagramma che illustra i sette passaggi necessari per creare un'app in contenitori.](./media/docker-apps-inner-loop-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 **Figura 4-22**. Flusso di lavoro generale del ciclo di vita di applicazioni Docker in contenitori tramite l'interfaccia della riga di comando di Docker
 
@@ -81,7 +81,7 @@ L'estensione Docker per Visual Studio Code offre le funzionalità seguenti:
 
 Per installare l'estensione Docker, premere CTRL + MAIUSC + P, digitare `ext install`, quindi eseguire il comando Installa estensione per visualizzare l'elenco delle estensioni del Marketplace. Successivamente, digitare **docker** per filtrare i risultati, quindi selezionare l'estensione del supporto per Docker come illustrato nella figura 4-23.
 
-![Visualizzazione dell'estensione Docker per Visual Studio Code.](./media/image20.png)
+![Visualizzazione dell'estensione Docker per Visual Studio Code.](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
 **Figura 4-23**. Installazione dell'estensione Docker in Visual Studio Code
 
@@ -96,7 +96,7 @@ Il `DockerFile` viene comunemente inserito nella cartella radice dell'app o del 
 
 La figura 4-24 visualizza come il file docker-compose viene aggiunto usando l'estensione Docker per Visual Studio Code.
 
-![Visualizzazione della console dell'estensione Docker per Visual Studio Code.](./media/image24.png)
+![Visualizzazione della console dell'estensione Docker per Visual Studio Code.](./media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)
 
 **Figura 4-24**. File Docker aggiunti usando il **comando Add Docker files to Workspace** (Aggiungi file Docker all'area di lavoro)
 
@@ -158,7 +158,7 @@ Per ogni servizio personalizzato comprensivo dell'app sarà necessario creare un
 
 Per creare un'immagine nell'ambiente locale e usare il Dockerfile, è possibile usare il comando docker build, come illustrato nella figura 4-25. È anche possibile eseguire `docker-compose up --build` per applicazioni composte da diversi contenitori/servizi.
 
-![Output della console per la compilazione di docker-compose che illustra lo stato di avanzamento del download delle immagini.](./media/image25.png)
+![Screenshot che mostra l'output della console del comando Docker Build.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
 **Figura 4-25**. Esecuzione del comando docker build
 
@@ -168,7 +168,7 @@ Questo esempio crea un'immagine Docker denominata `cesardl/netcore-webapi-micros
 
 È possibile trovare le immagini esistenti nel repository locale del computer di sviluppo usando il comando docker images, come illustrato nella figura 4-26.
 
-![Output della console del comando docker images che illustra le immagini esistenti.](./media/image26.png)
+![Output della console del comando docker images che illustra le immagini esistenti.](./media/docker-apps-inner-loop-workflow/view-existing-images-with-docker-images.png)
 
 **Figura 4-26**. Visualizzazione delle immagini esistenti usando il comando docker images
 
@@ -223,13 +223,13 @@ Per questo tipo specifico di distribuzione, le richieste inviate alla porta 80 s
 
 Nella maggior parte degli scenari aziendali un'applicazione Docker sarà composta da più servizi. In questi casi è possibile eseguire il comando `docker-compose up` (figura 4-27), che userà il file docker-compose.yml che probabilmente è stato creato in precedenza. Se eseguito, questo comando distribuisce un'applicazione composta con tutti i relativi contenitori correlati.
 
-![Output della console del comando docker-compose up.](./media/image27.png)
+![Output della console del comando docker-compose up.](./media/docker-apps-inner-loop-workflow/results-docker-compose-up.png)
 
 **Figura 4-27**. Risultati ottenuti eseguendo il comando "docker-compose up"
 
 Dopo aver eseguito il comando `docker-compose up`, l'applicazione e i relativi contenitori correlati vengono distribuiti nell'host Docker, come illustrato nella figura 4-28 (rappresentazione delle macchina virtuale).
 
-![Macchina virtuale che esegue applicazioni con più contenitori.](./media/image28.png)
+![Macchina virtuale che esegue applicazioni con più contenitori.](./media/docker-apps-inner-loop-workflow/vm-with-docker-containers-deployed.png)
 
 **Figura 4-28**. VM con contenitori Docker distribuiti
 
@@ -247,7 +247,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 Nell'host Docker aprire un browser e passare al sito. Verrà visualizzato il servizio o l'app in esecuzione, come illustrato nella figura 4-29.
 
-![Visualizzazione del browser con la risposta da localhost/API/values.](./media/image29.png)
+![Visualizzazione del browser con la risposta da localhost/API/values.](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-localhost.png)
 
 **Figura 4-29**. Test dell'applicazione Docker in locale tramite localhost
 
@@ -255,7 +255,7 @@ Si noti che si sta usando la porta 80, ma internamente si viene reindirizzati al
 
 È possibile testare l'app usando CURL dal terminale. In un'installazione Docker in Windows l'indirizzo IP predefinito è 10.0.75.1, come illustrato nella figura 4-30.
 
-![Output della console con http://10.0.75.1/API/values ottenuto tramite CURL](./media/image30.png)
+![Output della console con http://10.0.75.1/API/values ottenuto tramite CURL](./media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **Figura 4-30**. Test di un'applicazione Docker in locale tramite CURL
 

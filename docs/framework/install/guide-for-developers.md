@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051951"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833648"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
 
@@ -155,7 +155,7 @@ Entrambi i programmi di installazione offline e Web sono progettati per computer
 
 - .NET Framework 4.5, le relative versioni intermedie, .NET Framework 4.6 e le relative versioni intermedie, .NET Framework 4.7 e le relative versioni intermedie, nonché .NET Framework 4.8 sostituiscono .NET Framework 4. Quando si installano queste versioni in un sistema con .NET Framework 4, gli assembly vengono sostituiti.
 
-- Quando si disinstalla .NET Framework 4.5, le relative versioni intermedie, .NET Framework 4.6 e le relative versioni intermedie, .NET Framework 4.7 e le relative versioni intermedie o .NET Framework 4.8, vengono rimossi anche i file preesistenti di .NET Framework 4. Se si vuole tornare a .NET Framework 4, è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [Installazione di .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
+- Quando si disinstalla .NET Framework 4.5, le relative versioni intermedie, .NET Framework 4.6 e le relative versioni intermedie, .NET Framework 4.7 e le relative versioni intermedie o .NET Framework 4.8, vengono rimossi anche i file preesistenti di .NET Framework 4. Se si vuole tornare a .NET Framework 4, è necessario reinstallarlo insieme a tutti i relativi aggiornamenti. Vedere [installazione del .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
 
 - Per installare .NET Framework 4.5 e le versioni intermedie, .NET Framework 4.6 e le versioni intermedie e .NET Framework 4.7 e la versione intermedia, nonché .NET Framework 4.8, è necessario avere le credenziali di amministratore.
 

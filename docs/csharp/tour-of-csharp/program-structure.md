@@ -3,12 +3,12 @@ title: Struttura del programma C# - Panoramica del linguaggio C#
 description: Informazioni sui blocchi predefiniti di un programma C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634566"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834161"
 ---
 # <a name="program-structure"></a>Struttura del programma
 
@@ -20,7 +20,7 @@ Nell'esempio viene dichiarata una classe denominata `Stack` in uno spazio dei no
 
 Il nome completo di questa classe è `Acme.Collections.Stack`. La classe contiene vari membri: un campo `top`, due metodi `Push` e `Pop` e una classe annidata `Entry`. La classe `Entry` contiene altri tre membri: un campo `next`, un campo `data` e un costruttore. Supponendo che il codice sorgente dell'esempio sia archiviato nel file `acme.cs`, la riga di comando
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ Poiché un assembly è un'unità autodescrittiva di funzionalità contenente cod
 
 Se il programma è archiviato nel file `example.cs`, quando `example.cs` viene compilato è possibile fare riferimento all'assembly acme.dll usando l'opzione /r del compilatore:
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 In questo modo verrà creato un assembly eseguibile denominato `example.exe` che, quando viene eseguito, genera l'output:
 
-```
+```console
 100
 10
 1

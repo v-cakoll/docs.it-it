@@ -2,12 +2,12 @@
 title: Problemi e soluzioni per la gestione dei dati distribuiti
 description: Informazioni sulle problematiche e le soluzioni per la gestione dei dati distribuiti nell'area dei microservizi.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673138"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834453"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -47,7 +47,7 @@ In un'ipotetica versione monolitica di questa applicazione, quando il prezzo vie
 
 Tuttavia, in un'applicazione basata su microservizi le tabelle Product e Basket appartengono ai rispettivi microservizi. Nessun microservizio deve includere tabelle/risorse di archiviazione di proprietà di un altro microservizio nelle proprie transazioni e nemmeno nelle query dirette, come illustrato nella figura 4-9.
 
-![Un microservizio non può accedere direttamente a una tabella in un altro microservizio; per sincronizzare i dati è necessario usare la coerenza finale.](./media/image9.png)
+![Diagramma che mostra che i dati del database di microservizi non possono essere condivisi.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Un microservizio non può accedere direttamente a una tabella in un altro microservizio
 

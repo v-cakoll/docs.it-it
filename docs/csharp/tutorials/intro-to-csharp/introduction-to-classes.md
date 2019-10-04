@@ -3,20 +3,20 @@ title: Classi e oggetti - Esercitazione introduttiva su C#
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850730"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834111"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Esplorare la programmazione orientata agli oggetti con classi e oggetti
 
-Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
+Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo. L'esercitazione .NET [Hello World in 10 minuti](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) contiene le istruzioni per configurare l'ambiente di sviluppo locale in Windows, Linux o MacOS. Una breve panoramica dei comandi usati è disponibile in [Acquisire familiarità con gli strumenti di sviluppo](local-environment.md), che contiene collegamenti a informazioni più dettagliate.
 
 ## <a name="create-your-application"></a>Creare l'applicazione
 
-Usare una finestra del terminale per creare una directory denominata **classes**. L'applicazione verrà creata in questa posizione. Passare alla directory e digitare `dotnet new console` nella finestra della console. Questo comando crea l'applicazione. Aprire **Program.cs**. Il codice dovrebbe essere simile al seguente:
+Usare una finestra del terminale per creare una directory denominata *classes*. L'applicazione verrà creata in questa posizione. Passare alla directory e digitare `dotnet new console` nella finestra della console. Questo comando crea l'applicazione. Aprire *Program.cs*. Il codice dovrebbe essere simile al seguente:
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-In questa esercitazione verranno creati nuovi tipi che rappresentano un conto bancario. In genere, gli sviluppatori definiscono ogni classe in un file di testo diverso. In questo modo è più semplice gestire l'aumento di dimensioni di un programma.  Creare un nuovo file denominato **BankAccount.cs** nella directory **classes**. 
+In questa esercitazione verranno creati nuovi tipi che rappresentano un conto bancario. In genere, gli sviluppatori definiscono ogni classe in un file di testo diverso. In questo modo è più semplice gestire l'aumento di dimensioni di un programma. Creare un nuovo file denominato *BankAccount.cs* nella directory *classes*. 
 
 Questo file conterrà la definizione di un ***conto bancario***. Nella programmazione orientata a oggetti il codice viene organizzato tramite la creazione di tipi sotto forma di ***classi***. Queste classi contengono il codice che rappresenta un'entità specifica. La classe `BankAccount` rappresenta un conto bancario. Il codice implementa operazioni specifiche tramite metodi e proprietà. In questa esercitazione il conto bancario supporta questo comportamento:
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-I costruttori vengono chiamati quando si crea un oggetto con [`new`](../../language-reference/operators/new-operator.md). Sostituire la riga `Console.WriteLine("Hello World!");` in ***program.cs*** con la riga seguente (sostituire `<name>` con il proprio nome):
+I costruttori vengono chiamati quando si crea un oggetto con [`new`](../../language-reference/operators/new-operator.md). Sostituire la riga `Console.WriteLine("Hello World!");` in *Program.cs* con la riga seguente (sostituire `<name>` con il proprio nome):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,15 +119,15 @@ Digitare `dotnet run` per visualizzare i risultati.
 
 La classe del conto bancario deve accettare versamenti e prelievi per funzionare correttamente. I versamenti e i prelievi vengono implementati tramite la creazione di un registro di ogni transazione per il conto. Ciò presenta alcuni vantaggi rispetto al semplice aggiornamento del saldo per ogni transazione. È possibile usare la cronologia per controllare tutte le transazioni e gestire i saldi giornalieri. Grazie alla possibilità di calcolare il saldo dalla cronologia di tutte le transazioni all'occorrenza, eventuali errori in una singola transazione risolti saranno rispecchiati correttamente nel saldo dopo il calcolo successivo.
 
-Per iniziare, occorre creare un nuovo tipo per rappresentare una transazione. Si tratta di un tipo semplice senza responsabilità, che richiede alcune proprietà. Creare un nuovo file denominato ***Transaction.cs***. Aggiungere il codice seguente al file:
+Per iniziare, occorre creare un nuovo tipo per rappresentare una transazione. Si tratta di un tipo semplice senza responsabilità, che richiede alcune proprietà. Creare un nuovo file denominato *Transaction.cs*. Aggiungere il codice seguente al file:
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
 A questo punto, aggiungere un <xref:System.Collections.Generic.List%601> di oggetti `Transaction` alla classe `BankAccount`. Aggiungere la dichiarazione seguente:
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-La classe <xref:System.Collections.Generic.List%601> richiede di importare uno spazio dei nomi diverso. Aggiungere il codice seguente all'inizio di **BankAccount.cs**:
+La classe <xref:System.Collections.Generic.List%601> richiede di importare uno spazio dei nomi diverso. Aggiungere il codice seguente all'inizio di *BankAccount.cs*:
 
 ```csharp
 using System.Collections.Generic;
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 A questo punto, occorre modificare il modo in cui viene indicato il saldo (`Balance`).  Per ottenere il saldo, è possibile sommare i valori di tutte le transazioni. Modificare la dichiarazione di `Balance` nella classe `BankAccount` come indicato di seguito:
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 Questo esempio illustra un aspetto importante delle ***proprietà***. Il saldo viene ora calcolato quando un altro programmatore richiede il valore. Il calcolo enumera tutte le transazioni e fornisce la somma come saldo corrente.
 
@@ -143,13 +143,13 @@ Implementare ora i metodi `MakeDeposit` e `MakeWithdrawal`. Questi metodi applic
 
 Viene così introdotto il concetto di ***eccezioni***. Il modo standard per indicare che un metodo non può completare correttamente le operazioni previste consiste nel generare un'eccezione. Il tipo di eccezione e il messaggio associato descrivono l'errore. In questo caso, il metodo `MakeDeposit` genera un'eccezione se l'importo del versamento è negativo. Il metodo `MakeWithdrawal` genera un'eccezione se l'importo del prelievo è negativo oppure se dalla conferma del prelievo risulta un saldo negativo:
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 L'istruzione [`throw`](../../language-reference/keywords/throw.md) **genera** un'eccezione. L'esecuzione del blocco corrente termina e il controllo viene trasferito al primo blocco `catch` corrispondente trovato nello stack di chiamate. Più avanti si aggiungerà un blocco `catch` per testare questo codice.
 
 Il costruttore deve ottenere una modifica in modo da aggiungere una transazione iniziale, invece di aggiornare direttamente il saldo. Dato che il metodo `MakeDeposit` è già stato scritto, chiamarlo dal costruttore. Il costruttore completato dovrebbe essere simile al seguente:
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> è una proprietà che restituisce la data e l'ora correnti. Provare il codice aggiungendo alcuni versamenti e prelievi nel metodo `Main`:
 
@@ -196,11 +196,11 @@ Salvare il file e digitare `dotnet run` per provare il codice.
 
 Per completare questa esercitazione, è possibile scrivere il metodo `GetAccountHistory`, che crea un oggetto `string` per la cronologia delle transazioni. Aggiungere questo metodo al tipo `BankAccount`:
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Questo codice usa la classe <xref:System.Text.StringBuilder> per formattare una stringa che contiene una riga per ogni transazione. Il codice per la formattazione delle stringhe è stato presentato in precedenza in queste esercitazioni. `\t` è un nuovo carattere, che consente di inserire una tabulazione per formattare l'output.
 
-Aggiungere questa riga per testarla in **Program.cs**:
+Aggiungere questa riga per testarla in *Program.cs*:
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());
@@ -208,7 +208,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 Digitare `dotnet run` per visualizzare i risultati.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 In caso di problemi, è possibile visualizzare il codice sorgente per questa esercitazione nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
 

@@ -2,12 +2,12 @@
 title: Applicazione di schemi CQRS e DDD semplificati in un microservizio
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Riconoscere la relazione globale tra criteri CQRS e DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674378"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834312"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Applicare modelli CQRS e DDD semplificati in un microservizio
 
@@ -27,9 +27,11 @@ CQRS significa creare due oggetti per un'operazione di lettura/scrittura, dove i
 
 Un esempio di questo tipo di servizio è il microservizio per gli ordini dell'applicazione di riferimento eShopOnContainers. Questo servizio implementa un microservizio basato su un approccio CQRS semplificato. Usa una singola origine dati o un singolo database, ma due modelli logici, più schemi DDD per il dominio transazionale, come illustrato nella figura 7-2.
 
-![Il microservizio logico Ordinamento include il proprio database Ordinamento, che può essere incluso o meno nello stesso host Docker. Il fatto che il database sia incluso nello stesso host Docker è ottimale per lo sviluppo, ma non per la produzione.](./media/image2.png)
+![Diagramma che mostra un microservizio CQRS e DDD semplificato di alto livello.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Figura 7-2**. Microservizio semplificato basato su CQRS e DDD
+
+Il microservizio logico "ordering" include il database di ordinamento, che può essere, ma non necessariamente, lo stesso host docker. Il fatto che il database sia incluso nello stesso host Docker è ottimale per lo sviluppo, ma non per la produzione.
 
 Il livello dell'applicazione può essere la stessa API Web. L'aspetto di progettazione importante a questo proposito è che il microservizio ha suddiviso le query e i ViewModel (modelli di dati creati appositamente per le applicazioni client) dai comandi, dal modello di dominio e dalle transazioni seguendo lo schema CQRS. Questo approccio mantiene le query indipendenti da restrizioni e vincoli provenienti da schemi DDD che sono applicabili esclusivamente per le transazioni e gli aggiornamenti, come descritto nelle sezioni successive.
 

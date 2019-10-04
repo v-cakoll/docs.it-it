@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051746"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833623"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF
 Windows Communication Foundation (WCF) è la scelta migliore e più sicura su Distributed Component Object Model (DCOM) per le chiamate di codice gestito tra i server e i client in un ambiente distribuito. Questo articolo mostra come eseguire la migrazione del codice da DCOM a WCF per gli scenari seguenti.  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Di seguito è riportata l'implementazione di questo servizio. Questa implementazione mantiene una channel factory singleton per creare oggetti con sessione.  Quando viene chiamato `GetInstanceAddress`, questo crea un canale e un oggetto <xref:System.ServiceModel.EndpointAddress10> che fa riferimento all'indirizzo remoto associato a questo canale.   <xref:System.ServiceModel.EndpointAddress10> è un tipo di dati che può essere restituito al client in base al valore.  
+ Di seguito è riportata l'implementazione di questo servizio. Questa implementazione mantiene una channel factory singleton per creare oggetti con sessione.  Quando viene chiamato `GetInstanceAddress`, questo crea un canale e un oggetto <xref:System.ServiceModel.EndpointAddress10> che fa riferimento all'indirizzo remoto associato a questo canale.   <xref:System.ServiceModel.EndpointAddress10> è un tipo di dati che può essere restituito al client in base al valore.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -329,7 +329,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. Nella sezione `<services>` dichiarare gli endpoint di servizio per la factory e l'oggetto con sessione.  Ciò consente al client di comunicare con gli endpoint di servizio, di acquisire <xref:System.ServiceModel.EndpointAddress10> e di creare il canale con sessione.  
   
- Di seguito viene riportato un file di configurazione di esempio con queste impostazioni:  
+ Di seguito è riportato un esempio di file di configurazione con queste impostazioni:  
   
 ```xml  
 <configuration>  

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784792"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834277"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Applicazione di una trasformazione XSLT a un DataSet
-Il metodo **WriteXml** di <xref:System.Data.DataSet> consente di scrivere il contenuto di un **DataSet** come dati XML. Tali dati XML vengono solitamente convertiti in un formato diverso mediante XSLT (Extensible Stylesheets Language Transformations). Tuttavia, la sincronizzazione di un **DataSet** con <xref:System.Xml.XmlDataDocument> un oggetto consente di applicare un foglio di stile XSLT al contenuto di un **DataSet** senza dover prima scrivere il contenuto del **DataSet** come dati XML tramite **WriteXml**.  
+
+Il metodo **WriteXml** di <xref:System.Data.DataSet> consente di scrivere il contenuto di un **DataSet** come dati XML. Tali dati XML vengono solitamente convertiti in un formato diverso mediante XSLT (Extensible Stylesheets Language Transformations). Tuttavia, la sincronizzazione di un **set di dati** con un <xref:System.Xml.XmlDataDocument> consente di applicare un foglio di stile XSLT al contenuto di un **DataSet** senza dover prima scrivere il contenuto del **DataSet** come dati XML tramite **WriteXml**.  
   
- Nell'esempio seguente viene compilato un **set** di dati con tabelle e relazioni, viene sincronizzato il **set di dati** con un **XmlDataDocument**e viene scritta una parte del **set di dati** come file HTML utilizzando un foglio di stile XSLT. Di seguito viene riportato il contenuto del foglio di stile XSLT.  
+ Nell'esempio seguente viene compilato un **set** di dati con tabelle e relazioni, viene sincronizzato il **set di dati** con un **XmlDataDocument**e viene scritta una parte del **set di dati** come file HTML utilizzando un foglio di stile XSLT. Di seguito è riportato il contenuto del foglio di stile XSLT:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +60,7 @@ Il metodo **WriteXml** di <xref:System.Data.DataSet> consente di scrivere il con
  Il codice seguente compila il **set di dati** e applica il foglio di stile XSLT.  
   
 > [!NOTE]
-> Se si applica un foglio di stile XSLT a un **set di dati** che contiene relazioni, si ottengono prestazioni ottimali se si imposta la <xref:System.Data.DataRelation> proprietà **Nested** di su **true** per ogni relazione annidata. Ciò consente di navigare all'interno della gerarchia e trasformare i dati mediante i fogli di stile XSLT, che implementano un'elaborazione sequenziale dall'alto verso il basso, anziché mediante gli assi di posizione XPath, ad esempio i nodi di pari livello precedenti e successivi nelle espressioni di verifica del nodo dei fogli di stile, che comportano un maggiore dispendio di risorse. Per ulteriori informazioni sulle relazioni annidate, vedere [nidificazione di oggetti DataRelation](nesting-datarelations.md).  
+> Se si applica un foglio di stile XSLT a un **set di dati** che contiene relazioni, si ottengono prestazioni ottimali se si imposta la proprietà **nested** di <xref:System.Data.DataRelation> su **true** per ogni relazione annidata. Ciò consente di navigare all'interno della gerarchia e trasformare i dati mediante i fogli di stile XSLT, che implementano un'elaborazione sequenziale dall'alto verso il basso, anziché mediante gli assi di posizione XPath, ad esempio i nodi di pari livello precedenti e successivi nelle espressioni di verifica del nodo dei fogli di stile, che comportano un maggiore dispendio di risorse. Per ulteriori informazioni sulle relazioni annidate, vedere [nidificazione di oggetti DataRelation](nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

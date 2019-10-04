@@ -2,12 +2,12 @@
 title: Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 description: Informazioni sulle differenze e sugli usi dello schema API Gateway e della comunicazione diretta da client a microservizio.
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914669"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834442"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -17,7 +17,7 @@ In un'architettura di microservizi, ogni microservizio espone in genere un set d
 
 Un possibile approccio prevede l'uso di un'architettura di comunicazione da client a microservizio diretta. In questo caso, un'app client può effettuare richieste direttamente ad alcuni microservizi, come illustrato nella figura 4-12.
 
-![Diagramma che mostra un'architettura di comunicazione da client a microservizio diretta, in cui ogni app comunica direttamente con singoli microservizi.](./media/image12.png)
+![Diagramma che illustra l'architettura di comunicazione da client a microservizio.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 **Figura 4-12**. Uso di un'architettura di comunicazione da client a microservizio diretta
 
@@ -69,11 +69,11 @@ Pertanto, il gateway API si trova tra le app client e i microservizi. Opera come
 
 La figura 4-13 mostra in che modo un gateway API personalizzato può essere inserito in un'architettura basata su microservizi semplificata, con pochi microservizi.
 
-![Diagramma che illustra un gateway API implementato come servizio personalizzato, in modo che le app si connettono a un unico endpoint (il gateway API) configurato per inoltrare le richieste ai singoli microservizi.](./media/image13.png)
+![Diagramma che mostra un gateway API implementato come servizio personalizzato.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **Figura 4-13**. Uso di un gateway API implementato come servizio personalizzato
 
-In questo esempio il gateway API viene implementato sotto forma di servizio WebHost ASP.NET Core personalizzato eseguito come contenitore.
+Le app si connettono a un singolo endpoint, il gateway API, configurato per l'invio di richieste a singoli microservizi. In questo esempio il gateway API viene implementato sotto forma di servizio WebHost ASP.NET Core personalizzato eseguito come contenitore.
 
 È importante evidenziare che nel diagramma viene usato un solo servizio gateway API personalizzato per numerose app client di diverso tipo. Ciò può presentare dei rischi significativi perché il servizio API Gateway verrà ampliato e sviluppato in base alle diverse esigenze delle app client. Alla fine, per soddisfare tutte le esigenze, il servizio potrebbe diventare talmente esteso da sembrare un'unica applicazione o servizio monolitico. Ecco perché si consiglia vivamente di suddividere il gateway API in più servizi o in gateway API più piccoli, ad esempio uno per ogni tipo fattore di forma di app client.
 
@@ -83,11 +83,11 @@ Di conseguenza, i gateway API devono essere separati in base ai limiti aziendali
 
 Quando si divide il livello API Gateway in più gateway API, se l'applicazione ha più app client può costituire un elemento pivot primario per l'identificazione dei diversi tipi di gateway API, in modo da avere una facciata differente per le esigenze di ciascuna app client. Questo caso è uno schema denominato "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)), in cui ogni gateway API può fornire un'API specifica per ogni tipo di app client, eventualmente anche in base al fattore di forma del client, implementando un codice dell'adattatore specifico che chiama più microservizi interni, come illustrato nell'immagine seguente:
 
-![Diagramma che visualizza più gateway API personalizzati, in cui i gateway API sono suddivisi per tipo di client, uno per i client per dispositivi mobili e uno per i client Web. Un'app Web tradizionale si connette a un microservizio MVC che usa gateway API Web.](./media/image13.1.png)
+![Diagramma che Mostra più gateway API personalizzati.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **Figura 4-13.1**. Uso di più gateway API personalizzati
 
-L'immagine precedente mostra un'architettura semplificata con più gateway API con granularità fine. In questo caso i limiti identificati per ogni gateway API si basano esclusivamente sullo schema "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)), pertanto sono basati solo sull'API necessaria per ciascuna app client. Ma in applicazioni di dimensioni più elevate è anche opportuno andare avanti e creare altri gateway API basati sui limiti aziendali come secondo elemento pivot di progettazione.
+Figura 4-13.1 Mostra i gateway API che sono separati dal tipo di client; uno per i client per dispositivi mobili e uno per i client Web. Un'app Web tradizionale si connette a un microservizio MVC che usa gateway API Web. Nell'esempio viene illustrata un'architettura semplificata con più gateway API con granularità fine. In questo caso i limiti identificati per ogni gateway API si basano esclusivamente sullo schema "Backend for Frontend" ([BFF](https://samnewman.io/patterns/architectural/bff/)), pertanto sono basati solo sull'API necessaria per ciascuna app client. Ma in applicazioni di dimensioni più elevate è anche opportuno andare avanti e creare altri gateway API basati sui limiti aziendali come secondo elemento pivot di progettazione.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Funzionalità principali dello schema API Gateway
 
@@ -128,11 +128,11 @@ Possono esserci molti altri problemi trasversali generati dai gateway API a seco
 
 [Gestione API di Azure](https://azure.microsoft.com/services/api-management/) (come illustrato nella figura 4-14) consente di risolvere le esigenze del gateway API e fornisce anche funzionalità come la raccolta di informazioni dalle API. Se si usa una soluzione per la gestione delle API, un gateway API è solo un componente della soluzione completa.
 
-![Gestione API di Azure risolve sia le esigenze di gateway API che quelle di gestione, come registrazione, sicurezza, misurazione e così via.](./media/api-gateway-azure-api-management.png)
+![Diagramma che illustra come usare gestione API di Azure come gateway API.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Utilizzo di Gestione API di Azure per il gateway API
 
-In questo caso, quando si usa un prodotto come Gestione API di Azure, la presenza di un solo gateway API non è così rischiosa perché questi tipi di gateway API sono più "sottili", in altre parole non comportano l'implementazione di codice C# personalizzato che potrebbe diventare un componente monolitico. 
+Gestione API di Azure risolve sia le esigenze di gateway API che quelle di gestione, come registrazione, sicurezza, misurazione e così via. In questo caso, quando si usa un prodotto come Gestione API di Azure, la presenza di un solo gateway API non è così rischiosa perché questi tipi di gateway API sono più "sottili", in altre parole non comportano l'implementazione di codice C# personalizzato che potrebbe diventare un componente monolitico. 
 
 I gateway API fungono in genere da proxy inverso per le comunicazioni in ingresso, in cui è possibile anche filtrare le API dai microservizi interni e applicare l'autorizzazione alle API pubblicate in questo livello singolo.
 
@@ -170,7 +170,7 @@ Dopo le sezioni iniziali di spiegazione degli schemi e dell'architettura, le sez
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Pattern: Schema: API Gateway/Back-end per front-end** \
+- **Chris Richardson. Criterio: Schema: API Gateway/Back-end per front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Schema API Gateway** \

@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709868"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835001"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)
 Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  
@@ -45,7 +45,7 @@ End Module
   
  Questo esempio produce il seguente output:  
   
-```  
+```console  
 1  
 2  
 3  
@@ -82,7 +82,7 @@ End Module
   
  Questo esempio produce il seguente output:  
   
-```  
+```console  
 1  
 2  
 3  

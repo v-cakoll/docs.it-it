@@ -3,12 +3,12 @@ title: Eseguire la migrazione di servizi duplex WCF a gRPC-gRPC per sviluppatori
 description: Informazioni su come eseguire la migrazione di varie forme di servizio WCF Duplex ai servizi di streaming gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 06ac784a31df43fd270f7ef0475bcdc282efad8f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184337"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834513"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>Eseguire la migrazione di servizi duplex WCF a gRPC
 
@@ -244,7 +244,7 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 > [!TIP]
 > La sezione sulle [librerie client](client-libraries.md#iobservable) alla fine di questo capitolo illustra come aggiungere un metodo di estensione e le classi per eseguire il `IAsyncStreamReader<T>` wrapping in `IObservable<T>` un per gli sviluppatori che usano modelli di programmazione reattivi.
 
-Anche in questo caso, prestare attenzione a intercettare le eccezioni a causa della possibilità di errori di rete <xref:System.OperationCanceledException> , nonché di che inevitabilmente verranno generati perché il codice usa <xref:System.Threading.CancellationToken> un oggetto per interrompere il ciclo. Il `RpcException` tipo contiene numerose informazioni utili sugli errori di runtime di gRPC, `StatusCode`tra cui. Per ulteriori informazioni, vedere [ *gestione degli errori* nel capitolo 4](error-handling.md)
+Anche in questo caso, prestare attenzione a intercettare le eccezioni a causa della possibilità di errori di rete <xref:System.OperationCanceledException> , nonché di che inevitabilmente verranno generati perché il codice usa <xref:System.Threading.CancellationToken> un oggetto per interrompere il ciclo. Il `RpcException` tipo contiene numerose informazioni utili sugli errori di runtime di gRPC, `StatusCode`tra cui. Per ulteriori informazioni, vedere [ *gestione degli errori* nel capitolo 4](error-handling.md).
 
 ## <a name="bidirectional-streaming"></a>Streaming bidirezionale
 

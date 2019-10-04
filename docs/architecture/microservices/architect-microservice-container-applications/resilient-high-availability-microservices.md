@@ -2,12 +2,12 @@
 title: Resilienza e disponibilità elevata nei microservizi
 description: I microservizi sono progettati per resistere a errori temporanei di rete e dipendenze che per raggiungere una disponibilità elevata devono essere resilienti.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675058"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834343"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
@@ -46,7 +46,7 @@ Un'applicazione basata su microservizio non deve provare ad archiviare autonomam
 
 Quando si crea un'applicazione basata su microservizio, è necessario risolvere la complessità. Naturalmente, un singolo microservizio è semplice da gestire, ma decine o centinaia di tipi e migliaia di istanze di microservizi rappresentano un problema complesso. Non si tratta solo di creare la propria architettura di microservizi: occorrono anche disponibilità elevata, indirizzabilità, resilienza, integrità e diagnostica se si vuole avere un sistema stabile e coesivo.
 
-![Gli agenti di orchestrazione offrono una piattaforma di supporto per l'esecuzione dei microservizi.](./media/image22.png)
+![Diagramma dei cluster che forniscono una piattaforma di supporto per i microservizi.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Figura 4-22**. Una piattaforma di microservizi è fondamentale per la gestione dell'integrità di un'applicazione
 

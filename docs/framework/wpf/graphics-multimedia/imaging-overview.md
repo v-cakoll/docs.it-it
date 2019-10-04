@@ -21,24 +21,24 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f8686a189883bed782cdde80e56c87ab6dbe404a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914095"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835019"
 ---
 # <a name="imaging-overview"></a>Cenni preliminari sulla creazione dell'immagine
 Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] consente agli sviluppatori di visualizzare, trasformare e formattare le immagini.  
 
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione di immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, dipendono in precedenza dalle librerie Microsoft Windows Graphics Device Interface (GDI) o GDI+ di Microsoft Windows. Queste API offrono funzionalità di imaging di base, ma non dispongono di funzionalità come il supporto per l'estendibilità dei codec e il supporto per immagini ad alta fedeltà. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]è progettato per superare le carenze di GDI e GDI+ e offrire un nuovo set di API per visualizzare e usare le immagini all'interno delle applicazioni.  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre miglioramenti significativi nelle funzionalità di creazione delle immagini all'interno di [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Le funzionalità di creazione di immagini, ad esempio la visualizzazione di una bitmap o l'uso di un'immagine in un controllo comune, dipendono in precedenza dalle librerie Microsoft Windows Graphics Device Interface (GDI) o GDI+ di Microsoft Windows. Queste API offrono funzionalità di imaging di base, ma non dispongono di funzionalità come il supporto per l'estendibilità dei codec e il supporto per immagini ad alta fedeltà. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] è progettato per superare le carenze di GDI e GDI+ e offrire un nuovo set di API per visualizzare e usare le immagini all'interno delle applicazioni.  
   
  Esistono due modi per accedere all' [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, un componente gestito e un componente non gestito. Il componente non gestito fornisce le funzionalità riportate di seguito.  
   
 - Modello di estendibilità per formati di immagine nuovi o proprietari.  
   
-- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui bitmap (BMP), gruppo di esperti di fotografica (jpeg) [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]Portable Network Graphics (png),,, Graphics Interchange Format (gif) e icona (. ico).  
+- Miglioramento delle prestazioni e della sicurezza nei formati di immagini native, tra cui bitmap (BMP), gruppo di esperti di fotografica (JPEG), Portable Network Graphics (PNG), Tagged Image File Format (TIFF), [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], Graphics Interchange Format (GIF) e icona (. ico).  
   
 - Conservazione dei dati di immagini con intensità fino a 8 bit per canale (32 bit per pixel).  
   
@@ -56,13 +56,13 @@ Questo argomento offre un'introduzione a [!INCLUDE[TLA#tla_wic](../../../../incl
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formati di immagini WPF  
- Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]include un codec per i formati di immagine BMP, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]JPEG [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], PNG,,, gif e Icon. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
+ Viene usato un codec per decodificare o codificare un formato multimediale specifico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] include un codec per i formati di immagine BMP, JPEG, PNG, TIFF, [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], GIF e ICON. Ognuno di questi codec consente alle applicazioni di decodificare e, ad eccezione di ICON, codificare i rispettivi formati di immagine.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>è una classe importante utilizzata per la decodifica e la codifica delle immagini. Si tratta del blocco predefinito di base della pipeline di [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] e rappresenta un set unico e costante di pixel a una specifica dimensione e risoluzione. Un <xref:System.Windows.Media.Imaging.BitmapSource> può essere un singolo frame di un'immagine a più frame oppure il risultato di una trasformazione eseguita su un oggetto <xref:System.Windows.Media.Imaging.BitmapSource>. È l'elemento padre di molte delle classi primarie utilizzate nella [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] creazione di immagini <xref:System.Windows.Media.Imaging.BitmapFrame>, ad esempio.  
   
- Un <xref:System.Windows.Media.Imaging.BitmapFrame> oggetto viene utilizzato per archiviare i dati bitmap effettivi di un formato di immagine. Molti formati di immagine supportano solo un <xref:System.Windows.Media.Imaging.BitmapFrame>singolo, anche se formati come gif [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] e supportano più frame per ogni immagine. I fotogrammi vengono usati dai decodificatori come dati di input e vengono passati ai codificatori per creare file di immagine.  
+ Un <xref:System.Windows.Media.Imaging.BitmapFrame> oggetto viene utilizzato per archiviare i dati bitmap effettivi di un formato di immagine. Molti formati di immagine supportano solo un singolo <xref:System.Windows.Media.Imaging.BitmapFrame>, anche se i formati quali GIF e TIFF supportano più frame per ogni immagine. I fotogrammi vengono usati dai decodificatori come dati di input e vengono passati ai codificatori per creare file di immagine.  
   
- Nell'esempio seguente viene illustrato come <xref:System.Windows.Media.Imaging.BitmapFrame> creare un oggetto da <xref:System.Windows.Media.Imaging.BitmapSource> un oggetto e quindi aggiungerlo a un' [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] immagine.  
+ Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Media.Imaging.BitmapFrame> da un <xref:System.Windows.Media.Imaging.BitmapSource> e quindi aggiungerlo a un'immagine TIFF.  
   
  [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
  [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
@@ -164,7 +164,7 @@ I pennelli immagine possono riempire forme, controlli, testo e altro ancora
 ## <a name="image-metadata"></a>Metadati delle immagini  
  Alcuni file di immagine contengono metadati che descrivono il contenuto o le caratteristiche del file. La maggior parte delle fotocamere digitali, ad esempio, crea immagini che contengono i metadati relativi a marca e modello della fotocamera usata per acquisire l'immagine. Ogni formato di immagine gestisce i metadati in modo diverso, ma [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] offre un metodo uniforme per archiviare e recuperare i metadati per ogni formato di immagine supportato.  
   
- L'accesso ai metadati viene fornito tramite <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> la proprietà di <xref:System.Windows.Media.Imaging.BitmapSource> un oggetto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Restituisce un <xref:System.Windows.Media.Imaging.BitmapMetadata> oggetto che include tutti i metadati contenuti nell'immagine. Questi dati possono essere in uno schema di metadati o in una combinazione di schemi diversi. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]supporta i seguenti schemi di metadati di immagine: File di immagine scambiabile (EXIF), testo (dati testuali PNG), directory file di immagine (IFD), International Press Telecommunications Council (IPTC [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]) e.  
+ L'accesso ai metadati viene fornito tramite <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> la proprietà di <xref:System.Windows.Media.Imaging.BitmapSource> un oggetto. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Restituisce un <xref:System.Windows.Media.Imaging.BitmapMetadata> oggetto che include tutti i metadati contenuti nell'immagine. Questi dati possono essere in uno schema di metadati o in una combinazione di schemi diversi. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] supporta gli schemi dei metadati delle immagini seguenti: File di immagine scambiabile (EXIF), testo (dati testuali PNG), directory file di immagine (IFD), International Press Telecommunications Council (IPTC) e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
  Per semplificare il processo di lettura dei metadati, <xref:System.Windows.Media.Imaging.BitmapMetadata> fornisce diverse proprietà denominate a cui è possibile accedere facilmente, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>ad esempio <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>, e. Molte di queste proprietà denominate consentono anche di scrivere metadati. Il lettore di query dei metadati fornisce supporto aggiuntivo per la lettura dei metadati. Il <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> metodo viene utilizzato per recuperare un lettore di query di metadati fornendo una query di tipo stringa, ad esempio *"/app1/exif/"* . Nell'esempio <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> seguente viene usato per ottenere il testo archiviato nel percorso *"/Text/Description"* .  
   

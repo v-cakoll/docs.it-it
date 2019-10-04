@@ -2,12 +2,12 @@
 title: Identificazione dei limiti del modello di dominio per ogni microservizio
 description: Esplorare l'essenza del partizionamento di un'applicazione di grandi dimensioni in microservizi per ottenere un'architettura solida.
 ms.date: 09/20/2018
-ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673088"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834410"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificare i limiti del modello di dominio per ogni microservizio
 
@@ -27,21 +27,21 @@ Si può dedurre che sono stati ottenuti i limiti e le dimensioni giusti per ogni
 
 Probabilmente la risposta migliore alla domanda su quali dovrebbero essere le dimensioni di un modello di dominio per ogni microservizio è la seguente: deve contenere un BC autonomo, che consente di lavorare senza dover continuamente passare ad altri contesti (altri modelli di microservizio). Nella figura 4-10 è possibile osservare che ciascuno dei molteplici microservizi (più BC) ha il proprio modello e che è possibile definire le relative entità, a seconda dei requisiti specifici per ognuno dei domini identificati nell'applicazione.
 
-![Entità presenti in diversi limiti del modello (Bounded Contexts), in cui la stessa entità appare come "Users", "Buyers", "Payers" e "Customers" in base al contesto limitato](./media/image10.png)
+![Diagramma che mostra le entità in diversi limiti del modello.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Figura 4-10**. Identificazione di entità e dei limiti del modello di microservizio
 
-La figura 4-10 illustra un esempio di scenario correlato a un sistema di gestione di conferenze online. Sono stati identificati diversi BC implementabili come microservizi, in base ai domini definiti per l'utente dagli esperti di dominio. Come si può notare, ci sono entità presenti solo in un modello di microservizio singolo, ad esempio Payments nel microservizio Payment, che saranno facili da implementare.
+La figura 4-10 illustra un esempio di scenario correlato a un sistema di gestione di conferenze online. La stessa entità viene visualizzata come "Users", "Buyers", "Payers" e "Customers", a seconda del contesto delimitato. Sono stati identificati diversi BC implementabili come microservizi, in base ai domini definiti per l'utente dagli esperti di dominio. Come si può notare, ci sono entità presenti solo in un modello di microservizio singolo, ad esempio Payments nel microservizio Payment, che saranno facili da implementare.
 
 Tuttavia, potrebbero esserci anche entità con una forma differente, ma che condividono la stessa identità tra più modelli di dominio di più microservizi. Ad esempio, l'entità User viene identificata nel microservizio Conferences Management. Lo stesso utente, con la stessa identità, è quello denominato Buyers nel microservizio degli ordini o Payer nel microservizio Payment, e persino quello denominato Customer nel microservizio Customer Service. Questo avviene perché, a seconda del [linguaggio comune](https://martinfowler.com/bliki/UbiquitousLanguage.html) usato da ogni esperto di dominio, un utente potrebbe avere una prospettiva diversa, anche con attributi diversi. L'entità utente nel modello di microservizio denominato Conferences Management potrebbe contenere la maggior parte dei relativi attributi dati personali. Tuttavia, lo stesso utente sotto forma di Payer nel microservizio Payment o sotto forma di Customer nel microservizio Customer Service potrebbe non aver bisogno dello stesso elenco di attributi.
 
 Un approccio simile è illustrato nella figura 4-11.
 
-![Quando si scompone un modello di dati tradizionali tra contesti delimitati, è possibile avere diverse entità che condividono la stessa identità (un acquirente è anche un utente) con attributi diversi in ogni contesto delimitato.](./media/image11.png)
+![Diagramma che illustra come scomporre un modello di dati in più modelli di dominio.](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **Figura 4-11**. Scomposizione di modelli di dati tradizionali in più modelli di dominio
 
-Come si può osservare, l'utente è presente nel modello di microservizio Conferences Management come entità User, ma anche sotto forma di entità Buyer nel microservizio Pricing, con attributi o dettagli alternativi sull'utente quando si tratta effettivamente di un acquirente. Ogni microservizio o BC potrebbe non necessitare di tutti i dati relativi a un'entità User, ma solo di parte di essi, a seconda del contesto o del problema da risolvere. Ad esempio, nel modello di microservizio Pricing, non è necessario l'indirizzo o il nome dell'utente, ma sono sufficienti solo l'ID (come identità) e lo stato, che avranno un impatto sugli sconti quando si determinano i prezzi delle postazioni per ogni acquirente.
+Quando si scompone un modello di dati tradizionali tra contesti delimitati, è possibile avere diverse entità che condividono la stessa identità (un acquirente è anche un utente) con attributi diversi in ogni contesto delimitato. Come si può osservare, l'utente è presente nel modello di microservizio Conferences Management come entità User, ma anche sotto forma di entità Buyer nel microservizio Pricing, con attributi o dettagli alternativi sull'utente quando si tratta effettivamente di un acquirente. Ogni microservizio o BC potrebbe non necessitare di tutti i dati relativi a un'entità User, ma solo di parte di essi, a seconda del contesto o del problema da risolvere. Ad esempio, nel modello di microservizio Pricing, non è necessario l'indirizzo o il nome dell'utente, ma sono sufficienti solo l'ID (come identità) e lo stato, che avranno un impatto sugli sconti quando si determinano i prezzi delle postazioni per ogni acquirente.
 
 L'entità Seat ha lo stesso nome, ma diversi attributi in ciascun modello di dominio. Tuttavia, questa entità condivide l'identità basata sullo stesso ID, così come accade con User e Buyer.
 
