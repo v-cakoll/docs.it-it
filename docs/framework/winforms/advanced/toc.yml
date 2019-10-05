@@ -334,9 +334,7 @@
     - name: Globalizzazione di Windows Form
       href: globalizing-windows-forms.md
       items:
-        - name: Globalizzazione di Windows Form e codifica
-          href: encoding-and-windows-forms-globalization.md
-        - name: Tipi di carattere internazionali nei controlli e in Windows Form
+        - name: Caratteri internazionali nei controlli e in Windows Form
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Supporto bidirezionale per le applicazioni Windows Forms
           href: bi-directional-support-for-windows-forms-applications.md
