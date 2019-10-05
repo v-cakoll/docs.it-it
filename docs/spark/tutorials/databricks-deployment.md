@@ -4,12 +4,12 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117931"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957255"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Distribuire un'applicazione .NET per Apache Spark in Databricks
 
@@ -119,11 +119,11 @@ Questo passaggio è necessario solo una volta per un cluster.
 
 3. Impostare i parametri in modo appropriato.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Parametro   | Value                                                |
+   |-------------|------------------------------------------------------|
+   | Classe principale  | org. Apache. Spark. deploy. dotnet. DotnetRunner          |
+   | Argomenti   | /dBFS/Apps/< your-app-name >. zip <-app-Main-Class > |
+
 4. Configurare il **cluster** in modo che punti al cluster esistente per cui è stato creato lo **script** di inizializzazione nella sezione precedente.
 
 #### <a name="publish-and-run-your-app"></a>Pubblicare ed eseguire l'app
