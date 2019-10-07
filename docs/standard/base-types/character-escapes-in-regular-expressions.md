@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 10/04/2019
 ms.locfileid: "69934837"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caratteri di escape nelle espressioni regolari
@@ -38,7 +38,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
 ## <a name="character-escapes-in-net"></a>Caratteri di escape in .NET  
  La tabella seguente elenca i caratteri di escape supportati dalle espressioni regolari in .NET.  
   
-|Carattere o sequenza|DESCRIZIONE|  
+|Carattere o sequenza|Descrizione|  
 |---------------------------|-----------------|  
 |Tutti i caratteri eccetto i seguenti:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |I caratteri diversi da quelli elencati nella colonna **Carattere o sequenza** non hanno un significato speciale nelle espressioni regolari, ma corrispondono a se stessi.<br /><br /> I caratteri inclusi nella colonna **Carattere o sequenza** sono elementi speciali del linguaggio di espressioni regolari. Per trovare una corrispondenza con essi in un'espressione regolare, è necessario aggiungere un carattere di escape o includerli in un [gruppo di caratteri positivi](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Ad esempio, l'espressione regolare `\$\d+` o `[$]\d+` trova la corrispondenza con "$1200".|  
 |`\a`|Corrisponde a un carattere di controllo del segnale acustico di avviso, `\u0007`.|  
@@ -63,7 +63,7 @@ La barra rovesciata (\\) in un'espressione regolare indica una delle situazioni 
   
  L'espressione regolare `\G(.+)[\t|\u007c](.+)\r?\n` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\G`|Inizia la corrispondenza dove termina l'ultima corrispondenza.|  
 |`(.+)`|Trova la corrispondenza con qualsiasi carattere uno o più volte. Equivale al primo gruppo di acquisizione.|  
