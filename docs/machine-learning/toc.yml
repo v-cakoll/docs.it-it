@@ -115,6 +115,8 @@
           href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
 - name: Risorse
   items:
+    - name: Panoramica
+      href: resources/index.md
     - name: Glossario
       href: resources/glossary.md
     - name: Dati di telemetria dell'interfaccia della riga di comando
