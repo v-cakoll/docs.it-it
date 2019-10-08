@@ -1,0 +1,42 @@
+---
+ms.openlocfilehash: 78d2ec6fb505573ad36d55a9ca0a20452b7fa244
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002880"
+---
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a><span data-ttu-id="e252a-101">Il valore predefinito di HttpRequestMessage. Version è stato modificato in 1,1</span><span class="sxs-lookup"><span data-stu-id="e252a-101">Default value of HttpRequestMessage.Version changed to 1.1</span></span> 
+
+<span data-ttu-id="e252a-102">Il valore predefinito della proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> è stato modificato da 2,0 a 1,1.</span><span class="sxs-lookup"><span data-stu-id="e252a-102">The default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property has changed from 2.0 to 1.1.</span></span>
+
+#### <a name="version-introduced"></a><span data-ttu-id="e252a-103">Versione introdotta</span><span class="sxs-lookup"><span data-stu-id="e252a-103">Version introduced</span></span>
+
+<span data-ttu-id="e252a-104">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="e252a-104">.NET Core 3.0</span></span>
+
+#### <a name="details"></a><span data-ttu-id="e252a-105">Dettagli</span><span class="sxs-lookup"><span data-stu-id="e252a-105">Details</span></span>
+
+<span data-ttu-id="e252a-106">In .NET Core da 1,0 a 2,0, il valore predefinito della proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> è 1,1.</span><span class="sxs-lookup"><span data-stu-id="e252a-106">In .NET Core 1.0 through 2.0, the default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is 1.1.</span></span> <span data-ttu-id="e252a-107">A partire da .NET Core 2,1, è stato modificato in 2,1.</span><span class="sxs-lookup"><span data-stu-id="e252a-107">Starting with .NET Core 2.1, it was changed to 2.1.</span></span> 
+
+<span data-ttu-id="e252a-108">A partire da .NET Core 3,0, il numero di versione predefinito restituito dalla proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> è ancora una volta 1,1.</span><span class="sxs-lookup"><span data-stu-id="e252a-108">Starting with .NET Core 3.0, the default version number returned by the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is once again 1.1.</span></span>
+ 
+#### <a name="recommended-action"></a><span data-ttu-id="e252a-109">Azione consigliata</span><span class="sxs-lookup"><span data-stu-id="e252a-109">Recommended action</span></span>
+
+<span data-ttu-id="e252a-110">Aggiornare il codice se dipende dalla proprietà <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> che restituisce un valore predefinito di 2,0.</span><span class="sxs-lookup"><span data-stu-id="e252a-110">Update your code if it depends on the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property returning a default value of 2.0.</span></span>
+
+#### <a name="category"></a><span data-ttu-id="e252a-111">Category</span><span class="sxs-lookup"><span data-stu-id="e252a-111">Category</span></span>
+
+<span data-ttu-id="e252a-112">Rete</span><span class="sxs-lookup"><span data-stu-id="e252a-112">Networking</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="e252a-113">API interessate</span><span class="sxs-lookup"><span data-stu-id="e252a-113">Affected APIs</span></span>
+
+- <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
+
+<!--
+a def
+### Affected APIs
+
+- `P:System.Net.Http.HttpRequestMessage.Version`
+
+-- >
+

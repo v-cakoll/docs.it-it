@@ -9,52 +9,56 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649725"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002376"
 ---
-# <a name="-define-visual-basic"></a><span data-ttu-id="ea761-102">-define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ea761-102">-define (Visual Basic)</span></span>
-<span data-ttu-id="ea761-103">Definisce le costanti del compilatore condizionali.</span><span class="sxs-lookup"><span data-stu-id="ea761-103">Defines conditional compiler constants.</span></span>  
+# <a name="-define-visual-basic"></a><span data-ttu-id="e2a56-102">-define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2a56-102">-define (Visual Basic)</span></span>
+<span data-ttu-id="e2a56-103">Definisce le costanti del compilatore condizionali.</span><span class="sxs-lookup"><span data-stu-id="e2a56-103">Defines conditional compiler constants.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea761-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ea761-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2a56-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e2a56-104">Syntax</span></span>  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+<span data-ttu-id="e2a56-105">oppure</span><span class="sxs-lookup"><span data-stu-id="e2a56-105">or</span></span>
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="ea761-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="ea761-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e2a56-106">Argomenti</span><span class="sxs-lookup"><span data-stu-id="e2a56-106">Arguments</span></span>  
   
-|<span data-ttu-id="ea761-106">Termine</span><span class="sxs-lookup"><span data-stu-id="ea761-106">Term</span></span>|<span data-ttu-id="ea761-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="ea761-107">Definition</span></span>|  
+|<span data-ttu-id="e2a56-107">Nome</span><span class="sxs-lookup"><span data-stu-id="e2a56-107">Term</span></span>|<span data-ttu-id="e2a56-108">Definizione</span><span class="sxs-lookup"><span data-stu-id="e2a56-108">Definition</span></span>|  
 |---|---|  
-|`symbol`|<span data-ttu-id="ea761-108">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="ea761-108">Required.</span></span> <span data-ttu-id="ea761-109">Il simbolo da definire.</span><span class="sxs-lookup"><span data-stu-id="ea761-109">The symbol to define.</span></span>|  
-|`value`|<span data-ttu-id="ea761-110">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="ea761-110">Optional.</span></span> <span data-ttu-id="ea761-111">Il valore da assegnare a `symbol`.</span><span class="sxs-lookup"><span data-stu-id="ea761-111">The value to assign `symbol`.</span></span> <span data-ttu-id="ea761-112">Se `value` è una stringa, deve essere racchiuso tra sequenze di barre rovesciate/virgolette (\\") anziché le virgolette.</span><span class="sxs-lookup"><span data-stu-id="ea761-112">If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks.</span></span> <span data-ttu-id="ea761-113">Se non è specificato un valore, è considerato True.</span><span class="sxs-lookup"><span data-stu-id="ea761-113">If no value is specified, then it is taken to be True.</span></span>|  
+|`symbol`|<span data-ttu-id="e2a56-109">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="e2a56-109">Required.</span></span> <span data-ttu-id="e2a56-110">Il simbolo da definire.</span><span class="sxs-lookup"><span data-stu-id="e2a56-110">The symbol to define.</span></span>|  
+|`value`|<span data-ttu-id="e2a56-111">facoltativo.</span><span class="sxs-lookup"><span data-stu-id="e2a56-111">Optional.</span></span> <span data-ttu-id="e2a56-112">Il valore da assegnare a `symbol`.</span><span class="sxs-lookup"><span data-stu-id="e2a56-112">The value to assign `symbol`.</span></span> <span data-ttu-id="e2a56-113">Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\ ") anziché virgolette.</span><span class="sxs-lookup"><span data-stu-id="e2a56-113">If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks.</span></span> <span data-ttu-id="e2a56-114">Se non è specificato un valore, è considerato True.</span><span class="sxs-lookup"><span data-stu-id="e2a56-114">If no value is specified, then it is taken to be True.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ea761-114">Note</span><span class="sxs-lookup"><span data-stu-id="ea761-114">Remarks</span></span>  
- <span data-ttu-id="ea761-115">Il `-define` opzione ha un effetto simile all'uso di un `#Const` direttiva per il preprocessore nel file di origine, ad eccezione che le costanti definite con `-define` sono pubblici e si applicano a tutti i file nel progetto.</span><span class="sxs-lookup"><span data-stu-id="ea761-115">The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2a56-115">Note</span><span class="sxs-lookup"><span data-stu-id="e2a56-115">Remarks</span></span>  
+ <span data-ttu-id="e2a56-116">L'opzione `-define` ha un effetto simile all'uso di una direttiva per il preprocessore `#Const` nel file di origine, ad eccezione del fatto che le costanti definite con `-define` sono pubbliche e si applicano a tutti i file del progetto.</span><span class="sxs-lookup"><span data-stu-id="e2a56-116">The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.</span></span>  
   
- <span data-ttu-id="ea761-116">È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.</span><span class="sxs-lookup"><span data-stu-id="ea761-116">You can use symbols created by this option with the `#If`...`Then`...`#Else` directive to compile source files conditionally.</span></span>  
+ <span data-ttu-id="e2a56-117">È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.</span><span class="sxs-lookup"><span data-stu-id="e2a56-117">You can use symbols created by this option with the `#If`...`Then`...`#Else` directive to compile source files conditionally.</span></span>  
   
- <span data-ttu-id="ea761-117">`-d` è la versione abbreviata di `-define`.</span><span class="sxs-lookup"><span data-stu-id="ea761-117">`-d` is the short form of `-define`.</span></span>  
+ <span data-ttu-id="e2a56-118">`-d` è la versione abbreviata di `-define`.</span><span class="sxs-lookup"><span data-stu-id="e2a56-118">`-d` is the short form of `-define`.</span></span>  
   
- <span data-ttu-id="ea761-118">È possibile definire più simboli con `-define`, separando le definizioni dei simboli con una virgola.</span><span class="sxs-lookup"><span data-stu-id="ea761-118">You can define multiple symbols with `-define` by using a comma to separate symbol definitions.</span></span>  
+ <span data-ttu-id="e2a56-119">È possibile definire più simboli con `-define`, separando le definizioni dei simboli con una virgola.</span><span class="sxs-lookup"><span data-stu-id="e2a56-119">You can define multiple symbols with `-define` by using a comma to separate symbol definitions.</span></span>  
   
-|<span data-ttu-id="ea761-119">Per impostare /define nell'ambiente di sviluppo integrato di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ea761-119">To set /define in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="e2a56-120">Per impostare /define nell'ambiente di sviluppo integrato di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e2a56-120">To set /define in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="ea761-120">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="ea761-120">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="ea761-121">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="ea761-121">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="ea761-122">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="ea761-122">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="ea761-123">3.  Scegliere **Avanzate**.</span><span class="sxs-lookup"><span data-stu-id="ea761-123">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="ea761-124">4.  Modificare il valore di **stanti personalizzate** casella.</span><span class="sxs-lookup"><span data-stu-id="ea761-124">4.  Modify the value in the **Custom Constants** box.</span></span>|  
+|<span data-ttu-id="e2a56-121">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="e2a56-121">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="e2a56-122">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="e2a56-122">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="e2a56-123">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="e2a56-123">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="e2a56-124">3.  Scegliere **Avanzate**.</span><span class="sxs-lookup"><span data-stu-id="e2a56-124">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="e2a56-125">4.  Modificare il valore nella casella **costanti personalizzate** .</span><span class="sxs-lookup"><span data-stu-id="e2a56-125">4.  Modify the value in the **Custom Constants** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="ea761-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="ea761-125">Example</span></span>  
- <span data-ttu-id="ea761-126">Nel codice seguente sono definite e usate due costanti di compilazione condizionale.</span><span class="sxs-lookup"><span data-stu-id="ea761-126">The following code defines and then uses two conditional compiler constants.</span></span>  
+## <a name="example"></a><span data-ttu-id="e2a56-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="e2a56-126">Example</span></span>  
+ <span data-ttu-id="e2a56-127">Nel codice seguente sono definite e usate due costanti di compilazione condizionale.</span><span class="sxs-lookup"><span data-stu-id="e2a56-127">The following code defines and then uses two conditional compiler constants.</span></span>  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a><span data-ttu-id="ea761-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ea761-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2a56-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2a56-128">See also</span></span>
 
-- [<span data-ttu-id="ea761-128">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ea761-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="ea761-129">Direttive #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="ea761-129">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="ea761-130">Direttiva #Const</span><span class="sxs-lookup"><span data-stu-id="ea761-130">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
-- [<span data-ttu-id="ea761-131">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="ea761-131">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="e2a56-129">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2a56-129">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="e2a56-130">Direttive #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="e2a56-130">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="e2a56-131">Direttiva #Const</span><span class="sxs-lookup"><span data-stu-id="e2a56-131">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
+- [<span data-ttu-id="e2a56-132">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="e2a56-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
