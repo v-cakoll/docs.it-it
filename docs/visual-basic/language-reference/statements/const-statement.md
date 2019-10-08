@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 522ac71767707ae90a3f1d11d45ef8b29471ae6c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623988"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005118"
 ---
 # <a name="const-statement-visual-basic"></a>Istruzione Const (Visual Basic)
 Dichiara e definisce una o più costanti.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
 ## <a name="parts"></a>Parti  
  `attributelist`  
- Facoltativo. Elenco di attributi che si applicano a tutte le costanti dichiarato nella presente informativa. Visualizzare [elenco di attributi](../../../visual-basic/language-reference/statements/attribute-list.md) parentesi angolari ("`<`"e"`>`").  
+ facoltativo. Elenco di attributi che si applicano a tutte le costanti dichiarate in questa istruzione. Vedere l' [elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi angolari ("`<`" e "`>`").  
   
  `accessmodifier`  
- Facoltativo. Questa scheda consente di specificare il tipo di codice può accedere a queste costanti. Può essere [pubbliche](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privata](../../../visual-basic/language-reference/modifiers/private.md), o [Private Protected](../../language-reference/modifiers/private-protected.md).
+ facoltativo. Usare questa funzione per specificare quale codice può accedere a queste costanti. Può essere [public](../../../visual-basic/language-reference/modifiers/public.md), [protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [private](../../../visual-basic/language-reference/modifiers/private.md)o [private protected](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
- Facoltativo. Consente di dichiarare nuovamente e nascondere un elemento di programmazione in una classe base. Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ facoltativo. Usare questa classe per dichiarare e nascondere un elemento di programmazione in una classe base. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Obbligatorio. Elenco di costanti che vengono dichiarate in questa istruzione.  
+ Obbligatorio. Elenco di costanti dichiarate in questa istruzione.  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -46,58 +46,58 @@ Const constantlist
 |----------|-----------------|  
 |`constantname`|Obbligatorio. Nome della costante. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`datatype`|Obbligatorio se `Option Strict` è `On`. Tipo di dati della costante.|  
-|`initializer`|Obbligatorio. Espressione che viene valutata in fase di compilazione e assegnato alla costante.|  
+|`initializer`|Obbligatorio. Espressione valutata in fase di compilazione e assegnata alla costante.|  
   
 ## <a name="remarks"></a>Note  
- Se si dispone di un valore che non cambia mai nell'applicazione, è possibile definire una costante denominata e usarlo al posto di un valore letterale. È più facile da ricordare al valore di un nome. È possibile definire la costante a una sola volta e usarla in molte posizioni nel codice. Se in una versione successiva è necessario ridefinire il valore di `Const` istruzione è l'unica piattaforma è necessario apportare una modifica.  
+ Se si dispone di un valore che non cambia mai nell'applicazione, è possibile definire una costante denominata e utilizzarla al posto di un valore letterale. Un nome è più facile da ricordare rispetto a un valore. È possibile definire la costante una sola volta e usarla in molte posizioni nel codice. Se in una versione successiva è necessario ridefinire il valore, l'istruzione `Const` rappresenta l'unica posizione necessaria per apportare una modifica.  
   
- È possibile usare `Const` solo a livello di modulo o routine. Ciò significa che il *contesto della dichiarazione* per una variabile deve essere una classe, struttura, modulo, procedura o blocco e non può essere un file di origine, lo spazio dei nomi o interfaccia. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ È possibile utilizzare `Const` solo a livello di modulo o di procedura. Ciò significa che il *contesto di dichiarazione* per una variabile deve essere una classe, una struttura, un modulo, una procedura o un blocco e non può essere un file di origine, uno spazio dei nomi o un'interfaccia. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Predefinito di costante locale (all'interno di una routine) per l'accesso pubblico e si non è possibile usare modificatori di accesso su di essi. Classe e il modulo predefinito di costanti (all'esterno di qualsiasi routine) membri per accesso privato e predefinito di costanti di membro di struttura per l'accesso pubblico. È possibile modificare i livelli di accesso con i modificatori di accesso.  
+ Le costanti locali (all'interno di una procedura) utilizzano per impostazione predefinita l'accesso pubblico e non è possibile usare alcun modificatore di accesso. Le costanti membro della classe e del modulo (all'esterno di qualsiasi routine) per impostazione predefinita è l'accesso privato e le costanti membro della struttura vengono predefinite per l'accesso pubblico. È possibile modificare i livelli di accesso con i modificatori di accesso.  
   
 ## <a name="rules"></a>Regole  
   
-- **Contesto della dichiarazione.** Una costante dichiarata a livello di modulo, all'esterno di qualsiasi routine è una *costante membro*; è un membro della classe, struttura, o modulo che lo dichiara.  
+- **Contesto di dichiarazione.** Una costante dichiarata a livello di modulo, all'esterno di qualsiasi routine, è una *costante membro*; si tratta di un membro della classe, della struttura o del modulo che lo dichiara.  
   
-     Una costante dichiarata a livello di routine è una *costante locale*; è locale per la routine o un blocco che lo dichiara.  
+     Una costante dichiarata a livello di routine è una *costante locale*. è locale per la routine o il blocco che lo dichiara.  
   
-- **Attributi.** È possibile applicare gli attributi solo per le costanti di membro, non per le costanti locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le costanti locali.  
+- **Attributi.** È possibile applicare attributi solo a costanti membro, non a costanti locali. Un attributo fornisce informazioni ai metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le costanti locali.  
   
-- **Modificatori.** Per impostazione predefinita, tutte le costanti vengono `Shared`, `Static`, e `ReadOnly`. È possibile utilizzare queste parole chiave quando si dichiara una costante.  
+- **Modificatori.** Per impostazione predefinita, tutte le costanti sono `Shared`, `Static` e `ReadOnly`. Non è possibile usare una di queste parole chiave quando si dichiara una costante.  
   
-     A livello di routine, non è possibile usare `Shadows` o qualsiasi modificatori di accesso per dichiarare le costanti locali.  
+     A livello di procedura, non è possibile usare `Shadows` o qualsiasi modificatore di accesso per dichiarare le costanti locali.  
   
-- **Più costanti.** È possibile dichiarare le costanti diversi nella stessa istruzione di dichiarazione, specificando il `constantname` parte per ognuno di essi. Più costanti sono separate da virgole.  
+- **Più costanti.** È possibile dichiarare più costanti nella stessa istruzione di dichiarazione, specificando la parte `constantname` per ciascuna di esse. Più costanti sono separate da virgole.  
   
-## <a name="data-type-rules"></a>Regole di tipo di dati  
+## <a name="data-type-rules"></a>Regole del tipo di dati  
   
-- **Tipi di dati.** Il `Const` istruzione può dichiarare il tipo di dati di una variabile. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione.  
+- **Tipi di dati.** L'istruzione `Const` può dichiarare il tipo di dati di una variabile. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione.  
   
-- **Tipo predefinito.** Se non si specifica `datatype`, la costante accetta il tipo di dati di `initializer`. Se si specificano entrambe `datatype` e `initializer`, il tipo di dati `initializer` deve essere convertibile in `datatype`. Se nessuno di essi `datatype` né `initializer` è presente, il valore predefinito è di tipo di dati `Object`.  
+- **Tipo predefinito.** Se non si specifica `datatype`, la costante accetta il tipo di dati di `initializer`. Se si specificano entrambi `datatype` e `initializer`, il tipo di dati di `initializer` deve essere convertibile in `datatype`. Se non è presente né `datatype` né `initializer`, il tipo di dati predefinito è `Object`.  
   
-- **Tipi diversi.** È possibile specificare tipi di dati diversi per le costanti diversi utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Tuttavia, non è possibile dichiarare più costanti dello stesso tipo tramite un comune `As` clausola.  
+- **Tipi diversi.** È possibile specificare tipi di dati diversi per costanti diverse utilizzando una clausola `As` separata per ogni variabile dichiarata. Tuttavia, non è possibile dichiarare più costanti in modo che siano dello stesso tipo utilizzando una clausola `As` comune.  
   
-- **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Si utilizza `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere qualsiasi combinazione di valori letterali, altre costanti che sono già definite e membri di enumerazione che sono già definiti. È possibile utilizzare gli operatori logici e aritmetici per combinare tali elementi.  
+- **Inizializzazione.** È necessario inizializzare il valore di ogni costante in `constantlist`. Usare `initializer` per fornire un'espressione da assegnare alla costante. L'espressione può essere costituita da qualsiasi combinazione di valori letterali, altre costanti già definite e membri di enumerazione già definiti. Per combinare tali elementi, è possibile utilizzare operatori aritmetici e logici.  
   
-     È possibile usare le variabili o funzioni in `initializer`. Tuttavia, è possibile utilizzare parole chiave di conversione, ad esempio `CByte` e `CShort`. È anche possibile usare `AscW` se viene chiamata con una costante `String` o `Char` argomento, dal momento che possono essere valutati in fase di compilazione.  
+     Non è possibile usare variabili o funzioni in `initializer`. È tuttavia possibile usare parole chiave di conversione, ad esempio `CByte` e `CShort`. È inoltre possibile utilizzare `AscW` se viene chiamato con un argomento Constant `String` o `Char`, dal momento che può essere valutato in fase di compilazione.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Ambito.** Costanti locali sono accessibili solo dall'interno della routine o un blocco. Costanti di membro sono accessibili da qualsiasi punto all'interno di loro classe, struttura o modulo.  
+- **Ambito.** Le costanti locali sono accessibili solo dall'interno della procedura o del blocco. Le costanti membro sono accessibili da qualsiasi punto all'interno della classe, della struttura o del modulo.  
   
-- **Qualification.** Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una costante membro con il nome di tale classe, struttura o modulo. All'esterno di che una routine o un blocco non può fare riferimento a costanti locali all'interno di tale routine o un blocco di codice.  
+- **Qualificazione.** Il codice esterno a una classe, una struttura o un modulo deve qualificare il nome di una costante membro con il nome della classe, della struttura o del modulo. Il codice esterno a una procedura o a un blocco non può fare riferimento alle costanti locali all'interno di tale procedura o blocco.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Const` istruzione per dichiarare le costanti per l'uso al posto dei valori letterali.  
+ Nell'esempio seguente viene utilizzata l'istruzione `Const` per dichiarare le costanti da utilizzare al posto dei valori letterali.  
   
  [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>Esempio  
- Se si definisce una costante con tipo di dati `Object`, il compilatore Visual Basic restituisce il tipo della `initializer`, invece di `Object`. Nell'esempio seguente, la costante `naturalLogBase` ha il tipo di runtime `Decimal`.  
+ Se si definisce una costante con tipo di dati `Object`, il compilatore Visual Basic lo assegna al tipo di `initializer` anziché `Object`. Nell'esempio seguente, la costante `naturalLogBase` ha il tipo in fase di esecuzione `Decimal`.  
   
  [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
- L'esempio precedente Usa la <xref:System.Type.ToString%2A> metodo sul <xref:System.Type> oggetto restituito dal [operatore GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), in quanto <xref:System.Type> non può essere convertito in `String` usando `CStr`.  
+ Nell'esempio precedente viene usato il metodo <xref:System.Type.ToString%2A> sull'oggetto <xref:System.Type> restituito dall' [operatore GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), perché <xref:System.Type> non può essere convertito in `String` con `CStr`.  
   
 ## <a name="see-also"></a>Vedere anche
 

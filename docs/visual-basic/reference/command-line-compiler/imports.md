@@ -1,44 +1,44 @@
 ---
-title: -imports (Visual Basic)
+title: -Imports (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663245"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005567"
 ---
-# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
 Importa gli spazi dei nomi da un assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`namespaceList`|Obbligatorio. Elenco delimitato da virgole degli spazi dei nomi da importare.|  
+|`namespaceList`|Obbligatorio. Elenco delimitato da virgole di spazi dei nomi da importare.|  
   
 ## <a name="remarks"></a>Note  
- Il `-imports` opzione consente di importare spazi dei nomi definiti all'interno del gruppo di file di origine o da qualsiasi assembly di riferimento correnti.  
+ L'opzione `-imports` importa qualsiasi spazio dei nomi definito all'interno del set di file di origine corrente o da qualsiasi assembly a cui si fa riferimento.  
   
- I membri di uno spazio dei nomi specificati con `-imports` sono disponibili a tutti i file di codice sorgente nella compilazione. Usare la [istruzione Imports (tipo e .NET Namespace)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) usare uno spazio dei nomi in un file del codice sorgente singolo.  
+ I membri in uno spazio dei nomi specificato con `-imports` sono disponibili per tutti i file del codice sorgente nella compilazione. Usare l' [istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per usare uno spazio dei nomi in un unico file del codice sorgente.  
   
-|Per impostare/Importa nell'ambiente di sviluppo integrato di Visual Studio|  
+|Per impostare/Imports in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Immettere il nome dello spazio dei nomi nella casella accanto il **Aggiungi importazione utente** pulsante.<br />4.  Scegliere il **Aggiungi importazione utente** pulsante.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Immettere il nome dello spazio dei nomi nella casella accanto al pulsante **Aggiungi importazione utente** .<br />4.  Fare clic sul pulsante **Aggiungi importazione utente** .|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene compilato quando `/imports:system.globalization` è specificato. In caso contrario, la compilazione ha esito positivo richiede che un `Imports System.Globalization` istruzione può essere incluso all'inizio del file del codice sorgente o che la proprietà essere qualificato come `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Il codice seguente viene compilato quando si specifica `/imports:system.globalization`. In caso contrario, la compilazione riuscita richiede che un'istruzione `Imports System.Globalization` venga inclusa all'inizio del file di codice sorgente o che la proprietà sia completamente qualificata come `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

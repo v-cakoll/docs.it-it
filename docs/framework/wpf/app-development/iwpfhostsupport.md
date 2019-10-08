@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 994e5146e9cf49a9b31396d0b51e7be83bbb3cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85309e46403b2f22f9afb760d4c4ae370c39246b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964789"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004099"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
-Le applicazioni che [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ospitano il contenuto tramite PresentationHost. exe implementano questa interfaccia per fornire un punto di integrazione tra l'host e PresentationHost. exe.  
+Le applicazioni che ospitano contenuto [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] tramite PresentationHost. exe implementano questa interfaccia per fornire un punto di integrazione tra l'host e PresentationHost. exe.  
   
 ## <a name="remarks"></a>Note  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]le applicazioni, ad esempio i Web [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] browser, possono [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ospitare contenuto, incluso e separato da XAML. Per ospitare [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] il contenuto [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] , le applicazioni creano un'istanza del [controllo WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Per essere ospitata [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] , crea un'istanza di PresentationHost. exe, che fornisce il [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] contenuto ospitato all'host per la visualizzazione nel [controllo WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
+ le applicazioni [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], ad esempio i Web browser, possono ospitare contenuto WPF, tra cui [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e XAML separato. Per ospitare il contenuto WPF, le applicazioni [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] creano un'istanza del [controllo WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Per essere ospitata, WPF crea un'istanza di PresentationHost. exe, che fornisce il contenuto WPF ospitato all'host per la visualizzazione nel [controllo WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
   
- L'integrazione abilitata `IWpfHostSupport` da consente a PresentationHost. exe di:  
+ L'integrazione abilitata da `IWpfHostSupport` consente a PresentationHost. exe di:  
   
 - Individuare e registrare con i dispositivi di input non elaborati (dispositivi di interfaccia umana) a cui è interessata l'applicazione host.  
   

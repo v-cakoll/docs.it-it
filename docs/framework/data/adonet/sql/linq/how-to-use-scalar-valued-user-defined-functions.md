@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781469"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003231"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procedura: Usare funzioni definite dall'utente con valori scalari
 È possibile eseguire il mapping di un metodo client definito in una classe a una funzione definita dall'utente usando l'attributo <xref:System.Data.Linq.Mapping.FunctionAttribute>. Notare che nel corpo del metodo viene costruita un'espressione che acquisisce lo scopo della chiamata al metodo e passa quell'espressione a <xref:System.Data.Linq.DataContext> per la conversione e l'esecuzione.  
   
 > [!NOTE]
-> Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query. Per altre informazioni, vedere [Procedura: Chiamare le funzioni definite dall'utente inline](how-to-call-user-defined-functions-inline.md).  
+> Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query. Per altre informazioni, vedere [Procedura: Chiamare le funzioni definite dall'utente inline @ no__t-0.  
   
 ## <a name="example"></a>Esempio  
  Nel codice SQL seguente viene presentata una funzione con valori scalari definita dall'utente `ReverseCustName()`.  
   
-```  
+```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
 RETURNS varchar(100)  
 AS  

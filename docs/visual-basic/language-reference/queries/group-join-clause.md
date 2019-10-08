@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184077f2689eb64e4373d407913eefcc03b795c2
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945314"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005728"
 ---
 # <a name="group-join-clause-visual-basic"></a>Clausola Group Join (Visual Basic)
-Combina due raccolte in un'unica raccolta gerarchica. L'operazione di join è basata su chiavi corrispondenti.  
+Combina due raccolte in un'unica raccolta gerarchica. L'operazione di join è basata sulle chiavi corrispondenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Group Join element [As type] In collection _  
   On key1 Equals key2 [ And key3 Equals key4 [... ] ] _  
   Into expressionList  
@@ -31,27 +31,27 @@ Group Join element [As type] In collection _
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`element`|Obbligatorio. La variabile di controllo per la raccolta da unire in join.|  
-|`type`|Facoltativo. Tipo di `element`. Se nessun `type` viene specificato, il tipo di `element` viene dedotto dal `collection`.|  
-|`collection`|Obbligatorio. La raccolta da combinare con la raccolta che si trova sul lato sinistro del `Group Join` operatore. Oggetto `Group Join` clausola può essere annidata in una `Join` clausola o in un altro `Group Join` clausola.|  
-|`key1` `Equals` `key2`|Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario usare il `Equals` operatore per confrontare le chiavi delle raccolte da unire in join. È possibile combinare le condizioni di join tramite il `And` operatore per identificare più chiavi. Il `key1` il parametro deve essere dall'insieme sul lato sinistro del `Join` operatore. Il `key2` il parametro deve essere dall'insieme sul lato destro del `Join` operatore.<br /><br /> Le chiavi usate nella condizione di join possono essere espressioni che includono più di un elemento dalla raccolta. Tuttavia, ogni espressione chiave può contenere solo gli elementi del rispettivo insieme.|  
-|`expressionList`|Obbligatorio. Uno o più espressioni che identificano come vengono aggregati i gruppi di elementi dalla raccolta. Per identificare il nome di un membro per i risultati raggruppati, usare il `Group` parola chiave (`<alias> = Group`). È anche possibile includere funzioni di aggregazione da applicare al gruppo.|  
+|`element`|Obbligatorio. Variabile di controllo per la raccolta da unire in join.|  
+|`type`|facoltativo. Tipo di `element`. Se non si specifica `type`, il tipo di `element` viene dedotto da `collection`.|  
+|`collection`|Obbligatorio. Raccolta da combinare con la raccolta che si trova sul lato sinistro dell'operatore `Group Join`. Una clausola `Group Join` può essere annidata in una clausola `Join` o in un'altra clausola `Group Join`.|  
+|`key1` `Equals` `key2`|Obbligatorio. Identifica le chiavi per le raccolte da unire in join. È necessario usare l'operatore `Equals` per confrontare le chiavi delle raccolte da unire in join. È possibile combinare le condizioni di join usando l'operatore `And` per identificare più chiavi. Il parametro `key1` deve essere dalla raccolta sul lato sinistro dell'operatore `Join`. Il parametro `key2` deve essere dalla raccolta sul lato destro dell'operatore `Join`.<br /><br /> Le chiavi utilizzate nella condizione di join possono essere espressioni che includono più di un elemento della raccolta. Ogni espressione chiave può tuttavia contenere solo elementi della rispettiva raccolta.|  
+|`expressionList`|Obbligatorio. Una o più espressioni che identificano la modalità di aggregazione dei gruppi di elementi della raccolta. Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` (`<alias> = Group`). È anche possibile includere funzioni di aggregazione da applicare al gruppo.|  
   
 ## <a name="remarks"></a>Note  
- Il `Group Join` clausola combina due raccolte in base ai corrispondenti valori di chiave da raccolte da includere. La raccolta risultante può contenere un membro che fa riferimento a una raccolta di elementi della seconda raccolta che corrisponde al valore chiave della prima raccolta. È anche possibile specificare funzioni di aggregazione da applicare agli elementi raggruppati della seconda raccolta. Per informazioni sulle funzioni di aggregazione, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ La clausola `Group Join` combina due raccolte in base ai valori di chiave corrispondenti delle raccolte da unire in join. La raccolta risultante può contenere un membro che fa riferimento a una raccolta di elementi della seconda raccolta che corrispondono al valore della chiave della prima raccolta. È inoltre possibile specificare le funzioni di aggregazione da applicare agli elementi raggruppati della seconda raccolta. Per informazioni sulle funzioni di aggregazione, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Si consideri, ad esempio, una raccolta di gestori e una raccolta di dipendenti. Gli elementi di entrambe le raccolte hanno una proprietà di ManagerID che identifichi i dipendenti che fanno riferimento a un particolare responsabile. I risultati di un'operazione di join contiene un risultato per ogni responsabile e dipendenti con un valore ManagerID corrispondente. I risultati di una `Group Join` operazione contiene l'elenco completo dei gestori. Ogni risultato manager sarebbe necessario un membro a cui fa riferimento l'elenco dei dipendenti che hanno una corrispondenza per il gestore specifico.  
+ Si consideri, ad esempio, una raccolta di Manager e una raccolta di dipendenti. Gli elementi di entrambe le raccolte hanno una proprietà ManagerID che identifica i dipendenti che riferiscono a un particolare responsabile. I risultati di un'operazione di join contengono un risultato per ogni responsabile e dipendente con un valore ManagerID corrispondente. I risultati di un'operazione `Group Join` contengono l'elenco completo dei Manager. Ogni risultato di gestione avrà un membro che fa riferimento all'elenco di dipendenti che corrispondevano al responsabile specifico.  
   
- La raccolta risultante da un `Group Join` operazione può contenere qualsiasi combinazione di valori dalla raccolta identificata nel `From` clausola e alle espressioni identificate nel `Into` clausola del `Group Join` clausola. Per altre informazioni sulle espressioni valide per i `Into` clausola, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ La raccolta risultante da un'operazione `Group Join` può contenere qualsiasi combinazione di valori della raccolta identificata nella clausola `From` e le espressioni identificate nella clausola `Into` della clausola `Group Join`. Per ulteriori informazioni sulle espressioni valide per la clausola `Into`, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Oggetto `Group Join` operazione restituirà tutti i risultati dalla raccolta identificata nel lato sinistro del `Group Join` operatore. Questo vale anche se non sono presenti corrispondenze nella raccolta da unire in join. Si tratta, ad esempio un `LEFT OUTER JOIN` in SQL.  
+ Un'operazione `Group Join` restituirà tutti i risultati della raccolta identificata sul lato sinistro dell'operatore `Group Join`. Questo vale anche se non sono presenti corrispondenze nella raccolta da unire in join. Questa operazione è simile a `LEFT OUTER JOIN` in SQL.  
   
- È possibile usare il `Join` clausola per combinare raccolte in un'unica raccolta. Ciò equivale a un `INNER JOIN` in SQL.  
+ È possibile usare la clausola `Join` per combinare le raccolte in un'unica raccolta. Equivale a un `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente unisce due raccolte mediante il `Group Join` clausola.  
+ L'esempio di codice seguente unisce due raccolte usando la clausola `Group Join`.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   

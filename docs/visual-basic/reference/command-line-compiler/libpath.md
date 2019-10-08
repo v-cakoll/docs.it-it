@@ -6,30 +6,30 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4e415576562885c9edbd3d2dddbe2a271e9923
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793926"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005461"
 ---
 # <a name="-libpath"></a>-libpath
-Specifica la posizione degli assembly cui viene fatto riferimento.  
+Specifica il percorso degli assembly a cui si fa riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -libpath:dirList  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`dirList`|Obbligatorio. Elenco delimitato da punto e virgola delle directory in cui il compilatore ricerca se un assembly di riferimento non trova nella directory di lavoro corrente (la directory da cui si richiama il compilatore) o la directory di sistema di common language runtime. Se il nome della directory contiene uno spazio, racchiudere il nome tra virgolette ("").|  
+|`dirList`|Obbligatorio. Elenco delimitato da punti e virgola di directory per il compilatore da cercare se un assembly a cui si fa riferimento non viene trovato nella directory di lavoro corrente (la directory da cui si richiama il compilatore) o nella directory di sistema del Common Language Runtime. Se il nome della directory contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
 ## <a name="remarks"></a>Note  
- Il `-libpath` opzione consente di specificare la posizione degli assembly a cui fanno riferimento le [-riferimento](../../../visual-basic/reference/command-line-compiler/reference.md) opzione.  
+ L'opzione `-libpath` specifica il percorso degli assembly a cui fa riferimento l'opzione [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) .  
   
  La ricerca dei riferimenti non completi agli assembly viene operata nell'ordine seguente:  
   
@@ -37,20 +37,20 @@ Specifica la posizione degli assembly cui viene fatto riferimento.
   
 2. Directory di sistema di Common Language Runtime.  
   
-3. Directory specificate dalla `/libpath`.  
+3. Directory specificate da `/libpath`.  
   
 4. Directory specificate dalla variabile di ambiente LIB.  
   
- Il `-libpath` opzione si sommano tra loro; specificando che più di una volta aggiunto a eventuali valori precedenti.  
+ L'opzione `-libpath` è additiva; la specifica di più di una volta viene accodata a qualsiasi valore precedente.  
   
- Usare `-reference` per specificare un riferimento all'assembly.  
+ Utilizzare `-reference` per specificare un riferimento a un assembly.  
   
-|Per impostare /libpath in Visual Studio ambiente di sviluppo integrato|  
+|Per impostare/LIBPATH in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Fare clic su di **fanno riferimento a percorsi...**  pulsante.<br />4.  Nel **percorsi di riferimento** finestra di dialogo immettere il nome della directory nel **cartella:** casella.<br />5.  Fare clic su **aggiungere la cartella**.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Fare clic sul pulsante **Percorsi riferimento...** .<br />4.  Nella finestra di dialogo **Percorsi riferimento** immettere il nome della directory nella casella **cartella:** .<br />5.  Fare clic su **Aggiungi cartella**.|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `T2.vb` per creare un file .exe. Il compilatore cerca nella directory di lavoro, nella directory radice dell'unità c: e nella directory nuovi assembly dell'unità c: i riferimenti ad assembly.  
+ Il codice seguente compila `T2.vb` per creare un file con estensione exe. Il compilatore cerca nella directory di lavoro, nella directory radice dell'unità C: e nella nuova directory degli assembly dell'unità C: per i riferimenti all'assembly.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

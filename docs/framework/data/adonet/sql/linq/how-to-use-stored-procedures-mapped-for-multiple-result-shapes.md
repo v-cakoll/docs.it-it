@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: d32faf026789923ca4343271c9fd1b6bbdb068df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 065e866ec5937c4af31c0b1563a7582cb4112eba
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793097"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003279"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedura: Usare stored procedure mappate per più forme di risultati
-Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sia in grado di generare tutti i possibili tipi di proiezione, non è in grado di stabilire l'ordine in cui verranno restituiti.  
+Quando una stored procedure consente di restituire più forme di risultati, il tipo restituito non può essere fortemente tipizzato a una singola forma di proiezione. Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possa generare tutti i possibili tipi di proiezione, non può essere a conoscenza dell'ordine in cui verranno restituiti.  
   
- Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per forme](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)di risultati sequenziali.  
+ Si consideri questo scenario rispetto a stored procedure che producono più forme di risultati in sequenza. Per altre informazioni, vedere [Procedura: Utilizzare stored procedure mappate per forme di risultati sequenziali @ no__t-0.  
   
  L'attributo <xref:System.Data.Linq.Mapping.ResultTypeAttribute> viene applicato a stored procedure che restituiscono più tipi di risultati per specificare il set di tipi che la stored procedure può restituire.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice SQL riportato di seguito la forma dei risultati dipende dall'input (`shape =1` o `shape = 2`). Non si conosce la proiezione che verrà restituita per prima.  
   
-```  
+``` sql
 CREATE PROCEDURE VariableResultShapes(@shape int)  
 AS  
 if(@shape = 1)  

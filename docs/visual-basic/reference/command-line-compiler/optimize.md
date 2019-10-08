@@ -7,41 +7,41 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788973"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005378"
 ---
 # <a name="-optimize"></a>-optimize
-Abilita o disabilita le ottimizzazioni del compilatore.  
+Abilita o Disabilita le ottimizzazioni del compilatore.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -optimize[ + | - ]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Il `-optimize-` opzione Disabilita le ottimizzazioni del compilatore. Il `-optimize+` opzione Abilita le ottimizzazioni. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
+|`+` &#124; `-`|facoltativo. L'opzione `-optimize-` Disabilita le ottimizzazioni del compilatore. L'opzione `-optimize+` Abilita le ottimizzazioni. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
   
 ## <a name="remarks"></a>Note  
- Le ottimizzazioni del compilatore consentono di ridurre le dimensioni del file di output rendendolo più veloce ed efficiente. Tuttavia, poiché le ottimizzazioni comportano una riorganizzazione del codice nel file di output, `-optimize+` può rendere difficile il debug.  
+ Le ottimizzazioni del compilatore consentono di ridurre le dimensioni del file di output rendendolo più veloce ed efficiente. Tuttavia, poiché le ottimizzazioni generano una riorganizzazione del codice nel file di output, `-optimize+` può rendere difficoltoso il debug.  
   
- Tutti i moduli generati con `-target:module` per un assembly deve usare lo stesso `-optimize` le impostazioni dell'assembly. Per altre informazioni, vedere [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Tutti i moduli generati con `-target:module` per un assembly devono usare le stesse impostazioni `-optimize` dell'assembly. Per ulteriori informazioni, vedere [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- È possibile combinare le `-optimize` e `-debug` opzioni.  
+ È possibile combinare le opzioni `-optimize` e `-debug`.  
   
-|Per impostare - ottimizzare nell'ambiente di sviluppo integrato di Visual Studio|  
+|Per impostare-optimize in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il **abilitare le ottimizzazioni** casella di controllo.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare la casella di controllo **Abilita ottimizzazioni** .|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `T2.vb` e abilita le ottimizzazioni del compilatore.  
+ Il codice seguente compila `T2.vb` e Abilita le ottimizzazioni del compilatore.  
   
 ```console
 vbc t2.vb -optimize  

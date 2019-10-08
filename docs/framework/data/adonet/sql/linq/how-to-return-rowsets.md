@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b853a6f2175009cbcbc01c14a6732b98e37e1a7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781601"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003067"
 ---
 # <a name="how-to-return-rowsets"></a>Procedura: Restituire set di righe
 In questo esempio viene restituito un rowset dal database e viene incluso un parametro di input per filtrare il risultato.  
@@ -20,7 +20,7 @@ In questo esempio viene restituito un rowset dal database e viene incluso un par
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è rappresentata una stored procedure che restituisce righe di clienti e usa un parametro di input per restituire solo le righe in cui è elencata "London" come città del cliente. In questo esempio si presuppone una classe `CustomersByCityResult` enumerabile.  
   
-```  
+```sql  
 CREATE PROCEDURE [dbo].[Customers By City]  
     (@param1 NVARCHAR(20))  
 AS  

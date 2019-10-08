@@ -2,12 +2,12 @@
 title: 'Procedura: Generare il modello a oggetti come file esterno'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793594"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002734"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedura: Generare il modello a oggetti come file esterno
 In alternativa al mapping basato sugli attributi, è possibile generare il modello a oggetti come file XML esterno usando lo strumento da riga di comando SQLMetal. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Usando un file di mapping XML esterno, si evita confusione nel codice. È inoltre possibile modificare il comportamento modificando il file esterno senza ricompilare i file binari dell'applicazione. Per ulteriori informazioni, vedere [mapping esterno](external-mapping.md).  
@@ -18,7 +18,7 @@ In alternativa al mapping basato sugli attributi, è possibile generare il model
 ## <a name="example"></a>Esempio  
  Il comando seguente genera un file di mapping esterno dal database di esempio Northwind.  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   

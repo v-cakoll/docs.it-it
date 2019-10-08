@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332763"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004609"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Procedura: Scrivere un metodo di estensione (Visual Basic)
 
@@ -27,11 +27,13 @@ I metodi di estensione consentono di aggiungere metodi a una classe esistente. I
     Imports System.Runtime.CompilerServices
     ```
 
-3. All'interno di un modulo nell'applicazione nuova o esistente, iniziare la definizione del metodo con l'attributo di estensione:
+3. All'interno di un modulo nell'applicazione nuova o esistente, iniziare la definizione del metodo con l'attributo [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) :
 
     ```vb
     <Extension()>
     ```
+ 
+   Si noti che l'attributo `Extension` può essere applicato solo a un metodo, ovvero una procedura `Sub` o `Function`, in un [modulo](../../../language-reference/statements/module-statement.md)Visual Basic. Se lo si applica a un metodo in un `Class` o un `Structure`, il compilatore Visual Basic genera l'errore [BC36551](../../../misc/bc36551.md)"i metodi di estensione possono essere definiti solo nei moduli".
 
 4. Dichiarare il metodo nel modo consueto, ad eccezione del fatto che il tipo del primo parametro deve essere il tipo di dati che si desidera estendere.
 

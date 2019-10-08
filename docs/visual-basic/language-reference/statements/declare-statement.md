@@ -1,5 +1,5 @@
 ---
-title: Declare (istruzione) (Visual Basic)
+title: Istruzione Declare (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Declare
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 6ff20af1ef439e27cffaf306c7917dbc98a419ce
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e839fe14c360229fbe0350fd7878c7a844056e8b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662917"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005087"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -40,7 +40,7 @@ Dichiara un riferimento a una routine implementata in un file esterno.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _
 Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _
 [ Alias "aliasname" ] [ ([ parameterlist ]) ]
@@ -52,94 +52,94 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="parts"></a>Parti
 
-|Termine|Definizione|
+|Nome|Definizione|
 |---|---|
-|`attributelist`|Facoltativo. Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
-|`Shadows`|Facoltativo. Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|Facoltativo. Specifica di set di caratteri e i file di informazioni di ricerca. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automatico](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|Facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Indica che la routine esterna non restituisce un valore.|
-|`Function`|Facoltativo, ma uno `Sub` o `Function` devono essere visualizzati. Indica che la routine esterna restituisce un valore.|
-|`name`|Obbligatorio. Nome della Guida di riferimento esterno. Per altre informazioni, vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|Obbligatorio. Introduce un `Lib` clausola che identifica il file esterno (DLL o risorsa codice) contenente una routine esterna.|
+|`attributelist`|facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|
+|`accessmodifier`|facoltativo. Può essere uno dei seguenti:<br /><br /> -   [pubblico](../../../visual-basic/language-reference/modifiers/public.md)<br />[protetto](../../../visual-basic/language-reference/modifiers/protected.md) da -   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privato](../../../visual-basic/language-reference/modifiers/private.md)<br />[Friend protetto](../../language-reference/modifiers/protected-friend.md) da @no__t 0<br />Protetto da - [privato](../../language-reference/modifiers/private-protected.md)<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|
+|`Shadows`|facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|
+|`charsetmodifier`|facoltativo. Specifica le informazioni sul set di caratteri e la ricerca di file. Può essere uno dei seguenti:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (impostazione predefinita)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [auto](../../../visual-basic/language-reference/modifiers/auto.md)|
+|`Sub`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Indica che la procedura esterna non restituisce alcun valore.|
+|`Function`|Facoltativo, ma è necessario che sia presente `Sub` o `Function`. Indica che la procedura esterna restituisce un valore.|
+|`name`|Obbligatorio. Nome del riferimento esterno. Per ulteriori informazioni, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Obbligatorio. Introduce una clausola `Lib`, che identifica il file esterno (DLL o risorsa del codice) che contiene una procedura esterna.|
 |`libname`|Obbligatorio. Nome del file che contiene la routine dichiarata.|
-|`Alias`|Facoltativo. Indica che la routine viene dichiarata non può essere identificata all'interno del file per il nome specificato in `name`. Specificarne l'identificazione in `aliasname`.|
-|`aliasname`|Obbligatorio se si usa il `Alias` (parola chiave). Stringa che identifica la procedura descritta in uno dei due modi:<br /><br /> Il nome del punto di ingresso della routine all'interno del file, all'interno delle virgolette (`""`)<br /><br /> -oppure-<br /><br /> Un simbolo di cancelletto (`#`) seguito da un integer che specifica il numero ordinale del punto di ingresso della routine all'interno del file|
-|`parameterlist`|Obbligatorio se la procedura accetta parametri. Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Obbligatorio se `Function` specificato e `Option Strict` è `On`. Tipo di dati del valore restituito dalla procedura.|
+|`Alias`|facoltativo. Indica che la routine dichiarata non può essere identificata all'interno del file in base al nome specificato in `name`. L'identificazione viene specificata in `aliasname`.|
+|`aliasname`|Obbligatorio se si usa la parola chiave `Alias`. Stringa che identifica la procedura in uno dei due modi seguenti:<br /><br /> Nome del punto di ingresso della routine all'interno del file, racchiuso tra virgolette (`""`)<br /><br /> -oppure-<br /><br /> Un segno di cancelletto (`#`) seguito da un Integer che specifica il numero ordinale del punto di ingresso della routine all'interno del file|
+|`parameterlist`|Obbligatorio se la procedura accetta parametri. Vedere [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).|
+|`returntype`|Obbligatorio se si specifica `Function` e `Option Strict` è `On`. Tipo di dati del valore restituito dalla stored procedure.|
 
 ## <a name="remarks"></a>Note
 
-In alcuni casi è necessario chiamare una routine definita in un file (ad esempio una DLL o risorsa codice) all'esterno del progetto. Quando si esegue questa operazione, il compilatore Visual Basic è privo di accesso per le informazioni necessarie per chiamare la routine in modo corretto, ad esempio in cui si trova la procedura, come viene identificato, la sequenza di chiamata e il tipo restituito e il set di caratteri della stringa che viene utilizzata. Il `Declare` istruzione crea un riferimento a una routine esterna e fornisce le informazioni necessarie.
+In alcuni casi è necessario chiamare una routine definita in un file, ad esempio una DLL o una risorsa di codice, all'esterno del progetto. Quando si esegue questa operazione, il compilatore Visual Basic non ha accesso alle informazioni necessarie per chiamare correttamente la stored procedure, ad esempio la posizione in cui si trova la stored procedure, il modo in cui viene identificata, la sequenza chiamante e il tipo restituito e il set di caratteri stringa usato. L'istruzione `Declare` crea un riferimento a una procedura esterna e fornisce le informazioni necessarie.
 
-Si può usare `Declare` solo a livello di modulo. Ciò significa che il *contesto della dichiarazione* per un riferimento esterno deve essere una classe, struttura o modulo e non può essere un file di origine, lo spazio dei nomi, interfaccia, routine o blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Si può usare `Declare` solo a livello di modulo. Ciò significa che il *contesto di dichiarazione* per un riferimento esterno deve essere una classe, una struttura o un modulo e non può essere un file di origine, uno spazio dei nomi, un'interfaccia, una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Per impostazione predefinita a riferimenti esterni [pubblica](../../../visual-basic/language-reference/modifiers/public.md) accesso. È possibile modificare i livelli di accesso con i modificatori di accesso.
+Riferimenti esterni per impostazione predefinita l'accesso [pubblico](../../../visual-basic/language-reference/modifiers/public.md) . È possibile modificare i livelli di accesso con i modificatori di accesso.
 
 ## <a name="rules"></a>Regole
 
-- **Attributi.** È possibile applicare attributi a un riferimento esterno. Tutti gli attributi applicati hanno effetto solo nel progetto, non nel file esterno.
+- **Attributi.** È possibile applicare attributi a un riferimento esterno. Tutti gli attributi applicati hanno effetto solo nel progetto e non nel file esterno.
 
-- **Modificatori.** Routine esterne sono implicitamente [condiviso](../../../visual-basic/language-reference/modifiers/shared.md). Non è possibile usare il `Shared` parola chiave quando si dichiara un riferimento esterno ed è possibile modificare lo stato condiviso.
+- **Modificatori.** Le procedure esterne sono implicitamente [condivise](../../../visual-basic/language-reference/modifiers/shared.md). Non è possibile usare la parola chiave `Shared` quando si dichiara un riferimento esterno e non è possibile modificarne lo stato condiviso.
 
-  Una routine esterna non possa partecipare a viene sottoposto a override, implementano membri di interfaccia o la gestione degli eventi. Di conseguenza, non è possibile usare la `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, oppure `Handles` parola chiave in un `Declare` istruzione.
+  Una procedura esterna non può partecipare all'override, all'implementazione di membri di interfaccia o alla gestione degli eventi. Di conseguenza, non è possibile usare la parola chiave `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` o `Handles` in un'istruzione `Declare`.
 
-- **Nome della routine esterna.** Non è necessario assegnare lo stesso nome di questo riferimento esterno (in `name`) come nome del punto di ingresso della stored procedure contenuta nel file esterno (`aliasname`). È possibile usare un `Alias` clausola per specificare il nome del punto di ingresso. Ciò può essere utile se la routine esterna ha lo stesso nome come modificatore riservato Visual Basic o una variabile, routine o altri elementi di programmazione nello stesso ambito.
-
-  > [!NOTE]
-  > I nomi di punto di ingresso in quasi tutte le DLL sono tra maiuscole e minuscole.
-
-- **Numero di routine esterna.** In alternativa, è possibile usare un `Alias` clausola per specificare il numero ordinale del punto di ingresso all'interno della tabella di esportazione del file esterno. A tale scopo, iniziare `aliasname` con un simbolo di cancelletto (`#`). Ciò risulta utile se qualsiasi carattere nel nome della routine esterna non è consentito in Visual Basic o se il file esterno consente di esportare la procedura senza nome.
-
-## <a name="data-type-rules"></a>Regole di tipo di dati
-
-- **Tipi di dati di parametro.** Se `Option Strict` viene `On`, è necessario specificare il tipo di dati di ogni parametro in `parameterlist`. Può trattarsi di qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia. All'interno `parameterlist`, si utilizza un `As` clausola per specificare il tipo di dati dell'argomento deve essere passato a ogni parametro.
+- **Nome della procedura esterna.** Non è necessario assegnare a questo riferimento esterno lo stesso nome (in `name`) come nome del punto di ingresso della stored procedure all'interno del file esterno (`aliasname`). È possibile usare una clausola `Alias` per specificare il nome del punto di ingresso. Questo può essere utile se la procedura esterna ha lo stesso nome di un modificatore riservato Visual Basic o di una variabile, di una routine o di qualsiasi altro elemento di programmazione nello stesso ambito.
 
   > [!NOTE]
-  > Se la routine esterna non è stato scritto per .NET Framework, è necessario prestare attenzione i tipi di dati corrispondenti. Ad esempio, se si dichiara un riferimento esterno a una procedura di Visual Basic 6.0 con un' `Integer` parametro (16 bit in Visual Basic 6.0), è necessario identificare l'argomento corrispondente come `Short` nel `Declare` istruzione, perché questo è il 16 - tipo di integer bit in Visual Basic. Analogamente, `Long` ha un'ampiezza dei dati diversa in Visual Basic 6.0, e `Date` viene implementato in modo diverso.
+  > I nomi dei punti di ingresso nella maggior parte delle dll fanno distinzione tra maiuscole e minuscole
 
-- **Tipo di dati restituito.** Se la routine esterna è un `Function` e `Option Strict` è `On`, è necessario specificare il tipo di dati del valore restituito al codice chiamante. Può trattarsi di qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.
+- **Numero di procedura esterna.** In alternativa, è possibile utilizzare una clausola `Alias` per specificare il numero ordinale del punto di ingresso all'interno della tabella di esportazione del file esterno. A tale scopo, iniziare `aliasname` con un simbolo di cancelletto (`#`). Questo può essere utile se un carattere nel nome della procedura esterna non è consentito in Visual Basic o se il file esterno Esporta la stored procedure senza un nome.
+
+## <a name="data-type-rules"></a>Regole del tipo di dati
+
+- **Tipi di dati dei parametri.** Se `Option Strict` è `On`, è necessario specificare il tipo di dati di ogni parametro in `parameterlist`. Può essere qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia. All'interno `parameterlist` è possibile utilizzare una clausola `As` per specificare il tipo di dati dell'argomento da passare a ogni parametro.
 
   > [!NOTE]
-  > Il compilatore Visual Basic non verifica che i tipi di dati compatibili con quelli della routine esterna. Se è presente una mancata corrispondenza, common language runtime genera una <xref:System.Runtime.InteropServices.MarshalDirectiveException> eccezione in fase di esecuzione.
+  > Se la procedura esterna non è stata scritta per la .NET Framework, è necessario prestare attenzione che i tipi di dati corrispondano. Se, ad esempio, si dichiara un riferimento esterno a una procedura Visual Basic 6,0 con un parametro `Integer` (16 bit in Visual Basic 6,0), è necessario identificare l'argomento corrispondente come `Short` nell'istruzione `Declare`, perché questo è il tipo Integer a 16 bit in Visual Basic. Analogamente, `Long` ha una larghezza dati diversa in Visual Basic 6,0 e `Date` viene implementata in modo diverso.
 
-- **Tipi di dati predefiniti.** Se `Option Strict` viene `Off` e non si specifica il tipo di dati di un parametro in `parameterlist`, il compilatore Visual Basic consente di convertire l'argomento corrispondente per il [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md). Analogamente, se non si specifica `returntype`, il compilatore prende il tipo di dati restituito sia `Object`.
+- **Tipo di dati restituito.** Se la procedura esterna è un `Function` e `Option Strict` è `On`, è necessario specificare il tipo di dati del valore restituito al codice chiamante. Può essere qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia.
 
   > [!NOTE]
-  > Poiché è necessario gestire una routine esterna che sia stato scritto su una piattaforma diversa, può essere pericoloso per fare supposizioni sui tipi di dati o per consentire loro di default. È molto più sicura specificare il tipo di dati di ogni parametro e il valore restituito, se presente. Inoltre, per migliorare la leggibilità del codice.
+  > Il compilatore Visual Basic non verifica che i tipi di dati siano compatibili con quelli della procedura esterna. In caso di mancata corrispondenza, il Common Language Runtime genera un'eccezione <xref:System.Runtime.InteropServices.MarshalDirectiveException> in fase di esecuzione.
+
+- **Tipi di dati predefiniti.** Se `Option Strict` è `Off` e non si specifica il tipo di dati di un parametro in `parameterlist`, il compilatore Visual Basic converte l'argomento corrispondente nel [tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md). Analogamente, se non si specifica `returntype`, il compilatore accetta il tipo di dati restituito come `Object`.
+
+  > [!NOTE]
+  > Poiché si tratta di una procedura esterna che potrebbe essere stata scritta su una piattaforma diversa, è pericoloso creare ipotesi sui tipi di dati o per consentirne l'impostazione predefinita. È molto più sicuro specificare il tipo di dati di ogni parametro e del valore restituito, se presente. Questa operazione migliora inoltre la leggibilità del codice.
 
 ## <a name="behavior"></a>Comportamento
 
-- **Ambito.** Un riferimento esterno è nell'ambito in tutta la classe, struttura o modulo.
+- **Ambito.** Un riferimento esterno è nell'ambito di tutta la classe, la struttura o il modulo.
 
-- **Ciclo di vita.** Un riferimento esterno ha la stessa durata della classe, struttura o modulo in cui è dichiarata.
+- **Vita.** Un riferimento esterno ha la stessa durata della classe, della struttura o del modulo in cui è dichiarata.
 
-- **Chiamare una routine esterna.** Si chiama una routine esterna simile a quello di chiamare un `Function` oppure `Sub` procedure, ovvero utilizzandolo in un'espressione, se viene restituito un valore o specificando in un [istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md) se non viene restituito un valore.
+- **Chiamata a una routine esterna.** È possibile chiamare una routine esterna nello stesso modo in cui si chiama una procedura `Function` o `Sub`, usandola in un'espressione se restituisce un valore o specificandone il valore in un' [istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md) se non restituisce un valore.
 
-  È passare argomenti per la routine esterna esattamente come specificato da `parameterlist` nella `Declare` istruzione. Non considerare come i parametri sono stati originariamente dichiarati nel file esterno. Analogamente, se è presente un valore restituito, usarlo esattamente come specificato da `returntype` nella `Declare` istruzione.
+  Gli argomenti vengono passati alla procedura esterna esattamente come specificato da `parameterlist` nell'istruzione `Declare`. Non prendere in considerazione il modo in cui i parametri sono stati originariamente dichiarati nel file esterno. Analogamente, se è presente un valore restituito, utilizzarlo esattamente come specificato da `returntype` nell'istruzione `Declare`.
 
-- **Set di caratteri.** È possibile specificare in `charsetmodifier` come Visual Basic deve effettuare il marshalling delle stringhe quando chiama la routine esterna. Il `Ansi` modificatore indirizza il marshalling di tutte le stringhe in valori ANSI e `Unicode` modificatore indirizza per effettuare il marshalling di tutte le stringhe in valori Unicode. Il `Auto` modificatore indica a Visual Basic per il marshalling delle stringhe in base a .NET Framework delle regole in base al riferimento esterno `name`, o `aliasname` se non specificato. Il valore predefinito è `Ansi`.
+- **Set di caratteri.** È possibile specificare in `charsetmodifier` il modo in cui Visual Basic deve effettuare il marshalling delle stringhe quando viene chiamata la procedura esterna. Il modificatore `Ansi` indirizza Visual Basic per eseguire il marshalling di tutte le stringhe in valori ANSI e il modificatore `Unicode` indica di effettuare il marshalling di tutte le stringhe in valori Unicode. Il modificatore `Auto` indirizza Visual Basic per eseguire il marshalling delle stringhe in base alle regole di .NET Framework in base al riferimento esterno `name` o `aliasname` se specificato. Il valore predefinito è `Ansi`.
 
-  `charsetmodifier` Specifica inoltre come Visual Basic deve cercare la routine esterna all'interno del file esterno. `Ansi` e `Unicode` entrambe indirizzare Visual Basic per cercare senza modificarne il nome durante la ricerca. `Auto` indica a Visual Basic per determinare il set di caratteri di base della piattaforma in fase di esecuzione ed eventualmente modificare il nome della routine esterna, come indicato di seguito:
+  `charsetmodifier` specifica anche il modo in cui Visual Basic cerca la procedura esterna all'interno del file esterno. `Ansi` e `Unicode` Visual Basic diretta per cercarla senza modificarne il nome durante la ricerca. `Auto` indirizza Visual Basic per determinare il set di caratteri di base della piattaforma di runtime ed eventualmente modificare il nome della procedura esterna, come indicato di seguito:
 
-  - In una piattaforma di ANSI, ad esempio Windows 95, Windows 98 o Windows Millennium Edition, cercare prima di tutto la routine esterna senza modificarne il nome. Se il problema persiste, aggiungere "A" alla fine del nome della routine esterna a cercare nuovamente.
+  - In una piattaforma ANSI, ad esempio Windows 95, Windows 98 o Windows Millennium Edition, cercare prima la procedura esterna senza modificarne il nome. Se l'operazione ha esito negativo, aggiungere "A" alla fine del nome della procedura esterna e cercarla nuovamente.
 
-  - In una piattaforma di Unicode, ad esempio Windows NT, Windows 2000 o Windows XP, cercare prima di tutto la routine esterna senza modificarne il nome. Se il problema persiste, aggiungere "W" alla fine della routine esterna assegnare un nome e cercare nuovamente.
+  - In una piattaforma Unicode, ad esempio Windows NT, Windows 2000 o Windows XP, cercare prima la procedura esterna senza modificarne il nome. Se l'operazione ha esito negativo, aggiungere "W" alla fine del nome della procedura esterna e cercarla nuovamente.
 
-- **Meccanismo.** Visual Basic Usa .NET Framework *PInvoke* meccanismo (PInvoke) per risolvere e accedere alle routine esterne. Il `Declare` istruzione e <xref:System.Runtime.InteropServices.DllImportAttribute> classe entrambi usano questo meccanismo automaticamente e non è necessaria alcuna conoscenza di una chiamata PInvoke. Per altre informazioni, vedere [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+- **Meccanismo.** Visual Basic utilizza il meccanismo .NET Framework *Platform Invoke* (PInvoke) per risolvere e accedere a procedure esterne. L'istruzione `Declare` e la classe <xref:System.Runtime.InteropServices.DllImportAttribute> utilizzano entrambi questo meccanismo automaticamente e non è necessaria alcuna conoscenza di PInvoke. Per altre informazioni, vedere [Procedura dettagliata: Chiamata di API Windows @ no__t-0.
 
 > [!IMPORTANT]
-> Se la routine esterna viene eseguito all'esterno di common language runtime (CLR), si tratta *codice non gestito*. Quando si chiama questo tipo una routine, ad esempio una funzione API di Windows o un metodo COM, si potrà esporre l'applicazione a rischi di sicurezza. Per altre informazioni, vedere [Secure linee guida di codifica per il codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
+> Se la procedura esterna viene eseguita all'esterno del Common Language Runtime (CLR), si tratta di *codice non gestito*. Quando si chiama una procedura di questo tipo, ad esempio una funzione API Windows o un metodo COM, è possibile esporre l'applicazione ai rischi per la sicurezza. Per altre informazioni, vedere [linee guida per la codifica di codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente dichiara un riferimento esterno a un `Function` procedure che restituisce il nome dell'utente corrente. Quindi chiama la routine esterna `GetUserNameA` come parte di `getUser` procedure.
+Nell'esempio seguente viene dichiarato un riferimento esterno a una procedura `Function` che restituisce il nome utente corrente. Viene quindi chiamata la procedura esterna `GetUserNameA` come parte della procedura `getUser`.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>Esempio
 
-Il <xref:System.Runtime.InteropServices.DllImportAttribute> offre un modo alternativo all'utilizzo di funzioni nel codice non gestito. L'esempio seguente dichiara una funzione importata senza usare un `Declare` istruzione.
+Il <xref:System.Runtime.InteropServices.DllImportAttribute> fornisce un modo alternativo per usare le funzioni nel codice non gestito. Nell'esempio seguente viene dichiarata una funzione importata senza utilizzare un'istruzione `Declare`.
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 

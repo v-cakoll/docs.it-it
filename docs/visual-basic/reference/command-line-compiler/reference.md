@@ -1,5 +1,5 @@
 ---
-title: -riferimenti (Visual Basic)
+title: -Reference (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -9,49 +9,53 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583364"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005267"
 ---
-# <a name="-reference-visual-basic"></a>-riferimenti (Visual Basic)
-Indica al compilatore di rendere disponibili per il progetto in corso di compilazione informazioni sui tipi negli assembly specificati.  
+# <a name="-reference-visual-basic"></a>-Reference (Visual Basic)
+Fa in modo che il compilatore renda le informazioni sul tipo negli assembly specificati disponibili per il progetto attualmente in fase di compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -reference:fileList  
-' -or-  
+```
+
+oppure
+
+```console
 -r:fileList  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
 |`fileList`|Obbligatorio. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
   
 ## <a name="remarks"></a>Note  
- I file importati devono contenere i metadati dell'assembly. Solo i tipi pubblici sono visibili all'esterno dell'assembly. Il [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opzione Importa i metadati da un modulo.  
+ I file importati devono contenere i metadati dell'assembly. Solo i tipi pubblici sono visibili all'esterno dell'assembly. L'opzione [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa i metadati da un modulo.  
   
- Se si fa riferimento a un assembly (Assembly A) che a sua volta fa riferimento a un altro assembly (Assembly B), è necessario fare riferimento all'Assembly B se:  
+ Se si fa riferimento a un assembly (assembly A) che a sua volta fa riferimento a un altro assembly (assembly B), è necessario fare riferimento all'assembly B se:  
   
 - Un tipo dell'assembly A eredita da un tipo o implementa un'interfaccia dall'assembly B.  
   
 - Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Uso [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trovano uno o più riferimenti agli assembly.  
+ Usare [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti ad assembly.  
   
- Per il compilatore di riconoscere un tipo in un assembly (non un modulo), è necessario imporre la risoluzione del tipo. Un esempio di come è possibile eseguire questa operazione consiste nel definire un'istanza del tipo. Esistono altri modi risolvere i nomi dei tipi in un assembly per consentire al compilatore. Ad esempio, se si eredita da un tipo in un assembly, il nome del tipo quindi diventa noto al compilatore.  
+ Affinché il compilatore riconosca un tipo in un assembly (non un modulo), è necessario forzare la risoluzione del tipo. Un esempio di come è possibile eseguire questa operazione consiste nel definire un'istanza del tipo. Sono disponibili altri modi per risolvere i nomi dei tipi in un assembly per il compilatore. Se, ad esempio, si eredita da un tipo in un assembly, il nome del tipo diventa noto al compilatore.  
   
- Il file di risposta Vbc. rsp, che fa riferimento agli assembly di .NET Framework comunemente utilizzati, viene usato per impostazione predefinita. Usare `-noconfig` se non si desidera al compilatore di utilizzare vbc. rsp.  
+ Per impostazione predefinita, viene usato il file di risposta vbc. rsp, che fa riferimento a assembly .NET Framework di uso comune. Usare `-noconfig` se non si vuole che il compilatore usi vbc. rsp.  
   
  La forma breve di `-reference` è `/r`.  
   
 ## <a name="example"></a>Esempio  
- Il comando seguente consente di compilare file di origine `Input.vb` e fare riferimento agli assembly da `Metad1.dll` e `Metad2.dll` produrre `Out.exe`.  
+ Il comando seguente compila il file di origine `Input.vb` e gli assembly di riferimento da `Metad1.dll` e `Metad2.dll` per produrre `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

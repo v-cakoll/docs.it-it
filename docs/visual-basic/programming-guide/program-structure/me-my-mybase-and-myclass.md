@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586262"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002541"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase e MyClass in Visual Basic
-`Me`, `My`, `MyBase`, e `MyClass` in Visual Basic hanno nomi simili, ma scopi diversi. Questo argomento descrive ognuna di queste entità per distinguerli.  
+`Me`, `My`, `MyBase` e `MyClass` in Visual Basic hanno nomi simili, ma a scopi diversi. In questo argomento vengono descritte le singole entità per distinguerle.  
   
 ## <a name="me"></a>Me  
- Il `Me` (parola chiave) fornisce un modo per fare riferimento all'istanza specifica di una classe o struttura in cui è attualmente in esecuzione il codice. `Me` si comporta come una variabile oggetto o una variabile di struttura che fa riferimento all'istanza corrente. Usando `Me` è particolarmente utile per passare le informazioni relative all'istanza attualmente in esecuzione di una classe o struttura a una routine in un'altra classe, struttura o modulo.  
+ La parola chiave `Me` fornisce un modo per fare riferimento all'istanza specifica di una classe o struttura in cui è attualmente in esecuzione il codice. `Me` si comporta come una variabile oggetto o una variabile di struttura che fa riferimento all'istanza corrente. L'uso di `Me` è particolarmente utile per passare informazioni sull'istanza attualmente in esecuzione di una classe o di una struttura a una routine in un'altra classe, struttura o modulo.  
   
- Ad esempio, si supponga di che avere la seguente procedura in un modulo.  
+ Si supponga, ad esempio, di avere la procedura seguente in un modulo.  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- È possibile chiamare la routine e passare l'istanza corrente del <xref:System.Windows.Forms.Form> classe come un argomento usando l'istruzione seguente.  
+ È possibile chiamare questa procedura e passare l'istanza corrente della classe <xref:System.Windows.Forms.Form> come argomento usando l'istruzione seguente.  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- Il `My` funzionalità fornisce l'accesso semplice e intuitivo a numerose classi .NET Framework, che consente all'utente di Visual Basic interagire con il computer, applicazioni, impostazioni, risorse e così via.  
+ La funzionalità `My` consente di accedere in modo semplice e intuitivo a diverse classi .NET Framework, consentendo al Visual Basic utente di interagire con il computer, l'applicazione, le impostazioni, le risorse e così via.  
   
 ## <a name="mybase"></a>MyBase  
- Il `MyBase` (parola chiave) si comporta come una variabile oggetto che fa riferimento alla classe di base dell'istanza corrente di una classe. `MyBase` viene comunemente utilizzato per accedere ai membri di classe base sottoposto a override o shadowing in una classe derivata. `MyBase.New` Consente di chiamare in modo esplicito un costruttore di classe di base da un costruttore di classe derivata.  
+ La parola chiave `MyBase` si comporta come una variabile oggetto che fa riferimento alla classe di base dell'istanza corrente di una classe. `MyBase` viene comunemente usato per accedere ai membri della classe di base sottoposti a override o nascosti in una classe derivata. `MyBase.New` viene usato per chiamare in modo esplicito un costruttore della classe base da un costruttore di classe derivata.  
   
 ## <a name="myclass"></a>MyClass  
- Il `MyClass` (parola chiave) si comporta come una variabile oggetto che fa riferimento all'istanza corrente di una classe come implementata originariamente. `MyClass` è simile a `Me`, ma tutte le chiamate di metodo su di essa sono trattate come se fosse il metodo `NotOverridable`.  
+ La parola chiave `MyClass` si comporta come una variabile oggetto che fa riferimento all'istanza corrente di una classe come implementata originariamente. `MyClass` è simile a `Me`, ma tutte le chiamate al metodo su di essa sono trattate come se il metodo fosse `NotOverridable`.  
   
 ## <a name="see-also"></a>Vedere anche
 

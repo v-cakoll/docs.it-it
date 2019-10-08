@@ -13,36 +13,36 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: b637f6a5f3ef367dfe769c2878878eeb938e3c81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3b57ae45815fbd91cad17cddbed4d01037eb92f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638808"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002096"
 ---
 # <a name="property-procedures-visual-basic"></a>Routine Property (Visual Basic)
-Una routine di proprietà è una serie di istruzioni di Visual Basic che consentono di modificare una proprietà personalizzata in un modulo, classe o struttura. Le routine della proprietà sono dette anche *funzioni di accesso proprietà*.  
+Una routine di proprietà è una serie di istruzioni Visual Basic che consentono di modificare una proprietà personalizzata in un modulo, una classe o una struttura. Le routine di proprietà sono note anche come *funzioni di accesso alle proprietà*.  
   
- Visual Basic fornisce le routine della proprietà seguente:  
+ Visual Basic fornisce le routine di proprietà seguenti:  
   
-- Oggetto `Get` procedure restituisce il valore di una proprietà. Viene chiamato quando si accede alla proprietà in un'espressione.  
+- Una routine `Get` restituisce il valore di una proprietà. Viene chiamato quando si accede alla proprietà in un'espressione.  
   
-- Oggetto `Set` routine imposta una proprietà su un valore, incluso un riferimento all'oggetto. Viene chiamato quando si assegna un valore alla proprietà.  
+- Una procedura `Set` imposta una proprietà su un valore, incluso un riferimento a un oggetto. Viene chiamato quando si assegna un valore alla proprietà.  
   
- Le routine della proprietà in genere definite in coppie, mediante il `Get` e `Set` istruzioni, ma è possibile definire entrambe le procedure da solo se la proprietà è di sola lettura ([l'istruzione Get](../../../../visual-basic/language-reference/statements/get-statement.md)) o in sola lettura ([impostata Istruzione](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ In genere, le routine di proprietà vengono definite in coppie, usando le istruzioni `Get` e `Set`, ma è possibile definire una sola procedura solo se la proprietà è di sola lettura ([istruzione Get](../../../../visual-basic/language-reference/statements/get-statement.md)) o di sola scrittura ([istruzione set](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   
- È possibile omettere il `Get` e `Set` procedura quando si usa una proprietà implementata automaticamente. Per altre informazioni, vedere [Proprietà implementate automaticamente](./auto-implemented-properties.md).  
+ È possibile omettere la procedura `Get` e `Set` quando si usa una proprietà implementata automaticamente. Per altre informazioni, vedere [Proprietà implementate automaticamente](./auto-implemented-properties.md).  
   
- È possibile definire le proprietà nelle classi, strutture e i moduli. Le proprietà sono `Public` per impostazione predefinita, il che significa che è possibile chiamarle da qualsiasi posizione nell'applicazione che possa accedere al contenitore della proprietà.  
+ È possibile definire le proprietà in classi, strutture e moduli. Per impostazione predefinita, le proprietà sono `Public`, ovvero possono essere chiamate da qualsiasi punto dell'applicazione in grado di accedere al contenitore della proprietà.  
   
  Per un confronto tra proprietà e variabili, vedere [differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md).  
   
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
- Una proprietà è definita da un blocco di codice incluso all'interno di [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) e il `End Property` istruzione. All'interno del blocco, ogni routine della proprietà viene visualizzata come un blocco interno racchiuso in un'istruzione di dichiarazione (`Get` oppure `Set`) e il corrispondente `End` dichiarazione.  
+ Una proprietà viene definita da un blocco di codice racchiuso tra l' [istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md) e l'istruzione `End Property`. All'interno di questo blocco ogni routine di proprietà viene visualizzata come un blocco interno racchiuso tra un'istruzione di dichiarazione (`Get` o `Set`) e la dichiarazione `End` corrispondente.  
   
- La sintassi per dichiarare una proprietà e le relative procedure è come segue:  
+ La sintassi per la dichiarazione di una proprietà e delle relative procedure è la seguente:  
   
-```  
+```vb  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
     [AccessLevel] Get  
         ' Statements of the Get procedure.  
@@ -59,49 +59,49 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- Il `Modifiers` può specificare il livello di accesso e le informazioni riguardanti l'overload, si esegue l'override, la condivisione e shadowing, nonché se la proprietà è di sola lettura o in sola lettura. Il `AccessLevel` nella `Get` o `Set` routine può essere di qualsiasi livello più restrittivo rispetto al livello di accesso specificato per la proprietà stessa. Per altre informazioni, vedere [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ Il `Modifiers` può specificare il livello di accesso e le informazioni relative all'overload, all'override, alla condivisione e allo shadowing, nonché se la proprietà è di sola lettura o di sola scrittura. Il `AccessLevel` nella procedura `Get` o `Set` può essere qualsiasi livello più restrittivo del livello di accesso specificato per la proprietà stessa. Per ulteriori informazioni, vedere [istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md).  
   
 ### <a name="data-type"></a>Tipo di dati  
- Tipo di dati della proprietà e il livello di accesso dell'entità sono definiti nel `Property` istruzione, non nella routine della proprietà. Una proprietà può avere solo un tipo di dati. Ad esempio, è possibile definire una proprietà per archiviare una `Decimal` valore ma che recuperano un `Double` valore.  
+ Il tipo di dati e il livello di accesso dell'entità di una proprietà sono definiti nell'istruzione `Property`, non nelle routine della proprietà. Una proprietà può avere un solo tipo di dati. Non è ad esempio possibile definire una proprietà per archiviare un valore `Decimal`, ma recuperare un valore `Double`.  
   
 ### <a name="access-level"></a>Livello di accesso  
- Tuttavia, è possibile definire un livello di accesso dell'entità per una proprietà e limitare ulteriormente il livello di accesso in una delle routine della proprietà. Ad esempio, è possibile definire un `Public` proprietà, quindi definire un `Private Set` procedure. Il `Get` rimane impostato su procedure `Public`. È possibile modificare il livello di accesso in solo una delle routine della proprietà e si può solo rendono più restrittivo del livello di accesso dell'entità. Per altre informazioni, vedere [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md).  
+ Tuttavia, è possibile definire un livello di accesso principale per una proprietà e limitare ulteriormente il livello di accesso in una delle relative routine di proprietà. Ad esempio, è possibile definire una proprietà `Public` e quindi definire una procedura `Private Set`. La procedura `Get` rimane `Public`. È possibile modificare il livello di accesso solo in una delle routine di una proprietà ed è possibile renderlo solo più restrittivo del livello di accesso principale. Per altre informazioni, vedere [Procedura: Dichiarare una proprietà con livelli di accesso misti @ no__t-0.  
   
 ## <a name="parameter-declaration"></a>Dichiarazione di parametro  
- Ogni parametro è dichiarare la stessa procedura valida per [routine Sub](./sub-procedures.md), ad eccezione del fatto che il meccanismo di passaggio deve essere `ByVal`.  
+ Ogni parametro viene dichiarato in modo analogo alle [procedure secondarie](./sub-procedures.md), con la differenza che il meccanismo di passaggio deve essere `ByVal`.  
   
- La sintassi per ogni parametro nell'elenco dei parametri è come segue:  
+ La sintassi per ogni parametro nell'elenco di parametri è la seguente:  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Se il parametro è facoltativo, è necessario specificare anche un valore predefinito come parte della relativa dichiarazione. La sintassi per specificare un valore predefinito è come segue:  
+ Se il parametro è facoltativo, è necessario specificare anche un valore predefinito come parte della relativa dichiarazione. La sintassi per specificare un valore predefinito è la seguente:  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
 ## <a name="property-value"></a>Valore proprietà  
- In un `Get` procedure, il valore restituito viene fornita all'espressione chiamante come valore della proprietà.  
+ In una procedura `Get`, il valore restituito viene fornito all'espressione chiamante come valore della proprietà.  
   
- In un `Set` routine, il nuovo valore della proprietà viene passato al parametro il `Set` istruzione. Se si dichiara in modo esplicito un parametro, è necessario dichiararla con lo stesso tipo di dati della proprietà. Se non si dichiara un parametro, il compilatore Usa il parametro implicito `Value` per rappresentare il nuovo valore da assegnare alla proprietà.  
+ In una procedura `Set`, il nuovo valore della proprietà viene passato al parametro dell'istruzione `Set`. Se si dichiara in modo esplicito un parametro, è necessario dichiararlo con lo stesso tipo di dati della proprietà. Se non si dichiara un parametro, il compilatore usa il parametro implicito `Value` per rappresentare il nuovo valore da assegnare alla proprietà.  
   
 ## <a name="calling-syntax"></a>Sintassi di chiamata  
- Una routine di proprietà è richiamare in modo implicito facendo riferimento alla proprietà. Si utilizza il nome della proprietà simile a quello è necessario usare il nome di una variabile, ad eccezione del fatto che è necessario fornire valori per tutti gli argomenti che non sono facoltativi ed è necessario racchiudere l'elenco di argomenti racchiuso tra parentesi. Se viene fornito alcun argomento, è possibile omettere le parentesi.  
+ Per richiamare una routine di proprietà in modo implicito, è necessario fare riferimento alla proprietà. Usare il nome della proprietà nello stesso modo in cui si usa il nome di una variabile, ad eccezione del fatto che è necessario fornire i valori per tutti gli argomenti non facoltativi ed è necessario racchiudere l'elenco di argomenti tra parentesi. Se non viene fornito alcun argomento, facoltativamente è possibile omettere le parentesi.  
   
- La sintassi per una chiamata implicita a un `Set` procedura è la seguente:  
+ La sintassi per una chiamata implicita a una procedura `Set` è la seguente:  
   
  `propertyname[(argumentlist)] = expression`  
   
- La sintassi per una chiamata implicita a un `Get` procedura è la seguente:  
+ La sintassi per una chiamata implicita a una procedura `Get` è la seguente:  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
-### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
- La proprietà seguente archivia un nome completo come due parti costitutive, il nome e cognome. Quando legge il codice chiamante `fullName`, il `Get` procedure combina le due parti costitutive e restituisce il nome completo. Quando il codice chiamante assegna un nuovo nome completo, il `Set` routine tenta di suddividere l'operazione in due parti costitutive. Se non viene trovato uno spazio, li archivia tutti come il nome.  
+### <a name="illustration-of-declaration-and-call"></a>Illustrazione della dichiarazione e della chiamata  
+ Nella proprietà seguente viene archiviato un nome completo come due nomi costitutivi, il primo nome e il cognome. Quando il codice chiamante legge `fullName`, la procedura `Get` combina i due nomi costitutivi e restituisce il nome completo. Quando il codice chiamante assegna un nuovo nome completo, la procedura `Set` tenta di suddividerla in due nomi costitutivi. Se non trova uno spazio, lo archivia come nome.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- L'esempio seguente illustra tipici chiamate alle routine della proprietà di `fullName`.  
+ Nell'esempio seguente vengono illustrate le chiamate tipiche alle routine di proprietà di `fullName`.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
@@ -112,8 +112,8 @@ End Property
 - [Routine di operatore](./operator-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)
-- [Procedura: Creare una proprietà](./how-to-create-a-property.md)
-- [Procedura: Chiamare una routine Property](./how-to-call-a-property-procedure.md)
-- [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)
-- [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)
+- [Procedura: Creare una proprietà @ no__t-0
+- [Procedura: Chiamare una routine di proprietà @ no__t-0
+- [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic @ no__t-0
+- [Procedura: Inserire un valore in una proprietà @ no__t-0
+- [Procedura: Ottenere un valore da una proprietà @ no__t-0

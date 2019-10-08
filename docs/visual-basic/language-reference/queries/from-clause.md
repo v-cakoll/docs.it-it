@@ -10,62 +10,62 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639626"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004786"
 ---
 # <a name="from-clause-visual-basic"></a>Clausola From (Visual Basic)
-Specifica uno o più variabili di intervallo e una raccolta di query.  
+Specifica una o più variabili di intervallo e una raccolta su cui eseguire una query.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`element`|Obbligatorio. Oggetto *variabile di intervallo* utilizzato per scorrere gli elementi della raccolta. Una variabile di intervallo viene usata per fare riferimento a ogni membro del `collection` perché la query esegue l'iterazione attraverso la `collection`. Deve essere un tipo enumerabile.|  
-|`type`|Facoltativo. Tipo di `element`. Se nessun `type` viene specificato, il tipo di `element` viene dedotto dal `collection`.|  
-|`collection`|Obbligatorio. Fa riferimento alla raccolta per eseguire una query. Deve essere un tipo enumerabile.|  
+|`element`|Obbligatorio. *Variabile di intervallo* utilizzata per scorrere gli elementi della raccolta. Una variabile di intervallo viene utilizzata per fare riferimento a ogni membro del `collection` quando la query esegue l'iterazione nel `collection`. Deve essere un tipo enumerabile.|  
+|`type`|facoltativo. Tipo di `element`. Se non si specifica `type`, il tipo di `element` viene dedotto da `collection`.|  
+|`collection`|Obbligatorio. Fa riferimento alla raccolta su cui eseguire una query. Deve essere un tipo enumerabile.|  
   
 ## <a name="remarks"></a>Note  
- Il `From` clausola viene utilizzata per identificare i dati di origine per una query e le variabili che vengono utilizzate per fare riferimento a un elemento dalla raccolta di origine. Queste variabili vengono chiamate *variabili di intervallo*. Il `From` clausola è necessaria per una query, tranne quando la `Aggregate` clausola viene utilizzata per identificare una query che restituisce solo i risultati aggregati. Per altre informazioni, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ La clausola `From` viene utilizzata per identificare i dati di origine per una query e le variabili utilizzate per fare riferimento a un elemento della raccolta di origine. Queste variabili sono denominate *variabili di intervallo*. La clausola `From` è obbligatoria per una query, tranne quando la clausola `Aggregate` viene utilizzata per identificare una query che restituisce solo i risultati aggregati. Per ulteriori informazioni, vedere [clausola Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- È possibile specificare più `From` clausole in una query per identificare più raccolte di essere unito in join. Quando si specificano più raccolte, essi vengono scorsi in modo indipendente oppure è possibile unirle se sono correlati. È possibile unire le raccolte in modo implicito utilizzando la `Select` clausola, o in modo esplicito usando il `Join` o `Group Join` clausole. In alternativa, è possibile specificare più variabili di intervallo e le raccolte in una singola `From` clausola, con ogni raccolta separato dagli altri da una virgola e la variabile di intervallo correlato. Esempio di codice seguente illustra entrambe le opzioni della sintassi per il `From` clausola.  
+ È possibile specificare più clausole `From` in una query per identificare più raccolte da unire in join. Quando si specificano più raccolte, vengono ripetute in modo indipendente oppure è possibile unirle se sono correlate. È possibile unire le raccolte in modo implicito usando la clausola `Select` oppure in modo esplicito usando le clausole `Join` o `Group Join`. In alternativa, è possibile specificare più variabili di intervallo e raccolte in una singola clausola `From`, con ogni variabile di intervallo e raccolta correlate separate dalle altre con una virgola. Nell'esempio di codice seguente vengono illustrate entrambe le opzioni di sintassi per la clausola `From`.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- Il `From` clausola definisce l'ambito di una query, che è simile all'ambito di un `For` ciclo. Pertanto, ogni `element` variabile di intervallo nell'ambito di una query deve avere un nome univoco. Poiché è possibile specificare più `From` clausole per una query, le successive `From` clausole possono fare riferimento a variabili di intervallo nel `From` clausola oppure è possibile fare riferimento alle variabili di intervallo in una precedente `From` clausola. Ad esempio, l'esempio seguente mostra un nidificata `From` clausola in cui la raccolta nella seconda clausola si basa su una proprietà della variabile di intervallo nella prima clausola.  
+ La clausola `From` definisce l'ambito di una query, che è simile all'ambito di un ciclo `For`. Ogni variabile di intervallo `element` nell'ambito di una query deve pertanto avere un nome univoco. Poiché è possibile specificare più clausole `From` per una query, le clausole `From` successive possono fare riferimento alle variabili di intervallo nella clausola `From` oppure possono fare riferimento alle variabili di intervallo in una clausola `From` precedente. Ad esempio, nell'esempio seguente viene illustrata una clausola `From` annidata in cui la raccolta nella seconda clausola è basata su una proprietà della variabile di intervallo nella prima clausola.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Ogni `From` clausola può essere seguita da una qualsiasi combinazione di clausole di query aggiuntive per perfezionare la query. È possibile affinare la query nei modi seguenti:  
+ Ogni clausola `From` può essere seguita da qualsiasi combinazione di clausole di query aggiuntive per perfezionare la query. È possibile affinare la query nei modi seguenti:  
   
-- Combinare più raccolte in modo implicito usando la `From` e `Select` clausole, o in modo esplicito tramite il `Join` o `Group Join` clausole.  
+- Combinare più raccolte in modo implicito usando le clausole `From` e `Select` oppure in modo esplicito usando le clausole `Join` o `Group Join`.  
   
-- Usare il `Where` clausola per filtrare i risultati della query.  
+- Utilizzare la clausola `Where` per filtrare il risultato della query.  
   
-- Ordinare il risultato utilizzando il `Order By` clausola.  
+- Ordinare il risultato usando la clausola `Order By`.  
   
-- Raggruppare i risultati simili tramite la `Group By` clausola.  
+- Raggruppare i risultati simili utilizzando la clausola `Group By`.  
   
-- Usare il `Aggregate` clausola per identificare le funzioni di aggregazione da valutare per l'intero risultato della query.  
+- Utilizzare la clausola `Aggregate` per identificare le funzioni di aggregazione da valutare per l'intero risultato della query.  
   
-- Usare il `Let` clausola per introdurre una variabile di iterazione il cui valore è determinato da un'espressione anziché una raccolta.  
+- Utilizzare la clausola `Let` per introdurre una variabile di iterazione il cui valore è determinato da un'espressione anziché da una raccolta.  
   
-- Usare il `Distinct` clausola per ignorare i risultati della query duplicata.  
+- Utilizzare la clausola `Distinct` per ignorare i risultati della query duplicati.  
   
-- Identificare le parti del risultato da restituire con il `Skip`, `Take`, `Skip While`, e `Take While` clausole.  
+- Identificare le parti del risultato da restituire utilizzando le clausole `Skip`, `Take`, `Skip While` e `Take While`.  
   
 ## <a name="example"></a>Esempio  
- La query seguente espressione Usa un `From` clausola per dichiarare una variabile di intervallo `cust` per ogni `Customer` dell'oggetto nel `customers` raccolta. Il `Where` clausola utilizza la variabile di intervallo per limitare l'output per i clienti dall'area specificata. Il `For Each` ciclo Visualizza il nome della società per ogni cliente nel risultato della query.  
+ Nell'espressione di query seguente viene utilizzata una clausola `From` per dichiarare una variabile di intervallo `cust` per ogni oggetto `Customer` nella raccolta `customers`. La clausola `Where` usa la variabile di intervallo per limitare l'output ai clienti dall'area specificata. Il ciclo `For Each` Visualizza il nome della società per ogni cliente nel risultato della query.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   

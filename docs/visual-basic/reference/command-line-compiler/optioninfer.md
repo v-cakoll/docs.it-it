@@ -8,25 +8,25 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939195"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005316"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
 |`+` &#124; `-`|facoltativo. Specificare `-optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `-optioninfer-` per bloccarla. L'opzione `-optioninfer`, senza alcun valore specificato, equivale a `-optioninfer+`. Il valore predefinito, quando l'opzione `-optioninfer` non è presente, è anche `-optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
   
@@ -34,7 +34,7 @@ Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni d
 > È possibile usare l'opzione `-noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp. Il valore predefinito del compilatore per questa opzione è `-optioninfer-`.  
   
 ## <a name="remarks"></a>Note  
- Se il file di codice sorgente contiene un' [istruzione Option deduce](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione sostituisce `-optioninfer` l'impostazione del compilatore da riga di comando.  
+ Se il file di codice sorgente contiene un' [istruzione Option deduce](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione sostituisce l'impostazione del compilatore da riga di comando `-optioninfer`.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Per impostare-optioninfer (nell'IDE di Visual Studio  
   

@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625900"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005345"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-Applica una semantica dei tipi rigorosa per limitare le conversioni implicite.  
+Applica una semantica dei tipi rigorosa per limitare le conversioni implicite dei tipi.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Facoltativo. Il `-optionstrict+` limita l'opzione di conversione implicita del tipo. Il valore predefinito per questa opzione è `-optionstrict-`. Il `-optionstrict+` opzione è identico `-optionstrict`. È possibile utilizzare entrambi per la semantica di tipo permissivo.  
+ facoltativo. L'opzione `-optionstrict+` limita la conversione implicita di tipi. Il valore predefinito per questa opzione è `-optionstrict-`. L'opzione `-optionstrict+` corrisponde a `-optionstrict`. È possibile utilizzare entrambi per la semantica di tipo permissivo.  
   
  `custom`  
- Obbligatorio. Avvisa quando non viene rispettata la semantica del linguaggio rigorosa.  
+ Obbligatorio. Avvisa quando la semantica del linguaggio strict non viene rispettata.  
   
 ## <a name="remarks"></a>Note  
- Quando si `-optionstrict+` è attiva, solo le conversioni di tipo widening possono essere eseguite in modo implicito. Conversioni di tipi, ad esempio l'assegnazione di narrowing implicite un `Decimal` tipo object per un oggetto di tipo integer, vengono segnalati come errori.  
+ Quando `-optionstrict+` è attivo, è possibile rendere implicite solo le conversioni verso un tipo più ampio. Le conversioni implicite di tipi più restrittivi, ad esempio l'assegnazione di un oggetto di tipo `Decimal` a un oggetto di tipo Integer, vengono segnalate come errori.  
   
- Per generare avvisi per conversioni di tipo narrowing, utilizzare `-optionstrict:custom`. Uso `-nowarn:numberlist` per ignorare determinati avvisi e `-warnaserror:numberlist` particolare considerarli come errori.  
+ Per generare avvisi per le conversioni implicite di tipi più restrittivi, utilizzare `-optionstrict:custom`. Utilizzare `-nowarn:numberlist` per ignorare determinati avvisi e `-warnaserror:numberlist` per considerare determinati avvisi come errori.  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Per impostare - optionstrict nell'IDE di Visual Studio  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Per impostare-optionstrict (nell'IDE di Visual Studio  
   
-1. Selezionare un progetto in **Esplora soluzioni**. Nel **Project** menu, fare clic su **proprietà.**   
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere Proprietà dal menu **progetto** **.**   
   
 2. Fare clic sulla scheda **Compila**.  
   
-3. Modificare il valore di **Option Strict** casella.  
+3. Modificare il valore nella casella **Option Strict** .  
   
-### <a name="to-set--optionstrict-programmatically"></a>Per impostare a livello di codice - optionstrict  
+### <a name="to-set--optionstrict-programmatically"></a>Per impostare-optionstrict (a livello di codice  
   
-- Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Vedere [istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `Test.vb` mediante la semantica di tipo strict.  
+ Il codice seguente compila `Test.vb` usando la semantica di tipo strict.  
   
 ```console
 vbc -optionstrict+ test.vb  

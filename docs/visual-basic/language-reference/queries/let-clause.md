@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054198"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004723"
 ---
 # <a name="let-clause-visual-basic"></a>Clausola Let (Visual Basic)
 Calcola un valore e lo assegna a una nuova variabile all'interno della query.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`variable`|Obbligatorio. Un alias che può essere utilizzato per fare riferimento ai risultati dell'espressione fornita.|  
-|`expression`|Obbligatorio. Un'espressione che verrà valutata e assegnata alla variabile specificata.|  
+|`variable`|Obbligatorio. Alias che può essere utilizzato per fare riferimento ai risultati dell'espressione fornita.|  
+|`expression`|Obbligatorio. Espressione che verrà valutata e assegnata alla variabile specificata.|  
   
 ## <a name="remarks"></a>Note  
- Il `Let` clausola consente di calcolare i valori per ogni risultato della query e farvi riferimento utilizzando un alias. L'alias può essere utilizzato in altre clausole, ad esempio il `Where` clausola. Il `Let` clausola consente di creare un'istruzione di query che è più facile da leggere in quanto è possibile specificare un alias per una clausola dell'espressione inclusa nella query e sostituire l'alias ogni volta che viene utilizzata la clausola dell'espressione.  
+ La clausola `Let` consente di calcolare i valori per ogni risultato della query e di farvi riferimento tramite un alias. L'alias può essere utilizzato in altre clausole, ad esempio la clausola `Where`. La clausola `Let` consente di creare un'istruzione di query più semplice da leggere, in quanto è possibile specificare un alias per una clausola Expression inclusa nella query e sostituire l'alias ogni volta che viene utilizzata la clausola Expression.  
   
- È possibile includere un numero qualsiasi di `variable` e `expression` assegnazioni nel `Let` clausola. Separare ogni assegnazione con una virgola (,).  
+ È possibile includere un numero qualsiasi di assegnazioni `variable` e `expression` nella clausola `Let`. Separare ogni assegnazione con una virgola (,).  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come utilizzare il `Let` clausola per calcolare un 10% di sconto sui prodotti.  
+ Nell'esempio di codice seguente viene usata la clausola `Let` per calcolare uno sconto del 10% sui prodotti.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

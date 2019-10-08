@@ -8,37 +8,37 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054393"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004711"
 ---
 # <a name="take-clause-visual-basic"></a>Clausola Take (Visual Basic)
 Restituisce un numero specificato di elementi contigui dall'inizio di una raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Take count  
 ```  
   
 ## <a name="parts"></a>Parti  
  `count`  
- Obbligatorio. Un valore o un'espressione che restituisce il numero di elementi della sequenza da restituire.  
+ Obbligatorio. Valore o espressione che restituisce il numero di elementi della sequenza da restituire.  
   
 ## <a name="remarks"></a>Note  
- Il `Take` clausola provoca una query includere un numero specificato di elementi contigui dall'inizio di un elenco di risultati. Viene specificato il numero di elementi da includere per il `count` parametro.  
+ La clausola `Take` fa in modo che una query includa un numero specificato di elementi contigui dall'inizio di un elenco di risultati. Il numero di elementi da includere è specificato dal parametro `count`.  
   
- È possibile usare la `Take` clausola con il `Skip` clausola per restituire un intervallo di dati da qualsiasi segmento di una query. A questo scopo, passare l'indice del primo elemento dell'intervallo per il `Skip` clausola e le dimensioni dell'intervallo dal `Take` clausola. In questo caso, il `Take` clausola deve essere specificata dopo il `Skip` clausola.  
+ È possibile utilizzare la clausola `Take` con la clausola `Skip` per restituire un intervallo di dati da qualsiasi segmento di una query. A tale scopo, passare l'indice del primo elemento dell'intervallo alla clausola `Skip` e la dimensione dell'intervallo alla clausola `Take`. In questo caso, è necessario specificare la clausola `Take` dopo la clausola `Skip`.  
   
- Quando si usa la `Take` clausola in una query, è necessario anche assicurarsi che i risultati vengono restituiti in un ordine che consentirà di `Take` clausola per includere i risultati desiderati. Per altre informazioni su come ordinare i risultati della query, vedere [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando si utilizza la clausola `Take` in una query, potrebbe essere necessario assicurarsi che i risultati vengano restituiti in un ordine che consentirà alla clausola `Take` di includere i risultati desiderati. Per ulteriori informazioni sull'ordinamento dei risultati di query, vedere [clausola ORDER BY](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- È possibile usare il `TakeWhile` clausola per specificare che vengano restituiti solo determinati elementi, in base a una condizione specificata.  
+ È possibile utilizzare la clausola `TakeWhile` per specificare che vengano restituiti solo determinati elementi, a seconda della condizione specificata.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come utilizzare il `Take` clausola insieme al `Skip` clausola per restituire i dati da una query nelle pagine. La funzione GetCustomers utilizza il `Skip` clausola per ignorare i clienti nell'elenco fino a quando il valore iniziale specificato valore di indice e utilizza il `Take` clausola per restituire una pagina di clienti a partire dal valore di indice specificato.  
+ Nell'esempio di codice seguente viene utilizzata la clausola `Take` insieme alla clausola `Skip` per restituire dati da una query in pagine. La funzione GetCustomers usa la clausola `Skip` per ignorare i clienti nell'elenco fino al valore di indice iniziale fornito e usa la clausola `Take` per restituire una pagina di clienti a partire da tale valore di indice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

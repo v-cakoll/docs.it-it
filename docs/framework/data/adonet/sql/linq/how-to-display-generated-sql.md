@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793752"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002973"
 ---
 # <a name="how-to-display-generated-sql"></a>Procedura: Visualizzare il codice SQL generato
 È possibile visualizzare il codice SQL generato per le query e modificare l'elaborazione usando la proprietà <xref:System.Data.Linq.DataContext.Log%2A>. Questo approccio può essere utile per comprendere la funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e per eseguire il debug di problemi specifici.  
@@ -20,7 +20,7 @@ ms.locfileid: "70793752"
   
  Le linee dalla finestra della console sono quelle visualizzate quando si esegue il Visual Basic o C# il codice seguente.  
   
-```  
+```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
 itle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Coun  
 try], [t0].[Phone], [t0].[Fax]  
@@ -30,7 +30,7 @@ WHERE [t0].[City] = @p0
 -- Context: SqlProvider(Sql2005) Model: AttributedMetaModel Build: 3.5.20810.0  
 ```  
   
-```  
+```console  
 AROUT  
 BSBEV  
 CONSH  

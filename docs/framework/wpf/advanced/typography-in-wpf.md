@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 11087ed4da23d73fc8edc36680dd1b3587c011ce
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016120"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004921"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste funzionalità includono qualità e prestazioni migliorate per il rendering del testo, supporto tipografico OpenType, testo internazionale migliorato, supporto dei tipi di carattere migliorato e nuove API (Application Programming Interface) di testo.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Qualità e prestazioni del testo migliorate  
- Il rendering [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] del testo in viene eseguito utilizzando Microsoft ClearType, che migliora la chiarezza e la leggibilità del testo. ClearType è una tecnologia software sviluppata da Microsoft che consente di migliorare la leggibilità del testo sugli schermi LCD (Liquid Crystal Display), ad esempio schermi portatili, schermate Pocket PC e monitor Flat Panel. ClearType utilizza il rendering dei subpixel, che consente di visualizzare il testo con una maggiore fedeltà alla propria forma reale allineando i caratteri in una parte frazionaria di un pixel. La risoluzione aggiuntiva aumenta la nitidezza dei piccoli dettagli nella visualizzazione del testo, rendendone più facile la lettura per periodi prolungati. Un altro miglioramento di ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in è l'anti-aliasing della direzione y, che smussa le parti superiori e inferiori delle curve superficiali nei caratteri di testo. Per ulteriori informazioni sulle funzionalità ClearType, vedere [Cenni preliminari su ClearType](cleartype-overview.md).  
+ Il rendering del testo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene eseguito utilizzando Microsoft ClearType, che migliora la chiarezza e la leggibilità del testo. ClearType è una tecnologia software sviluppata da Microsoft che consente di migliorare la leggibilità del testo sugli schermi LCD (Liquid Crystal Display), ad esempio schermi portatili, schermate Pocket PC e monitor Flat Panel. ClearType utilizza il rendering dei subpixel, che consente di visualizzare il testo con una maggiore fedeltà alla propria forma reale allineando i caratteri in una parte frazionaria di un pixel. La risoluzione aggiuntiva aumenta la nitidezza dei piccoli dettagli nella visualizzazione del testo, rendendone più facile la lettura per periodi prolungati. Un altro miglioramento di ClearType in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è l'anti-aliasing della direzione y, che smussa le parti superiori e inferiori delle curve superficiali nei caratteri di testo. Per ulteriori informazioni sulle funzionalità ClearType, vedere [Cenni preliminari su ClearType](cleartype-overview.md).  
   
  ![Testo con anti-aliasing della direzione y ClearType](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Testo con anti-aliasing della direzione y ClearType  
@@ -29,15 +29,15 @@ Testo con anti-aliasing della direzione y ClearType
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Funzionalità tipografiche avanzate  
- Il formato del tipo di carattere OpenType è un' [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] estensione del formato carattere. Il formato del tipo di carattere OpenType è stato sviluppato congiuntamente da Microsoft e Adobe e offre un'ampia gamma di funzionalità tipografiche avanzate. L' <xref:System.Windows.Documents.Typography> oggetto espone molte delle funzionalità avanzate dei tipi di carattere OpenType, ad esempio alternative stilistiche e ornati. Il Windows SDK fornisce un set di tipi di carattere OpenType di esempio progettati con funzionalità avanzate, ad esempio i tipi di carattere Pericle e Pescadero. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
+ Il formato del tipo di carattere OpenType è un'estensione del formato di carattere TrueType®. Il formato del tipo di carattere OpenType è stato sviluppato congiuntamente da Microsoft e Adobe e offre un'ampia gamma di funzionalità tipografiche avanzate. L'oggetto <xref:System.Windows.Documents.Typography> espone molte delle funzionalità avanzate dei tipi di carattere OpenType, ad esempio alternative stilistiche e ornati. Il Windows SDK fornisce un set di tipi di carattere OpenType di esempio progettati con funzionalità avanzate, ad esempio i tipi di carattere Pericle e Pescadero. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
   
  Il tipo di carattere OpenType di Pericle contiene glifi aggiuntivi che forniscono alternative stilistiche al set di glifi standard. Il testo seguente mostra glifi con stile alternativo.  
   
- ![Testo con glifi alternativi stilistici OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Testo con glifi alternativi stilistici OpenType")  
+ ![Testo con glifi alternativi stilistici OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "testo con glifi alternativi stilistici OpenType")  
   
  I glifi ornati sono glifi decorativi che usano ornamenti elaborati spesso associati alla calligrafia. Il testo seguente mostra glifi standard e ornati per il tipo di carattere Pescadero.  
   
- ![Testo con glifi standard e ornati OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Testo con glifi standard e ornati OpenType")  
+ ![Testo con glifi standard e ornati OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "con glifi standard e ornati OpenType")  
   
  Per ulteriori informazioni sulle funzionalità OpenType, vedere [funzionalità dei tipi di carattere OpenType](opentype-font-features.md).  
   
@@ -59,19 +59,19 @@ Testo con anti-aliasing della direzione y ClearType
   
 - Comportamento del tipo di carattere indipendente dalle impostazioni globali, ad esempio le impostazioni locali del sistema.  
   
-- Separare <xref:System.Windows.FontWeight>i <xref:System.Windows.FontStretch>tipi, <xref:System.Windows.FontStyle> e per la definizione <xref:System.Windows.Media.FontFamily>di un oggetto. Offre maggiore flessibilità rispetto alla programmazione [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], in cui si usano combinazioni booleane di corsivo e grassetto per definire una famiglia di caratteri.  
+- Separare i tipi <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch> e <xref:System.Windows.FontStyle> per la definizione di un <xref:System.Windows.Media.FontFamily>. Offre maggiore flessibilità rispetto alla programmazione [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], in cui si usano combinazioni booleane di corsivo e grassetto per definire una famiglia di caratteri.  
   
 - Direzione di scrittura (orizzontale o verticale) gestita indipendentemente dal nome del carattere.  
   
-- Collegamento e fallback dei tipi di carattere in un file [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] portabile, con tecnologia dei tipi di carattere compositi. I tipi di carattere compositi consentono la costruzione di una gamma completa di tipi di carattere multilingua. Offrono inoltre un meccanismo che evita la visualizzazione di glifi mancanti. Per ulteriori informazioni, vedere la sezione Osservazioni nella <xref:System.Windows.Media.FontFamily> classe.  
+- Collegamento e fallback dei tipi di carattere in un file [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] portabile, con tecnologia dei tipi di carattere compositi. I tipi di carattere compositi consentono la costruzione di una gamma completa di tipi di carattere multilingua. Offrono inoltre un meccanismo che evita la visualizzazione di glifi mancanti. Per ulteriori informazioni, vedere la sezione Osservazioni nella classe <xref:System.Windows.Media.FontFamily>.  
   
 - Tipi di carattere internazionali compilati da tipi di carattere compositi, mediante un gruppo di tipi di carattere di una singola lingua. In questo modo, si risparmiano risorse durante lo sviluppo dei tipi di carattere per più lingue.  
   
-- Tipi di carattere compositi incorporati in un documento, per offrire maggiore portabilità dei documenti. Per ulteriori informazioni, vedere la sezione Osservazioni nella <xref:System.Windows.Media.FontFamily> classe.  
+- Tipi di carattere compositi incorporati in un documento, per offrire maggiore portabilità dei documenti. Per ulteriori informazioni, vedere la sezione Osservazioni nella classe <xref:System.Windows.Media.FontFamily>.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Nuove API (Application Programming Interface) di testo  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]in sono disponibili diverse API di testo che gli sviluppatori possono utilizzare per includere testo nelle applicazioni. Queste API sono raggruppate in tre categorie:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce diverse API di testo che gli sviluppatori possono usare quando si include il testo nelle applicazioni. Queste API sono raggruppate in tre categorie:  
   
 - **Layout e interfaccia utente**. Controlli di testo comuni per l'interfaccia utente grafica (GUI).  
   
@@ -80,7 +80,7 @@ Testo con anti-aliasing della direzione y ClearType
 - **Formattazione del testo avanzata**. Consente di implementare un motore di testo personalizzato.  
   
 ### <a name="layout-and-user-interface"></a>Layout e interfaccia utente  
- Al livello più elevato di funzionalità, le API di testo forniscono [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controlli comuni, <xref:System.Windows.Controls.Label>ad <xref:System.Windows.Controls.TextBlock>esempio, <xref:System.Windows.Controls.TextBox>e. Questi controlli offrono gli elementi di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] di base all'interno di un'applicazione e un modo semplice per presentare il testo e interagire con esso. I controlli come <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.PasswordBox> consentono una gestione del testo più avanzata o specializzata. Le classi e, <xref:System.Windows.Documents.TextRange>ad <xref:System.Windows.Documents.TextSelection>esempio, <xref:System.Windows.Documents.TextPointer> e consentono una manipolazione del testo utile. Questi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controlli forniscono proprietà <xref:System.Windows.Controls.Control.FontFamily%2A>quali, <xref:System.Windows.Controls.Control.FontSize%2A>e <xref:System.Windows.Controls.Control.FontStyle%2A>, che consentono di controllare il tipo di carattere utilizzato per il rendering del testo.  
+ Al livello più elevato di funzionalità, le API di testo forniscono controlli comuni [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], ad esempio <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.TextBox>. Questi controlli offrono gli elementi di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] di base all'interno di un'applicazione e un modo semplice per presentare il testo e interagire con esso. I controlli, ad esempio <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.PasswordBox>, consentono una gestione del testo più avanzata o specializzata. E le classi come <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection> e <xref:System.Windows.Documents.TextPointer> consentono una manipolazione del testo utile. Questi controlli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] forniscono proprietà quali <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> e <xref:System.Windows.Controls.Control.FontStyle%2A>, che consentono di controllare il tipo di carattere utilizzato per il rendering del testo.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Uso di effetti bitmap, trasformazioni ed effetti di testo  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di usare il testo in modi visivamente interessanti grazie a funzionalità come effetti bitmap, trasformazioni ed effetti di testo. L'esempio seguente illustra un tipico effetto di ombreggiatura applicato al testo.  
@@ -107,25 +107,25 @@ Testo con anti-aliasing della direzione y ClearType
   
  ![Testo inclinato con SkewTransform](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- Un <xref:System.Windows.Media.TextEffect> oggetto è un oggetto helper che consente di trattare il testo come uno o più gruppi di caratteri in una stringa di testo. L'esempio seguente mostra la rotazione di un singolo carattere. Ogni carattere viene ruotato in modo indipendente a intervalli di 1 secondo.  
+ Un oggetto <xref:System.Windows.Media.TextEffect> è un oggetto helper che consente di trattare il testo come uno o più gruppi di caratteri in una stringa di testo. L'esempio seguente mostra la rotazione di un singolo carattere. Ogni carattere viene ruotato in modo indipendente a intervalli di 1 secondo.  
   
  ![Schermata di effetto rotazione del testo](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>Uso di documenti dinamici  
- Oltre ai controlli comuni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un controllo di layout per la presentazione del testo, <xref:System.Windows.Documents.FlowDocument> ovvero l'elemento. L' <xref:System.Windows.Documents.FlowDocument> elemento, insieme <xref:System.Windows.Controls.DocumentViewer> all'elemento, fornisce un controllo per grandi quantità di testo con requisiti di layout diversi. I controlli di layout consentono di accedere a tipografia avanzata tramite l'oggetto e le <xref:System.Windows.Documents.Typography> proprietà correlate al tipo di carattere di altri [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] controlli.  
+ Oltre ai controlli comuni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un controllo di layout per la presentazione del testo, ovvero l'elemento <xref:System.Windows.Documents.FlowDocument>. L'elemento <xref:System.Windows.Documents.FlowDocument>, in combinazione con l'elemento <xref:System.Windows.Controls.DocumentViewer>, fornisce un controllo per grandi quantità di testo con requisiti di layout diversi. I controlli di layout consentono di accedere a funzionalità tipografiche avanzate tramite l'oggetto <xref:System.Windows.Documents.Typography> e le proprietà correlate al tipo di carattere di altri controlli [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
- Nell'esempio seguente viene illustrato il contenuto di testo <xref:System.Windows.Controls.FlowDocumentReader>ospitato in un oggetto, che fornisce supporto per la ricerca, la navigazione, l'impaginazione e il ridimensionamento del contenuto.  
+ Nell'esempio seguente viene illustrato il contenuto di testo ospitato in un <xref:System.Windows.Controls.FlowDocumentReader>, che fornisce il supporto per la ricerca, la navigazione, l'impaginazione e il ridimensionamento del contenuto.  
   
  ![Screenshot che mostra i tipi di carattere OpenType.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  Per altre informazioni, vedere [Documenti in WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Disegno di testo leggero  
- È possibile creare il testo direttamente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] negli oggetti usando il <xref:System.Windows.Media.DrawingContext.DrawText%2A> metodo dell' <xref:System.Windows.Media.DrawingContext> oggetto. Per usare questo metodo, è necessario creare <xref:System.Windows.Media.FormattedText> un oggetto. Questo oggetto consente di creare testo su più righe, in cui ogni carattere può essere formattato singolarmente. La funzionalità dell' <xref:System.Windows.Media.FormattedText> oggetto contiene la maggior parte delle funzionalità dei flag DrawText nell'API Windows. Inoltre, l'oggetto <xref:System.Windows.Media.FormattedText> contiene funzionalità come il supporto dei puntini di sospensione, in cui vengono visualizzati i puntini di sospensione quando il testo supera i limiti. L'esempio seguente illustra un testo a cui sono stati applicati diversi formati, inclusa una sfumatura lineare sulla seconda e la terza parola.  
+ È possibile creare il testo direttamente in oggetti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando il metodo <xref:System.Windows.Media.DrawingContext.DrawText%2A> dell'oggetto <xref:System.Windows.Media.DrawingContext>. Per usare questo metodo, è necessario creare un oggetto <xref:System.Windows.Media.FormattedText>. Questo oggetto consente di creare testo su più righe, in cui ogni carattere può essere formattato singolarmente. La funzionalità dell'oggetto <xref:System.Windows.Media.FormattedText> contiene la maggior parte delle funzionalità dei flag DrawText nell'API Windows. Inoltre, l'oggetto <xref:System.Windows.Media.FormattedText> contiene funzionalità come il supporto dei puntini di sospensione, in cui vengono visualizzati i puntini di sospensione quando il testo supera i limiti. L'esempio seguente illustra un testo a cui sono stati applicati diversi formati, inclusa una sfumatura lineare sulla seconda e la terza parola.  
   
  ![Testo visualizzato usando l'oggetto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
- È possibile convertire il testo formattato in <xref:System.Windows.Media.Geometry> oggetti, consentendo di creare altri tipi di testo visivamente interessante. Ad esempio, è possibile creare un <xref:System.Windows.Media.Geometry> oggetto in base alla struttura di una stringa di testo.  
+ È possibile convertire il testo formattato in oggetti <xref:System.Windows.Media.Geometry>, consentendo di creare altri tipi di testo visivamente interessante. Ad esempio, è possibile creare un oggetto <xref:System.Windows.Media.Geometry> in base al contorno di una stringa di testo.  
   
  ![Struttura di testo con pennello sfumato lineare](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
@@ -137,12 +137,12 @@ Testo con anti-aliasing della direzione y ClearType
   
  ![Testo con pennello immagine applicato al tratto ed evidenziato](./media/typography-in-wpf/image-brush-text-application.jpg)
   
- Per ulteriori informazioni sull' <xref:System.Windows.Media.FormattedText> oggetto, vedere disegno di [testo formattato](drawing-formatted-text.md).  
+ Per ulteriori informazioni sull'oggetto <xref:System.Windows.Media.FormattedText>, vedere [disegno di testo formattato](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Formattazione del testo avanzata  
- Al livello più avanzato delle API di testo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre la possibilità di creare un layout di testo personalizzato usando l' <xref:System.Windows.Media.TextFormatting.TextFormatter> oggetto <xref:System.Windows.Media.TextFormatting> e altri tipi nello spazio dei nomi. Le <xref:System.Windows.Media.TextFormatting.TextFormatter> classi e associate consentono di implementare un layout di testo personalizzato che supporta la definizione di formati di carattere, stili di paragrafo, regole di interruzioni di riga e altre funzionalità di layout per il testo internazionale. Sono pochi i casi in cui occorre eseguire l'override dell'implementazione predefinita del supporto di layout di testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se tuttavia occorre creare un controllo o un'applicazione di modifica del testo, potrebbe essere necessaria un'implementazione diversa da quella predefinita di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Al livello più avanzato delle API di testo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre la possibilità di creare un layout di testo personalizzato usando l'oggetto <xref:System.Windows.Media.TextFormatting.TextFormatter> e altri tipi nello spazio dei nomi <xref:System.Windows.Media.TextFormatting>. Le classi <xref:System.Windows.Media.TextFormatting.TextFormatter> e associate consentono di implementare un layout di testo personalizzato che supporta la definizione di formati carattere, stili di paragrafo, regole di interruzioni di riga e altre funzionalità di layout per il testo internazionale. Sono pochi i casi in cui occorre eseguire l'override dell'implementazione predefinita del supporto di layout di testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se tuttavia occorre creare un controllo o un'applicazione di modifica del testo, potrebbe essere necessaria un'implementazione diversa da quella predefinita di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Diversamente da un'API di testo tradizionale, <xref:System.Windows.Media.TextFormatting.TextFormatter> il interagisce con un client di layout di testo tramite un set di metodi di callback. Richiede che il client fornisca questi metodi in un'implementazione della <xref:System.Windows.Media.TextFormatting.TextSource> classe. Nel diagramma seguente viene illustrata l'interazione del layout del testo tra l' <xref:System.Windows.Media.TextFormatting.TextFormatter>applicazione client e.  
+ Diversamente da un'API di testo tradizionale, il <xref:System.Windows.Media.TextFormatting.TextFormatter> interagisce con un client di layout di testo tramite un set di metodi di callback. Richiede che il client fornisca questi metodi in un'implementazione della classe <xref:System.Windows.Media.TextFormatting.TextSource>. Nel diagramma seguente viene illustrata l'interazione del layout del testo tra l'applicazione client e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagramma del client del layout di testo e TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -156,5 +156,5 @@ Testo con anti-aliasing della direzione y ClearType
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)
 - [Disegno di testo formattato](drawing-formatted-text.md)
 - [Formattazione del testo avanzata](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)
 - [Microsoft Typography](https://docs.microsoft.com/typography/)

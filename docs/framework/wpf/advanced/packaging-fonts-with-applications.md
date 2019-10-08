@@ -10,24 +10,24 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 18a8037b6b4433a4a83860eae205174f3036d6e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016093"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005010"
 ---
 # <a name="packaging-fonts-with-applications"></a>Includere i tipi di carattere nel pacchetto delle applicazioni
-In questo argomento viene fornita una panoramica su come creare un pacchetto [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] di tipi di carattere con l'applicazione.  
+In questo argomento viene fornita una panoramica su come creare un pacchetto di tipi di carattere con l'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!NOTE]
 > Come con la maggior parte delle applicazioni software, i file dei tipi di carattere vengono concessi in licenza e non venduti. Le licenze che regolano l'utilizzo dei tipi di carattere variano a seconda del fornitore, ma in generale la maggior parte delle licenze, incluse quelle relative ai tipi di carattere forniti da Microsoft con le applicazioni e Windows, non consentono di incorporare i tipi di carattere all'interno delle applicazioni o di ridistribuirli. Per questo motivo, gli sviluppatori sono tenuti ad assicurarsi che l'utente abbia i diritti di licenza separati per qualsiasi tipo di carattere incorporato in un'applicazione o ridistribuito in altro modo.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Introduzione all'inclusione dei tipi di carattere nel pacchetto  
- È possibile creare facilmente pacchetti di tipi di carattere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] come risorse all'interno delle applicazioni per visualizzare il testo dell'interfaccia utente e altri tipi di contenuto basato su testo. I tipi di carattere possono essere separati o incorporati nei file di assembly dell'applicazione. È anche possibile creare una libreria di tipi di carattere di sole risorse, a cui l'applicazione può fare riferimento.  
+ È possibile creare facilmente un pacchetto di tipi di carattere come risorse all'interno delle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per visualizzare il testo dell'interfaccia utente e altri tipi di contenuto basato su testo. I tipi di carattere possono essere separati o incorporati nei file di assembly dell'applicazione. È anche possibile creare una libreria di tipi di carattere di sole risorse, a cui l'applicazione può fare riferimento.  
   
- OpenType e [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] i tipi di carattere contengono un flag di tipo, fsType, che indica i diritti di licenza per l'incorporamento del tipo di carattere. Questo flag di tipo, tuttavia, fa riferimento solo ai tipi di carattere incorporati archiviati in un documento e non ai tipi di carattere incorporati in un'applicazione. È possibile recuperare i diritti di incorporamento del tipo di carattere per un <xref:System.Windows.Media.GlyphTypeface> tipo di carattere creando <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> un oggetto e facendo riferimento alla relativa proprietà. Per ulteriori informazioni sul flag fsType, vedere la sezione "metriche del sistema operativo/2 e Windows" della [specifica OpenType](https://www.microsoft.com/typography/otspec/os2.htm) .  
+ I tipi di carattere OpenType e TrueType® contengono un flag di tipo, fsType, che indica i diritti di licenza per l'incorporamento del tipo di carattere. Questo flag di tipo, tuttavia, fa riferimento solo ai tipi di carattere incorporati archiviati in un documento e non ai tipi di carattere incorporati in un'applicazione. È possibile recuperare i diritti di incorporamento del tipo di carattere per un tipo di carattere creando un oggetto <xref:System.Windows.Media.GlyphTypeface> e facendo riferimento alla relativa proprietà <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>. Per ulteriori informazioni sul flag fsType, vedere la sezione "metriche del sistema operativo/2 e Windows" della [specifica OpenType](https://www.microsoft.com/typography/otspec/os2.htm) .  
   
  Il sito Web [Microsoft Typography](https://docs.microsoft.com/typography/) include informazioni di contatto che consentono di individuare un particolare fornitore di tipi di carattere o trovare un fornitore di tipi di carattere per il lavoro personalizzato.  
   
@@ -47,7 +47,7 @@ In questo argomento viene fornita una panoramica su come creare un pacchetto [!I
 </Project>  
 ```  
   
- Per assicurarsi che l'applicazione possa usare i tipi di carattere in fase di esecuzione, i tipi di carattere devono essere accessibili nella directory di distribuzione dell'applicazione. L' `<CopyToOutputDirectory>` elemento nel file di progetto dell'applicazione consente di copiare automaticamente i tipi di carattere nella directory di distribuzione dell'applicazione durante il processo di compilazione. L'esempio di file di progetto seguente illustra come copiare i tipi di carattere nella directory di distribuzione.  
+ Per assicurarsi che l'applicazione possa usare i tipi di carattere in fase di esecuzione, i tipi di carattere devono essere accessibili nella directory di distribuzione dell'applicazione. L'elemento `<CopyToOutputDirectory>` nel file di progetto dell'applicazione consente di copiare automaticamente i tipi di carattere nella directory di distribuzione dell'applicazione durante il processo di compilazione. L'esempio di file di progetto seguente illustra come copiare i tipi di carattere nella directory di distribuzione.  
   
 ```xml  
 <ItemGroup>  
@@ -81,19 +81,19 @@ In questo argomento viene fornita una panoramica su come creare un pacchetto [!I
 ```  
   
 > [!NOTE]
-> Quando si aggiungono tipi di carattere come risorse all'applicazione, assicurarsi di impostare l' `<Resource>` elemento e non l' `<EmbeddedResource>` elemento nel file di progetto dell'applicazione. L' `<EmbeddedResource>` elemento per l'azione di compilazione non è supportato.  
+> Quando si aggiungono tipi di carattere come risorse all'applicazione, assicurarsi di impostare l'elemento `<Resource>` e non l'elemento `<EmbeddedResource>` nel file di progetto dell'applicazione. L'elemento `<EmbeddedResource>` per l'azione di compilazione non è supportato.  
   
  L'esempio di markup seguente illustra come fare riferimento alle risorse dei tipi di carattere dell'applicazione.  
   
  [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>Riferimento agli elementi risorsa dei tipi di carattere dal codice  
- Per fare riferimento agli elementi delle risorse del tipo di carattere dal codice, è necessario fornire un riferimento a una risorsa del [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]tipo di carattere in due parti: la base e il riferimento al percorso del tipo di carattere. Questi valori vengono usati come parametri per il <xref:System.Windows.Media.FontFamily.%23ctor%2A> metodo. Nell'esempio di codice seguente viene illustrato come fare riferimento alle risorse dei tipi di carattere dell'applicazione nella `resources`sottodirectory del progetto denominata.  
+ Per fare riferimento agli elementi delle risorse del tipo di carattere dal codice, è necessario fornire un riferimento a una risorsa del tipo di carattere in due parti: la base [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; e il riferimento al percorso del tipo di carattere. Questi valori vengono usati come parametri per il metodo <xref:System.Windows.Media.FontFamily.%23ctor%2A>. Nell'esempio di codice seguente viene illustrato come fare riferimento alle risorse dei tipi di carattere dell'applicazione nella sottodirectory del progetto denominata `resources`.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
  [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
- La base [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] può includere la sottodirectory dell'applicazione in cui risiede la risorsa del tipo di carattere. In questo caso, non è necessario specificare una directory per il riferimento al percorso dei tipi di carattere, ma è necessario includere`./`un carattere "" che indica che la risorsa del tipo di carattere si trova nella [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]stessa directory specificata dalla base. L'esempio di codice seguente illustra un modo alternativo per fare riferimento all'elemento risorsa dei tipi di carattere, che equivale all'esempio di codice precedente.  
+ La base [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] può includere la sottodirectory dell'applicazione in cui risiede la risorsa del tipo di carattere. In questo caso, non è necessario specificare una directory per il riferimento al percorso dei tipi di carattere, ma è necessario includere un "`./`", che indica che la risorsa del tipo di carattere si trova nella stessa directory specificata dalla @no__t di base-1. L'esempio di codice seguente illustra un modo alternativo per fare riferimento all'elemento risorsa dei tipi di carattere, che equivale all'esempio di codice precedente.  
   
  [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
  [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
@@ -119,12 +119,12 @@ In questo argomento viene fornita una panoramica su come creare un pacchetto [!I
  [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>Enumerazione di tipi di carattere in un'applicazione  
- Per enumerare i tipi di carattere come elementi di risorsa nell'applicazione <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> , <xref:System.Windows.Media.Fonts.GetTypefaces%2A> usare il metodo o. Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> metodo per restituire la raccolta di <xref:System.Windows.Media.FontFamily> oggetti dal percorso dei tipi di carattere dell'applicazione. In questo caso, l'applicazione contiene una sottodirectory denominata "resources".  
+ Per enumerare i tipi di carattere come elementi risorsa nell'applicazione, usare il metodo <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> o <xref:System.Windows.Media.Fonts.GetTypefaces%2A>. Nell'esempio seguente viene illustrato come utilizzare il metodo <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> per restituire la raccolta di oggetti <xref:System.Windows.Media.FontFamily> dal percorso dei tipi di carattere dell'applicazione. In questo caso, l'applicazione contiene una sottodirectory denominata "resources".  
   
  [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
  [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
- Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Media.Fonts.GetTypefaces%2A> metodo per restituire la raccolta di <xref:System.Windows.Media.Typeface> oggetti dal percorso dei tipi di carattere dell'applicazione. In questo caso, l'applicazione contiene una sottodirectory denominata "resources".  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo <xref:System.Windows.Media.Fonts.GetTypefaces%2A> per restituire la raccolta di oggetti <xref:System.Windows.Media.Typeface> dal percorso dei tipi di carattere dell'applicazione. In questo caso, l'applicazione contiene una sottodirectory denominata "resources".  
   
  [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
  [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
@@ -152,17 +152,17 @@ In questo argomento viene fornita una panoramica su come creare un pacchetto [!I
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
-> Questo SDK contiene un set di tipi di carattere OpenType di esempio che è [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possibile usare con le applicazioni. I tipi di carattere sono definiti in una libreria di sole risorse. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
+> Questo SDK contiene un set di tipi di carattere OpenType di esempio che è possibile usare con le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. I tipi di carattere sono definiti in una libreria di sole risorse. Per altre informazioni, vedere [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Limitazioni all'utilizzo dei tipi di carattere  
- L'elenco seguente descrive diverse limitazioni relative alla creazione di pacchetti e all'uso [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di tipi di carattere nelle applicazioni:  
+ L'elenco seguente descrive diverse limitazioni relative alla creazione di pacchetti e all'uso di tipi di carattere nelle applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
 - **Bit autorizzazione per l'incorporamento tipi di carattere:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni non controllano né applicano bit di autorizzazione per l'incorporamento tipi di carattere. Per ulteriori informazioni, vedere la sezione relativa ai [tipi di carattere Introduction_to_Packing](#introduction_to_packaging_fonts) .  
   
-- **Tipi di carattere del sito di origine:** le applicazioni non consentono un riferimento a un tipo di carattere a un http o FTP [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+- **Tipi di carattere del sito di origine:** le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non consentono un riferimento a un tipo di carattere a un http o FTP [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
-- **URI assoluto con la notazione Pack:** le applicazioni non consentono di creare un <xref:System.Windows.Media.FontFamily> oggetto a livello di codice utilizzando "Pack:" come parte del riferimento [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] assoluto a un tipo di carattere. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ad esempio, `"pack://application:,,,/resources/#Pericles Light"` è un riferimento al tipo di carattere non valido.  
+- **URI assoluto con le applicazioni Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non consentono di creare un oggetto <xref:System.Windows.Media.FontFamily> a livello di codice usando "Pack:" come parte del riferimento assoluto [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] a un tipo di carattere. Ad esempio, `"pack://application:,,,/resources/#Pericles Light"` è un riferimento al tipo di carattere non valido.  
   
 - **Incorporamento automatico dei tipi di carattere:** Durante la fase di progettazione, non è previsto alcun supporto per la ricerca dell'utilizzo di tipi di carattere da parte dell'applicazione e l'incorporamento automatico dei tipi di carattere nelle risorse dell'applicazione.  
   
@@ -174,7 +174,7 @@ In questo argomento viene fornita una panoramica su come creare un pacchetto [!I
 
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft Typography: Collegamenti, notizie e contatti](https://docs.microsoft.com/typography/)
+- Tipografia [Microsoft: Collegamenti, notizie e contatti @ no__t-0
 - [Specifica OpenType](https://www.microsoft.com/typography/otspec/)
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)
 - [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md)

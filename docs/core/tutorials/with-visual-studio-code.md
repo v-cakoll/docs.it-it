@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849462"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002330"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -34,9 +34,10 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
       ![Cartella aperta di Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Inizializzare un progetto C#:
+
     - Aprire il terminale integrato da Visual Studio Code scegliendo **Visualizza** > **Terminale integrato** dal menu principale.
     - Nella finestra del terminale digitare `dotnet new console`.
-    - Questo comando crea un file `Program.cs` nella cartella con un semplice programma "Hello World" già scritto, oltre a un file di progetto C# denominato `HelloWorld.csproj`.
+    - Questo comando crea un file *Program.cs* nella cartella con un semplice programma "Hello World" già scritto insieme a un C# file di progetto denominato *HelloWorld. csproj*.
 
       ![Comando new di dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
@@ -70,7 +71,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
     ![Aprire la scheda Debug in Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Individuare la freccia verde nella parte superiore del riquadro. Verificare che nel menu a discesa accanto alla freccia sia selezionato `.NET Core Launch (console)`.
+4. Individuare la freccia verde nella parte superiore del riquadro. Verificare che nell'elenco a discesa accanto sia selezionato **Avvia .NET Core (console)** .
 
     ![Selezione di .NET Core in Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
@@ -90,9 +91,9 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ## <a name="add-a-class"></a>Aggiungere una classe
 
-1. Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse nell'utilità di esplorazione di VSCode e scegliere **Nuovo file**. Verrà aggiunto un nuovo file alla cartella aperta in VSCode.
-2. Assegnare al file il nome `MyClass.cs`. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
-3. Aggiungere il codice seguente per creare la prima classe. Assicurarsi di includere lo spazio dei nomi corretto per potervi fare riferimento dal file `Program.cs`.
+1. Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse su VSCode Explorer e scegliere **nuovo file**. Verrà aggiunto un nuovo file alla cartella aperta in VSCode.
+2. Assegnare al file il nome *MyClass.cs*. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
+3. Aggiungere il codice seguente per creare la prima classe. Assicurarsi di includere lo spazio dei nomi corretto in modo che sia possibile farvi riferimento dal file *Program.cs* :
 
     ``` csharp
     using System;
@@ -109,7 +110,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
     }
     ```
 
-4. Chiamare la nuova classe dal metodo principale in `Program.cs` aggiungendo il codice seguente.
+4. Chiamare la nuova classe dal metodo Main in *Program.cs* aggiungendo il codice seguente:
 
     ```csharp
     using System;
@@ -120,7 +121,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
         {
             static void Main(string[] args)
             {
-                MyClass c1 = new MyClass();
+                var c1 = new MyClass();
                 Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
             }
         }
@@ -138,7 +139,7 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Non sono più disponibili gli asset necessari per compilare ed eseguire il debug di C# in Visual Studio Code. Ildebugger indica "Nessuna configurazione".
 
-L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando ">.NET: genera asset per la compilazione e il debug". Questa seleziona consente di generare i file .vscode, launch.json e tasks.json necessari.
+L'estensione C# di Visual Studio Code può generare gli asset necessari per compilare ed eseguire il debug. Visual Studio Code chiederà di generarli alla prima apertura di un progetto C#. Se gli asset non sono stati generati, è comunque possibile eseguire questo comando aprendo il riquadro comandi (**Visualizza > Riquadro comandi**) e digitando ">.NET: genera asset per la compilazione e il debug". Selezionando questa operazione vengono generati i file di configurazione *. VSCODE*, *Launch. JSON*e *Tasks. JSON* necessari.
 
 ## <a name="see-also"></a>Vedere anche
 

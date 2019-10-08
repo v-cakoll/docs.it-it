@@ -13,19 +13,19 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 7fbf2b15105a9fdcda5c7f6653753a4da54b394b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e4514686afcbbe0e9ff0b3326c1be212db4f9f8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622336"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005160"
 ---
 # <a name="class-statement-visual-basic"></a>Istruzione Class (Visual Basic)
-Dichiara il nome di una classe e introduce la definizione delle variabili, proprietà, eventi e le procedure che comprende la classe.  
+Dichiara il nome di una classe e introduce la definizione di variabili, proprietà, eventi e routine inclusi nella classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
 Class name [ ( Of typelist ) ]  
     [ Inherits classname ]  
@@ -36,74 +36,74 @@ End Class
   
 ## <a name="parts"></a>Parti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`attributelist`|Facoltativo. Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facoltativo. Può essere uno dei seguenti:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private Protected](../../language-reference/modifiers/private-protected.md)<br/><br/> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Facoltativo. Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Facoltativo. Visualizzare [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Facoltativo. Visualizzare [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Facoltativo. Indica una definizione parziale della classe. Visualizzare [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`attributelist`|facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|facoltativo. Può essere uno dei seguenti:<br /><br /> -   [pubblico](../../../visual-basic/language-reference/modifiers/public.md)<br />[protetto](../../../visual-basic/language-reference/modifiers/protected.md) da -   <br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privato](../../../visual-basic/language-reference/modifiers/private.md)<br />[Friend protetto](../../language-reference/modifiers/protected-friend.md) da @no__t 0<br />Protetto da - [privato](../../language-reference/modifiers/private-protected.md)<br/><br/> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|facoltativo. Vedere [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|facoltativo. Vedere [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`Partial`|facoltativo. Indica una definizione parziale della classe. Vedere [parziale](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obbligatorio. Nome di questa classe. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Facoltativo. Specifica che si tratta di una classe generica.|  
-|`typelist`|Obbligatorio se si usa la [di](../../../visual-basic/language-reference/statements/of-clause.md) (parola chiave). Elenco di parametri di tipo per questa classe. Visualizzare [elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Facoltativo. Indica che questa classe eredita i membri di un'altra classe. Visualizzare [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Obbligatorio se si usa il `Inherits` istruzione. Il nome della classe da cui deriva questa classe.|  
-|`Implements`|Facoltativo. Indica che questa classe implementa i membri di una o più interfacce. Visualizzare [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Obbligatorio se si usa il `Implements` istruzione. I nomi delle interfacce di che questa classe implementa.|  
-|`statements`|Facoltativo. Istruzioni che definiscono i membri di questa classe.|  
-|`End Class`|Obbligatorio. Termina il `Class` definizione.|  
+|`Of`|facoltativo. Specifica che si tratta di una classe generica.|  
+|`typelist`|Obbligatorio se si usa la parola chiave [of](../../../visual-basic/language-reference/statements/of-clause.md) . Elenco di parametri di tipo per questa classe. Vedere [elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|facoltativo. Indica che questa classe eredita i membri di un'altra classe. Vedere [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|Obbligatorio se si usa l'istruzione `Inherits`. Nome della classe da cui deriva questa classe.|  
+|`Implements`|facoltativo. Indica che questa classe implementa i membri di una o più interfacce. Vedere [istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Obbligatorio se si usa l'istruzione `Implements`. Nomi delle interfacce implementate da questa classe.|  
+|`statements`|facoltativo. Istruzioni che definiscono i membri di questa classe.|  
+|`End Class`|Obbligatorio. Termina la definizione `Class`.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto `Class` istruzione definisce un nuovo tipo di dati. Oggetto *classe* è un blocco predefinito fondamentale della programmazione orientata agli oggetti (OOP). Per altre informazioni, vedere [oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ Un'istruzione `Class` definisce un nuovo tipo di dati. Una *classe* è un blocco predefinito fondamentale della programmazione orientata a oggetti (OOP). Per altre informazioni, vedere [oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- È possibile usare `Class` solo a livello di spazio dei nomi o modulo. Ciò significa che il *contesto della dichiarazione* per una classe deve essere un file di origine, lo spazio dei nomi, classe, struttura, modulo o dell'interfaccia e non può essere una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ È possibile usare `Class` solo a livello di spazio dei nomi o di modulo. Ciò significa che il *contesto di dichiarazione* per una classe deve essere un file di origine, uno spazio dei nomi, una classe, una struttura, un modulo o un'interfaccia e non può essere una routine o un blocco. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Ogni istanza di una classe ha una durata indipendente da tutte le altre istanze. Questa durata ha inizio quando viene creato da un [nuovo operatore](../../../visual-basic/language-reference/operators/new-operator.md) clausola o da una funzione, ad esempio <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Termina quando tutte le variabili che puntano all'istanza sono state impostate su [Nothing](../../../visual-basic/language-reference/nothing.md) o per istanze di altre classi.  
+ Ogni istanza di una classe ha una durata indipendente da tutte le altre istanze. Questa durata inizia quando viene creata da una [nuova clausola operator](../../../visual-basic/language-reference/operators/new-operator.md) o da una funzione quale <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Termina quando tutte le variabili che puntano all'istanza sono state impostate su [Nothing](../../../visual-basic/language-reference/nothing.md) o su istanze di altre classi.  
   
- Le classi per impostazione predefinita a [Friend](../../../visual-basic/language-reference/modifiers/friend.md) accesso. È possibile modificare i livelli di accesso con i modificatori di accesso. Per altre informazioni, vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Per impostazione predefinita, le classi accedono a [Friend](../../../visual-basic/language-reference/modifiers/friend.md) . È possibile modificare i livelli di accesso con i modificatori di accesso. Per altre informazioni, vedere [livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regole  
   
-- **Annidamento.** È possibile definire una classe all'interno di altra. Classe esterna viene chiamata il *contenente classi*, e la classe interna viene chiamata una *classi annidate*.  
+- **Annidamento.** È possibile definire una classe all'interno di un'altra. La classe esterna viene chiamata *classe che la contiene*e la classe interna è chiamata *classe annidata*.  
   
-- **Ereditarietà.** Se la classe Usa il [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), è possibile specificare solo una classe di base o interfaccia. Una classe non può ereditare da più di un elemento.  
+- **Ereditarietà.** Se la classe utilizza l' [istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), è possibile specificare solo una classe o un'interfaccia di base. Una classe non può ereditare da più di un elemento.  
   
-     Una classe non può ereditare da un'altra classe con un livello di accesso più restrittivo. Ad esempio, un `Public` classe non può ereditare da un `Friend` classe.  
+     Una classe non può ereditare da un'altra classe con un livello di accesso più restrittivo. Una classe `Public`, ad esempio, non può ereditare da una classe `Friend`.  
   
      Una classe non può ereditare da una classe annidata al suo interno.  
   
-- **Implementazione.** Se la classe Usa il [istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md), è necessario implementare tutti i membri definiti da ogni interfaccia specificata in `interfacenames`. Un'eccezione è reimplementazione di un membro di classe di base. Per altre informazioni, vedere "Reimplementazione" nella [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **Implementazione.** Se la classe utilizza l' [istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md), è necessario implementare ogni membro definito da ogni interfaccia specificata in `interfacenames`. Un'eccezione a questa operazione è la riimplementazione di un membro della classe base. Per ulteriori informazioni, vedere la sezione relativa alla riimplementazione in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
-- **Proprietà predefinita.** Una classe può specificare al massimo una proprietà come relativo *predefiniti delle proprietà*. Per altre informazioni, vedere [predefinito](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Proprietà predefinita.** Una classe può specificare al massimo una proprietà come *proprietà predefinita*. Per ulteriori informazioni, vedere [default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Livello di accesso.** All'interno di una classe, è possibile dichiarare ogni membro con il proprio livello di accesso. Per impostazione predefinita i membri della classe [pubbliche](../../../visual-basic/language-reference/modifiers/public.md) accedere, ad eccezione delle variabili e costanti, quale per impostazione predefinita ai [privati](../../../visual-basic/language-reference/modifiers/private.md) accesso. Quando una classe, l'accesso è più limitato rispetto a uno dei relativi membri, il livello di accesso della classe ha la precedenza.  
+- **Livello di accesso.** All'interno di una classe, è possibile dichiarare ogni membro con il proprio livello di accesso. I membri della classe hanno per impostazione predefinita l'accesso [pubblico](../../../visual-basic/language-reference/modifiers/public.md) , eccetto le variabili e le costanti, per impostazione predefinita l'accesso [privato](../../../visual-basic/language-reference/modifiers/private.md) . Quando una classe dispone di un accesso più limitato di uno dei relativi membri, il livello di accesso della classe ha la precedenza.  
   
-- **Ambito.** Una classe è l'ambito relativo dello spazio dei nomi, classe, struttura o modulo che lo contiene.  
+- **Ambito.** Una classe è nell'ambito di tutti gli spazi dei nomi, la classe, la struttura o il modulo che lo contiene.  
   
      L'ambito di ogni membro della classe è l'intera classe.  
   
-     **Ciclo di vita.** Visual Basic non supporta le classi statiche. L'equivalente funzionale di una classe statica viene fornito da un modulo. Per altre informazioni, vedere [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
+     **Vita.** Visual Basic non supporta classi statiche. L'equivalente funzionale di una classe statica viene fornito da un modulo. Per ulteriori informazioni, vedere [istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     I membri della classe hanno durate a seconda di come e dove vengono dichiarati. Per altre informazioni, vedere [durata in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+     I membri della classe hanno durate a seconda della modalità e della posizione in cui vengono dichiarati. Per ulteriori informazioni, vedere [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- **Qualification.** Il codice all'esterno di una classe deve qualificare il nome di un membro con il nome di tale classe.  
+- **Qualificazione.** Il codice esterno a una classe deve qualificare il nome di un membro con il nome della classe.  
   
-     Se il codice all'interno di una classe annidata contiene un riferimento non qualificato a un elemento di programmazione, Visual Basic cerca prima della classe annidata, quindi nella classe che contiene e così via per l'elemento più esterno.  
+     Se il codice all'interno di una classe annidata crea un riferimento non qualificato a un elemento di programmazione, Visual Basic cerca prima l'elemento nella classe annidata, quindi nella classe che lo contiene e così via fino all'elemento contenitore più esterno.  
   
 ## <a name="classes-and-modules"></a>Classi e moduli  
- Questi elementi presentano molte analogie, ma esistono alcune importanti differenze.  
+ Questi elementi presentano molte analogie, ma esistono anche alcune differenze importanti.  
   
-- **Terminology.** Le versioni precedenti di Visual Basic riconoscono due tipi di moduli: *classe moduli* (file CLS) e *moduli standard* (file con estensione BAS). La versione corrente chiama questi *classi* e *moduli*, rispettivamente.  
+- **Terminologia.** Le versioni precedenti di Visual Basic riconoscono due tipi di moduli: *moduli di classe* (file con estensione CLS) e *moduli standard* (file con estensione BAS). La versione corrente chiama queste *classi* e *moduli*, rispettivamente.  
   
-- **Membri condivisi.** È possibile controllare se un membro di una classe è condivisa o membro di istanza.  
+- **Membri condivisi.** È possibile controllare se un membro di una classe è un membro condiviso o di istanza.  
   
-- **Orientamento agli oggetti.** Le classi sono orientate a oggetti, ma non sono i moduli. È possibile creare uno o più istanze di una classe. Per altre informazioni, vedere [oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Orientamento dell'oggetto.** Le classi sono orientate agli oggetti, ma i moduli non lo sono. È possibile creare una o più istanze di una classe. Per altre informazioni, vedere [oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa un `Class` istruzione per definire una classe e alcuni membri.  
+ Nell'esempio seguente viene utilizzata un'istruzione `Class` per definire una classe e diversi membri.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
@@ -114,6 +114,6 @@ End Class
 - [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)
 - [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Durata degli oggetti: Come gli oggetti vengono creati ed eliminati](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- Durata [Object: Come vengono creati ed eliminati gli oggetti @ no__t-0
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Procedura: Usare una classe generica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

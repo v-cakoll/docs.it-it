@@ -5,21 +5,21 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330991"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004898"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
-I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] usate dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
+i commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà, all'interno del codice sorgente XAML, fornite dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Commenti di localizzazione  
- Se gli autori dell'applicazione di markup necessitano di elementi specifici nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ad esempio vincoli relativi alla lunghezza del testo, alla famiglia o alle dimensioni del carattere, possono trasmettere queste informazioni ai localizzatori con commenti nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Il processo di aggiunta di commenti al codice sorgente è il seguente:  
+ Se gli autori dell'applicazione di markup hanno requisiti per elementi specifici in XAML, ad esempio vincoli sulla lunghezza del testo, la famiglia di caratteri o la dimensione del carattere, possono inviare tali informazioni ai localizzatori con commenti nel codice XAML. Il processo di aggiunta di commenti al codice sorgente è il seguente:  
   
-1. Lo sviluppatore dell'applicazione aggiunge i commenti di localizzazione al codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+1. Lo sviluppatore di applicazioni aggiunge commenti di localizzazione al codice sorgente XAML.  
   
 2. Durante il processo di compilazione, nel file con estensione proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly, se rimuoverne una parte o se rimuoverli tutti. I commenti rimossi vengono inseriti in un file separato. Per indicare la scelta si usa un tag `LocalizationDirectivesToLocFile`, ad esempio:  
   
@@ -37,7 +37,7 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 5. I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.  
   
- L'esempio seguente illustra come aggiungere commenti di localizzazione a un file [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+ Nell'esempio seguente viene illustrato come aggiungere commenti di localizzazione a un file XAML.  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -88,7 +88,7 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 |Category|Significato|  
 |--------------|-------------|  
-|Nessuna|Per il valore di destinazione non è definita alcuna categoria.|  
+|nessuno|Per il valore di destinazione non è definita alcuna categoria.|  
 |Eredita|Il valore di destinazione eredita la categoria dall'elemento padre.|  
 |Ignora|Il valore di destinazione viene ignorato nel processo di localizzazione. Questa categoria influisce solo sul valore corrente e non sui nodi figlio.|  
 |NeverLocalize|Il valore corrente non può essere localizzato. Questa categoria viene ereditata dagli elementi figlio di un elemento.|  

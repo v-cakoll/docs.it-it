@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627291"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005697"
 ---
 # <a name="controls-by-category"></a>Controlli per categoria
-Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
+I controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
   
 ## <a name="layout"></a>Layout  
  I controlli di layout consentono di gestire le dimensioni, la posizione e la disposizione degli elementi figlio.  
@@ -56,7 +56,7 @@ Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logic
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Pulsanti  
- I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono qualche attività nel <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando un utente fa clic su di essi.  
+ I pulsanti sono uno dei controlli più semplici dell'interfaccia utente. Le applicazioni in genere eseguono alcune attività nell'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> quando un utente fa clic su di essi.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,7 +171,7 @@ Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logic
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Input penna  
- I controlli di input penna digitale forniscono supporto integrato per le funzionalità di [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], ad esempio la visualizzazione e l'immissione dell'input penna.  
+ I controlli Ink digitali forniscono il supporto integrato per le funzionalità di Tablet PC, ad esempio la visualizzazione dell'input penna e l'input penna.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

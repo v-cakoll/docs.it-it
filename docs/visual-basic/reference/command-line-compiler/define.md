@@ -9,33 +9,37 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649725"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002376"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definisce le costanti del compilatore condizionali.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+oppure
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
 |`symbol`|Obbligatorio. Il simbolo da definire.|  
-|`value`|Facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiuso tra sequenze di barre rovesciate/virgolette (\\") anziché le virgolette. Se non è specificato un valore, è considerato True.|  
+|`value`|facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiusa tra sequenze di barra rovesciata/virgolette (\\ ") anziché virgolette. Se non è specificato un valore, è considerato True.|  
   
 ## <a name="remarks"></a>Note  
- Il `-define` opzione ha un effetto simile all'uso di un `#Const` direttiva per il preprocessore nel file di origine, ad eccezione che le costanti definite con `-define` sono pubblici e si applicano a tutti i file nel progetto.  
+ L'opzione `-define` ha un effetto simile all'uso di una direttiva per il preprocessore `#Const` nel file di origine, ad eccezione del fatto che le costanti definite con `-define` sono pubbliche e si applicano a tutti i file del progetto.  
   
  È possibile usare i simboli creati mediante questa opzione con la direttiva `#If`...`Then`...`#Else` per eseguire la compilazione condizionale dei file di origine.  
   
@@ -45,7 +49,7 @@ Definisce le costanti del compilatore condizionali.
   
 |Per impostare /define nell'ambiente di sviluppo integrato di Visual Studio|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Scegliere **Avanzate**.<br />4.  Modificare il valore di **stanti personalizzate** casella.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Scegliere **Avanzate**.<br />4.  Modificare il valore nella casella **costanti personalizzate** .|  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente sono definite e usate due costanti di compilazione condizionale.  

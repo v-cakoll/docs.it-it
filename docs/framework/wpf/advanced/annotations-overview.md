@@ -9,21 +9,21 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 861a757effee8d68d1e41682dd91ffadba20c536
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364369"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004039"
 ---
 # <a name="annotations-overview"></a>Cenni preliminari sulle annotazioni
 La scrittura di note o commenti su documenti cartacei è un'attività comune che diamo quasi per scontata. Queste note o commenti sono "annotazioni" aggiunte a un documento per contrassegnare informazioni o evidenziare elementi di interesse a cui fare riferimento in un secondo momento. Sebbene la scrittura di note su documenti stampati sia un'operazione semplice e comune, la capacità di aggiungere commenti personali ai documenti elettronici, se disponibile, è in genere molto limitata.  
   
- In questo argomento vengono esaminati diversi tipi comuni di annotazioni, in particolare note e evidenziazioni e viene illustrato il modo in cui il framework delle annotazioni Microsoft semplifica questi tipi di annotazioni nelle applicazioni tramite il Windows Presentation Foundation (WPF ) controlli di visualizzazione del documento.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i controlli di visualizzazione dei documenti che supportano <xref:System.Windows.Controls.FlowDocumentReader> le <xref:System.Windows.Controls.FlowDocumentScrollViewer>annotazioni includono e, nonché <xref:System.Windows.Controls.Primitives.DocumentViewerBase> i <xref:System.Windows.Controls.DocumentViewer> controlli derivati da, ad esempio e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In questo argomento vengono esaminati diversi tipi comuni di annotazioni, in particolare note e evidenziazioni e viene illustrato il modo in cui il framework delle annotazioni Microsoft semplifica questi tipi di annotazioni nelle applicazioni tramite il Windows Presentation Foundation (WPF ) controlli di visualizzazione del documento.  i controlli di visualizzazione dei documenti [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] che supportano le annotazioni includono <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, nonché i controlli derivati da <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, ad esempio <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Memo  
- Normalmente una nota adesiva contiene informazioni scritte su un pezzetto di carta colorata che viene successivamente "attaccato" su un documento. Le note digitali di Memo offrono una funzionalità simile per i documenti elettronici, ma con un'ulteriore flessibilità che consente di includere molti altri tipi di contenuto, quali testo digitato, note scritte a mano (ad esempio, tratti di "input penna" [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]) o collegamenti Web.  
+ Normalmente una nota adesiva contiene informazioni scritte su un pezzetto di carta colorata che viene successivamente "attaccato" su un documento. Le note adesive digitali forniscono funzionalità simili per i documenti elettronici, ma con la flessibilità aggiuntiva per includere molti altri tipi di contenuto, ad esempio il testo tipizzato, le note scritte a mano (ad esempio, i tratti di "input penna" di Tablet PC) o i collegamenti Web.  
   
  La figura seguente mostra alcuni esempi di annotazioni con evidenziatore, annotazioni di testo con Memo e annotazioni a penna di Memo.  
   
@@ -36,13 +36,13 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Evidenziazioni  
- Quando si eseguono annotazioni su un documento cartaceo, per attirare l'attenzione su elementi di interesse si usano metodi creativi, ad esempio sottolineando, evidenziando, cerchiando parole in una frase o tracciando segni o notazioni sul margine.  Le annotazioni evidenziate in Microsoft Annotations Framework forniscono una funzionalità simile per contrassegnare le informazioni visualizzate nei controlli di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] visualizzazione dei documenti.  
+ Quando si eseguono annotazioni su un documento cartaceo, per attirare l'attenzione su elementi di interesse si usano metodi creativi, ad esempio sottolineando, evidenziando, cerchiando parole in una frase o tracciando segni o notazioni sul margine.  Le annotazioni evidenziate in Microsoft Annotations Framework forniscono una funzionalità simile per contrassegnare le informazioni visualizzate nei controlli di visualizzazione dei documenti [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  La figura seguente mostra un esempio di annotazione con evidenziatore.  
   
  ![Annotazione con evidenziatore](./media/caf-callouts.png "CAF_Callouts")  
   
- Gli utenti in genere creano annotazioni selezionando prima di tutto un testo o un elemento di interesse, quindi facendo clic <xref:System.Windows.Controls.ContextMenu> con il pulsante destro del mouse per visualizzare una delle opzioni di annotazione.  Nell'esempio seguente viene illustrato [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] l'oggetto che è possibile utilizzare <xref:System.Windows.Controls.ContextMenu> per dichiarare un con i comandi indirizzati a cui gli utenti possono accedere per creare e gestire le annotazioni.  
+ Gli utenti in genere creano annotazioni selezionando prima di tutto un testo o un elemento di interesse, quindi facendo clic con il pulsante destro del mouse per visualizzare un <xref:System.Windows.Controls.ContextMenu> delle opzioni di annotazione.  Nell'esempio seguente viene illustrato il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che è possibile utilizzare per dichiarare un <xref:System.Windows.Controls.ContextMenu> con comandi indirizzati a cui gli utenti possono accedere per creare e gestire le annotazioni.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -75,4 +75,4 @@ La scrittura di note o commenti su documenti cartacei è un'attività comune che
 - [Panoramica sull'oggetto ContextMenu](../controls/contextmenu-overview.md)
 - [Panoramica sull'esecuzione di comandi](commanding-overview.md)
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)
-- [Procedura: Aggiungere un comando a un MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Procedura: Aggiungere un comando a un MenuItem @ no__t-0

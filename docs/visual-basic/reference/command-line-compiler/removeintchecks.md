@@ -1,5 +1,5 @@
 ---
-title: -/removeintchecks
+title: -removeintchecks
 ms.date: 03/13/2018
 f1_keywords:
 - removeintchecks
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: c086a031d5cef4563a6769e7683dcb1110b8fe49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bea6ca24ea6da9000267e754d52fe0ca152f7d7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788765"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005235"
 ---
-# <a name="-removeintchecks"></a>-/removeintchecks
-Attiva il controllo per operazioni con numeri interi o disattivare l'errore di overflow.  
+# <a name="-removeintchecks"></a>-removeintchecks
+Attiva o disattiva il controllo degli errori di overflow per le operazioni integer.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 -removeintchecks[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
-|Termine|Definizione|  
+|Nome|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Il `-removeintchecks-` opzione indica al compilatore di verificare tutti i calcoli di interi per gli errori di overflow. Il valore predefinito è `-removeintchecks-`.<br /><br /> Che specifica `-removeintchecks` o `-removeintchecks+` impedisce il controllo degli errori e può rendere più veloci i calcoli di integer. Tuttavia, senza il controllo degli errori, e se le capacità di tipo di dati sono ha causato l'overflow, risultati non corretti potrebbero essere archiviati senza generare un errore.|  
+|`+` &#124; `-`|facoltativo. L'opzione `-removeintchecks-` induce il compilatore a controllare tutti i calcoli Integer per rilevare errori di overflow. Il valore predefinito è `-removeintchecks-`.<br /><br /> Se si specifica `-removeintchecks` o `-removeintchecks+`, il controllo degli errori e i calcoli Integer possono essere più veloci. Tuttavia, senza il controllo degli errori e in caso di overflow delle capacità del tipo di dati, i risultati non corretti possono essere archiviati senza generare un errore.|  
   
-|Per impostare - /removeintchecks nell'ambiente di sviluppo integrato di Visual Studio|  
+|Per impostare-removeintchecks (in Visual Studio Integrated Development Environment|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il valore dei **Rimuovi controllo dell'overflow integer** casella.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il valore della casella di **controllo Rimuovi overflow di Integer** .|  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente Compila `Test.vb` e consente di disattivare il controllo dell'overflow integer.  
+ Il codice seguente compila `Test.vb` e disattiva il controllo degli errori di overflow di Integer.  
   
 ```console
 vbc -removeintchecks+ test.vb  
