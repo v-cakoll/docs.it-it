@@ -2,12 +2,12 @@
 title: 'Eventi del dominio: progettazione e implementazione'
 description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | Ottenere un quadro dettagliato degli eventi di dominio, un concetto chiave per stabilire la comunicazione tra le aggregazioni.
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926551"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031844"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -71,7 +71,7 @@ Se invece si usano gli eventi del dominio, è possibile creare un'implementazion
 2. Ricevere il comando in un gestore di comandi.
    - Eseguire una transazione della singola aggregazione.
    - (Facoltativo) Generare eventi del dominio per gli effetti collaterali, ad esempio OrderStartedDomainEvent.
-3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Ad esempio:
+3. Gestire gli eventi del dominio (all'interno del processo corrente) che eseguiranno un numero aperto di effetti collaterali in più aggregazioni o azioni di applicazioni. Esempio:
    - Verificare o creare l'acquirente e la modalità di pagamento.
    - Creare e inviare un evento di integrazione correlato al bus di eventi per propagare gli stati tra i microservizi o attivare azioni esterne, come l'invio di un messaggio di posta elettronica all'acquirente.
    - Gestire gli altri effetti collaterali.
@@ -84,7 +84,7 @@ Come illustrato nella figura 7-15, a partire dallo stesso evento di dominio è p
 
 In genere i gestori di eventi si trovano a livello dell'applicazione perché si usano oggetti di infrastruttura, come i repository o un'API di applicazione, per il comportamento del microservizio. In questo senso, i gestori di eventi sono simili ai gestori di comandi poiché entrambi fanno parte del livello dell'applicazione. La differenza importante è che un comando deve essere elaborato una sola volta. Un evento del dominio può essere elaborato zero o *n* volte perché può essere ricevuto da più ricevitori o gestori dell'evento con uno scopo diverso per ogni gestore.
 
-La possibilità di avere un numero aperto di gestori per evento di dominio consente di aggiungere molte altre regole di dominio senza che vi siano effetti sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
+La presenza di un numero aperto di gestori per ogni evento di dominio consente di aggiungere tutte le regole di dominio necessarie, senza influire sul codice corrente. Ad esempio, implementare la regola di business seguente può essere facile come aggiungere alcuni gestori di eventi o anche uno solo:
 
 > Quando la quantità totale acquistata da un cliente nello store, con qualsiasi numero di ordini, supera $ 6.000, applicare uno sconto del 10% per ogni nuovo ordine e notificare al cliente questo sconto per gli ordini futuri con un messaggio di posta elettronica.
 

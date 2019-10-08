@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d462f692366575fd01842f41252fc96658fdcac5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834357"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002343"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Implementare i comandi idempotenti
 
-In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Poiché tuttavia il processo aziendale degli ordini è un po' più complesso e, in questo caso, inizia di fatto con il microservizio Basket, l'azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore eventi di integrazione denominato >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) anziché da un semplice controller API Web chiamato dall'app client come nel più semplice esempio precedente.
+In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l'invio di un oggetto CreateOrderCommand dal microservizio degli ordini. Tuttavia, poiché il processo di business degli ordini è un po' più complesso e, in questo caso, inizia effettivamente nel microservizio basket, questa azione di invio dell'oggetto CreateOrderCommand viene eseguita da un gestore dell'evento di integrazione denominato [ UserCheckoutAcceptedIntegrationEvent](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) invece di un semplice controller WebAPI chiamato dall'app client come nell'esempio precedente più semplice.
 
 L'azione di invio del comando a MediatR è però molto simile, come illustrato nel codice seguente.
 
