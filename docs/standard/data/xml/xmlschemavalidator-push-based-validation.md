@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b78430c03b0d62dcf0e84577cd337240d3729d0e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: a420a134eda6c62758b0d218e3c0a4a4922b048c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046538"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250050"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Convalida basata sul metodo push di XmlSchemaValidator
 
@@ -154,7 +154,7 @@ Per altre informazioni sul metodo <xref:System.Xml.Schema.XmlSchemaValidator.Add
 
 La classe <xref:System.Xml.Schema.XmlSchemaValidator> fornisce diversi metodi usati per convalidare elementi, attributi e contenuto in un infoset XML in base a schemi XML. Nella tabella seguente viene descritto ciascuno di questi metodi.
 
-|Metodo|DESCRIZIONE|
+|Metodo|Descrizione|
 |------------|-----------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Convalida il nome dell'elemento nel contesto corrente.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Convalida l'attributo nel contesto dell'elemento corrente oppure in base all'oggetto <xref:System.Xml.Schema.XmlSchemaAttribute> passato come parametro al metodo <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.|
@@ -189,25 +189,25 @@ Di seguito è riportato un <xref:System.Xml.Schema.XmlValueGetter>`delegate` di 
 ```vb
 Shared dateTimeGetterContent As Object
 
-Shared Function dateTimeGetterHandle() As Object
+Shared Function DateTimeGetterHandle() As Object
     Return dateTimeGetterContent
 End Function
 
-Shared Function dateTimeGetter(ByVal dateTime As DateTime) As XmlValueGetter
+Shared Function DateTimeGetter(dateTime As DateTime) As XmlValueGetter
     dateTimeGetterContent = dateTime
-    Return New XmlValueGetter(AddressOf dateTimeGetterHandle)
+    Return New XmlValueGetter(AddressOf DateTimeGetterHandle)
 End Function
 ```
 
 ```csharp
 static object dateTimeGetterContent;
 
-static object dateTimeGetterHandle()
+static object DateTimeGetterHandle()
 {
     return dateTimeGetterContent;
 }
 
-static XmlValueGetter dateTimeGetter(DateTime dateTime)
+static XmlValueGetter DateTimeGetter(DateTime dateTime)
 {
     dateTimeGetterContent = dateTime;
     return new XmlValueGetter(dateTimeGetterHandle);
@@ -260,11 +260,11 @@ Ad esempio, nello schema XSD (XML Schema Definition Language) e nel documento XM
 ```vb
 Dim reader As XmlReader =  XmlReader.Create("input.xml")
 
-Dim schemaSet As XmlSchemaSet =  New XmlSchemaSet()
+Dim schemaSet As New XmlSchemaSet()
 schemaSet.Add(Nothing, "schema.xsd")
-Dim manager As XmlNamespaceManager =  New XmlNamespaceManager(reader.NameTable)
+Dim manager As New XmlNamespaceManager(reader.NameTable)
 
-Dim validator As XmlSchemaValidator =  New XmlSchemaValidator(reader.NameTable,schemaSet,manager,XmlSchemaValidationFlags.None)
+Dim validator As New XmlSchemaValidator(reader.NameTable,schemaSet,manager,XmlSchemaValidationFlags.None)
 validator.Initialize()
 
 validator.ValidateElement("book", "", Nothing)
@@ -303,11 +303,11 @@ validator.ValidateEndElement(Nothing)
 ```csharp
 XmlReader reader = XmlReader.Create("input.xml");
 
-XmlSchemaSet schemaSet = new XmlSchemaSet();
+var schemaSet = new XmlSchemaSet();
 schemaSet.Add(null, "schema.xsd");
-XmlNamespaceManager manager = new XmlNamespaceManager(reader.NameTable);
+var manager = new XmlNamespaceManager(reader.NameTable);
 
-XmlSchemaValidator validator = new XmlSchemaValidator(reader.NameTable, schemaSet, manager, XmlSchemaValidationFlags.None);
+var validator = new XmlSchemaValidator(reader.NameTable, schemaSet, manager, XmlSchemaValidationFlags.None);
 validator.Initialize();
 
 validator.ValidateElement("book", "", null);
@@ -347,7 +347,7 @@ validator.ValidateEndElement(null);
 validator.ValidateEndElement(null);
 ```
 
- Nell'esempio il seguente XML viene considerato come input.
+ Nell'esempio viene preso come input il codice XML seguente:
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3c.org/2001/XMLSchema">
@@ -361,7 +361,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-Nell'esempio il seguente schema XSD viene considerato come input.
+Nell'esempio il seguente schema XSD viene preso come input:
 
 ```xml
 <book>
@@ -404,7 +404,7 @@ Gli avvisi di convalida dello schema presentano un valore <xref:System.Xml.Schem
 Di seguito è riportato un esempio di un ti<xref:System.Xml.Schema.ValidationEventHandler> che riceve avvisi ed errori di convalida dello schema rilevati durante la convalida dello schema nell'esempio dell'introduzione.
 
 ```vb
-Shared Sub SchemaValidationEventHandler(ByVal sender As Object, ByVal e As ValidationEventArgs)
+Shared Sub SchemaValidationEventHandler(sender As Object, e As ValidationEventArgs)
 
     Select Case e.Severity
         Case XmlSeverityType.Error
@@ -440,7 +440,7 @@ La classe <xref:System.Xml.Schema.XmlSchemaValidator> presenta una transizione d
 
 Nella tabella seguente vengono descritti la transizione dello stato della classe <xref:System.Xml.Schema.XmlSchemaValidator>, nonché la sequenza e l'occorrenza delle chiamate del metodo che possono essere effettuate in ciascuno stato.
 
-|Stato|Transizione|
+|State|Transizione|
 |-----------|----------------|
 |Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
@@ -454,7 +454,7 @@ Nella tabella precedente, relativa alla transizione dello stato, vengono usati i
 
 Nella tabella seguente vengono descritti gli effetti dei segni di punteggiatura della tabella precedente relativa alla transizione dello stato sui metodi e su altri stati che possono essere chiamati per ciascuno stato di transizione della classe <xref:System.Xml.Schema.XmlSchemaValidator>.
 
-|Simbolo|DESCRIZIONE|
+|Simbolo|Descrizione|
 |------------|-----------------|
 |&#124;|È possibile chiamare il metodo o lo stato che precede o che segue la barra.|
 |?|Il metodo o lo stato che precede il punto interrogativo è facoltativo. Tuttavia, se viene chiamato, può essere chiamato solo una volta.|
@@ -471,15 +471,15 @@ Nella tabella seguente vengono descritti i risultati della chiamata di questi me
 |Metodo|GetExpectedParticles|GetExpectedAttributes|AddSchema|
 |------------|--------------------------|---------------------------|---------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>|Se viene chiamato il metodo predefinito <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice contenente tutti gli elementi globali.<br /><br /> Se il metodo di overload <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> che accetta un tipo <xref:System.Xml.Schema.XmlSchemaObject> come parametro viene chiamato per inizializzare la convalida parziale di un elemento, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà solo l'elemento con cui viene inizializzato l'oggetto <xref:System.Xml.Schema.XmlSchemaValidator>.|Se viene chiamato il metodo predefinito <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.<br /><br /> Se il metodo di overload <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> che accetta un tipo <xref:System.Xml.Schema.XmlSchemaObject> come parametro viene chiamato per inizializzare la convalida parziale di un attributo, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà solo l'attributo con cui viene inizializzato l'oggetto <xref:System.Xml.Schema.XmlSchemaValidator>.|Aggiunge lo schema al tipo <xref:System.Xml.Schema.XmlSchemaSet> dell'oggetto <xref:System.Xml.Schema.XmlSchemaValidator> se non si verificano errori di pre-elaborazione.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Se l'elemento di contesto è valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista come elementi figlio dell'elemento di contesto.<br /><br /> Se l'elemento di contesto è non valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.|Se l'elemento di contesto è valido e se non è stata effettuata in precedenza alcuna chiamata a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco di tutti gli attributi definiti nell'elemento di contesto.<br /><br /> Se alcuni attributi sono già stati convalidati, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco degli attributi rimanenti da convalidare.<br /><br /> Se l'elemento di contesto è non valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Se l'attributo di contesto è un attributo di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Se l'attributo di contesto è un attributo di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà l'elenco degli attributi rimanenti da convalidare.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi obbligatori e facoltativi che devono ancora essere convalidati per l'elemento di contesto.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce una matrice vuota.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Se contentType dell'elemento di contesto è Mixed, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista nella posizione successiva.<br /><br /> Se contentType dell'elemento di contesto è TextOnly o Empty, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> Se contentType dell'elemento di contesto è ElementOnly, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista nella posizione successiva. Tuttavia, si è già verificato un errore di convalida.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi non convalidati per l'elemento di contesto.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Se lo spazio vuoto di contesto è uno spazio vuoto di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il comportamento del metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sarà lo stesso di <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Se lo spazio vuoto di contesto è uno spazio vuoto di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il comportamento del metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> sarà lo stesso di <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista dopo l'elemento di contesto, ovvero gli eventuali elementi di pari livello.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi non convalidati per l'elemento di contesto.<br /><br /> Se l'elemento di contesto non presenta un elemento padre, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco vuoto. L'elemento di contesto è l'elemento padre dell'elemento corrente in cui è stato chiamato <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Uguale a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Uguale a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Vedi sopra.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Restituisce una matrice vuota.|Restituisce una matrice vuota.|Vedi sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Se l'elemento di contesto è valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista come elementi figlio dell'elemento di contesto.<br /><br /> Se l'elemento di contesto è non valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.|Se l'elemento di contesto è valido e se non è stata effettuata in precedenza alcuna chiamata a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco di tutti gli attributi definiti nell'elemento di contesto.<br /><br /> Se alcuni attributi sono già stati convalidati, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco degli attributi rimanenti da convalidare.<br /><br /> Se l'elemento di contesto è non valido, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Se l'attributo di contesto è un attributo di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Se l'attributo di contesto è un attributo di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà l'elenco degli attributi rimanenti da convalidare.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi obbligatori e facoltativi che devono ancora essere convalidati per l'elemento di contesto.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista come primo elemento figlio dell'elemento di contesto.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce una matrice vuota.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Se contentType dell'elemento di contesto è Mixed, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista nella posizione successiva.<br /><br /> Se contentType dell'elemento di contesto è TextOnly o Empty, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> Se contentType dell'elemento di contesto è ElementOnly, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà la sequenza di elementi prevista nella posizione successiva. Tuttavia, si è già verificato un errore di convalida.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi non convalidati per l'elemento di contesto.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Se lo spazio vuoto di contesto è uno spazio vuoto di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il comportamento del metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sarà lo stesso di <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Se lo spazio vuoto di contesto è uno spazio vuoto di primo livello, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà una matrice vuota.<br /><br /> In caso contrario, il comportamento del metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> sarà lo stesso di <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> restituisce la sequenza di elementi prevista dopo l'elemento di contesto, ovvero gli eventuali elementi di pari livello.|Il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituisce un elenco degli attributi non convalidati per l'elemento di contesto.<br /><br /> Se l'elemento di contesto non presenta un elemento padre, il metodo <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> restituirà un elenco vuoto. L'elemento di contesto è l'elemento padre dell'elemento corrente in cui è stato chiamato <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Uguale a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Uguale a <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Come sopra.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Restituisce una matrice vuota.|Restituisce una matrice vuota.|Come sopra.|
 
 > [!NOTE]
 > La chiamata dei metodi descritti nella tabella precedente non influisce sul valore restituito dalle diverse proprietà della classe <xref:System.Xml.Schema.XmlSchemaValidator>.

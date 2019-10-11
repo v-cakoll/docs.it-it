@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332696"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179385"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Distribuire un modello in un'API Web ASP.NET Core
 
@@ -138,7 +138,16 @@ Impostare il parametro `watchForChanges` su `true` e il `PredictionEnginePool` a
 
 Il modello è identificato dal parametro `modelName` in modo che sia possibile ricaricare più di un modello per applicazione al momento della modifica. 
 
-In alternativa, è possibile utilizzare il metodo `FromUri` quando si utilizzano i modelli archiviati in remoto. Invece di controllare gli eventi di modifica dei file, `FromUri` esegue il polling della posizione remota per le modifiche. Per impostazione predefinita, l'intervallo di polling è 5 minuti. È possibile aumentare o diminuire l'intervallo di polling in base ai requisiti dell'applicazione.
+> [!TIP]
+> In alternativa, è possibile utilizzare il metodo `FromUri` quando si utilizzano i modelli archiviati in remoto. Invece di controllare gli eventi di modifica dei file, `FromUri` esegue il polling della posizione remota per le modifiche. Per impostazione predefinita, l'intervallo di polling è 5 minuti. È possibile aumentare o diminuire l'intervallo di polling in base ai requisiti dell'applicazione. Nell'esempio di codice riportato di seguito, il `PredictionEnginePool` esegue il polling del modello archiviato nell'URI specificato ogni minuto.
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="create-predict-controller"></a>Creare il controller Predict
 

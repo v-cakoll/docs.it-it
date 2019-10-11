@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: e16f0c8ede5e1a24d4fc4606c3c25225ea72e750
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117160"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237383"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Firma di JsonFactoryConverter. CreateConverter modificata
 
-Per facilitare la composizione delle <xref:System.Text.Json.Serialization.JsonConverterFactory> classi, il <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> metodo è stato reso pubblico e viene fornito un secondo argomento di <xref:System.Text.Json.JsonSerializerOptions>tipo.
+Per semplificare la composizione di classi <xref:System.Text.Json.Serialization.JsonConverterFactory>, il metodo <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> è stato reso pubblico e dato un secondo argomento di tipo <xref:System.Text.Json.JsonSerializerOptions>.
 
-#### <a name="details"></a>Dettagli
+#### <a name="change-description"></a>Descrizione della modifica
 
-La firma del `CreateConverter` metodo in .NET Core precedente alla versione 3,0 Preview 8 era: 
+La firma del metodo `CreateConverter` in .NET Core prima della versione 3,0 Preview 8 era: 
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,7 +36,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Prima di questa modifica, era difficile comporre convertitori di fabbrica Sealed, dal momento che non esisteva un modo <xref:System.Text.Json.Serialization.JsonConverter%601> semplice per ottenere il. Rendendo pubblico il metodo factory e passando l'oggetto corrente <xref:System.Text.Json.JsonSerializerOptions> , è possibile creare una composizione molto più flessibile.
+Prima di questa modifica, era difficile comporre convertitori di fabbrica Sealed, dal momento che non esisteva un modo semplice per ottenere il <xref:System.Text.Json.Serialization.JsonConverter%601>. Rendere pubblico il metodo factory e passare anche il @no__t corrente-0 consente una composizione molto più flessibile.
 
 #### <a name="version-introduced"></a>Versione introdotta
 
@@ -48,7 +48,7 @@ Prima di questa modifica, era difficile comporre convertitori di fabbrica Sealed
 
 #### <a name="affected-apis"></a>API interessate
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> (Indici per tabelle con ottimizzazione per la memoria).
 
 <!-- For tool use only
 

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare elementi correlati (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Trova elementi correlati (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a430291925037f16883a27ca9deea5a4ec7a8175
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780432"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250070"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare elementi correlati (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Procedura: Trova elementi correlati (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere un elemento selezionando un attributo cui viene fatto riferimento dal valore di un altro elemento.  
   
  L'espressione XPath è:  
@@ -55,7 +55,7 @@ Console.WriteLine(customer1)
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  

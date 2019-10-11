@@ -1,5 +1,5 @@
 ---
-title: Serializzazione JSON in .NET
+title: Serializzare e deserializzare JSON C# con-.NET
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083087"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180147"
 ---
-# <a name="json-serialization-in-net"></a>Serializzazione JSON in .NET
+# <a name="json-serialization-in-net---overview"></a>Serializzazione JSON in .NET-Panoramica
 
-Lo `System.Text.Json` spazio dei nomi fornisce funzionalità per la serializzazione da e verso JavaScript Object Notation (JSON).
+Lo spazio dei nomi `System.Text.Json` fornisce funzionalità per la serializzazione e la deserializzazione da JavaScript Object Notation (JSON).
 
 La progettazione della libreria enfatizza le prestazioni elevate e l'allocazione di memoria insufficiente su un set di funzionalità esteso. Il supporto incorporato di UTF-8 ottimizza il processo di lettura e scrittura del testo JSON codificato come UTF-8, ovvero la codifica più prevalente per i dati sul Web e sui file su disco.
 
@@ -29,8 +29,8 @@ La libreria fornisce inoltre le classi per l'utilizzo di un modello DOM (Documen
 * La libreria è incorporata come parte del Framework condiviso di [.NET Core 3,0](https://aka.ms/netcore3download) .
 * Per gli altri Framework di destinazione, installare il pacchetto NuGet [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) . Il pacchetto supporta:
   * .NET Standard 2,0 e versioni successive
-  * .NET Framework 4,61 e versioni successive
-  * .NET Core 2,0 e versioni successive
+  * .NET Framework 4.6.1 e versioni successive
+  * .NET Core 2,0, 2,1 e 2,2
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963437"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957192"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 
@@ -59,17 +59,13 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
   
  Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  dove *character_group* è un elenco dei singoli caratteri che possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
   
  Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
 
@@ -78,7 +74,7 @@ Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può
 
 Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti classi di caratteri positivi.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`[aeiou]`|Corrisponde a tutte le vocali.|  
 |`[\p{P}\d]`|Corrisponde a tutti i caratteri di punteggiatura e tutte le cifre decimali.|  
@@ -91,7 +87,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `gr[ae]y\s\S+?[\s|\p{P}]` viene definita come segue:  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`gr`|Corrisponde ai caratteri letterali "gr".|  
 |`[ae]`|Corrisponde a una "a" o una "e".|  
@@ -106,7 +102,7 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
  L'espressione regolare `\b[A-Z]\w*\b` viene definita come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`[A-Z]`|Corrisponde a qualsiasi carattere maiuscolo da A a Z.|  
@@ -119,17 +115,13 @@ Nella tabella seguente sono elencati alcuni criteri di espressione regolare comu
   
 Di seguito viene indicata la sintassi per specificare un elenco di singoli caratteri:  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  dove *character_group* è un elenco dei singoli caratteri che non possono essere inclusi nella stringa di input affinché una corrispondenza riesca. *character_group* può contenere qualsiasi combinazione di uno o più caratteri letterali, [caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o classi di caratteri.  
   
  Di seguito viene indicata la sintassi per specificare un intervallo di caratteri:  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacter* è il carattere alla fine dell'intervallo. Un intervallo di caratteri è una serie contigua di caratteri definita specificando il primo carattere della serie, un trattino (-), quindi l'ultimo carattere della serie. Due caratteri sono contigui se hanno punti di codice Unicode adiacenti. *firstCharacter* deve essere il carattere con il punto di codice più basso, e *lastCharacter* deve essere il carattere con il punto di codice più alto.
 
@@ -145,7 +137,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Nella tabella seguente sono elencati alcuni criteri di espressione regolare comuni contenenti gruppi di caratteri negativi.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corrisponde a tutti i caratteri eccetto le vocali.|  
 |`[^\p{P}\d]`|Corrisponde a tutti i caratteri eccetto caratteri di punteggiatura e cifre decimali.|  
@@ -157,7 +149,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\bth[^o]\w+\b` viene definita come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`th`|Corrisponde ai caratteri letterali "th".|  
@@ -204,7 +196,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'espressione regolare `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` viene definita come illustrato nella tabella seguente.  
   
-|Modello|DESCRIZIONE|  
+|Pattern|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\p{IsGreek}+`|Corrisponde a uno o più caratteri greci.|  
@@ -237,7 +229,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="word-character-w"></a>Carattere alfanumerico: \w  
  `\w` trova la corrispondenza con qualsiasi carattere alfanumerico. Un carattere alfanumerico è un membro di una delle categorie Unicode elencate nella seguente tabella.  
   
-|Category|DESCRIZIONE|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -255,7 +247,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Nell'esempio seguente viene usato l'elemento di linguaggio `\w` per individuare una corrispondenza con i caratteri duplicati in una parola. L'esempio definisce un criterio di ricerca di espressioni regolari, `(\w)\1`, che può essere interpretato nel modo seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |(\w)|Corrisponde a un carattere alfanumerico. Equivale al primo gruppo di acquisizione.|  
 |\1|Corrisponde al valore della prima acquisizione.|  
@@ -267,13 +259,11 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="non-word-character-w"></a>Carattere non alfanumerico: \W  
  `\W` trova la corrispondenza con qualsiasi carattere non alfanumerico. L'elemento di linguaggio \W è equivalente alla classe di caratteri seguente:  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  In altre parole, trova corrispondenza con tutti i caratteri, ad eccezione di quelli nelle categorie Unicode elencati nella tabella seguente.  
   
-|Category|DESCRIZIONE|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -291,7 +281,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra la classe di caratteri `\W`.  Definisce un criterio di ricerca di espressioni regolari, `\b(\w+)(\W){1,2}`, che corrisponde a una parola seguita da uno o due caratteri non alfanumerici, ad esempio uno spazio vuoto o un segno di punteggiatura. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |\b|Inizia la corrispondenza sul confine di parola.|  
 |(\w+)|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -306,7 +296,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="whitespace-character-s"></a>Carattere spazio vuoto: \s  
  `\s` corrisponde a qualsiasi carattere spazio vuoto. È equivalente alle sequenze di escape e alle categorie Unicode elencate nella tabella seguente.  
   
-|Category|DESCRIZIONE|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |`\f`|Carattere di avanzamento modulo, \u000C.|  
 |`\n`|Carattere di nuova riga, \u000A.|  
@@ -320,7 +310,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra la classe di caratteri `\s`. Definisce un criterio di ricerca di espressioni regolari, `\b\w+(e)?s(\s|$)`, che corrisponde a una parola che termina in "s" o "es" seguita da uno spazio vuoto o dalla fine della stringa di input. L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |\b|Inizia la corrispondenza sul confine di parola.|  
 |\w+|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -339,7 +329,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra l'elemento di linguaggio `\S`. Il criterio di espressione regolare `\b(\S+)\s?` corrisponde a stringhe delimitate da spazi vuoti. Il secondo elemento nell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> della corrispondenza contiene la stringa corrispondente. L'espressione regolare può essere interpretata come indicato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\S+)`|Trova la corrispondenza con uno o più caratteri diversi dallo spazio vuoto. Equivale al primo gruppo di acquisizione.|  
@@ -356,7 +346,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  L'esempio seguente illustra l'elemento di linguaggio `\d`. Viene verificato se una stringa di input rappresenta un numero di telefono valido negli Stati Uniti e in Canada. Il criterio di ricerca di espressioni regolari `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` è definito nel modo illustrato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`\(?`|Corrisponde a zero o a un carattere letterale "(".|  
@@ -378,7 +368,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
   
  Nell'esempio seguente viene illustrato l'elemento di linguaggio \D. Verifica se una stringa, ad esempio un numero parte, è formata dalla combinazione corretta di caratteri decimali e non decimali. Il criterio di ricerca di espressioni regolari `^\D\d{1,5}\D*$` è definito nel modo illustrato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`\D`|Corrisponde a un carattere non numerico.|  
@@ -393,7 +383,7 @@ dove *firstCharacter* è il carattere all'inizio dell'intervallo e *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
  In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
-|Category|DESCRIZIONE|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase|  
 |`Ll`|Letter, Lowercase|  
@@ -571,7 +561,7 @@ In .NET sono supportati i blocchi denominati elencati nella tabella seguente. Il
   
  Nell'esempio seguente viene definita un'espressione regolare, `^[0-9-[2468]]+$`, che corrisponde a zero e a cifre dispari in una stringa di input.  L'espressione regolare viene interpretata come illustrato nella tabella seguente.  
   
-|Elemento|DESCRIZIONE|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |^|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`[0-9-[2468]]+`|Corrisponde a una o più occorrenze di qualsiasi carattere da 0 a 9 ad eccezione di 2, 4, 6 e 8. In altre parole, corrisponde a una o più occorrenze di zero o di una cifra dispari.|  

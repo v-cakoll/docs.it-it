@@ -1,17 +1,17 @@
 ---
 title: Vincoli
-description: Informazioni su F# vincoli che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
+description: Informazioni sui F# vincoli che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
 ms.date: 05/16/2016
-ms.openlocfilehash: bb6625636f0465dd608ae2e8a8986d043b62b6e4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378192"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736799"
 ---
 # <a name="constraints"></a>Vincoli
 
-In questo argomento descrive i vincoli che è possibile applicare generico parametri per specificare i requisiti per un argomento di tipo in un tipo generico o una funzione di tipo.
+In questo argomento vengono descritti i vincoli che è possibile applicare ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,31 +21,31 @@ type-parameter-list when constraint1 [ and constraint2]
 
 ## <a name="remarks"></a>Note
 
-Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi che possono essere utilizzati in un tipo generico. Nella tabella seguente elenca e descrive questi vincoli.
+Esistono diversi vincoli che è possibile applicare per limitare i tipi che possono essere utilizzati in un tipo generico. La tabella seguente elenca e descrive questi vincoli.
 
 |Vincolo|Sintassi|Descrizione|
 |----------|------|-----------|
-|Vincolo di tipo|*parametro di tipo* :&gt; *tipo*|Il tipo specificato deve essere uguale o derivare dal tipo specificato o, se il tipo è un'interfaccia, il tipo specificato deve implementare l'interfaccia.|
-|Vincolo Null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Ciò include tutti i tipi di oggetto .NET, ma non F# elenco, tuple, funzione, classe, record o i tipi di unione.|
-|Vincolo membro esplicito|[(]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo specificati deve avere un membro con la firma specificata. non destinato all'uso comune. I membri devono essere esplicitamente definiti sul tipo o parte di un'estensione di tipo implicito da destinazioni valide per un vincolo membro esplicito.|
-|Vincolo del costruttore|*parametro di tipo* : (new: unità -&gt; ' un)|Il tipo specificato deve avere un costruttore predefinito.|
-|Vincolo di tipo valore|: uno struct|Il tipo specificato deve essere un tipo di valore .NET.|
-|Vincolo di tipo riferimento|: non struct|Il tipo specificato deve essere un tipo di riferimento .NET.|
-|Vincolo di tipo di enumerazione|: enumerazione&lt;*tipo sottostante*&gt;|Il tipo specificato deve essere un tipo enumerato che contiene il tipo sottostante specificato. non destinato all'uso comune.|
-|Vincolo di delegato|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Il tipo specificato deve essere un tipo delegato che contiene gli argomenti specificati e restituire valore. non destinato all'uso comune.|
-|Vincolo di confronto|: confronto|Il tipo specificato deve supportare il confronto.|
+|Vincolo di tipo|*parametro Type* : *tipo* &gt;|Il tipo fornito deve essere uguale o derivato dal tipo specificato oppure, se il tipo è un'interfaccia, il tipo fornito deve implementare l'interfaccia.|
+|Vincolo null|*parametro di tipo* : null|Il tipo specificato deve supportare il valore letterale null. Sono inclusi tutti i tipi di oggetto .NET F# , ma non i tipi List, Tuple, Function, Class, record o Union.|
+|Vincolo membro esplicito|[(]*parametro di tipo* [or... o *parametro di tipo*)]: (*firma del membro*)|Almeno uno degli argomenti di tipo forniti deve avere un membro con la firma specificata. non è destinato all'uso comune. I membri devono essere definiti in modo esplicito nel tipo o in una parte di un'estensione di tipo implicita come destinazioni valide per un vincolo di membro esplicito.|
+|Vincolo del costruttore|*parametro di tipo* : (nuovo: unit-&gt;' a)|Il tipo specificato deve avere un costruttore senza parametri.|
+|Vincolo di tipo valore|: struct|Il tipo specificato deve essere un tipo di valore .NET.|
+|Vincolo di tipo riferimento|: not struct|Il tipo specificato deve essere un tipo di riferimento .NET.|
+|Vincolo di tipo di enumerazione|: enum @ no__t-0*sottostante-tipo*&gt;|Il tipo specificato deve essere un tipo enumerato con il tipo sottostante specificato. non è destinato all'uso comune.|
+|Vincolo delegate|: Delegate @ no__t-0*Tuple-parameter-type*, *return-type*&gt;|Il tipo specificato deve essere un tipo delegato con gli argomenti e il valore restituito specificati. non è destinato all'uso comune.|
+|Vincolo di confronto|: confronto|Il tipo fornito deve supportare il confronto.|
 |Vincolo di uguaglianza|: uguaglianza|Il tipo specificato deve supportare l'uguaglianza.|
-|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. Tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipi di enumerazione `nativeptr<_>`, o una struttura non generica i cui campi sono tutti i tipi non gestiti.|
+|Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. I tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, 0, 1, 2 o 3), tipi di enumerazione, 4 o un oggetto non generico struttura i cui campi sono tutti tipi non gestiti.|
 
-È necessario aggiungere un vincolo quando il codice deve usare una funzionalità che è disponibile per il tipo di vincolo ma non nei tipi in generale. Ad esempio, se si usa il vincolo di tipo per specificare un tipo di classe, è possibile usare uno dei metodi della classe della funzione generica o tipo.
+È necessario aggiungere un vincolo quando il codice deve usare una funzionalità disponibile sul tipo di vincolo ma non sui tipi in generale. Se ad esempio si usa il vincolo di tipo per specificare un tipo di classe, è possibile usare uno dei metodi di tale classe nella funzione o nel tipo generico.
 
-I vincoli è talvolta necessario specificare durante la scrittura di parametri di tipo in modo esplicito, poiché senza un vincolo, il compilatore non ha modo di verificare che le funzionalità che si siano utilizzando sarà disponibile in qualsiasi tipo che può essere fornito in fase di esecuzione per il tipo parametro.
+Quando si scrivono parametri di tipo in modo esplicito, è talvolta necessario specificare vincoli perché senza un vincolo il compilatore non è in grado di verificare che le funzionalità in uso siano disponibili in qualsiasi tipo che potrebbe essere fornito in fase di esecuzione per il tipo parametro.
 
-I vincoli più comuni è usare in F# codice sono vincoli di tipo specificare classi base o interfacce. Gli altri vincoli vengono utilizzati per il F# libreria per implementare determinate funzionalità, ad esempio il vincolo membro esplicito, che viene usato per implementare l'overload di operatori per gli operatori aritmetici o viene fornito principalmente perché F# supporta il set completo di vincoli supportata da common language runtime.
+I vincoli più comuni usati nel codice F# sono vincoli di tipo che specificano le classi o le interfacce di base. Gli altri vincoli vengono usati dalla F# libreria per implementare determinate funzionalità, ad esempio il vincolo esplicito dei membri, che viene usato per implementare l'overload degli operatori per gli operatori aritmetici o vengono forniti principalmente F# perché supporta il set completo di vincoli supportato dal Common Language Runtime.
 
-Durante il processo di inferenza del tipo, alcuni vincoli vengono automaticamente dedotti dal compilatore. Ad esempio, se si usa il `+` operatore in una funzione, il compilatore deduce automaticamente di un vincolo per tipi di variabili utilizzate nell'espressione di membro esplicito.
+Durante il processo di inferenza del tipo, alcuni vincoli vengono dedotti automaticamente dal compilatore. Se, ad esempio, si usa l'operatore `+` in una funzione, il compilatore deduce un vincolo esplicito dei membri sui tipi di variabile usati nell'espressione.
 
-Il codice seguente illustra alcune dichiarazioni di vincolo.
+Il codice seguente illustra alcune dichiarazioni di vincolo:
 
 ```fsharp
 // Base Type Constraint

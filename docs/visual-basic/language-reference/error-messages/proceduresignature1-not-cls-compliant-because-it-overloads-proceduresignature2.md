@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> non è conforme a CLS perché esegue l'overload <proceduresignature2> che differisce da esso solo per la matrice di tipi di parametro matrice o per numero di dimensioni dei tipi di parametro matrice
+title: <proceduresignature1> non è conforme a CLS perché esegue l'overload di <proceduresignature2> che differisce da esso solo per la matrice dei tipi di parametro matrice o per il numero di dimensioni dei tipi di parametro matrice
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,25 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6143ebfbe7f131b0e196e531ed4282c8333be4ea
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661789"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250175"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > non è conforme a CLS perché esegue l'overload \<proceduresignature2 > che differisce da esso solo per la matrice di tipi di parametro matrice o per numero di dimensioni dei tipi di parametro matrice
-Una routine o proprietà è contrassegnata come `<CLSCompliant(True)>` quando esegue l'override di un'altra proprietà o routine e l'unica differenza tra gli elenchi dei parametri è il livello di nidificazione di una matrice di matrici o il numero di dimensioni di una matrice.  
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>il > \<proceduresignature1 non è conforme a CLS perché viene sottoposto a overload \<proceduresignature2 > che differisce da esso solo per matrice di tipi di parametro di matrice o per il rango dei tipi di parametro di matrice
+
+Una routine o una proprietà è contrassegnata come `<CLSCompliant(True)>` quando esegue l'override di un'altra routine o proprietà e l'unica differenza tra gli elenchi di parametri è il livello di nidificazione di una matrice di matrici o il rango di una matrice.
   
- Nelle seguenti dichiarazioni, le dichiarazioni di seconda e terza generano questo errore.  
+ Nelle dichiarazioni seguenti la seconda e la terza dichiarazione generano questo errore:
   
- `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam()() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam()() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- La seconda dichiarazione modifica parametro originale dell'unidimensionale `arrayParam` a una matrice di matrici. La terza dichiarazione modifica `arrayParam` a una matrice bidimensionale (rank 2). Anche se Visual Basic consente l'overload a differiscono solo per una di queste modifiche, questo tipo di overload non è conforme con la [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+ La seconda dichiarazione modifica il parametro unidimensionale originale `arrayParam` in una matrice di matrici. La terza dichiarazione cambia `arrayParam` in una matrice bidimensionale (Rank 2). Sebbene Visual Basic consentano gli overload di differire solo per una di queste modifiche, tale overload non è conforme all' [indipendenza del linguaggio e ai componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Quando <xref:System.CLSCompliantAttribute> viene applicato a un elemento di programmazione, il parametro `isCompliant` dell'attributo viene impostato su `True` o `False` per indicare la conformità o la non conformità. L'impostazione predefinita per questo parametro non è disponibile, quindi è necessario specificare un valore.  
   
@@ -37,11 +38,10 @@ Una routine o proprietà è contrassegnata come `<CLSCompliant(True)>` quando es
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-- Se necessaria la conformità a CLS, definire l'overload per differenziarsi in più modi rispetto a quelle elencate in questa pagina della Guida.  
-  
-- Se è necessario che gli overload sono diversi solo per le modifiche citate in questo argomento della Guida di pagina, rimuovere il <xref:System.CLSCompliantAttribute> dalle relative definizioni o contrassegnarli come `<CLSCompliant(False)>`.  
+- Se è necessaria la conformità a CLS, definire gli overload per distinguerli tra loro in più modi rispetto alle modifiche citate in questa pagina della guida.
+- Se è necessario che gli overload differiscano solo per le modifiche citate in questa pagina della guida, rimuovere il <xref:System.CLSCompliantAttribute> dalle definizioni o contrassegnarle come `<CLSCompliant(False)>`.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overload della routine](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Overload](../modifiers/overloads.md)

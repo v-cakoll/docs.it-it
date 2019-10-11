@@ -4,12 +4,12 @@ description: Informazioni su come usare lo strumento dell'interfaccia della riga
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: c147464ff59563d336363eed73fc6337bdb12e85
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663933"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275844"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizzare il training del modello con l'interfaccia della riga di comando ML.NET
 
@@ -42,10 +42,10 @@ Attualmente, le attività di apprendimento automatico supportate dall'interfacci
 Esempio di utilizzo:
 
 ```console
-> mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![immagine](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/cli-model-generation.gif)
 
 È possibile eseguire la funzionalità come si esegue *Windows PowerShell*, *bash di macOS/Linux o una *finestra di comando di Windows*. Tuttavia, il completamento automatico in formato tabella (suggerimento dei parametri) non funzionerà nella *finestra di comando di Windows*.
 
@@ -73,7 +73,7 @@ Nel riepilogo che segue le metriche sono raggruppate per attività di apprendime
 
 Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione binaria dei primi cinque modelli individuati dall'interfaccia della riga di comando:
 
-![immagine](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
 L'accuratezza è una metrica molto diffusa per i problemi di classificazione, tuttavia non è sempre la metrica più adatta per selezionare il modello ottimale, come spiegato di seguito. Vi sono casi in cui è necessario valutare la qualità del modello con metriche supplementari.
 
@@ -83,7 +83,7 @@ Per esaminare e comprendere le metriche generate dall'interfaccia della riga di 
 
 Di seguito è visualizzato l'elenco delle metriche delle attività di apprendimento automatico per la classificazione multiclasse dei primi cinque modelli individuati dall'interfaccia della riga di comando:
 
-![immagine](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
 Per esaminare e comprendere le metriche generate dall'interfaccia della riga di comando, vedere [Metriche per la classificazione multiclasse](resources/metrics.md#metrics-for-multi-class-classification).
 
@@ -93,7 +93,7 @@ Un modello di regressione risulta adatto ai dati se le differenze tra i valori o
 
 Verrà visualizzato un elenco simile di metriche per i primi cinque modelli di qualità ottimale individuati dall'interfaccia della riga di comando. In questo caso particolare, correlato a un'attività di regressione dell'apprendimento automatico:
 
-![immagine](media/automate-training-with-cli/cli-regression-metrics.png)
+![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
 Per esaminare e comprendere le metriche generate dall'interfaccia della riga di comando, vedere [Metriche per la regressione](resources/metrics.md#metrics-for-regression).
 

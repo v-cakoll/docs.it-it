@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elemento figlio (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dac53f70882791fb05265d4a04444c98adff451
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855244"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249985"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare un elemento figlio (XPath-LINQ to XML) (Visual Basic)
 Questo argomento confronta l'asse degli elementi figlio XPath con il metodo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  
@@ -17,7 +17,7 @@ Questo argomento confronta l'asse degli elementi figlio XPath con il metodo [!IN
 ## <a name="example"></a>Esempio  
  In questo esempio viene trovato l'elemento figlio `DeliveryNotes`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -41,7 +41,7 @@ Console.WriteLine(el1)
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  

@@ -3,12 +3,12 @@ title: App candidate per cloud native
 description: Informazioni sui tipi di applicazioni che traggono vantaggio da un approccio nativo per il cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214009"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275822"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>App candidate per cloud native
 
@@ -36,8 +36,7 @@ Sono quindi presenti sistemi legacy. Per quanto riguarda la creazione di nuove a
 
 L'e-book gratuito Microsoft [modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) fornisce indicazioni per la migrazione dei carichi di lavoro locali nel cloud. La figura 1-8 Mostra che non è disponibile una singola strategia unica, unica per la modernizzazione delle applicazioni legacy.
 
-![Strategie per la migrazione dei carichi](./media/strategies-for-migrating-legacy-workloads.png)
-di lavoro legacy**Figura 1-8**. Strategie per la migrazione di carichi di lavoro legacy
+![Strategies per la migrazione dei carichi di lavoro legacy @ no__t-1**figura 1-8**. Strategie per la migrazione di carichi di lavoro legacy
 
 Le app monolitiche che non sono in gran parte critiche traggono vantaggio da una rapida migrazione (pronta per l'[infrastruttura cloud](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). In questo caso, il carico di lavoro locale viene riallocato a una macchina virtuale basata sul cloud, senza modifiche. Questo approccio usa il [modello IaaS (infrastruttura distribuita come servizio)](https://azure.microsoft.com/overview/what-is-iaas/). Azure include diversi strumenti, ad esempio[Azure migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)e il [servizio migrazione del database di Azure](https://azure.microsoft.com/campaigns/database-migration/), per semplificare il passaggio. Sebbene questa strategia possa produrre risparmi in termini di costi, tali applicazioni in genere non sono state progettate per sbloccare e sfruttare i vantaggi di cloud computing. 
 
@@ -73,7 +72,7 @@ Con l'introduzione, viene ora analizzato in modo molto più dettagliato il cloud
 
 - [Cloud native Computing Foundation](https://www.cncf.io/)
 
-- [Microservizi .NET.: Architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [Microservizi .NET.: Architettura per le applicazioni .NET in contenitori @ no__t-0
 
 - [Modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
@@ -83,7 +82,7 @@ Con l'introduzione, viene ora analizzato in modo molto più dettagliato il cloud
 
 - [Che cos'è l'infrastruttura come codice](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [Micro deploy di uber Engineering: Distribuzione giornaliera con sicurezza](https://eng.uber.com/micro-deploy/)
+- Distribuzione micro di [Uber Engineering: Distribuzione giornaliera con confidenza @ no__t-0
 
 - [Come Netflix distribuisce il codice](https://www.infoq.com/news/2013/06/netflix/)
 

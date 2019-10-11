@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: af441c0fd040897ebcd7af2edd6122a47e70468a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002123"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179914"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opzioni del compilatore C#)
 
@@ -63,7 +63,7 @@ Per altri modi per specificare la C# versione della lingua, vedere l'articolo [s
 
 Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
-### <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 |Versione|Collegamento|Descrizione|
 |-------|----|-----------|
@@ -75,19 +75,23 @@ Per informazioni su come impostare questa opzione del compilatore a livello di c
 |C# 1.2|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Specifiche del linguaggio C# versione 1.2: Microsoft Corporation|
 |C# 1.0|[Scaricare DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Specifiche del linguaggio C# versione 1.0: Microsoft Corporation|
 
-### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Versione minima del compilatore necessaria per supportare tutte le funzionalità del linguaggio
+## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Versione minima dell'SDK necessaria per supportare tutte le funzionalità del linguaggio
 
-CS80 Microsoft Visual Studio/Build Tools 2019 versione 16 o .NET Core 3.0 SDK  
-CS73: Microsoft Visual Studio/Build Tools 2017 versione 15.7  
-CS72: Microsoft Visual Studio/Build Tools 2017 versione 15.5  
-CS71: Microsoft Visual Studio/Build Tools 2017 versione 15.3  
-CS7: Microsoft Visual Studio/Build Tools 2017  
-CS6 Microsoft Visual Studio/Build Tools 2015  
-CS5 Microsoft Visual Studio/Build Tools 2012 o compilatore di .Net Framework 4.5 in bundle  
-CS4 Microsoft Visual Studio/Build Tools 2010 o compilatore di .Net Framework 4.0 in bundle  
-CS3 Microsoft Visual Studio/Build Tools 2008 o compilatore di .Net Framework 3.5 in bundle  
-ISO2 Microsoft Visual Studio/Build Tools 2005 o compilatore di .Net Framework 2.0 in bundle  
-ISO1 Microsoft Visual Studio/Build Tools .NET 2002 o compilatore di .NET Framework 1.0 in bundle  
+La tabella seguente elenca le versioni minime dell'SDK con il C# compilatore che supporta la versione del linguaggio corrispondente:
+
+|C#Versione|Versione minima dell'SDK|
+|----------|-------------------|
+|C# 8.0| Microsoft Visual Studio/Build Tools 2019, versione 16,3 o .NET Core 3,0 SDK |
+|C# 7.3| Microsoft Visual Studio/Build Tools 2017 versione 15.7 |
+|C# 7.2| Microsoft Visual Studio/Build Tools 2017 versione 15.5 |
+|C# 7.1| Microsoft Visual Studio/Build Tools 2017 versione 15.3 |
+|C# 7.0| Microsoft Visual Studio/Build Tools 2017 |
+|C# 6| Microsoft Visual Studio/Build Tools 2015 |
+|C#5| Microsoft Visual Studio/Build Tools 2012 o compilatore di .Net Framework 4.5 in bundle |
+|C# 4| Microsoft Visual Studio/Build Tools 2010 o compilatore di .Net Framework 4.0 in bundle |
+|C#3| Microsoft Visual Studio/Build Tools 2008 o compilatore di .Net Framework 3.5 in bundle |
+|C#2| Microsoft Visual Studio/Build Tools 2005 o compilatore di .Net Framework 2.0 in bundle |
+|C#1.0/1.2 | Microsoft Visual Studio/Build Tools .NET 2002 o bundled .NET Framework 1,0 compilatore |
 
 ## <a name="see-also"></a>Vedere anche
 

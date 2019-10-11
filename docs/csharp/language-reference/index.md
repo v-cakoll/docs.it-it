@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925349"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275806"
 ---
 # <a name="c-reference"></a>Riferimenti per C#
 Questa sezione offre informazioni di riferimento su parole chiave, operatori, caratteri speciali, direttive del preprocessore, opzioni del compilatore ed errori e avvisi del compilatore in C#.  
@@ -55,7 +55,7 @@ Le funzionalità che sono state implementate nelle versioni di C# successive all
  C# 7.3 è un'altra versione secondaria che include numerosi piccoli aggiornamenti. È possibile usare nuovi vincoli per i parametri di tipo generico. Altre modifiche rendono più facile lavorare con i campi `fixed`, incluso l'uso delle allocazioni [`stackalloc`](./operators/stackalloc.md). Le variabili locali dichiarate con la parola chiave `ref` potrebbero essere riassegnate per fare riferimento alla nuova risorsa di archiviazione. È possibile posizionare attributi in proprietà implementate automaticamente destinate al campo di supporto generato dal compilatore. È possibile usare variabili di espressione negli inizializzatori. Le tuple possono essere confrontate per verificarne l'uguaglianza (o la disuguaglianza). Sono stati introdotti anche alcuni miglioramenti per la risoluzione dell'overload.
   
  [C#8,0 proposte specifiche](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0 è disponibile con .NET Core 3,0. Le funzionalità includono i tipi di riferimento Nullable, i criteri di ricerca ricorsivi, i membri dell'interfaccia predefiniti, i flussi asincroni, gli intervalli e gli indici, il modello basato sull'utilizzo di dichiarazioni, l'assegnazione di Unione null e i membri dell'istanza di ReadOnly.
+ C#8,0 è disponibile con .NET Core 3,0. Le funzionalità includono i tipi di riferimento Nullable, i criteri di ricerca ricorsivi, i metodi di interfaccia predefiniti, i flussi asincroni, gli intervalli e gli indici, il modello basato sull'utilizzo di dichiarazioni, l'assegnazione di Unione di valori null e i membri dell'istanza di sola lettura.
   
 ## <a name="related-sections"></a>Sezioni correlate  
 

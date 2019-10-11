@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Filtro su un attributo (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Filtrare in un attributo (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ee90e90e1087ffeeeefb475b637f3307a179bff
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855494"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250033"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: Filtro su un attributo (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Procedura: Filtrare in un attributo (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere gli elementi discendente con un nome specificato e con un attributo con un valore specificato.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come ottenere gli elementi discendente con 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati tutti gli elementi discendente il cui nome è `Address` e in cui il valore dell'attributo `Type` è "Shipping".  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -47,7 +47,7 @@ Next
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Results are identical  
 <Address Type="Shipping">  
   <Name>Ellen Adams</Name>  

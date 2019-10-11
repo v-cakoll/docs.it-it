@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)'
+title: 'Procedura: Trovare tutti i nodi in uno spazio dei nomi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855673"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249939"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedura: Trovare tutti i nodi in uno spazio dei nomi (Visual Basic)
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  
   
 ## <a name="example"></a>Esempio  
@@ -45,7 +45,7 @@ End Module
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Esempio  
  Il file XML cui accede la seguente query contiene gli ordini di acquisto in due spazi dei nomi diversi. Con la query viene creato un nuovo albero contenente solo gli elementi di uno degli spazi dei nomi.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

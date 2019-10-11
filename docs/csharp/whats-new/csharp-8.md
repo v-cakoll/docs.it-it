@@ -2,19 +2,19 @@
 title: Novità di C# 8,0- C# Guida
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736705"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275777"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
 C#8,0 aggiunge le funzionalità e i miglioramenti seguenti al C# linguaggio:
 
 - [Membri di sola lettura](#readonly-members)
-- [Membri di interfaccia predefiniti](#default-interface-members)
+- [Metodi di interfaccia predefiniti](#default-interface-methods)
 - [Miglioramenti dei criteri di ricerca](#more-patterns-in-more-places):
   - [Espressioni switch](#switch-expressions)
   - [Criteri per le proprietà](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità.
 
-## <a name="default-interface-members"></a>Membri di interfaccia predefiniti
+## <a name="default-interface-methods"></a>Metodi di interfaccia predefiniti
 
-È ora possibile aggiungere membri alle interfacce e fornire un'implementazione per tali membri. Questa funzionalità del linguaggio consente agli autori di API di aggiungere metodi a un'interfaccia nelle versioni più recenti senza compromettere l'origine o la compatibilità binaria con le implementazioni esistenti di tale interfaccia. Le implementazioni esistenti *ereditano* l'implementazione predefinita. Questa funzionalità supporta anche l'interoperabilità di C# con API destinate ad Android o Swift, che supporta funzionalità simili. I membri di interfaccia predefiniti abilitano anche scenari simili alla funzionalità del linguaggio "tratti".
+È ora possibile aggiungere membri alle interfacce e fornire un'implementazione per tali membri. Questa funzionalità del linguaggio consente agli autori di API di aggiungere metodi a un'interfaccia nelle versioni più recenti senza compromettere l'origine o la compatibilità binaria con le implementazioni esistenti di tale interfaccia. Le implementazioni esistenti *ereditano* l'implementazione predefinita. Questa funzionalità supporta anche l'interoperabilità di C# con API destinate ad Android o Swift, che supporta funzionalità simili. I metodi di interfaccia predefiniti consentono inoltre scenari simili alla funzionalità del linguaggio "tratti".
 
-I membri di interfaccia predefiniti hanno effetti su molti scenari ed elementi del linguaggio. La prima esercitazione illustra l'[aggiornamento di un'interfaccia con le implementazioni predefinite](../tutorials/default-interface-members-versions.md). Sono previsti altre esercitazioni e aggiornamenti dei riferimenti in tempo per il rilascio generale.
+I metodi di interfaccia predefiniti influiscono su molti scenari ed elementi del linguaggio. La prima esercitazione illustra l'[aggiornamento di un'interfaccia con le implementazioni predefinite](../tutorials/default-interface-methods-versions.md). Sono previsti altre esercitazioni e aggiornamenti dei riferimenti in tempo per il rilascio generale.
 
 ## <a name="more-patterns-in-more-places"></a>Più criteri in più posizioni
 
@@ -382,7 +382,7 @@ Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operator
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
 - Indice dell'operatore end `^`, che specifica che un indice è relativo alla fine della sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
-- Operatore `..`Range, che specifica l'inizio e la fine di un intervallo come operandi.
+- Operatore di intervallo `..`, che specifica l'inizio e la fine di un intervallo come operandi.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
 
@@ -451,7 +451,7 @@ Non solo le matrici supportano gli indici e gli intervalli. È anche possibile u
 
 ## <a name="null-coalescing-assignment"></a>Assegnazione di Unione null
 
-C#8,0 introduce l'operatore `??=`di assegnazione di Unione null. È possibile usare l' `??=` operatore per assegnare il valore dell'operando destro all'operando sinistro solo se l'operando sinistro restituisce. `null`
+C#8,0 introduce l'operatore di assegnazione a Unione null `??=`. È possibile usare l'operatore `??=` per assegnare il valore dell'operando destro all'operando sinistro solo se l'operando sinistro restituisce `null`.
 
 ```csharp
 List<int> numbers = null;
@@ -471,7 +471,7 @@ Per ulteriori informazioni, vedere [?? e?? = articolo Operators](../language-ref
 
 In C# 7,3 e versioni precedenti, un tipo costruito (un tipo che include almeno un argomento di tipo) non può essere un [tipo non gestito](../language-reference/builtin-types/unmanaged-types.md). A partire C# da 8,0, un tipo di valore costruito non è gestito se contiene campi solo di tipi non gestiti.
 
-Ad esempio, data la seguente definizione del tipo generico `Coords<T>` :
+Ad esempio, data la seguente definizione del tipo generico `Coords<T>`:
 
 ```csharp
 public struct Coords<T>
@@ -481,7 +481,7 @@ public struct Coords<T>
 }
 ```
 
-il `Coords<int>` tipo è un tipo non gestito in C# 8,0 e versioni successive. Come per qualsiasi tipo non gestito, è possibile creare un puntatore a una variabile di questo tipo o [allocare un blocco di memoria nello stack per le](../language-reference/operators/stackalloc.md) istanze di questo tipo:
+il tipo `Coords<int>` è un tipo non gestito in C# 8,0 e versioni successive. Come per qualsiasi tipo non gestito, è possibile creare un puntatore a una variabile di questo tipo o [allocare un blocco di memoria nello stack per le](../language-reference/operators/stackalloc.md) istanze di questo tipo:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -496,7 +496,7 @@ Per ulteriori informazioni, vedere [tipi non gestiti](../language-reference/buil
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc nelle espressioni annidate
 
-A partire C# da 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) <xref:System.Span%601?displayProperty=nameWithType> è di tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> o, è possibile usare l' `stackalloc` espressione in altre espressioni:
+A partire C# da 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) è del tipo <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, è possibile usare l'espressione `stackalloc` in altre espressioni:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -506,4 +506,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
 
-L' `$` ordine dei token `@` e nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere any: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti il `$` token deve essere visualizzato prima del `@` token.
+L'ordine dei token `$` e `@` nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere qualsiasi: `$@"..."` e `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token `$` deve essere visualizzato prima del token `@`.

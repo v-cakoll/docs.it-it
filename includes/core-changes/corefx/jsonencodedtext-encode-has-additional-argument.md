@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217073"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237384"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>I metodi JsonEncodedText. Encode hanno un argomento JavaScriptEncoder aggiuntivo
 
-A partire da .NET Core 3,0 Preview 8, <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> i metodi contengono un <xref:System.Text.Encodings.Web.JavaScriptEncoder> argomento facoltativo.
+A partire da .NET Core 3,0 Preview 8, i metodi <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> contengono un argomento facoltativo <xref:System.Text.Encodings.Web.JavaScriptEncoder>.
 
-#### <a name="details"></a>Dettagli
+#### <a name="change-description"></a>Descrizione della modifica
 
-.NET Core 3,0 include un nuovo tipo, xrif: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. A partire da .NET Core 3,0 Preview 8, la firma di <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> tutti gli overload del metodo è cambiata in modo da <xref:System.Text.Encodings.Web.JavaScriptEncoder> includere un parametro facoltativo. Questa modifica è stata apportata per consentire un codificatore diverso o personalizzato.
+.NET Core 3,0 include un nuovo tipo, xrif: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. A partire da .NET Core 3,0 Preview 8, la firma di tutti gli overload del metodo <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> è cambiata in modo da includere un parametro facoltativo <xref:System.Text.Encodings.Web.JavaScriptEncoder>. Questa modifica è stata apportata per consentire un codificatore diverso o personalizzato.
 
-La firma dei `Encode` metodi in .NET Core 3,0 Preview 7 è:
+La firma dei metodi `Encode` in .NET Core 3,0 Preview 7 è:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-La firma degli stessi `Encode` metodi in .NET Core 3,0 Preview 8 e versioni successive è la seguente:
+La firma degli stessi metodi `Encode` in .NET Core 3,0 Preview 8 e versioni successive è la seguente:
 
 ```csharp
 namespace System.Text.Json

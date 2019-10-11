@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elemento con un elemento figlio specifico (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709062"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249905"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Procedura: Trovare un elemento con un elemento figlio specifico (Visual Basic)
 In questo argomento viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come trovare un determinato elemento che in
 ## <a name="example"></a>Esempio  
  Nell'esempio viene ricercato l'elemento `Test` contenente un elemento figlio `CommandLine` con valore "Examp2.EXE".  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -30,7 +30,7 @@ Next
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per ulteriori informazioni, vedere [Cenni preliminari sugli spazi dei nomi (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -61,7 +61,7 @@ End Module
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 0002  
 0006  
 ```  

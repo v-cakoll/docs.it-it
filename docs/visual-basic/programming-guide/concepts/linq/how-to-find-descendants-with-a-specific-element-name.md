@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare i discendenti con un nome di elemento specifico (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710266"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249688"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Procedura: Trovare i discendenti con un nome di elemento specifico (Visual Basic)
 Talvolta si desidera individuare tutti i discendenti con un determinato nome. È possibile scrivere codice per scorrere tutti i discendenti, tuttavia è più agevole usare l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -49,7 +49,7 @@ Console.WriteLine(str)
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -96,7 +96,7 @@ End Module
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   

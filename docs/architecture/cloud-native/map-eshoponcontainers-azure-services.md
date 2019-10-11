@@ -1,15 +1,15 @@
 ---
-title: Mapping di eShopOnContainers ai servizi di Azure
+title: Mapping di eShopOnContainers a Servizi di Azure
 description: Mapping di eShopOnContainers ai servizi di Azure come il servizio Azure Kubernetes, il gateway API e il bus di servizio di Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: feb6d8f5ca05ab55ce4695d1200766a18b8f744a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182818"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275812"
 ---
-# <a name="mapping-eshoponcontainers-to-azure-services"></a>Mapping di eShopOnContainers ai servizi di Azure
+# <a name="mapping-eshoponcontainers-to-azure-services"></a>Mapping di eShopOnContainers a Servizi di Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -17,8 +17,7 @@ Sebbene non sia necessario, Azure è particolarmente adatto per supportare il eS
 
 L'architettura dell'applicazione è illustrata nella figura 2-5. A sinistra si trovano le app client, suddivise in versioni per dispositivi mobili, Web tradizionali e applicazioni a pagina singola (SPA). A destra sono disponibili i componenti lato server che costituiscono il sistema, ognuno dei quali può essere ospitato in contenitori Docker e cluster Kubernetes. L'app Web tradizionale è basata sull'applicazione ASP.NET Core MVC visualizzata in giallo. Questa app e le applicazioni per dispositivi mobili e Web SPA comunicano con i singoli microservizi tramite uno o più gateway API. Il gateway API segue il modello "backend per front-end" (BFF), che significa che ogni gateway è progettato per supportare un client front-end specifico. I singoli microservizi sono elencati a destra dei gateway API e includono sia la logica di business che un tipo di archivio di persistenza. I diversi servizi usano i database SQL Server, le istanze di cache Redis e gli archivi MongoDB/CosmosDB. All'estrema destra è il bus di eventi del sistema usato per la comunicazione tra i microservizi.
 
-![architettura](./media/eshoponcontainers-architecture.png)
-eShopOnContainers**Figura 2-5**. Architettura eShopOnContainers.
+![eShopOnContainers Architecture @ no__t-1**figura 2-5**. Architettura eShopOnContainers.
 
 I componenti lato server di questa architettura vengono mappati facilmente ai servizi di Azure.
 
@@ -26,7 +25,7 @@ I componenti lato server di questa architettura vengono mappati facilmente ai se
 
 I servizi ospitati da contenitori dell'applicazione, da ASP.NET Core app MVC a singoli cataloghi e ordini di microservizi, possono essere ospitati e gestiti in Azure Kubernetes Service (AKS). L'applicazione può essere eseguita localmente in Docker e Kubernetes e gli stessi contenitori possono quindi essere distribuiti negli ambienti di gestione temporanea e di produzione ospitati in AKS. Questo processo può essere automatizzato come si vedrà nella sezione successiva.
 
-AKS fornisce servizi di gestione per singoli cluster di contenitori. Tramite l'applicazione vengono distribuiti cluster AKS distinti per ogni microservizio illustrato nel diagramma dell'architettura precedente. Questo approccio consente a ogni singolo servizio in modo indipendente in base alle richieste di risorse. Ogni microservizio può anche essere distribuito in modo indipendente e, idealmente, le distribuzioni non dovrebbero subire alcun tempo di inattività del sistema.
+AKS fornisce servizi di gestione per singoli cluster di contenitori. Tramite l'applicazione vengono distribuiti cluster AKS distinti per ogni microservizio illustrato nel diagramma dell'architettura precedente. Questo approccio consente a ogni singolo servizio di ridimensionarsi in modo indipendente in base alle richieste di risorse. Ogni microservizio può anche essere distribuito in modo indipendente e, idealmente, le distribuzioni non dovrebbero subire alcun tempo di inattività del sistema.
 
 ## <a name="api-gateway"></a>Gateway API
 
@@ -44,7 +43,7 @@ Utilizzando Gestione API, le applicazioni possono esporre diversi gruppi di serv
 
 Un'altra opzione se l'applicazione usa AKS consiste nel distribuire il controller di ingresso del gateway di Azure come Pod nel cluster AKS. In questo modo il cluster si integra con un gateway applicazione Azure, consentendo al gateway di bilanciare il carico del traffico ai pod AKS. [Altre informazioni sul controller di ingresso del gateway di Azure per AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>Dati
+## <a name="data"></a>Data
 
 I vari servizi back-end usati da eShopOnContainers hanno requisiti di archiviazione diversi. Diversi microservizi utilizzano database SQL Server. Il microservizio basket si avvale di una cache Redis per la relativa persistenza. Il microservizio località prevede un'API MongoDB per i dati. Azure supporta ognuno di questi formati di dati.
 

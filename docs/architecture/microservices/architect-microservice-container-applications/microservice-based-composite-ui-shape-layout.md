@@ -2,16 +2,16 @@
 title: Creazione dell'interfaccia utente composita basata su microservizi
 description: L'architettura di microservizi non è destinata solo al back-end. Di seguito se ne analizza brevemente l'uso nei contesti front-end.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834371"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275735"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creazione dell'interfaccia utente composita basata su microservizi
 
-L'architettura di microservizi inizia spesso con la gestione dei dati e della logica sul lato server. Un approccio più avanzato prevede tuttavia la progettazione dell'interfaccia utente dell'applicazione basata anche sui microservizi. Ciò significa avere un'interfaccia utente composita generata dai microservizi, invece di avere i microservizi sul server e solo un'app client monolitica che utilizza i microservizi. Con questo approccio, i microservizi creati possono essere completati con la rappresentazione sia logica che visiva.
+L'architettura di microservizi spesso inizia con la gestione dei dati e della logica sul lato server, ma in molti casi l'interfaccia utente viene ancora gestita come Monolith. Tuttavia, un approccio più avanzato, denominato [micro](https://martinfowler.com/articles/micro-frontends.html)-front-end, consiste nel progettare l'interfaccia utente dell'applicazione in base ai microservizi. Ciò significa avere un'interfaccia utente composita generata dai microservizi, invece di avere i microservizi sul server e solo un'app client monolitica che utilizza i microservizi. Con questo approccio, i microservizi creati possono essere completati con la rappresentazione sia logica che visiva.
 
 La figura 4-20 illustra l'approccio più semplice in cui i microservizi vengono utilizzati da un'applicazione client monolitica. Nel mezzo è ovviamente possibile avere un servizio MVC ASP.NET che genera il codice HTML e JavaScript. La figura è una rappresentazione semplificata che evidenzia la presenza di una sola interfaccia utente client (monolitica) che utilizza i microservizi, concentrati solo sulla logica e sui dati e non sulla forma dell'interfaccia utente (HTML e JavaScript).
 
@@ -39,19 +39,25 @@ Per altre informazioni sull'interfaccia utente composita basata sui microservizi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Composite UI using ASP.NET (Interfaccia utente composita con ASP.NET - Workshop di Particular)**  \
+- **Micro front-end (Blog di Martin Fowler)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **Micro-front-end (sito Michael Geers)**  
+  <https://micro-frontends.org/>
+  
+- **Interfaccia utente composita con ASP.NET (officina particolare)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Front-end monolitico nell'architettura di microservizi)**  \
+- **Ruben Oostinga. Front-end monolitico nell'architettura di microservizi @ no__t-0  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. The secret of better UI composition (Il segreto per una composizione ideale dell'interfaccia utente)**  \
+- **Mauro Servienti. Il segreto di una migliore composizione dell'interfaccia utente @ no__t-0  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Including Front-End Web Components Into Microservices (Inserimento di componenti Web front-end nei microservizi)**  \
+- **Viktor Farcic. Inclusione di componenti Web front-end in microservizi @ no__t-0  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture (Gestione del front-end nell'architettura di microservizi)**  \
+- **Gestione di front-end nell'architettura di microservizi**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

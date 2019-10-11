@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Trova nodi di pari livello (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 673cb3975ae2dc2ed34ba82c806b318ffef75da8
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780393"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250055"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Procedura: Trova nodi di pari livello (XPath-LINQ to XML) (Visual Basic)
 Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ Può essere necessario trovare tutti i gli elementi di pari livello di un nodo c
 ## <a name="example"></a>Esempio  
  In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`. La raccolta risultante include il nodo di contesto.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -44,7 +44,7 @@ Next
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Results are identical  
 <Book id="bk101">  
   <Author>Garghentini, Davide</Author>  

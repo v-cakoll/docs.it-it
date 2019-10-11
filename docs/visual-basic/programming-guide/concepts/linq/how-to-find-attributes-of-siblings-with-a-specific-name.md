@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)'
+title: 'Procedura: Trovare attributi di elementi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 709c21cee37c42f7633b2b108b8846ddd8e3b4e7
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780575"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249891"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare attributi di elementi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come trovare tutti gli attributi degli elementi di pari livello del nodo di contesto. Nella raccolta vengono restituiti solo gli attributi con un nome specifico.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come trovare tutti gli attributi degli elem
 ## <a name="example"></a>Esempio  
  In questo esempio viene dapprima ricercato un elemento `Book`, quindi tutti gli elementi di pari livello denominati `Book` e infine tutti gli attributi denominati `id`. Il risultato è una raccolta di attributi.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -48,7 +48,7 @@ Next
   
  Questo esempio produce il seguente output:  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 id="bk102"  

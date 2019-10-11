@@ -2,12 +2,12 @@
 title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 5cb8322fc50dc5759f8e546ae6b698c036c91fa4
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216197"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179994"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -29,7 +29,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Suggerimenti
+### <a name="recommendations"></a>Consigli
 
 Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NETStandard.Library` in modo implicito, ecco le procedure consigliate:
 
@@ -130,8 +130,8 @@ L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attri
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
 2. .NET Core Web SDK con l'ID di `Microsoft.NET.Sdk.Web`
 3. .NET Core Razor Class Library SDK con l'ID di `Microsoft.NET.Sdk.Razor`
-4. Il servizio del ruolo di lavoro di .NET Core `Microsoft.NET.Sdk.Worker` con ID (a partire da .NET Core 3,0)
-5. WinForms di .NET Core e WPF con ID (a `Microsoft.NET.Sdk.WindowsDesktop` partire da .NET Core 3,0)
+4. Il servizio del ruolo di lavoro di .NET Core con ID `Microsoft.NET.Sdk.Worker` (a partire da .NET Core 3,0)
+5. WinForms di .NET Core e WPF con ID `Microsoft.NET.Sdk.WindowsDesktop` (a partire da .NET Core 3,0)
 
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`.
 
@@ -347,6 +347,12 @@ Specifica l'URL per l'archivio in cui si trova il codice sorgente per il pacchet
 ### <a name="repositorytype"></a>RepositoryType
 
 Specifica il tipo dell'archivio. Il valore predefinito è "git".
+
+### <a name="repositorybranch"></a>RepositoryBranch
+Specifica il nome del ramo di origine nel repository. Quando il progetto viene incluso in un pacchetto NuGet, viene aggiunto ai metadati del pacchetto.
+
+### <a name="repositorycommit"></a>RepositoryCommit
+Commit o insieme di modifiche facoltativo del repository per indicare l'origine su cui è stato compilato il pacchetto. per includere questa proprietà, è necessario specificare anche `RepositoryUrl`. Quando il progetto viene incluso in un pacchetto NuGet, questo commit o insieme di modifiche viene aggiunto ai metadati del pacchetto.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

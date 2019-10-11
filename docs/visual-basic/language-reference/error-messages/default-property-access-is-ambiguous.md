@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512743"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250374"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>L'accesso alla proprietà predefinita è ambiguo tra i membri\<di interfaccia ereditati ' defaultpropertyname\<>' dell'interfaccia '\<nomeinterfaccia1 >' è defaultpropertyname\< >' dell'interfaccia ' nomeinterfaccia2 >'
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>L'accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati ' \<defaultpropertyname >' dell'interfaccia ' \<interfacename1 >' è \<defaultpropertyname >' dell'interfaccia ' \<interfacename2 >'
 
 Un'interfaccia eredita da due interfacce, ognuna delle quali dichiara una proprietà predefinita con lo stesso nome. Il compilatore non può risolvere un accesso a questa proprietà predefinita senza qualifica. Questa condizione è illustrata nell'esempio seguente.
 
@@ -42,7 +42,7 @@ Quando si specifica `testObj(1)`, il compilatore tenta di risolverlo nella propr
 
 ## <a name="to-correct-this-error"></a>Per correggere l'errore
 
-- Evitare di ereditare i membri con lo stesso nome. Nell'esempio precedente, se `testObj` non necessita di alcun membro di, `Iface2`ad esempio,, dichiararlo come segue:
+- Evitare di ereditare i membri con lo stesso nome. Nell'esempio precedente, se `testObj` non necessita di alcun membro di, ad esempio `Iface2`, dichiararlo come segue:
 
   ```vb
   Dim testObj As Iface1
@@ -66,4 +66,4 @@ Quando si specifica `testObj(1)`, il compilatore tenta di risolverlo nella propr
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Interfacce](../../programming-guide/language-features/interfaces/index.md)

@@ -4,12 +4,12 @@ description: Glossario dei principali termini relativi all'apprendimento automat
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929261"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180178"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -123,7 +123,7 @@ Un vettore di [funzionalità](#feature) costituito solo da valori numerici. È s
 
 Tutte le operazioni necessarie per adattare un modello a un set di dati. Una pipeline è costituita dai passaggi di importazione dei dati, trasformazione, estrazione delle funzionalità e apprendimento. Una volta eseguito il training, una pipeline si trasforma in un modello.
 
-## <a name="precision"></a>Precision
+## <a name="precision"></a>Precisione
 
 Nell'ambito della [classificazione](#classification), la precisione di una classe è il numero di elementi stimati correttamente come appartenenti alla classe diviso per il numero totale di elementi previsti come appartenenti alla classe.
 
@@ -136,7 +136,7 @@ Nell'ambito della [classificazione](#classification), il richiamo di una classe 
  La regolarizzazione penalizza un modello lineare per essere troppo complicato. Sono disponibili due tipi di regolarizzazione:
 
 - La regolarizzazione $L_1$ azzera i pesi per le funzionalità non significative. La dimensione del modello salvato può ridursi dopo questo tipo di regolarizzazione.
-- La regolarizzazione $L_2$ riduce al minimo l'intervallo di peso per le funzionalità non significative. Si tratta di un processo più generale ed è meno sensibile agli outlier.
+- $L regolarizzazione _2 $ riduce al minimo l'intervallo di ponderazione per le funzionalità non significative. Si tratta di un processo più generale ed è meno sensibile agli outlier.
 
 ## <a name="regression"></a>Regressione
 

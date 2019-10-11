@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Informazioni sul ripristino delle dipendenze e degli strumenti specifici per il progetto tramite il comando dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117601"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275754"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -137,7 +137,7 @@ Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripris
 
 `--verbosity <LEVEL>`
 
-Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
 
 `--interactive`
 
@@ -179,11 +179,11 @@ Specifica un runtime per il ripristino dei pacchetti. Questo runtime viene usato
 
 `-s|--source <SOURCE>`
 
-Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l' `<packageSource>` elemento non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
+Specifica un'origine dei pacchetti NuGet da usare durante l'operazione di ripristino. Esegue l'override di tutte le origini specificate nei file *NuGet. config* , leggendo effettivamente il file *NuGet. config* come se l'elemento `<packageSource>` non fosse presente. È possibile specificare più origini, selezionando questa opzione più volte.
 
 `--verbosity <LEVEL>`
 
-Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Il valore predefinito è `minimal`.
 
 ---
 
@@ -205,6 +205,6 @@ Ripristinare le dipendenze e gli strumenti per il progetto nella directory corre
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente e mostrare solo un output minimo:
+Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente che mostra l'output dettagliato:
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`
