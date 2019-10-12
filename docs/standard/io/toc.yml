@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: 'Procedura: Usare le named pipe per la comunicazione interprocesso in rete'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Pipeline
+      href: pipelines.md
     - name: File mappati alla memoria
       href: memory-mapped-files.md
