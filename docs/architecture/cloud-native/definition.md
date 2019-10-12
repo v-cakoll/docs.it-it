@@ -1,14 +1,14 @@
 ---
-title: Definizione del cloud nativo
+title: Definizione di cloud nativo
 description: Informazioni sui pilastri fondamentali che forniscono il fondamento per i sistemi nativi del cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6a4a63f003c8ff0c7381d29f4e569838e45bd669
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183469"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291207"
 ---
 # <a name="defining-cloud-native"></a>Definizione del cloud nativo
 
@@ -22,9 +22,9 @@ I sistemi nativi del cloud sono progettati per adottare modifiche rapide, scalab
 
 Cloud native Computing Foundation fornisce una [definizione ufficiale](https://github.com/cncf/foundation/blob/master/charter.md):
 
-> *Le tecnologie native del cloud consentono alle organizzazioni di creare ed eseguire applicazioni scalabili in ambienti dinamici moderni, ad esempio cloud pubblici, privati e ibridi. I contenitori, le mesh dei servizi, i microservizi, l'infrastruttura non modificabile e le API dichiarative esemplificano questo approccio.*
+> *Cloud-le tecnologie native consentono alle organizzazioni di creare ed eseguire applicazioni scalabili in ambienti dinamici moderni, ad esempio cloud pubblici, privati e ibridi. Contenitori, mesh di servizi, microservizi, infrastruttura non modificabile e API dichiarative esemplificano questo approccio.*
 
-> *Queste tecniche consentono sistemi a regime di controllo libero, resilienti, gestibili e osservabili. Combinati con un'automazione affidabile, consentono ai tecnici di apportare modifiche a un elevato livello di frequenza e prevedibili con una fatica minima.*
+> le tecniche @no__t 0These consentono sistemi a regime di controllo libero, resilienti, gestibili e osservabili. Combinate con un'automazione affidabile, consentono ai tecnici di apportare modifiche a un elevato livello di frequenza e prevedibili con una fatica minima. *
 
 Le applicazioni sono diventate sempre più complesse con gli utenti che ne richiedono sempre di più. Gli utenti si aspettano velocità di risposta rapida, funzionalità innovative e nessun tempo di inattività. I problemi di prestazioni, gli errori ricorrenti e l'impossibilità di muoversi velocemente non sono più accettabili. Si passerà facilmente al tuo concorrente.
 
@@ -40,11 +40,11 @@ Di seguito sono riportate alcune società che hanno implementato queste tecniche
 
 Come si può vedere, Netflix, Uber e WeChat espongono sistemi costituiti da centinaia di microservizi indipendenti. Questo stile di architettura consente loro di rispondere rapidamente alle condizioni di mercato. Possono aggiornare immediatamente piccole aree di un'applicazione dinamica e complessa e ridimensionare singolarmente le aree in base alle esigenze.
 
-La velocità e l'agilità del cloud nativo derivano da diversi fattori. Il primo è l'infrastruttura cloud. Cinque pilastri fondamentali aggiuntivi illustrati nella figura 1-1 forniscono anche il fondamento per i sistemi nativi del cloud.
+La velocità e l'agilità del cloud nativo derivano da diversi fattori. Il primo è l'infrastruttura cloud. Cinque pilastri fondamentali aggiuntivi illustrati nella figura 1-3 forniscono anche il fondamento per i sistemi nativi del cloud.
 
 ![Pilastri di base nativi del cloud](./media/cloud-native-foundational-pillars.png)
 
-**Figura 1-1**. Pilastri di base nativi del cloud
+**Figura 1-3**. Pilastri di base nativi del cloud
 
 Per comprendere meglio il significato di ogni pilastro,
 
@@ -54,7 +54,7 @@ I sistemi nativi del Cloud sfruttano al meglio il modello del servizio cloud.
 
 Progettato per prosperare in un ambiente cloud virtualizzato e dinamico, questi sistemi fanno ampio uso dell'infrastruttura di calcolo [PaaS (Platform as a Service)](https://azure.microsoft.com/overview/what-is-paas/) e dei servizi gestiti. Gestiscono l'infrastruttura sottostante come con provisioning *Disposable* in pochi minuti e ridimensionato, ridimensionato, spostato o eliminato su richiesta, tramite l'automazione.
 
-Si prenda in considerazione il concetto di [DevOps di animali domestici ampiamente accettati rispetto a Bestiame](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). In una data center tradizionale, i server vengono considerati come *animali domestici*: un computer fisico, dato un nome significativo e curato. Per la scalabilità, è possibile aggiungere altre risorse allo stesso computer (scalabilità verticale). Se il server si ammala, è necessario invitarlo di nuovo all'integrità. Se il server non è più disponibile, tutti gli avvisi.
+Si consideri il concetto di DevOps ampiamente accettato di [Pets rispetto a Bestiame @ no__t-0. In una data center tradizionale, i server vengono considerati come *animali domestici*: un computer fisico, dato un nome significativo e curato. Per la scalabilità, è possibile aggiungere altre risorse allo stesso computer (scalabilità verticale). Se il server si ammala, è necessario invitarlo di nuovo all'integrità. Se il server non è più disponibile, tutti gli avvisi.
 
 Il modello del servizio *bestiame* è diverso. Si esegue il provisioning di ogni istanza come macchina virtuale o contenitore. Sono identici e vengono assegnati a un identificatore di sistema, ad esempio Service-01, Service-02 e così via. La scalabilità viene eseguita creandone più di una (scalabilità orizzontale). Quando una non è più disponibile, nessuno lo rileva.
 
@@ -76,10 +76,10 @@ Sebbene sia applicabile a qualsiasi applicazione basata su Web, molti profession
 
 Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
-|    |  Fattore | Descrizione  |
+|    |  Fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 1 | Codebase | Una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti (QA, staging, produzione). |
-| 2 | Dipendenze | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
+| 2 | Dependencies | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
 | 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
@@ -93,7 +93,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
 Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)fattori, l'autore Kevin Hoffman Details ognuno dei 12 fattori originali (scritti in 2011). Inoltre, il libro offre tre fattori aggiuntivi che riflettono la progettazione di applicazioni cloud moderne di oggi.
 
-|    |  Nuovo fattore | Descrizione  |
+|    |  Nuovo fattore | Spiegazione  |
 | :-------- | :-------- | :-------- |
 | 13 | Prima API | Rendere tutto un servizio. Si supponga che il codice venga utilizzato da un client front-end. Gateway o un altro servizio. |
 | 14 | Telemetria | In una workstation è possibile ottenere visibilità approfondita dell'applicazione e del relativo comportamento. Nel cloud non è necessario. Assicurarsi che la progettazione includa la raccolta di dati di monitoraggio, specifici del dominio e integrità/sistema. |
@@ -146,15 +146,15 @@ Progettato come un set distribuito di piccoli servizi indipendenti che interagis
 
 - Si compongono insieme per formare un'applicazione.
 
-La figura 1-2 contrasta l'approccio di un'applicazione monolitica con un approccio basato su microservizi. Si noti che il monolito è costituito da un'architettura a più livelli, che viene eseguita in un singolo processo. Viene in genere utilizzato un database relazionale. L'approccio basato su microservizi, tuttavia, separa le funzionalità in servizi indipendenti che includono la logica e i dati. Ogni microservizio ospita il proprio archivio dati.
+La figura 1-4 contrasta l'approccio di un'applicazione monolitica con un approccio basato su microservizi. Si noti che il monolito è costituito da un'architettura a più livelli, che viene eseguita in un singolo processo. Viene in genere utilizzato un database relazionale. L'approccio basato su microservizi, tuttavia, separa le funzionalità in servizi indipendenti che includono la logica e i dati. Ogni microservizio ospita il proprio archivio dati.
 
 ![Distribuzione monolitica rispetto ai microservizi](./media/monolithic-vs-microservices.png)
 
-**Figura 1-2.** Distribuzione monolitica rispetto ai microservizi
+**Figura 1-4.** Distribuzione monolitica rispetto ai microservizi
 
 Si noti che i microservizi innalzano di livello il principio "un solo codebase, un'applicazione" dall' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza nel capitolo.
 
-> *Il \#fattore 1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Rilevato con il controllo della versione, è possibile eseguire la distribuzione in più ambienti.*
+> *Factor \#1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Rilevato con il controllo della versione, è possibile eseguire la distribuzione in più ambienti "*
 
 ### <a name="why-microservices"></a>Perché usare i microservizi?
 
@@ -166,7 +166,7 @@ In precedenza nel capitolo è stata confrontata un'applicazione di eCommerce cre
 
 - Ogni microservizio può essere ridimensionato in modo indipendente. Anziché ridimensionare l'intera applicazione come singola unità, è possibile scalare solo i servizi che richiedono una maggiore potenza di elaborazione o la larghezza di banda di rete. Questo approccio con granularità fine per la scalabilità consente un maggiore controllo del sistema e consente di ridurre i costi complessivi quando si ridimensionano le parti del sistema, non tutti gli elementi.
 
-Una guida di riferimento eccellente per comprendere i microservizi [sono i microservizi .NET: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/standard/microservices-architecture/) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
+Una guida di riferimento eccellente per informazioni sui microservizi è @no__t microservizi 0.NET: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/standard/microservices-architecture/) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Sviluppo di microservizi
 
@@ -186,17 +186,17 @@ Inserimento un microservizio è semplice e diretto. Il codice, le relative dipen
 
 Quando necessario, l'immagine viene trasformata in un'istanza del contenitore in esecuzione. L'istanza di viene eseguita in qualsiasi computer in cui è installato un motore di [runtime del contenitore](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) . È possibile avere tutte le istanze del servizio in contenitori in base alle esigenze.
 
-La figura 1-3 mostra tre microservizi diversi, ognuno nel relativo contenitore, in esecuzione in un singolo host.
+La figura 1-5 mostra tre microservizi diversi, ognuno nel relativo contenitore, in esecuzione in un singolo host.
 
 ![Più contenitori in esecuzione in un host contenitore](./media/hosting-mulitple-containers.png)  
 
-**Figura 1-3**. Più contenitori in esecuzione in un host contenitore
+**Figura 1-5**. Più contenitori in esecuzione in un host contenitore
 
 Si noti che ogni contenitore mantiene il proprio set di dipendenze e Runtime, che può essere diverso. Qui vengono visualizzate diverse versioni del microservizio prodotto in esecuzione nello stesso host. Ogni contenitore condivide una sezione del sistema operativo host sottostante, della memoria e del processore, ma è isolata l'una dall'altra. 
 
 Si noti il modo in cui il modello di contenitore abbraccia il principio "dipendenze" dall' [applicazione a dodici fattori](https://12factor.net/).
 
-> *Il \#fattore 2 specifica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
+> *Factor \#2 indica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
 
 I contenitori supportano i carichi di lavoro Linux e Windows. Il cloud di Azure accetta entrambi. È interessante notare che si tratta di Linux, non di Windows Server, che è diventato il sistema operativo più diffuso in Azure.
 
@@ -214,30 +214,30 @@ Condividendo il sistema operativo e le risorse host sottostanti, i contenitori h
 
 Sebbene strumenti come Docker creino immagini ed eseguano contenitori, è necessario anche strumenti per gestirli. La gestione dei contenitori viene eseguita con un programma software speciale denominato agente di orchestrazione del contenitore. Quando si opera su larga scala, l'orchestrazione del contenitore è essenziale. 
 
-La figura 1-4 illustra le attività di gestione fornite dagli agenti di orchestrazione dei contenitori.
+La figura 1-6 illustra le attività di gestione fornite dagli agenti di orchestrazione dei contenitori.
 
 ![Operazioni eseguite dagli agenti di orchestrazione del contenitore](./media/what-container-orchestrators-do.png)
 
-**Figura 1-4**. Operazioni eseguite dagli agenti di orchestrazione del contenitore
+**Figura 1-6**. Operazioni eseguite dagli agenti di orchestrazione del contenitore
 
 Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione.
 
-|  Attività | Descrizione  |
+|  Attività | Spiegazione  |
 | :-------- | :-------- |
 | Pianificazione | Eseguire automaticamente il provisioning delle istanze del contenitore.|
 | Affinità/anti-affinità | Eseguire il provisioning di contenitori vicini o lontani tra loro, in modo da garantire disponibilità e prestazioni. |
 | Monitoraggio dell'integrità | Rilevare e correggere automaticamente gli errori.|
 | Failover | Eseguire automaticamente il provisioning dell'istanza non riuscita in computer integri.|
 | Ridimensionamento | Aggiungere o rimuovere automaticamente un'istanza del contenitore per soddisfare la domanda.|
-| Servizi di rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
+| Rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
 | Individuazione dei servizi | Consente ai contenitori di individuarsi reciprocamente.|
 | Aggiornamenti in sequenza | Coordinare gli aggiornamenti incrementali senza alcuna distribuzione del tempo di inattività. Esegue automaticamente il rollback delle modifiche problematiche.|
 
 Si noti che gli agenti di orchestrazione adottano i principi di disposizione e di concorrenza dall' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
-> *Il \#fattore 9 specifica che le istanze del servizio devono essere monouso, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
+> *Factor \#9 specifica che le istanze del servizio devono essere Disposable, favorendo Startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
 
-> *Il \#fattore 8 specifica che "i servizi vengono scalati orizzontalmente in un numero elevato di piccoli processi identici (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
+> *Factor \#8 indica che "i servizi vengono scalati orizzontalmente in un numero elevato di processi identici di piccole dimensioni (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
 
 Sebbene esistano diversi agenti di orchestrazione dei contenitori, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) è diventato lo standard de facto per il mondo nativo del cloud. Si tratta di una piattaforma portabile, estensibile e open source per la gestione dei carichi di lavoro in contenitori. 
 
@@ -249,15 +249,15 @@ I servizi di Azure Kubernetes sono trattati nel capitolo 2 relativo alla *scalab
 
 I sistemi nativi del cloud dipendono da molte risorse ausiliarie diverse, ad esempio archivi dati, broker di messaggi, monitoraggio e servizi di identità. Questi servizi sono noti come [servizi di supporto](https://12factor.net/backing-services).
 
- La figura 1-5 illustra molti servizi di supporto comuni utilizzati dai sistemi nativi del cloud.
+ La figura 1-7 illustra molti servizi di supporto comuni utilizzati dai sistemi nativi del cloud.
 
 ![Servizi di supporto comuni](./media/common-backing-services.png)
 
-**Figura 1-5**. Servizi di supporto comuni
+**Figura 1-7**. Servizi di supporto comuni
 
 I servizi di supporto promuovono il principio di "senza stato" dall' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Il \#fattore 6* specifica che "ogni microservizio deve essere eseguito nel proprio processo, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati ".
+>*Factor \#6* specifica che "ogni microservizio deve essere eseguito nel proprio processo, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati ".
 
 È possibile ospitare i propri servizi di backup, ma in questo esempio si è responsabili della gestione delle licenze, del provisioning e della gestione di tali risorse.
 
@@ -267,9 +267,9 @@ I sistemi nativi del cloud favoriscono i servizi di backup gestiti dai fornitori
 
 Una procedura consigliata consiste nel considerare un servizio di backup come *risorsa collegata*, associato in modo dinamico a un microservizio con informazioni (un URL e credenziali) archiviate in una configurazione esterna. Questa guida è stata digitata nell' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Il \#fattore 4* indica che i servizi di backup devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
+>*Factor \#4* indica che i servizi di supporto "devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
 
->*Il \#fattore 3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
+>*Factor \#3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
 
 Con questo modello, è possibile collegare e scollegare un servizio di supporto senza modifiche al codice. È possibile alzare di livello un microservizio da QA a un ambiente di gestione temporanea. È possibile aggiornare la configurazione del microservizio in modo che punti ai servizi di supporto in gestione temporanea e inserire le impostazioni nel contenitore tramite una variabile di ambiente.
 
@@ -297,15 +297,15 @@ In questo articolo, [che cos'è l'infrastruttura come codice](https://docs.micro
 
 L' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza, richiede passaggi distinti durante la trasformazione del codice completato in un'applicazione in esecuzione.
 
-> *Il \#fattore 5* indica che ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
+> *Factor \#5* indica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
 
 I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti. 
 
-La figura 1,6 Mostra la separazione tra il processo di distribuzione.
+La figura 1-8 Mostra la separazione tra il processo di distribuzione.
 
 ![Passaggi per le distribuzioni nella pipeline CI/CD](./media/build-release-run-pipeline.png)
 
-**Figura 1-6**. Passaggi di distribuzione in una pipeline CI/CD
+**Figura 1-8**. Passaggi di distribuzione in una pipeline CI/CD
 
 Nella figura precedente, prestare particolare attenzione alla separazione delle attività. 
 
@@ -321,11 +321,11 @@ Applicando queste procedure, le organizzazioni si sono evolute radicalmente nel 
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Il cloud di Azure include un nuovo servizio CI/CD denominato [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), che fa parte dell'offerta [DevOps di Azure](https://azure.microsoft.com/services/devops/) illustrata nella figura 1-7.
+Il cloud di Azure include un nuovo servizio CI/CD denominato [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), che fa parte dell'offerta [DevOps di Azure](https://azure.microsoft.com/services/devops/) illustrata nella figura 1-9.
 
 ![Azure Pipelines in DevOps](./media/devops-components.png)
 
-**Figura 1-7**. Offerte di Azure DevOps
+**Figura 1-9**. Offerte di Azure DevOps
 
 Azure Pipelines è un servizio cloud che combina integrazione continua (CI) e recapito continuo (CD). È possibile testare, compilare e distribuire il codice automaticamente a qualsiasi destinazione.
 

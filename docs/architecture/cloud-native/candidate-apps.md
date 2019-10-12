@@ -3,12 +3,12 @@ title: App candidate per cloud native
 description: Informazioni sui tipi di applicazioni che traggono vantaggio da un approccio nativo per il cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275822"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291228"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>App candidate per cloud native
 
@@ -34,9 +34,11 @@ Sono quindi presenti sistemi legacy. Per quanto riguarda la creazione di nuove a
 
 ### <a name="modernizing-legacy-apps"></a>Modernizzazione di app legacy
 
-L'e-book gratuito Microsoft [modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) fornisce indicazioni per la migrazione dei carichi di lavoro locali nel cloud. La figura 1-8 Mostra che non è disponibile una singola strategia unica, unica per la modernizzazione delle applicazioni legacy.
+L'e-book gratuito Microsoft [modernizza le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) fornisce indicazioni per la migrazione dei carichi di lavoro locali nel cloud. La figura 1-10 Mostra che non è disponibile una singola strategia unica, unica per la modernizzazione delle applicazioni legacy.
 
-![Strategies per la migrazione dei carichi di lavoro legacy @ no__t-1**figura 1-8**. Strategie per la migrazione di carichi di lavoro legacy
+![Strategie per la migrazione di carichi di lavoro legacy](./media/strategies-for-migrating-legacy-workloads.png)
+
+**Figura 1-10**. Strategie per la migrazione di carichi di lavoro legacy
 
 Le app monolitiche che non sono in gran parte critiche traggono vantaggio da una rapida migrazione (pronta per l'[infrastruttura cloud](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). In questo caso, il carico di lavoro locale viene riallocato a una macchina virtuale basata sul cloud, senza modifiche. Questo approccio usa il [modello IaaS (infrastruttura distribuita come servizio)](https://azure.microsoft.com/overview/what-is-iaas/). Azure include diversi strumenti, ad esempio[Azure migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)e il [servizio migrazione del database di Azure](https://azure.microsoft.com/campaigns/database-migration/), per semplificare il passaggio. Sebbene questa strategia possa produrre risparmi in termini di costi, tali applicazioni in genere non sono state progettate per sbloccare e sfruttare i vantaggi di cloud computing. 
 
