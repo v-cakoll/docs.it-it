@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018741"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291636"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Procedura: Archiviare chiavi asimmetriche in un contenitore di chiavi
 Le chiavi private asimmetriche non devono essere mai archiviate in modalità verbatim o in testo normale nel computer locale. Se è necessario archiviare una chiave privata, è opportuno usare un contenitore di chiavi. Per altre informazioni sui contenitori di chiavi, vedere[Informazioni sui contenitori di chiavi RSA a livello di computer e utente](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Per creare una chiave asimmetrica e salvarla in un contenitore di chiavi  
   
-1. Creare una nuova istanza di un <xref:System.Security.Cryptography.CspParameters> classe e passare il nome che si desidera chiamare il contenitore di chiavi per il <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
+1. Creare una nuova istanza di una classe <xref:System.Security.Cryptography.CspParameters> e passare il nome a cui si desidera chiamare il contenitore di chiavi nel campo <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>.  
   
-2. Creare una nuova istanza di una classe che deriva dal <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (in genere **RSACryptoServiceProvider** oppure **DSACryptoServiceProvider**) e passare l'oggetto creato in precedenza  **CspParameters** oggetto al rispettivo costruttore.  
+2. Creare una nuova istanza di una classe che deriva dalla classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> (in genere **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) e passare l'oggetto **CspParameters** creato in precedenza al relativo costruttore.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Per eliminare la chiave da un contenitore di chiavi  
   
@@ -212,7 +212,7 @@ public class StoreKey
 }  
 ```  
   
-```Output  
+```console  
 Key added to container:  
 <RSAKeyValue> Key Information A</RSAKeyValue>  
 Key retrieved from container :  

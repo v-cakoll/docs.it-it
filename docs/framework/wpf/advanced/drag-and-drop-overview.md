@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046400"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291482"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -28,9 +28,9 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Il tipo e il numero di oggetti che possono essere manipolati con un trascinamento della selezione sono del tutto arbitrari. Ad esempio file, cartelle e selezioni di contenuto sono alcuni degli oggetti più comuni manipolati con operazioni di trascinamento della selezione.  
   
- Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, per impostazione predefinita, trascinando una selezione di file da una cartella a un'altra sullo stesso dispositivo di archiviazione, i file vengono spostati, mentre, per impostazione predefinita, trascinando dei file da una condivisione [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] a una cartella locale, i file vengono copiati.  
+ Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, il trascinamento di una selezione di file da una cartella a un'altra nello stesso dispositivo di archiviazione consente di spostare i file per impostazione predefinita, mentre il trascinamento dei file da una condivisione Universal Naming Convention (UNC) a una cartella locale copia i file per impostazione predefinita.  
   
- Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento e la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rimozione tra applicazioni e altre applicazioni Windows sono completamente supportati.  
+ Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Anche il trascinamento e la rimozione tra applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e altre applicazioni Windows sono completamente supportati.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può partecipare al trascinamento della selezione. Gli eventi e i metodi necessari per le operazioni di trascinamento della selezione vengono definiti nella classe <xref:System.Windows.DragDrop>. Le classi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> contengono alias per gli eventi associati <xref:System.Windows.DragDrop> in modo che gli eventi appaiano nell'elenco dei membri della classe quando un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> viene ereditato come elemento di base. I gestori eventi associati a questi eventi vengono associati all'evento associato <xref:System.Windows.DragDrop> sottostante e ricevono la stessa istanza di dati dell'evento. Per altre informazioni, vedere l'evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
@@ -122,7 +122,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Esempi di trascinamento della selezione  
- Questa sezione descrive come implementare il trascinamento della selezione per un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> è sia un'origine di trascinamento che un obiettivo di rilascio. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse. Il codice XAML seguente mostra l'elemento <xref:System.Windows.Shapes.Ellipse> e gli eventi relativi al trascinamento della selezione gestiti. Per istruzioni complete su come implementare il trascinamento della selezione, vedere [procedura dettagliata: Abilitazione del trascinamento della selezione](walkthrough-enabling-drag-and-drop-on-a-user-control.md)in un controllo utente.  
+ Questa sezione descrive come implementare il trascinamento della selezione per un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> è sia un'origine di trascinamento che un obiettivo di rilascio. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse. Il codice XAML seguente mostra l'elemento <xref:System.Windows.Shapes.Ellipse> e gli eventi relativi al trascinamento della selezione gestiti. Per istruzioni complete su come implementare il trascinamento della selezione, vedere [Walkthrough: Abilitazione del trascinamento della selezione in un controllo utente @ no__t-0.  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -218,6 +218,6 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Clipboard>
-- [Procedura dettagliata: Abilitazione del trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Procedura dettagliata: Abilitazione del trascinamento della selezione in un controllo utente @ no__t-0
 - [Procedure relative alle proprietà](drag-and-drop-how-to-topics.md)
 - [Trascinamento della selezione](drag-and-drop.md)

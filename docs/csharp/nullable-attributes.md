@@ -2,14 +2,14 @@
 title: Aggiornare le API con attributi per definire le aspettative null
 description: Questo articolo illustra le motivazioni e le tecniche per l'aggiunta di attributi descrittivi per descrivere lo stato null degli argomenti e i valori restituiti dalle API
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834198"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291316"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aggiornare le librerie per usare i tipi di riferimento nullable e comunicare le regole Nullable ai chiamanti.
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aggiornare le librerie per usare i tipi di riferimento nullable e comunicare le regole Nullable ai chiamanti
 
 L'aggiunta di [tipi di riferimento Nullable](nullable-references.md) significa che è possibile dichiarare se è consentito o meno un valore `null` per ogni variabile. Che offre un'esperienza ottimale durante la scrittura del codice. Si ottengono avvisi se una variabile che non ammette i valori null può essere impostata su `null`. Si ottengono avvisi se una variabile nullable non è controllata da null prima di dereferenziarla. L'aggiornamento delle librerie può richiedere tempo, ma i profitti valgono. Le informazioni fornite al compilatore *quando* un valore `null` sono consentite o proibite, gli avvisi migliori che gli utenti dell'API otterranno. Iniziamo con un esempio familiare. Si supponga che la libreria disponga dell'API seguente per recuperare una stringa di risorsa:
 

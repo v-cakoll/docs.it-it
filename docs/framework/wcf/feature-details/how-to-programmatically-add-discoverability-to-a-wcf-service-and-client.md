@@ -2,21 +2,21 @@
 title: 'Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586620"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291562"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice
-In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
+In questo argomento viene illustrato come rendere individuabile un servizio di Windows Communication Foundation (WCF). Si basa sull'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) .  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
-1. Aprire la soluzione self-hosting in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Aprire la soluzione self-host in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva di .NET Framework rispetto a quella specificata nel progetto..." Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Potrebbe essere visualizzato un messaggio di errore che informa che "System. ServiceModel. Discovery. dll o una delle relative dipendenze richiede una versione successiva del .NET Framework rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic con il pulsante destro del mouse sul progetto nella Esplora soluzioni e scegliere **Proprietà**. Nella finestra delle **proprietà del progetto** verificare che il Framework di **destinazione** sia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
   
@@ -60,7 +60,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 2. Aggiungere un riferimento a `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
-3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare doppio clic su file nei **Esplora soluzioni**, selezionare **copia**e quindi selezionare il **DiscoveryClientApp** del progetto, fare doppio clic e selezionare **Incollare**.  
+3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare clic con il pulsante destro del mouse sui file nel **Esplora soluzioni**, selezionare **copia**, quindi selezionare il progetto **DiscoveryClientApp** , fare clic con il pulsante destro del mouse e scegliere **Incolla**.  
   
 4. Aprire Program.cs.  
   
@@ -92,7 +92,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     }  
     ```  
   
-     Indica a WCF che il <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
+     Indica a WCF che la classe <xref:System.ServiceModel.Discovery.DiscoveryClient> deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
   
 8. Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
   
@@ -124,7 +124,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.  
   
-11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita per il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio. È stata generata utilizzando Svcutil.exe.  
+11. Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`. Questa classe è definita dall'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) . È stata generata utilizzando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 3. L'output di service.exe deve essere analogo all'output indicato di seguito.  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 4. L'output di Discoveryclientapp.exe deve essere analogo all'output indicato di seguito.  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     ```  
   
 ## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice si basa sul [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio, vengono elencati solo i file che sono stati modificati. Per altre informazioni sull'esempio self-hosting, vedere [istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice è basato sull'esempio [self-host](https://go.microsoft.com/fwlink/?LinkId=145523) , vengono elencati solo i file modificati. Per ulteriori informazioni sull'esempio Self-host, vedere [istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  
