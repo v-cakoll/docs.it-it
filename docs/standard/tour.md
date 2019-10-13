@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415923"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291597"
 ---
 # <a name="tour-of-net"></a>Panoramica di .NET
 
@@ -55,7 +55,7 @@ Nell'esempio seguente il runtime genera un'eccezione `InvalidIndexException` per
 
 Alcuni oggetti fanno riferimento a *risorse non gestite*. Le risorse non gestite sono risorse che non vengono gestite automaticamente dal runtime di .NET. Ad esempio, un handle di file è una risorsa non gestita. Un oggetto <xref:System.IO.FileStream> è un oggetto gestito, ma fa riferimento a un handle di file, che non è gestito. Dopo aver usato <xref:System.IO.FileStream>, è necessario rilasciare l'handle di file.
 
-In .NET gli oggetti che fanno riferimento a risorse non gestite implementano l'interfaccia <xref:System.IDisposable>. Dopo aver usato l'oggetto, è possibile chiamare il metodo <xref:System.IDisposable.Dispose> dell'oggetto, che è responsabile del rilascio delle risorse non gestite. I linguaggi .NET specificano una comoda sintassi `using` per tali oggetti, come illustrato nell'esempio seguente:
+In .NET gli oggetti che fanno riferimento a risorse non gestite implementano l'interfaccia <xref:System.IDisposable>. Dopo aver usato l'oggetto, è possibile chiamare il metodo <xref:System.IDisposable.Dispose> dell'oggetto, che è responsabile del rilascio delle risorse non gestite. I linguaggi .NET forniscono una pratica [istruzione `using`](../csharp/language-reference/keywords/using.md) per tali oggetti, come illustrato nell'esempio seguente:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

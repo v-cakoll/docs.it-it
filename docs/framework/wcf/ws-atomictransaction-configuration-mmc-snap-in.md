@@ -2,22 +2,22 @@
 title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916812"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291498"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
   
 ## <a name="remarks"></a>Note  
- Se si sta eseguendo [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], è possibile trovare lo snap-in MMC passando a pannello di **controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **Proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
+ Se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], è possibile trovare lo snap-in MMC passando a **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** , facendo clic con il pulsante destro del mouse su **computer locale**e scegliendo **proprietà**. Si tratta dello stesso percorso nel quale è possibile configurare MSDTC. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
   
- Se si esegue Windows Vista [!INCLUDE[lserver](../../../includes/lserver-md.md)]o, è possibile trovare lo snap-in MMC facendo clic sul pulsante **Start** e digitando `dcomcnfg.exe` nella casella di **ricerca** . Quando si apre MMC, passare al nodo **Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
+ Se si esegue Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], è possibile trovare lo snap-in MMC facendo clic sul pulsante **Start** e digitando `dcomcnfg.exe` nella casella di **ricerca** . Quando si apre MMC, passare al nodo **Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , fare clic con il pulsante destro del mouse e scegliere **Proprietà**. Le opzioni disponibili per la configurazione sono raggruppate nella scheda **WS-at** .  
   
- I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire passaggi simili se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o. [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] Se si esegue Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], seguire i passaggi precedenti per vista e [!INCLUDE[lserver](../../../includes/lserver-md.md)], ma usare il nodo **Distributed Transaction Coordinator\Local DTC** nel nodo del computer remoto.  
+ I passaggi precedenti vengono utilizzati per avviare lo snap-in per la configurazione di un computer locale. Se si desidera configurare un computer remoto, è necessario individuare il nome del computer remoto nel **Pannello di controllo/strumenti di amministrazione/Servizi componenti/** ed eseguire passaggi simili se si esegue [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Se si esegue Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], seguire i passaggi precedenti per vista e [!INCLUDE[lserver](../../../includes/lserver-md.md)], ma usare il nodo **Distributed Transaction COORDINATOR\LOCAL DTC** nel nodo del computer remoto.  
   
  Per usare l'interfaccia fornita dallo strumento è necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
@@ -25,7 +25,7 @@ Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per confi
   
  La registrazione può essere effettuata con il comando seguente:  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  Facendo clic sul pulsante **Opzioni** viene richiamata una pagina in cui è possibile specificare impostazioni aggiuntive.  
   
- La casella combinata **livello traccia** consente di scegliere tra qualsiasi valore valido dell' <xref:System.Diagnostics.TraceLevel> enumerazione. È inoltre possibile utilizzare le caselle di controllo per specificare se si desidera eseguire attività di traccia, propagazione di attività o raccogliere informazioni identificabili personali.  
+ La casella combinata **livello traccia** consente di scegliere tra qualsiasi valore valido dell'enumerazione <xref:System.Diagnostics.TraceLevel>. È inoltre possibile utilizzare le caselle di controllo per specificare se si desidera eseguire attività di traccia, propagazione di attività o raccogliere informazioni identificabili personali.  
   
  È inoltre possibile specificare sessioni di registrazione nella casella di gruppo **sessione di registrazione** .  
   

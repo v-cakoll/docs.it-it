@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834662"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291266"
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 
-In questo argomento vengono presentate le linee guida per gli sviluppatori su come scrivere applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] localizzabile. In passato, la localizzazione di un'interfaccia utente era un processo che richiedeva molto tempo. Ogni lingua in cui l'interfaccia utente è stata adattata per la regolazione del pixel è necessaria. Oggi, con la progettazione corretta e gli standard di codifica corretti, è possibile costruire [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] in modo che i localizzatori abbiano un minor ridimensionamento e un riposizionamento. L'approccio alla scrittura di applicazioni che possono essere ridimensionate e riposizionate più facilmente viene definito layout automatico e può essere eseguito utilizzando la progettazione di applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+In questo argomento vengono presentate le linee guida per gli sviluppatori su come scrivere applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con interfacce utente localizzabili (UI). In passato, la localizzazione di un'interfaccia utente era un processo che richiedeva molto tempo. Ogni lingua in cui l'interfaccia utente è stata adattata per la regolazione del pixel è necessaria. Oggi, con la progettazione corretta e gli standard di codifica corretti, le interfacce utente possono essere costruite in modo che i localizzatori abbiano un minor ridimensionamento e un riposizionamento. L'approccio alla scrittura di applicazioni che possono essere ridimensionate e riposizionate più facilmente viene definito layout automatico e può essere eseguito utilizzando la progettazione di applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 
