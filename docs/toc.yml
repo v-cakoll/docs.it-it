@@ -120,7 +120,7 @@
       href: standard/numerics.md
     - name: 'Date, ore e fusi orari'
       href: standard/datetime/
-    - name: Eventi
+    - name: Events
       href: standard/events/
     - name: processo di esecuzione gestita
       href: standard/managed-execution-process.md
@@ -140,7 +140,7 @@
       href: standard/design-guidelines/
     - name: Documenti e dati XML
       href: standard/data/xml/
-    - name: Sicurezza
+    - name: Security
       href: standard/security/
     - name: Serializzazione
       href: standard/serialization/
@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Scenari avanzati per l'interpolazione di stringhe
           href: csharp/tutorials/string-interpolation.md
-        - name: Aggiornare le interfacce in modo sicuro con i membri di interfaccia predefiniti
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Aggiornare le interfacce in modo sicuro con i metodi di interfaccia predefiniti
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Esplorare indici e intervalli
           href: csharp/tutorials/ranges-indexes.md
         - name: Usare tipi riferimento nullable
@@ -877,7 +877,7 @@
           href: fsharp/language-reference/interfaces.md
         - name: Classi astratte
           href: fsharp/language-reference/abstract-classes.md
-        - name: Membri
+        - name: Members
           href: fsharp/language-reference/members/index.md
           items:
             - name: Associazioni let nelle classi
@@ -892,7 +892,7 @@
               href: fsharp/language-reference/members/methods.md
             - name: Costruttori
               href: fsharp/language-reference/members/constructors.md
-            - name: Eventi
+            - name: Events
               href: fsharp/language-reference/members/events.md
             - name: 'Campi espliciti: Parola chiave `val`'
               href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
@@ -1213,7 +1213,7 @@
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: Tipi di errore
           href: visual-basic/programming-guide/language-features/error-types.md
-        - name: Eventi
+        - name: Events
           href: visual-basic/programming-guide/language-features/events/index.md
         - name: Interfacce
           href: visual-basic/programming-guide/language-features/interfaces/index.md
