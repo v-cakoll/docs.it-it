@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740496"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274160"
 ---
-# <a name="cortypelayout-structure"></a>Struttura COR_TYPE_LAYOUT
+# <a name="cor_type_layout-structure"></a>Struttura COR_TYPE_LAYOUT
 Fornisce informazioni sul layout di un oggetto in memoria.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,25 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|`parentID`|L'identificatore del tipo padre per questo tipo. Questo sarà l'id di tipo NULL (token1 = 0, token2 = 0) se l'id del tipo corrisponde a <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Le dimensioni di base di un oggetto di questo tipo. Questa è la dimensione totale per gli oggetti con dimensione non variabile.|  
-|`numFields`|Il numero di campi inclusi negli oggetti di questo tipo.|  
-|`boxOffset`|Se questo tipo è di tipo boxed, inizio offset di campi di un oggetto. Questo campo è valido solo per i tipi di valore, ad esempio le primitive e strutture.|  
+|`parentID`|Identificatore del tipo padre a questo tipo. Si tratta dell'ID di tipo NULL (token1 = 0, token2 = 0) se l'ID del tipo corrisponde <xref:System.Object?displayProperty=nameWithType>a.|  
+|`objectSize`|Dimensioni di base di un oggetto di questo tipo. Dimensioni totali per gli oggetti di dimensioni non variabili.|  
+|`numFields`|Numero di campi inclusi negli oggetti di questo tipo.|  
+|`boxOffset`|Se questo tipo è boxed, l'offset iniziale dei campi di un oggetto. Questo campo è valido solo per i tipi di valore come le primitive e le strutture.|  
 |`type`|CorElementType a cui appartiene questo tipo.|  
   
 ## <a name="remarks"></a>Note  
- Se `numFields` è maggiore di zero, è possibile chiamare il [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) metodo per ottenere informazioni sui campi di questo tipo. Se `type` viene `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, o `ELEMENT_TYPE_SZARRAY`, la dimensione degli oggetti di questo tipo è variabile ed è possibile passare il [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) struttura per il [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) (metodo).  
+ Se `numFields` è maggiore di zero, è possibile chiamare il metodo [ICorDebugProcess5:: GetTypeFields](icordebugprocess5-gettypefields-method.md) per ottenere informazioni sui campi di questo tipo. Se `type` è `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY` o `ELEMENT_TYPE_SZARRAY`, le dimensioni degli oggetti di questo tipo sono variabili ed è possibile passare la struttura [COR_TYPEID](cor-typeid-structure.md) al metodo [ICorDebugProcess5::GetArrayLayout](icordebugprocess5-getarraylayout-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, CorDebug.h  
+ **Intestazione:** CorDebug. idl, CorDebug. h  
   
- **Libreria:** CorGuids.lib  
+ **Libreria** CorGuids.lib  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Strutture di debug](debugging-structures.md)
+- [Debug](index.md)
