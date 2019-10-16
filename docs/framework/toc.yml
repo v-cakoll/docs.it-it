@@ -1,0 +1,66 @@
+- name: Guida a .NET Framework
+  href: index.md
+- name: Novità
+  href: whats-new/
+- name: Introduzione
+  href: get-started/
+- name: Guida all'installazione
+  href: install/
+- name: Guida di migrazione
+  href: migration-guide/
+- name: Guida di sviluppo
+  href: development-guide.md
+  items:
+    - name: Domini applicazione e assembly
+      href: app-domains/
+    - name: Risorse nelle applicazioni desktop
+      href: resources/
+    - name: Accessibilità
+      href: ui-automation/
+    - name: Dati e modellazione
+      href: data/
+    - name: Applicazioni client
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Form
+          href: winforms/
+    - name: Applicazioni orientate ai servizi con WCF
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Applicazioni di servizio Windows
+      href: windows-services/
+    - name: Applicazioni a 64 bit
+      href: 64-bit-apps.md
+    - name: Applicazioni Web con ASP.NET
+      href: develop-web-apps-with-aspnet.md
+    - name: Programmazione di rete in .NET Framework
+      href: network-programming/
+    - name: Configurazione di app
+      href: configure-apps/
+    - name: Compilazione di app con .NET Native
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Debug, traccia e profilatura'
+      href: debug-trace-profile/
+    - name: Distribuzione
+      href: deployment/
+    - name: Prestazioni
+      href: performance/
+    - name: Programmazione dinamica
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Interoperabilità con codice non gestito
+      href: interop/
+    - name: Riferimenti alle API non gestite
+      href: unmanaged-api/
+    - name: Servizi XAML
+      href: xaml-services/
+- name: Strumenti
+  href: tools/
+- name: Librerie di classi e API aggiuntive
+  href: additional-apis/
