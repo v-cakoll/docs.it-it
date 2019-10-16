@@ -2,12 +2,12 @@
 title: Contenitori, immagini e registri Docker
 description: Informazioni sul ruolo chiave dei registri nella modalità di distribuzione delle applicazioni da parte di Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673518"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394623"
 ---
 # <a name="docker-containers-images-and-registries"></a>Contenitori, immagini e registri Docker
 
@@ -15,13 +15,15 @@ Quando si usa Docker, si crea un'app o un servizio e si crea un pacchetto conten
 
 Per eseguire l'app o il servizio, si crea un'istanza dell'immagine dell'app per creare un contenitore che verrà eseguito nell'host Docker. I contenitori vengono inizialmente testati in un PC o in un ambiente di sviluppo.
 
-Le immagini vengono archiviate in un registro che svolge la funzione di una libreria di immagini. È necessario un registro durante la distribuzione negli agenti di orchestrazione di produzione. Docker mantiene un registro pubblico tramite l'[hub Docker](https://hub.docker.com/). Altri fornitori offrono registri per diverse raccolte di immagini, incluso il [Registro Azure Container](https://azure.microsoft.com/services/container-registry/). In alternativa, le aziende possono gestire un registro privato locale per le proprie immagini Docker.
+Le immagini vengono archiviate in un registro che svolge la funzione di una libreria di immagini. È necessario un registro durante la distribuzione negli agenti di orchestrazione di produzione. Docker mantiene un registro pubblico tramite [Docker Hub](https://hub.docker.com/). Altri fornitori offrono registri per diverse raccolte di immagini, incluso il [Registro Azure Container](https://azure.microsoft.com/services/container-registry/). In alternativa, le aziende possono gestire un registro privato locale per le proprie immagini Docker.
 
 La figura 1-4 mostra la relazione tra le immagini e i registri in Docker e altri componenti. Mostra inoltre le varie offerte dei fornitori per i registri.
 
-![Tassonomia di base in Docker: il registro è paragonabile a una libreria in cui le immagini sono archiviate e disponibili per il pull per la creazione di contenitori per eseguire servizi o app Web. Sono disponibili registri Docker privati in locale e nel cloud pubblico. L'hub Docker è un registro pubblico gestito da Docker. Oltre a Docker Trusted Registry, una soluzione di livello aziendale, Azure offre il Registro Azure Container. Anche AWS, Google e altri hanno registri contenitori.](./media/image4.png)
+![Diagramma che mostra la tassonomia di base in docker.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **Figura 1-4**. Tassonomia dei termini e dei concetti di Docker
+
+il registro è paragonabile a una libreria in cui le immagini sono archiviate e disponibili per il pull per la creazione di contenitori per eseguire servizi o app Web. Sono disponibili registri Docker privati in locale e nel cloud pubblico. L'hub Docker è un registro pubblico gestito da Docker. Oltre a Docker Trusted Registry, una soluzione di livello aziendale, Azure offre il Registro Azure Container. Anche AWS, Google e altri hanno registri contenitori.
 
 L'inserimento delle immagini in un registro permette di archiviare bit di applicazioni statici e immutabili, incluse tutte le dipendenze, a livello di framework. È quindi possibile creare diverse versioni delle immagini e distribuirle in più ambienti per offrire un'unità di distribuzione coerente.
 

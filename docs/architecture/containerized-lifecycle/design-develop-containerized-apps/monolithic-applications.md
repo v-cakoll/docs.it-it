@@ -2,12 +2,12 @@
 title: Applicazioni monolitiche
 description: Concetti di base dell'inserimento di applicazioni monolitiche in contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673598"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394716"
 ---
 # <a name="monolithic-applications"></a>Applicazioni monolitiche
 
@@ -17,11 +17,11 @@ Per gestire questo modello, distribuire un singolo contenitore per rappresentare
 
 Tuttavia, in base al principio secondo il quale un contenitore esegue solo un'operazione e la esegue in un unico processo, lo schema monolitico potrebbe generare conflitti. È possibile includere più componenti/librerie o livelli interni in ogni contenitore, come illustrato nella figura 4-1.
 
-![La maggior parte delle funzionalità di un'app monolitica risiede in un unico processo o contenitore e l'app è suddivisa in componenti, librerie o livelli interni.](./media/image1.png)
+![Diagramma che illustra un'app monolitica che consente di scalare in orizzontale clonando l'app.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Figura 4-1.** Esempio di architettura di un'applicazione monolitica
 
-Lo svantaggio di questo approccio diventa evidente con l'eventuale crescita dell'applicazione, che ne richiede il ridimensionamento. Se l'intera applicazione è stata ridimensionata, non ci sono problemi. Tuttavia, nella maggior parte dei casi, solo alcune parti dell'applicazione rappresentano colli di bottiglia che richiedono il ridimensionamento, mentre altri componenti vengono usati di meno.
+La maggior parte delle funzionalità di un'app monolitica risiede in un unico processo o contenitore e l'app è suddivisa in componenti, librerie o livelli interni. Lo svantaggio di questo approccio diventa evidente con l'eventuale crescita dell'applicazione, che ne richiede il ridimensionamento. Se l'intera applicazione è stata ridimensionata, non ci sono problemi. Tuttavia, nella maggior parte dei casi, solo alcune parti dell'applicazione rappresentano colli di bottiglia che richiedono il ridimensionamento, mentre altri componenti vengono usati di meno.
 
 Usando il tipico esempio di e-commerce, la parte che probabilmente sarà necessario ridimensionare è il componente relativo alle informazioni sui prodotti. Il numero di clienti che visualizzano i prodotti è molto superiore al numero di quelli che li acquistano. Molti più clienti usano il carrello per poi usare la pipeline di pagamento, meno clienti aggiungono commenti o visualizzano la cronologia degli acquisti. E probabilmente sono pochi i dipendenti, in una singola area, che avranno bisogno di gestire i contenuti e le campagne di marketing. Con il ridimensionamento della progettazione monolitica, tutto il codice viene distribuito più volte.
 
@@ -31,7 +31,7 @@ L'approccio monolitico è comune e molte organizzazioni usano questo metodo nell
 
 Dal punto di vista dell'infrastruttura, ogni server può eseguire molte applicazioni all'interno dello stesso host e avere un rapporto accettabile di efficienza nell'utilizzo di risorse, come illustrato nella figura 4-2.
 
-![Un singolo host può eseguire più app in contenitori separati.](./media/image2.png)
+![Diagramma che mostra un host con più app in contenitori distinti.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **Figura 4-2**. Host che esegue più app in contenitori separati
 
@@ -43,9 +43,9 @@ Infine, dal punto di vista della disponibilità, le applicazioni monolitiche dev
 
 È possibile distribuire più VM come host Docker ed eseguire un numero qualsiasi di contenitori per VM. Quindi, usando Azure Load Balancer è possibile gestire la scalabilità, come illustrato nella figura 4-3.
 
-![È possibile eseguire la scalabilità orizzontale di un'app monolitica in diversi host che eseguono l'app in contenitori.](./media/image3.png)
+![Diagramma che mostra un'app monolitica ridimensionata in host diversi.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Figura 4-3**. Più host che eseguono la scalabilità orizzontale di una singola applicazione in app/contenitori Docker
+**Figura 4-3**. Più host con scalabilità orizzontale di una singola applicazione Docker
 
 È possibile gestire la distribuzione degli stessi host tramite le tecniche di distribuzione tradizionali.
 
@@ -71,7 +71,7 @@ Servizio app di Azure è intuitivo e consente di essere operativi in tempi rapid
 
 Ora quando si usa Visual Studio 2017, il supporto dei contenitori in Servizio app di Azure offre la possibilità di includere ciò che si vuole nell'ambiente dell'applicazione, come illustrato nella figura 4-4. Se è stata aggiunta una dipendenza all'app perché l'app viene eseguita in un contenitore, è possibile includere tale dipendenza nel Dockerfile o nell'immagine Docker.
 
-![Procedura guidata di Visual Studio per la pubblicazione in Servizio app di Azure, con la selezione del registro contenitori evidenziata.](./media/image4.png)
+![Screenshot della finestra di dialogo Crea servizio app che mostra un Container Registry.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Pubblicazione di un contenitore in Servizio app di Azure da app/contenitori di Visual Studio
 

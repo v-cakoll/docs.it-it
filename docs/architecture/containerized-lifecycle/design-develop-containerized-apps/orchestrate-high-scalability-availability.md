@@ -2,12 +2,12 @@
 title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 description: Le applicazioni di produzione reale devono essere distribuite e gestite con agenti di orchestrazione che gestiscono l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dcc1c8686210e34df33aef024429898a098fa33d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990490"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395416"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -15,7 +15,7 @@ L'uso di agenti di orchestrazione per applicazioni pronte per la produzione è e
 
 La figura 4-6 illustra la distribuzione in un cluster di un'applicazione costituita da più microservizi (contenitori).
 
-![Applicazioni Docker composte in un cluster: usare un contenitore per ogni istanza del servizio. I contenitori Docker sono "unità di distribuzione" e un contenitore è un'istanza di Docker. Un host gestisce molti contenitori](./media/image6.png)
+![Diagramma che mostra le applicazioni Docker composte in un cluster.](./media/orchestrate-high-scalability-availability/composed-docker-applications-cluster.png)
 
 **Figura 4-6**. Cluster di contenitori
 
@@ -35,12 +35,12 @@ I concetti di cluster e utilità di pianificazione sono strettamente correlati, 
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Piattaforme software per il clustering, l'orchestrazione e la pianificazione dei contenitori
 
-| Piattaforma | Commenti |
+| Piattaforma | Comments |
 |:---:|:---|
-| **Kubernetes** <br/> ![Logo di Kubernetes](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. Consente di automatizzare la distribuzione, il ridimensionamento e la gestione di contenitori di applicazioni in cluster di host. <br/> <br/> *Kubernetes* offre un'infrastruttura incentrata sui contenitori che raggruppa i contenitori di applicazioni in unità logiche per semplificarne la gestione e l'individuazione. <br/> <br/> *Kubernetes* è maturo in Linux, meno maturo in Windows. |
-| **Servizio Azure Kubernetes** <br/> ![Logo del servizio Azure Kubernetes](./media/aks-logo.png) | Il [servizio Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) è un servizio di orchestrazione dei contenitori Kubernetes gestito in Azure, che semplifica gestione, distribuzioni e operazioni del cluster Kubernetes. |
-| **Azure Service Fabric** <br/> ![Logo di Azure Service Fabric](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. È un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di macchine virtuali. Service Fabric può distribuire servizi come contenitori o come processi semplici. Può anche combinare servizi nei processi con servizi nei contenitori entro la stessa applicazione e lo stesso cluster. <br/> <br/> I cluster di *Service Fabric* possono essere distribuiti in Azure, in locale o in qualsiasi cloud. La distribuzione in Azure è tuttavia semplificata con un approccio gestito. <br/> <br/> *Service Fabric* offre [modelli di programmazione di Service Fabric](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) prescrittivi aggiuntivi e facoltativi, come [servizi con stato](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) e [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/). <br/> <br/> *Service Fabric* è maturo in Windows (anni di evoluzione in Windows), meno maturo in Linux. <br/> <br/> I contenitori Linux e Windows sono supportati in Service Fabric dal 2017. |
-| **Azure Service Fabric Mesh** <br/> ![Logo di Azure Service Fabric Mesh](./media/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) è analogo a Service Fabric in termini di affidabilità, prestazioni cruciali e scalabilità, ma offre anche una piattaforma completamente gestita e serverless. Non è necessario gestire un cluster, macchine virtuali, risorse di archiviazione o configurazione della rete. È sufficiente concentrarsi sullo sviluppo dell'applicazione. <br/> <br/> *Service Fabric Mesh* supporta contenitori Windows e Linux, consentendo lo sviluppo con qualsiasi linguaggio di programmazione e framework di propria scelta.
+| **Kubernetes** <br/> immagine ![An del logo Kubernetes. ](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. Consente di automatizzare la distribuzione, il ridimensionamento e la gestione di contenitori di applicazioni in cluster di host. <br/> <br/> *Kubernetes* offre un'infrastruttura incentrata sui contenitori che raggruppa i contenitori di applicazioni in unità logiche per semplificarne la gestione e l'individuazione. <br/> <br/> *Kubernetes* è maturo in Linux, meno maturo in Windows. |
+| **Servizio Azure Kubernetes** <br/> immagine ![An del logo del servizio Kubernetes di Azure. ](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | Il [servizio Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/) è un servizio di orchestrazione dei contenitori Kubernetes gestito in Azure, che semplifica gestione, distribuzioni e operazioni del cluster Kubernetes. |
+| **Azure Service Fabric** <br/> immagine ![An del logo di Azure Service Fabric. ](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. È un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di macchine virtuali. Service Fabric può distribuire servizi come contenitori o come processi semplici. Può anche combinare servizi nei processi con servizi nei contenitori entro la stessa applicazione e lo stesso cluster. <br/> <br/> I cluster di *Service Fabric* possono essere distribuiti in Azure, in locale o in qualsiasi cloud. La distribuzione in Azure è tuttavia semplificata con un approccio gestito. <br/> <br/> *Service Fabric* offre [modelli di programmazione di Service Fabric](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) prescrittivi aggiuntivi e facoltativi, come [servizi con stato](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) e [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/). <br/> <br/> *Service Fabric* è maturo in Windows (anni di evoluzione in Windows), meno maturo in Linux. <br/> <br/> I contenitori Linux e Windows sono supportati in Service Fabric dal 2017. |
+| **Azure Service Fabric Mesh** <br/> immagine ![An del logo Azure Service Fabric mesh. ](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) è analogo a Service Fabric in termini di affidabilità, prestazioni cruciali e scalabilità, ma offre anche una piattaforma completamente gestita e serverless. Non è necessario gestire un cluster, macchine virtuali, risorse di archiviazione o configurazione della rete. È sufficiente concentrarsi sullo sviluppo dell'applicazione. <br/> <br/> *Service Fabric Mesh* supporta contenitori Windows e Linux, consentendo lo sviluppo con qualsiasi linguaggio di programmazione e framework di propria scelta.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Uso degli agenti di orchestrazione basati su contenitori in Azure
 
@@ -54,7 +54,7 @@ Il servizio Azure Kubernetes consente di semplificare la creazione, la configura
 
 Il servizio Azure Kubernetes ottimizza la configurazione degli strumenti e delle tecnologie open source più diffusi per clustering Docker in modo specifico per Azure. Si ottiene una soluzione che offre la portabilità per la configurazione di contenitori e applicazioni. È sufficiente selezionare le dimensioni, il numero di host e gli strumenti dell'agente di orchestrazione. Il servizio Azure Kubernetes gestisce tutte le altre operazioni.
 
-![Struttura del cluster Kubernetes: è presente un nodo master che gestisce DNS, utilità di pianificazione, proxy e così via e diversi nodi del ruolo di lavoro che ospitano i contenitori.](media/image36.png)
+![Diagramma che mostra una struttura del cluster Kubernetes.](./media/orchestrate-high-scalability-availability/kubernetes-cluster-simplified-structure.png)
 
 **Figura 4-7**. Struttura semplificata e topologia del cluster Kubernetes
 
@@ -64,7 +64,7 @@ La figura 4-7 illustra la struttura di un cluster Kubernetes in cui un nodo mast
 
 Nell'ambiente di sviluppo che [Docker ha annunciato nel mese di luglio 2018](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) Kubernetes può essere eseguito anche in un singolo computer di sviluppo (Windows 10 o macOS) semplicemente installando [Docker Desktop](https://www.docker.com/community-edition). In un secondo momento sarà possibile procedere alla distribuzione nel cloud (servizio Azure Kubernetes) per altri test di integrazione, come illustrato nella figura 4-8.
 
-![Docker ha annunciato il supporto dei computer di sviluppo per i cluster Kubernetes nel luglio 2018 con Docker Desktop.](media/kubernetes-development-environment.png)
+![Diagramma che mostra Kubernetes in un computer di sviluppo quindi distribuito in AKS.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
 **Figura 4-8**. Esecuzione di Kubernetes in computer di sviluppo e nel cloud
 
@@ -96,13 +96,13 @@ Come accennato, Azure Dev Spaces usa i grafici Helm nella distribuzione delle ap
 
 Azure Dev Spaces aiuta i team di sviluppo a essere più produttivi in Kubernetes perché consente di eseguire rapidamente l'iterazione e il debug del codice direttamente in un cluster Kubernetes globale in Azure usando semplicemente Visual Studio 2017 o Visual Studio Code. Tale cluster Kubernetes in Azure è un cluster Kubernetes gestito condiviso, in modo che il team possa lavorare in modo collaborativo. È possibile sviluppare il codice in isolamento e quindi distribuirlo al cluster globale per poi eseguire test completi con altri componenti senza replicare o simulare le dipendenze.
 
-Come illustrato nella figura 4-9, la funzionalità che caratterizza maggiormente Azure Dev Spaces è la capacità di creare "spazi" che possono essere eseguiti in modo integrato rispetto al resto della distribuzione globale nel cluster.
+Come illustrato nella figura 4-9, la funzionalità più differenziante Azure Dev Spaces è la funzionalità di creazione di "spazi" che può essere eseguita in modo integrato al resto della distribuzione globale nel cluster:
 
-![Azure Dev Spaces può combinare in modo trasparente microservizi di produzione con istanze di contenitore di sviluppo, per testare facilmente le nuove versioni.](media/image38.png)
+![Diagramma che illustra l'uso di più spazi in Azure Dev Spaces.](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
 
 **Figura 4-9**. Uso di più spazi in Azure Dev Spaces
 
-Fondamentalmente è possibile impostare uno spazio di sviluppo condiviso in Azure. Ogni sviluppatore può concentrarsi solo sulla parte assegnata dell'applicazione e sviluppare in modo iterativo il codice pre-commit in uno spazio di sviluppo che già contiene tutti gli altri servizi e le risorse del cloud da cui dipendono i suoi scenari. Le dipendenze sono sempre aggiornate e gli sviluppatori lavorano in un ambiente che rispecchia quello di produzione.
+Azure Dev Spaces può combinare in modo trasparente microservizi di produzione con istanze di contenitore di sviluppo, per testare facilmente le nuove versioni. Fondamentalmente è possibile impostare uno spazio di sviluppo condiviso in Azure. Ogni sviluppatore può concentrarsi solo sulla parte assegnata dell'applicazione e sviluppare in modo iterativo il codice pre-commit in uno spazio di sviluppo che già contiene tutti gli altri servizi e le risorse del cloud da cui dipendono i suoi scenari. Le dipendenze sono sempre aggiornate e gli sviluppatori lavorano in un ambiente che rispecchia quello di produzione.
 
 Azure Dev Spaces usa il concetto di spazio, che consente di lavorare in isolamento e senza timore di inficiare il lavoro degli altri membri del team. Questa funzionalità si basa sull'uso di prefissi URL, perciò se si usa un prefisso di Azure Dev Spaces nell'URL per una richiesta del contenitore, Azure Dev Spaces esegue una versione speciale del contenitore distribuito per quello spazio, se esistente. In caso contrario, verrà eseguita la versione globale/consolidata.
 
@@ -137,11 +137,11 @@ Service Fabric è agnostico rispetto al modo in cui si crea il servizio ed è po
 
 Come illustrato nella figura 4-10, è possibile creare ed eseguire microservizi in Service Fabric come processi semplici o come contenitori Docker. È anche possibile combinare microservizi basati su contenitori con microservizi basati su processi all'interno dello stesso cluster di Service Fabric.
 
-![Confronto tra cluster di Azure Service Fabric: microservizi basati su processi, in cui ogni nodo esegue un processo per ogni microservizio, e microservizi basati su contenitori, in cui ogni nodo esegue Docker con più contenitori, uno per ogni microservizio.](./media/azure-service-fabric-cluster-types.png)
+![Diagramma che mostra il confronto dei cluster di Azure Service Fabric.](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
 
 **Figura 4-10**. Distribuzione di microservizi come processi o contenitori in Azure Service Fabric
 
-I cluster di Service Fabric basati su host Linux e Windows possono eseguire rispettivamente contenitori Linux Docker e Windows.
+Nella prima immagine vengono visualizzati i microservizi come processi, in cui ogni nodo esegue un processo per ogni microservizio. Nella seconda immagine vengono visualizzati i microservizi come contenitori, dove ogni nodo esegue Docker con diversi contenitori, un contenitore per microservizio. I cluster di Service Fabric basati su host Linux e Windows possono eseguire rispettivamente contenitori Linux Docker e Windows.
 
 Per informazioni aggiornate sul supporto di contenitori in Azure Service Fabric, vedere [Service Fabric e contenitori](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
@@ -149,11 +149,11 @@ Service Fabric è un buon esempio di piattaforma in cui è possibile definire un
 
 Come illustrato nella figura 4-10 e da un punto di vista di microservizio logico/aziendale, quando si implementa un servizio Reliable con stato di Service Fabric, è in genere necessario implementare due livelli di servizi. Il primo è il servizio Reliable con stato di back-end, che gestisce più partizioni (ciascuna partizione è un servizio con stato). Il secondo è il servizio front-end, o Servizio gateway, responsabile del routing e dell'aggregazione dei dati in più partizioni o istanze del servizio con stato. Tale Servizio gateway gestisce anche la comunicazione lato client con i cicli di ripetizione che accedono al servizio back-end. Viene chiamato Servizio gateway se si implementa il servizio personalizzato. In alternativa, è possibile usare il [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) di Service Fabric predefinito.
 
-![Service Fabric è in grado di supportare i diversi servizi Reliable con stato in contenitori.](./media/service-fabric-stateful-business-microservice.png)
+![Diagramma che mostra diversi servizi con stato in contenitori.](./media/orchestrate-high-scalability-availability/service-fabric-stateful-business-microservice.png)
 
 **Figura 4-11**. Microservizio aziendale con diverse istanze del servizio con stato e un front-end di gateway personalizzato
 
-In ogni caso, quando si usano i servizi Reliable con stato di Service Fabric, si ottiene anche un microservizio logico o aziendale (Bounded Context) che è costituito da più servizi fisici. Ognuno di questi, il servizio gateway e il servizio delle partizioni, può essere implementato come servizio API Web ASP.NET., come illustrato nella figura 4-11.
+In ogni caso, quando si usano i servizi Reliable con stato di Service Fabric, si ottiene anche un microservizio logico o aziendale (Bounded Context) che è costituito da più servizi fisici. Ognuno di questi, il servizio gateway e il servizio delle partizioni, può essere implementato come servizio API Web ASP.NET., come illustrato nella figura 4-11. Service Fabric è in grado di supportare i diversi servizi Reliable con stato in contenitori.
 
 In Service Fabric, è possibile raggruppare e distribuire gruppi di servizi come [Applicazione di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model), cioè l'unità di creazione pacchetto e distribuzione per l'agente di orchestrazione o il cluster. Di conseguenza, anche l'Applicazione di Service Fabric può essere mappata a questo limite del microservizio aziendale e logico autonomo, o Bounded Context, per poter distribuire questi servizi in modo autonomo.
 
@@ -161,15 +161,15 @@ In Service Fabric, è possibile raggruppare e distribuire gruppi di servizi come
 
 Per quanto riguarda i contenitori in Service Fabric, è anche possibile distribuire servizi in immagini del contenitore all'interno di un cluster di Service Fabric. Come illustrato nella figura 4-12, nella maggior parte dei casi è presente un solo contenitore per ogni servizio.
 
-![Un'applicazione di Service Fabric può eseguire diversi contenitori con accesso a un database esterno. L'intero set costituisce il limite logico di un microservizio aziendale](./media/azure-service-fabric-business-microservice.png)
+![Diagramma che mostra un contenitore per servizio in un database.](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
 
 **Figura 4-12**. Microservizio aziendale con numerosi servizi (contenitori) in Service Fabric
 
-I cosiddetti contenitori "collaterali" (due contenitori che devono essere distribuiti insieme nell'ambito di un servizio logico), tuttavia, sono possibili anche in Service Fabric. La cosa importante è che un microservizio aziendale è rappresentato dal limite logico intorno a diversi elementi coesivi. In molti casi, può trattarsi di un unico servizio con un unico modello di dati, ma in altri casi possono essere presenti anche diversi servizi fisici.
+Un'applicazione Service Fabric può eseguire diversi contenitori che accedono a un database esterno e l'intero set sarebbe il limite logico di un microservizio aziendale. I cosiddetti contenitori "collaterali" (due contenitori che devono essere distribuiti insieme nell'ambito di un servizio logico), tuttavia, sono possibili anche in Service Fabric. La cosa importante è che un microservizio aziendale è rappresentato dal limite logico intorno a diversi elementi coesivi. In molti casi, può trattarsi di un unico servizio con un unico modello di dati, ma in altri casi possono essere presenti anche diversi servizi fisici.
 
 Si noti che nella stessa applicazione di Service Fabric è possibile combinare servizi in processi e servizi all'interno di contenitori, come illustrato nella figura 4-13.
 
-![Applicazione di Service Fabric che esegue servizi e contenitori nello stesso nodo.](./media/business-microservice-mapped-to-service-fabric-application.png)
+![Diagramma che illustra i servizi nei processi e nei contenitori nella stessa app.](./media/orchestrate-high-scalability-availability/business-microservice-mapped-to-service-fabric-application.png)
 
 **Figura 4-13**. Microservizio aziendale mappato a un'applicazione di Service Fabric con contenitori e servizi con stato
 
@@ -181,17 +181,17 @@ Come accennato in precedenza, ogni microservizio (Bounded Context logico) deve e
 
 Ma anche i servizi stessi possono essere senza stato in Service Fabric, e ciò significa che i dati risiedono all'interno del microservizio. I dati potrebbero esistere non solo nello stesso server, ma all'interno del processo del microservizio, in memoria e persistenti sulle unità disco rigido e replicate in altri nodi. La figura 4-14 illustra i diversi approcci.
 
-![Nei servizi senza stato, lo stato (persistenza, database) viene mantenuto all'esterno del microservizio. Nei servizi con stato, lo stato viene mantenuto all'interno del microservizio.](./media/stateless-vs-stateful-microservices.png)
+![Diagramma che mostra un confronto tra un servizio con stato e senza stato.](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
 
 **Figura 4-14**. Microservizi con stato e senza stato
 
-Un approccio senza stato è perfettamente valido ed è più facile da implementare rispetto ai microservizi con stato, perché l'approccio è simile agli schemi tradizionali e noti. Tuttavia, i microservizi senza stato impongono la latenza tra il processo e le origini dati, oltre a comportare più elementi quando si prova a migliorare le prestazioni con cache e code aggiuntive. Il risultato è che si può finire con architetture complesse che hanno un numero eccessivo di livelli.
+Nei servizi senza stato, lo stato (persistenza, database) viene mantenuto all'esterno del microservizio. Nei servizi con stato lo stato viene mantenuto all'interno del microservizio. Un approccio senza stato è perfettamente valido ed è più facile da implementare rispetto ai microservizi con stato, perché l'approccio è simile agli schemi tradizionali e noti. Tuttavia, i microservizi senza stato impongono la latenza tra il processo e le origini dati, oltre a comportare più elementi quando si prova a migliorare le prestazioni con cache e code aggiuntive. Il risultato è che si può finire con architetture complesse che hanno un numero eccessivo di livelli.
 
 Al contrario, i [microservizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) possono rappresentare un'ottima soluzione in scenari avanzati, perché non prevedono alcuna latenza tra la logica di dominio e i dati. L'elaborazione di grandi quantità di dati, i back-end per i giochi, i database come servizio e altri scenari a bassa latenza traggono tutti vantaggio dai servizi con stato, che abilitano lo stato locale per un accesso più rapido.
 
 I servizi con e senza stato sono complementari. Ad esempio, come si può vedere nel diagramma a destra della figura 4-14, un servizio con stato può essere suddiviso in più partizioni. Per accedere a tali partizioni, potrebbe essere necessario un servizio senza stato che agisca come servizio gateway che sappia come risolvere ogni partizione in base alle chiavi di partizione.
 
-I servizi con stato presentano comunque degli svantaggi, perché l'aumento delle istanze comporta un elevato livello di complessità. La funzionalità che verrebbe di solito implementata dai sistemi di database esterni deve essere indirizzata alle attività quali la replica di dati tra microservizi con stato e partizionamento dei dati. Tuttavia, si tratta di una delle aree in cui un agente di orchestrazione come [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture), con i suoi [servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis), può essere di grande aiuto, in particolare semplificando i microservizi con stato con l'[API Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+I servizi con stato presentano comunque degli svantaggi, Impongono un livello di complessità elevato da scalare orizzontalmente. Le funzionalità che in genere verrebbero implementate dai sistemi di database esterni devono essere risolte per attività come la replica dei dati in microservizi con stato e il partizionamento dei dati. Tuttavia, si tratta di una delle aree in cui un agente di orchestrazione come [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture), con i suoi [servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis), può essere di grande aiuto, in particolare semplificando i microservizi con stato con l'[API Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 Altri framework del microservizio che abilitano i servizi con stato, che supportano lo schema Actor, e che migliorano la tolleranza di errore e la latenza tra logica di business e dati, sono Microsoft [Orleans](https://github.com/dotnet/orleans), di Microsoft Research, e [Akka.NET](https://getakka.net/). Entrambi i framework stanno attualmente migliorando il supporto per Docker.
 
@@ -203,7 +203,7 @@ Azure Service Fabric Mesh è un servizio completamente gestito che consente agli
 
 Come illustrato nella figura 4-15, è possibile eseguire e ridimensionare le applicazioni ospitate in Service Fabric Mesh senza doversi preoccupare dell'infrastruttura su cui sono basate.
 
-![È possibile distribuire in Azure Service Fabric Mesh un'app multicontenitore in esecuzione nel desktop di Docker senza doversi preoccupare dell'infrastruttura.](media/image39.png)
+![Diagramma che mostra la distribuzione da un repository locale a Service Fabric mesh.](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
 
 **Figura 4-15**. Distribuzione di un'applicazione di microservizi/contenitori in Service Fabric Mesh
 
@@ -215,7 +215,7 @@ Per altre informazioni, vedere la [documentazione di Service Fabric Mesh](https:
 
 La tabella seguente offre indicazioni sull'agente di orchestrazione da usare a seconda dei carichi di lavoro e del sistema operativo.
 
-![Il servizio Azure Kubernetes è più maturo in Linux che in Windows e viene usato principalmente per la distribuzione di microservizi basati su contenitori. Azure Service Fabric (sia cluster che mesh) è più maturo in Windows che in Linux ed è comunemente usato per microservizi basati su contenitori, microservizi basati su processi normali e servizi con stato.](media/image40.png)
+![Immagine di una tabella che confronta Kubernetes e Service Fabric.](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
 
 **Figura 4-16**. Selezione dell'agente di orchestrazione nel materiale sussidiario su Azure
 

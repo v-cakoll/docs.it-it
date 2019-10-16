@@ -2,12 +2,12 @@
 title: Stato e dati nelle applicazioni di Docker
 description: Informazioni sull'opzione disponibile per salvare lo stato nelle applicazioni in contenitori.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394631"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
@@ -47,7 +47,7 @@ I **montaggi `tmpfs`** sono cartelle virtuali presenti solo nella memoria dell'h
 
 Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in host Docker diversi. A tale scopo, si può tuttavia usare un driver del volume che supporta gli host remoti.
 
-![I volumi possono essere condivisi tra contenitori, ma solo nello stesso host, a meno che non si usi un driver remoto che supporta host remoti. ](./media/image5.png)
+![Diagramma che mostra i volumi Docker archiviati all'esterno dei contenitori.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Figura 4-5**. Volumi di dati e origini dati esterne per applicazioni basate su contenitore
 
@@ -63,7 +63,7 @@ Quando i contenitori Docker vengono gestiti da un agente di orchestrazione, i co
 
 - L'archiviazione tabelle archivia i set di dati strutturati. L'archiviazione tabelle è un archivio dati chiave-attributo NoSQL, che consente di sviluppare e di accedere rapidamente a quantità elevate di dati.
 
-**Database relazionali e database NoSQL.** Esistono numerose opzioni per i database esterni, dai database relazionali come SQL Server, PostgreSQL, Oracle o NoSQL ai database NoSQL come Azure Cosmos DB, MongoDB e così via. Questi database non verranno descritti in questa guida perché riguardano un argomento diverso.
+**Database relazionali e database NoSQL.** Sono disponibili molte opzioni per i database esterni, da database relazionali come SQL Server, PostgreSQL, Oracle o database NoSQL come Azure Cosmos DB, MongoDB e così via. Questi database non verranno spiegati come parte di questa guida perché sono un argomento completamente diverso.
 
 >[!div class="step-by-step"]
 >[Precedente](monolithic-applications.md)
