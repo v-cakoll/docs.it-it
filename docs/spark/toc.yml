@@ -3,6 +3,8 @@
 - name: Panoramica
   expanded: true
   items:
+    - name: Che cos'è Apache Spark?
+      href: what-is-spark.md
     - name: Che cos'è .NET per Apache Spark?
       href: what-is-apache-spark-dotnet.md
 - name: Esercitazioni

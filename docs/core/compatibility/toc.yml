@@ -22,19 +22,19 @@
           href: 3.0.9-3.0rc1.md
     - name: Per categoria
       items:
+        - name: ASP.NET Core
+          href: aspnetcore.md
         - name: CoreFx
           href: corefx.md
         - name: Crittografia
           href: cryptography.md
+        - name: Entity Framework Core
+          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
         - name: Globalizzazione
           href: globalization.md
-        - name: Servizi di rete
+        - name: Rete
           href: networking.md
         - name: Visual Basic
           href: visualbasic.md
-        - name: ASP.NET Core (in GitHub)
-          href: 'https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0'
-        - name: Entity Framework Core
-          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
         - name: Windows Form
           href: winforms.md
