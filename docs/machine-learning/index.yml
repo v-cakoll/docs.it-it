@@ -10,12 +10,12 @@ metadata:
   author: natke
   ms.author: nakersha
   ms.date: 10/02/2019
-  ms.openlocfilehash: d31cdb8046444b88a132c63867f590d72e624382
-  ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
+  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/04/2019
-  ms.locfileid: "71957226"
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72320527"
 landingContent:
 - title: Nozioni fondamentali su ML.NET
   linkLists:
@@ -55,13 +55,13 @@ landingContent:
       url: tutorials/github-issue-classification.md
     - text: Classificare le immagini con TensorFlow (API)
       url: tutorials/image-classification.md
-    - text: Rilevare oggetti nell'API immagini)
+    - text: Rilevare gli oggetti nelle immagini (API)
       url: tutorials/object-detection-onnx.md
     - text: Rilevare le anomalie nelle vendite di prodotti (API)
       url: tutorials/sales-anomaly-detection.md
     - text: Creazione di un Movie Recommender (API)
       url: tutorials/movie-recommendation.md
-- title: Guide alle procedure
+- title: Guide pratiche
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -77,7 +77,7 @@ landingContent:
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: Ripetere il training di un modello
       url: how-to-guides/retrain-model-ml-net.md
-- title: Riferimenti
+- title: Reference
   linkLists:
   - linkListType: reference
     links:

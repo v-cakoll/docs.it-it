@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Proiettare un grafico di oggetti (Visual Basic)'
+title: 'Procedura: proiettare un oggetto grafico (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038234"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320264"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="b901a-102">Procedura: Proiettare un grafico di oggetti (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b901a-102">How to: Project an Object Graph (Visual Basic)</span></span>
-<span data-ttu-id="b901a-103">In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.</span><span class="sxs-lookup"><span data-stu-id="b901a-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="be5d6-102">Procedura: proiettare un oggetto grafico (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be5d6-102">How to: Project an Object Graph (Visual Basic)</span></span>
+<span data-ttu-id="be5d6-103">In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.</span><span class="sxs-lookup"><span data-stu-id="be5d6-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b901a-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="b901a-104">Example</span></span>  
- <span data-ttu-id="b901a-105">Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del documento XML [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b901a-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="be5d6-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="be5d6-104">Example</span></span>  
+ <span data-ttu-id="be5d6-105">Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) Documento XML.</span><span class="sxs-lookup"><span data-stu-id="be5d6-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
   
 ```vb  
 Class Address  
@@ -296,11 +296,11 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="b901a-106">Nell'esempio il risultato della query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] viene restituito come oggetto <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="b901a-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="b901a-107">Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="b901a-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="b901a-108">Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.</span><span class="sxs-lookup"><span data-stu-id="b901a-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="be5d6-106">Nell'esempio il risultato della query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] viene restituito come oggetto <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="be5d6-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="be5d6-107">Gli elementi della classe `PurchaseOrder` sono di tipo <xref:System.Collections.Generic.IEnumerable%601> di `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="be5d6-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="be5d6-108">Il codice usa il metodo di estensione <xref:System.Linq.Enumerable.ToList%2A> per creare una raccolta <xref:System.Collections.Generic.List%601> dai risultati della query.</span><span class="sxs-lookup"><span data-stu-id="be5d6-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="b901a-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="b901a-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="be5d6-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="be5d6-109">The example produces the following output:</span></span>  
   
-```  
+```console  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b901a-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b901a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be5d6-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="be5d6-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [<span data-ttu-id="b901a-111">Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b901a-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="be5d6-111">Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be5d6-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
