@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701049"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396005"
 ---
 # <a name="extension-methods-visual-basic"></a>Metodi di estensione (Visual Basic)
 
 I metodi di estensione consentono agli sviluppatori di aggiungere funzionalità personalizzate ai tipi di dati già definiti senza creare un nuovo tipo derivato. I metodi di estensione consentono di scrivere un metodo che può essere chiamato come se fosse un metodo di istanza del tipo esistente.
-  
+
 ## <a name="remarks"></a>Note
 
 Un metodo di estensione può essere solo una routine `Sub` o una procedura `Function`. Non è possibile definire una proprietà, un campo o un evento di estensione. Tutti i metodi di estensione devono essere contrassegnati con l'attributo di estensione `<Extension>` dallo spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> e devono essere definiti in un [modulo](../../../language-reference/statements/module-statement.md). Se un metodo di estensione viene definito all'esterno di un modulo, il Visual Basic compilatore genera l'errore [BC36551](../../../misc/bc36551.md), "i metodi di estensione possono essere definiti solo nei moduli".
@@ -29,7 +29,7 @@ L'attributo `Extension` può essere applicato solo a una Visual Basic [`Module`]
 ## <a name="example"></a>Esempio
 
 Nell'esempio seguente viene definita un'estensione `Print` per il tipo di dati <xref:System.String>. Il metodo usa `Console.WriteLine` per visualizzare una stringa. Il parametro del metodo `Print`, `aString`, stabilisce che il metodo estende la classe <xref:System.String>.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Si noti che la definizione del metodo di estensione è contrassegnata con l'attributo di estensione `<Extension()>`. Contrassegnare il modulo in cui è definito il metodo è facoltativo, ma ogni metodo di estensione deve essere contrassegnato. per accedere all'attributo di estensione, è necessario importare <xref:System.Runtime.CompilerServices>.
@@ -45,7 +45,6 @@ L'esempio successivo, `PrintAndPunctuate`, è anche un'estensione di <xref:Syste
 Il metodo viene chiamato inviando in un argomento stringa per `punc`: `example.PrintAndPunctuate(".")`
 
 Nell'esempio seguente vengono illustrati `Print` e `PrintAndPunctuate` definiti e chiamati. <xref:System.Runtime.CompilerServices> viene importato nel modulo di definizione per consentire l'accesso all'attributo di estensione.
-
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -98,7 +97,7 @@ Se viene chiamato un metodo di estensione per un oggetto impostato su `Nothing`,
 - Delegati
 - Argomenti ByRef e ByVal
 - Parametri del metodo generico
-- Matrici
+- Array
 
 Poiché il primo parametro specifica il tipo di dati che il metodo di estensione estende, è obbligatorio e non può essere facoltativo. Per questo motivo, i parametri `Optional` e i parametri `ParamArray` non possono essere il primo parametro nell'elenco di parametri.
 
