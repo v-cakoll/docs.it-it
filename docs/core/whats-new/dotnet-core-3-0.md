@@ -7,22 +7,22 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216272"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395444"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novità di .NET Core 3.0
 
-Questo articolo descrive le novità di .NET Core 3.0. Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
+Questo articolo descrive le novità di .NET Core 3,0. Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Con il componente Windows Desktop di .NET Core 3.0 SDK, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) più avanti in questo articolo.
 
-.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio per Mac 8.3](/visualstudio/mac/install-preview)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
+.NET Core 3.0 aggiunge il supporto per C# 8.0. È consigliabile usare [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio per Mac 8,3](/visualstudio/mac/install-preview)o [Visual Studio Code](https://code.visualstudio.com/) con l'  **C# estensione**.
 
-[Scarica e inizia subito a usare .NET Core 3.0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
+[Scarica e inizia subito a usare .NET Core 3,0](https://aka.ms/netcore3download) in Windows, MacOS o Linux.
 
-Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Per ulteriori informazioni sulla versione, vedere l' [annuncio di .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 .NET Core RC1 è stato considerato pronto per la produzione da Microsoft ed è stato completamente supportato. Se si usa una versione di anteprima, è necessario passare alla versione RTM per il supporto continuo.
 
@@ -34,11 +34,11 @@ Per altre informazioni sul controllo delle versioni, vedere [Panoramica di come 
 
 ## <a name="c-80"></a>C# 8.0
 
-C# 8.0 fa anche parte di questa versione, che include la funzionalità dei tipi di riferimento Nullable, i flussi asincroni e altri modelli. Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
+C#8,0 fa anche parte di questa versione, che include la funzionalità dei tipi di riferimento Nullable, i flussi asincroni e altri modelli. Per altre informazioni sulle funzionalità di C# 8.0, vedere [Novità di C# 8.0](../../csharp/whats-new/csharp-8.md).
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Sebbene .NET Core 3.0 supporti **.NET standard 2.1**, il modello predefinito `dotnet new classlib` genera un progetto che ancora è destinato **.NET standard 2.0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
+Sebbene .NET Core 3,0 supporti **.NET Standard 2,1**, il modello predefinito `dotnet new classlib` genera un progetto che è ancora destinato **.NET standard 2,0**. Per destinarlo a **.NET Standard 2.1**, modificare il file di progetto e la proprietà `TargetFramework` in `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,7 +54,7 @@ Se si usa Visual Studio, è necessario [Visual Studio 2019](https://visualstudio
 
 ## <a name="improved-net-core-version-apis"></a>Miglioramento delle API della versione .NET Core
 
-A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Ad esempio:
+A partire da .NET Core 3.0, le API della versione di .NET Core restituiscono le informazioni previste. Esempio:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -109,10 +109,10 @@ Per pubblicare un file eseguibile singolo, impostare `PublishSingleFile` nel pro
 </PropertyGroup>
 ```
 
--oppure-
+oppure
 
 ```dotnetcli
-dotnet publish -r win10-x64 /p:PublishSingleFile=true
+dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
 Per altre informazioni sulla pubblicazione di file singolo, vedere il [documento sulla progettazione di un bundler con file singolo](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
@@ -336,7 +336,7 @@ Per altre informazioni, vedere l'[esercitazione sui flussi asincroni](../../csha
 
 ## <a name="ieee-floating-point-improvements"></a>Miglioramenti per le API a virgola mobile IEEE
 
-È in corso l'aggiornamento di API virgola mobile per conformità alla [revisione IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). L'obiettivo di queste modifiche è esporre tutte le operazioni **obbligatorie** e assicurarsi che, a livello di comportamento, siano conformi alla specifica IEEE. Per altre informazioni sui miglioramenti di virgola mobile, vedere il post di blog [Floating-Point Parsing and Formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) (Miglioramenti di analisi e formattazione di virgola mobile in .NET Core 3.0).
+È in corso l'aggiornamento di API virgola mobile per conformità alla [revisione IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). L'obiettivo di queste modifiche consiste nell'esporre tutte le operazioni **necessarie** e garantire che siano conformi alla specifica IEEE. Per altre informazioni sui miglioramenti a virgola mobile, vedere il post di Blog relativo all' [analisi a virgola mobile e alla formattazione in .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
 
 Di seguito sono riportate le correzioni per analisi e formattazione:
 
@@ -500,7 +500,7 @@ Per altre informazioni sul supporto limitato per la porta seriale in Linux, vede
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker e limiti di memoria cgroup
 
-L'esecuzione di .NET Core 3.0 in Linux con Docker funziona meglio con i limiti di memoria cgroup. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
+L'esecuzione di .NET Core 3,0 in Linux con Docker funziona meglio con i limiti di memoria cgroup. Eseguendo un contenitore Docker con limiti di memoria, ad esempio `docker run -m`, il comportamento di .NET Core cambia.
 
 - Dimensioni heap predefinite del Garbage Collector: massimo 20 MB o il 75% del limite di memoria nel contenitore.
 - È possibile impostare dimensioni esplicite come numero assoluto o percentuale di un limite cgroup.

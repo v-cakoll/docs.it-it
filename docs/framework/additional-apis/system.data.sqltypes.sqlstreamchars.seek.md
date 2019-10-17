@@ -1,5 +1,5 @@
 ---
-title: Metodo SqlStreamChars.Seek (Int64, SeekOrigin) (System.Data.SqlTypes)
+title: Metodo SqlStreamChars. Seek (Int64, SeekOrigin) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: db8aba0a86c140ba62af8056011226532d415951
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634356"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395588"
 ---
-# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Metodo SqlStreamChars.Seek (Int64, SeekOrigin)
+# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Metodo SqlStreamChars. Seek (Int64, SeekOrigin)
 
-Quando ne viene eseguito l'override in una classe derivata, imposta la posizione all'interno del flusso corrente. L'assembly contenente questo metodo ha una relazione di tipo friend SQLAccess. Si tratta per l'uso da SQL Server. Per altri database, usare il meccanismo di hosting fornito da tale database.
+Quando ne viene eseguito l'override in una classe derivata, imposta la posizione all'interno del flusso corrente. L'assembly che contiene questo metodo ha una relazione friend con SQLAccess. dll. È destinato all'uso da SQL Server. Per gli altri database, utilizzare il meccanismo di hosting fornito da tale database.
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
@@ -30,10 +30,10 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="parameters"></a>Parametri
 
 `offset`\
-Offset dei byte rispetto a `origin`.
+Offset di byte relativo a `origin`.
 
 `origin`\
-Uno dei valori di enumerazione che indica il punto di riferimento da cui ottenere la nuova posizione.
+Uno dei valori di enumerazione che indica il punto di riferimento dal quale ottenere la nuova posizione.
 
 ## <a name="returns"></a>Valore restituito
 
@@ -43,14 +43,14 @@ Nuova posizione all'interno del flusso corrente.
 ## <a name="remarks"></a>Note
 
 > [!WARNING]
-> Il `SqlStreamChars.Seek` metodo è privato e non deve essere utilizzato direttamente nel codice.
+> Il metodo `SqlStreamChars.Seek` è privato e non è destinato a essere usato direttamente nel codice.
 >
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questo metodo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (in System)
+**Assembly:** System. Data (in System. Data. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 076b5d628dfe83decdbbe2f5e74c50e08262c580
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700691"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395482"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Metodo ICorDebugCodeEnum::Next
 
@@ -41,22 +41,21 @@ HRESULT Next (
 
 ## <a name="parameters"></a>Parametri
 
- `celt`  
- in Numero di istanze di @no__t 0 da recuperare.
+`celt`  
+in Numero di istanze di @no__t 0 da recuperare.
 
- `values`  
- out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugCode`.
+`values`  
+out Matrice di puntatori, ciascuno dei quali punta a un oggetto `ICorDebugCode`.
 
- `pceltFetched`  
- out Puntatore al numero di istanze di @no__t 0 effettivamente restituite. Questo valore può essere null se `celt` è uno.
+`pceltFetched`  
+out Puntatore al numero di istanze di @no__t 0 effettivamente restituite. Questo valore può essere null se `celt` è uno.
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
- **Intestazione:** CorDebug. idl, CorDebug. h
+**Intestazione:** CorDebug.idl, CorDebug.h
 
- **Libreria** CorGuids.lib
+**Libreria:** CorGuids.lib
 
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

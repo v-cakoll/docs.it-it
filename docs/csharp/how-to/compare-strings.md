@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Confrontare stringhe -- Guida a C#'
+title: 'Procedura: Confrontare stringhe (Guida a C#)'
 description: Informazioni su come confrontare e ordinare i valori stringa, con o senza maiuscole, con o senza ordinamento specifico delle impostazioni cultura
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759872"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395452"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 
@@ -29,19 +29,19 @@ Quando si confrontano le stringhe, si definisce un ordine tra di esse. I confron
 
 ## <a name="default-ordinal-comparisons"></a>Confronti ordinali predefiniti
 
-Le operazioni più comuni:
+Per impostazione predefinita, le operazioni più comuni sono:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> e <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>, ovvero [gli operatori di uguaglianza `==` e `!=`](../language-reference/operators/equality-operators.md#string-equality)rispettivamente
 
-usano un confronto ordinale, un confronto con maiuscole/minuscole e le impostazioni cultura correnti. I risultati sono visualizzati nell'esempio seguente:
+eseguire un confronto ordinale con distinzione tra maiuscole e minuscole e, se necessario, usare le impostazioni cultura correnti. Nell'esempio seguente viene illustrato quanto segue:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-I confronti ordinali predefiniti non tengono conto delle regole linguistiche per il confronto di stringhe, ma viene confrontato il valore binario di ogni oggetto <xref:System.Char> nelle due stringhe. Di conseguenza, anche il confronto ordinale predefinito prevede la distinzione tra maiuscole e minuscole. 
+Il confronto ordinale predefinito non prende in considerazione le regole linguistiche quando si confrontano le stringhe. ma viene confrontato il valore binario di ogni oggetto <xref:System.Char> nelle due stringhe. Di conseguenza, anche il confronto ordinale predefinito prevede la distinzione tra maiuscole e minuscole.
 
-Si noti che il test di uguaglianza con <xref:System.String.Equals%2A?displayProperty=nameWithType> e <xref:System.String.op_Equality%2A?displayProperty=nameWithType> è diverso dal confronto di stringhe con i metodi <xref:System.String.CompareTo%2A?displayProperty=nameWithType> e <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mentre i test per verificare l'uguaglianza eseguono un confronto ordinale con distinzione tra maiuscole e minuscole, il metodo di confronto eseguire un confronto con distinzione tra maiuscole e minuscole e con distinzione delle impostazioni cultura usando le impostazioni cultura correnti. Dato che i metodi di confronto predefiniti spesso eseguono diversi tipi di confronti, è consigliabile chiarire sempre l'intento del codice chiamando un overload che specifichi in modo esplicito il tipo di confronto da eseguire.
+Si noti che il test per verificare l'uguaglianza con <xref:System.String.Equals%2A?displayProperty=nameWithType> e gli operatori `==` e `!=` differisce dal confronto tra stringhe usando i metodi <xref:System.String.CompareTo%2A?displayProperty=nameWithType> e <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mentre i test per l'uguaglianza eseguono un confronto ordinale con distinzione tra maiuscole e minuscole, i metodi di confronto eseguono un confronto con distinzione tra maiuscole e minuscole e con distinzione delle impostazioni cultura. Dato che i metodi di confronto predefiniti spesso eseguono diversi tipi di confronti, è consigliabile chiarire sempre l'intento del codice chiamando un overload che specifichi in modo esplicito il tipo di confronto da eseguire.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Confronti ordinali senza distinzione tra maiuscole e minuscole
 

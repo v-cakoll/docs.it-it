@@ -1,5 +1,5 @@
 ---
-title: Metodo SqlStreamChars.SetLength(Int64) (System.Data.SqlTypes)
+title: Metodo SqlStreamChars. selength (Int64) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6bdf7bf5b998135652bc63d8d3e6c71a61475d20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 291d6e9395581f2370dafc728521a314d54a686d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634298"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395729"
 ---
-# <a name="sqlstreamcharssetlengthint64-method"></a>Metodo SqlStreamChars.SetLength(Int64)
+# <a name="sqlstreamcharssetlengthint64-method"></a>Metodo SqlStreamChars. selength (Int64)
 
-Quando sottoposto a override in una classe derivata, rilascia le risorse usate dal flusso. L'assembly contenente questo metodo ha una relazione di tipo friend SQLAccess. Si tratta per l'uso da SQL Server. Per altri database, usare il meccanismo di hosting fornito da tale database.
+Quando sottoposto a override in una classe derivata, rilascia le risorse usate dal flusso. L'assembly che contiene questo metodo ha una relazione friend con SQLAccess. dll. È destinato all'uso da SQL Server. Per gli altri database, utilizzare il meccanismo di hosting fornito da tale database.
 
 ```csharp
 public abstract void SetLength (long value);
@@ -35,14 +35,14 @@ Lunghezza desiderata del flusso corrente in byte.
 ## <a name="remarks"></a>Note
 
 > [!WARNING]
-> Il `SqlStreamChars.SetLength` metodo è privato e non deve essere utilizzato direttamente nel codice.
+> Il metodo `SqlStreamChars.SetLength` è privato e non è destinato a essere usato direttamente nel codice.
 >
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questo metodo in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (in System)
+**Assembly:** System. Data (in System. Data. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

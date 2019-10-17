@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291739"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395919"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. Pipelines in .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291739"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>Quale problema risolve System. IO. Pipelines
+
 <!-- corner case doesn't MT (machine translate)   -->
 Le app che analizzano i dati di streaming sono costituite da codice standard con molti flussi di codice specializzati e insoliti. Il codice standard e del case speciale è complesso e difficile da gestire.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,7 +56,7 @@ Per risolvere i problemi precedenti, sono necessarie le modifiche seguenti:
 
 * Memorizza nel buffer i dati in arrivo fino a quando non viene trovata una nuova riga.
 * Analizza tutte le righe restituite nel buffer.
-* È possibile che la riga sia maggiore di 1 KB (1024 byte). Il codice deve ridimensionare il buffer di input. viene trovata una riga completa.
+* È possibile che la riga sia maggiore di 1 KB (1024 byte). Il codice deve ridimensionare il buffer di input fino a quando non viene trovato il delimitatore per adattarsi alla riga completa all'interno del buffer.
 
   * Se il buffer viene ridimensionato, vengono apportate più copie del buffer mentre le righe più lunghe vengono visualizzate nell'input.
   * Per ridurre lo spazio sprecato, compattare il buffer utilizzato per la lettura delle righe.
@@ -97,7 +98,7 @@ Nel secondo ciclo, il `PipeReader` utilizza i buffer scritti da `PipeWriter`. I 
 * Restituisce un <xref:System.IO.Pipelines.ReadResult> che contiene due informazioni importanti:
 
   * Dati letti nel formato `ReadOnlySequence<byte>`.
-  * Valore booleano `IsCompleted` che indica se è stata raggiunta la fine dei dati (EOF). 
+  * Valore booleano `IsCompleted` che indica se è stata raggiunta la fine dei dati (EOF).
 
 Dopo aver individuato il delimitatore di fine riga (EOL) e aver analizzato la riga:
 
@@ -122,8 +123,8 @@ Per ottenere prestazioni ottimali, c'è un equilibrio tra le pause frequenti e l
 
 Per risolvere il problema precedente, il `Pipe` ha due impostazioni per controllare il flusso di dati:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Determina la quantità di dati che devono essere memorizzati nel buffer prima della sospensione delle chiamate a <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>.
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Determina la quantità di dati che il lettore deve osservare prima che le chiamate a `PipeWriter.FlushAsync` riprendano.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: determina la quantità di dati che devono essere memorizzati nel buffer prima delle chiamate alla pausa <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>.
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: determina la quantità di dati che il lettore deve osservare prima che le chiamate a `PipeWriter.FlushAsync` riprendano.
 
 ![Diagramma con ResumeWriterThreshold e PauseWriterThreshold](./media/pipelines/resume-pause.png)
 
@@ -304,7 +305,7 @@ Quando si scrivono gli helper che leggono il buffer, qualsiasi payload restituit
 
 ## <a name="pipewriter"></a>PipeWriter
 
-Il <xref:System.IO.Pipelines.PipeWriter> gestisce i buffer per la scrittura per conto del chiamante. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` consente di ottenere l'accesso ai buffer per eseguire scritture senza copie del buffer aggiuntive.
+Il <xref:System.IO.Pipelines.PipeWriter> gestisce i buffer per la scrittura per conto del chiamante. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` consente di ottenere l'accesso ai buffer per eseguire scritture senza copie del buffer aggiuntive.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

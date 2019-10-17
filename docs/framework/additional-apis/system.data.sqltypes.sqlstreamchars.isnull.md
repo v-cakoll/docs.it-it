@@ -1,5 +1,5 @@
 ---
-title: Proprietà SqlStreamChars.IsNull (System.Data.SqlTypes)
+title: Proprietà SqlStreamChars. IsNull (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 03b702b0ffe258eb8cad0a1ece5314b363f9a0d0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d80f653724b3ef0a1cadb69a5f72b1d9455597d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634621"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395739"
 ---
-# <a name="sqlstreamcharsisnull-property"></a>Proprietà SqlStreamChars.IsNull
+# <a name="sqlstreamcharsisnull-property"></a>Proprietà SqlStreamChars. IsNull
 
-Quando sottoposto a override in una classe derivata, ottiene un valore che indica se il flusso è `null`. L'assembly che contiene questa proprietà ha una relazione di tipo friend SQLAccess. Si tratta per l'uso da SQL Server. Per altri database, usare il meccanismo di hosting fornito da tale database.
+Sottoposta a override in una classe derivata, ottiene un valore che indica se il flusso è `null`. L'assembly che contiene questa proprietà ha una relazione friend con SQLAccess. dll. È destinato all'uso da SQL Server. Per gli altri database, utilizzare il meccanismo di hosting fornito da tale database.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,22 +30,22 @@ Quando sottoposto a override in una classe derivata, ottiene un valore che indic
 public abstract bool IsNull { get; }
 ```
 
-## <a name="property-value"></a>Valore della proprietà
+## <a name="property-value"></a>Valore proprietà
 
 <xref:System.Boolean>\
-`true` Se il flusso `null`; in caso contrario, `false`.
+`true` se il flusso è `null`; in caso contrario, `false`.
 
 ## <a name="remarks"></a>Note
 
 > [!WARNING]
-> Il `SqlStreamChars.IsNull` proprietà è privato e non deve essere utilizzato direttamente nel codice.
+> La proprietà `SqlStreamChars.IsNull` è privata e non può essere utilizzata direttamente nel codice.
 >
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questa proprietà in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (in System)
+**Assembly:** System. Data (in System. Data. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 25349f7c8274b818df2cd1bc5d67856e31efecc4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700808"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395537"
 ---
 # <a name="icordebugcodegetsize-method"></a>Metodo ICorDebugCode::GetSize
 
@@ -38,16 +38,15 @@ HRESULT GetSize (
 
 ## <a name="parameters"></a>Parametri
 
- `pcBytes`  
- out Puntatore alla dimensione, in byte, del codice binario rappresentato da questo oggetto `ICorDebugCode`.
+`pcBytes`  
+out Puntatore alla dimensione, in byte, del codice binario rappresentato da questo oggetto `ICorDebugCode`.
 
 ## <a name="requirements"></a>Requisiti
 
- **Piattaforme** Vedere [Requisiti di sistema](../../get-started/system-requirements.md).
+**Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).
 
- **Intestazione:** CorDebug. idl, CorDebug. h
+**Intestazione:** CorDebug.idl, CorDebug.h
 
- **Libreria** CorGuids.lib
+**Libreria:** CorGuids.lib
 
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291469"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395846"
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono introdotti i problemi che è necessario tenere presente durante la scrittura di applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] per il mercato globale. Gli elementi di programmazione della globalizzazione sono definiti in .NET nello spazio dei nomi <xref:System.Globalization>.
@@ -23,7 +23,7 @@ In questo argomento vengono introdotti i problemi che è necessario tenere prese
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Riferimenti ai caratteri
-Un riferimento a un carattere fornisce l'unità di codice UTF16 del carattere [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] specifico che rappresenta, in formato decimale o esadecimale. Nell'esempio seguente viene illustrato un riferimento a un carattere decimale per la lettera MAIUSCOLa copto o ' Ϩ ':
+Un riferimento a un carattere fornisce l'unità di codice UTF16 del carattere Unicode particolare che rappresenta, in formato decimale o esadecimale. Nell'esempio seguente viene illustrato un riferimento a un carattere decimale per la lettera MAIUSCOLa copto o ' Ϩ ':
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>Codifica
- La codifica supportata da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 e UTF-8. L'istruzione Encoding si trova all'inizio del documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se non esiste alcun attributo di codifica né un ordine dei byte, il parser userà il valore predefinito UTF-8. UTF-8 e UTF-16 sono i tipi di codifica preferiti. UTF-7 non è supportato. Nell'esempio seguente viene illustrato come specificare una codifica UTF-8 in un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+ La codifica supportata da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è ASCII, Unicode UTF-16 e UTF-8. L'istruzione Encoding si trova all'inizio del documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se non esiste alcun attributo di codifica né un ordine dei byte, il parser userà il valore predefinito UTF-8. UTF-8 e UTF-16 sono i tipi di codifica preferiti. UTF-7 non è supportato. Nell'esempio seguente viene illustrato come specificare una codifica UTF-8 in un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 ### <a name="language-attribute"></a>Attributo Language
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizza [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo Language di un elemento.  Per sfruttare i vantaggi della classe <xref:System.Globalization.CultureInfo>, il valore dell'attributo Language deve essere uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nell'albero di elementi (in base alle regole XML, non necessariamente a causa dell'ereditarietà della proprietà di dipendenza) e il valore predefinito è una stringa vuota se non viene assegnato in modo esplicito.
 
- L'attributo language è molto utile per specificare i dialetti. Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera. Inoltre, il cinese, il giapponese e il coreano condividono punti di codice in [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideogrammi sono diverse e utilizzano tipi di carattere completamente diversi.
+ L'attributo language è molto utile per specificare i dialetti. Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera. Inoltre, il cinese, il giapponese e il coreano condividono punti di codice in Unicode, ma le forme ideogrammi sono diverse e utilizzano tipi di carattere completamente diversi.
 
  Nell'esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] seguente viene usato l'attributo Language `fr-CA` per specificare il francese canadese.
 
@@ -57,7 +57,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] supporta tutte le funzionalità di [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], inclusi i surrogati. Fino a quando il set di caratteri può essere mappato a [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], è supportato. GB18030, ad esempio, introduce alcuni caratteri con mapping all'estensione A e B per cinese, giapponese e coreano e le coppie di surrogati, quindi è completamente supportato. Un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può utilizzare <xref:System.Globalization.StringInfo> per manipolare le stringhe senza comprendere se hanno coppie di surrogati o caratteri combinati.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] supporta tutte le funzionalità Unicode, inclusi i surrogati. Se il set di caratteri può essere mappato a Unicode, è supportato. GB18030, ad esempio, introduce alcuni caratteri con mapping all'estensione A e B per cinese, giapponese e coreano e le coppie di surrogati, quindi è completamente supportato. Un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può utilizzare <xref:System.Globalization.StringInfo> per manipolare le stringhe senza comprendere se hanno coppie di surrogati o caratteri combinati.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Progettazione di un'interfaccia utente internazionale con XAML
@@ -125,7 +125,7 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
  Tutti i motori di sistema di scrittura supportano i tipi di carattere OpenType. I tipi di carattere OpenType possono includere le tabelle di layout OpenType che consentono agli autori di tipi di carattere di progettare migliori tipi di carattere tipografici internazionali e di fascia alta. Le tabelle di layout del tipo di carattere OpenType contengono informazioni sulle sostituzioni dei glifi, il posizionamento del glifo, la giustificazione e il posizionamento della linea di base, consentendo alle applicazioni di elaborazione del testo di migliorare il layout
 
- I tipi di carattere OpenType consentono la gestione di set di glifi di grandi dimensioni utilizzando la codifica [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.
+ I tipi di carattere OpenType consentono la gestione di set di glifi di grandi dimensioni utilizzando la codifica Unicode. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.
 
  il rendering del testo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è basato sulla tecnologia Microsoft ClearType dei sottopixel che supporta l'indipendenza dalla risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.
 
@@ -180,4 +180,4 @@ Nell'esempio seguente viene illustrato un riferimento a un carattere esadecimale
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)
+- [Cenni preliminari sulla globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md)

@@ -2,12 +2,12 @@
 title: Informazioni su .NET Core
 description: Informazioni su .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181913"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395173"
 ---
 # <a name="about-net-core"></a>Informazioni su .NET Core
 
@@ -15,8 +15,8 @@ ms.locfileid: "71181913"
 
 - **Multipiattaforma:** Viene eseguito nei [sistemi operativi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS e Linux.
 - **Coerenza in tutte le architetture:** esegue il codice con lo stesso comportamento in molteplici architetture, tra cui x64, x86 e ARM.
-- **Strumenti da riga di comando:**  include strumenti da riga di comando facili da usare per lo sviluppo locale e in scenari di integrazione continua.
-- **Distribuzione flessibile:** lo strumento può essere incluso nell'app o installato side-by-side (installazioni a livello di utente o di sistema). Può essere usato con i [contenitori Docker](docker/index.md).
+- **Strumenti da riga di comando:** include strumenti da riga di comando facili da usare per lo sviluppo locale e in scenari di integrazione continua.
+- **Distribuzione flessibile:** Può essere incluso nell'app o installato side-by-Side (installazioni a livello di utente o a livello di sistema). Può essere usato con i [contenitori Docker](docker/index.md).
 - **Compatibile:** .NET Core è compatibile con .NET Framework, Novell e mono, tramite [.NET standard](../standard/net-standard.md).
 - **Open source:** la piattaforma .NET Core è open source e usa le licenze MIT e Apache 2. .NET Core è un progetto [.NET Foundation](https://dotnetfoundation.org/).
 - **Supportato da Microsoft:** .NET Core è supportato da Microsoft, in base al [Supporto di .NET Core](https://dotnet.microsoft.com/platform/support/policy).
@@ -40,7 +40,7 @@ Questa integrazione viene fornita, in parte, dai collaboratori dei progetti [Omn
 - Raccolte, ad esempio <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipi di utilità, ad esempio <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipi di dati, ad esempio <xref:System.Data.DataSet?displayProperty=nameWithType> e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Tipi <xref:System.Numerics.Vector?displayProperty=nameWithType> a prestazioni elevate, ad esempio [pipeline](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)e.
+- Tipi a prestazioni elevate, ad esempio <xref:System.Numerics.Vector?displayProperty=nameWithType> e [pipeline](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 .NET Core assicura la compatibilità con le API .NET Framework e Mono tramite l'implementazione della specifica [.NET Standard](../standard/net-standard.md).
 
@@ -113,7 +113,7 @@ Poiché .NET Core supporta l'installazione side-by-side e il relativo runtime è
 
 ### <a name="comparison-with-mono"></a>Confronto con Mono
 
-[Mono](https://www.mono-project.com/) è l'originale multipiattaforma di .NET. È stata avviata come alternativa [Open Source]([open-source](https://github.com/mono/mono)) per la .NET Framework e la transizione alla destinazione dei dispositivi mobili come dispositivi iOS e Android sono diventati molto diffusi. Può essere considerato un duplicato della community di .NET Framework. Il team di progetto di mono si basava sugli [standard .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) aperti, in particolare ECMA 335, pubblicati da Microsoft per fornire un'implementazione compatibile.
+[Mono](https://www.mono-project.com/) è l'originale multipiattaforma di .NET. È stata avviata come un'alternativa [Open Source](https://github.com/mono/mono)per .NET Framework e la transizione alla destinazione dei dispositivi mobili come dispositivi iOS e Android è diventata molto popolare. Può essere considerato un duplicato della community di .NET Framework. Il team di progetto di mono si basava sugli [standard .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) aperti, in particolare ECMA 335, pubblicati da Microsoft per fornire un'implementazione compatibile.
 
 Le differenze principali tra .NET Core e Mono sono:
 

@@ -1,5 +1,5 @@
 ---
-title: Proprietà SqlStreamChars.Length (System.Data.SqlTypes)
+title: Proprietà SqlStreamChars. length (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634447"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395613"
 ---
-# <a name="sqlstreamcharslength-property"></a>Proprietà SqlStreamChars.Length
+# <a name="sqlstreamcharslength-property"></a>Proprietà SqlStreamChars. length
 
-Quando sottoposto a override in una classe derivata, ottiene la lunghezza del flusso corrente. L'assembly che contiene questa proprietà ha una relazione di tipo friend SQLAccess. Si tratta per l'uso da SQL Server. Per altri database, usare il meccanismo di hosting fornito da tale database.
+Quando sottoposto a override in una classe derivata, ottiene la lunghezza del flusso corrente. L'assembly che contiene questa proprietà ha una relazione friend con SQLAccess. dll. È destinato all'uso da SQL Server. Per gli altri database, utilizzare il meccanismo di hosting fornito da tale database.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,7 +30,7 @@ Quando sottoposto a override in una classe derivata, ottiene la lunghezza del fl
 public abstract long Length { get; }
 ```
 
-## <a name="property-value"></a>Valore della proprietà
+## <a name="property-value"></a>Valore proprietà
 
 <xref:System.Int64>\
 Lunghezza del flusso.
@@ -38,14 +38,14 @@ Lunghezza del flusso.
 ## <a name="remarks"></a>Note
 
 > [!WARNING]
-> Il `SqlStreamChars.Length` proprietà è privato e non deve essere utilizzato direttamente nel codice.
+> La proprietà `SqlStreamChars.Length` è privata e non può essere utilizzata direttamente nel codice.
 >
-> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
+> Microsoft non supporta l'utilizzo di questa proprietà in un'applicazione di produzione in qualsiasi circostanza.
 
 ## <a name="requirements"></a>Requisiti
 
 **Spazio dei nomi:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (in System)
+**Assembly:** System. Data (in System. Data. dll)
 
-**Versioni di .NET framework:** Disponibile dalla 2.0.
+**Versioni .NET Framework:** Disponibile a partire da 2,0.

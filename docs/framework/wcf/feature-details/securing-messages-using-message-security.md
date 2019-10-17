@@ -2,15 +2,15 @@
 title: Protezione dei messaggi mediante protezione a livello di messaggio
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911780"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395712"
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
-In questa sezione viene illustrata la sicurezza <xref:System.ServiceModel.NetMsmqBinding>del messaggio WCF quando si utilizza.  
+In questa sezione viene illustrata la sicurezza del messaggio WCF quando si utilizza <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 > Prima di leggere questo argomento, è consigliabile leggere i [concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
@@ -19,7 +19,7 @@ In questa sezione viene illustrata la sicurezza <xref:System.ServiceModel.NetMsm
   
  dei concetti della protezione del trasporto.  
   
- ![Diagramma dell'applicazione in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figure")  
+ ![Diagramma dell'applicazione in coda](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")  
   
  Quando si inviano messaggi in coda tramite WCF, il messaggio WCF viene allegato come corpo del messaggio di Accodamento messaggi (MSMQ). Mentre la protezione del trasporto protegge l'intero messaggio MSMQ, la protezione del messaggio, o SOAP, protegge il corpo del messaggio MSMQ.  
   
@@ -43,7 +43,7 @@ In questa sezione viene illustrata la sicurezza <xref:System.ServiceModel.NetMsm
   
  Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per ulteriori informazioni sui diversi archivi, vedere [archivi certificati](https://go.microsoft.com/fwlink/?LinkId=87787).  
   
-### <a name="windows"></a>Windows  
+### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
   
  Il protocollo Kerberos è un meccanismo di sicurezza che esegue l'autenticazione degli utenti in un dominio e consente agli utenti autenticati di stabilire una connessione protetta con le altre entità del dominio.  
@@ -52,7 +52,7 @@ In questa sezione viene illustrata la sicurezza <xref:System.ServiceModel.NetMsm
   
  Si noti che in caso di utilizzo di questo tipo di credenziale, il servizio deve essere in esecuzione nell'account SERVIZIO.  
   
- Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio. Per ulteriori informazioni, vedere [la pagina relativa all'esplorazione di Kerberos, il protocollo per la sicurezza distribuita in Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio.
   
 ### <a name="username-password"></a>Nome utente/password  
  Mediante questa proprietà il client può eseguire l'autenticazione nel server utilizzando una password di nome utente nell'intestazione di sicurezza del messaggio.  
