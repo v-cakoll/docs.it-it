@@ -1,9 +1,0 @@
-- name: 'Serializzazione (C#)'
-  href: index.md
-  items:
-    - name: 'Procedura: Scrivere dati oggetto in un file XML'
-      href: how-to-write-object-data-to-an-xml-file.md
-    - name: 'Procedura: Leggere dati oggetto in un file XML'
-      href: how-to-read-object-data-from-an-xml-file.md
-    - name: 'Procedura dettagliata: Persistenza di un oggetto in Visual Studio'
-      href: walkthrough-persisting-an-object-in-visual-studio.md

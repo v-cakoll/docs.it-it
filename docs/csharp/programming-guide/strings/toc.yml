@@ -1,5 +1,0 @@
-- name: Stringhe
-  href: index.md
-  items:
-    - name: 'Procedura: Determinare se una stringa rappresenta un valore numerico'
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md
