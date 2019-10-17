@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 2e57dc63cb7ad8b2e061296a082d6fa79b464f08
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 54965f3796b6c5ef0e387cd354abcb5740476257
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592033"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321169"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>L'eccezione del commento XML deve avere un attributo 'cref'
-Il tag di > \<exception fornisce un modo per documentare le eccezioni che possono essere generate da un metodo. L'attributo `cref` obbligatorio indica il nome di un membro, che viene controllato dal generatore di documentazione. Se il membro esiste, viene convertito nel nome canonico dell'elemento nel file di documentazione.  
-  
- **ID errore:** BC42319  
-  
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
-  
-- Aggiungere l'attributo `cref` all'eccezione come segue:  
-  
-    xml  
-    '''<exception cref="member">Descrizione</exception>  
-    ```  
-  
-## See also
+
+Il tag \<exception > fornisce un modo per documentare le eccezioni che possono essere generate da un metodo. L'attributo `cref` obbligatorio indica il nome di un membro, che viene controllato dal generatore di documentazione. Se il membro esiste, viene convertito nel nome canonico dell'elemento nel file di documentazione.
+
+**ID errore:** BC42319
+
+## <a name="to-correct-this-error"></a>Per correggere l'errore
+
+Aggiungere l'attributo `cref` all'eccezione come segue:
+
+```xml
+<exception cref="member">description</exception>
+```
+
+## <a name="see-also"></a>Vedere anche
 
 - [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Procedura: Creare documentazione XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

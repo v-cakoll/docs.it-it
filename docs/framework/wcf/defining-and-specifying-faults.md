@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 37ded0aad547df616d2b8b73e7cb145514da080d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 840d26e4543d2c90c99ebba05b5bca7a48cbdeda
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972362"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320040"
 ---
 # <a name="defining-and-specifying-faults"></a>Definizione e specifica degli errori
-Gli errori SOAP forniscono informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In questo argomento viene illustrato quando e come definire il contenuto di un errore personalizzato e specificare quali operazioni possono restituire tale contenuto. Per ulteriori informazioni sul modo in cui un servizio o un client duplex può inviare tali errori e in che modo un'applicazione client o di servizio gestisce tali errori, vedere [invio e ricezione di errori](../../../docs/framework/wcf/sending-and-receiving-faults.md). Per una panoramica della gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Gli errori SOAP forniscono informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In questo argomento viene illustrato quando e come definire il contenuto di un errore personalizzato e specificare quali operazioni possono restituire tale contenuto. Per ulteriori informazioni sul modo in cui un servizio o un client duplex può inviare tali errori e in che modo un'applicazione client o di servizio gestisce tali errori, vedere [invio e ricezione di errori](sending-and-receiving-faults.md). Per una panoramica della gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [specifica e gestione di errori in contratti e servizi](specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Panoramica  
  Gli errori SOAP dichiarati sono quelli in cui un'operazione presenta un <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> che specifica un tipo di errore SOAP personalizzato. Gli errori SOAP non dichiarati sono quelli che non vengono specificati nel contratto per un'operazione. In questo argomento viene illustrato come identificare tali condizioni di errore e creare un contratto di errore per il servizio che i client possono usare per gestire correttamente tali condizioni di errore quando vengono segnalate dagli errori SOAP personalizzati. Le attività di base sono descritte di seguito, in ordine progressivo:  
@@ -64,7 +64,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- Per ulteriori informazioni su come assicurarsi che i dati siano serializzabili, vedere [specifica trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Per un elenco del supporto <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> della serializzazione fornito da, vedere [tipi supportati dal serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Per ulteriori informazioni su come assicurarsi che i dati siano serializzabili, vedere [specifica trasferimento dati nei contratti di servizio](./feature-details/specifying-data-transfer-in-service-contracts.md). Per un elenco del supporto della serializzazione fornito da <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, vedere [tipi supportati dal serializzatore di contratti dati](./feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Contrassegnare le operazioni per stabilire il contratto di errore  
  Dopo aver definito una struttura di dati serializzabile che viene restituita come parte di un errore SOAP personalizzato, l'ultimo passaggio consiste nel contrassegnare il contratto dell'operazione per indicare che genera un errore SOAP di quel tipo. Per questo scopo, usare l'attributo <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> e passare il tipo di dati personalizzato costruito. Nell'esempio di codice seguente viene illustrato come usare l'attributo <xref:System.ServiceModel.FaultContractAttribute> per specificare che l'operazione `Divide` può restituire un errore SOAP di tipo `MathFault`. In questo modo anche le altre operazioni matematiche possono specificare che restituiscono un `MathFault`.  
@@ -74,7 +74,7 @@ End Class
   
  È possibile specificare che un'operazione restituisce più di un errore personalizzato contrassegnando tale operazione con più attributi <xref:System.ServiceModel.FaultContractAttribute>.  
   
- Il passaggio successivo, per implementare il contratto di errore nell'implementazione dell'operazione, è descritto nell'argomento [invio e ricezione degli errori](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Il passaggio successivo, per implementare il contratto di errore nell'implementazione dell'operazione, è descritto nell'argomento [invio e ricezione degli errori](sending-and-receiving-faults.md).  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>Considerazioni su SOAP, WSDL e sull'interoperabilità  
  In alcune circostanze, specialmente quando si interagisce con altre piattaforme, può essere importante controllare il modo in cui un errore viene visualizzato in un messaggio SOAP o il modo in cui viene descritto nei metadati WSDL.  
@@ -90,9 +90,9 @@ End Class
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Invio e ricezione degli errori](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Procedura: Dichiarare errori nei contratti di servizio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
-- [Informazioni sul livello di protezione](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Procedura: Imposta la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Definizione del trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Specifica e gestione degli errori in contratti e servizi](specifying-and-handling-faults-in-contracts-and-services.md)
+- [Invio e ricezione degli errori](sending-and-receiving-faults.md)
+- [Procedura: Dichiarare errori nei contratti di servizio](how-to-declare-faults-in-service-contracts.md)
+- [Informazioni sul livello di protezione](understanding-protection-level.md)
+- [Procedura: Impostare la proprietà ProtectionLevel](how-to-set-the-protectionlevel-property.md)
+- [Definizione del trasferimento dati nei contratti di servizio](./feature-details/specifying-data-transfer-in-service-contracts.md)

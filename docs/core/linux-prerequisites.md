@@ -3,13 +3,13 @@ title: Prerequisiti per .NET Core in Linux
 description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo sviluppo, la distribuzione e l'esecuzione di applicazioni .NET Core su computer Linux.
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
-ms.translationtype: MT
+ms.date: 10/11/2019
+ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591691"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318335"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -34,9 +34,9 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 .NET Core 3,0 è supportato nelle seguenti distribuzioni/versioni di Linux:
 
 > [!NOTE]
-> Un simbolo `+` rappresenta la versione minima.
+> Un simbolo di `+` rappresenta la versione minima.
 
-| OS                             | Versione               | Architetture    |
+| Sistema operativo                             | Versione               | Architetture    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6 + 7                 | X64 |
 | Oracle Linux                   | 7                     | X64 |
@@ -49,7 +49,7 @@ Per i collegamenti di download e altre informazioni, vedere [.NET Core 3.0 downl
 | SUSE Enterprise Linux (SLES)   | 12 SP2+               | X64 |
 | Alpine Linux                   | 3.8+                  | x64, ARM64 |
 
-Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzioni supportati da .NET Core 3.0, nonché delle versioni di sistemi operativi non supportate e dei criteri relativi al ciclo di vita, vedere [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (.NET Core 3.0 - Versioni di sistemi operativi supportate).
+Per l'elenco completo dei sistemi operativi, delle versioni e delle distribuzioni supportate da .NET Core 3.0, nonché delle versioni di sistemi operativi non supportate e dei criteri relativi al ciclo di vita, vedere [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (.NET Core 3.0 - Versioni di sistemi operativi supportate).
 
 Per altre informazioni su come installare .NET Core 3.0 su ARM64, vedere [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Installazione di .NET Core 3.0 su Linux ARM64).
 
@@ -62,9 +62,9 @@ Per i collegamenti al download e altre informazioni, vedere [download di .NET Co
 .NET Core 2,2 è supportato nelle seguenti distribuzioni/versioni di Linux:
 
 > [!NOTE]
-> Un simbolo `+` rappresenta la versione minima.
+> Un simbolo di `+` rappresenta la versione minima.
 
-| OS                             |  Versione                |  Architetture   |
+| Sistema operativo                             |  Versione                |  Architetture   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7                   | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -87,7 +87,7 @@ Per i collegamenti al download e altre informazioni, vedere [download di .NET Co
 
 .NET Core 2,1 è supportato nelle seguenti distribuzioni/versioni di Linux:
 
-| OS                             |  Versione                |  Architetture   |
+| Sistema operativo                             |  Versione                |  Architetture   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -128,6 +128,13 @@ Per le versioni precedenti a .NET Core 2.1, sono richieste anche le dipendenze s
 * libunwind8
 * libuuid1
 
+Per le applicazioni .NET Core che usano l'assembly *System. Drawing. Common* , è necessaria anche la dipendenza seguente:
+
+* libgdiplus (versione 6.0.1 o successiva)
+
+> [!NOTE]
+> La maggior parte delle versioni di Ubuntu include una versione precedente di libgdiplus. È possibile installare una versione recente di libgdiplus aggiungendo il repository mono al sistema. Per ulteriori informazioni, vedere <https://www.mono-project.com/download/stable/>.
+
 ### <a name="centos-and-fedora"></a>CentOS e Fedora
 
 Le distribuzioni CentOS richiedono che siano installate le librerie seguenti:
@@ -139,7 +146,7 @@ Le distribuzioni CentOS richiedono che siano installate le librerie seguenti:
 * libicu
 * zlib
 
-Utenti Fedora: se la versione di openssl in uso è maggiore o uguale a 1.1, è necessario installare compat-openssl10.
+Utenti di Fedora: se la versione di openssl in uso è maggiore o uguale a 1.1, è necessario installare compat-openssl10.
 
 Per le versioni precedenti a .NET Core 2.1, sono richieste anche le dipendenze seguenti:
 
@@ -147,6 +154,13 @@ Per le versioni precedenti a .NET Core 2.1, sono richieste anche le dipendenze s
 * libuuid
 
 Per altre informazioni sulle dipendenze, vedere [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Applicazioni Linux autonome).
+
+Per le applicazioni .NET Core che usano l'assembly *System. Drawing. Common* , è necessaria anche la dipendenza seguente:
+
+* libgdiplus (versione 6.0.1 o successiva)
+
+> [!NOTE]
+> La maggior parte delle versioni di CentOS e Fedora include una versione precedente di libgdiplus. È possibile installare una versione recente di libgdiplus aggiungendo il repository mono al sistema. Per ulteriori informazioni, vedere <https://www.mono-project.com/download/stable/>.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Installazione delle dipendenze di .NET Core con i programmi di installazione nativi
 
@@ -169,7 +183,7 @@ Lo script assume come impostazione predefinita l'installazione della versione "L
 
 Lo script bash del programma di installazione viene usato negli scenari di automazione e nelle installazioni non di amministratore. Questo script legge anche le opzioni PowerShell, che possono quindi essere usate con lo script nei sistemi Linux/OS X.
 
-## <a name="troubleshoot"></a>Risolvere problemi
+## <a name="troubleshoot"></a>Risolvere i problemi
 
 Se si verificano problemi in fase di installazione di .NET Core in una distribuzione/versione Linux supportata, vedere i seguenti argomenti per le distribuzioni/versioni installate in uso:
 

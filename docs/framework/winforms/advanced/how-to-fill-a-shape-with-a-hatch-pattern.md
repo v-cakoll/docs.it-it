@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Riempire una forma con un motivo di tratteggio'
+title: 'Procedura: riempire una forma con un motivo a tratteggio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b80708f0ce722b1809fe49190639231e7e4c8329
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645477"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320063"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Procedura: Riempire una forma con un motivo di tratteggio
-Un motivo a tratteggio è composto da due colori: uno per lo sfondo e uno per le linee che costituiscono il modello sullo sfondo. Per riempire una forma chiusa con un motivo a tratteggio, utilizzare un <xref:System.Drawing.Drawing2D.HatchBrush> oggetto. Nell'esempio seguente viene illustrato come compilare un'ellisse con un motivo a tratteggio:  
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Procedura: riempire una forma con un motivo a tratteggio
+Un modello di tratteggio è costituito da due colori: uno per lo sfondo e uno per le linee che formano il modello sullo sfondo. Per riempire una forma chiusa con un motivo di tratteggio, usare un oggetto <xref:System.Drawing.Drawing2D.HatchBrush>. Nell'esempio seguente viene illustrato come riempire un'ellisse con un motivo di tratteggio:  
   
 ## <a name="example"></a>Esempio  
- Il <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> costruttore accetta tre argomenti: il colore di sfondo, il colore della linea di tratteggio e lo stile di tratteggio. L'argomento dello stile di tratteggio può essere qualsiasi valore compreso il <xref:System.Drawing.Drawing2D.HatchStyle> enumerazione. Sono presenti più di 50 elementi nel <xref:System.Drawing.Drawing2D.HatchStyle> enumerazione; alcuni di questi elementi sono visualizzati nell'elenco seguente:  
+ Il costruttore <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> accetta tre argomenti: lo stile di tratteggio, il colore della linea di tratteggio e il colore dello sfondo. L'argomento dello stile di tratteggio può essere qualsiasi valore dell'enumerazione <xref:System.Drawing.Drawing2D.HatchStyle>. Sono presenti più di 50 elementi nell'enumerazione <xref:System.Drawing.Drawing2D.HatchStyle>; alcuni di questi elementi sono illustrati nell'elenco seguente:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,9 +34,9 @@ Un motivo a tratteggio è composto da due colori: uno per lo sfondo e uno per le
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- La figura seguente mostra l'ellisse piena.  
+ Nell'illustrazione seguente viene mostrata l'ellisse piena.  
   
- ![Motivo di tratteggio](./media/hatch1.png "hatch1")  
+  ![Screenshot dell'aspetto di un'ellisse riempita con un modello di tratteggio.](./media/how-to-fill-a-shape-with-a-hatch-pattern/ellipse-filled-hatch.png "hatch1")
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  

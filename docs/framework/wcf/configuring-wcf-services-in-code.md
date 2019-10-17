@@ -2,15 +2,15 @@
 title: Configurazione dei servizi WCF nel codice
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855639"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320640"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurazione dei servizi WCF nel codice
-Windows Communication Foundation (WCF) consente agli sviluppatori di configurare i servizi usando i file di configurazione o il codice.  I file di configurazione sono utili quando è necessario configurare un servizio dopo la relativa distribuzione. Quando si utilizzano i file di configurazione, un professionista IT deve solo aggiornare il file di configurazione. Non è necessario eseguire la ricompilazione. I file di configurazione, tuttavia, possono risultare complessi e difficili da gestire. Non è disponibile alcun supporto per il debug dei file di configurazione e, poiché il riferimento agli elementi di configurazione viene fatto in base ai nomi, i file di configurazione della creazione possono risultare difficili e soggetti a errori. WCF consente inoltre di configurare i servizi nel codice. Nelle versioni precedenti di WCF (4,0 e versioni precedenti) la configurazione dei servizi nel codice era molto semplice negli scenari indipendenti <xref:System.ServiceModel.ServiceHost> , la classe consentiva di configurare gli endpoint e i comportamenti prima di chiamare ServiceHost. Open. Negli scenari ospitati dal Web, tuttavia, non è possibile accedere direttamente alla classe <xref:System.ServiceModel.ServiceHost>. Per configurare un servizio ospitato dal Web era necessario creare un oggetto `System.ServiceModel.ServiceHostFactory` che creava l'oggetto <xref:System.ServiceModel.Activation.ServiceHostFactory> ed effettuava qualsiasi configurazione richiesta. A partire da .NET 4,5, WCF fornisce un modo più semplice per configurare i servizi ospitati in modalità self-hosted e Web nel codice.  
+Windows Communication Foundation (WCF) consente agli sviluppatori di configurare i servizi usando i file di configurazione o il codice.  I file di configurazione sono utili quando è necessario configurare un servizio dopo la relativa distribuzione. Quando si utilizzano i file di configurazione, un professionista IT deve solo aggiornare il file di configurazione. Non è necessario eseguire la ricompilazione. I file di configurazione, tuttavia, possono risultare complessi e difficili da gestire. Non è disponibile alcun supporto per il debug dei file di configurazione e, poiché il riferimento agli elementi di configurazione viene fatto in base ai nomi, i file di configurazione della creazione possono risultare difficili e soggetti a errori. WCF consente inoltre di configurare i servizi nel codice. Nelle versioni precedenti di WCF (4,0 e versioni precedenti) la configurazione dei servizi nel codice era facile in scenari indipendenti, la classe <xref:System.ServiceModel.ServiceHost> consentiva di configurare gli endpoint e i comportamenti prima di chiamare ServiceHost. Open. Negli scenari ospitati dal Web, tuttavia, non è possibile accedere direttamente alla classe <xref:System.ServiceModel.ServiceHost>. Per configurare un servizio ospitato dal Web era necessario creare un oggetto `System.ServiceModel.ServiceHostFactory` che creava l'oggetto <xref:System.ServiceModel.Activation.ServiceHostFactory> ed effettuava qualsiasi configurazione richiesta. A partire da .NET 4,5, WCF fornisce un modo più semplice per configurare i servizi ospitati in modalità self-hosted e Web nel codice.  
   
 ## <a name="the-configure-method"></a>Metodo Configure  
  Definire semplicemente un metodo statico pubblico denominato `Configure` con la firma seguente nella classe di implementazione del servizio:  
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Le impostazioni nella sezione <`protocolMappings`> vengono utilizzate solo se non viene aggiunto alcun endpoint dell'applicazione <xref:System.ServiceModel.ServiceConfiguration> a a livello di codice. Facoltativamente <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , è possibile caricare la configurazione del servizio dal file di configurazione dell'applicazione predefinito chiamando, quindi modificare le impostazioni. La classe <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> consente inoltre di caricare la configurazione da una configurazione centralizzata. Nell'esempio di codice seguente viene illustrato come implementare questa azione:  
+ Le impostazioni nella sezione < `protocolMappings` > vengono utilizzate solo se non vengono aggiunti endpoint applicazione al <xref:System.ServiceModel.ServiceConfiguration> a livello di codice. Facoltativamente, è possibile caricare la configurazione del servizio dal file di configurazione dell'applicazione predefinito chiamando <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> e quindi modificare le impostazioni. La classe <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> consente inoltre di caricare la configurazione da una configurazione centralizzata. Nell'esempio di codice seguente viene illustrato come implementare questa azione:  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,18 +91,18 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Si noti <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> che ignora <`host`Impostazioni > all'interno del`service`tag di > <`system.serviceModel`di < >. Concettualmente, <`host`> riguarda la configurazione host e non la configurazione del servizio e viene caricata prima dell'esecuzione del metodo Configure.  
+> Si noti che <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignora le impostazioni di < `host` > all'interno del tag < `service` > di < `system.serviceModel` >. Concettualmente, < `host` > riguarda la configurazione host e non la configurazione del servizio e viene caricata prima dell'esecuzione del metodo Configure.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione dei servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Configurazione dei comportamenti client](../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)
-- [Configurazione](../../../docs/framework/wcf/samples/configuration-sample.md)
-- [Attivazione basata sulla configurazione in IIS e WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
-- [Supporto di configurazione e metadati](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
-- [Configurazione](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Procedura: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procedura: Creare un endpoint del servizio nella configurazione](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Procedura: Specificare un'associazione client nella configurazione](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Configurazione dei servizi tramite file di configurazione](configuring-services-using-configuration-files.md)
+- [Configurazione dei comportamenti client](configuring-client-behaviors.md)
+- [Configurazione semplificata](simplified-configuration.md)
+- [Configurazione](./samples/configuration-sample.md)
+- [Attivazione basata sulla configurazione in IIS e WAS](./feature-details/configuration-based-activation-in-iis-and-was.md)
+- [Supporto di configurazione e metadati](./extending/configuration-and-metadata-support.md)
+- [Configurazione](./diagnostics/exceptions-reference/configuration.md)
+- [Procedura: Specificare un'associazione al servizio nella configurazione](how-to-specify-a-service-binding-in-configuration.md)
+- [Procedura: Creare un endpoint di servizio nella configurazione](./feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](./feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedura: Specificare un'associazione al client nella configurazione](how-to-specify-a-client-binding-in-configuration.md)

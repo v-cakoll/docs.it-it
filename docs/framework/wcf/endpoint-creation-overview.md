@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0b0c22737e9407ebe2cb56c15fb7ff75d16b50a4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bf6bfb10123223bf689945ef93ff09219a68092c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040313"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319918"
 ---
 # <a name="endpoint-creation-overview"></a>Cenni preliminari sulla creazione di endpoint
 
@@ -22,11 +22,11 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) av
 
 Ogni endpoint contiene un indirizzo che indica dove individuare l'endpoint, un'associazione che specifica in che modo un client può comunicare con l'endpoint e un contratto che identifica i metodi disponibili.
 
-- **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. Viene rappresentata nel modello a oggetti WCF dall'indirizzo <xref:System.ServiceModel.EndpointAddress> , che contiene un Uniform Resource Identifier (URI) e le proprietà dell'indirizzo che includono un'identità, alcuni elementi Web Services Description Language (WSDL) e una raccolta di facoltativo intestazioni. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per ulteriori informazioni, vedere [specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md).
+- **Indirizzo**. L'indirizzo identifica in modo univoco l'endpoint e comunica ai potenziali utenti l'ubicazione del servizio. Viene rappresentata nel modello a oggetti WCF dall'indirizzo del <xref:System.ServiceModel.EndpointAddress>, che contiene una Uniform Resource Identifier (URI) e le proprietà dell'indirizzo che includono un'identità, alcuni elementi Web Services Description Language (WSDL) e una raccolta di intestazioni facoltative. Le intestazioni facoltative forniscono dettagli aggiuntivi sull'indirizzo per identificare o interagire con l'endpoint. Per ulteriori informazioni, vedere [specifica di un indirizzo endpoint](specifying-an-endpoint-address.md).
 
-- **Associazione**. L'associazione specifica la modalità di comunicazione con l'endpoint. L'associazione specifica in che modo l'endpoint comunica con il mondo, incluso il protocollo di trasporto da usare (ad esempio, TCP o HTTP), il tipo di codifica da usare per i messaggi (ad esempio, testo o binaria) e i requisiti di sicurezza necessari (ad esempio, Secure Sockets Layer [SSL] o sicurezza dei messaggi SOAP). Per ulteriori informazioni, vedere [utilizzo delle associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).
+- **Associazione**. L'associazione specifica la modalità di comunicazione con l'endpoint. L'associazione specifica in che modo l'endpoint comunica con il mondo, incluso il protocollo di trasporto da usare (ad esempio, TCP o HTTP), il tipo di codifica da usare per i messaggi (ad esempio, testo o binaria) e i requisiti di sicurezza necessari (ad esempio, Secure Sockets Layer [SSL] o sicurezza dei messaggi SOAP). Per ulteriori informazioni, vedere [utilizzo delle associazioni per configurare servizi e client](using-bindings-to-configure-services-and-clients.md).
 
-- **Contratto di servizio**. Il contratto di servizio delinea la funzionalità che l'endpoint espone al client. Un contratto specifica le operazioni che un client può richiamare, il modulo del messaggio e il tipo di parametri o dati di input necessari per chiamare l'operazione e il tipo di elaborazione o messaggio di risposta che il client può aspettarsi. Tre tipi di contratti di base corrispondono a modelli di scambio dei messaggi (MEP, Message Exchange Pattern) di base: datagramma (unidirezionale), request/reply e duplex (bidirezionale). Il contratto di servizio può inoltre usare contratti dati e contratti di messaggio per richiedere tipi di dati e formati di messaggio specifici al momento dell'accesso. Per ulteriori informazioni su come definire un contratto di servizio, vedere [progettazione di contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md). Per ricevere messaggi dal servizio in un modello di scambio dei messaggi (MEP) duplex, è possibile che un client debba implementare un contratto definito dal servizio, detto contratto di callback. Per ulteriori informazioni, vedere [servizi duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).
+- **Contratto di servizio**. Il contratto di servizio delinea la funzionalità che l'endpoint espone al client. Un contratto specifica le operazioni che un client può richiamare, il modulo del messaggio e il tipo di parametri o dati di input necessari per chiamare l'operazione e il tipo di elaborazione o messaggio di risposta che il client può aspettarsi. Tre tipi di contratti di base corrispondono a modelli di scambio dei messaggi (MEP, Message Exchange Pattern) di base: datagramma (unidirezionale), request/reply e duplex (bidirezionale). Il contratto di servizio può inoltre usare contratti dati e contratti di messaggio per richiedere tipi di dati e formati di messaggio specifici al momento dell'accesso. Per ulteriori informazioni su come definire un contratto di servizio, vedere [progettazione di contratti di servizio](designing-service-contracts.md). Per ricevere messaggi dal servizio in un modello di scambio dei messaggi (MEP) duplex, è possibile che un client debba implementare un contratto definito dal servizio, detto contratto di callback. Per ulteriori informazioni, vedere [servizi duplex](./feature-details/duplex-services.md).
 
 L'endpoint per un servizio può essere specificato in modo imperativo mediante l'uso di codice oppure in modo dichiarativo mediante la configurazione. Se non è specificato alcun endpoint, il runtime ne fornisce di predefiniti aggiungendone uno per ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice. Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare e distribuire nuovamente l'applicazione.
 
@@ -37,11 +37,11 @@ L'endpoint per un servizio può essere specificato in modo imperativo mediante l
 
 Nell'esempio riportato di seguito viene illustrato come specificare un endpoint nel codice.
 
-- Definire un contratto per un `IEcho` tipo di servizio che accetta il nome e l'Echo di un utente con la \<risposta "Hello name >!".
+- Definire un contratto per un tipo di servizio `IEcho` che accetti il nome e l'Echo di un utente con la risposta "Hello \<name >!".
 
 - Implementare un servizio `Echo` del tipo definito dal contratto `IEcho`.
 
-- Specificare un indirizzo `http://localhost:8000/Echo` endpoint per il servizio.
+- Specificare un indirizzo endpoint di `http://localhost:8000/Echo` per il servizio.
 
 - Configurare il servizio `Echo` usando un'associazione <xref:System.ServiceModel.WSHttpBinding>.
 
@@ -133,10 +133,10 @@ serviceHost.Open()
 
 ## <a name="defining-endpoints-in-configuration"></a>Definizione di endpoint nella configurazione
 
-Durante la creazione di un'applicazione è spesso necessario rimettere le decisioni all'amministratore che distribuisce l'applicazione. Spesso non è possibile prevedere, ad esempio, quale sarà l'indirizzo (URI) di un servizio. Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione. Per informazioni dettagliate, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).
+Durante la creazione di un'applicazione è spesso necessario rimettere le decisioni all'amministratore che distribuisce l'applicazione. Spesso non è possibile prevedere, ad esempio, quale sarà l'indirizzo (URI) di un servizio. Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione. Per informazioni dettagliate, vedere [configurazione dei servizi](configuring-services.md).
 
 > [!NOTE]
-> Utilizzare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con `/config:`l' `]` opzione *filename*`[,`FileName per creare rapidamente file di configurazione.
+> Utilizzare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) con il `/config:`*filename* `[,`*filename* `]` opzione per creare rapidamente file di configurazione.
 
 ## <a name="using-default-endpoints"></a>Uso di endpoint predefiniti
 
@@ -201,8 +201,8 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()
 ```
 
- Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per ulteriori informazioni sugli endpoint predefiniti, vedere [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+ Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per ulteriori informazioni sugli endpoint predefiniti, vedere [Configurazione semplificata](simplified-configuration.md) e [Configurazione semplificata per i servizi WCF](./samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Implementazione dei contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Implementazione dei contratti di servizio](implementing-service-contracts.md)

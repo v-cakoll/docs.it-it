@@ -4,12 +4,12 @@ description: Panoramica degli strumenti globali .NET Core e dei comandi dell'int
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332012"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318310"
 ---
 # <a name="net-core-global-tools-overview"></a>Panoramica degli strumenti globali .NET Core
 
@@ -31,13 +31,12 @@ Se si vuole usare uno strumento globale .NET Core:
 
 ## <a name="find-a-net-core-global-tool"></a>Trovare uno strumento globale .NET Core
 
-Attualmente non è disponibile una funzionalità di ricerca degli strumenti globali nell'interfaccia della riga di comando di .NET Core.
+Attualmente non è disponibile una funzionalità di ricerca degli strumenti globali nell'interfaccia della riga di comando di .NET Core. Di seguito sono riportati alcuni suggerimenti su come trovare gli strumenti:
 
-È possibile trovare gli strumenti globali .NET Core in [NuGet](https://www.nuget.org). NuGet tuttavia non consente ancora di cercare specificatamente gli strumenti globali .NET Core.
-
-Sono anche disponibili consigli sull'uso degli strumenti nei post di blog o nel repository GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
-
-È anche possibile visualizzare il codice sorgente degli strumenti globali creati dal team di ASP.NET nel repository GitHub [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/).
+* È possibile trovare gli strumenti globali .NET Core in [NuGet](https://www.nuget.org). NuGet tuttavia non consente ancora di cercare specificatamente gli strumenti globali .NET Core.
+* È possibile trovare consigli sugli strumenti nei post di Blog o nel repository GitHub [natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) .
+* È possibile visualizzare il codice sorgente per gli strumenti globali creati dal team ASP.NET nel repository GitHub [ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Per informazioni sugli strumenti di diagnostica, vedere [strumenti globali di diagnostica DotNet di .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Verificare l'autore e le statistiche
 
@@ -70,10 +69,10 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Gli strumenti globali possono essere installati nella directory predefinita o in un percorso specifico. Le directory predefinite sono:
 
-| OS          | `Path`                          |
+| Sistema operativo          | Percorso                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| Windows     | `%USERPROFILE%\.dotnet\tools` |
+| WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
 
 Questi percorsi vengono aggiunti al percorso dell'utente alla prima esecuzione dell'SDK in modo che gli strumenti globali installati possano essere chiamati direttamente.
 

@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248981"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319270"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -15,13 +15,13 @@ La clausola SELECT può includere una sottoclausola TOP facoltativa dopo il modi
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```sql
 [ TOP (n) ]
 ```
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>argomenti
 
-`n`Espressione numerica che specifica il numero di righe da restituire. `n` potrebbero essere un singolo valore letterale numerico o un singolo parametro.
+`n` espressione numerica che specifica il numero di righe da restituire. `n` potrebbero essere un singolo valore letterale numerico o un singolo parametro.
 
 ## <a name="remarks"></a>Note
 
@@ -45,11 +45,11 @@ L'espressione TOP non è deterministica, a meno che la query non venga ordinata.
 
 Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato TOP per specificare la riga superiore da restituire dal risultato della query. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:
 
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).
 
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :
 
-    [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
+    [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
 ## <a name="see-also"></a>Vedere anche
 

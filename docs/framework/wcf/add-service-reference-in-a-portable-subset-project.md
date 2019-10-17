@@ -2,15 +2,15 @@
 title: Aggiungere un riferimento al servizio in un progetto di subset portabili
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782421"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320843"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Aggiungere un riferimento al servizio in un progetto di subset portabili
-Progetti di subset portabili consentono ai programmatori di assembly .NET gestire un unico albero di origine e di sistema di compilazione supportando comunque più implementazioni di .NET (desktop, Silverlight, Windows Phone e XBOX). Progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono un assembly di .NET framework che può essere usato in qualsiasi implementazione di .NET.  
+I progetti di subset portabili consentono ai programmatori di assembly .NET di mantenere un singolo albero di origine e il sistema di compilazione, supportando comunque più implementazioni .NET (desktop, Silverlight, Windows Phone e XBOX). I progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono assembly .NET Framework che possono essere usati in qualsiasi implementazione di .NET.  
   
 ## <a name="add-service-reference-details"></a>Dettagli relativi a Aggiungi riferimento al servizio  
  Quando si aggiunge un riferimento al servizio in un progetto di subset portabili, si applicano le limitazioni seguenti:  
@@ -45,5 +45,5 @@ Progetti di subset portabili consentono ai programmatori di assembly .NET gestir
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Accesso ai servizi tramite client WCF](accessing-services-using-a-wcf-client.md)
 - [Libreria di classi portabile](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

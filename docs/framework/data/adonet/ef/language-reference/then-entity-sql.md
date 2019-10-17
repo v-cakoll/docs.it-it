@@ -2,23 +2,23 @@
 title: THEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: c64e440e8cd8f86706db69d923ba7085d0cb3b3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ba01a978c53b58f7e6c1ac9bc42a97277ac64bbc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248983"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319290"
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 Risultato di una clausola WHEN quando restituisce `true`.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 WHEN when_expression THEN then_expression  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `when_expression`  
  Qualsiasi espressione booleana valida.  
   
@@ -33,11 +33,11 @@ WHEN when_expression THEN then_expression
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usata l'espressione CASE per valutare un set di espressioni `Boolean` . La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
+1. Attenersi alla procedura descritta in [procedura: eseguire una query che restituisce i risultati di PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
+ [!code-sql[DP EntityServices Concepts#CASE_WHEN_THEN_ELSE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#case_when_then_else)]  
   
 ## <a name="see-also"></a>Vedere anche
 

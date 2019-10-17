@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Proiettare un grafico di oggetti (Visual Basic)'
+title: 'Procedura: proiettare un oggetto grafico (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038234"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320264"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>Procedura: Proiettare un grafico di oggetti (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>Procedura: proiettare un oggetto grafico (Visual Basic)
 In questo argomento viene illustrato come proiettare, ovvero popolare, un oggetto grafico da XML.  
   
 ## <a name="example"></a>Esempio  
- Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del documento XML [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Nel codice seguente un oggetto grafico viene popolato con le classi `Address`, `PurchaseOrder` e `PurchaseOrderItem` del [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) Documento XML.  
   
 ```vb  
 Class Address  
@@ -300,7 +300,7 @@ End Sub
   
  Questo esempio produce il seguente output:  
   
-```  
+```console  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

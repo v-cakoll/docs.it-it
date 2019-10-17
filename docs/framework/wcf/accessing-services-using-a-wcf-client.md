@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: ae589e1c418b1cf13fe9f5b34648bdf7a2210eed
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855669"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72316540"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
 
@@ -26,10 +26,10 @@ Dopo aver creato un servizio, il passaggio successivo consiste nel creare un pro
 
 3. Creare un'istanza del proxy client WCF.
 
-Il proxy client WCF può essere generato manualmente utilizzando lo strumento di utilità metadati del modello di servizio (SvcUtil. exe) per ulteriori informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Il proxy client WCF può essere generato anche in Visual Studio usando la funzionalità **Aggiungi riferimento al servizio** . Per generare il proxy client WCF usando l'uno o l'altro metodo, è necessario che il servizio sia in esecuzione. Se il servizio è self-hosted, è necessario eseguire l'host. Se il servizio è ospitato in IIS/WAS, non è necessario effettuare nessun'altra operazione.
+Il proxy client WCF può essere generato manualmente utilizzando lo strumento di utilità metadati del modello di servizio (SvcUtil. exe) per ulteriori informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). Il proxy client WCF può essere generato anche in Visual Studio usando la funzionalità **Aggiungi riferimento al servizio** . Per generare il proxy client WCF usando l'uno o l'altro metodo, è necessario che il servizio sia in esecuzione. Se il servizio è self-hosted, è necessario eseguire l'host. Se il servizio è ospitato in IIS/WAS, non è necessario effettuare nessun'altra operazione.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>Strumento ServiceModel Metadata Utility Tool
- Lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) è uno strumento da riga di comando per la generazione di codice dai metadati. Di seguito è riportato un esempio di utilizzo di un comando Svcutil.exe di base.
+ Lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) è uno strumento da riga di comando per la generazione di codice dai metadati. Di seguito è riportato un esempio di utilizzo di un comando Svcutil.exe di base.
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -49,14 +49,14 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- Se viene fornito un solo nome file, si tratta del nome del file di output. Se vengono forniti due nomi file, il primo indica un file di configurazione di input il cui contenuto viene unito con la configurazione generata e scritto nel secondo file. Per ulteriori informazioni sulla configurazione, vedere [configurazione delle associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
+ Se viene fornito un solo nome file, si tratta del nome del file di output. Se vengono forniti due nomi file, il primo indica un file di configurazione di input il cui contenuto viene unito con la configurazione generata e scritto nel secondo file. Per ulteriori informazioni sulla configurazione, vedere [configurazione delle associazioni per i servizi](configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Le richieste di metadati non protette presentano alcuni rischi nello stesso modo in cui le richieste di rete non protette hanno: Se non si è certi che l'endpoint con cui si comunica corrisponde a chi afferma, le informazioni recuperate potrebbero essere i metadati di un servizio dannoso.
+> Le richieste di metadati non protette generano rischi esattamente come qualsiasi richiesta di rete non protetta. Se non si è certi dell'identità dell'endpoint con cui si sta comunicando, le informazioni recuperate potrebbero essere metadati provenienti da un servizio dannoso.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Aggiungi riferimento al servizio in Visual Studio
 
- Con il servizio in esecuzione, fare clic con il pulsante destro del mouse sul progetto che conterrà il proxy client WCF e scegliere **Aggiungi** > **riferimento al servizio**. Nella **finestra di dialogo Aggiungi riferimento al servizio**Digitare l'URL del servizio che si desidera chiamare, quindi fare clic sul pulsante **Vai** . Nella finestra di dialogo viene visualizzato un elenco dei servizi disponibili all'indirizzo specificato. Fare doppio clic sul servizio per visualizzare i contratti e le operazioni disponibili, specificare uno spazio dei nomi per il codice generato e fare clic sul pulsante **OK** .
+ Con il servizio in esecuzione, fare clic con il pulsante destro del mouse sul progetto che conterrà il proxy client WCF e selezionare **aggiungi**  > **riferimento al servizio**. Nella **finestra di dialogo Aggiungi riferimento al servizio**Digitare l'URL del servizio che si desidera chiamare, quindi fare clic sul pulsante **Vai** . Nella finestra di dialogo viene visualizzato un elenco dei servizi disponibili all'indirizzo specificato. Fare doppio clic sul servizio per visualizzare i contratti e le operazioni disponibili, specificare uno spazio dei nomi per il codice generato e fare clic sul pulsante **OK** .
 
 ## <a name="example"></a>Esempio
  Nell'esempio di codice seguente viene illustrato un contratto di servizio creato per un servizio.
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Molte eccezioni generate da un client WCF sono causate da un'eccezione nel servizio. Di seguito ne vengono riportati alcuni esempi:
 
-- <xref:System.Net.Sockets.SocketException>: Una connessione esistente è stata chiusa forzatamente dall'host remoto.
+- <xref:System.Net.Sockets.SocketException>: connessione esistente chiusa forzatamente dall'host remoto.
 
-- <xref:System.ServiceModel.CommunicationException>: La connessione sottostante è stata chiusa in modo imprevisto.
+- <xref:System.ServiceModel.CommunicationException>: connessione sottostante chiusa in modo imprevisto.
 
-- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Connessione socket interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: connessione socket interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
 
-Quando si verificano questi tipi di eccezioni, il modo migliore per risolvere il problema è attivare la traccia sul lato servizio e individuare l'eccezione che si è verificata. Per altre informazioni sulla traccia, vedere [traccia](../../../docs/framework/wcf/diagnostics/tracing/index.md) e [uso della traccia per risolvere i problemi dell'applicazione](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+Quando si verificano questi tipi di eccezioni, il modo migliore per risolvere il problema è attivare la traccia sul lato servizio e individuare l'eccezione che si è verificata. Per altre informazioni sulla traccia, vedere [traccia](./diagnostics/tracing/index.md) e [uso della traccia per risolvere i problemi dell'applicazione](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creazione di un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Procedura: Accedere ai servizi con un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Procedura: Chiama le operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Procedura: Accedere ai servizi con contratti unidirezionali e Request/Reply](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Procedura: Accedere a un servizio WSE 3,0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Informazioni sul codice client generato](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Procedura: Migliorare il tempo di avvio delle applicazioni client WCF utilizzando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Specifica del comportamento in fase di esecuzione dei client](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Configurazione dei comportamenti client](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Procedura: Creare un client](how-to-create-a-wcf-client.md)
+- [Procedura: Accedere ai servizi con un contratto duplex](./feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Procedura: Chiamare operazioni del servizio in modo asincrono](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Procedura: Accedere ai servizi con un contratto unidirezionale o request/reply](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Procedura: Accedere a un servizio WSE 3.0](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Informazioni sul codice client generato](./feature-details/understanding-generated-client-code.md)
+- [Procedura: Migliorare il tempo di avvio di applicazioni client WCF usando XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Specifica del comportamento in fase di esecuzione dei client](specifying-client-run-time-behavior.md)
+- [Configurazione dei comportamenti client](configuring-client-behaviors.md)

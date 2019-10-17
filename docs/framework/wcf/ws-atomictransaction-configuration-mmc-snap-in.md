@@ -2,12 +2,12 @@
 title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291498"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320333"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
@@ -31,9 +31,9 @@ regasm.exe /codebase WsatUI.dll
   
  È possibile utilizzare questo strumento per modificare le impostazioni di base WS-AtomicTransaction. Ad esempio, è possibile abilitare e disabilitare il supporto del protocollo WS-AtomicTransaction, configurare le porte HTTP per WS-AT, associare un Certificato SSL alla porta HTTP, configurare certificati specificando nomi dell’oggetto del certificato, selezionare la modalità Analisi e impostare i timeout massimi e predefiniti.  
   
- Se è necessario configurare il supporto di WS-AtomicTransaction solo sul computer locale, è possibile utilizzare la versione da riga di comando di questo strumento. Per ulteriori informazioni sullo strumento da riga di comando, vedere l'argomento relativo all' [utilità di configurazione WS-AtomicTransaction (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .  
+ Se è necessario configurare il supporto di WS-AtomicTransaction solo sul computer locale, è possibile utilizzare la versione da riga di comando di questo strumento. Per ulteriori informazioni sullo strumento da riga di comando, vedere l'argomento relativo all' [utilità di configurazione WS-AtomicTransaction (wsatConfig. exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .  
   
- È necessario tenere presente che Snap-in MMC e lo strumento della riga di comando, non supportano la configurazione di tutte le impostazioni WS-AT. Queste impostazioni possono essere modificate solo modificando direttamente il Registro di sistema. Per ulteriori informazioni su queste impostazioni del registro di sistema, vedere [configurazione del supporto per transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ È necessario tenere presente che Snap-in MMC e lo strumento della riga di comando, non supportano la configurazione di tutte le impostazioni WS-AT. Queste impostazioni possono essere modificate solo modificando direttamente il Registro di sistema. Per ulteriori informazioni su queste impostazioni del registro di sistema, vedere [configurazione del supporto per transazioni WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Descrizione dell'interfaccia utente  
  **Abilita supporto di rete WS-Atomic Transaction**:  
@@ -82,12 +82,12 @@ regasm.exe /codebase WsatUI.dll
  È inoltre possibile specificare sessioni di registrazione nella casella di gruppo **sessione di registrazione** .  
   
 > [!NOTE]
-> Quando il provider di traccia WS-AT è utilizzato da un altro consumer di traccia, non è possibile creare una nuova sessione di registrazione per gli eventi di traccia. Se si tenta di configurare la registrazione in questo momento verrà generato il messaggio di errore non “Errore durante l’abilitazione del provider”. Codice errore: 1".  
+> Quando il provider di traccia WS-AT è utilizzato da un altro consumer di traccia, non è possibile creare una nuova sessione di registrazione per gli eventi di traccia. Se si tenta di configurare la registrazione in questo momento verrà generato il messaggio di errore non “Errore durante l’abilitazione del provider”. Codice di errore: 1”.  
   
- Per ulteriori informazioni sulla traccia e la registrazione, vedere [amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md).  
+ Per ulteriori informazioni sulla traccia e la registrazione, vedere [amministrazione e diagnostica](./diagnostics/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione del supporto di transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md)
+- [Configurazione del supporto di transazioni WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md)
+- [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Amministrazione e diagnostica](./diagnostics/index.md)

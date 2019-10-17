@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Trovare il pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)'
+title: "Procedura: trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc54239d2ddaafcc46413ed13c274449daaba0c7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61854997"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320596"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare il pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare l'elemento di pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)
 A volte è necessario trovare l'elemento di pari livello immediatamente precedente a un nodo. A causa della differenza nella semantica dei predicati di posizione per gli assi di pari livello precedenti in XPath rispetto a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], si tratta di uno dei confronti più interessanti.  
   
 ## <a name="example"></a>Esempio  
@@ -43,7 +43,7 @@ Console.WriteLine(el1)
   
  Questo esempio produce il seguente output:  
   
-```  
+```console
 Results are identical  
 <Child3 />  
 ```  

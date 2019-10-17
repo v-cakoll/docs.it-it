@@ -2,26 +2,26 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4142dca604c0f6dd521f45a8cadd26b9574000f0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249207"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319371"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Specifica gli elementi restituiti da una query.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
-or  
+-- or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  ALL  
  Specifica che nel set di risultati possono essere inclusi duplicati. ALL è l'argomento predefinito.  
   
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Espressione nel formato seguente:  
   
- `expr`come `identifier` &#124;`expr`  
+ `expr` come `identifier` &#124; `expr`  
   
  `expr`  
  Valore letterale o espressione.  
@@ -49,20 +49,20 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
   
  L'elenco di una o più espressioni di query che seguono la parola chiave SELECT è noto come elenco di selezione o, più formalmente, come proiezione. La forma più generale di proiezione è una singola espressione di query. Se si seleziona un membro `member1` da una raccolta `collection1`, verrà creata una nuova raccolta di tutti i valori di `member1` per ogni oggetto di `collection1`, come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 SELECT collection1.member1 FROM collection1  
 ```  
   
  Se, ad esempio, `customers` è una raccolta di tipo `Customer` con una proprietà `Name` di tipo `string`, se si seleziona `Name` da `customers` verrà creata una raccolta di stringhe, come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 SELECT customers.Name FROM customers AS c  
 ```  
   
  È anche possibile usare la sintassi JOIN (FULL, INNER, LEFT, OUTER, ON e RIGHT). ON è obbligatorio per gli inner join e non è consentito per i cross join.  
   
 ## <a name="row-and-value-select-clauses"></a>Clausole SELECT per la selezione di righe e di valori  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due varianti della clausola SELECT. La prima variante, per la selezione di righe, è identificata dalla parola chiave SELECT e può essere usata per specificare uno o più valori da proiettare. Poiché ai valori restituiti viene aggiunto in modo implicito un wrapper di riga, il risultato dell'espressione di query è sempre un multiset di righe.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due varianti della clausola SELECT. La prima variante, Select di riga, è identificata dalla parola chiave SELECT e può essere usata per specificare uno o più valori da proiettare. Poiché un wrapper di riga viene aggiunto implicitamente attorno ai valori restituiti, il risultato dell'espressione di query è sempre un multiset di righe.  
   
  In ogni espressione di query in una clausola per la selezione di righe deve essere specificato un alias. Se non viene specificato alcun alias, in[!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene eseguito un tentativo di generare un alias usando le regole di generazione di alias.  
   
@@ -70,7 +70,7 @@ SELECT customers.Name FROM customers AS c
   
  Una clausola per la selezione di righe può essere sempre espressa in termini di VALUE SELECT, come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
@@ -81,24 +81,24 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 ## <a name="differences-from-transact-sql"></a>Differenze rispetto a Transact-SQL  
  A differenza di Transact-SQL, in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è supportato l'uso dell'argomento * nella clausola SELECT.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consente invece alle query di proiettare interi record facendo riferimento agli alias della raccolta dalla clausola FROM, come illustrato nell'esempio seguente.  
   
-```  
+```sql  
 SELECT * FROM T1, T2  
 ```  
   
- L'espressione di query Transact-SQL precedente viene espressa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in nel modo seguente.  
+ L'espressione di query Transact-SQL precedente è espressa in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nel modo seguente.  
   
-```  
+```sql  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore SELECT per specificare gli elementi che devono essere restituiti da una query. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
+ [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,23 +2,23 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb16fe0072066580bff36ac0879ff38217f1e34
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249245"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319381"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Consente di costruire record anonimi strutturalmente tipizzati da uno o più valori.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 ROW ( expression [ AS alias ] [,...] )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Qualsiasi espressione di query valida che restituisce un valore da costruire in un tipo di riga.  
   
@@ -31,7 +31,7 @@ ROW ( expression [ AS alias ] [,...] )
 ## <a name="remarks"></a>Note  
  Si usano costruttori ROW in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per costruire record anonimi strutturalmente tipizzati da uno o più valori. Il tipo di risultato di un costruttore ROW è un tipo di riga i cui tipi di campo corrispondono ai tipi dei valori usati per costruire la riga. L'espressione seguente consente ad esempio di costruire un valore di tipo `Record(a int, b string, c int)`.  
   
-```  
+```sql  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
@@ -48,11 +48,11 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore ROW per costruire record anonimi strutturalmente tipizzati. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
+ [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
 ## <a name="see-also"></a>Vedere anche
 

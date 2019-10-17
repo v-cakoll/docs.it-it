@@ -1,5 +1,5 @@
 ---
-title: 'Procedure consigliate: Controllo delle versioni dei contratti dati'
+title: 'Procedure consigliate: controllo delle versioni del contratto dati'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a56111796b1e301862dcbd9e76a6294c709ea06f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d500c37efa4a90e24b06cd2e886147e1f159d4e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652148"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320784"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
-In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per altre informazioni sui contratti dati, vedere gli argomenti in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+# <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: controllo delle versioni del contratto dati
+In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per ulteriori informazioni sui contratti dati, vedere gli argomenti relativi all' [utilizzo di contratti dati](./feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Note sulla convalida dello schema  
- Discutere il controllo delle versioni del contratto dati, è importante notare che lo schema di contratto dati esportato da Windows Communication Foundation (WCF) non dispone di alcun supporto di controllo delle versioni, non per il fatto che gli elementi sono contrassegnati come facoltativi per impostazione predefinita.  
+ Quando si discute il controllo delle versioni dei contratti dati, è importante notare che lo schema del contratto dati esportato da Windows Communication Foundation (WCF) non dispone di alcun supporto per il controllo delle versioni, tranne per il fatto che gli elementi sono contrassegnati come facoltativi per impostazione predefinita.  
   
  Di conseguenza, anche lo scenario di controllo delle versioni più comune, quale l'aggiunta di un nuovo membro dati, non può essere implementato agevolmente rispetto a un schema specificato. Le versioni più recenti di un contratto dati (ad esempio con un nuovo membro dati) non vengono convalidate usando lo schema obsoleto.  
   
- Esistono tuttavia molti scenari in cui non è richiesta una totale conformità allo schema. Molte piattaforme di servizi Web, tra cui WCF e servizi Web XML creati utilizzando ASP.NET, non eseguire la convalida dello schema per impostazione predefinita e pertanto tollerano elementi aggiuntivi non descritti nello schema. Se si usano tali piattaforme, l'implementazione di molti scenari di controllo delle versioni risulta più semplice.  
+ Esistono tuttavia molti scenari in cui non è richiesta una totale conformità allo schema. Molte piattaforme di servizi Web, tra cui WCF e i servizi Web XML creati tramite ASP.NET, non eseguono la convalida dello schema per impostazione predefinita e pertanto tollerano elementi aggiuntivi non descritti dallo schema. Se si usano tali piattaforme, l'implementazione di molti scenari di controllo delle versioni risulta più semplice.  
   
  Sono pertanto disponibili due set di linee guida per il controllo delle versioni di un contratto dati: un set per gli scenari in cui la rigorosa validità dello schema è importante e un altro set per gli scenari in cui non lo è.  
   
@@ -35,18 +35,18 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  Sebbene in questi esempi i nomi sono stati modificati (aggiungendo "2"), è consigliabile modificare gli spazi dei nomi anziché i nomi, aggiungendo un numero di versione o una data ai nuovi spazi dei nomi. Ad esempio, il contratto dati `http://schemas.contoso.com/2005/05/21/PurchaseOrder` diventerebbe il contratto dati `http://schemas.contoso.com/2005/10/14/PurchaseOrder`.  
   
- Per altre informazioni, vedere le procedure consigliate: [Controllo delle versioni del servizio](../../../docs/framework/wcf/service-versioning.md).  
+ Per ulteriori informazioni, vedere procedure consigliate: [controllo delle versioni dei servizi](service-versioning.md).  
   
- In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da WCF e determinano quindi l'invio di messaggi di schema non valido. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
+ In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da WCF e pertanto generano messaggi non validi per lo schema. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
   
 - Non implementare l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sui tipi usati.  
   
 - Applicare un attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al contratto di servizio con la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> impostata su `true`.  
   
- Per altre informazioni sulle sequenze andata e ritorno, vedere [contratti di dati Forward-Compatible](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Per ulteriori informazioni sul round trip, vedere [contratti dati compatibili con](./feature-details/forward-compatible-data-contracts.md)le versioni successive.  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Controllo delle versioni quando la convalida dello schema non è necessaria  
- La rigorosa conformità allo schema è richiesta raramente. Molte piattaforme tollerano elementi aggiuntivi non descritti da un schema. Purché questi elementi sono tollerati, il set completo di funzionalità descritto in [versioni di DataContract](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) e [contratti di dati Forward-Compatible](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) può essere utilizzato. Di seguito sono riportate alcune linee guida consigliate.  
+ La rigorosa conformità allo schema è richiesta raramente. Molte piattaforme tollerano elementi aggiuntivi non descritti da un schema. Fino a quando questo è tollerato, è possibile usare il set completo di funzionalità descritte nei contratti dati di [controllo delle versioni](./feature-details/data-contract-versioning.md) dei contratti dati e di [dati compatibili con](./feature-details/forward-compatible-data-contracts.md) le versioni successive. Di seguito sono riportate alcune linee guida consigliate.  
   
  È necessario attenersi esattamente ad alcune linee guida per inviare versioni nuove di un tipo quando ne è previsto uno precedente o inviare un tipo obsoleto quando ne è previsto uno nuovo. Altre linee guida non sono strettamente necessarie, ma sono elencate perché potrebbero essere interessate dagli sviluppi futuri del controllo delle versioni sullo schema.  
   
@@ -54,9 +54,9 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
 2. L'utilizzo dell'ereditarietà insieme ai contratti dati è consentito, purché l'ereditarietà non venga usata come un meccanismo di controllo delle versioni e vengano seguite determinate regole. Se un tipo deriva da un determinato tipo di base, non è possibile fare in modo che derivi da un tipo di base diverso in una versione futura (a meno che abbia lo stesso contratto dati). Esiste un'unica eccezione a questa condizione: è possibile inserire un tipo nella gerarchia tra un tipo di contratto dati e il relativo tipo di base, ma solo se non contiene membri dati con nomi identici a quelli di altri membri in qualsiasi possibile versione degli altri tipi nella gerarchia. In generale, l'uso di membri dati con nomi identici a livelli diversi della stessa gerarchia di ereditarietà può causare gravi problemi di controllo delle versioni e deve essere evitato.  
   
-3. A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
+3. A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](./feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
   
-4. Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. Per altre informazioni sulla denominazione, vedere [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. Per ulteriori informazioni sulla denominazione, vedere [nomi di contratto dati](./feature-details/data-contract-names.md).  
   
 5. Nelle versioni più recenti, non modificare i nomi di qualsiasi membro dati. Se si modifica il nome del campo, della proprietà o dell'evento sottostante il membro dati, usare la proprietà `Name` di <xref:System.Runtime.Serialization.DataMemberAttribute> per mantenere il nome del membro dati esistente.  
   
@@ -68,9 +68,9 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
     1. La proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> deve essere sempre impostata sul valore predefinito `false`.  
   
-    2. Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. Per altre informazioni sui callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2. Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. Per altre informazioni sul callback, vedere [callback di serializzazione a tolleranza di versione](./feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3. Il <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> proprietà deve essere usata per assicurarsi che tutti i membri dati appena aggiunti vengono visualizzati dopo i membri dati esistenti. È consigliabile eseguire questa operazione come segue: Nessuno dei membri dei dati nella prima versione del contratto dati deve avere i `Order` set di proprietà. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
+    3. È necessario utilizzare la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> per assicurarsi che tutti i membri dati appena aggiunti vengano visualizzati dopo i membri dati esistenti. La procedura consigliata per eseguire questa operazione consiste nel verificare che la proprietà `Order` non sia impostata per alcun membro dati nella prima versione del contratto dati. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
   
 9. Non rimuovere i membri dati nelle versioni più recenti, anche se per la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> è stato lasciato il valore predefinito `false` nelle versioni precedenti.  
   
@@ -86,7 +86,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
 14. Non è consigliabile aggiungere o rimuovere membri di enumerazione tra diverse versioni. È inoltre sconsigliabile rinominare i membri di enumerazione, a meno che non si utilizzi la proprietà Name sull'attributo `EnumMemberAttribute` per mantenere gli stessi nomi nel modello del contratto dati.  
   
-15. Le raccolte sono intercambiabili nel modello del contratto dati, come descritto in [tipi di raccolta nei contratti dati](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Ciò assicura un elevato grado di flessibilità. Tuttavia, accertarsi di non modificare inavvertitamente un tipo di raccolta in modo non intercambiabile da una versione all'altra. Ad esempio, non modificare una raccolta non personalizzata (ovvero senza l'attributo `CollectionDataContractAttribute`) in una raccolta personalizzata o una raccolta personalizzata in una non personalizzata. Inoltre, non impostare le proprietà su `CollectionDataContractAttribute` da versione a versione. L'unica modifica consentita consiste nell'aggiunta di una proprietà Name o Namespace se il nome o lo spazio dei nomi del tipo di raccolta sottostante sono stati modificati ed è necessario uniformare il nome e lo spazio dei nomi del contratto dati a quelli di una versione precedente.  
+15. Le raccolte sono intercambiabili nel modello del contratto dati, come descritto in [tipi di raccolta nei contratti dati](./feature-details/collection-types-in-data-contracts.md). Ciò assicura un elevato grado di flessibilità. Tuttavia, accertarsi di non modificare inavvertitamente un tipo di raccolta in modo non intercambiabile da una versione all'altra. Ad esempio, non modificare una raccolta non personalizzata (ovvero senza l'attributo `CollectionDataContractAttribute`) in una raccolta personalizzata o una raccolta personalizzata in una non personalizzata. Inoltre, non impostare le proprietà su `CollectionDataContractAttribute` da versione a versione. L'unica modifica consentita consiste nell'aggiunta di una proprietà Name o Namespace se il nome o lo spazio dei nomi del tipo di raccolta sottostante sono stati modificati ed è necessario uniformare il nome e lo spazio dei nomi del contratto dati a quelli di una versione precedente.  
   
  Alcune delle linee guida elencate possono essere ignorate senza conseguenze se si verificano alcune circostanze speciali. Accertarsi di aver compreso tutti gli aspetti della serializzazione, della deserializzazione e dei meccanismi dello schema coinvolti prima di allontanarsi dalle linee guida.  
   
@@ -101,8 +101,8 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Controllo delle versioni dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Nomi di contratto di dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Uso di contratti di dati](./feature-details/using-data-contracts.md)
+- [Controllo delle versioni dei contratti di dati](./feature-details/data-contract-versioning.md)
+- [Nomi di contratto di dati](./feature-details/data-contract-names.md)
+- [Contratti di dati compatibili con versioni successive](./feature-details/forward-compatible-data-contracts.md)
+- [Callback di serializzazione a tolleranza di versione](./feature-details/version-tolerant-serialization-callbacks.md)

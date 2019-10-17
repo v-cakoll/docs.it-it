@@ -2,23 +2,23 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250563"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319725"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Consente di determinare se un'espressione di query è null.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Qualsiasi espressione di query valida. Non può trattarsi di una raccolta, includere membri di una raccolta o essere un tipo di record con proprietà di un tipo di raccolta.  
   
@@ -31,7 +31,7 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>Note  
  Usare `IS NULL` per determinare se l'elemento di un outer join è null:  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,13 +40,13 @@ select c
   
  Usare `IS NULL` per determinare se un membro ha un valore effettivo:  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
  Nella tabella seguente viene illustrato il comportamento di `IS NULL` con alcuni modelli. Tutte le eccezioni vengono generate sul lato client prima che il provider venga richiamato:  
   
-|Modello|Comportamento|  
+|Criterio|Comportamento|  
 |-------------|--------------|  
 |null IS NULL|Restituisce `true`.|  
 |TREAT (null AS EntityType) IS NULL|Restituisce `true`.|  
@@ -57,13 +57,13 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Genera un errore.|  
   
 ## <a name="example"></a>Esempio  
- Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore is not null per determinare se un'espressione di query non è null. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
+ Nella query di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore IS NOT NULL per determinare se un'espressione di query non è null. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
 ## <a name="see-also"></a>Vedere anche
 

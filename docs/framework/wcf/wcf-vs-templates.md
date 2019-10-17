@@ -2,12 +2,12 @@
 title: Modelli di Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916783"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320480"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelli di Visual Studio WCF
 I modelli di Visual Studio Windows Communication Foundation (WCF) sono modelli di progetto e di elemento predefiniti che è possibile usare in Visual Studio per compilare rapidamente i servizi WCF e le applicazioni circostanti.  
@@ -27,7 +27,7 @@ I modelli di Visual Studio Windows Communication Foundation (WCF) sono modelli d
 - File di configurazione dell'applicazione (App.config). Il file di configurazione fornisce gli elementi di base di un modello di servizio WCF con un'associazione HTTP protetta. Include anche un endpoint per il servizio e abilita scambio di metadati.  
   
 > [!NOTE]
-> Visual Studio è configurato per riconoscere il file app. config come file di configurazione per il progetto quando viene eseguito tramite l' [host del servizio WCF (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), che è la configurazione predefinita. Se la libreria di servizi viene inserita in un eseguibile, è necessario spostare il codice di configurazione nel file di configurazione dell'eseguibile, in quanto i file di configurazione per le DLL non sono validi.  
+> Visual Studio è configurato per riconoscere il file app. config come file di configurazione per il progetto quando viene eseguito tramite l' [host del servizio WCF (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md), che è la configurazione predefinita. Se la libreria di servizi viene inserita in un eseguibile, è necessario spostare il codice di configurazione nel file di configurazione dell'eseguibile, in quanto i file di configurazione per le DLL non sono validi.  
   
 ### <a name="wcf-service-application-template"></a>Modello Applicazione di servizio WCF  
  Il modello applicazione di servizio WCF è disponibile nella finestra di dialogo nuovo progetto **in C#Visual \WCF** e **Visual Basic\WCF**.  
@@ -59,17 +59,17 @@ I modelli di Visual Studio Windows Communication Foundation (WCF) sono modelli d
  Se il progetto esistente è un progetto Web viene creato anche un file del host del servizio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modello di elemento e progetto di servizio WF WCF.  
- Questi modelli creano servizi WCF che ospitano un servizio del flusso di lavoro, ovvero un flusso di lavoro a cui è possibile accedere come un servizio Web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per ulteriori informazioni su questi tipi di flusso di lavoro [, vedere Procedura: Creare un flusso](../windows-workflow-foundation/how-to-create-a-workflow.md)di lavoro. Per ulteriori informazioni sulla creazione di progetti flusso di lavoro, vedere [creazione di progetti flusso di lavoro legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Questi modelli creano servizi WCF che ospitano un servizio del flusso di lavoro, ovvero un flusso di lavoro a cui è possibile accedere come un servizio Web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per ulteriori informazioni su questi tipi di flusso di lavoro, vedere [procedura: creare un flusso di lavoro](../windows-workflow-foundation/how-to-create-a-workflow.md). Per ulteriori informazioni sulla creazione di progetti flusso di lavoro, vedere [creazione di progetti flusso di lavoro legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  La finestra di progettazione di Visual Studio è più rispondente quando vengono usati flussi di lavoro di tipo XOML anziché quelli basati sul codice. XOML è il tipo di flusso predefinito che viene creato.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Modello Libreria di servizi di diffusione WCF  
- Questo modello consente di esporre il feed in formato RSS o ATOM come servizio WCF. Per ulteriori informazioni, vedere la pagina relativa alla [diffusione WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Questo modello consente di esporre il feed in formato RSS o ATOM come servizio WCF. Per ulteriori informazioni, vedere la pagina relativa alla [diffusione WCF](./feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Modifica dell'indirizzo del feed  
  Il modello di pubblicazione utilizza Internet Explorer durante l'esecuzione. Quando si fa clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** in Visual Studio, selezionare **Proprietà**, quindi selezionare la scheda **debug** ed è possibile visualizzare l'indirizzo predefinito del modello. Internet Explorer tenterà di aprire il feed a questo indirizzo.  
   
- Se si modifica l'indirizzo del feed, è necessario modificare anche l'indirizzo nella scheda **debug** . In caso contrario, Internet Explorer tenterà di aprire il feed all'indirizzo predefinito e l'operazione avrà esito negativo.  
+ Se si modifica l'indirizzo del feed, è necessario modificare anche l'indirizzo nella scheda **debug** . In caso contrario, Internet Explorer tenterà di aprire il feed all'indirizzo predefinito e avrà esito negativo.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>Modello di elemento del servizio WCF con supporto AJAX  
  Questo modello espone un controllo AJAX come servizio WCF. Per ulteriori informazioni sui controlli AJAX, vedere la [documentazione del controllo AJAX](https://go.microsoft.com/fwlink/?LinkId=96717).  
@@ -84,5 +84,5 @@ I modelli di Visual Studio Windows Communication Foundation (WCF) sono modelli d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host del servizio WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [Client di prova WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

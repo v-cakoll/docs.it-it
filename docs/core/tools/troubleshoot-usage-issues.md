@@ -3,12 +3,12 @@ title: Risolvere i problemi di utilizzo degli strumenti .NET Core
 description: Individuare i problemi comuni quando si eseguono gli strumenti di .NET Core e le possibili soluzioni.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332977"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318297"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Risolvere i problemi di utilizzo degli strumenti .NET Core
 
@@ -19,7 +19,7 @@ Si potrebbero riscontrare problemi durante il tentativo di installare o eseguire
 Quando si verifica un errore di esecuzione di uno strumento .NET Core, è molto probabile che si verifichi uno dei problemi seguenti:
 
 * Il file eseguibile per lo strumento non è stato trovato.
-* La versione corretta del runtime di .NET Core non è stata trovata. 
+* La versione corretta del runtime di .NET Core non è stata trovata.
 
 ### <a name="executable-file-not-found"></a>File eseguibile non trovato
 
@@ -44,10 +44,10 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
 
     Gli strumenti globali possono essere installati nella directory predefinita o in una posizione specifica. Le directory predefinite sono:
 
-    | OS          | `Path`                          |
+    | Sistema operativo          | Percorso                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+    | WINDOWS     | `%USERPROFILE%\.dotnet\tools` |
 
     Se si sta provando a eseguire uno strumento globale, verificare che la variabile di ambiente `PATH` nel computer contenga il percorso in cui è stato installato lo strumento globale e che il file eseguibile si trovi in tale percorso.
 
@@ -56,20 +56,20 @@ Il nome del file eseguibile determina il modo in cui si richiama lo strumento. L
   * Se si usa Linux e si è installato il .NET Core SDK usando file con *estensione tar. gz* e non apt-get o RPM.
   * Se si usa macOS 10,15 "Catalina" o versioni successive.
   * Se si usa macOS 10,14 "Mojave" o versioni precedenti ed è stato installato il .NET Core SDK usando file con *estensione tar. gz* e non *. pkg*.
-  * Se è stato installato .NET Core 3,0 SDK ed è stata impostata la variabile di ambiente `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` su `false`.
+  * Se è stato installato .NET Core 3,0 SDK e la variabile di ambiente `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` è stata impostata su `false`.
   * Se è stato installato .NET Core 2,2 SDK o versioni precedenti ed è stata impostata la variabile di ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` su `true`.
-  
+
   Per altre informazioni sugli strumenti globali, vedere [Cenni preliminari sugli strumenti globali di .NET Core](global-tools.md).
 
 * Strumenti locali
 
   Se si sta provando a eseguire uno strumento locale, verificare che esista un file manifesto denominato *DotNet-Tools. JSON* nella directory corrente o in una delle relative directory padre. Questo file può essere contenuto anche in una cartella denominata *. config* in un punto qualsiasi della gerarchia della cartella del progetto, anziché nella cartella radice. Se *DotNet-Tools. JSON* esiste, aprirlo e verificare lo strumento che si sta tentando di eseguire. Se il file non contiene una voce per `"isRoot": true`, controllare anche ulteriormente la gerarchia dei file per ulteriori file manifesto dello strumento.
 
-    Se si sta provando a eseguire uno strumento .NET Core installato con un percorso specificato, è necessario includere tale percorso quando si usa lo strumento. Di seguito è riportato un esempio di utilizzo di uno strumento-percorso installato:
+  Se si sta provando a eseguire uno strumento .NET Core installato con un percorso specificato, è necessario includere tale percorso quando si usa lo strumento. Di seguito è riportato un esempio di utilizzo di uno strumento-percorso installato:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>Runtime non trovato
 
@@ -95,7 +95,7 @@ dotnet --info
 
 Se si ritiene che lo strumento supporti la versione di Runtime attualmente installata, è possibile contattare l'autore dello strumento e verificare se è possibile aggiornare il numero di versione o il multitarget. Dopo aver ricompilato e ripubblicato il pacchetto di strumenti in NuGet con un numero di versione aggiornato, è possibile aggiornare la copia. Sebbene ciò non accada, la soluzione più rapida per l'utente consiste nell'installare una versione del runtime che funzionerebbe con lo strumento che si sta tentando di eseguire. Per scaricare una versione specifica del runtime di .NET Core, visitare la [pagina di download di .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-Se si installa il .NET Core SDK in un percorso non predefinito, è necessario impostare la variabile di ambiente `DOTNET_ROOT` sulla directory che contiene il file eseguibile `dotnet`.
+Se si installa il .NET Core SDK in un percorso non predefinito, è necessario impostare la variabile di ambiente `DOTNET_ROOT` alla directory che contiene il `dotnet` eseguibile.
 
 ## <a name="net-core-tool-installation-fails"></a>L'installazione dello strumento .NET Core non riesce
 
@@ -138,7 +138,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
 > [!NOTE]
-> Il team di interfaccia della riga di comando di .NET Core sta pianificando di aggiungere un Commuti `--preview` in una versione futura per semplificare questa operazione.
+> Il team interfaccia della riga di comando di .NET Core prevede di aggiungere un cambio di `--preview` in una versione futura per semplificare questa operazione.
 
 ### <a name="package-isnt-a-net-core-tool"></a>Il pacchetto non è uno strumento .NET Core
 
@@ -146,13 +146,13 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 Se si tenta di installare un pacchetto NuGet che è un pacchetto NuGet normale e non uno strumento .NET Core, verrà visualizzato un errore simile al seguente:
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: combinazione del pacchetto di progetto non valida per `<ToolName>`. Lo stile del progetto DotnetToolReference può contenere solo riferimenti del tipo DotnetTool.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>Non è possibile accedere al feed NuGet
 
 * Non è possibile accedere al feed NuGet necessario, probabilmente a causa di un problema di connessione a Internet.
 
-L'installazione dello strumento richiede l'accesso al feed NuGet che contiene il pacchetto di strumenti. Se il feed non è disponibile, l'operazione ha esito negativo. È possibile modificare i feed con `nuget.config`, richiedere un file `nuget.config` specifico o specificare feed aggiuntivi con l'opzione `--add-source`. Per impostazione predefinita, NuGet genera un errore per tutti i feed che non possono connettersi. Il flag `--ignore-failed-sources` può ignorare queste origini non raggiungibili.
+L'installazione dello strumento richiede l'accesso al feed NuGet che contiene il pacchetto di strumenti. Se il feed non è disponibile, l'operazione ha esito negativo. È possibile modificare i feed con `nuget.config`, richiedere un file di `nuget.config` specifico o specificare feed aggiuntivi con il commutatore `--add-source`. Per impostazione predefinita, NuGet genera un errore per tutti i feed che non possono connettersi. Il flag `--ignore-failed-sources` possibile ignorare queste origini non raggiungibili.
 
 ### <a name="package-id-incorrect"></a>ID pacchetto errato
 
@@ -161,4 +161,5 @@ L'installazione dello strumento richiede l'accesso al feed NuGet che contiene il
 Una causa comune dell'errore è che il nome dello strumento non è corretto. Questo problema può verificarsi a causa di una digitazione errata o perché lo strumento è stato spostato o è stato deprecato. Per gli strumenti di NuGet.org, un modo per assicurarsi che il nome sia corretto è cercare lo strumento in NuGet.org e copiare il comando di installazione.
 
 ## <a name="see-also"></a>Vedere anche
+
 * [Panoramica degli strumenti globali .NET Core](global-tools.md)

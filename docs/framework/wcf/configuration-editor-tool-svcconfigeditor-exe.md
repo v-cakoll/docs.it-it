@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 8123a504e83164f2ae842755da8ff4d8850141d2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046026"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320699"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 
@@ -61,20 +61,20 @@ L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nell
 
 ### <a name="opening-a-configuration-file"></a>Apertura di un file di configurazione
 
-1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF `SvcConfigEditor.exe`e quindi digitare.
+1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe`.
 
 2. Scegliere **Apri** dal menu **file** e quindi fare clic sul tipo di file che si desidera gestire.
 
 3. Nella finestra di dialogo **Apri** passare al file specifico che si desidera gestire e fare doppio clic su di esso.
 
-Il visualizzatore segue automaticamente il percorso del merge delle configurazioni e crea una visualizzazione della configurazione unita. Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine.config e App.config. Le modifiche vengono apportate al file attivo nell'editor SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di merge delle configurazioni, è necessario aprirlo direttamente.
+Il visualizzatore segue automaticamente il percorso del merge delle configurazioni e crea una visualizzazione della configurazione unita. Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine. config e app. config. Tutte le modifiche vengono applicate al file attivo in SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di merge delle configurazioni, è necessario aprirlo direttamente.
 
 > [!NOTE]
 > L'Editor di configurazione ricarica il file di configurazione attualmente aperto quando quest’ultimo è stato modificato fuori dell'Editor. Quando si verifica questa condizione, tutte le modifiche che non sono state salvate in modo durevole nell'Editor verranno perse. Se il nuovo caricamento si verifica costantemente, la causa più probabile è un servizio che accede continuamente al file di configurazione, ad esempio un software antivirus in esecuzione in background. Per risolvere questo problema, assicurarsi che l'Editor di configurazione sia l’unico processo solo che può accedere al file quando è aperto.
 
 ### <a name="services"></a>Servizi
 
-Il nodo **Servizi** Visualizza tutti i servizi attualmente assegnati nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento della <`services`> elemento nel file di configurazione.
+Il nodo **Servizi** Visualizza tutti i servizi attualmente assegnati nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'< `services` > elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **Servizi** , è possibile visualizzare o eseguire attività nella pagina di riepilogo del servizio nel riquadro dei **Dettagli** .
 
@@ -82,9 +82,9 @@ Quando si fa clic sul nodo **Servizi** , è possibile visualizzare o eseguire at
 
 Per creare una nuova configurazione di un servizio, è possibile procedere nei modi seguenti:
 
-- Utilizzo di una procedura guidata: Fare clic sul collegamento **Crea un nuovo servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. Questa operazione può essere eseguita anche nel menu **File** > **Aggiungi nuovo elemento**.
+- Utilizzo di una procedura guidata: fare clic sul collegamento **Crea un nuovo servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. Questa operazione può essere eseguita anche nel menu **File** > **Aggiungi nuovo elemento**.
 
-- Creazione manuale: È possibile fare clic con il pulsante destro del mouse sul nodo **Servizi** e scegliere **nuovo servizio**.
+- Creazione manuale: è possibile fare clic con il pulsante destro del mouse sul nodo **Servizi** e scegliere **nuovo servizio**.
 
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Creazione di una nuova configurazione di endpoint di servizio
 
@@ -92,7 +92,7 @@ Per creare una nuova configurazione di endpoint di servizio, è possibile proced
 
 - Creazione tramite una procedura guidata: fare clic sul collegamento **Crea un nuovo endpoint del servizio...** nel riquadro attività o nella pagina di riepilogo per avviare la procedura guidata. Questa operazione può essere eseguita anche nel menu **File** > **Aggiungi nuovo elemento**.
 
-- Creazione manuale: Dopo aver creato un servizio, è possibile fare clic con il pulsante destro del mouse sul nodo **endpoint** e scegliere "**nuovo endpoint servizio**".
+- Creazione manuale: dopo aver creato un servizio, è possibile fare clic con il pulsante destro del mouse sul nodo **endpoint** e scegliere "**nuovo endpoint servizio**".
 
 #### <a name="editing-a-service-configuration"></a>Modifica della configurazione di un servizio
 
@@ -117,11 +117,11 @@ Per creare una nuova configurazione di endpoint di servizio, è possibile proced
 4. Fare clic su **OK**.
 
 > [!NOTE]
-> Non è possibile modificare il valore di [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o Visual Studio.
+> Non è possibile modificare il valore di [\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o Visual Studio.
 
 ### <a name="client"></a>Client
 
-Il nodo **client** Visualizza tutti gli endpoint client nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'<`client`> elemento nel file di configurazione.
+Il nodo **client** Visualizza tutti gli endpoint client nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento dell'< `client` > elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **client** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** client nel **riquadro dettagli**.
 
@@ -129,9 +129,9 @@ Quando si fa clic sul nodo **client** , è possibile visualizzare o eseguire att
 
 Per creare una nuova configurazione di endpoint client, è possibile procedere nei modi seguenti:
 
-- Creazione tramite procedura guidata: Fare clic sul collegamento **Crea un nuovo client...** nel **riquadro attività** nella parte inferiore sinistra della finestra o nella **pagina di riepilogo** per avviare la procedura guidata. Questa operazione può essere eseguita anche nel menu **File** > **Aggiungi nuovo elemento**. Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client. A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.
+- Creazione tramite procedura guidata: fare clic sul collegamento **Crea un nuovo client...** nel **riquadro attività** nella parte inferiore sinistra della finestra o nella **pagina di riepilogo** per avviare la procedura guidata. Questa operazione può essere eseguita anche nel menu **File** > **Aggiungi nuovo elemento**. Verrà richiesto di individuare la posizione della configurazione del servizio, da cui viene generata la configurazione client. A questo punto è possibile specificare l'endpoint del servizio a cui connettersi.
 
-- Creazione manuale: Fare clic con il pulsante destro del mouse sul nodo **endpoint** in **client**e scegliere **nuovo endpoint client**.
+- Creazione manuale: fare clic con il pulsante destro del mouse sul nodo **endpoint** in **client**e scegliere **nuovo endpoint client**.
 
 #### <a name="editing-a-client-endpoint-configuration"></a>Modifica di una configurazione di endpoint client
 
@@ -143,7 +143,7 @@ Per creare una nuova configurazione di endpoint client, è possibile procedere n
 
 Gli endpoint standard sono endpoint specializzati in cui uno o più aspetti dell'indirizzo, del contratto e dell'associazione sono impostati sui valori predefiniti.
 
-Tali impostazioni di configurazione vengono archiviate nel nodo **endpoint standard** . Il nodo **endpoint standard** Visualizza tutte le impostazioni dell'endpoint standard nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento `<standardEndpoints>` dell'elemento nel file di configurazione.
+Tali impostazioni di configurazione vengono archiviate nel nodo **endpoint standard** . Il nodo **endpoint standard** Visualizza tutte le impostazioni dell'endpoint standard nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nell'elemento `<standardEndpoints>` nel file di configurazione.
 
 Quando si fa clic sul nodo **endpoint standard** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** endpoint standard nel **riquadro dettagli**.
 
@@ -175,13 +175,13 @@ Per eliminare una configurazione di endpoint standard, è possibile procedere ne
 
 - Fare clic sul nodo **endpoint standard** . Nel riquadro **attività** fare clic su **Elimina configurazione endpoint standard**.
 
-Se si utilizza l'endpoint standard, viene visualizzato un messaggio di avviso quando si tenta di eliminarlo: **L'endpoint standard è in uso. Se lo si elimina ora, assicurarsi di eliminare tutti i relativi riferimenti presenti in altre parti della configurazione (ad esempio, nell'endpoint del servizio). In caso contrario la configurazione non sarà valida e non potrà essere aperta in seguito. Eliminare l'endpoint standard? "**
+Se si utilizza l'endpoint standard, viene visualizzato un messaggio di avviso quando si tenta di eliminarlo: **l'endpoint standard è in uso. Se lo si elimina ora, assicurarsi di eliminare tutti i relativi riferimenti in altre parti della configurazione, ad esempio nell'endpoint del servizio o nel client. In caso contrario, la configurazione non sarà valida e non potrà essere aperta la volta successiva. Eliminare l'endpoint standard? "**
 
-### <a name="binding"></a>Associazione
+### <a name="binding"></a>Binding
 
 Le configurazioni di associazione consentono di configurare le associazioni sugli endpoint. Tali impostazioni di configurazione vengono archiviate nel nodo di **associazione** . Gli endpoint fanno riferimento alle configurazioni di associazione in base al nome. Inoltre, più endpoint possono fare riferimento a una stessa configurazione di associazione.
 
-Nel nodo **associazioni** vengono visualizzate tutte le impostazioni di associazione nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nel <`bindings`> elemento nel file di configurazione.
+Nel nodo **associazioni** vengono visualizzate tutte le impostazioni di associazione nel file di configurazione. Ogni sottonodo dell'albero corrisponde a un sottoelemento nell'< `bindings` > elemento nel file di configurazione.
 
 Quando si fa clic sul nodo **Binding** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** binding nel **riquadro dettagli**.
 
@@ -213,7 +213,7 @@ Un'associazione personalizzata è una raccolta di elementi di associazione organ
 
 2. Selezionare un elemento di estensione di binding nella sezione **posizione dell'estensione dell'elemento di binding** .
 
-3. Utilizzare il pulsante su o **giù** sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.
+3. Utilizzare il pulsante **su o** **giù** sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.
 
 #### <a name="editing-the-configuration-of-binding-element-extensions-in-a-custom-binding"></a>Modifica della configurazione di estensioni degli elementi di associazione in un'associazione personalizzata
 
@@ -225,7 +225,7 @@ Un'associazione personalizzata è una raccolta di elementi di associazione organ
 
 ### <a name="diagnostics"></a>Diagnostica
 
-Nel nodo **diagnostica** vengono visualizzate tutte le impostazioni di diagnostica nel file di configurazione. Consente di attivare o disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows (WMI), configurare la traccia WCF e configurare la registrazione dei messaggi WCF. Le impostazioni nel nodo **diagnostica** corrispondono alla sezione <`system.diagnostics`> e `<diagnostics>` alla sezione nel `<system.serviceModel>` file di configurazione.
+Nel nodo **diagnostica** vengono visualizzate tutte le impostazioni di diagnostica nel file di configurazione. Consente di attivare o disattivare i contatori delle prestazioni, abilitare o disabilitare Strumentazione gestione Windows (WMI), configurare la traccia WCF e configurare la registrazione dei messaggi WCF. Le impostazioni nel nodo **diagnostica** corrispondono alla sezione < `system.diagnostics` > e `<diagnostics>` sezione in `<system.serviceModel>` nel file di configurazione.
 
 Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguire attività nella **pagina Riepilogo** diagnostica nel **riquadro dettagli**.
 
@@ -233,7 +233,7 @@ Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguir
 
 1. Fare clic sul nodo **diagnostica** .
 
-2. Fare clic su Visualizza **/Nascondi contatori delle prestazioni**. Il contatore delle prestazioni ha tre stati: Off (impostazione predefinita), ServiceOnly e all. Il collegamento consente di attivare/disattivare l'impostazione degli stati.
+2. Fare clic su Visualizza **/Nascondi contatori delle prestazioni**. Il contatore delle prestazioni prevede tre stati: Disattivo (predefinito), Solo servizio e Tutto. Il collegamento consente di attivare/disattivare l'impostazione degli stati.
 
 #### <a name="configuring-wmi-provider"></a>Configurazione del provider WMI
 
@@ -249,7 +249,7 @@ Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguir
 
 2. Fare clic su **Abilita traccia**.
 
-3. Fare clic sul collegamento **livello traccia** per modificare il livello di traccia. Sono disponibili sei livelli di traccia: Off, Critical, Error, Warning, Information e Verbose. L'opzione **traccia attività** e **propaga attività** consente di utilizzare la funzionalità di traccia attività WCF.
+3. Fare clic sul collegamento **livello traccia** per modificare il livello di traccia. Esistono sei livelli di traccia: Disattivo, Critico, Errore, Avviso, Informazioni e Dettagliato. L'opzione **traccia attività** e **propaga attività** consente di utilizzare la funzionalità di traccia attività WCF.
 
 4. Fare clic sul nome del listener di traccia per specificare il file e le opzioni di traccia.
 
@@ -261,7 +261,7 @@ Quando si fa clic sul nodo **diagnostica** , è possibile visualizzare o eseguir
 
 2. Fare clic su **Abilita registrazione messaggi**.
 
-3. Fare clic sul collegamento **livello log** per modificare il livello di registrazione. Sono disponibili tre livelli di log: Formato non valido, servizio e trasporto.
+3. Fare clic sul collegamento **livello log** per modificare il livello di registrazione. Esistono tre livelli di log: Messaggi in formato non valido, Messaggi servizio e Messaggi trasporto.
 
 4. Fare clic sul nome del listener per specificare le opzioni e il file di log.
 
@@ -324,7 +324,7 @@ I comportamenti sono raccolte di elementi organizzati in uno stack. Ogni element
 
 3. Selezionare un elemento di estensione del comportamento nella sezione **posizione dell'estensione degli elementi di comportamento** .
 
-4. Utilizzare il pulsante su o **giù** sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.
+4. Utilizzare il pulsante **su o** **giù** sul lato sinistro dell'elenco per modificare la posizione dell'elemento selezionato.
 
 ##### <a name="editing-the-configuration-of-behavior-element-extensions"></a>Modifica della configurazione delle estensioni degli elementi del comportamento
 
@@ -374,9 +374,9 @@ Un modo per creare un nuovo file di configurazione è tramite la Creazione guida
 
 #### <a name="creating-a-configuration-file"></a>Creazione di un file di configurazione
 
-1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF `SvcConfigEditor.exe`e quindi digitare.
+1. Avviare l'editor di configurazione dei servizi utilizzando una finestra di comando per passare al percorso di installazione di WCF e quindi digitare `SvcConfigEditor.exe`.
 
-2. Scegliere **Apri** dal menu **file** e fare clic su **eseguibile**, **servizio com+** o **servizio**WebHosted, a seconda del tipo di file di configurazione che si desidera creare.
+2. Scegliere **Apri** dal menu **file** e fare clic su **eseguibile**, **servizio com+** o **Servizio WebHosted**, a seconda del tipo di file di configurazione che si desidera creare.
 
 3. Nella finestra di dialogo **Apri** passare al file specifico per il quale si desidera creare un file di configurazione e fare doppio clic su di esso.
 
@@ -389,13 +389,13 @@ Un modo per creare un nuovo file di configurazione è tramite la Creazione guida
 
 ## <a name="configuring-com"></a>Configurazione di COM+
 
-L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM+ esistente o di modificare una configurazione COM+ esistente. Il nodo del **contratto com** è visibile solo quando il`comContract`< > sezione è presente nel file di configurazione.
+L'Editor di configurazione dei servizi consente di creare un nuovo file di configurazione per un'applicazione COM+ esistente o di modificare una configurazione COM+ esistente. Il nodo del **contratto com** è visibile solo quando il < `comContract` sezione > è presente nel file di configurazione.
 
 ### <a name="creating-a-new-com-configuration"></a>Creazione di una nuova configurazione COM+
 
 Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM+ sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).
 
-1. Selezionare menu **file** -> **integrare** -> l'**applicazione com+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Viene quindi avviata l' **integrazione guidata com+** .
+1. Selezionare il menu **File** > **integra**  -> **applicazione com+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Viene quindi avviata l' **integrazione guidata com+** .
 
 2. Nella prima pagina, selezionare l'applicazione COM+ nell'albero. Se risulta impossibile individuare l'applicazione COM+ nell'albero, verificare che sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).
 
@@ -409,7 +409,7 @@ Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM
 
 ### <a name="editing-an-existing-com-configuration"></a>Modifica di una configurazione COM+ esistente
 
-1. Selezionare il menu **file** > **Apri** -> **servizio com+** ...
+1. Selezionare menu **file** -> **Apri**  -> **servizio com+** ...
 
 2. Selezionare nell'elenco il servizio COM+ che si desidera modificare.
 
@@ -418,8 +418,8 @@ Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM
     > [!NOTE]
     > È inoltre possibile aprire e modificare direttamente un file di configurazione contenente contratti COM.
 
-## <a name="security"></a>Security
+## <a name="security"></a>Sicurezza
 
-Un file di configurazione del servizio generato dall'Editor di configurazione non è necessariamente protetto. Per informazioni su come proteggere i servizi WCF, vedere la documentazione relativa alla [sicurezza](../../../docs/framework/wcf/feature-details/security.md) .
+Un file di configurazione del servizio generato dall'Editor di configurazione non è necessariamente protetto. Per informazioni su come proteggere i servizi WCF, vedere la documentazione relativa alla [sicurezza](./feature-details/security.md) .
 
 L’Editor di Configurazione, inoltre, può essere utilizzato solo per leggere e scrivere elementi di configurazione WCF validi. Lo strumento ignora elementi conformi allo schema, definiti dall'utente. L’Editor di Configurazione, inoltre, non tenta di rimuovere questi elementi dal file di configurazione o di determinarne gli effetti sugli elementi WCF conosciuti. L’utente è tenuto a determinare se questi elementi possono costituire una minaccia per l'applicazione o il sistema.

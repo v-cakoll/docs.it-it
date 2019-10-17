@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: bfcdcd172d96660c3351926a9c42d298ac3fa654
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92f9457dd0c118c9a7c578a7088f66cdea1e5ad0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928570"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320661"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurazione di associazioni per i servizi Windows Communication Foundation
 Durante la creazione di un'applicazione, è spesso necessario assegnare all'amministratore il compito di prendere alcune decisioni dopo la distribuzione dell'applicazione. Non è in alcun modo possibile, ad esempio, conoscere in anticipo l'indirizzo di un servizio, o URI (Uniform Resource Identifier). Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione.  
   
 > [!NOTE]
-> Utilizzare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con `/config` l'opzione per creare rapidamente file di configurazione.  
+> Utilizzare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) con l'opzione `/config` per creare rapidamente file di configurazione.  
   
 ## <a name="major-sections"></a>Sezioni principali  
- Lo schema di configurazione Windows Communication Foundation (WCF) include le tre sezioni principali seguenti`serviceModel`( `bindings`, e `services`):  
+ Lo schema di configurazione Windows Communication Foundation (WCF) include le tre sezioni principali seguenti (`serviceModel`, `bindings` e `services`):  
   
 ```xml  
 <configuration>  
@@ -34,13 +34,13 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementi ServiceModel  
- È possibile utilizzare la sezione delimitata dall' `system.ServiceModel` elemento per configurare un tipo di servizio con uno o più endpoint, nonché le impostazioni per un servizio. Ogni endpoint può essere quindi configurato con un indirizzo, un contratto e un'associazione. Per ulteriori informazioni sugli endpoint, vedere [Cenni preliminari sulla creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md). Se non è specificato alcun endpoint, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
+ È possibile utilizzare la sezione delimitata dall'elemento `system.ServiceModel` per configurare un tipo di servizio con uno o più endpoint, nonché le impostazioni per un servizio. Ogni endpoint può essere quindi configurato con un indirizzo, un contratto e un'associazione. Per ulteriori informazioni sugli endpoint, vedere [Cenni preliminari sulla creazione di endpoint](endpoint-creation-overview.md). Se non è specificato alcun endpoint, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
  Un'associazione specifica trasporti (HTTP, TCP, pipe, Accodamento messaggi) e protocolli (sicurezza, affidabilità, flussi delle transazioni) e consiste in elementi, ognuno dei quali specifica un aspetto del modo in cui un endpoint comunica con l'esterno.  
   
- Se ad esempio si specifica l' [ \<elemento BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) indica di utilizzare http come trasporto per un endpoint. Ciò consente di associare l'endpoint in fase di esecuzione quando il servizio che utilizza l'endpoint è aperto.  
+ Ad esempio, se si specifica l'elemento [\<basicHttpBinding >](../configure-apps/file-schema/wcf/basichttpbinding.md) viene indicato di utilizzare http come trasporto per un endpoint. Ciò consente di associare l'endpoint in fase di esecuzione quando il servizio che utilizza l'endpoint è aperto.  
   
- Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di tipi di binding predefiniti forniti da WCF, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. Per ulteriori informazioni sulle associazioni personalizzate, vedere [ \<CustomBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di tipi di binding predefiniti forniti da WCF, vedere [associazioni fornite dal sistema](system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. Per ulteriori informazioni sulle associazioni personalizzate, vedere [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md).  
   
  Nei quattro esempi seguenti vengono illustrate le configurazioni di binding più comuni utilizzate per la configurazione di un servizio WCF.  
   
@@ -58,7 +58,7 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 </service>  
 ```  
   
- In questo esempio l'attributo `name` indica il tipo di servizio per il quale è destinata la configurazione. Quando si crea un servizio nel codice con il contratto `HelloWorld`, viene inizializzato con tutti gli endpoint definiti nella configurazione di esempio. Se l'assembly implementa solo un contratto di servizio, `name` l'attributo può essere omesso perché il servizio utilizza l'unico tipo disponibile. L'attributo accetta una stringa che deve presentarsi nel formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ In questo esempio l'attributo `name` indica il tipo di servizio per il quale è destinata la configurazione. Quando si crea un servizio nel codice con il contratto `HelloWorld`, viene inizializzato con tutti gli endpoint definiti nella configurazione di esempio. Se l'assembly implementa solo un contratto di servizio, è possibile omettere l'attributo `name` perché il servizio utilizza l'unico tipo disponibile. L'attributo accetta una stringa che deve presentarsi nel formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  L'attributo `address` specifica l'URI utilizzato dagli altri endpoint per comunicare con il servizio. L'URI può essere assoluto o relativo. Se viene fornito un indirizzo relativo, l'host deve fornire un indirizzo di base appropriato per lo schema di trasporto utilizzato nell'associazione. Se non viene configurato un indirizzo, si presuppone che l'indirizzo di base valga come indirizzo per quell'endpoint.  
   
@@ -89,7 +89,7 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Configurare un comportamento da applicare a un servizio  
- Nell'esempio seguente viene configurato un comportamento specifico per il tipo di servizio. L' `ServiceMetadataBehavior` elemento viene utilizzato per abilitare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per eseguire una query sul servizio e generare documenti Web Services Description Language (WSDL) dai metadati.  
+ Nell'esempio seguente viene configurato un comportamento specifico per il tipo di servizio. L'elemento `ServiceMetadataBehavior` viene utilizzato per abilitare lo [strumento ServiceModel Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) per eseguire una query sul servizio e generare documenti di Web Services Description Language (WSDL) dai metadati.  
   
 > [!NOTE]
 > Se si assegna un determinato nome al comportamento, `behaviorConfiguration` specificato nella sezione del servizio o dell'endpoint deve corrispondere ad esso.  
@@ -116,7 +116,7 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Specificare un servizio con due endpoint che utilizzano valori di associazione diversi  
- Nell'ultimo esempio sono configurati due endpoint per il tipo di servizio `HelloWorld`. Ogni endpoint usa un attributo personalizzato `bindingConfiguration` diverso dello stesso tipo di binding (ogni `basicHttpBinding`modifica di).  
+ Nell'ultimo esempio sono configurati due endpoint per il tipo di servizio `HelloWorld`. Ogni endpoint usa un attributo `bindingConfiguration` personalizzato diverso dello stesso tipo di binding (ogni modifica la `basicHttpBinding`).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -163,7 +163,7 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)
-- [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)
-- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Configurazione semplificata](simplified-configuration.md)
+- [Associazioni fornite dal sistema](system-provided-bindings.md)
+- [Panoramica della creazione di endpoint](endpoint-creation-overview.md)
+- [Uso di associazioni per configurare servizi e client](using-bindings-to-configure-services-and-clients.md)

@@ -2,23 +2,23 @@
 title: . (Accesso ai membri) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: 1db6be632da90eaa7a761bb213e395182ae42347
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e63caba9e9efb91d5c4629b9da0b1feca905ace
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250290"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319653"
 ---
 # <a name="-member-access-entity-sql"></a>. (Accesso ai membri) (Entity SQL)
-L'operatore punto (.) è l' [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatore di accesso ai membri. L'operatore di accesso ai membri viene usato per produrre il valore di una proprietà o di un campo di un'istanza del tipo di modello concettuale strutturale.  
+L'operatore punto (.) è l'operatore di accesso ai membri [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. L'operatore di accesso ai membri viene usato per produrre il valore di una proprietà o di un campo di un'istanza del tipo di modello concettuale strutturale.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 expression.identifier  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Istanza di un tipo di modello concettuale strutturale.  
   

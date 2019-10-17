@@ -2,25 +2,25 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 4055d56d878b817fe88bb0dacb53ea39061bc4b2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7755219c5238f78e59332c508643fe2ae1f5096f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249854"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319523"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (Entity SQL)
 Nega un'espressione `Boolean` .  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 NOT boolean_expression  
-or  
+-- or  
 ! boolean_expression  
-```  
+``` 
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `boolean_expression`  
  Qualsiasi espressione valida che restituisce un valore Boolean.  
   
@@ -30,11 +30,11 @@ or
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore NOT per negare un'espressione `Boolean` . La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#NOT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not)]  
+ [!code-sql[DP EntityServices Concepts#NOT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#not)]  
   
 ## <a name="see-also"></a>Vedere anche
 

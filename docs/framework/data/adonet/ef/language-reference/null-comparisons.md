@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854328"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319489"
 ---
 # <a name="null-comparisons"></a>Confronti Null
-Un valore `null` nell'origine dati indica che il valore è sconosciuto. In LINQ to Entities query è possibile verificare la presenza di valori null in modo che determinati calcoli o confronti vengano eseguiti solo su righe con dati validi o non null. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Ovvero, un confronto con un valore null non restituisce `true` o `false` `unknown`, restituisce. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
+Un valore `null` nell'origine dati indica che il valore è sconosciuto. In LINQ to Entities query è possibile verificare la presenza di valori null in modo che determinati calcoli o confronti vengano eseguiti solo su righe con dati validi o non null. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Ovvero, un confronto con un valore null non restituisce `true` o `false`, restituisce `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
   
  Per impostazione predefinita, in SQL Server il confronto tra valori Null con il metodo Equals restituisce un valore Null. Nell'esempio seguente, le righe in cui `ShipDate` è null sono escluse dal set di risultati e l'istruzione Transact-SQL restituisce 0 righe.  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Passaggio di raccolte null a funzioni di aggregazione  
- In LINQ to Entities, quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite nel database. Potrebbero esserci differenze nei risultati di una query eseguita in memoria e in una query eseguita nel database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i `null` valori possibili, eseguire il cast dei tipi e delle proprietà dei tipi che ricevono i risultati della query ai tipi nullable.  
+ In LINQ to Entities, quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite nel database. Potrebbero esserci differenze nei risultati di una query eseguita in memoria e in una query eseguita nel database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili valori di `null`, eseguire il cast dei tipi e delle proprietà dei tipi che ricevono i risultati della query ai tipi nullable.  
   
 ## <a name="see-also"></a>Vedere anche
 

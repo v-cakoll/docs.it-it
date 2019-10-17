@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi di installazione
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291520"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321348"
 ---
 # <a name="troubleshooting-setup-issues"></a>Risoluzione dei problemi di installazione
 In questo argomento viene descritto come risolvere i problemi di configurazione di Windows Communication Foundation (WCF).  
@@ -42,13 +42,13 @@ In questo argomento viene descritto come risolvere i problemi di configurazione 
   
      oppure:  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: L'inizializzatore di tipo per ' System. Management. ManagementPath ' ha generato un'eccezione. ---> System.Runtime.InteropServices.COMException (0x80040154): Il recupero del class factory COM per il componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} non è riuscito a causa dell'errore seguente: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: L'inizializzatore di tipo di 'System.Management.ManagementPath' ha generato un'eccezione. ---> System. Runtime. InteropServices. COMException (0x80040154): il recupero del class factory COM per il componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} non è riuscito a causa dell'errore seguente: 80040154.  
   
      oppure:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Impossibile caricare il file o l'assembly ' C:\WINDOWS\system32\wbem\mofcomp.exe ' o una delle relative dipendenze. Impossibile trovare il file specificato.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Impossibile caricare il file o l'assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' o una delle relative dipendenze. Impossibile trovare il file specificato.  
   
-     Nome del file: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
+     Nome file: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  Per risolvere il problema descritto in precedenza, è necessario eseguire la procedura seguente.  
   
@@ -57,17 +57,17 @@ In questo argomento viene descritto come risolvere i problemi di configurazione 
  Ripristinare l'installazione di .NET Framework 3,0 usando l'applet installazione **applicazioni** disponibile nel pannello di **controllo**oppure disinstallare/reinstallare il .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Il ripristino di .NET Framework 3.0 in seguito all'installazione di .NET Framework 3.5 rimuove gli elementi di configurazione introdotti da .NET Framework 3.5 nel file machine.config  
- Il ripristino di .NET Framework 3.0 in seguito all'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], gli elementi di configurazione introdotti da [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] nel file machine.config vengono rimossi. Tuttavia, la config web rimane invariata. La soluzione alternativa consiste nel ripristinare [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] dopo questa operazione tramite ARP oppure utilizzare lo [strumento di registrazione del servizio del flusso di lavoro (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con l'opzione `/c`.  
+ Il ripristino di .NET Framework 3.0 in seguito all'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], gli elementi di configurazione introdotti da [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] nel file machine.config vengono rimossi. Tuttavia, la config web rimane invariata. La soluzione alternativa consiste nel ripristinare [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] dopo questa operazione tramite ARP oppure utilizzare lo [strumento di registrazione del servizio del flusso di lavoro (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con l'opzione di `/c`.  
   
- [Lo strumento di registrazione del servizio di flusso di lavoro (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) si trova in%windir%\Microsoft.NET\framework\v3.5\ o in%windir%\Microsoft.net\framework64\v3.5\  
+ [Lo strumento di registrazione del servizio di flusso di lavoro (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) si trova in%windir%\Microsoft.NET\framework\v3.5\ o in%windir%\Microsoft.net\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configurare IIS correttamente per WCF/WF Webhost dopo aver installato .NET Framework 3.5  
- Quando l'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] non riesce a configurare altre impostazioni di configurazione IIS correlate a WCF, registra un errore nel log di installazione e continua. Qualsiasi tentativo di eseguire applicazioni WorkflowServices avrà esito negativo in quanto le impostazioni di configurazione richieste risultano mancanti. Ad esempio, il caricamento di xoml o del servizio regole potrebbe avere esito negativo.  
+ Quando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installazione non riesce a configurare altre impostazioni di configurazione IIS correlate a WCF, registra un errore nel log di installazione e continua. Qualsiasi tentativo di eseguire applicazioni WorkflowServices avrà esito negativo in quanto le impostazioni di configurazione richieste risultano mancanti. Ad esempio, il caricamento di xoml o del servizio regole potrebbe avere esito negativo.  
   
- Per aggirare questo problema, utilizzare lo [strumento di registrazione del servizio del flusso di lavoro (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con l'opzione `/c` per configurare correttamente le mappe di script IIS nel computer. [Lo strumento di registrazione del servizio di flusso di lavoro (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) si trova in%windir%\Microsoft.NET\framework\v3.5\ o in%windir%\Microsoft.net\framework64\v3.5\  
+ Per aggirare questo problema, utilizzare lo [strumento di registrazione del servizio del flusso di lavoro (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con l'opzione `/c` per configurare correttamente le mappe di script IIS nel computer. [Lo strumento di registrazione del servizio di flusso di lavoro (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) si trova in%windir%\Microsoft.NET\framework\v3.5\ o in%windir%\Microsoft.net\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Impossibile caricare il tipo ‘System.ServiceModel.Activation.HttpModule’ dall'assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Questo errore si verifica se è installato [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] e l'attivazione HTTP WCF è abilitata. Per risolvere il problema, eseguire la seguente riga di comando dall'interno del Prompt dei comandi per gli sviluppatori per Visual Studio:  
+ Questo errore si verifica se è installato [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] e quindi l'attivazione HTTP WCF è abilitata. Per risolvere il problema, eseguire la seguente riga di comando dall'interno del Prompt dei comandi per gli sviluppatori per Visual Studio:  
   
 ```console
 aspnet_regiis.exe -i -enable  
@@ -75,4 +75,4 @@ aspnet_regiis.exe -i -enable
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzioni di configurazione](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Istruzioni di configurazione](./samples/set-up-instructions.md)

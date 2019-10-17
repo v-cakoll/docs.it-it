@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 13368dfa7ca9d7981ac146b87e83f77077eaf537
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855660"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320730"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Strumento per la configurazione del modello di servizio di COM+ (ComSvcConfig.exe)
 Lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) consente di configurare le interfacce COM+ che si desidera siano esposte come servizi Web.  
@@ -30,11 +30,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- Per ulteriori informazioni su ComSvcConfig. exe, vedere [procedura: Utilizzare lo strumento](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)di configurazione del modello di servizi com+.  
+ Per ulteriori informazioni su ComSvcConfig. exe, vedere [procedura: utilizzare lo strumento di configurazione del modello di servizi com+](./feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
  Nella tabella riportata di seguito sono descritti le modalità di utilizzo di ComSvcConfig.exe.  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |`install`|Installa una configurazione per un'interfaccia COM+ per l'integrazione del Modello di servizio.<br /><br /> Forma abbreviata `/i`.|  
 |`uninstall`|Disinstalla una configurazione per un'interfaccia COM+ dall'integrazione del Modello di servizio.<br /><br /> Forma abbreviata `/u`.|  
@@ -42,13 +42,13 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  Nella tabella riportata di seguito sono descritti i flag che possono essere utilizzati con ComSvcConfig.exe.  
   
-|Opzione|DESCRIZIONE|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Specifica l'applicazione COM+ da configurare.<br /><br /> Forma abbreviata `/a`.|  
-|`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Specifica componente e interfaccia COM+ che verranno configurati come contratto del servizio.<br /><br /> Forma abbreviata `/c`.<br /><br /> Sebbene sia possibile utilizzare il\*carattere jolly () quando si specificano i nomi dei componenti e delle interfacce, è consigliabile non utilizzarlo perché è possibile esporre interfacce che non si intendevano.|  
-|`/hosting:` \<*complus*  &#124; *was*\>|Specifica se utilizzare la modalità di hosting COM+ o Web.<br /><br /> Forma abbreviata `/h`.<br /><br /> L'utilizzo della modalità di hosting COM+ richiede l’attivazione esplicita dell'applicazione COM+. L'utilizzo della modalità di hosting Web, consente l’attivazione automatica dell’applicazione COM+ come necessario. Se l'applicazione COM+ è un'applicazione della libreria, essa viene eseguita nel processo di Internet Information Services (IIS). Se l'applicazione COM+ è un'applicazione server, essa viene eseguita nel processo di Dllhost.exe.|  
-|`/webSite:`\< *Sito Web*\>|Specifica il sito Web per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/w`.<br /><br /> Se non viene specificato nessun sito Web, verrà utilizzato il sito Web predefinito.|  
-|`/webDirectory:` \<*WebDirectoryName*\>|Specifica la directory virtuale per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/d`.|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName* \>|Specifica l'applicazione COM+ da configurare.<br /><br /> Forma abbreviata `/a`.|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; 1 2|Specifica componente e interfaccia COM+ che verranno configurati come contratto del servizio.<br /><br /> Forma abbreviata `/c`.<br /><br /> Sebbene sia possibile utilizzare il carattere jolly (\*) quando si specificano i nomi dei componenti e delle interfacce, è consigliabile non utilizzarlo perché è possibile esporre interfacce che non si intendevano.|  
+|`/hosting:` \<*ComPlus* &#124; *è stato* \>|Specifica se utilizzare la modalità di hosting COM+ o Web.<br /><br /> Forma abbreviata `/h`.<br /><br /> L'utilizzo della modalità di hosting COM+ richiede l’attivazione esplicita dell'applicazione COM+. L'utilizzo della modalità di hosting Web, consente l’attivazione automatica dell’applicazione COM+ come necessario. Se l'applicazione COM+ è un'applicazione della libreria, essa viene eseguita nel processo di Internet Information Services (IIS). Se l'applicazione COM+ è un'applicazione server, essa viene eseguita nel processo di Dllhost.exe.|  
+|`/webSite:` \<*websitename* \>|Specifica il sito Web per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/w`.<br /><br /> Se non viene specificato nessun sito Web, verrà utilizzato il sito Web predefinito.|  
+|`/webDirectory:` \<*Webdirectoryname* \>|Specifica la directory virtuale per l’hosting quando viene utilizzata la modalità di hosting Web (vedere il flag `/hosting` ).<br /><br /> Forma abbreviata `/d`.|  
 |`/mex`|Aggiunge l'endpoint del servizio MEX (Metadata Exchange) alla configurazione del servizio predefinita per supportare client che desiderano recuperare una definizione del contratto dal servizio.<br /><br /> Forma abbreviata `/x`.|  
 |`/id`|Visualizza applicazione, componente e informazioni sull'interfaccia come ID.<br /><br /> Forma abbreviata `/k`.|  
 |`/nologo`|Impedisce la visualizzazione del logo di ComSvcConfig.exe.<br /><br /> Forma abbreviata `/n`.|  
@@ -67,7 +67,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### <a name="description"></a>DESCRIZIONE  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene aggiunta l'interfaccia `IStockLevels` del componente `ItemInventory.Warehouse` (dall'applicazione OnlineWarehouse COM+) al set di interfacce esposte come servizi Web, utilizzando la modalità di hosting Web. Il Servizio Web è ospitato sul Web nella directory virtuale OnlineWarehouse di IIS.  
   
 ### <a name="code"></a>Codice  
@@ -85,7 +85,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### <a name="description"></a>DESCRIZIONE  
+### <a name="description"></a>Descrizione  
  L’esempio di seguito riportato elenca le interfacce ospitate COM+ attualmente esposte, insieme all'indirizzo corrispondente e ai dettagli di associazione, per l'applicazione OnlineStore COM+ sul computer locale.  
   
 ### <a name="code"></a>Codice  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Utilizzare lo strumento di configurazione del modello di servizi COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Procedura: Usare lo strumento di configurazione del modello di servizi COM+](./feature-details/how-to-use-the-com-service-model-configuration-tool.md)

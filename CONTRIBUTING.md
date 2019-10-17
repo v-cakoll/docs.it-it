@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955962"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315875"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -33,16 +33,16 @@ Questo repository contiene la documentazione concettuale per .NET. Il sito della
 
 Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Passaggio 1:** Ignorare questo passaggio per le modifiche di piccola entità (ad esempio, per correggere un errore di digitazione o aprire immediatamente una richiesta pull per risolvere un problema rilevato nella documentazione). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
+**Passaggio 1:** Ignorare questo passaggio per le piccole modifiche (ad esempio, se si corregge un errore di digitazione o si apre immediatamente una richiesta pull per risolvere un problema riscontrato nei documenti). Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella *docs* è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
--oppure-
+oppure
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 
 - **Maintenance** (Manutenzione). Questa categoria include contributi piuttosto semplici, ad esempio la correzione di collegamenti interrotti o non corretti, l'aggiunta di esempi di codice mancanti o la risoluzione di problemi di contenuto limitato. In alcuni casi, questi problemi possono riguardare un numero elevato di file. In tal caso, è opportuno comunicare su che cosa si vuole intervenire prima di iniziare.
 
-- **Content updates** (Aggiornamenti del contenuto). A causa dell'enormità del set di documenti, il contenuto diventa facilmente obsoleto e richiede una revisione. Inoltre, per diversi motivi, alcuni contenuti sono stati duplicati o anche triplicati. L'aggiornamento del contenuto richiede di verificare che i singoli argomenti siano aggiornati o di revisionare il contenuto in un'area funzionale per eliminare i duplicati assicurandosi che tutto il contenuto univoco venga conservato nel set di documenti più piccolo.
+- **Content updates** (Aggiornamenti del contenuto). A causa dell'enormità del set di documenti, il contenuto diventa facilmente obsoleto e richiede una revisione. Per diversi motivi, inoltre, il contenuto è stato duplicato o anche triplicated. L'aggiornamento del contenuto richiede di verificare che i singoli argomenti siano aggiornati o di revisionare il contenuto in un'area funzionale per eliminare i duplicati assicurandosi che tutto il contenuto univoco venga conservato nel set di documenti più piccolo.
 
 - **New content authoring** (Creazione di nuovi contenuti). Se si è interessati a creare il proprio argomento, questi problemi elencano gli argomenti che sarebbe opportuno aggiungere al set di documenti. Prima di iniziare a lavorare su un argomento, inviare un messaggio. Se si è interessati a scrivere un argomento non elencato qui, aprire un problema.
 
@@ -54,7 +54,7 @@ Per le piccole modifiche, è possibile usare l'interfaccia Web di GitHub. È suf
 
 **Passaggio 3:** Apportare le modifiche in questo nuovo ramo.
 
-Se si tratta di un nuovo argomento, è possibile usare questo [file modello](./styleguide/template.md) come punto di partenza. Contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
+Se si tratta di un nuovo argomento, è possibile usare questo [file modello](./styleguide/template.md) come punto di partenza. Il file contiene le linee guida per la scrittura e illustra anche i metadati necessari per ogni articolo, ad esempio le informazioni sull'autore.
 
 Passare alla cartella che corrisponde alla posizione del sommario determinata per l'articolo nel passaggio 1.
 Questa cartella contiene i file markdown per tutti gli articoli nella sezione.
@@ -87,7 +87,7 @@ Se la richiesta pull tratta un problema esistente, aggiungere la parola chiave `
 
 Il team di .NET esaminerà la richiesta pull e informerà l'utente se sono necessari altri aggiornamenti o modifiche per l'approvazione.
 
-**Passaggio 5:** Eseguire gli aggiornamenti necessari per il ramo, come discusso con il team.
+**Passaggio 5:** eseguire gli aggiornamenti necessari per il ramo come discusso con il team.
 
 Dopo aver applicato il feedback e se la modifica viene approvata, i responsabili eseguiranno il merge della richiesta pull nel ramo master.
 
@@ -120,7 +120,7 @@ Per altre informazioni, vedere il [file leggimi sugli esempi](https://github.com
 
 ## <a name="the-c-interactive-experience"></a>Esperienza interattiva in C#
 
-Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. Gli esempi di codice inline usano il tag `csharp-interactive`. Per i frammenti inclusi dal codice sorgente, usare il tag `code-csharp-interactive`. Questi esempi di codice visualizzano una finestra di codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio. 
+Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. (Gli esempi di codice inline usano il tag `csharp-interactive` per i frammenti di codice inclusi nell'origine, usare il tag `code-csharp-interactive`). Questi esempi di codice visualizzano una finestra del codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio. 
 
 L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori possono eseguire l'esempio per visualizzare i risultati. Una serie di fattori consente di determinare se l'esempio o il testo corrispondente deve includere informazioni sull'output.
 

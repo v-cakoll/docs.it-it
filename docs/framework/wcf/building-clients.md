@@ -5,27 +5,27 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16eaafe6b95b1e5142d055c2c95b52ba27cd2514
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608866"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320744"
 ---
 # <a name="building-clients"></a>Creazione di client
-Gli argomenti in questa sezione illustrano come creare e usare un client Windows Communication Foundation (WCF).  
+Negli argomenti di questa sezione viene illustrato come creare e utilizzare un client Windows Communication Foundation (WCF).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica dei client WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Viene fornita una panoramica di WCF client e sul relativo funzionamento.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica dei client WCF](wcf-client-overview.md)  
+ Viene fornita una panoramica dei client WCF e del relativo funzionamento.  
   
- [Accesso ai servizi tramite client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Descrive il metodo di base della creazione di un oggetto client WCF per l'uso in un'applicazione client.  
+ [Accesso ai servizi tramite client WCF](accessing-services-using-a-wcf-client.md)  
+ Viene descritto il metodo di base per la creazione di un oggetto client WCF da utilizzare in un'applicazione client.  
   
- [Protezione di client](../../../docs/framework/wcf/securing-clients.md)  
+ [Protezione di client](securing-clients.md)  
  Viene descritto come configurare la sicurezza per i client WCF.  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Reference  
  <xref:System.ServiceModel.ClientBase%601>  
   
  <xref:System.ServiceModel.DuplexClientBase%601>  
@@ -41,6 +41,6 @@ Gli argomenti in questa sezione illustrano come creare e usare un client Windows
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Servizi di hosting](../../../docs/framework/wcf/hosting-services.md)  
+ [Servizi di hosting](hosting-services.md)  
   
- [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)
+ [Progettazione e implementazione di servizi](designing-and-implementing-services.md)

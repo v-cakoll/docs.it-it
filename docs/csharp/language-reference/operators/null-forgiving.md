@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: cf941e5e3fa3fc6313ef8b2ff5c176aec68c1e6b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291725"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319086"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operatore (riferimento null) (C# riferimento)
 
-Disponibile in C# 8,0 e versioni successive, il suffisso unario `!` operatore è l'operatore che perdona i valori null. In un [contesto di annotazione Nullable](../../nullable-references.md#nullable-annotation-context)abilitato, è possibile usare l'operatore con indulgenza null per dichiarare che l'espressione `x` di un tipo di riferimento non è null: `x!`. Il prefisso unario @no__t operatore-0 è un [operatore logico di negazione](boolean-logical-operators.md#logical-negation-operator-).
+Disponibile in C# 8,0 e versioni successive, il suffisso unario `!` operatore è l'operatore che perdona i valori null. In un [contesto di annotazione Nullable](../../nullable-references.md#nullable-annotation-context)abilitato è possibile usare l'operatore di perdonazione null per dichiarare che l'espressione `x` di un tipo di riferimento non è null: `x!`. Il prefisso unario `!` operatore è l' [operatore di negazione logica](boolean-logical-operators.md#logical-negation-operator-).
 
-L'operatore che perdona i valori null non ha alcun effetto in fase di esecuzione. Influisce solo sull'analisi del flusso statico del compilatore modificando lo stato null dell'espressione. In fase di esecuzione l'espressione `x!` restituisce il risultato dell'espressione sottostante `x`.
+L'operatore che perdona i valori null non ha alcun effetto in fase di esecuzione. Influisce solo sull'analisi del flusso statico del compilatore modificando lo stato null dell'espressione. In fase di esecuzione, Expression `x!` restituisce il risultato dell'espressione sottostante `x`.
 
 Per ulteriori informazioni sulla funzionalità dei tipi di riferimento Nullable, vedere [tipi di riferimento Nullable](../../nullable-references.md).
 
@@ -31,22 +31,26 @@ Usando il [Framework di test di MSTest](../../../core/testing/unit-testing-with-
 
 [!code-csharp[Person test](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
 
-Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice precedente: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Con l'uso dell'operatore di indulgenza null, si consente al compilatore di sapere che il passaggio di `null` è previsto e non deve essere avvisato.
+Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice precedente: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Con l'uso dell'operatore che perdona i valori null, il compilatore può sapere che il passaggio di `null` è previsto e non deve essere avvisato.
 
-È anche possibile usare l'operatore di indulgenza null quando si è certi che un'espressione non può essere `null`, ma il compilatore non riesce a conoscerlo. Nell'esempio seguente, se il metodo `IsValid` restituisce `true`, il relativo argomento non è `null` ed è possibile dereferenziarlo in modo sicuro:
+È anche possibile usare l'operatore di indulgenza null quando si è certi che un'espressione non può essere `null` ma il compilatore non riesce a conoscerlo. Nell'esempio seguente, se il metodo `IsValid` restituisce `true`, il relativo argomento non viene `null` ed è possibile dereferenziarlo in modo sicuro:
 
 [!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice `p.Name`: `Warning CS8602: Dereference of a possibly null reference.`.
+Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice di `p.Name`: `Warning CS8602: Dereference of a possibly null reference`.
 
-Se è possibile modificare il metodo `IsValid`, è possibile usare l'attributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) per indicare al compilatore che un argomento del metodo `IsValid` non può essere `null` quando il metodo restituisce `true`:
+Se è possibile modificare il metodo `IsValid`, è possibile usare l'attributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) per indicare al compilatore che non è possibile `null` un argomento del metodo `IsValid` quando il metodo restituisce `true`:
 
 [!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
 
-Nell'esempio precedente non è necessario usare l'operatore che perdona i valori null perché il compilatore dispone di informazioni sufficienti per scoprire che `p` non può essere `null` nell'istruzione `if`. Per ulteriori informazioni sugli attributi che consentono di specificare informazioni aggiuntive sullo stato null di una variabile, vedere [aggiornare le API con attributi per definire le aspettative null](../../nullable-attributes.md).
+Nell'esempio precedente non è necessario usare l'operatore che perdona i valori null perché il compilatore dispone di informazioni sufficienti per scoprire che non è possibile `null` `p` all'interno dell'istruzione `if`. Per ulteriori informazioni sugli attributi che consentono di specificare informazioni aggiuntive sullo stato null di una variabile, vedere [aggiornare le API con attributi per definire le aspettative null](../../nullable-attributes.md).
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per ulteriori informazioni, vedere [la sezione operatore con indulgenza null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) della [bozza della specifica dei tipi di riferimento Nullable](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
 - [Operatori C#](index.md)
-- [Esercitazione: Progettazione con tipi di riferimento Nullable @ no__t-0
+- [Esercitazione: progettare con tipi di riferimento Nullable](../../tutorials/nullable-reference-types.md)

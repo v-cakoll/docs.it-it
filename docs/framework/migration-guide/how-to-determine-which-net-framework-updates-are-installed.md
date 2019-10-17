@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790060"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318963"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procedura: Determinare gli aggiornamenti della sicurezza e gli aggiornamenti rapidi di .NET Framework installati
 
@@ -29,7 +29,7 @@ Questo articolo illustra come trovare gli aggiornamenti della sicurezza e gli ag
 
 Gli aggiornamenti della sicurezza e gli aggiornamenti rapidi installati per ogni versione di .NET Framework installata in un computer sono elencati nel Registro di sistema di Windows. Per visualizzare queste informazioni, è possibile usare il programma Editor del Registro di sistema (*regedit.exe*).
 
-1. Aprire il programma **regedit.exe**. In Windows 8 e versioni successive fare clic con il pulsante destro del mouse su **Start** ![Logo di Windows](../get-started/media/windowskeyboardlogo.png "tasto WINDOWS"), quindi scegliere **Esegui**. Nella casella **Apri** immettere **regedit** e fare clic su **OK**.
+1. Aprire il programma **regedit.exe**. In Windows 8 e versioni successive, fare clic con il pulsante destro del mouse su **Start** ![screenshot del logo della chiave Windows.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo"), quindi selezionare **Esegui**. Nella casella **Apri** immettere **regedit** e fare clic su **OK**.
 
 2. Nell'Editor del Registro di sistema aprire la seguente sottochiave:
 
@@ -37,7 +37,7 @@ Gli aggiornamenti della sicurezza e gli aggiornamenti rapidi installati per ogni
 
      Gli aggiornamenti installati sono elencati nelle sottochiavi che identificano la versione di .NET Framework a che si applicano. Ogni aggiornamento è identificato da un numero di Knowledge Base (KB).
 
-Nell'Editor del Registro di sistema le versioni di .NET Framework e gli aggiornamenti installati per ogni versione sono archiviati in sottochiavi diverse. Per informazioni sul rilevamento dei numeri di versioni installate, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).
+Nell'Editor del Registro di sistema le versioni di .NET Framework e gli aggiornamenti installati per ogni versione sono archiviati in sottochiavi diverse. Per informazioni sul rilevamento dei numeri delle versioni installate, vedere [Procedura: Determinare le versioni di .NET Framework installate](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Per trovare gli aggiornamenti installati eseguendo una query sul Registro di sistema nel codice
 

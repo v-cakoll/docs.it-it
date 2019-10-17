@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567575"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320012"
 ---
 # <a name="net-framework-application-essentials"></a>Concetti di base sulle applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni sulle attività di base per lo sviluppo di applicazioni in .NET Framework.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Tipi di base](../../docs/standard/base-types/index.md)  
  Vengono descritte la formattazione e l'analisi di tipi di dati di base e l'uso di espressioni regolari per l'elaborazione del testo.  
   
@@ -54,8 +54,7 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni sull
  [Globalizzazione e localizzazione](../../docs/standard/globalization-localization/index.md)  
  Fornisce informazioni per la progettazione e lo sviluppo di applicazioni internazionali.  
   
- Accessibilità  
- Fornisce informazioni sull'automazione dell'interfaccia utente Microsoft, ovvero un framework di accessibilità che soddisfa le esigenze di prodotti tecnologici di assistenza e framework di test automatizzati, con accesso a livello di codice alle informazioni relative all'interfaccia utente.  
+ [Accessibilità](../../docs/framework/ui-automation/index.md) Fornisce informazioni sull'automazione dell'interfaccia utente Microsoft, ovvero un Framework di accessibilità che soddisfa le esigenze dei prodotti tecnologici per l'accessibilità e i Framework di test automatizzati, fornendo l'accesso a livello di codice alle informazioni sull'interfaccia utente (UI).  
   
  [Attributi](../../docs/standard/attributes/index.md)  
  Viene descritto come usare gli attributi per personalizzare i metadati.  
@@ -67,5 +66,5 @@ Questa sezione della documentazione di .NET Framework fornisce informazioni sull
  [Guida di sviluppo](../../docs/framework/development-guide.md)  
  Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
- [Sicurezza](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  Fornisce informazioni sulle classi e sui servizi in Common Language Runtime e .NET Framework che semplificano lo sviluppo di applicazioni protette.

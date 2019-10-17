@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Esaminare il contesto di sicurezza'
+title: 'Procedura: esaminare il contesto di sicurezza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625793"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320995"
 ---
-# <a name="how-to-examine-the-security-context"></a>Procedura: Esaminare il contesto di sicurezza
-Durante la programmazione di servizi Windows Communication Foundation (WCF), il contesto di sicurezza del servizio consente di determinare dettagli sulle credenziali client e sulle attestazioni utilizzate per eseguire l'autenticazione con il servizio. A tale fine, utilizzare le proprietà della classe <xref:System.ServiceModel.ServiceSecurityContext>.  
+# <a name="how-to-examine-the-security-context"></a>Procedura: esaminare il contesto di sicurezza
+Quando si programmano i servizi di Windows Communication Foundation (WCF), il contesto di sicurezza del servizio consente di determinare i dettagli sulle credenziali client e sulle attestazioni usate per l'autenticazione con il servizio. A tale fine, utilizzare le proprietà della classe <xref:System.ServiceModel.ServiceSecurityContext>.  
   
  È ad esempio possibile recuperare l'identità del client corrente utilizzando <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> o la proprietà <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Per determinare se il client è anonimo, utilizzare la proprietà <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
   
@@ -56,5 +56,5 @@ Durante la programmazione di servizi Windows Communication Foundation (WCF), il 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
-- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Protezione dei servizi](securing-services.md)
+- [Identità del servizio e autenticazione](./feature-details/service-identity-and-authentication.md)

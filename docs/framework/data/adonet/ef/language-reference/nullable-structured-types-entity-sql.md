@@ -2,12 +2,12 @@
 title: Tipi strutturati nullable (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249808"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319483"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Tipi strutturati nullable (Entity SQL)
 Un'istanza `null` di un tipo strutturato è un'istanza che non esiste ed è diversa da un'istanza esistente nella quale tutte le proprietà hanno valori `null`.  
@@ -28,46 +28,46 @@ Un'istanza `null` di un tipo strutturato è un'istanza che non esiste ed è dive
   
 - Modellazione di `null` come tipo strutturato:  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - Upcast di un tipo di base a un tipo derivato:  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - Outer join in una condizione false:  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --oppure  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --oppure  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - Dereferenziamento di riferimento `null`:  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - Recupero di ANYELEMENT da una raccolta vuota:  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   

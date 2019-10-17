@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 6f62d0f712f7461ef8cd65f15f3ed2690446bae1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 47a7bb42ea2441ffef2fd27f26a20beceb871173
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044460"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321130"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 
@@ -20,35 +20,35 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) si
 
 ## <a name="definition-of-an-endpoint-address"></a>Definizione di un indirizzo endpoint
 
-In WCF un <xref:System.ServiceModel.EndpointAddress> modello è un riferimento a un endpoint (EPR) come definito nello standard WS-Addressing.
+In WCF un <xref:System.ServiceModel.EndpointAddress> modella un riferimento all'endpoint (EPR) come definito nello standard WS-Addressing.
 
-L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Questo URI, ad esempio, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` include le quattro parti seguenti:
+L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Questo URI, ad esempio, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` presenta le quattro parti seguenti:
 
 - Schema: http:
 
-- Macchina`www.fabrikam.com`
+- Computer: `www.fabrikam.com`
 
-- Opzionale Porta 322
+- (Facoltativo) Porta: 322
 
 - Percorso: /mathservice.svc/secureEndpoint
 
-Il modello di riferimento endpoint prevede che ogni riferimento possa includere alcuni parametri di riferimento che aggiungono ulteriori informazioni di identificazione. In WCF questi parametri di riferimento vengono modellati come istanze della <xref:System.ServiceModel.Channels.AddressHeader> classe.
+Il modello di riferimento endpoint prevede che ogni riferimento possa includere alcuni parametri di riferimento che aggiungono ulteriori informazioni di identificazione. In WCF questi parametri di riferimento vengono modellati come istanze della classe <xref:System.ServiceModel.Channels.AddressHeader>.
 
 L'indirizzo endpoint per un servizio può essere specificato in modo imperativo mediante l'utilizzo di codice oppure in modo dichiarativo mediante la configurazione. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. In genere è più pratico definire endpoint di servizio mediante la configurazione piuttosto che mediante codice. Se le informazioni sull'associazione e sull'indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare e distribuire nuovamente l'applicazione. Se non è specificato alcun endpoint nel codice o nella configurazione, il runtime ne aggiunge uno predefinito ad ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio.
 
 Esistono due modi per specificare gli indirizzi degli endpoint per un servizio in WCF. È possibile specificare un indirizzo assoluto per ogni endpoint associato al servizio o fornire un indirizzo di base per la classe <xref:System.ServiceModel.ServiceHost> di un servizio e quindi specificare un indirizzo per ogni endpoint associato a questo servizio, che viene definito come relativo all'indirizzo di base. È possibile utilizzare entrambe le procedure per specificare gli indirizzi degli endpoint per un servizio nella configurazione o nel codice. Se non si specifica un indirizzo relativo, il servizio utilizza l'indirizzo di base. È inoltre possibile avere più indirizzi di base per un servizio, ma per ogni servizio è consentito un solo indirizzo di base per ogni trasporto. Se sono presenti più endpoint, ognuno dei quali è configurato con un'associazione diversa, i relativi indirizzi devono essere univoci. Gli endpoint che utilizzano la stessa associazione ma contratti diversi possono utilizzare lo stesso indirizzo.
 
-Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. Per ulteriori informazioni, vedere [distribuzione di un servizio WCF ospitato in Internet Information Services](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
+Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. Per ulteriori informazioni, vedere [distribuzione di un servizio WCF ospitato in Internet Information Services](./feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definizione degli indirizzi endpoint nella configurazione
 
-Per definire un endpoint in un file di configurazione, utilizzare l' [ \<elemento endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md) .
+Per definire un endpoint in un file di configurazione, usare l'elemento [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md) .
 
 [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]
 
-Quando viene <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> chiamato il metodo, ovvero quando l'applicazione host tenta di avviare il servizio, il sistema cerca un [ \<](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento del > di servizio con un attributo Name che specifica "UE". Samples. HelloService ". Se viene trovato l' [ \<elemento Service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) , il sistema carica la classe specificata e crea gli endpoint usando le definizioni di endpoint fornite nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.
+Quando viene chiamato il metodo <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>, ovvero quando l'applicazione host tenta di avviare il servizio, il sistema cerca un elemento [\<service >](../configure-apps/file-schema/wcf/service.md) con un attributo Name che specifica "UE". Samples. HelloService ". Se viene trovato l'elemento [\<service >](../configure-apps/file-schema/wcf/service.md) , il sistema carica la classe specificata e crea gli endpoint usando le definizioni di endpoint fornite nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.
 
-Le intestazioni facoltative vengono dichiarate in un [ \<> di intestazioni](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che distingue tra due intestazioni: Client "Gold" da `http://tempuri1.org/` e "standard" da. `http://tempuri2.org/` Il client che chiama questo servizio deve avere le [ \<intestazioni appropriate >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.
+Le intestazioni facoltative vengono dichiarate in un [\<headers >](../configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che distingue tra due intestazioni: i client "Gold" da `http://tempuri1.org/` e i client "standard" da `http://tempuri2.org/`. Il client che chiama questo servizio deve avere il [\<headers appropriato >](../configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.
 
 [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]
 
@@ -84,11 +84,11 @@ Nell'esempio seguente viene illustrato come aggiungere un indirizzo relativo ("M
 
 Se non è specificato alcun endpoint nel codice o nella configurazione, il runtime ne fornisce di predefiniti aggiungendone uno ad ogni indirizzo di base per ciascun contratto di servizio implementato dal servizio. L'indirizzo di base può essere specificato nel codice o nella configurazione e gli endpoint predefiniti vengono aggiunti quando viene chiamato <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> in <xref:System.ServiceModel.ServiceHost>.
 
-Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).
+Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.ServiceModel.EndpointAddress>
-- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Hosting](../../../docs/framework/wcf/feature-details/hosting.md)
+- [Identità del servizio e autenticazione](./feature-details/service-identity-and-authentication.md)
+- [Panoramica della creazione di endpoint](endpoint-creation-overview.md)
+- [Hosting](./feature-details/hosting.md)

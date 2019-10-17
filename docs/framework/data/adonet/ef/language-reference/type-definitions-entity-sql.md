@@ -2,12 +2,12 @@
 title: Definizioni dei tipi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248956"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319253"
 ---
 # <a name="type-definitions-entity-sql"></a>Definizioni dei tipi (Entity SQL)
 Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una funzione inline [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -23,7 +23,7 @@ Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una
   
 - La parola chiave `COLLECTION` seguita da un'altra definizione del tipo tra parentesi (ad esempio "Collection(AdventureWorks.Order)").  
   
-- La parola chiave ROW seguita da un elenco di definizioni di proprietà tra parentesi (ad esempio "Row(x AdventureWorks.Order)"). Le definizioni di proprietà hanno un formato come`identifier type_definition`" `identifier type_definition`,,...".  
+- La parola chiave ROW seguita da un elenco di definizioni di proprietà tra parentesi (ad esempio "Row(x AdventureWorks.Order)"). Le definizioni di proprietà hanno un formato come "`identifier type_definition`, `identifier type_definition`,...".  
   
 - La parola chiave REF seguita dal tipo dell'identificatore tra parentesi (ad esempio "Ref(AdventureWorks.Order)"). L'operatore della definizione del tipo Ref richiede un tipo di entità come argomento. Non è possibile specificare un tipo primitivo come argomento.  
   
@@ -31,7 +31,7 @@ Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una
   
  Le opzioni di definizione del tipo sono:  
   
-- `IdentifierName supported_type`o  
+- `IdentifierName supported_type` o  
   
 - `IdentifierName` COLLECTION(`type_definition`) o  
   
@@ -48,7 +48,7 @@ Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una
 ## <a name="examples"></a>Esempi  
  Di seguito è riportato un esempio di definizione del tipo semplice.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  Di seguito è riportato un esempio di definizione del tipo COLLECTION.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  Di seguito è riportato un esempio di definizione del tipo ROW.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  Di seguito è riportato un esempio di definizione del tipo REF.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  

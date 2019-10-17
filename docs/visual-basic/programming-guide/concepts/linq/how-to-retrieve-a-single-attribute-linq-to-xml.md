@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Recuperare un singolo attributo (LINQ to XML) (Visual Basic)'
+title: 'Procedura: recuperare un singolo attributo (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 635644783153765d61aff3c00fe16860642c29f1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710519"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321321"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedura: Recuperare un singolo attributo (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedura: recuperare un singolo attributo (LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come recuperare un singolo attributo di un elemento, dato il relativo nome. Questa procedura è utile per la scrittura di espressioni di query in cui si desidera trovare un elemento con un attributo specifico.  
   
  Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> della classe <xref:System.Xml.Linq.XElement> restituisce l'attributo <xref:System.Xml.Linq.XAttribute> con il nome specificato.  
@@ -32,7 +32,7 @@ Next
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 home  
 work  
 ```  
@@ -55,7 +55,7 @@ Next
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 home  
 work  
 ```  
@@ -87,7 +87,7 @@ End Module
   
  L'output del codice è il seguente:  
   
-```  
+```console  
 home  
 work  
 ```  
