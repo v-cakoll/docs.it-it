@@ -2,19 +2,19 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249761"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319437"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzione SELECT.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -25,7 +25,7 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
 ]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `order_by_expression`  
  Qualsiasi espressione di query valida che specifica una proprietà in base a cui eseguire l'ordinamento. È possibile specificare più espressioni di ordinamento. La sequenza delle espressioni di ordinamento nella clausola ORDER BY definisce l'organizzazione del set di risultati ordinato.  
   
@@ -52,16 +52,18 @@ Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzio
  Ogni espressione nella clausola ORDER BY deve restituire un tipo che possa essere confrontato per verificare la disuguaglianza ordinata (minore di o maggiore di e così via). Questi tipi sono in genere tipi primitivi scalari ad esempio numeri, stringhe e date. Anche i tipi RowTypes di tipi confrontabili possono essere confrontati in termini di ordinamento.  
   
  Se il codice scorre un set ordinato, non è garantito che l'ordine venga mantenuto, ad eccezione del caso di una proiezione di livello principale.  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+
+Nell'esempio seguente è garantita la conservazione dell'ordine:
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+Nella query seguente l'ordinamento della query nidificata viene ignorato:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -70,7 +72,7 @@ SELECT C2.FirstName, C2.LastName
   
  Per eseguire un'operazione UNION, UNION ALL, EXCEPT o INTERSECT ordinata, usare il modello seguente:  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
@@ -99,16 +101,18 @@ ORDER BY ...
   
 ## <a name="ordering-nested-queries"></a>Ordinamento di query annidate  
  In Entity Framework un'espressione annidata può essere inserita in una posizione qualsiasi nella query. L'ordine di una query annidata non viene mantenuto.  
-  
-```  
--- The following query will order the results by the last name.  
+
+Nella query seguente i risultati vengono ordinati in base al cognome:  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+Nella query seguente l'ordinamento della query nidificata viene ignorato:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -118,11 +122,11 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Esempio  
  Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore ORDER BY per specificare l'ordinamento usato per gli oggetti restituiti in un'istruzione SELECT. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
 ## <a name="see-also"></a>Vedere anche
 
