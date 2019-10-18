@@ -4,12 +4,12 @@ description: Funzioni di Azure offre funzionalità senza server tra più linguag
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577604"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522872"
 ---
 # <a name="azure-functions"></a>Funzioni di Azure
 
@@ -27,7 +27,7 @@ Sono disponibili due versioni del runtime di funzioni di Azure: 1. x e 2. x. La 
 
 [La versione 2. x è ora disponibile](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/)a livello generale. Si avvale di .NET Core e supporta lo sviluppo multipiattaforma sui computer Windows, macOS e Linux. 2. x aggiunge un supporto di prima classe per Java ma non supporta ancora direttamente nessuno dei linguaggi sperimentali. La versione 2. x usa un nuovo modello di estendibilità dell'associazione che consente estensioni di terze parti per la piattaforma, il controllo delle versioni indipendente delle associazioni e un ambiente di esecuzione più semplificato.
 
-> **Si è verificato un problema noto in 1. x con supporto per il [Reindirizzamento dell'associazione](https://github.com/Azure/azure-functions-host/issues/992).** Il problema è specifico per lo sviluppo in .NET. Sono interessati i progetti con dipendenze dalle librerie che hanno una versione diversa rispetto alle librerie incluse nel Runtime. Il team di funzioni si è impegnato a compiere un progressi concreto sul problema. Il team affronterà i reindirizzamenti di binding in 2. x prima di passare alla disponibilità generale. L'istruzione ufficiale del team con correzioni e soluzioni alternative consigliate è disponibile qui: [Risoluzione degli assembly in funzioni di Azure](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **Si è verificato un problema noto in 1. x con supporto per il [Reindirizzamento dell'associazione](https://github.com/Azure/azure-functions-host/issues/992).** Il problema è specifico per lo sviluppo in .NET. Sono interessati i progetti con dipendenze dalle librerie che hanno una versione diversa rispetto alle librerie incluse nel Runtime. Il team di funzioni si è impegnato a compiere un progressi concreto sul problema. Il team affronterà i reindirizzamenti di binding in 2. x prima di passare alla disponibilità generale. L'istruzione ufficiale del team con correzioni e soluzioni alternative consigliate è disponibile qui: [risoluzione degli assembly in funzioni di Azure](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Per ulteriori informazioni, vedere [compare 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -35,7 +35,7 @@ Per ulteriori informazioni, vedere [compare 1. x e 2. x](https://docs.microsoft.
 
 Le lingue seguenti sono supportate in disponibilità generale (GA), anteprima o sperimentale.
 
-|Linguaggio      |1. x         |2.x      |
+|Language      |1. x         |2.x      |
 |--------------|------------|---------|
 |**C#**        |GA          |Anteprima  |
 |**JavaScript**|GA          |Anteprima  |
@@ -60,9 +60,9 @@ Per altre informazioni, vedere [piani di servizio app](https://docs.microsoft.co
 
 Esistono tre modi comuni per creare app per le funzioni.
 
-* Funzioni di script nel portale.
-* Creare le risorse necessarie usando l'interfaccia della riga di comando di Azure.
-* Consente di compilare localmente le funzioni usando l'IDE preferito e di pubblicarle in Azure.
+- Funzioni di script nel portale.
+- Creare le risorse necessarie usando l'interfaccia della riga di comando di Azure.
+- Consente di compilare localmente le funzioni usando l'IDE preferito e di pubblicarle in Azure.
 
 Per altre informazioni sulla creazione di una funzione con script nel portale, vedere [creare la prima funzione nel portale di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
 
@@ -72,20 +72,20 @@ Per creare una funzione da Visual Studio, vedere [creare la prima funzione con V
 
 ## <a name="understand-triggers-and-bindings"></a>Informazioni sui trigger e sulle associazioni
 
-Le funzioni vengono richiamate da un *trigger* e possono avere esattamente una. Oltre a richiamare la funzione, alcuni trigger vengono utilizzati anche come associazioni. È anche possibile definire più associazioni oltre al trigger. Le *associazioni* forniscono una modalità dichiarativa per connettere i dati al codice. Possono essere passati (input) o ricevere dati (output). I trigger e le associazioni facilitano l'utilizzo delle funzioni. Le associazioni rimuovono l'overhead della creazione manuale di connessioni di database o file system. Tutte le informazioni necessarie per le associazioni sono contenute in un file functions *. JSON* speciale per gli script o dichiarati con attributi nel codice.
+Le funzioni vengono richiamate da un *trigger* e possono avere esattamente una. Oltre a richiamare la funzione, alcuni trigger vengono utilizzati anche come associazioni. È anche possibile definire più associazioni oltre al trigger. Le *associazioni* forniscono una modalità dichiarativa per connettere i dati al codice. Possono essere passati (input) o ricevere dati (output). I trigger e le associazioni facilitano l'utilizzo delle funzioni. Le associazioni rimuovono l'overhead della creazione manuale di connessioni di database o file system. Tutte le informazioni necessarie per le associazioni sono contenute in un file *Functions. JSON* speciale per gli script o dichiarati con attributi nel codice.
 
 Alcuni trigger comuni includono:
 
-* Archiviazione BLOB: richiamare la funzione quando un file o una cartella viene caricata o modificata nello spazio di archiviazione.
-* HTTP: richiama la funzione come un'API REST.
-* Queue: richiama la funzione quando gli elementi sono presenti in una coda.
-* Timer: richiamare la funzione a cadenza regolare.
+- Archiviazione BLOB: richiamare la funzione quando un file o una cartella viene caricata o modificata nello spazio di archiviazione.
+- HTTP: richiama la funzione come un'API REST.
+- Queue: richiama la funzione quando gli elementi sono presenti in una coda.
+- Timer: richiamare la funzione a cadenza regolare.
 
 Di seguito sono riportati alcuni esempi di binding:
 
-* CosmosDB: consente di connettersi facilmente al database per caricare o salvare i file.
-* Archiviazione tabelle: usare l'archiviazione di chiave/valore dall'app per le funzioni.
-* Archiviazione code: è possibile recuperare facilmente elementi da una coda o inserire nuovi elementi nella coda.
+- CosmosDB: consente di connettersi facilmente al database per caricare o salvare i file.
+- Archiviazione tabelle: usare l'archiviazione di chiave/valore dall'app per le funzioni.
+- Archiviazione code: è possibile recuperare facilmente elementi da una coda o inserire nuovi elementi nella coda.
 
 Il file *Functions. JSON* di esempio seguente definisce un trigger e un'associazione:
 
@@ -111,7 +111,7 @@ Il file *Functions. JSON* di esempio seguente definisce un trigger e un'associaz
 }
 ```
 
-In questo esempio, la funzione viene attivata da una modifica all'archiviazione BLOB nel `images` contenitore. Le informazioni per il file vengono passate, quindi il trigger funge anche da Binding. Esiste un'altra associazione per inserire le informazioni in una `images`coda denominata.
+In questo esempio, la funzione viene attivata da una modifica all'archiviazione BLOB nel contenitore `images`. Le informazioni per il file vengono passate, quindi il trigger funge anche da Binding. Esiste un'altra associazione per inserire le informazioni in una coda denominata `images`.
 
 Di seguito è C# riportato lo script per la funzione:
 
@@ -131,17 +131,17 @@ Per un elenco completo dei trigger e delle associazioni, vedere [concetti relati
 
 I proxy forniscono la funzionalità di reindirizzamento per l'applicazione. I proxy espongono un endpoint ed eseguire il mapping dell'endpoint a un'altra risorsa. Con i proxy è possibile:
 
-* Reindirizzare una richiesta in ingresso a un altro endpoint.
-* Modificare la richiesta in ingresso prima che venga passata.
-* Modificare o fornire una risposta.
+- Reindirizzare una richiesta in ingresso a un altro endpoint.
+- Modificare la richiesta in ingresso prima che venga passata.
+- Modificare o fornire una risposta.
 
 I proxy vengono usati per scenari come:
 
-* Semplificazione, abbreviazione o modifica dell'URL.
-* Fornire un prefisso API coerente a più servizi back-end.
-* Simulazione di una risposta a un endpoint in fase di sviluppo.
-* Fornire una risposta statica a un endpoint noto.
-* Mantenere coerente un endpoint API mentre viene spostato o migrato il back-end.
+- Semplificazione, abbreviazione o modifica dell'URL.
+- Fornire un prefisso API coerente a più servizi back-end.
+- Simulazione di una risposta a un endpoint in fase di sviluppo.
+- Fornire una risposta statica a un endpoint noto.
+- Mantenere coerente un endpoint API mentre viene spostato o migrato il back-end.
 
 I proxy vengono archiviati come definizioni JSON. Ecco un esempio:
 
@@ -169,13 +169,13 @@ I proxy vengono archiviati come definizioni JSON. Ecco un esempio:
 }
 ```
 
-Il `Domain Redirect` proxy accetta una route abbreviata e ne esegue il mapping alla risorsa della funzione più lunga. La trasformazione ha un aspetto simile al seguente:
+Il proxy `Domain Redirect` accetta una route abbreviata e ne esegue il mapping alla risorsa della funzione più lunga. La trasformazione ha un aspetto simile al seguente:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-Il `Root` proxy accetta qualsiasi elemento inviato all'URL radice (`https://--shorturl--/`) e lo reindirizza al sito della documentazione.
+Il proxy `Root` esegue qualsiasi operazione inviata all'URL radice (`https://--shorturl--/`) e la reindirizza al sito della documentazione.
 
-Un esempio di utilizzo di proxy è illustrato nel video [Azure: Porta la tua app nel cloud con funzioni](https://channel9.msdn.com/events/Connect/2017/E102)di Azure senza server. In tempo reale, viene eseguita la migrazione di un'applicazione ASP.NET Core in esecuzione su SQL Server locale al cloud di Azure. I proxy vengono usati per eseguire il refactoring di un progetto API Web tradizionale per l'uso di funzioni.
+Un esempio di uso di proxy è illustrato nel video [Azure: portare l'app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102). In tempo reale, viene eseguita la migrazione di un'applicazione ASP.NET Core in esecuzione su SQL Server locale al cloud di Azure. I proxy vengono usati per eseguire il refactoring di un progetto API Web tradizionale per l'uso di funzioni.
 
 Per altre informazioni sui proxy, vedere [usare proxy di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 

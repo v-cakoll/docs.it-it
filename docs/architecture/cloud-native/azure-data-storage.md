@@ -2,12 +2,12 @@
 title: Archiviazione dati in Azure
 description: Architettura di app .NET cloud native per Azure | Archiviazione dati in Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 5e1182af61401990112135c2f7a3dd37508c9e72
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214102"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521116"
 ---
 # <a name="data-storage-in-azure"></a>Archiviazione dati in Azure
 
@@ -35,7 +35,7 @@ La figura 5-12 illustra le opzioni di distribuzione per il database SQL di Azure
 
 Si notino le alternative nella figura precedente quando si distribuisce un database SQL:
 
-- Un [database](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) singolo con il proprio set di risorse gestite da un [server di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Un database singolo è simile a un [database](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) indipendente in una distribuzione di SQL Server locale.
+- Un [database singolo](https://docs.microsoft.com/azure/sql-database/sql-database-single-database)  with un proprio set di risorse gestite da un [server di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Un database singolo è simile a un [database indipendente](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)  in una distribuzione SQL Server locale.
 
 - Un [pool elastico](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) in cui una raccolta di database SQL condivide un singolo server di database SQL a un prezzo fisso. I database singoli possono essere spostati all'interno e all'esterno di un pool elastico in base alle esigenze per ottimizzare le prestazioni dei prezzi per un gruppo di database.
 
@@ -45,7 +45,7 @@ Il database SQL di Azure è un [motore di database di piattaforma distribuita co
 
 Il database SQL di Azure include funzionalità [di monitoraggio e ottimizzazione intelligenti predefinite](https://docs.microsoft.com/azure/sql-database/sql-database-monitoring-tuning-index) che consentono di ottimizzare le prestazioni e ridurre i costi operativi. Ad esempio, la funzionalità di [ottimizzazione automatica](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning) fornisce l'ottimizzazione delle prestazioni continua basata su intelligenza artificiale e machine learning. Il servizio apprende dai carichi di lavoro in esecuzione e può applicare le indicazioni di ottimizzazione. Più a lungo viene eseguito un database SQL di Azure con l'ottimizzazione automatica abilitata, migliore sarà il rendimento.
 
-[Database SQL di Azure senza server](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) (disponibile per l'anteprima al momento della stesura di questo libro) è un livello di calcolo per i database singoli che si ridimensiona automaticamente in base alla domanda del carico di lavoro e le fatture per la quantità di calcolo usata al secondo. Il livello di calcolo senza server inoltre sospende automaticamente i database durante i periodi di inattività, in modo che vengano addebitati solo i costi di archiviazione. Riprende automaticamente quando l'attività restituisce.
+Il [database SQL di Azure senza server](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) (disponibile per l'anteprima al momento della stesura di questo libro) è un livello di calcolo per i database singoli che si ridimensiona automaticamente in base alle richieste di carico di lavoro e fattura per la quantità di calcolo usata al secondo. Il livello di calcolo senza server inoltre sospende automaticamente i database durante i periodi di inattività, in modo che vengano addebitati solo i costi di archiviazione. Riprende automaticamente quando l'attività restituisce.
 
 Infine, è disponibile il nuovo piano tariffario per il [database SQL di Azure](https://azure.microsoft.com/services/sql-database/) . È basato su un'architettura di archiviazione altamente scalabile e consente di aumentare le dimensioni del database in base alle esigenze, eliminando la necessità di eseguire il pre-provisioning delle risorse di archiviazione. È possibile ridimensionare le risorse di calcolo e archiviazione in modo indipendente, offrendo la flessibilità necessaria per ottimizzare le prestazioni per ogni carico di lavoro. L'iperscalabilità di database SQL di Azure è ottimizzata per l'elaborazione [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) e carichi di lavoro analitici con velocità effettiva elevata con archiviazione fino a 100 TB.  Con i carichi di lavoro con utilizzo intensivo di lettura, l'iperscalabilità offre una rapida scalabilità orizzontale tramite il provisioning di altre repliche di lettura in base alle esigenze per l'offload dei carichi di lavoro 
 
@@ -53,7 +53,7 @@ Oltre allo stack di Microsoft SQL Server tradizionale, Azure offre anche version
 
 ## <a name="azure-database-for-mysql"></a>Database di Azure per MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) è un [open-source](https://en.wikipedia.org/wiki/Open-source_software) [database relazionale](https://en.wikipedia.org/wiki/Relational_database_management_system). Si tratta di un componente nello [stack del software Lamp](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) e usato da molte organizzazioni di grandi dimensioni, tra cui Facebook, Twitter e YouTube. La Community Edition è disponibile gratuitamente e l'edizione Enterprise richiede l'acquisto di una licenza. Originariamente creato in 1995, il prodotto è stato acquistato da Sun Microsystems nel 2008, che è stato acquisito da Oracle in 2010.
+[MySQL](https://en.wikipedia.org/wiki/MySQL)  is un [database relazionale](https://en.wikipedia.org/wiki/Relational_database_management_system) [Open Source](https://en.wikipedia.org/wiki/Open-source_software). Si tratta di un componente nello [stack del software Lamp](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) e usato da molte organizzazioni di grandi dimensioni, tra cui Facebook, Twitter e YouTube. La Community Edition è disponibile gratuitamente e l'edizione Enterprise richiede l'acquisto di una licenza. Originariamente creato in 1995, il prodotto è stato acquistato da Sun Microsystems nel 2008, che è stato acquisito da Oracle in 2010.
 
 [Database di Azure per MySQL](https://azure.microsoft.com/services/mysql/) è un servizio di database relazionale completamente gestito e pronto per l'azienda basato sul motore del server MySQL open source. Implementando MySQL Community Edition sono incluse le funzionalità di PaaS seguenti senza costi aggiuntivi:
 
@@ -101,15 +101,15 @@ MariaDB ha un forte seguito e viene usato da molte grandi aziende. Sebbene Oracl
 
 [PostgreSQL](https://www.postgresql.org/) è un altro noto database relazionale open source con oltre 30 anni di sviluppo attivo. Si tratta di un sistema di gestione di database relazionale a oggetti e per utilizzo generico. Le licenze sono considerate "liberali" e il prodotto è gratuito per l'uso, la modifica e la distribuzione in qualsiasi forma. Molte grandi aziende, tra cui Apple, Red Hat e Fujitsu, hanno creato prodotti con PostgreSQL.
 
-[Database di Azure per PostgreSQL](https://azure.microsoft.com/services/postgresql/) è un servizio di database relazionale completamente gestito, basato sul motore di database Postgres open source. Consente di gestire carichi di lavoro cruciali con prestazioni prevedibili, sicurezza, disponibilità elevata e scalabilità dinamica. Supporta diversi Framework e linguaggi open source, tra cui C++Java, Python, node, C\#e php. Consente la [migrazione](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) dei database PostgreSQL tramite un'interfaccia della riga di comando o il [servizio migrazione dati di Azure](https://azure.microsoft.com/services/database-migration/).
+[Database di Azure per PostgreSQL](https://azure.microsoft.com/services/postgresql/) è un servizio di database relazionale completamente gestito, basato sul motore di database Postgres open source. Consente di gestire carichi di lavoro cruciali con prestazioni prevedibili, sicurezza, disponibilità elevata e scalabilità dinamica. Supporta diversi Framework e linguaggi open source, tra cui C++Java, Python, node, C \# e php. Consente la [migrazione](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) dei database PostgreSQL tramite un'interfaccia della riga di comando o il [servizio migrazione dati di Azure](https://azure.microsoft.com/services/database-migration/).
 
 Il servizio include [Intelligence incorporata](https://docs.microsoft.com/azure/postgresql/concepts-monitoring) che studia i modelli di database esclusivi e fornisce consigli personalizzati e informazioni dettagliate per ottimizzare le prestazioni del database PostgreSQL. [Advanced Threat Protection](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection) monitora il database in base all'orologio e rileva le attività potenzialmente dannose, avvisando il rilevamento in modo da poter intervenire immediatamente.
 
-Database di Azure per PostgreSQL è disponibile come due opzioni di distribuzione: Server singolo e iperscalabilità (CITUS), disponibile per l'anteprima al momento della stesura di questo libro
+Database di Azure per PostgreSQL è disponibile come due opzioni di distribuzione: server singolo e iperscalabilità (CITUS), disponibile per l'anteprima al momento della stesura di questo libro.
 
 - L'opzione di distribuzione a [server singolo](https://docs.microsoft.com/azure/postgresql/concepts-servers) è un punto amministrativo centrale per più database. Si tratta dello stesso motore del server PostgreSQL disponibile per le distribuzioni locali. Con esso, è possibile creare un singolo database per ogni server per utilizzare tutte le risorse o creare più database per condividere le risorse. I prezzi sono strutturati per server in base ai core e all'archiviazione.
 
-- L' [opzione iperscale (CITUS)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) è basata sulla tecnologia [CITUS data](https://www.citusdata.com/) Technology. Consente la scalabilità a prestazioni elevate con scalabilità orizzontale di un database singolo in centinaia di nodi per offrire prestazioni e scalabilità incredibilmente veloci. Questa opzione consente al motore di adattare più dati in memoria, parallelizzare le query tra centinaia di nodi e indicizzare i dati più velocemente. La funzionalità iperscalabile è compatibile con le innovazioni, le versioni e gli strumenti più recenti per PostgreSQL, in modo da poter sfruttare le competenze esistenti di PostgreSQL.
+- L' [opzione iperscale (CITUS)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) è basata su [CITUS data](https://www.citusdata.com/)  technology. Consente la scalabilità a prestazioni elevate con scalabilità orizzontale di un database singolo in centinaia di nodi per offrire prestazioni e scalabilità incredibilmente veloci. Questa opzione consente al motore di adattare più dati in memoria, parallelizzare le query tra centinaia di nodi e indicizzare i dati più velocemente. La funzionalità iperscalabile è compatibile con le innovazioni, le versioni e gli strumenti più recenti per PostgreSQL, in modo da poter sfruttare le competenze esistenti di PostgreSQL.
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -117,7 +117,7 @@ Azure Cosmos DB è un servizio di database NoSQL completamente gestito e distrib
 
 ![Panoramica di Cosmos DB](./media/cosmos-db-overview.png)
 
-**Figura 5-13**: Panoramica di Cosmos DB
+**Figura 5-13**: panoramica di Cosmos DB
 
 Si noti nella figura 5-13 come Cosmos DB è un servizio di database solido e altamente versatile con molte funzionalità predefinite native del cloud. In questa sezione verranno esaminati in modo più approfondito.
 
@@ -145,17 +145,17 @@ Cosmos DB è una *piattaforma dati multimodello* che consente di interagire con 
 
 ![Provider di Cosmos DB](./media/cosmos-db-providers.png)
 
-**Figura 5-14**: Provider di Cosmos DB
+**Figura 5-14**: provider di Cosmos DB
 
 Si noti nella figura 5-14 come Cosmos DB supporta l' [archiviazione tabelle](https://azure.microsoft.com/services/storage/tables/). Sia Cosmos DB che [archiviazione tabelle di Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) condividono lo stesso modello di tabella sottostante ed espongono molte delle stesse operazioni di tabella. Tuttavia, il [Cosmos DB API tabella](https://docs.microsoft.com/azure/cosmos-db/table-introduction) fornisce molti miglioramenti Premium non disponibili nell'API di archiviazione di Azure. Queste funzionalità sono contrapposte alla figura 5-15.
 
 ![API Tabella di Azure](./media/azure-table-api.png)
 
-**Figura 5-15**: API Tabella di Azure
+**Figura 5-15**: API tabella di Azure
 
 Le applicazioni scritte per l'archiviazione tabelle di Azure possono eseguire la migrazione a Azure Cosmos DB usando il API Tabella senza modifiche al codice.
 
-In [Brownfield] (https://en.wikipedia.org/wiki/Brownfield_(software_development) scenari di applicazioni, i team di sviluppo possono migrare i database Mongo, Gremlin o Cassandra esistenti in Cosmos DB con modifiche minime al codice dell'applicazione o dei dati esistenti. Per gli scenari [Greenfield](https://en.wikipedia.org/wiki/Greenfield_project) , i team di sviluppo possono scegliere il modello di dati che meglio soddisfa i requisiti e le preferenze, incluse le opzioni open source completamente supportate per le piattaforme MongoDB, Cassandra e Gremlin.
+Negli scenari di applicazioni [Brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) , i team di sviluppo possono migrare i database Mongo, Gremlin o Cassandra esistenti in Cosmos DB con modifiche minime al codice dell'applicazione o dei dati esistenti. Per gli scenari [Greenfield](https://en.wikipedia.org/wiki/Greenfield_project) , i team di sviluppo possono scegliere il modello di dati che meglio soddisfa i requisiti e le preferenze, incluse le opzioni open source completamente supportate per le piattaforme MongoDB, Cassandra e Gremlin.
 
 ### <a name="consistency-models"></a>Modelli di coerenza
 
@@ -167,7 +167,7 @@ Azure Cosmos DB offre uno spettro di [cinque modelli di coerenza ben definiti](h
 
 ![Livelli di coerenza Cosmos DB](./media/cosmos-db-consistency-levels.png)
 
-**Figura 5-16**: Livelli di coerenza Cosmos DB
+**Figura 5-16**: livelli di coerenza Cosmos DB
 
 ### <a name="partitioning"></a>Partizionamento
 
@@ -177,9 +177,9 @@ Per gestire i dati nei dati Cosmos DB, è possibile creare [database, contenitor
 
 ![Entità Cosmos DB](./media/cosmos-db-entities.png)
 
-**Figura 5-17**: Gerarchia delle entità Cosmos DB
+**Figura 5-17**: gerarchia di entità Cosmos DB
 
-Si noti nella figura 5-17 come iniziare creando un database Cosmos DB all'interno di un account Azure. Il database diventa l'unità di gestione per un set di contenitori. Un contenitore è un raggruppamento di elementi indipendente dallo schema che può essere espresso come raccolta, tabella o grafico, in base al provider di API selezionato (descritto nella sezione precedente). Gli elementi sono i dati che si aggiungono al contenitore e sono rappresentati come documenti, righe, nodi o bordi. Per impostazione predefinita, tutti gli elementi aggiunti a un contenitore vengono indicizzati automaticamente senza richiedere la gestione esplicita di indici o schemi.
+Si noti nella figura 5-17 come iniziare creando un database Cosmos DB all'interno di un account di database. Il database diventa l'unità di gestione per un set di contenitori. Un contenitore è un raggruppamento di elementi indipendente dallo schema che può essere espresso come raccolta, tabella o grafico, in base al provider di API selezionato (descritto nella sezione precedente). Gli elementi sono i dati che si aggiungono al contenitore e sono rappresentati come documenti, righe, nodi o bordi. Per impostazione predefinita, tutti gli elementi aggiunti a un contenitore vengono indicizzati automaticamente senza richiedere la gestione esplicita di indici o schemi.
 
 Per partizionare il contenitore, gli elementi sono divisi in subset distinti denominati [partizioni logiche](https://docs.microsoft.com/azure/cosmos-db/partition-data). Le partizioni logiche vengono create in base al valore di una chiave di partizione associata a ogni elemento in un contenitore. La figura 5-18 Mostra come tutti gli elementi di una partizione logica hanno lo stesso valore della chiave di partizione.
 
@@ -199,7 +199,7 @@ Per un'applicazione nativa del cloud, un percorso comune per aggiungere la memor
 
 ![Memorizzazione nella cache in un'app nativa del cloud](./media/caching-in-a-cloud-native-app.png)
 
-**Figura 5-19**: Memorizzazione nella cache in un'app nativa del cloud
+**Figura 5-19**: memorizzazione nella cache in un'app nativa del cloud
 
 Un modello di memorizzazione nella cache comune è il [modello cache-aside](https://docs.microsoft.com/azure/architecture/patterns/cache-aside). Per una richiesta in ingresso, eseguire prima una query sulla cache per la risposta, illustrata nel passaggio #1 nella figura 5-19. Se viene trovato, i dati vengono restituiti immediatamente. Se i dati non esistono nella cache (noto come [mancato riscontro nella cache](https://www.techopedia.com/definition/6308/cache-miss)), vengono recuperati dal database locale o dal servizio downstream (passaggio #2), scritti nella cache per richieste future (passaggio #3) e restituiti al chiamante. È necessario prestare attenzione per rimuovere periodicamente i dati memorizzati nella cache, in modo che il sistema rimanga coerente e accurato.
 

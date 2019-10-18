@@ -2,12 +2,12 @@
 title: Monitoraggio di Azure
 description: L'uso di monitoraggio di Azure per ottenere visibilità sul sistema è in esecuzione.
 ms.date: 09/23/2019
-ms.openlocfilehash: 20048792e95ef1f6e75551cdd0d3571f972f6c14
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214099"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521030"
 ---
 # <a name="azure-monitor"></a>Monitoraggio di Azure 
 
@@ -15,8 +15,8 @@ ms.locfileid: "71214099"
 
 Nessun altro provider di servizi cloud ha maturato una soluzione di monitoraggio delle applicazioni cloud come quello presente in Azure. Monitoraggio di Azure è un nome di ombrello per una raccolta di strumenti progettati per fornire visibilità sullo stato del sistema, informazioni dettagliate sui problemi e sull'ottimizzazione dell'applicazione. 
 
-![Monitoraggio di Azure, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud. **Figura 7-9**. ](./media/azure-monitor.png)
- Monitoraggio di Azure, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud.
+![Azure monitor, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud. ](./media/azure-monitor.png)
+**figura 7-9**. Monitoraggio di Azure, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud.
 
 ## <a name="gathering-logs-and-metrics"></a>Raccolta di log e metriche
 
@@ -42,8 +42,8 @@ StormEvents
 | render piechart 
 ```
 
-![Risultato della query](./media/azure-monitor.png)
-Application Insights**Figura 7-10**. Risultato della query Application Insights.
+![The risultato della query Application Insights ](./media/azure-monitor.png)
+**figura 7-10**. Risultato della query Application Insights.
 
 È disponibile un [Playground per la sperimentazione](https://dataexplorer.azure.com/clusters/help/databases/Samples) delle query kusto, che è un ottimo punto di dedicare un'ora o due. La lettura di [query di esempio](https://docs.microsoft.com/azure/kusto/query/samples) può essere anche istruttiva.
 
@@ -51,23 +51,23 @@ Application Insights**Figura 7-10**. Risultato della query Application Insights.
 
 Sono disponibili diverse tecnologie dashboard che possono essere usate per esporre le informazioni da monitoraggio di Azure. Probabilmente il più semplice consiste nell'eseguire query in Application Insights e [tracciare i dati in un grafico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards). 
 
-![Esempio di Application Insights grafici incorporati nella**Figura 7-11**del dashboard](./media/azure-monitor.png)
-principale di Azure. Esempio di Application Insights grafici incorporati nel dashboard principale di Azure.
+![An esempio di grafici Application Insights incorporati nel dashboard principale di Azure ](./media/azure-monitor.png)
+**figura 7-11**. Esempio di Application Insights grafici incorporati nel dashboard principale di Azure.
 
 Questi grafici possono quindi essere incorporati nel portale di Azure appropriato tramite l'uso della funzionalità Dashboard. Per gli utenti con requisiti più precisi, come la possibilità di eseguire il drill-down in diversi livelli di dati di monitoraggio di Azure, è possibile [Power bi](https://powerbi.microsoft.com/). Power BI è uno strumento di business intelligence aziendale leader del settore che consente di aggregare dati da molte origini dati diverse.
 
-![Un esempio Power BI Dashboard](./media/azure-monitor.png)
-**Figura 7-12**. Un esempio Power BI Dashboard.
+![An esempio Power BI Dashboard ](./media/azure-monitor.png)
+**figura 7-12**. Un esempio Power BI Dashboard.
 
 ## <a name="alerts"></a>Avvisi
 
 In alcuni casi, la presenza di dashboard di dati è insufficiente. Se nessuno è sveglio per guardare i dashboard, può essere ancora in molte ore prima che un problema venga risolto o addirittura rilevato. A questo scopo, monitoraggio di Azure fornisce anche una [soluzione di avviso](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)di livello superiore. Gli avvisi possono essere attivati da un'ampia gamma di condizioni, tra cui:
 
-* Valori delle metriche
-* Query di ricerca log
-* Eventi del log attività
-* Integrità della piattaforma Azure sottostante
-* Test per la disponibilità del sito Web
+- Valori delle metriche
+- Query di ricerca log
+- Eventi del log attività
+- Integrità della piattaforma Azure sottostante
+- Test per la disponibilità del sito Web
 
 Quando viene attivato, gli avvisi possono eseguire un'ampia gamma di attività. Sul lato più semplice, gli avvisi possono semplicemente inviare una notifica tramite posta elettronica a una lista di distribuzione o a un messaggio di testo a un singolo utente. Gli avvisi più interessati possono attivare un flusso di lavoro in uno strumento, ad esempio PagerDuty, che è a conoscenza di chi chiama per una particolare applicazione. Gli avvisi possono attivare azioni in [Microsoft Flow](https://flow.microsoft.com/) sbloccare quasi illimitatamente le possibilità per i flussi di lavoro.
 

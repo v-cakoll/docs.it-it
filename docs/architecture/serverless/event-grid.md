@@ -4,12 +4,12 @@ description: Griglia di eventi di Azure è una soluzione senza server per il rec
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577574"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522710"
 ---
 # <a name="event-grid"></a>Griglia di eventi
 
@@ -19,9 +19,9 @@ ms.locfileid: "69577574"
 
 Le funzionalità principali di griglia di eventi includono:
 
-* Routing di eventi completamente gestito.
-* Recapito di eventi quasi in tempo reale su larga scala.
-* Ampia copertura sia all'interno che all'esterno di Azure.
+- Routing di eventi completamente gestito.
+- Recapito di eventi quasi in tempo reale su larga scala.
+- Ampia copertura sia all'interno che all'esterno di Azure.
 
 ## <a name="scenarios"></a>Scenari
 
@@ -57,13 +57,13 @@ Per un confronto più dettagliato, vedere confrontare i [servizi di messaggistic
 
 Utilizzando griglia di eventi è possibile sfruttare le garanzie di prestazioni seguenti:
 
-* Latenza end-to-end secondaria nel 99 ° percentile.
-* disponibilità del 99,99%.
-* 10 milioni eventi al secondo per area.
-* 100 milioni sottoscrizioni per area.
-* 50-latenza autore ms.
-* tentativo di 24 ore con il back-off esponenziale per il recapito garantito nella finestra di un giorno.
-* Failover a livello di area trasparente.
+- Latenza end-to-end secondaria nel 99 ° percentile.
+- disponibilità del 99,99%.
+- 10 milioni eventi al secondo per area.
+- 100 milioni sottoscrizioni per area.
+- 50-latenza autore ms.
+- tentativo di 24 ore con il back-off esponenziale per il recapito garantito nella finestra di un giorno.
+- Failover a livello di area trasparente.
 
 ## <a name="event-grid-schema"></a>Schema griglia di eventi
 
@@ -84,31 +84,31 @@ Griglia di eventi usa uno schema standard per eseguire il wrapping degli eventi 
 }]
 ```
 
-Tutte le informazioni sul messaggio sono standard, `data` ad eccezione della proprietà. È possibile esaminare il messaggio e utilizzare `eventType` e `dataVersion` per deserializzare la porzione personalizzata del payload.
+Tutte le informazioni sul messaggio sono standard, ad eccezione della proprietà `data`. È possibile esaminare il messaggio e utilizzare il `eventType` e `dataVersion` per deserializzare la porzione personalizzata del payload.
 
-## <a name="azure-resources"></a>Risorse di Azure
+## <a name="azure-resources"></a>risorse di Azure
 
 Un vantaggio principale dell'uso di griglia di eventi è costituito dai messaggi automatici prodotti da Azure. In Azure le risorse vengono pubblicate automaticamente in un *argomento* che consente di effettuare la sottoscrizione per diversi eventi. Nella tabella seguente sono elencati i tipi di risorse, i tipi di messaggi e gli eventi disponibili automaticamente.
 
 | Risorsa di Azure | Tipo evento | Descrizione |
 | -------------- | ---------- | ----------- |
-| Sottoscrizione di Azure | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
-| | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
-| | Microsoft.Resources.ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
-|  | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
-|  | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
-| | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
-| Archiviazione BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un BLOB. |
-| | Microsoft.Storage.BlobDeleted | Generato quando viene eliminato un BLOB. |
-| Hub eventi | Microsoft.EventHub.CaptureFileCreated | Generato quando viene creato un file di acquisizione.
-| Hub IoT | Microsoft.Devices.DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub IoT. |
-| | Microsoft.Devices.DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub IoT. |
-| Gruppi di risorse | Microsoft.Resources.ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
-| | Microsoft.Resources.ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
-| | Microsoft.Resources.ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
-| | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
-| | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
-| | Microsoft.Resources.ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
+| Sottoscrizione di Azure | Microsoft. resources. ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
+| | Microsoft. resources. ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
+| | Microsoft. resources. ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
+|  | Microsoft. resources. ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
+|  | Microsoft. resources. ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
+| | Microsoft. resources. ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
+| Archiviazione - BLOB | Microsoft. storage. BlobCreated | Generato quando viene creato un BLOB. |
+| | Microsoft. storage. BlobDeleted | Generato quando viene eliminato un BLOB. |
+| Hub eventi | Microsoft. EventHub. CaptureFileCreated | Generato quando viene creato un file di acquisizione.
+| Hub Internet delle cose | Microsoft. Devices. DeviceCreated | Pubblicato quando un dispositivo viene registrato in un hub Internet. |
+| | Microsoft. Devices. DeviceDeleted | Pubblicato quando un dispositivo viene eliminato da un hub Internet. |
+| Gruppi di risorse | Microsoft. resources. ResourceWriteSuccess | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito positivo. |
+| | Microsoft. resources. ResourceWriteFailure | Generato quando un'operazione di creazione o aggiornamento di una risorsa ha esito negativo. |
+| | Microsoft. resources. ResourceWriteCancel | Generato quando un'operazione di creazione o aggiornamento di una risorsa viene annullata. |
+| | Microsoft. resources. ResourceDeleteSuccess | Generato quando un'operazione di eliminazione di una risorsa ha esito positivo. |
+| | Microsoft. resources. ResourceDeleteFailure | Generato quando un'operazione di eliminazione di una risorsa ha esito negativo. |
+| | Microsoft. resources. ResourceDeleteCancel | Generato quando un'operazione di eliminazione di una risorsa viene annullata. Questo evento si verifica quando viene annullata la distribuzione di un modello. |
 
 Per altre informazioni, vedere [schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
 
@@ -120,26 +120,26 @@ In questo capitolo sono state illustrate le informazioni sulla piattaforma senza
 
 ## <a name="recommended-resources"></a>Risorse consigliate
 
-* [Piani di servizio app](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-* [Application Insights](https://docs.microsoft.com/azure/application-insights)
-* [Analisi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure Porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/overview)
-* [Schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
-* [Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs)
-* [Documentazione di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions)
-* [Concetti relativi a trigger e associazioni di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-* [App per la logica di Azure](https://docs.microsoft.com/azure/logic-apps)
-* [Bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging)
-* [Archiviazione tabelle di Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-* [Confrontare le funzioni 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
-* [Connessione a origini dati locali con gateway dati locale di Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-* [Creare la prima funzione nell'portale di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-* [Creare la prima funzione usando l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-* [Creare la prima funzione con Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-* [Lingue supportate dalle funzioni](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-* [Monitorare funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-* [Usare Proxy di Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
+- [Piani di servizio app](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](https://docs.microsoft.com/azure/application-insights)
+- [Analisi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [Azure: porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
+- [Griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/overview)
+- [Schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
+- [Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs)
+- [Documentazione di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions)
+- [Concetti relativi a trigger e associazioni di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [App per la logica di Azure](https://docs.microsoft.com/azure/logic-apps)
+- [Bus di servizio di Azure](https://docs.microsoft.com/azure/service-bus-messaging)
+- [Archiviazione tabelle di Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Confrontare le funzioni 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+- [Connessione a origini dati locali con gateway dati locale di Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
+- [Creare la prima funzione nell'portale di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
+- [Creare la prima funzione usando l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Creare la prima funzione con Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Lingue supportate dalle funzioni](https://docs.microsoft.com/azure/azure-functions/supported-languages)
+- [Monitorare funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Usare Proxy di Funzioni di Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[Precedente](logic-apps.md)

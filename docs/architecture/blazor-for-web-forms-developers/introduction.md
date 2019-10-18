@@ -4,12 +4,12 @@ description: Introduzione a blazer e scrittura di app Web con stack completo con
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 922e72514f0283b66de971d679fab0af436f1c75
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183847"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520306"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Introduzione a blazer per gli sviluppatori di Web Form ASP.NET
 
@@ -62,25 +62,25 @@ In modo autonomo, la possibilità di eseguire il codice .NET in un browser non o
 
 Blazer offre un ottimo supporto per gli strumenti in Visual Studio e Visual Studio Code. Il Framework include anche un modello di componente completo dell'interfaccia utente e offre funzionalità predefinite per:
 
-* Moduli e convalida
-* Inserimento di dipendenze
-* Routing lato client
-* Layout
-* Debug nel browser
-* Interoperabilità JavaScript
+- Moduli e convalida
+- Inserimento di dipendenze
+- Routing lato client
+- Layout
+- Debug nel browser
+- Interoperabilità JavaScript
 
 Blazer è molto comune con ASP.NET Web Forms. Entrambi i Framework offrono modelli di programmazione dell'interfaccia utente con stato basato su componenti e basati su eventi. La differenza di architettura principale consiste nel fatto che ASP.NET Web Forms viene eseguito solo sul server. Blazer può essere eseguito sul client nel browser. Tuttavia, se ci si trova da uno sfondo Web Form ASP.NET, c'è molto di più in grado di essere familiare. Blazer è una soluzione naturale per gli sviluppatori di Web Form ASP.NET che cercano un metodo per sfruttare lo sviluppo lato client e il futuro multipiattaforma open source di .NET.
 
 Questo libro fornisce un'introduzione a blazer che si rivolge in modo specifico agli sviluppatori di Web Form ASP.NET. Ogni concetto di Blazer viene presentato nel contesto delle funzionalità e delle procedure di ASP.NET Web Forms analoghe. Al termine di questo libro, sarà possibile comprendere quanto segue:
 
-* Come creare app blazer.
-* Funzionamento di Blazer.
-* In che modo Blazer si riferisce a .NET Core.
-* Strategie ragionevoli per la migrazione delle app Web Form ASP.NET esistenti a blazer laddove appropriato.
+- Come creare app blazer.
+- Funzionamento di Blazer.
+- In che modo Blazer si riferisce a .NET Core.
+- Strategie ragionevoli per la migrazione delle app Web Form ASP.NET esistenti a blazer laddove appropriato.
 
 ## <a name="get-started-with-blazor"></a>Introduzione a blazer
 
-Iniziare a usare blazer è facile. Passare a <https://blazor.net> e seguire i collegamenti per installare i modelli di progetto .NET Core SDK e blazer appropriati. Sono inoltre disponibili istruzioni per la configurazione degli strumenti di Blazer in Visual Studio o Visual Studio Code.
+Iniziare a usare blazer è facile. Passare a <https://blazor.net> e seguire i collegamenti per installare i modelli di progetto .NET Core SDK e Blaze appropriati. Sono inoltre disponibili istruzioni per la configurazione degli strumenti di Blazer in Visual Studio o Visual Studio Code.
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)

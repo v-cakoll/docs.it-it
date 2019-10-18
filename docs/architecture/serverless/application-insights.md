@@ -4,12 +4,12 @@ description: Application Insights è una piattaforma di diagnostica senza server
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577724"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522741"
 ---
 # <a name="telemetry-with-application-insights"></a>Telemetria con Application Insights
 
@@ -19,12 +19,12 @@ ms.locfileid: "69577724"
 
 L'aggiunta di Application Insights alle app esistenti è semplice come aggiungere una chiave di strumentazione alle impostazioni dell'applicazione. Con Application Insights è possibile:
 
-* Creare grafici e avvisi personalizzati in base alle metriche, ad esempio il numero di chiamate di funzione, il tempo necessario per l'esecuzione di una funzione e le eccezioni
-* Analizzare gli errori e le eccezioni del server
-* Analizzare le prestazioni per operazione e misurare il tempo necessario per chiamare le dipendenze di terze parti
-* Monitorare l'utilizzo della CPU, la memoria e le tariffe in tutti i server che ospitano le app per le funzioni
-* Visualizzare un flusso live di metriche, tra cui il numero di richieste e la latenza per le app per le funzioni
-* Usare [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) per eseguire ricerche, eseguire query e creare grafici personalizzati sui dati delle funzioni
+- Creare grafici e avvisi personalizzati in base alle metriche, ad esempio il numero di chiamate di funzione, il tempo necessario per l'esecuzione di una funzione e le eccezioni
+- Analizzare gli errori e le eccezioni del server
+- Analizzare le prestazioni per operazione e misurare il tempo necessario per chiamare le dipendenze di terze parti
+- Monitorare l'utilizzo della CPU, la memoria e le tariffe in tutti i server che ospitano le app per le funzioni
+- Visualizzare un flusso live di metriche, tra cui il numero di richieste e la latenza per le app per le funzioni
+- Usare [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) per eseguire ricerche, eseguire query e creare grafici personalizzati sui dati delle funzioni
 
 ![Esplora metriche](./media/metrics-explorer.png)
 

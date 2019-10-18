@@ -4,12 +4,12 @@ description: Informazioni su come creare pagine in blazer, utilizzare il routing
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: c31544156250a9e97ff8c0b17338f418817b21d2
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 693eee270a46ccb56ed5fef8fced1d4a1cf1974f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275827"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520233"
 ---
 # <a name="pages-routing-and-layouts"></a>Pagine, routing e layout
 
@@ -84,7 +84,7 @@ La pagina equivalente in un'app Blazer avrà un aspetto simile al seguente:
 
 ## <a name="create-pages"></a>Crea pagine
 
-Per creare una pagina in blazer, creare un componente e aggiungere la direttiva Razor `@page` per specificare la route per il componente. La direttiva `@page` accetta un solo parametro, ovvero il modello di route da aggiungere a tale componente.
+Per creare una pagina in blazer, creare un componente e aggiungere la direttiva `@page` Razor per specificare la route per il componente. La direttiva `@page` accetta un solo parametro, ovvero il modello di route da aggiungere a tale componente.
 
 ```razor
 @page "/counter"
@@ -122,7 +122,7 @@ Per un elenco completo dei vincoli di route supportati da Blazer, vedere [vincol
 
 ## <a name="router-component"></a>Componente router
 
-Il routing in blazer è gestito dal componente `Router`. Il componente `Router` viene in genere usato nel componente radice dell'app (*app. Razor*).
+Il routing in blazer viene gestito dal componente `Router`. Il componente `Router` viene in genere usato nel componente radice dell'app (*app. Razor*).
 
 ```razor
 <Router AppAssembly="@typeof(Program).Assembly">
@@ -137,9 +137,9 @@ Il routing in blazer è gestito dal componente `Router`. Il componente `Router` 
 </Router>
 ```
 
-Il componente `Router` individua i componenti instradabili nell'`AppAssembly` specificato e nel `AdditionalAssemblies` specificato facoltativamente. Quando il browser si sposta, il `Router` intercetta la navigazione ed esegue il rendering del contenuto del parametro `Found` con il `RouteData` Estratto se una route corrisponde all'indirizzo. in caso contrario, il `Router` esegue il rendering del parametro `NotFound`.
+Il componente `Router` individua i componenti instradabili nella `AppAssembly` specificata e nel `AdditionalAssemblies` specificato facoltativamente. Quando il browser si sposta, il `Router` intercetta la navigazione ed esegue il rendering del contenuto del parametro `Found` con il `RouteData` Estratto se una route corrisponde all'indirizzo. in caso contrario, il `Router` esegue il rendering del relativo parametro di `NotFound`.
 
-Il componente `RouteView` gestisce il rendering del componente corrispondente specificato dall'`RouteData` con il relativo layout se ne è presente uno. Se il componente corrispondente non dispone di un layout, viene utilizzato il parametro facoltativo specificato `DefaultLayout`.
+Il componente `RouteView` gestisce il rendering del componente corrispondente specificato dall'`RouteData` con il relativo layout se ne è presente uno. Se il componente corrispondente non ha un layout, viene usato il `DefaultLayout` facoltativo specificato.
 
 Il componente `LayoutView` esegue il rendering del relativo contenuto figlio all'interno del layout specificato. I layout verranno esaminati più dettagliatamente più avanti in questo capitolo.
 
@@ -158,10 +158,10 @@ La restituzione di una risposta di reindirizzamento non è in genere possibile i
 
 Blazer fornisce un servizio `NavigationManager` che può essere usato per:
 
-* Ottenere l'indirizzo del browser corrente
-* Ottenere l'indirizzo di base
-* Spostamenti trigger
-* Ricevere una notifica quando viene modificato l'indirizzo
+- Ottenere l'indirizzo del browser corrente
+- Ottenere l'indirizzo di base
+- Spostamenti trigger
+- Ricevere una notifica quando viene modificato l'indirizzo
 
 Per passare a un indirizzo diverso, usare il metodo `NavigateTo`:
 
@@ -278,7 +278,7 @@ L'output di cui è stato eseguito il rendering per la pagina sarà quindi:
 
 I layout in Blazer non definiscono in genere gli elementi HTML radice per una pagina (`<html>`, `<body>`, `<head>` e così via). Gli elementi HTML radice sono invece definiti nella pagina host dell'app blazer, che viene usata per eseguire il rendering del contenuto HTML iniziale per l'app (vedere [bootstrap Blazer](project-structure.md#bootstrap-blazor)). La pagina host può eseguire il rendering di più componenti radice per l'app con markup circostante.
 
-I componenti in blazer, incluse le pagine, non possono eseguire il rendering dei tag `<script>`. Questa restrizione di rendering esiste perché i tag `<script>` vengono caricati una sola volta e non possono essere modificati. Potrebbe verificarsi un comportamento imprevisto se si tenta di eseguire il rendering dinamico dei tag usando sintassi Razor. Al contrario, tutti i tag `<script>` devono essere aggiunti alla pagina host dell'app.
+I componenti in blazer, incluse le pagine, non possono eseguire il rendering di tag `<script>`. Questa restrizione di rendering esiste perché i tag `<script>` vengono caricati una volta e non possono essere modificati. Potrebbe verificarsi un comportamento imprevisto se si tenta di eseguire il rendering dinamico dei tag usando sintassi Razor. Al contrario, tutti i tag di `<script>` devono essere aggiunti alla pagina host dell'app.
 
 >[!div class="step-by-step"]
 >[Precedente](components.md)

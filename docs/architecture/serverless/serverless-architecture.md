@@ -4,12 +4,12 @@ description: Esplorazione di varie architetture e app supportate da architetture
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577354"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522399"
 ---
 # <a name="serverless-architecture"></a>Architettura serverless
 
@@ -27,12 +27,12 @@ Alcuni progetti possono trarre vantaggio dall'adozione di un approccio "All-in" 
 
 Il back-end senza server completo è ideale per diversi tipi di scenari, soprattutto quando si compilano applicazioni nuove o "verdi". Un'applicazione con una grande superficie di attacco API può trarre vantaggio dall'implementazione di ogni API come funzione senza server. Le app basate sull'architettura di microservizi sono un altro esempio che può essere implementato come back-end senza server completo. I microservizi comunicano su diversi protocolli tra loro. Gli scenari specifici includono:
 
-* Prodotti SaaS basati su API (ad esempio, elaborazione di pagamenti finanziari).
-* Applicazioni basate su messaggi (esempio: soluzione di monitoraggio dei dispositivi).
-* App incentrate sull'integrazione tra i servizi, ad esempio l'applicazione di prenotazione aerea.
-* Processi eseguiti periodicamente, ad esempio la pulizia del database basata su timer.
-* App incentrate sulla trasformazione dei dati (esempio: importazione attivata dal caricamento di file).
-* Estrae processi ETL (Transform and Load).
+- Prodotti SaaS basati su API (ad esempio, elaborazione di pagamenti finanziari).
+- Applicazioni basate su messaggi (esempio: soluzione di monitoraggio dei dispositivi).
+- App incentrate sull'integrazione tra i servizi, ad esempio l'applicazione di prenotazione aerea.
+- Processi eseguiti periodicamente, ad esempio la pulizia del database basata su timer.
+- App incentrate sulla trasformazione dei dati (esempio: importazione attivata dal caricamento di file).
+- Estrae processi ETL (Transform and Load).
 
 Ci sono altri casi d'uso più specifici descritti più avanti in questo documento.
 
@@ -42,7 +42,7 @@ Un problema comune è la migrazione di un'applicazione monolitica esistente al c
 
 ![Migrazione di Monolith senza server](./media/serverless-monolith-migration.png)
 
-Per ulteriori informazioni su questo approccio, guardare il video: [Porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/Events/Connect/2017/E102).
+Per altre informazioni su questo approccio, Guarda il video: [porta la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>App Web
 
@@ -66,12 +66,12 @@ Si riferisce a oggetti fisici collegati in rete. Sono talvolta denominate "dispo
 
 Il volume elevato di dispositivi e informazioni impone spesso un'architettura basata su eventi per indirizzare ed elaborare i messaggi. Senza server è una soluzione ideale per diversi motivi:
 
-* Abilita la scalabilità Man mano che aumenta il volume di dispositivi e dati.
-* Consente di aggiungere nuovi endpoint per supportare nuovi dispositivi e sensori.
-* Semplifica il controllo delle versioni indipendente, in modo che gli sviluppatori possano aggiornare la logica di business per un dispositivo specifico senza dover distribuire l'intero sistema.
-* Resilienza e minor tempo di inattività.
+- Abilita la scalabilità Man mano che aumenta il volume di dispositivi e dati.
+- Consente di aggiungere nuovi endpoint per supportare nuovi dispositivi e sensori.
+- Semplifica il controllo delle versioni indipendente, in modo che gli sviluppatori possano aggiornare la logica di business per un dispositivo specifico senza dover distribuire l'intero sistema.
+- Resilienza e minor tempo di inattività.
 
-La pervasività di Internet delle cose ha comportato diversi prodotti senza server che si concentrano in modo specifico sulle problematiche, ad esempio l' [Hub Azure](https://docs.microsoft.com/azure/iot-hub). Senza server automatizza le attività, ad esempio *la*registrazione del dispositivo, l'applicazione dei criteri, il monitoraggio e persino la distribuzione di codice nei dispositivi perimetrali. Il bordo si riferisce a dispositivi come sensori e attuatori connessi a, ma non a una parte attiva di Internet.
+La pervasività di Internet delle cose ha comportato diversi prodotti senza server che si concentrano in modo specifico sulle problematiche, ad esempio l' [Hub Azure](https://docs.microsoft.com/azure/iot-hub). Senza server automatizza le attività, ad esempio la registrazione del dispositivo, l'applicazione dei criteri, il monitoraggio e persino la distribuzione di codice nei dispositivi *perimetrali*. Il bordo si riferisce a dispositivi come sensori e attuatori connessi a, ma non a una parte attiva di Internet.
 
 >[!div class="step-by-step"]
 >[Precedente](architecture-approaches.md)

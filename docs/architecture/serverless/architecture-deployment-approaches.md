@@ -4,12 +4,12 @@ description: Una guida a diversi modi per le architetture aziendali viene distri
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834330"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522735"
 ---
 # <a name="architecture-deployment-approaches"></a>Approcci alla distribuzione dell'architettura
 
@@ -19,38 +19,38 @@ Indipendentemente dall'approccio dell'architettura utilizzato per progettare un'
 
 Il [modello di architettura](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) a più livelli è un'architettura avanzata e si riferisce semplicemente a applicazioni che separano diversi livelli logici in livelli fisici distinti. L'architettura a più livelli è un'implementazione fisica dell'architettura a N livelli. L'implementazione più comune di questa architettura include:
 
-* Un livello di presentazione, ad esempio un'app Web.
-* Un'API o un livello di accesso ai dati, ad esempio un'API REST.
-* Livello dati, ad esempio un database SQL.
+- Un livello di presentazione, ad esempio un'app Web.
+- Un'API o un livello di accesso ai dati, ad esempio un'API REST.
+- Livello dati, ad esempio un database SQL.
 
 ![Architettura a più livelli](./media/n-tier-architecture.png)
 
 Le soluzioni a più livelli hanno le caratteristiche seguenti:
 
-* I progetti sono in genere allineati con i livelli.
-* Il test può essere affrontato in modo diverso in base al livello.
-* I livelli forniscono livelli di astrazione, ad esempio il livello di presentazione è in genere ignaro dei dettagli di implementazione del livello dati.
-* In genere, i livelli interagiscono solo con i livelli adiacenti.
-* Le versioni vengono spesso gestite a livello di progetto e, di conseguenza, di livello. Una semplice modifica API potrebbe richiedere una nuova versione di un intero livello intermedio.
+- I progetti sono in genere allineati con i livelli.
+- Il test può essere affrontato in modo diverso in base al livello.
+- I livelli forniscono livelli di astrazione, ad esempio il livello di presentazione è in genere ignaro dei dettagli di implementazione del livello dati.
+- In genere, i livelli interagiscono solo con i livelli adiacenti.
+- Le versioni vengono spesso gestite a livello di progetto e, di conseguenza, di livello. Una semplice modifica API potrebbe richiedere una nuova versione di un intero livello intermedio.
 
 Questo approccio offre diversi vantaggi, tra cui:
 
-* Isolamento del database (spesso il front-end non ha accesso diretto al back-end del database).
-* Il riutilizzo dell'API (ad esempio, i client di app per dispositivi mobili, desktop e Web possono riutilizzare le stesse API).
-* Possibilità di scalare in orizzontale i livelli indipendentemente l'uno dall'altro.
-* Refactoring dell'isolamento: è possibile effettuare il refactoring di un livello senza influire sugli altri livelli.
+- Isolamento del database (spesso il front-end non ha accesso diretto al back-end del database).
+- Il riutilizzo dell'API (ad esempio, i client di app per dispositivi mobili, desktop e Web possono riutilizzare le stesse API).
+- Possibilità di scalare in orizzontale i livelli indipendentemente l'uno dall'altro.
+- Refactoring dell'isolamento: è possibile effettuare il refactoring di un livello senza influire sugli altri livelli.
 
 ## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Locale e infrastruttura distribuita come servizio (IaaS)
 
 L'approccio tradizionale per l'hosting di applicazioni richiede l'acquisto di hardware e la gestione di tutte le installazioni software, incluso il sistema operativo. In origine, era necessario disporre di costosi Data Center e hardware fisico. I problemi relativi all'hardware fisico operativo sono molti, tra cui:
 
-* La necessità di acquistare un eccesso per gli scenari "just in case" o Peak demand.
-* Protezione dell'accesso fisico all'hardware.
-* Responsabilità degli errori hardware, ad esempio errori del disco.
-* Raffreddamento.
-* Configurazione di router e di bilanciamento del carico.
-* Ridondanza dell'alimentazione.
-* Sicurezza dell'accesso al software.
+- La necessità di acquistare un eccesso per gli scenari "just in case" o Peak demand.
+- Protezione dell'accesso fisico all'hardware.
+- Responsabilità degli errori hardware, ad esempio errori del disco.
+- Raffreddamento.
+- Configurazione di router e di bilanciamento del carico.
+- Ridondanza dell'alimentazione.
+- Sicurezza dell'accesso al software.
 
 ![Approccio IaaS](./media/iaas-approach.png)
 
@@ -68,10 +68,10 @@ Piattaforma distribuita come servizio (PaaS) offre soluzioni configurate che gli
 
 PaaS risolve le questioni comuni a IaaS. PaaS consente allo sviluppatore di concentrarsi sul codice o sullo schema del database anziché su come viene distribuito. I vantaggi di PaaS includono:
 
-* Pagare i modelli di utilizzo che eliminano il sovraccarico dovuto all'investimento in computer inattivi.
-* Distribuzione diretta e pipeline di DevOps, integrazione continua (CI) e recapito continuo (CD).
-* Aggiornamenti automatici, aggiornamenti e patch di protezione.
-* Pulsante con scalabilità orizzontale e scalabilità verticale (scalabilità elastica).
+- Pagare i modelli di utilizzo che eliminano il sovraccarico dovuto all'investimento in computer inattivi.
+- Distribuzione diretta e pipeline di DevOps, integrazione continua (CI) e recapito continuo (CD).
+- Aggiornamenti automatici, aggiornamenti e patch di protezione.
+- Pulsante con scalabilità orizzontale e scalabilità verticale (scalabilità elastica).
 
 Lo svantaggio principale di PaaS tradizionalmente è costituito dal blocco del fornitore. Alcuni provider PaaS, ad esempio, supportano solo ASP.NET, node. js o altre piattaforme e linguaggi specifici. I prodotti come app Azure Service si sono evoluti per indirizzare più piattaforme e supportare un'ampia gamma di linguaggi e Framework per l'hosting di app Web.
 
@@ -89,11 +89,11 @@ I contenitori sono una soluzione interessante che consente di ottenere vantaggi 
 
 I vantaggi dei contenitori includono:
 
-* Leggero e portatile
-* Indipendenti, quindi non è necessario installare le dipendenze
-* Fornire un ambiente coerente indipendentemente dall'host (esegue esattamente la stessa cosa in un computer portatile come in un server cloud)
-* È possibile eseguire rapidamente il provisioning per la scalabilità orizzontale
-* Può essere riavviato rapidamente per il ripristino da un errore
+- Leggero e portatile
+- Indipendenti, quindi non è necessario installare le dipendenze
+- Fornire un ambiente coerente indipendentemente dall'host (esegue esattamente la stessa cosa in un computer portatile come in un server cloud)
+- È possibile eseguire rapidamente il provisioning per la scalabilità orizzontale
+- Può essere riavviato rapidamente per il ripristino da un errore
 
 Un contenitore viene eseguito in un host contenitore, che a sua volta può essere eseguito in un computer bare metal o in una macchina virtuale. Più contenitori o istanze degli stessi contenitori possono essere eseguiti in un singolo host. Per il failover e la resilienza reali, i contenitori devono essere ridimensionati tra gli host.
 
@@ -125,10 +125,10 @@ Nella figura seguente vengono illustrati quattro componenti senza server. Una ri
 
 I vantaggi offerti da senza server includono:
 
-* **Densità elevata.** Molte istanze dello stesso codice senza server possono essere eseguite nello stesso host rispetto a contenitori o macchine virtuali. Le istanze vengono ridimensionate in più host con scalabilità orizzontale e resilienza.
-* **Micro-fatturazione**. La maggior parte dei provider senza server viene fatturata in base alle esecuzioni senza server, consentendo un notevole risparmio sui costi in determinati scenari.
-* **Scala immediata**. La scalabilità senza server può corrispondere ai carichi di lavoro in modo automatico e rapido.
-* **Time-to-market più veloce** Gli sviluppatori si concentrano sul codice e vengono distribuiti direttamente alla piattaforma senza server. I componenti possono essere rilasciati in modo indipendente l'uno dall'altro.
+- **Densità elevata.** Molte istanze dello stesso codice senza server possono essere eseguite nello stesso host rispetto a contenitori o macchine virtuali. Le istanze vengono ridimensionate in più host con scalabilità orizzontale e resilienza.
+- **Micro-fatturazione.** La maggior parte dei provider senza server viene fatturata in base alle esecuzioni senza server, consentendo un notevole risparmio sui costi in determinati scenari.
+- **Scala immediata.** La scalabilità senza server può corrispondere ai carichi di lavoro in modo automatico e rapido.
+- **Tempi di immissione sul mercato più rapidi.** Gli sviluppatori si concentrano sul codice e vengono distribuiti direttamente alla piattaforma senza server. I componenti possono essere rilasciati in modo indipendente l'uno dall'altro.
 
 Il server è spesso discusso nel contesto di calcolo, ma può anche essere applicato ai dati. Ad esempio, [SQL di Azure](https://docs.microsoft.com/azure/sql-database) e [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) forniscono entrambi i database cloud che non richiedono la configurazione di computer o cluster host. Questo libro è incentrato sulle risorse di calcolo senza server.
 
@@ -140,30 +140,30 @@ Esiste una vasta gamma di opzioni disponibili per l'architettura, incluso un app
 |---------|---------|---------|---------|----------|
 |**Scala**|VM       |Istanza |App      |Funzione  |
 |**Astrae**|Hardware|Piattaforma|Host sistema operativo|Runtime   |
-|**Unità** |VM       |Progetto  |Image    |Codice      |
-|**Durata**|mesi|Da giorni a mesi|Da minuti a giorni|Da millisecondi a minuti|
+|**Unità** |VM       |Progetto  |Immagine    |Codice      |
+|**Durata**|Mesi|Da giorni a mesi|Da minuti a giorni|Da millisecondi a minuti|
 |**Responsabilità**|Applicazioni, dipendenze, Runtime e sistema operativo|Applicazioni e dipendenze|Applicazioni, dipendenze e Runtime|Funzione
 
-* La **scala** si riferisce all'unità utilizzata per ridimensionare l'applicazione
-* **Abstracts** si riferisce al livello astratto dall'implementazione
-* L' **unità** si riferisce all'ambito degli elementi distribuiti
-* **Lifetime** si riferisce al runtime tipico di un'istanza specifica
-* La **responsabilità** si riferisce al sovraccarico per la compilazione, la distribuzione e la gestione dell'applicazione
+- La **scala** si riferisce all'unità utilizzata per ridimensionare l'applicazione
+- **Abstracts** si riferisce al livello astratto dall'implementazione
+- L' **unità** si riferisce all'ambito degli elementi distribuiti
+- **Lifetime** si riferisce al runtime tipico di un'istanza specifica
+- La **responsabilità** si riferisce al sovraccarico per la compilazione, la distribuzione e la gestione dell'applicazione
 
 Il capitolo successivo si focalizzerà sull'architettura senza server, sui casi di utilizzo e sui modelli di progettazione.
 
 ## <a name="recommended-resources"></a>Risorse consigliate
 
-* [Guida all'architettura delle applicazioni Azure](https://docs.microsoft.com/azure/architecture/guide/)
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [SQL di Azure](https://docs.microsoft.com/azure/sql-database)
-* [Modello di architettura a più livelli](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-* [Kubernetes in Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Microservizi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-* [Architettura di riferimento a più livelli della macchina virtuale](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-* [Macchine virtuali](https://docs.microsoft.com/azure/virtual-machines/)
-* [Che cos'è Docker?](../microservices/container-docker-introduction/docker-defined.md)
-* [Applicazione SaaS Wingtip Tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Guida all'architettura delle applicazioni Azure](https://docs.microsoft.com/azure/architecture/guide/)
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [SQL di Azure](https://docs.microsoft.com/azure/sql-database)
+- [Modello di architettura a più livelli](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
+- [Kubernetes in Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+- [Microservizi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+- [Architettura di riferimento a più livelli della macchina virtuale](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Macchine virtuali](https://docs.microsoft.com/azure/virtual-machines/)
+- [Che cos'è Docker?](../microservices/container-docker-introduction/docker-defined.md)
+- [Applicazione SaaS Wingtip Tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[Precedente](architecture-approaches.md)

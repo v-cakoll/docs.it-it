@@ -2,12 +2,12 @@
 title: Resilienza della piattaforma Azure
 description: Architettura di app .NET cloud native per Azure | Resilienza dell'infrastruttura cloud con Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214205"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520765"
 ---
 # <a name="azure-platform-resiliency"></a>Resilienza della piattaforma Azure
 
@@ -68,17 +68,17 @@ Il cloud si sviluppa in scala. La possibilità di aumentare o ridurre le risorse
 
 - *Sfrutta i vantaggi delle funzionalità di scalabilità automatica della piattaforma.* Usare le funzionalità di scalabilità automatica predefinite, laddove possibile, anziché meccanismi personalizzati o di terze parti. Laddove possibile, usare le regole di scalabilità pianificate per garantire che le risorse siano disponibili senza un ritardo di avvio, ma aggiungere la scalabilità automatica reattiva alle regole in base alle esigenze, per gestire modifiche impreviste della richiesta. Per altre informazioni, vedere [linee guida per la scalabilità](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automatica.
 
-- *Scalabilità verticale in modo aggressivo.* Una procedura finale è la scalabilità verticale in modo che sia possibile raggiungere rapidamente i picchi di traffico immediatamente senza perdere il business. E quindi ridurre le risorse non necessarie (ovvero rimuovere le risorse non necessarie) in modo conservativo per assicurare la stabilità del sistema. Un modo semplice per implementare questa operazione consiste nell'impostare il periodo di raffreddamento, ovvero il tempo di attesa tra le operazioni di ridimensionamento, fino a cinque minuti per l'aggiunta di risorse e fino a 15 minuti per la rimozione di istanze.
+- *Scalabilità orizzontale in modo aggressivo.* Una procedura finale è la scalabilità orizzontale in modo aggressivo, in modo che sia possibile raggiungere rapidamente i picchi di traffico immediatamente senza perdere il business. E, quindi applicare la scalabilità (ovvero rimuovere le istanze non necessarie) in modo conservativo per assicurare la stabilità del sistema. Un modo semplice per implementare questa operazione consiste nell'impostare il periodo di raffreddamento, ovvero il tempo di attesa tra le operazioni di ridimensionamento, fino a cinque minuti per l'aggiunta di risorse e fino a 15 minuti per la rimozione di istanze.
 
 ## <a name="built-in-retry-in-services"></a>Tentativi predefiniti nei servizi
 
 È stata consigliata la procedura consigliata per implementare le operazioni di ripetizione a livello di codice in una sezione precedente. Tenere presente che molti servizi di Azure e gli SDK client corrispondenti includono anche meccanismi di ripetizione dei tentativi. L'elenco seguente riepiloga le funzionalità di ripetizione dei tentativi nei molti servizi di Azure trattati in questo libro:
 
-- *Azure Cosmos DB.* La <xref:Microsoft.Azure.Documents.Client.DocumentClient> classe dell'API client ritira automaticamente i tentativi non riusciti. Il numero di tentativi e il tempo massimo di attesa sono configurabili. Le eccezioni generate dall'API client sono richieste che superano i criteri di ripetizione o gli errori non temporanei.
+- *Azure Cosmos DB.* La classe <xref:Microsoft.Azure.Documents.Client.DocumentClient> dall'API client ritira automaticamente i tentativi non riusciti. Il numero di tentativi e il tempo massimo di attesa sono configurabili. Le eccezioni generate dall'API client sono richieste che superano i criteri di ripetizione o gli errori non temporanei.
 
 - *Cache Redis di Azure.* Il client Redis StackExchange usa una classe di gestione connessione che include tentativi per i tentativi non riusciti. Il numero di tentativi, i criteri di ripetizione e il tempo di attesa specifici sono configurabili.
 
-- *Bus di servizio di Azure.* Il client del bus di servizio espone una [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) che può essere configurata con un intervallo di back-off <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, un numero di tentativi e, che specifica il tempo massimo che un'operazione può assumere. I criteri predefiniti sono nove tentativi di ripetizione massimi con un periodo di backoff di 30 secondi tra i tentativi.
+- *Bus di servizio di Azure.* Il client del bus di servizio espone una [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) che può essere configurata con un intervallo di back-off, un numero di tentativi e un <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, che specifica il tempo massimo che un'operazione può assumere. I criteri predefiniti sono nove tentativi di ripetizione massimi con un periodo di backoff di 30 secondi tra i tentativi.
 
 - *Database SQL di Azure.* Quando si usa la libreria [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) , viene fornito il supporto per i tentativi.
 

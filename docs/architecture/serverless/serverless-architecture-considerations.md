@@ -4,12 +4,12 @@ description: Informazioni sulle problemi di architettura delle applicazioni senz
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ecbffbbd435b4926608e4def519fdaddddab688d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577434"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522436"
 ---
 # <a name="serverless-architecture-considerations"></a>Considerazioni sull'architettura serverless
 
@@ -21,9 +21,9 @@ Le funzioni senza server, come per i microservizi in generale, sono senza stato 
 
 Sono disponibili diverse soluzioni per adottare lo stato senza compromettere i vantaggi di senza server. Di seguito sono riportate alcune delle soluzioni più diffuse:
 
-* Usare un archivio dati temporaneo o una cache distribuita, ad esempio Redis
-* Archiviare lo stato in un database, ad esempio SQL o CosmosDB
-* Gestire lo stato tramite un motore del flusso di lavoro come funzioni permanenti
+- Usare un archivio dati temporaneo o una cache distribuita, ad esempio Redis
+- Archiviare lo stato in un database, ad esempio SQL o CosmosDB
+- Gestire lo stato tramite un motore del flusso di lavoro come funzioni permanenti
 
 Il risultato finale è che è necessario tenere presente la necessità di qualsiasi gestione dello stato all'interno dei processi che si sta considerando di implementare senza server.
 
@@ -37,9 +37,9 @@ Esistono alcune eccezioni e soluzioni. Una soluzione può consistere nel suddivi
 
 Un potenziale problema con le implementazioni senza server è la fase di avvio. Per conservare le risorse, molti provider senza server creano un'infrastruttura su richiesta. Quando una funzione senza server viene attivata dopo un periodo di tempo, potrebbe essere necessario creare o riavviare le risorse per ospitare la funzione. In alcune situazioni, l'avvio a freddo può causare ritardi di alcuni secondi. Il tempo di avvio varia a seconda del livello di servizio e provider. Ci sono alcuni approcci per risolvere i tempi di avvio se è importante ridurre al minimo il successo dell'app.
 
-* Alcuni provider consentono agli utenti di pagare i livelli di servizio che garantiscono che l'infrastruttura sia "always on".
-* Implementare un meccanismo Keep-Alive (effettuare il ping dell'endpoint per mantenerlo "sveglio").
-* Utilizzare un'orchestrazione come Kubernetes con un approccio di funzione in contenitori (l'host è già in esecuzione, quindi la creazione di nuove istanze è estremamente veloce).
+- Alcuni provider consentono agli utenti di pagare i livelli di servizio che garantiscono che l'infrastruttura sia "always on".
+- Implementare un meccanismo Keep-Alive (effettuare il ping dell'endpoint per mantenerlo "sveglio").
+- Utilizzare un'orchestrazione come Kubernetes con un approccio di funzione in contenitori (l'host è già in esecuzione, quindi la creazione di nuove istanze è estremamente veloce).
 
 ## <a name="database-updates-and-migrations"></a>Aggiornamenti e migrazioni del database
 
@@ -71,7 +71,7 @@ Un'architettura senza server può includere funzioni che si basano su altre funz
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Gestione degli errori e fornitura della resilienza
 
-È anche importante prendere in considerazione il *modello di interruttore*: Se, per qualche motivo, un servizio continua a non riuscire, non è consigliabile chiamare tale servizio ripetutamente. Viene invece chiamato un servizio alternativo o viene restituito un messaggio finché non viene ristabilita l'integrità del servizio dipendente. L'architettura senza server deve prendere in considerazione la strategia per la risoluzione e la gestione delle dipendenze tra servizi.
+È anche importante prendere in considerazione il *modello di interruttore*: se, per qualche motivo, un servizio continua a non riuscire, non è consigliabile chiamare tale servizio ripetutamente. Viene invece chiamato un servizio alternativo o viene restituito un messaggio finché non viene ristabilita l'integrità del servizio dipendente. L'architettura senza server deve prendere in considerazione la strategia per la risoluzione e la gestione delle dipendenze tra servizi.
 
 Per continuare il modello di interruttore, i servizi devono essere a tolleranza d'errore e resilienti. La tolleranza di errore si riferisce alla capacità dell'applicazione di continuare l'esecuzione anche dopo che sono state rilevate eccezioni impreviste o Stati non validi. La tolleranza di errore è in genere una funzione del codice stesso e del modo in cui viene scritta per gestire le eccezioni. La resilienza si riferisce al modo in cui l'app è in fase di recupero da errori. La resilienza è spesso gestita dalla piattaforma senza server. La piattaforma dovrebbe essere in grado di creare una nuova istanza della funzione senza server in caso di errore di uno esistente. La piattaforma dovrebbe inoltre essere sufficientemente intelligente da interrompere la creazione di nuove istanze in caso di errore di ogni nuova istanza.
 

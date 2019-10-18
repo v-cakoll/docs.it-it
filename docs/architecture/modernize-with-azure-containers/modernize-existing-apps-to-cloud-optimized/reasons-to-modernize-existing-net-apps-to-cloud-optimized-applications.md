@@ -2,12 +2,12 @@
 title: Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373925"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522928"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivi per modernizzare le app .NET esistenti in applicazioni ottimizzate per il cloud
 
@@ -41,7 +41,7 @@ L'elenco seguente descrive i principi o le procedure principali per le applicazi
 
 La figura 4-2 illustra i principali pilastri facoltativi di un'applicazione ottimizzata per il cloud. Maggiore è il numero di pilastri implementati, il più idoneo per soddisfare le aspettative dei clienti.
 
-![Principali pilastri di un'applicazione ottimizzata per il cloud](./media/image2.png)
+![Diagramma che denomina i pilastri principali di un'applicazione ottimizzata per il cloud.](./media/main-pillars-cloud-optimized-application.png)
 
 **Figura 4-2**. Principali pilastri di un'applicazione ottimizzata per il cloud
 

@@ -2,12 +2,12 @@
 title: Sicurezza di Azure per app native del cloud
 description: Architettura di app .NET cloud native per Azure | Sicurezza di Azure per le app cloud native
 ms.date: 06/30/2019
-ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 59b99dfea4926c4b89d7704b3ec3640990747212
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214127"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520825"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Sicurezza di Azure per app native del cloud
 
@@ -21,10 +21,10 @@ Sul lato flip, i servizi più piccoli, ognuno con il proprio archivio dati, limi
 
 Indipendentemente dal fatto che i vantaggi superino gli svantaggi delle applicazioni native del cloud, è necessario seguire la stessa mentalità olistica per la sicurezza. La sicurezza e il pensiero sicuro devono far parte di ogni fase della storia di sviluppo e operatività. Quando si pianifica un'applicazione, porre domande come:
 
-* Qual è l'effetto della perdita dei dati?
-* In che modo è possibile limitare i danni causati da dati danneggiati da inserire in questo servizio?
-* Utenti autorizzati ad accedere a questi dati
-* Sono disponibili criteri di controllo per il processo di sviluppo e rilascio?
+- Qual è l'effetto della perdita dei dati?
+- In che modo è possibile limitare i danni causati da dati danneggiati da inserire in questo servizio?
+- Utenti autorizzati ad accedere a questi dati
+- Sono disponibili criteri di controllo per il processo di sviluppo e rilascio?
 
 Tutte queste domande fanno parte di un processo denominato [modellazione dei rischi](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool). Questo processo prova a rispondere alla domanda di quali sono le minacce al sistema, alla probabilità che si verifichino le minacce e ai potenziali danni. 
 
@@ -32,7 +32,7 @@ Una volta stabilito l'elenco delle minacce, è necessario decidere se è opportu
 
 I processori modificati sono difficili da rilevare senza un microscopio e una conoscenza avanzata della progettazione del processore in silicone. Questo scenario è improbabile e costoso da mitigare, quindi probabilmente nessun modello di minaccia suggerisce la creazione della protezione dagli exploit. 
 
-Minacce più probabili, ad esempio i controlli di accesso interrotti che consentono `Id` di incrementare gli attacchi (sostituendo `Id=2` con `Id=3` nell'URL) o SQL injection, sono più interessanti per la creazione di protezioni da. Le mitigazioni per queste minacce sono piuttosto ragionevoli per la creazione e la prevenzione di problemi di sicurezza imbarazzanti che informano la reputazione dell'azienda. 
+Minacce più probabili, ad esempio i controlli di accesso interrotti che consentono di `Id` incrementare gli attacchi (sostituendo `Id=2` con `Id=3` nell'URL) o SQL injection, sono più interessanti per la creazione di protezioni da. Le mitigazioni per queste minacce sono piuttosto ragionevoli per la creazione e la prevenzione di problemi di sicurezza imbarazzanti che informano la reputazione dell'azienda. 
 
 ## <a name="principle-of-least-privilege"></a>Principio dei privilegi minimi
 
@@ -86,8 +86,8 @@ Per impostazione predefinita, la maggior parte delle risorse di Azure PaaS ha so
 
 Fortunatamente, la maggior parte delle risorse di Azure può essere posizionata in una rete virtuale di Azure che consente il controllo degli accessi con granularità fine. Analogamente al modo in cui le reti locali stabiliscono reti private protette dal mondo più ampio, le reti virtuali sono isole di indirizzi IP privati che si trovano all'interno della rete di Azure.
 
-![Figura 10-1 una rete virtuale in Azure](./media/virtual-network.png)
-**Figura 10-1**. Una rete virtuale in Azure.
+![Figure 10-1 una rete virtuale in Azure ](./media/virtual-network.png)
+**figura 10-1**. Una rete virtuale in Azure.
 
 Nello stesso modo in cui le reti locali hanno un firewall che controlla l'accesso alla rete, è possibile stabilire un firewall simile al limite della rete virtuale. Per impostazione predefinita, tutte le risorse in una rete virtuale possono comunque comunicare con Internet. Sono solo le connessioni in ingresso che richiedono una qualche forma di eccezione esplicita del firewall.
 
@@ -109,16 +109,13 @@ RBAC è un sistema che fornisce un'identità alle applicazioni in esecuzione in 
 
 Il primo componente di RBAC è un'entità di sicurezza. Un'entità di sicurezza può essere un utente, un gruppo, un'entità servizio o un'identità gestita. 
 
-![Figura 10-2 tipi diversi di entità](./media/rbac-security-principal.png)
-di sicurezza**Figura 10-2**. Tipi diversi di entità di sicurezza.
+![Figure 10-2 tipi diversi di entità di sicurezza ](./media/rbac-security-principal.png)
+**figura 10-2**. Tipi diversi di entità di sicurezza.
 
-* Utente: qualsiasi utente che dispone di un account in Azure Active Directory è un utente.
-
-* Group: raccolta di utenti da Azure Active Directory. Come membro di un gruppo, un utente assume i ruoli del gruppo in aggiunta ai rispettivi.
-
-* Entità servizio: identità di sicurezza in cui vengono eseguiti i servizi o le applicazioni.
-
-* Identità gestita: identità Azure Active Directory gestita da Azure. Le identità gestite vengono in genere usate quando si sviluppano applicazioni cloud che gestiscono le credenziali per l'autenticazione ai servizi di Azure.
+- Utente: qualsiasi utente che dispone di un account in Azure Active Directory è un utente.
+- Group: raccolta di utenti da Azure Active Directory. Come membro di un gruppo, un utente assume i ruoli del gruppo in aggiunta ai rispettivi.
+- Entità servizio: identità di sicurezza in cui vengono eseguiti i servizi o le applicazioni.
+- Identità gestita: identità Azure Active Directory gestita da Azure. Le identità gestite vengono in genere usate quando si sviluppano applicazioni cloud che gestiscono le credenziali per l'autenticazione ai servizi di Azure.
 
 L'entità di sicurezza può essere applicata alla maggior parte delle risorse. Ciò significa che è possibile assegnare un'entità di sicurezza a un contenitore in esecuzione in Azure Kubernetes, consentendo l'accesso ai segreti archiviati in Key Vault. Una funzione di Azure può assumere un'autorizzazione che consente di comunicare con un'istanza di Active Directory per convalidare un JWT per un utente chiamante. Una volta abilitati i servizi con un'entità servizio, le autorizzazioni possono essere gestite in modo granulare tramite ruoli e ambiti.  
 
@@ -126,8 +123,8 @@ L'entità di sicurezza può essere applicata alla maggior parte delle risorse. C
 
 Un'entità di sicurezza può assumere molti ruoli o, usando un'analogia sartoriale, ha molti cappelli. Ogni ruolo definisce una serie di autorizzazioni, ad esempio "leggere i messaggi dall'endpoint del bus di servizio di Azure". Il set di autorizzazioni valide di un'entità di sicurezza è la combinazione di tutte le autorizzazioni assegnate a tutti i ruoli dell'entità di sicurezza. Azure dispone di un numero elevato di ruoli predefiniti e gli utenti possono definire i propri ruoli.
 
-![Figura 10-3 definizione](./media/rbac-role-definition.png)
-di ruolo RBAC**Figura 10-3**. Definizioni di ruolo RBAC.
+![Figure 10-3 le definizioni di ruolo RBAC ](./media/rbac-role-definition.png)
+**figura 10-3**. Definizioni di ruolo RBAC.
 
 Incorporati in Azure sono anche un numero di ruoli di alto livello, ad esempio proprietario, collaboratore, lettore e amministratore account utente. Con il ruolo proprietario, un'entità di sicurezza può accedere a tutte le risorse e assegnare le autorizzazioni ad altri utenti. Un collaboratore ha lo stesso livello di accesso a tutte le risorse, ma non può assegnare autorizzazioni. Un lettore può solo visualizzare le risorse di Azure esistenti e un amministratore dell'account utente può gestire l'accesso alle risorse di Azure.
 
@@ -135,7 +132,7 @@ I ruoli predefiniti più granulari, come il [collaboratore zona DNS](https://doc
 
 ## <a name="scopes"></a>Ambiti
 
-I ruoli possono essere applicati a un set limitato di risorse in Azure. Ad esempio, applicando l'ambito all'esempio precedente di lettura da una coda del bus di servizio, è possibile limitare l'autorizzazione a una singola coda: "Leggere i messaggi dall'endpoint `blah.servicebus.windows.net/queue1`del bus di servizio di Azure"
+I ruoli possono essere applicati a un set limitato di risorse in Azure. Ad esempio, applicando l'ambito all'esempio precedente di lettura da una coda del bus di servizio, è possibile limitare l'autorizzazione a una singola coda: "leggere i messaggi dall'endpoint del bus di servizio di Azure `blah.servicebus.windows.net/queue1`"
 
 L'ambito può essere limitato come una singola risorsa oppure può essere applicato a un intero gruppo di risorse, una sottoscrizione o un gruppo di gestione.
 
@@ -151,8 +148,8 @@ Le regole Deny hanno la precedenza sulle regole Allow. Ora rappresenta lo stesso
 
 Come si può immaginare, avere un numero elevato di ruoli e ambiti può rendere piuttosto difficile l'autorizzazione efficace di un'entità servizio. L'accumulo di regole di negazione, serve solo per aumentare la complessità. Fortunatamente, è disponibile un calcolatore delle autorizzazioni che consente di visualizzare le autorizzazioni valide per qualsiasi entità servizio. Si trova in genere nella scheda IAM del portale, come illustrato nella figura 10-3.
 
-![Figura 10-4 calcolatore delle autorizzazioni per un servizio](./media/check-rbac.png)
-app**Figura 10-4**. Calcolatore delle autorizzazioni per un servizio app.
+![Figure il calcolatore delle autorizzazioni 10-4 per un servizio app ](./media/check-rbac.png)
+**figura 10-4**. Calcolatore delle autorizzazioni per un servizio app.
 
 ## <a name="securing-secrets"></a>Protezione dei segreti
 
@@ -170,7 +167,7 @@ L'accesso all'insieme di credenziali delle chiavi viene fornito tramite RBAC, va
 
 ## <a name="kubernetes"></a>Kubernetes
 
-All'interno di Kubernetes è disponibile un servizio simile per la gestione di piccoli elementi di informazioni segrete. I segreti Kubernetes possono essere impostati tramite il `kubectl` tipico eseguibile.
+All'interno di Kubernetes è disponibile un servizio simile per la gestione di piccoli elementi di informazioni segrete. I segreti Kubernetes possono essere impostati tramite il tipico eseguibile `kubectl`.
 
 La creazione di un segreto è semplice come trovare la versione Base64 dei valori da archiviare:
 
@@ -181,7 +178,7 @@ echo -n '1f2d1e2e67df' | base64
 MWYyZDFlMmU2N2Rm
 ```
 
-Quindi, aggiungerlo a un file Secrets denominato `secret.yml` , ad esempio, simile all'esempio seguente:
+Quindi, aggiungendolo a un file Secrets denominato `secret.yml` ad esempio simile all'esempio seguente:
 
 ```yml
 apiVersion: v1
@@ -218,8 +215,8 @@ Questo controllo può essere eseguito da un servizio esterno, ad esempio il test
 
 Anche i servizi come i database SQL di Azure usano la crittografia TLS per nascondere i dati. La parte interessante sulla crittografia dei dati in transito con TLS è che non è possibile, neanche per Microsoft, restare in ascolto sulla connessione tra computer che eseguono TLS. Questo dovrebbe garantire la comodità per le aziende in cui i dati possono essere a rischio da Microsoft o addirittura da un attore di stato con più risorse rispetto all'utente malintenzionato standard. 
 
-![Figura 10-5 report dei Lab SSL che mostra un punteggio di un per un endpoint del bus di servizio. **Figura 10-5**. ](./media/ssl-report.png)
- Report di Labs SSL che mostra un punteggio di un per un endpoint del bus di servizio.
+![Figure 10-5 il report dei Lab SSL che mostra un punteggio di un per un endpoint del bus di servizio. ](./media/ssl-report.png)
+**figura 10-5**. Report di Labs SSL che mostra un punteggio di un per un endpoint del bus di servizio.
 
 Sebbene questo livello di crittografia non sia sufficiente per tutti i tempi, dovrebbe ispirare la sicurezza che le connessioni TLS di Azure siano abbastanza sicure. Azure continuerà a evolvere gli standard di sicurezza Man mano che la crittografia migliora. È interessante tenere presente che qualcuno sta osservando gli standard di sicurezza e aggiornando Azure Man mano che migliorano.
 
@@ -241,16 +238,16 @@ Le macchine virtuali usano l'archiviazione crittografata, ma è possibile fornir
 
 I database ospitati in SQL di Azure usano una tecnologia denominata Transparent Data Encryption (Transparent Data [Encryption)](/sql/relational-databases/security/encryption/transparent-data-encryption) per garantire la crittografia dei dati. Questa funzionalità è abilitata per impostazione predefinita in tutti i nuovi database SQL creati, ma deve essere abilitata manualmente per i database legacy. Transparent Data Encryption esegue la crittografia e la decrittografia in tempo reale di non solo del database, ma anche dei backup e dei log delle transazioni.
 
-I parametri di crittografia vengono archiviati nel `master` database e, all'avvio, vengono letti in memoria per le operazioni rimanenti. Ciò significa che il `master` database deve rimanere non crittografato. La chiave effettiva viene gestita da Microsoft. Tuttavia, gli utenti con requisiti di sicurezza esatti possono fornire la propria chiave in Key Vault in modo analogo a quanto avviene per archiviazione di Azure. Il Key Vault fornisce servizi come la rotazione e la revoca delle chiavi.
+I parametri di crittografia vengono archiviati nel database di `master` e, all'avvio, vengono letti in memoria per le operazioni rimanenti. Ciò significa che il database di `master` deve rimanere non crittografato. La chiave effettiva viene gestita da Microsoft. Tuttavia, gli utenti con requisiti di sicurezza esatti possono fornire la propria chiave in Key Vault in modo analogo a quanto avviene per archiviazione di Azure. Il Key Vault fornisce servizi come la rotazione e la revoca delle chiavi.
 
 La parte "trasparente" di TDS deriva dal fatto che non sono necessarie modifiche client per l'utilizzo di un database crittografato. Sebbene questo approccio offra una corretta sicurezza, la perdita della password del database è sufficiente per consentire agli utenti di decrittografare i dati. Esiste un altro approccio che crittografa singole colonne o tabelle in un database. [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) garantisce che i dati crittografati non vengano visualizzati in testo normale all'interno del database.
 
 La configurazione di questo livello di crittografia richiede l'esecuzione di una procedura guidata in SQL Server Management Studio di selezionare il tipo di crittografia e la posizione in Key Vault per archiviare le chiavi associate. 
 
-![Figura 10-6 selezione di colonne in una tabella da crittografare con](./media/always-encrypted.png)
-always Encrypted**Figura 10-6**. Selezione di colonne in una tabella da crittografare con Always Encrypted.
+![Figure 10-6 selezione di colonne in una tabella da crittografare con Always Encrypted ](./media/always-encrypted.png)
+**figura 10-6**. Selezione di colonne in una tabella da crittografare con Always Encrypted.
 
-Le applicazioni client che leggono le informazioni da queste colonne crittografate devono avere un limite speciale per leggere i dati crittografati. È necessario aggiornare le stringhe di connessione `Column Encryption Setting=Enabled` con e le credenziali client devono essere recuperate dal Key Vault. Il client SQL Server deve quindi essere preimpostato con le chiavi di crittografia della colonna. Al termine, le azioni rimanenti usano le interfacce standard per il client SQL. Ovvero strumenti come elegante e Entity Framework, basati sul client SQL, continueranno a funzionare senza modifiche. Always Encrypted potrebbe non essere ancora disponibile per ogni SQL Server driver in ogni lingua.
+Le applicazioni client che leggono le informazioni da queste colonne crittografate devono avere un limite speciale per leggere i dati crittografati. Le stringhe di connessione devono essere aggiornate con `Column Encryption Setting=Enabled` e le credenziali client devono essere recuperate dall'Key Vault. Il client SQL Server deve quindi essere preimpostato con le chiavi di crittografia della colonna. Al termine, le azioni rimanenti usano le interfacce standard per il client SQL. Ovvero strumenti come elegante e Entity Framework, basati sul client SQL, continueranno a funzionare senza modifiche. Always Encrypted potrebbe non essere ancora disponibile per ogni SQL Server driver in ogni lingua.
 
 La combinazione di Transparent Data Encryption e Always Encrypted, entrambi utilizzabili con chiavi specifiche del client, garantisce che siano supportati anche i requisiti di crittografia più precisi.
 
@@ -258,14 +255,14 @@ La combinazione di Transparent Data Encryption e Always Encrypted, entrambi util
 
 Cosmos DB è il database più recente fornito da Microsoft in Azure. È stato creato da zero con la sicurezza e la crittografia. La crittografia AES-256bit è standard per tutti i database Cosmos DB e non può essere disabilitata. In combinazione con il requisito TLS 1,2 per la comunicazione, viene crittografata l'intera soluzione di archiviazione.
 
-![Figura 10-7 il flusso di crittografia dei dati in](./media/cosmos-encryption.png)
-Cosmos DB**Figura 10-7**. Il flusso di crittografia dei dati all'interno Cosmos DB.
+![Figure 10-7 il flusso di crittografia dei dati all'interno Cosmos DB ](./media/cosmos-encryption.png)
+**figura 10-7**. Il flusso di crittografia dei dati all'interno Cosmos DB.
 
 Sebbene Cosmos DB non fornisca le chiavi di crittografia del cliente, il team ha svolto un lavoro significativo per assicurarsi che rimanga compatibile con PCI-DSS senza questo. Cosmos DB non supporta ancora la crittografia di una singola colonna simile al Always Encrypted di Azure SQL.
 
 ## <a name="keeping-secure"></a>Mantenimento della sicurezza
 
-Azure dispone di tutti gli strumenti necessari per rilasciare un prodotto altamente protetto. Tuttavia, una catena è altrettanto complessa del suo collegamento più debole. Se le applicazioni distribuite in Azure non sono sviluppate con un approccio di sicurezza appropriato e controlli di sicurezza efficaci, diventano il collegamento debole nella catena. Sono disponibili molti strumenti di analisi statica, librerie di crittografia e procedure di sicurezza eccezionali che è possibile usare per garantire che il software installato in Azure sia sicuro come Azure. [strumenti di analisi statica](https://www.whitesourcesoftware.com/), [librerie di crittografia](https://www.libressl.org/)e [procedure di sicurezza](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), [ [LibreSSL](https://www.libressl.org/) e Red vs. I test di penetrazione della sicurezza interni](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) blu di Microsoft Azure sono rispettivamente esempi. 
+Azure dispone di tutti gli strumenti necessari per rilasciare un prodotto altamente protetto. Tuttavia, una catena è altrettanto complessa del suo collegamento più debole. Se le applicazioni distribuite in Azure non sono sviluppate con un approccio di sicurezza appropriato e controlli di sicurezza efficaci, diventano il collegamento debole nella catena. Sono disponibili molti strumenti di analisi statica, librerie di crittografia e procedure di sicurezza eccezionali che è possibile usare per garantire che il software installato in Azure sia sicuro come Azure. [gli strumenti di analisi statica](https://www.whitesourcesoftware.com/), le [librerie di crittografia](https://www.libressl.org/)e le [procedure di sicurezza](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), i [test Microsoft Azure di penetrazione della sicurezza interni di](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) [LibreSSL](https://www.libressl.org/) e Red rispetto al blu sono esempi di questi, rispettivamente. 
 
 >[!div class="step-by-step"]
 >[Precedente](security.md)

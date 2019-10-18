@@ -2,12 +2,12 @@
 title: Comunicazione asincrona basata su messaggi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
 ms.date: 09/20/2018
-ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394567"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522751"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -77,7 +77,7 @@ Un problema durante l'implementazione di un'architettura basata su eventi per pi
 
 - Uso dello schema [Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
-- Uso dello [schema Outbox](http://gistlabs.com/2014/05/the-outbox/): una tabella di database transazionale come una coda di messaggi che sarà la base per un componente per la creazione di eventi, che crea l'evento e lo pubblica.
+- Uso dello [schema Outbox](http://www.kamilgrzybek.com/design/the-outbox-pattern/): una tabella di database transazionale come una coda di messaggi che sarà la base per un componente per la creazione di eventi, che crea l'evento e lo pubblica.
 
 Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'idempotenza dei messaggi e la deduplicazione dei messaggi. Questi argomenti sono trattati nella sezione [Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) più avanti in questa guida.
 
