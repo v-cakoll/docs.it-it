@@ -4,12 +4,12 @@ description: Informazioni sul processo di trasferimento e sugli strumenti che po
 author: cartermp
 ms.date: 09/13/2019
 ms.custom: seodec18
-ms.openlocfilehash: b6c02932b5d9c7ccc2743dd38dddf2904f9c24e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039659"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522994"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Convertire il codice da .NET Framework a .NET Core
 
@@ -31,7 +31,7 @@ Questo è il processo che è consigliabile eseguire durante la conversione del p
 
    Lo strumento API Portability Analyzer analizza gli assembly compilati e genera un report che mostra un riepilogo di portabilità di alto livello e una suddivisione di ogni API in uso che non è disponibile nell'area pubblica della piattaforma .NET Core di destinazione. È possibile usare questo report insieme a un'analisi della base di codici per sviluppare un piano per il trasferimento del codice.
 
-4. Una volta che il file di progetto è stato convertito nella versione di .NET Core di destinazione, è possibile usare l' [analizzatore di API .NET](../../standard/analyzers/api-analyzer.md) basato su Roslyn per identificare le API che generano <xref:System.PlatformNotSupportedException> alcune piattaforme e altri potenziali problemi di compatibilità.
+4. Una volta che il file di progetto è stato convertito nella versione di .NET Core di destinazione, è possibile usare l' [analizzatore di API .NET](../../standard/analyzers/api-analyzer.md) basato su Roslyn per identificare le API che generano <xref:System.PlatformNotSupportedException> in alcune piattaforme e altri potenziali problemi di compatibilità.
 
 5. Trasferire il codice di test.
 
@@ -41,9 +41,9 @@ Questo è il processo che è consigliabile eseguire durante la conversione del p
 
 L'elenco seguente illustra gli strumenti che potrebbero risultare utili durante il processo di conversione:
 
-* .NET Portability Analyzer: [strumento da riga di comando](https://github.com/Microsoft/dotnet-apiport/releases) o [estensione di Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), uno strumento in grado di generare un report sulla portabilità del codice tra .NET Framework e la piattaforma .NET Core di destinazione. Il report contiene una scomposizione per assembly del tipo e le API mancanti nella piattaforma .NET Core di destinazione. Per altre informazioni, vedere [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). È consigliabile eseguire lo strumento .NET Portability Analyzer prima di iniziare il porting, in quanto consente di identificare eventuali gap nelle API mancanti in una specifica area pubblica della piattaforma .NET di destinazione.
-* Analizzatore di API .NET: analizzatore Roslyn che rileva le API .NET Standard che producono <xref:System.PlatformNotSupportedException> in determinate piattaforme, rileva chiamate ad API deprecate e individua altri potenziali rischi di compatibilità per le API C# in piattaforme diverse. Per altre informazioni, vedere [Analizzatore di API .NET](../../standard/analyzers/api-analyzer.md). Questo analizzatore è utile dopo che già stato creato il progetto .NET Core per identificare le differenze di comportamento di runtime su piattaforme diverse.
-* Reverse Package Search: un [servizio Web utile](https://packagesearch.azurewebsites.net) che consente di eseguire le ricerche in base al tipo e di trovare pacchetti contenenti tale tipo.
+- .NET Portability Analyzer: [strumento da riga di comando](https://github.com/Microsoft/dotnet-apiport/releases) o estensione di [Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), uno strumento che consente di generare un report del modo in cui il codice è portabile tra .NET Framework e la piattaforma .NET Core di destinazione. Il report contiene una scomposizione per assembly del tipo e le API mancanti nella piattaforma .NET Core di destinazione. Per altre informazioni, vedere [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). È consigliabile eseguire lo strumento .NET Portability Analyzer prima di iniziare il porting, in quanto consente di identificare eventuali gap nelle API mancanti in una specifica area pubblica della piattaforma .NET di destinazione.
+- Analizzatore di API .NET: analizzatore Roslyn che rileva le API .NET Standard che producono <xref:System.PlatformNotSupportedException> in determinate piattaforme, rileva chiamate ad API deprecate e individua altri potenziali rischi di compatibilità per le API C# in piattaforme diverse. Per altre informazioni, vedere [Analizzatore di API .NET](../../standard/analyzers/api-analyzer.md). Questo analizzatore è utile dopo che già stato creato il progetto .NET Core per identificare le differenze di comportamento di runtime su piattaforme diverse.
+- Reverse Package Search: un [servizio Web utile](https://packagesearch.azurewebsites.net) che consente di eseguire le ricerche in base al tipo e di trovare pacchetti contenenti tale tipo.
 
 È anche possibile provare a convertire soluzioni più piccole o singoli progetti al formato di file di progetto .NET Core con lo strumento [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 

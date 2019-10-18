@@ -2,12 +2,12 @@
 title: Comando dotnet build-server
 description: Il comando dotnet build-server interagisce con i server avviati da una compilazione.
 ms.date: 04/24/2019
-ms.openlocfilehash: 89d1aba104e2cb07b46766a3768eed68d85a7aa7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117774"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523019"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
@@ -17,7 +17,7 @@ ms.locfileid: "71117774"
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet build-server`: interagisce con i server avviati da una compilazione.
 
@@ -29,26 +29,26 @@ dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
 ```
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 
-* **`shutdown`**
+- **`shutdown`**
 
   Arresta i server di compilazione avviati da dotnet. Per impostazione predefinita, vengono arrestati tutti i server.
 
 ## <a name="options"></a>Opzioni
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Stampa una breve guida per il comando.
 
-* **`--msbuild`**
+- **`--msbuild`**
 
   Arresta il server di compilazione MSBuild.
 
-* **`--razor`**
+- **`--razor`**
 
   Arresta il server di compilazione Razor.
 
-* **`--vbcscompiler`**
+- **`--vbcscompiler`**
 
   Arresta il server di compilazione del compilatore VB/C#.

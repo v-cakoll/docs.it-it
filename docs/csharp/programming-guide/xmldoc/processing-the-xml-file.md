@@ -6,16 +6,16 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587860"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523383"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
 
-Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni sull'applicazione di tag al codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
+Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
 
  Il file XML non è una rappresentazione gerarchica del codice, bensì un normale elenco contenente un ID generato per ogni elemento.
 
@@ -25,7 +25,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
 
 - La prima parte della stringa ID specifica il tipo di membro da identificare, con un singolo carattere seguito dai due punti. Vengono usati i tipi di membri seguenti:
 
-    |Carattere|DESCRIZIONE|
+    |Carattere|Descrizione|
     |---------------|-----------------|
     |N|namespace<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, ma, se supportati, è possibile creare riferimenti cref a tali commenti.|
     |T|tipo: classe, interfaccia, struct, enum, delegato|
@@ -71,7 +71,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
 
 - Limitatamente agli operatori di conversione (op_Implicit e op_Explicit), il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.
 
-- Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Ad esempio:
+- Nel caso di tipi generici, il nome del tipo è seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici. Esempio:
 
      ``<member name="T:SampleClass`2">`` è il tag di un tipo che viene definito come `public class SampleClass<T, U>`.
 
@@ -86,5 +86,5 @@ Negli esempi seguenti viene illustrato come vengono generate le stringhe di ID p
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [/doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)

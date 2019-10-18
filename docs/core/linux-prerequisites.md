@@ -4,19 +4,19 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: leecow
 ms.author: leecow
 ms.date: 10/11/2019
-ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318335"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521482"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
 Questo articolo illustra le dipendenze necessarie per sviluppare applicazioni .NET Core in Linux. Le distribuzioni/versioni Linux supportate e le dipendenze seguenti si applicano alle due modalità di sviluppo di app .NET Core in Linux:
 
-* [Riga di comando con l'editor preferito](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Riga di comando con l'editor preferito](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > Il pacchetto .NET Core SDK non è richiesto per ambienti/server di produzione. È necessario solo il pacchetto di runtime di .NET Core per le app distribuite in ambienti di produzione. Il runtime di .NET Core viene distribuito con le app nell'ambito di una distribuzione indipendente, ma deve essere distribuito separatamente per le app dipendenti dal framework. Per altre informazioni sui tipi di distribuzione indipendenti e dipendenti dal framework, vedere [Distribuzione di applicazioni .NET Core](./deploying/index.md). Per linee guida specifiche, vedere anche [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Applicazioni Linux indipendenti).
@@ -112,21 +112,21 @@ Quelli che seguono sono esempi. Le versioni e i nomi esatti possono variare legg
 
 Le distribuzioni Ubuntu richiedono che siano installate le librerie seguenti:
 
-* liblttng-ust0
-* libcurl3 (per 14.x e 16.x)
-* libcurl4 (per 18.x)
-* libssl1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52 (per 14.X)
-* libicu55 (per 16.X)
-* libicu57 (per 17.X)
-* libicu60 (per 18.x)
+- liblttng-ust0
+- libcurl3 (per 14.x e 16.x)
+- libcurl4 (per 18.x)
+- libssl1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52 (per 14.X)
+- libicu55 (per 16.X)
+- libicu57 (per 17.X)
+- libicu60 (per 18.x)
 
 Per le versioni precedenti a .NET Core 2.1, sono richieste anche le dipendenze seguenti:
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
 
 Per le applicazioni .NET Core che usano l'assembly *System. Drawing. Common* , è necessaria anche la dipendenza seguente:
 
@@ -139,19 +139,19 @@ Per le applicazioni .NET Core che usano l'assembly *System. Drawing. Common* , �
 
 Le distribuzioni CentOS richiedono che siano installate le librerie seguenti:
 
-* lttng-ust
-* libcurl
-* openssl-libs
-* krb5-libs
-* libicu
-* zlib
+- lttng-ust
+- libcurl
+- openssl-libs
+- krb5-libs
+- libicu
+- zlib
 
 Utenti di Fedora: se la versione di openssl in uso è maggiore o uguale a 1.1, è necessario installare compat-openssl10.
 
 Per le versioni precedenti a .NET Core 2.1, sono richieste anche le dipendenze seguenti:
 
-* libunwind
-* libuuid
+- libunwind
+- libuuid
 
 Per altre informazioni sulle dipendenze, vedere [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Applicazioni Linux autonome).
 
@@ -168,8 +168,8 @@ Sono disponibili programmi di installazione .NET Core nativi per le distribuzion
 
 In Linux sono disponibili due opzioni relative al pacchetto di installazione:
 
-* L'utilizzo di un sistema di gestione pacchetti basato su feed, ad esempio apt-get per Ubuntu o yum per CentOS/RHEL.
-* L'utilizzo dei pacchetti stessi, DEB o RPM.
+- L'utilizzo di un sistema di gestione pacchetti basato su feed, ad esempio apt-get per Ubuntu o yum per CentOS/RHEL.
+- L'utilizzo dei pacchetti stessi, DEB o RPM.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Gli script vengono installati con lo script di installazione di .NET Core
 
@@ -187,8 +187,8 @@ Lo script bash del programma di installazione viene usato negli scenari di autom
 
 Se si verificano problemi in fase di installazione di .NET Core in una distribuzione/versione Linux supportata, vedere i seguenti argomenti per le distribuzioni/versioni installate in uso:
 
-* [Problemi noti relativi a .NET Core 3.0](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [Problemi noti relativi a .NET Core 2.2](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [Problemi noti relativi a .NET Core 2.1](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [Problemi noti relativi a .NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [Problemi noti relativi a .NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+- [Problemi noti relativi a .NET Core 3.0](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+- [Problemi noti relativi a .NET Core 2.2](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+- [Problemi noti relativi a .NET Core 2.1](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+- [Problemi noti relativi a .NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+- [Problemi noti relativi a .NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0)

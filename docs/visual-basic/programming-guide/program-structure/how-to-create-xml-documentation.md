@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creazione di documentazione XML in Visual Basic'
+title: 'Procedura: creare documentazione XLM in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: ff93a7bb2d8fdef68fc956d4c569ca5ad37afb2c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054106"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524485"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedura: Creazione di documentazione XML in Visual Basic
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedura: creare documentazione XLM in Visual Basic
 
 Questo esempio illustra come aggiungere commenti alla documentazione XML al codice.
 
@@ -29,16 +29,16 @@ Questo esempio illustra come aggiungere commenti alla documentazione XML al codi
 3. Aggiungere informazioni descrittive tra i tag appropriati.
 
     > [!NOTE]
-    > Se si aggiungono righe aggiuntive all'interno del blocco di documentazione XML, ogni riga `'''`deve iniziare con.
+    > Se si aggiungono righe aggiuntive all'interno del blocco di documentazione XML, ogni riga deve iniziare con `'''`.
 
 4. Aggiungere codice aggiuntivo che utilizza il tipo o il membro con i nuovi commenti della documentazione XML.
 
-    IntelliSense consente di visualizzare il testo \<del Tag > di riepilogo per il tipo o il membro.
+    IntelliSense Visualizza il testo dalla \<summary Tag > per il tipo o il membro.
 
-5. Compilare il codice per generare un file XML contenente i commenti della documentazione. Per altre informazioni, vedere [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Compilare il codice per generare un file XML contenente i commenti della documentazione. Per altre informazioni, vedere [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Documentazione del codice tramite XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)

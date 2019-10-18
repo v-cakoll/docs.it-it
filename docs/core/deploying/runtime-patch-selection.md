@@ -4,12 +4,12 @@ description: Informazioni sulle modifiche di dotnet publish per le distribuzioni
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
-ms.translationtype: HT
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656297"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522096"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward del runtime di distribuzione autonoma
 
@@ -28,8 +28,8 @@ Le [distribuzioni di applicazioni autonome](index.md) .NET Core includono sia le
 
 L'esecuzione di `restore` all'interno dell'operazione `publish` può essere indesiderata per lo scenario. Per evitare l'esecuzione di `restore` durante la creazione di applicazioni autonome tramite `publish`, eseguire le operazioni seguenti:
 
-* Impostare la proprietà `RuntimeIdentifiers` su un elenco delimitato da punto e virgola di tutti i [RID](../rid-catalog.md) da pubblicare.
-* Impostare la proprietà `TargetLatestRuntimePatch` su `true`.
+- Impostare la proprietà `RuntimeIdentifiers` su un elenco delimitato da punto e virgola di tutti i [RID](../rid-catalog.md) da pubblicare.
+- Impostare la proprietà `TargetLatestRuntimePatch` su `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Argomento no-restore con le opzioni di dotnet publish
 

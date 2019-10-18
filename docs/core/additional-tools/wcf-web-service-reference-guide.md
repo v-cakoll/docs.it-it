@@ -4,12 +4,12 @@ description: Panoramica dello strumento Microsoft WCF Web Service Reference Prov
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926464"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522230"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usare lo strumento WCF Web Service Reference Provider
 
@@ -18,18 +18,18 @@ Nel corso degli anni, molti sviluppatori di Visual Studio hanno aumentato la pro
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) o versioni successive
+- [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) o versioni successive
 
 ## <a name="how-to-use-the-extension"></a>Come usare l'estensione
 
 > [!NOTE]
 > L'opzione **WCF Web Service Reference** è applicabile ai progetti creati con i modelli di progetto seguenti:
 >
-> * **Visual C#**  >  **.NET Core**
-> * **Visual C#**  >  **.NET Standard**
-> * **Visual C#**  > **Web** > **Applicazione ASP.NET Core Web**
+> - **Visual C#**  >  **.NET Core**
+> - **Visual C#**  >  **.NET Standard**
+> - **Visual C#**  > **Web** > **Applicazione ASP.NET Core Web**
 
 Se si usa il modello di progetto **Applicazione ASP.NET Core Web**, l'articolo illustra i passaggi per aggiungere un riferimento al servizio WFC al progetto:
 
@@ -68,9 +68,9 @@ Se si usa il modello di progetto **Applicazione ASP.NET Core Web**, l'articolo i
 
 Durante la visualizzazione dello stato, lo strumento:
 
-* Scarica i metadati dal servizio WCF.
-* Genera il codice del riferimento al servizio in un file denominato *reference.cs*e lo aggiunge al progetto sotto il nodo **Servizi connessi**.
-* Aggiorna il file di progetto con estensione csproj con i riferimenti al pacchetto NuGet necessari per la compilazione e l'esecuzione nella piattaforma di destinazione.
+- Scarica i metadati dal servizio WCF.
+- Genera il codice del riferimento al servizio in un file denominato *reference.cs*e lo aggiunge al progetto sotto il nodo **Servizi connessi**.
+- Aggiorna il file di progetto con estensione csproj con i riferimenti al pacchetto NuGet necessari per la compilazione e l'esecuzione nella piattaforma di destinazione.
 
 ![Finestra di stato di Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ In caso di domande o commenti e suggerimenti, [segnalare un problema in GitHub](
 
 ### <a name="release-notes"></a>Note sulla versione
 
-* Fare riferimento alle [note sulla versione](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) per informazioni aggiornate sulle versioni, compresi i problemi noti.
+- Fare riferimento alle [note sulla versione](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) per informazioni aggiornate sulle versioni, compresi i problemi noti.

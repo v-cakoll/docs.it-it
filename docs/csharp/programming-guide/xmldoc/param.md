@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: e2e9bd4478ceaf2f491aba0aa3db8bae7857f28d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ed7a8f8a06771a18dc4244bffbda53e9adbd4e90
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587919"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523421"
 ---
 # <a name="param-c-programming-guide"></a>\<param> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -30,12 +30,12 @@ ms.locfileid: "69587919"
  `description`  
  Descrizione del parametro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il tag \<param> viene usato nel commento di una dichiarazione di metodo per descrivere uno dei parametri del metodo. Per documentare più parametri, usare più tag \<param>.  
   
  Il testo del tag \<param> verrà visualizzato in IntelliSense, nella finestra Visualizzatore oggetti e nel report Web sui commenti del codice.  
   
- Compilare con [/doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  

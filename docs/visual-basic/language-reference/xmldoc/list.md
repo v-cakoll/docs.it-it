@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940878"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524744"
 ---
-# <a name="list-visual-basic"></a>\<list> (Visual Basic)
+# <a name="list-visual-basic"></a>\<list > (Visual Basic)
 Definisce un elenco o una tabella.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -40,25 +40,25 @@ Definisce un elenco o una tabella.
   
 ## <a name="parameters"></a>Parametri  
  `type`  
- Il tipo dell'elenco. Deve essere un "punto elenco" per un elenco puntato, "number" per un elenco numerato o "table" per una tabella a due colonne.  
+ Tipo dell'elenco. Deve essere un "Bullet" per un elenco puntato, "Number" per un elenco numerato o "Table" per una tabella a due colonne.  
   
  `term`  
- Usato solo `type` è "table". Termine da definire, che viene definito nel tag di descrizione.  
+ Utilizzato solo quando `type` è "Table". Termine da definire, definito nel tag Description.  
   
  `description`  
- Quando `type` è "bullet" o "number", `description` è un elemento nell'elenco quando `type` è "table" `description` è la definizione di `term`.  
+ Quando `type` è "Bullet" o "Number", `description` è un elemento nell'elenco quando `type` è "Table" `description` è la definizione di `term`.  
   
 ## <a name="remarks"></a>Note  
- Il `<listheader>` blocco definisce l'intestazione di tabella o una definizione elenco. Quando si definisce una tabella, è sufficiente fornire una voce per `term` nell'intestazione.  
+ Il blocco `<listheader>` definisce l'intestazione di un elenco di tabelle o di definizioni. Quando si definisce una tabella, è necessario specificare solo una voce per `term` nell'intestazione.  
   
- Ogni elemento nell'elenco viene specificato con un `<item>` blocco. Quando si crea un elenco di definizioni, è necessario specificare entrambe `term` e `description`. Tuttavia, per una tabella, elenco puntato o numerato, è sufficiente fornire una voce per `description`.  
+ Ogni elemento nell'elenco viene specificato con un blocco `<item>`. Quando si crea un elenco di definizioni, è necessario specificare sia `term` sia `description`. Tuttavia, per una tabella, un elenco puntato o un elenco numerato, è necessario specificare solo una voce per `description`.  
   
- Un elenco o una tabella può avere un numero `<item>` blocca in base alle esigenze.  
+ Un elenco o una tabella può contenere il numero di blocchi di `<item>` necessari.  
   
- Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio viene usato il `<list>` tag per definire un elenco puntato nella sezione Osservazioni.  
+ Questo esempio usa il tag `<list>` per definire un elenco puntato nella sezione Osservazioni.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

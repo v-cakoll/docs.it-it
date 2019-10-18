@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: ac8629dacbb8c1fde1f55468e5d2aeaf78cfe017
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d17ff0b78d8ae40916447e8e12da7948a21e5717
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928033"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523362"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Tag consigliati per i commenti relativi alla documentazione (Guida per programmatori C#)
 Il compilatore C# elabora i commenti alla documentazione nel codice e li formatta come XML in un file il cui nome è stato specificato nell'opzione della riga di comando **/doc**. Per creare la documentazione finale basata sul file generato dal compilatore, è possibile creare uno strumento personalizzato o usare uno strumento come [DocFX](https://dotnet.github.io/docfx/) o [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -47,5 +47,5 @@ Il compilatore C# elabora i commenti alla documentazione nel codice e li formatt
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../index.md)
-- [/doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (opzioni del compilatore C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Commenti relativi alla documentazione XML](./index.md)

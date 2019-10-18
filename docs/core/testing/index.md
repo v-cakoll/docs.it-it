@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926290"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522906"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
@@ -39,30 +39,30 @@ Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 
 I progetti di unit test .NET Core sono supportati per i linguaggi seguenti:
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 È anche possibile scegliere tra le opzioni seguenti:
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 Altre informazioni sono disponibili nelle procedure dettagliate seguenti:
 
-* Creare unit test con [*xUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md).
-* Creare unit test con [*NUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-nunit.md).
-* Creare unit test con [*MSTest* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-mstest.md).
-* Creare unit test con [*xUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-dotnet-test.md).
-* Creare unit test con [*NUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-nunit.md).
-* Creare unit test con [*MSTest* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-mstest.md).
-* Creare unit test con [*xUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
-* Creare unit test con [*NUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-nunit.md).
-* Creare unit test con [*MSTest* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-mstest.md).
+- Creare unit test con [*xUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md).
+- Creare unit test con [*NUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-nunit.md).
+- Creare unit test con [*MSTest* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-mstest.md).
+- Creare unit test con [*xUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+- Creare unit test con [*NUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-nunit.md).
+- Creare unit test con [*MSTest* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-mstest.md).
+- Creare unit test con [*xUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+- Creare unit test con [*NUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-nunit.md).
+- Creare unit test con [*MSTest* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 Altre informazioni sono disponibili negli articoli seguenti:
 
-* Visual Studio Enterprise offre ottimi strumenti di test per .NET Core. Per altre informazioni vedere [Live Unit Testing](/visualstudio/test/live-unit-testing) o l'argomento relativo al [code coverage](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Per altre informazioni su come eseguire unit test selettivi, vedere [Esecuzione di unit test selettivi](selective-unit-tests.md) o [Includere ed escludere test con Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* [How to use xUnit with .NET Core and Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html) (Come usare xUnit con .NET Core e Visual Studio).
+- Visual Studio Enterprise offre ottimi strumenti di test per .NET Core. Per altre informazioni vedere [Live Unit Testing](/visualstudio/test/live-unit-testing) o l'argomento relativo al [code coverage](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
+- Per altre informazioni su come eseguire unit test selettivi, vedere [Esecuzione di unit test selettivi](selective-unit-tests.md) o [Includere ed escludere test con Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+- [How to use xUnit with .NET Core and Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html) (Come usare xUnit con .NET Core e Visual Studio).

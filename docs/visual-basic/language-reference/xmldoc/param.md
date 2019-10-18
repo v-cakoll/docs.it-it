@@ -5,14 +5,14 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664202"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524725"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
 Definisce un nome di parametro e una descrizione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -29,18 +29,18 @@ Definisce un nome di parametro e una descrizione.
  Descrizione del parametro.  
   
 ## <a name="remarks"></a>Note  
- Il `<param>` tag deve essere usato nel commento per una dichiarazione di metodo per descrivere uno dei parametri del metodo.  
+ Il tag `<param>` deve essere usato nel commento per una dichiarazione di metodo per descrivere uno dei parametri per il metodo.  
   
- Il testo per il `<param>` tag verrà visualizzato nelle posizioni seguenti:  
+ Il testo per il tag `<param>` verrà visualizzato nei percorsi seguenti:  
   
 - Informazioni sul parametro di IntelliSense. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense).  
   
 - Visualizzatore oggetti. Per altre informazioni, vedere [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code) (Visualizzazione della struttura del codice).  
   
- Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa la `<param>` tag per descrivere il `id` parametro.  
+ Questo esempio usa il tag `<param>` per descrivere il parametro `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
-ms.translationtype: MT
+ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214446"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523870"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -58,7 +58,7 @@ Tuttavia, la definizione di versioni precedenti di .NET Standard come destinazio
 Esistono due regole principali per il controllo delle versioni:
 
 - Additive: le versioni di .NET Standard sono cerchi concentrici da un punto di vista logico, ovvero le versioni successive includono tutte le API delle versioni precedenti. Non vengono apportate modifiche importanti tra una versione e l'altra.
-- Non modificabili: una volta fornite, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
+- Non modificabili: dopo essere state rilasciate, le versioni di .NET Standard sono bloccate. Le nuove API vengono prima rese disponibili in implementazioni di .NET specifiche, ad esempio .NET Core. Se la commissione di esame di .NET Standard ritiene che le nuove API debbano essere disponibili per tutte le implementazioni di .NET, vengono aggiunte in una nuova versione di .NET Standard.
 
 ## <a name="specification"></a>Specifica
 
@@ -88,7 +88,7 @@ I pacchetti NuGet hanno come destinazione uno o più [framework](frameworks.md).
 
 Il metapacchetto [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) fa riferimento al set completo di pacchetti NuGet che definiscono .NET Standard.  Il modo più comune di definire `netstandard` come destinazione è fare riferimento a questo metapacchetto. Questo metapacchetto descrive e fornisce l'accesso alle circa 40 librerie .NET e alle API associate che definiscono .NET Standard. Per accedere ad API aggiuntive, è possibile fare riferimento ad altri pacchetti che hanno come destinazione `netstandard`.
 
-### <a name="versioning"></a>Controllo delle versioni
+### <a name="versioning"></a>Versionamento
 
 La specifica non è singola, ma costituisce un set di API a crescita incrementale e con definizione lineare delle versioni. La prima versione dello standard definisce un set di dati di riferimento delle API. Le versioni successive aggiungono nuove API ed ereditano quelle definite dalle versioni precedenti. Non esiste alcuna norma stabilita per la rimozione di API dallo standard.
 
@@ -164,3 +164,4 @@ Di seguito è riportato il set di profili delle librerie di classi portabili com
 ## <a name="see-also"></a>Vedere anche
 
 - [.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md) (Versioni di .NET Standard)
+- [Compilazione di una libreria di .NET Standard](../core/tutorials/library-with-visual-studio.md)

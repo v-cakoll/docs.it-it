@@ -2,66 +2,67 @@
 title: Creazione di attributi personalizzati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: e4b55f92466fde47011937d08c946c9c75ca07b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b1b03f69229bd4d824d6fff734b83400c2aab44
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966325"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524295"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Creazione di attributi personalizzati (Visual Basic)
-È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati. Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo. Si potrebbe definire una classe Attribute `Author` personalizzata:  
-  
-```vb  
-<System.AttributeUsage(System.AttributeTargets.Class Or   
-                       System.AttributeTargets.Struct)>   
-Public Class Author  
-    Inherits System.Attribute  
-    Private name As String  
-    Public version As Double  
-    Sub New(ByVal authorName As String)  
-        name = authorName  
-        version = 1.0  
-    End Sub  
-End Class  
-```  
-  
- Il nome della classe è il nome dell'attributo, `Author`. La classe deriva da `System.Attribute`, quindi è una classe Attribute personalizzata. I parametri del costruttore sono parametri posizionali dell'attributo personalizzato. In questo esempio `name` è un parametro posizionale. Tutte le proprietà o i campi pubblici di lettura/scrittura sono parametri denominati. In questo caso `version` è l'unico parametro denominato. Si noti l'uso dell'attributo `AttributeUsage` per rendere l'attributo `Author` valido solo per la classe e le dichiarazioni `Structure`.  
-  
- È possibile usare questo nuovo attributo come indicato di seguito:  
-  
-```vb  
-<Author("P. Ackerman", Version:=1.1)>   
-Class SampleClass  
-    ' P. Ackerman's code goes here...  
-End Class  
-```  
-  
- `AttributeUsage` ha un parametro denominato, `AllowMultiple`, che consente di rendere un attributo personalizzato monouso o multiuso. Nell'esempio di codice seguente viene creato un attributo multiuso.  
-  
-```vb  
-' multiuse attribute  
-<System.AttributeUsage(System.AttributeTargets.Class Or   
-                       System.AttributeTargets.Struct,   
-                       AllowMultiple:=True)>   
-Public Class Author  
-    Inherits System.Attribute  
-```  
-  
- Nell'esempio vengono applicati a una classe più attributi dello stesso tipo.  
-  
-```vb  
-<Author("P. Ackerman", Version:=1.1),   
-Author("R. Koch", Version:=1.2)>   
-Class SampleClass  
-    ' P. Ackerman's code goes here...  
-    ' R. Koch's code goes here...  
-End Class  
-```  
-  
+
+È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati. Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo. Si potrebbe definire una classe Attribute `Author` personalizzata:
+
+```vb
+<System.AttributeUsage(System.AttributeTargets.Class Or
+                       System.AttributeTargets.Struct)>
+Public Class Author
+    Inherits System.Attribute
+    Private name As String
+    Public version As Double
+    Sub New(ByVal authorName As String)
+        name = authorName
+        version = 1.0
+    End Sub
+End Class
+```
+
+Il nome della classe è il nome dell'attributo, `Author`. La classe deriva da `System.Attribute`, quindi è una classe Attribute personalizzata. I parametri del costruttore sono parametri posizionali dell'attributo personalizzato. In questo esempio `name` è un parametro posizionale. Tutte le proprietà o i campi pubblici di lettura/scrittura sono parametri denominati. In questo caso `version` è l'unico parametro denominato. Si noti l'uso dell'attributo `AttributeUsage` per rendere l'attributo `Author` valido solo per la classe e le dichiarazioni `Structure`.
+
+È possibile usare questo nuovo attributo come indicato di seguito:
+
+```vb
+<Author("P. Ackerman", Version:=1.1)>
+Class SampleClass
+    ' P. Ackerman's code goes here...
+End Class
+```
+
+`AttributeUsage` ha un parametro denominato, `AllowMultiple`, che consente di rendere un attributo personalizzato monouso o multiuso. Nell'esempio di codice seguente viene creato un attributo multiuso.
+
+```vb
+' multiuse attribute
+<System.AttributeUsage(System.AttributeTargets.Class Or
+                       System.AttributeTargets.Struct,
+                       AllowMultiple:=True)>
+Public Class Author
+    Inherits System.Attribute
+```
+
+Nell'esempio vengono applicati a una classe più attributi dello stesso tipo.
+
+```vb
+<Author("P. Ackerman", Version:=1.1),
+Author("R. Koch", Version:=1.2)>
+Class SampleClass
+    ' P. Ackerman's code goes here...
+    ' R. Koch's code goes here...
+End Class
+```
+
 > [!NOTE]
-> Se la classe Attribute contiene una proprietà, tale proprietà deve essere di lettura/scrittura.  
-  
+> Se la classe Attribute contiene una proprietà, tale proprietà deve essere di lettura/scrittura.
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection>

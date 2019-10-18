@@ -3,12 +3,12 @@ title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104778"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521162"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -34,9 +34,9 @@ I commenti in formato documentazione XML, come tutti gli altri commenti, vengono
 
 - Se si sviluppa un'applicazione tramite Visual Studio, fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Nella finestra di dialogo Proprietà selezionare la scheda **Genera** e controllare **File di documentazione XML**. È anche possibile modificare il percorso in cui il compilatore scrive il file.
 
-- Se si sta compilando un'applicazione .NET Framework dalla riga di comando, aggiungere l'[opzione di compilazione /doc](language-reference/compiler-options/doc-compiler-option.md) durante la compilazione.  
+- Se si compila un'applicazione .NET Framework dalla riga di comando, aggiungere l'opzione del [compilatore-doc](language-reference/compiler-options/doc-compiler-option.md) durante la compilazione.  
 
-I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di commento in formato XML. Ad esempio:
+I commenti in formato documentazione XML usano tre barre (`///`) e un corpo di commento in formato XML. Esempio:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -136,7 +136,7 @@ Ciò può essere qualsiasi tipo definito nel progetto o in un assembly di riferi
 
 ## <a name="param"></a>\<param>
 
-Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double: Il parametro descritto dal tag viene specificato nell'attributo **obbligatorio** `name`.
+Il tag `<param>` viene usato per descrivere i parametri del metodo. Di seguito viene illustrato un esempio sul metodo `Add` double. Il parametro descritto dal tag viene specificato nell'attributo `name` **obbligatorio**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 

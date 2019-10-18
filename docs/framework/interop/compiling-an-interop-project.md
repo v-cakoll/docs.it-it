@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5bc92eb9d4b7b0ae5db56303f3fbfa991c58e06a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969096"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523838"
 ---
 # <a name="compiling-an-interop-project"></a>Compilazione di un progetto di interoperabilità
 
@@ -24,15 +24,15 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 
  Esistono due modi per fare riferimento agli assembly di interoperabilità:
 
-- Tipi di interoperabilità incorporati: a partire da .NET Framework 4 e Visual Studio 2010, è possibile indicare al compilatore di incorporare nell'eseguibile informazioni sul tipo ottenute da un assembly di interoperabilità. Questa è la tecnica consigliata.
+- Tipi di interoperabilità incorporati: a partire da .NET Framework 4 e Visual Studio 2010, è possibile indicare al compilatore di incorporare le informazioni sui tipi da un assembly di interoperabilità nell'eseguibile. Questa è la tecnica consigliata.
 
 - Distribuzione di assembly di interoperabilità: è possibile creare un riferimento standard a un assembly di interoperabilità. In questo caso, l'assembly di interoperabilità deve essere distribuito con l'applicazione.
 
  Le differenze tra queste due tecniche sono discusse più dettagliatamente in [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- L'incorporamento dei tipi di interoperabilità con Visual Studio è illustrato in [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual](../../standard/assembly/embed-types-visual-studio.md)Studio.
+ L'incorporamento dei tipi di interoperabilità con Visual Studio è illustrato in [procedura dettagliata: incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Per fare riferimento a un assembly di interoperabilità con un compilatore da riga di comando e incorporare le informazioni sul tipo negli eseguibili, usare l'opzione del compilatore [/link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e specificare il nome dell'assembly.
+ Per fare riferimento a un assembly di interoperabilità con un compilatore da riga di comando e incorporare le informazioni sul tipo nei file eseguibili, usare l'opzione del compilatore-link ( [OpzioniC# del compilatore)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e specificare il nome dell'assembly di interoperabilità.
 
 > [!NOTE]
 > Le applicazioni Visual C++ non possono incorporare informazioni sul tipo, ma possono interagire con applicazioni o componenti aggiuntivi in grado di farlo.
@@ -44,5 +44,5 @@ I progetti di interoperabilità COM che fanno riferimento a uno o più assembly 
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../standard/language-independence-and-language-independent-components.md)
 - [Uso dei tipi COM nel codice gestito](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)

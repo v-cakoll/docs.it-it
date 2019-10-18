@@ -5,14 +5,14 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938593"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523933"
 ---
-# <a name="c-visual-basic"></a>\<c> (Visual Basic)
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
 Indica che il testo all'interno di una descrizione è codice.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -28,12 +28,12 @@ Indica che il testo all'interno di una descrizione è codice.
 |`text`|Il testo che si desidera indicare come codice.|  
   
 ## <a name="remarks"></a>Note  
- Il `<c>` tag offre un modo per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) per indicare più righe come codice.  
+ Il tag `<c>` fornisce un modo per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) per indicare più righe come codice.  
   
- Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa la `<c>` tag nella sezione di riepilogo per indicare che `Counter` è codice.  
+ Questo esempio usa il tag `<c>` nella sezione Summary per indicare che `Counter` è il codice.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

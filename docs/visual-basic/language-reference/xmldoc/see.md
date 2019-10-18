@@ -5,14 +5,14 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 828e55e0ddb0382c16c60ae3d9e5958c18e42c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3ae5fb63540e47e5b8da2e2d60d5bd736e019d7
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940803"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524665"
 ---
-# <a name="see-visual-basic"></a>\<see> (Visual Basic)
+# <a name="see-visual-basic"></a>\<see > (Visual Basic)
 Specifica un collegamento a un altro membro.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -26,12 +26,12 @@ Specifica un collegamento a un altro membro.
  Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambiente di compilazione corrente. Il compilatore verifica l'esistenza dell'elemento di codice specificato e passa `member` al nome dell'elemento nel file XML di output. `member` deve essere racchiuso tra virgolette doppie (" ").  
   
 ## <a name="remarks"></a>Note  
- Usare il `<see>` tag per specificare un collegamento nel testo. Uso [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) per indicare il testo che è possibile visualizzare in una sezione "Vedere anche".  
+ Usare il tag `<see>` per specificare un collegamento dall'interno del testo. Usare [\<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) per indicare il testo che potrebbe essere necessario visualizzare in una sezione "vedere anche".  
   
- Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa la `<see>` contrassegnare nel `UpdateRecord` per fare riferimento alla sezione relativa alle osservazioni di `DoesRecordExist` (metodo).  
+ Questo esempio usa il tag `<see>` nella sezione `UpdateRecord` osservazioni per fare riferimento al metodo `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

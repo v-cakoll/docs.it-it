@@ -5,14 +5,14 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b220c2a9aa544413c3692485f6c1eb2b64e54389
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940790"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524690"
 ---
-# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
+# <a name="returns-visual-basic"></a>\<returns > (Visual Basic)
 Specifica il valore restituito della proprietà o della funzione.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -26,12 +26,12 @@ Specifica il valore restituito della proprietà o della funzione.
  Descrizione del valore restituito.  
   
 ## <a name="remarks"></a>Note  
- Usare il `<returns>` tag nel commento per una dichiarazione di metodo descrivere il valore restituito.  
+ Usare il tag `<returns>` nel commento per una dichiarazione di metodo per descrivere il valore restituito.  
   
- Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio Usa la `<returns>` tag per illustrare i valori di `DoesRecordExist` funzione restituisce.  
+ Questo esempio usa il tag `<returns>` per spiegare il risultato restituito dalla funzione `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

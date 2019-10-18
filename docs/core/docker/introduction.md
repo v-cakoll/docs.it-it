@@ -3,18 +3,18 @@ title: Introduzione a Docker
 description: Questo articolo fornisce un'introduzione e una panoramica di Docker nel contesto di un'applicazione .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799371"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523007"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduzione a .NET e Docker
 
 .NET Core può essere eseguito facilmente in un contenitore Docker. I contenitori offrono un modo semplice per isolare l'applicazione dal resto del sistema host, condividendo solo il kernel e usando le risorse assegnate all'applicazione. Se non si ha familiarità con Docker, è consigliabile leggere la [documentazione introduttiva](https://docs.docker.com/engine/docker-overview/) a Docker.
 
-Per altre informazioni su come installare Docker, vedere la pagina di download per [Docker Desktop: Community Edition](https://www.docker.com/products/docker-desktop).
+Per altre informazioni su come installare Docker, vedere la pagina di download per [Docker desktop: Community Edition](https://www.docker.com/products/docker-desktop).
 
 ## <a name="docker-basics"></a>Concetti di base su Docker
 
@@ -52,27 +52,27 @@ Microsoft fornisce immagini progettate per scenari specifici. Il [repository di 
 
 Diversi servizi di Azure consentono l'uso di contenitori. È possibile creare un'immagine Docker per un'applicazione e distribuirla in uno dei servizi seguenti:
 
-* [Servizio Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Servizio Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/)\
 Consente di ridimensionare e orchestrare contenitori Linux usando Kubernetes.
 
-* [Servizio app di Azure](https://azure.microsoft.com/services/app-service/containers/)\
+- [Servizio app di Azure](https://azure.microsoft.com/services/app-service/containers/)\
 Consente di distribuire API o app Web usando contenitori Linux in un ambiente PaaS.
 
-* [Istanze di Azure Container](https://azure.microsoft.com/services/container-instances/)\
+- [Istanze di Azure Container](https://azure.microsoft.com/services/container-instances/)\
 Consentono di ospitare il contenitore nel cloud senza servizi di gestione di livello superiore.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Consente di eseguire processi di calcolo ripetitivi usando contenitori.
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Consente di trasferire in modalità lift-and-shift e modernizzare le applicazioni .NET trasformandole in microservizi tramite contenitori di Windows Server.
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+Consente di sollevare, spostare e modernizzare le applicazioni .NET in microservizi usando i contenitori di Windows Server.
 
-* [Registro Azure Container](https://azure.microsoft.com/services/container-registry/)\
+- [Registro Azure Container](https://azure.microsoft.com/services/container-registry/)\
 Consente di archiviare e gestire immagini dei contenitori per tutti i tipi di distribuzioni di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Vedere le informazioni su come distribuire un'applicazione .NET Core in un contenitore.](build-docker-netcore-container.md)
-* [Vedere le informazioni su come distribuire un'applicazione ASP.NET Core in un contenitore.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [Provare l'esercitazione sulla creazione di microservizi ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Vedere informazioni sugli strumenti per contenitori in Visual Studio](/visualstudio/containers/overview)
+- [Vedere le informazioni su come distribuire un'applicazione .NET Core in un contenitore.](build-docker-netcore-container.md)
+- [Vedere le informazioni su come distribuire un'applicazione ASP.NET Core in un contenitore.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [Provare l'esercitazione sulla creazione di microservizi ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Vedere informazioni sugli strumenti per contenitori in Visual Studio](/visualstudio/containers/overview)

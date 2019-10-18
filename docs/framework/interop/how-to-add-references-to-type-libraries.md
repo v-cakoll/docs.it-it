@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere riferimenti alle librerie dei tipi'
+title: 'Procedura: aggiungere riferimenti alle librerie dei tipi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4908653b650f05bd25a7893d104040802f34d7e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971895"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523817"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Procedura: Aggiungere riferimenti alle librerie dei tipi
+# <a name="how-to-add-references-to-type-libraries"></a>Procedura: aggiungere riferimenti alle librerie dei tipi
 Quando si aggiunge un riferimento a una libreria dei tipi, Visual Studio genera un assembly di interoperabilità contenente metadati. Se è disponibile un assembly di interoperabilità primario, prima della generazione di un nuovo assembly di interoperabilità in Visual Studio verrà utilizzato l'assembly esistente.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Per aggiungere un riferimento a una libreria dei tipi in Visual Studio  
@@ -40,14 +40,14 @@ Quando si aggiunge un riferimento a una libreria dei tipi, Visual Studio genera 
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Per aggiungere un riferimento a una libreria dei tipi per la compilazione da riga di comando  
   
-1. Generare un assembly di interoperabilità come descritto in [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md).  
+1. Generare un assembly di interoperabilità, come descritto in [Procedura: Generare assembly di interoperabilità da librerie dei tipi](how-to-generate-interop-assemblies-from-type-libraries.md).  
   
-2. Usare l'opzione del compilatore [/link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con il nome dell'assembly di interoperabilità per incorporare informazioni sui tipi COM nei file eseguibili.  
+2. Usare l'opzione del compilatore [-link (C# opzioni del compilatore)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con il nome dell'assembly di interoperabilità per incorporare le informazioni sul tipo per i tipi com nei file eseguibili.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)
 - [Esposizione di componenti COM a .NET Framework](exposing-com-components.md)
-- [Procedura dettagliata: Incorporamento di tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
-- [/link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
+- [-link (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-collegamento (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

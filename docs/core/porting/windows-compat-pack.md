@@ -4,12 +4,12 @@ description: Informazioni su Windows Compatibility Pack e su come è possibile u
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202559"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521274"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usare Windows Compatibility Pack per convertire il codice per .NET Core
 
@@ -25,23 +25,23 @@ Questo pacchetto è un'[estensione logica di .NET 2.0 Standard](../whats-new/dot
 
 Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma per le aree tecnologiche seguenti:
 
-* Tabelle codici
-* CodeDom
-* Configurazione
-* Servizi directory
-* Disegno
-* ODBC
-* Autorizzazioni
-* Porte
-* Elenchi di controllo degli accessi (ACL) di Windows
-* Windows Communication Foundation (WCF)
-* Crittografia di Windows
-* Registro eventi di Windows
-* Strumentazione gestione Windows (WMI, Windows Management Instrumentation)
-* Contatori delle prestazioni di Windows
-* Registro di sistema di Windows
-* Memorizzazione nella cache di Windows Runtime
-* servizi Windows
+- Tabelle codici
+- CodeDom
+- Configurazione
+- Servizi directory
+- Disegno
+- ODBC
+- Autorizzazioni
+- Porte
+- Elenchi di controllo degli accessi (ACL) di Windows
+- Windows Communication Foundation (WCF)
+- Crittografia di Windows
+- Registro eventi di Windows
+- Strumentazione gestione Windows (WMI, Windows Management Instrumentation)
+- Contatori delle prestazioni di Windows
+- Registro di sistema di Windows
+- Memorizzazione nella cache di Windows Runtime
+- servizi Windows
 
 Per altre informazioni, vedere la [specifica del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

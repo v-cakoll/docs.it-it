@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5eb240b23d255987e96c58fefc7007c8030c6502
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662683"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524396"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Accesso alle risorse del computer (Visual Basic)
 
-L'oggetto `My.Computer` è uno dei tre oggetti principali di `My` e permette l'accesso a informazioni e funzionalità usate di frequente. `My.Computer` specifica metodi, proprietà ed eventi per l'accesso al computer in cui è eseguita l'applicazione. Gli oggetti includono:  
-  
+L'oggetto `My.Computer` è uno dei tre oggetti principali di `My` e permette l'accesso a informazioni e funzionalità usate di frequente. `My.Computer` specifica metodi, proprietà ed eventi per l'accesso al computer in cui è eseguita l'applicazione. Gli oggetti includono:
+
 - <xref:Microsoft.VisualBasic.Devices.Audio>
 - Appunti (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
 - <xref:Microsoft.VisualBasic.Devices.Clock>
@@ -27,29 +27,29 @@ L'oggetto `My.Computer` è uno dei tre oggetti principali di `My` e permette l'a
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - Registro di sistema (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
-  
-## <a name="in-this-section"></a>Contenuto della sezione
 
-[Riproduzione di suoni](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)   
+## <a name="in-this-section"></a>In questa sezione
+
+[Riproduzione di suoni](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
 Elenca le attività associate a `My.Computer.Audio`, ad esempio la riproduzione di un suono in background.
 
-[Archiviazione e lettura di dati negli Appunti](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)   
+[Archiviazione e lettura di dati negli Appunti](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
 Elenca le attività associate a `My.Computer.Clipboard`, ad esempio la lettura o la scrittura di dati negli Appunti.
 
-[Ottenere informazioni sul computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)   
+[Ottenere informazioni sul computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)  
 Elenca le attività associate a `My.Computer.Info`, ad esempio il rilevamento del nome completo di un computer o di indirizzi IP.
 
-[Accesso alla tastiera](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)   
+[Accesso alla tastiera](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
 Elenca le attività associate a `My.Computer.Keyboard`, ad esempio il rilevamento di BLOC MAIUSC attivo.
 
-[Accesso al mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)   
+[Accesso al mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
 Elenca le attività associate a `My.Computer.Mouse`, ad esempio il rilevamento della presenza di un mouse.
 
-[Esecuzione di operazioni di rete](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)   
+[Esecuzione di operazioni di rete](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)  
 Elenca le attività associate a `My.Computer.Network`, ad esempio il caricamento o il download di file.
 
-[Accesso alle porte del computer](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)   
+[Accesso alle porte del computer](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)  
 Elenca le attività associate a `My.Computer.Ports`, ad esempio la visualizzazione delle porte seriali disponibili o l'invio di stringhe a porte seriali.
 
-[Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+[Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
 Elenca le attività associate a `My.Computer.Registry`, ad esempio la lettura o la scrittura di dati nelle chiavi del Registro di sistema.

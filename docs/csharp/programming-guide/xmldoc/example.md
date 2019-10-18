@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: e81a95102100d3b0f3fdc84cf2113abf6ae35351
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 17956838c20a4342873478869c07c6382f037fcb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588133"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523504"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -27,10 +27,10 @@ ms.locfileid: "69588133"
  `description`  
  Descrizione dell'esempio di codice.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Il tag \<example> consente di specificare un esempio di come usare un metodo o un altro membro della libreria. In genere comporta l'uso del tag [\<code>](./code.md).  
   
- Compilare con [/doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
+ Compilare con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  

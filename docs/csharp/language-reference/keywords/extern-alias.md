@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924688"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520284"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Riferimenti per C#)
 È necessario far riferimento a due versioni di assembly che dispongono degli stessi nomi di tipo completi. Ad esempio, potrebbe essere necessario usare due o più versioni di un assembly nella stessa applicazione. Con un alias di assembly esterno, è possibile eseguire il wrapping degli spazi dei nomi di ogni assembly all'interno degli spazi dei nomi a livello radice denominati dall'alias, consentendone l'utilizzo nello stesso file.  
@@ -28,7 +28,7 @@ ms.locfileid: "69924688"
   
  `/r:GridV2=grid20.dll`  
   
- In questo modo vengono creati gli alias extern `GridV1` e `GridV2`. Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`. Ad esempio:  
+ In questo modo vengono creati gli alias extern `GridV1` e `GridV2`. Per usare questi alias all'interno di un programma, far riferimento a essi tramite la parola chiave `extern`. Esempio:  
   
  `extern alias GridV1;`  
   
@@ -46,5 +46,5 @@ ms.locfileid: "69924688"
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](./index.md)
-- [:: (operatore)](../operators/namespace-alias-qualifier.md)
+- [Operatore ::](../operators/namespace-alias-qualifier.md)
 - [-reference (opzioni del compilatore C#)](../compiler-options/reference-compiler-option.md)

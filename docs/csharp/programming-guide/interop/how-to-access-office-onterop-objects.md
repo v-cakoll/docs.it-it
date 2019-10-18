@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# - Guida per programmatori C#'
+title: 'Procedura: accedere agli oggetti di interoperabilità di C# Office utilizzando C# le funzionalità visive-Guida alla programmazione'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834201"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523559"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.
 
@@ -31,7 +31,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 1. Avviare Visual Studio.
 
-2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
+2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto**.
 
 3. Nel riquadro **Modelli installati** espandere **Visual C#** e fare clic su **Windows**.
 
@@ -47,9 +47,9 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 ## <a name="to-add-references"></a>Per aggiungere riferimenti
 
-1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.
 
-2. Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non sono visibili, potrebbe essere necessario assicurarsi che siano installati e visualizzati. Vedere [How to: Installare gli assembly di interoperabilità primari di Office @ no__t-0.
+2. Nella pagina **Assembly** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente** e, tenendo premuto CTRL, selezionare **Microsoft.Office.Interop.Excel**.  Se gli assembly non sono visibili, potrebbe essere necessario assicurarsi che siano installati e visualizzati. Vedere [procedura: installare gli assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
 3. Fare clic su **OK**.
 
@@ -57,7 +57,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file *Program.cs* e quindi fare clic su **Visualizza codice**.
 
-2. Aggiungere le seguenti direttive `using` all'inizio del file di codice:
+2. Aggiungere le seguenti direttive di `using` all'inizio del file di codice:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
@@ -95,7 +95,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 e versioni successive convertono automaticamente l'oggetto `Object` restituito in `dynamic` se si fa riferimento all'assembly dall'opzione del compilatore [/link](../../language-reference/compiler-options/link-compiler-option.md) o, analogamente, se la proprietà **Incorpora tipi di interoperabilità** di Excel è impostata su true. True è il valore predefinito di questa proprietà.
+     C#4 e versioni successive, converte automaticamente il `Object` restituito in `dynamic` se all'assembly viene fatto riferimento dall'opzione del compilatore [-link](../../language-reference/compiler-options/link-compiler-option.md) o, in modo analogo, se la proprietà **Incorpora tipi di interoperabilità** di Excel è impostata su true. True è il valore predefinito di questa proprietà.
 
 ## <a name="to-run-the-project"></a>Per eseguire il progetto
 
@@ -137,7 +137,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Per impostare la proprietà Incorpora tipi di interoperabilità
 
-1. Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).
+1. Quando si chiama un tipo COM che non richiede un assembly di interoperabilità primario (PIA) in fase di esecuzione, sono possibili altri miglioramenti. Eliminando la dipendenza dai risultati dei PIA produce l'indipendenza dalla versione e semplifica la distribuzione. Per altre informazioni sui vantaggi della programmazione senza PIA, vedere [Procedura dettagliata: incorporamento di tipi da assembly gestiti](../../../standard/assembly/embed-types-visual-studio.md).
 
      Inoltre, la programmazione è più semplice perché i tipi richiesti e restituiti dai metodi COM possono essere rappresentati usando il tipo `dynamic` anziché `Object`. Le variabili di tipo `dynamic` non saranno valutate fino al runtime, eliminando la necessità del cast esplicito. Per altre informazioni, vedere [Uso del tipo dynamic](../types/using-type-dynamic.md).
 
@@ -149,7 +149,7 @@ Per completare questa procedura dettagliata, è necessario aver installato nel c
 
 3. Se non è possibile visualizzare la finestra **Proprietà**, premere **F4**.
 
-4. Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. Allo stesso modo, è possibile compilare usando l'opzione del compilatore [/reference](../../language-reference/compiler-options/reference-compiler-option.md) invece di [/link](../../language-reference/compiler-options/link-compiler-option.md) a un prompt dei comandi.
+4. Trovare **Incorpora tipi di interoperabilità** nell'elenco delle proprietà e modificarne il valore in **False**. In modo analogo, è possibile compilare usando l'opzione del compilatore [-Reference](../../language-reference/compiler-options/reference-compiler-option.md) invece di [-link](../../language-reference/compiler-options/link-compiler-option.md) al prompt dei comandi.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Per aggiungere ulteriore formattazione alla tabella
 

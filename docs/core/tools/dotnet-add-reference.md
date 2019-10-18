@@ -2,12 +2,12 @@
 title: Comando dotnet-add reference
 description: Il comando dotnet add reference offre un'opzione utile per aggiungere riferimenti da progetto a progetto.
 ms.date: 06/26/2019
-ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 79c8a787079e02f6cf227820c24bb4157b0292c6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117780"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522762"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -17,7 +17,7 @@ ms.locfileid: "71117780"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>nome
+## <a name="name"></a>Name
 
 `dotnet add reference`: aggiunge riferimenti da progetto a progetto.
 
@@ -25,9 +25,9 @@ ms.locfileid: "71117780"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrizione
 
-Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferimenti al progetto in un progetto. Dopo l'esecuzione del comando, `<ProjectReference>` gli elementi vengono aggiunti al file di progetto.
+Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferimenti al progetto in un progetto. Dopo l'esecuzione del comando, gli elementi `<ProjectReference>` vengono aggiunti al file di progetto.
 
 ```xml
 <ItemGroup>
@@ -37,45 +37,45 @@ Il comando `dotnet add reference` offre un'opzione utile per aggiungere i riferi
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a>argomenti
 
-* **`PROJECT`**
+- **`PROJECT`**
 
   Specifica il file di progetto. Se non specificato, il comando ne cerca uno nella directory corrente.
 
-* **`PROJECT_REFERENCES`**
+- **`PROJECT_REFERENCES`**
 
   Riferimenti da progetto a progetto da aggiungere. Specificare uno o più progetti. I [criteri GLOB](https://en.wikipedia.org/wiki/Glob_(programming)) sono supportati nei sistemi basati su Unix/Linux.
 
 ## <a name="options"></a>Opzioni
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Stampa una breve guida per il comando.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Aggiunge riferimenti al progetto solo quando la destinazione è un [framework](../../standard/frameworks.md) specifico.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Consente al comando di arrestarsi e attendere l'input o l'azione dell'utente (ad esempio, il completamento dell'autenticazione). Disponibile a partire da .NET Core 3.0 SDK.
 
 ## <a name="examples"></a>Esempi
 
-* Aggiungere un riferimento al progetto:
+- Aggiungere un riferimento al progetto:
 
   ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-* Aggiungere più riferimenti al progetto nella directory corrente:
+- Aggiungere più riferimenti al progetto nella directory corrente:
 
   ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-* Aggiungere più riferimenti al progetto usando un criterio GLOB in Linux/Unix:
+- Aggiungere più riferimenti al progetto usando un criterio GLOB in Linux/Unix:
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj

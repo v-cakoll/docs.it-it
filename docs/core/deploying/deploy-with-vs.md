@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216246"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522810"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -146,7 +146,7 @@ Per pubblicare l'app da Visual Studio eseguire le operazioni seguenti:
 
       1. Nella scheda **Pubblica** selezionare **Pubblica**. I file che costituiscono l'applicazione vengono salvati nel file system locale.
 
-      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo vengono visualizzate nella sezione **Riepilogo** della scheda. **Runtime di destinazione** identifica il runtime pubblicato e **Percorso di destinazione** identifica il percorso in cui sono stati salvati i file per la distribuzione autonoma.
+      1. La scheda **Pubblica** ora visualizza un unico profilo **FolderProfile**. Le impostazioni di configurazione del profilo sono mostrate nella sezione **Riepilogo** della scheda. il **runtime di destinazione** identifica il runtime pubblicato e il **percorso di destinazione** identifica la posizione in cui si trovano i file per la distribuzione autonoma. scritti.
 
       1. Per impostazione predefinita tutti i file pubblicati vengono salvati in una singola directory. Per praticità è consigliabile creare un profilo separato per ogni runtime di destinazione e inserire i file pubblicati in una directory specifica per la piattaforma. Questo richiede la creazione di un profilo di pubblicazione separato per ogni piattaforma di destinazione. A questo punto ricompilare l'applicazione per ogni piattaforma procedendo nel modo seguente:
 
@@ -194,7 +194,7 @@ Eseguire le operazioni seguenti per ogni piattaforma a cui è destinata l'applic
   
 1. Selezionare la posizione in cui Visual Studio pubblica l'applicazione.
 
-   Se esegue solo la pubblicazione in una singola piattaforma, è possibile accettare il valore predefinito nella casella di testo **Scegliere una cartella**; con questa operazione si pubblica la distribuzione dipendente dal framework dell'applicazione nella directory *\<directory del progetto>\bin\Release\netcoreapp2.1\publish\*.
+   Se si esegue la pubblicazione in una sola piattaforma, è possibile accettare il valore predefinito nella casella di testo **scegliere una cartella** . Questa operazione consente di pubblicare la distribuzione dipendente dal framework dell'applicazione nella directory *\<project directory > \bin\Release\netcoreapp2.1\publish* .
 
    Se esegue la pubblicazione in più di una piattaforma, aggiungere una stringa che identifica la piattaforma di destinazione. Se ad esempio si aggiunge la stringa "linux" al percorso del file, Visual Studio pubblica la distribuzione dipendente dal framework dell'applicazione nella directory *\<directory del progetto>\bin\Release\netcoreapp2.1\publish\linux*.
 
