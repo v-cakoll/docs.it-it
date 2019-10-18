@@ -17,6 +17,8 @@
       href: file-format.md
     - name: 'Procedura: Usare ed eseguire il debug di assembly non caricabili in .NET Core'
       href: unloadability.md
+    - name: Assembly di riferimento
+      href: reference-assemblies.md
     - name: Risolvere i caricamenti di assembly
       href: resolve-loads.md
     - name: Programmare con gli assembly
