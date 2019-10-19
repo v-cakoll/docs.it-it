@@ -1,25 +1,25 @@
 ---
-title: Utilizzo di funzioni senza server
+title: Uso di funzioni serverless
 description: Uso di funzioni senza server e di Azure in applicazioni native del cloud
 ms.date: 06/30/2019
-ms.openlocfilehash: 61bf4db6d61160c7ec11ffa3f178cc3917ae6cf9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182825"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578919"
 ---
-# <a name="leveraging-serverless-functions"></a>Utilizzo di funzioni senza server
+# <a name="leveraging-serverless-functions"></a>Uso di funzioni serverless
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Nell'ambito della gestione di computer e sistemi operativi completi per sfruttare le funzionalità del cloud, la vita senza server è alla fine estremo, dove l'unica cosa che si è responsabile è il codice e si paga solo per il codice durante l'esecuzione. Funzioni di Azure offre un modo per creare funzionalità senza server nelle applicazioni. 
+Nell'ambito della gestione dei computer e dei sistemi operativi completi per sfruttare le funzionalità del cloud, le vite senza server si trovano alla fine estremo, dove l'unica cosa che si è responsabile è il codice e si paga solo quando viene eseguito il codice. Funzioni di Azure offre un modo per creare funzionalità senza server nelle applicazioni. 
 
 ## <a name="what-is-serverless"></a>Che cos'è senza server?
 
 L'elaborazione senza server non significa che non sia presente un server per l'esecuzione dell'applicazione. il codice viene comunque eseguito in un server. La distinzione è che il team di sviluppo di applicazioni non deve più preoccuparsi di gestire l'infrastruttura server. Le soluzioni di elaborazione senza server come funzioni di Azure consentono ai team di aumentare la produttività e consentire alle organizzazioni di ottimizzare le risorse e concentrarsi sulla distribuzione di soluzioni.
 
-L'elaborazione senza server USA contenitori senza stato attivati da eventi per ospitare l'applicazione o parte dell'applicazione. Le piattaforme senza server possono aumentare e ridurre le prestazioni per soddisfare la domanda in base alle esigenze. Le piattaforme come funzioni di Azure offrono un accesso diretto facile ad altri servizi di Azure, come code, eventi e archiviazione.
+L'elaborazione senza server USA contenitori senza stato attivati da eventi per ospitare l'applicazione o parte dell'applicazione. Le piattaforme senza server possono scalare in orizzontale e in per soddisfare la domanda in base alle esigenze. Le piattaforme come funzioni di Azure offrono un accesso diretto facile ad altri servizi di Azure, come code, eventi e archiviazione.
 
 ## <a name="what-challenges-are-solved-by-serverless"></a>Quali problemi vengono risolti da server?
 
@@ -45,10 +45,10 @@ Molte applicazioni hanno processi a esecuzione prolungata come parte dei propri 
 
 ## <a name="when-should-you-avoid-serverless"></a>Quando è consigliabile evitare senza server?
 
-L'elaborazione senza server è più usata per le attività che non bloccano l'interfaccia utente. Ciò significa che non sono ideali per ospitare direttamente le applicazioni Web o le API Web. Il motivo principale è che le soluzioni senza server vengono sottoposte a provisioning e ridimensionate su richiesta. Quando è necessaria una nuova istanza di una funzione, definita *avvio a freddo*, il provisioning richiede tempo. Questo tempo è in genere di pochi secondi, ma può essere più lungo a seconda di diversi fattori. Una singola istanza può spesso essere mantenuta a tempo indefinito (ad esempio, effettuando periodicamente una richiesta), ma il problema di avvio a freddo rimane se il numero di istanze deve essere ridimensionato.
+L'elaborazione senza server è più usata per le attività che non bloccano l'interfaccia utente. Ciò significa che non sono ideali per ospitare direttamente le applicazioni Web o le API Web. Il motivo principale è che le soluzioni senza server vengono sottoposte a provisioning e ridimensionate su richiesta. Quando è necessaria una nuova istanza di una funzione, definita *avvio a freddo*, il provisioning richiede tempo. Questo tempo è in genere di pochi secondi, ma può essere più lungo a seconda di diversi fattori. Una singola istanza può essere spesso mantenuta attiva per un periodo illimitato (ad esempio, effettuando periodicamente una richiesta), ma il problema di avvio a freddo rimane se il numero di istanze deve essere ridimensionato.
 
-![**Figura 3-10**di avvio](./media/cold-start-warm-start.png)
-a freddo e a caldo. Avvio a freddo rispetto all'avvio a caldo.
+![Cold rispetto all'avvio a caldo ](./media/cold-start-warm-start.png)
+**figura 3-10**. Avvio a freddo rispetto all'avvio a caldo.
 
 Se è necessario evitare completamente l'avvio a freddo, è possibile scegliere di passare da un [piano a consumo a un piano dedicato](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). È anche possibile [configurare una o più istanze già riscaldate](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) con il piano Premium, in modo che quando è necessario aggiungere un'altra istanza, il piano è già attivo e pronto per l'uso. Queste opzioni possono attenuare una delle problematiche principali associate all'elaborazione senza server.
 
