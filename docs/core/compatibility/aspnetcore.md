@@ -1,24 +1,21 @@
 ---
 title: Modifiche di rilievo ASP.NET Core-.NET Core
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522880"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579981"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="83712-103">ASP.NET Core modifiche di rilievo</span><span class="sxs-lookup"><span data-stu-id="83712-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="c0a53-103">ASP.NET Core modifiche di rilievo</span><span class="sxs-lookup"><span data-stu-id="c0a53-103">ASP.NET Core breaking changes</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="83712-104">Questo articolo è in costruzione.</span><span class="sxs-lookup"><span data-stu-id="83712-104">This article is under construction.</span></span> <span data-ttu-id="83712-105">Non si tratta di un elenco completo di ASP.NET Core modifiche di rilievo.</span><span class="sxs-lookup"><span data-stu-id="83712-105">This is not a complete list of ASP.NET Core breaking changes.</span></span> <span data-ttu-id="83712-106">Per ulteriori informazioni su ASP.NET Core modifiche di rilievo, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub.</span><span class="sxs-lookup"><span data-stu-id="83712-106">For more information on ASP.NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
+<span data-ttu-id="c0a53-104">Di seguito è riportato un elenco di ASP.NET Core modifiche di rilievo per ASP.NET Core versione.</span><span class="sxs-lookup"><span data-stu-id="c0a53-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="c0a53-105">ASP.NET Core fornisce le funzionalità di sviluppo di app Web usate da .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c0a53-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-<span data-ttu-id="83712-107">Di seguito è riportato un elenco di ASP.NET Core modifiche di rilievo per ASP.NET Core versione.</span><span class="sxs-lookup"><span data-stu-id="83712-107">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="83712-108">ASP.NET Core fornisce le funzionalità di sviluppo di app Web usate da .NET Core.</span><span class="sxs-lookup"><span data-stu-id="83712-108">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
-
-## <a name="aspnet-core-30"></a><span data-ttu-id="83712-109">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="83712-109">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="c0a53-106">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="c0a53-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 

@@ -2,26 +2,26 @@
 title: Ambito degli spazi dei nomi predefiniti in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710360"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581877"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="8f9f4-102">Ambito degli spazi dei nomi predefiniti in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8f9f4-102">Scope of Default Namespaces in Visual Basic</span></span>
-<span data-ttu-id="8f9f4-103">Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="8f9f4-104">Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="eb1d6-102">Ambito degli spazi dei nomi predefiniti in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="eb1d6-102">Scope of Default Namespaces in Visual Basic</span></span>
+<span data-ttu-id="eb1d6-103">Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="eb1d6-104">Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- <span data-ttu-id="8f9f4-105">Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query su alberi XML è che, se l'albero XML include uno spazio dei nomi predefinito, lo sviluppatore scrive talvolta la query come se il codice XML non fosse incluso in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+ <span data-ttu-id="eb1d6-105">Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query su alberi XML è che, se l'albero XML include uno spazio dei nomi predefinito, lo sviluppatore scrive talvolta la query come se il codice XML non fosse incluso in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="8f9f4-106">Nel primo set di esempi riportati in questo argomento viene illustrato il tipico caricamento del codice XML in uno spazio dei nomi predefinito e l'esecuzione errata di query su tale codice.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
+ <span data-ttu-id="eb1d6-106">Nel primo set di esempi riportati in questo argomento viene illustrato il tipico caricamento del codice XML in uno spazio dei nomi predefinito e l'esecuzione errata di query su tale codice.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- <span data-ttu-id="8f9f4-107">Nel secondo set di esempi sono illustrate le correzioni necessarie da effettuare per poter eseguire query su codice XML in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="eb1d6-107">Nel secondo set di esempi sono illustrate le correzioni necessarie da effettuare per poter eseguire query su codice XML in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f9f4-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f9f4-108">Example</span></span>  
- <span data-ttu-id="8f9f4-109">In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query che restituisce un set di risultati vuoto.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="eb1d6-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="eb1d6-108">Example</span></span>  
+ <span data-ttu-id="eb1d6-109">In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query che restituisce un set di risultati vuoto.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8f9f4-110">Codice</span><span class="sxs-lookup"><span data-stu-id="8f9f4-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="eb1d6-110">Codice</span><span class="sxs-lookup"><span data-stu-id="eb1d6-110">Code</span></span>  
   
 ```vb  
 Module Module1  
@@ -47,20 +47,20 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="8f9f4-111">Commenti</span><span class="sxs-lookup"><span data-stu-id="8f9f4-111">Comments</span></span>  
- <span data-ttu-id="8f9f4-112">Il risultato ottenuto dall'esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="8f9f4-112">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="eb1d6-111">Comments</span><span class="sxs-lookup"><span data-stu-id="eb1d6-111">Comments</span></span>  
+ <span data-ttu-id="eb1d6-112">Il risultato ottenuto dall'esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="eb1d6-112">This example produces the following result:</span></span>  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="8f9f4-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f9f4-113">Example</span></span>  
- <span data-ttu-id="8f9f4-114">In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query codificata correttamente.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="eb1d6-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="eb1d6-113">Example</span></span>  
+ <span data-ttu-id="eb1d6-114">In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query codificata correttamente.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="8f9f4-115">Diversamente dall'esempio di codice errato precedente, l'approccio corretto quando si usa Visual Basic consiste nel dichiarare e inizializzare uno spazio dei nomi predefinito globale.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="8f9f4-116">In questo modo tutte le proprietà XML vengono inserite nello spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="8f9f4-117">Non è necessario apportare altre modifiche all'esempio per fare in modo che venga eseguito correttamente.</span><span class="sxs-lookup"><span data-stu-id="8f9f4-117">No other modifications are required to the example to make it work properly.</span></span>  
+ <span data-ttu-id="eb1d6-115">Diversamente dall'esempio di codice errato precedente, l'approccio corretto quando si usa Visual Basic consiste nel dichiarare e inizializzare uno spazio dei nomi predefinito globale.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="eb1d6-116">In questo modo tutte le proprietà XML vengono inserite nello spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="eb1d6-117">Non è necessario apportare altre modifiche all'esempio per fare in modo che venga eseguito correttamente.</span><span class="sxs-lookup"><span data-stu-id="eb1d6-117">No other modifications are required to the example to make it work properly.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="8f9f4-118">Codice</span><span class="sxs-lookup"><span data-stu-id="8f9f4-118">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="eb1d6-118">Codice</span><span class="sxs-lookup"><span data-stu-id="eb1d6-118">Code</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -88,10 +88,10 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="8f9f4-119">Commenti</span><span class="sxs-lookup"><span data-stu-id="8f9f4-119">Comments</span></span>  
- <span data-ttu-id="8f9f4-120">Il risultato ottenuto dall'esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="8f9f4-120">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="eb1d6-119">Comments</span><span class="sxs-lookup"><span data-stu-id="eb1d6-119">Comments</span></span>  
+ <span data-ttu-id="eb1d6-120">Il risultato ottenuto dall'esempio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="eb1d6-120">This example produces the following result:</span></span>  
   
-```  
+```console  
 Result set follows:  
 1  
 2  
@@ -99,6 +99,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f9f4-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8f9f4-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb1d6-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eb1d6-121">See also</span></span>
 
-- [<span data-ttu-id="8f9f4-122">Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f9f4-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
+- [<span data-ttu-id="eb1d6-122">Panoramica degli spazi dei nomi (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb1d6-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)

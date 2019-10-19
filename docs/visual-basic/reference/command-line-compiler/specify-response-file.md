@@ -4,64 +4,69 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: deab111cc669941a1cd7dc143dd699b6521221bb
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 60206b6e42d329776948e8a0ef3c2e8e7e7d58bc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004986"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583307"
 ---
-# <a name="-specify-response-file-visual-basic"></a><span data-ttu-id="6147f-102">@ (specificare il file di risposta) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6147f-102">@ (Specify Response File) (Visual Basic)</span></span>
-<span data-ttu-id="6147f-103">Specifica un file che contiene le opzioni del compilatore e i file del codice sorgente da compilare.</span><span class="sxs-lookup"><span data-stu-id="6147f-103">Specifies a file that contains compiler options and source-code files to compile.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="6147f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6147f-104">Syntax</span></span>  
-  
-```console  
-@response_file  
-```  
-  
-## <a name="arguments"></a><span data-ttu-id="6147f-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="6147f-105">Arguments</span></span>  
- `response_file`  
- <span data-ttu-id="6147f-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="6147f-106">Required.</span></span> <span data-ttu-id="6147f-107">File che elenca le opzioni del compilatore o i file del codice sorgente da compilare.</span><span class="sxs-lookup"><span data-stu-id="6147f-107">A file that lists compiler options or source-code files to compile.</span></span> <span data-ttu-id="6147f-108">Racchiudere il nome file tra virgolette ("") se contiene uno spazio.</span><span class="sxs-lookup"><span data-stu-id="6147f-108">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="6147f-109">Note</span><span class="sxs-lookup"><span data-stu-id="6147f-109">Remarks</span></span>  
- <span data-ttu-id="6147f-110">Il compilatore elabora le opzioni del compilatore e i file del codice sorgente specificati in un file di risposta come se fossero stati specificati nella riga di comando.</span><span class="sxs-lookup"><span data-stu-id="6147f-110">The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.</span></span>  
-  
- <span data-ttu-id="6147f-111">Per specificare più di un file di risposta in una compilazione, specificare più opzioni del file di risposta, ad esempio la seguente.</span><span class="sxs-lookup"><span data-stu-id="6147f-111">To specify more than one response file in a compilation, specify multiple response-file options, such as the following.</span></span>  
-  
-```console  
-@file1.rsp @file2.rsp  
-```  
-  
- <span data-ttu-id="6147f-112">In un file di risposta, più opzioni del compilatore e file del codice sorgente possono essere visualizzati in una sola riga.</span><span class="sxs-lookup"><span data-stu-id="6147f-112">In a response file, multiple compiler options and source-code files can appear on one line.</span></span> <span data-ttu-id="6147f-113">Una singola specifica dell'opzione del compilatore deve essere visualizzata su una riga (non può estendersi su più righe).</span><span class="sxs-lookup"><span data-stu-id="6147f-113">A single compiler-option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="6147f-114">I file di risposta possono avere commenti che iniziano con il simbolo `#`.</span><span class="sxs-lookup"><span data-stu-id="6147f-114">Response files can have comments that begin with the `#` symbol.</span></span>  
-  
- <span data-ttu-id="6147f-115">È possibile combinare le opzioni specificate nella riga di comando con le opzioni specificate in uno o più file di risposta.</span><span class="sxs-lookup"><span data-stu-id="6147f-115">You can combine options specified on the command line with options specified in one or more response files.</span></span> <span data-ttu-id="6147f-116">Il compilatore elabora le opzioni del comando mentre le rileva.</span><span class="sxs-lookup"><span data-stu-id="6147f-116">The compiler processes the command options as it encounters them.</span></span> <span data-ttu-id="6147f-117">Pertanto, gli argomenti della riga di comando possono eseguire l'override delle opzioni elencate in precedenza nei file di risposta.</span><span class="sxs-lookup"><span data-stu-id="6147f-117">Therefore, command-line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="6147f-118">Viceversa, le opzioni in un file di risposta sostituiscono le opzioni elencate in precedenza nella riga di comando o in altri file di risposta.</span><span class="sxs-lookup"><span data-stu-id="6147f-118">Conversely, options in a response file override options listed previously on the command line or in other response files.</span></span>  
-  
- <span data-ttu-id="6147f-119">Visual Basic fornisce il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe.</span><span class="sxs-lookup"><span data-stu-id="6147f-119">Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file.</span></span> <span data-ttu-id="6147f-120">Il file Vbc. RSP è incluso per impostazione predefinita, a meno che non venga utilizzata l'opzione `-noconfig`.</span><span class="sxs-lookup"><span data-stu-id="6147f-120">The Vbc.rsp file is included by default unless the `-noconfig` option is used.</span></span> <span data-ttu-id="6147f-121">Per ulteriori informazioni, vedere [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span><span class="sxs-lookup"><span data-stu-id="6147f-121">For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="6147f-122">L'opzione `@` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="6147f-122">The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="6147f-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="6147f-123">Example</span></span>  
- <span data-ttu-id="6147f-124">Le righe seguenti sono riportate in un file di risposta di esempio.</span><span class="sxs-lookup"><span data-stu-id="6147f-124">The following lines are from a sample response file.</span></span>  
-  
-```console
-# build the first output file  
--target:exe   
--out:MyExe.exe  
-source1.vb   
-source2.vb  
-```  
-  
-## <a name="example"></a><span data-ttu-id="6147f-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="6147f-125">Example</span></span>  
- <span data-ttu-id="6147f-126">Nell'esempio seguente viene illustrato come utilizzare l'opzione `@` con il file di risposta denominato `File1.rsp`.</span><span class="sxs-lookup"><span data-stu-id="6147f-126">The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.</span></span>  
-  
-```console
-vbc @file1.rsp  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="6147f-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6147f-127">See also</span></span>
+# <a name="-specify-response-file-visual-basic"></a><span data-ttu-id="832fc-102">@ (specificare il file di risposta) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="832fc-102">@ (Specify Response File) (Visual Basic)</span></span>
 
-- [<span data-ttu-id="6147f-128">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6147f-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="6147f-129">-noconfig</span><span class="sxs-lookup"><span data-stu-id="6147f-129">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="6147f-130">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="6147f-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+<span data-ttu-id="832fc-103">Specifica un file che contiene le opzioni del compilatore e i file del codice sorgente da compilare.</span><span class="sxs-lookup"><span data-stu-id="832fc-103">Specifies a file that contains compiler options and source-code files to compile.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="832fc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="832fc-104">Syntax</span></span>
+
+```console
+@response_file
+```
+
+## <a name="arguments"></a><span data-ttu-id="832fc-105">argomenti</span><span class="sxs-lookup"><span data-stu-id="832fc-105">Arguments</span></span>
+
+`response_file`  
+<span data-ttu-id="832fc-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="832fc-106">Required.</span></span> <span data-ttu-id="832fc-107">File che elenca le opzioni del compilatore o i file del codice sorgente da compilare.</span><span class="sxs-lookup"><span data-stu-id="832fc-107">A file that lists compiler options or source-code files to compile.</span></span> <span data-ttu-id="832fc-108">Racchiudere il nome file tra virgolette ("") se contiene uno spazio.</span><span class="sxs-lookup"><span data-stu-id="832fc-108">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="832fc-109">Note</span><span class="sxs-lookup"><span data-stu-id="832fc-109">Remarks</span></span>
+
+<span data-ttu-id="832fc-110">Il compilatore elabora le opzioni del compilatore e i file del codice sorgente specificati in un file di risposta come se fossero stati specificati nella riga di comando.</span><span class="sxs-lookup"><span data-stu-id="832fc-110">The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.</span></span>
+
+<span data-ttu-id="832fc-111">Per specificare più di un file di risposta in una compilazione, specificare più opzioni del file di risposta, ad esempio la seguente.</span><span class="sxs-lookup"><span data-stu-id="832fc-111">To specify more than one response file in a compilation, specify multiple response-file options, such as the following.</span></span>
+
+```console
+@file1.rsp @file2.rsp
+```
+
+<span data-ttu-id="832fc-112">In un file di risposta, più opzioni del compilatore e file del codice sorgente possono essere visualizzati in una sola riga.</span><span class="sxs-lookup"><span data-stu-id="832fc-112">In a response file, multiple compiler options and source-code files can appear on one line.</span></span> <span data-ttu-id="832fc-113">Una singola specifica dell'opzione del compilatore deve essere visualizzata su una riga (non può estendersi su più righe).</span><span class="sxs-lookup"><span data-stu-id="832fc-113">A single compiler-option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="832fc-114">I file di risposta possono avere commenti che iniziano con il simbolo `#`.</span><span class="sxs-lookup"><span data-stu-id="832fc-114">Response files can have comments that begin with the `#` symbol.</span></span>
+
+<span data-ttu-id="832fc-115">È possibile combinare le opzioni specificate nella riga di comando con le opzioni specificate in uno o più file di risposta.</span><span class="sxs-lookup"><span data-stu-id="832fc-115">You can combine options specified on the command line with options specified in one or more response files.</span></span> <span data-ttu-id="832fc-116">Il compilatore elabora le opzioni del comando mentre le rileva.</span><span class="sxs-lookup"><span data-stu-id="832fc-116">The compiler processes the command options as it encounters them.</span></span> <span data-ttu-id="832fc-117">Pertanto, gli argomenti della riga di comando possono eseguire l'override delle opzioni elencate in precedenza nei file di risposta.</span><span class="sxs-lookup"><span data-stu-id="832fc-117">Therefore, command-line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="832fc-118">Viceversa, le opzioni in un file di risposta sostituiscono le opzioni elencate in precedenza nella riga di comando o in altri file di risposta.</span><span class="sxs-lookup"><span data-stu-id="832fc-118">Conversely, options in a response file override options listed previously on the command line or in other response files.</span></span>
+
+<span data-ttu-id="832fc-119">Visual Basic fornisce il file Vbc. rsp, che si trova nella stessa directory del file Vbc. exe.</span><span class="sxs-lookup"><span data-stu-id="832fc-119">Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file.</span></span> <span data-ttu-id="832fc-120">Il file Vbc. RSP è incluso per impostazione predefinita, a meno che non venga utilizzata l'opzione `-noconfig`.</span><span class="sxs-lookup"><span data-stu-id="832fc-120">The Vbc.rsp file is included by default unless the `-noconfig` option is used.</span></span> <span data-ttu-id="832fc-121">Per ulteriori informazioni, vedere [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span><span class="sxs-lookup"><span data-stu-id="832fc-121">For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="832fc-122">L'opzione `@` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="832fc-122">The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>
+
+## <a name="example"></a><span data-ttu-id="832fc-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="832fc-123">Example</span></span>
+
+<span data-ttu-id="832fc-124">Le righe seguenti sono riportate in un file di risposta di esempio.</span><span class="sxs-lookup"><span data-stu-id="832fc-124">The following lines are from a sample response file.</span></span>
+
+```console
+# build the first output file
+-target:exe
+-out:MyExe.exe
+source1.vb
+source2.vb
+```
+
+## <a name="example"></a><span data-ttu-id="832fc-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="832fc-125">Example</span></span>
+
+<span data-ttu-id="832fc-126">Nell'esempio seguente viene illustrato come utilizzare l'opzione `@` con il file di risposta denominato `File1.rsp`.</span><span class="sxs-lookup"><span data-stu-id="832fc-126">The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.</span></span>
+
+```console
+vbc @file1.rsp
+```
+
+## <a name="see-also"></a><span data-ttu-id="832fc-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="832fc-127">See also</span></span>
+
+- [<span data-ttu-id="832fc-128">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="832fc-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="832fc-129">-noconfig</span><span class="sxs-lookup"><span data-stu-id="832fc-129">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="832fc-130">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="832fc-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
