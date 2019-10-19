@@ -1,16 +1,16 @@
 ---
 title: Istruzione using - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632905"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579172"
 ---
 # <a name="using-statement-c-reference"></a>Istruzione using (Riferimenti per C#)
 
@@ -22,7 +22,11 @@ L'esempio seguente mostra come usare l'istruzione `using`.
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-## <a name="remarks"></a>Osservazioni
+A partire C# da 8,0, è possibile usare la sintassi alternativa seguente per l'istruzione `using` che non richiede le parentesi graffe:
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
+## <a name="remarks"></a>Note
 
 <xref:System.IO.File> e <xref:System.Drawing.Font> sono esempi di tipi gestiti che accedono a risorse non gestite (in questo caso handle di file e contesti di dispositivo). Esistono molti altri tipi di risorse non gestite e tipi della libreria di classi che le incapsulano. Ogni tipo deve implementare l'interfaccia <xref:System.IDisposable>.
 
@@ -32,11 +36,17 @@ L'istruzione `using` garantisce che <xref:System.IDisposable.Dispose%2A> venga c
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
+La sintassi dell'istruzione `using` più recente si traduce in codice molto simile. Il blocco `try` viene aperto in cui viene dichiarata la variabile. Il blocco `finally` viene aggiunto alla chiusura del blocco di inclusione, in genere alla fine di un metodo.
+
 Per altre informazioni sull'istruzione `try`-`finally`, vedere l'argomento [try-finally](try-finally.md).
 
 È possibile dichiarare più istanze di un tipo nell'istruzione `using`, come illustrato nell'esempio seguente:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+È possibile combinare più dichiarazioni dello stesso tipo usando la nuova sintassi introdotta anche con C# 8. Questa operazione è illustrata nell'esempio seguente:
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
 È possibile creare un'istanza dell'oggetto risorsa e quindi passare la variabile all'istruzione `using`, ma questa procedura non è consigliata. In questo caso l'oggetto rimane nell'ambito quando il controllo lascia il blocco `using`, anche se probabilmente non avrà più accesso alle relative risorse non gestite. In altre parole, non è più completamente inizializzato. Se si tenta di usare l'oggetto di fuori del blocco `using`, si rischia di causare la generazione di un'eccezione. Per questo motivo, in genere è preferibile creare un'istanza dell'oggetto nell'istruzione `using` e limitare l'ambito al blocco `using`.
 
@@ -57,3 +67,4 @@ Per altre informazioni, vedere [Istruzione using](~/_csharplang/spec/statements.
 - [Garbage Collection](../../../standard/garbage-collection/index.md)
 - [Uso di oggetti che implementano IDisposable](../../../standard/garbage-collection/using-objects.md)
 - [Interfaccia IDisposable](xref:System.IDisposable)
+- [istruzione using in C# 8,0](~/_csharplang/proposals/csharp-8.0/using.md)

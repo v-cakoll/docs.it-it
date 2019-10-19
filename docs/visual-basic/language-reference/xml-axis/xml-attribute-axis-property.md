@@ -10,60 +10,60 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 896081c3dc7ca9e50b4dc4bd87675e957c34b649
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025223"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582157"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Proprietà axis dell'attributo XML (Visual Basic)
-Fornisce l'accesso al valore di un attributo per un <xref:System.Xml.Linq.XElement> oggetto o al primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
+Consente di accedere al valore di un attributo per un oggetto <xref:System.Xml.Linq.XElement> o al primo elemento di una raccolta di oggetti <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-      object.@attribute  
--or-  
+```vb  
+object.@attribute  
+' -or-  
 object.@<attribute>  
 ```  
   
 ## <a name="parts"></a>Parti  
  `object`  
- Obbligatorio. Un' <xref:System.Xml.Linq.XElement> oggetto o una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
+ Obbligatorio. Oggetto <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XElement>.  
   
  .@  
  Obbligatorio. Indica l'inizio di una proprietà axis dell'attributo.  
   
  <  
- Facoltativo. Indica l'inizio del nome dell'attributo quando `attribute` non è un identificatore valido in Visual Basic.  
+ Parametro facoltativo. Indica l'inizio del nome dell'attributo quando `attribute` non è un identificatore valido nel Visual Basic.  
   
  `attribute`  
- Obbligatorio. Nome dell'attributo a cui accedere, nel formato [`prefix`:]`name`.  
+ Obbligatorio. Nome dell'attributo a cui accedere, nel formato [`prefix`:] `name`.  
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|`prefix`|Facoltativo. Prefisso dello spazio dei nomi XML per l'attributo. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.|  
-|`name`|Obbligatorio. Nome locale dell'attributo. Visualizzare [nomi degli elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|Parametro facoltativo. Prefisso dello spazio dei nomi XML per l'attributo. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.|  
+|`name`|Obbligatorio. Nome dell'attributo locale. Vedere [nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Facoltativo. Indica la fine del nome dell'attributo quando `attribute` non è un identificatore valido in Visual Basic.  
+ Parametro facoltativo. Indica la fine del nome dell'attributo quando `attribute` non è un identificatore valido nel Visual Basic.  
   
 ## <a name="return-value"></a>Valore restituito  
- Stringa che contiene il valore di `attribute`. Se il nome dell'attributo non esiste, `Nothing` viene restituito.  
+ Stringa che contiene il valore di `attribute`. Se il nome dell'attributo non esiste, viene restituito `Nothing`.  
   
 ## <a name="remarks"></a>Note  
- È possibile usare una proprietà asse attributo XML per accedere al valore di un attributo in base al nome da un <xref:System.Xml.Linq.XElement> oggetto o tra il primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti. È possibile recuperare un valore di attributo in base al nome o aggiungere un nuovo attributo a un elemento specificando un nuovo nome preceduto dal @ identificatore.  
+ È possibile utilizzare una proprietà axis dell'attributo XML per accedere al valore di un attributo in base al nome da un oggetto <xref:System.Xml.Linq.XElement> o dal primo elemento di una raccolta di oggetti <xref:System.Xml.Linq.XElement>. È possibile recuperare un valore di attributo in base al nome o aggiungere un nuovo attributo a un elemento specificando un nuovo nome preceduto da @ Identifier.  
   
- Quando fa riferimento a un attributo XML con l'identificatore @, viene restituito il valore dell'attributo sotto forma di stringa e non è necessario specificare in modo esplicito il <xref:System.Xml.Linq.XAttribute.Value%2A> proprietà.  
+ Quando si fa riferimento a un attributo XML usando l'identificatore @, il valore dell'attributo viene restituito come stringa e non è necessario specificare in modo esplicito la proprietà <xref:System.Xml.Linq.XAttribute.Value%2A>.  
   
- Le regole di denominazione per gli attributi XML differiscono dalle regole di denominazione per gli identificatori di Visual Basic. Per accedere a un attributo XML che ha un nome che non è un valido identificatore Visual Basic, racchiuderlo tra parentesi angolari (\< e >).  
+ Le regole di denominazione per gli attributi XML sono diverse dalle regole di denominazione per gli identificatori di Visual Basic. Per accedere a un attributo XML con un nome diverso da un identificatore di Visual Basic valido, racchiudere il nome tra parentesi acute (\< e >).  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
- Il nome di una proprietà axis dell'attributo può usare solo i prefissi dello spazio dei nomi XML dichiarati a livello globale usando il `Imports` istruzione. Non può usare prefissi degli spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per altre informazioni, vedere [istruzione Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ Il nome in una proprietà axis dell'attributo può utilizzare solo i prefissi degli spazi dei nomi XML dichiarati globalmente utilizzando l'istruzione `Imports`. Non può usare prefissi degli spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per altre informazioni, vedere [istruzione Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come ottenere i valori degli attributi XML denominati `type` da una raccolta di elementi XML che sono denominate `phone`.  
+ Nell'esempio seguente viene illustrato come ottenere i valori degli attributi XML denominati `type` da una raccolta di elementi XML denominati `phone`.  
   
  [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
@@ -78,7 +78,7 @@ object.@<attribute>
  `</phoneTypes>`  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare in modo dichiarativo, come parte del codice XML e in modo dinamico mediante l'aggiunta di un attributo a un'istanza di attributi per un elemento XML sia un <xref:System.Xml.Linq.XElement> oggetto. Il `type` l'attributo viene creato in modo dichiarativo e `owner` attributo viene creato dinamicamente.  
+ Nell'esempio seguente viene illustrato come creare attributi per un elemento XML in modo dichiarativo, come parte del codice XML, e in modo dinamico aggiungendo un attributo a un'istanza di un oggetto <xref:System.Xml.Linq.XElement>. L'attributo `type` viene creato in modo dichiarativo e l'attributo `owner` viene creato dinamicamente.  
   
  [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa la sintassi di parentesi uncinate per ottenere il valore dell'attributo XML denominato `number-type`, che non è un identificatore valido in Visual Basic.  
+ Nell'esempio seguente viene utilizzata la sintassi della parentesi uncinata per ottenere il valore dell'attributo XML denominato `number-type`, che non è un identificatore valido nella Visual Basic.  
   
  [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
@@ -98,7 +98,7 @@ object.@<attribute>
  `Phone type: work`  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene dichiarato `ns` come un prefisso dello spazio dei nomi XML. Il prefisso dello spazio dei nomi viene quindi utilizzato per creare un file XML letterale e accedere al primo nodo figlio con il nome completo "`ns:name`".  
+ Nell'esempio seguente viene dichiarato `ns` come un prefisso dello spazio dei nomi XML. USA quindi il prefisso dello spazio dei nomi per creare un valore letterale XML e accedere al primo nodo figlio con il nome completo "`ns:name`".  
   
  [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   

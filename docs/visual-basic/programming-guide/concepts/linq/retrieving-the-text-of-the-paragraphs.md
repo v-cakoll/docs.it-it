@@ -2,15 +2,15 @@
 title: Recupero del testo dei paragrafi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: f508c95d5ea7889d3ea22a4852b4813ec54f97a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a87fa6d86983f5ae11fcbc7731ea9396c2252e0
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627169"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582203"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Recupero del testo dei paragrafi (Visual Basic)
-Questo esempio si basa sull'esempio precedente [recupero di paragrafi e dei relativi stili (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Questo nuovo esempio consente di recuperare il testo di ciascun paragrafo sotto forma di stringa.  
+Questo esempio si basa sull'esempio precedente, [recuperando i paragrafi e i relativi stili (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Questo nuovo esempio consente di recuperare il testo di ciascun paragrafo sotto forma di stringa.  
   
  Per recuperare il testo, nell'esempio viene aggiunta un'ulteriore query che scorre la raccolta di tipi anonimi e proietta una nuova raccolta di un tipo anonimo con l'aggiunta di un nuovo membro `Text`. Viene usato l'operatore di query standard <xref:System.Linq.Enumerable.Aggregate%2A> per concatenare più stringhe in un'unica stringa.  
   
@@ -18,12 +18,12 @@ Questo esempio si basa sull'esempio precedente [recupero di paragrafi e dei rela
   
  Sarebbe naturalmente possibile scrivere una singola query che contiene la funzionalità per recuperare i paragrafi, nonché lo stile e il testo di ogni paragrafo. Tuttavia, è spesso utile suddividere una query più complessa in più query perché il codice risultante è più modulare e più facilmente gestibile. Se inoltre è necessario riutilizzare parte della query, risulta più agevole effettuare il refactoring se le query sono scritte in questo modo.  
   
- Queste query, che vengono concatenate, usano il modello di elaborazione esaminato in dettaglio nell'argomento [Esercitazione: (Visual Basic) di esecuzione posticipata](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ Queste query, che vengono concatenate insieme, usano il modello di elaborazione esaminato in dettaglio nell'argomento [esercitazione: esecuzione posticipata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, determinando il nodo dell'elemento, il nome dello stile e il testo di ciascun paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -116,9 +116,9 @@ Module Module1
 End Module  
 ```  
   
- In questo esempio produce il seguente output quando viene applicato al documento descritto [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Questo esempio produce l'output seguente quando viene applicato al documento descritto in [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -139,9 +139,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Passaggi successivi  
  Nell'esempio successivo viene illustrato come usare un metodo di estensione, anziché <xref:System.Linq.Enumerable.Aggregate%2A>, per concatenare più stringhe in un'unica stringa.  
   
-- [Refactoring con un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Esecuzione posticipata e valutazione Lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esecuzione posticipata e valutazione lazy in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

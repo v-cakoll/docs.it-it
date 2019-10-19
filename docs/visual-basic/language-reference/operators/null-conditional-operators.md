@@ -6,31 +6,31 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062939"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581639"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. e? operatori condizionali null () (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. e? () operatori condizionali null (Visual Basic)
 
-Testa il valore dell'operando a sinistra i valori null (`Nothing`) prima di eseguire un accesso ai membri (`?.`) o un indice (`?()`) operazione; restituisce `Nothing` se l'operando sinistro `Nothing`. Si noti che nelle espressioni che restituiscono in genere i tipi di valore, l'operatore condizionale null restituisce un <xref:System.Nullable%601>.
+Verifica il valore dell'operando sinistro per null (`Nothing`) prima di eseguire un'operazione di accesso ai membri (`?.`) o di indice (`?()`). Restituisce `Nothing` se l'operando sinistro restituisce `Nothing`. Si noti che nelle espressioni che in genere restituiscono tipi di valore, l'operatore condizionale null restituisce un <xref:System.Nullable%601>.
 
-Questi operatori consentono di scrivere meno codice per gestire i controlli null, in particolare quando decrescente in strutture di dati. Ad esempio:
+Questi operatori consentono di scrivere meno codice per gestire i controlli null, soprattutto in caso di decrescente in strutture di dati. Esempio:
 
 ```vb
-' Nothing if customers is Nothing  
-Dim length As Integer? = customers?.Length  
+' Nothing if customers is Nothing
+Dim length As Integer? = customers?.Length
 
 ' Nothing if customers is Nothing
 Dim first As Customer = customers?(0)
 
 ' Nothing if customers, the first customer, or Orders is Nothing
-Dim count As Integer? = customers?(0)?.Orders?.Count()   
+Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-Per il confronto, il codice alternativo per il primo di tali espressioni senza un operatore condizionale null è:
+Per il confronto, il codice alternativo per la prima di queste espressioni senza un operatore condizionale null è:
 
 ```vb
 Dim length As Integer
@@ -39,35 +39,35 @@ If customers IsNot Nothing Then
 End If
 ```
 
-In alcuni casi è necessario eseguire un'azione su un oggetto che può essere null, in base al valore di un membro booleano su tale oggetto (ad esempio la proprietà booleana `IsAllowedFreeShipping` nell'esempio seguente):
+In alcuni casi è necessario eseguire un'azione su un oggetto che può essere null, in base al valore di un membro booleano sull'oggetto, ad esempio la proprietà booleana `IsAllowedFreeShipping` nell'esempio seguente:
 
 ```vb
-  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
-  
-  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
-   ApplyFreeShippingToOrders(customer)
-  End If
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+  ApplyFreeShippingToOrders(customer)
+End If
 ```
 
-È possibile abbreviare il codice ed evitare controllare manualmente i valori null usando l'operatore condizionale null come indicato di seguito:
+È possibile abbreviare il codice ed evitare di verificare manualmente la presenza di valori null usando l'operatore condizionale null come indicato di seguito:
 
 ```vb
- Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
- 
- If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Gli operatori condizionali Null causano corto circuiti.  Se un'operazione in una catena di operazioni di indice e accesso ai membri condizionali restituisce `Nothing`, il resto del viene arrestata l'esecuzione della catena.  Nell'esempio riportato di seguito `C(E)` non viene valutato se `A`, `B`, o `C` restituisce `Nothing`.
+Gli operatori condizionali Null causano corto circuiti.  Se un'operazione in una catena di operazioni di accesso ai membri condizionali e di indice restituisce `Nothing`, il resto dell'esecuzione della catena viene arrestato.  Nell'esempio seguente `C(E)` non viene valutato se `A`, `B` o `C` restituisce `Nothing`.
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Un altro uso per l'accesso ai membri condizionali null è richiamare delegati in modo thread-safe scrivendo molto meno codice.  L'esempio seguente definisce due tipi, una `NewsBroadcaster` e un `NewsReceiver`. Nuovi elementi vengono inviati al ricevitore per il `NewsBroadcaster.SendNews` delegare.
+Un altro utilizzo per l'accesso ai membri condizionali null consiste nel richiamare i delegati in modo thread-safe con molto meno codice.  Nell'esempio seguente vengono definiti due tipi, una `NewsBroadcaster` e una `NewsReceiver`. Gli elementi di notizie vengono inviati al destinatario dal delegato `NewsBroadcaster.SendNews`.
 
 ```vb
 Public Module NewsBroadcaster
-   Dim SendNews As Action(Of String) 
+   Dim SendNews As Action(Of String)
 
    Public Sub Main()
       Dim rec As New NewsReceiver()
@@ -91,23 +91,23 @@ Public Class NewsReceiver
 End Class
 ```
 
-Se non esistono elementi nel `SendNews` elenco di chiamate, il `SendNews` delegare genera un <xref:System.NullReferenceException>. Prima di operatori condizionali null, di codice come il seguente garantito che l'elenco di chiamate del delegato non è stato `Nothing`:
+Se non sono presenti elementi nell'elenco chiamate `SendNews`, il delegato `SendNews` genera un'<xref:System.NullReferenceException>. Prima degli operatori condizionali null, il codice simile al seguente verifica che l'elenco chiamate del delegato non sia stato `Nothing`:
 
-```vb  
-SendNews = SendNews.Combine({SendNews, client})  
-If SendNews IsNot Nothing Then 
+```vb
+SendNews = SendNews.Combine({SendNews, client})
+If SendNews IsNot Nothing Then
    SendNews("Just in...")
 End If
 ```
 
-Ora tutto è molto più semplice:  
+Ora tutto è molto più semplice:
 
 ```vb
-SendNews = SendNews.Combine({SendNews, client})  
+SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-Il codice creato in questo modo è thread-safe perché il compilatore genera il codice per valutare `SendNews` una sola volta, mantenendo il risultato in una variabile temporanea. È necessario chiamare esplicitamente il metodo `Invoke` perché non esiste una sintassi di chiamata dei delegati con condizione Null `SendNews?(String)`.  
+Il codice creato in questo modo è thread-safe perché il compilatore genera il codice per valutare `SendNews` una sola volta, mantenendo il risultato in una variabile temporanea. È necessario chiamare esplicitamente il metodo `Invoke` perché non esiste una sintassi di chiamata dei delegati con condizione Null `SendNews?(String)`.
 
 ## <a name="see-also"></a>Vedere anche
 

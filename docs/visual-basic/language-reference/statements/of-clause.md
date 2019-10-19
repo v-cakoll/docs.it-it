@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784150"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583502"
 ---
 # <a name="of-clause-visual-basic"></a>Clausola Of (Visual Basic)
-Introduce un' `Of` clausola che identifica una *il parametro di tipo* su un *generico* classe, struttura, interfaccia, delegato o procedure. Per informazioni su tipi generici, vedere [tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Introduce una clausola `Of`, che identifica un *parametro di tipo* in una classe, una struttura, un'interfaccia, un delegato o una routine *generica* . Per informazioni sui tipi generici, vedere [tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Tramite l'utilizzo della parola chiave  
- Il codice seguente viene illustrato come utilizzare il `Of` parola chiave per definire la struttura di una classe che accetta due parametri di tipo. Si *vincola* la `keyType` parametro per il <xref:System.IComparable> interfaccia, che significa che il codice consumer deve fornire un argomento di tipo che implementa <xref:System.IComparable>. Questa operazione è necessaria in modo che il `add` procedure può chiamare il <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> (metodo). Per altre informazioni sui vincoli, vedere [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Utilizzo della parola chiave of  
+ Nell'esempio di codice seguente viene usata la parola chiave `Of` per definire il contorno di una classe che accetta due parametri di tipo. *Vincola* il parametro `keyType` dall'interfaccia <xref:System.IComparable>, il che significa che il codice consumer deve fornire un argomento di tipo che implementi <xref:System.IComparable>. Questa operazione è necessaria in modo che la procedura `add` possa chiamare il metodo <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Per altre informazioni sui vincoli, vedere [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,11 +42,11 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Dopo aver completato la precedente definizione di classe, è possibile costruire una serie di `dictionary` classi da esso. I tipi forniti da `entryType` e `keyType` determinare il tipo di voce contiene la classe e il tipo di chiave associa ogni voce. A causa del vincolo, è necessario fornire al `keyType` un tipo che implementa <xref:System.IComparable>.  
+ Se si completa la definizione di classe precedente, è possibile creare una varietà di `dictionary` classi. I tipi forniti per `entryType` e `keyType` determinare il tipo di voce che la classe include e il tipo di chiave che associa a ogni voce. A causa del vincolo, è necessario fornire a `keyType` un tipo che implementi <xref:System.IComparable>.  
   
- L'esempio di codice seguente crea un oggetto che contiene `String` voci e associa un `Integer` chiave con ciascuno di essi. `Integer` implementa <xref:System.IComparable> e pertanto soddisfa il vincolo su `keyType`.  
+ Nell'esempio di codice seguente viene creato un oggetto che include `String` voci e associa una chiave di `Integer` a ciascuna di esse. `Integer` implementa <xref:System.IComparable> e pertanto soddisfa il vincolo in `keyType`.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   

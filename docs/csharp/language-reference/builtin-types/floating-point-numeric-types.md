@@ -1,7 +1,7 @@
 ---
 title: Tipi numerici a virgola mobile - Riferimenti per C#
 description: Panoramica dei tipi a virgola mobile incorporati di C#
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002188"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579378"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
-I **tipi numerici a virgola mobile** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#floating-point-literals). Tutti i tipi a virgola mobile sono anche tipi di valore. Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), [di confronto e di uguaglianza](../operators/equality-operators.md).
+I **tipi numerici a virgola mobile** sono un subset dei **tipi semplici** e possono essere inizializzati con [*valori letterali*](#real-literals). Tutti i tipi a virgola mobile sono anche tipi di valore. Tutti i tipi numerici a virgola mobile supportano gli operatori [aritmetici](../operators/arithmetic-operators.md), di [confronto](../operators/comparison-operators.md)e di [uguaglianza](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Caratteristiche dei tipi a virgola mobile
 
 C# supporta i tipi a virgola mobile predefiniti seguenti:
   
-|Tipo/parola chiave C#|Intervallo approssimativo|Precisione|Size|Tipo .NET|
+|Tipo/parola chiave C#|Intervallo approssimativo|Precisione|Dimensioni|Tipo .NET|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|Compreso tra ±1.5 x 10<sup>−45</sup> e ±3.4 x 10<sup>38</sup>|~6-9 cifre|4 byte|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|~15-17 cifre|8 byte|<xref:System.Double?displayProperty=nameWithType>|
@@ -52,8 +52,8 @@ Dato che il tipo `decimal` è caratterizzato da una maggiore precisione e da un 
 
 In un'espressione è possibile combinare tipi [integrali](integral-numeric-types.md) e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:
 
-- Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
-- Se l'espressione non contiene un tipo `double`, restituirà un valore `float` o [bool](../keywords/bool.md) nei confronti relazionali o nei confronti per l'uguaglianza.
+- Se uno dei tipi a virgola mobile è `double`, l'espressione restituisce `double` o a [bool](../keywords/bool.md) nei confronti relazionali e di uguaglianza.
+- Se non è presente alcun tipo di `double` nell'espressione, l'espressione restituisce `float` o a [bool](../keywords/bool.md) nei confronti relazionali e di uguaglianza.
 
 Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:
 
@@ -66,23 +66,41 @@ Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetic
 
 È possibile usare [stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md) oppure [stringhe di formato numerico personalizzato](../../../standard/base-types/custom-numeric-format-strings.md) per formattare un valore a virgola mobile.
 
-## <a name="floating-point-literals"></a>Valori letterali a virgola mobile
+## <a name="real-literals"></a>Valori letterali reali
 
-Per impostazione predefinita, un valore letterale numerico a virgola mobile a destra dell'operatore di assegnazione viene gestito come tipo `double`. È possibile usare suffissi per convertire un valore letterale a virgola mobile o integrale in un tipo specifico:
+Il tipo di un valore letterale reale è determinato dal suffisso, come indicato di seguito:
 
-- Il suffisso `d` o `D` converte un valore letterale in un tipo `double`.
-- Il suffisso `f` o `F` converte un valore letterale in un tipo `float`.
-- Il suffisso `m` o `M` converte un valore letterale in un tipo `decimal`.
+- Il valore letterale senza suffisso o con il suffisso `d` o `D` è di tipo `double`
+- Il valore letterale con il suffisso `f` o `F` è di tipo `float`
+- Il valore letterale con il suffisso `m` o `M` è di tipo `decimal`
 
-Negli esempi riportati di seguito viene illustrato ogni suffisso:
+Il codice seguente illustra un esempio di ogni:
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+Nell'esempio precedente viene inoltre illustrato l'utilizzo di `_` come *separatore di cifre*, supportato a partire C# da 7,0. È possibile usare il separatore di cifre con tutti i tipi di valori letterali numerici.
+
+È anche possibile usare la notazione scientifica, ovvero specificare una parte dell'esponente di un valore letterale reale, come illustrato nell'esempio seguente:
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>Conversioni
@@ -95,6 +113,14 @@ Per altre informazioni sulle conversioni numeriche implicite, vedere [Tabella de
 
 Per altre informazioni sulle conversioni numeriche esplicite, vedere [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md).
 
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguaggio C#](~/_csharplang/spec/introduction.md):
+
+- [Tipi a virgola mobile](~/_csharplang/spec/types.md#floating-point-types)
+- [Tipo decimale](~/_csharplang/spec/types.md#the-decimal-type)
+- [Valori letterali reali](~/_csharplang/spec/lexical-structure.md#real-literals)
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
@@ -102,8 +128,6 @@ Per altre informazioni sulle conversioni numeriche esplicite, vedere [Tabella de
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)
 - [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
-- [Tabella delle conversioni numeriche implicite](../keywords/implicit-numeric-conversions-table.md)
-- [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)

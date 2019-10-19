@@ -2,12 +2,12 @@
 title: Novità di C# 8,0- C# Guida
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275777"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579145"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -261,25 +261,36 @@ I criteri discard nell'espressione switch precedente trovano una corrispondenza 
 Una **dichiarazione using** è una dichiarazione di variabile preceduta dalla parola chiave `using`. Indica al compilatore che la variabile dichiarata deve essere eliminata alla fine dell'ambito di inclusione. Ad esempio, si consideri il codice seguente che consente di scrivere un file di testo:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 Nell'esempio precedente il file viene eliminato quando viene raggiunta la parentesi graffa di chiusura per il metodo. Questa è la fine dell'ambito in cui viene dichiarato `file`. Il codice precedente è equivalente al codice seguente con l'[istruzione using](../language-reference/keywords/using-statement.md) classica:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 
@@ -471,7 +487,7 @@ Per ulteriori informazioni, vedere [?? e?? = articolo Operators](../language-ref
 
 In C# 7,3 e versioni precedenti, un tipo costruito (un tipo che include almeno un argomento di tipo) non può essere un [tipo non gestito](../language-reference/builtin-types/unmanaged-types.md). A partire C# da 8,0, un tipo di valore costruito non è gestito se contiene campi solo di tipi non gestiti.
 
-Ad esempio, data la seguente definizione del tipo generico `Coords<T>`:
+Ad esempio, data la seguente definizione del tipo di `Coords<T>` generico:
 
 ```csharp
 public struct Coords<T>
@@ -481,7 +497,7 @@ public struct Coords<T>
 }
 ```
 
-il tipo `Coords<int>` è un tipo non gestito in C# 8,0 e versioni successive. Come per qualsiasi tipo non gestito, è possibile creare un puntatore a una variabile di questo tipo o [allocare un blocco di memoria nello stack per le](../language-reference/operators/stackalloc.md) istanze di questo tipo:
+il tipo di `Coords<int>` è un tipo non gestito in C# 8,0 e versioni successive. Come per qualsiasi tipo non gestito, è possibile creare un puntatore a una variabile di questo tipo o [allocare un blocco di memoria nello stack per le](../language-reference/operators/stackalloc.md) istanze di questo tipo:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -496,7 +512,7 @@ Per ulteriori informazioni, vedere [tipi non gestiti](../language-reference/buil
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc nelle espressioni annidate
 
-A partire C# da 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) è del tipo <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, è possibile usare l'espressione `stackalloc` in altre espressioni:
+A partire C# da 8,0, se il risultato di un'espressione [stackalloc](../language-reference/operators/stackalloc.md) è di tipo <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, è possibile usare l'espressione `stackalloc` in altre espressioni:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -506,4 +522,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Miglioramento delle stringhe verbatim interpolate
 
-L'ordine dei token `$` e `@` nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere qualsiasi: `$@"..."` e `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token `$` deve essere visualizzato prima del token `@`.
+L'ordine dei token `$` e `@` nelle stringhe verbatim [interpolate](../language-reference/tokens/interpolated.md) può essere qualsiasi: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide. Nelle versioni C# precedenti, il token di `$` deve essere visualizzato prima del token di `@`.

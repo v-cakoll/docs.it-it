@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: c1c26b49a33a58189f66e7b938333f362e467853
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ec8ec42c174d87834af5d4c651c1e8c8bde3b3e2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002158"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581695"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
-L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che consente l'hosting di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in browser compatibili (incluso Microsoft Internet Explorer 6 e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come Shell e gestore MIME per il contenuto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitato dal browser, che include:  
+L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applicazione che consente l'hosting di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni in browser compatibili (incluso Microsoft Internet Explorer 6 e versioni successive). Per impostazione predefinita, l'host Windows Presentation Foundation (WPF) viene registrato come Shell e gestore MIME per il contenuto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ospitato dal browser, che include:  
   
 - File [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati (con estensione xaml) non compilati.  
   
@@ -36,7 +36,7 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|filename|Il percorso del file da attivare. Può anche essere un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
+|filename|Il percorso del file da attivare. Può anche essere un URI.|  
 |-debug|Quando si attiva un'applicazione, non esegue il commit o non lo esegue dall'archivio. Funziona solo quando un file locale è attivato.|  
 |-debugSecurityZoneURL \<url>|Utilizzato con un valore URL per indicare a PresentationHost. exe che un'applicazione deve essere sottoposta a debug come se fosse stata distribuita dall'URL specificato. In questo modo si determina l'area di distribuzione e il sito di origine.|  
 |-embedding|Richiesto da OLE. Se viene specificato il parametro `-event` o `-debug`, non è necessario specificare il parametro `-embedding`, poiché tale parametro è impostato internamente.|  
@@ -59,4 +59,4 @@ L'host Windows Presentation Foundation (WPF) (PresentationHost. exe) è l'applic
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Sicurezza](../security-wpf.md)
+- [Security](../security-wpf.md)

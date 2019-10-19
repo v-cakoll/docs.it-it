@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: bc1dff6dc3b580079087f370212b7d3acd30e4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938671"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582222"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Proprietà axis descendant XML (Visual Basic)
 
-Fornisce l'accesso ai discendenti di uno dei seguenti: un' <xref:System.Xml.Linq.XElement> oggetti, un' <xref:System.Xml.Linq.XDocument> oggetto, una raccolta di <xref:System.Xml.Linq.XElement> oggetti, oppure una raccolta di <xref:System.Xml.Linq.XDocument> oggetti.
+Fornisce l'accesso ai discendenti dei seguenti elementi: un oggetto <xref:System.Xml.Linq.XElement>, un oggetto <xref:System.Xml.Linq.XDocument>, una raccolta di oggetti <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XDocument>.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 object...<descendant>
 ```
 
@@ -31,16 +31,16 @@ object...<descendant>
 
 `object` Obbligatorio. Un oggetto <xref:System.Xml.Linq.XElement>, un oggetto <xref:System.Xml.Linq.XDocument>, una raccolta di oggetti <xref:System.Xml.Linq.XElement> o una raccolta di oggetti <xref:System.Xml.Linq.XDocument>.
 
-`...<` Obbligatorio. Indica l'inizio di una proprietà axis discendente.
+`...<` Obbligatorio. Indica l'inizio di una proprietà asse discendente.
 
-`descendant` Obbligatorio. Nome dei nodi discendente per accedere, nel formato [`prefix:]name`.
+`descendant` Obbligatorio. Nome dei nodi discendenti a cui accedere, nel formato [`prefix:]name`.
 
 |Parte|Descrizione|
 |----------|-----------------|
-|`prefix`|Facoltativo. Prefisso dello spazio dei nomi XML per il nodo discendente. Deve essere uno spazio dei nomi XML globale definito usando un' `Imports` istruzione.|
-|`name`|Obbligatorio. Nome locale del nodo discendente. Visualizzare [nomi degli elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Parametro facoltativo. Prefisso dello spazio dei nomi XML per il nodo discendente. Deve essere uno spazio dei nomi XML globale definito tramite un'istruzione `Imports`.|
+|`name`|Obbligatorio. Nome locale del nodo discendente. Vedere [nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Obbligatorio. Indica la fine di una proprietà axis discendente.
+`>` Obbligatorio. Indica la fine di una proprietà asse discendente.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -48,17 +48,17 @@ Raccolta di oggetti <xref:System.Xml.Linq.XElement>.
 
 ## <a name="remarks"></a>Note
 
-È possibile usare una proprietà axis discendente XML per accedere ai nodi discendenti in base al nome da un <xref:System.Xml.Linq.XElement> oppure <xref:System.Xml.Linq.XDocument> oggetto, o da una raccolta di <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> oggetti. Usare il codice XML `Value` proprietà per accedere al valore del primo nodo discendente della raccolta restituita. Per altre informazioni, vedere [proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+È possibile utilizzare una proprietà axis discendente XML per accedere ai nodi discendenti in base al nome da un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> oppure da una raccolta di oggetti <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>. Utilizzare la proprietà `Value` XML per accedere al valore del primo nodo discendente nella raccolta restituita. Per ulteriori informazioni, vedere [proprietà del valore XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-Il compilatore Visual Basic converte le proprietà axis discendente in chiamate al <xref:System.Xml.Linq.XContainer.Descendants%2A> (metodo).
+Il compilatore Visual Basic converte le proprietà dell'asse discendente in chiamate al metodo <xref:System.Xml.Linq.XContainer.Descendants%2A>.
 
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML
 
-Il nome di una proprietà axis discendente può usare solo spazi dei nomi XML dichiarati globalmente con il `Imports` istruzione. Non può usare spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per altre informazioni, vedere [istruzione Imports (Namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+Il nome in una proprietà asse discendente può utilizzare solo spazi dei nomi XML dichiarati globalmente con l'istruzione `Imports`. Non può utilizzare spazi dei nomi XML dichiarati localmente nei valori letterali degli elementi XML. Per altre informazioni, vedere [istruzione Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come accedere al valore del primo nodo discendente denominato `name` e i valori di tutti i nodi discendenti denominati `phone` dal `contacts` oggetto.
+Nell'esempio seguente viene illustrato come accedere al valore del primo nodo discendente denominato `name` e i valori di tutti i nodi discendenti denominati `phone` dall'oggetto `contacts`.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Questo codice visualizza il testo seguente:
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene dichiarato `ns` come un prefisso dello spazio dei nomi XML. Il prefisso dello spazio dei nomi viene quindi utilizzato per creare un file XML letterale e accedere al valore del primo nodo figlio con il nome completo `ns:name`.
+Nell'esempio seguente viene dichiarato `ns` come un prefisso dello spazio dei nomi XML. USA quindi il prefisso dello spazio dei nomi per creare un valore letterale XML e accedere al valore del primo nodo figlio con il nome completo `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 

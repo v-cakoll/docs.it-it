@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583509"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581581"
 ---
 # <a name="option-compare-statement"></a>Istruzione Option Compare
 Dichiara il metodo di confronto predefinito da usare durante il confronto dei dati di tipo stringa.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -38,8 +38,8 @@ Option Compare { Binary | Text }
   
 |Termine|Definizione|  
 |---|---|  
-|`Binary`|Facoltativo. Consente di eseguire confronti tra stringhe basati su un criterio di ordinamento derivato dalle rappresentazioni binarie interne dei caratteri.<br /><br /> Questo tipo di confronto è particolarmente utile se le stringhe possono contenere caratteri che non devono essere interpretati come testo. In questo caso, non è consigliabile consentire che il confronto sia falsato da equivalenze alfabetiche, ad esempio dalla mancata distinzione tra maiuscole e minuscole.|  
-|`Text`|Facoltativo. Consente di eseguire confronti tra stringhe basati su un criterio di ordinamento testuale senza distinzione tra maiuscole e minuscole determinato dalle impostazioni locali del sistema.<br /><br /> Questo tipo di confronto è utile se le stringhe contengono tutti caratteri di testo e si vuole confrontarle prendendo in considerazione le equivalenze alfabetiche, quali la mancata distinzione tra maiuscole e minuscole e le lettere strettamente correlate. Ad esempio, è possibile considerare le lettere `A` e `a` equivalenti e fare in modo che le lettere `Ä` e `ä` precedano `B` e `b`.|  
+|`Binary`|Parametro facoltativo. Consente di eseguire confronti tra stringhe basati su un criterio di ordinamento derivato dalle rappresentazioni binarie interne dei caratteri.<br /><br /> Questo tipo di confronto è particolarmente utile se le stringhe possono contenere caratteri che non devono essere interpretati come testo. In questo caso, non è consigliabile consentire che il confronto sia falsato da equivalenze alfabetiche, ad esempio dalla mancata distinzione tra maiuscole e minuscole.|  
+|`Text`|Parametro facoltativo. Consente di eseguire confronti tra stringhe basati su un criterio di ordinamento testuale senza distinzione tra maiuscole e minuscole determinato dalle impostazioni locali del sistema.<br /><br /> Questo tipo di confronto è utile se le stringhe contengono tutti caratteri di testo e si vuole confrontarle prendendo in considerazione le equivalenze alfabetiche, quali la mancata distinzione tra maiuscole e minuscole e le lettere strettamente correlate. Ad esempio, è possibile considerare le lettere `A` e `a` equivalenti e fare in modo che le lettere `Ä` e `ä` precedano `B` e `b`.|  
   
 ## <a name="remarks"></a>Note  
  Se usato, è necessario includere l'istruzione `Option Compare` in un file prima di tutte le altre istruzioni del codice sorgente.  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Quando non è presente un'istruzione Option Compare  
- Se il codice sorgente non contiene un `Option Compare` istruzione, il **Option Compare** impostazione il [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) viene usato. Se si usa il compilatore della riga di comando, l'impostazione specificata per il [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) viene utilizzata l'opzione del compilatore.  
+ Se il codice sorgente non contiene un'istruzione `Option Compare`, viene utilizzata l'impostazione **Option Compare** nella [pagina compilazione, progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Se si usa il compilatore da riga di comando, viene usata l'impostazione specificata dall'opzione del compilatore [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) .  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. Fare clic sulla scheda **Compila**.  
   
-3. Impostare il valore di **Option Compare** casella.  
+3. Impostare il valore nella casella **Option Compare** .  
   
- Quando si crea un progetto, il **Option Compare** impostazione nel **compilare** scheda è impostata sul **Option Compare** impostazione nel **opzioni** finestra di dialogo. Per modificare questa impostazione, scegliere il **degli strumenti** menu, fare clic su **opzioni**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **le impostazioni predefinite di Visual Basic** viene **binario**.  
+ Quando si crea un progetto, l'impostazione **Option Compare** nella scheda **Compila** viene impostata sull'impostazione **Option Compare** nella finestra di dialogo **Opzioni** . Per modificare questa impostazione, scegliere **Opzioni**dal menu **strumenti** . Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in impostazioni **predefinite di Visual Basic** è **Binary**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Per impostare Option Compare sulla riga di comando  
   
-- Includere il [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opzione del compilatore nella **vbc** comando.  
+- Includere l'opzione del compilatore [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) nel comando **vbc** .  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usata l'istruzione `Option Compare` per impostare il confronto binario come metodo predefinito per il confronto tra stringhe. Per usare questo codice, rimuovere il commento dall'istruzione `Option Compare Binary` e inserirlo all'inizio del file di origine.  

@@ -1,20 +1,17 @@
 ---
 title: Modifiche di rilievo ASP.NET Core-.NET Core
 description: Elenca le modifiche di rilievo in ASP.NET Core.
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522880"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579981"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core modifiche di rilievo
-
-> [!IMPORTANT]
-> Questo articolo è in costruzione. Non si tratta di un elenco completo di ASP.NET Core modifiche di rilievo. Per ulteriori informazioni su ASP.NET Core modifiche di rilievo, è possibile esaminare i singoli [problemi di modifiche di rilievo](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) nel repository DotNet/docs su GitHub.
 
 Di seguito è riportato un elenco di ASP.NET Core modifiche di rilievo per ASP.NET Core versione. ASP.NET Core fornisce le funzionalità di sviluppo di app Web usate da .NET Core.
 

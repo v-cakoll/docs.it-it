@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964806"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582494"
 ---
 # <a name="application-development"></a>Sviluppo di applicazioni
 <a name="introduction"></a>Windows Presentation Foundation (WPF) è un Framework di presentazione che può essere utilizzato per sviluppare i seguenti tipi di applicazioni:  
   
 - Applicazioni autonome (applicazioni Windows di stile tradizionale compilate come assembly eseguibili installate ed eseguite dal computer client).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](applicazioni composte da pagine di navigazione compilate come assembly eseguibili e ospitate da Web browser quali Microsoft Internet Explorer o Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (applicazioni composte da pagine di navigazione compilate come assembly eseguibili e ospitate da Web browser quali Microsoft Internet Explorer o Mozilla Firefox).  
   
 - Librerie di controlli personalizzati, ovvero assembly non eseguibili contenenti controlli riutilizzabili.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69964806"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]estende il supporto principale nel Framework Microsoft .NET per le risorse incorporate con supporto per tre tipi di file di dati non eseguibili: risorse, contenuto e dati. Per altre informazioni, vedere [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende il supporto principale nel Framework Microsoft .NET per le risorse incorporate con supporto per tre tipi di file di dati non eseguibili: risorse, contenuto e dati. Per altre informazioni, vedere [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md).  
   
- Un componente chiave del supporto per file di dati non eseguibili di WPF è la possibilità di identificarli e caricarli usando uno [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] univoco. Per altre informazioni, vedere [URI di tipo pack in WPF](pack-uris-in-wpf.md).  
+ Un componente chiave del supporto per i file di dati non eseguibili WPF è la possibilità di identificare e caricare i file utilizzando un URI univoco. Per altre informazioni, vedere [URI di tipo pack in WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Finestre e finestre di dialogo  
@@ -74,7 +74,7 @@ ms.locfileid: "69964806"
   
  <xref:System.Windows.Window> permette di creare un tipo speciale di finestra, chiamata finestra di dialogo. È possibile creare tipi di finestre di dialogo modali e non modali.  
   
- Per praticità e i vantaggi della riusabilità e di un'esperienza utente coerente tra le [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni, espone tre delle finestre di dialogo comuni <xref:Microsoft.Win32.OpenFileDialog>di <xref:Microsoft.Win32.SaveFileDialog>Windows: <xref:System.Windows.Controls.PrintDialog>, e.  
+ Per praticità e i vantaggi della riusabilità e di un'esperienza utente coerente tra le applicazioni, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] espone tre delle finestre di dialogo comuni di Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
   
  Una finestra di messaggio è un tipo speciale di finestra di dialogo che permette di visualizzare agli utenti informazioni testuali importanti e di porre semplici domande con risposta Sì/No/OK/Annulla. Per creare e mostrare finestre di messaggio, è necessario usare la classe <xref:System.Windows.MessageBox>.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69964806"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]può essere ospitato in Microsoft Internet Explorer o Firefox. Ogni modello di hosting è associato a un insieme di considerazioni e vincoli descritti in [Hosting](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere ospitati in Microsoft Internet Explorer o Firefox. Ogni modello di hosting è associato a un insieme di considerazioni e vincoli descritti in [Hosting](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilazione e distribuzione  
@@ -119,7 +119,7 @@ ms.locfileid: "69964806"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Cenni preliminari sulla gestione di applicazioni](application-management-overview.md)|Offre una panoramica della classe <xref:System.Windows.Application>, con informazioni sulla gestione di ciclo di vita dell'applicazione, finestre, risorse dell'applicazione e navigazione.|  
 |[Windows in WPF](windows-in-wpf-applications.md)|Offre informazioni dettagliate sulla gestione delle finestre nell'applicazione, tra cui l'uso della classe <xref:System.Windows.Window> e delle finestre di dialogo.|  

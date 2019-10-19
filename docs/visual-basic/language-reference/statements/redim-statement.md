@@ -26,19 +26,19 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582905"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582090"
 ---
 # <a name="redim-statement-visual-basic"></a>Istruzione ReDim (Visual Basic)
 Rialloca lo spazio di archiviazione per una variabile di matrice.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
@@ -46,7 +46,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Termine|Definizione|  
 |----------|----------------|  
-|`Preserve`|Facoltativo. Modificatore utilizzato per conservare i dati nella matrice esistente quando si modifica soltanto la grandezza dell'ultima dimensione.|  
+|`Preserve`|Parametro facoltativo. Modificatore utilizzato per conservare i dati nella matrice esistente quando si modifica soltanto la grandezza dell'ultima dimensione.|  
 |`name`|Obbligatorio. Nome della variabile di matrice. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obbligatorio. Elenco di limiti relativi a ogni dimensione della matrice ridefinita.|  
   
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Regole  
   
-- **Più variabili.** È possibile ridimensionare numerose variabili di matrice nella stessa istruzione di dichiarazione e specificare i componenti `name` e `boundlist` per ogni variabile. Nel caso di più variabili, è possibile separarle mediante virgole.  
+- **Più variabili.** È possibile ridimensionare diverse variabili di matrice nella stessa istruzione di dichiarazione e specificare il `name` e `boundlist` le parti per ogni variabile. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
-- **Limiti di matrice.** Ogni voce in `boundlist` è in grado di specificare i limiti inferiori e superiori di tale dimensione. Il limite inferiore è sempre pari a 0 (zero). Il limite superiore rappresenta il valore di indice più alto possibile per la dimensione, non la lunghezza della dimensione (vale a dire, il limite superiore più uno). L'indice di ogni dimensione può variare tra 0 e il relativo valore di limite superiore.  
+- **Limiti della matrice.** Ogni voce in `boundlist` può specificare i limiti inferiore e superiore della dimensione. Il limite inferiore è sempre pari a 0 (zero). Il limite superiore rappresenta il valore di indice più alto possibile per la dimensione, non la lunghezza della dimensione (vale a dire, il limite superiore più uno). L'indice di ogni dimensione può variare tra 0 e il relativo valore di limite superiore.  
   
      Il numero di dimensioni in `boundlist` deve corrispondere al numero originale di dimensioni (livello) della matrice.  
   
-- **Tipi di dati.** L'istruzione `ReDim` non è in grado di modificare il tipo di dati di una variabile di matrice oppure i relativi elementi.  
+- **Tipi di dati.** L'istruzione `ReDim` non può modificare il tipo di dati di una variabile di matrice o dei relativi elementi.  
   
 - **Inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
   
-- **Numero di dimensioni.** L'istruzione `ReDim` non può modificare la classificazione (numero di dimensioni) della matrice.  
+- **Rank.** L'istruzione `ReDim` non può modificare il rango (numero di dimensioni) della matrice.  
   
 - **Ridimensionamento con Preserve.** Se si utilizza `Preserve`, è possibile ridimensionare solo l'ultima dimensione della matrice. Per ogni dimensione, è necessario specificare il limite della matrice esistente.  
   
      Ad esempio, se la matrice contiene solo una dimensione, è possibile ridimensionarla e mantenere tutto il contenuto della matrice, poiché si sta modificando l'ultima e unica dimensione. Tuttavia, se la matrice dispone di due o più dimensioni e si utilizza `Preserve`, è possibile modificare i valori soltanto per l'ultima dimensione.  
   
-- **proprietà.** È possibile utilizzare `ReDim` su una proprietà che contiene una matrice di valori.  
+- **Proprietà.** È possibile utilizzare `ReDim` su una proprietà che include una matrice di valori.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Sostituzione della matrice.** `ReDim` Rilascia la matrice esistente e crea una nuova matrice con lo stesso rango. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
+- **Sostituzione di matrici.** `ReDim` rilascia la matrice esistente e crea una nuova matrice con lo stesso rango. La nuova matrice sostituisce quella rilasciata nella variabile di matrice.  
   
-- **Inizializzazione senza Preserve.** Se non si specifica `Preserve`, `ReDim` inizializza gli elementi della nuova matrice utilizzando il valore predefinito per i loro tipi di dati.  
+- **Inizializzazione senza Preserve.** Se non si specifica `Preserve`, `ReDim` Inizializza gli elementi della nuova matrice utilizzando il valore predefinito per il tipo di dati.  
   
-- **Inizializzazione con Preserve.** Se si specifica `Preserve`, Visual Basic copia gli elementi dalla matrice esistente in quella nuova.  
+- **Inizializzazione con Preserve.** Se si specifica `Preserve`, Visual Basic copia gli elementi dalla matrice esistente alla nuova matrice.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene aumentata la grandezza dell'ultima dimensione di una matrice dinamica senza perdere i dati presenti nella matrice; in seguito, viene ridotta la dimensione con perdita di dati parziali. Infine, viene ridotta la dimensione del relativo valore originale e vengono inizializzati di nuovo tutti gli elementi della matrice.  
@@ -107,4 +107,4 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 - [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Istruzione Erase](../../../visual-basic/language-reference/statements/erase-statement.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)
-- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)

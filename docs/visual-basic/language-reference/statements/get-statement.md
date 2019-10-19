@@ -1,5 +1,5 @@
 ---
-title: Get (istruzione) (Visual Basic)
+title: Istruzione Get (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 33fa6811f952d240fb86bbdf59ca83df0afc03ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d76155b8ff29e4f5e9206ae8fc689fa4fcaf3b8c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625522"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581826"
 ---
 # <a name="get-statement"></a>Istruzione Get
-Dichiara un `Get` routine della proprietà utilizzata per recuperare il valore di una proprietà.  
+Dichiara una routine della proprietà `Get` utilizzata per recuperare il valore di una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Get()  
     [ statements ]  
 End Get  
@@ -33,43 +33,43 @@ End Get
   
 |Termine|Definizione|  
 |---|---|  
-|`attributelist`|Facoltativo. Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facoltativo in al massimo uno tra i `Get` e `Set` istruzioni in questa proprietà. Può essere uno dei seguenti:<br /><br /> -   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Facoltativo. Una o più istruzioni che vengono eseguite quando il `Get` routine della proprietà viene chiamato.|  
-|`End Get`|Obbligatorio. Termina la definizione del `Get` routine della proprietà.|  
+|`attributelist`|Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Facoltativo al massimo una delle istruzioni `Get` e `Set` in questa proprietà. Può essere uno dei seguenti:<br /><br /> -   [protetto](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privato](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Parametro facoltativo. Una o più istruzioni eseguite quando viene chiamata la routine della proprietà `Get`.|  
+|`End Get`|Obbligatorio. Termina la definizione della routine della proprietà `Get`.|  
   
 ## <a name="remarks"></a>Note  
- Ogni proprietà deve avere una `Get` routine della proprietà, a meno che la proprietà è contrassegnata `WriteOnly`. Il `Get` procedure viene utilizzata per restituire il valore corrente della proprietà.  
+ Ogni proprietà deve disporre di una routine della proprietà `Get`, a meno che la proprietà non sia contrassegnata `WriteOnly`. La procedura `Get` viene utilizzata per restituire il valore corrente della proprietà.  
   
- Visual Basic viene chiamata automaticamente una proprietà `Get` procedure quando un'espressione richiede il valore della proprietà.  
+ Visual Basic chiama automaticamente una routine `Get` della proprietà quando un'espressione richiede il valore della proprietà.  
   
- Il corpo della dichiarazione di proprietà può contenere solo della proprietà `Get` e `Set` procedure tra il [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) e il `End Property` istruzione. Non può contenere qualsiasi elemento diverso da tali procedure. In particolare, è possibile archiviare il valore della proprietà corrente. È necessario archiviare questo valore di fuori della proprietà, poiché se si archivia, all'interno di una delle routine della proprietà, le altre routine di proprietà non è possibile accedervi. In genere questo consiste nell'archiviare il valore in una [privato](../../../visual-basic/language-reference/modifiers/private.md) variabile dichiarata allo stesso livello della proprietà. È necessario definire un `Get` procedure all'interno della proprietà a cui viene applicata.  
+ Il corpo della dichiarazione di proprietà può contenere solo le `Get` della proprietà e `Set` le routine tra l' [istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md) e l'istruzione `End Property`. Non è possibile archiviare un valore diverso da tali procedure. In particolare, non è possibile archiviare il valore corrente della proprietà. È necessario archiviare questo valore all'esterno della proprietà, perché se viene archiviato in una delle routine della proprietà, l'altra routine della proprietà non potrà accedervi. L'approccio usuale consiste nell'archiviare il valore in una variabile [privata](../../../visual-basic/language-reference/modifiers/private.md) dichiarata allo stesso livello della proprietà. È necessario definire una procedura di `Get` all'interno della proprietà a cui si applica.  
   
- Il `Get` predefinito usato dalla procedura a livello di accesso della proprietà che la contiene meno di utilizzare `accessmodifier` nel `Get` istruzione.  
+ Per impostazione predefinita, la procedura `Get` il livello di accesso della proprietà che lo contiene, a meno che non si usi `accessmodifier` nell'istruzione `Get`.  
   
 ## <a name="rules"></a>Regole  
   
-- **Livelli di accesso misti.** Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi. In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà. Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Get` routine `Private`, ma non `Public`.  
+- **Livelli di accesso misti.** Se si definisce una proprietà di lettura/scrittura, è possibile specificare facoltativamente un livello di accesso diverso per la procedura `Get` o per la `Set`, ma non per entrambi. In tal caso, il livello di accesso della routine deve essere più restrittivo del livello di accesso della proprietà. Se, ad esempio, la proprietà viene dichiarata `Friend`, è possibile dichiarare la routine `Get` `Private`, ma non `Public`.  
   
-     Se si sta definendo un `ReadOnly` proprietà, il `Get` procedure rappresenta l'intera proprietà. Non è possibile dichiarare un accesso diverso a livello di `Get`, poiché verrebbero specificati due livelli di accesso per la proprietà.  
+     Se si definisce una proprietà `ReadOnly`, la routine `Get` rappresenta l'intera proprietà. Non è possibile dichiarare un livello di accesso diverso per `Get`, perché in questo modo verrebbero impostati due livelli di accesso per la proprietà.  
   
-- **Tipo restituito.** Il [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito. Il `Get` routine restituisce automaticamente che tipo di dati. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.  
+- **Tipo restituito.** L' [istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito. La procedura `Get` restituisce automaticamente il tipo di dati. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, una struttura, una classe o un'interfaccia.  
   
-     Se il `Property` istruzione non è specificato `returntype`, la stored procedure restituisce `Object`.  
+     Se l'istruzione `Property` non specifica `returntype`, la procedura restituisce `Object`.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Restituzione da una procedura.** Quando il `Get` routine restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
+- **Restituzione da una routine.** Quando la `Get` procedura restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
   
-     `Get` le routine della proprietà possono restituire un valore usando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito per il nome della proprietà. Per altre informazioni, vedere "Valore di restituire" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` routine Property può restituire un valore utilizzando l' [istruzione return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito al nome della proprietà. Per ulteriori informazioni, vedere "valore restituito" nell' [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà. Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.  
+     Le istruzioni `Exit Property` e `Return` generano un'uscita immediata da una routine Property. Un numero qualsiasi di istruzioni `Exit Property` e `Return` può essere visualizzato in qualsiasi punto della procedura ed è possibile combinare `Exit Property` e `Return` istruzioni.  
   
-- **Valore restituito.** Per restituire un valore da un `Get` procedure, è possibile assegnare il valore per il nome della proprietà o includerlo in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md). Il `Return` istruzione assegna contemporaneamente il `Get` procedure restituire valore e viene chiuso la procedura.  
+- **Valore restituito.** Per restituire un valore da una routine di `Get`, è possibile assegnare il valore al nome della proprietà o includerlo in un' [istruzione return](../../../visual-basic/language-reference/statements/return-statement.md). L'istruzione `Return` assegna simultaneamente il valore restituito della routine `Get` e chiude la procedura.  
   
-     Se si usa `Exit Property` senza assegnarle un valore per il nome della proprietà di `Get` procedure restituisce il valore predefinito per il tipo di dati della proprietà. Per altre informazioni, vedere "Valore di restituire" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+     Se si utilizza `Exit Property` senza assegnare un valore al nome della proprietà, la routine `Get` restituisce il valore predefinito per il tipo di dati della proprietà. Per ulteriori informazioni, vedere "valore restituito" nell' [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     L'esempio seguente illustra due modi la proprietà di sola lettura `quoteForTheDay` può restituire il valore della variabile privata `quoteValue`.  
+     Nell'esempio seguente vengono illustrati due modi per la proprietà di sola lettura `quoteForTheDay` possibile restituire il valore contenuto nella variabile privata `quoteValue`.  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Get` istruzione per restituire il valore di una proprietà.  
+ Nell'esempio seguente viene utilizzata l'istruzione `Get` per restituire il valore di una proprietà.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   

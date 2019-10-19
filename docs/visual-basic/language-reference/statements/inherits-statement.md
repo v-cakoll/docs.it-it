@@ -1,5 +1,5 @@
 ---
-title: Inherits (istruzione) (Visual Basic)
+title: Istruzione Inherits (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581746"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
-Fa sì che la classe corrente o l'interfaccia in modo che erediti da un'altra classe o un set di interfacce di attributi, le variabili, proprietà, procedure ed eventi.  
+Fa in modo che la classe o l'interfaccia corrente erediti gli attributi, le variabili, le proprietà, le procedure e gli eventi da un'altra classe o set di interfacce.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Inherits basetypenames  
 ```  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |Termine|Definizione|  
 |---|---|  
-|`basetypenames`|Obbligatorio. Il nome della classe da cui deriva questa classe.<br /><br /> -oppure-<br /><br /> I nomi delle interfacce da cui deriva questa interfaccia. Utilizzare le virgole per separare più nomi.|  
+|`basetypenames`|Obbligatorio. Nome della classe da cui deriva questa classe.<br /><br /> oppure<br /><br /> Nomi delle interfacce da cui deriva questa interfaccia. Utilizzare le virgole per separare più nomi.|  
   
 ## <a name="remarks"></a>Note  
- Se usato, il `Inherits` istruzione deve essere la prima riga non vuota e non di commento in una definizione di classe o interfaccia. Deve seguire immediatamente la `Class` o `Interface` istruzione.  
+ Se utilizzata, l'istruzione `Inherits` deve essere la prima riga non vuota non di commento in una definizione di classe o di interfaccia. Deve seguire immediatamente l'istruzione `Class` o `Interface`.  
   
- È possibile usare `Inherits` solo in una classe o interfaccia. Ciò significa che il contesto della dichiarazione di un'ereditarietà non può essere un file di origine, lo spazio dei nomi, struttura, modulo, procedura o blocco.  
+ È possibile utilizzare `Inherits` solo in una classe o in un'interfaccia. Ciò significa che il contesto di dichiarazione per un'ereditarietà non può essere un file di origine, uno spazio dei nomi, una struttura, un modulo, una procedura o un blocco.  
   
 ## <a name="rules"></a>Regole  
   
-- **Ereditarietà della classe.** Se una classe Usa il `Inherits` istruzione, è possibile specificare una sola classe base.  
+- **Ereditarietà della classe.** Se una classe utilizza l'istruzione `Inherits`, è possibile specificare una sola classe di base.  
   
      Una classe non può ereditare da una classe annidata al suo interno.  
   
-- **Ereditarietà dell'interfaccia.** Se un'interfaccia viene utilizzata la `Inherits` istruzione, è possibile specificare uno o più interfacce di base. È possibile ereditare da due interfacce, anche se ognuno definisce un membro con lo stesso nome. Se in questo caso, il codice di implementazione deve usare la qualificazione di nomi per specificare quale membro che sta implementando.  
+- **Ereditarietà dell'interfaccia.** Se un'interfaccia usa l'istruzione `Inherits`, è possibile specificare una o più interfacce di base. È possibile ereditare da due interfacce anche se ognuna definisce un membro con lo stesso nome. In tal caso, il codice di implementazione deve usare la qualificazione del nome per specificare il membro che sta implementando.  
   
-     Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo. Ad esempio, un `Public` interfaccia non può ereditare da un `Friend` interfaccia.  
+     Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo. Ad esempio, un'interfaccia `Public` non può ereditare da un'interfaccia `Friend`.  
   
      Un'interfaccia non può ereditare da un'interfaccia annidata al suo interno.  
   
- Un esempio di ereditarietà della classe in .NET Framework è la <xref:System.ArgumentException> classe che eredita dal <xref:System.SystemException> classe. Ciò fornisce <xref:System.ArgumentException> tutte le proprietà predefinite e le procedure necessarie per le eccezioni di sistema, ad esempio il <xref:System.Exception.Message%2A> proprietà e il <xref:System.Exception.ToString%2A> (metodo).  
+ Un esempio di ereditarietà della classe nel .NET Framework è la classe <xref:System.ArgumentException>, che eredita dalla classe <xref:System.SystemException>. Ciò consente di <xref:System.ArgumentException> tutte le proprietà e le procedure predefinite richieste dalle eccezioni di sistema, ad esempio la proprietà <xref:System.Exception.Message%2A> e il metodo <xref:System.Exception.ToString%2A>.  
   
- Un esempio di ereditarietà dell'interfaccia in .NET Framework è la <xref:System.Collections.ICollection> interfaccia che eredita dal <xref:System.Collections.IEnumerable> interfaccia. In questo modo, <xref:System.Collections.ICollection> eredita la definizione dell'enumeratore è necessaria per attraversare una raccolta.  
+ Un esempio di ereditarietà dell'interfaccia nel .NET Framework è l'interfaccia <xref:System.Collections.ICollection>, che eredita dall'interfaccia <xref:System.Collections.IEnumerable>. Questo fa sì che <xref:System.Collections.ICollection> erediti la definizione dell'enumeratore necessario per attraversare una raccolta.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il `Inherits` istruzione per mostrare come una classe denominata `thisClass` può ereditare tutti i membri di una classe base denominata `anotherClass`.  
+ Nell'esempio seguente viene utilizzata l'istruzione `Inherits` per mostrare in che modo una classe denominata `thisClass` può ereditare tutti i membri di una classe di base denominata `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente mostra l'ereditarietà di più interfacce.  
+ Nell'esempio seguente viene illustrata l'ereditarietà di più interfacce.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- L'interfaccia denominata `thisInterface` ora include tutte le definizioni di <xref:System.IComparable>, <xref:System.IDisposable>, e <xref:System.IFormattable> interfacce membri ereditati forniscono rispettivamente per il confronto di tipo specifico di due oggetti, rilasciando le risorse allocate e che esprime il valore di un oggetto come un `String`. Una classe che implementa `thisInterface` deve implementare ogni membro di ogni interfaccia di base.  
+ L'interfaccia denominata `thisInterface` include ora tutte le definizioni nelle interfacce <xref:System.IComparable>, <xref:System.IDisposable> e <xref:System.IFormattable> i membri ereditati forniscono rispettivamente per il confronto specifico del tipo di due oggetti, il rilascio delle risorse allocate e l'espressione del valore di oggetto come `String`. Una classe che implementa `thisInterface` deve implementare tutti i membri di ogni interfaccia di base.  
   
 ## <a name="see-also"></a>Vedere anche
 

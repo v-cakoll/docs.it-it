@@ -2,20 +2,20 @@
 title: Refactoring con una funzione pura (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 96e8534280d560502b04b1880273cf7254f36e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 361aef2baa2102f4f942b5ddd37ed8a9704fbf19
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666095"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582684"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring con una funzione pura (Visual Basic)
-Nell'esempio seguente effettua il refactoring nell'esempio precedente, [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), per usare una funzione pure. In questo esempio, il codice per individuare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  
+Nell'esempio seguente viene eseguito il refactoring dell'esempio precedente, effettuando il [refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), per utilizzare una funzione pure in questo esempio, il codice per trovare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione. Il codice oggetto del refactoring è indicato nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -149,7 +149,7 @@ End Module
   
  L'output ottenuto con questo esempio è uguale a quello ottenuto prima del refactoring:  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -174,6 +174,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Refactoring con un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Refactoring in funzioni pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

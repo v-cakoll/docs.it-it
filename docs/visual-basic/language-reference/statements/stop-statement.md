@@ -12,32 +12,32 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9382ee34842fc3a3b4b23f71848bda602c99780
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957625"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583227"
 ---
 # <a name="stop-statement-visual-basic"></a>Istruzione Stop (Visual Basic)
 Sospende l'esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Stop  
 ```  
   
 ## <a name="remarks"></a>Note  
- È possibile inserire `Stop` istruzioni in qualsiasi punto delle procedure per sospendere l'esecuzione. L'utilizzo `Stop` dell'istruzione è simile all'impostazione di un punto di interruzione nel codice.  
+ Per sospendere l'esecuzione, è possibile inserire `Stop` istruzioni in qualsiasi punto delle procedure. L'utilizzo dell'istruzione `Stop` è simile all'impostazione di un punto di interruzione nel codice.  
   
- L' `Stop` istruzione sospende l'esecuzione, ma, a `End`differenza di, non chiude alcun file né cancella alcuna variabile, a meno che non venga rilevata in un file eseguibile compilato (exe).  
+ L'istruzione `Stop` sospende l'esecuzione, ma a differenza di `End` non chiude alcun file né cancella alcuna variabile, a meno che non venga rilevata in un file eseguibile compilato (exe).  
   
 > [!NOTE]
-> Se l' `Stop` istruzione viene rilevata nel codice in esecuzione all'esterno del Integrated Development Environment (IDE), il debugger viene richiamato. Questo vale indipendentemente dal fatto che il codice sia stato compilato in modalità debug o al dettaglio.  
+> Se l'istruzione `Stop` viene rilevata nel codice in esecuzione all'esterno del Integrated Development Environment (IDE), il debugger viene richiamato. Questo vale indipendentemente dal fatto che il codice sia stato compilato in modalità debug o al dettaglio.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene `Stop` utilizzata l'istruzione per sospendere l'esecuzione per `For...Next` ogni iterazione del ciclo.  
+ In questo esempio viene utilizzata l'istruzione `Stop` per sospendere l'esecuzione per ogni iterazione nel ciclo di `For...Next`.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

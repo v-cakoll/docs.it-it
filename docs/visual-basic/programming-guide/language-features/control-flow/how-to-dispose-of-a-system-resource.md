@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eliminare una risorsa di sistema (Visual Basic)'
+title: 'Procedura: eliminare una risorsa di sistema (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906737"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583138"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: Eliminare una risorsa di sistema (Visual Basic)
-È possibile usare un `Using` blocco per garantire che il sistema elimina una risorsa quando il codice esce dal blocco. Ciò è utile se si usa una risorsa di sistema che utilizza una grande quantità di memoria o che altri componenti inoltre desiderano utilizzare.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: eliminare una risorsa di sistema (Visual Basic)
+È possibile usare un blocco di `Using` per garantire che il sistema elimini una risorsa quando il codice esce dal blocco. Questa opzione è utile se si usa una risorsa di sistema che usa una quantità elevata di memoria o che anche altri componenti desiderano usare.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Per eliminare una connessione al database quando il codice ha finito di usarlo  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Per eliminare una connessione al database al termine del codice  
   
-1. Assicurarsi di includere l'appropriato [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
+1. Assicurarsi di includere l' [istruzione Imports appropriata (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
   
-2. Creare un `Using` blocco con i `Using` e `End Using` istruzioni. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
+2. Creare un blocco di `Using` con le istruzioni `Using` e `End Using`. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
   
-3. Dichiarare la connessione e crearne un'istanza come parte di `Using` istruzione.  
+3. Dichiarare la connessione e crearne un'istanza come parte dell'istruzione `Using`.  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,11 +38,11 @@ ms.locfileid: "61906737"
     End Sub  
     ```  
   
-     Il sistema elimina le risorse, indipendentemente dal modo in cui si esce dal blocco, incluso il caso di un'eccezione non gestita.  
+     Il sistema elimina la risorsa indipendentemente dal modo in cui si esce dal blocco, incluso il caso di un'eccezione non gestita.  
   
-     Si noti che non è possibile accedere `sqc` all'esterno di `Using` blocca, perché il relativo ambito è limitato al blocco.  
+     Si noti che non è possibile accedere a `sqc` dall'esterno del blocco `Using`, perché il relativo ambito è limitato al blocco.  
   
-     È possibile usare questa stessa tecnica su una risorsa di sistema, ad esempio un handle di file o un wrapper COM. Si utilizza un `Using` bloccare quando si desidera essere sicuri che la risorsa disponibile per gli altri componenti dopo la chiusura di `Using` blocco.  
+     È possibile utilizzare la stessa tecnica in una risorsa di sistema, ad esempio un handle di file o un wrapper COM. Utilizzare un blocco di `Using` quando si desidera assicurarsi di lasciare la risorsa disponibile per altri componenti dopo aver terminato il blocco `Using`.  
   
 ## <a name="see-also"></a>Vedere anche
 

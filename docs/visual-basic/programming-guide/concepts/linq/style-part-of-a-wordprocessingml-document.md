@@ -1,13 +1,13 @@
 ---
-title: Parte di stile di visualizzazione di un WordprocessingML Document2
+title: Parte relativa allo stile di un document2 WordprocessingML
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907855"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582882"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
 In questo argomento è illustrato un esempio della parte di stile del documento WordprocessingML di Office Open XML.  
@@ -17,7 +17,7 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
   
  Lo stile del paragrafo predefinito ha un elemento con il seguente tag di apertura:  
   
-```  
+```xml  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
@@ -142,4 +142,4 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Informazioni dettagliate sui documenti WordprocessingML di Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

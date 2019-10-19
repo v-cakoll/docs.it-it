@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3c6766d9084962d006fe5e5d7d5cc723c2aad441
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046638"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582248"
 ---
 # <a name="withend-with-statement-visual-basic"></a>Istruzione With...End With (Visual Basic)
 
@@ -28,7 +28,7 @@ Esegue una serie di istruzioni che fanno riferimento più volte a un singolo ogg
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```vb
 With objectExpression
     [ statements ]
 End With
@@ -38,9 +38,9 @@ End With
 
 |Termine|Definizione|
 |---|---|
-|`objectExpression`|Richiesto. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|
-|`statements`|facoltativo. Una o più istruzioni tra `With` e `End With` che possono fare riferimento ai membri di un oggetto che verrà prodotto dalla valutazione di `objectExpression`.|
-|`End With`|Richiesto. Termina la definizione del blocco `With`.|
+|`objectExpression`|Obbligatorio. Espressione che restituisce un oggetto. L'espressione può essere arbitrariamente complessa ed essere valutata solo una volta. Può restituire qualsiasi tipo di dati, compresi i tipi di base.|
+|`statements`|Parametro facoltativo. Una o più istruzioni tra `With` e `End With` che possono fare riferimento ai membri di un oggetto che verrà prodotto dalla valutazione di `objectExpression`.|
+|`End With`|Obbligatorio. Termina la definizione del blocco `With`.|
 
 ## <a name="remarks"></a>Note
 
@@ -67,7 +67,7 @@ Non è consentita la creazione di rami in un'istruzione `With` dall'esterno del 
 A meno che il blocco non contenga un ciclo, le istruzioni vengono eseguite una sola volta. È possibile annidare tipi diversi di strutture di controllo. Per altre informazioni, vedere [strutture di controlli annidati](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per ulteriori informazioni ed esempi, vedere [inizializzatori di oggetto: Tipi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) denominati e anonimi e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> È possibile utilizzare la parola chiave `With` anche negli inizializzatori di oggetto. Per ulteriori informazioni ed esempi, vedere [inizializzatori di oggetto: tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Se si utilizza un blocco `With` solo per inizializzare le proprietà o i campi di un oggetto di cui è stata appena creata un'istanza, è possibile utilizzare un inizializzatore di oggetto.
 
@@ -87,5 +87,5 @@ Nell'esempio seguente vengono annidate le istruzioni `With…End With`. Nell'ist
 
 - <xref:System.Collections.Generic.List%601>
 - [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

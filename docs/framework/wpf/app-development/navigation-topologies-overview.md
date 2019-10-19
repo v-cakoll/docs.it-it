@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: b62432d64393f4fb749af2e25c42e2e0161de219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950741"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580714"
 ---
 # <a name="navigation-topologies-overview"></a>Cenni preliminari sulle topologie di navigazione
-<a name="introduction"></a>In questa panoramica viene fornita un'introduzione alle topologie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]di navigazione in. Di seguito vengono analizzate tre topologie di navigazione comuni con i relativi esempi.  
+<a name="introduction"></a>In questa panoramica viene fornita un'introduzione alle topologie di navigazione in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Di seguito vengono analizzate tre topologie di navigazione comuni con i relativi esempi.  
   
 > [!NOTE]
-> Prima di leggere questo argomento, è necessario avere familiarità con il concetto di navigazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] strutturata nell'utilizzo delle funzioni di pagina. Per altre informazioni su entrambi gli argomenti, vedere [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md).  
+> Prima di leggere questo argomento, è necessario avere familiarità con il concetto di navigazione strutturata in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando le funzioni di pagina. Per altre informazioni su entrambi gli argomenti, vedere [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md).  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -36,15 +36,15 @@ ms.locfileid: "69950741"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie di navigazione  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]la navigazione è in genere costituita<xref:System.Windows.Controls.Page>da pagine () con collegamenti<xref:System.Windows.Documents.Hyperlink>ipertestuali () che passano ad altre pagine quando si fa clic su di essa. Le pagine che sono state spostate sono identificate da [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (vedere URI di [pacchetto in WPF](pack-uris-in-wpf.md)). Si consideri il semplice esempio seguente che mostra le pagine, i [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]collegamenti ipertestuali e:  
+ In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] la navigazione è in genere costituita da pagine (<xref:System.Windows.Controls.Page>) con collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>) che passano ad altre pagine quando si fa clic su di essa. Le pagine che sono state spostate sono identificate da URI (Uniform Resource Identifier) (vedere [URI di pacchetto in WPF](pack-uris-in-wpf.md)). Si consideri il semplice esempio seguente che mostra le pagine, i collegamenti ipertestuali e gli URI (Uniform Resource Identifier):  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
- Queste pagine sono disposte in una topologia di *navigazione* la cui struttura è determinata dal modo in cui è possibile spostarsi tra le pagine. Questa particolare topologia di navigazione è adatta in scenari semplici. La navigazione può tuttavia richiedere topologie più complesse, alcune delle quali possono essere definite solo quando un'applicazione è in esecuzione.  
+ Queste pagine sono disposte in una *topologia di navigazione* la cui struttura è determinata dal modo in cui è possibile spostarsi tra le pagine. Questa particolare topologia di navigazione è adatta in scenari semplici. La navigazione può tuttavia richiedere topologie più complesse, alcune delle quali possono essere definite solo quando un'applicazione è in esecuzione.  
   
- In questo argomento vengono illustrate tre topologie di navigazione comuni: *lineare fissa*, *gerarchica fissa*e *generata dinamicamente*. Ogni topologia di navigazione viene illustrata con un esempio [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con un tipo simile a quello illustrato nella figura seguente:  
+ In questo argomento vengono illustrate tre topologie di navigazione comuni: *lineare fissa*, *gerarchica fissa*e *generata dinamicamente*. Ogni topologia di navigazione viene illustrata con un esempio con un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] come quello illustrato nella figura seguente:  
   
  ![Pagine di attività con elementi di dati e pulsanti di spostamento.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69950741"
   
  I comportamenti tipici per la navigazione in una topologia lineare fissa includono quanto segue:  
   
-- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]di avvio <xref:System.Windows.Navigation.PageFunction%601>(a-less) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
+- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina di avvio (<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
   
 - Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69950741"
   
  Anche se la sequenza di navigazione delle pagine in una struttura gerarchica fissa è determinata in fase di esecuzione, l'esperienza utente è la stessa di una topologia lineare fissa:  
   
-- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]di avvio <xref:System.Windows.Navigation.PageFunction%601>(a-less) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
+- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina di avvio (<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
   
 - Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "69950741"
   
  La sequenza di navigazione è indicata come topologia generata dinamicamente. L'esperienza utente è analoga alle topologie di navigazione precedenti:  
   
-- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]di avvio <xref:System.Windows.Navigation.PageFunction%601>(a-less) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
+- Navigazione dalla pagina chiamante a una pagina di avvio che inizializza la procedura guidata e porta alla prima pagina di questa. Non è necessaria una pagina di avvio (<xref:System.Windows.Navigation.PageFunction%601> senza [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]) perché una pagina chiamante può chiamare direttamente la prima pagina della procedura guidata. L'uso di una pagina di avvio può tuttavia semplificare l'inizializzazione della procedura guidata, in particolare se questa è complessa.  
   
 - Gli utenti possono spostarsi tra le pagine usando i pulsanti Avanti e Indietro (o i collegamenti ipertestuali).  
   

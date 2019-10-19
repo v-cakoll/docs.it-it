@@ -3,14 +3,14 @@ title: Generare e usare flussi asincroni
 description: Questa esercitazione avanzata illustra gli scenari in cui la generazione e l'uso di flussi asincroni rappresenta un modo più naturale di lavorare con sequenze di dati che potrebbero essere generate in modo asincrono.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216557"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579212"
 ---
-# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Esercitazione: Generare e usare flussi asincroni con C# 8.0 e .NET Core 3.0
+# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Esercitazione: generare e utilizzare flussi asincroni utilizzando C# 8,0 e .net core 3,0
 
 C# 8.0 introduce i **flussi asincroni**, che modellano un'origine di dati di flusso quando gli elementi nel flusso di dati possono essere recuperati o generati in modo asincrono. I flussi asincroni si basano sulle nuove interfacce introdotte in .NET Standard 2.1 e implementate in .NET Core 3.0 per fornire un modello di programmazione naturale per origini dati di flusso asincrone.
 
@@ -22,7 +22,7 @@ In questa esercitazione si imparerà a:
 > - Utilizzare tale origine dati in modo asincrono.
 > - Riconoscere quando la nuova interfaccia e l'origine dati sono da preferire rispetto alle sequenze di dati sincrone precedenti.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
@@ -58,7 +58,7 @@ L'implementazione spiega il comportamento evidenziato nella sezione precedente. 
 
 [!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
-Concentrarsi sull'algoritmo per la suddivisione in pagine e sulla struttura asincrona del codice precedente. (È possibile consultare la [documentazione per GraphQL di GitHub](https://developer.github.com/v4/guides/) per informazioni dettagliate sull'API GraphQL di GitHub.) Il metodo `runPagedQueryAsync` enumera i problemi dal più recente al meno recente. Richiede 25 problemi per ogni pagina ed esamina la struttura `pageInfo` della risposta per continuare con la pagina precedente. Viene rispettato il supporto della suddivisione in pagine standard di GraphQL per le risposte a più pagine. La risposta include un oggetto `pageInfo` che include un valore `hasPreviousPages` e un valore `startCursor` usato per richiedere la pagina precedente. I problemi sono nella matrice `nodes`. Il metodo `runPagedQueryAsync` aggiunge questi nodi in una matrice che contiene tutti i risultati da tutte le pagine.
+Concentrarsi sull'algoritmo per la suddivisione in pagine e sulla struttura asincrona del codice precedente. È possibile consultare la [documentazione di GitHub GraphQL](https://developer.github.com/v4/guides/) per informazioni dettagliate sull'API GraphQL di GitHub. Il metodo `runPagedQueryAsync` enumera i problemi dalla più recente alla meno recente. Richiede 25 problemi per ogni pagina ed esamina la struttura `pageInfo` della risposta per continuare con la pagina precedente. Viene rispettato il supporto della suddivisione in pagine standard di GraphQL per le risposte a più pagine. La risposta include un oggetto `pageInfo` che include un valore `hasPreviousPages` e un valore `startCursor` usato per richiedere la pagina precedente. I problemi sono nella matrice `nodes`. Il metodo `runPagedQueryAsync` aggiunge questi nodi in una matrice che contiene tutti i risultati da tutte le pagine.
 
 Dopo il recupero e il ripristino di una pagina di risultati, `runPagedQueryAsync` segnala lo stato e verifica se è presente una richiesta di annullamento. In caso affermativo, `runPagedQueryAsync` genera un'eccezione <xref:System.OperationCanceledException>.
 
@@ -135,7 +135,7 @@ Sostituire il codice con il ciclo `await foreach` seguente:
 
 ## <a name="run-the-finished-application"></a>Eseguire l'applicazione completata
 
-Eseguire di nuovo l'applicazione. Confrontare il comportamento con il comportamento dell'applicazione iniziale. La prima pagina di risultati viene enumerata non appena è disponibile. Esiste una pausa osservabile quando viene richiesta e recuperata ogni nuova pagina, poi i risultati della pagina successiva vengono enumerati rapidamente. Il blocco `try` / `catch` non è necessario per gestire l'annullamento: il chiamante può interrompere l'enumerazione della raccolta. Lo stato viene segnalato in modo chiaro perché il flusso asincrono genera i risultati quando viene scaricata ogni pagina.
+Eseguire di nuovo l'applicazione. Confrontare il comportamento con il comportamento dell'applicazione iniziale. La prima pagina di risultati viene enumerata non appena è disponibile. Esiste una pausa osservabile quando viene richiesta e recuperata ogni nuova pagina, poi i risultati della pagina successiva vengono enumerati rapidamente. Il blocco `try` / `catch` non è necessario per gestire l'annullamento: il chiamante può interrompere l'enumerazione della raccolta. Lo stato viene segnalato in modo chiaro perché il flusso asincrono genera i risultati quando viene scaricata ogni pagina. Lo stato di ogni problema restituito è facilmente incluso nel ciclo `await foreach`. Non è necessario un oggetto callback per tenere traccia dello stato di avanzamento.
 
 È possibile notare miglioramenti per l'uso della memoria esaminando il codice. Non è più necessario allocare una raccolta per archiviare tutti i risultati prima che vengano enumerati. Il chiamante può determinare come utilizzare i risultati e se è necessaria una raccolta di archiviazione.
 

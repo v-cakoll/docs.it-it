@@ -2,17 +2,17 @@
 title: Recupero dei paragrafi e dei relativi stili (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bc20556fb668db2db3e6bcfa42e96cc0d963b93
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787036"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582154"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Recupero dei paragrafi e dei relativi stili (Visual Basic)
 In questo esempio viene scritta una query che recupera i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo.  
   
- Questa query si basa sulla query nell'esempio precedente, [ricerca dello stile di paragrafo predefinito (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), che recupera lo stile predefinito dall'elenco degli stili. Queste informazioni sono necessarie per consentire alla query di identificare gli stili dei paragrafi per i quali non è stato impostato uno stile in modo esplicito. Gli stili dei paragrafi vengono impostati tramite l'elemento `w:pPr`. Se un paragrafo non contiene tale elemento, verrà formattato con lo stile predefinito.  
+ Questa query si basa sulla query dell'esempio precedente, [cercando lo stile di paragrafo predefinito (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), che recupera lo stile predefinito dall'elenco degli stili. Queste informazioni sono necessarie per consentire alla query di identificare gli stili dei paragrafi per i quali non è stato impostato uno stile in modo esplicito. Gli stili dei paragrafi vengono impostati tramite l'elemento `w:pPr`. Se un paragrafo non contiene tale elemento, verrà formattato con lo stile predefinito.  
   
  In questo argomento viene spiegata l'importanza di alcune parti della query e quindi viene illustrata la query in un esempio completo e funzionante.  
   
@@ -23,7 +23,7 @@ In questo esempio viene scritta una query che recupera i nodi dei paragrafi da u
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Questa espressione è simile all'origine della query nell'esempio precedente, [ricerca dello stile di paragrafo predefinito (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La differenza principale è data dall'utilizzo dell'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>, anziché dell'asse <xref:System.Xml.Linq.XContainer.Elements%2A>. La query usa l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A> perché nei documenti suddivisi in sezioni i paragrafi non saranno elementi figlio diretti dell'elemento del corpo, ma si troveranno due livelli più sotto nella gerarchia. Usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>, il codice verrà eseguito correttamente anche se nel documento vengono usate sezioni.  
+ Questa espressione è simile all'origine della query dell'esempio precedente, [ricerca dello stile di paragrafo predefinito (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La differenza principale è data dall'utilizzo dell'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>, anziché dell'asse <xref:System.Xml.Linq.XContainer.Elements%2A>. La query usa l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A> perché nei documenti suddivisi in sezioni i paragrafi non saranno elementi figlio diretti dell'elemento del corpo, ma si troveranno due livelli più sotto nella gerarchia. Usando l'asse <xref:System.Xml.Linq.XContainer.Descendants%2A>, il codice verrà eseguito correttamente anche se nel documento vengono usate sezioni.  
   
 ## <a name="example"></a>Esempio  
  La query usa una clausola `Let` per determinare l'elemento che contiene il nodo dello stile. Se non è presente nessun elemento, `styleNode` viene impostato su `Nothing`.  
@@ -39,7 +39,7 @@ Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i nodi dei paragrafi da un documento WordprocessingML. Viene inoltre identificato lo stile di ciascun paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
- È possibile trovare istruzioni per la creazione del documento di origine per questo esempio nella [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -111,9 +111,9 @@ Module Module1
 End Module  
 ```  
   
- In questo esempio produce il seguente output quando viene applicato al documento descritto [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Questo esempio produce l'output seguente quando viene applicato al documento descritto in [creazione del documento Office Open XML di origine (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
-```  
+```console  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Nell'argomento successivo [recuperando il testo dei paragrafi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), si creerà una query per recuperare il testo dei paragrafi.  
+ Nell'argomento successivo, [recuperando il testo dei paragrafi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), verrà creata una query per recuperare il testo dei paragrafi.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: modifica del contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
