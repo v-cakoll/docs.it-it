@@ -1,19 +1,19 @@
 ---
-title: Caratteri speciali (riferimenti di Visual Basic)
+title: Caratteri speciali (riferimenti per Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: c179ac69833404f0ad7e36cfcada1643d91d604d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7085c020cc21b0ca8b3fc46226c864d736ab0085
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945145"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582376"
 ---
-# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="b1867-102">Caratteri speciali (riferimenti di Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1867-102">Special Characters (Visual Basic Reference)</span></span>
+# <a name="special-characters-visual-basic-reference"></a><span data-ttu-id="02e81-102">Caratteri speciali (riferimenti per Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="02e81-102">Special Characters (Visual Basic Reference)</span></span>
 
-<span data-ttu-id="b1867-103">Caratteri speciali sono caratteri contestuali predefiniti che modifica l'elemento del programma a cui vengono anteposti.</span><span class="sxs-lookup"><span data-stu-id="b1867-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="b1867-104">Visual Basic supporta i caratteri speciali seguenti:</span><span class="sxs-lookup"><span data-stu-id="b1867-104">Visual Basic supports the following special character:</span></span> 
+<span data-ttu-id="02e81-103">I caratteri speciali sono caratteri contestuali predefiniti che modificano l'elemento del programma a cui vengono anteposti.</span><span class="sxs-lookup"><span data-stu-id="02e81-103">Special characters are predefined, contextual characters that modifies the program element to which they are prepended.</span></span> <span data-ttu-id="02e81-104">Visual Basic supporta il carattere speciale seguente:</span><span class="sxs-lookup"><span data-stu-id="02e81-104">Visual Basic supports the following special character:</span></span>
 
-- <span data-ttu-id="b1867-105">[$](interpolated.md), carattere di stringa interpolata.</span><span class="sxs-lookup"><span data-stu-id="b1867-105">[$](interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="02e81-105">[$](interpolated.md), carattere di stringa interpolata.</span><span class="sxs-lookup"><span data-stu-id="02e81-105">[$](interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b1867-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1867-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02e81-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="02e81-106">See also</span></span>
 
-- [<span data-ttu-id="b1867-107">Riferimenti di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b1867-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)
+- [<span data-ttu-id="02e81-107">Riferimenti di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02e81-107">Visual Basic Reference</span></span>](../../../visual-basic/language-reference/index.md)
