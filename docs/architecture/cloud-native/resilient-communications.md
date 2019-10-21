@@ -2,12 +2,12 @@
 title: Comunicazione resiliente
 description: Architettura di app .NET cloud native per Azure | Comunicazione resiliente
 ms.date: 06/30/2019
-ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214499"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315806"
 ---
 # <a name="resilient-communications"></a>Comunicazioni resilienti
 
@@ -20,7 +20,7 @@ In questo libro abbiamo evangelizzato i meriti del passaggio oltre la tradiziona
 - *Resilienza.* Come si gestiscono gli errori di breve durata e si mantiene stabile il sistema?
 - *Bilanciamento del carico.* In che modo il traffico in ingresso viene distribuito tra più istanze di un servizio?
 - *Sicurezza.* In che modo vengono applicati problemi di sicurezza, ad esempio la crittografia a livello di trasporto e la gestione dei certificati?
-- \* Monitoraggio distribuito. -In che modo è possibile correlare e acquisire la tracciabilità e il monitoraggio per una singola richiesta tra più servizi consumer?
+- *Monitoraggio distribuito.* -In che modo è possibile correlare e acquisire la tracciabilità e il monitoraggio per una singola richiesta tra più servizi consumer?
 
 Sebbene questi problemi possano essere risolti con diverse librerie e Framework, l'implementazione all'interno della codebase può essere costosa, complessa e dispendiosa in termini di tempo. Inoltre, si finisce con una soluzione in cui i problemi di infrastruttura sono associati alla logica di business.
 
@@ -34,7 +34,7 @@ Un approccio migliore consiste nel prendere in considerazione una tecnologia nuo
 
 Nella figura precedente si noti il modo in cui il proxy intercetta e gestisce le comunicazioni tra i microservizi e il cluster.
 
-Una mesh di servizi viene suddivisa logicamente in due componenti diversi: [Piano dati](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) e [piano di controllo](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). La figura 6-10 illustra questi componenti e le relative responsabilità.
+Una mesh di servizi viene suddivisa logicamente in due componenti diversi: un [piano dati](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) e un [piano di controllo](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). La figura 6-10 illustra questi componenti e le relative responsabilità.
 
 ![Controllo mesh di servizi e piano dati](./media/istio-control-and-data-plane.png)
 

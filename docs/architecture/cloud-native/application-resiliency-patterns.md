@@ -2,12 +2,12 @@
 title: Modelli di resilienza delle applicazioni
 description: Architettura di app .NET cloud native per Azure | Modelli di resilienza delle applicazioni
 ms.date: 06/30/2019
-ms.openlocfilehash: 8455584fe1d5b02f6d9543c3bad32cca7369c158
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183721"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315948"
 ---
 # <a name="application-resiliency-patterns"></a>Modelli di resilienza delle applicazioni
 
@@ -27,7 +27,7 @@ Si noti come nella figura precedente i criteri di resilienza si applicano ai mes
 
 **Figura 6-3**. Codici di stato HTTP da ritentare
 
-Domanda: Si ritenta un codice di stato HTTP 403-accesso negato? No. Il sistema funziona correttamente, ma informa il chiamante che non è autorizzato a eseguire l'operazione richiesta. È necessario prestare attenzione per ritentare solo le operazioni causate da errori.
+Domanda: si tenterà di ritentare un codice di stato HTTP 403-accesso negato? No. Il sistema funziona correttamente, ma informa il chiamante che non è autorizzato a eseguire l'operazione richiesta. È necessario prestare attenzione per ritentare solo le operazioni causate da errori.
 
 Come consigliato nel capitolo 1, gli sviluppatori Microsoft che creano applicazioni native del cloud dovrebbero avere come destinazione .NET Core. Nella versione 2,1 è stata introdotta la libreria [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) per la creazione di istanze client HTTP per l'interazione con risorse basate su URL. Sostituendo la classe HTTPClient originale, la classe factory supporta molte funzionalità avanzate, una delle quali è una [stretta integrazione](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) con la libreria di resilienza di Polly. Con esso, è possibile definire facilmente i criteri di resilienza nella classe di avvio dell'applicazione per gestire errori parziali e problemi di connettività.
 
@@ -45,7 +45,7 @@ Il [modello di ripetizione dei tentativi](https://docs.microsoft.com/azure/archi
 
 Nella figura precedente è stato implementato un modello di ripetizione dei tentativi per un'operazione di richiesta. È configurata in modo da consentire fino a quattro tentativi prima di avere esito negativo con un intervallo di backoff (tempo di attesa) a partire da due secondi, che viene raddoppiato in modo esponenziale per ogni tentativo successivo.
 
-- La prima chiamata ha esito negativo e restituisce un codice di stato HTTP 500. L'applicazione attende due secondi e riunisce la chiamata.
+- La prima chiamata ha esito negativo e restituisce un codice di stato HTTP 500. L'applicazione attende due secondi e ritenta la chiamata.
 - Anche la seconda chiamata ha esito negativo e restituisce un codice di stato HTTP 500. L'applicazione ora raddoppia l'intervallo di backoff a quattro secondi e ritenta la chiamata.
 - Infine, la terza chiamata ha esito positivo.
 - In questo scenario, l'operazione di ripetizione dei tentativi avrebbe tentato fino a quattro tentativi, raddoppiando la durata di backoff prima della mancata chiamata.

@@ -1,23 +1,23 @@
 ---
-title: Registrazione con Elastic stack
+title: Registrazione con Elastic Stack
 description: Registrazione con Elastic stack, logstash e Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: b3fd3ea30f46914e6513be79f7d949499142b381
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182832"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315795"
 ---
-# <a name="logging-with-elastic-stack"></a>Registrazione con Elastic stack 
+# <a name="logging-with-elastic-stack"></a>Registrazione con Elastic Stack 
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: Ricerca elastica, logstash e Kibana. Collettivamente questi strumenti sono noti come stack elastico o ELK.
+Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: ricerca elastica, logstash e Kibana. Collettivamente questi strumenti sono noti come stack elastico o ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quali sono i vantaggi di Elastic stack?
 
-Elastic stack fornisce la registrazione centralizzata in modo semplice e a basso costo. L'interfaccia utente semplifica l'analisi dei dati, in modo da poter dedicare tempo alla spigolatura dei dati, anziché a un'interfaccia goffa. Supporta un'ampia gamma di input, in modo che l'applicazione distribuita si estenda su più tipi di servizi, ma è possibile prevedere di continuare a inserire dati di log e metriche nel sistema. Elastic stack supporta inoltre le ricerche rapide anche nei set di dati di grandi dimensioni, consentendo alle applicazioni anche di grandi dimensioni di registrare dati dettagliati e comunque di potervi ottenere visibilità in modo efficiente.
+Elastic stack fornisce la registrazione centralizzata in modo semplice e a basso costo. L'interfaccia utente semplifica l'analisi dei dati, in modo da poter dedicare tempo alla spigolatura dei dati, anziché a un'interfaccia goffa. Supporta un'ampia gamma di input, in modo che l'applicazione distribuita si estenda su più tipi di servizi, ma è possibile prevedere di continuare a inserire dati di log e metriche nel sistema. Elastic stack supporta inoltre le ricerche rapide anche nei set di dati di grandi dimensioni, rendendo possibile anche per le applicazioni di grandi dimensioni registrare dati dettagliati e comunque essere in grado di renderli visibili in modo efficiente.
 
 ## <a name="logstash"></a>Logstash
 
@@ -63,7 +63,7 @@ La ricerca elastica è un motore di ricerca potente che può indicizzare i log M
 
 I messaggi di log che sono stati creati per contenere parametri o i cui parametri sono stati divisi tramite l'elaborazione di logstash, possono essere sottoposti a query direttamente perché elasticsearch conserva queste informazioni.
 
-Una query che cerca le prime 10 pagine visitate da `jill@example.com`viene visualizzata nella figura 7-4.
+Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene visualizzata nella figura 7-4.
 
 ```
 "query": {

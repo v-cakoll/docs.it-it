@@ -1,15 +1,15 @@
 ---
-title: Uso dei contenitori e degli agenti di orchestrazione
+title: Uso di contenitori e agenti di orchestrazione
 description: Uso dei contenitori Docker e degli agenti di orchestrazione Kubernetes in Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 4008a14e4db28e07d5fda0a1f175aada9ffe6734
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182881"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315886"
 ---
-# <a name="leveraging-containers-and-orchestrators"></a>Uso dei contenitori e degli agenti di orchestrazione
+# <a name="leveraging-containers-and-orchestrators"></a>Uso di contenitori e agenti di orchestrazione
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -53,8 +53,8 @@ I contenitori vengono definiti da file semplici che possono essere archiviati ne
 
 I contenitori non sono modificabili. Quando si ha la definizione di un contenitore, è possibile ricreare il contenitore che verrà eseguito esattamente allo stesso modo. Questa immutabilità si presta alla progettazione basata su componenti. Se alcune parti di un'applicazione non cambiano spesso come altre, perché ridistribuire l'intera applicazione quando è possibile distribuire solo le parti che cambiano più di frequente? Diverse funzionalità e problematiche trasversali di un'app possono essere suddivise in unità separate. La figura 3-2 Mostra come un'app monolitica può sfruttare i vantaggi di contenitori e microservizi delegando determinate funzionalità o funzionalità. Anche le funzionalità rimanenti nell'app sono state incluse nel contenitore.
 
-![Suddivisione di un'app monolitica per l'uso di microservizi nel back-end. **Figura 3-2**. ](./media/breaking-up-monolith-with-backend-microservices.png)
- Suddivisione di un'app monolitica per l'uso di microservizi nel back-end.
+![Breaking un'app monolitica per l'uso di microservizi nel back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
+**figura 3-2**. Suddivisione di un'app monolitica per l'uso di microservizi nel back-end.
 
 Le app native del cloud compilate con contenitori separati traggono vantaggio dalla possibilità di distribuire il maggior volume o il minor volume di un'applicazione in base alle esigenze. I singoli servizi possono essere ospitati in nodi con risorse appropriate per ogni servizio. L'ambiente in cui viene eseguito ogni servizio non è modificabile, può essere condiviso tra sviluppo, test e produzione e può essere facilmente sottoversione. L'accoppiamento tra aree diverse dell'applicazione si verifica in modo esplicito come chiamate o messaggi tra servizi, non dipendenze in fase di compilazione all'interno di Monolith. Qualsiasi parte dell'app complessiva può scegliere la tecnologia più sensata per la funzionalità o la funzionalità senza richiedere modifiche al resto dell'app.
 
@@ -62,14 +62,14 @@ Le app native del cloud compilate con contenitori separati traggono vantaggio da
 
 I servizi basati sui contenitori possono sfruttare i vantaggi di scalabilità offerti dagli strumenti di orchestrazione, ad esempio Kubernetes. I contenitori di progettazione conoscono solo se stessi. Quando si inizia a avere più contenitori che devono collaborare, può essere utile organizzarli a un livello superiore. Per organizzare un numero elevato di contenitori e le relative dipendenze condivise, ad esempio la configurazione di rete, sono disponibili gli strumenti di orchestrazione per salvare il giorno. Kubernetes è una piattaforma di orchestrazione dei contenitori progettata per automatizzare la distribuzione, il ridimensionamento e la gestione di applicazioni in contenitori. Crea un livello di astrazione su gruppi di contenitori e li organizza in *Pod*. I pod vengono eseguiti nei computer di lavoro denominati *nodi*. L'intero gruppo organizzato viene definito *cluster*. La figura 3-3 Mostra i diversi componenti di un cluster Kubernetes.
 
-![Componenti cluster Kubernetes. **Figura 3-3**. ](./media/kubernetes-cluster-components.png)
- Componenti cluster Kubernetes.
+componenti del cluster ![Kubernetes. ](./media/kubernetes-cluster-components.png)
+**figura 3-3**. Componenti cluster Kubernetes.
 
 Kubernetes offre il supporto incorporato per la scalabilità dei cluster per soddisfare la domanda. In combinazione con i microservizi in contenitori, offre alle applicazioni native del cloud la possibilità di rispondere in modo rapido ed efficiente ai picchi di domanda con risorse aggiuntive quando e dove sono necessari.
 
 ### <a name="declarative-versus-imperative"></a>Dichiarativo e imperativo
 
-Kubernetes supporta la configurazione dell'oggetto dichiarativa e imperativa. L'approccio imperativo prevede l'esecuzione di diversi comandi che indicano a Kubernetes cosa eseguire ogni passaggio del processo. *Eseguire* questa immagine. *Eliminare* questo pod. *Esporre* questa porta. Con l'approccio dichiarativo, si usa un file di configurazione che descrive *cosa si vuole* , anziché le *operazioni da eseguire* e Kubernetes i dati per ottenere lo stato finale desiderato. Se il cluster è già stato configurato usando i comandi imperativi, è possibile esportare un manifesto `kubectl get svc SERVICENAME -o yaml > service.yaml`dichiarativo usando. Verrà generato un file manifesto come il seguente:
+Kubernetes supporta la configurazione dell'oggetto dichiarativa e imperativa. L'approccio imperativo prevede l'esecuzione di diversi comandi che indicano a Kubernetes cosa eseguire ogni passaggio del processo. *Eseguire* questa immagine. *Eliminare* questo pod. *Esporre* questa porta. Con l'approccio dichiarativo, si usa un file di configurazione che descrive *cosa si vuole* , anziché le *operazioni da eseguire* e Kubernetes i dati per ottenere lo stato finale desiderato. Se il cluster è già stato configurato usando i comandi imperativi, è possibile esportare un manifesto dichiarativo usando `kubectl get svc SERVICENAME -o yaml > service.yaml`. Verrà generato un file manifesto come il seguente:
 
 ```yaml
 apiVersion: v1
@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-Quando si usa la configurazione dichiarativa, è possibile visualizzare in anteprima le modifiche che verranno apportate prima di eseguirne il commit usando `kubectl diff -f FOLDERNAME` la cartella in cui si trovano i file di configurazione. Quando si è certi di voler applicare le modifiche, eseguire `kubectl apply -f FOLDERNAME`. Aggiungere `-R` per elaborare in modo ricorsivo una gerarchia di cartelle.
+Quando si usa la configurazione dichiarativa, è possibile visualizzare in anteprima le modifiche che verranno apportate prima di eseguirne il commit usando `kubectl diff -f FOLDERNAME` sulla cartella in cui si trovano i file di configurazione. Quando si è certi di voler applicare le modifiche, eseguire `kubectl apply -f FOLDERNAME`. Aggiungere `-R` per elaborare in modo ricorsivo una gerarchia di cartelle.
 
 Oltre ai servizi, è possibile usare la configurazione dichiarativa per altre funzionalità di Kubernetes, ad esempio le *distribuzioni*. Le distribuzioni dichiarative vengono utilizzate dai controller di distribuzione per aggiornare le risorse del cluster. Le distribuzioni vengono usate per implementare nuove modifiche, ridimensionarle per supportare un carico maggiore o eseguire il rollback a una revisione precedente. Se un cluster è instabile, le distribuzioni dichiarative forniscono un meccanismo per ripristinare automaticamente il cluster allo stato desiderato.
 
@@ -121,7 +121,7 @@ Se non si è in grado di compilare l'applicazione in base ai principi dell'app a
 
 ## <a name="development-resources"></a>Risorse di sviluppo
 
-Questa sezione presenta un breve elenco di risorse di sviluppo che possono essere utili per iniziare a usare i contenitori e gli agenti di orchestrazione per l'applicazione successiva. Per informazioni aggiuntive su come progettare un'app per l'architettura di microservizi nativa del cloud, vedere la pagina relativa ai microservizi [.NET complementari di questo libro: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori).
+Questa sezione presenta un breve elenco di risorse di sviluppo che possono essere utili per iniziare a usare i contenitori e gli agenti di orchestrazione per l'applicazione successiva. Per informazioni aggiuntive su come progettare un'app per l'architettura di microservizi nativa del cloud, vedere l'articolo complementare [per i microservizi .NET di questo libro: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
 ### <a name="local-kubernetes-development"></a>Sviluppo Kubernetes locale
 
@@ -137,9 +137,9 @@ Che cos'è Minikube? Il progetto Minikube indica che Minikube implementa un clus
 - Dashboard
 - Runtime del contenitore: Docker, RKT, CRI-O e contenitori
 - Abilitazione di CNI (container Network Interface)
-- Ingress
+- Ingresso
 
-Dopo l'installazione di Minikube, è possibile iniziare a usarla rapidamente `minikube start` eseguendo il comando, che Scarica un'immagine e avvia il cluster Kubernetes locale. Una volta avviato il cluster, è possibile interagire con esso usando i comandi `kubectl` Kubernetes standard.
+Dopo l'installazione di Minikube, è possibile iniziare a usarla rapidamente eseguendo il comando `minikube start`, che Scarica un'immagine e avvia il cluster Kubernetes locale. Una volta avviato il cluster, è possibile interagire con esso usando i comandi Kubernetes `kubectl` standard.
 
 ### <a name="docker-desktop"></a>Desktop Docker
 
@@ -159,7 +159,7 @@ Visual Studio supporta lo sviluppo di Docker per le applicazioni Web. Quando si 
 
 **Figura 3-5**. Abilitazione del supporto Docker in Visual Studio
 
-Quando questa opzione è selezionata, il progetto viene creato con `Dockerfile` nella relativa radice, che può essere usato per compilare e ospitare l'app in un contenitore docker. Un esempio di Dockerfile è illustrato nella figura 3-6.
+Quando questa opzione è selezionata, il progetto viene creato con un `Dockerfile` nella radice, che può essere usato per creare e ospitare l'app in un contenitore docker. Un esempio di Dockerfile è illustrato nella figura 3-6.
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -192,15 +192,15 @@ Il comportamento predefinito quando viene eseguita l'app è configurato anche pe
 
 **Figura 3-7**. Opzioni di esecuzione di Docker per Visual Studio
 
-Oltre allo sviluppo locale, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) offre un modo pratico per consentire a più sviluppatori di lavorare con le proprie configurazioni Kubernetes all'interno di Azure. Come si può vedere nella figura 3-10, è anche possibile eseguire l'applicazione in Azure Dev Spaces.
+Oltre allo sviluppo locale, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) offre un modo pratico per consentire a più sviluppatori di lavorare con le proprie configurazioni Kubernetes all'interno di Azure. Come si può vedere nella figura 3-7, è anche possibile eseguire l'applicazione in Azure Dev Spaces.
 
-Se non si aggiunge il supporto di Docker all'applicazione ASP.NET Core al momento della creazione, è sempre possibile aggiungerla in un secondo momento. Dalla Esplora soluzioni di Visual Studio fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi** > **supporto Docker**, come illustrato nella figura 3-8.
+Se non si aggiunge il supporto di Docker all'applicazione ASP.NET Core al momento della creazione, è sempre possibile aggiungerla in un secondo momento. Dalla Esplora soluzioni di Visual Studio fare clic con il pulsante destro del mouse sul progetto e scegliere **aggiungi**  > **supporto Docker**, come illustrato nella figura 3-8.
 
 ![Aggiunta del supporto per Docker in Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Aggiunta del supporto per Docker in Visual Studio
 
-Oltre al supporto per Docker, è anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-11. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Dopo aver scelto l'agente di orchestrazione `azds.yaml` , viene aggiunto un file alla radice del progetto `charts` e viene aggiunta una cartella contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
+Oltre al supporto per Docker, è anche possibile aggiungere il supporto dell'orchestrazione del contenitore, illustrato nella figura 3-8. Per impostazione predefinita, l'agente di orchestrazione USA Kubernetes e Helm. Una volta scelto l'agente di orchestrazione, viene aggiunto un file di `azds.yaml` alla radice del progetto e viene aggiunta una cartella `charts` contenente i grafici Helm usati per configurare e distribuire l'applicazione in Kubernetes. La figura 3-9 Mostra i file risultanti in un nuovo progetto.
 
 ![Aggiunta del supporto dell'agente di orchestrazione in Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 

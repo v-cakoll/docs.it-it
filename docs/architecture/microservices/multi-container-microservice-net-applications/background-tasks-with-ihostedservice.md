@@ -2,12 +2,12 @@
 title: Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulle nuove opzioni per usare IHostedService e BackgroundService per implementare attività in background nei microservizi .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039877"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318679"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementare attività in background in microservizi con IHostedService e la classe BackgroundService
 
@@ -222,7 +222,7 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>Diagramma classi di riepilogo
 
-La figura seguente illustra un riepilogo visivo delle classi e delle interfacce visibili durante l'implementazione di IHostedServices.
+Nell'immagine seguente viene illustrato un riepilogo visivo delle classi e delle interfacce necessarie per l'implementazione di IHostedServices.
 
 ![Diagramma classi: IWebHost e IHost possono ospitare molti servizi, che ereditano da BackgroundService, che implementa IHostedService.](./media/image27.png)
 

@@ -2,12 +2,12 @@
 title: Informazioni sulle app cloud native
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Cosa accade per le applicazioni native del cloud?
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373914"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318429"
 ---
 # <a name="what-about-cloud-native-applications"></a>Informazioni sulle app cloud native
 
@@ -15,7 +15,7 @@ Sebbene le applicazioni [native del cloud](https://azure.microsoft.com/overview/
 
 Figura 4-3 posizioni delle app native del cloud nei livelli di maturità della modernizzazione delle applicazioni:
 
-![Posizionamento di applicazioni native del cloud](./media/image3.png)
+![Diagramma che illustra come posizionare le applicazioni native del cloud.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **Figura 4-3.** Posizionamento di applicazioni native del cloud
 
@@ -25,7 +25,7 @@ I principali pilastri delle applicazioni native del cloud sono basati su approcc
 
 La figura 4-4 illustra le caratteristiche principali del modello nativo del cloud.
 
-![Le caratteristiche native del cloud sono microservizi, contenitori, resilienti per il cloud, agenti di orchestrazione e senza server](./media/image4.png)
+![Diagramma che elenca le principali caratteristiche native del cloud.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **Figura 4-4.** Caratteristiche native del cloud
 
@@ -41,7 +41,7 @@ L' [app a dodici fattori](https://12factor.net/) (una raccolta di modelli strett
 
 [Cloud native Computing Foundation (CNCF)](https://www.cncf.io/) è un promotore primario di principi nativi del cloud. Microsoft è [membro di CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Per una definizione di esempio e per altre informazioni sulle caratteristiche delle applicazioni native del cloud, vedere l'articolo di Gartner [How to Architect and Design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Per indicazioni specifiche da Microsoft su come implementare un'applicazione nativa del cloud, vedere [microservizi .NET: Architettura per le applicazioni](https://aka.ms/microservicesebook).NET in contenitori.
+Per una definizione di esempio e per altre informazioni sulle caratteristiche delle applicazioni native del cloud, vedere l'articolo di Gartner [How to Architect and Design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Per indicazioni specifiche da Microsoft su come implementare un'applicazione nativa del cloud, vedere [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
 Il fattore più importante da considerare quando si esegue la migrazione di un'applicazione completa al modello nativo del cloud è che è necessario riprogettare un'architettura basata su microservizi. Questa operazione richiede chiaramente un investimento significativo nello sviluppo a causa del notevole processo di refactoring. Questa opzione viene in genere scelta per le applicazioni cruciali che necessitano di nuovi livelli di scalabilità e agilità a lungo termine. Tuttavia, è possibile iniziare a passare a native del cloud aggiungendo microservizi per alcuni nuovi scenari e infine effettuare il refactoring dell'applicazione come microservizi. Si tratta di un approccio incrementale che rappresenta la scelta migliore per alcuni scenari.
 
@@ -55,7 +55,7 @@ I microservizi, tuttavia, non sono obbligatori per qualsiasi applicazione nuova 
 
 L'architettura dei microservizi sta diventando l'approccio preferito per le applicazioni mission-critical distribuite e grandi o complesse basate su più sottosistemi indipendenti sotto forma di servizi autonomi. In un'architettura basata su microservizi, un'applicazione viene creata come una raccolta di servizi che possono essere sviluppati, testati, sottoposti a controllo delle versioni, distribuiti e ridimensionati in modo indipendente. Questo può includere qualsiasi database autonomo correlato per microservizio.
 
-Per un'analisi dettagliata di un'architettura di microservizi che è possibile implementare con .NET Core, vedere l'e-book [PDF scaricabile: Architettura per le applicazioni](https://aka.ms/microservicesebook).NET in contenitori. La guida è disponibile anche in [linea](../../microservices/index.md).
+Per un'analisi dettagliata di un'architettura di microservizi che è possibile implementare con .NET Core, vedere l'e-book PDF scaricabile [per i microservizi .NET: architettura per le applicazioni .NET in contenitori](https://aka.ms/microservicesebook). La guida è disponibile anche in [linea](../../microservices/index.md).
 
 Tuttavia, anche negli scenari in cui i microservizi offrono potenti funzionalità indipendenti dalla distribuzione, i limiti del sottosistema e la diversità tecnologica, generano anche molte nuove problemi. I problemi sono correlati allo sviluppo di applicazioni distribuite, ad esempio modelli di dati frammentati e indipendenti; raggiungimento di una comunicazione resiliente tra microservizi; la necessità di coerenza finale; e complessità operativa. I microservizi introducono un livello di complessità superiore rispetto alle applicazioni monolitiche tradizionali.
 

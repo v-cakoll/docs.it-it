@@ -3,12 +3,12 @@ title: Comunicazione da servizio a servizio
 description: Informazioni sul modo in cui i microservizi nativi del cloud back-end comunicano con altri microservizi back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214394"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315859"
 ---
 # <a name="service-to-service-communication"></a>Comunicazione da servizio a servizio
 
@@ -50,7 +50,7 @@ L'esecuzione di una richiesta non frequente che esegue una singola chiamata HTTP
 
 **Figura 4-9**. Concatenamento di query HTTP
 
-È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il \#passaggio 3 ha esito negativo? O il \#passaggio 8 ha esito negativo? Come si esegue il ripristino? Cosa accade se \#il passaggio 6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
+È certamente possibile immaginare il rischio nella progettazione mostrata nell'immagine precedente. Cosa accade se il passaggio \#3 non riesce? O il passaggio \#8 non riesce? Come si esegue il ripristino? Cosa accade se il passaggio \#6 è lento perché il servizio sottostante è occupato? Come continuare? Anche se tutto funziona correttamente, si può pensare alla latenza utilizzata da questa chiamata, ovvero la somma della latenza di ogni passaggio.
 
 L'elevato livello di accoppiamento nell'immagine precedente suggerisce che i servizi non sono stati modellati in modo ottimale. Behoove al team di rivedere la loro progettazione.
 
@@ -78,7 +78,7 @@ Un altro approccio per separare i messaggi HTTP sincroni è un [modello Request/
 
 In questo caso, il producer di messaggi crea un messaggio basato su query che contiene un ID di correlazione univoco e lo inserisce in una coda di richieste. Il servizio consumer rimuove dalla coda i messaggi, li elabora e inserisce la risposta nella coda di risposta con lo stesso ID di correlazione. Il servizio Producer rimuove il messaggio dalla coda, ne corrisponde l'ID di correlazione e continua l'elaborazione. Le code sono descritte in dettaglio nella sezione successiva.
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 
 Un altro tipo di interazione di comunicazione è un *comando*. Un microservizio può richiedere un altro microservizio per eseguire un'azione. Il microservizio degli ordini potrebbe richiedere il microservizio shipping per creare una spedizione per un ordine approvato. Nella figura 4-12, un microservizio, denominato Producer, invia un messaggio a un altro microservizio, il consumer, che lo comanda per eseguire un'operazione. 
 
@@ -90,7 +90,7 @@ In genere, il producer non richiede una risposta e può *attivare e dimenticare*
 
 Una coda di messaggi è un costrutto intermediario attraverso il quale un producer e un consumer passano un messaggio. Le code implementano un modello di messaggistica Point-to-Point asincrono. Il produttore sa dove deve essere inviato un comando e viene indirizzato in modo appropriato. La coda garantisce che un messaggio venga elaborato esattamente da una delle istanze del consumer che eseguono la lettura dal canale. In questo scenario, il servizio Producer o consumer può essere scalato in orizzontale senza influire sull'altro. Inoltre, le tecnologie possono essere diversi su ogni lato, ovvero potrebbe essere presente un microservizio Java che chiama un microservizio [Golang](https://golang.org) . 
 
-Nel capitolo 1, abbiamo parlato dei *servizi di supporto*. I servizi di supporto sono risorse ausiliarie su cui dipendono i sistemi nativi del cloud. Le code di messaggi sono servizi di supporto. Il cloud di Azure supporta due tipi di code di messaggi che possono essere utilizzati dai sistemi nativi del cloud per implementare la messaggistica dei comandi: Code di archiviazione di Azure e code del bus di servizio di Azure.
+Nel capitolo 1, abbiamo parlato dei *servizi di supporto*. I servizi di supporto sono risorse ausiliarie su cui dipendono i sistemi nativi del cloud. Le code di messaggi sono servizi di supporto. Il cloud di Azure supporta due tipi di code di messaggi che possono essere utilizzati dai sistemi nativi del cloud per implementare la messaggistica dei comandi: le code di archiviazione di Azure e le code del bus di servizio di Azure.
 
 ### <a name="azure-storage-queues"></a>Code di archiviazione di Azure
 
@@ -134,7 +134,7 @@ Altre due funzionalità aziendali sono il partizionamento e le sessioni. Una cod
 
 Le [sessioni del bus di servizio](https://codingcanvas.com/azure-service-bus-sessions/) forniscono un modo per raggruppare i messaggi correlati. Si immagini uno scenario del flusso di lavoro in cui i messaggi devono essere elaborati insieme e l'operazione è stata completata alla fine. Per sfruttare i vantaggi, le sessioni devono essere abilitate in modo esplicito per la coda e ogni messaggio correlato deve contenere lo stesso ID di sessione.
 
-Tuttavia, esistono alcune avvertenze importanti: Le dimensioni delle code del bus di servizio sono limitate a 80 GB, molto più piccole rispetto a quelle disponibili nelle code di archiviazione. Inoltre, le code del bus di servizio incorrono un costo di base e un addebito per ogni operazione.
+Tuttavia, esistono alcuni aspetti importanti: le dimensioni delle code del bus di servizio sono limitate a 80 GB, il che è molto più piccolo rispetto a quello disponibile dalle code di archiviazione. Inoltre, le code del bus di servizio incorrono un costo di base e un addebito per ogni operazione.
 
 La figura 4-14 illustra l'architettura di alto livello di una coda del bus di servizio.
 
@@ -144,7 +144,7 @@ La figura 4-14 illustra l'architettura di alto livello di una coda del bus di se
 
 Nella figura precedente si noti la relazione Point-to-Point. Due istanze dello stesso provider accodano i messaggi in una singola coda del bus di servizio. Ogni messaggio viene utilizzato da una sola delle tre istanze di consumer a destra. Viene quindi illustrato come implementare la messaggistica in cui i diversi consumer possono essere tutti interessati allo stesso messaggio.
 
-## <a name="events"></a>Eventi
+## <a name="events"></a>eventi
 
 Accodamento messaggi è un modo efficace per implementare la comunicazione in cui un producer può inviare un messaggio in modo asincrono a un consumer. Tuttavia, cosa accade quando *molti utenti diversi* sono interessati allo stesso messaggio? Una coda di messaggi dedicata per ogni consumer non avrebbe scalato bene e sarebbe diventato difficile da gestire. 
 
@@ -166,9 +166,9 @@ Con la gestione degli eventi, la tecnologia di Accodamento viene spostata *negli
 
 **Figura 4-16**. Architettura degli argomenti
 
-Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. Qui viene inviato un evento "CreateOrder" alla sottoscrizione \#1 e alla sottoscrizione \#3, ma non alla sottoscrizione \#2. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \#2 e alla sottoscrizione \#3.
+Nella figura precedente, i Publisher inviano messaggi all'argomento. Al termine, i sottoscrittori ricevono messaggi dalle sottoscrizioni. Al centro, l'argomento invia messaggi alle sottoscrizioni in base a un set di *regole*, visualizzate in caselle blu scuro. Le regole fungono da filtro che trasmette messaggi specifici a una sottoscrizione. In questo caso, un evento "CreateOrder" verrebbe inviato alla sottoscrizione \#1 e \#3 di sottoscrizione, ma non al \#2 di sottoscrizione. Un evento "OrderCompleted" verrebbe inviato alla sottoscrizione \#2 e \#3 di sottoscrizione.
 
-Il cloud di Azure supporta due servizi diversi per gli argomenti: Argomenti del bus di servizio di Azure e Azure EventGrid.
+Il cloud di Azure supporta due servizi di argomento diversi: gli argomenti del bus di servizio di Azure e Azure EventGrid.
 
 ### <a name="azure-service-bus-topics"></a>Argomenti del bus di servizio di Azure
 
@@ -208,7 +208,7 @@ Griglia di eventi è un servizio cloud senza server completamente gestito. Viene
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Streaming di messaggi nel cloud di Azure
 
-Il bus di servizio e griglia di eventi di Azure offrono un supporto eccezionale per le applicazioni che espongono singoli eventi discreti come un nuovo documento inserito in un Cosmos DB). Tuttavia, cosa accade se il sistema nativo del cloud deve elaborare un *flusso di eventi correlati*? I [flussi di eventi](https://msdn.microsoft.com/magazine/dn904671.aspx?f=255&MSPPError=-2147217396) sono più complessi. In genere sono ordinati in termini di tempo, intercorrelati e devono essere elaborati come un gruppo.
+Il bus di servizio e griglia di eventi di Azure offrono un supporto eccezionale per le applicazioni che espongono singoli eventi discreti, ad esempio un nuovo documento inserito in un Cosmos DB. Tuttavia, cosa accade se il sistema nativo del cloud deve elaborare un *flusso di eventi correlati*? I [flussi di eventi](https://msdn.microsoft.com/magazine/dn904671) sono più complessi. In genere sono ordinati in termini di tempo, intercorrelati e devono essere elaborati come un gruppo.
 
 [Hub eventi di Azure](https://azure.microsoft.com/services/event-hubs/) è una piattaforma di streaming di dati e un servizio di inserimento di eventi che raccoglie, trasforma e archivia gli eventi. È ottimizzato per acquisire i dati di streaming, ad esempio le notifiche di eventi continui emesse da un contesto di telemetria. Il servizio è altamente scalabile e può archiviare ed [elaborare milioni di eventi al secondo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Come illustrato nella figura 4-18, spesso si tratta di una porta anteriore per una pipeline di eventi, disaccoppiando il flusso di inserimento dal consumo di eventi.
 

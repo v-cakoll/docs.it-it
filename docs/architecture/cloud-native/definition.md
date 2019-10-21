@@ -3,12 +3,12 @@ title: Definizione di cloud nativo
 description: Informazioni sui pilastri fondamentali che forniscono il fondamento per i sistemi nativi del cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291207"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315941"
 ---
 # <a name="defining-cloud-native"></a>Definizione del cloud nativo
 
@@ -22,9 +22,9 @@ I sistemi nativi del cloud sono progettati per adottare modifiche rapide, scalab
 
 Cloud native Computing Foundation fornisce una [definizione ufficiale](https://github.com/cncf/foundation/blob/master/charter.md):
 
-> *Cloud-le tecnologie native consentono alle organizzazioni di creare ed eseguire applicazioni scalabili in ambienti dinamici moderni, ad esempio cloud pubblici, privati e ibridi. Contenitori, mesh di servizi, microservizi, infrastruttura non modificabile e API dichiarative esemplificano questo approccio.*
+> *Le tecnologie native del cloud consentono alle organizzazioni di creare ed eseguire applicazioni scalabili in ambienti dinamici moderni, ad esempio cloud pubblici, privati e ibridi. I contenitori, le mesh dei servizi, i microservizi, l'infrastruttura non modificabile e le API dichiarative esemplificano questo approccio.*
 
-> le tecniche @no__t 0These consentono sistemi a regime di controllo libero, resilienti, gestibili e osservabili. Combinate con un'automazione affidabile, consentono ai tecnici di apportare modifiche a un elevato livello di frequenza e prevedibili con una fatica minima. *
+> *Queste tecniche consentono sistemi a regime di controllo libero, resilienti, gestibili e osservabili. Combinati con un'automazione affidabile, consentono ai tecnici di apportare modifiche a un elevato livello di frequenza e prevedibili con una fatica minima.*
 
 Le applicazioni sono diventate sempre più complesse con gli utenti che ne richiedono sempre di più. Gli utenti si aspettano velocità di risposta rapida, funzionalità innovative e nessun tempo di inattività. I problemi di prestazioni, gli errori ricorrenti e l'impossibilità di muoversi velocemente non sono più accettabili. Si passerà facilmente al tuo concorrente.
 
@@ -54,7 +54,7 @@ I sistemi nativi del Cloud sfruttano al meglio il modello del servizio cloud.
 
 Progettato per prosperare in un ambiente cloud virtualizzato e dinamico, questi sistemi fanno ampio uso dell'infrastruttura di calcolo [PaaS (Platform as a Service)](https://azure.microsoft.com/overview/what-is-paas/) e dei servizi gestiti. Gestiscono l'infrastruttura sottostante come con provisioning *Disposable* in pochi minuti e ridimensionato, ridimensionato, spostato o eliminato su richiesta, tramite l'automazione.
 
-Si consideri il concetto di DevOps ampiamente accettato di [Pets rispetto a Bestiame @ no__t-0. In una data center tradizionale, i server vengono considerati come *animali domestici*: un computer fisico, dato un nome significativo e curato. Per la scalabilità, è possibile aggiungere altre risorse allo stesso computer (scalabilità verticale). Se il server si ammala, è necessario invitarlo di nuovo all'integrità. Se il server non è più disponibile, tutti gli avvisi.
+Prendere in considerazione il concetto di DevOps di [animali domestici e bestiame](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)ampiamente accettato. In una data center tradizionale, i server vengono considerati come *animali domestici*: un computer fisico, dato un nome significativo e curato. Per la scalabilità, è possibile aggiungere altre risorse allo stesso computer (scalabilità verticale). Se il server si ammala, è necessario invitarlo di nuovo all'integrità. Se il server non è più disponibile, tutti gli avvisi.
 
 Il modello del servizio *bestiame* è diverso. Si esegue il provisioning di ogni istanza come macchina virtuale o contenitore. Sono identici e vengono assegnati a un identificatore di sistema, ad esempio Service-01, Service-02 e così via. La scalabilità viene eseguita creandone più di una (scalabilità orizzontale). Quando una non è più disponibile, nessuno lo rileva.
 
@@ -76,16 +76,16 @@ Sebbene sia applicabile a qualsiasi applicazione basata su Web, molti profession
 
 Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
-|    |  Fattore | Spiegazione  |
+|    |  Fattore | Descrizione  |
 | :-------- | :-------- | :-------- |
 | 1 | Codebase | Una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti (QA, staging, produzione). |
-| 2 | Dependencies | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
-| 3 | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
+| 2 | Dipendenze | Ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza alcun effetto sull'intero sistema. |
+| 3\. | Configurazioni  | Le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice. La stessa distribuzione può propagarsi tra gli ambienti con la configurazione corretta applicata.  |
 | 4 | Servizi di supporto | Le risorse ausiliarie (archivi dati, cache, broker di messaggi) devono essere esposte tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendo l'interscambiabilità.  |
 | 5 | Compilazione, versione, esecuzione | Ogni versione deve applicare una rigorosa separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback. I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. |
 | 6 | Processi | Ogni microservizio deve essere eseguito in un processo distinto, isolato da altri servizi in esecuzione. Externalize lo stato richiesto a un servizio di supporto, ad esempio una cache distribuita o un archivio dati. |
 | 7 | Binding porta | Ogni microservizio deve essere autonomo con le interfacce e le funzionalità esposte sulla relativa porta. In questo modo viene fornito l'isolamento da altri microservizi. |
-| 8 | Concorrenza | I servizi vengono scalati orizzontalmente in un numero elevato di processi identici (copie) identici rispetto alla scalabilità verticale di una singola istanza large nel computer più potente disponibile. |
+| 8 | concorrenza | I servizi vengono scalati orizzontalmente in un numero elevato di processi identici (copie) identici rispetto alla scalabilità verticale di una singola istanza large nel computer più potente disponibile. |
 | 9 | Disponibilità | Le istanze del servizio devono essere eliminate, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano intrinsecamente questo requisito. |
 | 10 | Parità sviluppo/prod | Mantieni gli ambienti nel ciclo di vita dell'applicazione nel modo più simile possibile, evitando costosi collegamenti. In questo caso, l'adozione di contenitori può contribuire significativamente con la promozione dello stesso ambiente di esecuzione. |
 | 11 | Registrazione | Considera i log generati dai microservizi come flussi di eventi. È possibile elaborarli con un aggregatore di eventi e propagarli a strumenti di gestione dei log e di data mining quali monitoraggio di Azure o Splunk e infine l'archiviazione a lungo termine. |
@@ -93,7 +93,7 @@ Nella tabella seguente viene evidenziata la metodologia a dodici fattori:
 
 Nel libro, [oltre all'app a dodici](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)fattori, l'autore Kevin Hoffman Details ognuno dei 12 fattori originali (scritti in 2011). Inoltre, il libro offre tre fattori aggiuntivi che riflettono la progettazione di applicazioni cloud moderne di oggi.
 
-|    |  Nuovo fattore | Spiegazione  |
+|    |  Nuovo fattore | Descrizione  |
 | :-------- | :-------- | :-------- |
 | 13 | Prima API | Rendere tutto un servizio. Si supponga che il codice venga utilizzato da un client front-end. Gateway o un altro servizio. |
 | 14 | Telemetria | In una workstation è possibile ottenere visibilità approfondita dell'applicazione e del relativo comportamento. Nel cloud non è necessario. Assicurarsi che la progettazione includa la raccolta di dati di monitoraggio, specifici del dominio e integrità/sistema. |
@@ -154,7 +154,7 @@ La figura 1-4 contrasta l'approccio di un'applicazione monolitica con un approcc
 
 Si noti che i microservizi innalzano di livello il principio "un solo codebase, un'applicazione" dall' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza nel capitolo.
 
-> *Factor \#1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Rilevato con il controllo della versione, è possibile eseguire la distribuzione in più ambienti "*
+> *Factor \#1 specifica "una singola codebase per ogni microservizio, archiviato nel proprio repository. Con il controllo della versione, è possibile eseguire la distribuzione in più ambienti.*
 
 ### <a name="why-microservices"></a>Perché usare i microservizi?
 
@@ -166,7 +166,7 @@ In precedenza nel capitolo è stata confrontata un'applicazione di eCommerce cre
 
 - Ogni microservizio può essere ridimensionato in modo indipendente. Anziché ridimensionare l'intera applicazione come singola unità, è possibile scalare solo i servizi che richiedono una maggiore potenza di elaborazione o la larghezza di banda di rete. Questo approccio con granularità fine per la scalabilità consente un maggiore controllo del sistema e consente di ridurre i costi complessivi quando si ridimensionano le parti del sistema, non tutti gli elementi.
 
-Una guida di riferimento eccellente per informazioni sui microservizi è @no__t microservizi 0.NET: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/standard/microservices-architecture/) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
+Una guida di riferimento eccellente per comprendere i microservizi è [microservizi .NET: architettura per le applicazioni .NET in contenitori](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Il libro approfondisce la progettazione e l'architettura di microservizi. È un complemento per un' [architettura di riferimento del microservizio con stack completo](https://github.com/dotnet-architecture/eShopOnContainers) disponibile come download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Sviluppo di microservizi
 
@@ -174,7 +174,7 @@ I microservizi possono essere creati con qualsiasi piattaforma di sviluppo moder
 
 La piattaforma Microsoft .NET Core è un'ottima scelta. Disponibile e open source, offre molte funzionalità predefinite per semplificare lo sviluppo di microservizi. .NET Core è multipiattaforma. Le applicazioni possono essere compilate ed eseguite su Windows, macOS e la maggior parte delle versioni di Linux.
 
-.NET Core è altamente efficiente e ha un punteggio ottimale rispetto a node. js e ad altre piattaforme complete. È interessante notare che [TechEmpower](https://www.techempower.com/) ha condotto un ampio set di [benchmark delle prestazioni](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) in molti Framework e piattaforme di applicazioni Web. .NET Core ha un punteggio nelle prime 10, ben oltre node. js e altre piattaforme in competizione. 
+.NET Core è altamente efficiente e ha un punteggio ottimale rispetto a node. js e ad altre piattaforme in competizione. È interessante notare che [TechEmpower](https://www.techempower.com/) ha condotto un ampio set di [benchmark delle prestazioni](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) in molti Framework e piattaforme di applicazioni Web. .NET Core ha un punteggio nelle prime 10, ben oltre node. js e altre piattaforme in competizione. 
 
 .NET Core è gestito da Microsoft e dalla community .NET su GitHub. 
 
@@ -196,7 +196,7 @@ Si noti che ogni contenitore mantiene il proprio set di dipendenze e Runtime, ch
 
 Si noti il modo in cui il modello di contenitore abbraccia il principio "dipendenze" dall' [applicazione a dodici fattori](https://12factor.net/).
 
-> *Factor \#2 indica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
+> *Factor \#2 specifica che "ogni microservizio isola e impacchetta le proprie dipendenze, accettando le modifiche senza influire sull'intero sistema".*
 
 I contenitori supportano i carichi di lavoro Linux e Windows. Il cloud di Azure accetta entrambi. È interessante notare che si tratta di Linux, non di Windows Server, che è diventato il sistema operativo più diffuso in Azure.
 
@@ -222,22 +222,22 @@ La figura 1-6 illustra le attività di gestione fornite dagli agenti di orchestr
 
 Nella tabella seguente vengono descritte le attività comuni dell'orchestrazione.
 
-|  Attività | Spiegazione  |
+|  Attività | Descrizione  |
 | :-------- | :-------- |
 | Pianificazione | Eseguire automaticamente il provisioning delle istanze del contenitore.|
 | Affinità/anti-affinità | Eseguire il provisioning di contenitori vicini o lontani tra loro, in modo da garantire disponibilità e prestazioni. |
 | Monitoraggio dell'integrità | Rilevare e correggere automaticamente gli errori.|
 | Failover | Eseguire automaticamente il provisioning dell'istanza non riuscita in computer integri.|
 | Ridimensionamento | Aggiungere o rimuovere automaticamente un'istanza del contenitore per soddisfare la domanda.|
-| Rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
+| Servizi di rete | Gestire una sovrapposizione di rete per la comunicazione del contenitore.|
 | Individuazione dei servizi | Consente ai contenitori di individuarsi reciprocamente.|
 | Aggiornamenti in sequenza | Coordinare gli aggiornamenti incrementali senza alcuna distribuzione del tempo di inattività. Esegue automaticamente il rollback delle modifiche problematiche.|
 
 Si noti che gli agenti di orchestrazione adottano i principi di disposizione e di concorrenza dall' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
-> *Factor \#9 specifica che le istanze del servizio devono essere Disposable, favorendo Startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
+> *Factor \#9 specifica che "le istanze del servizio devono essere monouso, prediligendo le startup veloci per aumentare le opportunità di scalabilità e gli arresti normali per lasciare il sistema in uno stato corretto. I contenitori Docker insieme a un agente di orchestrazione soddisfano questo requisito ".*
 
-> *Factor \#8 indica che "i servizi vengono scalati orizzontalmente in un numero elevato di processi identici di piccole dimensioni (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
+> *Factor \#8 specifica che "i servizi vengono scalati orizzontalmente in un numero elevato di piccoli processi identici (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
 
 Sebbene esistano diversi agenti di orchestrazione dei contenitori, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) è diventato lo standard de facto per il mondo nativo del cloud. Si tratta di una piattaforma portabile, estensibile e open source per la gestione dei carichi di lavoro in contenitori. 
 
@@ -267,7 +267,7 @@ I sistemi nativi del cloud favoriscono i servizi di backup gestiti dai fornitori
 
 Una procedura consigliata consiste nel considerare un servizio di backup come *risorsa collegata*, associato in modo dinamico a un microservizio con informazioni (un URL e credenziali) archiviate in una configurazione esterna. Questa guida è stata digitata nell' [applicazione a dodici fattori](https://12factor.net/), illustrata in precedenza nel capitolo.
 
->*Factor \#4* indica che i servizi di supporto "devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
+>*Factor \#4* specifica che i servizi di backup devono essere esposti tramite un URL indirizzabile. Questa operazione separa la risorsa dall'applicazione, consentendone l'interscambiabilità. "
 
 >*Factor \#3* specifica che "le informazioni di configurazione vengono spostate al di fuori del microservizio ed esternalizzate tramite uno strumento di gestione della configurazione all'esterno del codice".
 
@@ -287,7 +287,7 @@ Con IaC è possibile automatizzare il provisioning della piattaforma e la distri
 
 ### <a name="automating-infrastructure"></a>Automazione dell'infrastruttura
 
-Strumenti come [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), [bonifica e l'interfaccia della riga di comando di [Azure](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)consentono di creare in modo dichiarativo l'infrastruttura cloud necessaria. I nomi delle risorse, le località, le capacità e i segreti sono parametrizzati e dinamici. Lo script viene sottoposto a controllo delle versioni e archiviato nel controllo del codice sorgente come elemento del progetto. Si richiama lo script per eseguire il provisioning di un'infrastruttura coerente e ripetibile negli ambienti di sistema, ad esempio QA, staging e produzione. 
+Strumenti come [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), bonifica e l'interfaccia della riga di comando di [Azure](https://docs.microsoft.com/cli/azure/)consentono di creare script in modo dichiarativo dell'infrastruttura cloud necessaria. I nomi delle risorse, le località, le capacità e i segreti sono parametrizzati e dinamici. Lo script viene sottoposto a controllo delle versioni e archiviato nel controllo del codice sorgente come elemento del progetto. Si richiama lo script per eseguire il provisioning di un'infrastruttura coerente e ripetibile negli ambienti di sistema, ad esempio QA, staging e produzione. 
 
 In realtà, IaC è idempotente, il che significa che è possibile eseguire lo stesso script senza effetti collaterali. Se il team deve apportare una modifica, viene modificato ed eseguito nuovamente lo script. Sono interessate solo le risorse aggiornate.
 
@@ -297,7 +297,7 @@ In questo articolo, [che cos'è l'infrastruttura come codice](https://docs.micro
 
 L' [applicazione a dodici fattori](https://12factor.net/), descritta in precedenza, richiede passaggi distinti durante la trasformazione del codice completato in un'applicazione in esecuzione.
 
-> *Factor \#5* indica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
+> *Factor \#5* specifica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
 
 I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti. 
 

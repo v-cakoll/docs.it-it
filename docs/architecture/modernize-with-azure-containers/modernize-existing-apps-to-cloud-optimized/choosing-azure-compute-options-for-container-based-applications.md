@@ -2,12 +2,12 @@
 title: Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitore
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitori
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331967"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318670"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Scelta delle piattaforme di calcolo di Azure per le applicazioni basate su contenitore
 
@@ -17,7 +17,7 @@ Come raccomandazione *per impostazione predefinita* , di seguito sono riportati 
 
 - **Singola app monolitica:** Scegliere app Azure servizio
 - **App a più livelli:** Scegliere gli agenti di orchestrazione, ad esempio Azure Kubernetes Service (AKS) o il servizio app, se si dispone di un singolo o di pochi servizi back-end
-- **Microservizi** Scegliere AKS o app Web di Azure per contenitori
+- **Microservizi:** Scegliere AKS o app Web di Azure per contenitori
 - **Funzioni senza server & gestori eventi:** Scegliere funzioni di Azure
 - **Batch su larga scala:** Scegliere Azure Batch
 
