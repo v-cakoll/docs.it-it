@@ -8,15 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928882"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321292"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Procedura: Specificare il tipo di credenziali client
-Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è possibile impostare il tipo di credenziali client. Questa proprietà specifica il tipo di credenziali che il client deve fornire al servizio per l'autenticazione. Per altre informazioni sull'impostazione della modalità di sicurezza (un passaggio necessario prima impostare il tipo di credenziale client), vedere [come: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è possibile impostare il tipo di credenziali client. Questa proprietà specifica il tipo di credenziali che il client deve fornire al servizio per l'autenticazione. Per ulteriori informazioni sull'impostazione della modalità di sicurezza (un passaggio necessario prima di impostare il tipo di credenziale client), vedere [How: Impostare la modalità di sicurezza ](how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Per impostare il tipo di credenziali client nel codice  
   
@@ -31,17 +31,17 @@ Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è poss
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>Per impostare il tipo di credenziali client nella configurazione  
   
-1. Aggiungere un [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento nel file di configurazione.  
+1. Aggiungere un elemento [\<system. serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) al file di configurazione.  
   
-2. Come elemento figlio, aggiungere un [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+2. Come elemento figlio, aggiungere un elemento [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) .  
   
-3. Aggiungere un'associazione appropriata. Questo esempio Usa la [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
+3. Aggiungere un'associazione appropriata. Questo esempio usa l'elemento [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .  
   
-4. Aggiungere un [ \<associazione >](../../../docs/framework/misc/binding.md) e impostare il `name` attributo su un valore appropriato. In questo esempio viene utilizzato il nome "SecureBinding."  
+4. Aggiungere un elemento [\<binding >](../misc/binding.md) e impostare l'attributo `name` su un valore appropriato. In questo esempio viene utilizzato il nome "SecureBinding."  
   
 5. Aggiungere un'associazione `<security>`. Impostare l'attributo `mode` su un valore appropriato. In questo esempio viene impostato su `"Message"`.  
   
-6. Aggiungere un `<message>` o `<transport>` elemento, come determinato dalla modalità di sicurezza. Impostare l'attributo `clientCredentialType` su un valore appropriato. In questo esempio viene usato `"Windows"`.  
+6. Aggiungere un elemento &lt;transport&gt; o`<message>`, come determinato dalla modalità di sicurezza. Impostare l'attributo `clientCredentialType` su un valore appropriato. In questo esempio viene usato `"Windows"`.  
   
     ```xml  
     <system.serviceModel>  
@@ -59,5 +59,5 @@ Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è poss
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
-- [Procedura: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Protezione dei servizi](securing-services.md)
+- [Procedura: Impostare la modalità di sicurezza ](how-to-set-the-security-mode.md)
