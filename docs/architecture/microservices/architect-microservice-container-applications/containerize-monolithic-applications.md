@@ -2,12 +2,12 @@
 title: Inserimento di applicazioni monolitiche nei contenitori
 description: L'inserimento di applicazioni monolitiche nei contenitori, anche se non consente di usufruire di tutti i vantaggi dell'architettura dei microservizi, offre fin dall'inizio vantaggi notevoli per la distribuzione.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673218"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771484"
 ---
 # <a name="containerizing-monolithic-applications"></a>Inserimento di applicazioni monolitiche nei contenitori
 
@@ -23,7 +23,7 @@ Per gestire questo modello, distribuire un singolo contenitore per rappresentare
 
 Lo svantaggio di questo approccio diventa evidente con l'eventuale crescita dell'applicazione, che ne richiede la scalabilità. Se è possibile ridimensionare l'intera applicazione, questo non rappresenta un problema. Tuttavia, nella maggior parte dei casi, solo alcune parti dell'applicazione rappresentano colli di bottiglia che richiedono il ridimensionamento, mentre altri componenti vengono usati di meno.
 
-Ad esempio, in una tipica applicazione di e-commerce, potrebbe essere necessario ridimensionare il sottosistema delle informazioni sul prodotto, perché molti più clienti danno un'occhiata ai prodotti prima di acquistarli. Molti più clienti usano il carrello per poi usare la pipeline di pagamento, meno clienti aggiungono commenti o visualizzano la cronologia degli acquisti. E potrebbe anche capitare che solo pochi dipendenti abbiano bisogno di gestire i contenuti e le campagne di marketing. Se si modifica la scala della progettazione monolitica, tutto il codice per le diverse attività viene distribuito più volte e scalato allo stesso grado.
+Ad esempio, in una tipica applicazione di e-commerce, potrebbe essere necessario ridimensionare il sottosistema delle informazioni sul prodotto, perché molti più clienti danno un'occhiata ai prodotti prima di acquistarli. Molti più clienti usano il carrello per poi usare la pipeline di pagamento, meno clienti aggiungono commenti o visualizzano la cronologia degli acquisti. Potrebbero essere presenti solo pochi dipendenti che devono gestire il contenuto e le campagne di marketing. Se si modifica la scala della progettazione monolitica, tutto il codice per le diverse attività viene distribuito più volte e scalato allo stesso grado.
 
 Esistono diversi modi per ridimensionare un'applicazione: duplicazione orizzontale, suddivisione di aree diverse dell'applicazione e partizionamento di concetti o dati aziendali simili. Tuttavia, oltre al problema di ridimensionamento di tutti i componenti, le modifiche apportate a un singolo componente richiedono la completa riesecuzione del test dell'intera applicazione e una ridistribuzione completa di tutte le istanze.
 
@@ -33,7 +33,7 @@ Dal punto di vista dell'infrastruttura, ogni server può eseguire molte applicaz
 
 ![Un host può eseguire diverse app monolitiche, ognuna in un contenitore separato.](./media/image2.png)
 
-**Figura 4-2**. Approccio monolitico: host che esegue più applicazioni, ciascuna delle quali in esecuzione come contenitore
+**Figura 4-2**. Approccio monolitico: Host che esegue più applicazioni, ciascuna delle quali in esecuzione come contenitore
 
 Le applicazioni monolitiche in Microsoft Azure possono essere distribuite usando macchine virtuali dedicate per ogni istanza. Con i [set di scalabilità di macchine virtuali di Microsoft Azure](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/) è anche possibile ridimensionare facilmente le macchine virtuali. Anche il [Servizio app di Azure](https://azure.microsoft.com/services/app-service/) può eseguire applicazioni monolitiche e scalare facilmente le istanze senza la necessità di gestire le macchine virtuali. Dal 2016, i Servizi app di Azure possono eseguire anche singole istanze di contenitori Docker, semplificando la distribuzione.
 

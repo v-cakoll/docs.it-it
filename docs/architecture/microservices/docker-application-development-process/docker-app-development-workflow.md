@@ -2,12 +2,12 @@
 title: Flusso di lavoro di sviluppo per app Docker
 description: Informazioni dettagliate sul flusso di lavoro richiesto per lo sviluppo delle applicazioni basate su Docker. Iniziare gradualmente e approfondire alcuni dettagli per ottimizzare i Dockerfile e terminare con il flusso di lavoro semplificato disponibile quando si usa Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031875"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771493"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -23,11 +23,11 @@ Ogni contenitore, ovvero un'istanza di un'immagine Docker, include i componenti 
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni Docker basate su contenitore
 
-Questa sezione descrive il flusso di lavoro di sviluppo a *ciclo interno* per applicazioni Docker basate su contenitore. Flusso di lavoro a ciclo interno significa che non tiene conto del flusso di lavoro DevOps più ampio, che può arrivare fino alla distribuzione di produzione, e si concentra solo sul lavoro di sviluppo eseguito sul computer dello sviluppatore. I passaggi iniziali per configurare l'ambiente non sono inclusi, poiché vengono eseguiti una sola volta.
+Questa sezione descrive il flusso di lavoro di sviluppo a *ciclo interno* per applicazioni Docker basate su contenitore. Il flusso di lavoro a ciclo interno significa che non sta considerando il flusso di lavoro DevOps più ampio, che può includere fino alla distribuzione di produzione, e si concentra solo sul lavoro di sviluppo svolto nel computer dello sviluppatore. I passaggi iniziali per configurare l'ambiente non sono inclusi, poiché vengono eseguiti una sola volta.
 
 Un'applicazione è costituita da servizi e raccolte aggiuntive, ossia dipendenze. Di seguito sono indicati i passaggi di base che si eseguono in genere quando si compila un'applicazione Docker, come illustrato nella figura 5-1.
 
-![Il processo di sviluppo per le applicazioni Docker: 1 - Scrivere il codice dell'app, 2 - Scrivere i Dockerfile, 3 - Creare immagini definite nei Dockerfile, 4 - (facoltativo) Comporre i servizi nel file docker-compose.yml, 5 - Eseguire l'app contenitore o docker-compose, 6: Testare l'app o i microservizi, 7 - Eseguire il push al repository e ripetere. ](./media/image1.png)
+![Il processo di sviluppo per le app docker: 1-codice dell'app, 2-scrittura Dockerfile/s, 3-creare immagini definite in Dockerfile/s, 4-(facoltativo) comporre servizi nel file Docker-compose. yml, 5-eseguire il contenitore o l'app Docker-compose, 6 testare l'app o i microservizi, 7- Push nel repository e ripetizione. ](./media/image1.png)
 
 **Figura 5-1.** Flusso di lavoro passo per passo per lo sviluppo di applicazioni Docker in contenitori
 
@@ -69,7 +69,7 @@ Inoltre, è necessario Visual Studio 2017 versione 15.7 o successive con il cari
 
 ![2 - Scrivere i Dockerfile](./media/image4.png)
 
-## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Passaggio 2. Creare un Dockerfile correlato a un'immagine di base .NET esistente
+## <a name="step-2-create-a-dockerfile-related-to-an-existing-net-base-image"></a>Passaggio 2: Creare un Dockerfile correlato a un'immagine di base .NET esistente
 
 È necessario un Dockerfile per ogni immagine personalizzata che si desidera creare; è necessario un Dockerfile per ogni contenitore da distribuire, sia che si esegua la distribuzione automaticamente da Visual Studio o manualmente con la CLI di Docker: comandi docker run e docker-compose. Se l'applicazione contiene un solo servizio personalizzato, è necessario un solo Dockerfile. Se l'applicazione contiene più servizi, come in un'architettura a microservizi, è necessario un Dockerfile per ogni servizio.
 
@@ -110,7 +110,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-In questo caso l'immagine si basa sulla versione 2.2 dell'immagine Docker ufficiale di ASP.NET Core (multiarchitettura per Linux e Windows). Si tratta dell'impostazione `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. Per altre informazioni su questa immagine di base, vedere la pagina [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) (Immagine .NET Core Docker). Nel Dockerfile è necessario anche indicare al Docker di rimanere in ascolto sulla porta TCP che sarà usata in fase di esecuzione, in questo caso la porta 80 configurata con l'impostazione EXPOSE.
+In questo caso l'immagine si basa sulla versione 2.2 dell'immagine Docker ufficiale di ASP.NET Core (multiarchitettura per Linux e Windows). Si tratta dell'impostazione `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. Per altre informazioni su questa immagine di base, vedere la pagina dell' [immagine Docker di .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) . In Dockerfile è anche necessario indicare a Docker di restare in ascolto sulla porta TCP che verrà usata in fase di esecuzione (in questo caso, la porta 80, come configurata con l'impostazione EXPOSE).
 
 Nel Dockerfile è possibile specificare altre impostazioni di configurazione in base al linguaggio e al framework in uso. Ad esempio, la riga ENTRYPOINT con `["dotnet", "MySingleContainerWebApp.dll"]` indica a Docker di eseguire un'applicazione .NET Core. Se si usa l'SDK e l'interfaccia della riga di comando di .NET Core, ovvero l'interfaccia della riga di comando dotnet, per compilare ed eseguire l'applicazione .NET, questa impostazione sarà diversa. In sostanza la riga ENTRYPOINT e altre impostazioni saranno diverse a seconda del linguaggio e della piattaforma scelti per l'applicazione.
 
@@ -204,7 +204,7 @@ Il Dockerfile iniziale può avere un aspetto simile al seguente:
 
 E questi sono i dettagli, riga per riga:
 
-- **#1 riga:** Avviare una fase con una "piccola" immagine di base solo di runtime, denominarla **base** per riferimento.
+- **#1 riga:** Iniziare una fase con un'immagine di base di sola esecuzione "Small", chiamarla come **base** per riferimento.
 
 - **#2 riga:** Creare la directory **/app** nell'immagine.
 
@@ -216,7 +216,7 @@ E questi sono i dettagli, riga per riga:
 
 - **#7 riga:** Fino alla riga 16, copiare i file di progetto con **estensione csproj** a cui si fa riferimento per poter ripristinare i pacchetti in un secondo momento.
 
-- **#17 riga:** Ripristinare i pacchetti per il progetto **Catalog.API** e i progetti di riferimento.
+- **#17 riga:** Ripristinare i pacchetti per il progetto **Catalog. API** e i progetti a cui si fa riferimento.
 
 - **#18 riga:** Copiare **tutti gli alberi di directory per la soluzione** (ad eccezione dei file/directory inclusi nel file con **estensione dockerignore** ) nella directory **/src** nell'immagine.
 
@@ -234,7 +234,7 @@ E questi sono i dettagli, riga per riga:
 
 - **#27 riga:** Copiare la directory **/app** dalla fase di **pubblicazione** alla directory corrente.
 
-- **#28 riga:** Definire il comando da eseguire quando viene avviato il contenitore.
+- **#28 riga:** Definire il comando da eseguire all'avvio del contenitore.
 
 Esaminare ora alcune ottimizzazioni che consentono di migliorare le prestazioni generali del processo che, nel caso di eShopOnContainers, corrispondono a circa 22 minuti o più per la compilazione della soluzione completa nei contenitori Linux.
 
@@ -433,7 +433,7 @@ Dopo aver aggiunto il supporto dell'agente di orchestrazione alla soluzione in V
 
 Se l'applicazione ha un solo contenitore, è possibile eseguirla distribuendola all'host Docker, ovvero una VM o un server fisico. Se invece l'applicazione contiene più servizi, è possibile distribuirla come applicazione composta, usando un unico comando della CLI, ossia docker-compose up, o con Visual Studio, che userà lo stesso comando dietro le quinte. Le diverse opzioni sono esaminate di seguito.
 
-### <a name="option-a-running-a-single-container-application"></a>Opzione A: esecuzione di un'applicazione a un solo contenitore
+### <a name="option-a-running-a-single-container-application"></a>Opzione A: esecuzione di un'applicazione a contenitore singolo
 
 #### <a name="using-docker-cli"></a>Con l'interfaccia della riga di comando di Docker
 
@@ -533,14 +533,14 @@ Se si sviluppa usando l'approccio editor/CLI, eseguire il debug dei contenitori 
 - **Debug delle applicazioni in un contenitore Docker locale** \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker. Compilare, eseguire il debug e distribuire app ASP.NET Core con Docker.** Video. \
+- **Steve Lasker. Compila, Esegui il debug, Distribuisci ASP.NET Core app con Docker.** Video. \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Flusso di lavoro semplificato per lo sviluppo di contenitori con Visual Studio
 
 Il flusso di lavoro quando si usa Visual Studio è molto più semplice rispetto all'uso dell'approccio editor/CLI. La maggior parte dei passaggi richiesti da Docker correlati ai file Dockerfile e docker-compose.yml sono nascosti o semplificati da Visual Studio, come illustrato nella figura 5-15.
 
-![Flusso di lavoro semplificato con i contenitori in Visual Studio: 1 - Scrivere il codice dell'app, 2 - Aggiungere il supporto Docker ai progetti (solo una volta), 3 - Eseguire l'app contenitore o docker-compose, 4 - Testare l'app o i microservizi, 5 - Eseguire il push al repository e ripetere.](./media/image20.png)
+![Flusso di lavoro di sviluppo di contenitori semplificato con Visual Studio: 1-scrivere il codice dell'app, 2-aggiungere il supporto di Docker ai progetti (una sola volta), a 3-Run container o a Docker-compose app, 4-testare l'app o i microservizi, 5 push nel repository e REPEAT.](./media/image20.png)
 
 **Figura 5-15**. Flusso di lavoro semplificato per lo sviluppo con Visual Studio
 

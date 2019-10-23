@@ -3,12 +3,12 @@ title: Infrastruttura di comunicazione con mesh di servizi
 description: Informazioni su come le tecnologie di servizi Mesh semplificano la comunicazione di microservizi nativa del cloud
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214344"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771023"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruttura di comunicazione con mesh di servizi
 
@@ -26,9 +26,9 @@ Un componente chiave di una rete mesh di servizi è un proxy. In un'applicazione
 
 **Figura 4-23**. Rete di servizi con un'auto laterale
 
-Si noti che nella figura precedente il modo in cui i messaggi vengono intercettati da un proxy eseguito insieme a ogni microservizio. Ogni proxy può essere configurato con regole di traffico specifiche del microservizio. Riconosce i messaggi ed è in grado di instradarli tra i servizi e il mondo esterno. 
+Si noti che nella figura precedente il modo in cui i messaggi vengono intercettati da un proxy eseguito insieme a ogni microservizio. Ogni proxy può essere configurato con regole di traffico specifiche del microservizio. Riconosce i messaggi ed è in grado di instradarli tra i servizi e il mondo esterno.
 
-Oltre alla gestione della comunicazione da servizio a servizio, la rete mesh del servizio fornisce supporto per l'individuazione dei servizi e il bilanciamento del carico. 
+Oltre alla gestione della comunicazione da servizio a servizio, la rete mesh del servizio fornisce supporto per l'individuazione dei servizi e il bilanciamento del carico.
 
 Una volta configurata, una mesh del servizio è altamente funzionante. Il mesh recupera un pool di istanze corrispondente da un endpoint di individuazione del servizio. Invia una richiesta a un'istanza del servizio specifica, registrando la latenza e il tipo di risposta del risultato. Consente di scegliere l'istanza con maggiore probabilità di restituire una risposta rapida in base a fattori diversi, inclusa la latenza osservata per le richieste recenti.
 
@@ -38,7 +38,7 @@ Nel capitolo 6 vengono approfondite le tecnologie di rete di servizi, inclusa un
 
 ## <a name="summary"></a>Riepilogo
 
-In questo capitolo sono stati illustrati i modelli di comunicazione nativi del cloud. Abbiamo iniziato esaminando il modo in cui i client front-end comunicano con microservizi back-end. Abbiamo parlato delle piattaforme del gateway API e della comunicazione in tempo reale. È stato quindi esaminato il modo in cui i microservizi comunicano con altri servizi back-end. Sono state esaminate sia la comunicazione HTTP sincrona che la messaggistica asincrona tra i servizi. Abbiamo trattato gRPC, una tecnologia imminente nel mondo nativo del cloud. È stata infine introdotta una tecnologia nuova e in rapida evoluzione denominata mesh di servizi in grado di semplificare la comunicazione di microservizi. 
+In questo capitolo sono stati illustrati i modelli di comunicazione nativi del cloud. Abbiamo iniziato esaminando il modo in cui i client front-end comunicano con microservizi back-end. Abbiamo parlato delle piattaforme del gateway API e della comunicazione in tempo reale. È stato quindi esaminato il modo in cui i microservizi comunicano con altri servizi back-end. Sono state esaminate sia la comunicazione HTTP sincrona che la messaggistica asincrona tra i servizi. Abbiamo trattato gRPC, una tecnologia imminente nel mondo nativo del cloud. È stata infine introdotta una tecnologia nuova e in rapida evoluzione denominata mesh di servizi in grado di semplificare la comunicazione di microservizi.
 
 Particolare enfasi sui servizi di Azure gestiti che consentono di implementare la comunicazione nei sistemi nativi del cloud:
 
@@ -52,25 +52,25 @@ Particolare enfasi sui servizi di Azure gestiti che consentono di implementare l
 
 Si passa quindi ai dati distribuiti nei sistemi nativi del cloud e ai vantaggi e alle esigenze che presenta.
 
-### <a name="references"></a>Riferimenti 
+### <a name="references"></a>Riferimenti
 
-- [Microservizi .NET.: Architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
-  
+- [Microservizi .NET: architettura per le applicazioni .NET in contenitori](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+
 - [Progettazione della comunicazione tra servizi per i microservizi](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
 - [Servizio Azure SignalR, un servizio completamente gestito per l'aggiunta di funzionalità in tempo reale](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
-  
+
 - [Controller di ingresso del gateway API di Azure](https://azure.github.io/application-gateway-kubernetes-ingress/)
-  
+
 - [Informazioni sul traffico in ingresso in Azure Kubernetes Service (AKS)](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
- 
+
 - [GRPC pratici](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
 
 - [Documentazione di gRPC](https://grpc.io/docs/guides/)
 
-- [gRPC per sviluppatori WCF](https://bing.com) [Libro gRPC di Mark]
-  
-- [Confronto tra i servizi gRPC e le API HTTP](https://docs.microsoft.com/en-us/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [gRPC per sviluppatori WCF](https://bing.com) [libro gRPC di Mark]
+
+- [Confronto tra i servizi gRPC e le API HTTP](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 >[!div class="step-by-step"]
 >[Precedente](rest-grpc.md)

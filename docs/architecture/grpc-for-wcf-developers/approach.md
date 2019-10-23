@@ -3,14 +3,14 @@ title: Modalità di gRPC approcci RPC-gRPC per gli sviluppatori WCF
 description: Confronto tra le funzionalità principali di WCF e gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65d61c8246569d81dfec3aeb8e3df4bea26258dc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 36d51b96796f274811bfeea64c159afcc9bce301
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184603"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770679"
 ---
-# <a name="how-grpc-approaches-rpc"></a>Modalità di gRPC approcci RPC
+# <a name="how-grpc-approaches-rpc"></a>Approccio di gRPC per RPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -25,7 +25,7 @@ La tabella seguente illustra il modo in cui le funzionalità principali di WCF s
 | Lingua (capitolo 3-5) | Contratti scritti in C# o Visual Basic | Lingua del buffer del protocollo |
 | Formato wire (capitolo 3) | Configurabile, tra cui SOAP/XML, plain XML, JSON, .NET Binary e così via. | Formato binario del buffer del protocollo (anche se è possibile usare altri formati).
 | Interoperabilità (capitolo 4) | Quando si usa SOAP su HTTP | Supporto ufficiale: .NET, Java, Python, JavaScript, C/C++, go, Rust, Ruby, Swift, Dart, php. Supporto non ufficiale per altre lingue della community. |
-| Rete (capitolo 4) | Configurato in fase di esecuzione. Passare tra TCP, HTTP, MSMQ e così via. | Always HTTP/2 |
+| Rete (capitolo 4) | Configurato in fase di esecuzione. Passare da NetTCP, HTTP, MSMQ e così via. | HTTP/2, attualmente su TCP solo con ASP.NET Core gRPC. |
 | Approccio (capitolo 4) | Generazione di runtime di/deserialization di serializzazione e codice di rete nelle classi base | Generazione in fase di compilazione di/deserialization di serializzazione e codice di rete nelle classi di base |
 | Sicurezza (capitolo 6) | Autenticazione, WS-Security, crittografia messaggi | Credenziali, sicurezza ASP.NET Core, rete TLS |
 

@@ -2,12 +2,12 @@
 title: Implementazione di gateway API con Ocelot
 description: Informazioni su come implementare i gateway API con Ocelot e come usare Ocelot in un ambiente basato su contenitori.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676188"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771180"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementare gateway API con Ocelot
 
@@ -30,7 +30,7 @@ Questo diagramma illustra in che modo l'intera applicazione viene distribuita in
 
 Le risorse dell'infrastruttura, inoltre, ad esempio i database, la cache e i broker dei messaggi, devono essere scaricate dall'agente di orchestrazione e distribuite in sistemi a disponibilità elevata per l'infrastruttura, ad esempio Database SQL di Azure, Azure Cosmos DB, Redis di Azure, bus di servizio di Azure o qualsiasi altra soluzione di clustering a disponibilità elevata locale.
 
-Come si può notare nel diagramma, la presenza di più gateway API consente a più team di sviluppo di essere autonomi (in questo caso, le funzionalità di Marketing e le funzionalità di Shopping) nello sviluppo e nella distribuzione di microservizi con i propri gateway API correlati.
+Come si può notare anche nel diagramma, avere più gateway API consente a più team di sviluppo di essere autonomi (in questo caso funzionalità di marketing e funzionalità di acquisto) quando sviluppa e distribuisce i microservizi e i relativi gateway API correlati.
 
 Un unico gateway API monolitico significherebbe un unico punto che i vari team di sviluppo devono aggiornare, con conseguente rischio di duplicazione di tutti i microservizi con una singola parte dell'applicazione.
 
@@ -390,7 +390,7 @@ Nel diagramma seguente è possibile vedere in che modo i servizi di aggregazione
 
 Entrando maggiormente in dettaglio, nell'area di business "Shopping" nell'immagine seguente è possibile vedere che le comunicazioni frammentate tra le app client e i microservizi diminuiscono quando si usano i servizi di aggregazione nei gateway API.
 
-![Architettura di eShopOnContainers ingrandita, con i servizi di aggregazione, che "assembla" una risposta "unendo" le risposte di diversi microservizi per ridurre le comunicazioni frammentate con il client finale.](./media/image38.png)
+![architettura eShopOnContainers zoom avanti, che mostra i servizi aggregator, che "assembla" una risposta "join" della risposta da diversi microservizi per ridurre chattiness con il client finale.](./media/image38.png)
 
 **Figura 6-38**. Visualizzazione in dettaglio dei servizi di aggregazione
 
@@ -410,7 +410,7 @@ Poiché eShopOnContainers usa più gateway API con limiti basati su aree di busi
 
 Ocelot supporta tuttavia anche il posizionamento del microservizio di gestione delle identità/autenticazione all'interno del limite del gateway API, come illustrato in questo altro diagramma.
 
-![Autenticazione con il microservizio di gestione delle identità nel gateway API (AG): 1) AG richiede un token di autenticazione al microservizio di gestione delle identità, 2) Il microservizio di gestione delle identità restituisce il token ad AG, 3-4) AG invia le richieste ai microservizi usando il token di autenticazione.](./media/image40.png)
+![Autenticazione con il servizio di gestione delle identità nel gateway API (AG): 1) AG richiede un token di autenticazione al microservizio di gestione delle identità, 2) Il microservizio di gestione delle identità restituisce il token ad AG, 3-4) AG invia le richieste ai microservizi usando il token di autenticazione.](./media/image40.png)
 
 **Figura 6-40**. Autenticazione in Ocelot
 

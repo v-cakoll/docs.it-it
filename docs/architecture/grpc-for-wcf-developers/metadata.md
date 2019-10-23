@@ -3,12 +3,12 @@ title: Metadati-gRPC per sviluppatori WCF
 description: Modalità di utilizzo dei metadati in gRPC per passare un contesto aggiuntivo tra client e server
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1a2131fa3ee3112eaa3c3e7f7c97017fea6b1004
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 71ac60cd4c389277675dd452430735fb698fd342
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184330"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770484"
 ---
 # <a name="metadata"></a>Metadati
 
@@ -16,11 +16,11 @@ ms.locfileid: "71184330"
 
 "Metadata" si riferisce a dati aggiuntivi che possono risultare utili durante l'elaborazione di richieste e risposte, ma che non fanno parte dei dati effettivi dell'applicazione. I metadati possono includere token di autenticazione, identificatori di richiesta e tag a scopo di monitoraggio o informazioni sui dati come il numero di record in un set di dati.
 
-È possibile aggiungere intestazioni chiave/valore generiche ai messaggi WCF usando un oggetto <xref:System.ServiceModel.OperationContextScope> e la <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> proprietà e gestirli usando <xref:System.ServiceModel.Channels.MessageProperties>.
+È possibile aggiungere intestazioni chiave/valore generiche ai messaggi WCF utilizzando un <xref:System.ServiceModel.OperationContextScope> e la proprietà <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> e gestirle utilizzando <xref:System.ServiceModel.Channels.MessageProperties>.
 
-le chiamate e le risposte gRPC possono includere anche metadati simili alle intestazioni HTTP. Sono principalmente invisibili per gRPC e vengono passati per essere elaborati dal codice dell'applicazione o dal middleware. I metadati sono rappresentati come coppie chiave/valore in cui la chiave è una stringa e il valore è una stringa o dati binari. Non è necessario specificare i `.proto` metadati nel file.
+le chiamate e le risposte gRPC possono includere anche metadati simili alle intestazioni HTTP. Sono principalmente invisibili per gRPC e vengono passati per essere elaborati dal codice dell'applicazione o dal middleware. I metadati sono rappresentati come coppie chiave/valore in cui la chiave è una stringa e il valore è una stringa o dati binari. Non è necessario specificare i metadati nel file di `.proto`.
 
-I metadati vengono gestiti usando `Metadata` la classe del pacchetto NuGet [Grpc. Core](https://www.nuget.org/packages/Grpc.Core/) . Questa classe può essere utilizzata con la sintassi dell'inizializzatore di raccolta.
+I metadati vengono gestiti usando la classe `Metadata` dal pacchetto NuGet [Grpc. Core. API](https://www.nuget.org/packages/Grpc.Core.Api/) . Questa classe può essere utilizzata con la sintassi dell'inizializzatore di raccolta.
 
 Nell'esempio seguente viene illustrato come aggiungere metadati a una chiamata da un C# client:
 
@@ -38,7 +38,7 @@ var request = new GetPortfolioRequest
 var response = await client.GetPortfolioAsync(request, metadata);
 ```
 
-i servizi gRPC possono accedere ai metadati `ServerCallContext` dalla `RequestHeaders` proprietà dell'argomento:
+i servizi gRPC possono accedere ai metadati dalla proprietà `RequestHeaders` dell'argomento `ServerCallContext`:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -52,7 +52,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-I servizi possono inviare metadati ai client usando `ResponseTrailers` la proprietà `ServerCallContext`di:
+I servizi possono inviare metadati ai client usando la proprietà `ResponseTrailers` di `ServerCallContext`:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)

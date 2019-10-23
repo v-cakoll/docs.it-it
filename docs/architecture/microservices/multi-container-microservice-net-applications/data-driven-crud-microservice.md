@@ -2,12 +2,12 @@
 title: Creazione di un microservizio CRUD semplice basato sui dati
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sulla creazione di un microservizio CRUD semplice basato sui dati nel contesto di un'applicazione di microservizi.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039920"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771202"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creazione di un microservizio CRUD semplice basato sui dati
 
@@ -43,7 +43,7 @@ Per implementare un microservizio CRUD semplice con .NET Core e Visual Studio, �
 
 Dopo aver creato il progetto, è possibile implementare i controller MVC, come in qualsiasi altro progetto API Web, usando l'API di Entity Framework o altre API. In un nuovo progetto API Web è possibile notare che l'unica dipendenza presente in tale microservizio è su ASP.NET Core stesso. Internamente, all'interno della dipendenza *Microsoft. AspNetCore. All* , fa riferimento Entity Framework e molti altri pacchetti NuGet di .NET Core, come illustrato nella figura 6-7.
 
-![Il progetto API include riferimenti al pacchetto NuGet Microsoft.AspNetCore.App, che a sua volta include riferimenti a tutti i pacchetti essenziali. Può anche includere altri pacchetti.](./media/image8.png)
+![Il progetto API include riferimenti al pacchetto NuGet Microsoft. AspNetCore. app, che include i riferimenti a tutti i pacchetti essenziali. Può anche includere altri pacchetti.](./media/image8.png)
 
 **Figura 6-7**. Dipendenze in un microservizio API Web CRUD semplice
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
@@ -289,13 +289,13 @@ Questo meccanismo di controllo delle versioni è semplice e dipende dal server c
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Controllo facilitato delle versioni delle API Web ASP.NET Core RESTful)**  \
+- **Scott Hansel. ASP.NET Core il controllo delle versioni dell'API Web RESTful** semplificato  \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Versioning a RESTful web API (Controllo delle versioni delle API Web RESTful)**  \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)**  \
+- **Fielding di Roy. Controllo delle versioni, ipermedia e REST**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generazione dei metadati delle descrizioni Swagger dall'API Web ASP.NET Core
@@ -328,7 +328,7 @@ Microsoft Flow, PowerApps e le app per la logica di Azure usano proprio i metada
 
 Sono disponibili diverse opzioni per automatizzare la generazione di metadati di Swagger per le applicazioni API REST di ASP.NET Core, sotto forma di pagine della Guida dell'API funzionale basate su *swagger-ui*.
 
-La più diffusa è probabilmente [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), che è usata attualmente in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) e verrà illustrata in maggior dettaglio in questa guida. È anche possibile usare [NSwag](https://github.com/RSuter/NSwag), che genera client API Typescript e C\# e controller C\# da una specifica Swagger o OpenAPI e anche tramite scansione del file DLL contenente i controller, mediante [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
+Probabilmente la conoscenza migliore è [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , che è attualmente usata in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) e verrà illustrata in dettaglio in questa guida, ma è anche possibile usare [NSwag](https://github.com/RSuter/NSwag), che può generare typescript e C \# client API, nonché C \# controller, da una specifica spavalderia o OpenAPI e persino eseguendo la scansione del file con estensione dll che contiene i controller, usando [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Come automatizzare la generazione di metadati di Swagger per le API con il pacchetto NuGet Swashbuckle
 
