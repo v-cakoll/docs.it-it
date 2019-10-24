@@ -3,12 +3,12 @@ title: Migrazione di .NET Core da project.json
 description: Informazioni su come eseguire la migrazione di un progetto .NET Core meno recente usando project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698927"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773905"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrazione di progetti .NET Core da project.json
 
@@ -40,7 +40,7 @@ Visual Studio esegue automaticamente la migrazione dei progetti selezionati. Qua
 I file di cui è stata eseguita la migrazione (*Project. JSON*, *Global. JSON*, *. xproj*e file di soluzione) vengono spostati in una cartella di *backup* . Il file di soluzione migrato viene aggiornato a Visual Studio 2017 o a Visual Studio 2019 e non sarà possibile aprire il file di soluzione in Visual Studio 2015 o versioni precedenti. Anche un file denominato *UpgradeLog. htm* che contiene un report di migrazione viene salvato e aperto automaticamente.
 
 > [!IMPORTANT]
-> Non è possibile eseguire la migrazione dei progetti con Visual Studio 2015.
+> In Visual Studio 2019 versione 16,3 e successive non è possibile caricare o migrare un file con *estensione xproj* . Inoltre, Visual Studio 2015 non offre la possibilità di eseguire la migrazione di un file con *estensione xproj* . Se si usa una di queste versioni di Visual Studio, installare una versione appropriata di Visual Studio o usare lo strumento di migrazione da riga di comando descritto di seguito.
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -49,17 +49,17 @@ Nello scenario della riga di comando, è possibile usare il comando [`dotnet mig
 I file di cui è stata eseguita la migrazione (*Project. JSON*, *Global. JSON*e *. xproj*) vengono spostati in una cartella di *backup* .
 
 > [!NOTE]
-> Se si utilizza Visual Studio Code, il comando `dotnet migrate` non modifica i file Visual Studio Code specifici, ad esempio `tasks.json`. Questi file devono essere modificati manualmente.
-> Questo vale anche se si usa Project Ryder o qualsiasi editor o ambiente di sviluppo integrato (IDE, Integrated Development Environment) diverso da Visual Studio.
+> Se si usa Visual Studio Code, il comando `dotnet migrate` non modifica i file di Visual Studio Code specifici, ad esempio *Tasks. JSON*. Questi file devono essere modificati manualmente.
+> Questo vale anche se si usa un editor o un ambiente di sviluppo integrato (IDE) diverso da Visual Studio.
 
-Per un confronto tra i formati project.json e csproj, vedere [Mapping tra le proprietà di project.json e csproj](../tools/project-json-to-csproj.md).
+Vedere [un mapping tra le proprietà Project. JSON e csproj](../tools/project-json-to-csproj.md) per un confronto dei formati *Project. JSON* e *. csproj* .
 
-### <a name="common-issues"></a>Problemi comuni
+Se si verifica un errore:
 
-- Se si verifica un errore: "No executable found matching command dotnet-migrate" (Non sono stati trovati eseguibili corrispondenti al comando dotnet migrate):
+> Non è stato trovato alcun eseguibile corrispondente al comando DotNet-migrate
 
-Eseguire `dotnet --version` per visualizzare la versione in uso. [`dotnet migrate`](../tools/dotnet-migrate.md) richiede la versione RC3 della CLI di .NET Core o versione successiva.
-Questo tipo di errore viene visualizzato se si ha un file *global.json* nella directory corrente o principale e la versione `sdk` è impostata su una versione precedente.
+Eseguire `dotnet --version` per visualizzare la versione in uso. [`dotnet migrate`](../tools/dotnet-migrate.md) è stato introdotto in .NET Core SDK 1.0.0 e rimosso nella versione 3.0.100.
+Questo errore viene ricevuto se si dispone di un file *Global. JSON* nella directory corrente o padre e la versione `sdk` specificata non rientra nell'intervallo.
 
 ## <a name="migration-from-dnx-to-csproj"></a>Migrazione da DNX a csproj
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 19b4ec08cc8790df0e9a99204c0401b1b873eb20
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: fd5960f9820e90d49afe3ba748136f1a2d3ce690
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588434"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774109"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -30,11 +30,11 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversioni implicite**: non è necessaria alcuna sintassi speciale perché la conversione è indipendente dai tipi e i dati non andranno persi. Gli esempi includono conversioni dai tipi integrali più piccoli ai più grandi e conversioni dalle classi derivate alle classi di base.  
   
-- **Conversioni esplicite (cast)** : le conversioni esplicite richiedono un operatore cast. L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi.  Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
+- **Conversioni esplicite (cast)** : le conversioni esplicite richiedono l' [operatore cast `()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). L'esecuzione di cast è obbligatoria se si prevede una possibile perdita di informazioni durante la conversione oppure se la conversione non riesce per altri motivi. Alcuni esempi tipici includono la conversione numerica in un tipo con precisione inferiore o con un intervallo più piccolo e la conversione di un'istanza della classe di base in una classe derivata.  
   
 - **Conversioni definite dall'utente**: le conversioni definite dall'utente vengono eseguite da metodi speciali che possono essere definiti per abilitare conversioni esplicite e implicite tra tipi personalizzati che non hanno una relazione di classe basata su una classe di base. Per altre informazioni, vedere [Operatori di conversione definiti dall'utente](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Conversioni con le classi helper**: per eseguire la conversione tra tipi non compatibili, ad esempio numeri interi e oggetti <xref:System.DateTime?displayProperty=nameWithType> oppure tra stringhe esadecimali e matrici di byte, è possibile usare la classe <xref:System.BitConverter?displayProperty=nameWithType>, la classe <xref:System.Convert?displayProperty=nameWithType> e i metodi `Parse` dei tipi numerici predefiniti, ad esempio <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Procedura: Convertire una matrice di byte in un Integer](./how-to-convert-a-byte-array-to-an-int.md), [Procedura: Convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md) e [Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Conversioni con le classi helper**: per eseguire la conversione tra tipi non compatibili, ad esempio numeri interi e oggetti <xref:System.DateTime?displayProperty=nameWithType> oppure tra stringhe esadecimali e matrici di byte, è possibile usare la classe <xref:System.BitConverter?displayProperty=nameWithType>, la classe <xref:System.Convert?displayProperty=nameWithType> e i metodi `Parse` dei tipi numerici predefiniti, ad esempio <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Procedura: Convertire una matrice di byte in un int](./how-to-convert-a-byte-array-to-an-int.md), [Procedura: Convertire una stringa in un numero](./how-to-convert-a-string-to-a-number.md) e [Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Conversioni implicite
 
@@ -42,7 +42,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Per un elenco completo delle conversioni numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Per un elenco completo di tutte le conversioni numeriche implicite, vedere la sezione [conversioni numeriche implicite](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) dell'articolo sulle [conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md) .
   
  Per i tipi di riferimento, è sempre disponibile una conversione implicita da una classe a qualsiasi classe di base diretta o indiretta o interfacce. Poiché una classe derivata contiene sempre tutti i membri di una classe di base, non è necessaria alcuna sintassi speciale.  
   
@@ -53,11 +53,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>Conversioni esplicite
 
- Tuttavia, se una conversione non può essere eseguita senza il rischio di perdita di informazioni, il compilatore richiede di eseguire una conversione esplicita, che viene chiamata *cast*. Un cast è un modo per informare esplicitamente il compilatore che si vuole eseguire la conversione e che si è a conoscenza della possibile perdita di dati. Per eseguire un cast, specificare il tipo tra parentesi davanti al valore o alla variabile da convertire. Il seguente programma esegue il cast di [double](../../language-reference/builtin-types/floating-point-numeric-types.md) in [int](../../language-reference/builtin-types/integral-numeric-types.md). Il programma non verrà compilato senza il cast.  
+ Tuttavia, se una conversione non può essere eseguita senza il rischio di perdita di informazioni, il compilatore richiede di eseguire una conversione esplicita, che viene chiamata *cast*. Un cast è un modo per informare esplicitamente il compilatore che si vuole eseguire la conversione e che si è a conoscenza della possibile perdita di dati. Per eseguire un cast, specificare il tipo tra parentesi davanti al valore o alla variabile da convertire. Il programma seguente esegue il cast di un [valore Double](../../language-reference/builtin-types/floating-point-numeric-types.md) a un valore [int](../../language-reference/builtin-types/integral-numeric-types.md). Il programma non verrà compilato senza il cast.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- Per un elenco delle conversioni numeriche esplicite consentite, vedere [Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Per un elenco completo delle conversioni numeriche esplicite supportate, vedere la sezione [conversioni numeriche esplicite](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) dell'articolo sulle [conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md) .
   
  Per i tipi di riferimento, è necessario un cast esplicito se si vuole eseguire la conversione da un tipo di base a un tipo derivato:  
   

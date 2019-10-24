@@ -1,17 +1,17 @@
 ---
-title: 'Esercitazione: Rilevare le anomalie nelle vendite di prodotti'
+title: 'Esercitazione: rilevare le anomalie nelle vendite di prodotti'
 description: Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio 2019.
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929048"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774431"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: Rilevare le anomalie nelle vendite di prodotti con ML.NET
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Esercitazione: rilevare le anomalie nelle vendite di prodotti con ML.NET
 
 Informazioni su come creare un'applicazione di rilevamento delle anomalie per i dati di vendita dei prodotti. Questa esercitazione crea un'applicazione console .NET Core usando C# in Visual Studio.
 
@@ -26,9 +26,9 @@ In questa esercitazione si imparerà a:
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+* [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
 * [Set di dati product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -40,7 +40,7 @@ In questa esercitazione si imparerà a:
 
 1. Creare un'**applicazione Console .NET Core** denominata "ProductSalesAnomalyDetection".
 
-2. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati.
+2. Creare una directory denominata *Data* nel progetto per salvare i file del set di dati.
 
 3. Installare il **pacchetto NuGet Microsoft.ML**:
 
@@ -133,8 +133,8 @@ Il rilevamento delle anomalie è il processo di rilevamento degli outlier dati d
 
 Il rilevamento delle anomalie può essere utile in molte situazioni. Ad esempio:
 
-Se si dispone di un'automobile, si potrebbe voler sapere se: La lettura del manometro dell'olio è normale o è presente una perdita?
-Se si sta monitorando il consumo di energia elettrica, si desidera sapere: se vi è un'interruzione del servizio.
+Se si dispone di un'auto, è possibile che si desideri essere a conoscenza della normale presenza di questo misuratore.
+Se si sta monitorando il consumo di energia elettrica, è opportuno essere a conoscenza della presenza di un'interruzione.
 
 Esistono due tipi di anomalie di serie temporali che possono essere rilevati:
 

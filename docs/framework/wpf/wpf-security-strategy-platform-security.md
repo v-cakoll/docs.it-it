@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133755"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774737"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Sebbene Windows Presentation Foundation (WPF) fornisca un'ampia gamma di servizi di sicurezza, sfrutta anche le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, CLR e Internet Explorer. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -37,18 +37,18 @@ Il nucleo di Windows offre diverse funzionalità di sicurezza che costituiscono 
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Oltre a una revisione generale e al potenziamento di Windows, sono disponibili tre funzionalità [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] principali che verranno illustrate in questo argomento:  
+ Oltre a una revisione generale e al potenziamento di Windows, sono disponibili tre funzionalità chiave di [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] che verranno illustrate in questo argomento:  
   
 - Compilazione /GS  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
   
 #### <a name="gs-compilation"></a>Compilazione /GS  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]fornisce la protezione ricompilando molte librerie di sistema principali, incluse tutte le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dipendenze, ad esempio CLR, per mitigare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre protezione ricompilando molte librerie di sistema principali, incluse tutte le dipendenze [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], ad esempio CLR, per mitigare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
   
  In passato i sovraccarichi del buffer sono stati causa di molte violazioni della sicurezza a impatto elevato. Si verifica un sovraccarico del buffer quando un utente malintenzionato sfrutta una vulnerabilità del codice per introdurre codice dannoso che viene scritto oltre i limiti di un buffer. Il malintenzionato sarà così in grado di assumere il controllo del processo in cui il codice è in esecuzione, sovrascrivendo l'indirizzo di ritorno di una funzione per indurre l'esecuzione del proprio codice dannoso. Il risultato sarà l'esecuzione di codice arbitrario attraverso codice dannoso con gli stessi privilegi del processo di cui è stato assunto il controllo.  
   
- In generale, il flag del compilatore /GS protegge da alcuni potenziali sovraccarichi del buffer introducendo uno speciale cookie di sicurezza per proteggere l'indirizzo di ritorno di una funzione dotata di buffer di stringhe locali. Dopo la restituzione di un risultato da parte di una funzione, il cookie di sicurezza viene confrontato con il suo valore precedente. Se il valore è cambiato, è possibile che si sia verificato un sovraccarico del buffer e che il processo venga interrotto con una condizione di errore. L'interruzione del processo impedisce l'esecuzione di codice potenzialmente dannoso. Per ulteriori informazioni, vedere [/GS (controllo sicurezza buffer)](/cpp/build/reference/gs-buffer-security-check) .  
+ A un livello elevato, il flag del compilatore-GS protegge da alcuni potenziali sovraccarichi del buffer inserendo uno speciale cookie di sicurezza per proteggere l'indirizzo di ritorno di una funzione con buffer di stringa locali. Dopo la restituzione di un risultato da parte di una funzione, il cookie di sicurezza viene confrontato con il suo valore precedente. Se il valore è cambiato, è possibile che si sia verificato un sovraccarico del buffer e che il processo venga interrotto con una condizione di errore. L'interruzione del processo impedisce l'esecuzione di codice potenzialmente dannoso. Per ulteriori informazioni, vedere [-GS (controllo di sicurezza del buffer)](/cpp/build/reference/gs-buffer-security-check) .  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] è compilato con il flag /GS per aggiungere un ulteriore livello di difesa alle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -75,7 +75,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processo con diritti limitati per le applicazioni ospitate nei browser  
- Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ospitate nei browser vengono eseguite nella sandbox dell'area Internet. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]l'integrazione con Microsoft Internet Explorer estende questa protezione con supporto aggiuntivo.  
+ Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ospitate nei browser vengono eseguite nella sandbox dell'area Internet. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] integrazione con Microsoft Internet Explorer estende questa protezione con supporto aggiuntivo.  
   
  Poiché le [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vengono in genere eseguite in una sandbox in base al set di autorizzazioni dell'area Internet, la rimozione di questi privilegi non danneggia, da un punto di vista della compatibilità, tali [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Viene invece creato un livello di difesa aggiuntivo; se un'applicazione eseguita in una sandbox è in grado di sfruttare altri livelli e di assumere il controllo del processo, il processo disporrà comunque unicamente di privilegi limitati.  
   
@@ -101,11 +101,11 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
  Il codice gestito che non rispetta le regole di verifica non verrà eseguito, a meno che non venga considerato codice attendibile.  
   
- Il vantaggio del codice verificabile è il motivo principale per [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] cui si basa sul .NET Framework. Pertanto, più esteso sarà l'uso di codice verificabile, minori saranno le possibilità di sfruttare le vulnerabilità del sistema.  
+ Il vantaggio del codice verificabile è il motivo principale per cui [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa sulla .NET Framework. Pertanto, più esteso sarà l'uso di codice verificabile, minori saranno le possibilità di sfruttare le vulnerabilità del sistema.  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>Sicurezza per l'accesso al codice  
- Un computer client espone un'ampia varietà di risorse a cui un'applicazione gestita ha accesso, ad esempio il file system, il Registro di sistema, i servizi di stampa, l'interfaccia utente, la reflection e le variabili di ambiente. Prima che un'applicazione gestita possa accedere a una qualsiasi delle risorse in un computer client, deve disporre di .NET Framework autorizzazione. Un'autorizzazione in CAS è una sottoclasse di <xref:System.Security.CodeAccessPermission>. CAS implementa una sottoclasse per ogni risorsa a cui possono accedere le applicazioni gestite.  
+ Un computer client espone un'ampia varietà di risorse a cui un'applicazione gestita ha accesso, ad esempio il file system, il Registro di sistema, i servizi di stampa, l'interfaccia utente, la reflection e le variabili di ambiente. Prima che un'applicazione gestita possa accedere a una qualsiasi delle risorse in un computer client, deve disporre di .NET Framework autorizzazione. Un'autorizzazione in CAS è una sottoclasse del <xref:System.Security.CodeAccessPermission>; CAS implementa una sottoclasse per ogni risorsa a cui possono accedere le applicazioni gestite.  
   
  Il set di autorizzazioni che un'applicazione gestita viene concessa dalle CA quando viene avviata l'esecuzione è noto come set di autorizzazioni ed è determinato dall'evidenza fornita dall'applicazione. Per le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], le evidenze fornite sono il percorso, o area, da cui vengono avviate. CA identifica le zone seguenti:  
   
@@ -119,7 +119,7 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 - **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
   
- Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. Sono inclusi:  
+ Per ognuna di queste zone, CAS fornisce un set di autorizzazioni predefinito che include le autorizzazioni che corrispondono al livello di attendibilità associato a ciascuna di esse. tra cui:  
   
 - **FullTrust**. Per le applicazioni avviate dalla zona **computer locale** . Sono concesse tutte le autorizzazioni possibili.  
   
@@ -127,20 +127,20 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 - **Internet**. Per le applicazioni avviate dall'area **Internet** o **siti attendibili** . Viene concesso un sottoinsieme di autorizzazioni per fornire accesso limitato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, solo apertura di file e interfaccia utente limitata. In pratica, questo set di autorizzazioni isola le applicazioni dal computer client.  
   
- Alle applicazioni identificate come provenienti dall'area **siti** non attendibili non vengono concesse le autorizzazioni per le autorità di certificazione. Di conseguenza, queste non dispongono di alcun set di autorizzazioni predefinito.  
+ Alle applicazioni identificate come provenienti dall'area **siti non attendibili** non vengono concesse le autorizzazioni per le autorità di certificazione. Di conseguenza, queste non dispongono di alcun set di autorizzazioni predefinito.  
   
  Nella figura seguente viene illustrata la relazione tra aree, set di autorizzazioni, autorizzazioni e risorse:  
   
  ![Diagramma che mostra i set di autorizzazioni CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Le restrizioni della sandbox di sicurezza dell'area Internet si applicano ugualmente a qualsiasi codice che un'applicazione XBAP importa da una [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]libreria di sistema, incluso. In questo modo, ogni frammento di codice viene bloccato, anche [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Sfortunatamente, per poter eseguire, un'applicazione XBAP deve eseguire funzionalità che richiedono più autorizzazioni rispetto a quelle abilitate dalla sandbox di sicurezza dell'area Internet.  
+ Le restrizioni della sandbox di sicurezza dell'area Internet si applicano ugualmente a qualsiasi codice che un'applicazione XBAP importa da una libreria di sistema, incluso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. In questo modo, ogni frammento di codice viene bloccato, anche [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Sfortunatamente, per poter eseguire, un'applicazione XBAP deve eseguire funzionalità che richiedono più autorizzazioni rispetto a quelle abilitate dalla sandbox di sicurezza dell'area Internet.  
   
  Si consideri un'applicazione XBAP che include la pagina seguente:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Per eseguire questa applicazione XBAP, il [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] codice sottostante deve eseguire più funzionalità rispetto a quelle disponibili per l'applicazione XBAP chiamante, tra cui:  
+ Per eseguire questa applicazione XBAP, il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sottostante deve eseguire più funzionalità di quelle disponibili per l'applicazione XBAP chiamante, tra cui:  
   
 - Creazione di un handle di finestra (HWND) per il rendering  
   
@@ -150,36 +150,36 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
  Da un punto di vista della sicurezza, consentire l'accesso diretto a queste operazioni dall'applicazione eseguita in una sandbox avrebbe conseguenze devastanti.  
   
- Fortunatamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] affronta questa situazione consentendo di eseguire le operazioni con privilegi elevati per conto dell'applicazione eseguita in una sandbox. Mentre tutte [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] le operazioni vengono verificate in base alle autorizzazioni di sicurezza limitate dell'area Internet del dominio dell' [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazione XBAP, viene concesso un set di autorizzazioni che include tutte le autorizzazioni possibili.
+ Fortunatamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] affronta questa situazione consentendo di eseguire le operazioni con privilegi elevati per conto dell'applicazione eseguita in una sandbox. Anche se tutte le operazioni di [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] vengono verificate in base alle autorizzazioni di sicurezza limitate dell'area Internet del dominio dell'applicazione XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], viene concesso un set di autorizzazioni che include tutte le autorizzazioni possibili.
   
  È quindi necessario che [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] riceva privilegi elevati, ma è altresì fondamentale impedire che tali privilegi vengano determinati dal set di autorizzazioni dell'area Internet del dominio dell'applicazione host.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]a tale scopo, viene utilizzato il metodo **Assert** di un'autorizzazione. Nel codice riportato di seguito viene illustrata questa operazione.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] esegue questa operazione utilizzando il metodo **Assert** di un'autorizzazione. Nel codice riportato di seguito viene illustrata questa operazione.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- L' **asserzione** impedisce essenzialmente che le autorizzazioni illimitate richieste da [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] vengano limitate dalle autorizzazioni dell'area Internet dell'applicazione XBAP.  
+ L' **asserzione** impedisce essenzialmente le autorizzazioni illimitate richieste da [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] essere limitate dalle autorizzazioni dell'area Internet dell'applicazione XBAP.  
   
- Dal punto di vista della [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] piattaforma, è responsabile dell'uso corretto di **Assert** ; un uso errato di **Assert** potrebbe consentire a codice dannoso di elevare i privilegi. Di conseguenza, è importante chiamare solo **Assert** quando necessario e assicurarsi che le restrizioni della sandbox rimangano intatte. Ad esempio, al codice sandbox non è consentita l'apertura di file casuali, ma è consentito l'uso dei tipi di carattere. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]consente alle applicazioni sandbox di usare la funzionalità dei tipidi carattere chiamando Assert [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] e per leggere i file che contengono tali caratteri per conto dell'applicazione creata mediante sandbox.  
+ Dal punto di vista della piattaforma, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] è responsabile dell'uso corretto di **Assert** . un uso errato di **Assert** potrebbe consentire a codice dannoso di elevare i privilegi. Di conseguenza, è importante chiamare solo **Assert** quando necessario e assicurarsi che le restrizioni della sandbox rimangano intatte. Ad esempio, al codice sandbox non è consentita l'apertura di file casuali, ma è consentito l'uso dei tipi di carattere. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] consente alle applicazioni sandbox di usare la funzionalità dei tipi di carattere chiamando **Assert**e per [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] di leggere i file che contengono tali caratteri per conto dell'applicazione creata mediante sandbox.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Distribuzione ClickOnce  
- ClickOnce è una tecnologia di distribuzione completa inclusa con .NET Framework e si integra con [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (vedere la pagina relativa alla [sicurezza e alla distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) per informazioni dettagliate). Le [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome possono essere distribuite tramite ClickOnce, mentre le applicazioni ospitate da browser devono essere distribuite con ClickOnce.  
+ ClickOnce è una tecnologia di distribuzione completa inclusa con .NET Framework e si integra con [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (vedere la pagina relativa alla [sicurezza e alla distribuzione ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) per informazioni dettagliate). Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonome possono essere distribuite tramite ClickOnce, mentre le applicazioni ospitate da browser devono essere distribuite con ClickOnce.  
   
  Alle applicazioni distribuite con ClickOnce viene assegnato un livello di sicurezza aggiuntivo rispetto alla sicurezza dall'accesso di codice (CAS); sostanzialmente, le applicazioni distribuite ClickOnce richiedono le autorizzazioni necessarie. A tali applicazioni vengono concesse solo quelle autorizzazioni se non superano l'insieme di autorizzazioni dell'area da cui vengono distribuite. Riducendo il set di autorizzazioni solo a quelle necessarie, anche se inferiori a quelle fornite dal set di autorizzazioni dell'area di avvio, il numero di risorse a cui l'applicazione ha accesso viene ridotto al minimo. Di conseguenza, se si perde il controllo dell'applicazione, le vulnerabilità del computer client saranno ridotte.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodologia critica per la sicurezza  
- Il [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] codice che usa le autorizzazioni per abilitare la sandbox dell'area Internet per le applicazioni XBAP deve essere mantenuto al massimo livello possibile di controllo e controllo di sicurezza. Per semplificare questo requisito, .NET Framework fornisce un nuovo supporto per la gestione del codice che eleva i privilegi. In particolare, CLR consente di identificare il codice che eleva i <xref:System.Security.SecurityCriticalAttribute>privilegi e di contrassegnarlo con; qualsiasi codice non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> diventa *trasparente* usando questa metodologia. Viceversa, il codice gestito non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> non può elevare i privilegi.  
+ Il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] che usa le autorizzazioni per abilitare la sandbox dell'area Internet per le applicazioni XBAP deve essere mantenuto al massimo livello di controllo e controllo di sicurezza. Per semplificare questo requisito, .NET Framework fornisce un nuovo supporto per la gestione del codice che eleva i privilegi. In particolare, CLR consente di identificare il codice che eleva i privilegi e di contrassegnarlo con l'<xref:System.Security.SecurityCriticalAttribute>; qualsiasi codice non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> diventa *trasparente* utilizzando questa metodologia. Viceversa, il codice gestito non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> non può elevare i privilegi.  
   
- La metodologia critica per la sicurezza consente di [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] organizzare il codice che eleva i privilegi nel *kernel critico*per la sicurezza, mentre il resto diventa trasparente. L'isolamento del codice critico per la sicurezza consente [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] al team di progettazione di concentrare un'analisi di sicurezza e un controllo del codice sorgente aggiuntivi sul kernel critico per la sicurezza, oltre alle procedure di sicurezza standard (vedere [strategia di sicurezza WPF-sicurezza Progettazione](wpf-security-strategy-security-engineering.md).  
+ La metodologia critica per la sicurezza consente all'organizzazione di [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] codice che eleva i privilegi nel *kernel critico*per la sicurezza, con la restante trasparenza. L'isolamento del codice critico per la sicurezza consente al team di progettazione [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] di concentrare un'analisi di sicurezza e un controllo del codice sorgente aggiuntivi sul kernel critico per la sicurezza, oltre alle procedure di sicurezza standard (vedere [strategia di sicurezza WPF-sicurezza Progettazione](wpf-security-strategy-security-engineering.md).  
   
- Si noti che .NET Framework consente a codice attendibile di estendere la sandbox dell'area Internet XBAP consentendo agli sviluppatori di scrivere assembly <xref:System.Security.AllowPartiallyTrustedCallersAttribute> gestiti contrassegnati con (APTCA) e distribuiti nella global assembly cache (GAC) dell'utente. Contrassegnare un assembly con APTCA è un'operazione estremamente delicata dal punto di vista della sicurezza in quanto consente a qualsiasi codice di chiamare quell'assembly, incluso eventuale codice dannoso proveniente da Internet. È necessario esercitare massima cautela, seguire le procedure consigliate e gli utenti devono scegliere di considerare attendibile un programma software per poterlo installare.  
+ Si noti che .NET Framework consente a codice attendibile di estendere la sandbox dell'area Internet XBAP consentendo agli sviluppatori di scrivere assembly gestiti contrassegnati con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e distribuiti nella global assembly cache (GAC) dell'utente. Contrassegnare un assembly con APTCA è un'operazione estremamente delicata dal punto di vista della sicurezza in quanto consente a qualsiasi codice di chiamare quell'assembly, incluso eventuale codice dannoso proveniente da Internet. È necessario esercitare massima cautela, seguire le procedure consigliate e gli utenti devono scegliere di considerare attendibile un programma software per poterlo installare.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Sicurezza di Microsoft Internet Explorer  
- Oltre a ridurre i problemi di sicurezza e a semplificare la configurazione della sicurezza, Microsoft Internet Explorer 6 (SP2) contiene diverse funzionalità che migliorano la [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]sicurezza per gli utenti di. Tramite queste funzionalità si tenta di fornire agli utenti un maggiore controllo sulla loro esperienza di esplorazione.  
+ Oltre a ridurre i problemi di sicurezza e a semplificare la configurazione della sicurezza, Microsoft Internet Explorer 6 (SP2) contiene diverse funzionalità che migliorano la sicurezza per gli utenti di [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Tramite queste funzionalità si tenta di fornire agli utenti un maggiore controllo sulla loro esperienza di esplorazione.  
   
  Prima di IE6 SP2, gli utenti potevano essere soggetti a uno dei seguenti elementi:  
   
@@ -189,19 +189,19 @@ Gli utenti WPF in Windows Vista trarranno vantaggio dai miglioramenti aggiuntivi
   
 - Numerose finestre di dialogo di sicurezza in alcuni siti Web.  
   
- In alcuni casi, i siti Web non affidabili tentano di ingannare gli utenti eseguendo [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] lo spoofing dell'installazione o visualizzando ripetutamente una finestra di dialogo di installazione di Microsoft ActiveX, anche se è possibile che l'utente lo abbia annullato. Tramite queste tecniche, è possibile che un numero significativo di utenti sia stato indotto a prendere decisioni che hanno causato l'installazione di applicazioni spyware.  
+ In alcuni casi, i siti Web non affidabili tentano di ingannare gli utenti effettuando lo spoofing dell'installazione [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] o visualizzando ripetutamente una finestra di dialogo di installazione di Microsoft ActiveX, anche se è possibile che l'utente lo abbia annullato. Tramite queste tecniche, è possibile che un numero significativo di utenti sia stato indotto a prendere decisioni che hanno causato l'installazione di applicazioni spyware.  
   
  IE6 SP2 include diverse funzionalità per attenuare questi tipi di problemi, che ruotano attorno al concetto di avvio dell'utente. IE6 SP2 rileva quando un utente ha fatto clic su un collegamento o un elemento della pagina prima di un'azione, nota come *avvio da parte dell'utente*, e lo considera in modo diverso rispetto a quando un'azione simile viene invece attivata dallo script in una pagina. Ad esempio, IE6 SP2 incorpora un **blocco popup** che rileva quando un utente fa clic su un pulsante prima che la pagina crei un popup. In questo modo IE6 SP2 è in grado di consentire i popup più innocui, evitando i popup che non vengono richiesti né desiderati dagli utenti. I popup bloccati vengono intercettati sotto la nuova **barra informazioni**, che consente all'utente di eseguire manualmente l'override del blocco e di visualizzare il popup.  
   
- Viene anche applicata la stessa logica di inizializzazione dell'utente per **aprire**/i prompt di sicurezza di**Save** . Le finestre di dialogo di installazione ActiveX vengono sempre intercettate sotto la barra informazioni a meno che non rappresentino un aggiornamento da un controllo installato in precedenza. Queste misure consentono agli utenti un'esperienza più controllata e sicura, perché sono protetti da quei siti che con l'inganno inducono a installare software indesiderato o dannoso.  
+ Viene anche applicata la stessa logica di avvio utente per **aprire**/**salvare** i prompt di sicurezza. Le finestre di dialogo di installazione ActiveX vengono sempre intercettate sotto la barra informazioni a meno che non rappresentino un aggiornamento da un controllo installato in precedenza. Queste misure consentono agli utenti un'esperienza più controllata e sicura, perché sono protetti da quei siti che con l'inganno inducono a installare software indesiderato o dannoso.  
   
- Queste funzionalità proteggono inoltre i clienti che utilizzano IE6 SP2 per accedere ai siti Web che consentono loro di scaricare [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] e installare le applicazioni. In particolare, questo è dovuto al fatto che IE6 SP2 offre un'esperienza utente migliore che riduce la possibilità per gli utenti di installare applicazioni dannose o malintenzionate indipendentemente dalla tecnologia usata [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]per la compilazione, tra cui. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]aggiunge a queste protezioni usando ClickOnce per facilitare il download delle applicazioni tramite Internet. Poiché le [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vengono eseguite all'interno di una sandbox di sicurezza dell'area Internet, possono essere avviate senza problemi. Al contrario, l'esecuzione delle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonome richiede attendibilità completa. Per queste applicazioni, ClickOnce visualizzerà una finestra di dialogo di sicurezza durante il processo di avvio per notificare l'uso dei requisiti di sicurezza aggiuntivi dell'applicazione. Questa operazione, che deve essere avviata dall'utente, verrà determinata dalla logica avviata dall'utente e potrà essere annullata.  
+ Queste funzionalità proteggono inoltre i clienti che utilizzano IE6 SP2 per accedere ai siti Web che consentono loro di scaricare e installare [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni. In particolare, questo è dovuto al fatto che IE6 SP2 offre un'esperienza utente migliore che riduce la possibilità per gli utenti di installare applicazioni dannose o malintenzionate indipendentemente dalla tecnologia usata per compilarlo, incluso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aggiunge a queste protezioni usando ClickOnce per facilitare il download delle applicazioni tramite Internet. Poiché le [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vengono eseguite all'interno di una sandbox di sicurezza dell'area Internet, possono essere avviate senza problemi. Al contrario, l'esecuzione delle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonome richiede attendibilità completa. Per queste applicazioni, ClickOnce visualizzerà una finestra di dialogo di sicurezza durante il processo di avvio per notificare l'uso dei requisiti di sicurezza aggiuntivi dell'applicazione. Questa operazione, che deve essere avviata dall'utente, verrà determinata dalla logica avviata dall'utente e potrà essere annullata.  
   
  Internet Explorer 7 incorpora ed estende le funzionalità di sicurezza di IE6 SP2 come parte di un costante impegno per la sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
-- [Sicurezza](security-wpf.md)
+- [Security](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
 - [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

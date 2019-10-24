@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117853"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775226"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
 .NET Standard è una specifica formale che definisce un set di API con versioni specifiche che devono essere disponibili nelle implementazioni .NET conformi a tale versione dello standard. .NET Standard è destinato agli sviluppatori di librerie. Una libreria che ha come destinazione una versione di .NET Standard è utilizzabile in qualsiasi implementazione di .NET Framework, .NET Core o Xamarin che supporta tale versione dello standard.
 
-La versione più recente di .NET Standard è la versione 2.0. Questa versione è inclusa con .NET Core 2.0 SDK e con Visual Studio 2017 versione 15.3 con il carico di lavoro .NET Core installato.
+La versione più recente di .NET Standard è la versione 2.0. È incluso in .NET Core 2,0 SDK, nonché con Visual Studio 2017 versione 15,3 con il carico di lavoro di .NET Core installato.
 
 ## <a name="supported-net-implementations"></a>Implementazioni di .NET supportate
 
@@ -61,7 +61,7 @@ L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framew
 
 ### <a name="support-for-visual-basic"></a>Supporto per Visual Basic
 
-È ora possibile sviluppare librerie .NET Standard in Visual Basic. Per gli sviluppatori Visual Basic che usano Visual Studio 2017 versione 15.3 o versioni successive con il carico di lavoro di .NET Core installato, Visual Studio ora include un modello di librerie di classi .NET Standard. Per gli sviluppatori Visual Basic che usano altri strumenti e ambienti di sviluppo, è possibile usare il comando [dotnet new](../../core/tools/dotnet-new.md) per creare un progetto di libreria .NET Standard. Per altre informazioni, vedere [Supporto degli strumenti per librerie .NET Standard](#tooling-support-for-net-standard-libraries).
+È ora possibile sviluppare librerie .NET Standard in Visual Basic. Per Visual Basic sviluppatori che usano Visual Studio 2017 versione 15,3 o successiva con il carico di lavoro di .NET Core installato, Visual Studio ora include un modello di libreria di classi .NET Standard. Per gli sviluppatori Visual Basic che usano altri strumenti e ambienti di sviluppo, è possibile usare il comando [dotnet new](../../core/tools/dotnet-new.md) per creare un progetto di libreria .NET Standard. Per altre informazioni, vedere [Supporto degli strumenti per librerie .NET Standard](#tooling-support-for-net-standard-libraries).
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Supporto degli strumenti per librerie .NET Standard
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605827"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771858"
 ---
 # <a name="enum-c-reference"></a>enum (Riferimenti per C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 In questa enumerazione la sequenza di elementi viene forzata a iniziare da `1` anziché da `0`. Tuttavia, si consiglia di includere una costante con valore pari a 0. Per altre informazioni, vedere [Tipi di enumerazione](../../programming-guide/enumeration-types.md).
 
-Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](char.md) non può essere un tipo sottostante di un'enumerazione. Il tipo sottostante predefinito degli elementi dell'enumerazione è [int](../builtin-types/integral-numeric-types.md). Per dichiarare un'enumerazione di un altro tipo integrale, ad esempio [byte](../builtin-types/integral-numeric-types.md), usare i due punti dopo l'identificatore seguiti dal tipo, come illustrato nell'esempio seguente.
+Ogni tipo di enumerazione ha un tipo sottostante, che può essere qualsiasi [tipo numerico integrale](../builtin-types/integral-numeric-types.md). Il tipo [char](char.md) non può essere un tipo sottostante di un'enumerazione. Il tipo sottostante predefinito degli elementi dell'enumerazione è [int](../builtin-types/integral-numeric-types.md). Per dichiarare un'enumerazione di un altro tipo integrale, ad esempio [byte](../builtin-types/integral-numeric-types.md), usare i due punti dopo l'identificatore seguito dal tipo, come illustrato nell'esempio seguente.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -82,7 +82,7 @@ L'esempio di codice seguente illustra l'utilizzo e gli effetti dell'attributo <x
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
-## <a name="comments"></a>Commenti
+## <a name="comments"></a>Comments
 
 Se si rimuove `Flags`, l'esempio visualizza i valori seguenti:
 
@@ -101,6 +101,4 @@ Se si rimuove `Flags`, l'esempio visualizza i valori seguenti:
 - [Parole chiave di C#](index.md)
 - [Tipi integrali](../builtin-types/integral-numeric-types.md)
 - [Tabella dei tipi incorporati](built-in-types-table.md)
-- [Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)
-- [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)
 - [Convenzioni di denominazione di enumerazione](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

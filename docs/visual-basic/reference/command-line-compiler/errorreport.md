@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: c8e193a8cb4d4dbc7515c32139bad9dce8b48ed7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005625"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775673"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -35,19 +35,19 @@ Nella tabella seguente sono riepilogati gli effetti dell'opzione `-errorreport`.
 |---|---|
 |`prompt`|Se si verifica un errore interno del compilatore, viene visualizzata una finestra di dialogo in cui è possibile visualizzare i dati esatti raccolti dal compilatore. È possibile determinare se nel report degli errori sono presenti informazioni riservate e decidere se inviarle a Microsoft. Se si decide di inviarlo e le impostazioni dei criteri utente e del computer lo consentono, il compilatore invia i dati a Microsoft.|
 |`queue`|Accoda la segnalazione errori. Quando si esegue l'accesso con privilegi di amministratore, è possibile segnalare eventuali errori dall'ultima volta che è stato effettuato l'accesso. non verrà richiesto di inviare i report per gli errori più di una volta ogni tre giorni. Si tratta del comportamento predefinito quando non viene specificata l'opzione `-errorreport`.|
-|`send`|Se si verifica un errore interno del compilatore e le impostazioni dei criteri utente e del computer lo consentono, il compilatore invia i dati a Microsoft.<br /><br /> L'opzione `-errorreport:send` tenta di inviare automaticamente le informazioni sugli errori a Microsoft se la creazione di report è abilitata dalle impostazioni di sistema [segnalazione errori Windows](/windows/desktop/wer/windows-error-reporting) . |
+|`send`|Se si verifica un errore interno del compilatore e le impostazioni dei criteri utente e del computer lo consentono, il compilatore invia i dati a Microsoft.<br /><br /> L'opzione `-errorreport:send` tenta di inviare automaticamente le informazioni sugli errori a Microsoft se la creazione di report è abilitata dalle impostazioni di sistema del [segnalazione errori Windows](/windows/desktop/wer/windows-error-reporting) . |
 |`none`|Se si verifica un errore interno del compilatore, non verrà raccolto né inviato a Microsoft.|
 
 Il compilatore invia i dati che includono lo stack al momento dell'errore, che in genere include un codice sorgente. Se `-errorreport` viene usato con l'opzione [-bugreport (](../../../visual-basic/reference/command-line-compiler/bugreport.md) , viene inviato l'intero file di origine.
 
-Questa opzione è ideale per l'uso con l'opzione [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , perché consente ai tecnici Microsoft di riprodurre più facilmente l'errore.
+Questa opzione è ideale per l'uso con l'opzione [-bugreport (](../../../visual-basic/reference/command-line-compiler/bugreport.md) , perché consente ai tecnici Microsoft di riprodurre più facilmente l'errore.
 
 > [!NOTE]
 > L'opzione `-errorreport` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si esegue la compilazione dalla riga di comando.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente tenta di compilare `T2.vb` e, se il compilatore rileva un errore interno del compilatore, chiede di inviare la segnalazione errori a Microsoft.
+Il codice seguente tenta di compilare `T2.vb`e se il compilatore rileva un errore interno del compilatore, viene richiesto di inviare la segnalazione errori a Microsoft.
 
 ```console
 vbc -errorreport:prompt t2.vb

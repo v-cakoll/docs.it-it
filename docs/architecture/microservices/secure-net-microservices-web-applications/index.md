@@ -4,12 +4,12 @@ description: Protezione di microservizi e applicazioni Web .NET - Informazioni s
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296475"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798851"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteggere i microservizi e le applicazioni Web .NET
 
@@ -25,9 +25,9 @@ In scenari con microservizi, l'autenticazione viene in genere gestita a livello 
 
 **Figura 9-1**. Autenticazione centralizzata con un gateway API
 
-Se è possibile accedere direttamente ai servizi, per autenticare gli utenti è possibile usare un servizio di autenticazione come Azure Active Directory o un microservizio di autenticazione dedicato con funzione di servizio token di sicurezza. Le decisioni sull'attendibilità vengono condivise tra i servizi con i token di sicurezza o i cookie. (Questi token possono essere condivisi tra le applicazioni ASP.NET Core, se necessario, implementando la [condivisione dei cookie](/aspnet/core/security/cookie-sharing).) Questo scenario è illustrato nella figura 9-2.
+Se è possibile accedere direttamente ai servizi, per autenticare gli utenti è possibile usare un servizio di autenticazione come Azure Active Directory o un microservizio di autenticazione dedicato con funzione di servizio token di sicurezza. Le decisioni sull'attendibilità vengono condivise tra i servizi con i token di sicurezza o i cookie. Questi token possono essere condivisi tra ASP.NET Core applicazioni, se necessario, implementando la [condivisione dei cookie](/aspnet/core/security/cookie-sharing). Questo modello è illustrato nella figura 9-2.
 
-![Quando l'accesso ai i microservizi è diretto, l'attendibilità, che include autenticazione e autorizzazione, viene gestita da un token di sicurezza emesso da un microservizio dedicato, condiviso tra i microservizi.](./media/image2.png)
+![Quando si accede direttamente ai microservizi, l'attendibilità, che include l'autenticazione e l'autorizzazione, viene gestita da un token di sicurezza emesso da un microservizio dedicato, condiviso tra microservizi.](./media/image2.png)
 
 **Figura 9-2**. Autenticazione mediante microservizio di identità; l'attendibilità è condivisa con un token di autorizzazione
 
@@ -282,22 +282,19 @@ Il middleware di autenticazione con bearer token JWT può supportare anche scena
 - **Introduzione all'identità** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Autenticazione a due fattori con SMS** \
+- **Rick Anderson. Autenticazione a due fattori con SMS**  \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Abilitazione dell'autenticazione con Facebook, Google e altri provider esterni** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2 (Introduzione a OAuth 2)**  \
+- **Michell anicas. Introduzione a OAuth 2**  \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repository GitHub per i provider OAuth ASP.NET) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app (Integrazione di Azure AD in un'app Web ASP.NET Core)**  \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
-
-- **IdentityServer4. Documentazione ufficiale** \
+- **IdentityServer4. Documentazione ufficiale**  \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]

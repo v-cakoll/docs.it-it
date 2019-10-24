@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
-ms.translationtype: HT
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609948"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771714"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operatori di scorrimento e bit per bit (Riferimenti per C#)
 
@@ -136,7 +136,7 @@ L'esempio seguente illustra l'uso dell'assegnazione composta con gli operatori d
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-A causa delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
+In ragione delle [promozioni numeriche](~/_csharplang/spec/expressions.md#numeric-promotions) il risultato dell'operazione `op` potrebbe non essere convertibile in modo implicito nel tipo `T` di `x`. In questo caso, se `op` è un operatore già definito e il risultato dell'operazione è convertibile in modo esplicito nel tipo `T` di `x`, un'espressione di assegnazione composta nel formato `x op= y` equivale a `x = (T)(x op y)`, con la differenza che `x` viene valutato una sola volta. L'esempio seguente illustra questo comportamento:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -158,7 +158,7 @@ Per l'elenco completo degli operatori C# ordinati in base al livello di preceden
 
 ## <a name="shift-count-of-the-shift-operators"></a>Conteggio degli scorrimenti degli operatori di scorrimento
 
-Per gli operatori di scorrimento `<<` e `>>`, il tipo dell'operando di destra deve essere [int](../builtin-types/integral-numeric-types.md) o un tipo con una [conversione numerica implicita predefinita](../keywords/implicit-numeric-conversions-table.md) in `int`.
+Per gli operatori di scorrimento `<<` e `>>`, il tipo dell'operando di destra deve essere [int](../builtin-types/integral-numeric-types.md) o un tipo con una [conversione numerica implicita predefinita](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) in `int`.
 
 Per le espressioni `x << count` e `x >> count`, il conteggio effettivo degli scorrimenti varia a seconda del tipo di `x` come segue:
 

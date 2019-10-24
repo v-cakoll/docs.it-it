@@ -3,12 +3,12 @@ title: Introduzione agli eventi
 description: Questa panoramica offre informazioni sugli eventi di .NET Core e sugli obiettivi di progettazione del linguaggio per gli eventi.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: HT
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051946"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771910"
 ---
 # <a name="introduction-to-events"></a>Introduzione agli eventi
 
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 Il tipo di evento (`EventHandler<FileListArgs>` in questo esempio) deve essere un tipo di delegato. Quando si dichiara un evento, è necessario seguire un certo numero di convenzioni. In genere, il tipo di delegato di un evento restituisce void.
 Le dichiarazioni di eventi devono essere un verbo o una frase verbale.
-Usare il passato (come in questo esempio) quando l'evento segnala qualcosa che si è verificato. Usare il presente (ad esempio, `Closing`) per segnalare qualcosa che sta per verificarsi. L'uso del presente indica spesso che la classe supporta un determinato tipo di comportamento di personalizzazione. Uno degli scenari più comuni riguarda il supporto dell'annullamento. Un evento `Closing`, ad esempio, può includere un argomento che indica se l'operazione di chiusura deve continuare o meno.  Altri scenari possono consentire ai chiamanti di modificare il comportamento tramite l'aggiornamento delle proprietà degli argomenti dell'evento. È possibile generare un evento per proporre l'azione successiva che un algoritmo deve eseguire. Il gestore eventi può imporre un'azione diversa modificando le proprietà dell'argomento dell'evento.
+Usare il tempo passato quando l'evento segnala qualcosa che si è verificato. Usare il presente (ad esempio, `Closing`) per segnalare qualcosa che sta per verificarsi. L'uso del presente indica spesso che la classe supporta un determinato tipo di comportamento di personalizzazione. Uno degli scenari più comuni riguarda il supporto dell'annullamento. Un evento `Closing`, ad esempio, può includere un argomento che indica se l'operazione di chiusura deve continuare o meno.  Altri scenari possono consentire ai chiamanti di modificare il comportamento tramite l'aggiornamento delle proprietà degli argomenti dell'evento. È possibile generare un evento per proporre l'azione successiva che un algoritmo deve eseguire. Il gestore eventi può imporre un'azione diversa modificando le proprietà dell'argomento dell'evento.
 
 Quando si vuole generare l'evento, è possibile chiamare i gestori eventi tramite la sintassi di chiamata dei delegati:
 

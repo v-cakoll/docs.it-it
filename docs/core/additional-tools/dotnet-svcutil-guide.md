@@ -4,12 +4,12 @@ description: Panoramica dello strumento Microsoft WCF dotnet-svcutil che aggiung
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522835"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771974"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Strumento WCF dotnet-svcutil per .NET Core
 
@@ -17,7 +17,7 @@ Lo strumento Windows Communication Foundation (WCF) **dotnet-svcutil** è uno st
 
 Analogo allo strumento [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per i progetti .NET Framework, **dotnet-svcutil** è uno strumento da riga di comando per la generazione di un riferimento al servizio Web compatibile con i progetti .NET Core e .NET Standard.
 
-Lo strumento **dotnet-svcutil** rappresenta un'alternativa al provider di servizi connessi di Visuali Studio [**WCF Web Service Reference Provider**](wcf-web-service-reference-guide.md), disponibile per la prima volta con Visual Studio 2017 versione 15.5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
+Lo strumento **DotNet-Svcutil** è un'opzione alternativa al [**servizio Web WCF riferimento**](wcf-web-service-reference-guide.md) al provider di servizi connessi di Visual Studio, fornito per la prima volta con Visual Studio 2017 versione 15,5. Come strumento dell'interfaccia della riga di comando di .NET Core, **dotnet-svcutil** è disponibile come strumento multipiattaforma in Linux, macOS e Windows.
 
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza.
