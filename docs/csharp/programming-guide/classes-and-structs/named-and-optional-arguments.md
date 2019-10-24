@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 83e465651762fce33a62009fb3add40373a33c51
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922206"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772118"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -51,7 +51,7 @@ In C# 4 sono stati introdotti gli argomenti denominati e facoltativi. Gli *argom
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Gli argomenti denominati nell'ordine non corretto sono invece ritenuti non validi se seguiti da argomenti posizionali.
+ Gli argomenti posizionali che seguono gli argomenti denominati non ordinati non sono validi.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.

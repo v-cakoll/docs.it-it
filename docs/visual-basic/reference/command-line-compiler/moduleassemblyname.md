@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 5b26e36346858d95526f5d5ce7d4645bea1dbe05
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a612a68cffd927f3e360406cca6d9daae4f66c86
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005475"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775629"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Specifica il nome dell'assembly di cui fa parte il modulo.  
@@ -22,9 +22,9 @@ Specifica il nome dell'assembly di cui fa parte il modulo.
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |---|---|  
 |`assembly_name`|Nome dell'assembly di cui questo modulo sarà parte.|  
   
@@ -33,11 +33,11 @@ Specifica il nome dell'assembly di cui fa parte il modulo.
   
  L'opzione `-moduleassemblyname` è necessaria solo quando sono soddisfatte le condizioni seguenti:  
   
-- Un tipo di dati nel modulo deve accedere a un tipo `Friend` in un assembly a cui si fa riferimento.  
+- Un tipo di dati nel modulo deve accedere a un tipo di `Friend` in un assembly a cui si fa riferimento.  
   
 - L'assembly a cui si fa riferimento ha concesso l'accesso dell'assembly Friend all'assembly in cui verrà compilato il modulo.  
   
- Per ulteriori informazioni sulla creazione di un modulo, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Per ulteriori informazioni sugli assembly Friend, vedere [assembly Friend](../../../standard/assembly/friend.md).  
+ Per ulteriori informazioni sulla creazione di un modulo, vedere [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Per ulteriori informazioni sugli assembly Friend, vedere [assembly Friend](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
 > L'opzione `-moduleassemblyname` non è disponibile nell'ambiente di sviluppo di Visual Studio. è disponibile solo quando si compila da un prompt dei comandi.  

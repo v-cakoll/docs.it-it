@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 93b2e1a433b5d5b9694257d4d12e47d9107f4cd7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117033"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771930"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testare l'output pubblicato con dotnet vstest
 
@@ -34,7 +34,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Nota: se l'app specifica come destinazione un framework diverso da `netcoreapp`, è possibile eseguire il comando `dotnet vstest` passando il framework di destinazione con un flag framework. Ad esempio `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. In Visual Studio 2017 Update 5 il framework desiderato viene rilevato automaticamente.
+> Nota: se l'app è destinata a un Framework diverso da `netcoreapp`, è comunque possibile eseguire il comando `dotnet vstest` passando il Framework di destinazione con un flag di Framework. Ad esempio `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. In Visual Studio 2017 Update 5 e versioni successive il framework desiderato viene rilevato automaticamente.
 
 ## <a name="see-also"></a>Vedere anche
 

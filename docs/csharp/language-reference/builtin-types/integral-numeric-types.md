@@ -1,7 +1,7 @@
 ---
 title: Tipi numerici integrali - Riferimenti per C#
 description: Informazioni sull'intervallo, le dimensioni di archiviazione e gli usi dei singoli tipi numerici integrali.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579188"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773860"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipi numerici integrali (Riferimenti per C#)
 
@@ -100,7 +100,7 @@ Il tipo di un valore letterale integer è determinato dal suffisso, come indicat
 
 Se il valore rappresentato da un valore letterale Integer supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione [CS1021](../../misc/cs1021.md).
 
-Il valore rappresentato da un valore letterale integer può essere convertito in modo implicito in un tipo con un intervallo inferiore al tipo determinato del valore letterale. Questo è possibile quando il valore è compreso nell'intervallo del tipo di destinazione:
+Se il tipo determinato di un valore letterale integer è `int` e il valore è compreso nell'intervallo del tipo di destinazione, il valore rappresentato dal valore letterale può essere convertito in modo implicito in `sbyte`, `byte`, `short` `ushort` , `uint` o `ulong`:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversioni
 
-Viene eseguita una conversione implicita (detta *conversione verso un tipo di dati più grande*) tra due tipi integrali in cui il tipo di destinazione può archiviare tutti i valori del tipo di origine. Ad esempio, è presente una conversione implicita da `int` a `long` perché l'intervallo di valori `int` è un subset corretto di `long`. Sono presenti conversioni implicite da un tipo integrale senza segno più piccolo a un tipo integrale con segno più grande. È presente una conversione implicita anche da qualsiasi tipo integrale a qualsiasi tipo a virgola mobile.  Non vi è conversione implicita da qualsiasi tipo integrale con segno a qualsiasi tipo integrale senza segno.
-
-È necessario usare un cast esplicito per convertire un tipo integrale in un altro tipo integrale quando non è definita una conversione implicita dal tipo di origine al tipo di destinazione. Questa operazione è definita *conversione verso un tipo di dati più piccolo*. Il caso esplicito è necessario perché la conversione può comportare una perdita di dati.
+È possibile convertire qualsiasi tipo numerico integrale in qualsiasi altro tipo numerico integrale. Se il tipo di destinazione può archiviare tutti i valori del tipo di origine, la conversione è implicita. In caso contrario, è necessario usare l' [operatore cast `()`](../operators/type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita. Per altre informazioni, vedere [conversioni numeriche predefinite](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -132,8 +130,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Tipi a virgola mobile](floating-point-numeric-types.md)
-- [Tabella dei valori predefiniti](../keywords/default-values-table.md)
-- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
+- [Tipi a virgola mobile](floating-point-numeric-types.md)
+- [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Dati numerici in .NET](../../../standard/numerics.md)

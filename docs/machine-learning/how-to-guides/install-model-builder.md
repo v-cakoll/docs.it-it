@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306319"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774572"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Come installare il generatore di modelli di ML.NET
 
@@ -21,7 +21,7 @@ Di seguito viene descritto come installare il generatore di modelli di ML.NET pe
 
 ## <a name="pre-requisites"></a>Prerequisiti
 
-- Visual Studio 2017 15.9.12 o versione successiva/Visual Studio 2019
+- Visual Studio 2017 versione 15.9.12 o successiva/Visual Studio 2019
 - SDK .NET Core 2.1 o versione successiva
 
 ## <a name="limitations"></a>Limitazioni
@@ -31,9 +31,9 @@ Di seguito viene descritto come installare il generatore di modelli di ML.NET pe
 - SQL Server ha un limite di 100 migliaia di righe per il training
 - Microsoft SQL Server Data Tools per Visual Studio 2017 non è supportato
 
-## <a name="install"></a>Installazione
+## <a name="install"></a>Installazione di
 
-Il generatore di modelli di ML.NET può essere installato tramite Visual Studio Marketplace o dall'interno di Visual Studio. 
+Il generatore di modelli di ML.NET può essere installato tramite Visual Studio Marketplace o dall'interno di Visual Studio.
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace
 
@@ -66,7 +66,7 @@ Il generatore di modelli di ML.NET può essere installato tramite Visual Studio 
 
 1. Seguire i messaggi visualizzati per completare l'installazione
 
-## <a name="uninstall"></a>Disinstallare
+## <a name="uninstall"></a>Disinstalla
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 

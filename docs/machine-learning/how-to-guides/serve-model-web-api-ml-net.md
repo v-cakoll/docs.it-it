@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179385"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774515"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Distribuire un modello in un'API Web ASP.NET Core
 
@@ -19,9 +19,9 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
 > [!NOTE]
 > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+- [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 - PowerShell.
 - Modello con training preliminare. Usare l'[esercitazione di analisi del sentiment in ML.NET](../tutorials/sentiment-analysis.md) per creare un modello personalizzato oppure scaricare questo [modello di Machine Learning di analisi del sentiment con training preliminare](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -48,7 +48,7 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
 1. Copiare il modello predefinito nella directory *MLModels*
 1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul file ZIP del modello e scegliere Proprietà. In Avanzate impostare il valore di Copia nella directory di output su Copia se più recente.
 
-## <a name="create-data-models"></a>Creare i modelli di dati
+## <a name="create-data-models"></a>Creare modelli di dati
 
 È necessario creare alcune classi per i dati di input e le stime. Aggiungere una nuova classe al progetto:
 
@@ -62,9 +62,9 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Rimuovere la definizione di classe esistente e aggiungere il codice seguente al file **SentimentData.cs**:
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Rimuovere la definizione di classe esistente e aggiungere il codice seguente al file *SentimentPrediction.cs*:
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,11 +99,11 @@ Informazioni su come rendere disponibile un modello di Machine Learning ML.NET c
     }
     ```
 
-    `SentimentPrediction` eredita da `SentimentData`. Ciò semplifica la visualizzazione dei dati originali nella proprietà `SentimentText` insieme all'output generato dal modello. 
+    `SentimentPrediction` eredita da `SentimentData`. Ciò semplifica la visualizzazione dei dati originali nella proprietà `SentimentText` insieme all'output generato dal modello.
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Registrare PredictionEnginePool per l'uso nell'applicazione
 
-Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. Inoltre, è necessario crearne un'istanza ovunque sia necessario all'interno dell'applicazione. Con la crescita dell'applicazione, questo processo può diventare non gestibile. Per migliorare le prestazioni e thread safety, usare una combinazione di inserimento delle dipendenze e il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione.
+Per eseguire una singola stima, è necessario creare un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. Inoltre, è necessario crearne un'istanza ovunque sia necessario all'interno dell'applicazione. Con la crescita dell'applicazione, questo processo può diventare non gestibile. Per migliorare le prestazioni e thread safety, utilizzare una combinazione di inserimento delle dipendenze e il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) per l'utilizzo nell'applicazione.
 
 Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere ulteriori informazioni sull' [inserimento delle dipendenze in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -130,22 +130,22 @@ Il collegamento seguente fornisce ulteriori informazioni se si desidera ottenere
     }
     ```
 
-A un livello elevato, questo codice inizializza automaticamente gli oggetti e i servizi per un uso successivo quando richiesto dall'applicazione anziché eseguire manualmente questa operazione. 
+A un livello elevato, questo codice inizializza automaticamente gli oggetti e i servizi per un uso successivo quando richiesto dall'applicazione anziché eseguire manualmente questa operazione.
 
-I modelli di apprendimento automatico non sono statici. Al momento della disponibilità dei nuovi dati di training, il modello viene nuovamente sottoposto a training e ridistribuito. Un modo per ottenere la versione più recente del modello nell'applicazione consiste nel ridistribuire l'intera applicazione. Questa operazione introduce tuttavia i tempi di inattività dell'applicazione. Il servizio `PredictionEnginePool` fornisce un meccanismo per ricaricare un modello aggiornato senza interrompere l'esecuzione dell'applicazione. 
+I modelli di apprendimento automatico non sono statici. Al momento della disponibilità dei nuovi dati di training, il modello viene nuovamente sottoposto a training e ridistribuito. Un modo per ottenere la versione più recente del modello nell'applicazione consiste nel ridistribuire l'intera applicazione. Questa operazione introduce tuttavia i tempi di inattività dell'applicazione. Il servizio `PredictionEnginePool` fornisce un meccanismo per ricaricare un modello aggiornato senza interrompere l'applicazione.
 
-Impostare il parametro `watchForChanges` su `true` e il `PredictionEnginePool` avvia un [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) in ascolto delle notifiche di modifica file System e genera eventi quando viene apportata una modifica al file. In questo modo viene richiesto `PredictionEnginePool` per ricaricare automaticamente il modello.
+Impostare il parametro `watchForChanges` su `true` e il `PredictionEnginePool` avvia un [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) in ascolto delle notifiche di modifica file System e genera eventi quando viene apportata una modifica al file. In questo modo viene richiesto all'`PredictionEnginePool` di ricaricare automaticamente il modello.
 
-Il modello è identificato dal parametro `modelName` in modo che sia possibile ricaricare più di un modello per applicazione al momento della modifica. 
+Il modello è identificato dal parametro `modelName` in modo che sia possibile ricaricare più di un modello per applicazione al momento della modifica.
 
 > [!TIP]
 > In alternativa, è possibile utilizzare il metodo `FromUri` quando si utilizzano i modelli archiviati in remoto. Invece di controllare gli eventi di modifica dei file, `FromUri` esegue il polling della posizione remota per le modifiche. Per impostazione predefinita, l'intervallo di polling è 5 minuti. È possibile aumentare o diminuire l'intervallo di polling in base ai requisiti dell'applicazione. Nell'esempio di codice riportato di seguito, il `PredictionEnginePool` esegue il polling del modello archiviato nell'URI specificato ogni minuto.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ Per elaborare le richieste HTTP in ingresso, creare un controller.
     ```
 
     Rimuovere la definizione di classe esistente e aggiungere il codice seguente al file *PredictController.cs*:
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -193,7 +193,7 @@ Per elaborare le richieste HTTP in ingresso, creare un controller.
     }
     ```
 
-Questo codice assegna `PredictionEnginePool` passandolo al costruttore del controller ottenuto tramite l'inserimento delle dipendenze. Quindi, il metodo `Post` del controller `Predict` usa il `PredictionEnginePool` per eseguire stime usando il `SentimentAnalysisModel` registrato nella classe `Startup` e restituisce i risultati all'utente in caso di esito positivo.
+Questo codice assegna `PredictionEnginePool` passandolo al costruttore del controller ottenuto tramite l'inserimento delle dipendenze. Quindi, il metodo di `Post` del controller di `Predict` utilizza il `PredictionEnginePool` per eseguire stime utilizzando il `SentimentAnalysisModel` registrato nella classe `Startup` e restituisce i risultati all'utente in caso di esito positivo.
 
 ## <a name="test-web-api-locally"></a>Testare l'API Web in locale
 
@@ -207,7 +207,7 @@ Dopo aver completato la configurazione, è possibile testare l'applicazione.
     ```
 
     In caso di esito positivo, l'output sarà simile al testo seguente:
-    
+
     ```powershell
     Negative
     ```

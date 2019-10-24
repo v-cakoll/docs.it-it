@@ -1,7 +1,7 @@
 ---
 title: Tipi numerici a virgola mobile - Riferimenti per C#
 description: Panoramica dei tipi a virgola mobile incorporati di C#
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579378"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771897"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipi numerici a virgola mobile (riferimenti per C#)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Conversioni
 
-La conversione è implicita (denominata *conversione verso un tipo di dati più grande*) da `float` in `double` perché l'intervallo di valori `float` è un subset corretto di `double` e non si perde precisione da `float` in `double`.
-
-È necessario usare un cast esplicito per convertire un tipo a virgola mobile in un altro tipo a virgola mobile quando non è definita una conversione implicita dal tipo di origine nel tipo di destinazione. Questa operazione è definita *conversione verso un tipo di dati più piccolo*. Il caso esplicito è necessario perché la conversione può comportare una perdita di dati. La conversione non è implicita tra altri tipi a virgola mobile e il tipo `decimal` perché il tipo `decimal` ha una maggiore precisione rispetto a `float` o `double`.
-
-Per altre informazioni sulle conversioni numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../keywords/implicit-numeric-conversions-table.md).
-
-Per altre informazioni sulle conversioni numeriche esplicite, vedere [Tabella delle conversioni numeriche esplicite](../keywords/explicit-numeric-conversions-table.md).
+Esiste una sola conversione implicita tra tipi numerici a virgola mobile: da `float` a `double`. Tuttavia, è possibile convertire qualsiasi tipo a virgola mobile in qualsiasi altro tipo a virgola mobile con il [cast esplicito](../operators/type-testing-and-cast.md#cast-operator-). Per altre informazioni, vedere [conversioni numeriche predefinite](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -124,10 +118,9 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per C#](../index.md)
-- [Tipi integrali](integral-numeric-types.md)
 - [Tabella dei tipi incorporati](../keywords/built-in-types-table.md)
-- [Dati numerici in .NET](../../../standard/numerics.md)
-- [Cast e conversioni di tipi](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Tipi integrali](integral-numeric-types.md)
 - [Tabella di formattazione dei risultati numerici](../keywords/formatting-numeric-results-table.md)
 - [Stringhe di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Dati numerici in .NET](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

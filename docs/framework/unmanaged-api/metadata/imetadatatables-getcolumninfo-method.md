@@ -1,6 +1,6 @@
 ---
 title: Metodo IMetaDataTables::GetColumnInfo
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781519"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774250"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Metodo IMetaDataTables::GetColumnInfo
 Ottiene i dati relativi alla colonna specificata nella tabella specificata.  
@@ -40,31 +40,59 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri
+=======
+
  `ixTbl`  
- [in] L'indice della tabella desiderata.  
+ in Indice della tabella desiderata.  
   
  `ixCol`  
- [in] L'indice della colonna desiderata.  
+ in Indice della colonna desiderata.  
   
  `poCol`  
- [out] Un puntatore all'offset della colonna nella riga.  
+ out Puntatore all'offset della colonna nella riga.  
   
  `pcbCol`  
- [out] Un puntatore alla dimensione, espressa in byte, della colonna.  
+ out Puntatore alla dimensione, in byte, della colonna.  
   
  `pType`  
- [out] Un puntatore al tipo dei valori nella colonna.  
+ out Puntatore al tipo dei valori nella colonna.  
   
  `ppName`  
- [out] Un puntatore a un puntatore al nome della colonna.  
-  
+ out Puntatore a un puntatore al nome della colonna.  
+ 
+## <a name="remarks"></a>Note
+
+Il tipo di colonna restituito rientra in un intervallo di valori:
+
+| pType                    | Descrizione   | Funzione helper                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`.. `iRidMax`<br>(0.. 63)   | Sbarazzarsi           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`.. `iCodedTokenMax`<br>(64.. 95) | Token codificato | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)          | Stringa        | **IsHeapType**                    |
+| `iGUID` (102)            | GUID          | **IsHeapType**                    |
+| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+
+I valori archiviati nell' *heap* (ovvero `IsHeapType == true`) possono essere letti utilizzando:
+
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GETguid**
+- `iBLOB`: **IMetadataTables. GetBlob**
+
+> [!IMPORTANT]
+> Per usare le costanti definite nella tabella precedente, includere la direttiva `#define _DEFINE_META_DATA_META_CONSTANTS` fornita dal file di intestazione *cor. h* .
+
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** vedere [Requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** Usato come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in MsCorEE. dll  
   
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

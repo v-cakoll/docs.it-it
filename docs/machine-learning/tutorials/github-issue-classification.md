@@ -1,17 +1,17 @@
 ---
-title: 'Esercitazione: Categorizzare i problemi di supporto - classificazione multiclasse'
+title: 'Esercitazione: categorizzare i problemi di supporto-classificazione multiclasse'
 description: Informazioni su come usare ML.NET in uno scenario di classificazione multiclasse per assegnare i problemi di GitHub a un'area specifica.
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: a6d158d51e6775feaed669c678bb9a36984f08f3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698981"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774495"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Esercitazione: Categorizzare i problemi di supporto usando la classificazione multiclasse con ML NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Esercitazione: categorizzare i problemi di supporto usando la classificazione multiclasse con ML .NET
 
 Questa esercitazione di esempio illustra come usare ML.NET per creare un classificatore di problemi di GitHub per eseguire il training di un modello che classifica e stima l'etichetta Area per un problema di GitHub tramite un'applicazione console .NET Core con C# in Visual Studio.
 
@@ -27,9 +27,9 @@ In questa esercitazione si imparerà a:
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+* [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
 * Il [file separato da tabulazioni dei problemi di Github (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * Il [file di test separato da tabulazioni dei problemi di Github (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
@@ -38,7 +38,7 @@ In questa esercitazione si imparerà a:
 
 ### <a name="create-a-project"></a>Creare un progetto
 
-1. Aprire Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)** . Nella casella di testo **Nome** digitare "GitHubIssueClassification" e quindi selezionare il pulsante **OK**.
+1. Aprire Visual Studio 2017. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App Console (.NET Core)** . Nella casella di testo **Nome** digitare "GitHubIssueClassification" e quindi selezionare il pulsante **OK**.
 
 2. Creare una directory denominata *Data* nel progetto per salvare i file del set di dati:
 
@@ -91,7 +91,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-`label` è la colonna da stimare. Gli elementi `Features` identificati sono gli input indicati al modello per stimare l'etichetta.
+`label` è la colonna sulla quale eseguire le stime. Gli elementi `Features` identificati sono gli input indicati al modello per stimare l'etichetta.
 
 Usare [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) per specificare gli indici delle colonne di origine nel set di dati.
 
@@ -104,7 +104,7 @@ Usare [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) per spec
 
 `IssuePrediction` è la classe usata per la stima dopo il training del modello. Dispone di un `string` singolo (`Area`) e di un attributo `PredictedLabel` `ColumnName`.  `PredictedLabel` viene usato durante la valutazione e la stima. Per la valutazione vengono usati un input con dati di training, i valori stimati e il modello.
 
-Tutte le operazioni ML.NET iniziano nella classe [MLContext](xref:Microsoft.ML.MLContext). L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro della creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in `Entity Framework`.
+Tutte le operazioni ML.NET iniziano nella classe [MLContext](xref:Microsoft.ML.MLContext). L'inizializzazione di `mlContext` crea un nuovo ambiente ML.NET che può essere condiviso tra gli oggetti del flusso di lavoro di creazione del modello. Dal punto di vista concettuale è simile a `DBContext` in `Entity Framework`.
 
 ### <a name="initialize-variables-in-main"></a>Inizializzare le variabili in Main
 
@@ -114,7 +114,7 @@ Inizializzare la variabile globale `_mlContext` con una nuova istanza di `MLCont
 
 ## <a name="load-the-data"></a>Caricare i dati
 
-ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo efficiente e flessibile per descrivere i dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio, file di database SQL o di log).
+ML.NET usa la [classe IDataView](xref:Microsoft.ML.IDataView) come un modo efficiente e flessibile per descrivere i dati tabulari numerici o di testo. `IDataView` può caricare file testo o in tempo reale (ad esempio file di database SQL o file di log).
 
 Per inizializzare e caricare la variabile globale `_trainingDataView` in modo da riusarla per la pipeline, aggiungere il codice seguente dopo l'inizializzazione di `mlContext`:
 
@@ -212,7 +212,7 @@ Eseguire il fit del modello ai dati `splitTrainSet` e restituire il modello sott
 
 Il metodo `Fit()` esegue il training del modello trasformando il set di dati e applicando il training.
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di servizio che consente di passare e quindi eseguire una stima su una singola istanza di dati. Aggiungere il codice seguente come riga successiva nel metodo `BuildAndTrainModel()`:
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di servizio che consente di passare e quindi effettuare una stima su una singola istanza di dati. Aggiungere il codice seguente come riga successiva nel metodo `BuildAndTrainModel()`:
 
 [!code-csharp[CreatePredictionEngine1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
@@ -288,7 +288,7 @@ Usare il codice seguente per visualizzare le metriche, condividere i risultati e
 
 ### <a name="save-the-model-to-a-file"></a>Salvare il modello in un file
 
-Quando si è soddisfatti con il modello ottenuto, salvarlo in un file per poter effettuare stime in un secondo momento o in un'altra applicazione. Aggiungere al metodo `Evaluate` il seguente codice. 
+Quando si è soddisfatti con il modello ottenuto, salvarlo in un file per poter effettuare stime in un secondo momento o in un'altra applicazione. Aggiungere al metodo `Evaluate` il seguente codice.
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
@@ -340,7 +340,7 @@ Come in precedenza, creare un'istanza `PredictionEngine` con il codice seguente:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oggetti da usare nell'applicazione. Vedere questa guida sull'uso di [`PredictionEnginePool` in un'API Web di ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
 
 > [!NOTE]
 > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.

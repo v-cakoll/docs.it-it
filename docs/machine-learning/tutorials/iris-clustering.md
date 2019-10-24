@@ -1,18 +1,18 @@
 ---
-title: 'Esercitazione: Categorizzare i fiori di iris - clustering k-means'
+title: 'Esercitazione: classificare i fiori Iris-clustering k-means'
 description: Informazioni su come usare ML.NET in uno scenario di clustering
 author: pkulikov
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: e360cf2418e2003f9f40628c714e9e8ebd7c3e40
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b3bd6c2bea62359e8dd0840475afecc13bba37e4
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698552"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774472"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Esercitazione: Classificare i fiori di iris usando il clustering k-means con ML.NET
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Esercitazione: categorizzare i fiori Iris con il clustering k-means con ML.NET
 
 Questa esercitazione illustra come usare ML.NET per compilare un [modello di clustering](../resources/tasks.md#clustering) per il [set di dati dei fiori iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -27,9 +27,9 @@ In questa esercitazione si imparerà a:
 > - Eseguire il training del modello
 > - Usare il modello per le stime
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+- [Visual Studio 2017 versione 15,6 o successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "sviluppo multipiattaforma .NET Core" installato.
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -41,7 +41,7 @@ Poiché non si sa a quale gruppo appartenga ciascun fiore, scegliere l'attività
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
-1. Aprire Visual Studio. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App console (.NET Core)** . Nella casella di testo **Nome** digitare "IrisFlowerClustering" e quindi selezionare il pulsante **OK**.
+1. Aprire Visual Studio. Selezionare **File** > **Nuovo** > **Progetto** dalla barra dei menu. Nella finestra di dialogo **Nuovo progetto** selezionare il nodo **Visual C#** seguito dal nodo **.NET Core**. Selezionare quindi il modello di progetto **App Console (.NET Core)** . Nella casella di testo **Nome** digitare "IrisFlowerClustering" e quindi selezionare il pulsante **OK**.
 
 1. Creare una directory denominata *Dati* nel progetto per salvare i file del set di dati e del modello:
 
@@ -157,7 +157,7 @@ Per eseguire stime, usare la classe <xref:Microsoft.ML.PredictionEngine%602>, ch
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di oggetti [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) è un'API di praticità, che consente di eseguire una stima su una singola istanza di dati. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) non è thread-safe. È accettabile usare in ambienti a thread singolo o prototipi. Per migliorare le prestazioni e thread safety negli ambienti di produzione, usare il servizio `PredictionEnginePool`, che consente di creare un [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) di [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) oggetti da usare nell'applicazione. Vedere questa guida su come [usare `PredictionEnginePool` in un'API Web di ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > L'estensione del servizio `PredictionEnginePool` è attualmente in anteprima.

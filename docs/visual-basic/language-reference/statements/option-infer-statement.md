@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582624"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775448"
 ---
 # <a name="option-infer-statement"></a>Option Infer (istruzione)
 
@@ -62,7 +62,7 @@ Per altre informazioni, vedere [inferenza dei tipi locali](../../../visual-basic
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Quando non è presente un'istruzione Option Infer
 
-Se il codice sorgente non contiene un'istruzione `Option Infer`, viene utilizzata l' **opzione deduce** impostazione nella [pagina Compila, progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Se viene usato il compilatore da riga di comando, viene usata l'opzione del compilatore [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) .
+Se il codice sorgente non contiene un'istruzione `Option Infer`, viene utilizzata l' **opzione deduce** impostazione nella [pagina Compila, progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Se viene usato il compilatore da riga di comando, viene usata l'opzione del compilatore [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md) .
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Per impostare Option Infer nell'IDE
 
@@ -76,7 +76,7 @@ Quando si crea un nuovo progetto, l'impostazione **Option deduce** nella scheda 
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Per impostare Option Infer nella riga di comando
 
-Includere l'opzione del compilatore [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) nel comando **vbc** .
+Includere l'opzione del compilatore [-optioninfer (](../../../visual-basic/reference/command-line-compiler/optioninfer.md) nel comando **vbc** .
 
 ## <a name="default-data-types-and-values"></a>Tipi di dati e valori predefiniti
 
@@ -109,5 +109,5 @@ L'esempio seguente dimostra che il tipo di runtime può differire quando una var
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
