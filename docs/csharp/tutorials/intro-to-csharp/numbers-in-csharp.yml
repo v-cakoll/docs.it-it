@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="873d2-101">Modificare numeri a virgola mobile e integrali in C#</span><span class="sxs-lookup"><span data-stu-id="873d2-101">Manipulate integral and floating point numbers in C#</span></span>
+title: Modificare numeri a virgola mobile e integrali in C#
 metadata:
   title: Numeri in C# - Esercitazione interattiva introduttiva su C#
   description: In questa esercitazione sui tipi numerici si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser.
@@ -8,23 +8,23 @@ metadata:
   ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
-  nextTutorialTitle: <span data-ttu-id="873d2-105">Rami e cicli in C#</span><span class="sxs-lookup"><span data-stu-id="873d2-105">Branches and loops in C#</span></span>
+  nextTutorialTitle: Rami e cicli in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291379"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774006"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="873d2-106">Questa esercitazione descrive l'uso interattivo di tipi numerici in C#, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione e dell'esecuzione del codice.</span><span class="sxs-lookup"><span data-stu-id="873d2-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="873d2-107">L'esercitazione contiene una serie di lezioni che illustrano l'uso dei numeri e le operazioni matematiche in C#.</span><span class="sxs-lookup"><span data-stu-id="873d2-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="873d2-108">Queste lezioni presentano le nozioni fondamentali del linguaggio C#.</span><span class="sxs-lookup"><span data-stu-id="873d2-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="873d2-109">Esplorare le operazioni matematiche su interi</span><span class="sxs-lookup"><span data-stu-id="873d2-109">Explore integer math</span></span>
+    Questa esercitazione descrive l'uso interattivo di tipi numerici in C#, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione e dell'esecuzione del codice. L'esercitazione contiene una serie di lezioni che illustrano l'uso dei numeri e le operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
+- title: Esplorare le operazioni matematiche su interi
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="873d2-110">Eseguire il codice seguente nella finestra interattiva.</span><span class="sxs-lookup"><span data-stu-id="873d2-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="873d2-111">A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:</span><span class="sxs-lookup"><span data-stu-id="873d2-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:
 
 
     ```csharp
@@ -40,28 +40,28 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-112">Se si esegue questa operazione nell'ambiente in uso, è consigliabile seguire invece le istruzioni per la [versione locale](numbers-in-csharp-local.md) .</span><span class="sxs-lookup"><span data-stu-id="873d2-112">If you are running this on your environment, you should follow the instructions for the [local version](numbers-in-csharp-local.md) instead.</span></span>
+    Se si esegue questa operazione nell'ambiente in uso, è consigliabile seguire invece le istruzioni per la [versione locale](numbers-in-csharp-local.md) .
 
 
-    <span data-ttu-id="873d2-113">Questa è una delle operazioni matematiche fondamentali su interi.</span><span class="sxs-lookup"><span data-stu-id="873d2-113">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="873d2-114">Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo.</span><span class="sxs-lookup"><span data-stu-id="873d2-114">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="873d2-115">Per l'addizione si usa il simbolo `+`.</span><span class="sxs-lookup"><span data-stu-id="873d2-115">You use the `+` symbol for addition.</span></span> <span data-ttu-id="873d2-116">Altre operazioni matematiche comuni per gli interi includono:</span><span class="sxs-lookup"><span data-stu-id="873d2-116">Other common mathematical operations for integers include:</span></span>
+    Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
 
 
-    - <span data-ttu-id="873d2-117">`-` per la sottrazione</span><span class="sxs-lookup"><span data-stu-id="873d2-117">`-` for subtraction</span></span>
+    - `-` per la sottrazione
 
-    - <span data-ttu-id="873d2-118">`*` per la moltiplicazione</span><span class="sxs-lookup"><span data-stu-id="873d2-118">`*` for multiplication</span></span>
+    - `*` per la moltiplicazione
 
-    - <span data-ttu-id="873d2-119">`/` per la divisione</span><span class="sxs-lookup"><span data-stu-id="873d2-119">`/` for division</span></span>
+    - `/` per la divisione
 
 
     > [!TIP]
 
-    > <span data-ttu-id="873d2-120">In tutte le parti di questa esercitazione interattiva è possibile esplorare liberamente i contenuti modificando il codice scritto nella finestra interattiva.</span><span class="sxs-lookup"><span data-stu-id="873d2-120">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="873d2-121">Questa esercitazione offre esempi che è possibile provare a ogni passaggio.</span><span class="sxs-lookup"><span data-stu-id="873d2-121">This tutorial provides examples that you can try at each step.</span></span>
+    > In tutte le parti di questa esercitazione interattiva è possibile esplorare liberamente i contenuti modificando il codice scritto nella finestra interattiva. Questa esercitazione offre esempi che è possibile provare a ogni passaggio.
 
 
-    <span data-ttu-id="873d2-122">Per iniziare, esplorare le diverse operazioni.</span><span class="sxs-lookup"><span data-stu-id="873d2-122">Start by exploring those different operations.</span></span> <span data-ttu-id="873d2-123">Modificare la terza riga per provare ognuna di queste operazioni.</span><span class="sxs-lookup"><span data-stu-id="873d2-123">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="873d2-124">Dopo ogni modifica, fare clic sul pulsante **Esegui**.</span><span class="sxs-lookup"><span data-stu-id="873d2-124">After each edit, click the **Run** button.</span></span>
+    Per iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, fare clic sul pulsante **Esegui**.
 
 
-    <span data-ttu-id="873d2-125">Sottrazione:</span><span class="sxs-lookup"><span data-stu-id="873d2-125">Subtraction:</span></span>
+    Sottrazione:
 
 
     ```csharp
@@ -71,7 +71,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-126">Moltiplicazione:</span><span class="sxs-lookup"><span data-stu-id="873d2-126">Multiplication:</span></span>
+    Moltiplicazione:
 
 
     ```csharp
@@ -81,7 +81,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-127">Divisione:</span><span class="sxs-lookup"><span data-stu-id="873d2-127">Division:</span></span>
+    Divisione:
 
 
     ```csharp
@@ -91,27 +91,27 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-128">È anche possibile sperimentare eseguendo più operazioni matematiche nella stessa riga.</span><span class="sxs-lookup"><span data-stu-id="873d2-128">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
+    È anche possibile sperimentare eseguendo più operazioni matematiche nella stessa riga.
 
 
     > [!TIP]
 
-    > <span data-ttu-id="873d2-129">Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice.</span><span class="sxs-lookup"><span data-stu-id="873d2-129">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="873d2-130">Il **compilatore** troverà questi errori e li segnalerà.</span><span class="sxs-lookup"><span data-stu-id="873d2-130">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="873d2-131">Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.</span><span class="sxs-lookup"><span data-stu-id="873d2-131">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.
 
-    > <span data-ttu-id="873d2-132">Questo esercizio sarà utile per imparare la struttura del codice C#.</span><span class="sxs-lookup"><span data-stu-id="873d2-132">That exercise will help you learn the structure of C# code.</span></span>
+    > Questo esercizio sarà utile per imparare la struttura del codice C#.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-133">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-133">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-134">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-134">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="873d2-135">Esplorare l'ordine delle operazioni</span><span class="sxs-lookup"><span data-stu-id="873d2-135">Explore order of operations</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
+- title: Esplorare l'ordine delle operazioni
   durationInMinutes: 7
   content: >
-    <span data-ttu-id="873d2-136">Il linguaggio C# stabilisce un ordine di precedenza per le diverse operazioni matematiche, con regole coerenti con quelle della matematica.</span><span class="sxs-lookup"><span data-stu-id="873d2-136">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
+    Il linguaggio C# stabilisce un ordine di precedenza per le diverse operazioni matematiche, con regole coerenti con quelle della matematica.
 
-    <span data-ttu-id="873d2-137">La moltiplicazione e la divisione hanno la precedenza rispetto ad addizione e sottrazione.</span><span class="sxs-lookup"><span data-stu-id="873d2-137">Multiplication and division take precedence over addition and subtraction.</span></span>
+    La moltiplicazione e la divisione hanno la precedenza rispetto ad addizione e sottrazione.
 
-    <span data-ttu-id="873d2-138">Esplorare questo concetto eseguendo il codice seguente nella finestra interattiva:</span><span class="sxs-lookup"><span data-stu-id="873d2-138">Explore that by running the following code in the interactive window:</span></span>
+    Esplorare questo concetto eseguendo il codice seguente nella finestra interattiva:
 
 
     ```csharp
@@ -129,10 +129,10 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-139">L'output dimostra che la moltiplicazione viene eseguita prima dell'addizione.</span><span class="sxs-lookup"><span data-stu-id="873d2-139">The output demonstrates that the multiplication is performed before the addition.</span></span>
+    L'output dimostra che la moltiplicazione viene eseguita prima dell'addizione.
 
 
-    <span data-ttu-id="873d2-140">È possibile forzare un ordine diverso per le operazioni racchiudendo tra parentesi l'operazione o le operazioni che si vuole eseguire per prime:</span><span class="sxs-lookup"><span data-stu-id="873d2-140">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
+    È possibile forzare un ordine diverso per le operazioni racchiudendo tra parentesi l'operazione o le operazioni che si vuole eseguire per prime:
 
 
     ```csharp
@@ -150,7 +150,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-141">Sperimentare ulteriormente combinando molte operazioni diverse.</span><span class="sxs-lookup"><span data-stu-id="873d2-141">Explore more by combining many different operations.</span></span> <span data-ttu-id="873d2-142">Sostituire la quarta riga sopra con una simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="873d2-142">Replace the fourth line above with something like this:</span></span>
+    Sperimentare ulteriormente combinando molte operazioni diverse. Sostituire la quarta riga sopra con una simile alla seguente:
 
 
     ```csharp
@@ -160,10 +160,10 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-143">È possibile che si sia notato un comportamento interessante per gli interi.</span><span class="sxs-lookup"><span data-stu-id="873d2-143">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="873d2-144">La divisione di interi genera sempre un risultato intero, anche quando ci si aspetta che il risultato includa una parte decimale o frazionaria.</span><span class="sxs-lookup"><span data-stu-id="873d2-144">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
+    È possibile che si sia notato un comportamento interessante per gli interi. La divisione di interi genera sempre un risultato intero, anche quando ci si aspetta che il risultato includa una parte decimale o frazionaria.
 
 
-    <span data-ttu-id="873d2-145">Se questo comportamento non è stato notato, provare il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="873d2-145">If you haven't seen this behavior, try the following:</span></span>
+    Se questo comportamento non è stato notato, provare il codice seguente:
 
 
     ```csharp
@@ -181,18 +181,18 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-146">Fare clic su **Esegui** di nuovo per visualizzare i risultati.</span><span class="sxs-lookup"><span data-stu-id="873d2-146">Click **Run** again to see the results.</span></span>
+    Fare clic su **Esegui** di nuovo per visualizzare i risultati.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-147">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-147">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-148">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-148">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="873d2-149">Esplorare la precisione e i limiti delle operazioni su interi</span><span class="sxs-lookup"><span data-stu-id="873d2-149">Explore integer precision and limits</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
+- title: Esplorare la precisione e i limiti delle operazioni su interi
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="873d2-150">L'ultimo esempio dimostra che la divisione di interi tronca il risultato.</span><span class="sxs-lookup"><span data-stu-id="873d2-150">That last sample showed you that integer division truncates the result.</span></span>
+    L'ultimo esempio dimostra che la divisione di interi tronca il risultato.
 
-    <span data-ttu-id="873d2-151">È possibile ottenere il **resto** usando l'operatore **modulo**, ovvero il carattere `%`:</span><span class="sxs-lookup"><span data-stu-id="873d2-151">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
+    È possibile ottenere il **resto** usando l'operatore **modulo**, ovvero il carattere `%`:
 
 
     ```csharp
@@ -214,7 +214,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-152">Il tipo integer in C# è diverso dagli interi matematici per un altro aspetto, ovvero per il tipo `int` esistono limiti minimi e massimi.</span><span class="sxs-lookup"><span data-stu-id="873d2-152">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="873d2-153">Eseguire questo codice nella finestra interattiva per visualizzare questi limiti:</span><span class="sxs-lookup"><span data-stu-id="873d2-153">Run this code in the interactive window to see those limits:</span></span>
+    Il tipo integer in C# è diverso dagli interi matematici per un altro aspetto, ovvero per il tipo `int` esistono limiti minimi e massimi. Eseguire questo codice nella finestra interattiva per visualizzare questi limiti:
 
 
     ```csharp
@@ -228,7 +228,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-154">Se un calcolo produce un valore che supera questi limiti, si genera una condizione di **underflow** o **overflow**.</span><span class="sxs-lookup"><span data-stu-id="873d2-154">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="873d2-155">La risposta sembra proseguire da un limite all'altro.</span><span class="sxs-lookup"><span data-stu-id="873d2-155">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="873d2-156">Aggiungere queste due righe nella finestra interattiva per vedere un esempio:</span><span class="sxs-lookup"><span data-stu-id="873d2-156">Add these two lines to the interactive window to see an example:</span></span>
+    Se un calcolo produce un valore che supera questi limiti, si genera una condizione di **underflow** o **overflow**. La risposta sembra proseguire da un limite all'altro. Aggiungere queste due righe nella finestra interattiva per vedere un esempio:
 
 
     ```csharp
@@ -240,25 +240,25 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-157">Si noti che la risposta è molto vicina all'intero minimo (negativo).</span><span class="sxs-lookup"><span data-stu-id="873d2-157">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="873d2-158">È uguale a `min + 2`.</span><span class="sxs-lookup"><span data-stu-id="873d2-158">It's the same as `min + 2`.</span></span>
+    Si noti che la risposta è molto vicina all'intero minimo (negativo). È uguale a `min + 2`.
 
-    <span data-ttu-id="873d2-159">L'operazione di addizione **ha causato l'overflow** dei valori consentiti per gli interi.</span><span class="sxs-lookup"><span data-stu-id="873d2-159">The addition operation **overflowed** the allowed values for integers.</span></span>
+    L'operazione di addizione **ha causato l'overflow** dei valori consentiti per gli interi.
 
-    <span data-ttu-id="873d2-160">La risposta è un numero negativo molto grande, poiché un overflow "ritorna a capo" proseguendo dal valore intero più grande possibile a quello più piccolo.</span><span class="sxs-lookup"><span data-stu-id="873d2-160">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
+    La risposta è un numero negativo molto grande, poiché un overflow "ritorna a capo" proseguendo dal valore intero più grande possibile a quello più piccolo.
 
 
-    <span data-ttu-id="873d2-161">Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze.</span><span class="sxs-lookup"><span data-stu-id="873d2-161">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="873d2-162">Questi tipi verranno presentati nelle prossime lezioni.</span><span class="sxs-lookup"><span data-stu-id="873d2-162">Let's explore those next.</span></span>
+    Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze. Questi tipi verranno presentati nelle prossime lezioni.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-163">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-163">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-164">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-164">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="873d2-165">Usare il tipo double</span><span class="sxs-lookup"><span data-stu-id="873d2-165">Work with the double type</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
+- title: Usare il tipo double
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="873d2-166">Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia.</span><span class="sxs-lookup"><span data-stu-id="873d2-166">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="873d2-167">Questi termini potrebbero risultare sconosciuti.</span><span class="sxs-lookup"><span data-stu-id="873d2-167">Those terms may be new to you.</span></span> <span data-ttu-id="873d2-168">Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo.</span><span class="sxs-lookup"><span data-stu-id="873d2-168">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="873d2-169">Il termine **precisione doppia** indica che questi numeri vengono archiviati con una maggiore precisione rispetto alla **precisione singola**.</span><span class="sxs-lookup"><span data-stu-id="873d2-169">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="873d2-170">Nei computer moderni è più comune usare i numeri a precisione doppia rispetto ai numeri a precisione singola.</span><span class="sxs-lookup"><span data-stu-id="873d2-170">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
+    Il tipo numerico `double` rappresenta un numero a virgola mobile a precisione doppia. Questi termini potrebbero risultare sconosciuti. Un numero **a virgola mobile** è utile per rappresentare numeri non integrali, con ordine di grandezza molto grande o molto piccolo. Il termine **precisione doppia** indica che questi numeri vengono archiviati con una maggiore precisione rispetto alla **precisione singola**. Nei computer moderni è più comune usare i numeri a precisione doppia rispetto ai numeri a precisione singola.
 
-    <span data-ttu-id="873d2-171">Per iniziare a esplorare questo tipo,</span><span class="sxs-lookup"><span data-stu-id="873d2-171">Let's explore.</span></span> <span data-ttu-id="873d2-172">provare il codice seguente nella finestra interattiva ed esaminare il risultato:</span><span class="sxs-lookup"><span data-stu-id="873d2-172">Try the following code in the interactive window and see the result:</span></span>
+    Per iniziare a esplorare questo tipo, provare il codice seguente nella finestra interattiva ed esaminare il risultato:
 
 
     ```csharp
@@ -276,7 +276,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-173">Si noti che la risposta include la parte decimale del quoziente.</span><span class="sxs-lookup"><span data-stu-id="873d2-173">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="873d2-174">Provare ora un'espressione leggermente più complessa con valori double:</span><span class="sxs-lookup"><span data-stu-id="873d2-174">Try a slightly more complicated expression with doubles:</span></span>
+    Si noti che la risposta include la parte decimale del quoziente. Provare ora un'espressione leggermente più complessa con valori double:
 
 
     ```csharp
@@ -294,7 +294,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-175">L'intervallo di un valore double è molto maggiore rispetto ai valori integer.</span><span class="sxs-lookup"><span data-stu-id="873d2-175">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="873d2-176">Provare il codice seguente nella finestra interattiva:</span><span class="sxs-lookup"><span data-stu-id="873d2-176">Try the following code in the interactive window:</span></span>
+    L'intervallo di un valore double è molto maggiore rispetto ai valori integer. Provare il codice seguente nella finestra interattiva:
 
 
     ```csharp
@@ -308,10 +308,10 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-177">Questi valori vengono stampati con la notazione scientifica.</span><span class="sxs-lookup"><span data-stu-id="873d2-177">These values are printed out in scientific notation.</span></span> <span data-ttu-id="873d2-178">Il numero a sinistra di `E` rappresenta il significando.</span><span class="sxs-lookup"><span data-stu-id="873d2-178">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="873d2-179">Il numero a destra è l'esponente, come potenza di 10.</span><span class="sxs-lookup"><span data-stu-id="873d2-179">The number to the right is the exponent, as a power of 10.</span></span>
+    Questi valori vengono stampati con la notazione scientifica. Il numero a sinistra di `E` rappresenta il significando. Il numero a destra è l'esponente, come potenza di 10.
 
 
-    <span data-ttu-id="873d2-180">Come per i numeri decimali in matematica, i valori double in C# possono presentare errori di arrotondamento.</span><span class="sxs-lookup"><span data-stu-id="873d2-180">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="873d2-181">Provare questo codice:</span><span class="sxs-lookup"><span data-stu-id="873d2-181">Try this code:</span></span>
+    Come per i numeri decimali in matematica, i valori double in C# possono presentare errori di arrotondamento. Provare questo codice:
 
 
     ```csharp
@@ -323,22 +323,22 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-182">Si sa che `0.3` periodico non è esattamente identico a `1/3`.</span><span class="sxs-lookup"><span data-stu-id="873d2-182">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
+    Si sa che `0.3` periodico non è esattamente identico a `1/3`.
 
 
-    <span data-ttu-id="873d2-183">***Esercizio***</span><span class="sxs-lookup"><span data-stu-id="873d2-183">***Challenge***</span></span>
+    ***Esercizio***
 
 
-    <span data-ttu-id="873d2-184">Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazione e divisione usando il tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="873d2-184">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="873d2-185">Provare calcoli più complessi.</span><span class="sxs-lookup"><span data-stu-id="873d2-185">Try more complicated calculations.</span></span>
+    Provare altri calcoli con numeri grandi, numeri piccoli, moltiplicazione e divisione usando il tipo `double`.  Provare calcoli più complessi.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-186">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-186">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-187">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-187">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="873d2-188">Usare i tipi a virgola fissa</span><span class="sxs-lookup"><span data-stu-id="873d2-188">Work with fixed point types</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
+- title: Usare i tipi a virgola fissa
   durationInMinutes: 8
   content: >
-    <span data-ttu-id="873d2-189">Sono già stati presentati i tipi numerici di base in C#, ovvero integer e double.</span><span class="sxs-lookup"><span data-stu-id="873d2-189">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="873d2-190">C'è un altro tipo da conoscere, ovvero `decimal`.</span><span class="sxs-lookup"><span data-stu-id="873d2-190">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="873d2-191">Il tipo `decimal` ha un intervallo più piccolo, ma maggiore precisione di `double`.</span><span class="sxs-lookup"><span data-stu-id="873d2-191">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="873d2-192">Il termine **virgola fissa** significa che il separatore decimale (o punto binario) non si sposta.</span><span class="sxs-lookup"><span data-stu-id="873d2-192">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="873d2-193">Esaminare il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="873d2-193">Let's take a look:</span></span>
+    Sono già stati presentati i tipi numerici di base in C#, ovvero integer e double.  C'è un altro tipo da conoscere, ovvero `decimal`. Il tipo `decimal` ha un intervallo più piccolo, ma maggiore precisione di `double`. Il termine **virgola fissa** significa che il separatore decimale (o punto binario) non si sposta. Esaminare il codice seguente:
 
 
     ```csharp
@@ -352,7 +352,7 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-194">Si noti che l'intervallo è minore rispetto al tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="873d2-194">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="873d2-195">Per vedere la maggiore precisione del tipo decimal, provare il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="873d2-195">You can see the greater precision with the decimal type by trying the following code:</span></span>
+    Si noti che l'intervallo è minore rispetto al tipo `double`. Per vedere la maggiore precisione del tipo decimal, provare il codice seguente:
 
 
     ```csharp
@@ -373,28 +373,28 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-196">Il suffisso `M` nei numeri è il modo in cui si indica che una costante deve usare il tipo `decimal`.</span><span class="sxs-lookup"><span data-stu-id="873d2-196">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
+    Il suffisso `M` nei numeri è il modo in cui si indica che una costante deve usare il tipo `decimal`.
 
 
-    <span data-ttu-id="873d2-197">Si noti che le operazioni matematiche con il tipo decimal includono più cifre a destra del separatore decimale.</span><span class="sxs-lookup"><span data-stu-id="873d2-197">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
+    Si noti che le operazioni matematiche con il tipo decimal includono più cifre a destra del separatore decimale.
 
 
-    <span data-ttu-id="873d2-198">***Esercizio***</span><span class="sxs-lookup"><span data-stu-id="873d2-198">***Challenge***</span></span>
+    ***Esercizio***
 
 
-    <span data-ttu-id="873d2-199">Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm.</span><span class="sxs-lookup"><span data-stu-id="873d2-199">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="873d2-200">Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco.</span><span class="sxs-lookup"><span data-stu-id="873d2-200">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="873d2-201">Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore.</span><span class="sxs-lookup"><span data-stu-id="873d2-201">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
+    Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-202">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-202">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-203">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-203">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 
 
-    <span data-ttu-id="873d2-204">Si otterrà una risposta compresa tra 19 e 20.</span><span class="sxs-lookup"><span data-stu-id="873d2-204">You should get an answer between 19 and 20.</span></span>
-- title: <span data-ttu-id="873d2-205">Completare l'esercizio</span><span class="sxs-lookup"><span data-stu-id="873d2-205">Complete challenge</span></span>
+    Si otterrà una risposta compresa tra 19 e 20.
+- title: Completare l'esercizio
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="873d2-206">I risultati ottenuti sono simili a questi?</span><span class="sxs-lookup"><span data-stu-id="873d2-206">Did you come up with something like this?</span></span>
+    I risultati ottenuti sono simili a questi?
 
 
     ```csharp
@@ -408,25 +408,21 @@ items:
     ```
 
 
-    <span data-ttu-id="873d2-207">È anche possibile provare alcune altre formule.</span><span class="sxs-lookup"><span data-stu-id="873d2-207">Try some other formulas if you'd like.</span></span>
+    È anche possibile provare alcune altre formule.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="873d2-208">Questa esperienza di scrittura del codice online è in modalità di anteprima.</span><span class="sxs-lookup"><span data-stu-id="873d2-208">This online coding experience is in preview mode.</span></span> <span data-ttu-id="873d2-209">Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="873d2-209">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    <span data-ttu-id="873d2-210">È stata completata l'esercitazione interattiva "Numeri in C#".</span><span class="sxs-lookup"><span data-stu-id="873d2-210">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="873d2-211">Fare clic sul collegamento **Rami e cicli** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice.</span><span class="sxs-lookup"><span data-stu-id="873d2-211">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="873d2-212">La sezione "passaggi successivi" riporta a queste esercitazioni.</span><span class="sxs-lookup"><span data-stu-id="873d2-212">The "Next steps" section brings you back to these tutorials.</span></span>
+    È stata completata l'esercitazione interattiva "Numeri in C#". Fare clic sul collegamento **Rami e cicli** qui sotto per avviare la prossima esercitazione interattiva oppure visitare il [sito Web .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) per scaricare .NET Core SDK, creare un progetto nel proprio computer e continuare a scrivere codice. La sezione "passaggi successivi" riporta a queste esercitazioni.
 
 
-    <span data-ttu-id="873d2-213">Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:</span><span class="sxs-lookup"><span data-stu-id="873d2-213">You can learn more about numbers in C# in the following topics:</span></span>
+    Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
 
 
-    - [<span data-ttu-id="873d2-214">Tipi integrali</span><span class="sxs-lookup"><span data-stu-id="873d2-214">Integral types</span></span>](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [Tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [<span data-ttu-id="873d2-215">Tabella dei tipi a virgola mobile</span><span class="sxs-lookup"><span data-stu-id="873d2-215">Floating-Point Types Table</span></span>](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [<span data-ttu-id="873d2-216">Tabella dei tipi incorporati</span><span class="sxs-lookup"><span data-stu-id="873d2-216">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
-
-    - [<span data-ttu-id="873d2-217">Tabella delle conversioni numeriche implicite</span><span class="sxs-lookup"><span data-stu-id="873d2-217">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [<span data-ttu-id="873d2-218">Tabella delle conversioni numeriche esplicite</span><span class="sxs-lookup"><span data-stu-id="873d2-218">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md)
