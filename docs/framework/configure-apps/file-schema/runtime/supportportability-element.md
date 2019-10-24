@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252298"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773936"
 ---
-# <a name="supportportability-element"></a>\<Elemento > supportPortability
+# <a name="supportportability-element"></a>Elemento \<supportPortability >
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> di runtime**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> di associazione**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> supportPortability**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp;[ **&nbsp; &nbsp; \<assemblyBinding > \** ](assemblybinding-element-for-runtime.md)
+&nbsp; &nbsp; &nbsp; &nbsp; **&nbsp; &nbsp; \<supportPortability** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,14 +41,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ## <a name="enabled-attribute"></a>Attributo enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |true|Abilita il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. Questa è l'impostazione predefinita.|  
 |False|Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. Ciò consente all'applicazione di avere riferimenti a più implementazioni dell'assembly specificato.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
 
-Nessuno.  
+Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,16 +60,16 @@ Nessuno.
   
 ## <a name="remarks"></a>Note  
 
-A partire da .NET Framework 4, il supporto viene fornito automaticamente per le applicazioni che possono usare una delle due implementazioni del .NET Framework, ad esempio l'implementazione di .NET Framework o la .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari questa funzionalità di portabilità dell'applicazione causa problemi. In questi scenari, l' `<supportPortability>` elemento può essere usato per disabilitare la funzionalità.  
+A partire da .NET Framework 4, il supporto viene fornito automaticamente per le applicazioni che possono usare una delle due implementazioni del .NET Framework, ad esempio l'implementazione di .NET Framework o la .NET Framework per l'implementazione di Silverlight. Le due implementazioni di un particolare assembly di .NET Framework sono considerate equivalenti dal binder di assembly. In alcuni scenari questa funzionalità di portabilità dell'applicazione causa problemi. In questi scenari, è possibile usare l'elemento `<supportPortability>` per disabilitare la funzionalità.  
   
 Uno di questi scenari è costituito da un assembly che deve fare riferimento sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di un particolare assembly di riferimento. Ad esempio, una finestra di progettazione XAML scritta in Windows Presentation Foundation (WPF) potrebbe dover fare riferimento sia all'implementazione desktop WPF, per l'interfaccia utente della finestra di progettazione, sia al subset di WPF incluso nell'implementazione di Silverlight. Per impostazione predefinita, i riferimenti separati provocano un errore del compilatore, poiché l'associazione di assembly considera uguali i due assembly. Questo elemento Disabilita il comportamento predefinito e consente la compilazione in modo che abbia esito positivo.  
   
 > [!IMPORTANT]
-> Affinché il compilatore passi le informazioni alla logica di associazione degli assembly del Common Language Runtime, è necessario usare l' `/appconfig` opzione del compilatore per specificare il percorso del file app. config che contiene questo elemento.  
+> Per consentire al compilatore di passare le informazioni alla logica di associazione degli assembly del Common Language Runtime, è necessario usare l'opzione del compilatore `/appconfig` per specificare il percorso del file app. config che contiene questo elemento.  
   
 ## <a name="example"></a>Esempio  
 
-Nell'esempio seguente viene abilitata un'applicazione per avere riferimenti sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di qualsiasi assembly .NET Framework esistente in entrambe le implementazioni. Per `/appconfig` specificare il percorso del file app. config, è necessario usare l'opzione del compilatore.  
+Nell'esempio seguente viene abilitata un'applicazione per avere riferimenti sia all'implementazione di .NET Framework sia al .NET Framework per l'implementazione Silverlight di qualsiasi assembly .NET Framework esistente in entrambe le implementazioni. Per specificare il percorso del file app. config, è necessario usare l'opzione del compilatore `/appconfig`.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Nell'esempio seguente viene abilitata un'applicazione per avere riferimenti sia 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [/appconfig (C# opzioni del compilatore)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-appconfig (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Panoramica dell'unificazione degli assembly .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

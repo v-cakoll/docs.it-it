@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: cfd370df771998057fd421a0917b3e2fcd96d9f8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 34b192d17bd96b6b893c9f14f0d4a77274a32f78
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633033"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771747"
 ---
 # <a name="value-c-reference"></a>value (Riferimenti per C#)
 
-La parola chiave contestuale `value` viene usata nella funzione di accesso set nelle dichiarazioni di proprietà ordinarie. È simile a un parametro di input su un metodo. La parola `value` fa riferimento al valore che il codice client tenta di assegnare alla proprietà. Nell'esempio seguente, `MyDerivedClass` ha una proprietà denominata `Name` che usa il parametro `value` per assegnare una nuova stringa al campo sottostante `name`. Dal punto di vista del codice client, l'operazione viene scritta come assegnazione semplice.
+La parola chiave contestuale `value` viene utilizzata nella funzione di accesso `set` nelle dichiarazioni di [Proprietà](../../programming-guide/classes-and-structs/properties.md) e [indicizzatori](../../programming-guide/indexers/index.md) . È simile a un parametro di input di un metodo. La parola `value` fa riferimento al valore che il codice client sta tentando di assegnare alla proprietà o all'indicizzatore. Nell'esempio seguente, `MyDerivedClass` ha una proprietà denominata `Name` che usa il parametro `value` per assegnare una nuova stringa al campo sottostante `name`. Dal punto di vista del codice client, l'operazione viene scritta come assegnazione semplice.
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Per altre informazioni sull'uso di `value`, vedere [Proprietà](../../programming-guide/classes-and-structs/properties.md).
+Per altre informazioni, vedere gli articoli [Proprietà](../../programming-guide/classes-and-structs/properties.md) e [Indexeres](../../programming-guide/indexers/index.md) .
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

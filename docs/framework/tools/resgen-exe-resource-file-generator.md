@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db85781b48fd75c3d2ef70834fd8451647f6917
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f9b8b93fe2b15ca6b4544547f3934f51ffed4df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044227"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774187"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../resources/creating-resource-files-for-desktop-apps.md).  
@@ -62,7 +62,7 @@ resgen /?
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
+resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
 ```  
   
 ```console  
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>Parametri  
   
-|Parametro o opzione|DESCRIZIONE|  
+|Parametro o opzione|Descrizione|  
 |-------------------------|-----------------|  
 |`/define:` *simbolo1*[, *simbolo2*,...]|A partire da .NET Framework 4.5, supporta la compilazione condizionale in file di risorse basati su testo, con estensione txt o restext. Se *simbolo* corrisponde ad un simbolo incluso nel file di testo di input all'interno di un costrutto `#ifdef`, la risorsa di tipo stringa associata viene inclusa nel file RESOURCES. Se il file di testo di input include un'istruzione `#if !` con un simbolo non definito dall'opzione `/define`, la risorsa di tipo stringa associata viene inclusa nel file di risorse.<br /><br /> `/define` viene ignorato se è utilizzato con file non di testo. Nei simboli viene fatta distinzione tra maiuscole e minuscole.<br /><br /> Per altre informazioni su questa opzione, vedere [Compilazione condizionale di risorse](#Conditional) più avanti in questo argomento.|  
 |`useSourcePath`|Specifica che è necessario usare la directory corrente del file di input per risolvere i percorsi di file relativi.|  
@@ -108,10 +108,10 @@ resgen filename.extension [outputDirectory]
   
 |Conversione da|A file di testo|A file .resx|A file .resw|A file .resources|  
 |------------------|------------------|-------------------|-------------------|------------------------|  
-|File di testo (.txt o .restext)|--|Senza problemi|Non supportate|Senza problemi|  
+|File di testo (.txt o .restext)|--|Senza problemi|Non supportato|Senza problemi|  
 |File .resx|La conversione non riesce se il file contiene risorse non di tipo stringa (inclusi i collegamenti a file)|--|Non supportato|Senza problemi|  
-|File .resources|La conversione non riesce se il file contiene risorse non di tipo stringa (inclusi i collegamenti a file)|Senza problemi|Non supportate|--|  
-|assembly .exe o .dll|Non supportate|Non supportate|Solo le risorse di tipo stringa (inclusi i nomi di percorso) vengono riconosciute come risorse|Non supportate|  
+|File .resources|La conversione non riesce se il file contiene risorse non di tipo stringa (inclusi i collegamenti a file)|Senza problemi|Non supportato|--|  
+|assembly .exe o .dll|Non supportato|Non supportato|Solo le risorse di tipo stringa (inclusi i nomi di percorso) vengono riconosciute come risorse|Non supportato|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>Esecuzione di specifiche attività di Resgen.exe  
  È possibile utilizzare Resgen.exe per diversi scopi: per la compilazione di un file di risorse basato su testo o su XML in un file binario, per la conversione tra formati di file di risorse e per la generazione di una classe che esegue il wrapping della funzionalità <xref:System.Resources.ResourceManager> e fornisce accesso alle risorse. In questa sezione vengono fornite informazioni dettagliate su ogni attività:  

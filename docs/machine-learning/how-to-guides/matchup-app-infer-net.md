@@ -3,12 +3,12 @@ title: Creare un'app elenco di corrispondenze di gioco con Infer.NET e la progra
 description: Informazioni su come usare la programmazione probabilistica con Infer.NET per creare un'app elenco di corrispondenze di gioco basata su una versione semplificata di TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957209"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774536"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica
 
@@ -18,7 +18,7 @@ Questa guida pratica descrive la programmazione probabilistica tramite Infer.NET
 
 La programmazione probabilistica permette di creare modelli statistici di processi reali.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 - Configurazione di un ambiente di sviluppo locale
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Progettare il modello
 
-L'esempio usa partite di ping pong o calcio giocate in ufficio. Sono disponibili i partecipanti e il risultato di ogni partita.  Si vogliono dedurre le abilità del giocatore da questi dati. Presupporre che ogni giocatore abbia un'abilità latente normalmente distribuita e che le sue prestazioni in una partita specifica siano una versione accentuata di questa abilità. I dati vincolano le prestazioni del vincitore come migliori delle prestazioni del giocatore sconfitto. Si tratta di una versione semplificata del celebre modello [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), che supporta anche squadre, pareggi e altre estensioni. Una [versione avanzata](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) di questo modello viene usata per il matchmaking nei vendutissimi titoli Halo e Gears of War.
+L'esempio usa partite di ping pong o calcio giocate in ufficio. Sono disponibili i partecipanti e il risultato di ogni partita.  Si vogliono dedurre le abilità del giocatore da questi dati. Presupporre che ogni giocatore abbia un'abilità latente normalmente distribuita e che le sue prestazioni in una partita specifica siano una versione accentuata di questa abilità. I dati vincolano le prestazioni del vincitore come migliori delle prestazioni del giocatore sconfitto. Si tratta di una versione semplificata del celebre modello [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/), che supporta anche squadre, pareggi e altre estensioni. Una [versione avanzata](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) di questo modello viene usata per il matchmaking nei vendutissimi titoli Halo e Gears of War.
 
 È necessario elencare le abilità del giocatore dedotte, insieme alla rispettiva varianza, ovvero la misura di incertezza riguardo alle abilità.
 
@@ -55,7 +55,7 @@ Partita |Vincitori | Sconfitti
 ---------|----------|---------
  1 | Giocatore 0 | Giocatore 1
  2 | Giocatore 0 | Giocatore 3
- 3 | Giocatore 0 | Giocatore 4
+ 3\. | Giocatore 0 | Giocatore 4
  4 | Giocatore 1 | Giocatore 2
  5 | Giocatore 3 | Giocatore 1
  6 | Giocatore 4 | Giocatore 2

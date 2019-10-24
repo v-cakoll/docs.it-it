@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180187"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775329"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 
@@ -86,7 +86,7 @@ Dopo essere stato inizializzato da CLR, il Garbage Collector alloca un segmento 
 
 Per ogni processo gestito esiste un heap gestito. Tutti i thread nel processo allocano memoria per gli oggetti sullo stesso heap.
 
-Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) Win32.
+Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva anche i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) Win32.
 
 > [!IMPORTANT]
 > La dimensione dei segmenti allocati dal Garbage Collector è specifica dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.
@@ -125,7 +125,7 @@ Le operazioni di Garbage Collection vengono eseguite in generazioni specifiche a
 
 Gli oggetti che non vengono recuperati durante un'operazione di Garbage Collection sono definiti oggetti esclusi e vengono promossi alla generazione successiva. Gli oggetti esclusi da un'operazione di Garbage Collection di generazione 0 vengono promossi alla generazione 1; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 1 vengono promossi alla generazione 2; gli oggetti esclusi da un'operazione di Garbage Collection di generazione 2 restano nella generazione 2.
 
-Quando il Garbage Collector rileva un tasso di esclusione elevato in una generazione, aumenta la relativa soglia delle allocazioni, in modo che la raccolta successiva generi un recupero di memoria sostanziale. CLR bilancia continuamente due priorità: impedire che il working set di un'applicazione diventi troppo grande e limitare la durata delle operazioni di Garbage Collection.
+Quando il Garbage Collector rileva un tasso di esclusione elevato in una generazione, aumenta la relativa soglia delle allocazioni, in modo che la raccolta successiva generi un recupero di memoria sostanziale. CLR bilancia continuamente due priorità: non consentire a un working set di un'applicazione di diventare troppo grande ritardando Garbage Collection e non consentendo l'esecuzione troppo frequente del Garbage Collection.
 
 ### <a name="ephemeral-generations-and-segments"></a>Generazioni e segmenti temporanei
 
@@ -176,7 +176,7 @@ Prima di eseguire un'operazione di Garbage Collection, tutti i thread gestiti ve
 
 Nell'illustrazione seguente viene illustrato un thread che attiva un'operazione di Garbage Collection causando la sospensione degli altri thread.
 
-![Quando un thread attiva un'operazione di Garbage Collection](../../../docs/standard/garbage-collection/media/gc-triggered.png "quando un thread attiva un'operazione di Garbage Collection")
+![Quando un thread attiva un'operazione di Garbage Collection](../../../docs/standard/garbage-collection/media/gc-triggered.png "Thread che attiva un'operazione di Garbage Collection")
 
 [Torna all'inizio](#top)
 
@@ -208,7 +208,7 @@ Il Garbage Collector si regola da sé e può funzionare in un'ampia varietà di 
 
 La seguente illustrazione mostra i thread dedicati che eseguono l'operazione di Garbage Collection in un server.
 
-(../../../docs/standard/garbage-collection/media/gc-server.png "Thread di Garbage Collection") server ![thread di Garbage Collection]server
+![Thread di Garbage Collection per server](../../../docs/standard/garbage-collection/media/gc-server.png "Thread di Garbage Collection server")
 
 ### <a name="configuring-garbage-collection"></a>Configurazione dell'operazione di Garbage Collection
 
@@ -262,7 +262,7 @@ Le operazioni di Garbage Collection simultanee dispongono di un working set legg
 
 Nell'illustrazione riportata di seguito viene mostrata l'esecuzione simultanea di un'operazione di Garbage Collection in un thread dedicato separato.
 
-Thread di Garbage ![Collection simultanei](../../../docs/standard/garbage-collection/media/gc-concurrent.png "simultanei thread di Garbage Collection")
+![Thread di Garbage Collection simultanei](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Thread di Garbage Collection simultanei")
 
 [Torna all'inizio](#top)
 
@@ -270,7 +270,7 @@ Thread di Garbage ![Collection simultanei](../../../docs/standard/garbage-collec
 
 ## <a name="background-workstation-garbage-collection"></a>Garbage Collection della workstation in background
 
-Garbage Collection in background sostituisce Garbage Collection workstation simultanee a partire dal .NET Framework 4 e sostituisce Garbage Collection server simultanei a partire dal .NET Framework 4,5.  In un'operazione di Garbage Collection in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. Viene eseguita su un thread dedicato ed è applicabile solo alle raccolte di generazione 2. Il Garbage Collection in background viene abilitato automaticamente per impostazione predefinita e può essere abilitato o disabilitato con l'impostazione di configurazione [> \<gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) in applicazioni .NET Framework. 
+Garbage Collection in background sostituisce Garbage Collection workstation simultanee a partire dal .NET Framework 4 e sostituisce Garbage Collection server simultanei a partire dal .NET Framework 4,5.  In un'operazione di Garbage Collection in background, le generazioni temporanee (0 e 1) vengono raccolte in base alle esigenze mentre è in corso la raccolta di generazione 2. Viene eseguita su un thread dedicato ed è applicabile solo alle raccolte di generazione 2. Il Garbage Collection in background viene abilitato automaticamente per impostazione predefinita e può essere abilitato o disabilitato con l'impostazione [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) di configurazione nelle applicazioni .NET Framework. 
 
 > [!NOTE]
 > Le operazioni di Garbage Collection in background sono disponibili solo in .NET Framework 4 e versioni successive. In .NET Framework 4 è supportato solo per l'operazione di Garbage Collection per workstation. A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background è disponibile sia per workstation sia per server.
@@ -283,7 +283,7 @@ La modalità in background elimina le restrizioni di allocazione imposte dalla m
 
 La figura seguente illustra l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato su una workstation:
 
-![Diagramma che mostra Garbage Collection della workstation in background.](./media/fundamentals/background-workstation-garbage-collection.png "Diagramma che mostra Garbage Collection della workstation in background.")
+![Diagramma che mostra Garbage Collection della workstation in background.](./media/fundamentals/background-workstation-garbage-collection.png "Diagramma che illustra un'operazione di Garbage Collection in background su una workstation.")
 
 [Torna all'inizio](#top)
 
@@ -295,7 +295,7 @@ A partire da .NET Framework 4.5, l'operazione di Garbage Collection in backgroun
 
 La figura seguente illustra l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato su un server:
 
-![Diagramma che mostra Garbage Collection del server in background.](./media/fundamentals/background-server-garbage-collection.png "Diagramma che mostra Garbage Collection del server in background.")
+![Diagramma che mostra Garbage Collection del server in background.](./media/fundamentals/background-server-garbage-collection.png "Diagramma che illustra un'operazione di Garbage Collection in background su un server.")
 
 ## <a name="see-also"></a>Vedere anche
 

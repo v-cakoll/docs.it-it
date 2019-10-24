@@ -11,38 +11,32 @@ helpviewer_keywords:
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c3c7eb20bb3368205dab4c7e03b6b80d09a2121
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860555"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775268"
 ---
 # <a name="security-in-net"></a>Sicurezza in .NET
-Common language runtime e .NET forniscono molte utili servizi e classi che consentono agli sviluppatori di scrivere codice sicuro e consentono agli amministratori di sistema personalizzare le autorizzazioni concesse al codice in modo che possa accedere facilmente alle risorse protette. Inoltre, il runtime e .NET forniscono classi utili e servizi che semplificano l'uso di crittografia e la sicurezza basata sui ruoli.  
-  
-## <a name="in-this-section"></a>In questa sezione  
 
- [Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)  
- Fornisce una panoramica sulle funzionalità di protezione di Common Language Runtime. Questa sezione è di particolare interesse per gli sviluppatori e gli amministratori di sistema.  
-  
- [Sicurezza basata sui ruoli](../../../docs/standard/security/role-based-security.md)  
- Illustra come scrivere codice tenendo conto della protezione basata sui ruoli. Questa sezione è di particolare interesse per gli sviluppatori.  
-  
- [Modello di crittografia](../../../docs/standard/security/cryptography-model.md)  
- Fornisce una panoramica di servizi di crittografia forniti da .NET. Questa sezione è di particolare interesse per gli sviluppatori.  
-  
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)  
- Vengono descritte alcune delle procedure consigliate per la creazione di applicazioni .NET affidabili. Questa sezione è di particolare interesse per gli sviluppatori.  
-  
- [Linee guida per la creazione di codice sicuro applicabili al codice non gestito](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- Descrive alcune procedure consigliate e alcuni problemi di sicurezza in relazione alle chiamate di codice non gestito.  
-  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- Descrive come è possibile implementare l'identità basata sulle richieste nelle applicazioni.  
+Il Common Language Runtime e .NET forniscono molti servizi e classi utili che consentono agli sviluppatori di scrivere facilmente codice sicuro e consentono agli amministratori di sistema di personalizzare le autorizzazioni concesse al codice in modo da poter accedere alle risorse protette. Inoltre, il runtime e .NET forniscono classi e servizi utili che facilitano l'uso della crittografia e della sicurezza basata sui ruoli.
 
-[Modifiche della sicurezza](../../../docs/framework/security/security-changes.md) descrive importanti modifiche al sistema di sicurezza di .NET Framework.
+## <a name="in-this-section"></a>In questa sezione
 
-## <a name="related-sections"></a>Sezioni correlate  
- [Guida di sviluppo](../../../docs/framework/development-guide.md)  
- Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.
+- [Concetti chiave sulla sicurezza](key-security-concepts.md)  
+Fornisce una panoramica sulle funzionalità di protezione di Common Language Runtime. Questa sezione è di particolare interesse per gli sviluppatori e gli amministratori di sistema.
+
+- [Sicurezza basata sui ruoli](role-based-security.md)  
+Illustra come scrivere codice tenendo conto della protezione basata sui ruoli. Questa sezione è di particolare interesse per gli sviluppatori.
+
+- [Modello di crittografia](cryptography-model.md)  
+Viene fornita una panoramica dei servizi di crittografia forniti da .NET. Questa sezione è di particolare interesse per gli sviluppatori.
+
+- [Linee guida per la generazione di codice sicuro](secure-coding-guidelines.md)  
+Vengono descritte alcune delle procedure consigliate per la creazione di applicazioni .NET affidabili. Questa sezione è di particolare interesse per gli sviluppatori.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[Guida di sviluppo](../../framework/development-guide.md)  
+Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.

@@ -3,12 +3,12 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834091"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774017"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 
-Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, un numero intero zero, positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
+Questa è una delle operazioni matematiche fondamentali su interi. Il tipo di `int` rappresenta un **intero**, un numero intero zero, positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
 
 - `-` per la sottrazione
 - `*` per la moltiplicazione
@@ -320,8 +320,6 @@ Si otterrà una risposta compresa tra 19 e 20.
 
 Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
 
-- [Tipi integrali](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabella dei tipi a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Tabella dei tipi incorporati](../../language-reference/keywords/built-in-types-table.md)
-- [Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md)
