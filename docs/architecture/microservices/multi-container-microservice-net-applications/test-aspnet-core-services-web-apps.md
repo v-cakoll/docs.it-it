@@ -2,12 +2,12 @@
 title: Test delle app Web e dei servizi ASP.NET di base
 description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Esplorare un'architettura per il test delle app Web e dei servizi ASP.NET di base all'interno di contenitori.
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291276"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772022"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -101,7 +101,7 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Steve Smith. Test dei controller** (ASP.NET Core) \
+- **Steve Smith. Controller di test** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith. Test di integrazione** (ASP.NET Core) \
@@ -138,9 +138,9 @@ I test dell'applicazione di riferimento (eShopOnContainers) sono stati ristruttu
 
 2. **Test funzionali o di integrazione dei microservizi**, con test case che coinvolgono l'infrastruttura di ogni microservizio, ma sono isolati dagli altri e sono presenti all'interno dei progetti **{MicroserviceName}.FunctionalTests**.
 
-3. **Test funzionali o di integrazione delle applicazioni**, concentrati sull'integrazione con i microservizi e con test case che esercitano più microservizi. Questi test si trovano nel progetto **Application.FunctionalTests**.
+3. **Test funzionali/di integrazione dell'applicazione**, che si concentrano sull'integrazione di microservizi, con test case che impiegano diversi microservizi. Questi test si trovano nel progetto **Application.FunctionalTests**.
 
-4. **Test di carico**, concentrati sui tempi di risposta per ogni microservizio. Questi test si trovano nel progetto **LoadTest** e richiedono Visual Studio 2017 Enterprise Edition.
+4. **Test di carico**, che si concentrano sui tempi di risposta per ogni microservizio. Questi test si trovano nel progetto **LoadTest** e richiedono Visual Studio 2017 Enterprise Edition.
 
 Il test di integrazione e lo unit test per ogni microservizio si trovano nella cartella dei test del rispettivo microservizio. I test di carico delle applicazioni si trovano nella cartella dei test all'interno della cartella della soluzione, come illustrato nella figura 6-25.
 

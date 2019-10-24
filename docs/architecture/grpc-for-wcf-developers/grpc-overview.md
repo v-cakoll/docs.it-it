@@ -3,12 +3,12 @@ title: Panoramica di gRPC-gRPC per sviluppatori WCF
 description: Informazioni sul set di principi che guidano lo sviluppo di gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b372cc9dcdb2efd605b3d9b688513e4ff8530b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
-ms.translationtype: MT
+ms.openlocfilehash: 489b91f6aa279d9c457e2e8fccd4438885076779
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184442"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770456"
 ---
 # <a name="grpc-overview"></a>Panoramica di gRPC
 
@@ -20,7 +20,7 @@ ASP.NET Core 3,0 è la prima versione di ASP.NET che supporta in modo nativo gRP
 
 ## <a name="key-principles"></a>Principi chiave
 
-Come illustrato nel capitolo 1, Google ha voluto usare l'introduzione di HTTP/2 per rielaborare Stubby, l'infrastruttura RPC di uso generale interna. Stubby, rinominato gRPC, ora può sfruttare i vantaggi della standardizzazione ed estendere la relativa applicabilità al mobile computing, al cloud e al Internet delle cose.
+Come illustrato nel capitolo 1, Google ha voluto usare l'introduzione di HTTP/2 per sostituire Stubby, l'infrastruttura RPC per utilizzo generico interna. gRPC, basato su Stubby, ora può sfruttare i vantaggi della standardizzazione ed estendere la relativa applicabilità al mobile computing, al cloud e al Internet delle cose.
 
 A tale scopo, il [cloud native Computing Foundation (CNCF)](https://www.cncf.io/) ha stabilito un set di principi che governano gRPC. Nell'elenco seguente sono illustrati i più rilevanti, che riguardano principalmente la massimizzazione dell'accessibilità e dell'usabilità:
 

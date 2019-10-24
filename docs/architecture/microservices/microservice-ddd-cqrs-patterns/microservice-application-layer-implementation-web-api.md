@@ -2,12 +2,12 @@
 title: Implementazione del livello dell'applicazione di microservizi tramite l'API Web
 description: Architettura di microservizi .NET per applicazioni .NET incluse in contenitori | Informazioni sull'inserimento di dipendenze e sugli schemi Mediator e i relativi dettagli di implementazione nel livello dell'applicazione API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249738"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771109"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -17,7 +17,7 @@ Come accennato in precedenza, il livello dell'applicazione può essere implement
 
 Il codice del livello dell'applicazione del microservizio degli ordini, ad esempio, viene direttamente implementato come parte del progetto **Ordering.API** (un progetto API Web ASP.NET Core), come illustrato nella figura 7-23.
 
-![Visualizzazione Esplora soluzioni del microservizio Ordering.API, con le sottocartelle della cartella Applicazione visualizzate: Comportamenti, Comandi, DomainEventHandlers, IntegrationEvents, Modelli, Query e Convalide.](./media/image20.png)
+![La visualizzazione Esplora soluzioni del microservizio Ordering.API contiene le sottocartelle della cartella Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries e Validations.](./media/image20.png)
 
 **Figura 7-23**. Livello dell'applicazione nel progetto API Web ASP.NET Core Ordering.API
 
@@ -109,7 +109,7 @@ Quando si usa l'inserimento delle dipendenze in .NET Core, potrebbe essere neces
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Matthew King. Registrazione di servizi con Scrutor** \
+- **Matthew King. Registrazione di servizi con Scrutor**  \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repository GitHub. \
@@ -181,7 +181,7 @@ Lo schema Command è intrinsecamente correlato allo schema CQRS illustrato prima
 
 Come illustrato nella figura 7-24, lo schema si basa sull'accettazione dei comandi dal lato client, sulla loro elaborazione in base alle regole del modello di dominio e infine sulla persistenza degli stati con le transazioni.
 
-![Visualizzazione di alto livello del lato operazioni di scrittura in CQRS: l'app dell'interfaccia utente invia un comando attraverso l'API che raggiunge un CommandHandler, che dipende dal modello di dominio e dall'infrastruttura per aggiornare il database.](./media/image21.png)
+![La visualizzazione di alto livello del lato Scritture in CQRS: l'app dell'interfaccia utente invia un comando tramite l'API che raggiunge un CommandHandler, che dipende dal modello di dominio e dall'infrastruttura per l'aggiornamento del database.](./media/image21.png)
 
 **Figura 7-24**. Panoramica generale dei comandi o "lato transazionale" nello schema CQRS
 
@@ -335,7 +335,7 @@ L'importante in questo caso è che, quando un comando viene elaborato, tutta la 
 
 Quando i gestori comando sono complessi, con una logica eccessiva, può trattarsi di code smell. Esaminarli e, se si trova la logica di dominio, effettuare il refactoring del codice per spostare tale comportamento del dominio nei metodi degli oggetti dominio (la radice di aggregazione e l'entità figlio).
 
-Come esempio di una classe di gestori di comandi, il codice seguente mostra la stessa classe `CreateOrderCommandHandler` visualizzata all'inizio di questo capitolo. In questo caso, sono in evidenza il metodo Handle e le operazioni con gli oggetti o le aggregazioni del modello di dominio.
+Come esempio di una classe di gestori di comandi, il codice seguente mostra la stessa classe di `CreateOrderCommandHandler` visualizzata all'inizio di questo capitolo. In questo caso, sono in evidenza il metodo Handle e le operazioni con gli oggetti o le aggregazioni del modello di dominio.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -394,7 +394,7 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (In corrispondenza dei limiti, le applicazioni non sono orientate a oggetti)**  \
+- **Contrassegno. Ai limiti, le applicazioni non sono orientate agli oggetti**  \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandi ed eventi** \
@@ -403,10 +403,10 @@ I seguenti sono passaggi aggiuntivi che devono essere eseguiti da un gestore com
 - **What does a command handler do?** (Qual è la funzione di un gestore comandi?) \
   <http://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard. Domain Command Patterns - Handlers (Modelli di comando di dominio - Gestori)**  \
+- **Jimmy Bogard. Modelli di comandi di dominio: gestori**  \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard. Domain Command Patterns - Validation (Modelli di comando di dominio - Convalida)**  \
+- **Jimmy Bogard. Modelli di comando di dominio-convalida**  \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Pipeline di elaborazione del comando: come attivare un gestore comando
@@ -471,7 +471,7 @@ L'uso dello schema Mediator consente di ridurre l'accoppiamento e di isolare le 
 
 Un altro valido motivo per usare lo schema Mediator è stato illustrato da Jimmy durante la revisione di questa guida:
 
-> Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta in ingresso, risposta in uscita. Questo aspetto è risultato piuttosto utile nella creazione di test dal comportamento coerente.
+> Penso che qui valga la pena parlare dei test, che offrono un quadro coerente del comportamento del sistema. Richiesta-in, risposta in uscita. Questo aspetto è molto utile per la creazione di test comportati in modo coerente.
 
 Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effettivamente possibile usare l'oggetto Mediator. Se non si utilizza l'oggetto Mediator, è necessario inserire tutte le dipendenze per quel controller, ad esempio un oggetto logger e altri elementi. Il costruttore sarebbe quindi piuttosto complesso. D'altra parte, se si usa l'oggetto Mediator, il costruttore del controller può essere molto più semplice, con solo alcune dipendenze invece di molte se ne fosse presente una per ogni operazione trasversale, come nell'esempio seguente:
 
@@ -833,7 +833,7 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 
 ##### <a name="fluent-validation"></a>Convalida Fuent
 
-- **Jeremy Skinner. FluentValidation.** Repository GitHub. \
+- **Jeremy Skinner. Alla fluentvalidation.** Repository GitHub. \
   <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]

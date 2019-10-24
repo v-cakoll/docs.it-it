@@ -2,12 +2,12 @@
 title: Come scegliere il sistema operativo per i contenitori .NET
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Come scegliere il sistema operativo per i contenitori .NET
 ms.date: 01/07/2019
-ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039682"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772010"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Come scegliere il sistema operativo per i contenitori .NET
 
@@ -25,14 +25,22 @@ Nella figura 3-1 sono mostrate le versioni possibili del sistema operativo a sec
 
 È anche possibile creare un'immagine Docker personalizzata, se si vuole usare una distribuzione Linux diversa o un'immagine con versioni non fornite da Microsoft. Si può ad esempio creare un'immagine con ASP.NET Core in esecuzione in .NET Framework tradizionale e in Windows Server Core, che non rappresenta uno scenario così comune per Docker.
 
+> [!IMPORTANT]
+> Quando si usano le immagini di Windows Server Core, si potrebbe notare che alcune dll risultano mancanti, rispetto alle immagini Windows complete. Per risolvere questo problema, è possibile creare un'immagine server core personalizzata, aggiungendo i file mancanti al momento della compilazione dell'immagine, come indicato in questo [Commento di GitHub](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448).
+
 Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezionare il sistema operativo e la versione a seconda del tag usato, come negli esempi seguenti:
 
-| Image | Commenti |
+| Immagine | Comments |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | Multiarchitettura .NET Core 2.2: supporta Linux e Windows Nano Server a seconda dell'host Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | Multiarchitettura ASP .NET Core 2.2: supporta Linux e Windows Nano Server a seconda dell'host Docker. <br/> L'immagine aspnetcore ha poche ottimizzazioni per ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 multiarchitettura: supporta Linux e Windows nano server a seconda dell'host docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2,2 multiarchitettura: supporta Linux e Windows nano server a seconda dell'host docker. <br/> L'immagine aspnetcore ha poche ottimizzazioni per ASP.NET Core. |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Solo runtime .NET Core 2.2 in distribuzioni Linux Alpine |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Solo runtime .NET Core 2.2 in Windows Nano Server (Windows Server versione 1803) |
+
+## <a name="additional-resources"></a>Risorse aggiuntive
+
+- **BitmapDecoder non riesce a causa di WindowsCodecsExt. dll mancante (problema di GitHub)**  
+  <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
 > [Precedente](container-framework-choice-factors.md)
