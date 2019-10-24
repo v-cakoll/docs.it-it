@@ -4,12 +4,12 @@ description: Procedure consigliate per la creazione di pacchetti con NuGet per l
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895207"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775306"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -84,7 +84,7 @@ I pacchetti NuGet con un suffisso di versione sono considerati [versioni non def
 > [!NOTE]
 > Una pacchetto stabile non può dipendere da un pacchetto in versione non definitiva. È necessario impostare un pacchetto come versione non definitiva oppure fare in modo che dipenda da una versione stabile precedente.
 
-![Dipendenza dei pacchetti NuGet in versione non definitiva](./media/nuget/nuget-prerelease-package.png "Dipendenza dei pacchetti NuGet in versione non definitiva")
+![Dipendenza pacchetto della versione non definitiva NuGet](./media/nuget/nuget-prerelease-package.png "Dipendenza pacchetto della versione non definitiva NuGet")
 
 **✔️ PUBBLICARE** un pacchetto in versione non definitiva a scopi di test, anteprima o sperimentazione.
 
@@ -99,7 +99,7 @@ NuGet.org ospita il proprio [repository del server dei simboli](/nuget/create-pa
 > [!IMPORTANT]
 > Il server dei simboli di NuGet.org supporta solo i nuovi [file di simboli portatili](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) creati da progetti in stile SDK.
 >
-> Per usare il server dei simboli di NuGet.org per il debug di una libreria .NET, gli sviluppatori devono avere Visual Studio 2017 15.9 o versioni successive.
+> Per usare il server di simboli NuGet.org durante il debug di una libreria .NET, gli sviluppatori devono avere Visual Studio 2017 versione 15,9 o successiva.
 
 Un'alternativa alla creazione di un pacchetto di simboli è incorporare i file di simboli nel pacchetto NuGet principale. Il pacchetto NuGet principale è di dimensioni maggiori, tuttavia, grazie ai file di simboli incorporati gli sviluppatori non devono configurare il server di simboli NuGet.org. Se si sta creando un pacchetto NuGet usando un progetto in stile SDK, è possibile incorporare i file di simboli impostando la proprietà `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

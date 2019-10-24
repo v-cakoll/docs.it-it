@@ -3,12 +3,12 @@ title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105659"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774069"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
 
@@ -20,21 +20,21 @@ Diverse funzionalità C# offrono un valido aiuto per la creazione di applicazion
 
 C# presenta un ***sistema di tipi unificato***. Tutti i tipi C#, inclusi i tipi di primitiva quali `int` e `double`, ereditano da un unico tipo `object` radice. Di conseguenza, tutti i tipi condividono un set di operazioni comuni e i valori dei diversi tipi possono essere archiviati, trasportati e gestiti in modo coerente. C#, inoltre, supporta sia i tipi riferimento sia i tipi valore definiti dall'utente, consentendo l'allocazione dinamica di oggetti e l'archiviazione inline di strutture leggere.
 
-Per assicurare un'evoluzione coerente dei programmi e delle librerie C# nel corso del tempo, nella progettazione del linguaggio è stata data particolare importanza al ***controllo delle versioni***. Molti linguaggi di programmazione prestano scarsa attenzione a questo aspetto e, di conseguenza, i programmi scritti in tali linguaggi si interrompono molto più spesso del necessario quando vengono introdotte nuove versioni delle librerie dipendenti. Gli aspetti della progettazione di C# direttamente interessati dalle considerazioni sul controllo delle versioni includono quanto segue: modificatori `virtual` e `override` separati, regole per la risoluzione dell'overload dei metodi e supporto per le dichiarazioni esplicite dei membri di interfaccia.
+Per garantire che C# i programmi e le librerie possano evolversi nel tempo in modo compatibile, è stato enfatizzato il ***controllo*** delle C#versioni nel progetto. Molti linguaggi di programmazione prestano scarsa attenzione a questo aspetto e, di conseguenza, i programmi scritti in tali linguaggi si interrompono molto più spesso del necessario quando vengono introdotte nuove versioni delle librerie dipendenti. Gli aspetti C#della progettazione che sono stati influenzati direttamente dalle considerazioni sul controllo delle versioni includono i modificatori `virtual` e `override` separati, le regole per la risoluzione dell'overload del metodo e il supporto per le dichiarazioni esplicite dei membri di interfaccia.
 
 ## <a name="hello-world"></a>Hello world
 
 Il programma "Hello World" viene tradizionalmente usato per presentare un linguaggio di programmazione. Di seguito è riportato il programma Hello, World in C#:
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-I file di origine C# hanno in genere l'estensione `.cs`. Supponendo che il programma "Hello World" sia archiviato nel file `hello.cs`, è possibile compilarlo usando la riga di comando:
+I file di origine C# hanno in genere l'estensione `.cs`. Supponendo che il programma "Hello, World" sia archiviato nel file *Hello.cs*, è possibile che il programma venga compilato utilizzando la riga di comando:
 
 ```console
 csc hello.cs
 ```
 
-In questo modo viene generato un assembly eseguibile denominato hello.exe. L'output prodotto dall'applicazione quando viene eseguita è il seguente:
+che produce un assembly eseguibile denominato *Hello. exe*. L'output prodotto dall'applicazione quando viene eseguita è il seguente:
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ La classe `Hello` dichiarata dal programma "Hello World" ha un solo membro, ovve
 
 L'output del programma viene prodotto dal metodo `WriteLine` della classe `Console` nello spazio dei nomi `System`. Questa classe viene fornita da librerie di classi standard a cui, per impostazione predefinita, fa automaticamente riferimento il compilatore.
 
-Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#.  Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche offrono informazioni di base su tutti gli elementi del linguaggio C# e forniscono le informazioni necessarie per approfondire le caratteristiche di questi ultimi:
+Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#. Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche offrono informazioni di base su tutti gli elementi del linguaggio C# e forniscono le informazioni necessarie per approfondire le caratteristiche di questi ultimi:
 
 - [Struttura del programma](program-structure.md)
   - Vengono descritti i concetti organizzativi chiave di C#: ***programmi***, ***spazi dei nomi***, ***tipi***, ***membri*** e ***assembly***.
@@ -63,7 +63,7 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
   - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
 - [Struct](structs.md)
   - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
-- [Matrici](arrays.md)
+- [Array](arrays.md)
   - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
 - [Interfacce](interfaces.md)
   - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.

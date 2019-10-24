@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Rami e cicli in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291379"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774006"
 items:
 - durationInMinutes: 1
   content: >
@@ -421,12 +421,8 @@ items:
     Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
 
 
-    - [Tipi integrali](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [Tipi numerici integrali](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Tabella dei tipi a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Tipi numerici a virgola mobile](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [Tabella dei tipi incorporati](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md)

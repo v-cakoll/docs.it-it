@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523814"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774222"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
 Lo strumento Assembly Linker consente di generare un file con un manifesto dell'assembly a partire da uno o più moduli o file di risorse. Un modulo è un file di linguaggio intermedio (IL) privo di manifesto dell'assembly.
 
 > [!NOTE]
-> A partire da Visual Studio 2008, i compilatori C# e Visual Basic incorporano automaticamente un manifesto Win32 nell'assembly. Per altre informazioni, vedere [/win32manifest (opzioni del compilatore C#)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> A partire da Visual Studio 2008, i compilatori C# e Visual Basic incorporano automaticamente un manifesto Win32 nell'assembly. Per ulteriori informazioni, vedere [-win32manifest (C# opzioni del compilatore)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](developer-command-prompt-for-vs.md).
 

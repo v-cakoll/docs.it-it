@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582864"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775553"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -35,9 +35,7 @@ Percorso e nome del file dell'assembly di riferimento. In genere dovrebbe trovar
 
 Visual Basic supporta l'opzione di `-refout` a partire dalla versione 15,3.
 
-Gli assembly di riferimento sono assembly di soli metadati che contengono metadati ma nessun codice di implementazione. Includono informazioni sul tipo e sui membri per tutti gli elementi eccetto i tipi anonimi. I corpi dei metodi vengono sostituiti con una singola istruzione `throw null`. Il motivo per cui si usano i corpi del metodo `throw null` (in contrapposizione a nessun corpo) è in modo che PEVerify possa essere eseguito e superato (convalidando quindi la completezza dei metadati).
-
-Gli assembly di riferimento includono un attributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) a livello di assembly. Questo attributo può essere specificato nell'origine, quindi non è necessaria la sintesi da parte del compilatore. A causa di questo attributo, i runtime rifiutano di caricare gli assembly di riferimento per l'esecuzione, ma possono comunque essere caricati in un contesto di sola reflection. Gli strumenti che riflettono gli assembly devono assicurarsi di caricare gli assembly di riferimento come solo reflection; in caso contrario, il runtime genera un'<xref:System.BadImageFormatException>.
+Gli assembly di riferimento sono un tipo speciale di assembly che contiene solo la quantità minima di metadati necessaria per rappresentare la superficie dell'API pubblica della libreria. Sono incluse le dichiarazioni per tutti i membri significativi quando si fa riferimento a un assembly negli strumenti di compilazione, ma si escludono tutte le implementazioni e le dichiarazioni dei membri privati che non hanno alcun impatto osservabile sul contratto API. Per ulteriori informazioni, vedere [assembly di riferimento](../../../standard/assembly/reference-assemblies.md) nella Guida di .NET.
 
 Le opzioni `-refout` e [`-refonly`](refonly-compiler-option.md) si escludono reciprocamente.
 

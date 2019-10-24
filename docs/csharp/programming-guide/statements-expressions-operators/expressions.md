@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921800"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774173"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Overflow
 
- Le espressioni numeriche possono causare overflow se il valore è maggiore del valore massimo del tipo del valore. Per altre informazioni, vedere [Checked e Unchecked](../../language-reference/keywords/checked-and-unchecked.md) e la [Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Le espressioni numeriche possono causare overflow se il valore è maggiore del valore massimo del tipo del valore. Per ulteriori informazioni, vedere [checked e unchecked](../../language-reference/keywords/checked-and-unchecked.md) e la sezione [conversioni numeriche esplicite](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) dell'articolo [conversioni numeriche predefinite](../../language-reference/builtin-types/numeric-conversions.md) .
   
 ## <a name="operator-precedence-and-associativity"></a>Precedenza e associatività degli operatori
 
@@ -79,7 +79,7 @@ Gli alberi delle espressioni consentono di rappresentare le espressioni come str
 
 C# supporta i *membri con corpo di espressione*, che consentono di specificare una definizione concisa del corpo dell'espressione per metodi, costruttori, finalizzatori, proprietà e indicizzatori. Per altre informazioni, vedere [Membri con corpo di espressione](expression-bodied-members.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
  Ogni volta che un'espressione identifica una variabile, una proprietà dell'oggetto o l'accesso a un indicizzatore di oggetti, il valore di tale elemento viene usato come valore dell'espressione. Un'espressione può essere inserita ovunque sia richiesto un valore o un oggetto in C#, purché l'espressione alla fine restituisca il tipo richiesto.  
 

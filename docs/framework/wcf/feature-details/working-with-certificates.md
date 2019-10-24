@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045219"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774294"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 
@@ -26,7 +26,7 @@ I certificati devono essere rilasciati da un autorità di certificazione, che sp
 
 ## <a name="viewing-certificates"></a>Visualizzazione dei certificati
 
-Quando si utilizzano i certificati, spesso è necessario visualizzarli e analizzarne le proprietà. A tale scopo è possibile ricorrere allo snap-in Microsoft Management Console (MMC), uno strumento di facile utilizzo. Per altre informazioni, vedere [Procedura: Visualizzare i certificati con lo snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)MMC.
+Quando si utilizzano i certificati, spesso è necessario visualizzarli e analizzarne le proprietà. A tale scopo è possibile ricorrere allo snap-in Microsoft Management Console (MMC), uno strumento di facile utilizzo. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Archivi certificati
 
@@ -57,13 +57,13 @@ La scelta della posizione in cui archiviare un certificato dipende dalla modalit
 
 ### <a name="accessing-stores"></a>Accesso agli archivi
 
-Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato da Internet Information Services (IIS), il processo ASP.NET viene eseguito con l'account ASP.NET. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso usando lo strumento WinHttpCertConfig. exe, [vedere Procedura: Creare certificati temporanei da usare durante](how-to-create-temporary-certificates-for-use-during-development.md)lo sviluppo. Per altre informazioni sull'uso di certificati client in IIS, vedere la pagina relativa alla [procedura per chiamare un servizio Web tramite un certificato client per l'autenticazione in un'applicazione Web ASP.NET](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).
+Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato da Internet Information Services (IIS), il processo ASP.NET viene eseguito con l'account ASP.NET. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso tramite lo strumento WinHttpCertConfig.exe, vedere [Procedura: creare certificati temporanei da usare durante lo sviluppo](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Catena di trust e autorità di certificazione
 
 I certificati vengono creati in una gerarchia dove ogni singolo certificato è collegato alla CA che ha emesso il certificato. Questo collegamento è per il certificato della CA. Il certificato della CA viene quindi collegato alla CA che ha emesso il certificato della CA originale. Questo processo si ripete fino a raggiungere il certificato della CA radice. Il certificato della CA radice è considerato naturalmente attendibile.
 
-I certificati digitali vengono usati per autenticare un'entità basandosi su una *catena di trust*. Lo snap-in MMC consente di visualizzare la catena di qualsiasi certificato. A tale scopo, fare doppio clic sul certificato desiderato e quindi sulla scheda **Percorso certificato**. Per ulteriori informazioni sull'importazione di catene di certificati per un'autorità di [certificazione, vedere Procedura: Specificare la catena di certificati dell'autorità di certificazione utilizzata per](specify-the-certificate-authority-chain-verify-signatures-wcf.md)verificare le firme.
+I certificati digitali vengono usati per autenticare un'entità basandosi su una *catena di trust*. Per visualizzare la catena di qualsiasi certificato, è possibile utilizzare lo snap-in MMC facendo doppio clic su un certificato, quindi facendo clic sulla scheda **percorso certificato** . Per altre informazioni sull'importazione di catene di certificati per un'autorità di certificazione, vedere [procedura: specificare la catena di certificati dell'autorità di certificazione usata per verificare le firme](specify-the-certificate-authority-chain-verify-signatures-wcf.md).
 
 > [!NOTE]
 > Qualsiasi emittente può essere definito come un'autorità radice attendibile. A tale scopo, aggiungere il certificato di tale emittente nell'archivio Autorità di certificazione radice attendibili.
@@ -72,7 +72,7 @@ I certificati digitali vengono usati per autenticare un'entità basandosi su una
 
 Quando si crea un nuovo servizio è possibile che si utilizzi un certificato che non è stato rilasciato tramite un certificato radice attendibile oppure che il certificato emittente non sia contenuto nell'archivio Autorità di certificazione radice attendibili. In questo caso, e solo per scopi di sviluppo, è possibile disabilitare temporaneamente il meccanismo che verifica la catena di trust di un certificato. A tale scopo, impostare la proprietà `CertificateValidationMode` su `PeerTrust` oppure su `PeerOrChainTrust`. Queste modalità specificano rispettivamente che il certificato può essere autocertificato (trust peer) o appartenere a una catena di trust. Questa proprietà può essere impostata in una qualsiasi delle classi seguenti:
 
-|Classe|Proprietà|
+|Class|proprietà|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ Il cmdlet New-SelfSignedCertificate di PowerShell crea certificati X. 509 e copp
 
 3. Importare il certificato dell'autorità radice nell'archivio Autorità di certificazione radice attendibili.
 
-4. Per istruzioni dettagliate, vedere [procedura: Creare certificati temporanei da usare durante](how-to-create-temporary-certificates-for-use-during-development.md)lo sviluppo.
+4. Per istruzioni dettagliate, vedere [Procedura: Creare certificati temporanei da usare durante lo sviluppo](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="which-certificate-to-use"></a>Scelta del certificato da utilizzare
 
@@ -113,9 +113,9 @@ Quando si utilizzano i certificati spesso sorgono dubbi su quale certificato sce
 
 ### <a name="service-certificates"></a>Certificati di servizio
 
-Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti durante l'autenticazione di un server presso un client consiste nel confrontare il valore del campo **Soggetto** con l'Uniform Resource Identifier (URI) usato per contattare il servizio. In particolare, è necessario che i DNS di entrambi corrispondano fra loro. Se, ad esempio, l'URI del servizio è `http://www.contoso.com/endpoint/` , il campo **oggetto** deve contenere anche il valore `www.contoso.com`.
+Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti durante l'autenticazione di un server presso un client consiste nel confrontare il valore del campo **Soggetto** con l'Uniform Resource Identifier (URI) usato per contattare il servizio. In particolare, è necessario che i DNS di entrambi corrispondano fra loro. Se, ad esempio, l'URI del servizio è `http://www.contoso.com/endpoint/`, anche il campo **oggetto** deve contenere il valore `www.contoso.com`.
 
-Si noti che il campo può contenere più valori, ognuno avente un prefisso iniziale che ne indica il valore. In genere, l'inizializzazione è "CN" per il nome comune, ad `CN = www.contoso.com`esempio. È inoltre possibile che il campo **Soggetto** sia vuoto. In tal caso, il campo **Nome alternativo soggetto** può contenere il valore **Nome DNS**.
+Si noti che il campo può contenere più valori, ognuno avente un prefisso iniziale che ne indica il valore. In genere, l'inizializzazione è "CN" per il nome comune, ad esempio `CN = www.contoso.com`. È inoltre possibile che il campo **Soggetto** sia vuoto. In tal caso, il campo **Nome alternativo soggetto** può contenere il valore **Nome DNS**.
 
 Si noti inoltre che il valore del campo **Scopi designati** del certificato deve includere un valore appropriato, ad esempio "Autenticazione server" o "Autenticazione client".
 
@@ -141,7 +141,7 @@ La modalità può inoltre essere impostata nella configurazione tramite l'attrib
 
 In WCF spesso occorre specificare un certificato o un set di certificati che un servizio o un client deve usare per autenticare, crittografare o firmare digitalmente un messaggio. Questa operazione può essere eseguita a livello di programmazione mediante il metodo `SetCertificate` di varie classi che rappresentano i certificati X.509. Le classi seguenti utilizzano il metodo `SetCertificate` per specificare un certificato.
 
-|Classe|Metodo|
+|Class|Metodo|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|

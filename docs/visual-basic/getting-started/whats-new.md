@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581968"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774914"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -21,45 +21,45 @@ Questo argomento elenca i nomi delle funzionalità principali per ogni versione 
 
 ## <a name="current-version"></a>Versione corrente
 
-Visual Basic 16,0/Visual Studio 2019 versione 16,0  
+Visual Basic 16,0/Visual Studio 2019 versione 16,0 \
 Per le nuove funzionalità, vedere [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versioni precedenti
 
-Visual Basic 15.8/Visual Studio 2017 versione 15.8  
+Visual Basic 15,8/Visual Studio 2017 versione 15,8 \
 Per le nuove funzionalità, vedere [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15.5/Visual Studio 2017 versione 15.5  
+Visual Basic 15,5/Visual Studio 2017 versione 15,5 \
 Per le nuove funzionalità, vedere [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15.3/Visual Studio 2017 versione 15.3  
+Visual Basic 15,3/Visual Studio 2017 versione 15,3 \
 Per le nuove funzionalità, vedere [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017 \
 Per le nuove funzionalità, vedere [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015 \
 Per le nuove funzionalità, vedere [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013 \
 Technology Preview della piattaforma del compilatore .NET ("Roslyn")
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012 \
 Parole chiave `Async` e `await`, iteratori, attributi relativi alle informazioni sul chiamante
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010 \
 Proprietà implementate automaticamente, inizializzatori di insieme, continuazione di riga implicita, elementi dinamici, covarianza/controvarianza generica, accesso agli spazi dei nomi globali
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008 \
 Language Integrated Query (LINQ), valori letterali XML, inferenza del tipo di variabile locale, inizializzatori di oggetto, tipi anonimi, metodi di estensione, inferenza del tipo `var` locale, espressioni lambda, operatore `if`, metodi parziali, tipi di valore nullable
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005 \
 Tipo `My` e tipi di helper (accesso all'app, al computer, al file system, alla rete)
 
-Visual Basic/Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003 \
 Operatori di scorrimento bit, dichiarazione di variabile del ciclo
 
-Visual Basic/Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002 \
 Prima versione di Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Si noti che in questo caso i valori a virgola mobile vengono troncati anziché arrotondati.
@@ -237,7 +236,7 @@ I valori letterali data possono avere il formato aaaa-mm-gg, `#2015-03-17 16:10 
 
 **Proprietà dell'interfaccia readonly**
 
-È possibile implementare proprietà dell'interfaccia readonly usando una proprietà readonly.  L'interfaccia garantisce la funzionalità minima e le classi di implementazione non smettono di consentire l'impostazione della proprietà.
+È possibile implementare proprietà dell'interfaccia readonly usando una proprietà readonly. L'interfaccia garantisce la funzionalità minima e le classi di implementazione non smettono di consentire l'impostazione della proprietà.
 
 [TypeOf \<espressione> IsNot \<tipo>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

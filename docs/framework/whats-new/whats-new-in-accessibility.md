@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053733"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774275"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -447,10 +447,10 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - L'enumerazione <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, che definisce le i valori **LiveSetting** possibili seguenti:
 
-  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>). L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
-  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>). L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> L'elemento non invia notifiche se il contenuto dell'area dinamica è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> L'elemento invia notifiche che non causano interruzioni se il contenuto dell'area dinamica è stato modificato.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> L'elemento invia notifiche con interruzioni se il contenuto dell'area dinamica è stato modificato.
 
 È possibile creare un'area dinamica impostando la proprietà **AutomationProperties.LiveSetting** sull'elemento di interesse, come illustrato nell'esempio seguente:
 
@@ -474,11 +474,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Contrasto elevato**
 
-A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. Sono inclusi:
+A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi al contrasto elevato per vari controlli WPF, che sono ora visibili quando viene impostato il tema <xref:System.Windows.SystemParameters.HighContrast%2A>. tra cui:
 
 - Controllo <xref:System.Windows.Controls.Expander>
 
-  L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Ad esempio:
+  L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Esempio:
 
   Prima: 
 
@@ -490,7 +490,7 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
 - Controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
-  Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Ad esempio:
+  Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Esempio:
 
   Prima: 
 
@@ -502,7 +502,7 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
 - Controllo <xref:System.Windows.Controls.ComboBox>
 
-  A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Ad esempio:
+  A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Esempio:
 
   Prima: 
 
@@ -522,7 +522,7 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
   ![Colori del tema dei pulsanti dopo i miglioramenti per l'accessibilità](./media/button-themes-after.png) 
 
-  Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Ad esempio:
+  Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Esempio:
 
   Prima: 
 
@@ -534,7 +534,7 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
 - Controllo <xref:System.Windows.Controls.DataGrid>
 
-  A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Ad esempio:
+  A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Esempio:
 
   Prima: 
 
@@ -579,7 +579,7 @@ Alcuni esempi di modifiche per il contrasto elevato includono:
 
 - Il testo in un controllo <xref:System.Windows.Forms.Button> selezionato è contrastato rispetto al colore della selezione.
 
-- Il testo disabilitato è più facile da leggere. Ad esempio:
+- Il testo disabilitato è più facile da leggere. Esempio:
 
   Prima:
 
@@ -628,7 +628,7 @@ A partire da .NET Framework 4.7.1, Windows Forms include:
 
 ### <a name="aspnet-web-controls"></a>Controlli Web ASP.NET
 
-A partire da .NET Framework 4.7.1 e Visual Studio 2017 15.3, in ASP.NET è stato migliorato il funzionamento dei controlli Web ASP.NET con tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
+A partire da .NET Framework 4.7.1 e Visual Studio 2017 versione 15,3, ASP.NET migliora il funzionamento dei controlli Web ASP.NET con la tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
 
 - Modifiche per implementare criteri di accessibilità dell'interfaccia utente mancanti nei controlli, come la finestra di dialogo **Aggiungi campo** nella procedura guidata **Visualizzazione dettagli** o la finestra di dialogo **Configura ListView** nella procedura guidata **ListView**.
 
