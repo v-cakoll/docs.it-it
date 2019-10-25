@@ -2,23 +2,23 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: b5ab3c3ad070499d686ea74b9fd459e89f380cfa
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397969"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846864"
 ---
-# <a name="issuedtoken"></a>\<issuedToken>
+# <a name="issuedtoken"></a>\<issuedToken >
 Specifica un token personalizzato usato per autenticare un client presso un servizio.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamenti >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamento >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> clientCredentials**](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> issuedToken**  
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**comportamenti**](behaviors.md)\<\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**endpointBehaviors**](endpointbehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **&nbsp;&nbsp;\<** ](behavior-of-endpointbehaviors.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**ClientCredentials**](clientcredentials.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**IssuedToken** >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,19 +50,19 @@ Specifica un token personalizzato usato per autenticare un client presso un serv
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<localIssuer>](localissuer.md)|Specifica l'indirizzo dell'emittente locale del token e l'associazione usata per comunicare con l'endpoint.|  
-|[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|Specifica i comportamenti di endpoint da usare quando si contatta un'emittente locale.|  
+|[\<localIssuer >](localissuer.md)|Specifica l'indirizzo dell'emittente locale del token e l'associazione usata per comunicare con l'endpoint.|  
+|[\<issuerChannelBehaviors >](issuerchannelbehaviors-element.md)|Specifica i comportamenti di endpoint da usare quando si contatta un'emittente locale.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<clientCredentials>](clientcredentials.md)|Specifica le credenziali usate per autenticare un client presso un servizio.|  
+|[\<clientCredentials >](clientcredentials.md)|Specifica le credenziali usate per autenticare un client presso un servizio.|  
   
 ## <a name="remarks"></a>Note  
- Un token emesso è un tipo di credenziale personalizzato usato, ad esempio, quando si esegue l'autenticazione con un servizio token di sicurezza in uno scenario federato. Per impostazione predefinita, il token è un token SAML. Per altre informazioni, vedere [Federazione e token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md). e la [Federazione e i token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md).  
+ Un token emesso è un tipo di credenziale personalizzato usato, ad esempio, quando si esegue l'autenticazione con un servizio token di sicurezza in uno scenario federato. Per impostazione predefinita, il token è un token SAML. Per altre informazioni, vedere [Federazione e token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md), [Federazione e token emessi](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
- Questa sezione contiene gli elementi usati per configurare un'autorità emittente locale di token oppure i comportamenti usati in un servizio token di sicurezza. Per istruzioni sulla configurazione di un client per l'uso di un'autorità emittente [locale, vedere Procedura: Configurare un'autorità emittente](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)locale.  
+ Questa sezione contiene gli elementi usati per configurare un'autorità emittente locale di token oppure i comportamenti usati in un servizio token di sicurezza. Per istruzioni sulla configurazione di un client per l'uso di un'autorità emittente locale, vedere [procedura: configurare un'autorità emittente locale](../../../wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -76,6 +76,6 @@ Specifica un token personalizzato usato per autenticare un client presso un serv
 - [Protezione di servizi e client](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Protezione di client](../../../wcf/securing-clients.md)
-- [Procedura: Creazione di un client federato](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Procedura: Configurare un'autorità emittente locale](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Procedura: Creare un client federato](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: Configurare un emittente locale](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federazione e token rilasciati](../../../wcf/feature-details/federation-and-issued-tokens.md)

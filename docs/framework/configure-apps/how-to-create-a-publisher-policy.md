@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare criteri editore'
+title: 'Procedura: creare criteri editore'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991188"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846840"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
+# <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
 
 I fornitori di assembly possono dichiarare che le applicazioni devono usare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. Il file dei criteri editore specifica il reindirizzamento degli assembly e le impostazioni di base del codice e usa lo stesso formato di un file di configurazione dell'applicazione. Il file dei criteri editore viene compilato in un assembly e inserito nella Global Assembly Cache.
 
@@ -26,7 +26,7 @@ Per la creazione di un criterio editore sono necessari tre passaggi:
 
 3. Aggiungere l'assembly dei criteri editore al Global Assembly Cache.
 
-Lo schema per i criteri editore è descritto in [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md). Nell'esempio seguente viene illustrato un file dei criteri dell'editore che reindirizza una versione `myAssembly` di a un'altra.
+Lo schema per i criteri editore è descritto in [Reindirizzamento delle versioni di assembly](redirect-assembly-versions.md). Nell'esempio seguente viene illustrato un file dei criteri dell'editore che reindirizza una versione di `myAssembly` a un'altra.
 
 ```xml
 <configuration>
@@ -63,7 +63,7 @@ In questo comando:
 
 - L'argomento *publisherPolicyAssemblyFile* è il nome dell'assembly dei criteri editore risultante da questo comando. Il nome del file di assembly deve avere il formato seguente:
 
-  **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**
+  **politica.** *majorNumber* **.** *minorNumber* **.** *MainAssemblyName* **. dll**
 
 - L'argomento *keyPairFile* è il nome del file che contiene la coppia di chiavi. È necessario firmare l'assembly e l'assembly dei criteri editore con la stessa coppia di chiavi.
 
@@ -72,13 +72,13 @@ In questo comando:
   > [!NOTE]
   > La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0.
 
-La possibilità di utilizzare un'architettura di processore specifica è disponibile a partire da .NET Framework 2.0. il comando seguente crea un assembly dei `policy.1.0.myAssembly` criteri editore denominato da un file `pub.config`di criteri editore denominato, assegna un nome sicuro a assembly che utilizza la coppia di chiavi nel `sgKey.snk` file e specifica che l'assembly è destinato all'architettura del processore x86.
+La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0. Il comando seguente crea un assembly dei criteri editore denominato `policy.1.0.myAssembly` da un file di criteri editore denominato `pub.config`, assegna un nome sicuro all'assembly utilizzando la coppia di chiavi nel file `sgKey.snk` e specifica che l'assembly è destinato al processore x86 architettura.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-L'assembly dei criteri dell'editore deve corrispondere all'architettura del processore dell'assembly a cui si applica. Pertanto, se l'assembly ha un <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>valore, l'assembly dei criteri dell'editore per tale assembly deve essere creato `/platform:anycpu`con. È necessario fornire un assembly dei criteri di pubblicazione separato per ogni assembly specifico del processore.
+L'assembly dei criteri dell'editore deve corrispondere all'architettura del processore dell'assembly a cui si applica. Pertanto, se l'assembly ha un valore <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>, è necessario creare l'assembly dei criteri dell'editore per tale assembly con `/platform:anycpu`. È necessario fornire un assembly dei criteri di pubblicazione separato per ogni assembly specifico del processore.
 
 Una conseguenza di questa regola è che, per modificare l'architettura del processore per un assembly, è necessario modificare il componente principale o secondario del numero di versione, in modo che sia possibile fornire un nuovo assembly dei criteri editore con l'architettura del processore corretta. L'assembly dei criteri di pubblicazione precedente non può servire l'assembly quando l'assembly ha un'architettura del processore diversa.
 
@@ -92,9 +92,9 @@ Utilizzare lo [strumento Global Assembly Cache (Gacutil. exe)](../tools/gacutil-
 
 Al prompt dei comandi digitare il comando seguente:
 
-**gacutil/i** *publisherPolicyAssemblyFile*
+**gacutil/I**  *publisherPolicyAssemblyFile*
 
-Il comando seguente aggiunge `policy.1.0.myAssembly.dll` al Global assembly cache.
+Il comando seguente aggiunge `policy.1.0.myAssembly.dll` al Global Assembly Cache.
 
 ```
 gacutil /i policy.1.0.myAssembly.dll

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523383"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846932"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Elaborazione del file XML (Guida per programmatori C#)
 
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per informazioni su come contrassegnare il codice, vedere [Tag consigliati per i commenti relativi alla documentazione](./recommended-tags-for-documentation-comments.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML possono usare la stringa ID per identificare il corrispondente elemento metadati/reflection di .NET Framework a cui si applica la documentazione.
 
- Il file XML non è una rappresentazione gerarchica del codice, bensì un normale elenco contenente un ID generato per ogni elemento.
+Il file XML non è una rappresentazione gerarchica del codice, bensì un normale elenco contenente un ID generato per ogni elemento.
 
- Per generare gli ID, il compilatore applica le regole seguenti:
+Per generare gli ID, il compilatore applica le regole seguenti:
 
 - Assenza di spazi vuoti nella stringa.
 
@@ -41,7 +41,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
 
   - Tipi di base. I tipi regolari (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) vengono rappresentati con il nome completo del tipo.
 
-  - Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) vengono rappresentati come nome completo del tipo completo corrispondente, ad esempio System.Int32 o System.TypedReference.
+  - I tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF e ELEMENT_TYPE_VOID) sono rappresentati come il nome completo del tipo completo corrispondente. ad esempio System.Int32 o System.TypedReference.
 
   - ELEMENT_TYPE_PTR viene rappresentato con '\*' dopo il tipo modificato.
 
