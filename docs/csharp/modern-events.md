@@ -3,12 +3,12 @@ title: Schema di eventi .NET Core aggiornato
 description: Informazioni su come lo schema di eventi .NET Core favorisca la flessibilità grazie alla compatibilità con le versioni precedenti e come implementare l'elaborazione sicura di eventi con sottoscrittori asincroni.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751781"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798887"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Schema di eventi .NET Core aggiornato
 
@@ -71,7 +71,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Si noti innanzitutto che il gestore è contrassegnato come gestore asincrono. Poiché viene assegnato al tipo delegato di un gestore eventi, avrà un tipo restituito void. Per questa ragione è necessario seguire il modello indicato nel gestore e non consentire la generazione di eccezioni dal contesto del gestore asincrono. Poiché non restituisce attività, non sarà presente alcuna attività che segnala l'errore attivando lo stato di errore. Poiché è asincrono, il metodo non può generare l'eccezione. (L'esecuzione del metodo che esegue la chiamata non è stata interrotta poiché il metodo è `async`). Il comportamento effettivo del runtime verrà definito in modo diverso per i diversi ambienti. È possibile che venga terminato il thread, che venga terminato il programma oppure che il programma venga lasciato in uno stato indeterminato. Nessuno di questi è un risultato valido.
+Si noti innanzitutto che il gestore è contrassegnato come gestore asincrono. Poiché viene assegnato al tipo delegato di un gestore eventi, avrà un tipo restituito void. Per questa ragione è necessario seguire il modello indicato nel gestore e non consentire la generazione di eccezioni dal contesto del gestore asincrono. Poiché non restituisce attività, non sarà presente alcuna attività che segnala l'errore attivando lo stato di errore. Poiché è asincrono, il metodo non può generare l'eccezione. Il metodo chiamante ha continuato l'esecuzione perché è `async`. Il comportamento effettivo del runtime verrà definito in modo diverso per ambienti diversi. Potrebbe terminare il thread o il processo che possiede il thread o lasciare il processo in uno stato indeterminato. Tutti questi potenziali risultati sono estremamente indesiderati.
 
 Per questo motivo è necessario includere l'istruzione await per l'attività asincrona nel proprio blocco try. Se causa un'attività non riuscita, è possibile registrare l'errore. Se si tratta di un errore dal quale non è possibile ripristinare l'applicazione, è possibile uscire rapidamente dal programma.
 

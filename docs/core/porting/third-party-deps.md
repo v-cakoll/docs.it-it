@@ -2,28 +2,40 @@
 title: Analizzare le dipendenze per convertire il codice per .NET Core
 description: Informazioni su come analizzare le dipendenze esterne per convertire il progetto da .NET Framework a .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521481"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798788"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizzare le dipendenze per convertire il codice per .NET Core
 
-Per convertire il codice a .NET Core o .NET Standard, è necessario conoscere le dipendenze. Le dipendenze esterne sono i [pacchetti NuGet](#analyze-referenced-nuget-packages-in-your-projects) o le [DLL](#analyze-dependencies-that-arent-nuget-packages) a cui si fa riferimento nel progetto, ma che non si compilano. È necessario valutare le singole dipendenze e definire un piano di emergenza per quelle non compatibili con .NET Core. Ecco come determinare se una dipendenza è compatibile con .NET Core.
+Per convertire il codice a .NET Core o .NET Standard, è necessario conoscere le dipendenze. Le dipendenze esterne sono i pacchetti NuGet o `.dll`a cui si fa riferimento nel progetto, ma non vengono compilati personalmente.
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analizzare i pacchetti NuGet cui si fa riferimento nei progetti
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>Eseguire la migrazione dei pacchetti NuGet a `PackageReference`
 
-Se il progetto contiene riferimenti a pacchetti NuGet, è necessario verificare se i pacchetti sono compatibili con .NET Core.
-È possibile ottenere questo risultato in due modi:
+.NET Core usa [PackageReference](/nuget/consume-packages/package-references-in-project-files) per specificare le dipendenze dei pacchetti. Se si usa [packages. config](/nuget/reference/packages-config) per specificare i pacchetti nel progetto, è necessario convertirli nel formato `PackageReference` perché `packages.config` non è supportato in .NET Core.
 
-- [Tramite l'app NuGet Package Explorer](#analyze-nuget-packages-using-nuget-package-explorer)
-- [Tramite il sito nuget.org](#analyze-nuget-packages-using-nugetorg)
+Per informazioni su come eseguire la migrazione, vedere l'articolo [eseguire la migrazione da Packages. config a PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) .
 
-Dopo l'analisi dei pacchetti, se questi non sono compatibili con .NET Core e supportano solo .NET Framework, sarà possibile verificare se la [modalità di compatibilità .NET Framework](#net-framework-compatibility-mode) risulta utile per il trasferimento.
+## <a name="upgrade-your-nuget-packages"></a>Aggiornare i pacchetti NuGet
+
+Dopo la migrazione del progetto al formato `PackageReference`, è necessario verificare se i pacchetti sono compatibili con .NET Core.
+
+Per prima cosa, aggiornare i pacchetti alla versione più recente. Questa operazione può essere eseguita con l'interfaccia utente di gestione pacchetti NuGet in Visual Studio. È probabile che le versioni più recenti delle dipendenze del pacchetto siano già compatibili con .NET Core.
+
+## <a name="analyze-your-package-dependencies"></a>Analizzare le dipendenze del pacchetto
+
+Se non si è ancora verificato che le dipendenze dei pacchetti convertite e aggiornate funzionano in .NET Core, è possibile ottenere questo risultato in diversi modi:
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>Analizzare i pacchetti NuGet usando nuget.org
+
+È possibile visualizzare i moniker del Framework di destinazione (TFM) supportati da ogni pacchetto in [NuGet.org](https://www.nuget.org/) nella sezione **dipendenze** della pagina del pacchetto.
+
+Sebbene l'utilizzo del sito sia un metodo più semplice per verificare la compatibilità, le informazioni sulle **dipendenze** non sono disponibili nel sito per tutti i pacchetti.
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>Analizzare i pacchetti NuGet usando NuGet Package Explorer
 
@@ -37,27 +49,7 @@ Il metodo più semplice per esaminare le cartelle del pacchetto NuGet è lo stru
 4. Selezionare il nome del pacchetto nei risultati della ricerca e fare clic su **open** (Apri).
 5. Espandere la cartella *lib* sul lato destro per visualizzare i nomi delle cartelle.
 
-Cercare una cartella con uno dei nomi seguenti:
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+Cercare una cartella con i nomi usando uno dei modelli seguenti: `netstandardX.Y` o `netcoreappX.Y`.
 
 Questi valori sono i [Target Framework Moniker (TFM)](../../standard/frameworks.md) che corrispondono a versioni dei profili [.NET Standard](../../standard/net-standard.md), .NET Core e dei tradizionali profili della libreria di classi portabile (PCL) compatibili con .NET Core.
 
@@ -65,15 +57,9 @@ Questi valori sono i [Target Framework Moniker (TFM)](../../standard/frameworks.
 > Quando si esaminano i TFM supportati da un pacchetto, si noti che `netcoreapp*` è compatibile, ma è destinato solo ai progetti .NET Core e non ai progetti .NET Standard.
 > Una libreria che supporta solo `netcoreapp*` ma non `netstandard*` può essere usata solo da altre applicazioni .NET Core.
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>Analizzare i pacchetti NuGet usando nuget.org
+## <a name="net-framework-compatibility-mode"></a>Modalità di compatibilità di .NET Framework
 
-In alternativa è possibile visualizzare i TFM supportati da ogni pacchetto in [nuget.org](https://www.nuget.org/) nella sezione **Dependencies** (Dipendenze) della pagina del pacchetto.
-
-La verifica della compatibilità risulta più semplice nel sito, ma le informazioni presenti in **Dependencies** (Dipendenze) non sono disponibili per tutti i pacchetti nel sito.
-
-### <a name="net-framework-compatibility-mode"></a>Modalità di compatibilità di .NET Framework
-
-Il risultato dell'analisi dei pacchetti NuGet può essere che i pacchetti supportano solo .NET Framework, come la maggior parte dei pacchetti NuGet.
+Dopo aver analizzato i pacchetti NuGet, è possibile che siano destinati solo ai .NET Framework.
 
 A partire da .NET Standard 2.0 è stata introdotta la modalità di compatibilità di .NET Framework. Questa modalità consente a progetti .NET Standard e .NET Core di gestire riferimenti a librerie .NET Framework. I riferimenti alle librerie .NET Framework non funzionano per tutti i progetti, ad esempio se la libreria usa API Windows Presentation Foundation (WPF), ma sono in grado di risolvere molti scenari di portabilità.
 
@@ -92,12 +78,6 @@ Per eliminare l'avviso modificando il file di progetto, trovare la voce `Package
 ```
 
 Per altre informazioni sull'eliminazione degli avvisi del compilatore in Visual Studio, vedere [Non visualizzare avvisi per i pacchetti NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
-
-## <a name="port-your-packages-to-packagereference"></a>Convertire i pacchetti a `PackageReference`
-
-.NET Core usa [PackageReference](/nuget/consume-packages/package-references-in-project-files) per specificare le dipendenze dei pacchetti. Se si usa [packages.config](/nuget/reference/packages-config) per specificare i pacchetti, sarà necessario eseguire la conversione a `PackageReference`.
-
-Per altre informazioni, vedere [Eseguire la migrazione da packages.config a PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Operazioni da eseguire quando una dipendenza del pacchetto NuGet non viene eseguita in .NET Core
 

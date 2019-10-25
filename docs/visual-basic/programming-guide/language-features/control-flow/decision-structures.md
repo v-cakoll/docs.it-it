@@ -21,9 +21,9 @@ Visual Basic consente di verificare le condizioni ed eseguire diverse operazioni
   
  Nella figura seguente viene illustrata una struttura decisionale che verifica la presenza di una condizione true e che esegue azioni diverse a seconda che sia true o false.  
   
- ![Un diagramma di flusso di un if... Quindi... Costruzione else.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Un diagramma di flusso di un If...Then...Else costruzione.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>Se... Quindi... Costruzione else  
+## <a name="ifthenelse-construction"></a>If...Then...Else costruzione  
  `If...Then...Else`le costruzioni consentono di testare una o più condizioni ed eseguire una o più istruzioni a seconda di ogni condizione. È possibile verificare le condizioni e intraprendere azioni nei modi seguenti:  
   
 - Eseguire una o più istruzioni se una condizione è`True`  
@@ -34,12 +34,12 @@ Visual Basic consente di verificare le condizioni ed eseguire diverse operazioni
   
 - Testare una condizione aggiuntiva se una condizione precedente è`False`  
   
- La struttura di controllo che offre tutte queste possibilità è il [... Quindi... Else (istruzione](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)). È possibile utilizzare una versione a riga singola se si dispone solo di un test e di un'istruzione da eseguire. Se si dispone di un set più complesso di condizioni e azioni, è possibile usare la versione a più righe.  
+ La struttura di controllo che offre tutte queste possibilità è il [If...Then...Else istruzione](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). È possibile utilizzare una versione a riga singola se si dispone solo di un test e di un'istruzione da eseguire. Se si dispone di un set più complesso di condizioni e azioni, è possibile usare la versione a più righe.  
   
-## <a name="selectcase-construction"></a>Seleziona... Costruzione case  
- La `Select...Case` costruzione consente di valutare un'espressione una sola volta ed eseguire set di istruzioni diversi in base a valori possibili differenti. Per ulteriori informazioni, vedere [Select... Istruzione case](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case costruzione  
+ La `Select...Case` costruzione consente di valutare un'espressione una sola volta ed eseguire set di istruzioni diversi in base a valori possibili differenti. Per ulteriori informazioni, vedere [Istruzione Select...Case](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Prova... Rileva... Costruzione definitiva  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Costruzione  
  `Try...Catch...Finally`le costruzioni consentono di eseguire un set di istruzioni in un ambiente che mantiene il controllo se una qualsiasi delle istruzioni causa un'eccezione. È possibile eseguire azioni diverse per le diverse eccezioni. Facoltativamente, è possibile specificare un blocco di codice che viene eseguito prima di uscire `Try...Catch...Finally` dall'intera costruzione, indipendentemente da ciò che si verifica. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
