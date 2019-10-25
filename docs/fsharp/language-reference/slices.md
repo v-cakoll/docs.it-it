@@ -2,24 +2,24 @@
 title: Sezioni (F#)
 description: Informazioni su come usare le sezioni per i tipi F# di dati esistenti e su come definire sezioni personalizzate per altri tipi di dati.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627141"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798914"
 ---
-# <a name="slices"></a><span data-ttu-id="bcf91-103">Sezioni</span><span class="sxs-lookup"><span data-stu-id="bcf91-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="87788-103">Sezioni</span><span class="sxs-lookup"><span data-stu-id="87788-103">Slices</span></span>
 
-<span data-ttu-id="bcf91-104">In F#una sezione è un subset di un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="bcf91-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="bcf91-105">Per poter eseguire una sezione da un tipo di dati, il tipo di dati deve definire un `GetSlice` metodo o un'estensione del [tipo](type-extensions.md) nell'ambito.</span><span class="sxs-lookup"><span data-stu-id="bcf91-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="bcf91-106">Questo articolo illustra come prendere le sezioni dai tipi esistenti F# e come definirne di personalizzate.</span><span class="sxs-lookup"><span data-stu-id="bcf91-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="87788-104">In F#una sezione è un subset di un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="87788-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="87788-105">Per poter eseguire una sezione da un tipo di dati, il tipo di dati deve definire un metodo di `GetSlice` o un' [estensione del tipo](type-extensions.md) nell'ambito.</span><span class="sxs-lookup"><span data-stu-id="87788-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="87788-106">Questo articolo illustra come prendere le sezioni dai tipi esistenti F# e come definirne di personalizzate.</span><span class="sxs-lookup"><span data-stu-id="87788-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="bcf91-107">Le sezioni sono simili agli [indicizzatori](./members/indexed-properties.md), ma anziché restituire un singolo valore dalla struttura dei dati sottostante, producono più di uno.</span><span class="sxs-lookup"><span data-stu-id="bcf91-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="87788-107">Le sezioni sono simili agli [indicizzatori](./members/indexed-properties.md), ma anziché restituire un singolo valore dalla struttura dei dati sottostante, producono più di uno.</span><span class="sxs-lookup"><span data-stu-id="87788-107">Slices are similar to [indexers](./members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="bcf91-108">F#attualmente dispone del supporto intrinseco per sezionare stringhe, elenchi, matrici e matrici 2D.</span><span class="sxs-lookup"><span data-stu-id="bcf91-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="87788-108">F#attualmente dispone del supporto intrinseco per sezionare stringhe, elenchi, matrici e matrici 2D.</span><span class="sxs-lookup"><span data-stu-id="87788-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="bcf91-109">Sezionamento di base F# con elenchi e matrici</span><span class="sxs-lookup"><span data-stu-id="bcf91-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="87788-109">Sezionamento di base F# con elenchi e matrici</span><span class="sxs-lookup"><span data-stu-id="87788-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="bcf91-110">I tipi di dati più comuni sezionati sono F# elenchi e matrici.</span><span class="sxs-lookup"><span data-stu-id="bcf91-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="bcf91-111">Nell'esempio seguente viene illustrato come eseguire questa operazione con gli elenchi:</span><span class="sxs-lookup"><span data-stu-id="bcf91-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="87788-110">I tipi di dati più comuni sezionati sono F# elenchi e matrici.</span><span class="sxs-lookup"><span data-stu-id="87788-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="87788-111">Nell'esempio seguente viene illustrato come eseguire questa operazione con gli elenchi:</span><span class="sxs-lookup"><span data-stu-id="87788-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="bcf91-112">Il sezionamento di matrici è analogo a quello degli elenchi di sezionamento:</span><span class="sxs-lookup"><span data-stu-id="bcf91-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="87788-112">Il sezionamento di matrici è analogo a quello degli elenchi di sezionamento:</span><span class="sxs-lookup"><span data-stu-id="87788-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="bcf91-113">Sezionamento di matrici multidimensionali</span><span class="sxs-lookup"><span data-stu-id="bcf91-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="87788-113">Sezionamento di matrici multidimensionali</span><span class="sxs-lookup"><span data-stu-id="87788-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="bcf91-114">F#supporta matrici multidimensionali nella libreria F# principale.</span><span class="sxs-lookup"><span data-stu-id="bcf91-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="bcf91-115">Come per le matrici unidimensionali, possono essere utili anche le sezioni di matrici multidimensionali.</span><span class="sxs-lookup"><span data-stu-id="bcf91-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="bcf91-116">Tuttavia, l'introduzione di dimensioni aggiuntive impone una sintassi leggermente diversa, in modo da poter eseguire sezioni di righe e colonne specifiche.</span><span class="sxs-lookup"><span data-stu-id="bcf91-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="87788-114">F#supporta matrici multidimensionali nella libreria F# principale.</span><span class="sxs-lookup"><span data-stu-id="87788-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="87788-115">Come per le matrici unidimensionali, possono essere utili anche le sezioni di matrici multidimensionali.</span><span class="sxs-lookup"><span data-stu-id="87788-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="87788-116">Tuttavia, l'introduzione di dimensioni aggiuntive impone una sintassi leggermente diversa, in modo da poter eseguire sezioni di righe e colonne specifiche.</span><span class="sxs-lookup"><span data-stu-id="87788-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="bcf91-117">Gli esempi seguenti illustrano come sezionare una matrice 2D:</span><span class="sxs-lookup"><span data-stu-id="bcf91-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="87788-117">Gli esempi seguenti illustrano come sezionare una matrice 2D:</span><span class="sxs-lookup"><span data-stu-id="87788-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="bcf91-118">La F# libreria principale non definisce `GetSlice`per le matrici 3D.</span><span class="sxs-lookup"><span data-stu-id="bcf91-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="bcf91-119">Se si desidera sezionare tali matrici o altre matrici di dimensioni maggiori, è necessario definire il `GetSlice` membro manualmente.</span><span class="sxs-lookup"><span data-stu-id="bcf91-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="87788-118">La F# libreria principale non definisce`GetSlice`per le matrici 3D.</span><span class="sxs-lookup"><span data-stu-id="87788-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="87788-119">Se si desidera sezionare tali matrici o altre matrici di dimensioni maggiori, è necessario definire manualmente il membro `GetSlice`.</span><span class="sxs-lookup"><span data-stu-id="87788-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="bcf91-120">Definizione di sezioni per altre strutture di dati</span><span class="sxs-lookup"><span data-stu-id="bcf91-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="87788-120">Definizione di sezioni per altre strutture di dati</span><span class="sxs-lookup"><span data-stu-id="87788-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="bcf91-121">La F# libreria principale definisce sezioni per un set limitato di tipi.</span><span class="sxs-lookup"><span data-stu-id="bcf91-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="bcf91-122">Se si desidera definire sezioni per più tipi di dati, è possibile eseguire questa operazione nella definizione del tipo o in un'estensione del tipo.</span><span class="sxs-lookup"><span data-stu-id="bcf91-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="87788-121">La F# libreria principale definisce sezioni per un set limitato di tipi.</span><span class="sxs-lookup"><span data-stu-id="87788-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="87788-122">Se si desidera definire sezioni per più tipi di dati, è possibile eseguire questa operazione nella definizione del tipo o in un'estensione del tipo.</span><span class="sxs-lookup"><span data-stu-id="87788-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="bcf91-123">Ad esempio, di seguito viene illustrato come definire le sezioni per la <xref:System.ArraySegment%601> classe per consentire una manipolazione dei dati semplice:</span><span class="sxs-lookup"><span data-stu-id="bcf91-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="87788-123">Ad esempio, di seguito viene illustrato come è possibile definire sezioni per la classe <xref:System.ArraySegment%601> per consentire una manipolazione dei dati semplice:</span><span class="sxs-lookup"><span data-stu-id="87788-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="bcf91-124">Utilizzare l'incorporamento per evitare la conversione boxing se necessario</span><span class="sxs-lookup"><span data-stu-id="bcf91-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="87788-124">Utilizzare l'incorporamento per evitare la conversione boxing se necessario</span><span class="sxs-lookup"><span data-stu-id="87788-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="bcf91-125">Se si definiscono sezioni per un tipo che è effettivamente uno struct, è consigliabile `inline` usare il `GetSlice` membro.</span><span class="sxs-lookup"><span data-stu-id="bcf91-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="bcf91-126">Il F# compilatore ottimizza gli argomenti facoltativi, evitando qualsiasi allocazione di heap in seguito all'sezionamento.</span><span class="sxs-lookup"><span data-stu-id="bcf91-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="bcf91-127">Questo è estremamente importante per i costrutti di sezionamento, <xref:System.Span%601> ad esempio, che non possono essere allocati nell'heap.</span><span class="sxs-lookup"><span data-stu-id="bcf91-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="87788-125">Se si definiscono sezioni per un tipo che è effettivamente uno struct, è consigliabile `inline` il membro del `GetSlice`.</span><span class="sxs-lookup"><span data-stu-id="87788-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="87788-126">Il F# compilatore ottimizza gli argomenti facoltativi, evitando qualsiasi allocazione di heap in seguito all'sezionamento.</span><span class="sxs-lookup"><span data-stu-id="87788-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="87788-127">Questo è estremamente importante per i costrutti di sezionamento, ad esempio <xref:System.Span%601> che non possono essere allocati nell'heap.</span><span class="sxs-lookup"><span data-stu-id="87788-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bcf91-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bcf91-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87788-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="87788-128">See also</span></span>
 
-- [<span data-ttu-id="bcf91-129">Proprietà indicizzate</span><span class="sxs-lookup"><span data-stu-id="bcf91-129">Indexed properties</span></span>](./members/indexed-properties.md)
+- [<span data-ttu-id="87788-129">Proprietà indicizzate</span><span class="sxs-lookup"><span data-stu-id="87788-129">Indexed properties</span></span>](./members/indexed-properties.md)
