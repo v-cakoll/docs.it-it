@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850950"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774037"
 items:
 - durationInMinutes: 2
   content: >
@@ -54,7 +54,39 @@ items:
     > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Includere tipi di dati diversi
   durationInMinutes: 5
-  content: "Nel passaggio precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Un'espressione di interpolazione che fa parte di un'espressione di stringa interpolata può avere tuttavia qualsiasi tipo di dati. Includere valori di varie espressioni di tipi di dati in una stringa interpolata.\n\nNell'esempio seguente viene prima di tutto definita una [tupla](../../tuples.md), dotata di membri `Name`, `Price` e `perPackage`. Eseguire il codice seguente nella finestra interattiva:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nL'espressione di interpolazione `item.Price` nella stringa interpolata restituisce il testo \"1.99\" nella stringa del risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:\n\n- Se l'espressione di interpolazione restituisce `null`, viene usata una stringa vuota (\"\" o <xref:System.String.Empty?displayProperty=nameWithType>).\n\n- Se l'espressione di interpolazione non restituisce `null`, in genere viene chiamato il metodo `ToString` dell'espressione del risultato. \n\nNell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nel passaggio successivo si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Nel passaggio precedente è stata usata l'interpolazione di stringhe per inserire una stringa in un'altra. Un'espressione di interpolazione che fa parte di un'espressione di stringa interpolata può avere tuttavia qualsiasi tipo di dati. Includere valori di varie espressioni di tipi di dati in una stringa interpolata.
+
+
+    Nell'esempio seguente viene prima di tutto definita una [tupla](../../tuples.md), dotata di membri `Name`, `Price` e `perPackage`. Eseguire il codice seguente nella finestra interattiva:
+
+
+    ```csharp
+
+    var item = (Name: "eggplant", Price: 1.99m, perPackage: 3);
+
+    var date = DateTime.Now;
+
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+
+    ```
+
+
+    L'espressione di interpolazione `item.Price` nella stringa interpolata restituisce il testo "1.99" nella stringa del risultato. Questo accade perché, quando il tipo di risultato dell'espressione non è una stringa, il risultato restituisce una stringa nel modo seguente:
+
+
+    - Se l'espressione di interpolazione restituisce `null`, viene usata una stringa vuota ("" o <xref:System.String.Empty?displayProperty=nameWithType>).
+
+
+    - Se l'espressione di interpolazione non restituisce `null`, in genere viene chiamato il metodo `ToString` dell'espressione del risultato.
+
+
+    Nell'output di questo esempio la data è troppo precisa (il prezzo delle melanzane non varia ogni secondo) e il valore del prezzo non indica una valuta. Nel passaggio successivo si apprenderà come risolvere questi problemi controllando la formattazione delle rappresentazioni di stringa dei risultati delle espressioni.
+
+
+    > [!NOTE]
+
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Controllare la formattazione delle espressioni di interpolazione
   durationInMinutes: 5
   content: >
@@ -71,10 +103,10 @@ items:
     Per specificare una stringa di formato, aggiungere i due punti (":") e la stringa di formato desiderata dopo l'espressione di interpolazione. "d" è un [stringa di formato data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) che rappresenta il formato di data breve. "C2" è una [stringa di formato numerico standard](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) che rappresenta un numero come valore di valuta con due cifre dopo il separatore decimale.
 
 
-    Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#stringRef) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
+    Molti tipi delle librerie .NET supportano un set predefinito di stringhe di formato. Tali tipi includono tutti i tipi numerici e i tipi data e ora. Per l'elenco completo dei tipi che supportano le stringhe di formato, vedere [Stringhe di formato e tipi della libreria di classe .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) nell'articolo [Formattazione di tipi in .NET](../../../standard/base-types/formatting-types.md).
 
 
-    Provare a modificare le stringhe di formato nell'esempio per vedere come cambia la formattazione della stringa di data e ora e del valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero a quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
+    Provare a modificare le stringhe di formato nell'esempio per vedere come cambia la formattazione della stringa di data e ora e del valore numerico. Modificare il valore "d" in `{date:d}` inserendo i valori "t" (per visualizzare il formato ora breve), "y" (per visualizzare anno e mese) e "yyyy" (per visualizzare l'anno come numero di quattro cifre). Modificare "C2" in `{price:C2}` inserendo "e" (per la notazione esponenziale) e "F3" (per un valore numerico con tre cifre dopo il separatore decimale).
 
 
     Oltre alla formattazione è possibile controllare la larghezza del campo e l'allineamento delle stringhe formattate incluse nella stringa di risultato. Il passaggio successivo indica come eseguire questa operazione.

@@ -3,12 +3,12 @@ title: Come usare l'API di Machine Learning automatizzato per ML.NET
 description: L'API di Machine Learning automatizzato per ML.NET consente di automatizzare il processo di compilazione del modello e genera un modello pronto per la distribuzione. Sono disponibili varie opzioni per configurare attività di Machine Learning automatizzato.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332725"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774556"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Come usare l'API di Machine Learning automatizzato per ML.NET
 
@@ -89,7 +89,7 @@ Di seguito sono riportati alcuni esempi:
     ```
 
 1. L'impostazione `CacheDirectory` è un puntatore a una directory in cui verranno salvati tutti i modelli sottoposti a training durante l'attività AutoML. Se `CacheDirectory` è null i modelli verranno mantenuti nella memoria anziché salvati su disco.
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ Come illustrato nell'esempio precedente, la metrica di ottimizzazione determina 
 ## <a name="data-pre-processing-and-featurization"></a>Preelaborazione dati ed estrazione caratteristiche
 
 > [!NOTE]
-> La colonna feature supporta solo i tipi di [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)e [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
+> La colonna feature supporta solo tipi di <xref:System.Boolean>, <xref:System.Single>e <xref:System.String>.
 
 La preelaborazione dei dati si verifica per impostazione predefinita e i passaggi seguenti vengono eseguiti automaticamente:
 
@@ -141,10 +141,10 @@ La preelaborazione dei dati si verifica per impostazione predefinita e i passagg
     Riempimento delle celle con valore mancante con il valore predefinito per il tipo di dati. Aggiunta di caratteristiche indicatore con lo stesso numero di slot della colonna di input. Il valore nelle caratteristiche indicatore accodate è `1` se il valore nella colonna di input è mancante e `0` negli altri casi.
 
 1. Generare caratteristiche aggiuntive
-    
-    Per le caratteristiche di testo: caratteristiche bag-of-word (insieme di parole) con unigrammi e trigrammi di caratteri.
-    
-    Per le caratteristiche categoriche: codifica one-hot per caratteristiche a cardinalità bassa e codifica hash one-hot per le caratteristiche categoriche a cardinalità elevata.
+
+    Per le funzionalità di testo: funzionalità del contenitore di Word che usano unigrammi e Tri-character-grams.
+
+    Per le funzionalità categoriche: codifica One-Hot per le funzionalità di cardinalità bassa e codifica One-Hot-hash per le funzionalità categoriche con cardinalità elevata.
 
 1. Trasformazioni e codifiche
 
@@ -191,7 +191,7 @@ Esplorare altri overload per `Execute()` se si vuole passare dati di convalida, 
 AutoML include un metodo di esecuzione dell'esperimento con overload che consente di specificare dati di training. A livello interno, il Machine Learning automatizzato suddivide i dati in gruppi train-validate (training-convalida).
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>Set di dati di convalida personalizzato
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 Se la suddivisione casuale non è accettabile, come avviene in genere con i dati di serie temporali, usare un set di dati di convalida personalizzato. È possibile specificare il proprio set di dati di convalida. Il modello verrà valutato rispetto al set di dati di convalida specificato anziché rispetto a uno o più set di dati casuali.
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>Esplorare le metriche del modello
