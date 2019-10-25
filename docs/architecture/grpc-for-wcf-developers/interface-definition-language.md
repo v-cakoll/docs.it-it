@@ -3,24 +3,22 @@ title: "Linguaggio di definizione dell'interfaccia: gRPC per sviluppatori WCF"
 description: Introduzione all'IDL dei buffer del protocollo.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 71bdf8bf488e0a5bed177817343051bcd7847d25
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 00c73619c5c27003e200385d5f67d8b8b7546f9e
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184428"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846641"
 ---
 # <a name="interface-definition-language"></a>Linguaggio di definizione dell'interfaccia
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Con WCF, i servizi possono esporre i metadati della descrizione utilizzando il linguaggio WSDL (Web Service Definition Language), generato in modo dinamico tramite reflection .NET in fase di esecuzione. Gli sviluppatori possono utilizzare questi metadati per generare client per tali servizi, potenzialmente in altre lingue se viene utilizzata un'associazione indipendente dalla piattaforma, ad esempio SOAP su HTTP.
 
-gRPC usa il linguaggio di definizione dell'interfaccia (IDL) dai buffer del protocollo. Il buffer di protocollo IDL è un linguaggio personalizzato indipendente dalla piattaforma con una specifica aperta. Consente agli sviluppatori di `.proto` usare file di codice per descrivere i servizi insieme ai relativi input e output. Questi `.proto` file possono quindi essere usati per generare stub specifici della lingua o della piattaforma per client e server, consentendo la comunicazione di più piattaforme diverse. Grazie alla `.proto` condivisione di file, i team possono generare codice per usare i servizi di altri utenti senza dover prendere una dipendenza dal codice.
+gRPC usa il linguaggio di definizione dell'interfaccia (IDL) dai buffer del protocollo. Il buffer di protocollo IDL è un linguaggio personalizzato indipendente dalla piattaforma con una specifica aperta. Gli sviluppatori `.proto` file di codice per descrivere i servizi insieme ai relativi input e output. Questi file di `.proto` possono quindi essere usati per generare stub specifici della lingua o della piattaforma per client e server, consentendo la comunicazione di più piattaforme diverse. Condividendo `.proto` file, i team possono generare codice per usare i servizi di altri utenti senza dover prendere una dipendenza dal codice.
 
 Uno dei vantaggi di protobuf IDL è che, come linguaggio personalizzato, consente a gRPC di essere completamente indipendente dal linguaggio e dalla piattaforma, non privilegiando alcuna tecnologia rispetto a un altro.
 
-Protobuf IDL è anche progettato per gli utenti sia in lettura che in scrittura, mentre WSDL è concepito come formato leggibile dal computer/scrivibile. Per modificare il WSDL di un servizio WCF è in genere necessario apportare le modifiche al codice del servizio stesso, eseguendo il servizio e rigenerando il file WSDL dal server. Al contrario, con un `.proto` file, le modifiche sono semplici da applicare con un editor di testo e passano automaticamente attraverso il codice generato. Visual Studio 2019 Compila `.proto` i file in background quando vengono salvati. quando si usano altri editor, ad esempio vs code le modifiche verranno applicate al momento della compilazione del progetto.
+Protobuf IDL è anche progettato per gli utenti sia in lettura che in scrittura, mentre WSDL è concepito come formato leggibile dal computer/scrivibile. Per modificare il WSDL di un servizio WCF è in genere necessario apportare le modifiche al codice del servizio stesso, eseguendo il servizio e rigenerando il file WSDL dal server. Al contrario, con un file di `.proto`, le modifiche sono semplici da applicare con un editor di testo e passano automaticamente attraverso il codice generato. Visual Studio 2019 compila i file `.proto` in background quando vengono salvati; Quando si usano altri editor, ad esempio VS Code le modifiche verranno applicate al momento della compilazione del progetto.
 
 Se confrontato con XML e in particolare SOAP, i messaggi codificati con protobuf presentano molti vantaggi. I messaggi protobuf tendono a essere più piccoli rispetto agli stessi dati serializzati come XML SOAP e la codifica, la decodifica e la trasmissione in rete possono essere più veloci.
 

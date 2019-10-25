@@ -3,16 +3,14 @@ title: Sicurezza nelle applicazioni gRPC-gRPC per sviluppatori WCF
 description: Panoramica dell'autenticazione e dell'autorizzazione di chiamata e canale in gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f3d32817ccb5d9f278d256c0ee135f0e2a17cf2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d0b7ff5bef755c5eeb9b3c419dcda1cb75ac4031
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184141"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846234"
 ---
 # <a name="security-in-grpc-applications"></a>Sicurezza nelle applicazioni gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In qualsiasi scenario reale, è essenziale proteggere le applicazioni e i servizi. La sicurezza copre tre aree principali: la crittografia del traffico di rete per impedirne l'intercettazione da attori malintenzionati. autenticazione dei client e dei server per stabilire l'identità e l'attendibilità; e autorizzare i client a controllare l'accesso ai sistemi e a applicare le autorizzazioni in base all'identità.
 
@@ -23,7 +21,7 @@ In questo capitolo vengono illustrate le funzionalità di autenticazione e autor
 
 ## <a name="wcf-authentication-and-authorization"></a>Autenticazione e autorizzazione WCF
 
-In WCF, l'autenticazione e l'autorizzazione venivano gestite in modi diversi a seconda dei trasporti e delle associazioni utilizzati. WCF supporta diversi standard WS\* -Security e l'autenticazione di Windows per i servizi HTTP in esecuzione nei servizi IIS o NetTcp tra i sistemi Windows.
+In WCF, l'autenticazione e l'autorizzazione venivano gestite in modi diversi a seconda dei trasporti e delle associazioni utilizzati. WCF supporta diversi standard di sicurezza WS-\*, oltre all'autenticazione di Windows per i servizi HTTP eseguiti nei servizi IIS o NetTCP tra i sistemi Windows.
 
 ## <a name="grpc-authentication-and-authorization"></a>autenticazione e autorizzazione di gRPC
 

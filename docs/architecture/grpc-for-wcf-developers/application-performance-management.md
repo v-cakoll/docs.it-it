@@ -3,16 +3,14 @@ title: Gestione delle prestazioni delle applicazioni-gRPC per sviluppatori WCF
 description: Registrazione, metriche e traccia per ASP.NET Core le applicazioni gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e4c32d057c1ac143e18a4a3ddc83dd8b1f62800
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184610"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846719"
 ---
 # <a name="application-performance-management"></a>Gestione delle prestazioni delle applicazioni
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Negli ambienti di produzione moderni come Kubernetes, è molto importante essere in grado di monitorare le applicazioni per assicurarsi che siano in esecuzione in modo ottimale. Problemi quali la registrazione e le metriche non sono mai state ancora più importanti. ASP.NET Core, incluso gRPC, ha un supporto di prima classe per la produzione e la gestione dei dati di log e delle metriche, oltre ai dati di *traccia* . In questa sezione vengono illustrate in dettaglio le aree.
 
@@ -56,7 +54,7 @@ Per ulteriori informazioni sulla scrittura di messaggi di log e di destinazioni 
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>Metriche in ASP.NET Core gRPC
 
-Il runtime di .NET Core fornisce un set di componenti per la creazione e l'osservazione di metriche che includono API come le <xref:System.Diagnostics.Tracing.EventSource> classi <xref:System.Diagnostics.Tracing.EventCounter> e. Queste API possono essere usate per creare dati numerici di base che possono essere usati da processi esterni come lo [strumento globale DotNet-Counters](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)oppure Event Tracing for Windows. Per altre informazioni sull'uso `EventCounter` di nel codice, vedere l'esercitazione [introduttiva di EventCounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) .
+Il runtime di .NET Core fornisce un set di componenti per la creazione e l'osservazione di metriche che includono API come le classi <xref:System.Diagnostics.Tracing.EventSource> e <xref:System.Diagnostics.Tracing.EventCounter>. Queste API possono essere usate per creare dati numerici di base che possono essere usati da processi esterni come lo [strumento globale DotNet-Counters](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)oppure Event Tracing for Windows. Per altre informazioni sull'uso di `EventCounter` nel codice, vedere l'esercitazione [introduttiva di EventCounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) .
 
 Per metriche più avanzate e per la scrittura di dati di metrica in una gamma più ampia di archivi dati, è disponibile un progetto open source eccellente denominato metriche per le [app](https://www.app-metrics.io). Questa suite di librerie fornisce un set completo di tipi per instrumentare il codice. Offre anche pacchetti per scrivere metriche in diversi tipi di destinazioni che includono database di serie temporali, ad esempio Prometeo e InfluxDB, [applicazione Azure Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)e altro ancora. Il pacchetto NuGet [app. Metrics. AspNetCore. Mvc](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) aggiunge anche un set completo di metriche di base che vengono generate automaticamente tramite l'integrazione con il framework di ASP.NET Core e il sito Web fornisce [modelli](https://www.app-metrics.io/samples/grafana/) per la visualizzazione di tali metriche con la piattaforma di visualizzazione [Grafana](https://grafana.com/) .
 
@@ -74,7 +72,7 @@ La maggior parte delle piattaforme di metrica supporta cinque tipi di metriche d
 | Metro       | Misura la frequenza con cui si verifica un evento in diversi intervalli di tempo. |
 | Timer       | Tiene traccia della durata degli eventi e della frequenza con cui si verifica, archiviati come istogramma. |
 
-Usando le *metriche dell'app*, `IMetrics` un'interfaccia può essere ottenuta tramite l'inserimento di dipendenze e usata per registrare una qualsiasi di queste metriche per un servizio gRPC. Nell'esempio seguente viene illustrato come contare il numero di `Get` richieste effettuate nel tempo:
+Usando le *metriche dell'app*, è possibile ottenere un'interfaccia `IMetrics` tramite l'inserimento di dipendenze e usarla per registrare una qualsiasi di queste metriche per un servizio gRPC. Nell'esempio seguente viene illustrato come contare il numero di richieste di `Get` effettuate nel tempo:
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -127,9 +125,9 @@ La traccia distribuita si basa sul concetto di *intervalli*, ovvero operazioni a
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Traccia distribuita con DiagnosticSource
 
-.NET Core dispone di un modulo interno che esegue il mapping delle tracce e delle ampiezze distribuite: [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Oltre a fornire un modo semplice per produrre e utilizzare la diagnostica in un processo, il `DiagnosticSource` modulo ha il concetto di un' *attività*, che è in realtà un'implementazione di una traccia distribuita o un intervallo all'interno di una traccia. Gli elementi interni del modulo si occupano delle attività padre/figlio, inclusi gli identificatori di allocazione. Per ulteriori informazioni sull'utilizzo del `Activity` tipo, vedere la [Guida dell'utente dell'attività su GitHub](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide) .
+.NET Core dispone di un modulo interno che esegue il mapping in modo ottimale alle tracce distribuite e agli intervalli: [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Oltre a fornire un modo semplice per produrre e utilizzare la diagnostica in un processo, il modulo `DiagnosticSource` ha il concetto di un' *attività*, che è in realtà un'implementazione di una traccia distribuita o un intervallo all'interno di una traccia. Gli elementi interni del modulo si occupano delle attività padre/figlio, inclusi gli identificatori di allocazione. Per ulteriori informazioni sull'utilizzo del tipo di `Activity`, vedere la [Guida dell'utente dell'attività su GitHub](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide) .
 
-Poiché DiagnosticSource fa parte del framework principale, è supportato da diversi componenti di base, tra cui <xref:System.Net.Http.HttpClient>Entity Framework Core e ASP.NET Core, incluso il supporto esplicito nel Framework gRPC. Quando ASP.NET Core riceve una richiesta, verifica la presenza di una coppia di intestazioni HTTP corrispondenti allo standard del [contesto di traccia W3C](https://www.w3.org/TR/trace-context) . Se le intestazioni vengono trovate, un'attività viene avviata usando i valori Identity e il contesto dalle intestazioni. Se non viene trovata alcuna intestazione, viene avviata un'attività con valori Identity generati che corrispondono al formato standard. Qualsiasi diagnostica generata dal Framework o dal codice dell'applicazione durante il ciclo di vita di questa attività può essere contrassegnata con gli identificatori di traccia e di intervallo. Il `HttpClient` supporto si estende ulteriormente controllando la presenza di un'attività corrente per ogni richiesta e aggiungendo automaticamente le intestazioni di traccia alla richiesta in uscita.
+Poiché DiagnosticSource fa parte del framework principale, è supportato da diversi componenti di base, tra cui <xref:System.Net.Http.HttpClient>, Entity Framework Core e ASP.NET Core, incluso il supporto esplicito nel Framework gRPC. Quando ASP.NET Core riceve una richiesta, verifica la presenza di una coppia di intestazioni HTTP corrispondenti allo standard del [contesto di traccia W3C](https://www.w3.org/TR/trace-context) . Se le intestazioni vengono trovate, un'attività viene avviata usando i valori Identity e il contesto dalle intestazioni. Se non viene trovata alcuna intestazione, viene avviata un'attività con valori Identity generati che corrispondono al formato standard. Qualsiasi diagnostica generata dal Framework o dal codice dell'applicazione durante il ciclo di vita di questa attività può essere contrassegnata con gli identificatori di traccia e di intervallo. Il supporto `HttpClient` estende ulteriormente questo problema controllando la presenza di un'attività corrente per ogni richiesta e aggiungendo automaticamente le intestazioni di traccia alla richiesta in uscita.
 
 Le librerie client e server ASP.NET Core gRPC includono il supporto esplicito per DiagnosticSource e attività e creeranno le attività e utilizzeranno automaticamente le informazioni di intestazione.
 
@@ -138,7 +136,7 @@ Le librerie client e server ASP.NET Core gRPC includono il supporto esplicito pe
 
 ### <a name="add-your-own-diagnosticsources-and-activities"></a>Aggiungere DiagnosticSources e attività personali
 
-Sebbene una buona quantità di dati venga generata automaticamente da ASP.NET Core, tra cui gRPC, nonché Entity Framework Core e `HttpClient`, potrebbe essere necessario aggiungere la propria diagnostica o creare intervalli espliciti all'interno del codice dell'applicazione. Per informazioni dettagliate su come implementare la diagnostica personalizzata, vedere la guida dell' [utente di DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) e la [Guida dell'utente dell'attività](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage) .
+Sebbene una buona quantità di dati venga generata automaticamente da ASP.NET Core, tra cui gRPC, nonché Entity Framework Core e `HttpClient`, è possibile aggiungere la propria diagnostica o creare intervalli espliciti all'interno del codice dell'applicazione. Per informazioni dettagliate su come implementare la diagnostica personalizzata, vedere la guida dell' [utente di DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) e la [Guida dell'utente dell'attività](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage) .
 
 ### <a name="store-distributed-trace-data"></a>Archiviare dati di traccia distribuiti
 
@@ -148,7 +146,7 @@ L'API OpenTracing è descritta di seguito. Se si preferisce usare l'API OpenTele
 
 #### <a name="use-the-opentracing-package-to-store-distributed-trace-data"></a>Usare il pacchetto OpenTracing per archiviare i dati di traccia distribuiti
 
-[Pacchetto NuGet OpenTracing](https://www.nuget.org/packages/OpenTracing/) che supporta tutti i back-end conformi a OpenTracing (che possono essere usati indipendentemente da `DiagnosticSource`). È disponibile un pacchetto aggiuntivo dal progetto contributi API OpenTracing, [OpenTracing. contrib. Netcore](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/), che aggiunge un `DiagnosticSource` listener e scrive eventi e attività in un back-end automaticamente. L'abilitazione di questo pacchetto è semplice come installarla da NuGet e aggiungerla come servizio nella `Startup` classe.
+[Pacchetto NuGet OpenTracing](https://www.nuget.org/packages/OpenTracing/) che supporta tutti i back-end conformi a OpenTracing (che possono essere usati in modo indipendente da `DiagnosticSource`). È disponibile un pacchetto aggiuntivo dal progetto contributi API OpenTracing, [OpenTracing. contrib. Netcore](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/), che aggiunge un listener `DiagnosticSource` e scrive automaticamente eventi e attività in un back-end. L'abilitazione di questo pacchetto è semplice come installarla da NuGet e aggiungerla come servizio nella classe `Startup`.
 
 ```csharp
 public class Startup
@@ -162,7 +160,7 @@ public class Startup
 
 Il pacchetto OpenTracing è un livello di astrazione e, di conseguenza, richiede un'implementazione specifica del back-end. Le implementazioni dell'API OpenTracing sono disponibili per i back-end open source seguenti.
 
-| nome | Pacchetto | Sito Web |
+| Name | Pacchetto | Sito Web |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | APM elastica | [Elastic. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

@@ -3,28 +3,26 @@ title: Servizi di streaming gRPC rispetto a campi ripetuti-gRPC per sviluppatori
 description: Confronto tra campi ripetuti e servizi di streaming come modalità di passaggio di raccolte di dati con gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7dc3c8f5bf2efc304da7d50661ba47db500e67a0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e48fe4882139e029dbf5b52451a2e68cb4316677
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184071"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846078"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>Servizi di streaming gRPC rispetto ai campi ripetuti
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-i servizi gRPC forniscono due modi per restituire set di impostazioni o elenchi di oggetti. La specifica del messaggio buffer del protocollo utilizza `repeated` la parola chiave per dichiarare elenchi o matrici di messaggi all'interno di un altro messaggio. La specifica del servizio gRPC utilizza `stream` la parola chiave per dichiarare una connessione persistente con esecuzione prolungata su cui vengono inviati più messaggi e che può essere elaborata singolarmente. La `stream` funzionalità può essere usata anche per dati temporali con esecuzione prolungata, ad esempio notifiche o messaggi di log, ma in questo capitolo viene considerato l'uso per la restituzione di un singolo set di dati.
+i servizi gRPC forniscono due modi per restituire set di impostazioni o elenchi di oggetti. La specifica del messaggio buffer del protocollo utilizza la parola chiave `repeated` per dichiarare elenchi o matrici di messaggi all'interno di un altro messaggio. La specifica del servizio gRPC usa la parola chiave `stream` per dichiarare una connessione persistente con esecuzione prolungata in cui vengono inviati più messaggi e può essere elaborato singolarmente. La funzionalità `stream` può essere usata anche per dati temporali con esecuzione prolungata, ad esempio notifiche o messaggi di log, ma in questo capitolo viene considerato l'utilizzo per la restituzione di un singolo set di dati.
 
 È necessario utilizzare dipende da diversi fattori, ad esempio la dimensione complessiva del set di dati, il tempo necessario per creare il set di dati a livello di client o server e se il consumer del set di dati può iniziare a operare su di esso non appena il primo elemento è disponibile o necessita del set di dati completo per eseguire operazioni utili.
 
-## <a name="when-to-use-repeated-fields"></a>Quando usare `repeated` i campi
+## <a name="when-to-use-repeated-fields"></a>Quando usare campi di `repeated`
 
-Per qualsiasi set di dati vincolato a dimensioni e che può essere generato interamente in un breve periodo di tempo, ad indicare in un secondo, è necessario usare un `repeated` campo in un normale messaggio protobuf. Ad esempio, in un sistema di e-commerce, per compilare un elenco di elementi all'interno di un ordine è probabile che l'elenco non sia molto grande. La restituzione di un singolo `repeated` messaggio con un campo è un ordine di grandezza più `stream` veloce rispetto all'utilizzo di un e comporta un minor sovraccarico di rete.
+Per qualsiasi set di dati vincolato a dimensioni e che può essere generato interamente in un breve periodo di tempo, ad indicare in un secondo, è necessario usare un campo `repeated` in un messaggio protobuf normale. Ad esempio, in un sistema di e-commerce, per compilare un elenco di elementi all'interno di un ordine è probabile che l'elenco non sia molto grande. La restituzione di un singolo messaggio con un campo `repeated` è un ordine di grandezza più veloce rispetto all'utilizzo di un `stream` e comporta un minor sovraccarico di rete.
 
-Se il client richiede tutti i dati prima di iniziare a elaborarli e il set di dati è sufficientemente piccolo da costruire in memoria, provare `repeated` a usare un campo anche se la creazione effettiva del set di dati in memoria nel server è più lenta.
+Se il client richiede tutti i dati prima di iniziare a elaborarli e il set di dati è sufficientemente piccolo da costruire in memoria, provare a usare un campo `repeated` anche se la creazione effettiva del set di dati in memoria nel server è più lenta.
 
-## <a name="when-to-use-stream-methods"></a>Quando usare `stream` i metodi
+## <a name="when-to-use-stream-methods"></a>Quando usare i metodi `stream`
 
 I set di impostazioni in cui gli oggetti messaggio sono potenzialmente molto grandi vengono trasferiti in modo ottimale tramite richieste di streaming o risposte. È più efficiente costruire un oggetto di grandi dimensioni in memoria, scriverlo nella rete e quindi liberare le risorse. Questo approccio migliorerà la scalabilità del servizio.
 

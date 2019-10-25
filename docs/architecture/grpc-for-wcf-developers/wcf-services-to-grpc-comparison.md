@@ -3,16 +3,14 @@ title: Confronto tra WCF e gRPC-gRPC per sviluppatori WCF
 description: Confronto tra i framework WCF e gRPC per la creazione di applicazioni distribuite.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: c763048d09e7ed5ca0a3d5240f6b3cf5262f897c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184043"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846064"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Confronto tra WCF e gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Il capitolo precedente dovrebbe dare un'occhiata a protobuf e al modo in cui gRPC gestisce i messaggi. Prima di eseguire una conversione dettagliata da WCF a gRPC, è importante esaminare il modo in cui la gamma di funzionalità attualmente disponibili in WCF viene gestita in gRPC e le soluzioni alternative che è possibile usare quando non sembra essere un equivalente gRPC. In particolare, in questo capitolo vengono trattati gli argomenti seguenti:
 
@@ -21,11 +19,11 @@ Il capitolo precedente dovrebbe dare un'occhiata a protobuf e al modo in cui gRP
 - Tipi RPC
 - Metadati
 - Gestione degli errori
-- \* Protocolli WS
+- Protocolli WS-\*
 
 ## <a name="grpc-example"></a>esempio di gRPC
 
-Quando si crea un nuovo progetto ASP.NET Core 3,0 gRPC da Visual Studio 2019 o dalla riga di comando, viene generato automaticamente l'equivalente gRPC di "Hello World". È costituito da `greeter.proto` un file che definisce il servizio e i relativi messaggi e `GreeterService.cs` un file con un'implementazione del servizio.
+Quando si crea un nuovo progetto ASP.NET Core 3,0 gRPC da Visual Studio 2019 o dalla riga di comando, viene generato automaticamente l'equivalente gRPC di "Hello World". È costituito da un file `greeter.proto` che definisce il servizio e i relativi messaggi e un file `GreeterService.cs` con un'implementazione del servizio.
 
 ```protobuf
 syntax = "proto3";

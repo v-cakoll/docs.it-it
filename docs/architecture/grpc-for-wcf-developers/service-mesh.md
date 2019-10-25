@@ -3,16 +3,14 @@ title: Mesh del servizio-gRPC per sviluppatori WCF
 description: Uso di una rete mesh di servizi per indirizzare e bilanciare le richieste ai servizi gRPC in un cluster Kubernetes.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7fc80b95937dab9153b72aa6bc8da90f6453779f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184092"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846042"
 ---
 # <a name="service-meshes"></a>Mesh del servizio
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Una mesh di servizi è un componente dell'infrastruttura che prende il controllo del routing delle richieste di servizio all'interno di una rete. Le mesh del servizio possono gestire tutti i tipi di problemi a livello di rete all'interno di un cluster Kubernetes, tra cui:
 
@@ -24,7 +22,7 @@ Una mesh di servizi è un componente dell'infrastruttura che prende il controllo
 
 Il servizio Kubernetes mesh funziona aggiungendo un contenitore aggiuntivo, denominato *sidecar proxy*, a ogni pod incluso nella rete. Il proxy acquisisce la gestione di tutte le richieste di rete in ingresso e in uscita, consentendo la configurazione e la gestione delle operazioni di rete da mantenere separate dai contenitori dell'applicazione e, in molti casi, senza richiedere alcuna modifica al codice dell'applicazione.
 
-Prendere l' [esempio del capitolo precedente](kubernetes.md#testing-the-application), in cui le richieste gRPC dall'applicazione Web sono state indirizzate a una singola istanza del servizio gRPC. Questo problema si verifica perché il nome host del servizio viene risolto in un indirizzo IP e tale indirizzo IP viene memorizzato nella cache per `HttpClientHandler` la durata dell'istanza. Potrebbe essere possibile aggirare questo problema gestendo manualmente le ricerche DNS o creando più client, ma ciò complica notevolmente il codice dell'applicazione senza aggiungere alcun valore aziendale o cliente.
+Prendere l' [esempio del capitolo precedente](kubernetes.md#testing-the-application), in cui le richieste gRPC dall'applicazione Web sono state indirizzate a una singola istanza del servizio gRPC. Questo problema si verifica perché il nome host del servizio viene risolto in un indirizzo IP e tale indirizzo IP viene memorizzato nella cache per la durata dell'istanza di `HttpClientHandler`. Potrebbe essere possibile aggirare questo problema gestendo manualmente le ricerche DNS o creando più client, ma ciò complica notevolmente il codice dell'applicazione senza aggiungere alcun valore aziendale o cliente.
 
 Usando una mesh di servizi, le richieste provenienti dal contenitore dell'applicazione vengono inviate al proxy sidecar, che può distribuirle in modo intelligente in tutte le istanze dell'altro servizio. Il mesh può anche:
 
@@ -32,17 +30,17 @@ Usando una mesh di servizi, le richieste provenienti dal contenitore dell'applic
 - Gestire la semantica di ripetizione dei tentativi per le chiamate non riuscite o i timeout
 - Reindirizzare le richieste non riuscite a un'istanza alternativa senza tornare all'applicazione client.
 
-Lo screenshot seguente illustra l'applicazione StockWeb in esecuzione con la mesh del servizio Linkerd, senza modifiche al codice dell'applicazione o anche all'immagine Docker usata. L'unica modifica necessaria è l'aggiunta di un'annotazione alla distribuzione nei file YAML per i `stockdata` servizi `stockweb` e.
+Lo screenshot seguente illustra l'applicazione StockWeb in esecuzione con la mesh del servizio Linkerd, senza modifiche al codice dell'applicazione o anche all'immagine Docker usata. L'unica modifica necessaria è l'aggiunta di un'annotazione alla distribuzione nei file YAML per i servizi `stockdata` e `stockweb`.
 
 ![StockWeb con mesh del servizio](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Dalla colonna Server è possibile vedere che le richieste dall'applicazione StockWeb sono state indirizzate a entrambe le repliche del servizio StockData, nonostante l'origine da una singola `HttpClient` istanza nel codice dell'applicazione. Infatti, se si esamina il codice, si noterà che tutte le richieste 100 al servizio StockData vengono effettuate simultaneamente utilizzando la stessa `HttpClient` istanza, ma con la mesh del servizio, tali richieste verranno bilanciate in molte istanze del servizio disponibili.
+Dalla colonna Server è possibile vedere che le richieste dall'applicazione StockWeb sono state indirizzate a entrambe le repliche del servizio StockData, anche se originate da una singola istanza `HttpClient` nel codice dell'applicazione. Infatti, se si esamina il codice, si noterà che tutte le richieste 100 al servizio StockData vengono effettuate simultaneamente utilizzando la stessa istanza di `HttpClient`, ma con la mesh del servizio, tali richieste verranno bilanciate in molte istanze del servizio disponibili.
 
 Le mesh del servizio si applicano solo al traffico all'interno di un cluster. Per i client esterni, vedere [il capitolo successivo, bilanciamento del carico](load-balancing.md).
 
 ## <a name="service-mesh-options"></a>Opzioni di mesh del servizio
 
-Sono attualmente disponibili tre implementazioni di rete di servizi generiche da usare con Kubernetes: Istio, Linkerd e Consul Connect. Tutte e tre forniscono routing/inoltro delle richieste, crittografia del traffico, resilienza, autenticazione da host a host e controllo del traffico.
+Sono attualmente disponibili tre implementazioni di rete di servizi generiche da usare con Kubernetes: Istio, Linkerd e console connect. Tutte e tre forniscono routing/inoltro delle richieste, crittografia del traffico, resilienza, autenticazione da host a host e controllo del traffico.
 
 La scelta di una mesh di servizi dipende da diversi fattori: 
 
@@ -65,7 +63,7 @@ Con l'interfaccia della riga di comando di Linkerd installata, seguire le [istru
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Aggiungere Linkerd alle distribuzioni di Kubernetes
 
-L'interfaccia della riga di `inject` comando di Linkerd fornisce un comando per aggiungere le sezioni e le proprietà necessarie ai file Kubernetes. È possibile eseguire il comando e scrivere l'output in un nuovo file.
+L'interfaccia della riga di comando di Linkerd fornisce un comando `inject` per aggiungere le sezioni e le proprietà necessarie ai file Kubernetes. È possibile eseguire il comando e scrivere l'output in un nuovo file.
 
 ```console
 linkerd inject stockdata.yml > stockdata-with-mesh.yml
@@ -74,7 +72,7 @@ linkerd inject stockweb.yml > stockweb-with-mesh.yml
 
 È possibile esaminare i nuovi file per vedere quali modifiche sono state apportate. Per gli oggetti di distribuzione, viene aggiunta un'annotazione dei metadati per indicare a Linkerd di inserire un contenitore del proxy sidecar nel pod quando viene creato.
 
-È anche possibile inviare tramite pipe l'output del `linkerd inject` comando a `kubectl` direttamente. I comandi seguenti funzioneranno in PowerShell o in qualsiasi shell Linux.
+È anche possibile inviare tramite pipe l'output del comando `linkerd inject` per `kubectl` direttamente. I comandi seguenti funzioneranno in PowerShell o in qualsiasi shell Linux.
 
 ```console
 linkerd inject stockdata.yml | kubectl apply -f -
@@ -83,7 +81,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Esaminare i servizi nel dashboard di Linkerd
 
-Avviare il dashboard di Linkerd usando `linkerd` l'interfaccia della riga di comando.
+Avviare il dashboard di Linkerd usando l'interfaccia della riga di comando `linkerd`.
 
 ```console
 linkerd dashboard

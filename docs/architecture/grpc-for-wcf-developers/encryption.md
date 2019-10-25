@@ -3,22 +3,20 @@ title: Crittografia e sicurezza di rete-gRPC per sviluppatori WCF
 description: Alcune note sulla crittografia e la sicurezza di rete in gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 8a115b59337003669b4e5436edffe239489ca79e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ee1ffaf00ea0cc6b771ede9f49b6a691af0968
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184463"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846670"
 ---
 # <a name="encryption-and-network-security"></a>Crittografia e sicurezza di rete
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Il modello di sicurezza di rete di WCF è vasto e complesso, inclusa la sicurezza a livello di trasporto tramite HTTPS o TLS-over-TCP e la sicurezza a livello di messaggio utilizzando la specifica WS-Security per crittografare i singoli messaggi.
 
 gRPC lascia la rete sicura al protocollo HTTP/2 sottostante, che può essere protetto usando i normali certificati TLS.
 
-I Web browser si ostinano a usare le connessioni TLS per HTTP/2, ma la maggior parte dei client programmatici, incluso. `HttpClient`NET, può usare http/2 su connessioni non crittografate. `HttpClient`*richiede la* crittografia per impostazione predefinita, ma è possibile eseguirne l' <xref:System.AppContext> override usando un'opzione.
+I Web browser si ostinano a usare le connessioni TLS per HTTP/2, ma la maggior parte dei client programmatici, incluso. `HttpClient`NET, può usare HTTP/2 su connessioni non crittografate. `HttpClient` *richiede la crittografia* per impostazione predefinita, ma è possibile eseguirne l'override usando un'opzione di <xref:System.AppContext>.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

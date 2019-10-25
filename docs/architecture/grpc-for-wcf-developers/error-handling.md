@@ -3,18 +3,16 @@ title: Gestione degli errori-gRPC per sviluppatori WCF
 description: DA SCRIVERE
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3535a00aad49f532eb5f5f778116454a12bfd639
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 2ef1a0b38d9b63af7244c6e0428c9adbcb1d6527
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184456"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846665"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-WCF utilizza `FaultException<T>` e `FaultContract` per fornire informazioni dettagliate sull'errore, incluso il supporto dello standard di errore SOAP.
+WCF utilizza `FaultException<T>` e `FaultContract` per fornire informazioni dettagliate sull'errore, incluso il supporto dello standard degli errori SOAP.
 
 Sfortunatamente, la versione corrente di gRPC non dispone della sofisticazione trovata con WCF e prevede una gestione degli errori incorporata limitata basata su semplici codici di stato e metadati. La tabella seguente è una guida rapida ai codici di stato usati più di frequente:
 
@@ -30,7 +28,7 @@ Sfortunatamente, la versione corrente di gRPC non dispone della sofisticazione t
 
 ## <a name="raising-errors-in-aspnet-core-grpc"></a>Generazione di errori nel ASP.NET Core gRPC
 
-Un ASP.NET Core servizio gRPC può inviare una risposta di errore generando `RpcException`un'eccezione, che può essere rilevata dal client come se si trovasse nello stesso processo. `RpcException` Deve includere un codice di stato e una descrizione e può includere facoltativamente metadati e un messaggio di eccezione più lungo. I metadati possono essere utilizzati per inviare dati di supporto, in modo `FaultContract` analogo a come gli oggetti possono includere dati aggiuntivi per gli errori WCF.
+Un ASP.NET Core servizio gRPC può inviare una risposta di errore generando una `RpcException`, che può essere rilevata dal client come se si trovasse nello stesso processo. Il `RpcException` deve includere un codice di stato e una descrizione e può includere facoltativamente metadati e un messaggio di eccezione più lungo. I metadati possono essere utilizzati per inviare dati di supporto, in modo analogo a come `FaultContract` oggetti possono contenere dati aggiuntivi per gli errori WCF.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -49,7 +47,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>Rilevamento di errori nei client gRPC
 
-Proprio come i client WCF possono <xref:System.ServiceModel.FaultException%601> rilevare errori, un client gRPC può intercettare un `RpcException` per gestire gli errori. Poiché `RpcException` non è un tipo generico, non è possibile intercettare tipi di errore diversi in blocchi diversi, C#ma è possibile usare la funzionalità relativa `catch` ai *filtri eccezioni* per dichiarare blocchi distinti per i diversi codici di stato, come illustrato di seguito. esempio
+Proprio come i client WCF possono intercettare gli errori di <xref:System.ServiceModel.FaultException%601>, un client gRPC può intercettare un `RpcException` per gestire gli errori. Poiché `RpcException` non è un tipo generico, non è possibile intercettare tipi di errore diversi in blocchi diversi, C#ma è possibile usare la funzionalità *filtri eccezioni* per dichiarare blocchi di`catch`separati per i diversi codici di stato, come illustrato nell'esempio seguente:
 
 ```csharp
 try
@@ -68,7 +66,7 @@ catch (RpcException)
 ```
 
 > [!IMPORTANT]
-> Quando si forniscono metadati aggiuntivi per gli errori, assicurarsi di documentare le chiavi e i valori rilevanti nella documentazione dell'API o nei commenti del `.proto` file.
+> Quando si forniscono metadati aggiuntivi per gli errori, assicurarsi di documentare le chiavi e i valori rilevanti nella documentazione dell'API o nei commenti nel file di `.proto`.
 
 ## <a name="grpc-richer-error-model"></a>Modello di errore gRPC più completo
 

@@ -3,16 +3,14 @@ title: Eseguire la migrazione di servizi duplex WCF a gRPC-gRPC per sviluppatori
 description: Informazioni su come eseguire la migrazione di varie forme di servizio WCF Duplex ai servizi di streaming gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1c3f87b035cea367188e8357f4755c7b6786ab77
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770394"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846601"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>Eseguire la migrazione di servizi duplex WCF a gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ora che sono disponibili i concetti di base, in questa sezione verranno esaminati i servizi di *streaming* gRPC più complicati.
 

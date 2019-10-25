@@ -3,16 +3,14 @@ title: Tipi annidati protobuf-gRPC per sviluppatori WCF
 description: Informazioni sui tipi di messaggi annidati in protobuf e gRPC e sul modo in C#cui vengono generati in.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 39bc52b37cc9e57cfe0ed5a5118c348de5f014d8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184190"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846309"
 ---
 # <a name="protobuf-nested-types"></a>Tipi annidati protobuf
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Così come C# consente di dichiarare le classi all'interno di altre classi, protobuf consente di annidare le definizioni dei messaggi all'interno di altri messaggi. Nell'esempio seguente viene illustrato come creare tipi di messaggi annidati:
 
@@ -25,7 +23,7 @@ message Outer {
 }
 ```
 
-Nel codice generato C# , il `Inner` tipo verrà dichiarato in una classe statica `Types` annidata all'interno della `HelloRequest` classe:
+Nel codice generato C# il tipo di`Inner`verrà dichiarato in una classe di`Types`statica annidata all'interno della classe`HelloRequest`:
 
 ```csharp
 var inner = new Outer.Types.Inner { Text = "Hello" };

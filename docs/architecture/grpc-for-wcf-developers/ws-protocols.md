@@ -3,24 +3,22 @@ title: Protocolli WS-*-gRPC per sviluppatori WCF
 description: Esaminare i protocolli WS-* supportati da WCF e le alternative disponibili con gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cd9af401fc46297fc0c67f5b3e5d6b34177d6a87
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4e7b80df182fb69cc51e14738e59ad87efaf5dd2
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184029"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846037"
 ---
-# <a name="ws--protocols"></a>\* Protocolli WS
+# <a name="ws--protocols"></a>Protocolli WS-\*
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Uno dei vantaggi effettivi dell'utilizzo di Windows Communication Foundation (WCF) era che supportava molti dei protocolli _WS-\*_  standard esistenti. In questa sezione viene illustrato brevemente il modo in cui gRPC gestisce\* gli stessi WS-Protocol e illustra le opzioni disponibili quando non esiste alcuna alternativa.
+Uno dei vantaggi effettivi dell'utilizzo di Windows Communication Foundation (WCF) era che supportava molti dei protocolli standard _WS-\*_ esistenti. In questa sezione viene illustrato brevemente il modo in cui gRPC gestisce gli stessi protocolli WS-\* e illustra le opzioni disponibili quando non esiste alcuna alternativa.
 
 ## <a name="metadata-exchange---ws-policy-ws-discovery-and-so-on"></a>Scambio di metadati-WS-Policy, WS-Discovery e così via
 
 I servizi SOAP espongono documenti di schema Web Services Description Language (WSDL) con informazioni quali formati di dati, operazioni o opzioni di comunicazione. Questo schema può essere utilizzato per generare il codice client.
 
-gRPC funziona meglio quando i server e i client vengono generati dagli `.proto` stessi file, ma un'estensione facoltativa per la reflection del server fornisce un modo per esporre le informazioni dinamiche da un server in esecuzione. Per altre informazioni, vedere il pacchetto NuGet [Grpc. Reflection](https://nuget.org/packages/Grpc.Reflection) e l' [articolo C# Reflection server Grpc](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md) .
+gRPC funziona in modo ottimale quando i server e i client vengono generati dagli stessi file di `.proto`, ma un'estensione facoltativa di Reflection Server consente di esporre informazioni dinamiche da un server in esecuzione. Per altre informazioni, vedere il pacchetto NuGet [Grpc. Reflection](https://nuget.org/packages/Grpc.Reflection) e l' [articolo C# Reflection server Grpc](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md) .
 
 Il protocollo WS-Discovery viene utilizzato per individuare i servizi in una rete locale. i servizi gRPC in genere si trovano usando DNS o un registro del servizio, ad esempio Consul o ZooKeeper.
 

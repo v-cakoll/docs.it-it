@@ -3,16 +3,14 @@ title: Eseguire la migrazione di un servizio WCF Request/Reply a gRPC-gRPC per s
 description: Informazioni su come eseguire la migrazione di un semplice servizio request/reply da WCF a gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 183e3b0ab1ce5c63714ced064f0d0901f59819c7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770397"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846609"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Eseguire la migrazione di un servizio WCF Request/Reply a una RPC unaria gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Questa sezione illustra come eseguire la migrazione di un servizio request/reply di base in WCF a un servizio RPC unario in ASP.NET Core gRPC. Questi servizi sono i tipi di servizio più semplici sia Windows Communication Foundation (WCF) che gRPC, quindi è un ottimo punto di partenza. Dopo la migrazione del servizio, si apprenderà come generare una libreria client dallo stesso file di `.proto` per utilizzare il servizio da un'applicazione client .NET.
 
