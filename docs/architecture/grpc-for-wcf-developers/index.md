@@ -3,16 +3,14 @@ title: ASP.NET Core gRPC per sviluppatori WCF-gRPC per sviluppatori WCF
 description: DA SCRIVERE
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696916"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919382"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC per sviluppatori WCF
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![Immagine di copertina](./media/cover.png)
 
@@ -36,7 +34,7 @@ Alcuni esempi contenuti nella presente guida vengono forniti solo a fini illustr
 
 Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo https://www.microsoft.com sono marchi delle società del gruppo Microsoft.
 
-Il logo Docker con la balena è un marchio registrato di Docker, Inc. Usato su autorizzazione.
+Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
@@ -60,13 +58,13 @@ TODO
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 
-**AGGIORNA**
+**Aggiorna**
 
-I destinatari di questa guida sono gli sviluppatori, i lead di sviluppo e gli architetti WCF interessati alla migrazione di soluzioni WCF in .NET 4 e versioni precedenti a ASP.NET Core 3,0 mediante i servizi gRPC.
+I destinatari di questa guida sono gli sviluppatori, i lead di sviluppo e gli architetti WCF interessati alla migrazione di soluzioni WCF in .NET Framework 4 e versioni precedenti a ASP.NET Core 3,0 usando i servizi gRPC.
 
 ## <a name="how-you-can-use-this-guide"></a>Come usare questa guida
 
-**AGGIORNA**
+**Aggiorna**
 
 Si tratta di una breve introduzione alla creazione di servizi gRPC in ASP.NET Core 3,0 con particolare riferimento a WCF come piattaforma analoga. Vengono illustrati i principi di gRPC, con la correlazione di ogni concetto alle funzionalità equivalenti di WCF e vengono fornite indicazioni per la migrazione di un'applicazione WCF esistente a gRPC. È utile anche per gli sviluppatori che hanno esperienza con WCF e vogliono apprendere gRPC per creare nuovi servizi. L'applicazione di esempio può essere usata come modello o riferimento per i propri progetti e si è liberi di copiare e riutilizzare il codice dal libro o dai relativi esempi.
 

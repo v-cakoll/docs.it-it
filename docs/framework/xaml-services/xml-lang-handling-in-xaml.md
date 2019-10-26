@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3af85f298f7581146b5ecc8a559b185f1a01e54c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053600"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920008"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Gestione di xml:lang in XAML
 L'attributo `xml:lang` è un attributo definito da [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]che dichiara le informazioni relative a lingua e cultura per un elemento in XML. Il significato dell'attributo rimane persistente in XAML. Tuttavia, sono valide alcune considerazioni aggiuntive.  
@@ -30,7 +30,7 @@ L'attributo `xml:lang` è un attributo definito da [!INCLUDE[TLA2#tla_xml](../..
 |*rfc3066lang*|Stringa derivata dallo standard [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) che identifica una lingua o un'area linguistica. Se identifica un'area linguistica, la lingua e l'area sono separate da un trattino. Per altre informazioni su valori e formato, vedere <xref:System.Windows.Markup.XmlLanguage> .|  
   
 ## <a name="remarks"></a>Note  
- La definizione dell'attributo `xml:lang` in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] è derivata dall'attributo `xml:lang` definito come "attributo speciale" da [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] per [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Le informazioni su lingua e cultura sono potenzialmente elaborate in modi diversi in base agli elementi, a seconda delle relative implementazioni. Tuttavia, non esiste alcuna elaborazione [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] predefinita dell'attributo `xml:lang` .  
+ La definizione per l'attributo `xml:lang` in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] deriva da `xml:lang` come definito "attributo speciale" dal World Wide Web Consortium (W3C) per [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Le informazioni su lingua e cultura sono potenzialmente elaborate in modi diversi in base agli elementi, a seconda delle relative implementazioni. Tuttavia, non esiste alcuna elaborazione [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] predefinita dell'attributo `xml:lang` .  
   
  Il valore predefinito dell'attributo `xml:lang` è una stringa vuota a livello di attributo.  
   

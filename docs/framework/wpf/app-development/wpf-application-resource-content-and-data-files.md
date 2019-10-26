@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581722"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920369"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, chiamati file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
@@ -68,7 +68,7 @@ le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.m
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], è possibile creare un file di risorse aggiungendo un file a un progetto e impostando il relativo `Build Action` su `Resource`.  
+> In Visual Studio è possibile creare un file di risorse aggiungendo un file a un progetto e impostando il relativo `Build Action` su `Resource`.  
   
  Quando il progetto viene compilato, MSBuild compila la risorsa nell'assembly.  
   
@@ -109,12 +109,12 @@ le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.m
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] si aggiunge un nuovo <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> o <xref:System.Windows.ResourceDictionary> a un progetto, per impostazione predefinita il `Build Action` per il file di markup viene `Page`.  
+> In Visual Studio si aggiunge un nuovo <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>o <xref:System.Windows.ResourceDictionary> a un progetto, per impostazione predefinita il `Build Action` per il file di markup viene `Page`.  
   
  Quando viene compilato un progetto con `Page` elementi, gli elementi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono convertiti in formato binario e compilati nell'assembly associato. Di conseguenza, questi file possono essere utilizzati allo stesso modo dei file di risorse tipici.  
   
 > [!NOTE]
-> Se un file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene configurato come elemento `Resource` e non dispone di un file code-behind, la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non elaborata viene compilata in un assembly anziché in una versione binaria del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non elaborato.  
+> Se un file di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene configurato come elemento `Resource` e non dispone di un file code-behind, la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non elaborata viene compilata in un assembly anziché in una versione binaria del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]non elaborato.  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>File di dati  
@@ -140,7 +140,7 @@ le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.m
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], è possibile creare un file di contenuto aggiungendo un file a un progetto e impostando il relativo `Build Action` su `Content` e impostare la `Copy to Output Directory` su `Copy always` (uguale a `Always`) e `Copy if newer` (uguale a `PreserveNewest`).  
+> In Visual Studio è possibile creare un file di contenuto aggiungendo un file a un progetto e impostando il relativo `Build Action` su `Content`, quindi impostare la relativa `Copy to Output Directory` su `Copy always` (uguale a `Always`) e `Copy if newer` (uguale a `PreserveNewest`).  
   
  Quando il progetto viene compilato, un attributo <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> viene compilato nei metadati dell'assembly per ogni file di contenuto.  
   
@@ -187,7 +187,7 @@ le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.m
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Tuttavia, gli schemi file:/// e http:// richiedono che l'applicazione abbia un livello di attendibilità totale. Se l'applicazione è un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] avviato da Internet o Intranet e richiede solo il set di autorizzazioni consentite per le applicazioni avviate da tali percorsi, i file separati possono essere caricati solo dal sito di origine dell'applicazione (avvio percorso). Tali file sono noti come file *del sito di origine* .  
+ Tuttavia, gli schemi file:/// e http:// richiedono che l'applicazione abbia un livello di attendibilità totale. Se l'applicazione è un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] avviato da Internet o Intranet e richiede solo il set di autorizzazioni consentite per le applicazioni avviate da tali percorsi, i file separati possono essere caricati solo dal sito di origine dell'applicazione ( percorso di avvio). Tali file sono noti come file *del sito di origine* .  
   
  I file del sito di origine rappresentano l'unica opzione per le applicazioni parzialmente attendibili, benché non siano limitati a questo tipo di applicazione. È possibile che le applicazioni completamente attendibili debbano caricare file di dati dell'applicazione sconosciuti in fase di compilazione. Sebbene queste applicazioni possano utilizzare file:///, è probabile che i file di dati dell'applicazione vengano installati nella stessa cartella dell'assembly dell'applicazione o in una sottocartella di questo. In questo caso è più facile utilizzare un riferimento al sito di origine piuttosto che file:///, poiché l'utilizzo di file:/// richiede l'elaborazione del percorso completo del file.  
   
@@ -210,7 +210,7 @@ le applicazioni [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.m
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] si crea un file del sito di origine aggiungendo un file a un progetto e impostando il relativo `Build Action` su `None`.  
+> In Visual Studio è possibile creare un file del sito di origine aggiungendo un file a un progetto e impostando il relativo `Build Action` su `None`.  
   
  Quando il progetto viene compilato, MSBuild copia i file specificati nella cartella di output di compilazione.  
   
