@@ -4,133 +4,183 @@ description: Informazioni su come distribuire un'applicazione .NET per Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117973"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960981"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Esercitazione: distribuire un'applicazione .NET per Apache Spark in Azure HDInsight
 
-Questa esercitazione illustra come distribuire un'applicazione .NET per Apache Spark in Azure HDInsight.
+Questa esercitazione illustra come distribuire .NET per Apache Spark app nel cloud tramite un cluster Azure HDInsight. HDInsight semplifica la creazione e la configurazione di un cluster Spark in Azure poiché i cluster Spark in HDInsight sono compatibili con archiviazione di Azure e Azure Data Lake Storage. 
 
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 >
-> * Preparare Microsoft.Spark.Worker
-> * Pubblicare l'app Spark .NET
-> * Distribuire l'app in Azure HDInsight
-> * Eseguire l'app
+> * Accedere agli account di archiviazione usando Azure Storage Explorer.
+> * Creare un cluster HDInsight di Azure.
+> * Pubblicare .NET per Apache Spark app.
+> * Creare ed eseguire un'azione di script HDInsight.
+> * Eseguire un'app .NET per Apache Spark in un cluster HDInsight.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Prima di iniziare, eseguire le operazioni seguenti:
+Prima di iniziare, eseguire le attività seguenti:
 
-* Scaricare [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).
-* Scaricare [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) nel computer locale. Si tratta di uno script helper che verrà usato in seguito per copiare i file dipendenti di .NET per Apache Spark nei nodi di lavoro del cluster Spark.
+* Se non si ha una sottoscrizione di Azure, creare un [account gratuito](https://azure.microsoft.com/free/).
+* Accedere al [portale di Azure](https://portal.azure.com/).
+* Installare Azure Storage Explorer nel computer [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)o [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) .
+* Completare l'esercitazione [su .NET per Apache Spark-introduzione in 10 minuti](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
-## <a name="prepare-worker-dependencies"></a>Preparare le dipendenze dei nodi di lavoro
+## <a name="access-your-storage-accounts"></a>Accedere agli account di archiviazione
 
-**Microsoft. Spark.Worker** è un componente back-end che risiede nei singoli nodi di lavoro del cluster Spark. Quando si vuole eseguire una funzione definita dall'utente C#, Spark deve comprendere come avviare CLR .NET per eseguire la funzione definita dall'utente. **Microsoft. Spark.Worker** offre una raccolta di classi per Spark che consentono di abilitare questa funzionalità.
+1. Aprire Azure Storage Explorer.
 
-1. Selezionare una versione netcoreapp Linux di [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) da distribuire nel cluster.
+2. Selezionare **Aggiungi account** nel menu a sinistra e accedere al proprio account Azure.
 
-   Ad esempio, se si vuole usare `.NET for Apache Spark v0.1.0` con `netcoreapp2.1`, scaricare [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
+    ![Accedere all'account Azure da Storage Explorer](./media/hdinsight-deployment/signin-azure-storage-explorer.png)
 
-2. Caricare `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) in un file system distribuito (ad esempio, HDFS, WASB, ADLS) a cui può accedere il cluster.
+   Dopo aver eseguito l'accesso, verranno visualizzati tutti gli account di archiviazione disponibili e tutte le risorse caricate negli account di archiviazione.
 
-## <a name="prepare-your-net-for-apache-spark-app"></a>Preparare .NET per l'app Apache Spark
+## <a name="create-an-hdinsight-cluster"></a>Creare un cluster HDInsight
 
-1. Per creare l'app, seguire l'esercitazione [Introduzione](get-started.md).
+> [!IMPORTANT]  
+> La fatturazione per i cluster HDInsight viene rivalutata al minuto, anche se non vengono usate. Assicurarsi di eliminare il cluster al termine dell'uso. Per ulteriori informazioni, vedere la sezione [Pulisci risorse in](#clean-up-resources) questa esercitazione.
 
-2. Pubblicare l'app Spark .NET come indipendente.
+1. Visitare il [portale di Azure](https://portal.azure.com).
 
-   In Linux è possibile eseguire il comando seguente.
+2. Selezionare **+ Crea una risorsa**. Selezionare quindi **HDInsight** dalla categoria **Analytics** .
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+    ![Creare una risorsa HDInsight da portale di Azure](./media/hdinsight-deployment/create-hdinsight-resource.png)
+
+3. In **nozioni di base**specificare i valori seguenti:
+
+    |proprietà  |Descrizione  |
+    |---------|---------|
+    |Sottoscrizione  | Dall'elenco a discesa scegliere una delle sottoscrizioni di Azure attive. |
+    |Gruppo di risorse | Specificare se si vuole creare un nuovo gruppo di risorse o utilizzarne uno esistente. Un gruppo di risorse è un contenitore che include le risorse correlate per una soluzione di Azure. |
+    |Nome del cluster | Assegnare un nome al cluster HDInsight Spark.|
+    |Percorso   | Selezionare una località per il gruppo di risorse. Il modello usa questo percorso per creare il cluster e per l'archiviazione cluster predefinita. |
+    |Tipo di cluster| Selezionare **Spark** come tipo di cluster.|
+    |Versione cluster|Questo campo verrà automaticamente popolato con la versione predefinita dopo che è stato selezionato il tipo di cluster. Selezionare una versione 2,3 o 2,4 di Spark.|
+    |Nome utente di accesso del cluster| Immettere il nome utente di accesso del cluster.  Il nome predefinito è *admin*. |
+    |Password di accesso del cluster| Immettere una password di accesso. |
+    |Nome utente Secure Shell (SSH)| Immettere il nome utente SSH. Per impostazione predefinita, questo account condivide la stessa password dell'account *nome utente di accesso del cluster* . |
+
+4. Selezionare **Avanti: archiviazione > >** per passare alla pagina **archiviazione** . In **archiviazione**specificare i valori seguenti:
+
+    |proprietà  |Descrizione  |
+    |---------|---------|
+    |Tipo di archiviazione primario|Usare il valore predefinito **archiviazione di Azure**.|
+    |Metodo di selezione|Usare il valore predefinito **Select from list**.|
+    |Account di archiviazione primario|Scegliere la sottoscrizione e uno degli account di archiviazione attivi all'interno di tale sottoscrizione.|
+    |Contenitore|Questo contenitore è il contenitore BLOB specifico nell'account di archiviazione in cui il cluster Cerca i file per l'esecuzione dell'app nel cloud. È possibile assegnargli qualsiasi nome disponibile.|
+
+5. In **Verifica + crea**selezionare **Crea**. La creazione del cluster richiede circa 20 minuti. Il cluster deve essere creato prima di continuare con il passaggio successivo.
+
+## <a name="publish-your-app"></a>Pubblicare l'app
+
+Successivamente, pubblicare il *mySparkApp* creato in [.NET per Apache Spark-introduzione in 10 minuti](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) , che consente al cluster Spark di accedere a tutti i file necessari per eseguire l'app. 
+
+1. Eseguire i comandi seguenti per pubblicare il *mySparkApp*:
+
+   **In Windows:**
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
    ```
 
-3. Produrre `<your app>.zip` per i file pubblicati.
-
-   In Linux è possibile eseguire il comando seguente con `zip`.
+   **In Linux:**
 
    ```bash
-   zip -r <your app>.zip .
+   cd mySparkApp
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-4. Caricare il file seguente in un file system distribuito, ad esempio HDFS, WASB, ADLS, a cui può accedere il cluster:
+2. Eseguire le attività seguenti per comprimere i file dell'app pubblicata in modo che sia possibile caricarli facilmente nel cluster HDInsight.
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Questo file jar è incluso nel pacchetto NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) e viene posizionato nella directory di output di compilazione dell'app.
-   * `<your app>.zip`
-   * I file (come i file di dipendenza o i dati comuni accessibili a ogni ruolo di lavoro) o gli assembly (ad esempio le DLL che contengono funzioni definite dall'utente o librerie da cui dipende `app`), vengono inseriti nella directory di lavoro di ogni executor.
+   **In Windows:**
 
-## <a name="deploy-to-azure-hdinsight-spark"></a>Distribuire in Azure HDInsight Spark
+   Passare a *mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*. Quindi, fare clic con il pulsante destro del mouse su cartella di **pubblicazione** e selezionare **Invia a > cartella compressa**. Assegnare alla nuova cartella il nome **Publish. zip**.
 
-[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) è l'implementazione Microsoft di Apache Spark nel cloud che consente agli utenti di avviare e configurare cluster Spark in Azure. È possibile usare cluster HDInsight Spark per elaborare i dati archiviati in [Archiviazione di Azure](https://azure.microsoft.com/services/storage/) o in [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2).
+   **In Linux eseguire il comando seguente:**
 
-> [!NOTE]
-> Azure HDInsight Spark è basato su Linux. Se si è interessati a distribuire l'app in Azure HDInsight Spark, assicurarsi che l'app sia compatibile con .NET Standard e che venga usato il [compilatore .NET Core](https://dotnet.microsoft.com/download) per compilare l'app.
+   ```bash
+   zip -r publish.zip
+   ```
 
-### <a name="deploy-microsoftsparkworker"></a>Distribuire Microsoft.Spark.Worker
+## <a name="upload-files-to-azure"></a>Caricare file in Azure
 
-Questo passaggio è necessario solo una volta per il cluster.
+Usare quindi il Azure Storage Explorer per caricare i cinque file seguenti nel contenitore BLOB scelto per l'archiviazione del cluster: 
 
-Eseguire `install-worker.sh` nel cluster usando [azioni script di HDInsight](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).
+* Microsoft. Spark. Worker
+* install-worker.sh
+* Publish. zip
+* Microsoft-Spark-2.3. x-0.3.0. jar
+* input. txt.
 
-|Impostazione|Value|
-|-------|-----|
-|Tipo di script|Personalizzato|
-|NOME|Installare Microsoft.Spark.Worker|
-|URI script Bash|URI in cui è stato caricato `install-worker.sh`. Ad esempio: `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
-|Tipi di nodo|Lavoro|
-|Parametri|Parametri per `install-worker.sh`. Ad esempio, se `install-worker.sh` viene caricato in Azure Data Lake Gen2, sarà `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.|
+1. Aprire Azure Storage Explorer e passare all'account di archiviazione dal menu a sinistra. Eseguire il drill-down nel contenitore BLOB per il cluster in **contenitori BLOB** nell'account di archiviazione.
 
-![Immagine dell'azione script](./media/hdinsight-deployment/deployment-hdi-action-script.png)
+2. *Microsoft. Spark. Worker* consente di Apache Spark eseguire l'app, ad esempio qualsiasi funzione definita dall'utente (UDF) che è stata scritta. Scaricare [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz). Selezionare quindi **carica** in Azure Storage Explorer per caricare il ruolo di lavoro.
+
+   ![Caricare file in Azure Storage Explorer](./media/hdinsight-deployment/upload-files-to-storage.png)
+
+3. *Install-Worker.sh* è uno script che consente di copiare .net per Apache Spark file dipendenti nei nodi del cluster. 
+
+   Creare un nuovo file denominato **Install-Worker.sh** nel computer locale e incollare il [contenuto di install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) disponibile in GitHub. Quindi, caricare *Install-Worker.sh* nel contenitore BLOB.
+
+4. Il cluster richiede il file Publish. zip che contiene i file pubblicati dell'app. Passare alla cartella pubblicata, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**e individuare **Publish. zip**. Caricare quindi *Publish. zip* nel contenitore BLOB.
+
+5. Il cluster necessita del codice dell'applicazione che è stato incluso in un file jar. Passare alla cartella pubblicata, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**e individuare **Microsoft-Spark-2.3. x-0.3.0. jar**. Caricare quindi il file jar nel contenitore BLOB.
+
+   Potrebbero essere presenti più file con estensione jar (per le versioni 2.3. x e 2.4. x di Spark). È necessario scegliere il file con estensione jar che corrisponde alla versione di Spark scelta durante la creazione del cluster. Ad esempio, scegliere *Microsoft-Spark-2.3. x-0.3.0. jar* se si sceglie Spark 2.3.2 durante la creazione del cluster.
+
+6. Il cluster necessita dell'input per l'app. Passare alla directory **mySparkApp** e individuare **input. txt**. Caricare il file di input nella directory **User/sshuser** nel contenitore BLOB. Ci si connette al cluster tramite SSH e questa cartella è la posizione in cui il cluster cerca l'input. Il file *input. txt* è l'unico file caricato in una directory specifica.
+
+## <a name="run-the-hdinsight-script-action"></a>Eseguire l'azione di script HDInsight
+
+Quando il cluster è in esecuzione e i file sono stati caricati in Azure, si esegue lo script **Install-Worker.sh** nel cluster. 
+
+1. Passare al cluster HDInsight Spark in portale di Azure, quindi selezionare **azioni script**.
+
+2. Selezionare **+ Invia nuovo** e specificare i valori seguenti:
+
+   |proprietà  |Descrizione  |
+   |---------|---------|
+   | Tipo di script |Custom (Personalizzati)|
+   | Name | Installare il ruolo di lavoro|
+   | URI script bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Per confermare questo URI, fare clic con il pulsante destro del mouse su install-worker.sh in Azure Storage Explorer e scegliere Proprietà. |
+   | Tipi di nodo| Lavoro|
+   | Parametri | Azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin 
+
+3. Selezionare **Crea** per inviare lo script.
 
 ## <a name="run-your-app"></a>Eseguire l'app
 
-È possibile inviare il processo ad Azure HDInsight usando `spark-submit` o Apache Livy.
+1. Passare al cluster HDInsight Spark in portale di Azure, quindi selezionare **SSH + login cluster**.
 
-### <a name="use-spark-submit"></a>Usare spark-submit
+2. Copiare le informazioni di accesso SSH e incollare l'account di accesso in un terminale. Accedere al cluster usando la password impostata durante la creazione del cluster. Verranno visualizzati messaggi di benvenuto in Ubuntu e Spark.
 
-È possibile usare il comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) per inviare processi .NET per Apache Spark ad Azure HDInsight.
- 
-1. `ssh` in uno dei nodi head del cluster.
-
-1. Esegui `spark-submit`:
+3. Usare il comando **Spark-Submit** per eseguire l'app nel cluster HDInsight. Ricordarsi di **sostituire e** **mystorageaccount** nello script di esempio con i nomi effettivi del contenitore BLOB e dell'account di archiviazione.
 
    ```bash
-   spark-submit \
+   $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
+   --class org.apache.spark.deploy.DotnetRunner \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-### <a name="use-apache-livy"></a>Usare Apache Livy
+   Quando l'app viene eseguita, viene visualizzata la stessa tabella di conteggio delle parole dall'esecuzione locale della Guida introduttiva scritta nella console. Congratulazioni, è stata eseguita la prima applicazione .NET per Apache Spark nel cloud.
 
-È possibile usare [Apache Livy](https://livy.incubator.apache.org/), l'API REST di Apache Spark, per inviare i processi .NET per Apache Spark a un cluster Azure HDInsight Spark. Per altre informazioni, vedere [Processi remoti con Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).
+## <a name="clean-up-resources"></a>Pulire le risorse
 
-In Linux è possibile eseguire il comando seguente con `curl`:
+HDInsight Salva i dati in archiviazione di Azure, in modo da poter eliminare in modo sicuro un cluster quando non è in uso. Viene anche addebitato un cluster HDInsight, anche se non è in uso. Poiché gli addebiti per il cluster sono molti volte maggiori rispetto agli addebiti per l'archiviazione, è opportuno eliminare i cluster quando non sono in uso.
 
-```bash
-curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
--u "<hdinsight username>:<hdinsight password>" \
--H "Content-Type: application/json" \
--H "X-Requested-By: <hdinsight username>" \
--d @- << EOF
-{
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
-    "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
-    "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
-}
-EOF
-```
+È anche possibile selezionare il nome del gruppo di risorse per aprire la pagina del gruppo di risorse e quindi selezionare **Elimina gruppo di risorse**. Eliminando il gruppo di risorse, si eliminano sia il cluster HDInsight Spark che l'account di archiviazione predefinito.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
