@@ -497,7 +497,7 @@
         - name: 'Procedure dettagliate: Creare un pulsante personalizzato a cui è stata aggiunta un''animazione'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Creare un pulsante usando Microsoft Expression Blend
+            - name: Creare un pulsante tramite Blend
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-            - name: Creare un pulsante usando XAML
+            - name: Creare un pulsante tramite XAML
               href: walkthrough-create-a-button-by-using-xaml.md
