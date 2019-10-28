@@ -1,87 +1,119 @@
-- name: Dati
+- name: Documentazione sul data binding
   href: index.md
+- name: Panoramica
+  href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
+- name: Origini di binding
+  href: binding-sources-overview.md
+- name: Modelli di dati
+  href: data-templating-overview.md
+- name: Dichiarazioni di binding
+  href: binding-declarations-overview.md
+- name: Procedura
   items:
-    - name: Data binding
-      href: data-binding-wpf.md
+    - name: Procedure per il data binding
+      href: data-binding-how-to-topics.md
+    - name: Creare un binding semplice
+      href: how-to-create-a-simple-binding.md
+    - name: Specificare l'origine del binding
+      href: how-to-specify-the-binding-source.md
+    - name: Rendere i dati disponibili per il binding in XAML
+      href: how-to-make-data-available-for-binding-in-xaml.md
+    - name: Controllare il momento in cui l'origine viene aggiornata dal testo di TextBox
+      href: how-to-control-when-the-textbox-text-updates-the-source.md
+    - name: Specificare la direzione del binding
+      href: how-to-specify-the-direction-of-the-binding.md
+    - name: Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione
+      href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+    - name: Eseguire il binding a un'enumerazione
+      href: how-to-bind-to-an-enumeration.md
+    - name: Eseguire il binding delle proprietà di due controlli
+      href: how-to-bind-the-properties-of-two-controls.md
+    - name: Implementare la convalida del binding
+      href: how-to-implement-binding-validation.md
+    - name: Implementare la logica di convalida negli oggetti personalizzati
+      href: how-to-implement-validation-logic-on-custom-objects.md
+    - name: Ottenere l'oggetto di binding da una proprietà di destinazione associata
+      href: how-to-get-the-binding-object-from-a-bound-target-property.md
+    - name: Implementare un oggetto CompositeCollection
+      href: how-to-implement-a-compositecollection.md
+    - name: Convertire i dati associati
+      href: how-to-convert-bound-data.md
+    - name: Creare un binding nel codice
+      href: how-to-create-a-binding-in-code.md
+    - name: Ottenere la visualizzazione predefinita di una raccolta dati
+      href: how-to-get-the-default-view-of-a-data-collection.md
+    - name: Spostarsi tra gli oggetti nella visualizzazione di una raccolta dati
+      href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+    - name: Filtrare i dati di una visualizzazione
+      href: how-to-filter-data-in-a-view.md
+    - name: Ordinare i dati in una visualizzazione
+      href: how-to-sort-data-in-a-view.md
+    - name: Ordinare e raggruppare dati tramite una visualizzazione in XAML
+      href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+    - name: Usare il modello master-dettagli con dati gerarchici
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+    - name: Usare il modello master-dettagli con dati XML gerarchici
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+    - name: Produrre un valore in base a un elenco di elementi associati
+      href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+    - name: Implementare la notifica di modifiche alle proprietà
+      href: how-to-implement-property-change-notification.md
+    - name: Creare ed eseguire il binding a una classe ObservableCollection
+      href: how-to-create-and-bind-to-an-observablecollection.md
+    - name: Implementare un oggetto PriorityBinding
+      href: how-to-implement-prioritybinding.md
+    - name: Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath
+      href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+    - name: Eseguire il binding a risultati di query
+      href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+    - name: Eseguire il binding ai risultati di una query LINQ
+      href: how-to-bind-to-the-results-of-a-linq-query.md
+    - name: Usare gli spazi dei nomi XML nel data binding
+      href: how-to-use-xml-namespaces-in-data-binding.md
+    - name: Eseguire il binding a un'origine dati ADO.NET
+      href: how-to-bind-to-an-ado-net-data-source.md
+    - name: Eseguire il binding a un metodo
+      href: how-to-bind-to-a-method.md
+    - name: Configurare notifiche per gli aggiornamenti dei binding
+      href: how-to-set-up-notification-of-binding-updates.md
+    - name: Cancellare i binding
+      href: how-to-clear-bindings.md
+    - name: Trovare elementi generati da un oggetto DataTemplate
+      href: how-to-find-datatemplate-generated-elements.md
+    - name: Eseguire il binding a un servizio Web
+      href: how-to-bind-to-a-web-service.md
+- name: Data binding con LINQ to XML
+  items:
+    - name: Panoramica
+      href: wpf-data-binding-with-linq-to-xml-overview.md
+    - name: Proprietà dinamiche di LINQ to XML
       items:
-        - name: Panoramica sul data binding
-          href: data-binding-overview.md
-        - name: Cenni preliminari sulle origini del binding
-          href: binding-sources-overview.md
-        - name: Cenni preliminari sui modelli di dati
-          href: data-templating-overview.md
-        - name: Cenni preliminari sulle dichiarazioni di associazione
-          href: binding-declarations-overview.md
-        - name: Procedure relative
-          href: data-binding-how-to-topics.md
+        - name: Panoramica
+          displayName: LINQ to XML dynamic properties
+          href: linq-to-xml-dynamic-properties.md
+        - name: Proprietà dinamiche XAttribute
           items:
-            - name: Creare un binding semplice
-              href: how-to-create-a-simple-binding.md
-            - name: Specificare l'origine di binding
-              href: how-to-specify-the-binding-source.md
-            - name: Rendere i dati disponibili per il binding in XAML
-              href: how-to-make-data-available-for-binding-in-xaml.md
-            - name: Controllare il momento in cui il database di origine viene aggiornato dal testo di TextBox
-              href: how-to-control-when-the-textbox-text-updates-the-source.md
-            - name: Specificare la direzione del binding
-              href: how-to-specify-the-direction-of-the-binding.md
-            - name: Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione
-              href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
-            - name: Eseguire il binding a un'enumerazione
-              href: how-to-bind-to-an-enumeration.md
-            - name: Eseguire il binding delle proprietà di due controlli
-              href: how-to-bind-the-properties-of-two-controls.md
-            - name: Implementare la convalida del binding
-              href: how-to-implement-binding-validation.md
-            - name: Implementare la logica di convalida negli oggetti personalizzati
-              href: how-to-implement-validation-logic-on-custom-objects.md
-            - name: Ottenere l'oggetto di binding da una proprietà di destinazione associata
-              href: how-to-get-the-binding-object-from-a-bound-target-property.md
-            - name: Implementare un oggetto CompositeCollection
-              href: how-to-implement-a-compositecollection.md
-            - name: Convertire dati associati
-              href: how-to-convert-bound-data.md
-            - name: Creare un binding nel codice
-              href: how-to-create-a-binding-in-code.md
-            - name: Ottenere la visualizzazione predefinita di una raccolta dati
-              href: how-to-get-the-default-view-of-a-data-collection.md
-            - name: Spostarsi tra gli oggetti nella visualizzazione di una raccolta dati
-              href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
-            - name: Filtrare i dati in una visualizzazione
-              href: how-to-filter-data-in-a-view.md
-            - name: Ordinare i dati in una visualizzazione
-              href: how-to-sort-data-in-a-view.md
-            - name: Ordinare e raggruppare dati tramite una visualizzazione in XAML
-              href: how-to-sort-and-group-data-using-a-view-in-xaml.md
-            - name: Usare il modello Master-Details con dati gerarchici
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
-            - name: Usare il modello Master-Details con dati XML gerarchici
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
-            - name: Produrre un valore in base a un elenco di elementi associati
-              href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
-            - name: Implementare la notifica di modifiche alle proprietà
-              href: how-to-implement-property-change-notification.md
-            - name: Creare ed eseguire il binding a una classe ObservableCollection
-              href: how-to-create-and-bind-to-an-observablecollection.md
-            - name: Implementare un oggetto PriorityBinding
-              href: how-to-implement-prioritybinding.md
-            - name: Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath
-              href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
-            - name: 'Eseguire il binding ai risultati di una query XDocument, XElement o LINQ for XML'
-              href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
-            - name: Usare gli spazi dei nomi XML nel data binding
-              href: how-to-use-xml-namespaces-in-data-binding.md
-            - name: Eseguire il binding a un'origine dati ADO.NET
-              href: how-to-bind-to-an-ado-net-data-source.md
-            - name: Eseguire il binding a un metodo
-              href: how-to-bind-to-a-method.md
-            - name: Impostare notifiche relative ad aggiornamenti di binding
-              href: how-to-set-up-notification-of-binding-updates.md
-            - name: Cancellare binding
-              href: how-to-clear-bindings.md
-            - name: Trovare elementi generati da un oggetto DataTemplate
-              href: how-to-find-datatemplate-generated-elements.md
-            - name: Eseguire il binding a un servizio Web
-              href: how-to-bind-to-a-web-service.md
-            - name: Eseguire il binding ai risultati di una query LINQ
-              href: how-to-bind-to-the-results-of-a-linq-query.md
+            - name: Value
+              href: value-xattribute-dynamic-property.md
+        - name: Proprietà dinamiche XElement
+          items:
+            - name: Attributo
+              href: attribute-xelement-dynamic-property.md
+            - name: Elemento
+              href: element-xelement-dynamic-property.md
+            - name: Elementi
+              href: elements-xelement-dynamic-property.md
+            - name: Discendenti
+              href: descendants-xelement-dynamic-property.md
+            - name: Value
+              href: value-xelement-dynamic-property.md
+            - name: Xml
+              href: xml-xelement-dynamic-property.md
+        - name: Esempio
+          items:
+            - name: Esempio di data binding LINQ to XML
+              href: linq-to-xml-data-binding-sample.md
+            - name: Codice sorgente di L2DBForm.xaml
+              href: l2dbform-xaml-source-code.md
+            - name: Codice sorgente di L2DBForm.xaml.cs
+              href: l2dbform-xaml-cs-source-code.md
