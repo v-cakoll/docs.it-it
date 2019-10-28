@@ -2,12 +2,12 @@
 title: Novità di C# 8,0- C# Guida
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798926"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960822"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -40,7 +40,7 @@ Il resto di questo articolo descrive brevemente queste funzionalità. Se sono di
 
 ## <a name="readonly-members"></a>Membri di sola lettura
 
-È possibile applicare il modificatore `readonly` a qualsiasi membro di uno struct. Indica che il membro non modifica lo stato. È più granulare rispetto all'applicazione del modificatore `readonly` a una dichiarazione `struct`.  Considerare lo struct modificabile seguente:
+È possibile applicare il modificatore `readonly` ai membri di uno struct. Indica che il membro non modifica lo stato. È più granulare rispetto all'applicazione del modificatore `readonly` a una dichiarazione `struct`.  Considerare lo struct modificabile seguente:
 
 ```csharp
 public struct Point
@@ -61,21 +61,21 @@ public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-La modifica precedente genera un avviso del compilatore, poiché `ToString` accede alla proprietà `Distance`, che non è contrassegnata come `readonly`:
+La modifica precedente genera un avviso del compilatore, perché `ToString` accede alla proprietà `Distance`, che non è contrassegnata `readonly`:
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Il compilatore genera un avviso quando deve creare una copia difensiva.  La proprietà `Distance` non modifica lo stato, pertanto è possibile correggere il problema aggiungendo il modificatore `readonly` alla dichiarazione:
+Il compilatore genera un avviso quando deve creare una copia difensiva.  La proprietà `Distance` non modifica lo stato, quindi è possibile correggere l'avviso aggiungendo il modificatore di `readonly` alla dichiarazione:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Si noti che il modificatore `readonly` è necessario per una proprietà di sola lettura. Il compilatore non presume che le funzioni di accesso `get` non modifichino lo stato. È necessario dichiarare `readonly` in modo esplicito. Le proprietà implementate automaticamente sono un'eccezione. il compilatore considererà tutti i Getter implementati automaticamente come ReadOnly, quindi non è necessario aggiungere il modificatore `readonly` alle proprietà `X` e `Y`.
+Si noti che il modificatore `readonly` è necessario in una proprietà di sola lettura. Il compilatore non presuppone che le funzioni di accesso `get` non modifichino lo stato; è necessario dichiarare `readonly` in modo esplicito. Le proprietà implementate automaticamente sono un'eccezione. il compilatore considererà tutti i Getter implementati automaticamente come ReadOnly, quindi non è necessario aggiungere il modificatore `readonly` alle proprietà `X` e `Y`.
 
-Il compilatore applica la regola che i membri `readonly` non modificano lo stato. Il metodo seguente non verrà compilato a meno che non si rimuova il modificatore `readonly`:
+Il compilatore applica la regola che `readonly` membri non modificano lo stato. Il metodo seguente non verrà compilato a meno che non si rimuova il modificatore `readonly`:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -85,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità.
+Questa funzionalità consente di specificare la finalità della progettazione in modo che il compilatore possa imporla e applicare le ottimizzazioni in base a tale finalità. Per altre informazioni sui membri di sola lettura, vedere l'articolo di riferimento per il linguaggio [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
 
 ## <a name="default-interface-methods"></a>Metodi di interfaccia predefiniti
 
@@ -171,7 +171,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Criteri per le proprietà
 
-I **criteri per le proprietà** consentono di individuare corrispondenze in base alle proprietà dell'oggetto esaminato. Si consideri un sito di e-commerce che deve calcolare le imposte sulle vendite in base all'indirizzo dell'acquirente. Questo calcolo non è una delle responsabilità principali di una classe `Address`. È soggetto a variazioni nel tempo, probabilmente più spesso rispetto a eventuali modifiche del formato dell'indirizzo. L'importo delle imposte sulle vendite dipende dalla proprietà `State` dell'indirizzo. Il metodo seguente usa i criteri per le proprietà per calcolare l'imposta sulle vendite dall'indirizzo e dal prezzo:
+I **criteri per le proprietà** consentono di individuare corrispondenze in base alle proprietà dell'oggetto esaminato. Si consideri un sito di e-commerce che deve calcolare le imposte sulle vendite in base all'indirizzo dell'acquirente. Tale calcolo non è un compito fondamentale di una classe `Address`. È soggetto a variazioni nel tempo, probabilmente più spesso rispetto a eventuali modifiche del formato dell'indirizzo. L'importo delle imposte sulle vendite dipende dalla proprietà `State` dell'indirizzo. Il metodo seguente usa i criteri per le proprietà per calcolare l'imposta sulle vendite dall'indirizzo e dal prezzo:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -254,7 +254,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-I criteri discard nell'espressione switch precedente trovano una corrispondenza quando `x` o `y` è uguale a 0, ma non entrambi. Un'espressione switch deve produrre un valore o generare un'eccezione. Se nessuno dei casi corrisponde, l'espressione switch genera un'eccezione. Il compilatore genera un avviso per l'utente se non è possibile includere tutti i casi possibili nell'espressione switch.
+I criteri discard nell'espressione switch precedente trovano una corrispondenza quando `x` o `y` è uguale a 0, ma non entrambi. Un'espressione switch deve produrre un valore o generare un'eccezione. Se nessuno dei casi corrisponde, l'espressione switch genera un'eccezione. Il compilatore genera un avviso se non si coprono tutti i casi possibili nell'espressione switch.
 
 È possibile esplorare le tecniche dei criteri di ricerca in questa [esercitazione avanzata sui criteri di ricerca](../tutorials/pattern-matching.md).
 
@@ -313,7 +313,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 Nell'esempio precedente il file viene eliminato quando viene raggiunta la parentesi graffa di chiusura associata all'istruzione `using`.
 
-In entrambi i casi, il compilatore genera la chiamata a `Dispose()`. Il compilatore genera un errore se l'espressione nell'istruzione `using` non è eliminabile.
+In entrambi i casi, il compilatore genera la chiamata a `Dispose()`. Il compilatore genera un errore se l'espressione nell'istruzione `using` non è Disposable.
 
 ## <a name="static-local-functions"></a>Funzioni locali statiche
 
@@ -347,13 +347,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Struct ref Disposable
 
-Un oggetto `struct` dichiarato con il modificatore `ref` potrebbe non implementare alcuna interfaccia e quindi non può implementare <xref:System.IDisposable>. Pertanto, per abilitare un `ref struct` per l'eliminazione, deve avere un metodo `void Dispose()` accessibile. Questo vale anche per le dichiarazioni `readonly ref struct`.
+Una `struct` dichiarata con il modificatore di `ref` non può implementare alcuna interfaccia e pertanto non può implementare <xref:System.IDisposable>. Pertanto, per abilitare un `ref struct` per l'eliminazione, deve avere un metodo `void Dispose()` accessibile. Questa funzionalità si applica anche alle dichiarazioni `readonly ref struct`.
 
 ## <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
 All'interno di un contesto delle annotazioni nullable, qualsiasi variabile di un tipo riferimento viene considerata come un **tipo riferimento non nullable**. Se si vuole indicare che una variabile può essere Null, è necessario aggiungere `?` al nome del tipo per dichiarare la variabile come un **tipo riferimento nullable**.
 
-Per i tipi riferimento non nullable, il compilatore usa l'analisi di flusso per garantire che le variabili locali vengano inizializzate su un valore diverso da Null al momento della dichiarazione. I campi devono essere inizializzati durante la costruzione. Il compilatore genera un avviso se la variabile non è impostata da una chiamata a uno qualsiasi dei costruttori disponibili o da un inizializzatore. Inoltre, non è possibile assegnare ai tipi riferimento non nullable un valore che potrebbe essere Null.
+Per i tipi riferimento non nullable, il compilatore usa l'analisi di flusso per garantire che le variabili locali vengano inizializzate su un valore diverso da Null al momento della dichiarazione. I campi devono essere inizializzati durante la costruzione. Il compilatore genera un avviso se la variabile non è impostata da una chiamata a uno dei costruttori disponibili o da un inizializzatore. Inoltre, non è possibile assegnare ai tipi riferimento non nullable un valore che potrebbe essere Null.
 
 I tipi riferimento nullable non vengono controllati per verificare che non vengano assegnati o inizializzati su Null. Tuttavia, il compilatore usa l'analisi di flusso per garantire che qualsiasi variabile di un tipo riferimento nullable venga controllata per i valori Null prima dell'accesso o prima che venga assegnata a un tipo riferimento non nullable.
 
@@ -404,7 +404,7 @@ Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operator
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence.Length - n`.
 
-Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, vale a dire che l'*inizio* è compreso nell'intervallo, mentre la *fine* non lo è. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo.
+Un intervallo specifica *inizio* e *fine* di un intervallo. L'inizio dell'intervallo è inclusivo, ma la fine dell'intervallo è esclusiva, ovvero l' *inizio* è incluso nell'intervallo, ma la *fine* non è inclusa nell'intervallo. L'intervallo `[0..^0]` rappresenta l'intero intervallo, proprio come `[0..sequence.Length]` rappresenta l'intero intervallo.
 
 Di seguito verranno esaminati alcuni esempi. Si consideri la matrice seguente, annotata con il relativo indice dall'inizio e dalla fine:
 
@@ -437,7 +437,7 @@ Il codice seguente crea un intervallo secondario con le parole "quick", "brown" 
 var quickBrownFox = words[1..4];
 ```
 
-Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. L'indice finale `words[^0]` non viene incluso:
+Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. Il `words[^0]` end index non è incluso:
 
 ```csharp
 var lazyDog = words[^2..^0];

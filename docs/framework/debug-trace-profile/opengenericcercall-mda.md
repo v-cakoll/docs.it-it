@@ -12,100 +12,106 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa6ad656a5f762bf86d277d986bb087c97d7a78f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052408"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960906"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall (MDA)
-L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare che il grafico dell'area a esecuzione vincolata con variabili di tipo generico in corrispondenza del metodo radice viene elaborato in fase di compilazione JIT o di generazione delle immagini native e almeno una delle variabili di tipo generico è un tipo riferimento oggetto.  
+
+L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare che il grafico dell'area a esecuzione vincolata con variabili di tipo generico in corrispondenza del metodo radice viene elaborato in fase di compilazione JIT o di generazione delle immagini native e almeno una delle variabili di tipo generico è un tipo riferimento oggetto.
+
+## <a name="symptoms"></a>Sintomi
+
+Il codice dell'area a esecuzione vincolata non viene eseguito quando un thread viene interrotto o quando viene scaricato un dominio dell'applicazione.
+
+## <a name="cause"></a>Causa
+
+In fase di compilazione JIT, la creazione di un'istanza che contiene un tipo riferimento oggetto è rappresentativa solo perché il codice risultante è condiviso e ognuna delle variabili di tipo riferimento oggetto potrebbe essere qualsiasi tipo riferimento oggetto. Ciò può impedire la preparazione anticipata di alcune risorse in fase di esecuzione.
+
+In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per l'istruzione `List<T> list = new List<T>();` in cui `T` è una variabile di tipo generico, è necessario che il runtime cerchi la ricerca ed eventualmente crei la creazione di un'istanza esatta in fase di esecuzione, ad esempio `List<Object>, List<String>`e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.
+
+Questo assistente al debug gestito deve essere attivato solo in fase di compilazione JIT e non quando è prevista la creazione di un'istanza esatta.
+
+Quando viene attivato questo assistente al debug gestito, i sintomi più probabili sono il mancato funzionamento delle aree a esecuzione vincolata per le creazioni di istanze non valide. In effetti, il runtime non ha tentato di implementare un'area a esecuzione vincolata nelle circostanze che hanno causato l'attivazione dell'assistente al debug gestito. Pertanto, se lo sviluppatore usa la creazione d'istanza condivisa dell'area a esecuzione vincolata, gli errori di compilazione JIT, gli errori di caricamento di tipi generici o le interruzioni di thread all'interno dell'area a esecuzione vincolata prevista non vengono intercettati.
+
+## <a name="resolution"></a>Risoluzione
+
+Non usare variabili di tipo generico che sono di tipo riferimento oggetto per i metodi che possono contenere un'area a esecuzione vincolata.
+
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione
+
+L'assistente al debug gestito non ha alcun effetto su CLR.
+
+## <a name="output"></a>Output
+
+Di seguito è riportato un esempio di output di questo assistente al debug gestito:
   
-## <a name="symptoms"></a>Sintomi  
- Il codice dell'area a esecuzione vincolata non viene eseguito quando un thread viene interrotto o quando viene scaricato un dominio dell'applicazione.  
-  
-## <a name="cause"></a>Causa  
- In fase di compilazione JIT, la creazione di un'istanza che contiene un tipo riferimento oggetto è rappresentativa solo perché il codice risultante è condiviso e ognuna delle variabili di tipo riferimento oggetto potrebbe essere qualsiasi tipo riferimento oggetto. Ciò può impedire la preparazione anticipata di alcune risorse in fase di esecuzione.  
-  
- In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per l'istruzione `List<T> list = new List<T>();` in cui `T` è una variabile di tipo generico, il runtime deve cercare ed eventualmente creare un'istanza esatta in fase di esecuzione, ad esempio `List<Object>, List<String>` e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.  
-  
- Questo assistente al debug gestito deve essere attivato solo in fase di compilazione JIT e non quando è prevista la creazione di un'istanza esatta.  
-  
- Quando viene attivato questo assistente al debug gestito, i sintomi più probabili sono il mancato funzionamento delle aree a esecuzione vincolata per le creazioni di istanze non valide. In effetti, il runtime non ha tentato di implementare un'area a esecuzione vincolata nelle circostanze che hanno causato l'attivazione dell'assistente al debug gestito. Pertanto, se lo sviluppatore usa la creazione d'istanza condivisa dell'area a esecuzione vincolata, gli errori di compilazione JIT, gli errori di caricamento di tipi generici o le interruzioni di thread all'interno dell'area a esecuzione vincolata prevista non vengono intercettati.  
-  
-## <a name="resolution"></a>Risoluzione  
- Non usare variabili di tipo generico che sono di tipo riferimento oggetto per i metodi che possono contenere un'area a esecuzione vincolata.  
-  
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- L'assistente al debug gestito non ha alcun effetto su CLR.  
-  
-## <a name="output"></a>Output  
- Di seguito è riportato un esempio di output di questo assistente al debug gestito.  
-  
- `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
-  
- `The caller must ensure this method is prepared explicitly at run time prior to execution.`  
-  
- `method name="GenericMethodWithCer"`  
-  
- `declaringType name="OpenGenericCERCall"`  
-  
-## <a name="configuration"></a>Configurazione  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <openGenericCERCall/>  
-  </assistants>  
-</mdaConfig>  
+ ```output
+ Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
+ The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ method name="GenericMethodWithCer"
+ declaringType name="OpenGenericCERCall"
+ ```
+
+## <a name="configuration"></a>Configurazione
+
+```xml
+<mdaConfig>
+  <assistants>
+    <openGenericCERCall/>
+  </assistants>
+</mdaConfig>
 ```  
-  
-## <a name="example"></a>Esempio  
- Il codice dell'area a esecuzione vincolata non viene eseguito.  
-  
+
+## <a name="example"></a>Esempio
+
+Il codice dell'area a esecuzione vincolata non viene eseguito.
+
 ```csharp
-using System;  
-using System.Collections.Generic;  
-using System.Runtime.CompilerServices;  
-  
-class Program  
-{  
-    static void Main(string[] args)  
-    {  
-        CallGenericMethods();  
-    }  
-    static void CallGenericMethods()  
-    {  
-        // This call is correct. The instantiation of the method  
-        // contains only nonreference types.  
-        MyClass.GenericMethodWithCer<int>();  
-  
-        // This call is incorrect. A shared version of the method that  
-        // cannot be completely analyzed will be JIT-compiled. The   
-        // MDA will be activated at JIT-compile time, not at run time.  
-        MyClass.GenericMethodWithCer<String>();  
-    }  
-}  
-  
-    class MyClass  
-{  
-    public static void GenericMethodWithCer<T>()  
-    {  
-        RuntimeHelpers.PrepareConstrainedRegions();  
-        try  
-        {  
-  
-        }  
-        finally  
-        {  
-            // This is the start of the CER.  
-            Console.WriteLine("In finally block.");  
-        }  
-    }  
-}  
-```  
-  
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        CallGenericMethods();
+    }
+    static void CallGenericMethods()
+    {
+        // This call is correct. The instantiation of the method
+        // contains only nonreference types.
+        MyClass.GenericMethodWithCer<int>();
+
+        // This call is incorrect. A shared version of the method that
+        // cannot be completely analyzed will be JIT-compiled. The 
+        // MDA will be activated at JIT-compile time, not at run time.
+        MyClass.GenericMethodWithCer<String>();
+    }
+}
+
+class MyClass
+{
+    public static void GenericMethodWithCer<T>()
+    {
+        RuntimeHelpers.PrepareConstrainedRegions();
+        try
+        {
+
+        }
+        finally
+        {
+            // This is the start of the CER.
+            Console.WriteLine("In finally block.");
+        }
+    }
+}
+```
+
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
