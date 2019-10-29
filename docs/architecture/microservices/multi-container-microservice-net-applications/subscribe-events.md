@@ -2,12 +2,12 @@
 title: Sottoscrizione di eventi
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Informazioni sui dettagli di pubblicazione e sottoscrizione di eventi di integrazione.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039787"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035644"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -32,7 +32,7 @@ Dopo l'esecuzione di questo codice il microservizio del sottoscrittore sarà in 
 
 ## <a name="publishing-events-through-the-event-bus"></a>Pubblicazione di eventi tramite il bus di eventi
 
-Il mittente del messaggio (microservizio di origine) pubblica infine gli eventi di integrazione con codice simile all'esempio seguente. Si tratta di un esempio semplificato che non tiene conto dell'atomicità. È opportuno implementare codice simile ogni volta che un evento deve essere propagato in più microservizi, in genere subito dopo il commit di dati o transazioni dal microservizio di origine.
+Il mittente del messaggio (microservizio di origine) pubblica infine gli eventi di integrazione con codice simile all'esempio seguente. Si tratta di un esempio semplificato che non prende in considerazione l'atomicità. Si implementerà codice simile ogni volta che un evento deve essere propagato tra più microservizi, in genere subito dopo il commit di dati o transazioni dal microservizio di origine.
 
 Per iniziare, l'oggetto di implementazione del bus di eventi (basato su RabbitMQ o su un bus di servizio) verrà inserito a livello del costruttore del costruttore, come illustrato nel codice seguente:
 
@@ -105,7 +105,7 @@ Come accennato in precedenza nella sezione relativa all'architettura, è possibi
 
 - Uso dell'[estrazione del log delle transazioni](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Uso dello [schema Outbox](http://gistlabs.com/2014/05/the-outbox/). Si tratta di una tabella transazionale per archiviare gli eventi di integrazione (estendendo la transazione locale).
+- Uso dello [schema Outbox](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Si tratta di una tabella transazionale per archiviare gli eventi di integrazione (estendendo la transazione locale).
 
 Per questo scenario uno degli approcci migliori, se non *il* migliore, consiste nell'usare lo schema Event Sourcing completo. In molti scenari di applicazione, tuttavia, potrebbe non essere possibile implementare un sistema Event Sourcing completo. Lo schema Event Sourcing implica l'archiviazione dei soli eventi di dominio nel database transazionale, anziché dei dati relativi allo stato corrente. L'archiviazione dei soli eventi di dominio può presentare notevoli vantaggi, consentendo ad esempio di poter disporre della cronologia di sistema e poter determinare lo stato del sistema in qualsiasi momento nel passato. L'implementazione di un sistema Event Sourcing completo richiede però la ridefinizione dell'architettura della maggior parte del sistema e implica molti altri requisiti e complessità. Si supponga, ad esempio, di voler usare un database appositamente pensato per lo schema Event Sourcing, come [Event Store](https://eventstore.org/), oppure un database orientato ai documenti, come Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Lo schema Event Sourcing costituisce un valido approccio a questo problema, ma non è la soluzione più semplice a meno che non si abbia già familiarità con Event Sourcing.
 
@@ -326,9 +326,9 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     <https://go.particular.net/eShopOnContainers>
 
 - **Messaggistica basata su eventi** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)**  \
+- **Jimmy Bogard. Refactoring per la resilienza: valutazione dell'accoppiamento** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Canale di pubblicazione-sottoscrizione** \
@@ -343,10 +343,10 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Philip Brown. Strategie per l'integrazione di contesti delimitati** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Sviluppo di microservizi transazionali usando aggregazioni, Event Sourcing e CQRS - Parte 2** \
+- **Chris Richardson. Sviluppo di microservizi transazionali con aggregazioni, Event sourcing e CQRS-Part 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Schema Event Sourcing** \
+- **Chris Richardson. Modello** di origine eventi \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **Introduzione a Event Sourcing** \
@@ -355,7 +355,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Database di Event Store**. Sito ufficiale. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Gestione di dati basati su eventi per microservizi** \
+- **Patrick Nommensen. Gestione dati basata su eventi per i microservizi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Il teorema CAP** \
@@ -367,13 +367,13 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 - **Introduzione alla coerenza dei dati** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. Il teorema CAP: perché "tutto è diverso" con il cloud e Internet** \
+- **Rick Saling. Teorema CAP: perché "tutto è diverso" con il cloud e Internet** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP dodici anni dopo: come sono cambiate le "regole"**  \
+- **Eric Brewer. CAP dodici anni dopo: come sono state modificate le "regole"**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati**  \
+- **Bus di servizio di Azure. Messaggistica negoziata:  \ di rilevamento duplicati**
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Guida all'affidabilità**documentazione RabbitMQ \
