@@ -30,6 +30,8 @@
         - name: Raccomandare film (fattorizzazione di matrice)
           href: tutorials/movie-recommendation.md
         - name: Classificazione delle immagini (trasferimento induttivo)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Classificare le immagini (composizione del modello)
           href: tutorials/image-classification.md
         - name: Analisi delle vendite di prodotti (rilevamento anomalie)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Strumenti
       items:
+        - name: Caricare i dati in Model Builder
+          href: how-to-guides/load-data-model-builder.md
         - name: Installare Model Builder
           href: how-to-guides/install-model-builder.md
         - name: Installare l'interfaccia della riga di comando
