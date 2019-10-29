@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Lunghezza del record non valida
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Poiché la chiamata non può essere attesa, l''esecuzione del metodo corrente continua prima del completamento della chiamata'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: Impossibile convertire il tipo anonimo in una struttura ad albero dell'espressione. Il tipo anonimo contiene un campo utilizzato nell'inizializzazione di un altro campo.
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Non essendo possibile attendere la chiamata, l''esecuzione del metodo corrente continuerà prima del completamento della chiamata'
+          href: language-reference/error-messages/bc42358.md
+        - name: Non è possibile convertire il tipo anonimo in un albero delle espressioni perché una proprietà del tipo viene usata per inizializzare un'altra proprietà
+          href: language-reference/error-messages/bc36548.md
         - name: Impossibile creare il componente ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: Impossibile fare riferimento a '<name>' perché è un membro del campo di valori '<name>' della classe '<classname>' che ha 'System.MarshalByRefObject' come classe base
