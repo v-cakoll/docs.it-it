@@ -2,12 +2,12 @@
 title: Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855011"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039990"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 
@@ -31,7 +31,7 @@ Una possibile conversione di un albero dei comandi delle query in un'istruzione 
 
 Si consideri, come esempio, l'albero dei comandi di query seguente
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Un caso di aggregazione di più nodi in un'unica istruzione SQL SELECT consiste 
 
 I join del lato sinistro, ovvero quelli che vengono visualizzati come join figlio a sinistra di un altro join, possono essere più facilmente resi bidimensionali in un'unica istruzione SQL SELECT. Si consideri, come esempio, l'albero dei comandi di query seguente:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 I join non di sinistra non possono tuttavia essere facilmente resi bidimensionali e non è consigliabile provare a eseguire questa operazione. Ad esempio, i join dell'albero dei comandi di query seguente:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ Non usare `SELECT *` per effettuare la selezione dalle tabelle di base. Il model
 
 ## <a name="mapping-primitive-types"></a>Mapping di tipi primitivi
 
-Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Evitare inoltre di eseguire il mapping a tipi che non possono essere utilizzati per molte operazioni, come i tipi di `ntext` BLOB, ad esempio in SQL Server.
+Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Evitare inoltre di eseguire il mapping a tipi che non possono essere utilizzati per molte operazioni, come i tipi di BLOB, ad esempio `ntext` in SQL Server.
 
 ## <a name="see-also"></a>Vedere anche
 
