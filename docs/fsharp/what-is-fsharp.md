@@ -9,11 +9,11 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332727"
 ---
-# <a name="what-is-f"></a><span data-ttu-id="77662-104">Che cos'è F @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="77662-104">What is F\#</span></span>
+# <a name="what-is-f"></a><span data-ttu-id="6d6c8-104">Che cos'è F @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="6d6c8-104">What is F\#</span></span>
 
-<span data-ttu-id="77662-105">F# è un linguaggio di programmazione funzionale che semplifica la scrittura di codice corretto e mantenibile.</span><span class="sxs-lookup"><span data-stu-id="77662-105">F# is a functional programming language that makes it easy to write correct and maintainable code.</span></span>
+<span data-ttu-id="6d6c8-105">F# è un linguaggio di programmazione funzionale che semplifica la scrittura di codice corretto e mantenibile.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-105">F# is a functional programming language that makes it easy to write correct and maintainable code.</span></span>
 
-<span data-ttu-id="77662-106">La programmazione in F# comporta principalmente la definizione di tipi e funzioni che vengono automaticamente inferiti e generalizzati.</span><span class="sxs-lookup"><span data-stu-id="77662-106">F# programming primarily involves defining types and functions that are type-inferred and generalized automatically.</span></span> <span data-ttu-id="77662-107">Ciò consente di rimanere concentrati sul dominio del problema e sulla manipolazione dei dati, anziché sui dettagli della programmazione.</span><span class="sxs-lookup"><span data-stu-id="77662-107">This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</span></span>
+<span data-ttu-id="6d6c8-106">La programmazione in F# comporta principalmente la definizione di tipi e funzioni che vengono automaticamente inferiti e generalizzati.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-106">F# programming primarily involves defining types and functions that are type-inferred and generalized automatically.</span></span> <span data-ttu-id="6d6c8-107">Ciò consente di rimanere concentrati sul dominio del problema e sulla manipolazione dei dati, anziché sui dettagli della programmazione.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-107">This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</span></span>
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-<span data-ttu-id="77662-108">F# dispone di numerose funzionalità, tra cui:</span><span class="sxs-lookup"><span data-stu-id="77662-108">F# has numerous features, including:</span></span>
+<span data-ttu-id="6d6c8-108">F# dispone di numerose funzionalità, tra cui:</span><span class="sxs-lookup"><span data-stu-id="6d6c8-108">F# has numerous features, including:</span></span>
 
-* <span data-ttu-id="77662-109">Sintassi leggera</span><span class="sxs-lookup"><span data-stu-id="77662-109">Lightweight syntax</span></span>
-* <span data-ttu-id="77662-110">Immutabile per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="77662-110">Immutable by default</span></span>
-* <span data-ttu-id="77662-111">Inferenza dei tipi e generalizzazione automatica</span><span class="sxs-lookup"><span data-stu-id="77662-111">Type inference and automatic generalization</span></span>
-* <span data-ttu-id="77662-112">Funzioni di prima classe</span><span class="sxs-lookup"><span data-stu-id="77662-112">First-class functions</span></span>
-* <span data-ttu-id="77662-113">Tipi di dati avanzati</span><span class="sxs-lookup"><span data-stu-id="77662-113">Powerful data types</span></span>
-* <span data-ttu-id="77662-114">Criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="77662-114">Pattern matching</span></span>
-* <span data-ttu-id="77662-115">Programmazione asincrona</span><span class="sxs-lookup"><span data-stu-id="77662-115">Async programming</span></span>
+* <span data-ttu-id="6d6c8-109">Sintassi leggera</span><span class="sxs-lookup"><span data-stu-id="6d6c8-109">Lightweight syntax</span></span>
+* <span data-ttu-id="6d6c8-110">Immutabile per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="6d6c8-110">Immutable by default</span></span>
+* <span data-ttu-id="6d6c8-111">Inferenza dei tipi e generalizzazione automatica</span><span class="sxs-lookup"><span data-stu-id="6d6c8-111">Type inference and automatic generalization</span></span>
+* <span data-ttu-id="6d6c8-112">Funzioni di prima classe</span><span class="sxs-lookup"><span data-stu-id="6d6c8-112">First-class functions</span></span>
+* <span data-ttu-id="6d6c8-113">Tipi di dati avanzati</span><span class="sxs-lookup"><span data-stu-id="6d6c8-113">Powerful data types</span></span>
+* <span data-ttu-id="6d6c8-114">Criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="6d6c8-114">Pattern matching</span></span>
+* <span data-ttu-id="6d6c8-115">Programmazione asincrona</span><span class="sxs-lookup"><span data-stu-id="6d6c8-115">Async programming</span></span>
 
-<span data-ttu-id="77662-116">L'insieme completo delle funzionalità è documentato nella [Guida di riferimento del linguaggio F#](./language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="77662-116">A full set of features are documented in the [F# language reference](./language-reference/index.md).</span></span>
+<span data-ttu-id="6d6c8-116">L'insieme completo delle funzionalità è documentato nella [Guida di riferimento del linguaggio F#](./language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="6d6c8-116">A full set of features are documented in the [F# language reference](./language-reference/index.md).</span></span>
 
-## <a name="rich-data-types"></a><span data-ttu-id="77662-117">Tipi di dati avanzati</span><span class="sxs-lookup"><span data-stu-id="77662-117">Rich data types</span></span>
+## <a name="rich-data-types"></a><span data-ttu-id="6d6c8-117">Tipi di dati avanzati</span><span class="sxs-lookup"><span data-stu-id="6d6c8-117">Rich data types</span></span>
 
-<span data-ttu-id="77662-118">I tipi di dati, ad esempio i [record](./language-reference/records.md) e le [unioni discriminate](./language-reference/discriminated-unions.md) , consentono di rappresentare dati complessi e domini.</span><span class="sxs-lookup"><span data-stu-id="77662-118">Data types such as [Records](./language-reference/records.md) and [Discriminated Unions](./language-reference/discriminated-unions.md) let you represent complex data and domains.</span></span>
+<span data-ttu-id="6d6c8-118">I tipi di dati, ad esempio i [record](./language-reference/records.md) e le [unioni discriminate](./language-reference/discriminated-unions.md), consentono di rappresentare dati e domini complessi.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-118">Data types such as [Records](./language-reference/records.md) and [Discriminated Unions](./language-reference/discriminated-unions.md) let you represent complex data and domains.</span></span>
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-<span data-ttu-id="77662-119">F#i record e le unioni discriminate sono non null, non modificabili e confrontabili per impostazione predefinita, rendendoli molto facili da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="77662-119">F# records and discriminated unions are non-null, immutable, and comparable by default, making them very easy to use.</span></span>
+<span data-ttu-id="6d6c8-119">F#i record e le unioni discriminate sono non null, non modificabili e confrontabili per impostazione predefinita, rendendoli molto facili da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-119">F# records and discriminated unions are non-null, immutable, and comparable by default, making them very easy to use.</span></span>
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a><span data-ttu-id="77662-120">Applicare la correttezza alle funzioni e ai criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="77662-120">Enforced correctness with functions and pattern matching</span></span>
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a><span data-ttu-id="6d6c8-120">Applicare la correttezza alle funzioni e ai criteri di ricerca</span><span class="sxs-lookup"><span data-stu-id="6d6c8-120">Enforced correctness with functions and pattern matching</span></span>
 
-<span data-ttu-id="77662-121">F#le funzioni sono facili da dichiarare e potenti in pratica.</span><span class="sxs-lookup"><span data-stu-id="77662-121">F# functions are easy to declare and powerful in practice.</span></span> <span data-ttu-id="77662-122">In [combinazione con i criteri di](./language-reference/pattern-matching.md)ricerca, consentono di definire il comportamento la cui correttezza viene applicata dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="77662-122">When combined with [pattern matching](./language-reference/pattern-matching.md), they allow you to define behavior whose correctness is enforced by the compiler.</span></span>
+<span data-ttu-id="6d6c8-121">Le funzioni F# sono facili da dichiarare e potenti nella pratica.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-121">F# functions are easy to declare and powerful in practice.</span></span> <span data-ttu-id="6d6c8-122">In combinazione con i [criteri di ricerca](./language-reference/pattern-matching.md), consentono di definire un comportamento la cui correttezza viene verificata dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-122">When combined with [pattern matching](./language-reference/pattern-matching.md), they allow you to define behavior whose correctness is enforced by the compiler.</span></span>
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-<span data-ttu-id="77662-123">F#anche le funzioni sono di prima classe, ovvero possono essere passate come parametri e restituite da altre funzioni.</span><span class="sxs-lookup"><span data-stu-id="77662-123">F# functions are also first-class, meaning they can be passed as parameters and returned from other functions.</span></span>
+<span data-ttu-id="6d6c8-123">Anche le funzioni F# sono di prima classe, ovvero possono essere passate come parametri e restituite da altre funzioni.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-123">F# functions are also first-class, meaning they can be passed as parameters and returned from other functions.</span></span>
 
-## <a name="functions-to-define-operations-on-objects"></a><span data-ttu-id="77662-124">Funzioni per la definizione di operazioni sugli oggetti</span><span class="sxs-lookup"><span data-stu-id="77662-124">Functions to define operations on objects</span></span>
+## <a name="functions-to-define-operations-on-objects"></a><span data-ttu-id="6d6c8-124">Funzioni per definire operazioni sugli oggetti</span><span class="sxs-lookup"><span data-stu-id="6d6c8-124">Functions to define operations on objects</span></span>
 
-<span data-ttu-id="77662-125">F#dispone del supporto completo per gli oggetti, che sono tipi di dati utili quando è necessario combinare dati e funzionalità.</span><span class="sxs-lookup"><span data-stu-id="77662-125">F# has full support for objects, which are useful data types when you need to blend data and functionality.</span></span> <span data-ttu-id="77662-126">F#le funzioni vengono usate per modificare gli oggetti.</span><span class="sxs-lookup"><span data-stu-id="77662-126">F# functions are used to manipulate objects.</span></span>
+<span data-ttu-id="6d6c8-125">F# dispone del supporto completo per gli oggetti, che sono tipi di dati utili quando è necessario combinare dati e funzionalità.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-125">F# has full support for objects, which are useful data types when you need to blend data and functionality.</span></span> <span data-ttu-id="6d6c8-126">Le funzioni F# vengono usate per modificare gli oggetti.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-126">F# functions are used to manipulate objects.</span></span>
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
@@ -118,8 +118,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-<span data-ttu-id="77662-127">Anziché scrivere codice orientato a oggetti, in F# spesso si scrive codice che considera gli oggetti semplicemente come un altro tipo di dati modificabili dalle funzioni.</span><span class="sxs-lookup"><span data-stu-id="77662-127">Rather than writing code that is object-oriented, in F#, you will often write code that treats objects as another data type for functions to manipulate.</span></span> <span data-ttu-id="77662-128">Funzionalità come le [interfacce generiche](./language-reference/interfaces.md), le [espressioni di oggetti](./language-reference/object-expressions.md) e l'utilizzo oculato dei [membri](./language-reference/members/index.md) sono comuni nei programmi F# più grandi.</span><span class="sxs-lookup"><span data-stu-id="77662-128">Features such as [generic interfaces](./language-reference/interfaces.md), [object expressions](./language-reference/object-expressions.md), and judicious use of [members](./language-reference/members/index.md) are common in larger F# programs.</span></span>
+<span data-ttu-id="6d6c8-127">Anziché scrivere codice orientato a oggetti, in F# spesso si scrive codice che considera gli oggetti semplicemente come un altro tipo di dati modificabili dalle funzioni.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-127">Rather than writing code that is object-oriented, in F#, you will often write code that treats objects as another data type for functions to manipulate.</span></span> <span data-ttu-id="6d6c8-128">Funzionalità come le [interfacce generiche](./language-reference/interfaces.md), le [espressioni di oggetti](./language-reference/object-expressions.md) e l'utilizzo oculato dei [membri](./language-reference/members/index.md) sono comuni nei programmi F# più grandi.</span><span class="sxs-lookup"><span data-stu-id="6d6c8-128">Features such as [generic interfaces](./language-reference/interfaces.md), [object expressions](./language-reference/object-expressions.md), and judicious use of [members](./language-reference/members/index.md) are common in larger F# programs.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="77662-129">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="77662-129">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="6d6c8-129">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="6d6c8-129">Next steps</span></span>
 
-<span data-ttu-id="77662-130">Per informazioni su un insieme più ampio di funzionalità, vedere la [Panoramica di F#](tour.md).</span><span class="sxs-lookup"><span data-stu-id="77662-130">To learn more about a larger set of F# features, check out the [F# Tour](tour.md).</span></span>
+<span data-ttu-id="6d6c8-130">Per informazioni su un insieme più ampio di funzionalità, vedere la [Panoramica di F#](tour.md).</span><span class="sxs-lookup"><span data-stu-id="6d6c8-130">To learn more about a larger set of F# features, check out the [F# Tour](tour.md).</span></span>
