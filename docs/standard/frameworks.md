@@ -1,19 +1,19 @@
 ---
-title: Framework di destinazione
+title: Framework di destinazione nei progetti di tipo SDK-.NET
 description: Informazioni sui framework di destinazione per app e librerie di .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216672"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040995"
 ---
-# <a name="target-frameworks"></a>Framework di destinazione
+# <a name="target-frameworks-in-sdk-style-projects"></a>Framework di destinazione nei progetti di tipo SDK
 
 Quando si specifica come destinazione un framework in un'app o in una libreria, si specifica il set di API da rendere disponibile all'app o alla libreria. Per specificare il framework di destinazione nel file di progetto, usare i moniker framework di destinazione.
 
@@ -39,7 +39,7 @@ La tabella seguente definisce i framework di destinazione più comuni, il modo i
 
 Un framework di destinazione viene in genere specificato come riferimento da un moniker framework di destinazione. La tabella seguente mostra i framework di destinazione supportati da .NET Core SDK e dal client NuGet. Gli equivalenti sono visualizzati tra parentesi quadre. Ad esempio, `win81` è un moniker framework di destinazione equivalente a `netcore451`.
 
-| Framework di destinazione           | TFM |
+| Framework di destinazione           | Moniker framework di destinazione |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0 |
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-Il sistema di compilazione è compatibile con i simboli del preprocessore che rappresentano i framework di destinazione mostrati nella tabella [Versioni supportate dei framework di destinazione](#supported-target-framework-versions). Quando si usa un simbolo che rappresenta un moniker framework di destinazione di .NET Standard o .NET Core, sostituire il punto con un carattere di sottolineatura e sostituire le lettere minuscole con lettere maiuscole, ad esempio il simbolo per `netstandard1.4` è `NETSTANDARD1_4`).
+Il sistema di compilazione è in grado di riconoscere i simboli del preprocessore che rappresentano i Framework di destinazione mostrati nella tabella [versioni di destinazione supportate](#supported-target-framework-versions) quando si usano progetti in stile SDK. Quando si usa un simbolo che rappresenta un moniker framework di destinazione di .NET Standard o .NET Core, sostituire il punto con un carattere di sottolineatura e sostituire le lettere minuscole con lettere maiuscole, ad esempio il simbolo per `netstandard1.4` è `NETSTANDARD1_4`).
 
 L'elenco completo di simboli del preprocessore per il framework di destinazione di .NET Core è:
 

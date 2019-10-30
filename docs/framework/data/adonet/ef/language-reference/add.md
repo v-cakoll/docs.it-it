@@ -2,23 +2,23 @@
 title: + (aggiunta)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-ms.openlocfilehash: 8c9a6b2c8168e4677c37cfdb0b401a93ee0040cf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 62bb4782f135309eed8efa7e182fd8b75f92e126
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251365"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040298"
 ---
 # <a name="-add"></a>+ (addizione)
 Esegue l'addizione di due numeri.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```csharp  
 expression + expression  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Qualsiasi espressione valida con qualsiasi tipo di dati numerici.  
   
@@ -31,7 +31,7 @@ expression + expression
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore aritmetico + per sommare due numeri. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   

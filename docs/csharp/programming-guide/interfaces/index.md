@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053273"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039333"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfacce (Guida per programmatori C#)
 
-Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che possono essere implementate da una [classe](../../language-reference/keywords/class.md) o uno [struct](../../language-reference/keywords/struct.md).
+Un'interfaccia contiene le definizioni per un gruppo di funzionalità correlate che devono essere implementate da una [classe](../../language-reference/keywords/class.md) o uno [struct](../../language-reference/keywords/struct.md) non astratta.
   
 Usando le interfacce, è possibile, ad esempio, includere il comportamento di più origini in una classe. Tale funzionalità è importante in C# perché il linguaggio non supporta l'ereditarietà multipla delle classi. Inoltre è necessario usare un'interfaccia se si vuole simulare l'ereditarietà per le struct, perché non possono effettivamente ereditare da un'altra struct o classe.  
   
@@ -57,7 +57,7 @@ Un'interfaccia presenta le proprietà seguenti:
 - Le interfacce non contengono implementazioni di metodi.
 - Una classe o struct può implementare più interfacce. Una classe può ereditare una classe base e anche implementare una o più interfacce.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Implementazione esplicita dell'interfaccia](explicit-interface-implementation.md)  
  Illustra come creare un membro di una classe specifico di un'interfaccia.  
@@ -72,7 +72,7 @@ Un'interfaccia presenta le proprietà seguenti:
 
 - [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md)  
 - [Indicizzatori nelle interfacce](../indexers/indexers-in-interfaces.md)  
-- [Procedura:  Implementare eventi di interfaccia](../events/how-to-implement-interface-events.md)  
+- [Procedura: Implementare eventi di interfaccia](../events/how-to-implement-interface-events.md)  
 - [Classi e struct](../classes-and-structs/index.md)  
 - [Ereditarietà](../classes-and-structs/inheritance.md)  
 - [Metodi](../classes-and-structs/methods.md)  
@@ -84,7 +84,7 @@ Un'interfaccia presenta le proprietà seguenti:
   
 ## <a name="featured-book-chapter"></a>Capitolo del libro rappresentato
 
-[Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) (Interfacce) in [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29) (Imparare C# 3.0: concetti di base di C# 3.0)
+[Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) in [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>Vedere anche
 

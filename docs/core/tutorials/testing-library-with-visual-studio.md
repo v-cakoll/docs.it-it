@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970647"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037969"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Eseguire il test di una libreria .NET Standard con .NET Core in Visual Studio 2017
 
@@ -42,17 +42,17 @@ Per creare un progetto unit test, seguire questa procedura:
 
    Il codice sorgente creato dal modello di unit test esegue le operazioni seguenti:
 
-   * Importa lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, contenente i tipi usati per il testing unità.
+   - Importa lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, contenente i tipi usati per il testing unità.
 
-   * Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> alla classe `UnitTest1`. Ogni metodo di test presente in una classe di test contrassegnata con l'attributo \[TestMethod\] viene eseguito automaticamente durante l'esecuzione dello unit test.
+   - Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> alla classe `UnitTest1`. Ogni metodo di test presente in una classe di test contrassegnata con l'attributo \[TestMethod\] viene eseguito automaticamente durante l'esecuzione dello unit test.
 
-   * Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> per definire `TestMethod1` come metodo di test da eseguire automaticamente durante l'esecuzione dello unit test.
+   - Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> per definire `TestMethod1` come metodo di test da eseguire automaticamente durante l'esecuzione dello unit test.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del progetto **StringLibraryTest** e selezionare **Aggiungi riferimento** dal menu di scelta rapida.
 
    ![Menu di scelta rapida delle dipendenze StringLibraryTest - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. Nella finestra di dialogo **Gestione riferimenti** espandere il nodo **Progetti** e selezionare la casella accanto a **StringLibrary**. L'aggiunta di un riferimento all'assembly `StringLibrary` consente al compilatore di individuare i metodi **StringLibrary**. Selezionare il pulsante **OK**. Viene aggiunto un riferimento al progetto di libreria di classi `StringLibrary`.
+1. Nella finestra di dialogo **Gestione riferimenti** espandere il nodo **Progetti** e selezionare la casella accanto a **StringLibrary**. L'aggiunta di un riferimento all'assembly `StringLibrary` consente al compilatore di individuare i metodi **StringLibrary**. Selezionare il pulsante **OK** . Viene aggiunto un riferimento al progetto di libreria di classi `StringLibrary`.
 
    ![Finestra di dialogo per aggiungere riferimenti al progetto di Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
 
@@ -73,17 +73,17 @@ Per creare un progetto unit test, seguire questa procedura:
 
    Il codice sorgente creato dal modello di unit test esegue le operazioni seguenti:
 
-   * Importa lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, contenente i tipi usati per il testing unità.
+   - Importa lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, contenente i tipi usati per il testing unità.
 
-   * Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) alla classe `UnitTest1`. Ogni metodo di test presente in una classe di test contrassegnata con l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> viene eseguito automaticamente durante l'esecuzione dello unit test.
+   - Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> alla classe `UnitTest1`. Ogni metodo di test presente in una classe di test contrassegnata con l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> viene eseguito automaticamente durante l'esecuzione dello unit test.
 
-   * Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> per definire `TestMethod1` come metodo di test da eseguire automaticamente durante l'esecuzione dello unit test.
+   - Applica l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> per definire `TestMethod1` come metodo di test da eseguire automaticamente durante l'esecuzione dello unit test.
 
 1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del progetto **StringLibraryTest** e selezionare **Aggiungi riferimento** dal menu di scelta rapida.
 
    ![Menu di scelta rapida delle dipendenze StringLibraryTest](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. Nella finestra di dialogo **Gestione riferimenti** espandere il nodo **Progetti** e selezionare la casella accanto a **StringLibrary**. L'aggiunta di un riferimento all'assembly `StringLibrary` consente al compilatore di individuare i metodi **StringLibrary**. Selezionare il pulsante **OK**. Viene aggiunto un riferimento al progetto di libreria di classi `StringLibrary`.
+1. Nella finestra di dialogo **Gestione riferimenti** espandere il nodo **Progetti** e selezionare la casella accanto a **StringLibrary**. L'aggiunta di un riferimento all'assembly `StringLibrary` consente al compilatore di individuare i metodi **StringLibrary**. Selezionare il pulsante **OK** . Viene aggiunto un riferimento al progetto di libreria di classi `StringLibrary`.
 
    ![Finestra di dialogo per aggiungere riferimenti al progetto di Visual Studio - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 
@@ -93,7 +93,7 @@ Per creare un progetto unit test, seguire questa procedura:
 
 Quando Visual Studio esegue uno unit test, esegue tutti i metodi contrassegnati con l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> in una classe unit test, ovvero la classe a cui è applicato l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>. Un metodo di test termina quando viene rilevato il primo errore o quando tutti i test contenuti nel metodo stesso hanno avuto esito positivo.
 
-I test più comuni chiamano i membri della classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Molti metodi assert includono almeno due parametri, uno dei quali corrisponde al risultato previsto del test, mentre l'altro corrisponde al risultato effettivo. La tabella seguente illustra alcuni dei metodi chiamati con maggiore frequenza.
+I test più comuni chiamano i membri della classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Molti metodi assert includono almeno due parametri, uno dei quali corrisponde al risultato previsto del test, mentre l'altro corrisponde al risultato effettivo. Nella tabella seguente sono illustrati alcuni dei metodi chiamati più di frequente:
 
 Metodi Assert | Funzione
 --- | ---
@@ -116,7 +116,7 @@ Per creare i metodi di test:
 
 1. Nella finestra del codice *UnitTest1.cs* sostituire il codice con il seguente:
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Si noti che nel metodo `TestStartsWithUpper` il test dei caratteri maiuscoli include la lettera alfa maiuscola dell'alfabeto greco (U+0391) e la lettera EM maiuscola dell'alfabeto cirillico (U+041C). Si noti anche che nel metodo `TestDoesNotStartWithUpper` il test dei caratteri minuscoli include la lettera alfa minuscola dell'alfabeto greco (U+03B1) e la lettera Ghe minuscola dell'alfabeto cirillico (U+0433).
 
@@ -128,7 +128,7 @@ Per creare i metodi di test:
 
 1. Nella finestra del codice *UnitTest1.vb* sostituire il codice con il seguente:
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Si noti che nel metodo `TestStartsWithUpper` il test dei caratteri maiuscoli include la lettera alfa maiuscola dell'alfabeto greco (U+0391) e la lettera EM maiuscola dell'alfabeto cirillico (U+041C). Si noti anche che nel metodo `TestDoesNotStartWithUpper` il test dei caratteri minuscoli include la lettera alfa minuscola dell'alfabeto greco (U+03B1) e la lettera Ghe minuscola dell'alfabeto cirillico (U+0433).
 
@@ -171,7 +171,7 @@ L'esecuzione dei test non ha generato errori ma è opportuno apportare qualche m
 
    ![Finestra di Esplora test con i test non riusciti](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Scegliere il test che ha avuto esito negativo, `TestDoesNotStartWith`, nella sezione **Test non superati**. Nella finestra **Esplora test** viene visualizzato il messaggio generato dall'istruzione Assert: "Assert.IsFalse failed. Expected for 'Error': false; actual: True". A causa dell'errore, tutte le stringhe della matrice successive a "Error" non sono state testate.
+1. Scegliere il test che ha avuto esito negativo, `TestDoesNotStartWith`, nella sezione **Test non superati**. Nella finestra **Esplora test** viene visualizzato il messaggio generato dal metodo Assert: "Assert.IsFalse failed. Expected for 'Error': false; actual: True". A causa dell'errore, tutte le stringhe della matrice successive a "Error" non sono state testate.
 
    ![Finestra di Esplora test con l'errore del metodo Assert Is False](./media/testing-library-with-visual-studio/failed-test-detail.png)
 

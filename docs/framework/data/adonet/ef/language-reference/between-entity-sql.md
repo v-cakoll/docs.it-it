@@ -2,23 +2,23 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 41036e629837bd5861368df545bed9423eac5b23
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 611e90f362bbc0eac521e1e1998fb85200169c19
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039941"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-Determina se un'espressione restituisce un valore incluso in un intervallo specificato. L' [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressione between ha la stessa funzionalità dell'espressione Transact-SQL between.  
+Determina se un'espressione restituisce un valore incluso in un intervallo specificato. Il [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tra espressione ha la stessa funzionalità dell'espressione Transact-SQL BETWEEN.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```csharp  
 expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Qualsiasi espressione valida da testare nell'intervallo definito da `begin_expression` e `end_expression`. `expression` deve essere dello stesso tipo sia di `begin_expression` che di `end_expression`.  
   
@@ -43,7 +43,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore BETWEEN per determinare se un'espressione restituisce un valore incluso in un intervallo specificato. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-structuraltype-results.md)di StructuralType.  
+1. Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   

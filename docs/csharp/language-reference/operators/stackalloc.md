@@ -6,22 +6,22 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182427"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036136"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operatore stackalloc (Riferimenti per C#)
 
-L'operatore `stackalloc` alloca un blocco di memoria nello stack. Un blocco di memoria allocato nello stack, creato durante l'esecuzione del metodo, viene automaticamente eliminato alla restituzione del metodo. Non è possibile eliminare esplicitamente memoria allocata con l'operatore `stackalloc`. Un blocco di memoria allocato nello stack non è soggetto a una [Garbage Collection](../../../standard/garbage-collection/index.md) e non deve necessariamente essere aggiunto con l'[istruzione `fixed`](../keywords/fixed-statement.md).
+L'operatore `stackalloc` alloca un blocco di memoria nello stack. Un blocco di memoria allocato nello stack, creato durante l'esecuzione del metodo, viene automaticamente eliminato alla restituzione del metodo. Non è possibile eliminare esplicitamente memoria allocata con l'operatore `stackalloc`. Un blocco di memoria allocata nello stack non è soggetto a [Garbage Collection](../../../standard/garbage-collection/index.md) e non deve essere aggiunto con un' [istruzione`fixed`](../keywords/fixed-statement.md).
 
 Nell'espressione `stackalloc T[E]`, `T` deve essere un [tipo non gestito](../builtin-types/unmanaged-types.md) e `E` deve essere un'espressione di tipo `int`.
 
 È possibile assegnare il risultato dell'operatore `stackalloc` a una variabile di uno dei tipi seguenti:
 
-- A partire da C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, come nell'esempio seguente.
+- A partire C# da 7,2, <xref:System.Span%601?displayProperty=nameWithType>o<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, come illustrato nell'esempio seguente:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +31,7 @@ Nell'espressione `stackalloc T[E]`, `T` deve essere un [tipo non gestito](../bui
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  A partire C# da 8,0, è possibile usare `stackalloc` un'espressione all'interno di altre <xref:System.Span%601> espressioni <xref:System.ReadOnlySpan%601> ogni volta che è consentita una variabile o, come illustrato nell'esempio seguente:
+  A partire C# da 8,0, è possibile usare un'espressione`stackalloc`all'interno di altre espressioni ogni volta che è consentita una variabile<xref:System.Span%601>o<xref:System.ReadOnlySpan%601>, come illustrato nell'esempio seguente:
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -44,9 +44,9 @@ Nell'espressione `stackalloc T[E]`, `T` deve essere un [tipo non gestito](../bui
 
   Come illustrato nell'esempio precedente, quando si usa un tipo di puntatore è necessario adottare un contesto `unsafe`.
 
-  Nel caso dei tipi di puntatore, è possibile usare un' `stackalloc` espressione solo in una dichiarazione di variabile locale per inizializzare la variabile.
+  Nel caso dei tipi di puntatore, è possibile usare un'espressione `stackalloc` solo in una dichiarazione di variabile locale per inizializzare la variabile.
 
-Il contenuto della memoria appena allocata non è definito. A partire da C# 7.3, è possibile usare la sintassi dell'inizializzatore di matrice per definire il contenuto della memoria appena allocata. Nell'esempio seguente vengono illustrati vari modi per eseguire questa operazione.
+Il contenuto della memoria appena allocata non è definito. A partire C# da 7,3, è possibile usare la sintassi dell'inizializzatore di matrici per definire il contenuto della memoria appena allocata. Nell'esempio seguente vengono illustrati vari modi per eseguire questa operazione.
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 

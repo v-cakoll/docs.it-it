@@ -2,64 +2,64 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784899"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040141"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
-Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. Il provider di dati riceve la stringa di connessione come valore della <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> proprietà. Il provider analizza la stringa di connessione e garantisce che la sintassi sia corretta e che le parole chiave siano supportate. Quindi il <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> metodo passa i parametri di connessione analizzati all'origine dati. L'origine dati esegue una convalida ulteriore e stabilisce una connessione.
+Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. Il provider di dati riceve la stringa di connessione come valore della proprietà <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>. Il provider analizza la stringa di connessione e garantisce che la sintassi sia corretta e che le parole chiave siano supportate. Quindi il metodo <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> passa i parametri di connessione analizzati all'origine dati. L'origine dati esegue una convalida ulteriore e stabilisce una connessione.
 
 ## <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 
 Una stringa di connessione è un elenco delimitato da punti e virgola di coppie di parametri chiave/valore:
 
-```
+```csharp
 keyword1=value; keyword2=value;
 ```
 
 Parole chiave senza distinzione tra maiuscole e minuscole. I valori, tuttavia, possono fare distinzione tra maiuscole e minuscole, a seconda dell'origine dati. Sia le parole chiave che i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Gli spazi vuoti iniziali e finali vengono ignorati nelle parole chiave e nei valori non racchiusi tra virgolette.
 
-Se un valore contiene il punto e virgola, i [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o gli spazi vuoti iniziali o finali, è necessario racchiuderlo tra virgolette singole o doppie. Ad esempio:
+Se un valore contiene il punto e virgola, i [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o gli spazi vuoti iniziali o finali, è necessario racchiuderlo tra virgolette singole o doppie. Esempio:
 
-```
+```csharp
 Keyword=" whitespace  ";
 Keyword='special;character';
 ```
 
 Il carattere di inclusione potrebbe non essere presente nel valore che racchiude. Pertanto, un valore contenente virgolette singole può essere racchiuso tra virgolette doppie e viceversa:
 
-```
+```csharp
 Keyword='double"quotation;mark';
 Keyword="single'quotation;mark";
 ```
 
 È anche possibile utilizzare un carattere di escape per il carattere di inclusione utilizzandone due:
 
-```
+```csharp
 Keyword="double""quotation";
 Keyword='single''quotation';
 ```
 
 Le virgolette stesse, così come il segno di uguale, non richiedono l'escape, quindi sono valide le seguenti stringhe di connessione:
 
-```
+```csharp
 Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Poiché ogni valore viene letto fino al punto e virgola successivo o alla fine della stringa, il valore nel secondo `a=b=c`esempio è e il punto e virgola finale è facoltativo.
+Poiché ogni valore viene letto fino al punto e virgola successivo o alla fine della stringa, il valore nel secondo esempio viene `a=b=c`e il punto e virgola finale è facoltativo.
 
 Tutte le stringhe di connessione condividono la stessa sintassi di base descritta in precedenza. Il set di parole chiave riconosciute dipende tuttavia dal provider e si è evoluto negli anni dalle API precedenti, ad esempio *ODBC*. Il provider di dati *.NET Framework* per *SQL Server* (`SqlClient`) supporta molte parole chiave delle API precedenti, ma è in genere più flessibile e accetta sinonimi per molte delle parole chiave comuni della stringa di connessione.
 
-La digitazione degli errori può causare errori. Ad esempio, `Integrated Security=true` è valido, ma `IntegratedSecurity=true` genera un errore.
+La digitazione degli errori può causare errori. Ad esempio, `Integrated Security=true` è valido, ma `IntegratedSecurity=true` causa un errore.
 
 Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi di stringa Injection e compromettono la sicurezza nell'origine dati. Per risolvere questi problemi, in *ADO.NET* 2,0 sono stati introdotti i [generatori di stringhe di connessione](connection-string-builders.md) per ogni provider di dati *.NET Framework* . Questi generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e rendono possibile la convalida della stringa di connessione prima che venga inviata all'origine dati.
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
 [Generatori di stringhe di connessione](connection-string-builders.md)\
 Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.
@@ -67,7 +67,7 @@ Viene illustrato come usare le classi `ConnectionStringBuilder` per creare strin
 [Stringhe di connessione e file di configurazione](connection-strings-and-configuration-files.md)\
 Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.
 
-[Sintassi delle stringhe di connessione](connection-string-syntax.md)\
+\ della [sintassi delle stringhe di connessione](connection-string-syntax.md)
 Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.
 
 [Protezione delle informazioni di connessione](protecting-connection-information.md)\

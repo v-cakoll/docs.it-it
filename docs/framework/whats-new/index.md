@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8c9bdb3149834cd3dd04c7627bca440925f5273f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393713"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040758"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
@@ -310,7 +310,7 @@ End Function
 
 **Supporto per le chiavi temporanee**
 
-L'importazione PFX può caricare chiavi private direttamente dalla memoria, ignorando il disco rigido. Quando il nuovo flag <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> viene specificato in un costruttore <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> o uno degli overload del metodo <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, le chiavi private verranno caricate come chiavi temporanee. Ciò impedisce che le chiavi siano visibili sul disco. Tuttavia:
+L'importazione PFX può caricare chiavi private direttamente dalla memoria, ignorando il disco rigido. Quando il nuovo flag di <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> viene specificato in un costruttore di <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> o uno degli overload del metodo <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, le chiavi private verranno caricate come chiavi temporanee. Ciò impedisce che le chiavi siano visibili sul disco. Tuttavia:
 
 - Poiché le chiavi non vengono gestite su disco, i certificati caricati con questo flag non sono candidati ottimali per l'aggiunta a un archivio X509.
 
@@ -430,7 +430,7 @@ c.SameSite = SameSiteMode.Lax
          <!-- ...   -->
       </forms>
    <authentication />
-   <sessionSate cookieSameSite="Lax"></sessionState>
+   <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
@@ -545,7 +545,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Questo evento viene generato ogni volta che il runtime risolve un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Gli argomenti <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrivono la risoluzione e indicano l'oggetto e la proprietà che ospitano il riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e @ no__t-2 e la chiave usata per la risoluzione:
+Questo evento viene generato ogni volta che il runtime risolve un riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Gli argomenti <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrivono la risoluzione e indicano l'oggetto e la proprietà che ospitano il riferimento [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e il <xref:Windows.UI.Xaml.ResourceDictionary> e la chiave utilizzati per la risoluzione:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs

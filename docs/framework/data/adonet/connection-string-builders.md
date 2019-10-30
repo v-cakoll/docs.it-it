@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785691"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040173"
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
-Nelle versioni precedenti di ADO.NET, il controllo in fase di compilazione delle stringhe di connessione con valori di stringa concatenati non è stato eseguito, in modo che, in <xref:System.ArgumentException>fase di esecuzione, una parola chiave non corretta abbia generato un oggetto. Ogni provider di dati .NET Framework supportava una sintassi diversa per le parole chiave della stringa di connessione, rendendo difficoltosa la costruzione di stringhe di connessione valide se effettuate manualmente. Per risolvere questo problema, in ADO.NET 2,0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati .NET Framework e le classi del generatore di stringhe di connessione associate.  
+Nelle versioni precedenti di ADO.NET, il controllo in fase di compilazione delle stringhe di connessione con valori di stringa concatenati non è stato eseguito, quindi, in fase di esecuzione, una parola chiave non corretta ha generato un <xref:System.ArgumentException>. Ogni provider di dati .NET Framework supportava una sintassi diversa per le parole chiave della stringa di connessione, rendendo difficoltosa la costruzione di stringhe di connessione valide se effettuate manualmente. Per risolvere questo problema, in ADO.NET 2,0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati .NET Framework e le classi del generatore di stringhe di connessione associate.  
   
 |Provider|Classe ConnectionStringBuilder|  
 |--------------|-----------------------------------|  
@@ -48,7 +48,7 @@ Console.WriteLine(builder.ConnectionString);
   
  Dall'output si rileva che <xref:System.Data.SqlClient.SqlConnectionStringBuilder> ha gestito correttamente questa situazione convertendo in caratteri di escape il valore aggiuntivo in virgolette doppie anziché aggiungerlo alla stringa di connessione come nuova coppia chiave/valore.  
   
-```  
+```output  
 data source=(local);Integrated Security=True;  
 initial catalog="AdventureWorks;NewValue=Bad"  
 ```  

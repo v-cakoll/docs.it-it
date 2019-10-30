@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784799"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040404"
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Se si modificano i nomi degli elementi nello schema sottostante, il **set** di dati tipizzato farà riferimento a oggetti che non esistono nell'origine dati, oltre a perdere un riferimento agli oggetti esistenti nell'origine dati.  
   
- Utilizzando le annotazioni, è possibile personalizzare i nomi degli oggetti nel **set di dati** tipizzato con nomi più significativi, rendendo il codice più leggibile e il **set di dati** tipizzato più semplice per l'utilizzo da parte dei client, lasciando intatto lo schema sottostante. Ad esempio, l'elemento dello schema seguente per la tabella **Customers** del database **Northwind** genera un nome di oggetto **DataRow** di **CustomersRow** e un <xref:System.Data.DataRowCollection> oggetto denominato **Customers**.  
+ Utilizzando le annotazioni, è possibile personalizzare i nomi degli oggetti nel **set di dati** tipizzato con nomi più significativi, rendendo il codice più leggibile e il **set di dati** tipizzato più semplice per l'utilizzo da parte dei client, lasciando intatto lo schema sottostante. Ad esempio, l'elemento dello schema seguente per la tabella **Customers** del database **Northwind** provocherebbe un nome di oggetto **DataRow** di **CustomersRow** e un <xref:System.Data.DataRowCollection> denominato **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -45,7 +45,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
   
 |Annotazione|Descrizione|  
 |----------------|-----------------|  
-|**typedName**|Nome dell'oggetto.|  
+|**digitato**|Nome dell'oggetto.|  
 |**typedPlural**|Nome della raccolta di oggetti.|  
 |**typedParent**|Nome dell'oggetto quando si fa riferimento a tale oggetto in una relazione padre.|  
 |**typedChildren**|Nome del metodo per la restituzione di oggetti da una relazione figlio.|  
@@ -62,21 +62,21 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
   
  Nella tabella seguente vengono illustrati i valori predefiniti per gli oggetti in un **DataSet** tipizzato e le annotazioni disponibili.  
   
-|Oggetto/Metodo/Evento|Predefinito|Annotazione|  
+|Oggetto/Metodo/Evento|Impostazione predefinita|Annotazione|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** Metodi|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Proprietà**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Figlio** Accesso|GetChildTableNameRows|typedChildren|  
 |**Elemento padre** Accesso|TableNameRow|typedParent|  
 |**Set di dati** Eventi|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Per utilizzare le annotazioni del **set di dati** tipizzato, è necessario includere il riferimento **xmlns** seguente nello schema XSD (XML Schema Definition Language). Per creare un XSD dalle tabelle di database, <xref:System.Data.DataSet.WriteXmlSchema%2A> vedere o uso dei set di dati [in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Per utilizzare le annotazioni del **set di dati** tipizzato, è necessario includere il riferimento **xmlns** seguente nello schema XSD (XML Schema Definition Language). Per creare un XSD dalle tabelle di database, vedere <xref:System.Data.DataSet.WriteXmlSchema%2A> o uso dei set di dati [in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Nell'esempio di codice seguente viene utilizzato un **set di dati** fortemente tipizzato creato dallo schema di esempio. Viene utilizzato uno <xref:System.Data.SqlClient.SqlDataAdapter> per popolare la tabella **Customers** e <xref:System.Data.SqlClient.SqlDataAdapter> un'altra per popolare la tabella **Orders** . Il set di **dati** fortemente tipizzato definisce i **DataRelation**.  
+ Nell'esempio di codice seguente viene utilizzato un **set di dati** fortemente tipizzato creato dallo schema di esempio. Usa una <xref:System.Data.SqlClient.SqlDataAdapter> per popolare la tabella **Customers** e un'altra <xref:System.Data.SqlClient.SqlDataAdapter> per popolare la tabella **Orders** . Il set di **dati** fortemente tipizzato definisce i **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
+ms.openlocfilehash: b336834dcc021b986d79f09d2a9440de0b102f78
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826616"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039767"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membri con corpo di espressione (Guida per programmatori C#)
 
@@ -87,11 +87,11 @@ L'esempio seguente definisce un finalizzatore che usa una definizione di corpo d
 
 Per altre informazioni, vedere [Finalizzatori (Guida per programmatori C#)](../classes-and-structs/destructors.md).
 
-## <a name="indexers"></a>Indicizzatori
+## <a name="indexers"></a>Indexers (Indicizzatori)
 
-Analogamente alle proprietà, le funzioni di accesso get e set di un indicizzatore sono costituite da definizioni di corpi di espressione se la funzione di accesso get è costituita da una singola istruzione che restituisce un valore o la funzione di accesso set esegue un'assegnazione semplice.
+Analogamente alle proprietà, le funzioni di accesso Indexer `get` e `set` sono costituite da definizioni del corpo dell'espressione se la funzione di accesso `get` è costituita da una singola espressione che restituisce un valore o la funzione di accesso `set` esegue un'assegnazione semplice.
 
-Nell'esempio seguente viene definita una classe denominata `Sports` che include una matrice <xref:System.String> interna contenente i nomi di alcuni sport. Le funzioni di accesso sia get che set dell'indicizzatore vengono implementate come definizioni di corpi di espressione.
+Nell'esempio seguente viene definita una classe denominata `Sports` che include una matrice <xref:System.String> interna contenente i nomi di alcuni sport. Le funzioni di accesso `get` e `set` dell'indicizzatore sono implementate come definizioni del corpo dell'espressione.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

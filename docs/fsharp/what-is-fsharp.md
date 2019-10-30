@@ -35,7 +35,7 @@ let main args =
     0
 ```
 
-F#dispone di numerose funzionalità, tra cui:
+F# dispone di numerose funzionalità, tra cui:
 
 * Sintassi leggera
 * Non modificabile per impostazione predefinita

@@ -2,12 +2,12 @@
 title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782480"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040455"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -17,7 +17,7 @@ In molte applicazioni vengono usate le stored procedure per accedere ai dati, ba
 ## <a name="context-switching-with-the-execute-as-statement"></a>Cambio del contesto con l'istruzione EXECUTE AS  
  L'istruzione EXECUTE AS Transact-SQL consente di cambiare il contesto di esecuzione di un'istruzione mediante la rappresentazione di un altro account di accesso o utente del database. Si tratta di una tecnica utile per testare query e stored procedure usando le credenziali di un altro utente.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. Creazione di un utente proxy nel database non mappato a un account di accesso. Questo passaggio non è necessario ma risulta utile durante la gestione delle autorizzazioni.  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. Aggiunta della clausola EXECUTE AS alla stored procedure o alla funzione definita dall'utente.  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Uso di EXECUTE AS con REVERT  
  È possibile usare l'istruzione REVERT Transact-SQL per ripristinare il contesto di esecuzione originale.  
   
- La clausola facoltativa with no Revert cookie @variableName= consente di riportare il contesto di esecuzione al chiamante se @variableName la variabile contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante dell'istruzione Execute As, il chiamante può garantire che il contesto di esecuzione non possa essere modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per ulteriori informazioni sul pool di connessioni in ADO.NET, vedere [SQL Server pool di connessioni (ADO.NET)](../sql-server-connection-pooling.md).  
+ La clausola facoltativa WITH NO REVERT COOKIE = @variableNameconsente di riportare il contesto di esecuzione al chiamante se la variabile @variableName contiene il valore corretto. Viene quindi ripristinato il contesto di esecuzione del chiamante negli ambienti in cui viene usato il pool di connessioni. Poiché il valore di @variableName è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante può garantire che il contesto di esecuzione non possa essere modificato dall'utente finale che richiama l'applicazione. Alla chiusura della connessione, il contesto viene restituito al pool. Per ulteriori informazioni sul pool di connessioni in ADO.NET, vedere [SQL Server pool di connessioni (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Specifica del contesto di esecuzione  
  Oltre a specificare un utente, è inoltre possibile usare EXECUTE AS con le parole chiave seguenti.  

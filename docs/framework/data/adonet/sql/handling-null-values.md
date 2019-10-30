@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352985"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040212"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Un valore null in un database relazionale viene usato quando il valore in una colonna è sconosciuto o mancante. Un valore null non è né una stringa vuota (per tipi di dati carattere o data-ora) né un valore zero (per tipi di dati numerici). Nella specifica ANSI SQL-92 si afferma che un valore null deve essere uguale per tutti i tipi di dati, in modo da gestire coerentemente tutti i valori null. Lo spazio dei nomi <xref:System.Data.SqlTypes> offre una semantica di tipo null tramite l'implementazione dell'interfaccia <xref:System.Data.SqlTypes.INullable>. Ciascun tipo di dati nello spazio dei nomi <xref:System.Data.SqlTypes> dispone di una proprietà `IsNull` e di un valore `Null` che può essere assegnato a un'istanza di quel tipo di dati.  
@@ -32,26 +32,26 @@ Un valore null in un database relazionale viene usato quando il valore in una co
 ## <a name="nulls-and-sqlboolean"></a>Valori null e SqlBoolean  
  Un confronto tra qualsiasi spazio dei nomi <xref:System.Data.SqlTypes> restituirà un tipo <xref:System.Data.SqlTypes.SqlBoolean>. La funzione `IsNull` per ogni `SqlType` restituisce un tipo <xref:System.Data.SqlTypes.SqlBoolean> e può essere usata per controllare eventuali valori null. Nelle seguenti tabelle reali viene mostrato come funzionano gli operatori AND, OR e NOT in presenza di un valore null. (T=true, F=false e U=sconosciuto [unknown] o null.)  
   
- (./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11") ![tabella reale]  
+ ![Tabella verità](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Nozioni di base sull'opzione ANSI_NULLS  
  Lo spazio dei nomi <xref:System.Data.SqlTypes> offre la stessa semantica dell'opzione ANSI_NULLS quando è attivata in SQL Server. Tutti gli operatori aritmetici (+,-, \*,/,%), gli operatori bit per bit (~, &, \|) e la maggior parte delle funzioni restituiscono null se uno degli operandi o argomenti è null, ad eccezione della proprietà `IsNull`.  
   
  Lo standard ANSI SQL-92 non supporta *ColumnName* = null in una clausola WHERE. In SQL Server l'opzione ANSI_NULLS consente di controllare sia i valori null predefiniti nel database sia la valutazione dei confronti rispetto a valori null. Se l'opzione ANSI_NULLS è attivata (impostazione predefinita), è necessario usare l'operatore IS NULL nelle espressioni quando si verifica la presenza di valori null. Ad esempio, il confronto che segue restituisce sempre Sconosciuto quando l'opzione ANSI_NULLS è attiva:  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  Anche il confronto con una variabile che contiene un valore null restituisce Sconosciuto:  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  Usare il predicato IS NULL o IS NOT NULL per verificare la presenza di un valore null. In tal modo si può rendere più complessa la clausola WHERE. Ad esempio, la colonna TerritoryID nella tabella Customer di AdventureWorks consente valori null. Se con un'istruzione SELECT si intende verificare la presenza di valori in aggiunta ad altri valori, è necessario che l'istruzione includa un predicato IS NULL:  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  In questo esempio vengono visualizzati i seguenti risultati:  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  L'output del codice è il seguente:  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

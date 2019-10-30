@@ -2,13 +2,14 @@
 title: Esecuzione di alberi delle espressioni
 description: Informazioni sull'esecuzione di alberi delle espressioni convertendoli in istruzioni eseguibili in linguaggio intermedio (IL, Intermediate Language).
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201846"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037105"
 ---
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
@@ -19,7 +20,7 @@ Non è codice compilato ed eseguibile. Se si vuole eseguire il codice .NET che �
 
 ## <a name="lambda-expressions-to-functions"></a>Espressioni lambda per funzioni
 
-È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Sarebbe utile?) Un albero delle espressioni che è una `LambdaExpression` o un tipo derivato da `LambdaExpression` può essere convertito in IL.
+È possibile convertire qualsiasi LambdaExpression o qualsiasi tipo derivato da LambdaExpression in IL eseguibile. Altri tipi di espressioni non possono essere convertiti direttamente in codice. Questa restrizione ha un effetto limitato nella pratica. Le espressioni lambda sono gli unici tipi di espressioni che potrebbero essere eseguite convertendole in linguaggio intermedio eseguibile (IL). (Riflettere su cosa significherebbe eseguire direttamente una `ConstantExpression`. Potrebbe significare qualcosa di utile?) Qualsiasi albero delle espressioni che è un `LambdaExpression`o un tipo derivato da `LambdaExpression` può essere convertito in IL.
 Il tipo di espressione `Expression<TDelegate>` è l'unico esempio concreto nelle librerie di .NET Core. Viene usato per rappresentare un'espressione che esegue il mapping a qualsiasi tipo delegato. Poiché questo tipo è mappato a un tipo delegato, .NET può esaminare l'espressione e generare IL per un delegato appropriato che corrisponda alla firma dell'espressione lambda. 
 
 Nella maggior parte dei casi, verrà creato un mapping semplice tra un'espressione e il delegato corrispondente. Ad esempio, un albero delle espressioni che è rappresentato da `Expression<Func<int>>` viene convertito in un delegato del tipo `Func<int>`. Per un'espressione lambda con qualsiasi tipo restituito e un elenco di argomenti, esiste un tipo delegato che rappresenta il tipo di destinazione per il codice eseguibile rappresentato dall'espressione lambda.

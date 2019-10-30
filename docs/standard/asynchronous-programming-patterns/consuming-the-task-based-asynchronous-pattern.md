@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73cf0c09ab41fa7b1e4ee974d62ff8cbee59653b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929014"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038126"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizzo del modello asincrono basato su attività
 
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per attendere in modo asincrono più operazioni asincrone rappresentate come attività da completare.  Questo metodo viene usato principalmente in quattro casi:
 
-- Ridondanza:  esecuzione ripetuta di un'operazione e selezione di quella che viene terminata per prima (ad esempio contatto di più servizi Web di quotazioni di borsa tramite cui verrà generato un solo risultato e selezione di quello che viene completato più velocemente).
+- Ridondanza: esecuzione ripetuta di un'operazione e selezione di quella che viene terminata per prima (ad esempio contatto di più servizi Web di quotazioni di borsa tramite cui verrà generato un solo risultato e selezione di quello che viene completato più velocemente).
 
-- Interfoliazione:  avvio di più operazioni e attesa del completamento di tutte, ma elaborazione al termine delle operazioni in questione.
+- Interfoliazione: avvio di più operazioni e attesa del completamento di tutte, ma elaborazione al termine delle operazioni in questione.
 
-- Limitazione:  consentire l'avvio di operazioni aggiuntive al completamento delle altre.  Questa è un'estensione dello scenario di interfoliazione.
+- Limitazione: consentire l'avvio di operazioni aggiuntive al completamento delle altre.  Questa è un'estensione dello scenario di interfoliazione.
 
-- Bailout iniziale:  ad esempio, un'operazione rappresentata dall'attività t1 può essere raggruppata in un'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> con un'altra attività t2 ed è possibile attendere l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A>. L'attività t2 potrebbe rappresentare un timeout, un annullamento o un altro segnale che fa sì che l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> termini prima di t1.
+- Bailout iniziale: ad esempio, un'operazione rappresentata dall'attività t1 può essere raggruppata in un'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> con un'altra attività t2 ed è possibile attendere l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A>. L'attività t2 potrebbe rappresentare un timeout, un annullamento o un altro segnale che fa sì che l'attività <xref:System.Threading.Tasks.Task.WhenAny%2A> termini prima di t1.
 
 #### <a name="redundancy"></a>Ridondanza
  Si consideri il caso in cui si desidera decidere se comprare o meno dei titoli.  Esistono numerosi servizi Web attendibili che consigliano su azioni, ma a seconda del traffico giornaliero, ogni servizio può risultare lento in determinati momenti.  È possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per ricevere una notifica quando un'operazione termina:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Anche se il primo processo viene completato correttamente, le attività successive possono dare esito negativo.  A questo punto, sono disponibili diverse opzioni per la gestione delle eccezioni:  è possibile attendere il completamento di tutte le attività avviate e, in questo caso, è possibile usare il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A> oppure si può decidere che tutte le eccezioni sono importanti e devono essere registrate.  È possibile a tale scopo usare le continuazioni per ricevere una notifica quando le attività terminano in modo asincrono:
+ Anche se il primo processo viene completato correttamente, le attività successive possono dare esito negativo.  A questo punto, sono disponibili diverse opzioni per la gestione delle eccezioni: è possibile attendere il completamento di tutte le attività avviate e, in questo caso, è possibile utilizzare il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A> oppure è possibile decidere che tutte le eccezioni sono importanti e devono essere registrate.  È possibile a tale scopo usare le continuazioni per ricevere una notifica quando le attività terminano in modo asincrono:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -633,7 +633,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operazioni con interfoliazione
- Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi.  Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per un numero N di attività, questo comporta O(N2) continuazioni create durante l'operazione di interfoliazione.  Se si utilizza un ampio set di attività, è possibile utilizzare un operatore combinatorio (nell'esempio seguente `Interleaved`) per risolvere il problema di prestazioni:
+ Esiste un potenziale problema di prestazioni quando si usa il metodo <xref:System.Threading.Tasks.Task.WhenAny%2A> per supportare uno scenario di interfoliazione nel caso in cui si usino set di attività molto grandi. Ogni chiamata a <xref:System.Threading.Tasks.Task.WhenAny%2A> comporta la registrazione di una continuazione con ogni attività. Per il numero N di attività, il risultato è una continuazione di O (N<sup>2</sup>) creata per la durata dell'operazione di interfoliazione. Se si lavora con un ampio set di attività, è possibile usare un combinatore (`Interleaved` nell'esempio seguente) per risolvere il problema di prestazioni:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

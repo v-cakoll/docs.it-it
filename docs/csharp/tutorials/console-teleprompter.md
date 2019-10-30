@@ -2,13 +2,14 @@
 title: Applicazione console
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851014"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039257"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -24,7 +25,7 @@ Verrà creata un'applicazione in grado di leggere un file di testo e restituire 
 
 In questa esercitazione verranno create anche numerose funzionalità.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET Core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) . Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker.
 È necessario installare l'editor di codice preferito.

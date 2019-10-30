@@ -2,13 +2,14 @@
 title: Esplorare intervalli di dati con indici e intervalli
 description: Questa esercitazione avanzata descrive come esplorare i dati usando indici e intervalli per esaminare le sezioni di un set di dati sequenziale.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699930"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039676"
 ---
 # <a name="indices-and-ranges"></a>Indici e intervalli
 
@@ -27,9 +28,9 @@ In questa esercitazione si imparerà a:
 Questo supporto per il linguaggio si basa su due nuovi tipi e due nuovi operatori:
 
 - <xref:System.Index?displayProperty=nameWithType> rappresenta un indice in una sequenza.
-- Indice dell'operatore `^`end, che specifica che un indice è relativo alla fine di una sequenza.
+- Indice dell'operatore end `^`, che specifica che un indice è relativo alla fine di una sequenza.
 - <xref:System.Range?displayProperty=nameWithType> rappresenta un intervallo secondario di una sequenza.
-- Operatore `..`Range, che specifica l'inizio e la fine di un intervallo come operandi.
+- Operatore di intervallo `..`, che specifica l'inizio e la fine di un intervallo come operandi.
 
 Per iniziare, ecco come funzionano le regole per gli indici. Prendere in considerazione una matrice `sequence`. L'indice `0` è uguale a `sequence[0]`. L'indice `^0` è uguale a `sequence[sequence.Length]`. Si noti che `sequence[^0]` genera un'eccezione, proprio come `sequence[sequence.Length]`. Per qualsiasi numero `n`, l'indice `^n` è uguale a `sequence[sequence.Length - n]`.
 
@@ -79,9 +80,9 @@ L'esempio seguente illustra molti dei motivi per cui sono state fatte tali scelt
 
 Se un tipo fornisce un [indicizzatore](../programming-guide/indexers/index.md) con un parametro <xref:System.Index> o <xref:System.Range>, supporta in modo esplicito gli indici o gli intervalli rispettivamente.
 
-Un tipo può essere **conteggiato** se dispone di una proprietà denominata `Length` o `Count` con un getter accessibile e un tipo restituito `int`. Un tipo conteggiabile che non supporta in modo esplicito gli indici o gli intervalli può fornire un supporto implicito. Per ulteriori informazioni, vedere le sezioni supporto implicito degli [indici](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [supporto per intervalli impliciti](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) della [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Un tipo può essere **conteggiato** se dispone di una proprietà denominata `Length` o `Count` con un getter accessibile e un tipo restituito di `int`. Un tipo conteggiabile che non supporta in modo esplicito gli indici o gli intervalli può fornire un supporto implicito. Per ulteriori informazioni, vedere le sezioni supporto implicito degli [indici](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [supporto per intervalli impliciti](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) della [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
-I tipi .NET seguenti, ad esempio, supportano sia gli indici che gli intervalli: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> e <xref:System.ReadOnlySpan%601>. Il <xref:System.Collections.Generic.List%601> supporta gli indici, ma non supporta gli intervalli.
+I tipi .NET seguenti, ad esempio, supportano sia gli indici che gli intervalli: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>e <xref:System.ReadOnlySpan%601>. Il <xref:System.Collections.Generic.List%601> supporta gli indici, ma non supporta gli intervalli.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Scenari per gli indici e gli intervalli
 

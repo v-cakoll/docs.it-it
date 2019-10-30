@@ -2,12 +2,12 @@
 title: Pool di connessioni OLE DB, ODBC e Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794698"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039838"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Pool di connessioni OLE DB, ODBC e Oracle
 Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione. Questa sezione descrive il pool di connessioni per i provider di dati .NET Framework per OLE DB, ODBC e Oracle.  
@@ -15,7 +15,7 @@ Il pool di connessioni consente di migliorare notevolmente le prestazioni e di a
 ## <a name="connection-pooling-for-oledb"></a>Pool di connessioni per OleDb  
  Il provider di dati .NET Framework per OLE DB esegue automaticamente il pool di connessioni usando i pool di sessioni OLE DB. È possibile usare gli argomenti di tipo stringa di connessione per abilitare o disabilitare i servizi OLE DB, incluso il pool. La stringa di connessione seguente, ad esempio, disabilita il pool di sessioni OLE DB e l'inserimento automatico negli elenchi delle transazioni.  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  La tabella seguente descrive i valori <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> che consentono di regolare il comportamento del pool di connessioni.  
   
-|NOME|Predefinito|Descrizione|  
+|Name|Impostazione predefinita|Descrizione|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|Quando una connessione viene restituita al pool, l'ora di creazione viene confrontata con l'ora corrente e la connessione viene eliminata definitivamente se l'intervallo è superiore al valore in secondi della durata della connessione specificato da `Connection Lifetime`. Questa è utile nelle configurazioni cluster per applicare il bilanciamento del carico tra un server in esecuzione e un server appena portato online.<br /><br /> Un valore zero (0) imposta il timeout massimo delle connessioni in pool.|  
 |`Enlist`|'true'|Se l'impostazione è `true`, la funzione di pool inserisce automaticamente la connessione nel contesto della transazione corrente del thread di creazione, se è disponibile un contesto di transazione.|  

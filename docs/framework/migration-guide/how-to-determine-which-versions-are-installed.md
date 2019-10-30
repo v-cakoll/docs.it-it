@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: fd2558d854986d3dc541a9adf3c15abd553ce2ea
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956660"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039561"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: Determinare le versioni di .NET Framework installate
 
-Gli utenti possono [installare](https://docs.microsoft.com/dotnet/framework/install) ed eseguire nel computer più versioni di .NET Framework. Quando si sviluppa o si distribuisce l'app, potrebbe essere necessario conoscere quali versioni di .NET Framework sono installate nel computer dell'utente.
+Gli utenti possono [installare](../install/index.md) ed eseguire nel computer più versioni di .NET Framework. Quando si sviluppa o si distribuisce l'app, potrebbe essere necessario conoscere quali versioni di .NET Framework sono installate nel computer dell'utente.
 
 .NET Framework è costituito da due componenti principali, le cui versioni sono definite separatamente:
 
 - Un set di assembly, ovvero raccolte di tipi e risorse che forniscono la funzionalità per le app. .NET Framework e gli assembly condividono lo stesso numero di versione.
 
-- Common Language Runtime (CLR), che gestisce ed esegue il codice dell'app e che viene identificato dal relativo numero di versione (vedere [Versioni e dipendenze](versions-and-dependencies.md)).
+- Common Language Runtime (CLR), che gestisce ed esegue il codice dell'app CLR è identificato dal relativo numero di versione (vedere [versioni e dipendenze](versions-and-dependencies.md)).
 
 > [!NOTE]
 > Ogni nuova versione di .NET Framework conserva funzionalità dalle versioni precedenti e ne aggiunge nuove. È possibile caricare più versioni di .NET Framework in un singolo computer contemporaneamente, il che significa che si può installare .NET Framework senza dover disinstallare le versioni precedenti. In generale, non è necessario disinstallare alcuna versione precedente di .NET Framework, perché un'applicazione in uso potrebbe dipendere da una versione specifica e smettere di funzionare se quella versione viene rimossa.
@@ -34,7 +34,7 @@ Gli utenti possono [installare](https://docs.microsoft.com/dotnet/framework/inst
 > Esiste una differenza tra la versione di .NET Framework e la versione di CLR:
 >
 > - La versione di .NET Framework è basata sul set di assembly che costituiscono la libreria di classi .NET Framework. Ad esempio, le versioni di .NET Framework includono 4.5, 4.6.1 e 4.7.2.
->- La versione di CLR è basata sul runtime in cui vengono eseguite le applicazioni .NET Framework. In genere una singola versione di CLR supporta più versioni di .NET Framework. La versione di CLR 4.0.30319.*xxxxx*, ad esempio, supporta le versioni di .NET Framework da 4 a 4.5.2, in cui *xxxxx* è inferiore a 42000, e la versione di CLR 4.0.30319.42000 supporta le versioni di .NET Framework a partire da .NET Framework 4.6.
+> - La versione di CLR è basata sul runtime in cui vengono eseguite le applicazioni .NET Framework. In genere una singola versione di CLR supporta più versioni di .NET Framework. La versione di CLR 4.0.30319.*xxxxx*, ad esempio, supporta le versioni di .NET Framework da 4 a 4.5.2, in cui *xxxxx* è inferiore a 42000, e la versione di CLR 4.0.30319.42000 supporta le versioni di .NET Framework a partire da .NET Framework 4.6.
 >
 > Per altre informazioni sulle versioni, vedere [Versioni e dipendenze di .NET Framework](versions-and-dependencies.md).
 
@@ -53,7 +53,7 @@ Per ottenere un elenco delle versioni di CLR installate in un computer, usare un
 - [Usare lo strumento Clrver](#clr_a)
 - [Eseguire una query tramite codice nella classe Environment](#clr_b)
 
-Per informazioni sul rilevamento degli aggiornamenti installati per ogni versione di .NET Framework, vedere [Procedura: Determinare gli aggiornamenti di .NET Framework installati](how-to-determine-which-net-framework-updates-are-installed.md).
+Per informazioni sul rilevamento degli aggiornamenti installati per ogni versione della .NET Framework, vedere [procedura: determinare quali aggiornamenti di .NET Framework sono installati](how-to-determine-which-net-framework-updates-are-installed.md).
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>Trovare le versioni di .NET Framework più recenti (4.5 e successive)
 
@@ -65,14 +65,14 @@ Per informazioni sul rilevamento degli aggiornamenti installati per ogni version
 
      Per eseguire regedit, è necessario avere le credenziali amministrative.
 
-2. Nell'Editor del Registro di sistema aprire la seguente sottochiave: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. Se la sottochiave **Full** non è presente, .NET Framework 4.5 o versioni successive non è installato.
+2. Nell'editor del registro di sistema aprire la sottochiave seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. Se la sottochiave **Full** non è presente, .NET Framework 4.5 o versioni successive non è installato.
 
     > [!NOTE]
     > La cartella **NET Framework Setup** nel Registro di sistema *non* inizia con un punto.
 
 3. Verificare la presenza di una voce DWORD denominata **Release**. Se esiste, .NET Framework 4.5 o versioni successive è installato. Il valore è una chiave di rilascio che corrisponde a una particolare versione di .NET Framework. Nella figura seguente, ad esempio, il valore della voce **Release** è *378389*, ovvero la chiave di rilascio per .NET Framework 4.5.
 
-     ![Voce del Registro di sistema per .NET Framework 4.5](./media/clr-installdir.png "Voce del Registro di sistema per .NET Framework 4.5")
+     ![Voce del registro di sistema per la .NET Framework 4,5](./media/clr-installdir.png "Voce del registro di sistema per la .NET Framework 4,5")
 
 La tabella seguente elenca il valore della voce DWORD **Release** nei singoli sistemi operativi per .NET Framework 4.5 e versioni successive.
 
@@ -83,15 +83,15 @@ La tabella seguente elenca il valore della voce DWORD **Release** nei singoli si
 |Versione di .NET Framework|Valore DWORD di Release|
 |--------------------------------|-------------|
 |.NET Framework 4.5|Tutti i sistemi operativi Windows: 378389|
-|.NET Framework 4.5.1|In Windows 8.1 e Windows Server 2012 R2: 378675<br />In tutti gli altri sistemi operativi Windows: 378758|
+|.NET Framework 4.5.1|In Windows 8.1 e Windows Server 2012 R2:378675<br />In tutti gli altri sistemi operativi Windows: 378758|
 |.NET Framework 4.5.2|Tutti i sistemi operativi Windows: 379893|
-|.NET Framework 4.6|In Windows 10: 393295<br />In tutti gli altri sistemi operativi Windows: 393297|
+|.NET Framework 4.6|In Windows 10:393295<br />In tutti gli altri sistemi operativi Windows: 393297|
 |.NET Framework 4.6.1|Nei sistemi Windows 10 con aggiornamento di novembre: 394254<br />In tutti gli altri sistemi operativi Windows (incluso Windows 10): 394271|
 |.NET Framework 4.6.2|Nell'Aggiornamento dell'anniversario di Windows 10 e in Windows Server 2016: 394802<br />In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 394806|
 |.NET Framework 4.7|In Windows 10 Creators Update: 460798<br />In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 460805|
-|.NET Framework 4.7.1|In Windows 10 Fall Creators Update e Windows Server versione 1709: 461308<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 461310|
-|.NET Framework 4.7.2|In Windows 10 aggiornamento di aprile 2018 e Windows Server versione 1803: 461808<br/>In tutti i sistemi operativi diversi dall'Aggiornamento di Windows 10 (aprile 2018) e da Windows Server, versione 1803: 461814|
-|.NET Framework 4.8|Aggiornamento di Windows 10 di maggio 2019: 528040<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 528049|
+|.NET Framework 4.7.1|In Windows 10 Fall Creators Update e Windows Server versione 1709:461308<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 461310|
+|.NET Framework 4.7.2|In Windows 10 aprile 2018 aggiornamento e Windows Server, versione 1803:461808<br/>In tutti i sistemi operativi Windows diversi da Windows 10 aprile 2018 aggiornamento e Windows Server, versione 1803:461814|
+|.NET Framework 4.8|In Windows 10 maggio 2019 aggiornamento e Windows 10 novembre 2019 aggiornamento: 528040<br/>In tutti gli altri sistemi operativi Windows (inclusi altri sistemi operativi Windows 10): 528049|
 
 È possibile usare questi valori come indicato di seguito:
 
@@ -146,7 +146,7 @@ Per cercare una versione minima richiesta di .NET Framework diversa, sostituire 
 
     Per eseguire regedit, è necessario avere le credenziali amministrative.
 
-2. Nell'Editor del Registro di sistema aprire la seguente sottochiave: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**:
+2. Nell'editor del registro di sistema aprire la sottochiave seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**:
 
     - Per le versioni di .NET Framework da 1.1 a 3.5, ogni versione installata è elencata come sottochiave nella sottochiave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**. Ad esempio, **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5**. Il numero di versione è archiviato come valore nella voce **Version** della sottochiave della versione.
 
@@ -157,7 +157,7 @@ Per cercare una versione minima richiesta di .NET Framework diversa, sostituire 
 
     La figura seguente illustra la sottochiave e la relativa voce **Version** per .NET Framework 3.5.
 
-    ![Voce del Registro di sistema per .NET Framework 3.5.](./media/net-4-and-earlier.png ".NET framework 3.5 e versioni precedenti")
+    ![Voce del registro di sistema per la .NET Framework 3,5.](./media/net-4-and-earlier.png ".NET Framework 3,5 e versioni precedenti")
 
 <a name="net_c"></a>
 
@@ -178,7 +178,7 @@ L'esempio seguente illustra come trovare le versioni .NET Framework da 1 a 4 ins
 
 Usare lo [strumento della versione CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) per determinare le versioni di CLR installate in un computer:
 
-- Da un [Prompt dei comandi per gli sviluppatori per Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) immettere `clrver`.
+- Da un [Prompt dei comandi per gli sviluppatori per Visual Studio](../tools/developer-command-prompt-for-vs.md) immettere `clrver`.
 
     Esempio di output:
 
@@ -216,6 +216,6 @@ L'esempio seguente usa la proprietà <xref:System.Environment.Version%2A?display
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Determinare gli aggiornamenti di .NET Framework installati](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Procedura: determinare gli aggiornamenti di .NET Framework installati](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Installare .NET Framework per sviluppatori](../install/guide-for-developers.md)
 - [Versioni e dipendenze di .NET Framework](versions-and-dependencies.md)

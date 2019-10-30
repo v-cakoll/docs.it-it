@@ -2,17 +2,18 @@
 title: Struct - Guida a C#
 description: Informazioni sui tipi di struct e su come crearli
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a7cdd84677cb84038aae89da9774c6e365275963
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396118"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039734"
 ---
-# <a name="structs"></a>Struct
+# <a name="structs"></a>Strutture
 
-Uno *struct* è un tipo valore. Quando viene creato uno struct, la variabile a cui è assegnato lo struct contiene i dati effettivi dello struct. Quando viene assegnato a una nuova variabile, il tipo struct viene copiato. La nuova variabile e quella originale contengono quindi due copie separate degli stessi dati. Eventuali modifiche apportate a una copia non influiscono sull'altra copia.
+Uno *struct* è un tipo valore. Quando viene creato un tipo struct, la variabile a cui è assegnato questo tipo ne contiene i dati effettivi. Quando viene assegnato a una nuova variabile, il tipo struct viene copiato. La nuova variabile e quella originale contengono quindi due copie separate degli stessi dati. Eventuali modifiche apportate a una copia non influiscono sull'altra copia.
 
 Le variabili dei tipi valore contengono direttamente i rispettivi valori, ovvero la memoria viene allocata inline nel contesto in cui è dichiarata la variabile. Non esiste un'allocazione heap o un overhead di Garbage Collection separato per le variabili dei tipi valore.  
   

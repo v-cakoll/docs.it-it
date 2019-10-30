@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 21bbf8e1253641317750b911e052ee5ff0a0d063
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319086"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036164"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operatore (riferimento null) (C# riferimento)
 
-Disponibile in C# 8,0 e versioni successive, il suffisso unario `!` operatore è l'operatore che perdona i valori null. In un [contesto di annotazione Nullable](../../nullable-references.md#nullable-annotation-context)abilitato è possibile usare l'operatore di perdonazione null per dichiarare che l'espressione `x` di un tipo di riferimento non è null: `x!`. Il prefisso unario `!` operatore è l' [operatore di negazione logica](boolean-logical-operators.md#logical-negation-operator-).
+Disponibile in C# 8,0 e versioni successive, il suffisso unario `!` operatore è l'operatore che perdona i valori null. In un [contesto di annotazione Nullable](../../nullable-references.md#nullable-annotation-context)abilitato, si usa l'operatore che perdona i valori null per dichiarare che l'espressione `x` di un tipo di riferimento non è `null`: `x!`. Il prefisso unario `!` operatore è l' [operatore di negazione logica](boolean-logical-operators.md#logical-negation-operator-).
 
 L'operatore che perdona i valori null non ha alcun effetto in fase di esecuzione. Influisce solo sull'analisi del flusso statico del compilatore modificando lo stato null dell'espressione. In fase di esecuzione, Expression `x!` restituisce il risultato dell'espressione sottostante `x`.
 
@@ -31,7 +31,7 @@ Usando il [Framework di test di MSTest](../../../core/testing/unit-testing-with-
 
 [!code-csharp[Person test](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
 
-Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice precedente: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Con l'uso dell'operatore che perdona i valori null, il compilatore può sapere che il passaggio di `null` è previsto e non deve essere avvisato.
+Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice precedente: `Warning CS8625: Cannot convert null literal to non-nullable reference type`. Utilizzando l'operatore di indulgenza null, si informa il compilatore che il passaggio di `null` è previsto e non deve essere avvisato.
 
 È anche possibile usare l'operatore di indulgenza null quando si è certi che un'espressione non può essere `null` ma il compilatore non riesce a conoscerlo. Nell'esempio seguente, se il metodo `IsValid` restituisce `true`, il relativo argomento non viene `null` ed è possibile dereferenziarlo in modo sicuro:
 
@@ -39,11 +39,11 @@ Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente pe
 
 Senza l'operatore di indulgenza null, il compilatore genera l'avviso seguente per il codice di `p.Name`: `Warning CS8602: Dereference of a possibly null reference`.
 
-Se è possibile modificare il metodo `IsValid`, è possibile usare l'attributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) per indicare al compilatore che non è possibile `null` un argomento del metodo `IsValid` quando il metodo restituisce `true`:
+Se è possibile modificare il metodo `IsValid`, è possibile usare l'attributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) per informare il compilatore che non è possibile `null` un argomento del metodo `IsValid` quando il metodo restituisce `true`:
 
 [!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
 
-Nell'esempio precedente non è necessario usare l'operatore che perdona i valori null perché il compilatore dispone di informazioni sufficienti per scoprire che non è possibile `null` `p` all'interno dell'istruzione `if`. Per ulteriori informazioni sugli attributi che consentono di specificare informazioni aggiuntive sullo stato null di una variabile, vedere [aggiornare le API con attributi per definire le aspettative null](../../nullable-attributes.md).
+Nell'esempio precedente non è necessario usare l'operatore che perdona i valori null perché il compilatore dispone di informazioni sufficienti per scoprire che non è possibile `null` `p` all'interno dell'istruzione `if`. Per ulteriori informazioni sugli attributi che consentono di fornire informazioni aggiuntive sullo stato null di una variabile, vedere [aggiornare le API con attributi per definire le aspettative null](../../nullable-attributes.md).
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

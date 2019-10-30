@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002698"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039647"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -17,7 +17,7 @@ Questo articolo include la cronologia di ogni versione principale del linguaggio
 > [!IMPORTANT]
 > Per alcune funzionalità, il linguaggio C# si basa sui tipi e metodi inclusi in quella che la specifica C# definisce la *libreria standard*. La piattaforma .NET rende disponibili questi tipi e metodi in numerosi pacchetti. Un esempio è l'elaborazione delle eccezioni. Ogni istruzione o espressione `throw` viene controllata per assicurarsi che l'oggetto generato derivi da <xref:System.Exception>. Analogamente, ogni istruzione `catch` viene controllata per verificare che il tipo intercettato derivi da <xref:System.Exception>. In ogni versione potrebbero essere aggiunti nuovi requisiti. Per usare le funzionalità del linguaggio più recenti in ambienti meno recenti, potrebbe essere necessario installare librerie specifiche. Queste dipendenze sono documentate nella pagina per ogni versione specifica. Le informazioni sulle [relazioni tra linguaggio e libreria](relationships-between-language-and-library.md) possono essere utili per comprendere meglio questa dipendenza.
 
-Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
+Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione a punti, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
 
 - [C# 7.3](csharp-7-3.md):
   - C# 7.3 è disponibile a partire da [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
@@ -124,7 +124,7 @@ C#la versione 5,0, rilasciata con Visual Studio 2012, era una versione focalizza
 
 ### <a name="see-also"></a>Vedere anche
 
-- [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Attributi informativi sul chiamante in C# 5.0)
+- [Progetto di codice: Attributi informativi sul chiamante in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Gli attributi informativi sul chiamante consentono di recuperare facilmente informazioni sul contesto di esecuzione senza dover ricorrere a una grande quantità di codice di reflection boilerplate. Questi attributi hanno molte applicazioni nelle attività di diagnostica e di registrazione.
 
@@ -132,7 +132,7 @@ Ma le vere stelle di questa versione sono `async` e `await`. Con il rilascio di 
 
 ## <a name="c-version-60"></a>C# versione 6.0
 
-Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un linguaggio orientato agli oggetti. Con la versione 6,0, rilasciata con Visual Studio 2013, è possibile evitare di eseguire una funzione killer dominante e rilasciare invece molte funzionalità più C# piccole che hanno reso la programmazione più produttiva. Eccone alcune:
+Le versioni 3.0 e 5.0 hanno aggiunto a C# nuove funzionalità eccezionali per un linguaggio orientato agli oggetti. Con la versione 6,0, rilasciata con Visual Studio 2015, è possibile evitare di eseguire una funzionalità killer dominante e rilasciare invece molte funzionalità più C# piccole che rendevano la programmazione più produttiva. Eccone alcune:
 
 - [Importazioni statiche](./csharp-6.md#using-static)
 - [Filtri eccezioni](./csharp-6.md#exception-filters)

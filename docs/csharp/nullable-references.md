@@ -1,13 +1,14 @@
 ---
 title: Tipi riferimento nullable
 description: Questo articolo fornisce una panoramica dei tipi di riferimento Nullable, aggiunto C# in 8,0. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846753"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039775"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -66,6 +67,12 @@ Il contesto di annotazione nullable e il contesto di avviso nullable possono ess
   - Le variabili di un tipo di riferimento, ad esempio una stringa, non ammettono valori null. Tutti gli avvisi relativi al supporto dei valori Null sono disabilitati.
 - `disable`: il contesto dell'annotazione Nullable è **disabilitato**. Il contesto dell'avviso nullable è **disabled**.
   - Le variabili di un tipo riferimento sono indipendenti dai valori, come nelle versioni precedenti di C#. Tutti gli avvisi relativi al supporto dei valori Null sono disabilitati.
+
+**Esempio**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 È anche possibile usare le direttive per impostare questi stessi contesti ovunque nel progetto:
 

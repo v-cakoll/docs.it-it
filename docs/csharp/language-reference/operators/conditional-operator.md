@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036300"
 ---
 # <a name="-operator-c-reference"></a>Operatore ?: (Riferimenti per C#)
 
-L'operatore condizionale `?:`, comunemente noto come operatore condizionale ternario, valuta un'espressione booleana e restituisce il risultato della valutazione di una di due espressioni, a seconda che l'espressione booleana restituisca `true` o `false`. A partire da C# 7.2, l'[espressione condizionale ref](#conditional-ref-expression) restituisce il riferimento al risultato di una delle due espressioni.
+L'operatore condizionale `?:`, noto anche come operatore condizionale ternario, valuta un'espressione booleana e restituisce il risultato di una delle due espressioni, a seconda che l'espressione booleana restituisca `true` o `false`. A partire da C# 7.2, l'[espressione condizionale ref](#conditional-ref-expression) restituisce il riferimento al risultato di una delle due espressioni.
 
 La sintassi dell'operatore condizionale è la seguente:
 
@@ -72,21 +72,21 @@ L'esempio seguente illustra l'uso dell'espressione condizionale ref:
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-Per altre informazioni, vedere la [nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
-
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Operatore condizionale e istruzione `if..else`
 
-L'uso dell'operatore condizionale su un'istruzione [if-else](../keywords/if-else.md) potrebbe generare codice più conciso nel casi in cui occorre calcolare un valore in modo condizionale. L'esempio seguente illustra due modi di classificare un intero come negativo o non negativo:
+L'uso dell'operatore condizionale anziché di un'istruzione [if-else](../keywords/if-else.md) potrebbe produrre codice più conciso nei casi in cui è necessario calcolare un valore in modo condizionale. L'esempio seguente illustra due modi di classificare un intero come negativo o non negativo:
 
 [!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-Non è possibile eseguire l'overload dell'operatore condizionale.
+Un tipo definito dall'utente non può eseguire l'overload dell'operatore condizionale.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
 Per altre informazioni, vedere la sezione [Operatore condizionale](~/_csharplang/spec/expressions.md#conditional-operator) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
+
+Per ulteriori informazioni sull'espressione di riferimento condizionale, vedere la [Nota relativa alla proposta di funzionalità](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -94,5 +94,5 @@ Per altre informazioni, vedere la sezione [Operatore condizionale](~/_csharplang
 - [Operatori C#](index.md)
 - [Istruzione if-else](../keywords/if-else.md)
 - [Operatori ?. e ?[]](member-access-operators.md#null-conditional-operators--and-)
-- [Operatore ??](null-coalescing-operator.md)
+- [?? e? = operatori](null-coalescing-operator.md)
 - [ref (parola chiave)](../keywords/ref.md)

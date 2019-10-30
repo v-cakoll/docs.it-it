@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType>Elemento (.NET Native)
+title: Elemento <ImpliesType> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38bdfc974a6942596e9778cabb87b275f1e51db8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049669"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039529"
 ---
-# <a name="impliestype-element-net-native"></a>\<Elemento > ImpliesType (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<elemento ImpliesType > (.NET Native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,7 +35,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ### <a name="attributes"></a>Attributi  
   
-|Attributo|Tipo di attributo|DESCRIZIONE|  
+|Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
@@ -51,7 +51,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Value|DESCRIZIONE|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*type_name*|Nome del tipo. Se il tipo rappresentato da questo elemento `<ImpliesType>` si trova nello stesso spazio dei nomi dell'elemento `<Type>` contenitore, *type_name* può includere il nome del tipo senza lo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo.|  
   
@@ -62,7 +62,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- Nessuno.  
+ Nessuna.  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -99,13 +99,13 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 </Type>  
 ```  
   
- L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Si supponga, ad esempio, un `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` metodo generico a cui una determinata libreria accederà in modo dinamico <xref:System.Collections.Generic.List%601> insieme <xref:System.Array> ai tipi e associati. Questa operazione può essere espressa nel seguente modo:  
+ L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Si supponga, ad esempio, che un metodo generico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` che una determinata libreria possa accedere dinamicamente insieme ai tipi di <xref:System.Collections.Generic.List%601> e <xref:System.Array> associati. Questa operazione può essere espressa nel seguente modo:  
   
 ```xml  
 <Type Name="MyType">  
     <Method Name="MakeEnumerable{T}" Signature="(System.String, T)" Dynamic="Included">  
         <ImpliesType Name="T[]" Dynamic="Public" />  
-        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public">  
+        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public" />  
     </Method>  
 </Type>  
 ```  

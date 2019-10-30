@@ -2,13 +2,14 @@
 title: Generare e usare flussi asincroni
 description: Questa esercitazione avanzata illustra gli scenari in cui la generazione e l'uso di flussi asincroni rappresenta un modo più naturale di lavorare con sequenze di dati che potrebbero essere generate in modo asincrono.
 ms.date: 02/10/2019
+ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579212"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039218"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Esercitazione: generare e utilizzare flussi asincroni utilizzando C# 8,0 e .net core 3,0
 

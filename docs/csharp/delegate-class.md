@@ -2,13 +2,14 @@
 title: System.Delegate e la parola chiave `delegate`
 description: Informazioni sulle classi di .NET Framework che supportano i delegati e sul mapping tra queste classi e la parola chiave "delegate".
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465776"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037443"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e la parola chiave `delegate`
 
@@ -67,7 +68,7 @@ int result = comparator(left, right);
 Nella riga precedente il codice *richiama* il metodo associato al delegato.
 La variabile viene trattata come nome di metodo e per richiamarla viene usata usando la sintassi di chiamata di metodo normale.
 
-Tale riga di codice parte da un presupposto non sicuro: non esiste alcuna garanzia che una destinazione sia stata aggiunta al delegato. Se non sono state associate destinazioni, la riga precedente causerebbe la generazione di `NullReferenceException`. Gli idiomi usati per risolvere questo problema sono più complessi rispetto a un semplice controllo null e sono trattati più avanti in questa [serie](delegates-patterns.md).
+Quella riga di codice presuppone che non esista alcuna garanzia che una destinazione sia stata aggiunta al delegato. Se non sono state associate destinazioni, la riga precedente causerebbe la generazione di `NullReferenceException`. Gli idiomi usati per risolvere questo problema sono più complessi rispetto a un semplice controllo null e sono trattati più avanti in questa [serie](delegates-patterns.md).
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Assegnare, aggiungere e rimuovere destinazioni di chiamata
 
@@ -132,4 +133,4 @@ I metodi che si usano più di frequente con i delegati sono `Invoke()` e `BeginI
 
 Dopo aver esaminato la sintassi del linguaggio e le classi che supportano i delegati, vediamo in che modo vengono usati, creati e richiamati i delegati fortemente tipizzati.
 
-[Successivo](delegates-strongly-typed.md)
+[avanti](delegates-strongly-typed.md)

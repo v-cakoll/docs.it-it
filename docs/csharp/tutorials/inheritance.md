@@ -2,21 +2,21 @@
 title: Ereditarietà in C#
 description: Informazioni su come usare l'ereditarietà nelle applicazioni e nelle librerie C#.
 author: rpetrusha
-ms.author: ronpet
 ms.date: 07/05/2018
+ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f09eaaf397d148955a151d178566f2b5a0d935fd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850996"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039232"
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
 Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una caratteristica dei linguaggi di programmazione orientati a oggetti che consente di definire una classe di base con funzionalità specifiche (relative a dati e comportamento) e classi derivate che ereditano o eseguono l'override di tali funzionalità.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 In questa esercitazione si presuppone che sia stato installato il .NET Core SDK. Visitare la pagina di [download di .NET Core](https://dotnet.microsoft.com/download) per scaricarlo. È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per queste regole, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia." Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
+L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categorie di tipi (struct, delegati ed enumerazioni) non supportano l'ereditarietà. Per queste regole, se si prova a compilare il codice come nell'esempio seguente, verrà generato l'errore del compilatore CS0527: "Il tipo 'ValueType' nell'elenco delle interfacce non è un'interfaccia". Il messaggio di errore indica che, sebbene sia possibile definire le interfacce implementate da un tipo struct, l'ereditarietà non è supportata.
 
 ```csharp
 using System;
@@ -166,7 +166,7 @@ In questo caso è opportuno non fare affidamento sull'ereditarietà per rapprese
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Progettazione della classe di base e delle classi derivate
 
-Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione si definirà una classe di base, `Publication`, che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un diario, un articolo e così via. Si definirà anche una classe `Book` che deriva da `Publication`. L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
+Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione si definirà una classe di base, `Publication`, che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un journal, un articolo e così via. Si definirà anche una classe `Book` che deriva da `Publication`. L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>Classe di base Publication
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512350"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036155"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatori correlati ai puntatori (Riferimento C#)
 
@@ -48,7 +48,7 @@ L'operatore `&` unario restituisce l'indirizzo del relativo operando:
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-L'operando dell'operatore `&` deve essere una variabile fissa. Le variabili *fisse* sono variabili che si trovano in posizioni di archiviazione non interessate dall'operazione di [Garbage Collector](../../../standard/garbage-collection/index.md). Nell'esempio precedente la variabile locale `number` è una variabile fissa perché si trova nello stack. Le variabili che si trovano in posizioni di archiviazione che possono essere influenzate da Garbage Collector (ad esempio rilocate) sono chiamate variabili *mobili*. I campi degli oggetti e gli elementi delle matrici sono esempi di variabili mobili. È possibile ottenere l'indirizzo di una variabile mobile se si "fissa" o si "blocca" la variabile con l'istruzione [fixed](../keywords/fixed-statement.md). L'indirizzo ottenuto è valido solo per la durata del blocco di istruzioni `fixed`. L'esempio seguente mostra come usare l'istruzione `fixed` e l'operatore `&`:
+L'operando dell'operatore `&` deve essere una variabile fissa. Le variabili *fisse* sono variabili che si trovano in posizioni di archiviazione non interessate dall'operazione di [Garbage Collector](../../../standard/garbage-collection/index.md). Nell'esempio precedente la variabile locale `number` è una variabile fissa perché si trova nello stack. Le variabili che si trovano in posizioni di archiviazione che possono essere influenzate da Garbage Collector (ad esempio rilocate) sono chiamate variabili *mobili*. I campi degli oggetti e gli elementi delle matrici sono esempi di variabili mobili. È possibile ottenere l'indirizzo di una variabile mobile se si "corregge", o "pin", con un' [istruzione`fixed`](../keywords/fixed-statement.md). L'indirizzo ottenuto è valido solo all'interno del blocco di un'istruzione `fixed`. Nell'esempio seguente viene illustrato come utilizzare un'istruzione `fixed` e l'operatore `&`:
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ L'operatore `*` binario calcola il [prodotto](arithmetic-operators.md#multiplica
 
 ## <a name="pointer-member-access-operator--"></a>Operatore -> (accesso ai membri del puntatore)
 
-L'operatore `->` unisce il [riferimento indiretto al puntatore](#pointer-indirection-operator-) e l'[accesso ai membri](member-access-operators.md#member-access-operator-). Ovvero, se `x` è un puntatore di tipo `T*` e `y` è un membro accessibile di `T`, un'espressione nella forma
+L'operatore `->` unisce il [riferimento indiretto al puntatore](#pointer-indirection-operator-) e l'[accesso ai membri](member-access-operators.md#member-access-operator-). Ovvero, se `x` è un puntatore di tipo `T*` e `y` è un membro accessibile di tipo `T`, un'espressione nel formato
 
 ```csharp
 x->y
@@ -160,13 +160,13 @@ Nell'elenco seguente gli operatori correlati ai puntatori sono ordinati dalla pr
 
 - Operatori di incremento `x++` e decremento `x--` suffisso e operatori `->` e `[]`
 - Operatori di incremento `++x` e decremento `--x` prefisso e operatori `&` e `*`
-- Operatori di addizione `+` e `-`
+- Operatori additivi `+` e `-`
 - Operatori di confronto `<`, `>`, `<=` e `>=`
 - Operatori di uguaglianza `==` e `!=`
 
 Usare le parentesi, `()`, per cambiare l'ordine di valutazione imposto dalla precedenza tra gli operatori.
 
-Per l'elenco completo degli operatori C# ordinati in base al livello di precedenza, vedere [Operatori C#](index.md).
+Per l'elenco completo degli C# operatori ordinati in base al livello di precedenza, vedere la sezione [precedenza](index.md#operator-precedence) degli [ C# operatori](index.md) dell'articolo operatori.
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 

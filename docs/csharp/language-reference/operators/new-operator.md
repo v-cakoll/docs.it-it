@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 3d64c4805abe38c80301748ffa6b35fc87563b60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: c21132a6622ce697fe3c52a461a33f548e0c8f31
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403969"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036382"
 ---
 # <a name="new-operator-c-reference"></a>Operatore new (riferimenti per C#)
 
@@ -50,7 +50,7 @@ Per creare un'istanza di un [tipo anonimo](../../programming-guide/classes-and-s
 
 Non è necessario eliminare definitivamente istanze di tipi create in precedenza. Le istanze dei tipi riferimento e valore vengono eliminate definitivamente in modo automatico. Le istanze dei tipi valore vengono eliminate definitivamente non appena viene eliminato definitivamente il contesto che le contiene. Le istanze dei tipi riferimento vengono eliminate definitivamente dal [Garbage Collector](../../../standard/garbage-collection/index.md) in un momento non specificato dopo che è stato rimosso l'ultimo riferimento ad esse.
 
-Per i tipi che contengono risorse non gestite, ad esempio un handle di file, è consigliabile adottare la pulitura deterministica per garantire che le risorse contenute vengano rilasciate nel più breve tempo possibile. Per altre informazioni, vedere le informazioni di riferimento dell'API <xref:System.IDisposable?displayProperty=nameWithType> e l'articolo sull'[ istruzione using ](../keywords/using-statement.md).
+Per le istanze di tipo che contengono risorse non gestite, ad esempio un handle di file, è consigliabile usare la pulizia deterministica per assicurarsi che le risorse che contengono siano rilasciate il prima possibile. Per altre informazioni, vedere le informazioni di riferimento dell'API <xref:System.IDisposable?displayProperty=nameWithType> e l'articolo sull'[ istruzione using ](../keywords/using-statement.md).
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 

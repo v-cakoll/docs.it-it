@@ -6,18 +6,18 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042268"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040538"
 ---
 # <a name="ui-automation-overview"></a>Cenni preliminari su automazione interfaccia utente
 > [!NOTE]
-> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]vedere [API di automazione di Windows: Automazione](https://go.microsoft.com/fwlink/?LinkID=156746)interfaccia utente.  
+> Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è il nuovo framework di accessibilità per [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], disponibile su tutti i sistemi operativi che supportano [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è il nuovo Framework di accessibilità per Microsoft Windows, disponibile in tutti i sistemi operativi che supportano [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce l'accesso a livello di codice alla maggior parte degli elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] sul desktop, consentendo a prodotti di assistive technology, quali le utilità per la lettura dello schermo, di fornire informazioni sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] agli utenti finali e di modificare l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] con mezzi diversi dall'input standard. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] consente inoltre l'interazione degli script di test automatizzati con l' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -34,23 +34,23 @@ Automazione interfaccia utente offre funzionalità complete nei sistemi operativ
 ## <a name="providers-and-clients"></a>Provider e client  
  In[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono presenti quattro componenti principali, come illustrato nella tabella riportata di seguito.  
   
-|Componente|DESCRIZIONE|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
 |API provider (UIAutomationProvider. dll e UIAutomationTypes. dll)|Un insieme di definizioni dell'interfaccia implementate dai provider di automazione interfaccia utente, oggetti che forniscono informazioni sugli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e rispondono a input a livello di codice.|  
 |API client (UIAutomationClient.dll e UIAutomationTypes.dll)|Un insieme di tipi per il codice gestito che consente alle applicazioni client di automazione interfaccia utente di ottenere informazioni sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e inviare input ai controlli.|  
 |UiAutomationCore.dll|Il codice sottostante (talvolta denominato core di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ) che gestisce la comunicazione tra provider e client.|  
-|UIAutomationClientsideProviders.dll|Un insieme di provider di automazione interfaccia utente per i controlli standard legacy (i controlli [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] dispongono di supporto nativo per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]). Questo supporto è automaticamente disponibile per le applicazioni client.|  
+|UIAutomationClientsideProviders.dll|Un insieme di provider di automazione interfaccia utente per i controlli standard legacy i controlli [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hanno il supporto nativo per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Questo supporto è automaticamente disponibile per le applicazioni client.|  
   
  Per uno sviluppatore software, esistono due modalità d'uso di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: creare supporto per i controlli personalizzati (usando l'API del provider) e creare applicazioni che usano il core di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per comunicare con gli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (usando l'API client). In base allo stato attivo, è necessario fare riferimento a parti diverse della documentazione. Per altre informazioni sui concetti e per istruzioni pratiche sulle procedure, vedere le sezioni seguenti.  
   
-|`Section`|Argomento|Destinatari|  
+|Sezione|Argomento|Destinatari|  
 |-------------|--------------------|--------------|  
 |[Nozioni fondamentali sull'automazione interfaccia utente](index.md) (questa sezione)|Panoramiche generiche dei concetti.|Tutti.|  
 |[Provider di automazione interfaccia utente per il codice gestito](ui-automation-providers-for-managed-code.md)|Panoramiche e argomenti sulle procedure per consentire l'uso dell'API del provider.|Sviluppatori dei controlli.|  
 |[Client di automazione interfaccia utente per il codice gestito](ui-automation-clients-for-managed-code.md)|Panoramiche  e argomenti sulle procedure per l'uso dell'API client.|Sviluppatori di applicazioni client.|  
 |[Pattern di controllo per automazione interfaccia utente](ui-automation-control-patterns.md)|Informazioni sulla modalità di implementazione dei pattern di controllo da parte dei provider e sulle funzionalità disponibili ai client.|Tutti.|  
 |[Pattern di testo per l'automazione interfaccia utente](ui-automation-text-pattern.md)|Informazioni sulla modalità di implementazione del pattern di controllo Text da parte dei provider e sulle funzionalità disponibili ai client.|Tutti.|  
-|[UI Automation Control Types](ui-automation-control-types.md)|Informazioni sulle proprietà e sui pattern di controllo supportati da diversi tipi di controllo.|Tutti.|  
+|[Tipi di controllo per l'automazione interfaccia utente](ui-automation-control-types.md)|Informazioni sulle proprietà e sui pattern di controllo supportati da diversi tipi di controllo.|Tutti.|  
   
  Nella tabella riportata di seguito vengono elencati gli spazi dei nomi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , le DLL che li contengono e i destinatari che le usano.  
   

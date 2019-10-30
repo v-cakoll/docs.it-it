@@ -3,14 +3,15 @@ title: Programmazione asincrona - C#
 description: Informazioni sul modello di programmazione asincrona a livello del linguaggio C# fornito da .NET Core.
 author: cartermp
 ms.date: 06/20/2016
+ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 246046fb5ac9b0c03df7df71ef426dc2ac6f0617
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168806"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037678"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 

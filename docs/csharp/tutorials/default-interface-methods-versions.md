@@ -2,15 +2,16 @@
 title: Aggiornare in modo sicuro le interfacce usando i metodi di interfaccia predefiniti inC#
 description: Questa esercitazione avanzata esplora come sia possibile aggiungere in modo sicuro nuove funzionalità alle definizioni di interfaccia esistenti senza interrompere tutte le classi e gli struct che implementano tale interfaccia.
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276001"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039243"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Esercitazione: Aggiornare le interfacce con i metodi di C# interfaccia predefiniti in 8,0
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Esercitazione: aggiornare le interfacce con i metodi di C# interfaccia predefiniti in 8,0
 
 A partire da C# 8.0 su .NET Core 3.0 è possibile definire un'implementazione quando si dichiara un membro di un'interfaccia. Lo scenario più comune consiste nell'aggiunta sicura di membri a un'interfaccia già rilasciata e usata da innumerevoli client.
 
@@ -22,7 +23,7 @@ In questa esercitazione si imparerà a:
 > * Creare implementazioni con parametri per una maggiore flessibilità.
 > * Abilitare gli implementatori per fornire un'implementazione più specifica sotto forma di override.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8,0 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
@@ -40,7 +41,7 @@ Da queste interfacce il team potrebbe realizzare una raccolta per consentire agl
 
 Ora è il momento di aggiornare la raccolta per la versione successiva. Una delle funzionalità richieste è la definizione di uno sconto fedeltà per i clienti con molti ordini. Questo nuovo sconto fedeltà viene applicato ogni volta che un cliente effettua un ordine. Lo sconto specifico è una proprietà di ogni singolo cliente. Ogni implementazione di `ICustomer` può impostare regole diverse per lo sconto fedeltà. 
 
-Il modo più naturale per aggiungere questa funzionalità consiste nell'ottimizzare l'interfaccia `ICustomer` con un metodo per applicare qualsiasi sconto fedeltà. Questo suggerimento di progettazione genera preoccupazione tra gli sviluppatori esperti perché si ritiene che, una volta rilasciate, le interfacce non siano più modificabili a meno di generare errori. In C# 8.0 sono state aggiunte *implementazioni di interfaccia predefinite* per l'aggiornamento delle interfacce. Gli autori della raccolta possono aggiungere nuovi membri all'interfaccia a cui applicare un'implementazione predefinita.
+Il modo più naturale per aggiungere questa funzionalità consiste nell'ottimizzare l'interfaccia `ICustomer` con un metodo per applicare qualsiasi sconto fedeltà. Questo suggerimento di progettazione ha causato problemi tra gli sviluppatori esperti: "le interfacce non sono modificabili dopo il rilascio. a meno di generare errori. In C# 8.0 sono state aggiunte *implementazioni di interfaccia predefinite* per l'aggiornamento delle interfacce. Gli autori della raccolta possono aggiungere nuovi membri all'interfaccia a cui applicare un'implementazione predefinita.
 
 Le implementazioni di interfaccia predefinite consentono agli sviluppatori di aggiornare un'interfaccia, ma possono comunque essere sottoposte a override da qualsiasi implementatore. Gli utenti della raccolta possono accettare l'implementazione predefinita come modifica che non causa interruzioni. Se le regole business sono diverse, possono eseguire l'override.
 

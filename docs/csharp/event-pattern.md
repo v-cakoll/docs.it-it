@@ -2,13 +2,14 @@
 title: Schemi di eventi .NET standard
 description: Informazioni sugli schemi di eventi .NET standard e su come creare origini eventi standard e sottoscrivere ed elaborare gli eventi standard nel codice.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062955"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037175"
 ---
 # <a name="standard-net-event-patterns"></a>Schemi di eventi .NET standard
 
@@ -30,7 +31,7 @@ Il tipo restituito è void. Gli eventi sono basati su delegati e sono delegati m
 
 Gli argomenti sono due: mittente e argomenti evento. Il tipo di `sender` della fase di compilazione è `System.Object`, anche se si conosce probabilmente un tipo più derivato che va sempre bene. Per convenzione si usa `object`.
 
-Il secondo argomento era in genere un tipo derivato da `System.EventArgs`. Si vedrà nella [sezione successiva](modern-events.md) che questa convenzione non è più applicata. Se il tipo di evento non richiede argomenti aggiuntivi, è necessario comunque fornire entrambi gli argomenti.
+Il secondo argomento era in genere un tipo derivato da `System.EventArgs`. Nella [sezione successiva](modern-events.md) si vedrà che questa convenzione non viene più applicata. Se il tipo di evento non necessita di argomenti aggiuntivi, saranno comunque disponibili entrambi gli argomenti.
 È previsto un valore speciale, `EventArgs.Empty`, che si deve usare per indicare che l'evento non contiene informazioni aggiuntive.
 
 Creare ora una classe in cui sono elencati i file di una directory o di una delle sue sottodirectory che seguono uno schema. Questo componente genera un evento per ogni file individuato che corrisponde allo schema.

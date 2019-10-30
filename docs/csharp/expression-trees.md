@@ -2,17 +2,18 @@
 title: Alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni in .NET Core e su come usarli per rappresentare il codice sotto forma di strutture che è possibile esaminare, modificare ed eseguire.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096615"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036327"
 ---
 # <a name="expression-trees"></a>Alberi delle espressioni
 
-Se si è usato LINQ, si ha esperienza con una ricca libreria in cui i tipi `Func` fanno parte del set di API. Se non si ha familiarità con LINQ, è consigliabile leggere prima l'[esercitazione su LINQ](linq/index.md) e l'articolo sulle [espressioni lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md). Gli *alberi delle espressioni* offrono maggiore interazione con gli argomenti che sono funzioni.
+Se si è usato LINQ, si ha esperienza con una ricca libreria in cui i tipi `Func` fanno parte del set di API. Se non si ha familiarità con LINQ, è consigliabile leggere [l'esercitazione su LINQ](linq/index.md) e l'articolo sulle [espressioni lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) prima di questo. Gli *alberi delle espressioni* forniscono interazioni più complete con gli argomenti che sono funzioni.
 
 Scrivere gli argomenti della funzione, in genere usando le espressioni lambda, quando si creano query LINQ. In una tipica query LINQ, tali argomenti delle funzioni vengono trasformati in un delegato che viene creato dal compilatore. 
 

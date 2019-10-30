@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782436"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040436"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -26,7 +26,7 @@ Il mirroring del database in SQL Server consente di mantenere una copia, o mirro
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Definizione del partner di failover nella stringa di connessione  
  Se si specifica il nome di un server partner di failover nella stringa di connessione, il client tenterà una connessione al partner di failover in modo trasparente se il database principale non è disponibile quando l'applicazione client si connette per la prima volta.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
@@ -59,7 +59,7 @@ string activeServer = connection.DataSource;
 ## <a name="database-mirroring-resources"></a>Risorse relative al mirroring del database  
  Per la documentazione concettuale e per informazioni sulla configurazione, la distribuzione e l'amministrazione del mirroring, vedere le risorse seguenti nella documentazione di SQL Server.  
   
-|Risorsa|DESCRIZIONE|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
   

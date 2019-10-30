@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Hosting di un controllo Win32 in WPF'
+title: 'Procedura dettagliata: hosting di un controllo Win32 in WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: cc27189afd2185d5f0a1eeacccf4c537dd3d9c2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917536"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040810"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo Win32 in WPF
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: hosting di un controllo Win32 in WPF
 Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si ha un investimento sostanziale nel codice Win32, potrebbe essere più efficace riutilizzare almeno parte del codice nell'applicazione WPF anziché riscriverlo completamente. WPF fornisce un meccanismo semplice per l'hosting di una finestra Win32, in una pagina WPF.  
   
  In questo argomento viene illustrata un'applicazione che ospita un controllo [ListBox Win32 nell'esempio WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)che ospita un controllo casella di riepilogo Win32. Questa procedura generale può essere estesa per ospitare qualsiasi finestra di Win32.  
@@ -35,39 +35,39 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
  La procedura di hosting base è la seguente:  
   
-1. Implementare una pagina WPF per ospitare la finestra. Una tecnica consiste nel creare un <xref:System.Windows.Controls.Border> elemento per riservare una sezione della pagina per la finestra ospitata.  
+1. Implementare una pagina WPF per ospitare la finestra. Una tecnica consiste nel creare un elemento <xref:System.Windows.Controls.Border> per riservare una sezione della pagina per la finestra ospitata.  
   
 2. Implementare una classe per ospitare il controllo che eredita da <xref:System.Windows.Interop.HwndHost>.  
   
-3. In tale classe, eseguire l' <xref:System.Windows.Interop.HwndHost> override del <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>membro della classe.  
+3. In tale classe, eseguire l'override del membro della classe <xref:System.Windows.Interop.HwndHost> <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4. Creare la finestra ospitata come figlio della finestra che contiene la pagina WPF. Sebbene la programmazione WPF convenzionale non debba utilizzarla in modo esplicito, la pagina di hosting è una finestra con un handle (HWND). Si riceve la pagina HWND tramite il `hwndParent` parametro <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> del metodo. La finestra ospitata deve essere creata come elemento figlio dell'oggetto HWND.  
+4. Creare la finestra ospitata come figlio della finestra che contiene la pagina WPF. Sebbene la programmazione WPF convenzionale non debba utilizzarla in modo esplicito, la pagina di hosting è una finestra con un handle (HWND). Si riceve la pagina HWND tramite il parametro `hwndParent` del metodo <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. La finestra ospitata deve essere creata come elemento figlio dell'oggetto HWND.  
   
 5. Dopo aver creato la finestra host, restituire l'oggetto HWND della finestra ospitata. Se si desidera ospitare uno o più controlli Win32, in genere si crea una finestra host come elemento figlio di HWND e si rendono i controlli figlio di tale finestra host. Il wrapping dei controlli in una finestra host offre un modo semplice per la ricezione delle notifiche dai controlli da parte della pagina WPF, che riguarda alcuni problemi Win32 specifici con le notifiche attraverso il limite HWND.  
   
 6. Gestire i messaggi selezionati inviati alla finestra host, ad esempio notifiche dai controlli figlio. È possibile ottenere questo risultato in due modi.  
   
-    - Se si preferisce gestire i messaggi nella classe host, eseguire l'override <xref:System.Windows.Interop.HwndHost.WndProc%2A> del metodo <xref:System.Windows.Interop.HwndHost> della classe.  
+    - Se si preferisce gestire i messaggi nella classe host, eseguire l'override del metodo <xref:System.Windows.Interop.HwndHost.WndProc%2A> della classe <xref:System.Windows.Interop.HwndHost>.  
   
-    - Se si preferisce che WPF gestisca i messaggi, gestire l' <xref:System.Windows.Interop.HwndHost> evento della classe <xref:System.Windows.Interop.HwndHost.MessageHook> nel code-behind. Questo evento si verifica per ogni messaggio ricevuto dalla finestra ospitata. Se si sceglie questa opzione, è comunque necessario eseguire <xref:System.Windows.Interop.HwndHost.WndProc%2A>l'override di, ma è necessaria solo un'implementazione minima.  
+    - Se si preferisce che WPF gestisca i messaggi, gestire la classe <xref:System.Windows.Interop.HwndHost> <xref:System.Windows.Interop.HwndHost.MessageHook> evento nel code-behind. Questo evento si verifica per ogni messaggio ricevuto dalla finestra ospitata. Se si sceglie questa opzione, è comunque necessario eseguire l'override di <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ma è necessaria solo un'implementazione minima.  
   
-7. Eseguire l'override <xref:System.Windows.Interop.HwndHost.WndProc%2A> dei metodi <xref:System.Windows.Interop.HwndHost>edi. <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> Per soddisfare il <xref:System.Windows.Interop.HwndHost> contratto, è necessario eseguire l'override di questi metodi, ma potrebbe essere necessario fornire solo un'implementazione minima.  
+7. Eseguire l'override dei metodi <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> di <xref:System.Windows.Interop.HwndHost>. È necessario eseguire l'override di questi metodi per soddisfare il contratto di <xref:System.Windows.Interop.HwndHost>, ma potrebbe essere necessario fornire solo un'implementazione minima.  
   
-8. Nel file code-behind creare un'istanza della classe di hosting del controllo e impostarla come figlio dell' <xref:System.Windows.Controls.Border> elemento destinato a ospitare la finestra.  
+8. Nel file code-behind creare un'istanza della classe di hosting del controllo e impostarla come figlio dell'elemento <xref:System.Windows.Controls.Border> che deve ospitare la finestra.  
   
-9. Comunicare con la finestra ospitata inviando [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] messaggi e gestendo messaggi dalle relative finestre figlio, ad esempio le notifiche inviate dai controlli.  
+9. Comunicare con la finestra ospitata inviando i messaggi di Microsoft Windows e gestendo i messaggi dalle relative finestre figlio, ad esempio le notifiche inviate dai controlli.  
   
 <a name="page_layout"></a>   
 ## <a name="implement-the-page-layout"></a>Implementare il layout di pagina  
- Il layout per la pagina WPF che ospita il controllo ListBox è costituito da due aree. Il lato sinistro della pagina ospita diversi controlli WPF che forniscono un oggetto [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] che consente di modificare il controllo Win32. L'angolo superiore destro della pagina include un'area quadrata per il controllo ListBox ospitato.  
+ Il layout per la pagina WPF che ospita il controllo ListBox è costituito da due aree. Il lato sinistro della pagina ospita diversi controlli WPF che forniscono un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] che consente di modificare il controllo Win32. L'angolo superiore destro della pagina include un'area quadrata per il controllo ListBox ospitato.  
   
- Il codice per implementare questo layout è piuttosto semplice. L'elemento radice è un <xref:System.Windows.Controls.DockPanel> oggetto che dispone di due elementi figlio. Il primo è un <xref:System.Windows.Controls.Border> elemento che ospita il controllo ListBox. Occupa un quadrato 200x200 nell'angolo superiore destro della pagina. Il secondo è un <xref:System.Windows.Controls.StackPanel> elemento che contiene un set di controlli WPF che visualizzano informazioni e consentono di modificare il controllo ListBox impostando le proprietà di interoperatività esposte. Per tutti gli elementi figlio di <xref:System.Windows.Controls.StackPanel>, vedere il materiale di riferimento per i vari elementi utilizzati per informazioni dettagliate su questi elementi o sul loro funzionamento, elencati nel codice di esempio riportato di seguito, ma non verranno illustrati in questo articolo (il il modello di interoperabilità non ne richiede alcuno, viene fornito per aggiungere alcune interattività all'esempio.  
+ Il codice per implementare questo layout è piuttosto semplice. L'elemento radice è un <xref:System.Windows.Controls.DockPanel> che dispone di due elementi figlio. Il primo è un elemento <xref:System.Windows.Controls.Border> che ospita il controllo ListBox. Occupa un quadrato 200x200 nell'angolo superiore destro della pagina. Il secondo è un elemento <xref:System.Windows.Controls.StackPanel> che contiene un set di controlli WPF che visualizzano informazioni e consentono di modificare il controllo ListBox impostando proprietà di interoperatività esposte. Per ogni elemento figlio del <xref:System.Windows.Controls.StackPanel>, vedere il materiale di riferimento per i vari elementi usati per informazioni dettagliate su questi elementi o sul loro funzionamento, elencati nel codice di esempio seguente, ma non verranno illustrati in questo articolo (il il modello di interoperabilità non ne richiede alcuno, viene fornito per aggiungere alcune interattività all'esempio.  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
 ## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Implementare una classe per l'hosting del controllo Microsoft Win32  
- La parte centrale di questo esempio è la classe che ospita effettivamente il controllo, ControlHost.cs. Eredita da <xref:System.Windows.Interop.HwndHost>. Il costruttore accetta due parametri, Height e Width, che corrispondono all'altezza e alla larghezza dell' <xref:System.Windows.Controls.Border> elemento che ospita il controllo ListBox. Questi valori vengono usati in un secondo momento per garantire che la dimensione del controllo <xref:System.Windows.Controls.Border> corrisponda all'elemento.  
+ La parte centrale di questo esempio è la classe che ospita effettivamente il controllo, ControlHost.cs. Eredita da <xref:System.Windows.Interop.HwndHost>. Il costruttore accetta due parametri, Height e Width, che corrispondono all'altezza e alla larghezza dell'elemento <xref:System.Windows.Controls.Border> che ospita il controllo ListBox. Questi valori vengono usati in un secondo momento per assicurarsi che la dimensione del controllo corrisponda all'elemento <xref:System.Windows.Controls.Border>.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
@@ -81,7 +81,7 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Eseguire l'override di BuildWindowCore per creare la finestra Microsoft Win32  
  È possibile eseguire l'override di questo metodo per creare la finestra Win32 che verrà ospitata dalla pagina e per effettuare la connessione tra la finestra e la pagina. Poiché questo esempio include l'hosting di un controllo ListBox vengono create due finestre. Il primo è la finestra che è effettivamente ospitata dalla pagina WPF. Il controllo ListBox viene creato come elemento figlio di questa finestra.  
   
- Lo scopo di questo approccio è semplificare il processo di ricezione di notifiche dal controllo. La <xref:System.Windows.Interop.HwndHost> classe consente di elaborare i messaggi inviati alla finestra ospitata. Se si ospita un controllo Win32 direttamente, vengono ricevuti i messaggi inviati al ciclo di messaggi interno del controllo. È possibile visualizzare il controllo e inviare a esso messaggi ma non ricevere le notifiche che il controllo invia alla propria finestra padre. Ciò significa, tra l'altro, che non è possibile in alcun modo rilevare quando l'utente interagisce con il controllo. Creare invece una finestra host e impostare il controllo come elemento figlio di tale finestra. Ciò consente di elaborare i messaggi per la finestra host, incluse le notifiche inviate a essa dal controllo. Per comodità, dal momento che la finestra host è poco più di un semplice wrapper per il controllo, il pacchetto verrà restituito come un controllo ListBox.  
+ Lo scopo di questo approccio è semplificare il processo di ricezione di notifiche dal controllo. La classe <xref:System.Windows.Interop.HwndHost> consente di elaborare i messaggi inviati alla finestra ospitata. Se si ospita un controllo Win32 direttamente, vengono ricevuti i messaggi inviati al ciclo di messaggi interno del controllo. È possibile visualizzare il controllo e inviare a esso messaggi ma non ricevere le notifiche che il controllo invia alla propria finestra padre. Ciò significa, tra l'altro, che non è possibile in alcun modo rilevare quando l'utente interagisce con il controllo. Creare invece una finestra host e impostare il controllo come elemento figlio di tale finestra. Ciò consente di elaborare i messaggi per la finestra host, incluse le notifiche inviate a essa dal controllo. Per comodità, dal momento che la finestra host è poco più di un semplice wrapper per il controllo, il pacchetto verrà restituito come un controllo ListBox.  
   
 <a name="create_the_window_and_listbox"></a>   
 #### <a name="create-the-host-window-and-listbox-control"></a>Creare la finestra host e il controllo ListBox  
@@ -102,7 +102,7 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
 <a name="destroywindow_wndproc"></a>   
 ### <a name="implement-destroywindow-and-wndproc"></a>Implementare DestroyWindow e WndProc  
- Oltre a <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, è inoltre necessario <xref:System.Windows.Interop.HwndHost.WndProc%2A> eseguire l'override dei <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> metodi e di <xref:System.Windows.Interop.HwndHost>. In questo esempio, i messaggi per il controllo vengono gestiti dal <xref:System.Windows.Interop.HwndHost.MessageHook> gestore, pertanto l'implementazione di <xref:System.Windows.Interop.HwndHost.WndProc%2A> e <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> è minima. Nel caso di <xref:System.Windows.Interop.HwndHost.WndProc%2A>, impostare `handled` su `false` per indicare che il messaggio non è stato gestito e restituire 0. Per <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, eliminare semplicemente la finestra.  
+ Oltre a <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, è necessario eseguire l'override anche dei metodi <xref:System.Windows.Interop.HwndHost.WndProc%2A> e <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> della <xref:System.Windows.Interop.HwndHost>. In questo esempio, i messaggi per il controllo vengono gestiti dal gestore di <xref:System.Windows.Interop.HwndHost.MessageHook>, quindi l'implementazione di <xref:System.Windows.Interop.HwndHost.WndProc%2A> e <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> è minima. Nel caso di <xref:System.Windows.Interop.HwndHost.WndProc%2A>, impostare `handled` su `false` per indicare che il messaggio non è stato gestito e restituire 0. Per <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, è sufficiente eliminare la finestra.  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -112,12 +112,12 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
 <a name="host_the_control"></a>   
 ## <a name="host-the-control-on-the-page"></a>Ospitare il controllo nella pagina  
- Per ospitare il controllo nella pagina, creare prima di tutto una nuova istanza della `ControlHost` classe. Passare l'altezza e la larghezza dell'elemento Border che contiene il controllo (`ControlHostElement`) `ControlHost` al costruttore. Questo garantisce che le dimensioni di ListBox siano corrette. È quindi possibile ospitare il controllo nella pagina assegnando l' `ControlHost` oggetto <xref:System.Windows.Controls.Decorator.Child%2A> alla proprietà dell'host <xref:System.Windows.Controls.Border>.  
+ Per ospitare il controllo nella pagina, creare prima di tutto una nuova istanza della classe `ControlHost`. Passare l'altezza e la larghezza dell'elemento Border che contiene il controllo (`ControlHostElement`) al costruttore di `ControlHost`. Questo garantisce che le dimensioni di ListBox siano corrette. È quindi possibile ospitare il controllo nella pagina assegnando l'oggetto `ControlHost` alla proprietà <xref:System.Windows.Controls.Decorator.Child%2A> della <xref:System.Windows.Controls.Border>host.  
   
- L'esempio connette un gestore all' <xref:System.Windows.Interop.HwndHost.MessageHook> evento `ControlHost` di per ricevere messaggi dal controllo. Questo evento viene generato per ogni messaggio inviato alla finestra ospitata. In questo caso, si tratta dei messaggi inviati alla finestra che esegue il wrapping del controllo ListBox effettivo, incluse le notifiche dal controllo. L'esempio chiama SendMessage per ottenere informazioni dal controllo e ne modifica il contenuto. I dettagli di come la pagina comunica con il controllo sono illustrati nella sezione successiva.  
+ L'esempio connette un gestore all'evento <xref:System.Windows.Interop.HwndHost.MessageHook> della `ControlHost` per ricevere messaggi dal controllo. Questo evento viene generato per ogni messaggio inviato alla finestra ospitata. In questo caso, si tratta dei messaggi inviati alla finestra che esegue il wrapping del controllo ListBox effettivo, incluse le notifiche dal controllo. L'esempio chiama SendMessage per ottenere informazioni dal controllo e ne modifica il contenuto. I dettagli di come la pagina comunica con il controllo sono illustrati nella sezione successiva.  
   
 > [!NOTE]
-> Si noti che sono presenti due dichiarazioni PInvoke per SendMessage. Questa operazione è necessaria perché si usa `wParam` il parametro per passare una stringa e l'altra la usa per passare un numero intero. È necessaria una dichiarazione separata per ogni firma per assicurare che venga eseguito correttamente il marshalling dei dati.  
+> Si noti che sono presenti due dichiarazioni PInvoke per SendMessage. Questa operazione è necessaria perché si usa il parametro `wParam` per passare una stringa e l'altra la usa per passare un valore integer. È necessaria una dichiarazione separata per ogni firma per assicurare che venga eseguito correttamente il marshalling dei dati.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -139,16 +139,16 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
  L'utente può anche selezionare un elemento nella casella di riepilogo facendo clic su di esso, così come per un'applicazione Win32 convenzionale. I dati visualizzati vengono aggiornati ogni vota che l'utente modifica lo stato della casella di riepilogo, selezionando, aggiungendo o accodando un elemento.  
   
- Per accodare elementi, inviare alla casella di riepilogo un [ `LB_ADDSTRING` messaggio](/windows/desktop/Controls/lb-addstring). Per eliminare gli elementi, [`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel) inviare per ottenere l'indice della selezione corrente e quindi [`LB_DELETESTRING`](/windows/desktop/Controls/lb-deletestring) per eliminare l'elemento. L'esempio Invia [`LB_GETCOUNT`](/windows/desktop/Controls/lb-getcount)anche e usa il valore restituito per aggiornare la visualizzazione che mostra il numero di elementi. Entrambe le istanze di [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) utilizzano una delle dichiarazioni PInvoke illustrate nella sezione precedente.  
+ Per accodare elementi, inviare alla casella di riepilogo un [messaggio`LB_ADDSTRING`](/windows/desktop/Controls/lb-addstring). Per eliminare gli elementi, inviare [`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel) per ottenere l'indice della selezione corrente e quindi [`LB_DELETESTRING`](/windows/desktop/Controls/lb-deletestring) per eliminare l'elemento. L'esempio invia anche [`LB_GETCOUNT`](/windows/desktop/Controls/lb-getcount)e usa il valore restituito per aggiornare la visualizzazione che mostra il numero di elementi. Entrambe le istanze di [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) utilizzano una delle dichiarazioni PInvoke illustrate nella sezione precedente.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Quando l'utente seleziona un elemento o ne modifica la selezione, il controllo notifica alla finestra host inviando un [ `WM_COMMAND` messaggio](/windows/desktop/menurc/wm-command), che genera l' <xref:System.Windows.Interop.HwndHost.MessageHook> evento per la pagina. Il gestore riceve le stesse informazioni della routine della finestra principale della finestra host. Passa inoltre un riferimento a un valore `handled`booleano. Impostare `handled` su`true` per indicare che il messaggio è stato gestito e che non sono necessarie ulteriori elaborazioni.  
+ Quando l'utente seleziona un elemento o ne modifica la selezione, il controllo notifica alla finestra host inviando un [messaggio`WM_COMMAND`](/windows/desktop/menurc/wm-command), che genera l'evento <xref:System.Windows.Interop.HwndHost.MessageHook> per la pagina. Il gestore riceve le stesse informazioni della routine della finestra principale della finestra host. Passa inoltre un riferimento a un valore booleano `handled`. Impostare `handled` su `true` per indicare che il messaggio è stato gestito e che non sono necessarie ulteriori elaborazioni.  
   
- [`WM_COMMAND`](/windows/desktop/menurc/wm-command)viene inviato per diversi motivi, pertanto è necessario esaminare l'ID notifica per determinare se si tratta di un evento che si desidera gestire. L'ID è contenuto nel Word superiore del `wParam` parametro. Nell'esempio vengono utilizzati operatori bit per bit per estrarre l'ID. Se l'utente ha apportato o modificato la selezione, l'ID [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange)sarà.  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) viene inviato per diversi motivi, pertanto è necessario esaminare l'ID notifica per determinare se si tratta di un evento che si desidera gestire. L'ID è contenuto nella parola alta del parametro `wParam`. Nell'esempio vengono utilizzati operatori bit per bit per estrarre l'ID. Se l'utente ha apportato o modificato la selezione, l'ID verrà [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange).  
   
- Quando [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange) viene ricevuto, l'esempio ottiene l'indice dell'elemento selezionato inviando al controllo un [ `LB_GETCURSEL` messaggio](/windows/desktop/Controls/lb-getcursel). Per ottenere il testo, creare prima un oggetto <xref:System.Text.StringBuilder>. Il controllo viene quindi inviato a un [ `LB_GETTEXT` messaggio](/windows/desktop/Controls/lb-gettext). Passare l'oggetto <xref:System.Text.StringBuilder> vuoto `wParam` come parametro. Quando [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) restituisce, il <xref:System.Text.StringBuilder> conterrà il testo dell'elemento selezionato. Questo utilizzo di [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) richiede ancora un'altra dichiarazione PInvoke.  
+ Quando viene ricevuto [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange) , l'esempio ottiene l'indice dell'elemento selezionato inviando al controllo un [messaggio di`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel). Per ottenere il testo, creare prima di tutto un <xref:System.Text.StringBuilder>. Il controllo viene quindi inviato a un [messaggio di`LB_GETTEXT`](/windows/desktop/Controls/lb-gettext). Passare l'oggetto <xref:System.Text.StringBuilder> vuoto come parametro di `wParam`. Quando [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) restituisce, il <xref:System.Text.StringBuilder> conterrà il testo dell'elemento selezionato. Questo utilizzo di [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) richiede ancora un'altra dichiarazione PInvoke.  
   
  Infine, impostare `handled` su `true` per indicare che il messaggio è stato gestito.  
   

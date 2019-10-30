@@ -1,16 +1,17 @@
 ---
-title: Indicizzatori
+title: Indexers (Indicizzatori)
 description: Informazioni sugli indicizzatori C# e su come implementano proprietà indicizzate, ovvero proprietà a cui si fa riferimento usando uno o più argomenti.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197600"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039112"
 ---
-# <a name="indexers"></a>Indicizzatori
+# <a name="indexers"></a>Indexers (Indicizzatori)
 
 Gli *indicizzatori* sono simili alle proprietà e per molti aspetti si basano sulle stesse funzionalità del linguaggio delle [proprietà](properties.md). Gli indicizzatori consentono proprietà *indicizzate*, ovvero proprietà a cui si fa riferimento tramite uno o più argomenti, che forniscono un indice per una raccolta di valori.
 
@@ -326,4 +327,4 @@ Gli sviluppatori usano il tipo `DateTime`, ma usano la proprietà `Date` per ass
 ## <a name="summing-up"></a>Conclusioni
 
 È necessario creare indicizzatori ogni volta che all'interno di una classe è presente un elemento analogo a una proprietà e tale proprietà rappresenta non un singolo valore, ma una raccolta di valori in cui ogni singolo elemento è identificato da un set di argomenti. Tali argomenti consentono di identificare in modo univoco un elemento della raccolta a cui fare riferimento.
-Gli indicizzatori estendono il concetto di [proprietà](properties.md), in cui un membro viene considerato come elemento dati all'esterno della classe, ma come metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.
+Gli indicizzatori estendono il concetto di [Proprietà](properties.md), in cui un membro viene considerato come un elemento dati dall'esterno della classe, ma come un metodo all'interno. Gli indicizzatori consentono agli argomenti di individuare un singolo elemento all'interno di una proprietà che rappresenta un set di elementi.

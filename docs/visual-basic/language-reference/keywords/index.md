@@ -10,113 +10,115 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66eb6984bb6bb93dc7015a9da8c3099637bc2722
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959958"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039393"
 ---
 # <a name="keywords-visual-basic"></a>Parole chiave (Visual Basic)
-Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.  
-  
-## <a name="reserved-keywords"></a>Parole chiave riservate  
- Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come nomi di elementi di programmazione, ad esempio variabili o procedure. È possibile ignorare questa restrizione racchiudendo il nome tra parentesi quadre (`[]`). Per altre informazioni, vedere "Escaped Names" (Nomi con caratteri di escape) in [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nomi di elementi dichiarati).  
+
+Le tabelle seguenti elencano tutte le parole chiave del linguaggio Visual Basic.
+
+## <a name="reserved-keywords"></a>Parole chiave riservate
+
+Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come nomi di elementi di programmazione, ad esempio variabili o procedure. È possibile ignorare questa restrizione racchiudendo il nome tra parentesi quadre (`[]`). Per altre informazioni, vedere "Escaped Names" (Nomi con caratteri di escape) in [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nomi di elementi dichiarati).
+
+> [!NOTE]
+> Si consiglia di non usare nomi con caratteri di escape poiché possono rendere il codice di difficile lettura e causare errori difficili da rilevare.
+
+|||||
+|---|---|---|---|
+|[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[Alias](../statements/alias-clause.md)|[And](../operators/and-operator.md)|  
+|[AndAlso](../operators/andalso-operator.md)|[As](../statements/as-clause.md)|[Boolean](../data-types/boolean-data-type.md)|[ByRef](../modifiers/byref.md)|  
+|[Byte](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Case](../statements/select-case-statement.md)|  
+|[Catch](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
+|[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
+|[CInt](../functions/type-conversion-functions.md)|[Vincolo Class](../statements/type-list.md)|[Istruzione Class](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
+|[CObj](../functions/type-conversion-functions.md)|[Const](../statements/const-statement.md)|[Continue](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
+|[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
+|[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
+|[Decimal](../data-types/decimal-data-type.md)|[Declare](../statements/declare-statement.md)|[Default](../modifiers/default.md)|[Delegate](../statements/delegate-statement.md)|  
+|[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Double](../data-types/double-data-type.md)|  
+|[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[Istruzione End](../statements/end-statement.md)|  
+|[End \<parola chiave>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
+|[Erroree](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[File](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
+|[Finally](../statements/try-catch-finally-statement.md)|[For (in For…Next)](../statements/for-next-statement.md)|[For Each…Next](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
+|[Function](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
+|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[Handles](../statements/handles-clause.md)|  
+|[Se](../statements/if-then-else-statement.md)|[If()](../operators/if-operator.md)|[Implements](../statements/implements-clause.md)|[Istruzione Implements](../statements/implements-statement.md)|  
+|[Imports (spazio dei nomi e tipo .NET)](../statements/imports-statement-net-namespace-and-type.md)|[Imports (spazio dei nomi XML)](../statements/imports-statement-xml-namespace.md)|[In](../statements/in-clause.md)|[In (modificatore generico)](../modifiers/in-generic-modifier.md)|  
+|[Inherits](../statements/inherits-statement.md)|[Integer](../data-types/integer-data-type.md)|[Interface](../statements/interface-statement.md)|[Is](../operators/is-operator.md)|  
+|[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
+|[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
+|[Modulo](../modifiers/module-keyword.md)|[Istruzione Module](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../statements/namespace-statement.md)|[Narrowing](../modifiers/narrowing.md)|  
+|[Vincolo New](../statements/type-list.md)|[Operatore New](../operators/new-operator.md)|[avanti](../statements/for-next-statement.md)|[Next (in Resume)](../statements/resume-statement.md)|  
+|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|[NotOverridable](../modifiers/notoverridable.md)|  
+|[Oggetto](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../statements/operator-statement.md)|  
+|[Opzione](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|[OrElse](../operators/orelse-operator.md)|  
+|[Out (modificatore generico)](../modifiers/out-generic-modifier.md)|[Overload](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|[Overrides](../modifiers/overrides.md)|  
+|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|[Property](../statements/property-statement.md)|  
+|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|[ReadOnly](../modifiers/readonly.md)|  
+|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|[Resume](../statements/resume-statement.md)|  
+|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Selezione](../statements/select-case-statement.md)|[Set](../statements/set-statement.md)|  
+|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|[Single](../data-types/single-data-type.md)|  
+|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|[String](../data-types/string-data-type.md)|  
+|[Vincolo Structure](../statements/type-list.md)|[Istruzione Structure](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|[SyncLock](../statements/synclock-statement.md)|  
+|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[Per](../statements/for-next-statement.md)|[True](../data-types/boolean-data-type.md)|  
+|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|[UInteger](../data-types/uinteger-data-type.md)|  
+|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|`Variant`|  
+|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|[Widening](../modifiers/widening.md)|  
+|[With](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|[Xor](../operators/xor-operator.md)|  
+|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|[#End](../directives/if-then-else-directives.md)|  
+|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|[&=](../operators/and-assignment-operator.md)|  
+|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|[/=](../operators/floating-point-division-assignment-operator.md)|  
+|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|[^=](../operators/exponentiation-assignment-operator.md)|  
+|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|[-=](../operators/subtraction-assignment-operator.md)|  
+|[Operatore >>](../operators/right-shift-operator.md)|[Operatore >>=](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|[<\<=](../operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
-> Si consiglia di non usare nomi con caratteri di escape poiché possono rendere il codice di difficile lettura e causare errori difficili da rilevare.  
-  
-|||||  
-|---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)|[Alias](../../../visual-basic/language-reference/statements/alias-clause.md)|[And](../../../visual-basic/language-reference/operators/and-operator.md)|  
-|[AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)|[As](../../../visual-basic/language-reference/statements/as-clause.md)|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)|[Call](../../../visual-basic/language-reference/statements/call-statement.md)|[Case](../../../visual-basic/language-reference/statements/select-case-statement.md)|  
-|[Catch](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|  
-|[CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Vincolo Class](../../../visual-basic/language-reference/statements/type-list.md)|[Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)|[CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[CSByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CULng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Default](../../../visual-basic/language-reference/modifiers/default.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
-|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
-|[Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Istruzione End](../../../visual-basic/language-reference/statements/end-statement.md)|  
-|[End \<parola chiave>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|  
-|[Erroree](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[File](../../../visual-basic/language-reference/statements/exit-statement.md)|[False](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
-|[Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[For (in For…Next)](../../../visual-basic/language-reference/statements/for-next-statement.md)|[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|  
-|[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|[GetXMLNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)|  
-|[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Handles](../../../visual-basic/language-reference/statements/handles-clause.md)|  
-|[Se](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[If()](../../../visual-basic/language-reference/operators/if-operator.md)|[Implements](../../../visual-basic/language-reference/statements/implements-clause.md)|[Istruzione Implements](../../../visual-basic/language-reference/statements/implements-statement.md)|  
-|[Imports (spazio dei nomi e tipo .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|[Imports (spazio dei nomi XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[In](../../../visual-basic/language-reference/statements/in-clause.md)|[In (modificatore generico)](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)|  
-|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Is](../../../visual-basic/language-reference/operators/is-operator.md)|  
-|[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|[Modulo](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Spazio dei nomi](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
-|[Vincolo New](../../../visual-basic/language-reference/statements/type-list.md)|[Operatore New](../../../visual-basic/language-reference/operators/new-operator.md)|[avanti](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (in Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
-|[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
-|[Oggetto](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Opzione](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Facoltativo](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|[Out (modificatore generico)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Overload](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
-|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
-|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
-|[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
-|[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Seleziona](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|[Shared](../../../visual-basic/language-reference/modifiers/shared.md)|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|  
-|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
-|[Vincolo Structure](../../../visual-basic/language-reference/statements/type-list.md)|[Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)|[Sub](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Then](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[To](../../../visual-basic/language-reference/statements/for-next-statement.md)|[True](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
-|[Try](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|[TypeOf…Is](../../../visual-basic/language-reference/operators/typeof-operator.md)|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|[Using](../../../visual-basic/language-reference/statements/using-statement.md)|`Variant`|  
-|`Wend`|[When](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[Widening](../../../visual-basic/language-reference/modifiers/widening.md)|  
-|[With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)|[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)|[Xor](../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|[#Const](../../../visual-basic/language-reference/directives/const-directive.md)|[#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[#ElseIf](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[#End](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|  
-|[#If](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[=](../../../visual-basic/language-reference/operators/assignment-operator.md)|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md)|[&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
-|[*](../../../visual-basic/language-reference/operators/multiplication-operator.md)|[*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)|[/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|[/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)|  
-|[\\](../../../visual-basic/language-reference/operators/integer-division-operator.md)|[\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)|[^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)|  
-|[+](../../../visual-basic/language-reference/operators/addition-operator.md)|[+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)|[-](../../../visual-basic/language-reference/operators/subtraction-operator.md)|[-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)|  
-|[Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operatore >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
-  
-> [!NOTE]
-> `EndIf`, `GoSub`, e`Wend` vengono mantenuti come parole chiave riservate, anche se non vengono più utilizzate in Visual Basic. `Variant` Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, `Variant`e `Wend` vengono mantenute come parole chiave riservate, anche se non vengono più utilizzate in Visual Basic. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Parole chiave non riservate  
  Le parole chiave seguenti non sono riservate, ovvero possono essere usate come nomi degli elementi di programmazione. Si consiglia tuttavia di non eseguire questa operazione poiché potrebbe rendere il codice di difficile lettura e causare errori difficili da rilevare.  
   
 |||||  
 |---|---|---|---|  
-|[Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)|[Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)|[Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md)|  
-|[Auto](../../../visual-basic/language-reference/modifiers/auto.md)|[Await](../../../visual-basic/language-reference/operators/await-operator.md)|[Binary](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|[Personalizzato](../../../visual-basic/language-reference/statements/event-statement.md)|[Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)|[Equals](../../../visual-basic/language-reference/queries/equals-clause.md)|[Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|  
-|[From](../../../visual-basic/language-reference/queries/from-clause.md)|[Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)|[Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)|[Into](../../../visual-basic/language-reference/statements/into-clause.md)|  
-|[IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)|[IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)|[Iteratore](../../../visual-basic/language-reference/modifiers/iterator.md)|[Join](../../../visual-basic/language-reference/queries/join-clause.md)|  
-|[Key](../../../visual-basic/language-reference/modifiers/key.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)|  
-|[Preserve](../../../visual-basic/language-reference/statements/redim-statement.md)|[Skip](../../../visual-basic/language-reference/queries/skip-clause.md)|[Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)|[Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|  
-|[Take](../../../visual-basic/language-reference/queries/take-clause.md)|[Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)|[per](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)|  
-|[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
-|[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
+|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Binary](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
+|[Personalizzato](../statements/event-statement.md)|[Distinct](../queries/distinct-clause.md)|[Equals](../queries/equals-clause.md)|[Explicit](../statements/option-explicit-statement.md)|  
+|[From](../queries/from-clause.md)|[Group By](../queries/group-by-clause.md)|[Group Join](../queries/group-join-clause.md)|[Into](../statements/into-clause.md)|  
+|[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iteratore](../modifiers/iterator.md)|[Join](../queries/join-clause.md)|  
+|[Key](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[Off](../../../visual-basic/misc/off.md)|[Order By](../queries/order-by-clause.md)|  
+|[Preserve](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
+|[Take](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[Testo](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Until](../statements/do-loop-statement.md)|[Where](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
+|[#Region](../directives/region-directive.md)||||  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|DESCRIZIONE|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Riepilogo delle matrici](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Elenca gli elementi di linguaggio che consentono di creare, definire e usare le matrici.|  
-|[Riepilogo dell'oggetto Collection](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Elenca gli elementi del linguaggio usati per le raccolte.|  
-|[Riepilogo del flusso di controllo](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Elenca le istruzioni usate per eseguire il ciclo e controllare il flusso di routine.|  
-|[Riepilogo della conversione](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Elenca le funzioni usate per convertire numeri, date, ore e stringhe.|  
-|[Riepilogo dei tipi di dati](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Elenca i tipi di dati. Elenca anche le funzioni usate per convertire e verificare i tipi di dati.|  
-|[Riepilogo di data e ora](../../../visual-basic/language-reference/keywords/dates-and-times-summary.md)|Elenca gli elementi del linguaggio usati per date e ore.|  
-|[Riepilogo delle dichiarazioni e delle costanti](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)|Elenca le istruzioni usate per dichiarare variabili, costanti, classi, moduli e altri elementi di programmazione. Elenca anche gli elementi del linguaggio usati per ottenere informazioni sugli oggetti, gestire gli eventi e implementare l'ereditarietà.|  
-|[Riepilogo di directory e file](../../../visual-basic/language-reference/keywords/directories-and-files-summary.md)|Elenca le funzioni usate per controllare il file system ed elaborare i file.|  
-|[Riepilogo degli errori](../../../visual-basic/language-reference/keywords/errors-summary.md)|Elenca gli elementi del linguaggio usati per rilevare e restituire i valori degli errori di run-time.|  
-|[Riepilogo degli elementi finanziari](../../../visual-basic/language-reference/keywords/financial-summary.md)|Elenca le funzioni usate per eseguire calcoli finanziari.|  
-|[Riepilogo di input e output](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|Elenca le funzioni che consentono di leggere e scrivere nei file, gestire i file e stampare l'output.|  
-|[Riepilogo delle informazioni e dell'interazione](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|Elenca le funzioni usate per eseguire altri programmi, ottenere argomenti della riga di comando, modificare gli oggetti COM, recuperare le informazioni di colore e usare le finestre di dialogo di controllo.|  
-|[Riepilogo degli elementi matematici](../../../visual-basic/language-reference/keywords/math-summary.md)|Elenca le funzioni usate per eseguire calcoli trigonometrici e altri calcoli matematici.|  
-|[Riferimenti a oggetti My](../../../visual-basic/language-reference/keywords/my-reference.md)|Elenca gli oggetti contenuti in `My`, una funzionalità che consente di accedere a metodi, proprietà ed eventi usati di frequente del computer in cui l'applicazione è in esecuzione, dell'applicazione corrente, delle risorse dell'applicazione, delle impostazioni dell'applicazione e così via.|  
-|[Riepilogo degli operatori](../../../visual-basic/language-reference/keywords/operators-summary.md)|Elenca le espressioni di confronto e assegnazione e altri operatori.|  
-|[Riepilogo del Registro di sistema](../../../visual-basic/language-reference/keywords/registry-summary.md)|Elenca le funzioni usate per leggere, salvare ed eliminare le impostazioni del programma.|  
-|[Riepilogo della modifica delle stringhe](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Elenca le funzioni usate per modificare le stringhe.|  
+|[Riepilogo delle matrici](arrays-summary.md)|Elenca gli elementi di linguaggio che consentono di creare, definire e usare le matrici.|  
+|[Riepilogo dell'oggetto Collection](collection-object-summary.md)|Elenca gli elementi del linguaggio usati per le raccolte.|  
+|[Riepilogo del flusso di controllo](control-flow-summary.md)|Elenca le istruzioni usate per eseguire il ciclo e controllare il flusso di routine.|  
+|[Riepilogo della conversione](conversion-summary.md)|Elenca le funzioni usate per convertire numeri, date, ore e stringhe.|  
+|[Riepilogo dei tipi di dati](data-types-summary.md)|Elenca i tipi di dati. Elenca anche le funzioni usate per convertire e verificare i tipi di dati.|  
+|[Riepilogo di data e ora](dates-and-times-summary.md)|Elenca gli elementi del linguaggio usati per date e ore.|  
+|[Riepilogo delle dichiarazioni e delle costanti](declarations-and-constants-summary.md)|Elenca le istruzioni usate per dichiarare variabili, costanti, classi, moduli e altri elementi di programmazione. Elenca anche gli elementi del linguaggio usati per ottenere informazioni sugli oggetti, gestire gli eventi e implementare l'ereditarietà.|  
+|[Riepilogo di directory e file](directories-and-files-summary.md)|Elenca le funzioni usate per controllare il file system ed elaborare i file.|  
+|[Riepilogo degli errori](errors-summary.md)|Elenca gli elementi del linguaggio usati per rilevare e restituire i valori degli errori di run-time.|  
+|[Riepilogo degli elementi finanziari](financial-summary.md)|Elenca le funzioni usate per eseguire calcoli finanziari.|  
+|[Riepilogo di input e output](input-and-output-summary.md)|Elenca le funzioni che consentono di leggere e scrivere nei file, gestire i file e stampare l'output.|  
+|[Riepilogo delle informazioni e dell'interazione](information-and-interaction-summary.md)|Elenca le funzioni usate per eseguire altri programmi, ottenere argomenti della riga di comando, modificare gli oggetti COM, recuperare le informazioni di colore e usare le finestre di dialogo di controllo.|  
+|[Riepilogo degli elementi matematici](math-summary.md)|Elenca le funzioni usate per eseguire calcoli trigonometrici e altri calcoli matematici.|  
+|[Riferimenti a oggetti My](my-reference.md)|Elenca gli oggetti contenuti in `My`, una funzionalità che consente di accedere a metodi, proprietà ed eventi usati di frequente del computer in cui l'applicazione è in esecuzione, dell'applicazione corrente, delle risorse dell'applicazione, delle impostazioni dell'applicazione e così via.|  
+|[Riepilogo degli operatori](operators-summary.md)|Elenca le espressioni di confronto e assegnazione e altri operatori.|  
+|[Riepilogo del Registro di sistema](registry-summary.md)|Elenca le funzioni usate per leggere, salvare ed eliminare le impostazioni del programma.|  
+|[Riepilogo della modifica delle stringhe](string-manipulation-summary.md)|Elenca le funzioni usate per modificare le stringhe.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Membri della libreria di runtime di Visual Basic](../runtime-library-members.md)

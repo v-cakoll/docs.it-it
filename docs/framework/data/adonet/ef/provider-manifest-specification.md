@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854494"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040485"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -54,7 +54,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Scrivere un file XML con due sezioni:  
   
-- Elenco di tipi di provider espressi in termini EDM e definizione del mapping per entrambe le direzioni: Da EDM a provider e da provider a EDM.  
+- Un elenco di tipi di provider espresso in termini EDM con la definizione del mapping per entrambe le direzioni: da EDM a provider e da provider a EDM.  
   
 - Un elenco di funzioni supportate dal provider in cui i tipi di parametri e i tipi restituiti sono espressi in termini EDM.  
   
@@ -68,7 +68,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
 ### <a name="provider-manifest-token"></a>Token del manifesto del provider  
  Quando viene aperta una connessione a un archivio dati, il provider può richiedere informazioni tramite query per ottenere il manifesto appropriato. Questa operazione potrebbe non essere possibile negli scenari offline in cui le informazioni di connessione non sono disponibili oppure quando non è possibile eseguire la connessione all'archivio. Identificare il manifesto tramite l'attributo `ProviderManifestToken` dell'elemento `Schema` nel file con estensione ssdl. Non esiste un formato obbligatorio per questo attributo. Il provider sceglie le informazioni minime necessarie che consentono di identificare un manifesto senza dover aprire una connessione all'archivio.  
   
- Ad esempio:  
+ Esempio:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -83,7 +83,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
  Il manifesto del provider viene caricato dal caricatore dei metadati dell'archivio (StoreItemCollection) tramite una connessione all'archivio dati o un token del manifesto del provider.  
   
 #### <a name="using-a-data-store-connection"></a>Uso di una connessione all'archivio dati  
- Quando è disponibile la connessione all'archivio dati, <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> chiamare per restituire il token passato <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> al metodo, che restituisce <xref:System.Data.Common.DbProviderManifest>. Questo metodo delega all'implementazione del provider di `GetDbProviderManifestToken`.  
+ Quando è disponibile la connessione all'archivio dati, chiamare <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> per restituire il token passato al metodo <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>, che restituisce <xref:System.Data.Common.DbProviderManifest>. Questo metodo delega all'implementazione del provider di `GetDbProviderManifestToken`.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Uso di un token del manifesto del provider  
  Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. Il linguaggio SSDL consente di specificare un ProviderManifestToken (vedere [elemento schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) per ulteriori informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -248,33 +248,33 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Per esprimere queste informazioni sui tipi nel manifesto del provider, è necessario che ogni dichiarazione TypeInformation definisca diverse descrizioni di facet per ogni oggetto Type:  
   
-|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
+|Nome attributo|Tipo di dati|Richiesto|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sì|n/d|Nome del tipo di dati specifico del provider|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Yes|n/d|Nome del tipo EDM|  
+|Name|Stringa|Yes|N/D|Nome del tipo di dati specifico del provider|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Yes|N/D|Nome del tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Ogni oggetto Function definisce una sola funzione disponibile tramite il provider.  
   
-|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
+|Nome attributo|Tipo di dati|Richiesto|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|NOME|String|Sì|n/d|Nome/identificatore della funzione|  
-|ReturnType|String|No|Void|Il tipo restituito EDM della funzione|  
-|Aggregate|Boolean|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
-|BuiltIn|Boolean|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
-|StoreFunctionName|String|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
-|NiladicFunction|Boolean|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
+|Name|Stringa|Yes|N/D|Nome/identificatore della funzione|  
+|ReturnType|Stringa|No|Void|Il tipo restituito EDM della funzione|  
+|Aggregate|Booleano|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
+|BuiltIn|Booleano|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
+|StoreFunctionName|Stringa|No|Nome \<|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
+|NiladicFunction|Booleano|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
 |ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversione|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
  **Nodo parametri**  
   
  Ogni funzione presenta una raccolta di uno o più nodi Parameter.  
   
-|Nome attributo|Tipo di dati|Obbligatoria|Default Value|Descrizione|  
+|Nome attributo|Tipo di dati|Richiesto|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|NOME|String|Sì|n/d|Nome/identificatore del parametro.|  
-|Type|String|Yes|n/d|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direction|Yes|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-Inout|  
+|Name|Stringa|Yes|N/D|Nome/identificatore del parametro.|  
+|Digitare|Stringa|Yes|N/D|Tipo EDM del parametro.|  
+|Modalità|Parametro<br /><br /> Direzione|Yes|N/D|Direzione del parametro:<br /><br /> -in<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  

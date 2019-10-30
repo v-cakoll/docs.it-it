@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 9919bad113eb11a38ce137a2cbbf6c67bd5b21ef
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84048a3fba2b32b1ae745160e2b405c04b738c65
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794080"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040231"
 ---
 # <a name="enabling-query-notifications"></a>Abilitazione di notifiche di query
 Le applicazioni che usano le notifiche di query dispongono di un set comune di requisiti. L'origine dati dell'utente deve essere configurata correttamente per supportare le notifiche di query SQL e l'utente deve disporre delle autorizzazioni corrette sia sul lato client che sul lato server.  
@@ -55,7 +55,7 @@ Le applicazioni che usano le notifiche di query dispongono di un set comune di r
   
  Per una corretta esecuzione degli esempi di notifica di query, nel server database devono essere eseguite le seguenti istruzioni Transact-SQL:  
   
-```  
+```sql
 CREATE QUEUE ContactChangeMessages;  
   
 CREATE SERVICE ContactChangeNotifications  

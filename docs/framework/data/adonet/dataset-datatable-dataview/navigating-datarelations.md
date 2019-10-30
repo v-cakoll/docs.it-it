@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784353"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040353"
 ---
 # <a name="navigating-datarelations"></a>Esplorazione di oggetti DataRelation
-Una delle funzioni principali di un oggetto <xref:System.Data.DataRelation> è di consentire la navigazione da una <xref:System.Data.DataTable> all'altra all'interno di un <xref:System.Data.DataSet>. In questo modo è possibile recuperare tutti gli <xref:System.Data.DataRow> oggetti correlati in una **DataTable** quando viene specificato un singolo **DataRow** da un **DataTable**correlato. Ad esempio, dopo avere stabilito una **DataRelation** tra una tabella di clienti e una tabella di ordini, è possibile recuperare tutte le righe di ordine per una determinata riga del cliente utilizzando **GetChildRows**.  
+Una delle funzioni principali di un oggetto <xref:System.Data.DataRelation> è di consentire la navigazione da una <xref:System.Data.DataTable> all'altra all'interno di un <xref:System.Data.DataSet>. In questo modo è possibile recuperare tutti gli oggetti <xref:System.Data.DataRow> correlati in una **DataTable** , quando viene fornito un singolo **DataRow** da un **DataTable**correlato. Ad esempio, dopo avere stabilito una **DataRelation** tra una tabella di clienti e una tabella di ordini, è possibile recuperare tutte le righe di ordine per una determinata riga del cliente utilizzando **GetChildRows**.  
   
  Nell'esempio di codice seguente viene creata una **DataRelation** tra la tabella **Customers** e la tabella **Orders** di un **DataSet** e vengono restituiti tutti gli ordini per ogni cliente.  
   
@@ -24,11 +24,11 @@ Una delle funzioni principali di un oggetto <xref:System.Data.DataRelation> è d
   
  Nell'esempio espanso vengono inoltre restituiti i valori delle tabelle **OrderDetails** e **Products** . La tabella **Orders** è correlata alla tabella **OrderDetails** con **OrderID** per determinare, per ogni ordine cliente, i prodotti e le quantità ordinati. Poiché la tabella **OrderDetails** contiene solo il **ProductID** di un prodotto ordinato, **OrderDetails** è correlato ai **prodotti** che utilizzano **ProductID** per restituire il **ProductName**. In questa relazione la tabella **Products** è l'elemento padre e la tabella **Order Details** è l'elemento figlio. Di conseguenza, quando si scorre la tabella **OrderDetails** , viene chiamato **GetParentRow** per recuperare il valore **ProductName** correlato.  
   
- Si noti che quando si crea **DataRelation** per le tabelle **Customers** e **Orders** , non viene specificato alcun valore per il flag **createConstraints** (il valore predefinito è **true**). Si presuppone che tutte le righe della tabella **Orders** dispongano di un valore **CustomerID** presente nella tabella **Customers** padre. Se nella tabella **Orders** esiste un **CustomerID** che non esiste nella tabella <xref:System.Data.ForeignKeyConstraint> **Customers** , viene generata un'eccezione.  
+ Si noti che quando si crea **DataRelation** per le tabelle **Customers** e **Orders** , non viene specificato alcun valore per il flag **createConstraints** (il valore predefinito è **true**). Si presuppone che tutte le righe della tabella **Orders** dispongano di un valore **CustomerID** presente nella tabella **Customers** padre. Se nella tabella **Orders** esiste un **CustomerID** che non esiste nella tabella **Customers** , una <xref:System.Data.ForeignKeyConstraint> causa la generazione di un'eccezione.  
   
  Quando la colonna figlio potrebbe contenere valori non contenuti nella colonna padre, impostare il flag **createConstraints** su **false** quando si aggiunge la **DataRelation**. Nell'esempio, il flag **createConstraints** è impostato su **false** per l'oggetto **DataRelation** tra la tabella **Orders** e la tabella **OrderDetails** . Ciò consente all'applicazione di restituire tutti i record dalla tabella **OrderDetails** e solo un subset di record della tabella **Orders** senza generare un'eccezione in fase di esecuzione. Nell'esempio espanso viene generato un output con il seguente formato.  
   
-```  
+```output  
 Customer ID: NORTS  
   Order ID: 10517  
         Order Date: 4/24/1997 12:00:00 AM  

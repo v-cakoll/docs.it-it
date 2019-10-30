@@ -2,12 +2,12 @@
 title: Abilitazione dell'accesso tra database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bf46d43f5ac9b0a385e9bc6da1546af1d67a282d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794192"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040238"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Abilitazione dell'accesso tra database in SQL Server
 Il concatenamento della proprietà tra database si verifica quando una procedura di un database dipende dagli oggetti di un altro. Una catena di proprietà tra database funziona allo stesso modo del concatenamento della proprietà con un singolo database, ad eccezione del fatto che una catena di proprietà non interrotta richiede che tutti i proprietari degli oggetti siano mappati allo stesso account di accesso. Se l'oggetto di origine nel database di origine e gli oggetti di destinazione nei database di destinazione appartengono allo stesso account di accesso, le autorizzazioni sugli oggetti di destinazione non verranno controllate in SQL Server.  
@@ -26,7 +26,7 @@ Il concatenamento della proprietà tra database si verifica quando una procedura
   
  Nell'esempio seguente si attiva il concatenamento della proprietà tra database per tutti i database:  
   
-```  
+```sql
 EXECUTE sp_configure 'show advanced', 1;  
 RECONFIGURE;  
 EXECUTE sp_configure 'cross db ownership chaining', 1;  
@@ -35,7 +35,7 @@ RECONFIGURE;
   
  Nell'esempio seguente si attiva il concatenamento della proprietà tra database per database specifici:  
   
-```  
+```sql
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
 ALTER DATABASE Database2 SET DB_CHAINING ON;  
 ```  

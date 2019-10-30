@@ -2,12 +2,12 @@
 title: Sintassi delle stringhe di connessione
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e9e330b7195e5c04b6e9e2d086a04209e1c0e13
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784923"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040151"
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -49,12 +49,12 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
 La sintassi per una stringa di connessione <xref:System.Data.SqlClient.SqlConnection> è documentata nella proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. È possibile usare la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> per ottenere o impostare una stringa di connessione per un database di SQL Server. Per eseguire la connessione a una versione precedente di SQL Server, è necessario usare il provider di dati .NET Framework per OleDb (<xref:System.Data.OleDb>). La maggior parte delle parole chiave delle stringhe di connessione sono inoltre mappate alle proprietà dell'oggetto <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
 
 > [!IMPORTANT]
-> L'impostazione predefinita per la `Persist Security Info` parola chiave `false`è. Impostandola su `true` o `yes`, è possibile ottenere informazioni sensibili, compresi l'ID utente e la password, dalla connessione dopo che questa è stata aperta. Mantenere `Persist Security Info` impostata su `false` per assicurarsi che un'origine non attendibile non disponga dell'accesso alle informazioni sensibili sulla stringa di connessione.  
+> L'impostazione predefinita per la parola chiave `Persist Security Info` è `false`. Impostandola su `true` o `yes`, è possibile ottenere informazioni sensibili, compresi l'ID utente e la password, dalla connessione dopo che questa è stata aperta. Mantenere `Persist Security Info` impostare su `false` per assicurarsi che un'origine non attendibile non disponga dell'accesso alle informazioni sensibili della stringa di connessione.  
 
 ### <a name="windows-authentication-with-sqlclient"></a>Autenticazione di Windows con SqlClient 
  Ognuna delle forme di sintassi seguenti usa l'autenticazione di Windows per connettersi al database **AdventureWorks** in un server locale.  
   
-```  
+```csharp  
 "Persist Security Info=False;Integrated Security=true;  
     Initial Catalog=AdventureWorks;Server=MSSQL1"  
 "Persist Security Info=False;Integrated Security=SSPI;  
@@ -66,11 +66,11 @@ La sintassi per una stringa di connessione <xref:System.Data.SqlClient.SqlConnec
 ### <a name="sql-server-authentication-with-sqlclient"></a>Autenticazione SQL Server con SqlClient   
  L'autenticazione di Windows è il sistema consigliato per le connessioni a SQL Server. Se tuttavia è necessario usare l'autenticazione di SQL Server, usare la sintassi seguente per specificare un nome utente e una password. In questo esempio per rappresentare un nome utente e una password validi vengono usati asterischi.  
   
-```  
+```csharp  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Quando ci si connette al database SQL di Azure o a Azure SQL data warehouse e si specifica un account `user@servername`di accesso nel formato, `servername` verificare che il valore nell'account di accesso corrisponda al valore specificato per `Server=`.
+Quando ci si connette al database SQL di Azure o a Azure SQL Data Warehouse e si specifica un account di accesso nel formato `user@servername`, assicurarsi che il valore `servername` nell'account di accesso corrisponda al valore specificato per `Server=`.
 
 > [!NOTE]
 > L'autenticazione di Windows ha la precedenza sugli account di accesso di SQL Server. Se si specifica sia Integrated Security=true sia un nome utente e una password, questi ultimi saranno ignorati e sarà usata l'autenticazione di Windows.  
@@ -78,14 +78,14 @@ Quando ci si connette al database SQL di Azure o a Azure SQL data warehouse e si
 ### <a name="connect-to-a-named-instance-of-sql-server"></a>Connettersi a un'istanza denominata di SQL Server
 Per connettersi a un'istanza denominata di SQL Server, utilizzare la sintassi del *nome del server computer\nome* .  
   
+```csharp  
+"Data Source=MySqlServer\MSSQL1;"  
 ```  
-Data Source=MySqlServer\MSSQL1;"  
-```  
- 
+
 È anche possibile impostare la proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> di `SqlConnectionStringBuilder` sul nome dell'istanza quando si compila una stringa di connessione. La proprietà <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> di un oggetto <xref:System.Data.SqlClient.SqlConnection> è di sola lettura.  
   
 ### <a name="type-system-version-changes"></a>Modifiche alla versione del sistema di tipi  
- La `Type System Version` parola chiave in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> un oggetto specifica la rappresentazione lato client dei tipi di SQL Server. Per altre informazioni sulla parola chiave <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vedere `Type System Version`.  
+ La parola chiave `Type System Version` in una <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifica la rappresentazione lato client dei tipi di SQL Server. Per altre informazioni sulla parola chiave <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vedere `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Connessione e collegamento alle istanze utente di SQL Server Express  
  Le istanze utente sono una funzionalità di SQL Server Express. consentono a un utente che usa un account di Windows locale con privilegi minimi di collegarsi ed eseguire un database SQL Server senza la necessità di privilegi amministrativi. Un'istanza utente viene eseguita con le credenziali di Windows dell'utente, non come un servizio.  
@@ -93,10 +93,10 @@ Data Source=MySqlServer\MSSQL1;"
  Per ulteriori informazioni sull'utilizzo delle istanze utente, vedere [SQL Server Express istanze utente](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Uso di TrustServerCertificate  
- La `TrustServerCertificate` parola chiave è valida solo quando ci si connette a un'istanza di SQL Server con un certificato valido. Se `TrustServerCertificate` è impostata su `true`, il livello trasporto userà SSL per crittografare il canale e ignorerà l'analisi della catena di certificati per la convalida dell'attendibilità.  
+ La parola chiave `TrustServerCertificate` è valida solo quando ci si connette a un'istanza di SQL Server con un certificato valido. Se `TrustServerCertificate` è impostata su `true`, il livello trasporto userà SSL per crittografare il canale e ignorerà l'analisi della catena di certificati per la convalida dell'attendibilità.  
   
-```  
-"TrustServerCertificate=true;"   
+```csharp  
+"TrustServerCertificate=true;"
 ```  
   
 > [!NOTE]
@@ -105,19 +105,19 @@ Data Source=MySqlServer\MSSQL1;"
 ### <a name="enabling-encryption"></a>Attivazione della crittografia  
  Per abilitare la crittografia quando non è stato eseguito il provisioning di un certificato nel server, è necessario impostare le opzioni **Force Protocol Encryption** e **trust server certificate** in Gestione configurazione SQL Server. In questo caso, la crittografia userà un certificato server autofirmato senza convalida se nel server non è stato eseguito il provisioning di alcun certificato verificabile.  
   
- Le impostazioni delle applicazioni non possono ridurre il livello di sicurezza configurato in SQL Server, ma facoltativamente possono potenziarlo. Un'applicazione può richiedere la crittografia impostando `TrustServerCertificate` le `Encrypt` parole chiave `true`e su, garantendo che la crittografia venga eseguita anche quando non è stato eseguito il provisioning di un certificato server e non è stata **forzata la crittografia del protocollo** sono state configurate per il client. Tuttavia, se `TrustServerCertificate` non è attivata nella configurazione client, è comunque necessario il provisioning di un certificato server.  
+ Le impostazioni delle applicazioni non possono ridurre il livello di sicurezza configurato in SQL Server, ma facoltativamente possono potenziarlo. Un'applicazione può richiedere la crittografia impostando le parole chiave `TrustServerCertificate` e `Encrypt` su `true`, garantendo che la crittografia venga eseguita anche quando non è stato eseguito il provisioning di un certificato server e non è stata configurata la **crittografia del protocollo** . per il client. Tuttavia, se `TrustServerCertificate` non è attivata nella configurazione client, è comunque necessario il provisioning di un certificato server.  
   
  La tabella seguente descrive tutti i casi.  
   
 |Impostazione client Forza crittografia protocollo|Impostazione client Considera attendibile certificato server|Attributo/stringa di connessione Encrypt/Use Encryption for Data|Attributo/stringa di connessione Trust Server Certificate|Risultato|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/D|No (impostazione predefinita)|Ignorato|Nessuna crittografia.|  
-|No|N/D|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|No|N/D|Sì|Yes|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
-|Sì|No|Ignorato|Ignorato|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|No (impostazione predefinita)|Ignorato|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
-|Yes|Sì|Sì|No (impostazione predefinita)|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|Sì|Sì|Sì|Sì|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
+|No|N/D|Yes|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|No|N/D|Yes|Yes|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
+|Yes|No|Ignorato|Ignorato|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|Yes|Yes|No (impostazione predefinita)|Ignorato|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
+|Yes|Yes|Yes|No (impostazione predefinita)|La crittografia viene eseguita solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|Yes|Yes|Yes|Yes|La crittografia viene sempre eseguita, ma può utilizzare un certificato server autofirmato.|  
   
  Per ulteriori informazioni, vedere [utilizzo della crittografia senza convalida](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
@@ -127,13 +127,13 @@ Data Source=MySqlServer\MSSQL1;"
 ### <a name="oledb-connection-string-syntax"></a>Sintassi della stringa di connessione OleDb  
  È necessario specificare il nome di un provider per una stringa di connessione <xref:System.Data.OleDb.OleDbConnection>. La seguente stringa di connessione consente di connettersi a un database Microsoft Access usando il provider Jet. Si noti che le parole chiave `User ID` e `Password` sono facoltative se il database non è protetto (impostazione predefinita).  
   
-```   
-Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
+```csharp
+Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;
 ```  
   
  Se il database Jet è protetto tramite sicurezza a livello utente, è necessario specificare il percorso del file di informazioni sul gruppo di lavoro, con estensione mdw. Il file di informazioni sul gruppo di lavoro viene usato per convalidare le credenziali fornite nella stringa di connessione.  
   
-```  
+```csharp
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System Database=d:\NorthwindSystem.mdw;User ID=*****;Password=*****;  
 ```  
   
@@ -143,7 +143,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Uso di DataDirectory per la connessione a Access/Jet  
  `DataDirectory` non è riservata esclusivamente a `SqlClient`. Può essere usata anche con i provider di dati .NET <xref:System.Data.OleDb> e <xref:System.Data.Odbc>. Nell'esempio seguente la stringa <xref:System.Data.OleDb.OleDbConnection> indica la sintassi richiesta per connettersi al database Northwind.mdb situato nella cartella app_data dell'applicazione. In tale percorso è archiviato anche il database di sistema (System.mdw).  
   
-```  
+```csharp  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
 Data Source=|DataDirectory|\Northwind.mdb;  
 Jet OLEDB:System Database=|DataDirectory|\System.mdw;"  
@@ -155,7 +155,7 @@ Jet OLEDB:System Database=|DataDirectory|\System.mdw;"
 ### <a name="connecting-to-excel"></a>Connessione a Excel  
  Il provider Microsoft Jet viene usato per la connessione a una cartella di lavoro Excel. Nella seguente stringa di connessione la parola chiave `Extended Properties` imposta le proprietà specifiche di Excel. "HDR=Yes;" indica che la prima riga contiene nomi di colonne e non dati, mentre "IMEX=1;" indica al driver di leggere sempre come testo colonne di dati misti.  
   
-```  
+```csharp 
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=""Excel 8.0;HDR=Yes;IMEX=1""  
 ```  
   
@@ -164,7 +164,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=
 ### <a name="data-shape-provider-connection-string-syntax"></a>Sintassi della stringa di connessione di Data Shape Provider  
  Con il provider Microsoft Data Shape Provider, usare le parole chiave `Provider` e `Data Provider`. Nell'esempio seguente viene usato il provider Shape per eseguire la connessione a un'istanza locale di SQL Server.  
   
-```  
+```csharp  
 "Provider=MSDataShape;Data Provider=SQLOLEDB;Data Source=(local);Initial Catalog=pubs;Integrated Security=SSPI;"   
 ```  
   
@@ -173,14 +173,14 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=
   
  Nella seguente stringa di connessione viene usato il driver Microsoft per file di testo.  
   
-```  
+```csharp  
 Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=d:\bin  
 ```  
   
 ### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>Uso di DataDirectory per la connessione a Visual FoxPro  
  Nell'esempio di stringa di connessione <xref:System.Data.Odbc.OdbcConnection> seguente viene illustrato l'uso di `DataDirectory` per eseguire la connessione a un file di Microsoft Visual FoxPro.  
   
-```  
+```csharp  
 "Driver={Microsoft Visual FoxPro Driver};  
 SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"  
 ```  
@@ -188,7 +188,7 @@ SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"
 ## <a name="oracle-connection-strings"></a>Stringhe di connessione Oracle  
  La proprietà <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> di un oggetto <xref:System.Data.OracleClient.OracleConnection> consente di ottenere o impostare una stringa di connessione per un'origine dati OLE DB. Le stringhe di connessione Oracle sono supportate anche da <xref:System.Data.OracleClient.OracleConnectionStringBuilder>.  
   
-```  
+```csharp 
 Data Source=Oracle9i;User ID=*****;Password=*****;  
 ```  
   

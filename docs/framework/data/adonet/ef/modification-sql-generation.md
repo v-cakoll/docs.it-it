@@ -2,12 +2,12 @@
 title: Generazione di comandi SQL di modifica
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854287"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039892"
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 
@@ -29,7 +29,7 @@ Un oggetto DbModificationCommandTree è una rappresentazione del modello a ogget
 
 DbModificationCommandTree e le relative implementazioni generate dal Entity Framework rappresentano sempre un'operazione di riga singola. Questa sezione descrive questi tipi con i relativi vincoli in .NET Framework versione 3.5.
 
-![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diagramma](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree include una proprietà Target che rappresenta il set di destinazioni per l'operazione di modifica. La proprietà Expression di Target, che definisce il set di input, è sempre DbScanExpression.  Un DbScanExpression può rappresentare una tabella o una vista oppure un set di dati definiti con una query se la proprietà dei metadati "definizione della query" della relativa destinazione è non null.
 
@@ -62,9 +62,7 @@ Il valore Returning specifica una proiezione dei risultati da restituire in base
 
 SetClauses specifica l'elenco di clausole SET di inserimento o di aggiornamento che definiscono l'operazione di inserimento o aggiornamento.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Gli elementi dell'elenco vengono specificati come tipo DbModificationClause, che specifica una singola clausola in un'operazione di modifica di inserimento o aggiornamento. DbSetClause eredita da DbModificationClause e specifica la clausola in un'operazione di modifica che imposta il valore di una proprietà. A partire dalla versione 3,5 della .NET Framework, tutti gli elementi nelle seclausole sono di tipo seclausola.
 
 Property specifica la proprietà che deve essere aggiornata. È sempre un oggetto DbPropertyExpression di un oggetto DbVariableReferenceExpression, che rappresenta un riferimento alla proprietà Target del corrispondente DbModificationCommandTree.
 
@@ -116,7 +114,7 @@ Poiché l'istanza di DbPropertyExpression rappresenta sempre la tabella di input
 
 Per un determinato DbInsertCommandTree nel provider di esempio, il comando di inserimento generato si basa su uno dei due modelli di inserimento riportati di seguito.
 
-Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "\@ @ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "Keysi = &#124; SCOPE_IDENTITY ()" accetta la forma "keyso = SCOPE_IDENTITY ()" solo se KeysA è una chiave generata dall'archivio, perché SCOPE_IDENTITY () restituisce l'ultimo valore Identity inserito in un'identità ( colonna generata dall'archivio).
+Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "\@@ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "Keysi = &#124; SCOPE_IDENTITY ()" accetta la forma "keyso = SCOPE_IDENTITY ()" solo se KeysA è una chiave generata dall'archivio, perché SCOPE_IDENTITY () restituisce l'ultimo valore Identity inserito in un'identità ( colonna generata dall'archivio).
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 In questo codice viene prodotto il seguente albero dei comandi passato al provider:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-La clausola set contiene la clausola set fittizia (@i "= 0") solo se non è specificata alcuna clausola set. In questo modo si garantisce che le colonne calcolate dall'archivio vengano ricalcolate.
+La clausola set contiene la clausola set fittizia ("@i = 0") solo se non è specificata alcuna clausola set. In questo modo si garantisce che le colonne calcolate dall'archivio vengano ricalcolate.
 
 Solo se la proprietà Returning non è null, viene generata un'istruzione Select per restituire le proprietà specificate nella proprietà Returning.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 In questo codice utente viene prodotto il seguente albero dei comandi passato al provider:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 In questo codice utente viene prodotto il seguente albero dei comandi passato al provider:
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

@@ -2,14 +2,14 @@
 title: Variabili discard - Guida di C#
 description: Descrive il supporto in C# delle variabili discard, che sono variabili non assegnate e rimovibili, e le modalità d'uso di tali variabili.
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.openlocfilehash: 783266b6893a597d790af82db50b4f52a00ad0bf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143598"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037339"
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
 
@@ -68,15 +68,15 @@ Nel seguente esempio viene chiamato il metodo [DateTime.TryParse(String, out Dat
 
 Si noti che anche `_` è un identificatore valido. Quando viene usata fuori da un contesto supportato, `_` non viene considerata come una variabile discard ma come una variabile valida. Se un identificatore con nome `_` è già incluso nell'ambito, l'uso di `_` come variabile discard standalone può causare:
 
-- La modifica accidentale della variabile `_` dell'ambito, alla quale viene assegnato il valore della variabile discard prevista. Ad esempio:
+- La modifica accidentale della variabile `_` dell'ambito, alla quale viene assegnato il valore della variabile discard prevista. Esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Un errore del compilatore per la violazione dell'indipendenza dai tipi. Ad esempio:
+- Un errore del compilatore per la violazione dell'indipendenza dai tipi. Esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Errore del compilatore CS0136: "Non è possibile dichiarare in questo ambito una variabile locale o un parametro denominato "\_" perché tale nome viene usato in un ambito locale di inclusione per definire una variabile locale o un parametro". Ad esempio:
+- Errore del compilatore CS0136: "Non è possibile dichiarare in questo ambito una variabile locale o un parametro denominato "\_" perché tale nome viene usato in un ambito locale di inclusione per definire una variabile locale o un parametro". Esempio:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

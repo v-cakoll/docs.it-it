@@ -1,13 +1,14 @@
 ---
 title: Proprietà
 description: Informazioni sulle proprietà di C#, tra cui funzionalità per la convalida, valori calcolati, valutazione lazy e notifiche di modifica di proprietà.
+ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587395"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039753"
 ---
 # <a name="properties"></a>Proprietà
 

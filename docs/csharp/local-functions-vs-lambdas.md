@@ -2,13 +2,14 @@
 title: Funzioni locali ed espressioni lambda
 description: Informazioni sui motivi per cui le funzioni locali possono essere una scelta migliore rispetto alle espressioni lambda.
 ms.date: 06/27/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611445"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038806"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Confronto tra funzioni locali ed espressioni lambda
 
@@ -24,7 +25,7 @@ Confrontare l'implementazione con una versione che usa le espressioni lambda:
 
 Le funzioni locali hanno nomi. Le espressioni lambda sono metodi anonimi che vengono assegnati a variabili di tipo `Func` o `Action`. Quando si dichiara una funzione locale, i tipi di argomento e il tipo restituito fanno parte della dichiarazione della funzione. Anziché far parte del corpo dell'espressione lambda, i tipi di argomento e il tipo restituito fanno parte della dichiarazione del tipo di variabile dell'espressione lambda. Queste due differenze possono avere come risultato una maggiore chiarezza del codice.
 
-Le funzioni locali hanno regole diverse per l'assegnazione certa rispetto alle espressioni lambda. A una dichiarazione di funzione locale si può fare riferimento da qualsiasi posizione di codice nel cui ambito la funzione si trova. Un'espressione lambda deve essere assegnata a una variabile delegata prima che sia possibile accedervi o che sia possibile chiamarla tramite il delegato che fa riferimento all'espressione lambda stessa. Si noti che la versione che usa l'espressione lambda deve dichiarare e inizializzare l'espressione lambda `nthFactorial` prima di definirla. In caso contrario, si verifica un errore di compilazione per fare riferimento a `nthFactorial` prima di assegnarla.
+Le funzioni locali hanno regole diverse per l'assegnazione certa rispetto alle espressioni lambda. A una dichiarazione di funzione locale si può fare riferimento da qualsiasi posizione di codice nel cui ambito la funzione si trova. Un'espressione lambda deve essere assegnata a una variabile delegata prima che sia possibile accedervi o chiamarla tramite il delegato che fa riferimento all'espressione lambda. Si noti che la versione che usa l'espressione lambda deve dichiarare e inizializzare l'espressione lambda, `nthFactorial` prima di definirla. In caso contrario, si verifica un errore di compilazione per fare riferimento a `nthFactorial` prima di assegnarla.
 Queste differenze fanno sì che gli algoritmi ricorsivi sino più facili da creare usando funzioni locali. È possibile dichiarare e definire una funzione locale che chiama se stessa. Le espressioni lambda devono essere dichiarate e a queste deve essere assegnato un valore predefinito prima che sia possibile riassegnarle a un corpo che fa riferimento alla stessa espressione lambda.
 
 Le regole di assegnazione certa influiscono anche su tutte le variabili acquisite dalla funzione locale o dall'espressione lambda. Sia le regole delle funzioni locali che quelle delle espressioni lambda richiedono che tutte le variabili acquisite siano assegnate in modo certo nel momento in cui la funzione locale o l'espressione lambda viene convertita in delegato. La differenza è che le espressioni lambda vengono convertite in delegati quando vengono dichiarate. Le funzioni locali vengono convertite in delegati solo quando vengono usate come delegati. Se si dichiara una funzione locale e si fa riferimento a questa solo chiamandola come un metodo, non verrà convertita in delegato. Tale regola consente di dichiarare una funzione locale in qualsiasi posizione comoda all'interno dell'ambito che la comprende. È una pratica comune dichiarare funzioni locali alla fine del metodo padre, dopo le istruzioni Return.

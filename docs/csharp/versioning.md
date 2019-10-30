@@ -2,13 +2,14 @@
 title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
+ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834051"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039660"
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
@@ -39,10 +40,10 @@ Una nuova versione della libreria è compatibile a livello di codice sorgente co
 Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gestire la compatibilità della libreria con le versioni precedenti:
 
 - Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo. Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.
-- Firme del metodo: Quando si aggiorna il comportamento di un metodo, è necessario modificare anche la firma, è necessario creare un overload in modo che il codice che chiama il metodo continuerà a funzionare.
+- Firme del metodo: quando si aggiorna il comportamento di un metodo è necessario modificare anche la firma, è necessario creare un overload in modo tale che il codice che chiama il metodo continuerà a funzionare.
 È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.
 - [Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future. Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
-- Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o se ne modifica il valore predefinito, tutto il codice che non specifica questi argomenti dovrà essere aggiornato.
+- Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.
 
 > [!NOTE]
 > L'esecuzione di argomenti obbligatori facoltativi dovrebbe avere un effetto minimo, soprattutto se il comportamento del metodo non viene modificato.
@@ -52,7 +53,7 @@ Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
 
 Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](../framework/configure-apps/file-schema/index.md) nella maggior parte dei tipi di progetto.
-Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere, è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambiano regolarmente vengano archiviate nel file `app.config`, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve essere sostituito con quello nuovo senza il è necessario ricompilare la libreria.
+Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambiano regolarmente vengano archiviate nel file di `app.config`, in questo modo quando tali informazioni vengono aggiornate, il file di configurazione delle versioni precedenti deve essere sostituito con quello nuovo senza necessità di ricompilare la libreria.
 
 ## <a name="consuming-libraries"></a>Elaborazione delle librerie
 
@@ -62,7 +63,7 @@ Per fortuna, C# l'ecosistema .NET include funzionalità e tecniche che consenton
 
 ### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
 
-È possibile usare il file *app. config* per aggiornare la versione di una libreria usata dall'app. Aggiungendo un elemento definito reindirizzamento dell' [*associazione*](../framework/configure-apps/redirect-assembly-versions.md), è possibile usare la nuova versione della libreria senza dover ricompilare l'app. L'esempio seguente illustra come aggiornare il file *app. config* dell'app per usare la versione patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` in cui è stata originariamente compilata.
+È possibile usare il file *app. config* per aggiornare la versione di una libreria usata dall'app. Aggiungendo un elemento definito reindirizzamento dell' [*associazione*](../framework/configure-apps/redirect-assembly-versions.md), è possibile usare la nuova versione della libreria senza dover ricompilare l'app. L'esempio seguente illustra come aggiornare il file *app. config* dell'app per usare la versione `1.0.1` patch di `ReferencedLibrary` invece della versione `1.0.0` in cui è stata originariamente compilata.
 
 ```xml
 <dependentAssembly>
@@ -95,7 +96,7 @@ Ciò significa che quando una classe di base nella nuova versione di una libreri
 
 Se non si specifica alcun modificatore `new`, una classe derivata nasconderà per impostazione predefinita i membri in conflitto in una classe di base e il codice verrà comunque compilato anche se viene generato un avviso del compilatore. Ciò significa che la semplice aggiunta di nuovi membri a una classe esistente rende la nuova versione della libreria compatibile sia a livello di codice sorgente che a livello binario con il codice che dipende da essa.
 
-### <a name="override"></a>override
+### <a name="override"></a>ignora
 
 Il modificatore `override` indica che un'implementazione derivata estende l'implementazione di un membro della classe di base anziché nasconderlo. È necessario che al membro della classe di base sia applicato il modificatore `virtual`.
 

@@ -2,15 +2,15 @@
 title: Metodi - Guida a C#
 description: Panoramica dei metodi e dei parametri e dei valori restituiti dei metodi
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: b25fad09b530967c9bbfc83412632fc876842dcc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168507"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035801"
 ---
 # <a name="methods"></a>Metodi
 
@@ -18,22 +18,6 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
 
 > [!NOTE]
 > In questo argomento vengono descritti i metodi denominati. Per informazioni sulle funzioni anonime, vedere [Funzioni anonime](programming-guide/statements-expressions-operators/anonymous-functions.md).
-
-Di seguito sono elencate le diverse sezioni di questo argomento:
-
-- [Firme del metodo](#signatures)
-- [Chiamata del metodo](#invocation)
-- [Metodi ereditati e sottoposti a override](#inherited)
-- [Passaggio di parametri](#passing)
-  - [Passaggio di parametri per valore](#byval)
-  - [Passaggio di parametri per riferimento](#byref)
-  - [Matrici di parametri](#paramarray)
-- [Parametri e argomenti facoltativi](#optional)
-- [Valori restituiti](#return)
-- [Metodi di estensione](#extension)
-- [Metodi asincroni](#async)
-- [Membri con corpo di espressione](#expr)
-- [Iteratori](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +141,7 @@ La definizione di un metodo può specificare che i parametri sono obbligatori o 
 Il valore predefinito del parametro deve essere assegnato da uno dei tipi di espressioni seguenti:
 
 - Una costante, ad esempio una stringa letterale o un numero.
-- Un'espressione del form `new ValType`, dove `ValType` è un tipo di valore. Osservare come venga richiamato il costruttore senza parametri implicito del tipo di valore, che non è un membro effettivo del tipo.
+- Un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore. Osservare come venga richiamato il costruttore senza parametri implicito del tipo di valore, che non è un membro effettivo del tipo.
 - Un'espressione del form `default(ValType)`, dove `ValType` è un tipo di valore.
 
 Se un metodo include parametri obbligatori e facoltativi, i parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo tutti i parametri obbligatori.
@@ -295,7 +279,7 @@ Se il metodo restituisce `void` o è un metodo asincrono, il corpo del metodo de
 
 Un iteratore esegue un'iterazione personalizzata su una raccolta, ad esempio un elenco o una matrice. Un iteratore usa l'istruzione [yield return](language-reference/keywords/yield.md) per restituire un elemento alla volta. Quando viene raggiunta un'istruzione `yield return`, viene memorizzata la posizione corrente in modo che il chiamante possa richiedere l'elemento successivo della sequenza.
 
-Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.
+Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 Per altre informazioni, vedere [Iteratori](programming-guide/concepts/iterators.md).
 

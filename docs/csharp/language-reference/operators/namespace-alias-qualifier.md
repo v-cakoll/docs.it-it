@@ -11,19 +11,19 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038984"
 ---
 # <a name="-operator-c-reference"></a>Operatore :: (Riferimenti per C#)
 
-Usare il qualificatore di alias dello spazio dei nomi `::` per accedere ai membri di uno spazio dei nomi con alias. Il qualificatore `::` viene usato tra due identificatori. L'identificatore a sinistra può essere uno qualsiasi degli alias seguenti:
+Usare il qualificatore alias dello spazio dei nomi `::` per accedere a un membro di uno spazio dei nomi con alias. È possibile utilizzare il qualificatore di `::` solo tra due identificatori. L'identificatore a sinistra può essere uno qualsiasi degli alias seguenti:
 
-- Un alias dello spazio dei nomi creato con la [direttiva alias using](../keywords/using-directive.md):
-  
+- Alias dello spazio dei nomi creato con una [direttiva alias using](../keywords/using-directive.md):
+
   ```csharp
   using forwinforms = System.Drawing;
   using forwpf = System.Windows;
@@ -36,7 +36,7 @@ Usare il qualificatore di alias dello spazio dei nomi `::` per accedere ai membr
 
 - Un [alias extern](../keywords/extern-alias.md).
 - L'alias `global`, ovvero l'alias dello spazio dei nomi globale. Lo spazio dei nomi globale è lo spazio dei nomi che contiene gli spazi dei nomi e i tipi non dichiarati all'interno di uno spazio dei nomi denominato. Quando viene usato con il qualificatore `::`, l'alias `global` fa sempre riferimento allo spazio dei nomi globale, anche se è presente l'alias dello spazio dei nomi `global` definito dall'utente.
-  
+
   Nell'esempio seguente viene usato l'alias `global` per accedere allo spazio dei nomi .NET <xref:System>, che è un membro dello spazio dei nomi globale. Senza l'alias `global`, verrà eseguito l'accesso allo spazio dei nomi `System` definito dall'utente, che è un membro dello spazio dei nomi `MyCompany.MyProduct`:
 
   ```csharp
@@ -46,18 +46,18 @@ Usare il qualificatore di alias dello spazio dei nomi `::` per accedere ai membr
       {
           static void Main() => global::System.Console.WriteLine("Using global alias");
       }
-  
+
       class Console
       {
           string Suggestion => "Consider renaming this class";
       }
   }
   ```
-  
+
   > [!NOTE]
   > La parola chiave `global` è l'alias dello spazio dei nomi globale solo quando è l'identificatore di sinistra del qualificatore `::`.
 
-È anche possibile usare l'[operatore di accesso ai membri `.`](member-access-operators.md#member-access-operator-) per accedere ai membri di uno spazio dei nomi con alias. L'operatore `.` viene tuttavia anche usato per accedere ai membri di un tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
+È anche possibile usare l' [operatore `.` di accesso ai membri](member-access-operators.md#member-access-operator-) per accedere a un membro di uno spazio dei nomi con alias. Tuttavia, l'operatore `.` viene utilizzato anche per accedere a un membro del tipo. Il qualificatore `::` garantisce che il relativo identificatore di sinistra faccia sempre riferimento a un alias dello spazio dei nomi, anche se esiste un tipo o uno spazio dei nomi con lo stesso nome.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 

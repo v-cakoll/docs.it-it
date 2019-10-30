@@ -2,12 +2,12 @@
 title: Mapping tra vincoli XML Schema (XSD) univoci e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784417"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040354"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) univoci e vincoli di dataset
 In uno schema XSD (XML Schema Definition Language), l'elemento **Unique** specifica il vincolo di univocità per un elemento o un attributo. Durante il processo di conversione di un XML Schema in uno schema relazionale, viene eseguito il mapping del vincolo univoco specificato su un elemento o un attributo dell'XML Schema a un vincolo univoco del tipo <xref:System.Data.DataTable> nel tipo <xref:System.Data.DataSet> corrispondente generato.  
@@ -16,8 +16,8 @@ In uno schema XSD (XML Schema Definition Language), l'elemento **Unique** specif
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** fornisce il valore del nome del vincolo.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente nell'elemento **Unique** , viene creato un vincolo unique con la proprietà **IsPrimaryKey** impostata su **true**.|  
+|**msdata: ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, l'attributo **Name** fornisce il valore del nome del vincolo.|  
+|**msdata: PrimaryKey**|Se `PrimaryKey="true"` è presente nell'elemento **Unique** , viene creato un vincolo unique con la proprietà **IsPrimaryKey** impostata su **true**.|  
   
  Nell'esempio seguente viene illustrato un XML Schema che utilizza l'elemento **Unique** per specificare un vincolo di univocità.  
   
@@ -50,13 +50,13 @@ In uno schema XSD (XML Schema Definition Language), l'elemento **Unique** specif
   
  L'elemento **Unique** nello schema specifica che per tutti gli elementi **Customers** in un'istanza del documento, il valore dell'elemento figlio **CustomerID** deve essere univoco. Durante la compilazione del **set di dati**, il processo di mapping legge questo schema e genera la tabella seguente:  
   
-```  
+```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  Il processo di mapping crea anche un vincolo UNIQUE nella colonna **CustomerID** , come illustrato nel set di **dati**seguente. Per semplicità vengono mostrate solo le proprietà rilevanti.  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
@@ -64,7 +64,7 @@ TableName: Customers
       Unique: True  
   ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
-      Columns: CustomerID   
+      Columns: CustomerID
       IsPrimaryKey: False  
 ```  
   
@@ -86,10 +86,10 @@ TableName: Customers
   
  Si tratta del vincolo creato nel **set di dati**risultante.  
   
-```  
+```text  
 ConstraintName: SomeName  
   Table: Customers  
-  Columns: CustomerID CompanyName   
+  Columns: CustomerID CompanyName
   IsPrimaryKey: False  
 ```  
   

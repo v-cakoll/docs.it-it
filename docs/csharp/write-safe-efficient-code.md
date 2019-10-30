@@ -2,13 +2,14 @@
 title: Scrivere codice C# sicuro ed efficiente
 description: I recenti miglioramenti apportati al linguaggio C# consentono di scrivere codice sicuro verificabile, con prestazioni superiori a quelle in precedenza associate al codice non gestito.
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960833"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039638"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Scrivere codice C# sicuro ed efficiente
 
@@ -229,7 +230,7 @@ Il compilatore genera codice più efficiente quando si chiamano i membri di un `
 
 Non è necessario passare un tipo di valore nullable come argomento `in`. Il tipo di <xref:System.Nullable%601> non è dichiarato come struct di sola lettura. Ciò significa che il compilatore deve generare le copie difensive di tutti gli argomenti del valore di tipo nullable passato a un metodo tramite il modificatore `in` nella dichiarazione del parametro.
 
-Per un programma di esempio che illustra le differenze in termini di prestazioni, vedere [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) nel [repository di esempi](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) in GitHub. Viene confrontato il passaggio di uno struct modificabile per valore e per riferimento con il passaggio di uno struct non modificabile per valore e per riferimento. L'uso dello struct non modificabile e del passaggio per riferimento è più veloce.
+È possibile vedere un programma di esempio in cui vengono illustrate le differenze di prestazioni usando [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) nel [repository degli esempi](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) su GitHub. Viene confrontato il passaggio di uno struct modificabile per valore e per riferimento con il passaggio di uno struct non modificabile per valore e per riferimento. L'uso dello struct non modificabile e del passaggio per riferimento è più veloce.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Usare i tipi `ref struct` per lavorare con i blocchi o la memoria in un singolo stack frame
 

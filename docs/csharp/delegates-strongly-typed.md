@@ -2,13 +2,14 @@
 title: Delegati fortemente tipizzati
 description: Informazioni su come usare i tipi delegati generici per dichiarare tipi personalizzati quando si crea una funzionalità che richiede i delegati.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215164"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037351"
 ---
 # <a name="strongly-typed-delegates"></a>Delegati fortemente tipizzati
 
@@ -54,7 +55,8 @@ Per convenzione, il tipo del risultato è sempre l'ultimo parametro di tipo in t
 
 Usare uno dei tipi `Func` per ogni tipo delegato che restituisce un valore.
 
-È anche disponibile un tipo <xref:System.Predicate%601> specializzato per un delegato che restituisce un test su un singolo valore:
+È disponibile anche una <xref:System.Predicate%601> specializzata 
+digitare per un delegato che restituisce un test su un singolo valore:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

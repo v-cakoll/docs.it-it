@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920026"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040868"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundation (WPF) tramite Windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonome forniscono le proprie finestre usando la classe <xref:System.Windows.Window>. Questo argomento introduce <xref:System.Windows.Window> prima di illustrare le nozioni di base relative alla creazione e alla gestione di Windows in applicazioni autonome.  
@@ -442,7 +442,7 @@ Gli utenti interagiscono con applicazioni autonome Windows Presentation Foundati
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Stile di finestra non rettangolare  
- Esistono anche situazioni in cui gli stili del bordo che <xref:System.Windows.Window.WindowStyle%2A> consente di avere non sono sufficienti. È ad esempio possibile creare un'applicazione con un bordo non rettangolare, come [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] USA.  
+ Esistono anche situazioni in cui gli stili del bordo che <xref:System.Windows.Window.WindowStyle%2A> consente di avere non sono sufficienti. Ad esempio, è possibile creare un'applicazione con un bordo non rettangolare, come Microsoft Windows Media Player USA.  
   
  Si consideri, ad esempio, la finestra Bubble vocale mostrata nella figura seguente:  
   

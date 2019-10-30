@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
-ms.translationtype: HT
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609851"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038879"
 ---
 # <a name="--and---operators-c-reference"></a>Operatori - e -= (Riferimenti per C#)
 
-L'operatore `-` è supportato dai tipi numerici predefiniti e i tipi [delegato](../keywords/delegate.md).
+Gli operatori `-` e `-=` sono supportati dai tipi numerici [integrali](../builtin-types/integral-numeric-types.md) e a [virgola mobile](../builtin-types/floating-point-numeric-types.md) incorporati e dai tipi [delegati](../builtin-types/reference-types.md#the-delegate-type) .
 
 Per informazioni sull'operatore aritmetico `-`, vedere le sezioni [Operatori più e meno unari](arithmetic-operators.md#unary-plus-and-minus-operators) e [Operatore di sottrazione -](arithmetic-operators.md#subtraction-operator--) dell'articolo [Operatori aritmetici](arithmetic-operators.md).
 
 ## <a name="delegate-removal"></a>Rimozione di delegati
 
-Per gli operandi dello stesso tipo [delegato](../keywords/delegate.md), l'operatore `-` restituisce un'istanza di delegato che viene calcolata come segue:
+Per gli operandi dello stesso tipo [delegato](../builtin-types/reference-types.md#the-delegate-type), l'operatore `-` restituisce un'istanza di delegato che viene calcolata come segue:
 
 - Se entrambi gli operandi sono diversi da Null e l'elenco chiamate dell'operando di destra è un sottoelenco contiguo dell'elenco chiamate dell'operando di sinistra, il risultato dell'operazione è un nuovo elenco chiamate ottenuto rimuovendo le voci dell'operando di destra dall'elenco di chiamate dell'operando di sinistra. Se l'elenco dell'operando di destra corrisponde a più sottoelenchi contigui nell'elenco dell'operando di sinistra, viene rimosso solo il sottoelenco corrispondente più a destra. Se la rimozione restituisce un elenco vuoto, il risultato è `null`.
 
@@ -38,7 +38,7 @@ Per gli operandi dello stesso tipo [delegato](../keywords/delegate.md), l'operat
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  L'esempio precedente dimostra anche che, durante la rimozione del delegato, vengono confrontate le istanze del delegato. I delegati prodotti dalla valutazione di [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) identiche, ad esempio, non sono uguali. Per altre informazioni sull'uguaglianza dei delegati, vedere la sezione [Delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) dell'articolo [Specifiche del linguaggio C#](../language-specification/index.md).
+  L'esempio precedente dimostra anche che, durante la rimozione del delegato, vengono confrontate le istanze del delegato. I delegati prodotti dalla valutazione di [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) identiche, ad esempio, non sono uguali. Per altre informazioni sull'uguaglianza dei delegati, vedere la sezione [Delegare gli operatori di uguaglianza](~/_csharplang/spec/expressions.md#delegate-equality-operators) dell'articolo [Specifiche del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 - Se l'operando di sinistra è `null`, il risultato dell'operazione è `null`. Se l'operando di destra è `null`, il risultato dell'operazione è l'operando di sinistra.
 
@@ -63,7 +63,7 @@ x = x - y
 ```
 
 con la differenza che `x` viene valutato una sola volta.
-  
+
 Nell'esempio seguente viene illustrato l'uso dell'operatore `-=`:
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
@@ -82,7 +82,6 @@ Per altre informazioni, vedere le sezioni [Operatore meno unario](~/_csharplang/
 
 - [Riferimenti per C#](../index.md)
 - [Operatori C#](index.md)
-- [Delegati](../../programming-guide/delegates/index.md)
 - [Eventi](../../programming-guide/events/index.md)
 - [Operatori aritmetici](arithmetic-operators.md)
 - [Operatori + e +=](addition-operator.md)

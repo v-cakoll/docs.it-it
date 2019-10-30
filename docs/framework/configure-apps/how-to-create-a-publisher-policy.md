@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040197"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
 
@@ -55,26 +55,28 @@ Usare [assembly linker (al. exe)](../tools/al-exe-assembly-linker.md) per creare
 
 Al prompt dei comandi digitare il comando seguente:
 
-**al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/Platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 In questo comando:
 
-- L'argomento *publisherPolicyFile* è il nome del file dei criteri editore.
+- L'argomento `publisherPolicyFile` è il nome del file dei criteri editore.
 
-- L'argomento *publisherPolicyAssemblyFile* è il nome dell'assembly dei criteri editore risultante da questo comando. Il nome del file di assembly deve avere il formato seguente:
+- L'argomento `publisherPolicyAssemblyFile` è il nome dell'assembly dei criteri editore risultante da questo comando. Il nome del file di assembly deve avere il formato seguente:
 
-  **politica.** *majorNumber* **.** *minorNumber* **.** *MainAssemblyName* **. dll**
+  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
 
-- L'argomento *keyPairFile* è il nome del file che contiene la coppia di chiavi. È necessario firmare l'assembly e l'assembly dei criteri editore con la stessa coppia di chiavi.
+- L'argomento `keyPairFile` è il nome del file che contiene la coppia di chiavi. È necessario firmare l'assembly e l'assembly dei criteri editore con la stessa coppia di chiavi.
 
-- L'argomento *processorArchitecture* identifica la piattaforma di destinazione di un assembly specifico del processore.
+- L'argomento `processorArchitecture` identifica la piattaforma di destinazione di un assembly specifico del processore.
 
   > [!NOTE]
   > La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0.
 
 La possibilità di definire come destinazione un'architettura di processore specifica è disponibile a partire da .NET Framework 2,0. Il comando seguente crea un assembly dei criteri editore denominato `policy.1.0.myAssembly` da un file di criteri editore denominato `pub.config`, assegna un nome sicuro all'assembly utilizzando la coppia di chiavi nel file `sgKey.snk` e specifica che l'assembly è destinato al processore x86 architettura.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Utilizzare lo [strumento Global Assembly Cache (Gacutil. exe)](../tools/gacutil-
 
 Al prompt dei comandi digitare il comando seguente:
 
-**gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 Il comando seguente aggiunge `policy.1.0.myAssembly.dll` al Global Assembly Cache.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

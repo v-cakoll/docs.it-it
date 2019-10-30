@@ -2,12 +2,12 @@
 title: Problemi noti in SqlClient per Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395512"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039965"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemi noti in SqlClient per Entity Framework
 Questa sezione descrive i problemi noti relativi al provider di dati .NET Framework per SQL Server.  
@@ -38,7 +38,7 @@ Questa sezione descrive i problemi noti relativi al provider di dati .NET Framew
 ## <a name="skip-operator"></a>Operatore SKIP  
  Se si usa SQL Server 2000, l'uso di SKIP con ORDER BY in colonne non chiave potrebbe restituire risultati non corretti. Se la colonna non chiave include dati duplicati, potrebbe venire ignorato un numero di righe maggiore di quello specificato. Ciò è dovuto alla modalità di conversione di SKIP per SQL Server 2000. Nella query seguente, ad esempio, potrebbero essere ignorate più di cinque righe se `E.NonKeyColumn` ha valori duplicati:  
   
-```  
+```sql  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
@@ -52,7 +52,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
   
  Di seguito è riportato un esempio di query annidata in una clausola di proiezione:  
   
-```  
+```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254258"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035623"
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
-Negli argomenti di questa sezione viene illustrato come utilizzare le funzionalità di gestione del sistema di stampa e [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stampa incluse con e il nuovo percorso di stampa XPS (XML Paper Specification).  
+Negli argomenti di questa sezione viene illustrato come utilizzare le funzionalità di gestione del sistema di stampa e stampa incluse in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], nonché il nuovo percorso di stampa XPS (XML Paper Specification).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Richiamare una finestra di dialogo di stampa](how-to-invoke-a-print-dialog.md)  
- Istruzioni per il markup XAML per dichiarare [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] un oggetto della finestra di dialogo di stampa e utilizzare il codice per richiamare la finestra di dialogo dall'interno di un'applicazione Windows Presentation Foundation (WPF).  
+ Istruzioni per il markup XAML per dichiarare un oggetto finestra di dialogo di stampa di Microsoft Windows e usare il codice per richiamare la finestra di dialogo dall'interno di un'applicazione Windows Presentation Foundation (WPF).  
   
  [Duplicare una stampante](how-to-clone-a-printer.md)  
  Istruzioni per l'installazione di una seconda coda di stampa con esattamente le stesse proprietà di una coda di stampa esistente.  
@@ -35,7 +35,7 @@ Negli argomenti di questa sezione viene illustrato come utilizzare le funzionali
  Istruzioni su come individuare le proprietà dell'oggetto del sistema di stampa di runtime e i relativi tipi.  
   
  [Stampa di file XPS a livello di codice](how-to-programmatically-print-xps-files.md)  
- Istruzioni per la stampa rapida dei file XPS (XML Paper Specification) senza la necessità di [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]un oggetto.  
+ Istruzioni per la stampa rapida dei file XPS (XML Paper Specification) senza la necessità di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
  [Verificare lo stato delle stampanti da postazione remota](how-to-remotely-survey-the-status-of-printers.md)  
  Istruzioni per la creazione di un'utilità che rileverà le stampanti per individuare quelle che riscontrano un inceppamento della carta o altri problemi.  

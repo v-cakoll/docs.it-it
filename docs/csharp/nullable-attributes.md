@@ -1,13 +1,14 @@
 ---
 title: Aggiornare le API con attributi per definire le aspettative null
 description: Questo articolo illustra le motivazioni e le tecniche per l'aggiunta di attributi descrittivi per descrivere lo stato null degli argomenti e i valori restituiti dalle API
+ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319067"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039373"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aggiornare le librerie per usare i tipi di riferimento nullable e comunicare le regole Nullable ai chiamanti
 

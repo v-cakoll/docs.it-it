@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794684"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039808"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica. L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.  
@@ -34,7 +34,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  101 Smith Bob  
   
-|Nome colonna|Valore originale|Valore corrente|Valore nel database|  
+|Nome della colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Dalzi|Dalzi|Dalzi|  
@@ -44,7 +44,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Alle 1:03, User2 modifica **FirstName** da "Bob" a "Robert" e aggiorna il database.  
   
-|Nome colonna|Valore originale|Valore corrente|Valore nel database|  
+|Nome della colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Dalzi|Dalzi|Dalzi|  
@@ -54,7 +54,7 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Alle ore 13.05 l'Utente1 cambia il nome di "Maria" in "Teresa" e cerca di aggiornare la riga.  
   
-|Nome colonna|Valore originale|Valore corrente|Valore nel database|  
+|Nome della colonna|Valore originale|Valore corrente|Valore nel database|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Dalzi|Dalzi|Dalzi|  
@@ -67,13 +67,13 @@ In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento 
   
  Un'altra tecnica per rilevare eventuali violazioni alla concorrenza ottimistica consiste nel verificare che tutti i valori di colonna originali corrispondano ancora ai valori presenti nel database. Si consideri ad esempio la seguente query:  
   
-```  
+```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
  Per verificare la presenza di una violazione della concorrenza ottimistica quando si aggiorna una riga in **Tabella1**, è necessario eseguire l'istruzione Update seguente:  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
               Set Col2 = @NewCol2Value,  
               Set Col3 = @NewCol3Value  
@@ -88,7 +88,7 @@ WHERE Col1 = @OldCol1Value AND
   
  Se in una colonna dell'origine dati sono consentiti valori null, è necessario estendere la clausola WHERE, in modo che ricerchi un riferimento null corrispondente nella tabella locale e nell'origine dati. La seguente istruzione UPDATE, ad esempio, consente di verificare la corrispondenza tra un riferimento null nella riga locale e un riferimento null nell'origine dati o la corrispondenza tra un valore nella riga locale e il valore nell'origine dati.  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
@@ -96,7 +96,7 @@ UPDATE Table1 Set Col1 = @NewVal1
  Quando si usa il modello di concorrenza ottimistica, è possibile applicare anche criteri meno restrittivi. Ad esempio, se si usano solo le colonne di chiave primaria nella clausola WHERE, i dati verranno sovrascritti, indipendentemente dagli eventuali aggiornamenti apportati alle altre colonne successivamente all'ultima query. È inoltre possibile applicare una clausola WHERE solo a colonne specifiche, in modo che i dati vengano sovrascritti a meno che particolari campi non siano stati aggiornati successivamente all'ultima query.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- L'evento **RowUpdated** dell' <xref:System.Data.Common.DataAdapter> oggetto può essere usato in combinazione con le tecniche descritte in precedenza, per fornire una notifica all'applicazione di violazioni della concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornamento di una riga **modificata** da un **set di dati**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. L' <xref:System.Data.Common.RowUpdatedEventArgs> oggetto restituisce una proprietà **RecordsAffected** contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando Update per la verifica della concorrenza ottimistica, la proprietà **RecordsAffected** restituirà, di conseguenza, un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, perché non è stato aggiornato alcun record. In questo caso viene generata un'eccezione. L'evento **RowUpdated** consente di gestire questa occorrenza ed evitare l'eccezione impostando un valore **RowUpdatedEventArgs. status** appropriato, ad esempio **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sull'evento **RowUpdated** , vedere [gestione di eventi DataAdapter](handling-dataadapter-events.md).  
+ L'evento **RowUpdated** dell'oggetto <xref:System.Data.Common.DataAdapter> può essere usato in combinazione con le tecniche descritte in precedenza, per fornire una notifica all'applicazione di violazioni della concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornamento di una riga **modificata** da un **set di dati**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. L'oggetto <xref:System.Data.Common.RowUpdatedEventArgs> restituisce una proprietà **RecordsAffected** contenente il numero di righe interessate da un particolare comando Update per una riga modificata in una tabella. Impostando il comando Update per la verifica della concorrenza ottimistica, la proprietà **RecordsAffected** restituirà, di conseguenza, un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, perché non è stato aggiornato alcun record. In questo caso viene generata un'eccezione. L'evento **RowUpdated** consente di gestire questa occorrenza ed evitare l'eccezione impostando un valore **RowUpdatedEventArgs. status** appropriato, ad esempio **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sull'evento **RowUpdated** , vedere [gestione di eventi DataAdapter](handling-dataadapter-events.md).  
   
  Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** su **true**, prima di chiamare **Update**e rispondere alle informazioni sugli errori archiviate nella proprietà **RowError** di una determinata riga al termine dell' **aggiornamento** . Per ulteriori informazioni, vedere [informazioni sugli errori di riga](./dataset-datatable-dataview/row-error-information.md).  
   

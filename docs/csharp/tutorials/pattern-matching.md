@@ -2,15 +2,16 @@
 title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332361"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039200"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: uso delle funzionalità di criteri di ricerca per estendere i tipi di dati
 
 In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. Tali funzionalità vengono estese in C# 8 con nuove espressioni e criteri. È possibile scrivere funzionalità che si comportano come se si estendessero tipi che potrebbero essere in altre librerie. I criteri possono essere usati anche per creare funzionalità necessarie per l'applicazione che non sono funzioni fondamentali del tipo da estendere.
 
@@ -22,7 +23,7 @@ In questa esercitazione si imparerà a:
 > - Usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
 > - Combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 È necessario configurare il computer per l'esecuzione di .NET Core, incluso il C# compilatore 8,0. Il C# compilatore 8 è disponibile a partire da [Visual Studio 2019 versione 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download).
 
@@ -137,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-Tale codice è incluso nel progetto iniziale, ma è impostato come commento. Per testare il codice scritto, rimuovere i commenti.
+Il codice è incluso nel progetto iniziale, ma è impostato come commento. Rimuovere i commenti ed è possibile testare quello che è stato scritto.
 
 Si può già osservare come i criteri consentano di creare algoritmi in cui il codice e i dati sono separati. L'espressione `switch` testa il tipo e genera valori diversi in base ai risultati. Si tratta solo dell'inizio.
 
@@ -297,7 +298,7 @@ Per questa funzionalità si useranno i criteri di ricerca, che verranno però in
 
 La tabella seguente mostra le combinazioni dei valori di input e il moltiplicatore dei prezzi per le ore di punta:
 
-| Day        | Time         | Direction | Sovrapprezzo |
+| Day        | Ora         | Direzione | Sovrapprezzo |
 | ---------- | ------------ | --------- |--------:|
 | Giorno feriale    | ore di punta del mattino | in entrata   | x 2,00  |
 | Giorno feriale    | ore di punta del mattino | in uscita  | x 1,00  |

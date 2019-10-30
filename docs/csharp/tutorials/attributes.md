@@ -2,14 +2,15 @@
 title: Attributi - C#
 description: Informazioni sull'uso degli attributi in C#.
 author: mgroves
+ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 54eb3038594e1d4becf8a1bddd58b1e0e6464d68
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851009"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039281"
 ---
 # <a name="using-attributes-in-c"></a>Uso degli attributi in C\#
 
@@ -19,7 +20,7 @@ L'attributo `[Obsolete]`, ad esempio, può essere applicato a classi, struct, me
 
 In questa esercitazione si illustreranno le procedure necessarie per aggiungere attributi al codice, creare e usare attributi personalizzati e usare alcuni attributi incorporati in .NET Core.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 È necessario configurare il computer per l'esecuzione di .NET Core. È possibile trovare le istruzioni di installazione nella pagina di [download di .NET Core](https://dotnet.microsoft.com/download) .
 Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
@@ -81,7 +82,7 @@ Il codice precedente genererà un errore del compilatore come `Attribute constru
 Gli attributi possono essere usati su diversi tipi di "destinatari". Gli esempi precedenti ne illustrano l'uso all'interno di classi, ma possono anche essere usati in:
 
 * Assembly
-* Classe
+* Class
 * Costruttore
 * delegato
 * Enum
@@ -92,7 +93,7 @@ Gli attributi possono essere usati su diversi tipi di "destinatari". Gli esempi 
 * Metodo
 * Modulo
 * Parametro
-* Proprietà
+* proprietà
 * ReturnValue
 * Struct
 
@@ -134,12 +135,12 @@ Gli attributi vengono usati da molti tipi di strumenti e framework. NUnit si avv
 
 Di seguito sono illustrati alcuni attributi importanti incorporati nelle librerie di classi base di .NET Core:
 
-* [https://login.microsoftonline.com/common/](`[Obsolete]`). Questo attributo è stato usato negli esempi precedenti e si trova nello spazio dei nomi `System`. È utile per fornire documentazione dichiarativa su una codebase in fase di modifica. È possibile specificare un messaggio sotto forma di stringa e usare un altro parametro booleano per convertire un avviso del compilatore in un errore del compilatore.
+* `[Obsolete]` Questo attributo è stato usato negli esempi precedenti e si trova nello spazio dei nomi `System`. È utile per fornire documentazione dichiarativa su una codebase in fase di modifica. È possibile specificare un messaggio sotto forma di stringa e usare un altro parametro booleano per convertire un avviso del compilatore in un errore del compilatore.
 
-* [https://login.microsoftonline.com/consumers/](`[Conditional]`). Questo attributo si trova nello spazio dei nomi `System.Diagnostics` e può essere applicato a metodi (o a classi di attributo). È necessario passare una stringa al costruttore.
+* `[Conditional]` Questo attributo si trova nello spazio dei nomi `System.Diagnostics` e può essere applicato a metodi (o a classi di attributo). È necessario passare una stringa al costruttore.
 Se la stringa non corrisponde a una direttiva `#define`, qualsiasi chiamata al metodo (ma non il metodo stesso) verrà rimossa dal compilatore C#. Questo attributo viene in genere usato per attività di debug (diagnostica).
 
-* [https://login.microsoftonline.com/common/](`[CallerMemberName]`). Questo attributo può essere usato nei parametri e si trova nello spazio dei nomi `System.Runtime.CompilerServices`. Consente di inserire il nome del metodo che chiama un altro metodo. Viene in genere usato per eliminare "stringhe magiche" quando si implementa INotifyPropertyChanged in vari framework di interfaccia utente. Ad esempio:
+* `[CallerMemberName]` Questo attributo può essere usato nei parametri e si trova nello spazio dei nomi `System.Runtime.CompilerServices`. Consente di inserire il nome del metodo che chiama un altro metodo. Viene in genere usato per eliminare "stringhe magiche" quando si implementa INotifyPropertyChanged in vari framework di interfaccia utente. Ad esempio:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

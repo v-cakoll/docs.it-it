@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315875"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035452"
 ---
 # <a name="contributing"></a>Contributi al codice
 
@@ -79,7 +79,7 @@ docs
 
 **Passaggio 4:** Inviare una richiesta pull (PR) dal ramo a `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` o `dotnet/samples/master`.
 
-La richiesta pull dovrebbe avere *sempre* come destinazione il ramo master. È consigliabile non aprire *mai* una richiesta pull che ha come destinazione il ramo attivo.
+La richiesta pull deve *sempre* essere destinata al ramo predefinito del repository, a meno che non si stia lavorando a un ramo di rilascio. Per DotNet/docs, Master Branch è il ramo predefinito. Per i repository localizzati, il ramo attivo è quello predefinito. Non aprire *mai* una richiesta pull destinata al ramo Live su DotNet/docs.
 
 Ogni richiesta pull deve in genere fare riferimento a un problema alla volta. La richiesta pull può modificare uno o più file. Se è necessario apportare più correzioni in file diversi, è preferibile inviare richieste pull separate.
 
@@ -140,14 +140,14 @@ L'esperienza interattiva in C# cambia il modo di usare gli esempi. I visitatori 
 
 Il seguente elenco illustra alcune regole che è necessario tenere presenti quando si inviano contributi alla documentazione di .NET:
 
-- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo.
+- **NON** inviare richieste pull di grandi dimensioni. Al contrario, segnalare un problema e avviare una discussione in modo che si possa concordare una direzione prima di investire una grande quantità di tempo. Per le modifiche bulk, suddividere il lavoro in richieste pull più piccole (fino a 100 di file).
 - **LEGGERE** le linee guida riportate nella [Guida di stile](./styleguide/template.md) e sulla [voce e tono](./styleguide/voice-tone.md).
 - **USARE** il file [modello](./styleguide/template.md) come punto di partenza del proprio lavoro.
 - **CREARE** un ramo separato nel fork prima di lavorare sugli articoli.
 - **SEGUIRE** il [flusso di lavoro di GitHub Flow](https://guides.github.com/introduction/flow/).
 - **SCIVERE UN BLOG O INVIARE TWEET** (o usare altri mezzi) frequentemente per informazioni sui contributi.
 
-> Nota: si potrebbe osservare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./styleguide/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito. Controllare l'elenco dei [problemi aperti](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) che stiamo attualmente verificando per questo obiettivo specifico.
+> Nota: si potrebbe osservare che attualmente alcuni argomenti non seguono tutte le linee guida indicate qui e nella [Guida di stile](./styleguide/template.md). Ci stiamo impegnando per il raggiungimento della coerenza in tutto il sito.
 
 ## <a name="contributor-license-agreement"></a>Contratto di licenza per contributi
 

@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991359"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040807"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Caricare i dati da file e altre origini
 
@@ -116,9 +116,10 @@ Dato un database con una tabella denominata `House` e lo schema seguente:
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,6 +130,8 @@ I dati possono essere modellati in base a una classe come `HouseData`.
 public class HouseData
 {
     public float Size { get; set; }
+    
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
@@ -142,17 +145,19 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Definire la stringa di connessione, nonché il comando SQL da eseguire nel database e creare un' `DatabaseSource` istanza. In questo esempio viene utilizzato un database SQL Server database locale con un percorso di file. Tuttavia, DatabaseLoader supporta qualsiasi altra stringa di connessione valida per i database in locale e nel cloud.
+Definire la stringa di connessione, nonché il comando SQL da eseguire nel database e creare un'istanza di `DatabaseSource`. In questo esempio viene utilizzato un database SQL Server database locale con un percorso di file. Tuttavia, DatabaseLoader supporta qualsiasi altra stringa di connessione valida per i database in locale e nel cloud.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Infine, usare il `Load` metodo per caricare i dati in un [`IDataView`](xref:Microsoft.ML.IDataView)oggetto.
+I dati numerici che non sono di tipo [`Real`](xref:System.Data.SqlDbType) devono essere convertiti in [`Real`](xref:System.Data.SqlDbType). Il tipo di [`Real`](xref:System.Data.SqlDbType) è rappresentato come valore a virgola mobile e precisione singola o [`Single`](xref:System.Single), il tipo di input previsto dagli algoritmi ml.NET. In questo esempio, la colonna `NumBed` è un numero intero nel database. Utilizzando la funzione incorporata `CAST`, viene convertito in [`Real`](xref:System.Data.SqlDbType). Poiché la proprietà `Price` è già di tipo [`Real`](xref:System.Data.SqlDbType) viene caricata così com'è.
+
+Usare il metodo `Load` per caricare i dati in un [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +210,7 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Se si usa generatore di modelli per eseguire il training del modello di Machine Learning, vedere [caricare i dati di training in Generatore di modelli](load-data-model-builder.md).

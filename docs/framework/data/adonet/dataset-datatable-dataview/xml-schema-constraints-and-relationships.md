@@ -2,12 +2,12 @@
 title: Vincoli e relazioni di XML Schema
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784195"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040037"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Vincoli e relazioni di XML Schema
 In uno schema XSD (XML Schema Definition Language) è possibile specificare vincoli, ovvero vincoli UNIQUE, Key e keyref, e relazioni (tramite l'annotazione **msdata: Relationship** ). In questo argomento viene spiegato come vengono interpretati i vincoli e le relazioni specificati in XML Schema per generare il tipo <xref:System.Data.DataSet>.  
@@ -61,7 +61,7 @@ In uno schema XSD (XML Schema Definition Language) è possibile specificare vinc
   
  Il **set di dati** generato durante il processo di mapping di XML Schema include le tabelle **Order** e **OrderDetail** . Il **set di dati** include inoltre relazioni e vincoli. Nell'esempio seguente vengono illustrati tali vincoli e relazioni. Si noti che lo schema non specifica l'annotazione **msdata: Relationship** ; al contrario, i vincoli key e keyref vengono usati per generare la relazione.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ In uno schema XSD (XML Schema Definition Language) è possibile specificare vinc
   
  Il **set di dati** risultante dal processo di mapping di XML Schema include due tabelle:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  Il **set di dati** include anche le due relazioni, una basata sull'annotazione **msdata: Relationship** e l'altra in base ai vincoli key e keyref, e vari vincoli. Nell'esempio seguente vengono illustrati i vincoli e le relazioni.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

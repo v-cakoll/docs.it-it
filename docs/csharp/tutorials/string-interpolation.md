@@ -2,13 +2,14 @@
 title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
+ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
-ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252932"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039203"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
 
@@ -74,7 +75,7 @@ Per altre informazioni, vedere la sezione [Componente di allineamento](../../sta
 
 Le stringhe interpolate supportano tutte le sequenze di escape che è possibile usare all'interno di valori letterali stringa normali. Per altre informazioni, vedere [Sequenze di escape delle stringhe](../programming-guide/strings/index.md#string-escape-sequences).
 
-Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa Verbatim interpolata inizia con `$` il carattere seguito `@` dal carattere. A partire C# da 8,0, è possibile usare `$` i `@` token e in qualsiasi ordine: sia `$@"..."` che `@$"..."` sono stringhe verbatim interpolate valide.
+Per interpretare le sequenze di escape letteralmente, usare un valore letterale stringa [verbatim](../language-reference/tokens/verbatim.md). Una stringa Verbatim interpolata inizia con il carattere `$` seguito dal carattere di `@`. A partire C# da 8,0, è possibile usare i token di`$`e di`@`in qualsiasi ordine: sia `$@"..."`che`@$"..."`sono stringhe verbatim interpolate valide.
 
 Per includere una parentesi graffa, "{" o "}", in una stringa di risultato, usare due parentesi graffe, "{{" o "}}". Per altre informazioni, vedere la sezione [Sequenze di escape delle parentesi graffe](../../standard/base-types/composite-formatting.md#escaping-braces) dell'argomento [Formattazione composita](../../standard/base-types/composite-formatting.md).
 

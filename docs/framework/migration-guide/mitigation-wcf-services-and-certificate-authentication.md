@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 14fafa68e55ae7c1f3b6672b150cd0b149a3ffcd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789817"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039557"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigazione: Autenticazione del certificato e servizi WCF
 
@@ -17,9 +17,9 @@ ms.locfileid: "70789817"
 
 ## <a name="impact"></a>Impatto
 
-TLS 1.2 non supporta l'autenticazione dei certificati MD5. Di conseguenza, se un cliente usa un certificato SSL che a sua volta usa MD5 per l'algoritmo hash, il client di WCF non riesce a connettersi al servizio WCF. Per altre informazioni, vedere [Mitigazione: Autenticazione del certificato e servizi WCF](mitigation-wcf-services-and-certificate-authentication.md).
+TLS 1.2 non supporta l'autenticazione dei certificati MD5. Di conseguenza, se un cliente usa un certificato SSL che a sua volta usa MD5 per l'algoritmo hash, il client di WCF non riesce a connettersi al servizio WCF. Per altre informazioni, vedere [Mitigation: WCF Services and Certificate Authentication](mitigation-wcf-services-and-certificate-authentication.md) (Mitigazione: Servizi WCF e autenticazione dei certificati).
 
-## <a name="mitigation"></a>Mitigazione
+## <a name="mitigation"></a>Attenuazione
 
 È possibile risolvere questo problema in modo che un client WCF possa connettersi a un server WCF effettuando una delle operazioni seguenti:
 
@@ -47,7 +47,7 @@ TLS 1.2 non supporta l'autenticazione dei certificati MD5. Di conseguenza, se un
                   </binding>
               </netTcpBinding>
           </bindings>
-      </system.ServiceModel>
+      </system.serviceModel>
   </configuration>
   ```
 

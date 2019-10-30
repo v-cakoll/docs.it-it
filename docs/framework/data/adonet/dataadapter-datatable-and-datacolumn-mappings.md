@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784872"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040121"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Mapping di DataAdapter, DataTable e DataColumn
-Un **DataAdapter** contiene una raccolta di zero o più <xref:System.Data.Common.DataTableMapping> oggetti nella relativa proprietà **TableMappings** . Un **DataTableMapping** fornisce un mapping master tra i dati restituiti da una query su un'origine dati e un oggetto <xref:System.Data.DataTable>. Il nome di **DataTableMapping** può essere passato al posto del nome della **DataTable** al metodo **Fill** di **DataAdapter**. Nell'esempio seguente viene creato un **DataTableMapping** denominato **AuthorsMapping** per la tabella **authors** .  
+Un **DataAdapter** contiene una raccolta di zero o più oggetti <xref:System.Data.Common.DataTableMapping> nella relativa proprietà **TableMappings** . Un **DataTableMapping** fornisce un mapping master tra i dati restituiti da una query su un'origine dati e un <xref:System.Data.DataTable>. Il nome di **DataTableMapping** può essere passato al posto del nome della **DataTable** al metodo **Fill** di **DataAdapter**. Nell'esempio seguente viene creato un **DataTableMapping** denominato **AuthorsMapping** per la tabella **authors** .  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  Se non si specifica un nome **di tabella** o di **DataTableMapping** quando si chiama il metodo **Fill** o **Update** di **DataAdapter**, **DataAdapter** Cerca un **DataTableMapping** denominato "Table". Se **DataTableMapping** non esiste, il **TableName** della **DataTable** è "Table". È possibile specificare un **DataTableMapping** predefinito creando un **DataTableMapping** con il nome "Table".  
   
- Nell'esempio di codice seguente viene creato un oggetto DataTableMapping <xref:System.Data.Common> (dallo spazio dei nomi) e il mapping predefinito per l'oggetto **DataAdapter** specificato viene denominato "Table". Nell'esempio viene quindi eseguito il mapping delle colonne della prima tabella nel risultato della query, ovvero la tabella **Customers** del database **Northwind** , a un set di nomi descrittivi nella tabella <xref:System.Data.DataSet> **Northwind Customers** del. Per le colonne di cui non viene eseguito il mapping, viene usato il nome della colonna nell'origine dati.  
+ Nell'esempio di codice seguente viene creato un oggetto **DataTableMapping** (dallo spazio dei nomi <xref:System.Data.Common>) e il mapping predefinito per l'oggetto **DataAdapter** specificato viene denominato "Table". Nell'esempio viene quindi eseguito il mapping delle colonne della prima tabella nel risultato della query, ovvero la tabella **Customers** del database **Northwind** , a un set di nomi descrittivi nella tabella **Northwind Customers** della <xref:System.Data.DataSet>. Per le colonne di cui non viene eseguito il mapping, viene usato il nome della colonna nell'origine dati.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -86,16 +86,25 @@ adapter.Fill(custDS, "Customers");
 ## <a name="handling-multiple-result-sets"></a>Gestione di più set di risultati  
  Se **SelectCommand** restituisce più tabelle, **Fill** genera automaticamente i nomi di tabella con valori incrementali per le tabelle nel **set di dati**, iniziando con il nome della tabella specificato e continuando nel formato **TableName** *N*, a partire da **TableName1**. È possibile utilizzare i mapping di tabella per eseguire il mapping del nome di tabella generato automaticamente a un nome che si desidera specificare per la tabella nel **set di dati**. Ad esempio, per un **SelectCommand** che restituisce due tabelle, **Customers** e **Orders**, eseguire la chiamata seguente a **Fill**.  
   
-```  
+```vb  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
-  
+
+```csharp  
+adapter.Fill(customersDataSet, "Customers");  
+```  
+
  Nel **set di dati**vengono create due tabelle: **Customers** e **Customers1**. È possibile utilizzare i mapping delle tabelle per assicurarsi che la seconda tabella sia denominata **Orders** anziché **Customers1**. A tale scopo, eseguire il mapping della tabella di origine di **Customers1** agli **ordini**della tabella del **set di dati** , come illustrato nell'esempio seguente.  
   
-```  
+```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
+
+```csharp  
+adapter.TableMappings.Add("Customers1", "Orders");  
+adapter.Fill(customersDataSet, "Customers");  
+```
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Specifica di relazioni tra elementi senza alcun annidamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784275"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040042"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Specifica di relazioni tra elementi senza alcun annidamento
 Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. È tuttavia possibile specificare in modo esplicito le relazioni tra elementi che non sono annidati tramite l'annotazione **msdata: Relationship** .  
@@ -53,9 +53,9 @@ Se gli elementi non sono annidati, non viene creata alcuna relazione implicita. 
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema XSD (XML Schema Definition Language) <xref:System.Data.DataSet> crea un oggetto con le tabelle **Order** e **OrderDetail** e una relazione specificata tra le due tabelle, come illustrato di seguito.  
+ Il processo di mapping dello schema XSD (XML Schema Definition Language) crea una <xref:System.Data.DataSet> con le tabelle **Order** e **OrderDetail** e una relazione specificata tra le due tabelle, come illustrato di seguito.  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

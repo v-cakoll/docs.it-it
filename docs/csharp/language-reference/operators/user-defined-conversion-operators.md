@@ -10,18 +10,18 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 25f042dec5fd5594b7e166cc064394e90db01c27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566668"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036111"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operatori di conversione definiti dall'utente (riferimenti per C#)
 
 Un tipo definito dall'utente può definire una conversione implicita o esplicita da o in un altro tipo.
 
-Le conversioni implicite non richiedono una sintassi specifica per essere richiamate e possono essere usate in diverse situazioni, ad esempio durante le chiamate di metodi e assegnazioni. Le conversioni implicite C# predefinite hanno sempre esito positivo e non generano mai un'eccezione o una perdita di informazioni. Anche le conversioni implicite definite dall'utente si devono comportare nello stesso modo. Se una conversione personalizzata può generare un'eccezione o una perdita di informazioni, è necessario definirla come conversione esplicita.
+Le conversioni implicite non richiedono una sintassi specifica per essere richiamate e possono essere usate in diverse situazioni, ad esempio durante le chiamate di metodi e assegnazioni. Le conversioni implicite predefinite C# hanno sempre esito positivo e non generano mai un'eccezione. Anche le conversioni implicite definite dall'utente si devono comportare nello stesso modo. Se una conversione personalizzata può generare un'eccezione o una perdita di informazioni, è necessario definirla come conversione esplicita.
 
 Le conversioni definite dall'utente non vengono considerate dagli operatori [is](type-testing-and-cast.md#is-operator) e [as](type-testing-and-cast.md#as-operator). Usare l'[operatore cast ()](type-testing-and-cast.md#cast-operator-) per richiamare una conversione esplicita definita dall'utente.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796524"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038933"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operatore sizeof (Riferimenti per C#)
 
@@ -21,7 +21,7 @@ L'operatore `sizeof` restituisce il numero di byte occupati da una variabile di 
 
 L'operatore `sizeof` richiede un contesto [unsafe](../keywords/unsafe.md). Tuttavia, per le espressioni presentate nella tabella seguente vengono restituiti i valori costanti corrispondenti in fase di compilazione e non è richiesto un contesto unsafe:
 
-|Espressione|Valore costante|
+|Expression|Valore costante|
 |---------|---------------|
 |`sizeof(sbyte)`|1|
 |`sizeof(byte)`|1|
@@ -56,3 +56,4 @@ Per altre informazioni, vedere la sezione [Operatore sizeof](~/_csharplang/spec/
 - [Operatori relativi al puntatore](pointer-related-operators.md)
 - [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipi correlati alla memoria e agli intervalli](../../../standard/memory-and-spans/index.md)
+- [Generics in .NET](../../../standard/generics/index.md)

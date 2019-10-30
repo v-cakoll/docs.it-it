@@ -3,12 +3,12 @@ title: Introduzione a Docker
 description: Questo articolo fornisce un'introduzione e una panoramica di Docker nel contesto di un'applicazione .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523007"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038458"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduzione a .NET e Docker
 
@@ -40,7 +40,7 @@ La fonte ufficiale delle immagini di contenitore fornite da Microsoft è il Regi
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Un **Dockerfile** è un file in cui è definito un set di istruzioni per la creazione di un'immagine. Ogni istruzione nel **Dockerfile** crea un livello nell'immagine. Nella maggior parte dei casi, quando si compila una nuova immagine vengono ricompilati solo i livelli che sono stati modificati. Il **Dockerfile** può essere distribuito ad altri e consente di creare una nuova immagine esattamente come l'originale. In questo modo è possibile distribuire le *istruzioni* su come creare l'immagine, ma il metodo principale per distribuire un'immagine consiste nel pubblicarla in un registro.
+Un **Dockerfile** è un file in cui è definito un set di istruzioni per la creazione di un'immagine. Ogni istruzione nel **Dockerfile** crea un livello nell'immagine. Nella maggior parte dei casi, quando si ricompila l'immagine, vengono ricompilati solo i livelli modificati. La **Dockerfile** può essere distribuita ad altri utenti e consente loro di ricreare una nuova immagine nello stesso modo in cui è stata creata. In questo modo è possibile distribuire le *istruzioni* su come creare l'immagine, ma il metodo principale per distribuire un'immagine consiste nel pubblicarla in un registro.
 
 ## <a name="net-core-images"></a>Immagini di .NET Core
 

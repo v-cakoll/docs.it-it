@@ -2,23 +2,23 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251239"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039923"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Consente di convertire un'espressione da un tipo di dati a un altro.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```csharp
 CAST ( expression AS data_type )  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>argomenti  
  `expression`  
  Qualsiasi espressione valida che è possibile convertire in `data_type`.  
   
@@ -31,7 +31,7 @@ CAST ( expression AS data_type )
 ## <a name="remarks"></a>Note  
  La semantica dell'espressione cast è simile a quella dell'espressione Transact-SQL CONVERT. L'espressione CAST viene usata per convertire un valore di un tipo in un valore di un altro tipo.  
   
-```  
+```csharp
 CAST( e as T )  
 ```  
   
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Esempio  
  Nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente viene usato l'operatore CAST per eseguire il cast di un'espressione da un tipo di dati a un altro. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1. Attenersi alla procedura descritta [in procedura: Eseguire una query che restituisce i risultati](../how-to-execute-a-query-that-returns-primitivetype-results.md)di PrimitiveType.  
+1. Attenersi alla procedura descritta in [procedura: eseguire una query che restituisce i risultati di PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
