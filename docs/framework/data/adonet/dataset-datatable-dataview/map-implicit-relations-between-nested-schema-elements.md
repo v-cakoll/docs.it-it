@@ -2,27 +2,27 @@
 title: Mapping di relazioni implicite tra elementi di schemi annidati
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784432"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040380"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="92e05-102">Mapping di relazioni implicite tra elementi di schemi annidati</span><span class="sxs-lookup"><span data-stu-id="92e05-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="92e05-103">È possibile che in uno schema XSD (XML Schema Definition Language) siano presenti tipi complessi annidati uno all'interno dell'altro.</span><span class="sxs-lookup"><span data-stu-id="92e05-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="92e05-104">In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:</span><span class="sxs-lookup"><span data-stu-id="92e05-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="97c62-102">Mapping di relazioni implicite tra elementi di schemi annidati</span><span class="sxs-lookup"><span data-stu-id="97c62-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="97c62-103">È possibile che in uno schema XSD (XML Schema Definition Language) siano presenti tipi complessi annidati uno all'interno dell'altro.</span><span class="sxs-lookup"><span data-stu-id="97c62-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="97c62-104">In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:</span><span class="sxs-lookup"><span data-stu-id="97c62-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
-- <span data-ttu-id="92e05-105">Una tabella per ogni tipo complesso (padre e figlio).</span><span class="sxs-lookup"><span data-stu-id="92e05-105">One table for each of the complex types (parent and child).</span></span>  
+- <span data-ttu-id="97c62-105">Una tabella per ogni tipo complesso (padre e figlio).</span><span class="sxs-lookup"><span data-stu-id="97c62-105">One table for each of the complex types (parent and child).</span></span>  
   
-- <span data-ttu-id="92e05-106">Se nell'elemento padre non è presente alcun vincolo UNIQUE, una colonna chiave primaria aggiuntiva per ogni definizione di tabella denominata *TableName*_Id dove *TableName* è il nome della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="92e05-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+- <span data-ttu-id="97c62-106">Se nell'elemento padre non è presente alcun vincolo UNIQUE, una colonna chiave primaria aggiuntiva per ogni definizione di tabella denominata *TableName*_Id dove *TableName* è il nome della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="97c62-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
-- <span data-ttu-id="92e05-107">Un vincolo PRIMARY KEY nella tabella padre che identifica la colonna aggiuntiva come chiave primaria, impostando la proprietà **IsPrimaryKey** su **true**.</span><span class="sxs-lookup"><span data-stu-id="92e05-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="92e05-108">Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via.</span><span class="sxs-lookup"><span data-stu-id="92e05-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="92e05-109">Il nome predefinito del primo vincolo, ad esempio, è Constraint1.</span><span class="sxs-lookup"><span data-stu-id="92e05-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+- <span data-ttu-id="97c62-107">Un vincolo PRIMARY KEY nella tabella padre che identifica la colonna aggiuntiva come chiave primaria, impostando la proprietà **IsPrimaryKey** su **true**.</span><span class="sxs-lookup"><span data-stu-id="97c62-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="97c62-108">Il vincolo viene denominato Constraint\#, dove \# rappresenta 1, 2, 3 e così via.</span><span class="sxs-lookup"><span data-stu-id="97c62-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="97c62-109">Il nome predefinito del primo vincolo, ad esempio, è Constraint1.</span><span class="sxs-lookup"><span data-stu-id="97c62-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
-- <span data-ttu-id="92e05-110">Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="92e05-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="92e05-111">Il vincolo è denominato *ParentTable_ChildTable* , dove *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="92e05-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+- <span data-ttu-id="97c62-110">Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="97c62-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="97c62-111">Il vincolo è denominato *ParentTable_ChildTable* , dove *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.</span><span class="sxs-lookup"><span data-stu-id="97c62-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
-- <span data-ttu-id="92e05-112">Una relazione di dati tra le tabelle padre e figlio.</span><span class="sxs-lookup"><span data-stu-id="92e05-112">A data relation between the parent and child tables.</span></span>  
+- <span data-ttu-id="97c62-112">Una relazione di dati tra le tabelle padre e figlio.</span><span class="sxs-lookup"><span data-stu-id="97c62-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="92e05-113">Nell'esempio seguente viene illustrato uno schema in cui **OrderDetail** è un elemento figlio di **Order**.</span><span class="sxs-lookup"><span data-stu-id="92e05-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="97c62-113">Nell'esempio seguente viene illustrato uno schema in cui **OrderDetail** è un elemento figlio di **Order**.</span><span class="sxs-lookup"><span data-stu-id="97c62-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,18 +54,18 @@ ms.locfileid: "70784432"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="92e05-114">Il processo di mapping di XML Schema crea quanto segue nel **set di dati**:</span><span class="sxs-lookup"><span data-stu-id="92e05-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="97c62-114">Il processo di mapping di XML Schema crea quanto segue nel **set di dati**:</span><span class="sxs-lookup"><span data-stu-id="97c62-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
-- <span data-ttu-id="92e05-115">Un **ordine** e una tabella **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="92e05-115">An **Order** and an **OrderDetail** table.</span></span>  
+- <span data-ttu-id="97c62-115">Un **ordine** e una tabella **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="97c62-115">An **Order** and an **OrderDetail** table.</span></span>  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- <span data-ttu-id="92e05-116">Vincolo UNIQUE nella tabella **Order** .</span><span class="sxs-lookup"><span data-stu-id="92e05-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="92e05-117">Si noti che la proprietà **IsPrimaryKey** è impostata su **true**.</span><span class="sxs-lookup"><span data-stu-id="92e05-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+- <span data-ttu-id="97c62-116">Vincolo UNIQUE nella tabella **Order** .</span><span class="sxs-lookup"><span data-stu-id="97c62-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="97c62-117">Si noti che la proprietà **IsPrimaryKey** è impostata su **true**.</span><span class="sxs-lookup"><span data-stu-id="97c62-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -73,9 +73,9 @@ ms.locfileid: "70784432"
     IsPrimaryKey: True  
     ```  
   
-- <span data-ttu-id="92e05-118">Vincolo FOREIGN KEY nella tabella **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="92e05-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+- <span data-ttu-id="97c62-118">Vincolo FOREIGN KEY nella tabella **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="97c62-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -84,9 +84,9 @@ ms.locfileid: "70784432"
     RelatedColumns: Order_Id   
     ```  
   
-- <span data-ttu-id="92e05-119">Relazione tra le tabelle **Order** e **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="92e05-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="92e05-120">La proprietà **Nested** per questa relazione è impostata su **true** perché gli elementi **Order** e **OrderDetail** sono annidati nello schema.</span><span class="sxs-lookup"><span data-stu-id="92e05-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+- <span data-ttu-id="97c62-119">Relazione tra le tabelle **Order** e **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="97c62-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="97c62-120">La proprietà **Nested** per questa relazione è impostata su **true** perché gli elementi **Order** e **OrderDetail** sono annidati nello schema.</span><span class="sxs-lookup"><span data-stu-id="97c62-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  
@@ -97,8 +97,8 @@ ms.locfileid: "70784432"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="92e05-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="92e05-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97c62-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="97c62-121">See also</span></span>
 
-- [<span data-ttu-id="92e05-122">Generazione di relazioni tra DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="92e05-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="92e05-123">Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet</span><span class="sxs-lookup"><span data-stu-id="92e05-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="92e05-124">Panoramica di ADO.NET</span><span class="sxs-lookup"><span data-stu-id="92e05-124">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="97c62-122">Generazione di relazioni tra DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="97c62-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="97c62-123">Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet</span><span class="sxs-lookup"><span data-stu-id="97c62-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="97c62-124">Panoramica di ADO.NET</span><span class="sxs-lookup"><span data-stu-id="97c62-124">ADO.NET Overview</span></span>](../ado-net-overview.md)
