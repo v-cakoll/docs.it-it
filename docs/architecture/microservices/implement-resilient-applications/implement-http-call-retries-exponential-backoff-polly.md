@@ -2,12 +2,12 @@
 title: Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con Polly
 description: Informazioni su come gestire gli errori HTTP con Polly e HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089963"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementazione dei tentativi di chiamate HTTP con backoff esponenziale con i criteri di Polly e HttpClientFactory
 
@@ -15,7 +15,7 @@ L'approccio consigliato per i tentativi con backoff esponenziale prevede l'uso d
 
 Polly è una libreria .NET che fornisce funzionalità di resilienza e di gestione degli errori temporanei. È possibile implementare queste funzionalità applicando i criteri di Polly, ad esempio Retry, Circuit Breaker, Bulkhead Isolation, Timeout e Fallback. Polly targets .NET Framework 4. x e .NET Standard 1,0, 1,1 e 2,0 (che supporta .NET Core).
 
-Tuttavia, la scrittura di codice personalizzato per usare la libreria di Polly con HttpClient può essere molto complessa. Nella versione originale di eShopOnContainers si è verificato un [blocco predefinito di ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) basato su Polly. Tuttavia, con il rilascio di [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), l'implementazione della comunicazione http resiliente con Polly è diventata molto più semplice, in modo che il blocco di compilazione sia stato deprecato da eShopOnContainers. 
+Tuttavia, la scrittura di codice personalizzato per usare la libreria di Polly con HttpClient può essere molto complessa. Nella versione originale di eShopOnContainers si è verificato un [blocco predefinito di ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) basato su Polly. Tuttavia, con il rilascio di [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), l'implementazione della comunicazione http resiliente con Polly è diventata molto più semplice, in modo che il blocco di compilazione sia stato deprecato da eShopOnContainers.
 
 I passaggi seguenti mostrano come usare i tentativi HTTP con Polly integrato in HttpClientFactory, come spiegato nella sezione precedente.
 
@@ -49,20 +49,20 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Con Polly è possibile definire i criteri di ripetizione con il numero di tentativi, la configurazione del backoff esponenziale e le azioni da eseguire quando si verifica un'eccezione HTTP, ad esempio la registrazione dell'errore. In questo caso, i criteri vengono configurati per provare sei volte con un tentativo esponenziale, a partire da due secondi. 
+Con Polly è possibile definire i criteri di ripetizione con il numero di tentativi, la configurazione del backoff esponenziale e le azioni da eseguire quando si verifica un'eccezione HTTP, ad esempio la registrazione dell'errore. In questo caso, i criteri vengono configurati per provare sei volte con un tentativo esponenziale, a partire da due secondi.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Aggiungere una strategia di instabilità ai criteri di ripetizione
 
 I normali criteri di ripetizione possono influire sul sistema quando scalabilità e concorrenza sono elevate e sono presenti molti conflitti. Per risolvere i picchi di tentativi simili provenienti da molti client in caso di interruzioni parziali, una soluzione alternativa efficace consiste nell'aggiungere una strategia di instabilità all'algoritmo o ai criteri di ripetizione. Ciò può migliorare le prestazioni complessive del sistema end-to-end grazie all'aggiunta di casualità nel backoff esponenziale. Permette di diluire i picchi quando si verificano problemi. Il principio è illustrato nell'esempio seguente:
 
 ```csharp
-Random jitterer = new Random(); 
+Random jitterer = new Random();
 var retryWithJitterPolicy = HttpPolicyExtensions
     .HandleTransientHttpError()
     .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
     .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
         retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
     );
 ```
 

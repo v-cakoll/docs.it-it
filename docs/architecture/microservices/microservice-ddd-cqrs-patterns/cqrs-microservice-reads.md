@@ -2,12 +2,12 @@
 title: Implementazione di letture/query in un microservizio CQRS
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Riconoscere l'implementazione del lato query di CQRS nel microservizio degli ordini in eShopOnContainers con Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094058"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementare le letture/query in un microservizio CQRS
 
@@ -35,11 +35,11 @@ I dati restituiti (ViewModel) possono essere il risultato dell'unione di dati da
 
 I ViewModel possono essere tipi statici definiti nelle classi, oppure possono essere creati in modo dinamico in base alle query eseguite (così come implementate nel microservizio degli ordini), una funzionalità molto agile per gli sviluppatori.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Usare Dapper come micro ORM per eseguire query 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Usare Dapper come micro ORM per eseguire query
 
 È possibile usare qualsiasi micro ORM, Entity Framework Core o persino il normale ADO.NET per l'esecuzione di query. Nell'applicazione di esempio, Dapper è stato selezionato per il microservizio degli ordini in eShopOnContainers come ottimo esempio di micro ORM più diffuso. Può eseguire semplici query SQL con prestazioni elevate, perché è un framework molto leggero. Con Dapper, è possibile scrivere una query SQL che può accedere e creare un join a più tabelle.
 
-Dapper è un progetto open source (originalmente creato da Sam Saffron) e fa parte dei blocchi predefiniti usati nell'[Overflow dello stack](https://stackoverflow.com/). Per usare Dapper, è sufficiente installarlo con il [pacchetto NuGet Dapper](https://www.nuget.org/packages/Dapper), come illustrato nella figura riportata di seguito:
+Dapper è un progetto open source (originalmente creato da Sam Saffron) e fa parte dei blocchi predefiniti usati da [Stack Overflow](https://stackoverflow.com/). Per usare Dapper, è sufficiente installarlo con il [pacchetto NuGet Dapper](https://www.nuget.org/packages/Dapper), come illustrato nella figura riportata di seguito:
 
 ![Pacchetto di Dapper visualizzato nella vista di gestione dei pacchetti NuGet in Visual Studio.](./media/image4.1.png)
 
@@ -93,13 +93,13 @@ L'aspetto importante è che, usando un tipo dinamico, la raccolta dei dati resti
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel come classi DTO predefinite
 
-**Vantaggi:** avere classi ViewModel predefinite statiche, ad esempio "contratti" basati su classi DTO esplicite, è decisamente meglio per le API pubbliche, ma anche per i microservizi a lungo termine, anche se vengono usati solo dall'applicazione stessa.
+**Vantaggi:** avere classi ViewModel predefinite statiche, ad esempio "contratti" basati su classi DTO esplicite, è decisamente migliore per le API pubbliche, ma anche per i microservizi a lungo termine, anche se vengono usati solo dall'applicazione stessa.
 
 Se si vogliono specificare i tipi di risposta per Swagger, è necessario usare le classi DTO esplicite come tipo restituito. Di conseguenza, le classi DTO predefinite consentono di offrire informazioni più complete da Swagger. In tal modo, la documentazione e la compatibilità delle API migliora durante il loro utilizzo.
 
 **Svantaggi:** come indicato in precedenza, durante il suo aggiornamento, il codice richiede alcuni ulteriori passaggi per aggiornare le classi DTO.
 
-*Suggerimenti basati sull'esperienza Microsoft*: nelle query implementate nel microservizio degli ordini in eShopOnContainers, lo sviluppo è iniziato usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Tuttavia, una volta che lo sviluppo si è stabilizzato, è stato scelto di eseguire il refactoring delle API e di usare DTO statici o predefiniti per i ViewModel, perché era più chiaro per i consumer del microservizio conoscere i tipi di DTO espliciti, usati come "contratti".
+*Suggerimenti basati sulla nostra esperienza:* nelle query implementate nel microservizio degli ordini in eShopOnContainers, abbiamo iniziato a sviluppare usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Tuttavia, una volta che lo sviluppo si è stabilizzato, è stato scelto di eseguire il refactoring delle API e di usare DTO statici o predefiniti per i ViewModel, perché era più chiaro per i consumer del microservizio conoscere i tipi di DTO espliciti, usati come "contratti".
 
 Nell'esempio seguente, è possibile visualizzare in che modo la query restituisce dati usando una classe DTO ViewModel esplicita: la classe OrderSummary.
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 
@@ -179,7 +179,7 @@ Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di S
 
 ![Visualizzazione browser della pagina dell'interfaccia utente di Swagger per l'API degli ordini.](./media/image5.png)
 
-**Figura 7-5.** Interfaccia utente di Swagger che mostra i tipi di risposta e i possibili codici di stato HTTP da un'API Web
+**Figura 7-5**. Interfaccia utente di Swagger che mostra i tipi di risposta e i possibili codici di stato HTTP da un'API Web
 
 È possibile vedere nell'immagine precedente alcuni valori di esempio basati sui tipi ViewModel, oltre ai codici di stato HTTP che possono essere restituiti.
 

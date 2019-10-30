@@ -4,12 +4,12 @@ description: Informazioni su come eseguire la migrazione di un'app Web Form ASP.
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 78742fc0d998a70c6e3992041d1fa62f2fe53f39
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520277"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087922"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Eseguire la migrazione da Web Form ASP.NET a blazer
 
@@ -552,7 +552,7 @@ In blazer viene fornito il markup equivalente in un file *create. Razor* :
             <ValidationMessage For="(() => _item.Name)" />
         </div>
     </div>
-    
+
     ...
 </EditForm>
 ```

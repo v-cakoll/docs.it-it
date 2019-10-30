@@ -4,12 +4,12 @@ description: Introduzione a blazer e scrittura di app Web con stack completo con
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087928"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Introduzione a blazer per gli sviluppatori di Web Form ASP.NET
 
@@ -21,7 +21,7 @@ Nel corso degli anni Microsoft ha introdotto nuovi framework Web basati su ASP.N
 
 Al momento della stesura di questo articolo, quasi mezzo milione di sviluppatori Web utilizzano i Web Form ASP.NET ogni mese. Il framework Web Form ASP.NET è stabile al punto in cui documenti, esempi, libri e post di Blog di un decennio fa rimangono utili e pertinenti. Per molti sviluppatori Web .NET, "ASP.NET" è ancora sinonimo di "ASP.NET Web Forms" così com'era quando .NET è stato concepito per la prima volta. Gli argomenti per i pro e i contro di ASP.NET Web Forms rispetto agli altri nuovi framework Web .NET potrebbero infuriare. ASP.NET Web Forms rimane un Framework comune per la creazione di app Web.
 
-Anche in questo caso, le innovazioni di sviluppo software non rallentano. Tutti gli sviluppatori di software devono rimanere aggiornati sulle nuove tecnologie e tendenze. In particolare, è opportuno considerare due tendenze: 
+Anche in questo caso, le innovazioni di sviluppo software non rallentano. Tutti gli sviluppatori di software devono rimanere aggiornati sulle nuove tecnologie e tendenze. In particolare, è opportuno considerare due tendenze:
 
 1. Il passaggio a Open Source e multipiattaforma
 2. Spostamento della logica dell'applicazione al client

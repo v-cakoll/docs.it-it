@@ -1,15 +1,15 @@
 ---
-title: Modelli di dati nativi del cloud
+title: Modelli di dati cloud nativi
 description: Architettura di app .NET cloud native per Azure | Modelli di dati nativi cloud
 ms.date: 06/30/2019
-ms.openlocfilehash: 8fc5a09dca61e6644fdcaa692ff1a21f40ebf179
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183413"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087694"
 ---
-# <a name="cloud-native-data-patterns"></a>Modelli di dati nativi del cloud
+# <a name="cloud-native-data-patterns"></a>Modelli di dati cloud nativi
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -127,13 +127,13 @@ I database NoSQL vengono distribuiti e generalmente scalati orizzontalmente nei 
 
 Si tratta di una [coerenza finale](https://www.cloudcomputingpatterns.org/eventual_consistency/)nota, una caratteristica dei sistemi dati distribuiti in cui non sono supportate le transazioni ACID. Si tratta di un breve ritardo tra l'aggiornamento di un elemento di dati e il tempo necessario per propagare tale aggiornamento a ogni nodo di replica. Se si aggiorna un elemento prodotto in un database NoSQL nel Stati Uniti, ma allo stesso tempo si esegue una query sullo stesso elemento di dati da un nodo di replica in Europa, è possibile recuperare le informazioni precedenti sul prodotto, fino a quando il nodo europeo non è stato aggiornato con la modifica del prodotto. Il compromesso è che, grazie alla [coerenza](https://en.wikipedia.org/wiki/Strong_consistency)assoluta, in attesa dell'aggiornamento di tutti i nodi di replica prima della restituzione di un risultato della query, è possibile supportare volumi di traffico e scalabilità enormi, ma con la possibilità di presentare dati meno recenti.
 
-I database NoSQL possono essere suddivisi in categorie in base ai quattro modelli seguenti: 
+I database NoSQL possono essere suddivisi in categorie in base ai quattro modelli seguenti:
 
 - *Archivio documenti* (MongoDB, CouchDB, Couchbase): i dati (e i metadati corrispondenti) vengono archiviati in un formato non relazionale in documenti denormalizzati basati su JSON all'interno del database.
 
 - *Archivio chiave/valore* (Redis, Riak, Memcached): i dati vengono archiviati in semplici coppie chiave-valore con operazioni di sistema eseguite su una chiave di accesso univoca mappata a un valore di dati utente.
 
-- *Archivio a colonne Wide* (HBase, Cassandra): i dati correlati vengono archiviati in formato a colonne come un set di coppie chiave/valore annidate all'interno di una singola colonna con dati recuperati in genere come una singola unità senza dover unire più tabelle.
+- *Archivio a colonne Wide* (HBASE, Cassandra): i dati correlati vengono archiviati in un formato a colonne come un set di coppie chiave/valore annidate all'interno di una singola colonna con dati recuperati in genere come una singola unità senza dover unire più tabelle.
 
 - *Archivi Graph* (Neo4j, Titan): i dati vengono archiviati come rappresentazione grafica all'interno di un nodo insieme ai bordi che specificano la relazione tra i nodi.
 

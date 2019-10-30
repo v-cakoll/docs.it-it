@@ -3,12 +3,12 @@ title: Comunicazione da servizio a servizio
 description: Informazioni sul modo in cui i microservizi nativi del cloud back-end comunicano con altri microservizi back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094629"
 ---
 # <a name="service-to-service-communication"></a>Comunicazione da servizio a servizio
 
@@ -60,13 +60,13 @@ Una delle opzioni più diffuse per la rimozione dell'accoppiamento di microservi
 
 ### <a name="service-aggregator-pattern"></a>Modello di Service aggregator
 
-Un'altra opzione per eliminare l'accoppiamento da microservizio a microservizio è un [microservizio aggregatore](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), illustrato in viola nella figura 4-10. 
+Un'altra opzione per eliminare l'accoppiamento da microservizio a microservizio è un [microservizio aggregatore](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), illustrato in viola nella figura 4-10.
 
 ![Servizio aggregator](./media/aggregator-service.png)
 
 **Figura 4-10**. Microservizio aggregator
 
-Il modello isola un'operazione che effettua chiamate a più microservizi back-end, centralizzando la logica in un microservizio specializzato.  Il microservizio Purple checkout aggregator nella figura precedente Orchestra il flusso di lavoro per l'operazione di estrazione. Include le chiamate a diversi microservizi back-end in ordine sequenziale. I dati del flusso di lavoro vengono aggregati e restituiti al chiamante. Sebbene implementi ancora le chiamate HTTP dirette, il microservizio aggregator riduce le dipendenze dirette tra i microservizi back-end. 
+Il modello isola un'operazione che effettua chiamate a più microservizi back-end, centralizzando la logica in un microservizio specializzato.  Il microservizio Purple checkout aggregator nella figura precedente Orchestra il flusso di lavoro per l'operazione di estrazione. Include le chiamate a diversi microservizi back-end in ordine sequenziale. I dati del flusso di lavoro vengono aggregati e restituiti al chiamante. Sebbene implementi ancora le chiamate HTTP dirette, il microservizio aggregator riduce le dipendenze dirette tra i microservizi back-end.
 
 ### <a name="requestreply-pattern"></a>Modello di richiesta/risposta
 
@@ -80,7 +80,7 @@ In questo caso, il producer di messaggi crea un messaggio basato su query che co
 
 ## <a name="commands"></a>Comandi
 
-Un altro tipo di interazione di comunicazione è un *comando*. Un microservizio può richiedere un altro microservizio per eseguire un'azione. Il microservizio degli ordini potrebbe richiedere il microservizio shipping per creare una spedizione per un ordine approvato. Nella figura 4-12, un microservizio, denominato Producer, invia un messaggio a un altro microservizio, il consumer, che lo comanda per eseguire un'operazione. 
+Un altro tipo di interazione di comunicazione è un *comando*. Un microservizio può richiedere un altro microservizio per eseguire un'azione. Il microservizio degli ordini potrebbe richiedere il microservizio shipping per creare una spedizione per un ordine approvato. Nella figura 4-12, un microservizio, denominato Producer, invia un messaggio a un altro microservizio, il consumer, che lo comanda per eseguire un'operazione.
 
 ![Interazione del comando con una coda](./media/command-interaction-with-queue.png)
 
@@ -88,7 +88,7 @@ Un altro tipo di interazione di comunicazione è un *comando*. Un microservizio 
 
 In genere, il producer non richiede una risposta e può *attivare e dimenticare* il messaggio. Se è necessaria una risposta, il consumer invia un messaggio separato al producer su un altro canale. Un messaggio di comando viene inviato meglio in modo asincrono con una coda di messaggi. supportato da un broker di messaggi Lightweight. Nel diagramma precedente si noti come una coda separa e separa entrambi i servizi.
 
-Una coda di messaggi è un costrutto intermediario attraverso il quale un producer e un consumer passano un messaggio. Le code implementano un modello di messaggistica Point-to-Point asincrono. Il produttore sa dove deve essere inviato un comando e viene indirizzato in modo appropriato. La coda garantisce che un messaggio venga elaborato esattamente da una delle istanze del consumer che eseguono la lettura dal canale. In questo scenario, il servizio Producer o consumer può essere scalato in orizzontale senza influire sull'altro. Inoltre, le tecnologie possono essere diversi su ogni lato, ovvero potrebbe essere presente un microservizio Java che chiama un microservizio [Golang](https://golang.org) . 
+Una coda di messaggi è un costrutto intermediario attraverso il quale un producer e un consumer passano un messaggio. Le code implementano un modello di messaggistica Point-to-Point asincrono. Il produttore sa dove deve essere inviato un comando e viene indirizzato in modo appropriato. La coda garantisce che un messaggio venga elaborato esattamente da una delle istanze del consumer che eseguono la lettura dal canale. In questo scenario, il servizio Producer o consumer può essere scalato in orizzontale senza influire sull'altro. Inoltre, le tecnologie possono essere diversi su ogni lato, ovvero potrebbe essere presente un microservizio Java che chiama un microservizio [Golang](https://golang.org) .
 
 Nel capitolo 1, abbiamo parlato dei *servizi di supporto*. I servizi di supporto sono risorse ausiliarie su cui dipendono i sistemi nativi del cloud. Le code di messaggi sono servizi di supporto. Il cloud di Azure supporta due tipi di code di messaggi che possono essere utilizzati dai sistemi nativi del cloud per implementare la messaggistica dei comandi: le code di archiviazione di Azure e le code del bus di servizio di Azure.
 
@@ -116,7 +116,7 @@ La figura 4-13 Mostra la gerarchia di una coda di archiviazione di Azure.
 
 Nella figura precedente si noti come le code di archiviazione archiviano i messaggi nell'account di archiviazione di Azure sottostante.
 
-Per gli sviluppatori, Microsoft fornisce diverse librerie lato client e lato server per l'elaborazione delle code di archiviazione. Sono supportate la maggior parte delle piattaforme principali, tra cui .NET, Java, JavaScript, Ruby, Python e go. Gli sviluppatori non devono mai comunicare direttamente con queste librerie. In questo modo il codice del microservizio viene abbinato al Servizio di accodamento di archiviazione di Azure. È consigliabile isolare i dettagli di implementazione dell'API. Introduce un livello di intermediazione, o un'API intermedia, che espone operazioni generiche e incapsula la libreria concreta. Questo accoppiamento libero consente di scambiare un servizio di Accodamento per un altro senza dover apportare modifiche al codice del servizio principale. 
+Per gli sviluppatori, Microsoft fornisce diverse librerie lato client e lato server per l'elaborazione delle code di archiviazione. Sono supportate la maggior parte delle piattaforme principali, tra cui .NET, Java, JavaScript, Ruby, Python e go. Gli sviluppatori non devono mai comunicare direttamente con queste librerie. In questo modo il codice del microservizio viene abbinato al Servizio di accodamento di archiviazione di Azure. È consigliabile isolare i dettagli di implementazione dell'API. Introduce un livello di intermediazione, o un'API intermedia, che espone operazioni generiche e incapsula la libreria concreta. Questo accoppiamento libero consente di scambiare un servizio di Accodamento per un altro senza dover apportare modifiche al codice del servizio principale.
 
 Le code di archiviazione di Azure rappresentano un'opzione economica per implementare la messaggistica dei comandi nelle applicazioni native del cloud. In particolare, se le dimensioni della coda superano 80 GB o un set di funzionalità semplice è accettabile. Paghi solo per l'archiviazione dei messaggi; non sono previsti addebiti orari fissi.
 
@@ -146,9 +146,9 @@ Nella figura precedente si noti la relazione Point-to-Point. Due istanze dello s
 
 ## <a name="events"></a>eventi
 
-Accodamento messaggi è un modo efficace per implementare la comunicazione in cui un producer può inviare un messaggio in modo asincrono a un consumer. Tuttavia, cosa accade quando *molti utenti diversi* sono interessati allo stesso messaggio? Una coda di messaggi dedicata per ogni consumer non avrebbe scalato bene e sarebbe diventato difficile da gestire. 
+Accodamento messaggi è un modo efficace per implementare la comunicazione in cui un producer può inviare un messaggio in modo asincrono a un consumer. Tuttavia, cosa accade quando *molti utenti diversi* sono interessati allo stesso messaggio? Una coda di messaggi dedicata per ogni consumer non avrebbe scalato bene e sarebbe diventato difficile da gestire.
 
-Per risolvere questo scenario, si passa al terzo tipo di interazione dei messaggi, ovvero l' *evento*. Un microservizio annuncia che si è verificata un'azione. Altri microservizi, se interessati, reagiscono all'azione o all'evento. 
+Per risolvere questo scenario, si passa al terzo tipo di interazione dei messaggi, ovvero l' *evento*. Un microservizio annuncia che si è verificata un'azione. Altri microservizi, se interessati, reagiscono all'azione o all'evento.
 
 L'evento è un processo in due passaggi. Per una modifica dello stato, un microservizio pubblica un evento in un broker di messaggi, rendendolo disponibile per qualsiasi altro microservizio interessato. Il microservizio interessato viene informato sottoscrivendo l'evento nel broker di messaggi. Usare il modello di [pubblicazione/sottoscrizione](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) per implementare la [comunicazione basata su eventi](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
 
@@ -226,7 +226,7 @@ Hub eventi implementa lo streaming di messaggi tramite un [modello consumer part
 
 **Figura 4-19**. Partizionamento dell'hub eventi
 
-Anziché leggere dalla stessa risorsa, ogni gruppo di consumer viene letto in un subset, o partizione, del flusso di messaggi. 
+Anziché leggere dalla stessa risorsa, ogni gruppo di consumer viene letto in un subset, o partizione, del flusso di messaggi.
 
 Per le applicazioni native del cloud che devono trasmettere un numero elevato di eventi, Hub eventi di Azure può essere una soluzione affidabile e conveniente.
 

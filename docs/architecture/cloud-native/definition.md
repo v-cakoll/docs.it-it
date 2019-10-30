@@ -3,12 +3,12 @@ title: Definizione di cloud nativo
 description: Informazioni sui pilastri fondamentali che forniscono il fondamento per i sistemi nativi del cloud
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087537"
 ---
 # <a name="defining-cloud-native"></a>Definizione del cloud nativo
 
@@ -18,7 +18,7 @@ Interrompi le operazioni e il testo 10 dei tuoi colleghi. Chiedere loro di defin
 
 Il cloud nativo sta per cambiare il modo in cui si pensa alla costruzione di sistemi aziendali critici.
 
-I sistemi nativi del cloud sono progettati per adottare modifiche rapide, scalabilità elevata e resilienza. 
+I sistemi nativi del cloud sono progettati per adottare modifiche rapide, scalabilità elevata e resilienza.
 
 Cloud native Computing Foundation fornisce una [definizione ufficiale](https://github.com/cncf/foundation/blob/master/charter.md):
 
@@ -28,14 +28,14 @@ Cloud native Computing Foundation fornisce una [definizione ufficiale](https://g
 
 Le applicazioni sono diventate sempre più complesse con gli utenti che ne richiedono sempre di più. Gli utenti si aspettano velocità di risposta rapida, funzionalità innovative e nessun tempo di inattività. I problemi di prestazioni, gli errori ricorrenti e l'impossibilità di muoversi velocemente non sono più accettabili. Si passerà facilmente al tuo concorrente.
 
-Cloud native è molto su *velocità* e *agilità*. I sistemi aziendali si evolvono dall'abilitazione di funzionalità aziendali a armi di trasformazione strategica, accelerando la velocità e la crescita dell'azienda. È fondamentale ottenere immediatamente le idee sul mercato. 
+Cloud native è molto su *velocità* e *agilità*. I sistemi aziendali si evolvono dall'abilitazione di funzionalità aziendali a armi di trasformazione strategica, accelerando la velocità e la crescita dell'azienda. È fondamentale ottenere immediatamente le idee sul mercato.
 
 Di seguito sono riportate alcune società che hanno implementato queste tecniche. Valutare la velocità, l'agilità e la scalabilità configurate.
 
-| Società | Esperienza | 
+| Società | Esperienza |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | In produzione sono presenti oltre 600 servizi. Distribuisce un centinaio di volte al giorno. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Sono presenti oltre 1000 servizi archiviati nell'ambiente di produzione. Distribuisce diverse migliaia di build ogni settimana. | 
+| [Uber](https://eng.uber.com/micro-deploy/) | Sono presenti oltre 1000 servizi archiviati nell'ambiente di produzione. Distribuisce diverse migliaia di build ogni settimana. |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In produzione sono presenti 300 servizi. Apporta circa 1.000 modifiche al giorno. |
 
 Come si può vedere, Netflix, Uber e WeChat espongono sistemi costituiti da centinaia di microservizi indipendenti. Questo stile di architettura consente loro di rispondere rapidamente alle condizioni di mercato. Possono aggiornare immediatamente piccole aree di un'applicazione dinamica e complessa e ridimensionare singolarmente le aree in base alle esigenze.
@@ -132,6 +132,7 @@ In che modo il servizio identificherà chi vi accede e quali autorizzazioni hann
 L'identità è illustrata in dettaglio capitolo 8, *identità*.
 
 ## <a name="microservices"></a>Microservizi
+
 I sistemi nativi del cloud comprendono i microservizi, uno stile di architettura diffuso per la creazione di applicazioni moderne.
 
 Progettato come un set distribuito di piccoli servizi indipendenti che interagiscono attraverso un'infrastruttura condivisa, i microservizi condividono le caratteristiche seguenti:
@@ -160,7 +161,7 @@ Si noti che i microservizi innalzano di livello il principio "un solo codebase, 
 
 I microservizi offrono agilità.
 
-In precedenza nel capitolo è stata confrontata un'applicazione di eCommerce creata come Monolith con i microservizi. Nell'esempio abbiamo visto alcuni vantaggi evidenti: 
+In precedenza nel capitolo è stata confrontata un'applicazione di eCommerce creata come Monolith con i microservizi. Nell'esempio abbiamo visto alcuni vantaggi evidenti:
 
 - Ogni microservizio ha un ciclo di vita autonomo e può evolvere in modo indipendente e distribuito di frequente. Non è necessario attendere una versione trimestrale per la distribuzione di nuove funzionalità o aggiornamenti. È possibile aggiornare un'area di piccole dimensioni di un'applicazione complessa con meno rischi di compromettere l'intero sistema.
 
@@ -174,9 +175,9 @@ I microservizi possono essere creati con qualsiasi piattaforma di sviluppo moder
 
 La piattaforma Microsoft .NET Core è un'ottima scelta. Disponibile e open source, offre molte funzionalità predefinite per semplificare lo sviluppo di microservizi. .NET Core è multipiattaforma. Le applicazioni possono essere compilate ed eseguite su Windows, macOS e la maggior parte delle versioni di Linux.
 
-.NET Core è altamente efficiente e ha un punteggio ottimale rispetto a node. js e ad altre piattaforme in competizione. È interessante notare che [TechEmpower](https://www.techempower.com/) ha condotto un ampio set di [benchmark delle prestazioni](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) in molti Framework e piattaforme di applicazioni Web. .NET Core ha un punteggio nelle prime 10, ben oltre node. js e altre piattaforme in competizione. 
+.NET Core è altamente efficiente e ha un punteggio ottimale rispetto a node. js e ad altre piattaforme in competizione. È interessante notare che [TechEmpower](https://www.techempower.com/) ha condotto un ampio set di [benchmark delle prestazioni](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) in molti Framework e piattaforme di applicazioni Web. .NET Core ha un punteggio nelle prime 10, ben oltre node. js e altre piattaforme in competizione.
 
-.NET Core è gestito da Microsoft e dalla community .NET su GitHub. 
+.NET Core è gestito da Microsoft e dalla community .NET su GitHub.
 
 ## <a name="containers"></a>Contenitori
 
@@ -188,11 +189,11 @@ Quando necessario, l'immagine viene trasformata in un'istanza del contenitore in
 
 La figura 1-5 mostra tre microservizi diversi, ognuno nel relativo contenitore, in esecuzione in un singolo host.
 
-![Più contenitori in esecuzione in un host contenitore](./media/hosting-mulitple-containers.png)  
+![Più contenitori in esecuzione in un host contenitore](./media/hosting-mulitple-containers.png)
 
 **Figura 1-5**. Più contenitori in esecuzione in un host contenitore
 
-Si noti che ogni contenitore mantiene il proprio set di dipendenze e Runtime, che può essere diverso. Qui vengono visualizzate diverse versioni del microservizio prodotto in esecuzione nello stesso host. Ogni contenitore condivide una sezione del sistema operativo host sottostante, della memoria e del processore, ma è isolata l'una dall'altra. 
+Si noti che ogni contenitore mantiene il proprio set di dipendenze e Runtime, che può essere diverso. Qui vengono visualizzate diverse versioni del microservizio prodotto in esecuzione nello stesso host. Ogni contenitore condivide una sezione del sistema operativo host sottostante, della memoria e del processore, ma è isolata l'una dall'altra.
 
 Si noti il modo in cui il modello di contenitore abbraccia il principio "dipendenze" dall' [applicazione a dodici fattori](https://12factor.net/).
 
@@ -204,7 +205,7 @@ Sebbene esistano molti fornitori di contenitori, Docker ha acquisito la quota di
 
 ### <a name="why-containers"></a>Vantaggi dei contenitori
 
-I contenitori offrono la portabilità e garantiscono la coerenza tra gli ambienti. Incapsulando tutto in un singolo pacchetto, si *isola* il microservizio e le relative dipendenze dall'infrastruttura sottostante. 
+I contenitori offrono la portabilità e garantiscono la coerenza tra gli ambienti. Incapsulando tutto in un singolo pacchetto, si *isola* il microservizio e le relative dipendenze dall'infrastruttura sottostante.
 
 È possibile distribuire lo stesso contenitore in qualsiasi ambiente con il motore di runtime docker. I carichi di lavoro in contenitori eliminano anche i costi di pre-configurazione di ogni ambiente con Framework, librerie software e motori di Runtime.
 
@@ -212,7 +213,7 @@ Condividendo il sistema operativo e le risorse host sottostanti, i contenitori h
 
 ### <a name="container-orchestration"></a>Orchestrazione del contenitore
 
-Sebbene strumenti come Docker creino immagini ed eseguano contenitori, è necessario anche strumenti per gestirli. La gestione dei contenitori viene eseguita con un programma software speciale denominato agente di orchestrazione del contenitore. Quando si opera su larga scala, l'orchestrazione del contenitore è essenziale. 
+Sebbene strumenti come Docker creino immagini ed eseguano contenitori, è necessario anche strumenti per gestirli. La gestione dei contenitori viene eseguita con un programma software speciale denominato agente di orchestrazione del contenitore. Quando si opera su larga scala, l'orchestrazione del contenitore è essenziale.
 
 La figura 1-6 illustra le attività di gestione fornite dagli agenti di orchestrazione dei contenitori.
 
@@ -239,7 +240,7 @@ Si noti che gli agenti di orchestrazione adottano i principi di disposizione e d
 
 > *Factor \#8 specifica che "i servizi vengono scalati orizzontalmente in un numero elevato di piccoli processi identici (copie), anziché eseguire la scalabilità verticale di una singola istanza large nel computer più potente disponibile".*
 
-Sebbene esistano diversi agenti di orchestrazione dei contenitori, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) è diventato lo standard de facto per il mondo nativo del cloud. Si tratta di una piattaforma portabile, estensibile e open source per la gestione dei carichi di lavoro in contenitori. 
+Sebbene esistano diversi agenti di orchestrazione dei contenitori, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) è diventato lo standard de facto per il mondo nativo del cloud. Si tratta di una piattaforma portabile, estensibile e open source per la gestione dei carichi di lavoro in contenitori.
 
 È possibile ospitare la propria istanza di Kubernetes, ma è necessario eseguire il provisioning e la gestione delle risorse, che possono essere complesse. Le funzionalità cloud di Azure Kubernetes come servizio gestito, [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). Un servizio gestito consente di sfruttare appieno le funzionalità, senza doverle installare e gestire.
 
@@ -287,7 +288,7 @@ Con IaC è possibile automatizzare il provisioning della piattaforma e la distri
 
 ### <a name="automating-infrastructure"></a>Automazione dell'infrastruttura
 
-Strumenti come [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), bonifica e l'interfaccia della riga di comando di [Azure](https://docs.microsoft.com/cli/azure/)consentono di creare script in modo dichiarativo dell'infrastruttura cloud necessaria. I nomi delle risorse, le località, le capacità e i segreti sono parametrizzati e dinamici. Lo script viene sottoposto a controllo delle versioni e archiviato nel controllo del codice sorgente come elemento del progetto. Si richiama lo script per eseguire il provisioning di un'infrastruttura coerente e ripetibile negli ambienti di sistema, ad esempio QA, staging e produzione. 
+Strumenti come [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), bonifica e l'interfaccia della riga di comando di [Azure](https://docs.microsoft.com/cli/azure/)consentono di creare script in modo dichiarativo dell'infrastruttura cloud necessaria. I nomi delle risorse, le località, le capacità e i segreti sono parametrizzati e dinamici. Lo script viene sottoposto a controllo delle versioni e archiviato nel controllo del codice sorgente come elemento del progetto. Si richiama lo script per eseguire il provisioning di un'infrastruttura coerente e ripetibile negli ambienti di sistema, ad esempio QA, staging e produzione.
 
 In realtà, IaC è idempotente, il che significa che è possibile eseguire lo stesso script senza effetti collaterali. Se il team deve apportare una modifica, viene modificato ed eseguito nuovamente lo script. Sono interessate solo le risorse aggiornate.
 
@@ -299,7 +300,7 @@ L' [applicazione a dodici fattori](https://12factor.net/), descritta in preceden
 
 > *Factor \#5* specifica che "ogni versione deve applicare una stretta separazione tra le fasi di compilazione, rilascio ed esecuzione. Ogni deve essere contrassegnato con un ID univoco e supportare la possibilità di eseguire il rollback ".
 
-I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti. 
+I sistemi di integrazione continua/recapito continuo moderni contribuiscono a soddisfare questo principio. Forniscono passaggi di distribuzione distinti che consentono di garantire un codice coerente e di qualità immediatamente disponibile per gli utenti.
 
 La figura 1-8 Mostra la separazione tra il processo di distribuzione.
 
@@ -307,17 +308,17 @@ La figura 1-8 Mostra la separazione tra il processo di distribuzione.
 
 **Figura 1-8**. Passaggi di distribuzione in una pipeline CI/CD
 
-Nella figura precedente, prestare particolare attenzione alla separazione delle attività. 
+Nella figura precedente, prestare particolare attenzione alla separazione delle attività.
 
-Lo sviluppatore costruisce una funzionalità nel proprio ambiente di sviluppo, scorrendo il cosiddetto "ciclo interno" di codice, esecuzione ed esecuzione del debug. Al termine, viene eseguito il *push* del codice in un repository di codice, ad esempio GitHub, Azure DevOps o bitbucket. 
+Lo sviluppatore costruisce una funzionalità nel proprio ambiente di sviluppo, scorrendo il cosiddetto "ciclo interno" di codice, esecuzione ed esecuzione del debug. Al termine, viene eseguito il *push* del codice in un repository di codice, ad esempio GitHub, Azure DevOps o bitbucket.
 
-Il push attiva una fase di compilazione che trasforma il codice in un artefatto binario. Il lavoro viene implementato con una pipeline di [integrazione continua (ci)](https://martinfowler.com/articles/continuousIntegration.html) . Compila, testa e crea automaticamente i pacchetti dell'applicazione. 
+Il push attiva una fase di compilazione che trasforma il codice in un artefatto binario. Il lavoro viene implementato con una pipeline di [integrazione continua (ci)](https://martinfowler.com/articles/continuousIntegration.html) . Compila, testa e crea automaticamente i pacchetti dell'applicazione.
 
 La fase di rilascio preleva l'artefatto binario, applica le informazioni di configurazione dell'ambiente e dell'applicazione esterna e produce una versione non modificabile. La versione viene distribuita in un ambiente specificato. Il lavoro viene implementato con una pipeline di [recapito continuo (CD)](https://martinfowler.com/bliki/ContinuousDelivery.html) . Ogni versione deve essere identificabile. Si può dire che "questa distribuzione esegue la versione 2.1.1 dell'applicazione".
 
-Infine, la funzionalità rilasciata viene eseguita nell'ambiente di esecuzione di destinazione. Le versioni non sono modificabili, pertanto qualsiasi modifica deve creare una nuova versione. 
+Infine, la funzionalità rilasciata viene eseguita nell'ambiente di esecuzione di destinazione. Le versioni non sono modificabili, pertanto qualsiasi modifica deve creare una nuova versione.
 
-Applicando queste procedure, le organizzazioni si sono evolute radicalmente nel modo in cui distribuiscono il software. Molti sono passati da versioni trimestrali a aggiornamenti su richiesta. L'obiettivo è quello di rilevare i problemi nelle fasi iniziali del ciclo di sviluppo quando sono meno costosi da risolvere. Maggiore è la durata tra le integrazioni, i problemi più costosi diventano la risoluzione.  Con la coerenza del processo di integrazione, i team possono eseguire il commit delle modifiche del codice con maggiore frequenza, ottenendo una migliore collaborazione e qualità del software.  
+Applicando queste procedure, le organizzazioni si sono evolute radicalmente nel modo in cui distribuiscono il software. Molti sono passati da versioni trimestrali a aggiornamenti su richiesta. L'obiettivo è quello di rilevare i problemi nelle fasi iniziali del ciclo di sviluppo quando sono meno costosi da risolvere. Maggiore è la durata tra le integrazioni, i problemi più costosi diventano la risoluzione.  Con la coerenza del processo di integrazione, i team possono eseguire il commit delle modifiche del codice con maggiore frequenza, ottenendo una migliore collaborazione e qualità del software.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

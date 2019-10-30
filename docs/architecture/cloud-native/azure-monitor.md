@@ -2,20 +2,20 @@
 title: Monitoraggio di Azure
 description: L'uso di monitoraggio di Azure per ottenere visibilità sul sistema è in esecuzione.
 ms.date: 09/23/2019
-ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087688"
 ---
-# <a name="azure-monitor"></a>Monitoraggio di Azure 
+# <a name="azure-monitor"></a>Monitoraggio di Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Nessun altro provider di servizi cloud ha maturato una soluzione di monitoraggio delle applicazioni cloud come quello presente in Azure. Monitoraggio di Azure è un nome di ombrello per una raccolta di strumenti progettati per fornire visibilità sullo stato del sistema, informazioni dettagliate sui problemi e sull'ottimizzazione dell'applicazione. 
+Nessun altro provider di servizi cloud ha maturato una soluzione di monitoraggio delle applicazioni cloud come quello presente in Azure. Monitoraggio di Azure è un nome di ombrello per una raccolta di strumenti progettati per fornire visibilità sullo stato del sistema, informazioni dettagliate sui problemi e sull'ottimizzazione dell'applicazione.
 
-![Azure monitor, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud. ](./media/azure-monitor.png)
+![monitoraggio di Azure, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud.](./media/azure-monitor.png)
 **figura 7-9**. Monitoraggio di Azure, una raccolta di strumenti per fornire informazioni sul funzionamento di un'applicazione nativa del cloud.
 
 ## <a name="gathering-logs-and-metrics"></a>Raccolta di log e metriche
@@ -35,28 +35,28 @@ Non è stata completata alcuna applicazione moderna senza alcuna intelligenza ar
 Application Insights fornisce un linguaggio di query avanzato denominato kusto che può essere usato per trovare i record, riepilogarli e persino tracciare grafici. Questa query, ad esempio, consente di individuare tutti i record per il mese di novembre 2007, di raggrupparli in base allo stato e di tracciare i primi 10 come grafico a torta.
 
 ```
-StormEvents 
+StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State
 | top 10 by count_
-| render piechart 
+| render piechart
 ```
 
-![The risultato della query Application Insights ](./media/azure-monitor.png)
+![il risultato della query Application Insights](./media/azure-monitor.png)
 **figura 7-10**. Risultato della query Application Insights.
 
 È disponibile un [Playground per la sperimentazione](https://dataexplorer.azure.com/clusters/help/databases/Samples) delle query kusto, che è un ottimo punto di dedicare un'ora o due. La lettura di [query di esempio](https://docs.microsoft.com/azure/kusto/query/samples) può essere anche istruttiva.
 
 ## <a name="dashboards"></a>Dashboard
 
-Sono disponibili diverse tecnologie dashboard che possono essere usate per esporre le informazioni da monitoraggio di Azure. Probabilmente il più semplice consiste nell'eseguire query in Application Insights e [tracciare i dati in un grafico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards). 
+Sono disponibili diverse tecnologie dashboard che possono essere usate per esporre le informazioni da monitoraggio di Azure. Probabilmente il più semplice consiste nell'eseguire query in Application Insights e [tracciare i dati in un grafico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
 
-![An esempio di grafici Application Insights incorporati nel dashboard principale di Azure ](./media/azure-monitor.png)
+![un esempio di grafici Application Insights incorporati nel dashboard principale di Azure](./media/azure-monitor.png)
 **figura 7-11**. Esempio di Application Insights grafici incorporati nel dashboard principale di Azure.
 
 Questi grafici possono quindi essere incorporati nel portale di Azure appropriato tramite l'uso della funzionalità Dashboard. Per gli utenti con requisiti più precisi, come la possibilità di eseguire il drill-down in diversi livelli di dati di monitoraggio di Azure, è possibile [Power bi](https://powerbi.microsoft.com/). Power BI è uno strumento di business intelligence aziendale leader del settore che consente di aggregare dati da molte origini dati diverse.
 
-![An esempio Power BI Dashboard ](./media/azure-monitor.png)
+![un esempio Power BI Dashboard](./media/azure-monitor.png)
 **figura 7-12**. Un esempio Power BI Dashboard.
 
 ## <a name="alerts"></a>Avvisi
@@ -71,9 +71,9 @@ In alcuni casi, la presenza di dashboard di dati è insufficiente. Se nessuno è
 
 Quando viene attivato, gli avvisi possono eseguire un'ampia gamma di attività. Sul lato più semplice, gli avvisi possono semplicemente inviare una notifica tramite posta elettronica a una lista di distribuzione o a un messaggio di testo a un singolo utente. Gli avvisi più interessati possono attivare un flusso di lavoro in uno strumento, ad esempio PagerDuty, che è a conoscenza di chi chiama per una particolare applicazione. Gli avvisi possono attivare azioni in [Microsoft Flow](https://flow.microsoft.com/) sbloccare quasi illimitatamente le possibilità per i flussi di lavoro.
 
-Quando vengono identificate le cause comuni degli avvisi, gli avvisi possono essere migliorati con informazioni dettagliate sulle cause comuni degli avvisi e sui passaggi da eseguire per risolverli. Le distribuzioni di applicazioni cloud native altamente mature possono scegliere di avviare attività di correzione automatica, che eseguono azioni come la rimozione di nodi non riusciti da un set di scalabilità o l'attivazione di un'attività di scalabilità automatica. Alla fine, potrebbe non essere più necessario riattivare il personale di chiamata alle 2:00 per risolvere un problema del sito Live, perché il sistema sarà in grado di adattarsi per compensare o almeno zoppicare fino a quando qualcuno non arriva al lavoro il giorno successivo. 
+Quando vengono identificate le cause comuni degli avvisi, gli avvisi possono essere migliorati con informazioni dettagliate sulle cause comuni degli avvisi e sui passaggi da eseguire per risolverli. Le distribuzioni di applicazioni cloud native altamente mature possono scegliere di avviare attività di correzione automatica, che eseguono azioni come la rimozione di nodi non riusciti da un set di scalabilità o l'attivazione di un'attività di scalabilità automatica. Alla fine, potrebbe non essere più necessario riattivare il personale di chiamata alle 2:00 per risolvere un problema del sito Live, perché il sistema sarà in grado di adattarsi per compensare o almeno zoppicare fino a quando qualcuno non arriva al lavoro il giorno successivo.
 
-Monitoraggio di Azure sfrutta automaticamente Machine Learning per comprendere i normali parametri operativi delle applicazioni distribuite. In questo modo è possibile rilevare servizi che funzionano al di fuori dei parametri normali. Ad esempio, il normale traffico dei giorni feriali sul sito potrebbe essere 10.000 richieste al minuto. Quindi, in una determinata settimana, improvvisamente il numero di richieste raggiunge un 20.000 di richieste al minuto estremamente insolite. Il [rilevamento intelligente](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) noterà questa deviazione dalla norma e attiva un avviso. Allo stesso tempo, l'analisi della tendenza è sufficientemente intelligente da evitare la generazione di falsi positivi quando si prevede il carico del traffico.  
+Monitoraggio di Azure sfrutta automaticamente Machine Learning per comprendere i normali parametri operativi delle applicazioni distribuite. In questo modo è possibile rilevare servizi che funzionano al di fuori dei parametri normali. Ad esempio, il normale traffico dei giorni feriali sul sito potrebbe essere 10.000 richieste al minuto. Quindi, in una determinata settimana, improvvisamente il numero di richieste raggiunge un 20.000 di richieste al minuto estremamente insolite. Il [rilevamento intelligente](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) noterà questa deviazione dalla norma e attiva un avviso. Allo stesso tempo, l'analisi della tendenza è sufficientemente intelligente da evitare la generazione di falsi positivi quando si prevede il carico del traffico.
 
 >[!div class="step-by-step"]
 >[Precedente](monitoring-azure-kubernetes.md)

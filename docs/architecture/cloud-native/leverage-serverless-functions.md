@@ -2,18 +2,18 @@
 title: Uso di funzioni serverless
 description: Uso di funzioni senza server e di Azure in applicazioni native del cloud
 ms.date: 06/30/2019
-ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 77ddef0eb8844ea1b55cd2fc5ec8aa12593c8631
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087114"
 ---
 # <a name="leveraging-serverless-functions"></a>Uso di funzioni serverless
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Nell'ambito della gestione dei computer e dei sistemi operativi completi per sfruttare le funzionalità del cloud, le vite senza server si trovano alla fine estremo, dove l'unica cosa che si è responsabile è il codice e si paga solo quando viene eseguito il codice. Funzioni di Azure offre un modo per creare funzionalità senza server nelle applicazioni. 
+Nell'ambito della gestione dei computer e dei sistemi operativi completi per sfruttare le funzionalità del cloud, le vite senza server si trovano alla fine estremo, dove l'unica cosa che si è responsabile è il codice e si paga solo quando viene eseguito il codice. Funzioni di Azure offre un modo per creare funzionalità senza server nelle applicazioni.
 
 ## <a name="what-is-serverless"></a>Che cos'è senza server?
 
@@ -47,7 +47,7 @@ Molte applicazioni hanno processi a esecuzione prolungata come parte dei propri 
 
 L'elaborazione senza server è più usata per le attività che non bloccano l'interfaccia utente. Ciò significa che non sono ideali per ospitare direttamente le applicazioni Web o le API Web. Il motivo principale è che le soluzioni senza server vengono sottoposte a provisioning e ridimensionate su richiesta. Quando è necessaria una nuova istanza di una funzione, definita *avvio a freddo*, il provisioning richiede tempo. Questo tempo è in genere di pochi secondi, ma può essere più lungo a seconda di diversi fattori. Una singola istanza può essere spesso mantenuta attiva per un periodo illimitato (ad esempio, effettuando periodicamente una richiesta), ma il problema di avvio a freddo rimane se il numero di istanze deve essere ridimensionato.
 
-![Cold rispetto all'avvio a caldo ](./media/cold-start-warm-start.png)
+![a freddo e a caldo inizia](./media/cold-start-warm-start.png)
 **figura 3-10**. Avvio a freddo rispetto all'avvio a caldo.
 
 Se è necessario evitare completamente l'avvio a freddo, è possibile scegliere di passare da un [piano a consumo a un piano dedicato](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). È anche possibile [configurare una o più istanze già riscaldate](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) con il piano Premium, in modo che quando è necessario aggiungere un'altra istanza, il piano è già attivo e pronto per l'uso. Queste opzioni possono attenuare una delle problematiche principali associate all'elaborazione senza server.

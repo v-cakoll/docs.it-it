@@ -2,12 +2,12 @@
 title: Terminologia di Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Terminologia di Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179411"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090045"
 ---
 # <a name="docker-terminology"></a>Terminologia di Docker
 
@@ -17,7 +17,7 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Dockerfile**: file di testo contenente le istruzioni per compilare un'immagine Docker. È come uno script batch, dove la prima riga indica l'immagine di base con cui iniziare e quindi si seguono le istruzioni per installare i programmi necessari, copiare i file e così via, finché non si ottiene l'ambiente di lavoro necessario.
 
-**Compilazione**: azione di compilazione di un'immagine del contenitore in base alle informazioni e al contesto forniti dal Dockerfile corrispondente e ad altri file aggiuntivi nella cartella in cui viene creata l'immagine. È possibile compilare immagini con il comando Docker **docker build**. 
+**Compilazione**: azione di compilazione di un'immagine del contenitore in base alle informazioni e al contesto forniti dal Dockerfile corrispondente e ad altri file aggiuntivi nella cartella in cui viene creata l'immagine. È possibile compilare immagini con il comando Docker **docker build**.
 
 **Contenitore**: istanza di un'immagine Docker. Un contenitore rappresenta l'esecuzione di una singola applicazione o di un singolo processo o servizio. È costituito dal contenuto di un'immagine Docker, da un ambiente di esecuzione e da un set di istruzioni standard. Quando si ridimensiona un servizio, si creano più istanze di un contenitore dalla stessa immagine oppure in un processo batch può creare più contenitori dalla stessa immagine, passando parametri diversi a ogni istanza.
 
@@ -27,11 +27,11 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Compilazione in più fasi**: funzionalità disponibile in Docker 17.05 o versioni successive, che consente di ridurre le dimensioni delle immagini finali. In breve, con la compilazione in più fasi è possibile usare, ad esempio, un'immagine di base di grandi dimensioni, contenente l'SDK, per la compilazione e la pubblicazione dell'applicazione e quindi usare la cartella di pubblicazione con un'immagine di base solo runtime di piccole dimensioni, per produrre un'immagine finale molto più piccola
 
-**Repository**: raccolta di immagini Docker correlate, etichettate con un tag che indica la versione dell'immagine. Alcuni repository contengono più varianti di un'immagine specifica, ad esempio un'immagine contenente gli SDK (più pesante), un'immagine contenente solo i runtime (più leggera) e così via. Tali varianti possono essere contrassegnate con i tag. Un singolo repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine Windows.
+**Repository**: raccolta di immagini Docker correlate, etichettate con un tag che indica la versione dell'immagine. Alcuni repository contengono più varianti di un'immagine specifica, ad esempio un'immagine contenente SDK (più pesante), un'immagine contenente solo Runtime (più semplici) e così via. Tali varianti possono essere contrassegnate con tag. Un singolo repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine Windows.
 
 **Registro**: servizio che fornisce l'accesso ai repository. Il registro predefinito per la maggior parte delle immagini pubbliche è l'[Hub Docker](https://hub.docker.com/), di proprietà di Docker a livello di organizzazione. Un registro contiene in genere i repository di più team. Spesso le aziende hanno registri privati in cui archiviare e gestire le immagini che hanno creato. Registro Azure Container è un esempio.
 
-**Immagine con multiarchitettura**: per la multiarchitettura, è una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui Docker è in esecuzione. Ad esempio, quando un Dockerfile richiede un'immagine di base **FROM mcr.microsoft.com/dotnet/core/sdk:2.2** dal registro, ottiene di fatto **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** o **2.2-sdk-stretch**, a seconda del sistema operativo e della versione in cui Docker è in esecuzione.
+**Immagine**a più Arch: per la multiarchitettura, è una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui è in esecuzione Docker, ad esempio quando un Dockerfile richiede un'immagine **di base da MCR.Microsoft.com/dotnet/Core/SDK:2.2** dal registro di sistema, riceve effettivamente **2,2-sdk-nanoserver-1709**, **2,2-sdk-nanoserver-1803**, **2,2-SDK-nanoserver-1809** o **2,2-SDK-stretch**, a seconda del sistema operativo e della versione in cui è in esecuzione Docker .
 
 **Hub Docker**: registro pubblico in cui caricare le immagini e usarle. L'hub Docker fornisce l'hosting di immagini Docker, registri pubblici o privati, trigger e webhook di compilazione e integrazione con GitHub e Bitbucket.
 
@@ -45,9 +45,9 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Compose**: strumento da riga di comando e formato di file YAML con i metadati per definire ed eseguire applicazioni multicontenitore. Si definisce una singola applicazione in base a più immagini con uno o più file YML che possono eseguire l'override dei valori a seconda dell'ambiente. Dopo aver creato le definizioni, è possibile distribuire l'intera applicazione multicontenitore con un singolo comando (a partire da docker-compose) che crea un contenitore per immagine nell'host Docker.
 
-**Cluster**: raccolta di host Docker esposta come se si trattasse di un singolo host Docker virtuale, per consentire la scalabilità dell'applicazione aggiungendo più istanze dei servizi distribuite tra più host all'interno del cluster. È possibile creare i cluster Docker con Kubernetes, Azure Service Fabric Docker Swarm e Mesosphere DC/OS.
+**Cluster**: raccolta di host Docker esposta come se si trattasse di un singolo host Docker virtuale, per consentire la scalabilità aggiungendo più istanze dei servizi distribuite tra più host all'interno del cluster. È possibile creare i cluster Docker con Kubernetes, Azure Service Fabric Docker Swarm e Mesosphere DC/OS.
 
-**Agente di orchestrazione**: strumento che semplifica la gestione di cluster e host Docker. Gli agenti di orchestrazione consentono di gestire immagini, contenitori e host tramite un'interfaccia della riga di comando o un'interfaccia utente grafica. È possibile gestire le reti di contenitori, le configurazioni, il bilanciamento del carico, l'individuazione di servizi, la disponibilità elevata, la configurazione dell'host Docker e altro ancora. Un agente di orchestrazione è responsabile dell'esecuzione, della distribuzione, del ridimensionamento e della correzione dei carichi di lavoro in una raccolta di nodi. In genere, i prodotti per l'agente di orchestrazione sono gli stessi che forniscono l'infrastruttura cluster, ad esempio Kubernetes, Azure Service Fabric e altre offerte disponibili sul mercato. 
+**Agente di orchestrazione**: strumento che semplifica la gestione di cluster e host Docker. Gli agenti di orchestrazione consentono di gestire immagini, contenitori e host tramite un'interfaccia della riga di comando o un'interfaccia utente grafica. È possibile gestire le reti di contenitori, le configurazioni, il bilanciamento del carico, l'individuazione di servizi, la disponibilità elevata, la configurazione dell'host Docker e altro ancora. Un agente di orchestrazione è responsabile dell'esecuzione, della distribuzione, del ridimensionamento e della correzione dei carichi di lavoro in una raccolta di nodi. In genere, i prodotti per l'agente di orchestrazione sono gli stessi che forniscono l'infrastruttura cluster, ad esempio Kubernetes, Azure Service Fabric e altre offerte disponibili sul mercato.
 
 >[!div class="step-by-step"]
 >[Precedente](docker-defined.md)

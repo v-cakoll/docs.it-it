@@ -2,12 +2,12 @@
 title: Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 description: Architettura dei microservizi .NET per applicazioni .NET in contenitori | Usare il concetto di cartella SeedWork come punto di partenza per avviare l'implementazione di un modello di dominio orientato a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093799"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classi di base riutilizzabili e interfacce per il modello di dominio)
 
@@ -15,7 +15,7 @@ La cartella della soluzione contiene una cartella denominata *SeedWork*. Tale ca
 
 La figura 7-12 illustra le classi che costituiscono la cartella SeedWork del modello di dominio nel microservizio degli ordini. La cartella contiene alcune classi di base personalizzate come Entity, ValueObject ed Enumeration e alcune interfacce. Queste interfacce (IRepository e IUnitOfWork) indicano al livello infrastruttura le implementazioni necessarie. Queste interfacce vengono usate anche dal livello dell'applicazione tramite l'inserimento delle dipendenze.
 
-![Il contenuto dettagliato della cartella SeedWork, contenente le interfacce e le classi di base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
+![Il contenuto dettagliato della cartella SeedWork, che contiene le classi di base e le interfacce: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
 
 **Figura 7-12**. Set di esempio di classi di base e interfacce nella cartella"Seedwork" per il modello di dominio
 
@@ -30,9 +30,9 @@ Il codice seguente è un esempio di una classe di base Entity in cui è possibil
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;    
+    int _Id;
     private List<INotification> _domainEvents;
-    public virtual int Id 
+    public virtual int Id
     {
         get
         {
@@ -44,7 +44,7 @@ public abstract class Entity
         }
     }
 
-    public List<INotification> DomainEvents => _domainEvents;        
+    public List<INotification> DomainEvents => _domainEvents;
     public void AddDomainEvent(INotification eventItem)
     {
         _domainEvents = _domainEvents ?? new List<INotification>();
@@ -137,7 +137,7 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Martin Fowler. Separated Interface. (Interfaccia separata)** \
+- **Martin Fowler. Interfaccia separata.** \
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]

@@ -1,16 +1,16 @@
 ---
-title: Introduzione alle applicazioni native del cloud
+title: Introduzione alle applicazioni cloud native
 description: Informazioni sul cloud-native computing
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: a99e4b5599efee8b171c48a5b17e75b9e6cd63ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087239"
 ---
-# <a name="introduction-to-cloud-native-applications"></a>Introduzione alle applicazioni native del cloud
+# <a name="introduction-to-cloud-native-applications"></a>Introduzione alle applicazioni cloud native
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -18,7 +18,7 @@ Un altro giorno, in ufficio, a lavorare su "la prossima grande cosa".
 
 Il cellulare squilla. Si tratta di un Recruiter gentile, ovvero quello che chiama due volte al giorno per i nuovi processi.
 
-Ma questa volta è diversa: Avvio, equità e un ampio finanziamento.
+Ma questa volta è diversa: avvio, equità e abbondanza di finanziamenti.
 
 La menzione della tecnologia cloud e all'avanguardia ti permette di inserirti sul perimetro.
 
@@ -38,7 +38,7 @@ La procedura è stata completata.  È stata appena creata un'applicazione monoli
 
 Non è tutto negativo. I monoliti offrono alcuni vantaggi distinti. Ad esempio, sono semplici da...
 
-- build 
+- build
 - test
 - Distribuire
 - Risolvere i problemi
@@ -76,7 +76,7 @@ Nell'arco di un breve periodo di tempo, cloud native è diventato una tendenza d
 
 A differenza dell'hype continuo che guida il nostro settore, il cloud nativo è "*per il vero*". Si consideri il [cloud native Computing Foundation](https://www.cncf.io/) (CNCF), un consorzio di oltre 300 aziende principali con una carta per rendere il computer nativo dal cloud onnipresente tra tecnologie e stack cloud. In qualità di uno dei gruppi open source più influenti, ospita molti dei progetti open source più veloci, in GitHub. Sono inclusi progetti come [Kubernetes](https://kubernetes.io/), [Prometeo](https://prometheus.io/), [Helm](https://helm.sh/), [inviato](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
 
-Il CNCF promuove un ecosistema di Open Source e neutralità del fornitore. In seguito, vengono presentati i principi, i modelli e le procedure consigliate native del cloud, indipendenti dalla tecnologia. Allo stesso tempo, verranno illustrati i servizi e l'infrastruttura disponibili nel cloud Microsoft Azure per la creazione di sistemi nativi del cloud. 
+Il CNCF promuove un ecosistema di Open Source e neutralità del fornitore. In seguito, vengono presentati i principi, i modelli e le procedure consigliate native del cloud, indipendenti dalla tecnologia. Allo stesso tempo, verranno illustrati i servizi e l'infrastruttura disponibili nel cloud Microsoft Azure per la creazione di sistemi nativi del cloud.
 
 Che cos'è esattamente il cloud nativo? Torna indietro, rilassati e ti aiuteremo a esplorare questo nuovo mondo.
 

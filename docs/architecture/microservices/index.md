@@ -2,29 +2,29 @@
 title: Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089904"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: architettura per le applicazioni .NET incluse in contenitori
 
 ![Copertina](./media/cover-small.png)
 
 **EDIZIONE v2.2** - aggiornato ad ASP.NET Core 2.2
 
-Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker. 
+Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker.
 
 Per rendere più semplice iniziare, la guida illustra un'applicazione di riferimento basata su microservizi e inclusa in un contenitore che è possibile esplorare. L'applicazione di riferimento è disponibile nel repository GitHub [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
 ## <a name="action-links"></a>Collegamenti all'azione
 
-- Scaricare questo eBook nel formato preferito: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- Scarica questo e-book nel formato scelto (solo versione inglese): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Clonare o eseguire il fork dell'applicazione di riferimento [eShopOnContainers su GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
- 
+
 - Guardare il [video introduttivo su Channel 9](https://aka.ms/microservices-video)
 
 - Ottenere immediatamente informazioni sull'[architettura di microservizi](https://aka.ms/MicroservicesArchitecture)
@@ -33,7 +33,7 @@ Per rendere più semplice iniziare, la guida illustra un'applicazione di riferim
 
 Sempre più spesso nelle aziende vengono usati i contenitori per realizzare risparmi sui costi, risolvere i problemi di distribuzione e migliorare DevOps e operazioni di produzione. Microsoft ha introdotto innovazioni dei contenitori per Windows e Linux tramite la creazione di prodotti come il servizio Azure Kubernetes e Azure Service Fabric, oltre che attraverso la collaborazione con aziende leader del settore come Docker, Mesosphere e Kubernetes. Questi prodotti offrono soluzioni per i contenitori che consentono alle aziende di creare e distribuire le applicazioni con la velocità e la scalabilità del cloud, indipendentemente dalla piattaforma o dagli strumenti scelti.
 
-Docker sta diventando lo standard di fatto nel settore dei contenitori, supportato dai più significativi fornitori negli ecosistemi Windows e Linux (Microsoft è uno dei principali fornitori cloud che supportano Docker). In futuro, probabilmente Docker sarà presente in qualsiasi data center nel cloud o locale.
+Docker sta diventando lo standard di fatto nel settore dei contenitori, supportato dai più significativi fornitori negli ecosistemi Windows e Linux Microsoft è uno dei principali fornitori di cloud che supportano docker. In futuro, Docker sarà probabilmente onnipresente in qualsiasi Data Center nel cloud o in locale.
 
 Inoltre, l'architettura dei [microservizi](https://martinfowler.com/articles/microservices.html) sta emergendo come un importante approccio alle applicazioni distribuite di importanza strategica. In un'architettura basata su microservizi, l'applicazione si basa su una raccolta di servizi che possono essere sviluppati, testati, distribuiti e sottoposti a controllo della versione in modo indipendente.
 
@@ -47,7 +47,7 @@ Dopo aver consultato questa guida, il passaggio successivo sarà acquisire infor
 
 ## <a name="version"></a>Versione
 
-Questa guida è stata rivista per includere la versione **.NET Core 2.2** e numerosi aggiornamenti aggiuntivi correlati alla stessa "generazione" di tecnologie (ovvero Azure e tecnologie aggiuntive di terze parti) in coincidenza con .NET Core 2.2. Per tale motivo anche la versione stampata è stata aggiornata alla versione **2.2**. 
+Questa guida è stata rivista per includere la versione **.NET Core 2.2** e numerosi aggiornamenti aggiuntivi correlati alla stessa "generazione" di tecnologie (ovvero Azure e tecnologie aggiuntive di terze parti) in coincidenza con .NET Core 2.2. Per tale motivo anche la versione stampata è stata aggiornata alla versione **2.2**.
 
 ## <a name="what-this-guide-does-not-cover"></a>Argomenti non trattati dalla guida
 
@@ -72,7 +72,7 @@ La seconda parte della guida inizia con la sezione [Processo di sviluppo per le 
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Applicazione di riferimento correlata basata su microservizi e contenitori: eShopOnContainers
 
-L'applicazione eShopOnContainers è un'applicazione open-source di riferimento per .NET Core e i microservizi, progettata per la distribuzione mediante i contenitori Docker. L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi online (un'app Web MVC, un'applicazione Web a pagina singola e un'app per dispositivi mobili nativa). Include inoltre i microservizi e i contenitori back-end per tutte le operazioni lato server necessarie. 
+L'applicazione eShopOnContainers è un'applicazione open-source di riferimento per .NET Core e i microservizi, progettata per la distribuzione mediante i contenitori Docker. L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi online (un'app Web MVC, un'applicazione Web a pagina singola e un'app per dispositivi mobili nativa). Include inoltre i microservizi e i contenitori back-end per tutte le operazioni lato server necessarie.
 
 Lo scopo dell'applicazione consiste nel presentare i modelli di architettura. **NON È UN MODELLO DA USARE IN PRODUZIONE** per avviare applicazioni reali. Di fatto, l'applicazione è in uno stato beta permanente, perché viene usata anche per testare le nuove tecnologie potenzialmente interessanti quando diventano disponibili.
 
@@ -174,7 +174,7 @@ Microsoft e i marchi elencati nella pagina Web relativa ai marchi all'indirizzo 
 
 Mac e macOS sono marchi registrati di Apple Inc.
 
-Il logo Docker con la balena è un marchio registrato di Docker, Inc. Usato su autorizzazione.
+Il logo Docker Whale è un marchio registrato di Docker, Inc. usato dall'autorizzazione.
 
 Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 

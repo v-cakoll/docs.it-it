@@ -2,18 +2,19 @@
 title: Registrazione con Elastic Stack
 description: Registrazione con Elastic stack, logstash e Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087065"
 ---
-# <a name="logging-with-elastic-stack"></a>Registrazione con Elastic Stack 
+# <a name="logging-with-elastic-stack"></a>Registrazione con Elastic Stack
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: ricerca elastica, logstash e Kibana. Collettivamente questi strumenti sono noti come stack elastico o ELK.
+Sono disponibili molti strumenti di registrazione centralizzati e i costi variano a seconda del fatto che siano disponibili strumenti Open Source gratuiti per le opzioni più costose. In molti casi, gli strumenti gratuiti sono più efficaci o migliori delle offerte a pagamento. Uno di questi strumenti è costituito da una combinazione di tre componenti Open Source: ricerca elastica, logstash e Kibana.
+Collettivamente questi strumenti sono noti come stack elastico o ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quali sono i vantaggi di Elastic stack?
 
@@ -21,19 +22,19 @@ Elastic stack fornisce la registrazione centralizzata in modo semplice e a basso
 
 ## <a name="logstash"></a>Logstash
 
-Il primo componente è [logstash](https://www.elastic.co/products/logstash). Questo strumento viene usato per raccogliere informazioni di log da un'ampia gamma di origini diverse. Ad esempio, logstash può leggere i log dal disco e ricevere anche messaggi dalle librerie di registrazione come [Serilog](https://serilog.net/). Logstash è in grado di eseguire operazioni di filtro e espansione di base nei log Man mano che arrivano. Se, ad esempio, i log contengono indirizzi IP, è possibile configurare logstash per eseguire una ricerca geografica e ottenere un paese o anche una città di origine per quel messaggio. 
+Il primo componente è [logstash](https://www.elastic.co/products/logstash). Questo strumento viene usato per raccogliere informazioni di log da un'ampia gamma di origini diverse. Ad esempio, logstash può leggere i log dal disco e ricevere anche messaggi dalle librerie di registrazione come [Serilog](https://serilog.net/). Logstash è in grado di eseguire operazioni di filtro e espansione di base nei log Man mano che arrivano. Se, ad esempio, i log contengono indirizzi IP, è possibile configurare logstash per eseguire una ricerca geografica e ottenere un paese o anche una città di origine per quel messaggio.
 
 Serilog è una libreria di registrazione per i linguaggi .NET, che consente la registrazione con parametri. Anziché generare un messaggio di log testuale che incorpora campi, i parametri vengono mantenuti separati. Questo consente un filtro e una ricerca più intelligenti. Nella figura 7-2 viene visualizzata una configurazione Serilog di esempio per la scrittura in logstash.
 
 ```csharp
-var log = new LoggerConfiguration()   
+var log = new LoggerConfiguration()
          .WriteTo.Http("http://localhost:8080")
          .CreateLogger();
 ```
 
 **Figura 7-2** Configurazione di Serilog per la scrittura di informazioni di log direttamente in logstash su HTTP
 
-Logstash utilizzerebbe una configurazione come quella illustrata nella figura 7-3. 
+Logstash utilizzerebbe una configurazione come quella illustrata nella figura 7-3.
 
 ```
 input {
@@ -59,7 +60,7 @@ Una volta che i log sono stati raccolti da logstash, è necessario un punto in c
 
 ## <a name="elastic-search"></a>Ricerca elastica
 
-La ricerca elastica è un motore di ricerca potente che può indicizzare i log Man mano che arrivano. Consente di eseguire rapidamente query sui log. La ricerca elastica può gestire grandi quantità di log e, in casi estremi, può essere scalato orizzontalmente in più nodi. 
+La ricerca elastica è un motore di ricerca potente che può indicizzare i log Man mano che arrivano. Consente di eseguire rapidamente query sui log. La ricerca elastica può gestire grandi quantità di log e, in casi estremi, può essere scalato orizzontalmente in più nodi.
 
 I messaggi di log che sono stati creati per contenere parametri o i cui parametri sono stati divisi tramite l'elaborazione di logstash, possono essere sottoposti a query direttamente perché elasticsearch conserva queste informazioni.
 
@@ -85,11 +86,11 @@ Una query che cerca le prime 10 pagine visitate dal `jill@example.com`, viene vi
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Visualizzazione di informazioni con i dashboard Web di Kibana
 
-Il componente finale dello stack è Kibana. Questo strumento viene usato per fornire visualizzazioni interattive in un dashboard Web. I dashboard possono essere creati anche dagli utenti non tecnici. La maggior parte dei dati residenti nell'indice elasticsearch può essere inclusa nei dashboard di Kibana. I singoli utenti possono avere desideri diversi per i dashboard e Kibana consente questa personalizzazione attraverso la possibilità di dashboard specifici dell'utente. 
+Il componente finale dello stack è Kibana. Questo strumento viene usato per fornire visualizzazioni interattive in un dashboard Web. I dashboard possono essere creati anche dagli utenti non tecnici. La maggior parte dei dati residenti nell'indice elasticsearch può essere inclusa nei dashboard di Kibana. I singoli utenti possono avere desideri diversi per i dashboard e Kibana consente questa personalizzazione attraverso la possibilità di dashboard specifici dell'utente.
 
 ## <a name="installing-elastic-stack-on-azure"></a>Installazione di Elastic stack in Azure
 
-Lo stack elastico può essere installato in Azure in diversi modi. Come sempre, è possibile eseguire [il provisioning di macchine virtuali e installare Elastic stack direttamente su di essi](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Questa opzione è preferibile ad alcuni utenti esperti perché offre il massimo grado di personalizzazione. La distribuzione nell'infrastruttura come servizio introduce un sovraccarico di gestione significativo che impone a coloro che prendono tale percorso di assumere la proprietà di tutte le attività associate all'infrastruttura come servizio, ad esempio la protezione dei computer e la conservazione delle patch. 
+Lo stack elastico può essere installato in Azure in diversi modi. Come sempre, è possibile eseguire [il provisioning di macchine virtuali e installare Elastic stack direttamente su di essi](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Questa opzione è preferibile ad alcuni utenti esperti perché offre il massimo grado di personalizzazione. La distribuzione nell'infrastruttura come servizio introduce un sovraccarico di gestione significativo che impone a coloro che prendono tale percorso di assumere la proprietà di tutte le attività associate all'infrastruttura come servizio, ad esempio la protezione dei computer e la conservazione delle patch.
 
 Un'opzione con un sovraccarico minore consiste nell'usare uno dei molti contenitori Docker in cui è già stato configurato lo stack elastico. Questi contenitori possono essere rilasciati in un cluster Kubernetes esistente ed eseguiti insieme al codice dell'applicazione. Il contenitore [sebp/Elk](https://elk-docker.readthedocs.io/) è un contenitore di stack elastico ben documentato e testato.
 

@@ -4,12 +4,12 @@ description: Informazioni su come vengono confrontate le strutture di progetto d
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087860"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Struttura del progetto per le app Blazer
 
@@ -145,7 +145,7 @@ Dove si trovano le pagine nelle app Blazer? Blazer non definisce un'estensione d
 @page "/counter"
 ```
 
-Il routing in blazer è gestito sul lato client, non sul server. Quando l'utente si sposta nel browser, blazer intercetta la navigazione e quindi esegue il rendering del componente con la route corrispondente. 
+Il routing in blazer è gestito sul lato client, non sul server. Quando l'utente si sposta nel browser, blazer intercetta la navigazione e quindi esegue il rendering del componente con la route corrispondente.
 
 Le route dei componenti non sono attualmente dedotte dal percorso del file del componente, come avviene con le pagine *aspx* . Questa funzionalità può essere aggiunta in futuro. Ogni route deve essere specificata in modo esplicito nel componente. L'archiviazione di componenti instradabili in una cartella di *pagine* non ha un significato speciale ed è puramente una convenzione.
 

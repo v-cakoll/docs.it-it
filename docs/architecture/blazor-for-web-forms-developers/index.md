@@ -4,18 +4,18 @@ description: Scopri come creare app Web con stack completo con .NET usando blaze
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088122"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor per sviluppatori Web Forms ASP.NET
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Screenshot con la copertina dell'e-book App serverless.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Screenshot che mostra le app senza server e-book cover.](./media/index/blazor-for-web-forms-developers-cover.png)
 
 > Download disponibile all'indirizzo: <https://aka.ms/blazor-ebook>
 
@@ -75,7 +75,7 @@ Questo libro è un'introduzione a blazer, non a una guida alla migrazione comple
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-È possibile trovare la home page e la documentazione ufficiali di Blazer all'indirizzo <https://blazor.net>.
+È possibile trovare la home page e la documentazione ufficiale di Blazer in <https://blazor.net>.
 
 ## <a name="send-your-feedback"></a>Invia commenti e suggerimenti
 

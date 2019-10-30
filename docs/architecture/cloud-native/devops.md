@@ -2,12 +2,12 @@
 title: Cloud nativo DevOps
 description: Architettura di app .NET cloud native per Azure | Cloud nativo DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393725"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087548"
 ---
 # <a name="cloud-native-devops"></a>Cloud nativo DevOps
 
@@ -25,7 +25,7 @@ Anni fa, non era insolito per il processo di trasferimento di un'applicazione da
 
 I modelli e le procedure che consentono versioni più veloci e affidabili per fornire valore al business sono collettivamente noti come DevOps. Sono costituiti da un'ampia gamma di idee che occupano l'intero ciclo di vita dello sviluppo software, dalla specifica di un'applicazione fino alla distribuzione e al funzionamento di tale applicazione.
 
-DevOps è emerso prima dei microservizi ed è probabile che lo spostamento verso i servizi più piccoli e più idonei non sarebbe stato possibile senza DevOps per rendere più semplice il rilascio e il funzionamento di una sola applicazione, ma di molte applicazioni in produzione. 
+DevOps è emerso prima dei microservizi ed è probabile che lo spostamento verso i servizi più piccoli e più idonei non sarebbe stato possibile senza DevOps per rendere più semplice il rilascio e il funzionamento di una sola applicazione, ma di molte applicazioni in produzione.
 
 ![Figura 11-0 le tendenze di ricerca mostrano che la crescita nei microservizi non si avvia fino a quando DevOps non è un'idea abbastanza solida.](./media/microservices-vs-devops.png)
 
@@ -41,7 +41,7 @@ Azure DevOps è suddiviso in cinque componenti principali:
 
 ![Figura 11-1 le cinque principali aree di Azure DevOps](./media/devops-components.png)
 
-**Azure Boards** : fornisce un problema e lo strumento di gestione degli elementi di lavoro che consente agli utenti di selezionare i flussi di lavoro più adatti. Include una serie di modelli preconfigurati, tra cui quelli per supportare gli stili SCRUM e Kanban dello sviluppo. 
+**Azure Boards** : fornisce un problema e lo strumento di gestione degli elementi di lavoro che consente agli utenti di selezionare i flussi di lavoro più adatti. Include una serie di modelli preconfigurati, tra cui quelli per supportare gli stili SCRUM e Kanban dello sviluppo.
 
 Gestione del codice sorgente **Azure Repos** che supporta il venerato controllo della versione di Team Foundation (TFVC) e il git preferito del settore. Le richieste pull consentono di abilitare la codifica social attraverso la discussione delle modifiche apportate.
 
@@ -78,9 +78,9 @@ A prima vista, questo sembra come l'approccio più logico per suddividere il cod
 
 Una delle idee principali alla base dei microservizi è che i servizi devono essere silo e separati tra loro. Quando si utilizza la progettazione basata su dominio per stabilire i limiti per i servizi, i servizi fungono da limiti transazionali. Gli aggiornamenti del database non devono occupare più servizi. Questa raccolta di dati correlati viene definita contesto delimitato.  Questa idea è riflessa dall'isolamento dei dati di microservizio in un database separato e autonomo dal resto dei servizi. Si tratta di un'operazione molto utile per portare questa idea fino al codice sorgente.
 
-Tuttavia, questo approccio non è privo di problemi. Uno dei problemi di sviluppo più problematici del tempo è la gestione delle dipendenze. Prendere in considerazione il numero di file che costituiscono la directory media `node_modules`. Una nuova installazione di qualcosa come `create-react-app` è probabilmente destinata a migliaia di pacchetti. La questione della gestione di queste dipendenze è difficile. 
+Tuttavia, questo approccio non è privo di problemi. Uno dei problemi di sviluppo più problematici del tempo è la gestione delle dipendenze. Prendere in considerazione il numero di file che costituiscono la media `node_modules` directory. Una nuova installazione di qualcosa come `create-react-app` è probabilmente destinata a migliaia di pacchetti. La questione della gestione di queste dipendenze è difficile.
 
-Se viene aggiornata una dipendenza, i pacchetti downstream devono aggiornare anche questa dipendenza. Sfortunatamente, il lavoro di sviluppo viene eseguito in modo invariabilmente, la directory `node_modules` termina con più versioni di un singolo pacchetto, ognuna una dipendenza da un altro pacchetto con versione con una cadenza leggermente diversa. Quando si distribuisce un'applicazione, quale versione di una dipendenza deve essere utilizzata? La versione attualmente in produzione? La versione attualmente in versione beta ma probabilmente è in produzione nel momento in cui il consumer lo rende disponibile per la produzione? Problemi difficili che non vengono risolti usando solo i microservizi.
+Se viene aggiornata una dipendenza, i pacchetti downstream devono aggiornare anche questa dipendenza. Sfortunatamente, il lavoro di sviluppo viene eseguito in modo invariabilmente, il `node_modules` directory si trova con più versioni di un singolo pacchetto, ciascuna delle quali è una dipendenza di un altro pacchetto con versione con una cadenza leggermente diversa. Quando si distribuisce un'applicazione, quale versione di una dipendenza deve essere utilizzata? La versione attualmente in produzione? La versione attualmente in versione beta ma probabilmente è in produzione nel momento in cui il consumer lo rende disponibile per la produzione? Problemi difficili che non vengono risolti usando solo i microservizi.
 
 Sono disponibili librerie che dipendono da un'ampia gamma di progetti. Suddividendo i microservizi con uno in ogni repository, le dipendenze interne possono essere risolte in modo ottimale usando il repository interno Azure Artifacts. Le compilazioni per le librerie effettueranno il push delle versioni più recenti in Azure Artifacts per il consumo interno. Il progetto downstream deve ancora essere aggiornato manualmente per assumere una dipendenza dai pacchetti appena aggiornati.
 
@@ -195,7 +195,7 @@ steps:
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: '$(solution)'
-    
+
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:

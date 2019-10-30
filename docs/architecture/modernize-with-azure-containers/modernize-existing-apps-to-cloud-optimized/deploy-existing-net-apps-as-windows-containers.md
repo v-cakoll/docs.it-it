@@ -2,12 +2,12 @@
 title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | Distribuire app .NET esistenti come contenitori di Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318635"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089552"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
@@ -154,11 +154,11 @@ I prodotti in Azure che supportano i contenitori che si trovano allo stesso temp
 
 - **Servizio app di Azure**
 - **Servizio Azure Kubernetes (AKS e ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 Azure Container Registry, quindi, è un registro contenitori altamente scalabile ospitato in Azure che può essere usato da tutti i prodotti precedenti per la registrazione e la distribuzione delle immagini del contenitore personalizzato.
 
-Dai contenitori è inoltre possibile utilizzare altri servizi gestiti in Azure, ad esempio il database SQL di Azure, cache Redis di Azure, Azure Cosmos DB e così via. in Azure Marketplace sono inoltre disponibili soluzioni/piattaforme di terze parti, ad esempio Cloud Foundry e OpenShift, in cui è possibile usare i contenitori anche in Azure. 
+Dai contenitori è inoltre possibile utilizzare altri servizi gestiti in Azure, ad esempio il database SQL di Azure, cache Redis di Azure, Azure Cosmos DB e così via. in Azure Marketplace sono inoltre disponibili soluzioni/piattaforme di terze parti, ad esempio Cloud Foundry e OpenShift, in cui è possibile usare i contenitori anche in Azure.
 
 Nelle sezioni successive è possibile esaminare le raccomandazioni di Microsoft su quando usare i prodotti e le soluzioni di Azure in modo specifico per i contenitori di Windows.
 

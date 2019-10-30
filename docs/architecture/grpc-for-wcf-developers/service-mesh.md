@@ -3,12 +3,12 @@ title: Mesh del servizio-gRPC per sviluppatori WCF
 description: Uso di una rete mesh di servizi per indirizzare e bilanciare le richieste ai servizi gRPC in un cluster Kubernetes.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846042"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090180"
 ---
 # <a name="service-meshes"></a>Mesh del servizio
 
@@ -42,9 +42,9 @@ Le mesh del servizio si applicano solo al traffico all'interno di un cluster. Pe
 
 Sono attualmente disponibili tre implementazioni di rete di servizi generiche da usare con Kubernetes: Istio, Linkerd e console connect. Tutte e tre forniscono routing/inoltro delle richieste, crittografia del traffico, resilienza, autenticazione da host a host e controllo del traffico.
 
-La scelta di una mesh di servizi dipende da diversi fattori: 
+La scelta di una mesh di servizi dipende da diversi fattori:
 
-- Requisiti specifici dell'organizzazione relativi ai costi, alla conformità, ai piani di supporto a pagamento e così via. 
+- Requisiti specifici dell'organizzazione relativi ai costi, alla conformità, ai piani di supporto a pagamento e così via.
 - La natura del cluster, le dimensioni, il numero di servizi distribuiti e il volume di traffico all'interno della rete cluster.
 - Semplifica la distribuzione e la gestione della rete e la sua uso con i servizi.
 

@@ -4,12 +4,12 @@ description: Informazioni su come creare componenti dell'interfaccia utente riut
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: ab9697bcb12ec17528415b3ad4d850803f472b36
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088096"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crea componenti dell'interfaccia utente riutilizzabili con blazer
 
@@ -237,7 +237,7 @@ I gestori di eventi possono accettare un argomento facoltativo specifico dell'ev
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    void OnClick(MouseEventArgs e) 
+    void OnClick(MouseEventArgs e)
     {
         Console.WriteLine($"Mouse clicked at {e.ScreenX}, {e.ScreenY}.");
     }
@@ -259,7 +259,7 @@ I gestori di eventi possono essere eseguiti in modo sincrono o asincrono. Ad ese
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    async Task OnClick() 
+    async Task OnClick()
     {
         var result = await Http.GetAsync("api/values");
     }
@@ -283,7 +283,7 @@ Una volta gestito un evento, viene eseguito il rendering del componente per tene
     }
 }
 
-@code 
+@code
 {
     bool showMessage = false;
     string message;
@@ -343,9 +343,9 @@ I componenti possono inoltre supportare data binding ai relativi parametri. Per 
 *PasswordBox. Razor*
 
 ```razor
-Password: <input 
-    value="@Password" 
-    @oninput="OnPasswordChanged" 
+Password: <input
+    value="@Password"
+    @oninput="OnPasswordChanged"
     type="@(showPassword ? "text" : "password")" />
 
 <label><input type="checkbox" @bind="showPassword" />Show password</label>
@@ -431,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-I componenti Blazer hanno anche un ciclo di vita ben definito. Il ciclo di vita di un componente può essere utilizzato per inizializzare lo stato del componente e implementare i comportamenti dei componenti avanzati. 
+I componenti Blazer hanno anche un ciclo di vita ben definito. Il ciclo di vita di un componente può essere utilizzato per inizializzare lo stato del componente e implementare i comportamenti dei componenti avanzati.
 
 Tutti i metodi del ciclo di vita dei componenti di Blazer hanno versioni sincrone e asincrone. Il rendering del componente è sincrono. Non è possibile eseguire la logica asincrona come parte del rendering dei componenti. Tutte le logiche asincrone devono essere eseguite come parte di un metodo del ciclo di vita `async`.
 
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-I metodi `OnAfterRender` e `OnAfterRenderAsync` vengono chiamati dopo che un componente ha terminato il rendering. A questo punto vengono popolati i riferimenti a elementi e componenti (altre informazioni sui concetti seguenti). L'interattività con il browser è abilitata a questo punto. Le interazioni con l'esecuzione DOM e JavaScript possono avere luogo in modo sicuro. 
+I metodi `OnAfterRender` e `OnAfterRenderAsync` vengono chiamati dopo che un componente ha terminato il rendering. A questo punto vengono popolati i riferimenti a elementi e componenti (altre informazioni sui concetti seguenti). L'interattività con il browser è abilitata a questo punto. Le interazioni con l'esecuzione DOM e JavaScript possono avere luogo in modo sicuro.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -525,7 +525,7 @@ I componenti di Blazer possono acquisire riferimenti a un elemento. A differenza
 
 ## <a name="templated-components"></a>Componenti basati su modelli
 
-In ASP.NET Web Forms è possibile creare *controlli basati su modelli*. I controlli basati su modelli consentono allo sviluppatore di specificare una parte del codice HTML usato per eseguire il rendering di un controllo contenitore. I meccanismi di creazione di controlli server basati su modelli sono complessi, ma consentono scenari avanzati per il rendering dei dati in modo personalizzabile dall'utente. Esempi di controlli basati su modelli includono `Repeater` e `DataList`. 
+In ASP.NET Web Forms è possibile creare *controlli basati su modelli*. I controlli basati su modelli consentono allo sviluppatore di specificare una parte del codice HTML usato per eseguire il rendering di un controllo contenitore. I meccanismi di creazione di controlli server basati su modelli sono complessi, ma consentono scenari avanzati per il rendering dei dati in modo personalizzabile dall'utente. Esempi di controlli basati su modelli includono `Repeater` e `DataList`.
 
 I componenti di Blazer possono anche essere basati su modelli definendo parametri del componente di tipo `RenderFragment` o `RenderFragment<T>`. Una `RenderFragment` rappresenta un blocco di markup Razor di cui è possibile eseguire il rendering dal componente. Un `RenderFragment<T>` è un blocco di markup Razor che accetta un parametro che può essere specificato quando viene eseguito il rendering del frammento di rendering.
 
@@ -626,7 +626,7 @@ Un componente Blazer viene in genere creato in un singolo file *Razor* . Tuttavi
 *Counter.razor.cs*
 
 ```csharp
-public class CounterBase : ComponentBase 
+public class CounterBase : ComponentBase
 {
     protected int currentCount = 0;
 

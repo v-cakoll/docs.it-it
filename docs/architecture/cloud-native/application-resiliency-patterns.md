@@ -2,18 +2,18 @@
 title: Modelli di resilienza delle applicazioni
 description: Architettura di app .NET cloud native per Azure | Modelli di resilienza delle applicazioni
 ms.date: 06/30/2019
-ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315948"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087756"
 ---
 # <a name="application-resiliency-patterns"></a>Modelli di resilienza delle applicazioni
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-La prima linea di difesa è la resilienza dell'applicazione abilitata per il software. 
+La prima linea di difesa è la resilienza dell'applicazione abilitata per il software.
 
 Sebbene sia possibile investire molto tempo nella scrittura di un Framework di resilienza personalizzato, tali prodotti esistono già. Ad esempio, [Polly](http://www.thepollyproject.org/) è una libreria completa di resilienza .NET e di gestione degli errori temporanei che consente agli sviluppatori di esprimere i criteri di resilienza in modo Fluent e thread-safe. Polly è destinato alle applicazioni compilate con il .NET Framework completo o .NET Core. La figura 6-2 illustra i criteri di resilienza (ovvero funzionalità) disponibili nella libreria Polly. Questi criteri possono essere applicati singolarmente o combinati insieme.
 

@@ -2,12 +2,12 @@
 title: Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 description: Informazioni sulle differenze e sugli usi dello schema API Gateway e della comunicazione diretta da client a microservizio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522958"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090127"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -132,7 +132,7 @@ Possono esserci molti altri problemi trasversali generati dai gateway API a seco
 
 **Figura 4-14**. Utilizzo di Gestione API di Azure per il gateway API
 
-Gestione API di Azure risolve sia il gateway API sia le esigenze di gestione, ad esempio registrazione, sicurezza, misurazione e così via. In questo caso, quando si usa un prodotto come gestione API di Azure, il fatto che si disponga di un singolo gateway API non è così rischioso perché questi tipi di gateway API sono "più sottili", vale a dire che non C# si implementa codice personalizzato che può evolvere verso un componente monolitico. 
+Gestione API di Azure risolve sia il gateway API sia le esigenze di gestione, ad esempio registrazione, sicurezza, misurazione e così via. In questo caso, quando si usa un prodotto come gestione API di Azure, il fatto che si disponga di un singolo gateway API non è così rischioso perché questi tipi di gateway API sono "più sottili", vale a dire che non C# si implementa codice personalizzato che può evolvere verso un componente monolitico.
 
 I gateway API fungono in genere da proxy inverso per le comunicazioni in ingresso, in cui è possibile anche filtrare le API dai microservizi interni e applicare l'autorizzazione alle API pubblicate in questo livello singolo.
 

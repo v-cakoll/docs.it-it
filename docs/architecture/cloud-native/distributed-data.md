@@ -2,12 +2,12 @@
 title: Dati distribuiti
 description: Architettura di app .NET cloud native per Azure | Dati distribuiti per le app cloud native
 ms.date: 06/30/2019
-ms.openlocfilehash: 92086c52b02360e90461aea9ad23a2068224e187
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b715ae5203264a023bc9f911aa74ee222afe3d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087445"
 ---
 # <a name="distributed-data-for-cloud-native-apps"></a>Dati distribuiti per app native del cloud
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183133"
 
 Quando si crea un sistema nativo del cloud che è costituito da molti microservizi indipendenti, il modo in cui si pensa alle modifiche dell'archiviazione dei dati.
 
-Le tradizionali applicazioni monolitiche favoriscono un archivio dati centralizzato illustrato nella figura 5-1. 
+Le tradizionali applicazioni monolitiche favoriscono un archivio dati centralizzato illustrato nella figura 5-1.
 
 ![Singolo database monolitico](./media/single-monolithic-database.png)
 
@@ -32,7 +32,7 @@ I sistemi nativi del cloud favoriscono un'architettura dei dati illustrata nella
 **Figura 5-2**. Più database tra microservizi
 
 Si noti come nella figura precedente ogni microservizio è proprietario e incapsula l'archivio dati it ed espone solo i dati al mondo esterno dall'API pubblica.
- 
+
 Questo modello consente a ogni microservizio di evolversi in modo indipendente senza dover coordinare le modifiche dello schema dei dati con altri microservizi. Ogni microservizio è libero di implementare il tipo di archivio dati (database relazionale, database di documenti, archivio chiave-valore) che meglio soddisfa le proprie esigenze. In fase di esecuzione, ogni microservizio può ridimensionare i propri dati di conseguenza. Questa operazione è illustrata nella figura 5-3:
 
 ![Persistenza dei dati poliglotta](./media/polyglot-data-persistence.png)

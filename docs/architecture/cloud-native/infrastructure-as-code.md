@@ -2,12 +2,12 @@
 title: Infrastruttura come codice
 description: Architettura di app .NET cloud native per Azure | Infrastruttura come codice
 ms.date: 06/30/2019
-ms.openlocfilehash: e395db28bdeff785251b91ed643f9920873d26e8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183014"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087242"
 ---
 # <a name="infrastructure-as-code"></a>Infrastruttura come codice
 
@@ -37,7 +37,7 @@ Azure Resource Manager modelli sono un linguaggio basato su JSON per la definizi
 **Figura 11-10** -schema per un modello di gestione risorse
 
 All'interno di questo modello, è possibile definire un contenitore di archiviazione all'interno della sezione Resources, come indicato di seguito:
- 
+
 ```json
 "resources": [
     {
@@ -66,7 +66,7 @@ I modelli di Gestione risorse possono essere eseguiti in diversi modi. Forse il 
 
 Uno svantaggio percepito dei modelli di Gestione risorse è che sono specifici del cloud di Azure. È insolito creare applicazioni che includono risorse da più di un cloud, ma nei casi in cui l'azienda si basa su tempi di attività spettacolari, potrebbe essere utile il costo del supporto di più cloud. Se era disponibile un linguaggio di modello che poteva essere usato in ogni cloud, le competenze degli sviluppatori sarebbero molto più portabili.
 
-Sono disponibili diverse tecnologie. L'offerta più matura nello spazio è nota come [bonifica](https://www.terraform.io/). La bonifica supporta tutti i principali player cloud, ad esempio Azure, Google Cloud Platform, AWS e AliCloud, e supporta anche dozzine di giocatori secondari, ad esempio Heroku e DigitalOcean. Invece di usare JSON come linguaggio di definizione del modello, viene usato il formato YAML leggermente più conciso. 
+Sono disponibili diverse tecnologie. L'offerta più matura nello spazio è nota come [bonifica](https://www.terraform.io/). La bonifica supporta tutti i principali player cloud, ad esempio Azure, Google Cloud Platform, AWS e AliCloud, e supporta anche dozzine di giocatori secondari, ad esempio Heroku e DigitalOcean. Invece di usare JSON come linguaggio di definizione del modello, viene usato il formato YAML leggermente più conciso.
 
 Un esempio di file di bonifica che esegue la stessa operazione del modello di Gestione risorse precedente (Figura 11-11) è illustrato nella figura 11-12:
 

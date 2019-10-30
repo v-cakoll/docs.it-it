@@ -3,12 +3,12 @@ title: REST e gRPC
 description: Informazioni su gRPC, il suo ruolo in applicazioni native del cloud e su come differisce da HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094544"
 ---
 # <a name="rest-and-grpc"></a>REST e gRPC
 
@@ -28,7 +28,7 @@ gRPC è un Framework RPC moderno che è leggero ed efficiente. Usa HTTP/2 per il
 - Il flusso è integrato in HTTP/2, pertanto le richieste e le risposte possono trasmettere in modo asincrono set di dati di grandi dimensioni.
 - La combinazione di gRPC e HTTP/2 comporta un aumento significativo delle prestazioni. Nel gergo [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) , le prestazioni di gPRC soddisfano e superano la velocità e l'efficienza delle [associazioni NetTcp](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Tuttavia, a differenza di NetTCP, gRPC non è vincolato a linguaggi Microsoft, C# ad esempio o VB.NET.
 
-gRPC è supportato nelle piattaforme più diffuse, tra cui Java C#,, Golang e NodeJS. 
+gRPC è supportato nelle piattaforme più diffuse, tra cui Java C#,, Golang e NodeJS.
 
 ## <a name="protocol-buffers"></a>Buffer di protocollo
 
@@ -44,7 +44,7 @@ Il Framework di Microsoft .NET Core 3,0 include gli strumenti e il supporto nati
 
 **Figura 4-20**. supporto di gRPC in Visual Studio 2019
 
-.NET Core 3,0 integra perfettamente gRPC nel Framework, inclusi il routing degli endpoint, il supporto predefinito di IoC e la registrazione. Il server Web gheppio open source supporta completamente le connessioni HTTP/2. 
+.NET Core 3,0 integra perfettamente gRPC nel Framework, inclusi il routing degli endpoint, il supporto predefinito di IoC e la registrazione. Il server Web gheppio open source supporta completamente le connessioni HTTP/2.
 
 Nella figura 4-21 è illustrata la struttura di un servizio gRPC in Visual Studio 2019. Si noti come la struttura di cartelle includa le cartelle per i file proto e il codice del servizio.
 
@@ -69,7 +69,7 @@ Al momento della stesura di questo libro, la maggior parte dei browser ha un sup
 
 Si noti che nella figura precedente viene richiamato il traffico front-end con HTTP mentre il microservizio back-end in microservizio USA gRPC.
 
-In futuro, gRPC potrebbe svolgere un ruolo importante in detronizzare il dominamento di REST per i sistemi nativi del cloud. I vantaggi delle prestazioni e la facilità di sviluppo sono troppo efficaci per essere superati. Tuttavia, non creare alcun errore, REST rimarrà comunque da molto tempo. Si distingue ancora per le API esposte pubblicamente e per motivi di compatibilità con le versioni precedenti. 
+In futuro, gRPC potrebbe svolgere un ruolo importante in detronizzare il dominamento di REST per i sistemi nativi del cloud. I vantaggi delle prestazioni e la facilità di sviluppo sono troppo efficaci per essere superati. Tuttavia, non creare alcun errore, REST rimarrà comunque da molto tempo. Si distingue ancora per le API esposte pubblicamente e per motivi di compatibilità con le versioni precedenti.
 
 >[!div class="step-by-step"]
 >[Precedente](service-to-service-communication.md)

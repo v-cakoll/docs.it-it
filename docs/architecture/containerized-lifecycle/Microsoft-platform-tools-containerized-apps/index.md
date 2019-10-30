@@ -2,20 +2,20 @@
 title: Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
 description: Informazioni sulle offerte di Microsoft per il supporto del ciclo di vita delle applicazioni Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094461"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduzione alla piattaforma e agli strumenti Microsoft per le app in contenitori
 
-*Obiettivo: Creare un ciclo di vita dell'applicazione adattabile, di livello aziendale, in contenitori, che aumenti lo sviluppo, le operazioni IT e la gestione della produzione.*
+*Visione: creare un ciclo di vita dell'applicazione in contenitori adattabile e di livello aziendale che si estende su sviluppo, operazioni IT e gestione della produzione.*
 
 La figura 3-1 mostra gli elementi fondanti del ciclo di vita delle app Docker, classificati per tipo di lavoro svolto da più team (sviluppo di app, processi dell'infrastruttura DevOps e gestione e operazioni IT). In genere nell'organizzazione i profili dell'utente tipo responsabile per ogni area sono diversi. Lo stesso vale per le competenze.
 
-![Strumenti di Microsoft. Per il carico di lavoro di elaborazione/progettazione: Motore di docker per Windows, VS e VS Code, .NET Core, servizio Azure Kubernetes. Per il carico di lavoro di compilazione/test/spedizione: Azure DevOps, Team Foundation Server, Docker CLI, servizio Azure Kubernetes. Per il carico di lavoro di esecuzione/monitoraggio/gestione: Azure Monitor, Azure Portal, servizio Azure Kubernetes, Service Fabric, altri agenti di orchestrazione.](./media/image1.png)
+![Strumenti di Microsoft. Per il carico di lavoro sviluppo/progettazione: motore Docker per Windows, VS e VS Code, .NET Core, servizio Azure Kubernetes. Per il carico di lavoro di compilazione/test/spedizione: Azure DevOps, Team Foundation Server, interfaccia della riga di comando di Docker, servizio Kubernetes di Azure. Per il carico di lavoro esecuzione/Monitoraggio/gestione: monitoraggio di Azure, portale di Azure servizi Kubernetes di Azure, Service Fabric, altri agenti di orchestrazione.](./media/image1.png)
 
 **Figura 3-1.** Elementi fondanti del ciclo di vita per applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 
@@ -43,7 +43,7 @@ La piattaforma e gli strumenti Microsoft per app Docker in contenitori, come def
 
   - **Portale di Azure** Se si usano agenti di orchestrazione open source, il servizio Azure Kubernetes (AKS), Service Fabric e altri agenti di orchestrazione consentono di configurare e gestire gli ambienti Docker. Se si usa Azure Service Fabric, lo strumento Service Fabric Explorer permette di visualizzare e configurare il cluster.
 
-  - **Strumenti Docker** È possibile gestire le applicazioni contenitore usando strumenti familiari. Non è necessario modificare le procedure di gestione di Docker esistenti per spostare i carichi di lavoro dei contenitori nel cloud. Usare gli strumenti di gestione delle applicazioni con cui si ha già familiarità e connettersi tramite gli endpoint API standard per l'agente di orchestrazione scelto. È anche possibile usare strumenti di terze parti per gestire le applicazioni Docker, come Docker Datacenter o addirittura strumenti Docker dell'interfaccia della riga di comando. 
+  - **Strumenti Docker** È possibile gestire le applicazioni contenitore usando strumenti familiari. Non è necessario modificare le procedure di gestione di Docker esistenti per spostare i carichi di lavoro dei contenitori nel cloud. Usare gli strumenti di gestione delle applicazioni con cui si ha già familiarità e connettersi tramite gli endpoint API standard per l'agente di orchestrazione scelto. È anche possibile usare strumenti di terze parti per gestire le applicazioni Docker, come Docker Datacenter o addirittura strumenti Docker dell'interfaccia della riga di comando.
 
     Anche se si ha familiarità con i comandi di Linux, è possibile gestire le applicazioni contenitore usando Microsoft Windows e PowerShell con una riga di comando del sottosistema di Linux e i clienti dei prodotti (Docker, Kubernetes...) in esecuzione su questa funzionalità di sottosistema Linux. Nel seguito di questo libro saranno offerte altre informazioni sull'utilizzo di questi strumenti nel sottosistema Linux usando il sistema operativo Microsoft Windows preferito.
 

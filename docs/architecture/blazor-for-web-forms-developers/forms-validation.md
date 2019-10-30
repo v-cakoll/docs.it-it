@@ -4,18 +4,18 @@ description: Informazioni su come compilare moduli con la convalida lato client 
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: 9062e0ab106b7e647646bf5d206106153d7d9009
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c30db5e06d36a6d15301835fe782b21058a80592
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088081"
 ---
 # <a name="forms-and-validation"></a>Moduli e convalida
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Il framework Web Form ASP.NET include un set di controlli server di convalida che gestiscono la convalida dell'input utente immesso `CompareValidator`in `RangeValidator`un modulo (`RequiredFieldValidator`,, e così via). Il framework Web Form ASP.NET supporta anche l'associazione di modelli e la convalida del modello in base alle`[Required]`annotazioni dei dati ( `[Range]`, `[StringLength]`, e così via). La logica di convalida può essere applicata sia nel server che nel client usando la convalida basata su JavaScript non intrusiva. Il `ValidationSummary` controllo server viene utilizzato per visualizzare un riepilogo degli errori di convalida per l'utente.
+Il framework Web Form ASP.NET include un set di controlli server di convalida che gestiscono la convalida dell'input utente immesso in un modulo (`RequiredFieldValidator`, `CompareValidator`, `RangeValidator`e così via). Il framework Web Form ASP.NET supporta anche l'associazione di modelli e la convalida del modello in base alle annotazioni dei dati (`[Required]`, `[StringLength]`, `[Range]`e così via). La logica di convalida può essere applicata sia nel server che nel client usando la convalida basata su JavaScript non intrusiva. Il controllo `ValidationSummary` server viene utilizzato per visualizzare un riepilogo degli errori di convalida per l'utente.
 
 Blazer supporta la condivisione della logica di convalida tra il client e il server. ASP.NET fornisce implementazioni JavaScript predefinite di molte convalide server comuni. In molti casi, lo sviluppatore deve ancora scrivere codice JavaScript per implementare completamente la logica di convalida specifica dell'app. Gli stessi tipi di modello, le annotazioni dei dati e la logica di convalida possono essere utilizzati sia sul server che sul client.
 
@@ -30,9 +30,9 @@ Blazer fornisce un set di componenti di input. I componenti di input gestiscono 
 |`InputText`    |`<input>`                |
 |`InputTextArea`|`<textarea>`             |
 
-Il `EditForm` componente esegue il wrapping di questi componenti di input e orchestra il processo di `EditContext`convalida tramite un. Quando si crea `EditForm`un oggetto, è necessario specificare l'istanza del modello da `Model` associare a utilizzando il parametro. La convalida viene in genere eseguita utilizzando le annotazioni dei dati ed è estendibile. Per abilitare la convalida basata sull'annotazione dei `DataAnnotationsValidator` dati, aggiungere il componente come `EditForm`elemento figlio di. Il `EditForm` componente fornisce un pratico evento per la gestione degli`OnValidSubmit`invii validi ()`OnInvalidSubmit`e non validi (). È inoltre disponibile un evento più `OnSubmit` generico che consente di attivare e gestire autonomamente la convalida.
+Il componente `EditForm` esegue il wrapping di questi componenti di input e orchestra il processo di convalida tramite una `EditContext`. Quando si crea una `EditForm`, è necessario specificare l'istanza del modello da associare utilizzando il parametro `Model`. La convalida viene in genere eseguita utilizzando le annotazioni dei dati ed è estendibile. Per abilitare la convalida basata sull'annotazione dei dati, aggiungere il componente `DataAnnotationsValidator` come figlio del `EditForm`. Il componente `EditForm` fornisce un pratico evento per la gestione degli invii validi (`OnValidSubmit`) e non validi (`OnInvalidSubmit`). Esiste anche un evento `OnSubmit` più generico che consente di attivare e gestire la convalida autonomamente.
 
-Per visualizzare un riepilogo degli errori di convalida, `ValidationSummary` utilizzare il componente. Per visualizzare i messaggi di convalida per un campo di input specifico `ValidationMessage` , utilizzare il componente, specificando un' `For` espressione lambda per il parametro che punta al membro del modello appropriato.
+Per visualizzare un riepilogo degli errori di convalida, utilizzare il componente `ValidationSummary`. Per visualizzare i messaggi di convalida per un campo di input specifico, usare il componente `ValidationMessage`, specificando un'espressione lambda per il parametro `For` che punta al membro del modello appropriato.
 
 Il tipo di modello seguente definisce diverse regole di convalida usando le annotazioni dei dati:
 
@@ -43,7 +43,7 @@ using System.ComponentModel.DataAnnotations;
 public class Starship
 {
     [Required]
-    [StringLength(16, 
+    [StringLength(16,
         ErrorMessage = "Identifier too long (16 character limit).")]
     public string Identifier { get; set; }
 
@@ -52,12 +52,12 @@ public class Starship
     [Required]
     public string Classification { get; set; }
 
-    [Range(1, 100000, 
+    [Range(1, 100000,
         ErrorMessage = "Accommodation invalid (1-100000).")]
     public int MaximumAccommodation { get; set; }
 
     [Required]
-    [Range(typeof(bool), "true", "true", 
+    [Range(typeof(bool), "true", "true",
         ErrorMessage = "This form disallows unapproved ships.")]
     public bool IsValidatedDesign { get; set; }
 
@@ -66,7 +66,7 @@ public class Starship
 }
 ```
 
-Il componente seguente illustra la creazione di un modulo in blazer in `Starship` base al tipo di modello:
+Il componente seguente illustra la creazione di un modulo in blazer in base al tipo di modello di `Starship`:
 
 ```razor
 <h1>New Ship Entry Form</h1>

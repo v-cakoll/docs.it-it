@@ -2,18 +2,18 @@
 title: Monitoraggio e integrità
 description: Monitoraggio e integrità
 ms.date: 09/23/2019
-ms.openlocfilehash: 6e62c0dad3bdac9bed8eccfadd9011f9b6256efc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094508"
 ---
 # <a name="monitoring-and-health"></a>Monitoraggio e integrità
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-I microservizi e le applicazioni native del cloud vengono usati con buone procedure DevOps. DevOps è un numero elevato di elementi a molti utenti, ma forse una delle definizioni migliori deriva da cloud Advocate e DevOps Evangelist Donovan Brown: 
+I microservizi e le applicazioni native del cloud vengono usati con buone procedure DevOps. DevOps è un numero elevato di elementi a molti utenti, ma forse una delle definizioni migliori deriva da cloud Advocate e DevOps Evangelist Donovan Brown:
 
 "DevOps è l'Unione di persone, processi e prodotti per consentire il recapito continuo di valore agli utenti finali".
 

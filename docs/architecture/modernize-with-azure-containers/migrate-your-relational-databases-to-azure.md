@@ -2,16 +2,16 @@
 title: Eseguire la migrazione dei database relazionali in Azure
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows | eseguire la migrazione dei database relazionali in Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093619"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Eseguire la migrazione dei database relazionali in Azure
 
-Obiettivo: Azure offre la migrazione più completa del database.
+Visione: Azure offre la migrazione più completa del database.
 
 In Azure è possibile eseguire la migrazione dei server di database direttamente alle macchine virtuali IaaS (Lift-and-Shift puri) oppure è possibile eseguire la migrazione al database SQL di Azure per altri vantaggi. Il database SQL di Azure offre opzioni di istanza gestita e database completo come servizio (DBaaS). La figura 3-1 Mostra i percorsi di migrazione di database relazionali multipli disponibili in Azure.
 
@@ -90,7 +90,7 @@ Attualmente, Microsoft Azure supporta fino a [331 server di database diversi](ht
 
 Potrebbero esserci alcuni casi in cui è ancora necessario eseguire la migrazione a SQL Server come una normale macchina virtuale. Uno scenario di esempio è se è necessario usare SQL Server Reporting Services. Nella maggior parte dei casi, tuttavia, Istanza gestita di database SQL di Azure possibile fornire tutto il necessario per eseguire la migrazione da server SQL locali, quindi la migrazione a una macchina virtuale SQL Server dovrebbe essere l'ultima risorsa da provare.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Usare il servizio migrazione del database di Azure per eseguire la migrazione dei database relazionali in Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Usare il servizio migrazione del database di Azure per eseguire la migrazione dei database relazionali in Azure
 
 È possibile usare il servizio migrazione del database di Azure per eseguire la migrazione di database relazionali come SQL Server, Oracle e MySQL in Azure, indipendentemente dal fatto che il database di destinazione sia database SQL di Azure, Istanza gestita di database SQL di Azure o SQL Server in una macchina virtuale di Azure.
 
@@ -104,7 +104,7 @@ Per informazioni su come eseguire la migrazione dei database con il servizio mig
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Scegliere un'opzione di SQL Server Cloud: Database SQL di Azure (PaaS) o SQL Server in una macchina virtuale di Azure (IaaS)**
+- **Scegliere un'opzione di SQL Server Cloud: database SQL di Azure (PaaS) o SQL Server nella macchina virtuale di Azure (IaaS)**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 

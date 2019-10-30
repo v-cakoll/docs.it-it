@@ -2,12 +2,12 @@
 title: Resilienza e disponibilità elevata nei microservizi
 description: I microservizi sono progettati per resistere a errori temporanei di rete e dipendenze che per raggiungere una disponibilità elevata devono essere resilienti.
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094219"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienza e disponibilità elevata nei microservizi
 
@@ -31,8 +31,8 @@ La sezione [Implementazione dei controlli di integrità nei servizi ASP.NET Core
 
 È anche possibile usare Beat Pulse, un'utilissima libreria open-source disponibile su [GitHub](https://github.com/Xabaril/BeatPulse) e come [pacchetto NuGet](https://www.nuget.org/packages/BeatPulse/). Questa libreria esegue anche i controlli di integrità e gestisce due tipi di controlli:
 
-- **Attività**: controlla se il microservizio è attivo, ovvero se può accettare le richieste e rispondere. 
-- **Idoneità**: controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste. 
+- **Attività**: controlla se il microservizio è attivo, vale a dire, se può accettare le richieste e rispondere.
+- **Idoneità** : controlla se anche le dipendenze del microservizio (database, servizi coda e così via) sono idonee, in modo che il microservizio possa eseguire le operazioni previste.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Uso della diagnostica e log dei flussi di eventi
 
@@ -56,7 +56,7 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **The Twelve-Factor App. XI. Log: considerare i log come flussi di eventi** \
+- **App. XI a dodici fattori. Log: considera i registri come flussi di eventi** \
   <https://12factor.net/logs>
 
 - Repository GitHub **Libreria di flussi eventi di diagnostica Microsoft**. \
@@ -68,7 +68,7 @@ Diversi agenti di orchestrazione potrebbero sembrare simili, ma la diagnostica e
 - **Connettere computer Windows al servizio Monitoraggio di Azure** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Registrazione mirata: uso del blocco applicazione di registrazione semantica** \
+- **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrazione mirata: uso del blocco applicazione di registrazione semantica)
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Sito ufficiale di **Splunk**. \

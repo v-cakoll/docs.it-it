@@ -4,12 +4,12 @@ description: Informazioni sui diversi modi per ospitare un'app blazer, inclusa n
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 82628976bcb1f1cee3089aa25488396af44d0f1a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520296"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088049"
 ---
 # <a name="blazor-app-hosting-models"></a>Modelli di hosting di app Blazer
 
@@ -18,13 +18,13 @@ ms.locfileid: "72520296"
 Le app Blazer possono essere ospitate in IIS esattamente come le app Web Form ASP.NET. Le app Blazer possono anche essere ospitate in uno dei modi seguenti:
 
 - Lato client nel browser del webassembly.
-- Lato server in un'app ASP.NET Core. 
+- Lato server in un'app ASP.NET Core.
 
 ## <a name="blazor-webassembly-apps"></a>App webassembly Blazer
 
-Le app webassembly Blazer vengono eseguite direttamente nel browser in un Runtime .NET basato su webassembly. Le app webassembly Blazer funzionano in modo simile ai Framework JavaScript front-end come angolari o React. Tuttavia, invece di scrivere JavaScript si scrive C#. Il Runtime .NET viene scaricato con l'app insieme all'assembly dell'app e a tutte le dipendenze necessarie. Non sono necessarie estensioni o plug-in del browser. 
+Le app webassembly Blazer vengono eseguite direttamente nel browser in un Runtime .NET basato su webassembly. Le app webassembly Blazer funzionano in modo simile ai Framework JavaScript front-end come angolari o React. Tuttavia, invece di scrivere JavaScript si scrive C#. Il Runtime .NET viene scaricato con l'app insieme all'assembly dell'app e a tutte le dipendenze necessarie. Non sono necessarie estensioni o plug-in del browser.
 
-Gli assembly scaricati sono assembly .NET normali, come si farebbe per qualsiasi altra app .NET. Poiché il runtime supporta .NET Standard, è possibile usare le librerie di .NET Standard esistenti con l'app webassembly blazer. Tuttavia, questi assembly vengono comunque eseguiti nella sandbox di sicurezza del browser. Alcune funzionalità possono generare una <xref:System.PlatformNotSupportedException>, ad esempio il tentativo di accedere al file system o l'apertura di connessioni di rete arbitrarie. 
+Gli assembly scaricati sono assembly .NET normali, come si farebbe per qualsiasi altra app .NET. Poiché il runtime supporta .NET Standard, è possibile usare le librerie di .NET Standard esistenti con l'app webassembly blazer. Tuttavia, questi assembly vengono comunque eseguiti nella sandbox di sicurezza del browser. Alcune funzionalità possono generare una <xref:System.PlatformNotSupportedException>, ad esempio il tentativo di accedere al file system o l'apertura di connessioni di rete arbitrarie.
 
 Quando l'app viene caricata, il Runtime .NET viene avviato e punta all'assembly dell'app. Viene eseguita la logica di avvio dell'app e viene eseguito il rendering dei componenti radice. Blazer calcola gli aggiornamenti dell'interfaccia utente in base all'output di cui è stato eseguito il rendering dai componenti. Vengono quindi applicati gli aggiornamenti DOM.
 
