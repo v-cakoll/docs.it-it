@@ -49,7 +49,7 @@ L'insieme completo delle funzionalità è documentato nella [Guida di riferiment
 
 ## <a name="rich-data-types"></a>Tipi di dati avanzati
 
-I tipi di dati, ad esempio i [record](./language-reference/records.md) e le [unioni discriminate](./language-reference/discriminated-unions.md) , consentono di rappresentare dati complessi e domini.
+I tipi di dati, ad esempio i [record](./language-reference/records.md) e le [unioni discriminate](./language-reference/discriminated-unions.md), consentono di rappresentare dati e domini complessi.
 
 ```fsharp
 // Group data with Records
@@ -76,7 +76,7 @@ F#i record e le unioni discriminate sono non null, non modificabili e confrontab
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Applicare la correttezza alle funzioni e ai criteri di ricerca
 
-F#le funzioni sono facili da dichiarare e potenti in pratica. In [combinazione con i criteri di](./language-reference/pattern-matching.md)ricerca, consentono di definire il comportamento la cui correttezza viene applicata dal compilatore.
+Le funzioni F# sono facili da dichiarare e potenti nella pratica. In combinazione con i [criteri di ricerca](./language-reference/pattern-matching.md), consentono di definire un comportamento la cui correttezza viene verificata dal compilatore.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#anche le funzioni sono di prima classe, ovvero possono essere passate come parametri e restituite da altre funzioni.
+Anche le funzioni F# sono di prima classe, ovvero possono essere passate come parametri e restituite da altre funzioni.
 
-## <a name="functions-to-define-operations-on-objects"></a>Funzioni per la definizione di operazioni sugli oggetti
+## <a name="functions-to-define-operations-on-objects"></a>Funzioni per definire operazioni sugli oggetti
 
-F#dispone del supporto completo per gli oggetti, che sono tipi di dati utili quando è necessario combinare dati e funzionalità. F#le funzioni vengono usate per modificare gli oggetti.
+F# dispone del supporto completo per gli oggetti, che sono tipi di dati utili quando è necessario combinare dati e funzionalità. Le funzioni F# vengono usate per modificare gli oggetti.
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
